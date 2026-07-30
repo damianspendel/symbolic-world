@@ -1,5 +1,17 @@
 # Proposal: a relation-family layer, retrofitted without touching the verified layer
 
+**Scope decision (2026-07-30, Damian):** the family vocabulary is scoped to the
+ALCHEMICAL TRILOGY (CW 12/13/14) — "the alchemical corpus's relational ontology,
+v1" — not to Jung's works at large. This dissolves the vocabulary-closure objection
+from the cross-vendor planning review: the trilogy is a coherent relational world
+and closable now. Non-trilogy edges carry an explicit `pending-scope` marker
+(distinct from `unclassified`); the fail-closed CI rule applies within declared
+scope. Seam rule: when later volumes arrive, families may be ADDED via governance,
+but redefining an existing family to absorb new material requires re-gating its
+assignments. Aion then becomes a measured vocabulary-transfer study (fraction of
+CW 9ii edges classifiable under trilogy families) — generalization measured, not
+assumed, mirroring what E8 did for the pipeline.
+
 Status: proposal, updated 2026-07-30 with scholarship grounding, ontology-practice
 grounding, and narrative-probe evidence. For the post-submission roadmap (paper §8
 names this as the planned fix; scheduled as release v1.5 in docs/ROADMAP.md).
