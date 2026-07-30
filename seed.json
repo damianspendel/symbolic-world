@@ -1326,6 +1326,31 @@
    "id": "rites-of-renewal",
    "type": "Motif",
    "label": "Rites of renewal"
+  },
+  {
+   "id": "light",
+   "type": "Symbol",
+   "label": "Light"
+  },
+  {
+   "id": "diamond-body",
+   "type": "Symbol",
+   "label": "Diamond Body"
+  },
+  {
+   "id": "the-gods",
+   "type": "Figure",
+   "label": "The Gods"
+  },
+  {
+   "id": "neurosis",
+   "type": "Concept",
+   "label": "Neurosis"
+  },
+  {
+   "id": "hun",
+   "type": "Concept",
+   "label": "Hun (Cloud-Demon Soul)"
   }
  ],
  "edges": [
@@ -2885,6 +2910,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E6 stratified audit, 2026-07-27)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 33,
+     "quote": "The golden flower is a mandala symbol I have often met with in the material brought me by my patients.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
     }
    ]
   },
@@ -2904,6 +2940,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E6 stratified audit, 2026-07-27)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 33,
+     "quote": "The golden flower is the light, and the light of heaven is the Tao.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PARTIAL, 2026-07-30)",
+     "correction_note": "stage1: carrier error — asserts->reports (text doctrine)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw13-1): text gives the transitive identity (flower=light, light=Tao); 'symbolizes' is the existing edge's standing relation — both-defensible",
+     "note": "the Golden Flower text's own doctrine, expounded by Jung ('Our text promises to reveal...')"
     }
    ]
   },
@@ -2941,6 +2991,20 @@
      "source": "The Secret of the Golden Flower",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "13",
+     "paragraph": 38,
+     "quote": "the sun is activated and begins its course—in other words, the Tao begins to work and takes the lead",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PARTIAL, 2026-07-30)",
+     "correction_note": "stage1: carrier error — asserts->reports (text doctrine)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw13-1): the activation link is Jung's own 'in other words' gloss of the text's sun-course doctrine — both-defensible on the existing edge's relation",
+     "note": "the text's circulation doctrine, glossed by Jung ('expressed in our text by...')"
     }
    ]
   },
@@ -15455,6 +15519,338 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "does-harm-to-when-it-usurps-the-heritage-of-the-spirit",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 7,
+     "quote": "The intellect does indeed do harm to the soul when it dares to possess itself of the heritage of the spirit.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage1: conditional restored — harm asserted only \"when it dares to possess itself of the heritage of the spirit\""
+    }
+   ]
+  },
+  {
+   "subject": "psyche",
+   "relation": "has-common-substratum-in",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 11,
+     "quote": "the human psyche possesses a common substratum transcending all differences in culture and consciousness. I have called this substratum the collective unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "consciousness",
+   "relation": "develops-on-the-basis-of",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 12,
+     "quote": "All conscious ideation and action have developed on the basis of these unconscious archetypal patterns and always remain dependent on them.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "light",
+   "relation": "is-the-symbolical-equivalent-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 28,
+     "quote": "“Light” is the symbolical equivalent of consciousness, and the nature of consciousness is expressed by analogies with light.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "tends-towards",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 31,
+     "quote": "Most mandalas take the form of a flower, cross, or wheel, and show a distinct tendency towards a quaternary structure",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "is-derived-from",
+   "object": "magic-circle",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 36,
+     "quote": "it is derived from the “protective circle” or “charmed circle,” whose magic has been preserved in countless folk customs.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "tao",
+   "relation": "is-the-unity-of-life-and",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 37,
+     "quote": "The unity of the two, life and consciousness, is the Tao",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "circulation-of-light",
+   "relation": "amounts-to",
+   "object": "self-knowledge",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 39,
+     "quote": "It is nothing less than self-knowledge by means of self-brooding (Sanskrit tapas ).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-gods",
+   "relation": "originate-in",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 51,
+     "quote": "fragmentary psychic systems would never have been split off; in other words, neither spirits nor gods would ever have come into existence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PARTIAL, 2026-07-30)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw13-1): text says 'fragmentary psychic systems'; splinter-psyche is the graph's standing node for exactly this — both-defensible"
+    }
+   ]
+  },
+  {
+   "subject": "projection",
+   "relation": "leads-to-destructive-mass-psychoses-of",
+   "object": "mass-psyche",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 52,
+     "quote": "This leads to collective delusions, “incidents,” revolutions, war—in a word, to destructive mass psychoses.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PARTIAL, 2026-07-30)",
+     "correction_note": "stage1: text says \"destructive mass psychoses\"; exact term carried in the relation (mass-psyche is the standing node for the collective-psychic sphere)",
+     "vocabulary_note": "text term: mass psychoses; graph node: mass-psyche — relation carries the exact wording; cross-vendor concurs with the stage-1 note (mass psychoses vs mass-psyche); relation carries the exact wording — both-defensible"
+    }
+   ]
+  },
+  {
+   "subject": "the-gods",
+   "relation": "have-become",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 54,
+     "quote": "Today they are called phobias, obsessions, and so forth; in a word, neurotic symptoms. The gods have become diseases",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "hun",
+   "relation": "is-translated-by-wilhelm-as",
+   "object": "animus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 57,
+     "quote": "The word hun is translated by Wilhelm as animus.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)",
+     "note": "carrier: Richard Wilhelm's rendering of the Chinese term hun"
+    }
+   ]
+  },
+  {
+   "subject": "animus",
+   "relation": "is-on-a-low-level-an-inferior",
+   "object": "logos",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 60,
+     "quote": "On a low level the animus is an inferior Logos, a caricature of the differentiated masculine mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage1: scope qualifier \"on a low level\" restored"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "is-on-a-low-level-a-caricature-of-the-feminine",
+   "object": "eros",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 60,
+     "quote": "just as on a low level the anima is a caricature of the feminine Eros",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage1: scope qualifier and \"feminine\" restored (object eros is the standing node)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "is-a-personification-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 62,
+     "quote": "I have defined the anima as a personification of the unconscious in general, and have taken it as a bridge to the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "consciousness",
+   "relation": "comes-from",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 62,
+     "quote": "The text says that consciousness (that is, the personal consciousness) comes from the anima.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)",
+     "note": "carrier: our text (The Secret of the Golden Flower), narrated by Jung"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "lies-at-the-point-between-consciousness-and",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 67,
+     "quote": "in the hypothetical point between conscious and unconscious. This new centre might be called the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "diamond-body",
+   "relation": "symbolizes-the-detachment-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 68,
+     "quote": "these expressions symbolize an attitude that is beyond the reach of emotional entanglements and violent shocks—a consciousness detached from the world",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
     }
    ]
   }

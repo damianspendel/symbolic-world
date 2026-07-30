@@ -1,10 +1,10 @@
 {
- "updated": "2026-07-30T18:25",
+ "updated": "2026-07-30T23:10",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 263,
-  "edges": 743,
-  "refs": 787,
+  "nodes": 268,
+  "edges": 761,
+  "refs": 808,
   "verified": "100%"
  },
  "batches": [
@@ -258,9 +258,27 @@
     "cost_usd_per_citation": 0.124,
     "note": "80/20 split assumed"
    }
+  },
+  {
+   "id": "b-cw13-1",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §1-69",
+   "result": "CW13 arc opens (Golden Flower commentary). Mined 21 (21 refs); pre-check 21/21; stage1 15/6/0 (conditional and low-level qualifiers restored; two carrier errors asserts->reports for the text's own doctrine; mass-psychoses wording carried in relation); stage2 0 flags; cross-vendor 17/4/0, all both-defensible standing-node/relation-strength notes. Merged 18 new edges + 3 attaches, 5 new nodes (light, diamond-body, the-gods, neurosis, hun).",
+   "telemetry": {
+    "miner_tokens": 97463,
+    "stage1_tokens": 54918,
+    "stage2_tokens": 48844,
+    "crossvendor_tokens_in_out": [
+     8723,
+     1106
+    ],
+    "cost_usd_total": 2.68,
+    "cost_usd_per_citation": 0.128,
+    "note": "80/20 split assumed"
+   }
   }
  ],
- "next": "b-cw13-1 (CW13 §1-69) at 22:07 — CW13 arc begins",
+ "next": "b-cw13-2 (CW13 §70-138) at 03:07 pass",
  "nodes": 241,
  "edges": 648,
  "refs": 673,
