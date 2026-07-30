@@ -1,10 +1,10 @@
 {
- "updated": "2026-07-30T12:40",
+ "updated": "2026-07-30T13:05",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 254,
-  "edges": 692,
-  "refs": 724,
+  "nodes": 255,
+  "edges": 708,
+  "refs": 742,
   "verified": "100%"
  },
  "batches": [
@@ -204,9 +204,27 @@
     "cost_usd_per_citation": 0.116,
     "note": "80/20 in/out split assumed"
    }
+  },
+  {
+   "id": "b-cw12-7",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §321-331 + §421-446",
+   "result": "gap batch: mined 19 (19 refs); pre-check 19/19; stage1 15/4/0 (1 dropped on Thabritius/Gabricus referent drift, 3 corrected); stage2 1 asserts->reports; cross-vendor 14/4/0 — 1 upheld (practitioner-vs-discipline agency, relation reworded), 3 both-defensible with vocabulary_note; merged 16 new edges + 2 attaches, 1 new node (chaos)",
+   "telemetry": {
+    "miner_tokens": 128478,
+    "stage1_tokens": 56644,
+    "stage2_tokens": 47177,
+    "crossvendor_tokens_in_out": [
+     8741,
+     1008
+    ],
+    "cost_usd_total": 2.94,
+    "cost_usd_per_citation": 0.163,
+    "note": "80/20 split assumed; small batch raises per-citation cost"
+   }
   }
  ],
- "next": "b-cw12-7 (CW12 §321-331 + §421-446 gap batch) on next scheduled pass",
+ "next": "b-cw12-8 (CW12 §516-565) next pass",
  "nodes": 241,
  "edges": 648,
  "refs": 673,

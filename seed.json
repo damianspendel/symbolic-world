@@ -1281,6 +1281,11 @@
    "id": "blue",
    "type": "Symbol",
    "label": "The colour of the vertical, of height and depth, and of the Virgin’s cloak; the fourth colour missing from the disturbed mandala"
+  },
+  {
+   "id": "chaos",
+   "type": "Substance",
+   "label": "The massa confusa or chaos confusum out of which the stone arises; one of the recurring names of the prima materia"
   }
  ],
  "edges": [
@@ -12140,6 +12145,19 @@
      "source": "Gerhard Dorn",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "12",
+     "paragraph": 421,
+     "quote": "The substance that harbours the divine secret is everywhere, including the human body.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PARTIAL, 2026-07-30)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw12-7): auditor reads §421 as secret-concealed-in-substance, substance-everywhere-incl-body; the attach uses the existing edge's standing relation — adjudicated both-defensible",
+     "note": "New reference from this window for an existing edge; Jung's rendering of alchemical doctrine, footnoted (fnn. 45–46)."
     }
    ]
   },
@@ -12312,6 +12330,19 @@
      "source": "Raymond Lully, Codicillus",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-26"
+    },
+    {
+     "volume": "12",
+     "paragraph": 421,
+     "quote": "the opus is no longer a ritualistic officium , but the same work of redemption … accomplished upon mankind through the example of Christ",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage1: narrated alchemical self-understanding ('The alchemists emphasize this point'); asserts->reports",
+     "note": "New reference from this window for an existing edge; the elided words are “which God himself”."
     }
    ]
   },
@@ -14303,6 +14334,308 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
      "note": "Hedged: “We would conjecture… the vertical would correspond…”"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "means-the-height-and-depth-of",
+   "object": "man",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 321,
+     "quote": "like woman herself, the anima means the height and depth of a man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-centre",
+   "relation": "is-called",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 327,
+     "quote": "If I have called the centre the “self,” I did so after mature consideration and a careful appraisal of the empirical and historical data.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "note": "Jung's own terminological decision, stated in his own voice."
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "is-an-archetype-inherent-in",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 329,
+     "quote": "an a priori “type,” an archetype which is inherent in the collective unconscious and thus beyond individual birth and death",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "note": "Subject (the mandala motif) is named earlier in the same paragraph; hedged — “It is therefore more probable that we are dealing with…”."
+    }
+   ]
+  },
+  {
+   "subject": "individuation",
+   "relation": "is-the-realization-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 330,
+     "quote": "every life is the realization of a whole, that is, of a self, for which reason this realization can also be called “individuation.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "is-the-basis-of",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 425,
+     "quote": "The basis of the opus , the prima materia , is one of the most famous secrets of alchemy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "carries",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 425,
+     "quote": "it represents the unknown substance that carries the projection of the autonomous psychic content",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "paracelsus",
+   "relation": "holds-to-be-uncreated",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 430,
+     "quote": "the prima materia is a true principium … the Paracelsan view that it is something increatum , uncreated",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "note": "Doctrine of Paracelsus, “Philosophia ad Athenienses,” reported by Jung; both fragments from §430, in order."
+    }
+   ]
+  },
+  {
+   "subject": "alchemy",
+   "relation": "is-the-tradition-whose-practitioners-projected-god-into",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 432,
+     "quote": "the alchemists came to project even the highest value—God—into matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PARTIAL, 2026-07-30)",
+     "correction_note": "cross-vendor upheld (b-cw12-7): §432 attributes the projecting to the alchemists, not the discipline; relation reworded to carry the practitioner agency (no the-alchemists node; one-off nodes barred)"
+    }
+   ]
+  },
+  {
+   "subject": "chaos",
+   "relation": "gives-birth-to",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 433,
+     "quote": "The chaos is a massa confusa that gives birth to the stone",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "note": "Jung's exposition of the alchemical doctrine he is citing (Ripley, Hortulanus; fnn. 20–26)."
+    }
+   ]
+  },
+  {
+   "subject": "filius-regius",
+   "relation": "is-a-rejuvenated-form-of",
+   "object": "rex",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 436,
+     "quote": "The regius filius is a rejuvenated form of the Father-King",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "night-sea-journey",
+   "relation": "is-a-descent-into",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 436,
+     "quote": "the necessity of a descent into the dark world of the unconscious … the perilous adventure of the night sea journey",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "note": "The elided words are the appositive “the ritual κατάβασις εἰς ἄντρον,”."
+    }
+   ]
+  },
+  {
+   "subject": "night-sea-journey",
+   "relation": "has-as-its-end-and-aim",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 436,
+     "quote": "the perilous adventure of the night sea journey … whose end and aim is the restoration of life, resurrection, and the triumph over death",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PARTIAL, 2026-07-30)",
+     "vocabulary_note": "§436 reads 'restoration of life, resurrection, and the triumph over death'; rebirth is the graph's standing node for this cluster (cross-vendor PARTIAL adjudicated both-defensible, b-cw12-7)",
+     "note": "Only a figure reference is elided; “restoration of life, resurrection” is the rebirth node's referent."
+    }
+   ]
+  },
+  {
+   "subject": "consciousness",
+   "relation": "is-in-the-perilous-descent-overpowered-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 438,
+     "quote": "the conscious mind, advancing into the unknown regions of the psyche, is overpowered by the archaic forces of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage1: scope restricted to the descent into the unknown regions of the psyche (Arisleus/Theseus gloss); confidence demoted",
+     "note": "Jung's psychological gloss (“which is to say that…”) on the fate of Arisleus/Theseus."
+    }
+   ]
+  },
+  {
+   "subject": "ignis-gehennalis",
+   "relation": "is-the-hell-descended-into-by",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 440,
+     "quote": "This heat is the ignis gehennalis , the hell into which Christ descended in order to conquer death as part of his opus",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage2: renders Christian doctrine as parallel material; asserts->reports (protocol default)"
+    }
+   ]
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "is-inhabited-by",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 444,
+     "quote": "the earth (as prima materia ) is not a dead body, but is inhabited by a spirit that is its life and soul",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PARTIAL, 2026-07-30)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw12-7): auditor prefers jung-quotes-source for the Basilius Valentinus doctrine; the annotation protocol's standing convention (rendered named source without quotation marks -> reports, source in note; cf. the Orthelius ruling) applied — both-defensible",
+     "note": "doctrine explicitly 'According to Basilius Valentinus' — source named per protocol (reports keep source in note)"
+    }
+   ]
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "is-often-represented-as",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 446,
+     "quote": "He is often represented as a winged old man, … i.e., Mercurius in the form of the god of revelation",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
+     "note": "Footnoted alchemical iconography (fnn. 64–66) reported in Ripley's context; the “i.e., Mercurius” gloss is Jung's. “He” is the Holy Ghost, named in the immediately preceding sentence of §446; only footnote marker 65 is elided."
     }
    ]
   }
