@@ -7,10 +7,10 @@
 
 | | |
 |---|---|
-| Graph | **258 nodes · 723 edges · 762 references**, 544 distinct CW paragraphs, 9 volumes |
-| Verification | **762/762 (100%)** gate-verified with model+date provenance; 568 (75%) also cross-vendor checked (412 of CW 14's 413, everything since the pre-merge mandate) |
-| Claim provenance | 514 jung-asserts · 184 jung-reports-parallel · 64 jung-quotes-source (44 named-source strings) · 94 hedged |
-| Coverage | CW 14 end-to-end (413 refs); CW 12 at 198 — §1-565 complete except §111-180; seven further volumes sampled |
+| Graph | **263 nodes · 743 edges · 787 references**, 566 distinct CW paragraphs, 9 volumes |
+| Verification | **787/787 (100%)** gate-verified with model+date provenance; 593 (75%) also cross-vendor checked (412 of CW 14's 413, everything since the pre-merge mandate) |
+| Claim provenance | 534 jung-asserts · 187 jung-reports-parallel · 66 jung-quotes-source (45 named-source strings) · 96 hedged |
+| Coverage | CW 14 end-to-end (413 refs); CW 12 end-to-end (223 refs, §1-565 complete); seven further volumes sampled |
 | Human validation | **E10 gold set complete**: support 44/50 · voice agreement 40/50 (single-annotator, anchored — see caveats) |
 | Replication | James's *Varieties* pilot: 38 edges, full public package (`james/`) |
 | Cost to date | ≈ $85–115 total model spend; ≈ **$0.09–0.14 per fully verified citation** |

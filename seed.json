@@ -1301,6 +1301,31 @@
    "id": "faust",
    "type": "Figure",
    "label": "Faust (Goethe)"
+  },
+  {
+   "id": "dionysos",
+   "type": "Figure",
+   "label": "Dionysus"
+  },
+  {
+   "id": "the-ape",
+   "type": "Symbol",
+   "label": "The Ape (anthropoid)"
+  },
+  {
+   "id": "the-intellect",
+   "type": "Concept",
+   "label": "The intellect"
+  },
+  {
+   "id": "treasure-hard-to-attain",
+   "type": "Motif",
+   "label": "The treasure hard to attain"
+  },
+  {
+   "id": "rites-of-renewal",
+   "type": "Motif",
+   "label": "Rites of renewal"
   }
  ],
  "edges": [
@@ -3160,6 +3185,18 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "12",
+     "paragraph": 165,
+     "quote": "It is a symbol of the opus alchymicum",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "note": "“It” = the squaring of the circle, named in the preceding sentence of the same paragraph."
     }
    ]
   },
@@ -13733,6 +13770,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 145,
+     "quote": "Because of its feminine characteristics the unconscious is personified by the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "note": "Jung restricts this to men in the same sentence: “(that is to say, in men; in women it is masculine)”."
     }
    ]
   },
@@ -13775,6 +13824,17 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
      "note": "New reference from this window for an existing edge."
+    },
+    {
+     "volume": "12",
+     "paragraph": 150,
+     "quote": "The unknown woman or anima always represents the “inferior,” i.e., the undifferentiated function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
     }
    ]
   },
@@ -13794,6 +13854,17 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PARTIAL, 2026-07-30)",
      "vocabulary_note": "§193 says 'the fourth function'; identification with the inferior function is explicit at §220 (cross-vendor PARTIAL adjudicated both-defensible, b-cw12-5)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 145,
+     "quote": "The feminine nature of the inferior function derives from its contamination with the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
     }
    ]
   },
@@ -14447,6 +14518,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 163,
+     "quote": "Individuation, becoming a self, is not only a spiritual problem, it is the problem of all life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
     }
    ]
   },
@@ -14996,6 +15078,383 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, WRONG, 2026-07-30)",
      "correction_note": "cross-vendor WRONG upheld as adjudication error (b-cw12-8): the stage-1 reshape wrongly carried this §526 ref onto the §547 relation; edge split — §526 supports the harbours-in-itself claim"
+    }
+   ]
+  },
+  {
+   "subject": "sol",
+   "relation": "is-a-symbol-of-the-source-of-life-and-the-ultimate-wholeness-of",
+   "object": "man",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 112,
+     "quote": "the sun is a symbol of the source of life and the ultimate wholeness of man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "paracelsus",
+   "relation": "places-the-regio-nymphididica-at-the-initial-stage-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 116,
+     "quote": "the Paracelsan regio nymphididica, mentioned in the treatise De vita longa as the initial stage of the individuation process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage2: reverse error — individuation gloss is Jung's own term and parallel; reports->asserts",
+     "note": "Doctrine carried by Paracelsus and reported by Jung from the treatise De vita longa; not Jung's own claim about the individuation process."
+    }
+   ]
+  },
+  {
+   "subject": "dionysos",
+   "relation": "is-the-abyss-of-impassioned-dissolution-in-the-animal-divinity-of-the-primordial",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 118,
+     "quote": "Dionysus is the abyss of impassioned dissolution, where all human distinctions are merged in the animal divinity of the primordial psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-devil",
+   "relation": "is-the-strange-son-of",
+   "object": "chaos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 119,
+     "quote": "the devil is the “strange son of chaos” who can most readily be trusted to deal effectively with his mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "note": "The phrase “strange son of chaos” is in quotation marks but no source is named in the paragraph; the predication is Jung's own."
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "is-truly-always-an-inner-image-built-up-through",
+   "object": "active-imagination",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 123,
+     "quote": "The true mandala is always an inner image, which is gradually built up through (active) imagination",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "note": "reported explanation of the named lama Lingdam Gomchen (rimpoche of Bhutia Busty), which Jung then qualifies"
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "originated-in-dreams-and-visions-rather-than-in-invention",
+   "object": "visionary-experience",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 124,
+     "quote": "It seems to me beyond question that these Eastern symbols originated in dreams and visions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, PARTIAL, 2026-07-30)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw12-9): text reads 'dreams and visions'; visionary-experience is the graph's standing node for the class — both-defensible"
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "signifies-a-psychic-centre-of-the-personality-not-to-be-identified-with",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 126,
+     "quote": "they signify nothing less than a psychic centre of the personality not to be identified with the ego",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "note": "Subject “they” = the individual mandala symbols, named earlier in the same paragraph. Hedged: “Unless everything deceives us”."
+    }
+   ]
+  },
+  {
+   "subject": "the-centre",
+   "relation": "lies-on-a-different-plane-from-and-unlike-it-has-the-quality-of-eternity",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 135,
+     "quote": "the other centre of personality lies on a different plane from the ego since, unlike this, it has the quality of “eternity”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-in-the-upanishads-the-personal-atman-and-also-the-suprapersonal",
+   "object": "atman",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 137,
+     "quote": "In the philosophy of the Upanishads the Self is in one aspect the personal atman, but … it has a cosmic and metaphysical quality",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "note": "Doctrine carried by the Upanishads (“In the philosophy of the Upanishads”), reported by Jung."
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "begets-the-light-and-harbours-the-darkness-uniting",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 140,
+     "quote": "I beget the light, but the darkness too is of my nature",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, PARTIAL, 2026-07-30)",
+     "source": "Hermes, quoted by the Rosarium philosophorum",
+     "correction_note": "stage1: §140 gives light and darkness concretely; relation reworded to carry the pair rather than importing the abstraction bare (object retained as the graph term for the united pair)",
+     "vocabulary_note": "the-opposites is the graph's standing node for the united light/darkness pair of the Hermes quotation; cross-vendor concurs with the stage-1 note — both-defensible",
+     "note": "Words of the lapis quoting Hermes, in quotation marks in the Rosarium as cited by Jung."
+    }
+   ]
+  },
+  {
+   "subject": "artifex",
+   "relation": "is-not-the-master-of-the-stone-but-rather-the-minister-of",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 142,
+     "quote": "And thus the philosopher is not the master of the stone but rather its minister",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, PARTIAL, 2026-07-30)",
+     "source": "Hermes, quoted by the Rosarium philosophorum",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw12-9): text says 'the philosopher'; artifex is the standing node for the alchemical practitioner — both-defensible",
+     "note": "Jung's rendering of “Et sic Philosophus non est Magister lapidis, sed potius minister”, given in quotation marks."
+    }
+   ]
+  },
+  {
+   "subject": "man",
+   "relation": "could-according-to-the-alchemists-deo-concedente-produce-out-of-his-own-nature",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 144,
+     "quote": "the Son who, according to classical (and Christian) tradition, dwells eternally in the Father … something that man could produce out of his own nature",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage1: the alchemists' idea is conditioned \"with God's help, of course (Deo concedente)\"; qualifier restored in the relation",
+     "note": "Attributed by Jung to the alchemists as carrier (“It looks as if the idea had dawned on the alchemists”); hedged, and Jung at once calls the idea heretical."
+    }
+   ]
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "lies-hidden-in-the-ocean-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 155,
+     "quote": "The “treasure hard to attain” lies hidden in the ocean of the unconscious, and only the brave can reach it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "cannot-come-into-being-unless-mans-causal-link-with-the-world-of-instinct-is-rediscovered",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 157,
+     "quote": "Unless this link be rediscovered no lapis and no self can come into being",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)",
+     "note": "“this link” = “his causal link with the world of instinct”, named in the immediately preceding sentence of the same paragraph."
+    }
+   ]
+  },
+  {
+   "subject": "ouroboros",
+   "relation": "is-with-the-circular-figure-the-basic-mandala-of",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 165,
+     "quote": "together with the Uroboros—the dragon devouring itself tail first—is the basic mandala of alchemy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "circumambulatio",
+   "relation": "is-in-its-leftward-form-equivalent-to-movement-in-the-direction-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 166,
+     "quote": "a leftward movement is equivalent to a movement in the direction of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-ape",
+   "relation": "crops-up-in-the-vicinity-of-mercurius-as-the-simia-dei",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 173,
+     "quote": "the ape once more crops up in the vicinity of Mercurius as the simia Dei",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "rites-of-renewal",
+   "relation": "are-attempts-to-abolish-the-separation-between-consciousness-and",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 174,
+     "quote": "The rites are attempts to abolish the separation between the conscious mind and the unconscious, the real source of life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "dionysos",
+   "relation": "left-relics-in",
+   "object": "christianity",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 177,
+     "quote": "The Dionysian relics in the Church, such as the fish and wine symbolism, the Damascus chalice",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "is-wrongly-equated-by-the-modern-formula-with",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 178,
+     "quote": "the modern formula “intellect = spirit,” but it completely forgets the fact that “spirit” was never a human “activity,” much less a “function.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
     }
    ]
   }

@@ -1,10 +1,10 @@
 {
- "updated": "2026-07-30T14:35",
+ "updated": "2026-07-30T18:25",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 258,
-  "edges": 723,
-  "refs": 762,
+  "nodes": 263,
+  "edges": 743,
+  "refs": 787,
   "verified": "100%"
  },
  "batches": [
@@ -240,9 +240,27 @@
     "cost_usd_per_citation": 0.13,
     "note": "80/20 split assumed"
    }
+  },
+  {
+   "id": "b-cw12-9",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §111-180",
+   "result": "ex-E9 held-out window, production-mined AFTER the frozen E9 experiment (noted per plan). Mined 26 (26 refs); pre-check 26/26; stage1 22/4/0 (gibbon/dual-symbolism edge dropped; Deo-concedente restored; lama carrier named; light/darkness pair carried); stage2 1 reverse error; cross-vendor 22/3/0, all both-defensible normalizations. Merged 20 new edges + 5 attaches, 5 new nodes. CW12 COMPLETE §1-565.",
+   "telemetry": {
+    "miner_tokens": 126614,
+    "stage1_tokens": 62483,
+    "stage2_tokens": 54297,
+    "crossvendor_tokens_in_out": [
+     12046,
+     1392
+    ],
+    "cost_usd_total": 3.09,
+    "cost_usd_per_citation": 0.124,
+    "note": "80/20 split assumed"
+   }
   }
  ],
- "next": "b-cw12-9 (CW12 §111-180, ex-E9 window) at 17:07 pass",
+ "next": "b-cw13-1 (CW13 §1-69) at 22:07 — CW13 arc begins",
  "nodes": 241,
  "edges": 648,
  "refs": 673,
