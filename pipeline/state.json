@@ -1,10 +1,10 @@
 {
- "updated": "2026-07-30T13:05",
+ "updated": "2026-07-30T14:35",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 255,
-  "edges": 708,
-  "refs": 742,
+  "nodes": 258,
+  "edges": 723,
+  "refs": 762,
   "verified": "100%"
  },
  "batches": [
@@ -222,9 +222,27 @@
     "cost_usd_per_citation": 0.163,
     "note": "80/20 split assumed; small batch raises per-citation cost"
    }
+  },
+  {
+   "id": "b-cw12-8",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §516-565",
+   "result": "final CW12 window: mined 18 (24 refs); pre-check 24/24; stage1 18/5/1 (1 WRONG citation-mismatch dropped, 1 one-off-object dropped, Honorius quotes-source, Naassene scoped, reverse-correction on prima-materia analogy); stage2 3 reverse errors (unicorn/lion Mercurius decodings reports->asserts); cross-vendor 17/2/1 — the WRONG upheld as an adjudication mis-merge and fixed by edge split, 2 anaphora both-defensibles noted; merged +2 attaches, 3 new nodes (three-legged-ass, og-king-of-bashan, faust)",
+   "telemetry": {
+    "miner_tokens": 112379,
+    "stage1_tokens": 59409,
+    "stage2_tokens": 51355,
+    "crossvendor_tokens_in_out": [
+     10206,
+     1089
+    ],
+    "cost_usd_total": 2.86,
+    "cost_usd_per_citation": 0.13,
+    "note": "80/20 split assumed"
+   }
   }
  ],
- "next": "b-cw12-8 (CW12 §516-565) next pass",
+ "next": "b-cw12-9 (CW12 §111-180, ex-E9 window) at 17:07 pass",
  "nodes": 241,
  "edges": 648,
  "refs": 673,

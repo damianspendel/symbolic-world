@@ -1286,6 +1286,21 @@
    "id": "chaos",
    "type": "Substance",
    "label": "The massa confusa or chaos confusum out of which the stone arises; one of the recurring names of the prima materia"
+  },
+  {
+   "id": "three-legged-ass",
+   "type": "Symbol",
+   "label": "Three-legged ass (Bundahish)"
+  },
+  {
+   "id": "og-king-of-bashan",
+   "type": "Figure",
+   "label": "Og, King of Bashan"
+  },
+  {
+   "id": "faust",
+   "type": "Figure",
+   "label": "Faust (Goethe)"
   }
  ],
  "edges": [
@@ -1459,6 +1474,19 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "12",
+     "paragraph": 516,
+     "quote": "of this the alchemists said everything that we could possibly say about the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage1: the psychological equation is Jung's interpretive thesis (the alchemists cited as evidence, not as carriers); reports->asserts",
+     "note": "the alchemists"
     }
    ]
   },
@@ -12294,6 +12322,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "12",
+     "paragraph": 557,
+     "quote": "the alchemical opus is the labour of Man the Redeemer in the cause of the divine world-soul slumbering and awaiting redemption in matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
     }
    ]
   },
@@ -14636,6 +14675,327 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
      "note": "Footnoted alchemical iconography (fnn. 64–66) reported in Ripley's context; the “i.e., Mercurius” gloss is Jung's. “He” is the Holy Ghost, named in the immediately preceding sentence of §446; only footnote marker 65 is elided."
+    }
+   ]
+  },
+  {
+   "subject": "unicorn",
+   "relation": "is-a-symbol-of",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 518,
+     "quote": "Lion and unicorn are both symbols of Mercurius.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage2: reverse error — Jung's own interpretive decoding, reports->asserts",
+     "note": "alchemical symbolism narrated from the Chymical Wedding of Rosencreutz"
+    },
+    {
+     "volume": "12",
+     "paragraph": 547,
+     "quote": "both are symbols of Mercurius in alchemy, just as they are allegories of Christ in the Church",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage2: reverse error — Jung's own interpretive decoding, reports->asserts",
+     "note": "alchemical and ecclesiastical usage"
+    }
+   ]
+  },
+  {
+   "subject": "lion",
+   "relation": "is-a-symbol-of",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 519,
+     "quote": "that did not present any difficulty to the alchemist since the lion is likewise a symbol of Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage2: reverse error — Jung's own interpretive decoding, reports->asserts",
+     "note": "the alchemists; Ripley's green lion"
+    }
+   ]
+  },
+  {
+   "subject": "unicorn",
+   "relation": "is-an-allegory-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 519,
+     "quote": "the symbol of the unicorn as an allegory of Christ and of the Holy Ghost was current all through the Middle Ages",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)",
+     "note": "medieval ecclesiastical allegory"
+    },
+    {
+     "volume": "12",
+     "paragraph": 523,
+     "quote": "Christ is represented by this animal, and his insuperable strength … by its horn",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)",
+     "source": "Honorius of Autun",
+     "correction_note": "stage1: §523 gives Honorius of Autun's directly quoted words; reports->quotes-source",
+     "note": "Honorius of Autun, Speculum de mysteriis ecclesiae, rendered as a block quotation"
+    }
+   ]
+  },
+  {
+   "subject": "unicorn",
+   "relation": "stands-with-the-lion-for-the-inner-tension-of-opposites-in",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 547,
+     "quote": "Lion and unicorn stand for the inner tension of opposites in Mercurius.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "unicorn",
+   "relation": "has-an-inner-connection-with",
+   "object": "og-king-of-bashan",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 545,
+     "quote": "It is conceivable that there is an inner connection between Og and the unicorn: both escaped the flood",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "has-affinity-and-indeed-identity-with",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 519,
+     "quote": "Ripley had in his mind, when he used this symbol, the affinity, indeed the identity, of Mercurius with Christ",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)",
+     "note": "Ripley"
+    }
+   ]
+  },
+  {
+   "subject": "serpent",
+   "relation": "is-in-its-naassene-definition-in-agreement-with",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 528,
+     "quote": "This definition of the serpent agrees with the alchemical Mercurius, who is likewise a kind of water",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PARTIAL, 2026-07-30)",
+     "correction_note": "stage1: \"This definition\" is the Naassene serpent doctrine (via Hippolytus); scope carried in the relation to avoid referent drift",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw12-8): 'Naassene' names the anaphoric antecedent ('This definition') from the preceding paragraph; single-paragraph convention split, adjudicated both-defensible (cf. residual risk v)",
+     "note": "Naassene doctrine reported via Hippolytus; the agreement with Mercurius is Jung's own comparison"
+    }
+   ]
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "was-designated-with-the-name",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 517,
+     "quote": "The prima materia was thought of as an ever-changing substance … It was designated with the name “Mercurius,”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)",
+     "note": "the alchemists' conception of the prima materia"
+    }
+   ]
+  },
+  {
+   "subject": "three-legged-ass",
+   "relation": "is-identified-in-latin-alchemy-with",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 539,
+     "quote": "The ass is a daemon triunus … portrayed in Latin alchemy as a three-headed monster and identified with Mercurius, salt, and sulphur",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PARTIAL, 2026-07-30)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw12-8): §539 says 'the ass'; the three-legged ass of the Bundahish is the §535-537 antecedent under discussion — both-defensible anaphora",
+     "note": "Latin alchemists"
+    }
+   ]
+  },
+  {
+   "subject": "alchemy",
+   "relation": "reached-its-final-summit-in",
+   "object": "faust",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 558,
+     "quote": "alchemy had reached its final summit, and with it the historical turning-point, in Goethe’s Faust",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 554,
+     "quote": "It may well have reached its peak in Goethe’s religious Weltanschauung",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "faust",
+   "relation": "brings-back-from-its-projected-state-into-personal-psychological-experience",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 559,
+     "quote": "By identifying with Paris, Faust brings the coniunctio back from its projected state into the sphere of personal psychological experience",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "consciousness",
+   "relation": "harbours-with-every-increase-the-danger-of",
+   "object": "ego-inflation",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 559,
+     "quote": "every increase in consciousness harbours the danger of inflation, as is shown very clearly in Faust’s superhuman powers",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "ego-inflation",
+   "relation": "is-a-regression-of-consciousness-into",
+   "object": "unconsciousness",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 563,
+     "quote": "Paradoxically enough, inflation is a regression of consciousness into unconsciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "artifex",
+   "relation": "projected-into-the-phenomena-of-chemical-change",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 564,
+     "quote": "the alchemist projected what I have called the process of individuation into the phenomena of chemical change",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "unicorn",
+   "relation": "harbours-in-itself-the-inner-contradiction-of",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 526,
+     "quote": "it harbours in itself an inner contradiction, a complexio oppositorum",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, WRONG, 2026-07-30)",
+     "correction_note": "cross-vendor WRONG upheld as adjudication error (b-cw12-8): the stage-1 reshape wrongly carried this §526 ref onto the §547 relation; edge split — §526 supports the harbours-in-itself claim"
     }
    ]
   }
