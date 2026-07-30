@@ -39,12 +39,22 @@ is-image-of), correspondence/parallel (corresponds-to, is-analogue-of, has-paral
 amplification (amplified-by), composition (composed-of, contains), transformation
 (transforms-into, renewed-as), sequence (precedes), attribution/derivation, scoped-
 doctrine (the is-in-X-a-Y family). An explicit **`unclassified`** family is allowed
-and reported — forcing every string into a family is how distinct meanings get
-silently merged.
+and reported, WITH a CI ceiling (fail the build above ~10% unclassified) so the
+escape valve cannot become a dumping ground — forcing every edge into a family is
+how distinct meanings get silently merged, and unbounded escape is how the layer
+dies of vagueness; the ceiling holds the tension.
 
-The mapping (relation string → family) is published as a table in the repo, one row
-per string, each row carrying who assigned it and when — the same anatomy as a
-reference. Readers can dispute a mapping through the existing channel.
+Assignment lives at the EDGE level, not the string level (cross-vendor review
+correction, 2026-07-30): relation strings in this corpus are polysemous — "is"
+alone spans archetypal identity, categorization, and composition — so a global
+string→family table would silently corrupt every polysemous head string. The
+string is used only as a clustering heuristic to batch the work; the recorded,
+CI-enforced fact is `edge → family`, one row per edge, each row carrying who
+assigned it and when — the same anatomy as a reference. A derived string-level
+view is published for readability (singletons collapse to it trivially; head
+strings show their per-edge split). Readers dispute mappings through the existing
+channel. Cost consequence: the gate reviews ~700+ edge assignments, not ~300
+strings — the envelope below is revised accordingly.
 
 ## Assignment pipeline — the same gates, pointed at a new layer
 
@@ -104,10 +114,12 @@ is classical Jung and the definitions are load-bearing:
 - **The two-tier design is the W3C `rdfs:subPropertyOf` pattern**: verbatim
   relations as leaf properties, families as super-properties; queries over the
   family match the leaves; nothing is renamed. Decades of precedent, name it.
-- **CIDOC-CRM** (ISO 21127, cultural heritage): an entire discipline runs on ~160
-  curated properties. Lesson: keep the family set small (15-25); extensions go
-  under the core, not beside it. Also the interoperability door if the atlas ever
-  aligns with institutional collections.
+- **OBO Relation Ontology as the primary structural precedent** (cross-vendor
+  review correction): RO's state/relation-centric shared vocabulary matches this
+  use case; CIDOC-CRM (ISO 21127, ~160 event-centric properties) remains the
+  scale lesson (keep families small, 15-25; extensions under the core) and the
+  interoperability door, but its event-centric structure is the wrong template
+  for symbol-centric relations.
 - **Wikidata property governance**: new properties require a proposal with scope
   and constraints, community review, and — the rule worth stealing — the proposer
   may not be the creator. Adding a family here should follow the same shape:
@@ -116,13 +128,14 @@ is classical Jung and the definitions are load-bearing:
 - **OBO Relation Ontology** (biology's cure for relation sprawl): vocabularies
   converge only when convergence is enforced by tooling. Hence: CI fails on any
   unfamilied edge once the layer ships (fail-closed, as everywhere).
-- **SKOS match strength** (`exactMatch` / `closeMatch` / `relatedMatch`): the
-  graded-strength idea maps directly onto identity vs correspondence vs
-  amplification — three strengths of connection between symbols. Describing the
-  families this way makes the design legible to the semantic-web audience.
-- **Property characteristics (OWL)**: per-family symmetry (synonym-of), transitivity
-  (precedes), and inverse pairing (symbolizes/symbolized-by — currently two
-  unrelated strings) turn the graph from browsable to inferable.
+- **Property characteristics (OWL), used sparingly**: `owl:SymmetricProperty` for
+  synonym-of and `owl:inverseOf` for symbolization pairs (symbolizes/symbolized-by
+  are currently two unrelated strings). Transitivity is deliberately NOT declared:
+  alchemical sequences are cyclical (the uroboros, the Rex cycle), and a transitive
+  `precedes` lets an inference engine derive A-precedes-A. (An earlier draft also
+  analogized family strength to SKOS match properties; withdrawn on cross-vendor
+  review — SKOS match maps concepts across vocabularies, not edge classes within
+  one, and the analogy misleads more than it explains.)
 - **Prior art for the mapping step**: the NLP literature calls this relation
   canonicalization (clustering surface forms over open-IE output); E11's clustering
   inherits citable methods.
@@ -133,7 +146,10 @@ Amplification edges should skew jung-asserts (they name Jung's interpretive act)
 `synonym-of` edges should skew jung-reports-parallel (they render the alchemists'
 own lexicon). Once families exist, this correlation is one query — if it holds, it
 is independent evidence that both layers track something real; if it fails, one of
-the two layers has a definition problem. Either way, reportable.
+the two layers has a definition problem — with one confound named in advance:
+nested reporting (Jung quoting an alchemist who amplifies another alchemist)
+legitimately breaks the correlation, so E11 excludes nested-attribution edges
+before reading the result. Either way, reportable.
 
 ## Evidence from the narrative probes (2026-07-30)
 
@@ -170,7 +186,7 @@ second annotator covers voice gold set and family mapping in one recruited sessi
 | Step | Estimate |
 |---|---|
 | Clustering + proposal pass (~300 strings, batched) | ≈ $2–4 |
-| Gate review of full table | ≈ $2–3 |
+| Gate review of edge-level assignments (~700+) | ≈ $8–15 |
 | Cross-vendor sample | < $0.50 |
 | Human pass | author time, ~1–2 h (≈60-row stratified sample) |
 | Per-batch marginal thereafter | cents |
