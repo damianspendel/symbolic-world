@@ -4,6 +4,24 @@ Ideas parked for later, not yet scheduled. The canonical graph and its § discip
 always come first; nothing here may compromise the trust model (every canonical edge
 §-anchored + independently verified).
 
+## Human-in-the-loop process (for v1.6 "The Second Reader" and v2.0 community pilot)
+
+- **Reviewer identity as first-class provenance.** Validation records currently carry
+  `validated_by: "author"` only. Extend to stable reviewer ids with a role
+  (author / second-annotator / community), so every human judgment is attributable —
+  and surface the reviewer id in the public verification log and in the per-citation
+  evidence view, exactly like model verifier stamps. Community reviewers could link
+  an ORCID or stay pseudonymous-but-stable; the log shows who (or which id) validated
+  what, when, under which tool mode (anchored/unanchored). *(Added 2026-07-31.)*
+
+- **Drip-fed validation for the author.** The next major release needs a further
+  author-validated tranche beyond the 50-item gold set. Instead of marathon sessions:
+  the review tool serves small stratified tranches (~5 items) on request — "do a few
+  every once in a while" — resumable, accumulating toward a target n, with progress
+  shown (e.g. 35/100 toward v1.6). Could ride the session check-in cadence: a gentle
+  "5 items waiting" nudge, never a blocker. Unanchored mode by default per the E10
+  lesson. *(Added 2026-07-31.)*
+
 ## Paper
 
 - **Mention the public construction log in §6.1.** The atlas now exposes the
