@@ -1,8 +1,9 @@
 # Proposal: a relation-family layer, retrofitted without touching the verified layer
 
-Status: proposal, 2026-07-30. For the post-submission roadmap (paper §8 names this
-as the planned fix). Written on the mining-away branch; publication with the rest
-of the branch, at the return review's discretion.
+Status: proposal, updated 2026-07-30 with scholarship grounding, ontology-practice
+grounding, and narrative-probe evidence. For the post-submission roadmap (paper §8
+names this as the planned fix; scheduled as release v1.5 in docs/ROADMAP.md).
+Written on the mining-away branch; publication at the return review's discretion.
 
 ## The problem, with numbers
 
@@ -72,6 +73,86 @@ matching. That difference is the measured value of the layer, reportable as **E1
 with the usual design: seeded mis-familied edges to calibrate whatever gate checks
 families, catch rates with intervals, adjudications published. No headline without
 a calibrated instrument behind it.
+
+
+## Grounding I — the discipline's own definitions (research 2026-07-30)
+
+The families must be defined in classical Jungian terms, cited, because the corpus
+is classical Jung and the definitions are load-bearing:
+
+- **Symbolization** (Jung, CW 6, Definitions): a symbol is "the best possible
+  description or formulation of a relatively unknown fact"; a sign stands for
+  something known. The family is therefore *not* semiotic reference — "lapis
+  symbolizes the Self" claims best-available-expression of something not otherwise
+  formulable.
+- **Amplification** (Samuels, Shorter & Plaut, *A Critical Dictionary of Jungian
+  Analysis*, pp. 16-17; IAAP): the use of mythic, historical and cultural parallels
+  to widen the basis on which an image's interpretation rests — metaphorical, never
+  literal. Method-level: it names Jung's interpretive act, not the text's ontology.
+  The miners' unprompted use of `amplified-by` matches this definition.
+- **Archetypal identity** (Jung's projection thesis; Edinger, *Anatomy of the
+  Psyche*): the alchemical "is" asserts one archetype behind both terms, via
+  projection into matter — not logical identity. Defining the identity family this
+  way also answers the referee objection that the graph asserts literal absurdities.
+- **Where "mostly agreed" frays** (recorded, not hidden): the post-Jungian schools
+  (Samuels' classical / developmental / archetypal division) dispute amplification's
+  epistemic status (Hillman: stay with the image) and symbol theory's literalness.
+  Families are defined against classical usage, and the definitions doc says so.
+
+## Grounding II — ontology-practice precedents (research 2026-07-30)
+
+- **The two-tier design is the W3C `rdfs:subPropertyOf` pattern**: verbatim
+  relations as leaf properties, families as super-properties; queries over the
+  family match the leaves; nothing is renamed. Decades of precedent, name it.
+- **CIDOC-CRM** (ISO 21127, cultural heritage): an entire discipline runs on ~160
+  curated properties. Lesson: keep the family set small (15-25); extensions go
+  under the core, not beside it. Also the interoperability door if the atlas ever
+  aligns with institutional collections.
+- **Wikidata property governance**: new properties require a proposal with scope
+  and constraints, community review, and — the rule worth stealing — the proposer
+  may not be the creator. Adding a family here should follow the same shape:
+  proposal with definition + seed examples, reviewed by a different model family,
+  human sign-off.
+- **OBO Relation Ontology** (biology's cure for relation sprawl): vocabularies
+  converge only when convergence is enforced by tooling. Hence: CI fails on any
+  unfamilied edge once the layer ships (fail-closed, as everywhere).
+- **SKOS match strength** (`exactMatch` / `closeMatch` / `relatedMatch`): the
+  graded-strength idea maps directly onto identity vs correspondence vs
+  amplification — three strengths of connection between symbols. Describing the
+  families this way makes the design legible to the semantic-web audience.
+- **Property characteristics (OWL)**: per-family symmetry (synonym-of), transitivity
+  (precedes), and inverse pairing (symbolizes/symbolized-by — currently two
+  unrelated strings) turn the graph from browsable to inferable.
+- **Prior art for the mapping step**: the NLP literature calls this relation
+  canonicalization (clustering surface forms over open-IE output); E11's clustering
+  inherits citable methods.
+
+## Family × voice: a testable interaction
+
+Amplification edges should skew jung-asserts (they name Jung's interpretive act);
+`synonym-of` edges should skew jung-reports-parallel (they render the alchemists'
+own lexicon). Once families exist, this correlation is one query — if it holds, it
+is independent evidence that both layers track something real; if it fails, one of
+the two layers has a definition problem. Either way, reportable.
+
+## Evidence from the narrative probes (2026-07-30)
+
+Two probes support the layer's premise that relation semantics carry the graph's
+meaning: an unprimed cross-vendor model reconstructed the canonical opus narrative
+from labeled triples, and the fully node-anonymized run still produced the Rex
+renewal drama from structure plus generic relation verbs alone. The anonymized
+run's leak audit (ten relation strings carrying domain vocabulary) also demonstrated
+that relation strings are semantically dense — which is the family layer's entire
+premise stated as an experimental result. Formalization as E13 (blinding tiers,
+leak-scan pass, judge arm) is scheduled with release v1.8.
+
+## Human pass integration (with the HITL backlog items)
+
+The family mapping's human check uses the drip-fed tranche mechanism (small
+stratified batches on request, unanchored, progress toward a target n) and the
+reviewer-identity provenance planned for the verification log — so family
+validations are attributable records like every other human judgment. At v1.6 the
+second annotator covers voice gold set and family mapping in one recruited session.
 
 ## Timing: why later is genuinely better, not deferral
 
