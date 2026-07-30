@@ -102,12 +102,22 @@ it is not inspectable or tunable as a *thing*. Backlog: a small declarative laye
   new corpus, new axes, same machinery; and the assumptions register can link
   each verifier to its measured performance.
 
-## Publication venues beyond arXiv (added 2026-07-27)
-Research other places to publish/announce: Paradigm Explorer, Jungian journals
-(e.g. Journal of Analytical Psychology, Jung Journal: Culture & Psyche,
-International Journal of Jungian Studies), digital-humanities venues (DH Quarterly,
-Journal of Cultural Analytics). Check each venue's stance on AI-assisted work and
-preprints before submitting.
+## Publication venues beyond arXiv (added 2026-07-27; researched 2026-07-30)
+No journal is devoted to Mysterium/Jungian alchemy specifically. Target paper for
+the Jungian audience: "An atlas of Mysterium" companion piece — the instrument for
+scholars + the sympathetic-reportage boundary as a text-historical finding (where
+Jung's voice measurably merges with the alchemists'); 1956+70 anniversary peg.
+Ranked fit: 1) Phanês (Jung history, OA, peer-reviewed, ≤10k words, double-blind —
+first target); 2) International Journal of Jungian Studies (Brill; academic bridge,
+invites other disciplines; ScholarOne); 3) Journal of Analytical Psychology (Wiley;
+flagship, prefers clinical/empirical — second wave, voice-findings-for-analysts
+angle); 4) Journal of Jungian Scholarly Studies (OA, multidisciplinary); outreach
+tier: Jung Journal: Culture & Psyche, Psychological Perspectives, Quadrant (also
+community-pilot recruiting channels); outsider: Ambix (history of alchemy proper;
+Principe/Newman line critical of Jung — frame as mapping Jung's interpretation,
+which the voice layer supports). Also still: Paradigm Explorer, DH Quarterly,
+Journal of Cultural Analytics. Check each venue's AI-assisted-work stance before
+submitting; lead with the radical-disclosure posture.
 
 ## Reader's guide to the papers we cite (added 2026-07-27)
 Damian wants plain-language breakdowns of the papers cited in docs/PAPER.md to
