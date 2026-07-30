@@ -1,10 +1,10 @@
 {
- "updated": "2026-07-30T01:30",
+ "updated": "2026-07-30T12:40",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 248,
-  "edges": 669,
-  "refs": 699,
+  "nodes": 254,
+  "edges": 692,
+  "refs": 724,
   "verified": "100%"
  },
  "batches": [
@@ -186,9 +186,27 @@
    "id": "retro-stamp-0730",
    "status": "complete",
    "result": "final-gate review (Fable r4) found post-sweep references without a cross-vendor stamp (early union batch predating the pre-merge mandate, plus re-gated quote repairs); all 15 checked retroactively by the standing Gemini gate: 15/15 SUPPORTED, stamped"
+  },
+  {
+   "id": "b-cw12-6",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §251-320",
+   "result": "mined 26 (26 refs); pre-check 26/26; stage1 24/2/0 (1 attach dropped on referent drift, 1 converted to verbatim-faithful edge); stage2 1 reverse-direction flag; cross-vendor 24/1/0 — the 1 PARTIAL is a two-gate disagreement on the sympathetic-reportage boundary, adjudicated by the protocol default-to-reports rule and recorded as a vocabulary_note; merged 23 new edges + 2 attaches, 6 new nodes",
+   "telemetry": {
+    "miner_tokens": 115660,
+    "stage1_tokens": 53324,
+    "stage2_tokens": 48638,
+    "crossvendor_tokens_in_out": [
+     8631,
+     1313
+    ],
+    "cost_usd_total": 2.89,
+    "cost_usd_per_citation": 0.116,
+    "note": "80/20 in/out split assumed"
+   }
   }
  ],
- "next": "CW12 dream-series continuation (§251-331) when scheduled",
+ "next": "b-cw12-7 (CW12 §321-331 + §421-446 gap batch) on next scheduled pass",
  "nodes": 241,
  "edges": 648,
  "refs": 673,

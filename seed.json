@@ -1251,6 +1251,36 @@
    "id": "the-wheel",
    "type": "Symbol",
    "label": "The wheel (eight-spoked wheel, rota, Ezekiel's wheel) as symbol of the circulating process and of wholeness"
+  },
+  {
+   "id": "world-clock",
+   "type": "Symbol",
+   "label": "The three-dimensional mandala of the “Great Vision”: intersecting vertical and horizontal circles with three rhythms"
+  },
+  {
+   "id": "guillaume-de-digulleville",
+   "type": "Figure",
+   "label": "Norman Cistercian poet (c. 1330–55) whose Pélerinage de l’âme vision Jung takes as the historical parallel to the world clock"
+  },
+  {
+   "id": "philosophical-egg",
+   "type": "Symbol",
+   "label": "The alchemical egg, symbolized by the round cooking-vessel, from which the eagle or phoenix rises"
+  },
+  {
+   "id": "diamond",
+   "type": "Symbol",
+   "label": "The diamond of the dreamer’s ring, whose prism contains all the hues of the rainbow; identified with the lapis"
+  },
+  {
+   "id": "bear",
+   "type": "Symbol",
+   "label": "The chthonic four-eyed animal of the abyss; alchemical emblem of the dangerous aspect of the prima materia"
+  },
+  {
+   "id": "blue",
+   "type": "Symbol",
+   "label": "The colour of the vertical, of height and depth, and of the Virgin’s cloak; the fourth colour missing from the disturbed mandala"
   }
  ],
  "edges": [
@@ -13380,6 +13410,18 @@
      "verified_date": "2026-07-27",
      "modality_swept": true,
      "crossvendor_checked": "gemini-3.1-pro"
+    },
+    {
+     "volume": "12",
+     "paragraph": 287,
+     "quote": "enough water of life— aqua nostra , energy, libido—to reach the central star",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "New reference from this window for an existing edge."
     }
    ]
   },
@@ -13651,6 +13693,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PARTIAL, 2026-07-30)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 295,
+     "quote": "as anima she represents the fourth, “inferior” function, feminine because contaminated with the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "New reference from this window for an existing edge."
     }
    ]
   },
@@ -13819,6 +13873,436 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, SPLIT-ADJUDICATED, 2026-07-30)",
      "correction_note": "cross-vendor WRONG under merged relation; edge split — §186 supports the autonomy relation (the auditor’s own reading affirms it), §249 the original-form relation"
+    }
+   ]
+  },
+  {
+   "subject": "individuation",
+   "relation": "has-constantly-been-held-up-to-western-man-in-the-model-of-the-life-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 253,
+     "quote": "the process of individuation … has constantly been held up to Western man in the dogmatic and religious model of the life of Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-made-manifest-in",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 259,
+     "quote": "The self is made manifest in the opposites and in the conflict between them; it is a coincidentia oppositorum",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "bear",
+   "relation": "corresponds-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 263,
+     "quote": "In alchemy the bear corresponds to the nigredo of the prima materia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Reported as alchemical doctrine (“In alchemy…”)."
+    }
+   ]
+  },
+  {
+   "subject": "diamond",
+   "relation": "is-identified-with",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 263,
+     "quote": "lead to the lapis … the diamond whose prism contains all the hues of the rainbow",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Jung’s own gloss (“i.e.”) in the commentary on dream 39."
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is",
+   "object": "anima-mundi",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 265,
+     "quote": "Mercurius is the world-soul, and the Pole is its heart",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Jung’s summary of the unattributed alchemical passage quoted immediately before (fn. 129)."
+    }
+   ]
+  },
+  {
+   "subject": "anima-mundi",
+   "relation": "coincides-with",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 265,
+     "quote": "The idea of the anima mundi … coincides with that of the collective unconscious whose centre is the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "rubedo",
+   "relation": "as-a-rule-immediately-preceded-the-completion-of",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 269,
+     "quote": "the rubedo in alchemy, which as a rule immediately preceded the completion of the work",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Reported as alchemical practice (“in alchemy…”)."
+    }
+   ]
+  },
+  {
+   "subject": "circumambulatio",
+   "relation": "means-concentration-on",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 273,
+     "quote": "The circumambulatio means, as always, concentration on the centre",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "correction_note": "stage1: §273 says \"concentration on the centre\" without \"exclusive\"; separate edge with the paragraph's own wording (the exclusive form is §186's)",
+     "note": "New reference from this window for an existing edge."
+    }
+   ]
+  },
+  {
+   "subject": "lion",
+   "relation": "stands-for-the-danger-of-being-swallowed-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 277,
+     "quote": "It is a “fiery” animal, an emblem of the devil, and stands for the danger of being swallowed by the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Jung’s psychological gloss on the alchemical lion introduced in the preceding sentence."
+    }
+   ]
+  },
+  {
+   "subject": "the-wheel",
+   "relation": "refers-to",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 281,
+     "quote": "Being round, the wheel refers to the self and the creative activity in which it is manifest",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "wholeness",
+   "relation": "naturally-requires-the-image-of-the-woman-as",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 295,
+     "quote": "The production of wholeness … naturally requires the “image of the woman,” since as anima she represents the fourth, “inferior” function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "the-whole-man",
+   "relation": "casts",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 297,
+     "quote": "there is every reason here for some anxiety, since man as a whole being casts a shadow",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "eagle",
+   "relation": "is-synonymous-with",
+   "object": "phoenix",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 305,
+     "quote": "The eagle—synonymous with phoenix, vulture, raven—is a well-known alchemical symbol",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Synonymy reported as established alchemical usage (“a well-known alchemical symbol”)."
+    }
+   ]
+  },
+  {
+   "subject": "philosophical-egg",
+   "relation": "stands-for",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 306,
+     "quote": "In alchemy the egg stands for the chaos apprehended by the artifex, the prima materia containing the captive world-soul",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Reported as alchemical doctrine (“In alchemy…”)."
+    }
+   ]
+  },
+  {
+   "subject": "eagle",
+   "relation": "is-ultimately-identical-with",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 306,
+     "quote": "will rise the eagle or phoenix, the liberated soul, which is ultimately identical with the Anthropos",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PARTIAL, 2026-07-30)",
+     "correction_note": "stage1+stage2+crossvendor adjudication trail preserved; final label by protocol default",
+     "vocabulary_note": "gate disagreement on the sympathetic-reportage boundary (b-cw12-6 §306): the stage-2 specialist read the Anthropos-identity clause as Jung's own synthesis; the cross-vendor auditor read it as continuing the reported alchemical parallel; the annotation protocol's default-to-reports rule applied",
+     "note": "Continues the alchemical exposition of the egg begun in the preceding sentence."
+    }
+   ]
+  },
+  {
+   "subject": "world-clock",
+   "relation": "is-a-three-dimensional",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 308,
+     "quote": "It is a three-dimensional mandala—a mandala in bodily form signifying realization",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "quaternity",
+   "relation": "often-becomes-8-16-32-when-extended-to-the-periphery-of",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 313,
+     "quote": "the quaternity found at the centre of a mandala often becomes 8, 16, 32, or more when extended to the periphery",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Asserted from Jung’s own experience (“as we know from experience”)."
+    }
+   ]
+  },
+  {
+   "subject": "son-of-man",
+   "relation": "is-an-anticipation-of-the-idea-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 314,
+     "quote": "The Son of Man is an anticipation of the idea of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "world-clock",
+   "relation": "has-a-remarkable-parallel-in-the-writings-of",
+   "object": "guillaume-de-digulleville",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 315,
+     "quote": "We find a remarkable parallel in the writings of Guillaume de Digulleville, prior of the Cistercian monastery at Châlis",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "The first term of the parallel (the world-clock vision) is carried over from §307–313 and is not named in §315."
+    }
+   ]
+  },
+  {
+   "subject": "gold",
+   "relation": "is-attributed-to",
+   "object": "the-father",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 319,
+     "quote": "Gold, the royal colour, is attributed to God the Father; red to God the Son, because he shed his blood",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Doctrine of Guillaume de Digulleville’s angel (Pélerinage de l’âme), rendered by Jung without quotation marks.; source rendered without quotation marks: Guillaume de Digulleville, Pèlerinage de l'âme"
+    }
+   ]
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "has-feminine-characteristics-in",
+   "object": "man",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 320,
+     "quote": "But the unconscious in a man has feminine characteristics",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "blue",
+   "relation": "is-the-traditional-colour-of-the-celestial-cloak-of",
+   "object": "mary",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 320,
+     "quote": "blue is the traditional colour of the Virgin’s celestial cloak",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "blue",
+   "relation": "stands-for-the-vertical-which-corresponds-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 320,
+     "quote": "blue, standing for the vertical, means height and depth … Hence the vertical would correspond to the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
+     "note": "Hedged: “We would conjecture… the vertical would correspond…”"
     }
    ]
   }
