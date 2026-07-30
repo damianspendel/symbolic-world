@@ -1,6 +1,6 @@
 # Proposal: a relation-family layer, retrofitted without touching the verified layer
 
-**Scope decision (2026-07-30, Damian):** the family vocabulary is scoped to the
+**Scope option (2026-07-30, proposed; UNDECIDED — for the return review):** the family vocabulary would be scoped to the
 ALCHEMICAL TRILOGY (CW 12/13/14) — "the alchemical corpus's relational ontology,
 v1" — not to Jung's works at large. This dissolves the vocabulary-closure objection
 from the cross-vendor planning review: the trilogy is a coherent relational world

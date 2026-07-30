@@ -8,7 +8,7 @@ The paper stays frozen at v1.3.0; its CI verifies it against that tag forever.
 | Release | Name | Key deliverable | Ships | External dependency | ≈Cost |
 |---|---|---|---|---|---|
 | v1.4 | The Trilogy | Alchemical corpus complete (CW 12 + 13 join CW 14) | away-branch after review; CW 13 end-to-end; relation inventory export | return review | ~$30 |
-| v1.5 | The Typed Trilogy | Alchemy-scoped relation-family layer, measured | `docs/PROPOSAL_RELATION_TYPING.md` executed: definitions doc, mapping table with provenance, E11 query evaluation, atlas family facets + voice×family filter | family-definition sign-off | ~$10 |
+| v1.5 | The Typed Trilogy *(scope option undecided: trilogy-only vs Jung-wide-after-Aion — return review)* | Relation-family layer, measured | `docs/PROPOSAL_RELATION_TYPING.md` executed: definitions doc, mapping table with provenance, E11 query evaluation, atlas family facets + voice×family filter | family-definition sign-off | ~$10 |
 | v1.6 | The Second Reader | Inter-annotator agreement | unanchored second-annotator gold set + κ; open E10 items adjudicated; E1c drift recalibration; E9 cross-vendor re-grade; **arXiv paper v2** | second annotator recruited | ~$15 + their time |
 | v1.7 | Aion | Archetypal core complete + vocabulary-transfer study | CW 9ii + CW 9i end-to-end; measured fraction of Aion edges classifiable under trilogy families (family additions via governance; redefinitions barred without re-gating) | — | ~$50 |
 | v1.8 | The Story | Narrative as verified UI | "The Story" tab (every clause a clickable citation); E13 narrative probe formalized (blinding tiers, leak-scan, judge arm); second-witness toggle | — | ~$5 |
