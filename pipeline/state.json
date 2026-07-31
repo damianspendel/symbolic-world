@@ -1,10 +1,10 @@
 {
- "updated": "2026-07-30T23:10",
+ "updated": "2026-07-31T04:05",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 268,
-  "edges": 761,
-  "refs": 808,
+  "nodes": 273,
+  "edges": 782,
+  "refs": 833,
   "verified": "100%"
  },
  "batches": [
@@ -276,9 +276,27 @@
     "cost_usd_per_citation": 0.128,
     "note": "80/20 split assumed"
    }
+  },
+  {
+   "id": "b-cw13-2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §70-138",
+   "result": "Golden Flower close + Visions of Zosimos. Mined 23 (25 refs); pre-check 25/25; stage1 22/3/0 (religions/self-realization exact terms carried in relations; dragon attach converted to stage-specific edge); stage2 1 reverse-direction HEDGE fix (medium->high, a first); cross-vendor 23/2/0, both concurrences with stage-1 normalizations. Merged 21 new edges + 2 attaches, 5 new nodes (ion, meridian-of-the-sun, the-head, the-temple, dismemberment).",
+   "telemetry": {
+    "miner_tokens": 130504,
+    "stage1_tokens": 55560,
+    "stage2_tokens": 51508,
+    "crossvendor_tokens_in_out": [
+     11326,
+     1314
+    ],
+    "cost_usd_total": 2.97,
+    "cost_usd_per_citation": 0.119,
+    "note": "80/20 split assumed"
+   }
   }
  ],
- "next": "b-cw13-2 (CW13 §70-138) at 03:07 pass",
+ "next": "b-cw13-3 (CW13 §139-207) at 08:07 pass",
  "nodes": 241,
  "edges": 648,
  "refs": 673,

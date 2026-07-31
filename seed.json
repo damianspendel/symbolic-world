@@ -1351,6 +1351,31 @@
    "id": "hun",
    "type": "Concept",
    "label": "Hun (Cloud-Demon Soul)"
+  },
+  {
+   "id": "ion",
+   "type": "Figure",
+   "label": "Ion, priest of the inner sanctuaries"
+  },
+  {
+   "id": "meridian-of-the-sun",
+   "type": "Figure",
+   "label": "The Meridian of the Sun"
+  },
+  {
+   "id": "the-head",
+   "type": "Symbol",
+   "label": "The Head"
+  },
+  {
+   "id": "the-temple",
+   "type": "Symbol",
+   "label": "The Temple built of a single stone"
+  },
+  {
+   "id": "dismemberment",
+   "type": "Operation",
+   "label": "Dismemberment"
   }
  ],
  "edges": [
@@ -3023,6 +3048,18 @@
      "source": "Corpus Hermeticum (Poimandres)",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "13",
+     "paragraph": 96,
+     "quote": "This was the vessel which the demiurge sent down to earth filled with Nous",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
+     "note": "Carrier: the Poimandres, whose krater Jung is reporting; the bowl-shaped altar of the vision is related to it."
     }
    ]
   },
@@ -3042,6 +3079,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "13",
+     "paragraph": 111,
+     "quote": "The homunculus therefore stands for the uroboros, which devours itself and gives birth to itself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
     }
    ]
   },
@@ -15851,6 +15899,419 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    }
+   ]
+  },
+  {
+   "subject": "religious-function",
+   "relation": "is-as-all-religions-are-a-therapy-for-the-sorrows-and-disorders-of",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 71,
+     "quote": "This attitude is religious in the truest sense, and therefore therapeutic, for all religions are therapies for the sorrows and disorders of the soul.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, PARTIAL, 2026-07-31)",
+     "correction_note": "stage1: §71 speaks of \"all religions\"; the text term carried in the relation (religious-function is the standing node for the religious attitude Jung calls therapeutic in the same sentence)",
+     "vocabulary_note": "text: all religions; graph node: religious-function — both-defensible normalization, exact wording in the relation; cross-vendor concurs with the stage-1 normalization note — both-defensible"
+    }
+   ]
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "once-recognized-appears-as-something-objective-in-which-is-included",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 76,
+     "quote": "Once this illusion is shattered by a recognition of the unconscious, the unconscious will appear as something objective in which the ego is included.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "imitatio-christi",
+   "relation": "makes-us-out-of-sheer-imitation-forget-our-own-deepest-meaning-self-realization-that-is",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 80,
+     "quote": "out of sheer imitation, we forget to make real our own deepest meaning",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, PARTIAL, 2026-07-31)",
+     "correction_note": "stage1: §80 says \"self-realization\", the equation with individuation is not made in this paragraph; exact term carried in the relation, individuation kept as the standing node",
+     "vocabulary_note": "text: self-realization; graph node: individuation — standing-node normalization with exact wording preserved; cross-vendor concurs with the stage-1 normalization note — both-defensible",
+     "note": "Jung's term in the paragraph is 'self-realization'."
+    }
+   ]
+  },
+  {
+   "subject": "projection",
+   "relation": "makes-the-alchemists-perceive-their-own-unconscious-contents-as-qualities-of",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 88,
+     "quote": "contents emerge which the alchemists unconsciously projected into the chemical process and which were then perceived there, as though they were qualities of matter.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "aqua-permanens",
+   "relation": "stands-for-the-soul-imprisoned-in-matter-namely",
+   "object": "anima-mundi",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 89,
+     "quote": "The water was the humidum radicale (radical moisture), which stood for the anima media natura or anima mundi imprisoned in matter",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
+     "note": "Carrier: the alchemists from Democritus and Komarios onward, whose conception of the miraculous water Jung is reporting here; not his own psychological decoding."
+    }
+   ]
+  },
+  {
+   "subject": "the-head",
+   "relation": "when-decapitated-in-the-vision-signifies-the-obtaining-of",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 95,
+     "quote": "The decapitation in section III, v bis therefore signifies the obtaining of the arcane substance.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "meridian-of-the-sun",
+   "relation": "is-a-representation-of",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 109,
+     "quote": "Just as the angel Amnael brings the arcane substance with him, so the “Meridian of the Sun” is himself a representation of it.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 95,
+     "quote": "the initiate named the “Meridian of the Sun” himself represents the arcane substance.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
+     "note": "Hedged in this paragraph: 'we shall hardly go wrong in supposing that'."
+    }
+   ]
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "is-indicated-to-be-psychic-in-nature-by-the-head-as-the-seat-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 107,
+     "quote": "an indication of the psychic nature of the arcanum, for the head of a man signifies above all the seat of consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
+     "correction_note": "stage2: \"an indication of\" is asserted content, not a hedge — confidence medium->high (reverse-direction hedge fix)",
+     "note": "Hedged: Jung claims only 'an indication'."
+    }
+   ]
+  },
+  {
+   "subject": "ion",
+   "relation": "is-essentially-the-same-as",
+   "object": "ouroboros",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 111,
+     "quote": "it follows that Ion, the uroboros, and the sacrificer are essentially the same.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "dismemberment",
+   "relation": "is-psychologically-parallel-to-the-reduction-to-order-through-reflection-of-chaotic-fragments-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 111,
+     "quote": "The psychological parallel to this is the reduction to order, through reflection, of apparently chaotic fragments of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-temple",
+   "relation": "is-an-obvious-paraphrase-of",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 112,
+     "quote": "The temple built of a “single stone” is an obvious paraphrase of the lapis.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-vessel",
+   "relation": "is-made-by-a-psychic-operation-creating-an-inner-readiness-to-accept-the-archetype-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 115,
+     "quote": "It is essentially a psychic operation, the creation of an inner readiness to accept the archetype of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
+     "note": "Anaphora resolved in the cited paragraph: 'It' = the vessel, which Dorn says must be made 'by a kind of squaring of the circle'."
+    }
+   ]
+  },
+  {
+   "subject": "the-temple",
+   "relation": "is-where-the-transformation-process-takes-place-namely-in",
+   "object": "the-head",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 118,
+     "quote": "the transformation process is taking place inside the temple, that is, in the head.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "consciousness",
+   "relation": "develops-in-civilized-man-by-the-acquisition-of-knowledge-and-by-the-withdrawal-of",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 122,
+     "quote": "Consciousness develops in civilized man by the acquisition of knowledge and by the withdrawal of projections.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "signifies",
+   "object": "inner-man",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 126,
+     "quote": "The lapis signifies the inner man, the ἄνθρωπος πνενματικός , the natura abscondita which the alchemists sought to set free.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 134,
+     "quote": "It symbolizes man, or rather, the inner man, and the paradoxical statements about it are really descriptions and definitions of this inner man.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "functions-as-the-link-between-the-body-and",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 126,
+     "quote": "She played the part, therefore, of the anima, who functions as the link between body and spirit",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "is-in-khunraths-formulation-the-filius-macrocosmi-as-opposed-to-the-son-of-man",
+   "object": "filius-macrocosmi",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 127,
+     "quote": "In the sixteenth century Khunrath formulated for the first time the “theological” position of the lapis: it was the filius macrocosmi",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
+     "note": "Carrier: Khunrath, who first formulated the 'theological' position of the lapis in the sixteenth century."
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "is-the-mediator-which-unites",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 131,
+     "quote": "This “midmost” is the stone, the mediator which unites the opposites.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
+     "note": "Subject resolved in the cited paragraph: the 'midmost' of the Ostanes saying is the stone."
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "represents-a-transcendent-totality-which-coincides-with",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 134,
+     "quote": "the lapis represents the idea of a transcendent totality which coincides with what analytical psychology calls the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "ouroboros",
+   "relation": "as-the-symbol-of-the-divine-water-means-the-deus-absconditus-hidden-in",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 138,
+     "quote": "the divine water or its symbol, the uroboros, means nothing other than the deus absconditus , the god hidden in matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "dragon",
+   "relation": "represents-the-initial-state-of",
+   "object": "unconsciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 118,
+     "quote": "The dragon, or serpent, represents the initial state of unconsciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
+     "correction_note": "stage1: §118 asserts the INITIAL STATE of unconsciousness; attach converted to a stage-specific edge rather than inflating the general symbol equation"
     }
    ]
   }
