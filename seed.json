@@ -1376,6 +1376,41 @@
    "id": "dismemberment",
    "type": "Operation",
    "label": "Dismemberment"
+  },
+  {
+   "id": "iliaster",
+   "type": "Concept",
+   "label": "Iliaster"
+  },
+  {
+   "id": "aquaster",
+   "type": "Concept",
+   "label": "Aquaster"
+  },
+  {
+   "id": "ares",
+   "type": "Concept",
+   "label": "Ares"
+  },
+  {
+   "id": "melusina",
+   "type": "Figure",
+   "label": "Melusina"
+  },
+  {
+   "id": "aniadus",
+   "type": "Concept",
+   "label": "Aniadus"
+  },
+  {
+   "id": "homo-maximus",
+   "type": "Figure",
+   "label": "Homo maximus"
+  },
+  {
+   "id": "scaiolae",
+   "type": "Concept",
+   "label": "Scaiolae"
   }
  ],
  "edges": [
@@ -3145,6 +3180,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "13",
+     "paragraph": 148,
+     "quote": "There can be no doubt the “light of nature” was a second, independent source of knowledge for Paracelsus.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
     }
    ]
   },
@@ -16312,6 +16358,355 @@
      "verified_date": "2026-07-31",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)",
      "correction_note": "stage1: §118 asserts the INITIAL STATE of unconsciousness; attach converted to a stage-specific edge rather than inflating the general symbol equation"
+    }
+   ]
+  },
+  {
+   "subject": "alchemy",
+   "relation": "is-in-its-mystical-side-to-all-appearances-a-concretization-in-projected-and-symbolic-form-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 140,
+     "quote": "To all appearances, it is a concretization, in projected and symbolic form, of the process of individuation.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-christian-standpoint",
+   "relation": "could-never-get-along-with-the-thought-god-under-me-implicit-in-all-of",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 155,
+     "quote": "the truth of the Church and the Christian standpoint could never get along with the thought implicit in all alchemy, “God under me.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "had-long-before-paracelsus-been-regarded-as-an-allegory-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 158,
+     "quote": "long before this the filius or lapis philosophorum had been regarded as an allegory of Christ",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)",
+     "note": "the alchemical tradition (context: Melchior Cibinensis presenting the opus as a Mass), rendered by Jung"
+    }
+   ]
+  },
+  {
+   "subject": "lumen-naturae",
+   "relation": "is-what-alchemy-aims-to-beget-in-the-shape-of",
+   "object": "filius-philosophorum",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 161,
+     "quote": "so it is the aim of alchemy to beget this light in the shape of the filius philosophorum",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "is-extracted-by-human-art-from-and-made-by-means-of-the-opus-into-a-new-light-bringer",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 163,
+     "quote": "the filius philosophorum was extracted from matter by human art and, by means of the opus, made into a new light-bringer",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)",
+     "correction_note": "stage2: doctrinal content reported, asserts->reports",
+     "note": "alchemical teaching rendered in contrast with Christian doctrine — carrier: the alchemists"
+    }
+   ]
+  },
+  {
+   "subject": "archeus",
+   "relation": "is-undoubtedly-paracelsuss-name-for",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 168,
+     "quote": "Elsewhere he is called Archeus ... Undoubtedly this is the Primordial Man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "iliaster",
+   "relation": "seems-to-be-a-kind-of-universal-formative-principle-and-principle-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 171,
+     "quote": "It therefore seems to be a kind of universal formative principle and principle of individuation.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "artifex",
+   "relation": "accompanies-his-chemical-work-with-a-simultaneous-mental-operation-performed-by-means-of",
+   "object": "imaginatio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 173,
+     "quote": "the artifex accompanies his chemical work with a simultaneous mental operation which is performed by means of the imagination",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "aquaster",
+   "relation": "comes-of-all-paracelsan-concepts-closest-to-the-modern-concept-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 175,
+     "quote": "Of all the Paracelsan concepts, therefore, the Aquaster comes closest to the modern concept of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "ares",
+   "relation": "is-a-more-specific-principle-than-the-iliaster-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 177,
+     "quote": "It is thus a more specific principle of individuation than the Iliaster",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "melusina",
+   "relation": "is-for-anyone-familiar-with-the-subliminal-processes-of-psychic-transformation-clearly-a-figure-of",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 180,
+     "quote": "For anyone familiar with the subliminal processes of psychic transformation, Melusina is clearly an anima figure.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "filius-regius",
+   "relation": "is-in-reality-the-secret-transformative-substance-which-fell-into-the-darkest-depths-of-where-it-awaits-deliverance",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 183,
+     "quote": "In reality it is the secret transformative substance, which fell from the highest place into the darkest depths of matter where it awaits deliverance.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-sea",
+   "relation": "is-for-the-alchemists-their-own-darkness-namely",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 183,
+     "quote": "The sea ( mare nostrum ) of the alchemists is their own darkness, the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-centre",
+   "relation": "when-activated-by-the-retorta-distillatio-ex-medio-centri-coincides-psychologically-with",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 189,
+     "quote": "results in the activation and development of a psychic centre, a concept that coincides psychologically with that of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "aniadus",
+   "relation": "is-defined-by-ruland-as-the-regenerated-spiritual-man-in-us-namely",
+   "object": "inner-man",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 194,
+     "quote": "the regenerated spiritual man in us, the heavenly body implanted in us Christians by the Holy Ghost through the most Holy Sacraments",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)",
+     "source": "Ruland (Lexicon alchemiae), quoted by Jung"
+    }
+   ]
+  },
+  {
+   "subject": "lumen-naturae",
+   "relation": "is-the-little-spark-hidden-in-the-very-darkness-of-nature-namely",
+   "object": "scintilla",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 197,
+     "quote": "They discover that in the very darkness of nature a light is hidden, a little spark without which the darkness would not be darkness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PARTIAL, 2026-07-31)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw13-3): §197 says 'little spark'/'divine spark'; scintilla is the graph's standing node, wording preserved in the relation — both-defensible"
+    }
+   ]
+  },
+  {
+   "subject": "alchemy",
+   "relation": "had-as-its-goal-not-separation-of-the-natures-but",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 198,
+     "quote": "Not separation of the natures but union of the natures was the goal of alchemy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PARTIAL, 2026-07-31)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw13-3): text says 'union of the natures'; the paragraph's own gloss ('Here the opposites unite') licenses union-of-opposites — both-defensible"
+    }
+   ]
+  },
+  {
+   "subject": "homo-maximus",
+   "relation": "is-the-deathless-original-man-to-whom-mortal-man-can-be-approximated-by-means-of",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 203,
+     "quote": "that of the deathless Original Man, to whom the mortal man can be approximated by means of the alchemical opus",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)",
+     "correction_note": "stage1: the identification carries \"probably only\" — confidence high->medium"
+    }
+   ]
+  },
+  {
+   "subject": "scaiolae",
+   "relation": "correspond-to-the-traditional-quadripartite-man-and-express-his-all-encompassing",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 207,
+     "quote": "the four Scaiolae correspond to the traditional quadripartite man and express his all-encompassing wholeness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
     }
    ]
   }

@@ -1,10 +1,10 @@
 {
- "updated": "2026-07-31T04:05",
+ "updated": "2026-07-31T09:20",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 273,
-  "edges": 782,
-  "refs": 833,
+  "nodes": 280,
+  "edges": 801,
+  "refs": 853,
   "verified": "100%"
  },
  "batches": [
@@ -294,9 +294,27 @@
     "cost_usd_per_citation": 0.119,
     "note": "80/20 split assumed"
    }
+  },
+  {
+   "id": "b-cw13-3",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §139-207",
+   "result": "Zosimos close + Paracelsus arcana. Mined 21; 1 dropped at PRE-CHECK (elision 34>30 — first mechanical rejection of the arc); stage1 19/1/0 (probably-only hedge demoted); stage2 1 carrier fix (filius light-bringer doctrine asserts->reports); cross-vendor 18/2/0 (both both-defensible standing-node concurrences). Merged 19 new edges + 1 attach, 7 new nodes (iliaster, aquaster, ares, melusina, aniadus, homo-maximus, scaiolae).",
+   "telemetry": {
+    "miner_tokens": 118893,
+    "stage1_tokens": 63055,
+    "stage2_tokens": 53666,
+    "crossvendor_tokens_in_out": [
+     9800,
+     1150
+    ],
+    "cost_usd_total": 2.94,
+    "cost_usd_per_citation": 0.147,
+    "note": "80/20 split assumed"
+   }
   }
  ],
- "next": "b-cw13-3 (CW13 §139-207) at 08:07 pass",
+ "next": "b-cw13-4 (CW13 §208-276) at 12:07 pass",
  "nodes": 241,
  "edges": 648,
  "refs": 673,
