@@ -1411,6 +1411,11 @@
    "id": "scaiolae",
    "type": "Concept",
    "label": "Scaiolae"
+  },
+  {
+   "id": "saturn",
+   "type": "Figure",
+   "label": "Saturn"
   }
  ],
  "edges": [
@@ -2707,6 +2712,28 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "13",
+     "paragraph": 266,
+     "quote": "The psychologem “Mercurius” must therefore possess an essentially antinomian dual nature.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 269,
+     "quote": "Mercurius truly consists of the most extreme opposites; on the one hand he is undoubtedly akin to the godhead",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
     }
    ]
   },
@@ -2793,6 +2820,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "13",
+     "paragraph": 251,
+     "quote": "The same was said of the elusive Mercurius who evades every grasp—a real trickster who drove the alchemists to despair.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
     }
    ]
   },
@@ -16707,6 +16745,350 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-31",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "scaiolae",
+   "relation": "as-functions-of-consciousness-intervene-and-stimulate-to-change-herself-into-human-form",
+   "object": "melusina",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 215,
+     "quote": "As functions of consciousness … they “intervene” and stimulate Melusina, the water-nixie, to change herself into human form.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "flows-together-with-the-wise-old-man-in-the-symbolic-phenomenology-of",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 218,
+     "quote": "two empirically very common archetypes, namely the anima and the Wise Old Man … flow together in the symbolic phenomenology of Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "artifex",
+   "relation": "activates-through-rigorous-solitude-and-preoccupation-with-the-work",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 220,
+     "quote": "This rigorous solitude, together with his preoccupation with the endless obscurities of the work, was sufficient to activate the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, PARTIAL, 2026-07-31)",
+     "correction_note": "stage1: §220 makes solitude+preoccupation the activating agent, not the opus; agency moved to the artifex with the conditions carried in the relation",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw13-4): text says 'the alchemist'; artifex is the standing node — synonym normalization, both-defensible"
+    }
+   ]
+  },
+  {
+   "subject": "melusina",
+   "relation": "must-return-to-the-watery-realm-if-the-work-is-to-reach-its-goal-and-become-again-a-part-of-the-adepts",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 223,
+     "quote": "Melusina, the deceptive Shakti, must return to the watery realm … must become what she was from the beginning: a part of his wholeness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "lumen-naturae",
+   "relation": "is-the-natural-spirit-whose-strange-and-significant-workings-we-can-observe-in-the-manifestations-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 229,
+     "quote": "The lumen naturae is the natural spirit, whose strange and significant workings we can observe in the manifestations of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "is-a-largely-autonomous-psychic-system-for-compensating-the-biases-and-aberrations-of-the-conscious-attitude-namely-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 229,
+     "quote": "the unconscious is not just a “subconscious” appendage … is a largely autonomous psychic system for compensating the biases and aberrations of the conscious attitude",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-opus",
+   "relation": "replaces-less-by-word-than-by-deed-the-sacraments-of-the-church-that-are-the-only-way-to-immortality-in",
+   "object": "christianity",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 232,
+     "quote": "the sacraments of the Church. These are here replaced by the “sacrament” of the opus alchymicum , less by word than by deed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "oak",
+   "relation": "is-as-the-king-of-the-forest-the-prototype-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 241,
+     "quote": "The mighty old oak is proverbially the king of the forest. … It is the prototype of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "in-psychological-terms-has-its-roots-in-and-indeed-in-the-chemical-elements-of",
+   "object": "the-body",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 242,
+     "quote": "In psychological terms, this would mean that the self has its roots in the body, indeed in the body’s chemical elements.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-interpreted-by-the-fairytale-as-a-pagan-god-forced-to-descend-into-the-dark-underworld-and-be-morally-disqualified-under-the-influence-of",
+   "object": "christianity",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 246,
+     "quote": "Our fairytale thus interprets the evil spirit as a pagan god, forced under the influence of Christianity to descend into the dark underworld",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "alchemy",
+   "relation": "contains-as-its-core-the-gnostic-doctrine-of",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 252,
+     "quote": "alchemy contains as its core the Gnostic doctrine of the Anthropos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "as-the-revelatory-light-of-nature-is-also",
+   "object": "ignis-gehennalis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 257,
+     "quote": "Mercurius, the revelatory light of nature, is also hell-fire",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, PARTIAL, 2026-07-31)",
+     "vocabulary_note": "cross-vendor PARTIAL (b-cw13-4): text says 'hell-fire'; ignis-gehennalis is the standing Latin node, wording acknowledged — both-defensible"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "as-the-transformative-substance-so-dear-to-the-alchemist-is-obviously-a-projection-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 259,
+     "quote": "the philosophic Mercurius, so dear to the alchemist as the transformative substance, is obviously a projection of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-in-penotuss-words-nothing-other-than-the-become-body-within-the-earth-namely",
+   "object": "spiritus-mundi",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 261,
+     "quote": "nothing other than the spirit of the world become body within the earth",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)",
+     "source": "Penotus (sixteenth century), a pupil of Paracelsus, quoted by Jung"
+    }
+   ]
+  },
+  {
+   "subject": "anthropos",
+   "relation": "coincides-with-the-psychological-concept-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 268,
+     "quote": "I would like to emphasize once again that the Anthropos idea coincides with the psychological concept of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-in-his-unity-at-the-same-time-a-trinity-with-clear-reference-to",
+   "object": "the-trinity",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 270,
+     "quote": "The unity of Mercurius is at the same time a trinity, with clear reference to the Holy Trinity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "as-senex-is-identical-with",
+   "object": "saturn",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 274,
+     "quote": "Mercurius senex is identical with Saturn",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "saturn",
+   "relation": "is-not-only-a-maleficus-but-actually-the-dwelling-place-of",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 276,
+     "quote": "Saturn is not only a maleficus but actually the dwelling-place of the devil himself",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)",
+     "vocabulary_note": "two-stage gate disagreement recorded (b-cw13-4 n18): structure gate read Jung's flat endorsement as asserts, voice specialist identified the footnoted doctrinal carrier; protocol default-to-reports applied",
+     "note": "carrier: Cabalistic/astrological tradition (footnoted)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 209,
+     "quote": "the malefic Saturn is the abode of the devil",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-4, PARTIAL, 2026-07-31)",
+     "correction_note": "stage1: stated flatly in Jung's own voice; reports->asserts (consistent with the §276 attestation)",
+     "vocabulary_note": "two-stage gate disagreement recorded (b-cw13-4 n19): structure gate read Jung's flat endorsement as asserts, voice specialist identified the footnoted doctrinal carrier; protocol default-to-reports applied; cross-vendor PARTIAL (b-cw13-4): relation string carries the §276 phrasing on the §209 attestation; both paragraphs assert the same doctrine — both-defensible",
+     "note": "Carrier: the alchemical epithets of the prima materia that Jung is rendering; carrier: Cabalistic/astrological tradition (footnoted)"
     }
    ]
   }
