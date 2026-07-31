@@ -1,10 +1,10 @@
 {
- "updated": "2026-07-31T13:30",
+ "updated": "2026-07-31T22:40",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 281,
-  "edges": 819,
-  "refs": 875,
+  "nodes": 282,
+  "edges": 839,
+  "refs": 897,
   "verified": "100%"
  },
  "batches": [
@@ -330,9 +330,27 @@
     "cost_usd_per_citation": 0.143,
     "note": "80/20 split assumed"
    }
+  },
+  {
+   "id": "b-cw13-5",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §277-345",
+   "result": "Spirit Mercurius close + Philosophical Tree. HELD one pass on a sustained Gemini outage (8 failed retries), resumed from disk per the held-not-merged rule. Mined 22; pre-check 22/22; stage1 20/2/0 (two our-hypothesis conditionals demoted); stage2 1 flag producing the arc's 4th two-gate split (reverse direction); cross-vendor 22/22 SUPPORTED and tiebreak 2-1 — reports stands, split recorded. Merged 20 new edges + 2 attaches, 1 new node (tree-nymph).",
+   "telemetry": {
+    "miner_tokens": 142592,
+    "stage1_tokens": 56820,
+    "stage2_tokens": 51287,
+    "crossvendor_tokens_in_out": [
+     10438,
+     1043
+    ],
+    "cost_usd_total": 3.05,
+    "cost_usd_per_citation": 0.139,
+    "note": "80/20 split assumed; includes the outage pass overhead"
+   }
   }
  ],
- "next": "b-cw13-5 (CW13 §277-345) at 17:07 pass",
+ "next": "b-cw13-6 (CW13 §346-413) at 03:07 pass; then b-cw13-7 closes the trilogy",
  "nodes": 241,
  "edges": 648,
  "refs": 673,

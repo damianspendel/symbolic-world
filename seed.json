@@ -1416,6 +1416,11 @@
    "id": "saturn",
    "type": "Figure",
    "label": "Saturn"
+  },
+  {
+   "id": "tree-nymph",
+   "type": "Figure",
+   "label": "Tree nymph"
   }
  ],
  "edges": [
@@ -2953,6 +2958,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "13",
+     "paragraph": 288,
+     "quote": "For what it signifies is the individuation process … The commonest alchemical symbol for this is the tree, the arbor philosophica",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
     }
    ]
   },
@@ -2990,6 +3006,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "source": "alchemical tradition"
+    },
+    {
+     "volume": "13",
+     "paragraph": 315,
+     "quote": "In alchemy, Mercurius is symbolized by the tree as well as by the dragon.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)",
+     "note": "carrier: alchemical usage, marked by “In alchemy”"
     }
    ]
   },
@@ -17089,6 +17117,371 @@
      "correction_note": "stage1: stated flatly in Jung's own voice; reports->asserts (consistent with the §276 attestation)",
      "vocabulary_note": "two-stage gate disagreement recorded (b-cw13-4 n19): structure gate read Jung's flat endorsement as asserts, voice specialist identified the footnoted doctrinal carrier; protocol default-to-reports applied; cross-vendor PARTIAL (b-cw13-4): relation string carries the §276 phrasing on the §209 attestation; both paragraphs assert the same doctrine — both-defensible",
      "note": "Carrier: the alchemical epithets of the prima materia that Jung is rendering; carrier: Cabalistic/astrological tradition (footnoted)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "must-in-his-dark-form-be-understood-as-representing-the-initial-state-of",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 279,
+     "quote": "This dark Mercurius must once again be understood as representing the initial nigredo state, the lowest being a symbol of the highest",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "filius-macrocosmi",
+   "relation": "carries-out-the-reverse-movement-and-thereby-manifests-a-nature-contrary-to-that-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 280,
+     "quote": "He carries out the reverse movement and thereby manifests a nature contrary to that of Christ and the Gnostic Redeemers",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-besides-the-prima-materia-of-the-lowly-beginning-also-the-highest-goal-namely",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 283,
+     "quote": "Besides being the prima materia of the lowly beginning as well as the lapis as the highest goal, Mercurius is also the process",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)",
+     "vocabulary_note": "two-gate split adjudicated by cross-vendor tiebreak (b-cw13-5 n3): voice specialist read Jung's own synthesizing voice (asserts), structure gate and cross-vendor both read footnoted doctrine (reports) — 2-1, reports stands; fourth recorded split of the arc, first in the reverse direction",
+     "note": "carrier: the alchemical doctrine of Mercurius as beginning, middle, and end of the work, which Jung is rendering"
+    }
+   ]
+  },
+  {
+   "subject": "alchemy",
+   "relation": "had-as-a-still-greater-more-impassioned-concern-the-experience-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 285,
+     "quote": "But a still greater, more impassioned concern appears to have been—one cannot very well say the “investigation”—but rather the experience of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-though-imprisoned-in-the-bottle-yet-found-in-the-roots-as-the-quintessence-and-living-numen-of",
+   "object": "tree",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 287,
+     "quote": "the mercurial spirit, though imprisoned in the bottle, is yet found in the roots of the tree, as its quintessence and living numen",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "epitomizes-the-wholeness-of-the-personality-which-by-definition-includes",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 287,
+     "quote": "since the self epitomizes the wholeness of the personality. By definition, wholeness includes the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "not-only-partakes-of-but-according-to-alchemy-is-actually-identical-with",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 288,
+     "quote": "he not only partakes of the Holy Spirit but, according to alchemy, is actually identical with it",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)",
+     "note": "carrier: alchemy, named in the clause itself (“according to alchemy”)"
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "is-at-most-a-counterpart-or-analogy-in-the-physical-world-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 289,
+     "quote": "The lapis is at most a counterpart or analogy of Christ in the physical world.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "cannot-be-distinguished-except-by-incontestable-and-unprovable-faith-from",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 289,
+     "quote": "the self cannot be distinguished from a God-image (except by incontestable and unprovable faith)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "came-to-stand-in-a-tension-of-opposites-such-as-had-never-occurred-before-with",
+   "object": "antichrist",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 290,
+     "quote": "a tension of opposites such as had never occurred before … arose between Christ and the Antichrist, as Satan or the fallen angel",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-a-symbol-which-stands-according-to-all-the-psychological-rules-in-a-compensatory-relation-to",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 295,
+     "quote": "put together the figure of Mercurius and created a symbol which … stands in a compensatory relation to Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "must-be-viewed-as-a-symbol-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 296,
+     "quote": "Similarly, the Christ figure must be viewed as a self symbol, and for the same reasons.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "appears-from-this-standpoint-as-the-archetype-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 299,
+     "quote": "From this standpoint Christ appears as the archetype of consciousness and Mercurius as the archetype of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)",
+     "correction_note": "stage1: claim sits inside Jung's own \"our hypothesis\" conditional — confidence high->medium"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "appears-from-this-standpoint-as-the-archetype-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 299,
+     "quote": "From this standpoint Christ appears as the archetype of consciousness and Mercurius as the archetype of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)",
+     "correction_note": "stage1: claim sits inside Jung's own \"our hypothesis\" conditional — confidence high->medium"
+    }
+   ]
+  },
+  {
+   "subject": "self-knowledge",
+   "relation": "means-a-knowledge-not-of-the-ego-but-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 301,
+     "quote": "creation begins with self-knowledge, cognitio sui ipsius … by which is meant a knowledge not of the ego but of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "tree",
+   "relation": "represents-if-the-mandala-is-a-symbol-of-it-seen-in-cross-section-a-profile-view-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 304,
+     "quote": "If a mandala may be described as a symbol of the self … then the tree would represent a profile view of it",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "union-of-opposites",
+   "relation": "is-the-motivating-force-and-the-goal-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 307,
+     "quote": "the perfect symmetry of the crown points to a union of opposites. This is the motivating force and the goal of the individuation process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "tree-nymph",
+   "relation": "is-in-the-patients-picture-an-eve-who-instead-of-being-taken-from-adams-side-has-come-into-existence-independently",
+   "object": "eve",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 327,
+     "quote": "The tree nymph is an Eve who, instead of being taken from Adam’s side, has come into existence independently.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "animus",
+   "relation": "is-as-a-merely-masculine-principle-quite-unfitted-to-represent-the-totality-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 342,
+     "quote": "besides this the limitation of being a merely masculine principle. He is therefore quite unfitted to represent totality, whether of God or the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "symbolizes-owing-to-the-absence-of-the-feminine-eros-the-typical-opposition-in-a-man-between-sex-and",
+   "object": "nous",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 344,
+     "quote": "The concept of the alchemical Mercurius … symbolizes the typical opposition in a man between Nous and sex, owing to the absence of the feminine Eros",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-07-31",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)"
     }
    ]
   }
