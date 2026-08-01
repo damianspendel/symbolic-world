@@ -1,12 +1,7 @@
 {
- "updated": "2026-08-01T04:15",
+ "updated": "2026-08-01",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
- "graph": {
-  "nodes": 286,
-  "edges": 860,
-  "refs": 918,
-  "verified": "100%"
- },
+ "graph": "288 nodes · 880 edges · 939 references",
  "batches": [
   {
    "id": "cw14_candidates10",
@@ -366,11 +361,29 @@
     "cost_usd_per_citation": 0.144,
     "note": "80/20 split assumed"
    }
+  },
+  {
+   "id": "b-cw13-7",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §414-482",
+   "result": "Final Philosophical Tree window — CLOSES THE ALCHEMICAL TRILOGY (CW 12 + 13 + 14 end-to-end). Mined 20 candidates/23 refs; pre-check 23/23; stage1 13/9/1 (WRONG = duplicate triple, dropped; corrections included splitting a garbled tormentor/tormented fusion into two edges, restoring the 'can appear' modal, and two agency fixes); stage2 flagged 2 missing carriers (Mylius, Dorn); cross-vendor 17/3/1 — the WRONG caught a real defect in MY stage-1 adjudication: scoping the tree=lapis edge to Mylius's dictum wrongly covered a second reference (§423) whose paragraph carries Consilium coniugii/Senior/Khunrath, not Mylius; split into the Mylius-scoped §422 edge plus a new jung-asserts §423 identity edge. Merged 20 new edges + 1 attach, 2 new nodes (stork, cross).",
+   "telemetry": {
+    "miner_tokens": 128000,
+    "stage1_tokens": 58000,
+    "stage2_tokens": 51997,
+    "crossvendor_tokens_in_out": [
+     9759,
+     950
+    ],
+    "cost_usd_total": 3.15,
+    "cost_usd_per_citation": 0.15,
+    "note": "80/20 split assumed; miner/stage1 token counts carried from the pre-compaction pass log"
+   }
   }
  ],
- "next": "b-cw13-7 (CW13 §414-482) at 08:07 — the trilogy's final window",
- "nodes": 241,
- "edges": 648,
- "refs": 673,
- "as_of": "2026-07-28"
+ "next": "TRILOGY COMPLETE — no further mining scope is agreed. v1.5 scope (trilogy-only relation typing vs Jung-wide after Aion) is UNDECIDED and reserved for the return review. Fable 5 usage exhausted until Wed 2026-08-05 10:00; autonomous schedule cleared 2026-08-01.",
+ "nodes": 288,
+ "edges": 880,
+ "refs": 939,
+ "as_of": "2026-08-01"
 }

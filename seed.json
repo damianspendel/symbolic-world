@@ -1441,6 +1441,16 @@
    "id": "putissimus-homo",
    "type": "Figure",
    "label": "Putissimus homo"
+  },
+  {
+   "id": "stork",
+   "label": "Stork",
+   "type": "Symbol"
+  },
+  {
+   "id": "cross",
+   "label": "Cross",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -3006,6 +3016,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "13",
+     "paragraph": 458,
+     "quote": "The results of our investigation of the historical material have shown that the tree can be interpreted as the Anthropos or self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
     }
    ]
   },
@@ -17886,6 +17907,382 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-6, SUPPORTED, 2026-08-01)",
      "source": "Andrea Alciati, Emblemata cum commentariis",
      "correction_note": "stage1: Alciati's emblem maps man as an INVERTED TREE (root=head); relation corrected to keep the inversion on the tree"
+    }
+   ]
+  },
+  {
+   "subject": "tree",
+   "relation": "has-a-life-that-represents",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 414,
+     "quote": "It is clear from this that the life of the tree represents the opus, which as we know coincides with the seasons.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "correction_note": "stage1: §414 says \"the LIFE of the tree represents the opus\"; attach converted to a faithful new edge",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "philosophical-tree",
+   "relation": "designates-the-whole-process-of-psychological-development-that-is",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 482,
+     "quote": "The whole process, which today we understand as psychological development, was designated the “philosophical tree,”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "correction_note": "stage1: §482 says \"psychological development\", not individuation; exact term carried in the relation, individuation kept as the standing node",
+     "vocabulary_note": "text: psychological development; graph node: individuation — standing-node normalization, exact wording preserved",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PARTIAL, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "serpent",
+   "relation": "is-the-chthonic-numen-of",
+   "object": "tree",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 417,
+     "quote": "Just as the snake or dragon is the chthonic numen of the tree",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "stork",
+   "relation": "is-as-the-spiritual-principle-of-the-tree-a-symbol-of",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 417,
+     "quote": "so the stork is its spiritual principle and thus a symbol of the Anthropos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "tree",
+   "relation": "is-in-mylius-dictum-itself",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 422,
+     "quote": "Here the stone is itself the tree",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "note": "carrier: Mylius's dictum, which Jung is exegeting (\"Here the stone is itself the tree\")",
+     "correction_note": "stage1: scoped to Mylius's text; the general identity in Jung's own voice is the §423 attestation",
+     "source": "Mylius",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "can-show-at-the-first-meeting-the-negative-qualities-that-characterize-an-unexpected-encounter-with",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 428,
+     "quote": "at the first meeting with the self all those negative qualities can appear which almost invariably characterize an unexpected encounter with the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "correction_note": "stage1: modal \"can appear\" restored; confidence demoted; distinct phenomenological claim from the topological edge (gate-confirmed)",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "struggles-to-make-itself-manifest-and-threatens-to-overpower",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "quote": "the self struggles to make itself manifest and threatens to overpower consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "imitatio-christi",
+   "relation": "led-the-western-alchemist-to-regard-as-a-task-enjoined-upon-him-the-sweating-out-of-the-soul-substance-in-the-form-of",
+   "object": "rose-coloured-blood",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "quote": "the ideal of the imitatio Christi led him to regard the sweating out of the soul-substance in the form of the rose-coloured blood",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "nigredo",
+   "relation": "is-declared-by-dorn-in-the-physica-trismegisti-to-be-a",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 444,
+     "quote": "he even declares that the time-honoured blackness ( melanosis, nigredo ) is a projection",
+     "claim_type": "jung-reports-parallel",
+     "note": "carrier: Dorn, in his “Physica Trismegisti”, named in the sentence itself",
+     "confidence": "high",
+     "source": "Dorn, 'Physica Trismegisti'",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "tree",
+   "relation": "possesses-a-quaternary-quality-by-reason-of-representing-the-process-by-which-are-united",
+   "object": "four-elements",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 446,
+     "quote": "the tree possesses a quaternary quality by reason of the fact that it represents the process by which the four elements are united",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "is-characterized-by-the-snake-symbol-as-a-personification-in-all-its-aspects-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 448,
+     "quote": "The snake-symbol thus characterizes Christ as a personification of the unconscious in all its aspects",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "cross",
+   "relation": "is-as-well-as-the-tree-the-medium-of",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 457,
+     "quote": "the cross as well as the tree is the medium of conjunction",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "is-in-the-gnostic-creation-myth-described-in-the-form-of-a-cosmic-projection-as-separated-from-a-masculine-and-spiritually-oriented",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 453,
+     "quote": "it describes, in the form of a cosmic projection, the separation of the feminine anima from a masculine and spiritually oriented consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "in-the-language-of-myth-perceives-the-sufferings-of-and-gives-form-and-existence-to",
+   "object": "sophia-wisdom",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 455,
+     "quote": "Christ (the principle of masculine spirituality) perceives the sufferings of Sophia (i.e., the psyche) and thereby gives her form and existence.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "correction_note": "stage1: \"Expressed in the language of myth\" scope restored in the relation",
+     "vocabulary_note": "text: \"Sophia (i.e., the psyche)\"; sophia-wisdom is the standing node for Sophia — §455 glosses her as the psyche, not as wisdom",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PARTIAL, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "produces-the-symbols-of",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 456,
+     "quote": "That is why it is the unconscious which produces the symbols of wholeness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "tree-nymph",
+   "relation": "is-as-the-feminine-representation-of-the-tree-for-alchemists-and-humanists-a-projection-of",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 458,
+     "quote": "for the alchemists and humanists the feminine representation of the tree is an obvious projection of the anima figure",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "vocabulary_note": "text: \"the feminine representation of the tree\"; tree-nymph is the standing node for the feminine tree figure — exact wording in the relation",
+     "correction_note": "stage1: §458 does not say nymph; exact term carried, standing node kept",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PARTIAL, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "contrasexuality",
+   "relation": "is-as-symbol-covering-up-when-anima-or-animus-is-undifferentiated",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 458,
+     "quote": "contrasexual symbol has covered up the self ... when the man’s femininity, the anima, or the woman’s masculinity, the animus, is not differentiated enough",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "correction_note": "stage1: the covering agent is the contrasexual SYMBOL; relation adjusted | merge: quote trimmed by one leading article to satisfy the 25-token quotation ceiling",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-the-name-the-alchemists-gave-with-astonishing-accuracy-to-the-objective-presence-in-oneself-of-another",
+   "object": "will",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 481,
+     "quote": "the objective presence of another will. The alchemists, with astonishing accuracy, called this barely understandable thing Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "artifex",
+   "relation": "imagines-himself-the-tormentor-whereas-in-fact-he-is-the-tormented",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 439,
+     "quote": "The reversal of roles shows that the artifex imagines he is the tormentor whereas in fact he is the tormented.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "correction_note": "stage1: second half of the split — the artifex's self-deception about roles",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "tree",
+   "relation": "is-identical-with-and-like-it-a-symbol-of-wholeness",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 423,
+     "quote": "Hence the tree is identical with the stone and, like it, a symbol of wholeness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "correction_note": "cross-vendor: §423 carries no Mylius; split off from the Mylius-scoped edge as Jung's own inference from the Consilium coniugii / Senior / Khunrath passages",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-01",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, WRONG, 2026-08-01)"
     }
    ]
   }

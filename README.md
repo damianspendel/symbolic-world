@@ -11,8 +11,8 @@ Paper: [docs/PAPER.md](docs/PAPER.md) · One-page summary: [docs/ABSTRACT.md](do
 
 ## What this is
 
-286 symbols, figures, and concepts joined by 860 relations, each backed by one or
-more of 918 references. Every reference names its exact CW paragraph and Bollingen
+288 symbols, figures, and concepts joined by 880 relations, each backed by one or
+more of 939 references. Every reference names its exact CW paragraph and Bollingen
 page, carries a verbatim quote of ≤25 words, and is typed by **whose claim it is**:
 Jung's own assertion, doctrine he reports, or a named source he quotes. 100% of
 references passed an independent verification gate; the whole of CW 14 was
