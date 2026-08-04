@@ -6,7 +6,7 @@ with a stated pass criterion. Verdicts: PASS / PARTIAL / FAIL.
 PARTIAL = returns an answer, but an equally valid phrasing of the same question
 returns a different answer (i.e. the answer is not stable under the ontology).
 """
-import json, sys
+import json, pathlib, sys
 from collections import defaultdict, Counter
 
 G = json.load(open(sys.argv[1] if len(sys.argv) > 1 else 'seed.json', encoding='utf-8'))
@@ -216,11 +216,22 @@ cq(19, "Can a machine consume every edge without reading the quote?",
    "these edges are prose in triple clothing")
 
 # CQ20 — reproducibility of a count
+# Compared against pipeline/state.json, the ledger that tracks head. A tag-anchored
+# check against the published release is check_paper_facts.py's job, not this one;
+# hardcoding release counts here made this a permanent FAIL on any mining branch.
+_refs = sum(len(x['references']) for x in EDGES)
+try:
+    _st = json.load(open(pathlib.Path(__file__).resolve().parents[2] / 'pipeline' / 'state.json'))
+    _claim = (_st.get('nodes'), _st.get('edges'), _st.get('refs'))
+    _match = _claim == (len(NODES), len(EDGES), _refs)
+    _got = (f"{len(NODES)}/{len(EDGES)}/{_refs} vs ledger "
+            f"{_claim[0]}/{_claim[1]}/{_claim[2]}")
+except Exception as _e:                                     # ledger missing or malformed
+    _match, _got = False, f"{len(NODES)}/{len(EDGES)}/{_refs}; ledger unreadable ({_e})"
 cq(20, "Does the graph report its own size consistently?",
-   "PASS" if len(NODES) == 248 and len(EDGES) == 669 else "FAIL",
-   f"{len(NODES)} nodes / {len(EDGES)} edges / {sum(len(x['references']) for x in EDGES)} refs "
-   f"— matches README (248/669/699)",
-   "counts match the published figures and Zenodo metadata")
+   "PASS" if _match else "FAIL", _got,
+   "pipeline/state.json is updated on merge, so a mismatch means a batch landed "
+   "in the graph without being recorded in the ledger")
 
 w = Counter(v for _, _, v, _, _ in RESULTS)
 for n, q, v, got, why in RESULTS:
