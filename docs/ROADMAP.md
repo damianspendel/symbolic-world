@@ -8,7 +8,7 @@ The paper stays frozen at v1.3.0; its CI verifies it against that tag forever.
 | Release | Name | Key deliverable | Ships | External dependency | ≈Cost |
 |---|---|---|---|---|---|
 | v1.4 | The Trilogy | Alchemical corpus complete (CW 12 + 13 join CW 14) | away-branch after review; CW 13 end-to-end; relation inventory export | return review | ~$30 |
-| v1.5 | The Typed Trilogy *(scope option undecided: trilogy-only vs Jung-wide-after-Aion — return review)* | Relation-family layer, measured | `docs/PROPOSAL_RELATION_TYPING.md` executed: definitions doc, mapping table with provenance, E11 query evaluation, atlas family facets + voice×family filter | family-definition sign-off | ~$10 |
+| v1.5 | The Typed Trilogy *(scope option undecided: trilogy-only vs Jung-wide-after-Aion — settled by the step-0 tail test, see proposal)* | Relation-family layer, measured | `docs/PROPOSAL_RELATION_TYPING.md` executed: definitions doc, tail test, edge-level mapping with provenance, E11 query evaluation, atlas family facets + voice×family filter | family-definition sign-off | ~$25 |
 | v1.6 | The Second Reader | Inter-annotator agreement | unanchored second-annotator gold set + κ; open E10 items adjudicated; E1c drift recalibration; E9 cross-vendor re-grade; **arXiv paper v2** | second annotator recruited | ~$15 + their time |
 | v1.7 | Aion | Archetypal core complete + vocabulary-transfer study | CW 9ii + CW 9i end-to-end; measured fraction of Aion edges classifiable under trilogy families (family additions via governance; redefinitions barred without re-gating) | — | ~$50 |
 | v1.8 | The Story | Narrative as verified UI | "The Story" tab (every clause a clickable citation); E13 narrative probe formalized (blinding tiers, leak-scan, judge arm); second-witness toggle | — | ~$5 |
@@ -18,10 +18,14 @@ The paper stays frozen at v1.3.0; its CI verifies it against that tag forever.
 ## Sequencing rationale
 
 1. **Type after the flood, within declared scope.** The family vocabulary is
-   explicitly scoped to the alchemical trilogy (see the proposal's scope decision),
-   so it closes when the trilogy closes — clustered once — and later volumes test
-   its transfer rather than forcing re-clustering. Non-trilogy edges carry
-   `pending-scope`, visibly.
+   provisionally scoped to the alchemical trilogy (see the proposal's scope
+   decision), so it closes when the trilogy closes — clustered once — and later
+   volumes test its transfer rather than forcing re-clustering. Non-trilogy edges
+   carry `pending-scope`, visibly. The cross-vendor reviewer has twice argued that
+   Aion must come first; that disagreement is now resolved by measurement rather
+   than argument, via the tail test that opens the assignment pipeline. If the tail
+   resists the trilogy definitions, v1.7 moves ahead of v1.5 and this rationale
+   inverts.
 2. **One recruited human, two instruments.** Families (v1.5) precede the second
    annotator (v1.6) so a single recruited session validates the voice gold set and
    the family mapping together; the author's drip-fed tranches accumulate toward
