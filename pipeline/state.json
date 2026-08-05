@@ -1,7 +1,7 @@
 {
- "updated": "2026-08-01",
+ "updated": "2026-08-05",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
- "graph": "288 nodes · 880 edges · 939 references",
+ "graph": "298 nodes · 904 edges · 965 references",
  "batches": [
   {
    "id": "cw14_candidates10",
@@ -379,11 +379,21 @@
     "cost_usd_per_citation": 0.15,
     "note": "80/20 split assumed; miner/stage1 token counts carried from the pre-compaction pass log"
    }
+  },
+  {
+   "id": "b-cw9ii-1",
+   "status": "gated+merged (branch mining-away, unpublished) — CROSS-VENDOR PENDING",
+   "window": "CW9ii §1-69",
+   "result": "Aion arc opens: Ego, Shadow, Syzygy, the Self. Mined 31 candidates/31 refs; deterministic pre-check 31/31 after trimming 2 quotes over the 25-word cap. Dedup against the incidental 9ii pass dropped 2 (the-shadow/challenges/the-ego duplicated §14 exactly; the-ego/subordinate-to/the-self already cited §9 — the candidate differed only by relation string) and converted 2 to attaches. Fable stage-1+2 gate: 18 SUPPORTED / 11 PARTIAL / 0 WRONG. Nothing reversed or fabricated; the miner's recurring error was object drift, conflating `projection` with `projection-making-factor`. Adjudication: 7 corrections accepted as given; c12 deviated (kept `collective-unconscious` rather than the gate's `collective-unconscious-contents`, which would be a P24 pseudo-entity — confidence lowered to medium instead); 3 dropped rather than accept nominalized nodes (`anima-recognition`, `ego-self-approximation`) or a `god` node that would collide with `god-image`. Merged 24 new edges + 2 attaches, 10 new nodes. Mined and adjudicated by Opus 5, gated by Fable 5.",
+   "telemetry": {
+    "cost_usd_total": null,
+    "note": "run manually in-session after two scheduled runs failed; per-batch API cost not separately metered"
+   }
   }
  ],
- "next": "TRILOGY COMPLETE — no further mining scope is agreed. v1.5 scope (trilogy-only relation typing vs Jung-wide after Aion) is UNDECIDED and reserved for the return review. Fable 5 usage exhausted until Wed 2026-08-05 10:00; autonomous schedule cleared 2026-08-01.",
- "nodes": 288,
- "edges": 880,
- "refs": 939,
- "as_of": "2026-08-01"
+ "next": "b-cw9ii-2 (CW9ii §70-138). OUTSTANDING on b-cw9ii-1: cross-vendor (Gemini) check not yet run — batch is gated but not cross-checked. Run it before the arc closes.",
+ "nodes": 298,
+ "edges": 904,
+ "refs": 965,
+ "as_of": "2026-08-05"
 }

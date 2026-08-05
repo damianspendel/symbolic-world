@@ -1451,6 +1451,56 @@
    "id": "cross",
    "label": "Cross",
    "type": "Symbol"
+  },
+  {
+   "id": "syzygy",
+   "type": "Motif",
+   "label": "Syzygy (the divine pair)"
+  },
+  {
+   "id": "mother-imago",
+   "type": "Concept",
+   "label": "Mother-imago"
+  },
+  {
+   "id": "marriage-quaternio",
+   "type": "Motif",
+   "label": "Marriage quaternio"
+  },
+  {
+   "id": "maya",
+   "type": "Figure",
+   "label": "Maya (the Spinning Woman)"
+  },
+  {
+   "id": "wise-old-man",
+   "type": "Figure",
+   "label": "The Wise Old Man"
+  },
+  {
+   "id": "chthonic-mother",
+   "type": "Figure",
+   "label": "The Chthonic Mother"
+  },
+  {
+   "id": "analytic-process",
+   "type": "Concept",
+   "label": "The analytic process"
+  },
+  {
+   "id": "projection-making-factor",
+   "type": "Concept",
+   "label": "The projection-making factor"
+  },
+  {
+   "id": "christ-and-church",
+   "type": "Motif",
+   "label": "Christ and his bride the Church"
+  },
+  {
+   "id": "christian-mandala",
+   "type": "Symbol",
+   "label": "The Christian mandala"
   }
  ],
  "edges": [
@@ -2025,6 +2075,16 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 1,
+     "quote": "It forms, as it were, the centre of the field of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
     }
    ]
   },
@@ -4345,6 +4405,16 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 1,
+     "quote": "is not meant to take the place of the one that has always been known as the ego , but includes it in a supraordinate concept",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
     }
    ]
   },
@@ -18283,6 +18353,414 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-01",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, WRONG, 2026-08-01)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-a",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 42,
+     "quote": "The self, on the other hand, is a God-image, or at least cannot be distinguished from one.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "the-shadow",
+   "relation": "represents",
+   "object": "personal-unconscious",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 19,
+     "quote": "it represents first and foremost the personal unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "shadow-confrontation",
+   "relation": "is-first-stage-of",
+   "object": "analytic-process",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 42,
+     "quote": "the integration of the shadow, or the realization of the personal unconscious, marks the first stage in the analytic process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "projection",
+   "relation": "originates-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 17,
+     "quote": "it is not the conscious subject but the unconscious which does the projecting",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "personifies",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 26,
+     "quote": "The projection-making factor is the anima, or rather the unconscious as represented by the anima.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "mother-imago",
+   "relation": "identified-with",
+   "object": "projection-making-factor",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 24,
+     "quote": "In the case of the son, the projection-making factor is identical with the mother-imago",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "maya",
+   "relation": "personifies",
+   "object": "projection-making-factor",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 20,
+     "quote": "Maya, who creates illusion by her dancing",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "animus",
+   "relation": "corresponds-to",
+   "object": "logos",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 29,
+     "quote": "The animus corresponds to the paternal Logos just as the anima corresponds to the maternal Eros.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "corresponds-to",
+   "object": "eros",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 29,
+     "quote": "The animus corresponds to the paternal Logos just as the anima corresponds to the maternal Eros.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "animus",
+   "relation": "is-a",
+   "object": "psychopomp",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 33,
+     "quote": "the animus is a psychopomp, a mediator between the conscious and the unconscious and a personification of the latter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "personifies",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 40,
+     "quote": "The autonomy of the collective unconscious expresses itself in the figures of anima and animus.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "manifests-as",
+   "object": "christ-and-church",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 41,
+     "quote": "Even in Christianity the divine syzygy has not become obsolete, but occupies the highest place as Christ and his bride the Church.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "animus",
+   "relation": "corresponds-to",
+   "object": "hermes",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 41,
+     "quote": "in accordance with his Logos nature, is characterized by pneuma and nous , rather like Hermes with his ever-shifting hues",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "corresponds-to",
+   "object": "hecate",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 41,
+     "quote": "in accordance with her Eros nature, wears the features of Aphrodite, Helen (Selene), Persephone, and Hecate",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "marriage-quaternio",
+   "relation": "is-schema-for",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 42,
+     "quote": "The marriage quaternio provides a schema not only for the self but also for the structure of primitive society",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "completes",
+   "object": "marriage-quaternio",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 42,
+     "quote": "The missing fourth element that would make the triad a quaternity is, in a man, the archetype of the Wise Old Man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "chthonic-mother",
+   "relation": "completes",
+   "object": "marriage-quaternio",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 42,
+     "quote": "in a woman the Chthonic Mother",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "is-prerequisite-for",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 58,
+     "quote": "in order to open the way for a higher union, a coniunctio oppositorum . This is an indispensable prerequisite for wholeness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "quaternity",
+   "relation": "symbolizes",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 59,
+     "quote": "anticipated by the psyche in the form of spontaneous or autonomous symbols. These are the quaternity or mandala symbols",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "indistinguishable-from",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 60,
+     "quote": "their symbols can no longer be distinguished from the imago Dei",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "transforms",
+   "object": "chaos",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 60,
+     "quote": "depict or create an order that transforms the chaos into a cosmos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "embodies",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 69,
+     "quote": "He is our culture hero, who, regardless of his historical existence, embodies the myth of the divine Primordial Man, the mystic Adam.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "is-centre-of",
+   "object": "christian-mandala",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 69,
+     "quote": "It is he who occupies the centre of the Christian mandala",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
+    }
+   ]
+  },
+  {
+   "subject": "antichrist",
+   "relation": "opposes",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 69,
+     "quote": "do I discourse here upon Christ and his adversary, the Antichrist?",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05"
     }
    ]
   }
