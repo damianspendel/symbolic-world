@@ -1,7 +1,7 @@
 {
  "updated": "2026-08-05",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
- "graph": "298 nodes · 904 edges · 965 references",
+ "graph": "314 nodes · 996 edges · 1083 references",
  "batches": [
   {
    "id": "cw14_candidates10",
@@ -393,11 +393,29 @@
      1152
     ]
    }
+  },
+  {
+   "id": "b-cw9ii-2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW9ii §70-138",
+   "result": "Aion falsification window: the Christ chapter and the opening of the fishes. First batch mined BLIND — the miner was not told which vocabulary metrics are tracked. Mined 82 candidates + 13 attaches / 124 refs; deterministic pre-check 122/124 (2 exact self-duplicates dropped). Fable stage-1 structure gate: 89 SUPPORTED / 31 PARTIAL / 2 WRONG. The two WRONGs were a citation mismatch (evil/good equivalence anchored to §92, which is about Thomas on light and dark) and a reversed anticipation (the Antichrist figure does the anticipating, §114). Fable stage-2 voice gate: 19 flags on 16 refs, dominated by empty source fields on jung-quotes-source (4 of 5 in one chunk) and by Jung glosses absorbed into surrounding reportage. Cross-vendor (Gemini 3.1 Pro, PRE-merge, 6 chunks): 107 SUPPORTED / 12 PARTIAL / 1 WRONG. Adjudication: 1 XV WRONG upheld and dropped (the-devil/christ §78 — relation belongs to §77); 1 dropped for a quote that does not carry its relation (christ-and-church/coniunctio §72); 4 relation fixes; 4 claim_type corrections where XV reversed a stage-2 flag (quotes-source demoted where the quote was Jung glossing, not quoting); 2 sympathetic-reportage splits resolved to REPORTS per protocol default (n=22 Basil, n=31 the Fathers) against XV preferring asserts; 1 kept with a note and lowered confidence where the object is carried from the preceding paragraph (§125). Merged 92 new edges + 26 attaches, 16 new nodes, 118 refs. TRANSFER MEASUREMENT (post-merge, blind to the miner): string reuse against the pre-Aion set at b08b83f collapsed to 2/92 = 2.2%, minting 90 new relation strings, 66 of them sentence-shaped (>=6 hyphen tokens). b-cw9ii-1 measured 70.8% reuse but its miner knew the metric. Material and blinding changed together, so the two causes are confounded — but a 71->2 point drop is not plausibly all material. QA trend: rel_hapax_pct_vocab 86.9->89.0, sentence_edges_pct 21.5->27.2, cq_pass 13->12, cq_fail 2->3. The claims are individually verified; the relational layer got measurably worse. The pre-registered 70% family-fit threshold cannot be evaluated here: 66 of 90 minted strings are one-off clauses that do not sort into the proposed families without inventing one per string. Minted strings with edges, quotes and paragraphs captured in pipeline/work/b-cw9ii-2_minted_strings.json for Track B.",
+   "telemetry": {
+    "miner_tokens": 177869,
+    "stage1_tokens": 261633,
+    "stage2_tokens": 219475,
+    "crossvendor_tokens_in_out": [
+     58133,
+     6062
+    ],
+    "cost_usd_total": 10.39,
+    "cost_usd_per_citation": 0.088,
+    "note": "80/20 in/out split assumed; Opus $5/$25, Fable $10/$50, Gemini 3.1 Pro $1.25/$10 per MTok. Gates ran in 3 parallel chunks each."
+   }
   }
  ],
- "next": "b-cw9ii-2 (CW9ii §70-138).",
- "nodes": 298,
- "edges": 904,
- "refs": 965,
+ "next": "b-cw9ii-3 (CW9ii §139-207). SEE b-cw9ii-2 result: relation-vocabulary transfer collapsed to 2.2%; decide on a normalization pass before mining further.",
+ "nodes": 314,
+ "edges": 996,
+ "refs": 1083,
  "as_of": "2026-08-05"
 }
