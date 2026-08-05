@@ -1,5 +1,74 @@
 # Proposal: a relation-family layer, retrofitted without touching the verified layer
 
+## PRE-REGISTERED RULING — can a clause-predicate belong to a family? (2026-08-05)
+
+Written **before** opening `pipeline/work/b-cw9ii-2_minted_strings.json`, because a rule
+written after seeing the data is not a rule. Disclosure of partial exposure: while
+diagnosing the b-cw9ii-2 merge I saw roughly a dozen of the 90 strings incidentally
+through `seed.json` queries — the five longest and several at §70–74. I have not opened
+the capture file and have not seen the distribution. That exposure is small but not zero,
+and it is recorded here rather than claimed away.
+
+### The ruling
+
+**No. A clause-predicate cannot be assigned a `relation_family`, and it does not belong
+in `unclassified` either.**
+
+A family groups edges whose relations mean the same *kind* of thing. That works because
+the scope, carrier and condition of a claim live in the edge's other fields — subject,
+object, reference, `claim_type`, `source`. A clause-predicate breaks the premise: it
+carries propositional content that exists nowhere else on the edge. Assigning it a family
+forces one of two failures — discard that content, or mint a family per clause, which
+makes families and strings the same thing and the layer vacuous.
+
+`unclassified` is a claim about the **vocabulary**: "this is a relation and we have no
+family for it yet." A clause-predicate is a claim about the **edge**: its relation slot
+does not hold a relation. Recording the second as the first would let an extraction defect
+be read as a vocabulary failure, and would push the `unclassified` ceiling past 25% for
+reasons that have nothing to do with the vocabulary.
+
+Third value, therefore: **`not-a-relation`**, distinct from `unclassified`.
+
+### The test, decidable without seeing the data
+
+1. **Mechanical screen.** Relation carries ≥4 hyphen tokens. This is already implemented
+   as `quality.py`'s P24 check; no new code. A screen, not a verdict — `is-in-boehme-a-
+   concept-for` passes the screen and is a legitimate scoped relation.
+2. **Semantic test.** Does the predicate contain propositional content — a carrier, a
+   scope condition, a modality, or a second proposition — that is **not** recoverable
+   from the edge's subject, object, reference, `claim_type` or `source`? If yes:
+   `not-a-relation`. If no: it is a relation, however long, and takes a family or
+   `unclassified` on the normal rules.
+
+### What this does to the pre-registered threshold
+
+The 70% edge-level family-fit threshold applies to **well-formed predicates only**.
+`not-a-relation` edges leave the denominator. Three rates are reported, never pooled:
+
+| Rate | Denominator |
+|---|---|
+| family fit | edges whose predicate passed the semantic test |
+| `unclassified` share | same denominator |
+| `not-a-relation` share | all edges in the batch |
+
+A batch may therefore be simultaneously healthy on family fit and catastrophic on
+`not-a-relation`, which is exactly what b-cw9ii-2 appears to be and exactly the
+distinction a pooled number destroys.
+
+### Normalization is a LAYER, never an edit
+
+The verbatim relation is gate-verified and frozen; §"The one constraint everything follows
+from" forbids editing it. So a normalization pass does **not** re-express existing edges.
+It adds a third tier alongside `relation_family`:
+
+- `relation` — verbatim, frozen, gate-verified. Untouched forever.
+- `relation_normalized` — relation plus qualifiers, proposed later, own provenance, own gate.
+- `relation_family` — assigned over `relation_normalized` where one exists, over
+  `relation` otherwise.
+
+Same two-tier trick the proposal already uses, applied one level down. Nothing is
+re-gated, and the clauses become queryable without pretending they were relations.
+
 **Scope option (2026-07-30, proposed; UNDECIDED — for the return review):** the family vocabulary would be scoped to the
 ALCHEMICAL TRILOGY (CW 12/13/14) — "the alchemical corpus's relational ontology,
 v1" — not to Jung's works at large. This dissolves the vocabulary-closure objection

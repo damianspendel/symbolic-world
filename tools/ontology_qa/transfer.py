@@ -5,27 +5,44 @@ The question this answers: when mining moves into a new volume, does it reuse th
 relation vocabulary the earlier volumes established, or mint new strings? That is the
 evidence behind the relation-family scope decision (docs/PROPOSAL_RELATION_TYPING.md).
 
-Usage:
-    # reproduce the b-cw9ii-1 measurement, split at the paragraph where the
-    # quaternity/mandala material starts
-    python3 tools/ontology_qa/transfer.py --target 9ii --since 2026-08-05 --split 42
-
-    python3 tools/ontology_qa/transfer.py --target 9ii --since 2026-08-05 \
-            --label b-cw9ii-1 --record
+Usage — ALWAYS pass --window and --as-of for a batch figure:
+    python3 tools/ontology_qa/transfer.py --as-of 40dee7f --target 9ii \
+            --window 1-69 --since 2026-08-05 --label b-cw9ii-1 --record
+    python3 tools/ontology_qa/transfer.py --as-of 31bc08b --target 9ii \
+            --window 70-138 --since 2026-08-05 --label b-cw9ii-2 --record
     python3 tools/ontology_qa/transfer.py --show
 
-READ THIS BEFORE TRUSTING THE HEADLINE NUMBER. String reuse systematically
-UNDER-reports transfer, because the whole premise of the family layer is that many
-distinct strings collapse into few families. On b-cw9ii-1, string reuse was 71% while
-family fit was ~92%. The metric that decides the scope question is family fit of newly
-minted strings; this script computes string reuse exactly and stages the minted strings
-with their quotes so family fit can be judged. Pass --families once a definitions file
-exists.
+TWO TRAPS THAT BOTH PRODUCE A PLAUSIBLE WRONG NUMBER, SILENTLY:
+
+1. Date does not identify a batch. b-cw9ii-1 and b-cw9ii-2 were both verified
+   2026-08-05, so `--since 2026-08-05` alone pools them and returns 116 edges at
+   16.4% — a figure belonging to neither (they are 24/70.8% and 92/2.2%). Use --window.
+2. A batch's figures are not stable under later merges. Attaches add references to
+   older edges and retroactively change window membership: b-cw9ii-1 reads 70.8% at its
+   own merge and 72.7% at HEAD, because b-cw9ii-2 attached 8 references into §1-69's
+   edges. Use --as-of for anything recorded.
+
+READ THIS BEFORE TRUSTING ANY HEADLINE NUMBER. Three different rates are computed and
+they answer different questions:
+
+- string reuse UNDER-reports transfer, because the premise of the family layer is that
+  distinct strings collapse into few families;
+- family fit is the metric that decides the scope question, computed over WELL-FORMED
+  predicates only (pre-registered ruling, docs/PROPOSAL_RELATION_TYPING.md 2026-08-05);
+- clause-predicate rate is reported first-class, because a batch minting clauses
+  inflates 'new strings' with things that are not relations at all. b-cw9ii-2 minted 90
+  strings for 92 edges at an 83.7% clause rate — reuse there is not a vocabulary signal.
+
+Never pool these. A batch can be healthy on family fit and catastrophic on clauses.
+
+Read-only with respect to the graph. Writes only pipeline/transfer_trend.jsonl, and
+only with --record.
 
 Read-only with respect to the graph. Writes only pipeline/transfer_trend.jsonl, and
 only with --record.
 """
 import argparse
+import subprocess
 import collections
 import datetime
 import json
@@ -90,18 +107,28 @@ def baseline_vocabulary(edges, baseline_vols):
     return vocab
 
 
-def select_target(edges, target_vol, since):
-    """Edges wholly inside the target volume and wholly at or after `since`.
+def select_target(edges, target_vol, since, window=None):
+    """Edges wholly inside the target volume, at or after `since`, inside `window`.
 
-    Wholly, both times, on purpose. An edge with an older reference is an ATTACH to
-    pre-existing material, not vocabulary minted by this batch, and counting attaches
-    would inflate reuse.
+    Wholly, on purpose. An edge with an older reference is an ATTACH to pre-existing
+    material, not vocabulary minted by this batch, and counting attaches inflates reuse.
+
+    PREFER --window. Date alone does not identify a batch: b-cw9ii-1 and b-cw9ii-2 were
+    both verified 2026-08-05, so `--since 2026-08-05` silently pools them and returns a
+    figure belonging to neither (116 edges, 16.4%, versus 24/70.8% and 92/2.2%). A batch
+    is defined by its paragraph window; select on that.
     """
+    lo, hi = window if window else (None, None)
     new, attaches = [], []
     for e in edges:
         vols, dts = volumes(e), dates(e)
         if target_vol not in vols:
             continue
+        if lo is not None:
+            paras = [int(r["paragraph"]) for r in e["references"]
+                     if str(r["volume"]) == target_vol]
+            if not paras or not all(lo <= p <= hi for p in paras):
+                continue
         if vols == {target_vol} and all(d >= since for d in dts):
             new.append(e)
         elif any(d >= since for d in dts):
@@ -109,9 +136,9 @@ def select_target(edges, target_vol, since):
     return new, attaches
 
 
-def measure(edges, baseline_vols, target_vol, since, split, families):
+def measure(edges, baseline_vols, target_vol, since, split, families, window=None):
     vocab = baseline_vocabulary(edges, baseline_vols)
-    new, attaches = select_target(edges, target_vol, since)
+    new, attaches = select_target(edges, target_vol, since, window)
 
     reused = [e for e in new if e["relation"] in vocab]
     minted = [e for e in new if e["relation"] not in vocab]
@@ -162,13 +189,21 @@ def measure(edges, baseline_vols, target_vol, since, split, families):
     if families:
         assigned = {s for fam in families.get("families", {}).values()
                     for s in fam.get("members", [])}
-        placed_edges = [e for e in new
+        # PRE-REGISTERED RULING, docs/PROPOSAL_RELATION_TYPING.md 2026-08-05:
+        # clause-predicates are `not-a-relation` and leave the family-fit denominator.
+        # They are NOT `unclassified` — that word is a claim about the vocabulary, and
+        # this is a claim about the edge. The screen here is the mechanical one (P24,
+        # >=4 hyphen tokens); the semantic test is a human/gate call the script cannot
+        # make, so this figure is an upper bound on the clause count and is labelled so.
+        wellformed = [e for e in new if not is_sentence_shaped(e["relation"])]
+        placed_edges = [e for e in wellformed
                         if e["relation"] in vocab or e["relation"] in assigned]
         fit_strings = [s for s in minted_strings if s in assigned]
         result["family_fit"] = {
             "edges_placed": len(placed_edges),
-            "edges_total": len(new),
-            "edge_pct": round(100 * len(placed_edges) / len(new), 1) if new else 0.0,
+            "edges_total": len(wellformed),
+            "edges_excluded_not_a_relation": len(new) - len(wellformed),
+            "edge_pct": round(100 * len(placed_edges) / len(wellformed), 1) if wellformed else 0.0,
             "minted_strings": len(minted_strings),
             "minted_strings_placed": len(fit_strings),
             "minted_string_pct": round(
@@ -201,8 +236,14 @@ def report(r):
     print(f"  reuse a baseline    {r['reused_edges']}   = {r['reuse_pct']}%")
     print(f"  mint a new string   {r['minted_edges']}   "
           f"({len(r['minted_strings'])} distinct)")
-    print(f"  sentence-shaped     {r['sentence_shaped_new']}   "
-          f"(quality.py P24; >={SENTENCE_SHAPED_MIN_HYPHENS} hyphens)")
+    sn = r['sentence_shaped_new']
+    pct = 100 * sn / r['new_edges'] if r['new_edges'] else 0
+    print(f"  CLAUSE-PREDICATES   {sn}   = {pct:.1f}%   "
+          f"(P24 screen, >={SENTENCE_SHAPED_MIN_HYPHENS} hyphen tokens)")
+    if pct >= 25:
+        print("      ^ above 25%: read the reuse figure with care. A batch minting "
+              "clauses\n        inflates 'new strings' with things that are not "
+              "relations at all.")
 
     if r["minted_strings"]:
         print("\n  minted strings:")
@@ -226,8 +267,10 @@ def report(r):
 
     ff = r.get("family_fit")
     if ff:
-        print(f"\n  FAMILY FIT (headline, edge level)  "
+        print(f"\n  FAMILY FIT (headline, edge level, well-formed only)  "
               f"{ff['edges_placed']}/{ff['edges_total']} = {ff['edge_pct']}%")
+        print(f"  excluded as not-a-relation          "
+              f"{ff['edges_excluded_not_a_relation']}")
         print(f"  minted strings placed (diagnostic)  "
               f"{ff['minted_strings_placed']}/{ff['minted_strings']} "
               f"= {ff['minted_string_pct']}%")
@@ -249,12 +292,22 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("seed", nargs="?", default=str(ROOT / "seed.json"))
+    ap.add_argument("--as-of", dest="as_of", metavar="COMMIT",
+                    help="measure against seed.json AT THIS COMMIT instead of the working "
+                         "tree. USE THIS FOR TREND ROWS. A batch's figures are not stable "
+                         "under later merges: attaches add references to older edges and "
+                         "retroactively change window membership. b-cw9ii-1 reads 70.8%% "
+                         "at its own merge (40dee7f) and 72.7%% at HEAD, because "
+                         "b-cw9ii-2 attached 8 references into §1-69's edges.")
     ap.add_argument("--baseline", default="12,13,14",
                     help="comma-separated baseline volumes (default: the trilogy)")
     ap.add_argument("--target", help="target volume, e.g. 9ii")
     ap.add_argument("--since", default="",
                     help="only count edges whose references are all verified on/after "
                          "this ISO date, e.g. 2026-08-05")
+    ap.add_argument("--window", help="paragraph window LO-HI, e.g. 70-138. PREFER THIS: "
+                    "date alone does not identify a batch (b-cw9ii-1 and b-cw9ii-2 share "
+                    "2026-08-05 and pool silently without it)")
     ap.add_argument("--split", type=int,
                     help="paragraph number to stratify on; runs a Fisher exact test")
     ap.add_argument("--families", help="path to a family definitions JSON, once one exists")
@@ -281,11 +334,23 @@ def main():
     if not a.target:
         ap.error("--target is required (e.g. --target 9ii)")
 
-    graph = json.loads(pathlib.Path(a.seed).read_text(encoding="utf-8"))
+    if a.as_of:
+        proc = subprocess.run(["git", "show", f"{a.as_of}:seed.json"],
+                              capture_output=True, text=True, cwd=ROOT)
+        if proc.returncode:
+            sys.exit(f"cannot read seed.json at {a.as_of}: {proc.stderr.strip()}")
+        graph = json.loads(proc.stdout)
+    else:
+        graph = json.loads(pathlib.Path(a.seed).read_text(encoding="utf-8"))
     families = json.loads(pathlib.Path(a.families).read_text()) if a.families else None
 
+    win = None
+    if a.window:
+        lo, hi = a.window.split("-")
+        win = (int(lo), int(hi))
     r = measure(graph["edges"], set(a.baseline.split(",")), a.target, a.since,
-                a.split, families)
+                a.split, families, win)
+    r["window"] = a.window or ""
     if not r["new_edges"]:
         print(f"no edges matched CW {a.target} since '{a.since}' — nothing to measure")
         sys.exit(1)
