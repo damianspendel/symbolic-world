@@ -382,16 +382,20 @@
   },
   {
    "id": "b-cw9ii-1",
-   "status": "gated+merged (branch mining-away, unpublished) — CROSS-VENDOR PENDING",
+   "status": "merged (branch mining-away, unpublished)",
    "window": "CW9ii §1-69",
-   "result": "Aion arc opens: Ego, Shadow, Syzygy, the Self. Mined 31 candidates/31 refs; deterministic pre-check 31/31 after trimming 2 quotes over the 25-word cap. Dedup against the incidental 9ii pass dropped 2 (the-shadow/challenges/the-ego duplicated §14 exactly; the-ego/subordinate-to/the-self already cited §9 — the candidate differed only by relation string) and converted 2 to attaches. Fable stage-1+2 gate: 18 SUPPORTED / 11 PARTIAL / 0 WRONG. Nothing reversed or fabricated; the miner's recurring error was object drift, conflating `projection` with `projection-making-factor`. Adjudication: 7 corrections accepted as given; c12 deviated (kept `collective-unconscious` rather than the gate's `collective-unconscious-contents`, which would be a P24 pseudo-entity — confidence lowered to medium instead); 3 dropped rather than accept nominalized nodes (`anima-recognition`, `ego-self-approximation`) or a `god` node that would collide with `god-image`. Merged 24 new edges + 2 attaches, 10 new nodes. Mined and adjudicated by Opus 5, gated by Fable 5.",
+   "result": "Aion arc opens: Ego, Shadow, Syzygy, the Self. Mined 31 candidates/31 refs; deterministic pre-check 31/31 after trimming 2 quotes over the 25-word cap. Dedup against the incidental 9ii pass dropped 2 (the-shadow/challenges/the-ego duplicated §14 exactly; the-ego/subordinate-to/the-self already cited §9 — the candidate differed only by relation string) and converted 2 to attaches. Fable stage-1+2 gate: 18 SUPPORTED / 11 PARTIAL / 0 WRONG. Nothing reversed or fabricated; the miner's recurring error was object drift, conflating `projection` with `projection-making-factor`. Adjudication: 7 corrections accepted as given; c12 deviated (kept `collective-unconscious` rather than the gate's `collective-unconscious-contents`, which would be a P24 pseudo-entity — confidence lowered to medium instead); 3 dropped rather than accept nominalized nodes (`anima-recognition`, `ego-self-approximation`) or a `god` node that would collide with `god-image`. Merged 24 new edges + 2 attaches, 10 new nodes. Mined and adjudicated by Opus 5, gated by Fable 5. CROSS-VENDOR REPAIR 2026-08-05: the batch merged without its Gemini pass; the check was run afterwards over the 26 merged references and stamped post-merge (not pre-merge — the ordering broke and the record says so). Gemini 3.1 Pro: 25 SUPPORTED / 1 PARTIAL / 0 WRONG. The PARTIAL (syzygy -personifies-> collective-unconscious, §40) is the same edge the Fable gate contested; both read the paragraph as anima/animus personifying contents of the collective unconscious rather than the whole. Adjudication unchanged — standing node kept, no nominalized contents pseudo-entity minted, confidence stays medium — plus the vocabulary_note the original adjudication omitted. Nothing reversed, nothing dropped; graph counts unchanged at 298/904/965.",
    "telemetry": {
     "cost_usd_total": null,
-    "note": "run manually in-session after two scheduled runs failed; per-batch API cost not separately metered"
+    "note": "run manually in-session after two scheduled runs failed; per-batch API cost not separately metered Cross-vendor repair metered separately; miner/gate costs from the original pass were not.",
+    "crossvendor_tokens_in_out": [
+     11399,
+     1152
+    ]
    }
   }
  ],
- "next": "b-cw9ii-2 (CW9ii §70-138). OUTSTANDING on b-cw9ii-1: cross-vendor (Gemini) check not yet run — batch is gated but not cross-checked. Run it before the arc closes.",
+ "next": "b-cw9ii-2 (CW9ii §70-138).",
  "nodes": 298,
  "edges": 904,
  "refs": 965,

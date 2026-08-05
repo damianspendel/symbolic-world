@@ -7,10 +7,10 @@
 
 | | |
 |---|---|
-| Graph | **288 nodes · 880 edges · 939 references**, 681 distinct CW paragraphs, 9 volumes |
-| Verification | **918/918 (100%)** gate-verified with model+date provenance; 724 (79%) also cross-vendor checked (412 of CW 14's 413, everything since the pre-merge mandate) |
-| Claim provenance | 665 jung-asserts · 205 jung-reports-parallel · 69 jung-quotes-source (48 named-source strings) · 109 hedged |
-| Coverage | CW 14 end-to-end (413 refs); CW 12 end-to-end (223 refs); CW 13 in progress (155 refs, §1-413 done); six further volumes sampled |
+| Graph | **298 nodes · 904 edges · 965 references**, 692 distinct CW paragraphs, 9 volumes |
+| Verification | **965/965 (100%)** gate-verified with model+date provenance; 771 (80%) also cross-vendor checked (412 of CW 14's 413, everything since the pre-merge mandate) |
+| Claim provenance | 689 jung-asserts · 207 jung-reports-parallel · 69 jung-quotes-source (82 named-source strings) · 113 hedged |
+| Coverage | Alchemical trilogy end-to-end: CW 14 (413 refs), CW 12 (223 refs), CW 13 (176 refs). CW 9ii (Aion) in progress (47 refs, §1-69 mined); five further volumes sampled |
 | Human validation | **E10 gold set complete**: support 44/50 · voice agreement 40/50 (single-annotator, anchored — see caveats) |
 | Replication | James's *Varieties* pilot: 38 edges, full public package (`james/`) |
 | Cost to date | ≈ $85–115 total model spend; ≈ **$0.09–0.14 per fully verified citation** |
