@@ -1,7 +1,7 @@
 {
  "updated": "2026-08-05",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
- "graph": "323 nodes · 1033 edges · 1132 references",
+ "graph": "328 nodes · 1062 edges · 1180 references",
  "batches": [
   {
    "id": "cw14_candidates10",
@@ -429,11 +429,29 @@
     "cost_usd_per_citation": 0.029,
     "note": "miner (Opus subagent) + Gemini only; Fable gate ran in-session (Track B chat, combined stage-1+2) and is not separately metered"
    }
+  },
+  {
+   "id": "b-cw9ii-4",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW9ii §208-276",
+   "result": "Second blind batch under the form rule — 0 of 29 new edges clause-shaped (rule holds). The fish in alchemy: Echeneis/remora, the magnet of the wise, theoria, Dorn's self-knowledge arc. Mined 44 candidates/51 refs; pre-check 50/51. Fable gate in-session 44/6/0 ([10] quote extended to the identification clause; notes/demotions). Gemini PRE-merge 43/5/2; adjudication: both xv WRONGs UPHELD against the gate's keep ([1] stella maris is the starfish, not the alchemical fish — referent drift; [45] §233 does not state the enantiodromia parallel), gate's proposed [42]/[43] drops withdrawn on xv support, [16] converted to attach on the Ebionite elder-brother edge per the near-duplicate convention, [4] asserts->reports. Merged 29 new edges + 19 attaches, 5 new nodes (echeneis, magnet-of-the-wise, theoria, wheel-of-birth, demiurge). Transfer: 21/29 = 72.4% string reuse vs trilogy baseline — back to trilogy levels on alchemy-adjacent material, vs 37.8% on §139-207 and 2.2% on the blind no-rule batch: reuse tracks material once form is constrained. 8 minted strings, all well-formed.",
+   "telemetry": {
+    "miner_tokens": 139535,
+    "stage1_tokens": 0,
+    "stage2_tokens": 0,
+    "crossvendor_tokens_in_out": [
+     22657,
+     2725
+    ],
+    "cost_usd_total": 1.5,
+    "cost_usd_per_citation": 0.031,
+    "note": "miner (Opus subagent) + Gemini only; Fable gate ran in-session (Track B chat) and is not separately metered"
+   }
   }
  ],
- "next": "b-cw9ii-4 (CW9ii §208-276). Form rule PROVEN on b-cw9ii-3 (0% clause rate, blind); keep it in every input. Normalization layer covers all pre-rule clause edges.",
- "nodes": 323,
- "edges": 1033,
- "refs": 1132,
+ "next": "b-cw9ii-5 (CW9ii §277-345). Form rule proven twice (0% clause rate both blind batches); keep it in every input.",
+ "nodes": 328,
+ "edges": 1062,
+ "refs": 1180,
  "as_of": "2026-08-05"
 }

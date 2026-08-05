@@ -1626,6 +1626,31 @@
    "id": "alchemical-fish",
    "label": "The alchemical fish (the round fish in the sea)",
    "type": "Symbol"
+  },
+  {
+   "id": "echeneis",
+   "label": "Echeneis / remora (the sucking-fish)",
+   "type": "Symbol"
+  },
+  {
+   "id": "magnet-of-the-wise",
+   "label": "The magnet of the wise (magnes)",
+   "type": "Symbol"
+  },
+  {
+   "id": "theoria",
+   "label": "Theoria (the alchemical doctrine, aqua doctrinae)",
+   "type": "Concept"
+  },
+  {
+   "id": "wheel-of-birth",
+   "label": "The wheel of birth (rota nativitatis / horoscope)",
+   "type": "Motif"
+  },
+  {
+   "id": "demiurge",
+   "label": "The Demiurge (creator of the world)",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -1716,6 +1741,18 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 257,
+     "quote": "This description fits the paradoxical situation of the self, as its symbolism shows.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The description is of the stone in 'Rosinus ad Sarratantam Episcopum': below thee as to obedience, above thee as to dominion."
     }
    ]
   },
@@ -2013,6 +2050,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 252,
+     "quote": "“What” refers to the neutral self, the objective fact of totality, since the ego is … directed towards it as to a goal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
     }
    ]
   },
@@ -2439,6 +2487,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 221,
+     "quote": "only absolute totality contains everything in itself … This is undoubtedly the same as the idea of an absolute God",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
     }
    ]
   },
@@ -21525,6 +21584,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 265,
+     "quote": "Dorn thus equates the transcendent centre in man with the God-image.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The carrier is Dorn; Jung's term for the transcendent centre is the self."
     }
    ]
   },
@@ -21879,6 +21950,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 237,
+     "quote": "The circles naturally produce a mandala, the outermost circle paradoxically coinciding with the centre, and recalling the old image for God.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, PARTIAL, 2026-08-05)",
+     "note": "text: 'recalling the old image for God'"
     }
    ]
   },
@@ -23092,6 +23175,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 229,
+     "quote": "Two, they maintain, were begotten by God, one of them Christ, the other the devil.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "source": "Epiphanius, Panarium (reporting the Ebionites)",
+     "note": "The doctrine of a double sonship is the Ebionites', as reported by Epiphanius."
     }
    ],
    "relation_normalized": {
@@ -24910,6 +25006,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 231,
+     "quote": "The Platonic month of the Fishes is to be ruled by two principles.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, PARTIAL, 2026-08-05)",
+     "note": "The two principles are named in the next sentence: one Christ, the other the Antichrist."
     }
    ]
   },
@@ -24947,6 +25055,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 216,
+     "quote": "The same that is said of the lapis is said of Christ by Ephrem the Syrian",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The shared predicate is 'outward uncomeliness': the hidden treasure of small account."
     }
    ]
   },
@@ -24995,6 +25115,18 @@
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
      "note": "the ram belongs to the declining Aries era"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 231,
+     "quote": "The fishes in our text are parallel, like the oxen, and point to the same goal, although one is Christ and the other the Antichrist.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "corroborates the Christ/Antichrist pair as the two fishes; the ordering is carried by §149/§177"
     }
    ]
   },
@@ -25013,6 +25145,29 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 231,
+     "quote": "The fishes in our text are parallel, like the oxen, and point to the same goal, although one is Christ and the other the Antichrist.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "corroborates the Christ/Antichrist pair as the two fishes; the ordering is carried by §149/§177"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 233,
+     "quote": "Christ’s adversary, the second fish, alias the devil, appears as the demiurge",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
     }
    ]
   },
@@ -25515,6 +25670,17 @@
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
      "source": "Philalethes, “Introitus apertus”"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 209,
+     "quote": "His other synonym is Mercurius, whose heart is to be found at the Pole, and who guides men on their perilous voyage",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
     }
    ]
   },
@@ -25636,6 +25802,634 @@
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
      "note": "propounded by the alchemical adepts"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 209,
+     "quote": "the infernal fire is nothing other than the Deus absconditus (hidden God) who dwells at the North Pole",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, PARTIAL, 2026-08-05)",
+     "note": "Jung recapitulating the alchemical text under discussion; text's term is 'Deus absconditus'. | text states identity ('nothing other than the Deus absconditus'); 'contains' is the weaker entailed claim"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "symbolized-by",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 208,
+     "quote": "The round pool with the jelly-fish in it represents a three-dimensional mandala, the self: wholeness as the goal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Jung interpreting the image of one archetypal dream; the claim is about that image, not about dreams generally."
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "destroys",
+   "object": "wheel-of-birth",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 212,
+     "quote": "Knowing the changes of the firmament and destroying the wheel of generation, he has overcome the day of our birth by the renewal of baptism.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "source": "Priscillian (d. 385), quoted by Jung",
+     "note": "'He' is Christ; the text's term is 'the wheel of generation'."
+    }
+   ]
+  },
+  {
+   "subject": "alchemical-fish",
+   "relation": "is-identified-with",
+   "object": "echeneis",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 223,
+     "quote": "they identified the “round fish in our sea” with the remora",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The carriers are the alchemists, impressed by Pliny's tale of the Echeneis."
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 217,
+     "quote": "our strange hybrid, the “round fish,” finally becomes a verifiable vertebrate known to zoology",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, PARTIAL, 2026-08-05)",
+     "correction_note": "xv: the identification is reported from the anonymous French treatise tradition",
+     "note": "The vertebrate named in the sentence is Echeneis remora, the common remora or sucking-fish."
+    }
+   ]
+  },
+  {
+   "subject": "magnet-of-the-wise",
+   "relation": "attracts",
+   "object": "echeneis",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 218,
+     "quote": "it is needful that I instruct you concerning the magnet of the wise, which has the power of attracting the little fish called Echeneis",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "source": "Anonymous seventeenth-century French treatise (“Instructio de arbore solari”)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 239,
+     "quote": "in the alchemical view the attraction no longer proceeds from the fish but from a magnet which man possesses",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "the-sea",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 219,
+     "quote": "we know that in alchemy “our sea” is a symbol for the unconscious in general, just as it is in dreams",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "echeneis",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 219,
+     "quote": "The symbol of the self appears here as an “extremely small” fish in the vast ocean of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 223,
+     "quote": "the remora came to symbolize that extremely small thing in the vastness of the unconscious … it is the self, the atman",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "magnet-of-the-wise",
+   "relation": "is-identified-with",
+   "object": "theoria",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 219,
+     "quote": "This “magnet” is obviously something a master can teach to his pupil; it is the “theoria,”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "correction_note": "gate: quote extended to the clause carrying the identification",
+     "note": "Sentence continues: 'it is the “theoria,” the one solid possession from which the adept can proceed'."
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 244,
+     "quote": "the “magnet” or “heavenly dew” can be taught … Like the water, it symbolizes the doctrine itself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "corresponds-to",
+   "object": "atman",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 223,
+     "quote": "it is the self, the atman",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The epithet follows in the same sentence: 'smaller than small, greater than great'."
+    }
+   ]
+  },
+  {
+   "subject": "pisces",
+   "relation": "symbolizes",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 224,
+     "quote": "the zodiacal fishes that move in opposite directions symbolize the arcane substance",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The carrier is Lambspringk, in whose symbols the two fishes appear."
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 234,
+     "quote": "It shows two reversed fishes swimming in the sea … by which was meant the aqua permanens or arcane substance",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Lambspringk's symbol; the sea is 'nostro mari'."
+    }
+   ]
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 224,
+     "quote": "The arcane substance, as its attributes show, refers to the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "pisces",
+   "relation": "signifies",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 230,
+     "quote": "the two fishes which the devil found on the primeval waters would signify the newly arisen world of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Jung's psychological reading of the two fishes in the Bogomil-Catharist text."
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 231,
+     "quote": "the fishes represent the driving forces of the coming world of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "the-opus",
+   "relation": "begins-with",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 231,
+     "quote": "The alchemical work starts with the descent into darkness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Full sentence: 'the descent into darkness (nigredo), i.e., the unconscious'."
+    }
+   ]
+  },
+  {
+   "subject": "the-devil",
+   "relation": "is-identified-with",
+   "object": "demiurge",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 233,
+     "quote": "Christ’s adversary, the second fish, alias the devil, appears as the demiurge",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The carriers are the eleventh-century heresies (Bogomils, Cathars) in which Satanaël is the world's creator."
+    }
+   ]
+  },
+  {
+   "subject": "demiurge",
+   "relation": "is-source-of",
+   "object": "evil",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 233,
+     "quote": "the Gnostic demiurge was regarded as an inferior being from whom all evil comes",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The carriers are the Gnostics."
+    }
+   ]
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "symbolizes",
+   "object": "unconsciousness",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 240,
+     "quote": "it was not a definite substance at all, but rather an intuitive concept for an initial psychic situation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, PARTIAL, 2026-08-05)",
+     "note": "'It' is the prima materia, as its names (chaos, massa confusa, sea, mother) show."
+    }
+   ]
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "is-projection-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 242,
+     "quote": "one of the innumerable expressions used for the unconscious … in the guise of a hundred “arcane substances.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "is-identified-with",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 245,
+     "quote": "Sometimes the arcane substance is magnesia, sometimes the water, sometimes the magnet, sometimes the fish; and yet they all mean the prima materia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "the-opus",
+   "relation": "requires",
+   "object": "self-knowledge",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 250,
+     "quote": "See, therefore, that thou goest forth such as thou desirest the work to be which thou seekest.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "source": "Gerhard Dorn",
+     "note": "Jung's gloss: what one expects of the work must be applied to one's own ego."
+    }
+   ]
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "is-identified-with",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 250,
+     "quote": "The secret is first and foremost in man; it is his true self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "The text's term is Dorn's 'man's greatest treasure', to be found within man and not outside him."
+    }
+   ]
+  },
+  {
+   "subject": "self-knowledge",
+   "relation": "aims-at",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 252,
+     "quote": "Not the subjective ego-consciousness of the psyche is meant, but the psyche itself as the unknown, unprejudiced object that still has to be investigated.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Glossing Dorn's distinction between 'quis' (the ego) and 'quid' (the neutral self)."
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "is-extracted-from",
+   "object": "man",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 256,
+     "quote": "This thing is extracted from thee, for thou art its ore; in thee they find it",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "source": "Morienus Romanus",
+     "note": "Jung identifies the 'thing' as the lapis."
+    }
+   ]
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "is-essence-of",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 256,
+     "quote": "The transformation is brought about by the coniunctio",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Sentence continues: 'which forms the essence of the work'."
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "precedes",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 257,
+     "quote": "we know from experience that it had long been there and is older than the ego",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 257,
+     "quote": "The self, moreover, is an archetype that invariably expresses a situation within which the ego is contained",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "the-centre",
+   "relation": "is-identified-with",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 261,
+     "quote": "the “centre,” or what we would call the self, does not lie in the ego but is outside it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Jung glossing the alchemists' 'centre', which for them lay in matter."
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "is-projection-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 264,
+     "quote": "we would say that the stone is a projection of the unified self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "theoria",
+   "relation": "is-identical-with",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 264,
+     "quote": "That is why the theoria and the arcanum in matter are both called veritas",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Dorn's explanation, which Jung describes as the identity of two extremes."
+    }
+   ]
+  },
+  {
+   "subject": "alchemy",
+   "relation": "originates-in",
+   "object": "gnosticism",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 267,
+     "quote": "It owes its real beginnings to the Gnostic systems, which Hippolytus rightly regarded as philosophic",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "'It' is alchemy."
+    }
+   ]
+  },
+  {
+   "subject": "dogma",
+   "relation": "expresses",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 271,
+     "quote": "dogma, like mythology in general, expresses the quintessence of inner experience and thus formulates the operative principles of the objective psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)",
+     "note": "Jung glosses 'the objective psyche' as the collective unconscious in the same clause."
     }
    ]
   }
