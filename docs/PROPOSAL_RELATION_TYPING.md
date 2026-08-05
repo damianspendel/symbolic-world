@@ -69,6 +69,88 @@ It adds a third tier alongside `relation_family`:
 Same two-tier trick the proposal already uses, applied one level down. Nothing is
 re-gated, and the clauses become queryable without pretending they were relations.
 
+## The normalization arc — operational design (2026-08-05, approved)
+
+Scope: the 271 edges failing the P24 screen at head `f6b0ca4` — 70 CW 12, 122 CW 13,
+77 CW 9ii, 2 CW 14. All of them, including CW 9ii-2's, so the v1.4 release carries no
+raw clause predicate even though Aion ships later (v1.5). Root cause is recorded in the
+release plan: the windowed pipeline was rebuilt after v1.3.0 without a form rule, no
+gate checks form, and the P24 instrument arrived late and initially measured the wrong
+graph.
+
+### Schema
+
+One object on the edge, sibling to `relation`:
+
+```json
+"relation_normalized": {
+  "relation": "produces",
+  "qualifiers": {
+    "carrier": null,
+    "scope": "in the doctrine of the two sons of God",
+    "condition": "when the paramount power of evil is imputed to it",
+    "modality": "can"
+  },
+  "proposed_by": "claude-opus-5", "proposed_date": "…",
+  "verified_by": "claude-fable-5", "verified_date": "…",
+  "crossvendor_checked": null
+}
+```
+
+`relation` in the object is a verb phrase of at most 3 hyphen tokens. Qualifier keys are
+closed (`carrier`, `scope`, `condition`, `modality`, `note`); unused keys are null. The
+gate's question is entailment: subject + normalized relation + object + qualifiers must
+state the same claim the verbatim edge's quote was verified to support — nothing added,
+nothing stranded in the discarded clause.
+
+### Verdict classes
+
+Every screened edge receives exactly one:
+
+| Verdict | Meaning | Effect |
+|---|---|---|
+| `already-a-relation` | passed the screen but is a legitimate scoped relation (`is-in-boehme-a-concept-for`) | no normalized form; recorded so CI stops flagging it |
+| `rescued` | clause decomposes into relation + qualifiers with nothing lost | `relation_normalized` written |
+| `split` | clause fuses ≥2 propositions (the b-cw13-7 precedent) | primary claim normalized on the edge; each further claim becomes a NEW proposed edge through the full mining gate chain |
+| `unrescuable` | no decomposition preserves the verified claim | edge listed for the remine decision |
+
+**Rescue rate = (rescued + split) / (rescued + split + unrescuable).** The
+`already-a-relation` class is excluded — those were never broken.
+
+### Pipeline — same gates, pointed at the new layer
+
+1. **Propose** (Opus family): reads edge, quote, full paragraph, this spec. Drafts the
+   normalized object or claims a verdict class. Never sees graph-health metrics
+   (blinding holds; this is a form task).
+2. **Gate** (Fable family): entailment check against the same paragraph, carrying this
+   section as its brief, not the extraction rules. Confirms or reclassifies the verdict.
+3. **Cross-vendor** (Gemini): stratified sample, as everywhere.
+4. **Human anchor**: drip-fed tranche over the verdicts, unanchored tool mode.
+5. **CI**: at v1.4, every P24-failing edge carries `relation_normalized`,
+   `already-a-relation`, or a split record — fail-closed, no fourth state. New mining
+   rejects clause predicates at pre-check, so the class cannot grow.
+
+Proposer and verifier are different model families; the session that drafted this design
+runs Fable and therefore proposes nothing.
+
+### Step 0 — the 30-edge sample, drawn before committing the spend
+
+Stratified by volume proportionally (8 CW 12, 13 CW 13, 8 CW 9ii, 1 CW 14) and within
+volume by clause length (median split on hyphen count), seeded `random.Random(20260805)`
+so the draw is reproducible. Input file with full paragraph context:
+`pipeline/work/normalization_sample_input.json` (local, gitignored — carries corpus
+text).
+
+**Pre-set decision rule:** rescue ≥ 90% → run the full 271. Below 90% → the windows the
+failures cluster in are named, and remining those windows is Damian's explicit decision
+(one-pass-per-window is his rule to override). No number moves after the sample is seen.
+
+### Cost envelope
+
+Propose ≈ $3–6 (Opus, ~271 × edge + paragraph). Gate ≈ $3–8 (Fable, full paragraph, as
+the structure gate does). Cross-vendor < $1. **Total ≈ $10–15**, plus one short human
+tranche. The 30-edge sample is ≈ $1.50 of that and runs first.
+
 **Scope option (2026-07-30, proposed; UNDECIDED — for the return review):** the family vocabulary would be scoped to the
 ALCHEMICAL TRILOGY (CW 12/13/14) — "the alchemical corpus's relational ontology,
 v1" — not to Jung's works at large. This dissolves the vocabulary-closure objection
