@@ -1581,6 +1581,51 @@
    "id": "aeon-of-the-fishes",
    "label": "The aeon of the Fishes",
    "type": "Motif"
+  },
+  {
+   "id": "joachim-of-flora",
+   "label": "Joachim of Flora",
+   "type": "Figure"
+  },
+  {
+   "id": "hostile-brothers",
+   "label": "The motif of the hostile brothers",
+   "type": "Motif"
+  },
+  {
+   "id": "pisces",
+   "label": "Pisces (the zodiacal sign of the Fishes)",
+   "type": "Symbol"
+  },
+  {
+   "id": "nostradamus",
+   "label": "Michel Nostradamus",
+   "type": "Figure"
+  },
+  {
+   "id": "the-north",
+   "label": "The North (region of the devil and of the highest gods)",
+   "type": "Motif"
+  },
+  {
+   "id": "set-typhon",
+   "label": "Set / Typhon",
+   "type": "Figure"
+  },
+  {
+   "id": "behemoth",
+   "label": "Behemoth",
+   "type": "Symbol"
+  },
+  {
+   "id": "celestial-pole",
+   "label": "The celestial Pole",
+   "type": "Symbol"
+  },
+  {
+   "id": "alchemical-fish",
+   "label": "The alchemical fish (the round fish in the sea)",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -2112,6 +2157,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 171,
+     "quote": "since Christ, as a man, corresponds to the ego, and, as God, to the self, he is at once both ego and self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "the psychological aspect of the Monophysite dogma: Christ as God"
     }
    ]
   },
@@ -2473,6 +2530,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 171,
+     "quote": "Christ was born “not without a kind of shadow” and that he afterwards “cast off the shadow from himself.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "Valentinus",
+     "note": "Jung suggests Valentinus understood the shadow as the Yahwistic law"
     }
    ]
   },
@@ -24295,6 +24365,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 145,
+     "quote": "the baptismal bath was described as a piscina (fish-pond) quite early. This presupposes that the believers were fishes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "Doelger"
     }
    ]
   },
@@ -24756,6 +24838,806 @@
     "verified_date": "2026-08-05",
     "crossvendor_checked": "gemini-3.1-pro (normalization xv, full set, 2026-08-05, SUPPORTED)"
    }
+  },
+  {
+   "subject": "joachim-of-flora",
+   "relation": "proclaims",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 139,
+     "quote": "In Joachim’s view … a new “status” of the world—the age of monasticism and the reign of the Holy Ghost.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "Joachim dates the new status from the founding of Monte Cassino"
+    }
+   ]
+  },
+  {
+   "subject": "joachim-of-flora",
+   "relation": "is-seized-by",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 141,
+     "quote": "unconsciously—and this is psychologically what probably happened—Joachim could have been seized by the archetype of the spirit",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, PARTIAL, 2026-08-05)",
+     "note": "consciously he understood the spirit dogmatically, as the third Person"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "unites",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 141,
+     "quote": "the original, living spirit which, because of its ambivalence, is also a mediator and uniter of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "aeon-of-the-fishes",
+   "relation": "is-ruled-by",
+   "object": "hostile-brothers",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 142,
+     "quote": "If, as seems probable, the aeon of the fishes is ruled by the archetypal motif of the hostile brothers",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "yahweh",
+   "relation": "externalizes",
+   "object": "hostile-brothers",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 184,
+     "quote": "This relieves God of his own inner conflict, which now appears outside him in the form of a hostile pair of brother monsters.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "after Leviathan splits, the monster fights an equivalent monster instead of God"
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "is-parallel-to",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 143,
+     "quote": "the lapis philosophorum , which is used as a parallel to Christ, the “rock,” the “stone,” the “cornerstone.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "symbolized-by",
+   "object": "fish",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 147,
+     "quote": "The symbolism shows Christ and those who believe in him as fishes, fish as the food eaten at the Agape",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "is-first-fish-of",
+   "object": "pisces",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 149,
+     "quote": "Astrologically interpreted, the designation of Christ as one of the fishes identifies him with the first fish, the vertical one.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 147,
+     "quote": "he was born as the first fish of the Pisces era, and was doomed to die as the last ram",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "the ram belongs to the declining Aries era"
+    }
+   ]
+  },
+  {
+   "subject": "antichrist",
+   "relation": "is-second-fish-of",
+   "object": "pisces",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 177,
+     "quote": "in the astrological interpretation Christ is in fact only one of the fishes, the role of the other fish being allotted to the Antichrist",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "pisces",
+   "relation": "expresses",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 172,
+     "quote": "The Fishes, however, are a double sign.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, PARTIAL, 2026-08-05)",
+     "note": "the polarity is acquired and 'much emphasized in Christian times' (§147); §172 gives the double sign"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 147,
+     "quote": "This countermovement, which was unknown to the majority of the oldest sources, was much emphasized in Christian times",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "the contrary movement of the two fishes is not attested in the oldest sources"
+    }
+   ]
+  },
+  {
+   "subject": "enantiodromia",
+   "relation": "runs-parallel-to",
+   "object": "pisces",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 149,
+     "quote": "The beginning of the enantiodromia would fall, logically, midway between the two fishes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, PARTIAL, 2026-08-05)",
+     "note": "supports the midpoint of the enantiodromia between the fishes; the parallel-course wording is §156's"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 156,
+     "quote": "in the French Revolution men witnessed the enantiodromia that had set in with the Renaissance and ran parallel with the astrological fish symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "manifests-through",
+   "object": "synchronicity",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 148,
+     "quote": "an archetype that manifests itself on the one hand in a personality , and on the other hand synchronistically, in a moment of time",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "said of the archetype expressed both in Christ and in the inception of the Pisces aeon"
+    }
+   ]
+  },
+  {
+   "subject": "nostradamus",
+   "relation": "predicts",
+   "object": "antichrist",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 151,
+     "quote": "This shall be the second Antichrist, which shall persecute the said Church and its true vicar by means of the power of temporal kings",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "Nostradamus, letter to Henry II of France (1558)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 160,
+     "quote": "by making this prediction, he placed himself firmly in the antichristian phase and served as its mouthpiece",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, PARTIAL, 2026-08-05)",
+     "note": "§160 names the predicted event as the enantiodromia of the Christian aeon; §151 carries the Antichrist prophecy verbatim"
+    }
+   ]
+  },
+  {
+   "subject": "the-north",
+   "relation": "is-abode-of",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 157,
+     "quote": "the idea of the North as the region of the devil, unbelievers, and all things evil",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "correction_note": "gate: original quote supported 'north wind signifies devil' (Rhabanus), not abode; retargeted to the paragraph's direct statement of the traditional idea"
+    }
+   ]
+  },
+  {
+   "subject": "the-north",
+   "relation": "is-seat-of",
+   "object": "the-gods",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 192,
+     "quote": "the region to the north: it is the seat of the highest gods and also of the adversary",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, PARTIAL, 2026-08-05)",
+     "correction_note": "xv: 'Ancient history gives us a divided picture' — reported view, not Jung's own voice"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 189,
+     "quote": "According to Babylonian tradition Anu has his seat in the northern heaven; likewise Marduk, as the highest god … is the Pole",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "artifex",
+   "relation": "restores",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 191,
+     "quote": "What they were aiming at was a more or less conscious restoration of the primitive God-image.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "text: 'aiming at ... restoration' — an aim, not an accomplishment"
+    }
+   ]
+  },
+  {
+   "subject": "jakob-boehme",
+   "relation": "envisages",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 191,
+     "quote": "it was Jakob Böhme who … envisaged a paradoxical God-image in which the good and the bad aspects appertain to the same divine being",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "Boehme influenced by alchemy and the Cabala equally"
+    }
+   ]
+  },
+  {
+   "subject": "fish",
+   "relation": "is-son-of",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 173,
+     "quote": "The same thing happened to the Phoenician Derceto-Atargatis, who, half fish herself, had a son called Ichthys.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "is-bait-for",
+   "object": "leviathan",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 174,
+     "quote": "Symbologically, he is actually the hook or bait on God’s fishing-rod with which the Leviathan—death or the devil—is caught.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 178,
+     "quote": "in Christian symbology the crucifix is the hook or bait with which God catches Leviathan",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, PARTIAL, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "leviathan",
+   "relation": "corresponds-to",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 178,
+     "quote": "who is either death or the devil (“that ancient serpent”) but not the Messiah",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "in Christian symbology; in Jewish tradition Leviathan's flesh is the pharmakon athanasias"
+    }
+   ]
+  },
+  {
+   "subject": "fish",
+   "relation": "symbolizes",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 187,
+     "quote": "It even seems to have been regarded as a symbol for the soul, if we are to judge by a painting",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "a fish floats over the mummy in place of the usual soul-bird on a late Hellenistic sarcophagus"
+    }
+   ]
+  },
+  {
+   "subject": "leviathan",
+   "relation": "is-shadow-of",
+   "object": "yahweh",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 183,
+     "quote": "the great “fish” gradually split into its opposite, after having itself been the opposite of the highest God and hence his shadow",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "the embodiment of God's evil side"
+    }
+   ]
+  },
+  {
+   "subject": "leviathan",
+   "relation": "opposes",
+   "object": "behemoth",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 181,
+     "quote": "the battle between Leviathan and Behemoth at the end of time, in which the two monsters wound each other to death",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "poem by Meir ben Isaac"
+    }
+   ]
+  },
+  {
+   "subject": "behemoth",
+   "relation": "is-double-of",
+   "object": "leviathan",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 185,
+     "quote": "God’s monstrous antagonist produces a double because the God-image is incomplete and does not contain everything it logically ought to contain",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "Behemoth the warm-blooded quadruped stands above Leviathan the cold-blooded fish"
+    }
+   ]
+  },
+  {
+   "subject": "god-image",
+   "relation": "lacks",
+   "object": "man",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 185,
+     "quote": "What was previously missing in the God-image, therefore, was the human element.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    }
+   ]
+  },
+  {
+   "subject": "messiah",
+   "relation": "splits-into",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 169,
+     "quote": "the above-mentioned weakness of the Messianic element consists in a split which in the end becomes a complete polarity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 168,
+     "quote": "The later, mainly Cabalistic tradition speaks of two Messiahs, the Messiah ben Joseph (or ben Ephraim) and the Messiah ben David.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "in Abarbanel the Messiah ben Joseph is the Antichrist"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "corresponds-to",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 171,
+     "quote": "since Christ, as a man, corresponds to the ego, and, as God, to the self, he is at once both ego and self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "the psychological aspect of the Monophysite dogma: Christ as man"
+    }
+   ]
+  },
+  {
+   "subject": "set-typhon",
+   "relation": "opposes",
+   "object": "osiris",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 187,
+     "quote": "In later times he was a god of death, destruction, and the desert, the treacherous opponent of his brother Osiris.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "earlier he was a friend and helper of the dead, closely connected with Horus"
+    }
+   ]
+  },
+  {
+   "subject": "osiris",
+   "relation": "reaches",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 188,
+     "quote": "the opposites have to work together for a common purpose when it comes to helping the one god, Osiris, to reach the heavenly quaternity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "the quaternity is personified by the four sons of Horus"
+    }
+   ]
+  },
+  {
+   "subject": "celestial-pole",
+   "relation": "is-figured-as",
+   "object": "fish",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 189,
+     "quote": "in Arab tradition the region round the heavenly Pole is seen in the form of a fish",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "Qazvini"
+    }
+   ]
+  },
+  {
+   "subject": "celestial-pole",
+   "relation": "is-characterized-by",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 206,
+     "quote": "Together they form a cross, i.e., a quaternity, which characterizes the nature of the Pole.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "the two Indies and the turn of the compass to the north"
+    }
+   ]
+  },
+  {
+   "subject": "mercurius",
+   "relation": "dwells-in",
+   "object": "celestial-pole",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 206,
+     "quote": "In the Pole is found the heart of Mercurius, “which is the true fire wherein its Lord has his rest.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "Philalethes, “Introitus apertus”"
+    }
+   ]
+  },
+  {
+   "subject": "alchemical-fish",
+   "relation": "symbolizes",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 194,
+     "quote": "through the transformation of the arcane substance which it had at first represented—a symbol of the lapis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "the alchemical fish first represented the arcane substance"
+    }
+   ]
+  },
+  {
+   "subject": "alchemical-fish",
+   "relation": "symbolizes",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 194,
+     "quote": "Thus, by an indirect route, the alchemical fish attains the dignity of a symbol for the Salvator mundi .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "indirectly, through the filius philosophorum regarded as a parallel of Christ"
+    }
+   ]
+  },
+  {
+   "subject": "ignis-gehennalis",
+   "relation": "is-identified-with",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 200,
+     "quote": "The Philosophers call this fire the fire of the Holy Ghost.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "“Gloria mundi”"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 198,
+     "quote": "This glow is a fire—the fire of the Holy Ghost.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "Picinellus",
+     "note": "said of the burning stella marina"
+    }
+   ]
+  },
+  {
+   "subject": "ignis-gehennalis",
+   "relation": "burns-without",
+   "object": "light",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 199,
+     "quote": "fire that has no brightness, having all fire’s power of burning, but without any light",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "source": "St. Basil, cited by Picinellus",
+     "note": "the conception describes the fire of hell, the scintilla voluptatis"
+    }
+   ]
+  },
+  {
+   "subject": "ignis-gehennalis",
+   "relation": "contains",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 200,
+     "quote": "In this fire God himself glows in divine love.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, PARTIAL, 2026-08-05)",
+     "source": "“Gloria mundi”"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 191,
+     "quote": "paradoxes as shocking as that of God’s love glowing in the midst of hell-fire",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
+     "note": "propounded by the alchemical adepts"
+    }
+   ]
   }
  ]
 }

@@ -1,7 +1,7 @@
 {
  "updated": "2026-08-05",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
- "graph": "314 nodes · 996 edges · 1083 references",
+ "graph": "323 nodes · 1033 edges · 1132 references",
  "batches": [
   {
    "id": "cw14_candidates10",
@@ -411,11 +411,29 @@
     "cost_usd_per_citation": 0.088,
     "note": "80/20 in/out split assumed; Opus $5/$25, Fable $10/$50, Gemini 3.1 Pro $1.25/$10 per MTok. Gates ran in 3 parallel chunks each."
    }
+  },
+  {
+   "id": "b-cw9ii-3",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW9ii §139-207",
+   "result": "FIRST BATCH UNDER THE FORM RULE, blind miner — the fix test PASSED: 0 of 37 new edges carry a clause predicate (b-cw9ii-2 blind without the rule: 77%). Joachim/Holy Ghost movement, Nostradamus, the North, Leviathan/Behemoth, the fish aeon. Mined 43 candidates/54 refs; pre-check 51/54 (2 dedup, 1 over-length; attach routing fixed — pre-check had dropped legitimate new-paragraph attaches, inherited flaw). Fable gate in-session 43/8/0 (corrections: [18] quote retarget from Rhabanus wind-signification to the traditional region-of-the-devil idea + asserts->reports). Gemini PRE-merge 42/9/0; adjudication: 2 refs dropped on two-gate convergence (nostradamus->the-north object overreach; weak wind-quote ref), 1 xv voice catch accepted ([20] asserts->reports), 3 confidence demotions, notes. Merged 37 new edges + 12 attaches, 9 new nodes (joachim-of-flora, hostile-brothers, pisces, nostradamus, the-north, set-typhon, behemoth, celestial-pole, alchemical-fish). Transfer: string reuse 14/37 = 37.8% vs trilogy baseline; 23 minted strings, all well-formed verbs, captured in transfer_trend.jsonl; structural-position candidates keep accruing (is-first-fish-of, is-second-fish-of, is-abode-of, is-seat-of). Family fit not computed — definitions doc still pending.",
+   "telemetry": {
+    "miner_tokens": 133648,
+    "stage1_tokens": 0,
+    "stage2_tokens": 0,
+    "crossvendor_tokens_in_out": [
+     27283,
+     2651
+    ],
+    "cost_usd_total": 1.4,
+    "cost_usd_per_citation": 0.029,
+    "note": "miner (Opus subagent) + Gemini only; Fable gate ran in-session (Track B chat, combined stage-1+2) and is not separately metered"
+   }
   }
  ],
- "next": "b-cw9ii-3 (CW9ii §139-207). SEE b-cw9ii-2 result: relation-vocabulary transfer collapsed to 2.2%; decide on a normalization pass before mining further.",
- "nodes": 314,
- "edges": 996,
- "refs": 1083,
+ "next": "b-cw9ii-4 (CW9ii §208-276). Form rule PROVEN on b-cw9ii-3 (0% clause rate, blind); keep it in every input. Normalization layer covers all pre-rule clause edges.",
+ "nodes": 323,
+ "edges": 1033,
+ "refs": 1132,
  "as_of": "2026-08-05"
 }
