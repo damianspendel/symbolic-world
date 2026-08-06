@@ -46,16 +46,97 @@ invisible without UI work.
 
 | # | Decision | Rationale |
 |---|---|---|
-| 1 | **Homepage is a thin gateway, built around a graph-derived summary** | The atlas is the product; the homepage exists to orient and to route paper readers. See "The hundred-word summary" — it demonstrates the method instead of describing it. |
+| 1 | **Homepage is built around a graph-derived summary, presented as one continuous surface with the atlas** | The atlas is the product. Originally scoped as a thin gateway; revised 2026-08-06 to the R0 assembly, which demonstrates the method rather than describing it. |
 | 2 | **Family definitions: progressive disclosure** — chip → side panel → full document | The step-0 test measured this directly: twelve-word hovers produced 29% confidence and "best fit" answers, while the adjudication UI showing definitions and boundary rules in full worked. Too little is worse than none. |
 | 3 | **Pending edges visible and labelled** | `unclassified(pending-adjudication)` shows as a "pending review" chip and is filterable. Consistent with the dispute log and RAG dots, and preserves the reason-code distinction between "not yet judged" and "no family applies". |
 | 4 | **Review queue plus attributed log** | The adjudication tool wired into the atlas, with rulings appearing in the ledger under a stable reviewer id and date — the same treatment model verdicts already get. Delivers BACKLOG's "reviewer identity as first-class provenance" early. |
 
+## R0 — Aesthetic direction: the spectacle is the evidence
+
+Added 2026-08-06 on Damian's brief: *"a sexy slick build that wows aesthetically,
+grabs attention and then buries with the knowledge graph."* This supersedes R1's
+"thin gateway" framing, which was too modest. R1's *content* requirements all stand;
+R0 governs how they are presented.
+
+**The governing rule.** Every flourish must be a claim being verified. This project's
+credibility rests on the reader being able to check anything, so decoration bolted on
+top of the graph would cost more than it earns. But restraint is not the same as
+plainness — the material is Jung on alchemy, and its own imagery is the most striking
+thing available. Use that, not a design language borrowed from somewhere else.
+
+### R0.1 The assembly — one continuous surface, not a homepage and then an atlas
+
+There is no "enter the atlas" button, and no page transition. The homepage *is* the
+atlas at a different zoom.
+
+1. **Near-black. One node ignites** at centre.
+2. **The graph builds itself** over three to four seconds — edges drawing outward,
+   nodes blooming along them, from the real `atlas.json` at its real fcose positions.
+   Not a decorative particle field: 338 nodes and 1147 edges, which is the argument
+   about scale made without a number.
+3. **It settles and recedes**, dimming back to become ground.
+4. **The hundred-word summary writes itself over the top** (R2). As each clause lands,
+   the edges it rests on **light up in the graph behind it**. The reader watches a
+   sentence and its evidence appear together.
+5. **Scrolling lifts the prose away** and brings the graph forward. By the time the
+   reader notices they are in the atlas, they are already in it.
+
+That sequence is the whole brief in one gesture: it grabs attention, and what it grabs
+attention *with* is the verification chain.
+
+### R0.2 The palette is already the argument — commit to it
+
+`web/src/style.css` (139 lines) is holding a near-black ground `#0a0d12`, gold
+`#d9b25f`, sage `#7fc9a0`, terracotta `#d0685a`, cream `#f0ead8`. That is *nigredo,
+citrinitas, albedo, rubedo* — the alchemical colour sequence, arrived at by taste and
+never named. Name it, and let it do structural work: the assembly runs black → gold,
+selection states use rubedo, verified evidence reads cream.
+
+### R0.3 Typography carries the register
+
+A display serif with letterpress weight for the summary and the section heads; the
+current single `--serif` variable does everything and reads as a default. Large type,
+generous measure, real line-height. The summary is a hundred words on a dark field —
+it can afford to be set beautifully. **Self-hosted, no CDN** (the artifact must render
+from its own files, and the v1.3 snapshot precedent is strict about it).
+
+### R0.4 Motion with a rule
+
+Motion only ever expresses a relationship in the data: an edge drawing = a claim being
+asserted; a node brightening = it is cited by the clause you are reading; a filter
+transition = the graph re-forming under a constraint. Nothing eases, floats, parallaxes
+or bounces for its own sake.
+
+`prefers-reduced-motion: reduce` skips the assembly entirely and renders the settled
+graph with the summary already in place. Non-negotiable, and it must be tested, not
+just declared.
+
+### R0.5 What would cheapen it — named so it does not creep in
+
+Glassmorphism, gradient-mesh backgrounds, floating rounded cards on a light ground,
+numbers that count up on scroll, stock imagery, an AI-shimmer, and any copy in the
+register of *"unlock the hidden structure of the psyche."* Every one of these says
+"marketing site" and this artifact is making a claim about rigour. A reader who smells
+a pitch reads the citations less carefully, which is the opposite of the point.
+
+### R0.6 Honest scoping
+
+This is materially more than R1 originally scoped, and it is front-end work with real
+craft cost — call it the largest single item in v1.4. Three things make it tractable:
+the graph, its layout and its data already exist and render; the palette is already
+right; and the assembly animation is Cytoscape driving elements it already owns.
+
+Two risks to hold: **performance** — 1147 edges animating must stay smooth on a
+laptop and degrade gracefully on mobile, so the assembly is capped by time rather than
+by drawing every edge if it cannot keep up; and **the first-paint window** — if the
+graph takes two seconds to arrive at a black screen, the effect is a broken page, not
+a reveal. Something must be on screen inside 500 ms.
+
 ## R1 — Homepage and version routing
 
-**R1.1** A landing page at the site root. Three things above the fold: what this
-is in two sentences; the hundred-word summary (R2); a single primary action into
-the atlas.
+**R1.1** A landing surface at the site root, staged per R0.1 — what this is in two
+sentences, the hundred-word summary (R2), and a scroll into the atlas rather than a
+button to it.
 
 **R1.2** The method claim, stated once and plainly: *the model that proposes a
 claim is never the model that signs it off.* This is the paper's central assertion
@@ -234,6 +315,9 @@ needs identity, moderation and abuse handling that are out of scope here.
 2. `python3 tools/check_paper_facts.py` — 0 failures. Homepage counts are
    living-doc facts pinned to head; paper assertions stay pinned to `v1.3.0`.
 3. `web/public/v1.3/` byte-identical before and after — checksum it.
+3b. The assembly holds a smooth frame rate at 338/1147 on a laptop, something is
+   painted inside 500 ms, and `prefers-reduced-motion: reduce` renders the settled
+   graph with no animation at all. Tested, not asserted.
 4. Every family chip resolves to a definition; no chip shows a family absent from
    `docs/FAMILY_DEFINITIONS.md`.
 5. A permalink survives a round trip: copy, reload, same selection.
