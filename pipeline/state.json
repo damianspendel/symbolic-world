@@ -1,7 +1,7 @@
 {
  "updated": "2026-08-06",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
- "graph": "337 nodes · 1131 edges · 1284 references",
+ "graph": "338 nodes · 1147 edges · 1304 references",
  "batches": [
   {
    "id": "cw14_candidates10",
@@ -483,11 +483,29 @@
     "cost_usd_per_citation": 0.026,
     "note": "run in the Track B session; the scheduled task froze four consecutive times on an unallowlisted git checkout"
    }
+  },
+  {
+   "id": "b-cw9ii-7",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW9ii §414-429",
+   "result": "FINAL AION WINDOW — the arc is COMPLETE. Kircher's monad system, the circular opus, and Jung's closing summary of the self. Fifth blind batch under the form rule, 0 of 16 new edges clause-shaped. Mined 20 candidates/22 refs; pre-check 22/22, zero dropped. Fable gate in-session 15/7/0. Gemini PRE-merge 17/5/0; adjudication: 2 refs DROPPED on xv referent findings the gate passed ([3] §421's 'These' refers to the Ripley Scrowle depictions, not the opus — the claim survives on §418; [21] §426 authenticates the SYMBOLS of the self as God-images, not the self itself — the standing edge rests on §42), 1 relation corrected (expresses -> seeks-expression-for: the Gnostics made ATTEMPTS to find expressions), 2 vocabulary_notes. Merged 16 new edges + 4 attaches, 1 new node (gnostics). Transfer 7/16 = 43.8% string reuse.",
+   "telemetry": {
+    "miner_tokens": 84939,
+    "stage1_tokens": 0,
+    "stage2_tokens": 0,
+    "crossvendor_tokens_in_out": [
+     8647,
+     958
+    ],
+    "cost_usd_total": 0.9,
+    "cost_usd_per_citation": 0.045,
+    "note": "run in the Track B session; smallest window (16 paragraphs) so cost per citation is higher"
+   }
   }
  ],
- "next": "b-cw9ii-7 (CW9ii §414-429, 16 paragraphs) — the FINAL Aion window. Form rule proven on four blind batches (0% clause rate each). NOTE: the scheduled task's old working directory (SchellingKG) no longer exists; permissions and cwd must be re-established before relying on it.",
- "nodes": 337,
- "edges": 1131,
- "refs": 1284,
+ "next": "AION ARC COMPLETE — all seven CW 9ii windows merged (§1-429). No further mining scope is agreed; do not start another volume. Next work is the relation-family assignment pass over the full graph, then the v1.4 release. The scheduled task jungkg-aion-mining should be DISABLED: its purpose is served, it froze four consecutive times, and its working directory no longer exists.",
+ "nodes": 338,
+ "edges": 1147,
+ "refs": 1304,
  "as_of": "2026-08-05"
 }

@@ -1696,6 +1696,11 @@
    "id": "space-time-quaternio",
    "label": "The space-time quaternio",
    "type": "Motif"
+  },
+  {
+   "id": "gnostics",
+   "label": "The Gnostics",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -1810,6 +1815,17 @@
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)",
      "note": "Jung adds that it is not a human ego but a collective entity"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 418,
+     "quote": "the central idea of the lapis Philosophorum plainly signifies the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)"
     }
    ]
   },
@@ -26060,6 +26076,17 @@
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)",
      "note": "'this case' = the vision of Ezekiel behind Rupescissa's cherub-shaped vessel"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 426,
+     "quote": "its totality is discernible above all in the mandala and its countless variants",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)"
     }
    ]
   },
@@ -27443,6 +27470,28 @@
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)",
      "note": "Jung adds that this does not mean the self is as contradictory in itself as it seems"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 423,
+     "quote": "the self is a complexio oppositorum precisely because there can be no reality without polarity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)"
+    },
+    {
+     "volume": "9ii",
+     "paragraph": 426,
+     "quote": "Psychologically the self is a union of conscious (masculine) and unconscious (feminine)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)"
     }
    ]
   },
@@ -28164,6 +28213,308 @@
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)",
      "note": "argued from reciprocal action being otherwise impossible"
+    }
+   ]
+  },
+  {
+   "subject": "lapis",
+   "relation": "contains",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 417,
+     "quote": "the lapis is the arcanum that contains God or that part of God which is hidden in matter",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, PARTIAL, 2026-08-06)",
+     "note": "Jung states this explicitly 'in terms of alchemy', explaining why Kircher took the lapis as his example; the text says 'God', and god-image is the standing node."
+    }
+   ]
+  },
+  {
+   "subject": "the-opus",
+   "relation": "is-figured-as",
+   "object": "ouroboros",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 418,
+     "quote": "The alchemists were fond of picturing their opus as a circulatory process, as a circular distillation or as the uroboros",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "Carriers named in the text: the alchemists."
+    }
+   ]
+  },
+  {
+   "subject": "the-opus",
+   "relation": "illustrates",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 418,
+     "quote": "the opus with its countless symbols illustrates the process of individuation, the step-by-step development of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)"
+    }
+   ]
+  },
+  {
+   "subject": "circulation-of-light",
+   "relation": "corresponds-to",
+   "object": "circulatio",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 419,
+     "quote": "Independently of Western tradition, the same idea of the circular opus can be found in Chinese alchemy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "The text's terms are 'the circular opus' (Western) and the Golden Flower's making the light 'move in a circle'."
+    }
+   ]
+  },
+  {
+   "subject": "shadow-confrontation",
+   "relation": "uncovers",
+   "object": "syzygy",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 422,
+     "quote": "Through analysis of the shadow and of the processes contained in it we uncover the ANIMA / ANIMUS syzygy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)"
+    }
+   ]
+  },
+  {
+   "subject": "the-shadow",
+   "relation": "contains",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 423,
+     "quote": "his shadow, does not consist only of morally reprehensible tendencies, but also displays a number of good qualities, such as normal instincts",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "Text's full list: 'normal instincts, appropriate reactions, realistic insights, creative impulses'."
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "develops",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 423,
+     "quote": "all archetypes spontaneously develop favourable and unfavourable, light and dark, good and bad effects",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)"
+    }
+   ]
+  },
+  {
+   "subject": "evil",
+   "relation": "originates-in",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 423,
+     "quote": "It must therefore be supposed that they spring from a need of human consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "'They' = good and evil, predicated of the pair; the claim is that they lose validity outside the human sphere."
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "is-basis-of",
+   "object": "the-gods",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 425,
+     "quote": "they have formed since olden times the archetypal basis of all masculine and feminine divinities",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "'They' = anima and animus; text says 'all masculine and feminine divinities'."
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "represents",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 425,
+     "quote": "They therefore represent a supreme pair of opposites, not hopelessly divided by logical contradiction",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "Their opposition is that of the sexes; the mutual attraction between them gives promise of union."
+    }
+   ]
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "is-figured-as",
+   "object": "tifereth-malchuth",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 425,
+     "quote": "The coniunctio oppositorum engaged... those of the cabalists in the form of Tifereth and Malchuth or God and the Shekhinah",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "Carriers named in the text: the cabalists; the alchemists' form of the same is the 'Chymical Wedding'."
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "shares-symbols-with",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 427,
+     "quote": "among the symbols for Christ there are some very important ones which he has in common with the devil",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "Text adds that this had no influence on dogma."
+    }
+   ]
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "contradicts",
+   "object": "the-christian-standpoint",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 427,
+     "quote": "The natural archetypal symbolism, describing a totality that includes light and dark, contradicts in some sort the Christian but not the Jewish or Yahwistic viewpoint",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "Text's subject is 'the natural archetypal symbolism'; hedged by 'in some sort' and by 'or only to a relative degree'."
+    }
+   ]
+  },
+  {
+   "subject": "gnostics",
+   "relation": "seeks-expression-for",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 428,
+     "quote": "By far the most fruitful attempts, however, to find suitable symbolic expressions for the self were made by the Gnostics",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, PARTIAL, 2026-08-06)",
+     "correction_note": "xv: the text says the Gnostics made attempts to FIND symbolic expressions for the self",
+     "note": "Carriers, not the discipline: Jung names Valentinus and Basilides as instances."
+    }
+   ]
+  },
+  {
+   "subject": "gnostics",
+   "relation": "compensates",
+   "object": "privatio-boni",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 428,
+     "quote": "their ideas compensate the asymmetry of God postulated by the doctrine of the privatio boni",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, PARTIAL, 2026-08-06)",
+     "note": "'Their' = the Gnostics; what is compensated is the asymmetry of God postulated by that doctrine."
+    }
+   ]
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "produces",
+   "object": "uniting-symbol",
+   "references": [
+    {
+     "volume": "9ii",
+     "paragraph": 428,
+     "quote": "modern tendencies of the unconscious to produce symbols of totality for bridging the gap between the conscious and the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
+     "note": "Text's term is 'symbols of totality' bridging the conscious/unconscious gap."
     }
    ]
   }
