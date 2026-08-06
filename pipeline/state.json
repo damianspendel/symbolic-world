@@ -1,7 +1,7 @@
 {
- "updated": "2026-08-05",
+ "updated": "2026-08-06",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
- "graph": "328 nodes · 1062 edges · 1180 references",
+ "graph": "330 nodes · 1092 edges · 1227 references",
  "batches": [
   {
    "id": "cw14_candidates10",
@@ -447,11 +447,29 @@
     "cost_usd_per_citation": 0.031,
     "note": "miner (Opus subagent) + Gemini only; Fable gate ran in-session (Track B chat) and is not separately metered"
    }
+  },
+  {
+   "id": "b-cw9ii-5",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW9ii §277-345",
+   "result": "Third blind batch under the form rule — 0 of 30 new edges clause-shaped. Gnostic symbols of the self: the uniting symbol, the magnet/aqua doctrinae, Naassene Anthropos material, Meister Eckhart's Godhead, the point/scintilla. Mined 46 candidates/52 refs; pre-check 49/52 (3 dedup). Fable gate in-session 41/8/0 (scope narrowings on theoria, the Redeemer's affinity, the Zohar's central column). Gemini PRE-merge 44/5/0; adjudication: 2 refs DROPPED on xv overreach findings the gate had passed ([9] serpent-personifies-unconscious — §291 supports symbolization not personification, and proteus §338 already carries the personification claim; [44] mandala-indistinguishable-from-god-image — §304 says 'the circle is a well-known symbol for God', which is symbolization; the standing edge rests on §60), 3 scope narrowings accepted. Merged 30 new edges + 17 attaches, 2 new nodes (uniting-symbol, meister-eckhart). Transfer: 14/30 = 46.7% string reuse vs trilogy baseline — mid-range, consistent with Gnostic-doctrinal material sitting between the astrology window (37.8%) and the alchemical one (72.4%). 15 minted strings, all well-formed.",
+   "telemetry": {
+    "miner_tokens": 138412,
+    "stage1_tokens": 0,
+    "stage2_tokens": 0,
+    "crossvendor_tokens_in_out": [
+     22935,
+     2391
+    ],
+    "cost_usd_total": 1.5,
+    "cost_usd_per_citation": 0.032,
+    "note": "run manually in the Track B session after three scheduled firings froze on an unallowlisted git checkout; miner (Opus subagent) + Gemini metered, Fable gate in-session"
+   }
   }
  ],
- "next": "b-cw9ii-5 (CW9ii §277-345). Form rule proven twice (0% clause rate both blind batches); keep it in every input.",
- "nodes": 328,
- "edges": 1062,
- "refs": 1180,
+ "next": "b-cw9ii-6 (CW9ii §346-413). Form rule proven on three blind batches (0% clause rate each). Scheduled-task permissions fixed 2026-08-06 via JungKG/.claude/settings.local.json — the 16:25 firing is the test.",
+ "nodes": 330,
+ "edges": 1092,
+ "refs": 1227,
  "as_of": "2026-08-05"
 }
