@@ -1,6 +1,10 @@
-# Relation families — candidate definitions, v0.4 draft
+# Relation families — candidate definitions, v0.5
 
-Status: DRAFT for the step-0 tail test. Nothing here is assigned to any edge yet.
+Status: BINDING for the full assignment pass, per the sign-off ladder: the two
+model arms cleared the benchmark on controls, the gate is calibrated (and is
+re-calibrated in situ during the full pass — see the adjudication-run section),
+and the human has adjudicated the first disagreement set. Nothing is assigned to
+any edge until the full pass merges.
 
 Provenance: v0.1 drafted 2026-08-06 by the Fable-family planning session from the
 live graph (328 nodes / 1062 edges / 1180 references). Reviewed the same day by an
@@ -14,7 +18,11 @@ step-0 tail test. The test sample was drawn stratified by STRUCTURE
 (singleton/normalized/volume), never by family, so the v0.2→v0.3 fixes did not
 invalidate the draw.
 
-**v0.4 is the first revision driven by measurement rather than review.** The
+**v0.5 folds in the first human adjudication run** — ten rulings over the
+step-0 disagreement set, 2026-08-06, recorded in "The first adjudication run"
+below with four boundary refinements they force.
+
+**v0.4 was the first revision driven by measurement rather than review.** The
 step-0 test ran on 2026-08-06 in four arms: the human annotator (17 items), an
 Opus pass and a Gemini pass over all 60 blind, and a seeded-corruption
 calibration of the family gate. Results and their consequences are in
@@ -610,6 +618,48 @@ singleton tail is the test. Pre-registered expectation: most well-formed
 singletons land in a family (b-cw9ii-1 ran 22/24 at edge level); refusals
 above ~30% of the well-formed tail sample mean the vocabulary is short, and
 the refusal reasons say where. That outcome ships as a finding, not a failure.
+
+## The first adjudication run (v0.5, 2026-08-06)
+
+Ten edges where the two model arms disagreed, ruled by Damian in the
+adjudication interface, every ruling with a reason
+(`pipeline/work/family_adjudication_rulings.json`, exported 18:42Z).
+
+**Outcome: the human sided with Opus 5 times, Gemini 4, and chose a third answer
+once — agreement with at least one arm on 9 of 10 of the hardest cases in the
+sample.** The gate's signal held direction: all 3 assignments it marked SUPPORTED
+were confirmed by the human; of the 6 it marked WRONG, 4 ended in the human
+overruling the arm the gate had checked. Router, not judge — as designed.
+
+Four boundary refinements, each forced by a ruling, each now binding:
+
+1. **The referent decides identity vs classification vs symbolization** (rulings
+   14, 39). When the subject stands as the person or figure itself, identity
+   families beat `classification` (christ is-a anthropos → `archetypal-identity`:
+   "christ is the person here, not a symbol"). And a hermeneutic or doctrinal
+   emphasis in the paragraph tips even a literal `symbolizes` string into
+   `doctrinal-attribution` (phoenix symbolizes christ). The relation string never
+   decides the family; the edge in its paragraph does.
+2. **A process classifies by its stated terminus** (ruling 28). dionysos
+   dissolves-distinctions-into psyche is `union`, not `separation`: the
+   dissolving is the mechanism, the resulting unity is the claim. Where the text
+   states what the process arrives at, that terminus names the family.
+3. **Transcendence is position, not lack** (ruling 59). archetype transcends
+   psyche is `structural-position` — "this reflects more a location than a lack
+   (by being elsewhere)". `privation` requires a stated absence or deficiency,
+   never mere location beyond a boundary.
+4. **Characterization has no family, and that is the right answer** (ruling 44).
+   celestial-pole is-characterized-by quaternity was ruled
+   `unclassified(no-family)` over the composition reading: the claim is about how
+   a thing appears, not what it contains. Appearance/characterization claims are
+   a recorded candidate gap — **not** added as a family on one data point, per
+   the v0.4 refusal discipline.
+
+Because refinements 1–3 touch boundaries the calibration planted near-misses on,
+the gate's calibration is **re-run in situ during the full pass**: a fresh seeded
+corruption set is planted among the live assignments the gate checks, so
+sensitivity under v0.5 is measured on the pass itself rather than asserted from
+v0.4.
 
 ## The adjudication protocol (replaces the step-0 tail test)
 
