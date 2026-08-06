@@ -278,6 +278,50 @@ rather than as a default.
 **R7.6** v1.4 is single-reviewer. Community submission is a v2.0 question and
 needs identity, moderation and abuse handling that are out of scope here.
 
+## R8 — The Concordance: psychology against alchemy
+
+Added 2026-08-06 on Damian's brief: *"consider how we want to play off the core
+concepts against alchemy — perhaps there is a way to show the parallels in a
+clever way, make this a real didactic tool."* Mockup:
+`pipeline/work/atlas_mockup_v14.html`, section III.
+
+**The insight that makes it cheap.** Jung's thesis — alchemy is the psyche
+describing itself in projected form — does not need to be *stated* by the site.
+The graph already contains it as verified edges: `the-self —is-projection-of→
+lapis` (CW 9ii §264), `the-unconscious —is-psychic-analogue-of→ prima-materia`
+(CW 12 §431), `individuation —is-a→ coniunctio` (CW 9ii §117),
+`the-self —reborn-as→ filius-regius` (CW 14 §548), and dozens more. The
+Concordance is a lens on existing data, not a new dataset.
+
+**R8.1** A two-register view: psychological concepts on one side ("The Psyche"),
+alchemical carriers on the other ("The Laboratory"), bridge edges between them.
+Selecting a concept surfaces its carriers; each pairing is a cited, gated edge
+and clicking it opens the normal evidence view. Nothing appears in the
+Concordance that is not an edge in `seed.json`.
+
+**R8.2** The bridge set is selected by **family, not by hand**: the
+symbolization / correspondence / projection families crossing from a
+psychological-register node to an alchemical-register one. This makes the
+Concordance the family layer's first visible payoff and keeps it maintenance-free
+— new bridge edges appear as they are mined and classified.
+
+**R8.3** A per-concept **evidence-mix strip**: what share of this concept's
+references are alchemical vs other volumes. Measured today: anima 80%
+alchemical, the-unconscious 78%, projection 89%; 159 of 338 nodes rest *only* on
+trilogy evidence. This is didactically honest — it shows the reader where the
+graph's picture of the psychology currently comes from — and it turns the CW 9i
+arc into a visible experiment: as archetype theory mined without alchemical
+carriers merges, the strips shift on their own.
+
+**R8.4** **Guided pairs** for the reader who knows neither register: ~6 curated
+crossings (self/lapis, opus/individuation, nigredo/unconscious, …) presented as
+a short walk, each step one verified edge with its quote. Curation selects
+*which* edges to walk, never edits what they say.
+
+**R8.5** Register membership (psyche-side vs laboratory-side) is derived from
+node `type` plus a small explicit list for ambiguous Concept nodes, recorded in
+the build script — never inferred silently at runtime.
+
 ## Explicitly out of scope for v1.4
 
 - The full "Story" tab (v1.8) — R2 is a bounded down-payment, not the feature.
