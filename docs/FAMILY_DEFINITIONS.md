@@ -1,4 +1,4 @@
-# Relation families — candidate definitions, v0.3 draft
+# Relation families — candidate definitions, v0.4 draft
 
 Status: DRAFT for the step-0 tail test. Nothing here is assigned to any edge yet.
 
@@ -10,9 +10,19 @@ was re-reviewed by the same Opus agent: verdict MINOR-REVISIONS, 12 findings, al
 verified against the graph — three blockers (a type-based default in derivation, a
 direction inversion in manifestation's string list, a self-contradicting seed in
 separation) plus nine corrections. v0.3 lands them. Human sign-off comes from the
-step-0 tail test; the definitions bind the family gate only after that. The test
-sample was drawn stratified by STRUCTURE (singleton/normalized/volume), never by
-family, so the v0.2→v0.3 fixes do not invalidate the draw.
+step-0 tail test. The test sample was drawn stratified by STRUCTURE
+(singleton/normalized/volume), never by family, so the v0.2→v0.3 fixes did not
+invalidate the draw.
+
+**v0.4 is the first revision driven by measurement rather than review.** The
+step-0 test ran on 2026-08-06 in four arms: the human annotator (17 items), an
+Opus pass and a Gemini pass over all 60 blind, and a seeded-corruption
+calibration of the family gate. Results and their consequences are in
+"What the step-0 test measured" below. The headline: the gate caught 19 of 19
+planted errors, the two model arms agreed 83%, and the human arm diverged mainly
+where a thin UI withheld the boundary rules — so the definitions are followable
+from the document, the interface was not, and the human's role changes from
+classifier to adjudicator.
 
 Companion: `docs/PROPOSAL_RELATION_TYPING.md` (design, pre-registered ruling,
 assignment pipeline, cost). Measurement basis: **543 effective relation strings
@@ -40,6 +50,47 @@ and the rationale for taking or refusing it (full treatment in the proposal).
 | Fleiss' κ = 0.80 (Lomaeva & Jain's annotator pair) | **Used** as the agreement benchmark | disagreement concentrates on polysemous strings there too; the tail-test controls are expected near ceiling, singleton strata below |
 | OOPS! P24 (relation encodes a proposition) | **Used** as the `not-a-relation` screen | already implemented in `tools/ontology_qa/quality.py` and the mining pre-check |
 | Unanchored human passes | **Used** (internal, the E10 lesson) | anchored review anchors the reviewer; the sheet never shows a suggested family |
+
+## What the step-0 test measured (2026-08-06)
+
+Four arms, same 60-item structure-stratified sample, all blind to each other.
+
+**Arm 1 — gate calibration (the load-bearing result).** 19 deliberate errors were
+planted in the Opus pass's assignments and a Gemini gate judged all 60 without the
+key. Corruption classes were chosen to be meaningful rather than random: K1
+near-miss across a boundary this document explicitly rules on (8), K2 far-miss (4),
+K3 swap to `correspondence`, the family the human arm showed behaving as a sink (4),
+K4 replacing a confident family with a refusal (3).
+
+| | |
+|---|---|
+| Sensitivity | **19/19 = 100%**, including 8/8 on near-misses |
+| Specificity | 35/41 = 85%, **a floor** — several "false positives" are real errors in the uncorrupted set (the gate flagged `christ is-a anthropos` as classification-should-be-identity, and both other arms agree) |
+
+The gate cited boundary rules by name when rejecting near-misses. This is the
+evidence that the assignment pipeline can run at scale: the family gate is now a
+calibrated instrument rather than an assumed one.
+
+**Arms 2 and 3 — followability.** Opus vs Gemini agreed on 83% of 60 (100% on the
+amplification control, 80% on head-string controls). Two independent model families
+converging at that rate is evidence the document is followable. It is NOT evidence
+it is correct: no arm is ground truth, and the document's author is the Fable
+session, so agreement measures consistency, not truth.
+
+**Arm 4 — the human.** 17 items: 35% agreement with Opus, 41% with Gemini, but
+80–100% on head-string controls and 0–20% in the tail. Where the human differed,
+Opus and Gemini agreed with each other on 15 of 17. The interface showed twelve-word
+definitions on hover and **no boundary rules and no seed examples** — precisely the
+content that discriminates. The divergence is therefore attributable to the
+instrument, not to the annotator or (mainly) to the definitions. Confidence was 29%
+"sure" with "best fit" written four times, which is the signature of an annotator
+discriminating without the means to discriminate.
+
+**Consequence for the protocol.** The human step is redesigned: models classify, the
+calibrated gate checks them, and the human adjudicates only the cases where two model
+families genuinely disagree — roughly ten items rather than sixty. The step-0 test as
+originally specified (a human classifying cold from the definitions) is retired; it
+measured the interface as much as the vocabulary.
 
 ## The rules of the layer (fixed before any definition)
 
@@ -119,6 +170,25 @@ and the rationale for taking or refusing it (full treatment in the proposal).
 - **Sequence vs dependence on precedes:** "without X, no Y" → dependence
   (`the-shadow precedes anima/animus`, 9ii §42, whose quote says recognition
   is impossible without it); bare order → sequence.
+- **`is-a` on a named-figure pair is identity, not classification** *(v0.4, from
+  the gate)*. `christ is-a anthropos` was assigned classification by Opus and
+  flagged WRONG by the gate, with Gemini and the human both saying identity; the
+  quote ("The second Adam is Christ") asserts identity between two named figures,
+  not membership of a class. Rule: when both endpoints are named Figures and the
+  quote asserts they ARE one another, `is-a` is `archetypal-identity`.
+  Classification requires the object to be a genuine kind or class.
+- **Doctrinal-attribution outranks the relation's surface verb** *(v0.4)*. Where
+  the quote frames the claim as an act of interpretation by a named tradition or
+  author, attribution wins even when the relation string looks like another
+  family: Gemini read `phoenix symbolizes christ` as attribution because the
+  paragraph describes the reading being made ("in Christian interpretation"),
+  against Opus's symbolization. Test: is the CLAIM the symbolizing, or someone's
+  act of so reading it?
+- **`renewed-through` / `transformed-through` are per edge** *(v0.4)*. Opus read
+  `rex renewed-through the-unconscious` as dependence, Gemini as psychic-effect,
+  and instrumentality now also claims it. Decide by what the quote asserts: the
+  standing requirement (dependence), the acting-upon (psychic-effect), or the
+  route travelled (instrumentality).
 - **Per-edge caveats on promiscuous strings:** `is-a` (identity-flavoured at
   9ii §42, taxonomic at 9ii §33), `embodies` ("consists of/composed of"
   quotes → composition: `adam embodies quaternity` 14 §555; fusion/reunion
@@ -131,11 +201,11 @@ and the rationale for taking or refusing it (full treatment in the proposal).
 
 ## The families
 
-Twenty-four candidates. The ≤25 figure is a design TARGET from the CIDOC
-scale lesson, not a constraint: if the tail test's refusal reasons cluster
+Twenty-five candidates as of v0.4. The ≤25 figure is a design TARGET from the
+CIDOC scale lesson, not a constraint: if the tail test's refusal reasons cluster
 into a coherent 25th or 26th family, exceeding the target is a reportable
 finding and goes through governance — a hard cap against a fail-closed CI
-would deadlock. The count stands at 24 for a stated reason: the review showed that refusing the five v0.2 additions
+would deadlock. The count stands at 25 for a stated reason: the review showed that refusing the five v0.2 additions
 would send ~100 well-formed edges to `unclassified` and bake a ~10% error into
 the measured CI ceiling. Each entry: definition (agent-neutral), boundary,
 seeds verified against the live graph.
@@ -476,6 +546,28 @@ leads-to-psychoses-of mass-psyche` (13 §52); `artifex activates
 the-unconscious` (13 §220); `mediates` (4); `undergoes` (5);
 `consciousness leads-to-crucifixion-of the-ego` (9ii §79).
 
+### 25. instrumentality  *(added at v0.4 — earned by measured refusal)*
+The object is the MEANS by which the subject is reached, enabled, effected or
+made possible. Not what happens, but what it happens *through*.
+**Boundary:** telos names the END pursued; instrumentality names the route to it
+(`homo-maximus is-approached-through the-opus` — the opus is the road, the homo
+maximus the destination). Not dependence: a precondition must be satisfied
+*before*, a means is used *to*. Not psychic-effect: the subject is not acted upon
+by the object, it travels by it.
+**Evidence for the addition:** both model arms of the step-0 test refused items
+this family now covers, independently and with converging reasons — Gemini on
+`homo-maximus is-approached-through the-opus` ("an instrument/means relation is
+not covered by the existing families") and both arms on `temenos
+enables-meeting-with the-unconscious` ("an instrumental/affordance relation does
+not fit structural-position, dependence, or psychic-effect"). 13 strings and 13
+edges in the live vocabulary carry the sense.
+**Seeds:** `homo-maximus is-approached-through the-opus` (13 §203);
+`temenos enables-meeting-with the-unconscious` (12 §63); `imaginatio
+unlocks-secret-of the-opus` (12 §400); `mandala is-built-up-through
+active-imagination` (12 §123); `rex renewed-through the-unconscious`;
+`unio-mentalis achieved-by-separating the-body` (14 §671, per edge — the
+separation reading may win where the parting itself is the claim).
+
 ## What is deliberately NOT here
 
 - **No transitivity on any family**; symmetry and inverses only as declared
@@ -486,6 +578,30 @@ the-unconscious` (13 §220); `mediates` (4); `undergoes` (5);
 - **No manifestation/appearance merger into symbolization** — the direction
   test separates them and 19 edges depend on it.
 
+
+### Considered at v0.4 and NOT added
+
+Two further gaps surfaced in the step-0 refusals. Both are recorded rather than
+adopted, because the evidence does not yet meet the bar the instrumentality
+addition cleared.
+
+- **property-attribution** (`is-characterized-by`, `possesses`, `has-affinity-with`).
+  One arm refused one item. 5 strings / 7 edges. A family for "A has quality B"
+  is a different shape from every family here — the object is a property, not a
+  participant — and adopting it would invite every adjective in the corpus. Route
+  these to `unclassified(no-family)` for now and revisit if the full assignment
+  pass produces a cluster.
+- **governing-principle** (`is-principle-of`, `orders`). Both arms refused
+  `ares is-principle-of individuation`, which is real evidence, but the class is
+  3 strings / 4 edges — too thin to earn a family, and plausibly absorbed by
+  structural-position (a governing role is a place in a structure) or by
+  instrumentality (a principle by which something proceeds). Route to
+  `unclassified(no-family)` and let the assignment pass decide.
+
+Recording refusals as refusals, with their counts, is how the `unclassified`
+reason codes stay meaningful: a `no-family` on `is-principle-of` is now a known
+gap under review, not an unexplained miss.
+
 ## Expected coverage, stated before the test
 
 The 24 families were derived from the head (≥4 uses), the normalized layer,
@@ -495,22 +611,42 @@ singletons land in a family (b-cw9ii-1 ran 22/24 at edge level); refusals
 above ~30% of the well-formed tail sample mean the vocabulary is short, and
 the refusal reasons say where. That outcome ships as a finding, not a failure.
 
-## The step-0 protocol (the human tail test)
+## The adjudication protocol (replaces the step-0 tail test)
 
-Sample: 60 items, stratified, seeded — `pipeline/work/family_tailtest_sample.json`;
-working sheet `pipeline/work/family_tailtest_sheet.md`. UNANCHORED (the E10
-lesson): the sheet shows edge, effective relation, qualifiers, quote — never a
-suggested family.
+The original protocol asked a human to classify 60 items cold. It ran on
+2026-08-06 and is **retired**: it measured the interface as much as the
+vocabulary, and 60 cold classifications is the wrong use of the only scarce
+resource in the pipeline. What replaces it:
 
-Per item record: family, or `unclassified(no-family)`, or
-`unclassified(text-undecided)`, or `not-a-relation`; confidence (sure/unsure);
-a one-line reason for every refusal and every unsure. Report per stratum,
-never pooled. Benchmark: κ = 0.80 (see precedents table) — controls near
-ceiling, singleton strata below it is the expected shape.
+1. **Two model arms classify, blind to each other** — one Opus-family, one Gemini.
+   Neither may be the family that authored the definitions.
+2. **The calibrated gate checks both.** Sensitivity 19/19 and specificity ≥85%
+   are measured, not assumed, and both are re-measured whenever the definitions
+   change materially (the corruption harness is seed-reproducible:
+   `pipeline/work/corrupt_family_assignments.py`).
+3. **The human adjudicates only genuine disagreement** — cases where the two model
+   arms differ, plus any the gate marks WRONG on an uncorrupted assignment. On the
+   60-item sample that was ~10 items, not 60.
+4. **Refusals are routed, not pooled.** `unclassified(no-family)` clusters go to
+   the family-addition path in rule 5; `unclassified(text-undecided)` is recorded
+   against the corpus, never against the vocabulary.
 
-Decision rules, pre-set: controls (head strings, amplification layer) near
-ceiling AND well-formed-tail refusal ≤ ~30% → definitions sign off (with
-per-family fixes from the reasons) and the assignment pipeline runs. Controls
-stumble → the DEFINITIONS are at fault; rewrite before anything else.
-Refusals cluster in one semantic area → a family addition goes through
-governance and the test reruns on that stratum.
+The adjudication interface must show, at the point of decision: the edge with its
+qualifiers and quote, **both model answers with their stated reasons**, the
+competing family definitions in full, the governing boundary rule, and the seed
+examples. The v0.3 interface showed twelve-word hovers and none of that, which is
+the measured cause of the human arm's divergence — 80–100% agreement on head
+controls, 0–20% in the tail where boundary rules decide.
+
+Retained from the original protocol: unanchored presentation (no suggested
+answer), per-stratum reporting never pooled, a required one-line reason on every
+refusal, and Fleiss' κ = 0.80 as the agreement benchmark — now applied to the two
+model arms rather than to a human pair, with 83% observed on the first run.
+
+## Sign-off condition
+
+The definitions bind the family gate when: the two model arms agree at or above
+the benchmark on the controls; the gate's calibration has been re-run against the
+current definitions; and the human has adjudicated the disagreement set. None of
+those is satisfied by model agreement alone — consistency is not correctness, and
+the author family is not eligible to judge its own document.
