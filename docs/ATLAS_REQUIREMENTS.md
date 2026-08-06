@@ -256,6 +256,21 @@ reference at this scale.
 visibly closes for a reader. It is the headline capability of v1.4 and should be
 discoverable without instruction.
 
+**R5.5 The works bar replaces the left-hand filter column (DECIDED, Damian,
+2026-08-06).** The persistent checkbox stack is removed entirely. In its place:
+
+- A **thin coverage strip along the bottom edge**: one segment per volume,
+  width/brightness proportional to that volume's reference count, computed from
+  `atlas.json` at build time. Click a segment to filter to the volume; click
+  again to clear. The filter is itself a data statement — it shows where the
+  graph's evidence is deep (CW 14, 9ii) and where it is thin (incidental
+  volumes), which is the honesty R8.3 wants.
+- **Search-token filters**: typing `CW 14` filters to the volume and renders as
+  a removable chip beside the search field (extending the existing `CW 14 §1`
+  citation jump). Family and layer facets move into the same chip row.
+- Result: no persistent left panel at all; the graph owns the stage. The
+  `claim_type` (voice) filter joins the chip row too, not a separate control.
+
 ## R6 — Citable URLs
 
 **R6.1** A permalink per node and per edge (hash routing is sufficient).
