@@ -84,13 +84,29 @@ atlas at a different zoom.
 That sequence is the whole brief in one gesture: it grabs attention, and what it grabs
 attention *with* is the verification chain.
 
-### R0.2 The palette is already the argument — commit to it
+### R0.2 The palette: the Seven Metals (DECIDED, Damian, 2026-08-06)
 
-`web/src/style.css` (139 lines) is holding a near-black ground `#0a0d12`, gold
-`#d9b25f`, sage `#7fc9a0`, terracotta `#d0685a`, cream `#f0ead8`. That is *nigredo,
-citrinitas, albedo, rubedo* — the alchemical colour sequence, arrived at by taste and
-never named. Name it, and let it do structural work: the assembly runs black → gold,
-selection states use rubedo, verified evidence reads cream.
+Chosen from four candidates (`pipeline/work/atlas_palettes_v14.html`): warm
+near-black ground, gold accent, cream prose — and **node type coloured by metal**,
+so the legend is itself a claim about the material:
+
+| Type | Metal | Working hex |
+|---|---|---|
+| Concept | Gold — Sol | `#d4af37` |
+| Symbol | Silver — Luna | `#c2cdd6` |
+| Figure | Copper — Venus | `#c58152` |
+| Operation | Iron — Mars | `#b5502f` |
+| Substance | Verdigris (the oxide) | `#63997f` |
+| Motif | Lead — Saturn | `#8b96a5` |
+
+Ground `#0b0a08`, panel `#171410`, ink `#eae3d2`, accent gold `#d4af37`. The
+*system* is the decision; exact hex values are tuned at build for contrast and
+colour-blind distinguishability (iron vs copper is the pair to watch). Implemented
+as CSS variables plus the DOMAIN colour map in `build-atlas.mjs` — a later change
+is one block in each file, so this decision is cheap to revisit and expensive only
+to ignore. The rejected manuscript palette (parchment/ink/vermilion) is noted as a
+candidate skin for the evidence view or print export, as a design decision, not a
+user-facing toggle.
 
 ### R0.3 Typography carries the register
 
