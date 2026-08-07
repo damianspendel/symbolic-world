@@ -6,8 +6,7 @@ method stats at build time — these are the numbers that move. Bare numbers in
 the text are frozen measured results; the build registers them in the copy
 assertion's method-constants allowlist with their source noted here.
 
-Sources for the frozen numbers: 77% and 0%-across-six — pipeline/state.json
-batch records (b-cw9ii-2; b-cw9ii-3..7 + b-cw9i-1); 19/19 — step-0 gate
+Sources for the frozen numbers: 19/19 — step-0 gate
 calibration 2026-08-06; 20/20 and 38/40 — in-situ recalibration 2026-08-07,
 seed 90507; 86% — family_pass_summary.json; 14 of 20 — themis competency run;
 19 dispute rows — disputes.json; 10 rulings — family_adjudication_rulings.
@@ -119,10 +118,7 @@ The method was published with release v1.3.0 — 248 symbols, 669 relations,
 699 citations. That exact snapshot, atlas and ledger included, is preserved
 unchanged at [/v1.3/](/v1.3/), and the paper describes it. The live counts at
 the top of every page show how far the atlas has grown since, under the same
-gates. Since then, under
-the same gates: the relation form rule, the family layer, *Aion* end to end,
-and CW 9i in progress. The atlas above has grown; the bar for entry has not
-moved.
+gates.
 
 [citation block — wired from the repo's citation metadata; DOI
 10.5281/zenodo.21631523]
