@@ -57,6 +57,12 @@ add symbolicworld.observer (and www if used). Cloudflare rewrites the DNS
 record itself and issues the cert. The old record (tunnel CNAME) is what you
 are replacing; note its exact value first — it is the rollback.
 
+RECORDED 2026-08-07 pre-flip: the record was `symbolicworld.observer` -> type
+Tunnel -> tunnel name `oi-misterbig`, Proxied, TTL Auto — the only DNS record
+in the zone. Rollback = remove the custom domain from the Pages project and
+re-add the public hostname `symbolicworld.observer` to tunnel `oi-misterbig`
+(Zero Trust -> Networks -> Tunnels), or re-create the CNAME to the tunnel.
+
 Rollback at any point: delete the custom domain from the Pages project and
 restore the tunnel CNAME. Seconds, not hours.
 
