@@ -24,16 +24,28 @@ different companies have each had a chance to kill it — and every claim keeps
 the receipt: the exact paragraph, a verbatim quote, and the record of who
 checked what.
 
+[figure: one claim, drawn — the node `lapis` joined by the labelled relation
+`is-projection-of` to the node `the-self`, with its citation chip CW 9ii §264.
+The first clause of the narrative on the landing page rests on exactly this
+edge.]
+
+Reading it: the stone (lapis) is claimed to be a projection of the self, Jung
+says so at paragraph 264 of *Aion*, and clicking the claim anywhere on this
+site shows the verbatim sentence.
+
 ## One corpus
 
 Everything comes from a single source: the Bollingen edition of the *Collected
 Works*, in English. No secondary literature, no commentary, no symbol
-dictionaries. That choice costs breadth and buys depth. The strip below shows
-how deeply each volume is mined — the alchemical trilogy (CW 12, 13, 14) and
-*Aion* end to end, CW 9i in progress, five further volumes represented where
-the deep volumes reach into them.
+dictionaries. That choice costs breadth and buys depth.
 
-[works-strip component]
+[figure: the works bar, as it appears at the bottom of the atlas]
+
+The bar along the bottom of the atlas is the corpus made visible: one segment
+per volume, sized by how much verified evidence it carries — the alchemical
+trilogy (CW 12, 13, 14) and *Aion* mined end to end, CW 9i in progress, five
+further volumes represented where the deep volumes reach into them. The
+segments select: click one and the atlas shows only that volume's claims.
 
 ## How a claim gets in
 
@@ -67,8 +79,8 @@ Machines verify; people decide. Three places the human hand is in the record:
 - **The gold set.** {{human_chips}} claims in the [ledger](/ledger.html) carry
   a *human-validated* mark: a person read the source paragraph and confirmed
   the claim. This is the reference set the machine verdicts are measured
-  against, and it grows batch by batch. Most claims are machine-verified only
-  — the amber dot is the honest default, not a defect.
+  against. Most claims are machine-verified only — the amber dot is the
+  honest default, not a defect.
 - **The dispute log.** 19 public challenges to specific claims, each with its
   outcome on the record. A graph that cannot show you its corrections is
   asking for trust it has not earned.
@@ -78,7 +90,7 @@ Machines verify; people decide. Three places the human hand is in the record:
   queued for a human ruling, and every ruling lands in the ledger signed and
   dated, the same treatment the machine verdicts get.
 
-## How we know it holds — and what could still be wrong
+## Confidence levels
 
 The checks are themselves checked:
 
@@ -93,26 +105,21 @@ The checks are themselves checked:
   relations. Twenty standing questions about Jung's thought are asked of the
   graph after every change; it currently answers 14 in full.
 
-And the system has been needed. In August 2026 a blind mining run produced
-malformed relations at a rate of 77% — the metrics caught it, the cause was
-traced to a single sentence in the miner's briefing, the sentence was replaced
-with a formal rule, and six blind runs since have held at zero. That episode
-is in the ledger with everything else. A quality system that has never caught
-anything is a decoration; this one has a scar to show.
-
 What the instruments do not cover, stated plainly:
 
-| Known limit | What watches it |
+| Known limit | Options |
 |---|---|
-| One human reviewer; no second annotator yet | Planned: independent second annotation with agreement statistics |
+| One human reviewer; no second annotator yet | Independent second annotation with agreement statistics |
 | A class of identity drift (two names for one thing entering as two things) is invisible to the current audit | No instrument yet — known gap, on the record |
-| English translation only (Hull) | Planned: German cross-check against the *Gesammelte Werke* |
+| English translation only (Hull) | German cross-check against the *Gesammelte Werke* |
 
 ## The paper
 
 The method was published with release v1.3.0 — 248 symbols, 669 relations,
 699 citations. That exact snapshot, atlas and ledger included, is preserved
-unchanged at [/v1.3/](/v1.3/), and the paper describes it. Since then, under
+unchanged at [/v1.3/](/v1.3/), and the paper describes it. The live counts at
+the top of every page show how far the atlas has grown since, under the same
+gates. Since then, under
 the same gates: the relation form rule, the family layer, *Aion* end to end,
 and CW 9i in progress. The atlas above has grown; the bar for entry has not
 moved.
