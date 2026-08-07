@@ -125,27 +125,131 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
         ${lens.size ? '<button class="lens" data-lens-clear>clear</button>' : ''}
       </div>
 
-      <div class="conc-board" id="conc-board">
+      ${picked ? `<div class="wheel" id="wheel">
+        <svg class="wheel-svg" id="wheel-svg"></svg>
+        <button class="wheel-back" data-unpick>← all terms</button>
+      </div>` : `<div class="conc-board" id="conc-board">
         <svg class="conc-arcs" id="conc-arcs" preserveAspectRatio="none"></svg>
         <div class="conc-col left">
           <div class="conc-colhead">The Psyche</div>
-          ${psyIds.map(id => `<button class="cnode ${picked === id ? 'hot' : ''}" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>
+          ${psyIds.map(id => `<button class="cnode" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>
             ${mixStrip ? mixStrip(id, { compact: true }) : ''}`).join('')}
-        </div>
-        <div class="conc-mid">
-          ${picked ? `<div class="conc-colhead" style="text-align:center">${esc(label(picked))} · ${pickedRows.length} claim${pickedRows.length === 1 ? '' : 's'}</div>
-          ${pickedRows.map(r => `<button class="conc-rel" data-edge="${esc(r.id)}">${r.inverted ? '←&nbsp;' : ''}${esc(r.e.relation)}${r.inverted ? '' : '&nbsp;→'}<span class="cite">${esc(label(r.psyche === picked ? r.lab : r.psyche))} · ${esc(r.cite)}</span></button>`).join('')}
-          ${mixStrip ? mixStrip(picked) : ''}` : `<div class="conc-colhead" style="text-align:center;color:var(--ink-dim)">select a concept</div>`}
         </div>
         <div class="conc-col right">
           <div class="conc-colhead">The Laboratory</div>
-          ${labIds.map(id => `<button class="cnode ${picked === id ? 'hot' : ''}" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>`).join('')}
+          ${labIds.map(id => `<button class="cnode" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>`).join('')}
         </div>
-      </div>
+      </div>`}
     </div>`
 
     wire(rows)
-    setTimeout(() => drawArcs(rows), 0)
+    if (picked) setTimeout(() => drawWheel(), 0)
+    else setTimeout(() => drawArcs(rows), 0)
+  }
+
+  // ---- the wheel: the picked term at centre, every relation a labelled spoke.
+  // Psyche partners take the left half, laboratory partners the right, so the
+  // two-register geometry survives the change of form. Nodes fade in from the
+  // centre outward; not a perfect wheel, an honest one.
+  // spoke labels are signage: the normalized verb phrase where one exists;
+  // the evidence panel keeps the verbatim relation as primary (R3.4)
+  function spokeRel(e) { return (e.relation_normalized && e.relation_normalized.relation) || e.relation }
+
+  function drawWheel() {
+    const host = root.querySelector('#wheel')
+    const svg = root.querySelector('#wheel-svg')
+    if (!host || !svg || !picked) return
+    const rows = allRows.filter(r => r.psyche === picked || r.lab === picked)
+    // group by partner: one node per partner, one spoke per claim
+    const partners = new Map()
+    for (const r of rows) {
+      const partner = r.psyche === picked ? r.lab : r.psyche
+      if (!partners.has(partner)) partners.set(partner, [])
+      partners.get(partner).push(r)
+    }
+    function regOf(id) { return allRows.some(r => r.psyche === id) ? 'psyche' : 'lab' }
+    const left = [...partners.keys()].filter(p => regOf(p) === 'psyche')
+    const right = [...partners.keys()].filter(p => regOf(p) !== 'psyche')
+    const W = host.clientWidth
+    const dense = Math.max(left.length, right.length)
+    const H = Math.max(460, Math.min(760, 140 + dense * 62))
+    host.style.height = H + 'px'
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`)
+    svg.setAttribute('width', W); svg.setAttribute('height', H)
+    const cx = W / 2, cy = H / 2
+    const rx = Math.min(W * 0.40, 480), ry = H / 2 - 48
+    // partners on each half-arc; alternate radius slightly so neighbouring
+    // labels breathe — an honest wheel, not a perfect one
+    const place = (list, side) => list.map((id, i) => {
+      const n = list.length
+      const a = n === 1 ? 0 : (i / (n - 1) - 0.5) * Math.PI * 0.94
+      const wob = 1 + (i % 2 ? 0.045 : -0.045)
+      const x = cx + Math.cos(a) * rx * wob * side, y = cy + Math.sin(a) * ry * wob
+      return { id, x, y }
+    })
+    const pos = [...place(left, -1), ...place(right, 1)]
+    // curved spokes: one quadratic per claim, fanned by curvature; labels ride
+    // the curve and are collision-nudged so they cover neither nodes nor each other
+    const spokes = []
+    const labelBoxes = []
+    const qp = (t, ax, ay, cxp, cyp, bx, by) => ({
+      x: (1 - t) * (1 - t) * ax + 2 * (1 - t) * t * cxp + t * t * bx,
+      y: (1 - t) * (1 - t) * ay + 2 * (1 - t) * t * cyp + t * t * by,
+    })
+    pos.forEach((p, pi) => {
+      const claims = partners.get(p.id) || []
+      const dx = p.x - cx, dy = p.y - cy
+      const len = Math.hypot(dx, dy) || 1
+      const nx = -dy / len, ny = dx / len          // unit normal
+      claims.forEach((r, i) => {
+        const fan = (i - (claims.length - 1) / 2) * 30
+        const wiggle = (pi % 2 ? 12 : -12)
+        const bend = fan + wiggle
+        const mx2 = cx + dx * 0.5 + nx * bend, my2 = cy + dy * 0.5 + ny * bend
+        const d = `M ${cx.toFixed(1)} ${cy.toFixed(1)} Q ${mx2.toFixed(1)} ${my2.toFixed(1)} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`
+        const lensCls = lens.size ? (lens.has(r.family) ? `lens-${r.family}` : 'lens-dim') : ''
+        // label: ride the curve, nudge along it until clear of neighbours
+        let t = 0.55, L = null
+        const nearNode = pt => pos.some(q => Math.abs(pt.y - q.y) < 24 && Math.abs(pt.x - q.x) < 95)
+          || (Math.abs(pt.y - cy) < 26 && Math.abs(pt.x - cx) < 110)
+        for (let tries = 0; tries < 7; tries++) {
+          const pt = qp(t, cx, cy, mx2, my2, p.x, p.y)
+          const clash = labelBoxes.some(b => Math.abs(b.y - pt.y) < 14 && Math.abs(b.x - pt.x) < 118) || nearNode(pt)
+          if (!clash) { L = pt; break }
+          t -= 0.06
+        }
+        if (!L) { const pt = qp(0.55, cx, cy, mx2, my2, p.x, p.y); L = { x: pt.x, y: pt.y - 14 } }
+        labelBoxes.push(L)
+        spokes.push(`<path d="${d}" class="spoke ${lensCls}" data-arc="${esc(r.id)}"></path>
+          <path d="${d}" fill="none" stroke="transparent" stroke-width="14" style="pointer-events:stroke;cursor:pointer" data-hit="${esc(r.id)}"></path>
+          <text x="${L.x.toFixed(1)}" y="${(L.y - 5).toFixed(1)}" text-anchor="middle" class="spoke-label" data-spoke-label="${esc(r.id)}">${esc(r.inverted ? '← ' + spokeRel(r.e) : spokeRel(r.e) + ' →')}</text>`)
+      })
+    })
+    svg.innerHTML = spokes.join('')
+    // nodes as absolutely-positioned buttons over the svg
+    const nodeBtns = pos.map(p =>
+      `<button class="wnode ${regOf(p.id) === 'psyche' ? 'wp' : 'wl'}" data-node="${esc(p.id)}" style="left:${p.x}px;top:${p.y}px">${esc(label(p.id))}</button>`)
+    host.insertAdjacentHTML('beforeend',
+      `<button class="wnode wcenter ${regOf(picked) === 'psyche' ? 'wp' : 'wl'}" data-unpick style="left:${cx}px;top:${cy}px">${esc(label(picked))} <span class="deg">${rows.length}</span></button>` +
+      nodeBtns.join(''))
+    // entrance: everything starts at the centre and flies out
+    const els = [...host.querySelectorAll('.wnode:not(.wcenter)')]
+    els.forEach(el => { el.style.transform = `translate(-50%,-50%) translate(${cx - parseFloat(el.style.left)}px, ${cy - parseFloat(el.style.top)}px)`; el.style.opacity = '0' })
+    svg.style.opacity = '0'
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      els.forEach(el => { el.style.transform = 'translate(-50%,-50%)'; el.style.opacity = '1' })
+      svg.style.opacity = '1'
+    }))
+    // wiring: spoke click opens the claim; partner click re-centres the wheel
+    svg.querySelectorAll('[data-hit]').forEach(pth => {
+      const id = pth.dataset.hit
+      pth.addEventListener('click', () => onOpenEdge(id))
+      pth.addEventListener('mousemove', ev => showTip(ev, id))
+      pth.addEventListener('mouseenter', () => hot(id, true))
+      pth.addEventListener('mouseleave', () => { hot(id, false); hideTip() })
+    })
+    host.querySelectorAll('.wnode[data-node]').forEach(b => b.addEventListener('click', () => { picked = b.dataset.node; draw() }))
+    host.querySelectorAll('[data-unpick]').forEach(b => b.addEventListener('click', () => { picked = null; draw() }))
   }
 
   // ---- the arcs --------------------------------------------------------------
