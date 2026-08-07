@@ -5,8 +5,18 @@ Run from the repo root:  python3 tools/pages/verify.py https://symbolic-world.pa
 """
 import hashlib
 import pathlib
+import re
 import sys
 import urllib.request
+
+# Cloudflare Bot Fight Mode appends its challenge script to HTML on the wire
+# (zone feature, active since the tunnel era). Strip it before comparing so the
+# check measures OUR content, not Cloudflare's armour.
+CF_INJECT = re.compile(rb'<script>\(function\(\)\{.{0,4000}?__CF\$cv\$params.*?</script>', re.S)
+
+
+def normalize(body: bytes) -> bytes:
+    return CF_INJECT.sub(b'', body)
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 DIST = ROOT / 'web' / 'dist'
@@ -33,7 +43,7 @@ for p in files:
         fails.append(str(rel))
         print(f'  FAIL {rel} — fetch error: {e}')
         continue
-    if hashlib.md5(body).hexdigest() != hashlib.md5(p.read_bytes()).hexdigest():
+    if hashlib.md5(normalize(body)).hexdigest() != hashlib.md5(p.read_bytes()).hexdigest():
         fails.append(str(rel))
         print(f'  FAIL {rel} — content differs from local dist')
 print(f'  edge caching headers observed: {edge_cached}')
