@@ -232,7 +232,7 @@ page = f"""<!doctype html>
   <b>quote</b> check, the independent <b>gate</b> (verifier and date), the narrow <b>voice</b> audit,
   the second-vendor <b>cross-vendor</b> check, and — where a person has checked the paragraph —
   <b>human</b> validation from the gold set. Disputed records link to the
-  <a href="/disputes.html">verification log</a>. Hover any chip for detail.</p>
+  <a href="/disputes.html">dispute log</a>. Hover any chip for detail.</p>
   <p class="intro">Disclosure, mirrored from the paper: verification timestamps for batches gated
   before 2026-07-26 were batch-backfilled rather than recorded per-operation (the verification is
   real; those timestamps are reconstructions). Since then, stamps are written by the operations
