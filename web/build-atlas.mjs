@@ -45,6 +45,31 @@ const PHASE = { black: '#1c1c1c', white: '#e8e2d0', red: '#b23a2e' }
 // style.css), public/chrome.css for the generated pages, and src/tokens.json for
 // tools/build_ledger_page.py. A literal hex anywhere else is a contract breach
 // and the consistency sweep greps for exactly that.
+
+// ---- the public dataset -----------------------------------------------------
+// /graph.json is the citable data download: the full verified graph as built,
+// with provenance. A 76-node relic from the site's first week sat at this URL
+// until 2026-08-07; this emission replaces it every build so it can never go
+// stale again.
+import { readFileSync as _rf, writeFileSync as _wf } from 'node:fs'
+function emitPublicDataset(seed, meta) {
+  const out = {
+    _about: 'The Symbolic World — a verified knowledge graph of C. G. Jung\'s Collected Works. ' +
+      'Every edge cites its CW volume and paragraph with a verbatim quote (max 25 words) and the ' +
+      'verification provenance of a three-model chain (proposer, gate, cross-vendor auditor). ' +
+      'Method: https://symbolicworld.observer/#/method',
+    _license: 'Data: CC BY 4.0. Quotes are brief excerpts from the Collected Works cited under fair use.',
+    _version: meta.version,
+    _generated: meta.built,
+    _counts: meta.counts,
+    _frozen_release: meta.frozen,
+    nodes: seed.nodes,
+    edges: seed.edges,
+  }
+  _wf(new URL('./public/graph.json', import.meta.url), JSON.stringify(out, null, 1))
+  console.log(`graph.json: public dataset emitted — ${seed.nodes.length} nodes, ${seed.edges.length} edges`)
+}
+
 const TOKENS = {
   ground: '#0b0a08', 'ground-2': '#100e0b', panel: '#171410',
   ink: '#eae3d2', 'ink-faint': '#9a9382', 'ink-dim': '#6f6a5d', 'ink-bright': '#ffffff',
@@ -492,6 +517,7 @@ writeFileSync(here('./src/atlas.json'), JSON.stringify({
   concordance: { bridges, core, guided, guidedReverse, journeys, mix, bridgeDegree, registers: { psyche: 'The Psyche', laboratory: 'The Laboratory' } }
 }))
 
+emitPublicDataset(seed, meta)
 console.log(`atlas: ${atlasNodes.length} nodes, ${atlasEdges.length} edges, ${refCount} references, ${clusters.length} regions`)
 console.log('regions:', clusters.map(c => `${c.label} (${c.size})`).join(' · '))
 console.log(`families: ${families.length} extracted (${famVersion || 'no version'}), ${boundaryRules.length} boundary rules`)
