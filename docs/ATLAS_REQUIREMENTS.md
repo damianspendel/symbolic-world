@@ -392,7 +392,7 @@ full-record search reads as a feature, not a bug.
 **R9.8 Concordance (decided via structured questions):** full #/concordance
 page, two columns — The Psyche (left, concepts ranked by bridge count), The
 Laboratory (right) — with drawn arcs, every arc a verified edge opening the
-evidence panel. Curated core of ~30 load-bearing crossings by default (ranked
+evidence panel. Curated core of ~30 crossings by default (ranked
 by evidence weight: reference count, then bridge degree), "show all 94" one
 click away. First visit offers a six-stop guided walk, visibly skippable;
 returning visits open the columns directly. Guided six: the-self/lapis
@@ -401,6 +401,73 @@ individuation/the-opus (CW 9ii §418), collective-unconscious/mercurius
 (CW 13 §284), anima/salt (CW 14 §321), the-opposites/mercurius (CW 12 §404).
 The evidence-mix strip lives BOTH under each Concordance concept AND on every
 node's selection panel in the atlas.
+
+## R10 — Second user review, 2026-08-07 afternoon
+
+All decided. R10.0 governs how everything else is built.
+
+**R10.0 The consistency contract** (also in project memory as the standing
+rule): shared chrome defined once — topbar, breadcrumb in a fixed position
+identical on every page, search box in the same position with the same
+behaviour on every full-page route; colours only via :root variables, no
+literal hexes in components, generated pages (ledger, disputes, families.html)
+included — grep output for strays; ONE gesture = ONE camera/layout move, never
+chained jumps; every number in copy derives from atlas.json meta with a
+build-time assertion that fails on count-like literals not in meta; the word
+"load-bearing" is banned from all copy; a cross-page consistency sweep is a
+verification item.
+
+**R10.1 Landing motion is one continuous gesture.** The narration and the
+graph land together: the graph fades in and zooms slowly TOWARD its final
+resting transform (including the rightward offset) while the clauses write;
+when the narration finishes, the graph has already landed. No post-hoc bump to
+the right, ever. The placeholder mechanism stays as is.
+
+**R10.2 Clause click is ONE move.** From landing to the evidence view in a
+single camera gesture — no second correction jump after arrival. Scale on
+arrival is now right; keep it.
+
+**R10.3 Remove the boxed claim diagram** from the edge panel (the stacked
+subject/relation/object boxes). Plain, well-set claim line instead.
+
+**R10.4 Families page gets the standard search**, same position and concept as
+every other search, tested for consistency against the atlas search.
+
+**R10.5 The queue nests inside Families** as a section with a count badge; the
+separate topbar item goes; #/queue deep-links into the section.
+
+**R10.6 Breadcrumbs: one fixed position on every page.** Compare ledger vs
+families and make them identical.
+
+**R10.7 Disputes page moves to the metals palette** (currently old blue).
+
+**R10.8 Search fixes and upgrades:**
+- Bug: searching from the home page does not respond the second time — fix.
+- A search that matches a family or a node opens its definition/panel, not
+  just a filter.
+- Autocomplete: typeahead dropdown grouped by kind (node / family / relation /
+  volume), families showing a one-line definition preview; Enter selects.
+
+**R10.9 Chrome trims:** drop the "JUNGKG" text top-left on every page; the
+about panel's close control pinned to exactly the "?" position (no offset);
+the metals sentence rewritten to claim only what is true — alchemy assigned
+metals to planets, the mapping of node kinds to metals is this project's
+design choice.
+
+**R10.10 Concordance round two:**
+- Journey choice made obvious: a visible row of journey tiles, same concept as
+  the volume tiles on the main page.
+- The journey box is FIXED height; stepping through never moves the mapping
+  below it.
+- The six journeys align conceptually (wording, order) with the home-page
+  narrative clauses, so the walk reads as the narrative unpacked — no click
+  coupling.
+- Arc legibility: hovering an arc names its relation at the cursor; selecting
+  a concept lists its crossings with relation names, and hovering a list row
+  lights exactly its arc. The basic defect being fixed: you cannot tell which
+  arrow carries which relationship.
+- Browser zoom (cmd +/-) must scale the page coherently — audit the mixed
+  px/svg sizing.
 
 ## Explicitly out of scope for v1.4
 
