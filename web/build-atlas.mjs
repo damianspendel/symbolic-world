@@ -634,8 +634,11 @@ if (existsSync(methodPath)) {
   }
   const validations = JSON.parse(readFileSync(here('./public/validations.json'), 'utf8')).validations || []
 
+  const xvStamped = atlasEdges.reduce((n, e) => n + e.refs.filter(r => r.crossvendor_checked).length, 0)
   methodTokens = {
     nodes: meta.counts.nodes, edges: meta.counts.edges, refs: meta.counts.references,
+    xv_stamped: xvStamped,
+    xv_pct: Math.round(100 * xvStamped / meta.counts.references),
     last_proposed: Number(mProp[1]), last_merged: Number(mMerg[1]),
     human_chips: validations.length,
     families: families.length,
@@ -741,6 +744,7 @@ function nodeLabel(id) { const n = atlasNodes.find(x => x.id === id); return n ?
 // `copySources` — the exemption is the absence, and it is the point.
 const allowedNumbers = new Set([
   ...Object.values(meta.counts), ...Object.values(meta.frozen).filter(v => typeof v === 'number'),
+  ...Object.values(methodTokens || {}).filter(v => typeof v === 'number'),
   ...Object.values(meta.familyLayer.states || {}), meta.familyLayer.families, meta.normalized,
   core.length, bridges.length, guided.length, guidedReverse.length,
   ...volumes.flatMap(v => [v.references, v.edges]), ...Object.values(meta.voices || {}),

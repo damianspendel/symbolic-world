@@ -18,10 +18,11 @@ seed 90507; 86% — family_pass_summary.json; 14 of 20 — themis competency run
 The Symbolic World is a map of C. G. Jung's symbolic thought: {{nodes}}
 symbols, figures and concepts, joined by {{edges}} relations, resting on
 {{refs}} citations to his *Collected Works*. Nothing is here because a model
-said so. A claim enters this graph only after three AI models — two different
-model families from one vendor, and an auditor from another — have each had a
-chance to kill it, and every claim keeps the receipt: the exact paragraph, a
-verbatim quote, and the record of who checked what.
+said so. Every claim was proposed by one AI model and judged against its
+source paragraph by a second, from a different model family; an auditor from a
+different vendor re-reads each new batch in full, and {{xv_pct}}% of all
+{{refs}} citations currently carry its stamp. Every claim keeps the receipt:
+the exact paragraph, a verbatim quote, and the record of who checked what.
 
 [figure: one claim, drawn — the node `lapis` joined by the labelled relation
 `is-projection-of` to the node `the-self`, with its citation chip CW 9ii §264.
@@ -72,7 +73,7 @@ choice.
 
 ## How a claim gets in
 
-Five stations, no exceptions.
+Five stations.
 
 1. **Propose.** An Opus-family model reads a window of paragraphs and proposes
    claims, each with a verbatim quote.
@@ -82,8 +83,11 @@ Five stations, no exceptions.
 3. **Gate.** A Fable-family model judges every claim against its full source
    paragraph. It is hostile by default: the claim survives only if the
    paragraph actually supports it.
-4. **Audit.** A Gemini model re-reads everything that survived — before any of
-   it touches the graph. When gate and auditor disagree, the auditor wins.
+4. **Audit.** A Gemini model re-reads what survived, before any of it touches
+   the graph. Universal for every batch since the *Aion* arc (mid-2026);
+   earlier material was audited by sampling, and each claim's receipt shows
+   whether it carries the stamp — {{xv_stamped}} of {{refs}} citations do
+   today. When gate and auditor disagree, the auditor wins.
 5. **Merge.** The claim enters with its provenance stamped: dates, verdicts,
    corrections.
 
