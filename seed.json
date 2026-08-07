@@ -1731,6 +1731,31 @@
    "id": "nixie",
    "label": "The nixie (water-sprite)",
    "type": "Figure"
+  },
+  {
+   "id": "freud",
+   "label": "Sigmund Freud",
+   "type": "Figure"
+  },
+  {
+   "id": "dual-birth",
+   "label": "The dual birth / dual descent motif",
+   "type": "Motif"
+  },
+  {
+   "id": "leonardo",
+   "label": "Leonardo da Vinci",
+   "type": "Figure"
+  },
+  {
+   "id": "dream",
+   "label": "Dream",
+   "type": "Concept"
+  },
+  {
+   "id": "solar-phallus",
+   "label": "The solar phallus (the sun's tube, origin of the wind)",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -5336,6 +5361,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E6 stratified audit, 2026-07-27)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 88,
+     "quote": "the content of the collective unconscious is made up essentially of archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
     }
    ],
    "relation_family": {
@@ -5472,6 +5508,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 118,
+     "quote": "One of these archetypes, which is of paramount practical importance for the psychotherapist, I have named the anima.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
     }
    ],
    "relation_family": {
@@ -35518,6 +35565,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 90,
+     "quote": "there exists a second psychic system of a collective, universal, and impersonal nature which is identical in all individuals",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
     }
    ]
   },
@@ -36034,6 +36092,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 140,
+     "quote": "It is ready to spring out and project itself at the first opportunity, the moment a woman makes an impression",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
     }
    ]
   },
@@ -36142,6 +36211,858 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "paradise",
+   "relation": "is-conceived-as",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 73,
+     "quote": "In the Christian version it is also the heavenly city of the Apocalypse, which, like the Garden of Eden, is conceived as a mandala.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "is-archetype-of",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 74,
+     "quote": "The two magicians are, indeed, two aspects of the wise old man , the superior master and teacher, the archetype of the spirit",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "acts-as",
+   "object": "psychopomp",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 77,
+     "quote": "He is the enlightener, the master and teacher, a psychopomp",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 80,
+     "quote": "the shadow, the anima, and the wise old man—are of a kind that can be directly experienced in personified form",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "eludes",
+   "object": "the-intellect",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 80,
+     "quote": "The discriminating intellect naturally keeps on trying to establish their singleness of meaning and thus misses the essential point",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "overpowers",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 82,
+     "quote": "the archetypal figures, which are endowed with a certain autonomy anyway on account of their natural numinosity, will escape from conscious control altogether",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "possesses",
+   "object": "man",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 82,
+     "quote": "In the case of an anima-possession, for instance, the patient will want to change himself into a woman through self-castration",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "underlies",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 83,
+     "quote": "When, therefore, the analysis penetrates the background of conscious phenomena, it discovers the same archetypal figures that activate the deliriums of psychotics",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 99,
+     "quote": "a compulsiveness appears, which, like an instinctual drive, gains its way against all reason and will, or else produces a conflict of pathological dimensions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "individuation",
+   "relation": "integrates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 83,
+     "quote": "it is therefore necessary to integrate the unconscious into consciousness. This is a synthetic process which I have termed the “individuation process.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "requires",
+   "object": "meditatio",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 85,
+     "quote": "he puts into effect the alchemical definition of the meditatio: “an inner colloquy with one’s good angel.”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "is-part-of",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 88,
+     "quote": "The collective unconscious is a part of the psyche which can be negatively distinguished from a personal unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "personal-unconscious",
+   "relation": "consists-of",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 88,
+     "quote": "the personal unconscious consists for the most part of complexes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "freud",
+   "relation": "reduces-to",
+   "object": "personal-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 91,
+     "quote": "insists on the personal nature of the psyche. By this I mean the views of Freud and Adler.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 93,
+     "quote": "Freud interprets this remarkable picture in terms of the fact that Leonardo himself had two mothers. This causality is personal.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)",
+     "correction_note": "gate correction: Jung asserts in his own voice that Freud's interpretation is personal-causal ('This causality is personal') - a claim about Freud's method, not a mythological parallel"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "is-evidenced-by",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 92,
+     "quote": "there remain enough individual instances showing the autochthonous revival of mythological motifs to put the matter beyond any reasonable doubt",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 103,
+     "quote": "Such material is available in profusion, but it is valueless unless one can adduce convincing mythological parallels.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 118,
+     "quote": "the almost universal parallelism between mythological motifs, which, on account of their quality as primordial images, I have called archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "dual-mother",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 93,
+     "quote": "This is the motif of the dual mother , an archetype to be found in many variants in the field of mythology and comparative religion",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "dual-birth",
+   "relation": "recurs-in",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 93,
+     "quote": "the motif of the dual descent , that is, descent from human and divine parents, as in the case of Heracles",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)",
+     "correction_note": "xv correction: claim_type -> jung-asserts (Jung states the cross-cultural recurrence in his own voice)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 94,
+     "quote": "The idea of a second birth is found at all times and in all places.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "leonardo",
+   "relation": "depicts",
+   "object": "dual-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 95,
+     "quote": "he was in all probability representing the mythological dual-mother motif and by no means his own personal prehistory",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "mary",
+   "relation": "conceives-through",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 95,
+     "quote": "This fact, in my opinion, points without doubt to Mary, who, a virgin by nature, conceived through the pneuma, like a vulture.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 108,
+     "quote": "medieval paintings that depict the fructification of Mary with a tube or hose-pipe coming down from the throne of God",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "dual-mother",
+   "relation": "causes",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 96,
+     "quote": "For in reality the cause of his neurosis would lie in the reactivation of the dual-mother archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "dominates",
+   "object": "mass-psyche",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 97,
+     "quote": "Can we not see how a whole nation is reviving an archaic symbol, yes, even archaic religious forms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 98,
+     "quote": "There is no lunacy people under the domination of an archetype will not fall a prey to.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "is-evidenced-by",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 100,
+     "quote": "The main source, then, is dreams , which have the advantage of being involuntary, spontaneous products of the unconscious psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 103,
+     "quote": "sources of archetypal material are to be found in the delusions of paranoiacs, the fantasies observed in trance-states",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "active-imagination",
+   "relation": "produces",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 102,
+     "quote": "the resultant sequence of fantasies relieves the unconscious and produces material rich in archetypal images and associations",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "solar-phallus",
+   "relation": "recurs-in",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 105,
+     "quote": "For you will see hanging down from the disc of the sun something that looks like a tube.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)",
+     "source": "Albrecht Dieterich, the Greek magical papyrus he read as a Mithraic ritual"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 107,
+     "quote": "The association of sun and wind frequently occurs in ancient symbolism.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "dove",
+   "relation": "represents",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 108,
+     "quote": "The dove represents the fructifying agent, the wind of the Holy Ghost.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "appears-in",
+   "object": "syzygy",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 120,
+     "quote": "We encounter the anima historically above all in the divine syzygies, the male-female pairs of deities.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 115,
+     "quote": "the universal distribution and significance of the syzygy motif in the psychology of primitives",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "mother-imago",
+   "relation": "is-projected-in",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 122,
+     "quote": "the father-imago (or even the mother-imago) is projected on to the analyst",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "man",
+   "relation": "is-possessed-by",
+   "object": "dominant-of-consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 125,
+     "quote": "Somewhere or other, overtly or covertly, he is possessed by a supraordinate idea.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "god-image",
+   "relation": "is-associated-with",
+   "object": "mother-imago",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 127,
+     "quote": "theistic ideas are associated with the parental imagos, and that our patients are mostly unconscious of them",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 126,
+     "quote": "The psychologist knows how much religious ideas have to do with the parental imagos.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "possesses",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 129,
+     "quote": "The archetype behind a religious idea has, like every instinct, its specific energy, which it does not lose",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "is-perceived-through",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 130,
+     "quote": "contents of extreme tension which are not apperceived in consciousness and can therefore become perceptible only through projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 134,
+     "quote": "an emotionally charged content is lying ready in the unconscious and springs into projection at a certain moment",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "contradicts",
+   "object": "dogma",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 130,
+     "quote": "syzygies were projected which were in complete contradiction to the traditional beliefs",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 132,
+     "quote": "For a monk of the Cistercian Order, which as we know is distinguished for its severity, this vision is exceedingly heretical.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "nicholas-of-flue",
+   "relation": "envisions",
+   "object": "syzygy",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 131,
+     "quote": "God appeared in dual form, once as a majestic father and once as a majestic mother",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 131,
+     "quote": "It was the archetype of the divine pair, the syzygy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "assimilates",
+   "object": "mother-imago",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 137,
+     "quote": "the archetypal form of the divine syzygy first covers up and assimilates the image of the real parents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 138,
+     "quote": "from the son’s earliest childhood, the mother was assimilated to the archetypal idea of the syzygy, or conjunction of male and female",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "causes",
+   "object": "ego-inflation",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 138,
+     "quote": "if the subject identifies with it, it often causes a devastating change of personality, generally in the form of megalomania or its opposite",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "governs",
+   "object": "eros",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 140,
+     "quote": "The love life of a man reveals the psychology of this archetype in the form either of boundless fascination, overvaluation, and infatuation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 144,
+     "quote": "She intensifies, exaggerates, falsifies, and mythologizes all emotional relations with his work and with other people of both sexes.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "acquires-form-through",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 142,
+     "quote": "has no exactly determinable form but is in itself an indefinite structure which can assume definite forms only in projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "is-instance-of",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 142,
+     "quote": "The male-female syzygy is only one among the possible pairs of opposites, albeit the most important one in practice and the commonest.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
     }
    ]
   }
