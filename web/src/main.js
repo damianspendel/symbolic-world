@@ -68,7 +68,13 @@ const cy = cytoscape({
   // Both stay off until they can be tested on real hardware with a gesture
   // profile; a blank-looking graph on the primary traffic segment is not a
   // trade worth making today.
-  hideEdgesOnViewport: false,
+  // R13 — hideEdgesOnViewport ON for touch devices: pinch/pan redraws 1218
+  // edges per frame otherwise, and that is the whole difference between janky
+  // and smooth on a phone. The stale-frame failure that got this rejected on
+  // publish day (programmatic moves leaving a dot field) is neutralized in the
+  // settle-repaint below, which draws one full frame WITH edges after every
+  // viewport change, gesture or programmatic. textureOnViewport stays off.
+  hideEdgesOnViewport: MOBILE,
   textureOnViewport: false,
   // Kept, and both unconditionally safe: a 2-3x fragment reduction on a
   // high-density phone screen, and the cheap edge style below.
@@ -90,7 +96,7 @@ const cy = cytoscape({
     }},
     { selector: 'node[kind != "region"]', style: {
       'background-color': 'data(color)', 'border-color': 'data(color)', 'border-width': 2,
-      'width': 20, 'height': 20, 'label': 'data(label)', 'color': T('ink-label'),
+      'width': MOBILE ? 26 : 20, 'height': MOBILE ? 26 : 20, 'label': 'data(label)', 'color': T('ink-label'),
       'font-family': 'Iowan Old Style, Palatino, Georgia, serif', 'font-size': 11,
       'text-valign': 'bottom', 'text-margin-y': 3, 'text-wrap': 'wrap', 'text-max-width': 120,
       'text-outline-color': T('ground'), 'text-outline-width': 2, 'min-zoomed-font-size': 10
@@ -170,7 +176,15 @@ if (MOBILE) {
   let repaint
   cy.on('viewport', () => {
     clearTimeout(repaint)
-    repaint = setTimeout(() => cy.forceRender(), 140)
+    repaint = setTimeout(() => {
+      // draw one full frame with edges regardless of how the move was made:
+      // flip the renderer's flag off for a single forced render, restore it.
+      const r = cy.renderer()
+      const keep = r.hideEdgesOnViewport
+      r.hideEdgesOnViewport = false
+      cy.forceRender()
+      r.hideEdgesOnViewport = keep
+    }, 140)
   })
 }
 
