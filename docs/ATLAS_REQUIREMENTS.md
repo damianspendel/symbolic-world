@@ -468,6 +468,14 @@ design choice.
   arrow carries which relationship.
 - Browser zoom (cmd +/-) must scale the page coherently — audit the mixed
   px/svg sizing.
+- **Family lenses** (added same day): three toggles — symbolization /
+  correspondence / projection — that re-colour the arcs by how the two
+  registers touch. Same data, different question: where does each bridge kind
+  cluster.
+- **The reverse walk** (added same day): a laboratory-first journey — start
+  from the alchemical register (nigredo, prima materia…) and arrive at the
+  psychology, the direction a historical reader travelled. Reuses the journey
+  mechanism; its stops are the same verified edges walked the other way.
 
 ## Explicitly out of scope for v1.4
 
