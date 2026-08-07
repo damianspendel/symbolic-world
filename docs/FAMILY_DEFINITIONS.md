@@ -63,7 +63,7 @@ and the rationale for taking or refusing it (full treatment in the proposal).
 
 Four arms, same 60-item structure-stratified sample, all blind to each other.
 
-**Arm 1 — gate calibration (the load-bearing result).** 19 deliberate errors were
+**Arm 1 — gate calibration (the decisive result).** 19 deliberate errors were
 planted in the Opus pass's assignments and a Gemini gate judged all 60 without the
 key. Corruption classes were chosen to be meaningful rather than random: K1
 near-miss across a boundary this document explicitly rules on (8), K2 far-miss (4),
