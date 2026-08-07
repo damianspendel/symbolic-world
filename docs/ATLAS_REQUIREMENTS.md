@@ -353,6 +353,55 @@ a short walk, each step one verified edge with its quote. Curation selects
 node `type` plus a small explicit list for ambiguous Concept nodes, recorded in
 the build script — never inferred silently at runtime.
 
+## R9 — First user review, 2026-08-07 (Damian, on the served v1.4-dev build)
+
+All decided; supersedes anything above where they conflict.
+
+**R9.1 Landing declutters.** Above the fold only: title, the hundred-word
+summary, the v1.3 routing line, live counts. The "every link is anchored…"
+prose and the method claim move below the fold. The graph offsets to the
+right of the text column, computed from viewport size, never fixed.
+
+**R9.2 Clause-click zoom fits the neighbourhood**, not the edge: fit the
+selection plus first-degree context with generous padding and a zoom cap, so
+the reader lands seeing the region. The selection persisting into the atlas
+stays (it is the evidence view) but becomes visible as a selection chip with
+an ✕ beside the filter chips.
+
+**R9.3 "Scroll into the atlas" becomes a real control** (click + key), and
+trackpad scroll-delta handling gets verified on hardware — reported as
+possibly dead.
+
+**R9.4 Everything is a route.** #/families, #/queue, #/concordance are full
+pages in-app — no popups or side-panel-only surfaces for whole features. Every
+"back" from a generated page (ledger, disputes, families.html) targets
+#/atlas, never the landing. The queue keeps autosave and graph access; it just
+gets full-page form.
+
+**R9.5 Ledger.** Title: "Ledger". Intro distinguishes the two record types —
+a text relation gated against its paragraph vs a family assignment over an
+already-verified relation — and family-assignment rows are visually distinct
+from text-relation rows. The generator adopts the Seven Metals variables (the
+frozen /v1.3/ledger.html keeps its old skin).
+
+**R9.6 Search results name their match field** ("matched in quote") so
+full-record search reads as a feature, not a bug.
+
+**R9.7 Works bar more prominent**: taller, always-labelled, hover states.
+
+**R9.8 Concordance (decided via structured questions):** full #/concordance
+page, two columns — The Psyche (left, concepts ranked by bridge count), The
+Laboratory (right) — with drawn arcs, every arc a verified edge opening the
+evidence panel. Curated core of ~30 load-bearing crossings by default (ranked
+by evidence weight: reference count, then bridge degree), "show all 94" one
+click away. First visit offers a six-stop guided walk, visibly skippable;
+returning visits open the columns directly. Guided six: the-self/lapis
+(CW 9ii §264), the-unconscious/prima-materia (CW 12 §431),
+individuation/the-opus (CW 9ii §418), collective-unconscious/mercurius
+(CW 13 §284), anima/salt (CW 14 §321), the-opposites/mercurius (CW 12 §404).
+The evidence-mix strip lives BOTH under each Concordance concept AND on every
+node's selection panel in the atlas.
+
 ## Explicitly out of scope for v1.4
 
 - The full "Story" tab (v1.8) — R2 is a bounded down-payment, not the feature.
