@@ -19,7 +19,7 @@ ALLOW = {
     'index.html', 'ledger.html', 'disputes.html', 'families.html',
     'james.html', 'chrome.css',
     'graph.json', 'pages.json', 'confirmations.json', 'disputes.json',
-    'validations.json',
+    'validations.json', 'robots.txt', 'sitemap.xml',
 }
 ALLOW_DIRS = {'v1.3'}
 # Anything matching these anywhere in dist is an instant failure.
