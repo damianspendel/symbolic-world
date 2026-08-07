@@ -1701,6 +1701,36 @@
    "id": "gnostics",
    "label": "The Gnostics",
    "type": "Figure"
+  },
+  {
+   "id": "myth",
+   "label": "Myth and fairytale",
+   "type": "Concept"
+  },
+  {
+   "id": "nicholas-of-flue",
+   "label": "Brother Klaus (Nicholas of Flüe)",
+   "type": "Figure"
+  },
+  {
+   "id": "protestantism",
+   "label": "Protestantism",
+   "type": "Concept"
+  },
+  {
+   "id": "water",
+   "label": "Water",
+   "type": "Symbol"
+  },
+  {
+   "id": "persona",
+   "label": "The persona",
+   "type": "Concept"
+  },
+  {
+   "id": "nixie",
+   "label": "The nixie (water-sprite)",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -4703,6 +4733,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 57,
+     "quote": "The anima is not the soul in the dogmatic sense, not an anima rationalis , which is a philosophical conception, but a natural archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
     }
    ]
   },
@@ -4721,6 +4762,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E6 stratified audit, 2026-07-27)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 45,
+     "quote": "The shadow is a tight passage, a narrow door, whose painful constriction no one is spared who goes down to the deep well",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
     }
    ]
   },
@@ -4738,6 +4790,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 44,
+     "quote": "if we are able to see our own shadow and can bear knowing about it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
     }
    ]
   },
@@ -28515,6 +28578,685 @@
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)",
      "note": "Text's term is 'symbols of totality' bridging the conscious/unconscious gap."
+    }
+   ]
+  },
+  {
+   "subject": "personal-unconscious",
+   "relation": "is-layer-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 3,
+     "quote": "A more or less superficial layer of the unconscious is undoubtedly personal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "underlies",
+   "object": "personal-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 3,
+     "quote": "this personal unconscious rests upon a deeper layer, which does not derive from personal experience and is not a personal acquisition but is inborn",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)",
+     "note": "Jung names this deeper layer the collective unconscious in the next sentence."
+    }
+   ]
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "is-identical-in",
+   "object": "man",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 3,
+     "quote": "It is, in other words, identical in all men and thus constitutes a common psychic substrate of a suprapersonal nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "is-altered-by",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 6,
+     "quote": "The archetype is essentially an unconscious content that is altered by becoming conscious and by being perceived",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "is-expressed-in",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 6,
+     "quote": "Another well-known expression of the archetypes is myth and fairytale",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "augustine",
+   "relation": "anticipates",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 5,
+     "quote": "The term “archetype” is not found in St. Augustine, but the idea of it is.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "myth",
+   "relation": "expresses",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 7,
+     "quote": "The fact that myths are first and foremost psychic phenomena that reveal the nature of the soul",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 8,
+     "quote": "we should really have guessed long ago that myths refer to something psychic",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "overpowers",
+   "object": "man",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 11,
+     "quote": "They are meant to attract, to convince, to fascinate, and to overpower.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "dogma",
+   "relation": "formulates",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 21,
+     "quote": "Dogma takes the place of the collective unconscious by formulating its contents on a grand scale",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "dogma",
+   "relation": "assimilates",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 19,
+     "quote": "It helped him to assimilate the fatal incursion of an archetypal image and so escape being torn asunder",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 17,
+     "quote": "the dogma proved its powers of assimilation by turning something horribly alive into the beautiful abstraction of the Trinity idea",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "nicholas-of-flue",
+   "relation": "depicts",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 12,
+     "quote": "It is a mandala divided into six parts, and in the centre is the crowned countenance of God",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)",
+     "note": "The Trinity Vision painting preserved in the parish church at Sachseln."
+    }
+   ]
+  },
+  {
+   "subject": "mandala",
+   "relation": "protects",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 16,
+     "quote": "We know from experience that the protective circle, the mandala, is the traditional antidote for chaotic states of mind",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "yahweh",
+   "relation": "contains",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 18,
+     "quote": "Yahweh is a God-concept that contains the opposites in a still undivided state.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "jakob-boehme",
+   "relation": "depicts",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 20,
+     "quote": "the opposition has left obvious traces in the mandala appended to his XL Questions concerning the Soule",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "protestantism",
+   "relation": "destroys",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 22,
+     "quote": "The iconoclasm of the Reformation, however, quite literally made a breach in the protective wall of sacred images",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 23,
+     "quote": "The history of Protestantism has been one of chronic iconoclasm.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "the-gods",
+   "relation": "reappear-as",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 50,
+     "quote": "Only an unparalleled impoverishment of symbolism could enable us to rediscover the gods as psychic factors, that is, as archetypes of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "christianity",
+   "relation": "conforms-to",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 25,
+     "quote": "But Christianity had come to stay, because it fits in with the existing archetypal pattern.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "water",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 40,
+     "quote": "Water is the commonest symbol for the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 33,
+     "quote": "This water is no figure of speech, but a living symbol of the dark psyche.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "turns-to",
+   "object": "water",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 32,
+     "quote": "But when spirit becomes heavy it turns to water",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)",
+     "correction_note": "gate correction: The paragraph says spirit, having descended, becomes water (\"when spirit becomes heavy it turns to water\") - transformation, not descent into water as a medium."
+    },
+    {
+     "volume": "9i",
+     "paragraph": 40,
+     "quote": "Psychologically, therefore, water means spirit that has become unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)",
+     "correction_note": "gate correction: \"Water means spirit that has become unconscious\" supports spirit turning into water, not spirit descending into it."
+    }
+   ]
+  },
+  {
+   "subject": "consciousness",
+   "relation": "descends-into",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 40,
+     "quote": "The descent into the depths always seems to precede the ascent.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "lies-in",
+   "object": "water",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 37,
+     "quote": "the son is sent forth by his parents to seek the pearl that fell from the King’s crown",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)",
+     "correction_note": "gate correction: claim_type jung-reports is not in the closed set; §37 is Jung retelling the Gnostic hymn ascribed to Bardesanes, a reported parallel, not his own assertion.",
+     "note": "The Gnostic hymn to the soul ascribed to Bardesanes; the pearl lies at the bottom of a deep well."
+    },
+    {
+     "volume": "9i",
+     "paragraph": 51,
+     "quote": "know that the treasure lies in the depths of the water and will try to salvage it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "fish",
+   "relation": "symbolizes",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 38,
+     "quote": "that became the symbol of the saviour, the bringer of healing",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)",
+     "note": "Subject of the sentence is the fish, levatus de profundo."
+    }
+   ]
+  },
+  {
+   "subject": "persona",
+   "relation": "conceals",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 43,
+     "quote": "the face we never show to the world because we cover it with the persona , the mask of the actor",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)",
+     "note": "The hidden face is identified as the shadow in the following paragraph."
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "second-stage-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 61,
+     "quote": "If the encounter with the shadow is the “apprentice-piece” in the individual’s development, then that with the anima is the “master-piece.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "overwhelms",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 47,
+     "quote": "A wave of the unconscious may easily roll over it, and then he forgets who he was",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "appears-as",
+   "object": "nixie",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 53,
+     "quote": "The nixie is an even more instinctive version of a magical feminine being whom I call the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "operates-through",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 58,
+     "quote": "the anima-image is usually projected upon women",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 61,
+     "quote": "the anima projects herself by preference on the opposite sex, thus giving rise to magically complicated relationships",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "exemplifies",
+   "object": "contrasexuality",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 58,
+     "quote": "Either sex is inhabited by the opposite sex up to a point",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "confers",
+   "object": "numinosity",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 59,
+     "quote": "Everything the anima touches becomes numinous—unconditional, dangerous, taboo, magical.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "acts-as",
+   "object": "psychopomp",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 60,
+     "quote": "the anima can appear also as an angel of light, a psychopomp who points the way to the highest meaning",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "hides-behind",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 61,
+     "quote": "For the son, the anima is hidden in the dominating power of the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "carries",
+   "object": "sapientia",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 64,
+     "quote": "something strangely meaningful clings to her, a secret knowledge or hidden wisdom, which contrasts most curiously with her irrational elfin nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "subject": "rex",
+   "relation": "symbolizes",
+   "object": "dominant-of-consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 72,
+     "quote": "the old king is the ruling symbol that wants to go to its eternal rest",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
     }
    ]
   }

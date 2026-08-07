@@ -1,7 +1,11 @@
 {
- "updated": "2026-08-06",
+ "updated": "2026-08-07",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
- "graph": "338 nodes · 1147 edges · 1304 references",
+ "graph": {
+  "nodes": 344,
+  "edges": 1180,
+  "references": 1347
+ },
  "batches": [
   {
    "id": "cw14_candidates10",
@@ -501,9 +505,15 @@
     "cost_usd_per_citation": 0.045,
     "note": "run in the Track B session; smallest window (16 paragraphs) so cost per citation is higher"
    }
+  },
+  {
+   "id": "b-cw9i-1",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW9i §1-72",
+   "result": "FIRST CW 9i WINDOW — archetype theory without alchemical carriers, the transfer study's falsification volume. Collective-unconscious essay + the whole anima essay. Mined 41 candidates/62 refs; pre-check routed 4 declared attaches and dropped dedup repeats -> 37 candidates + 3 attaches, 50 refs. Fable gate 43/6/1 (FALSE: psychic-energy/mana referent, strands the mana node). Gemini PRE-merge 43 PASS / 6 FINDING; all 6 findings applied as drops per the xv-tiebreak rule — killed archetype-manifests-as-archetypal-image, anima-conceals-archetype, archetypal-image-underlies-the-intellect; the-gods-reappear-as-archetype survives on §50 alone. Merged +6 nodes (persona, water, myth, nixie, protestantism, nicholas-of-flue) +33 edges +43 refs -> 344/1180/1347. Form rule: 0% clause predicates, sixth consecutive blind batch at zero."
   }
  ],
- "next": "AION ARC COMPLETE — all seven CW 9ii windows merged (§1-429). No further mining scope is agreed; do not start another volume. Next work is the relation-family assignment pass over the full graph, then the v1.4 release. The scheduled task jungkg-aion-mining should be DISABLED: its purpose is served, it froze four consecutive times, and its working directory no longer exists.",
+ "next": "b-cw9i-2 (§73-144) under the jungkg-cw9i-mining task (02:20/14:20 daily)",
  "nodes": 338,
  "edges": 1147,
  "refs": 1304,
