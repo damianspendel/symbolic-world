@@ -46,6 +46,30 @@ trilogy (CW 12, 13, 14) and *Aion* mined end to end, CW 9i in progress, five
 further volumes represented where the deep volumes reach into them. The
 segments select: click one and the atlas shows only that volume's claims.
 
+## Reading the atlas
+
+[figure: the metals legend — six node kinds, six metals]
+
+Node colour is the kind of thing a node is. The palette borrows alchemy's
+metals — gold for concepts, silver for symbols, copper for figures, iron for
+operations, verdigris for substances, lead for motifs. Alchemy assigned its
+metals to the planets; mapping node kinds onto them is this project's design
+choice.
+
+- **Search** finds a symbol, a relation, a family, quote text, or a citation
+  such as CW 14 §1. Typing offers completions, and choosing a symbol or a
+  family opens it.
+- **Click** a node to read its connections; click a connection to open the
+  claim itself — relation, quote, paragraph, verdicts. **Copy link** on any
+  selection gives a URL that reopens it.
+- **The chips** beside the search box are the active filters — volume, family,
+  voice, layer. Remove one with its ×.
+- **The bar along the bottom** selects volumes; each segment is sized by the
+  verified evidence that volume carries.
+- Every citation shows a status dot: green, a person validated it; amber,
+  machine-verified only — the honest default; red, publicly disputed with the
+  dispute on the record.
+
 ## How a claim gets in
 
 Five stations, no exceptions.
