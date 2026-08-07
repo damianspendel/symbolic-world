@@ -1,0 +1,38 @@
+{
+ "placeholder": false,
+ "_keys": "edge_keys hold the STABLE edge key `subject|relation|object`, not the build-index `eN` id. Build indices shift whenever seed edge order changes; keys do not, so a clause fails loudly only when its edge is genuinely gone. The resolver still accepts a legacy `edge_ids` list.",
+ "version": "1",
+ "generated_by": "proposed: claude-opus (build session); gated: claude-fable-5 (3 corrections: analogue wording, is-a direction, uncited closer replaced); cross-checked: gemini-3.1-pro, 4/4 PASS against full paragraphs",
+ "generated_date": "2026-08-07",
+ "method": "tools/narrative_probe.py — the E13 narrative probe, which read the graph with every node label replaced by an opaque id.",
+ "method_url": "/ledger.html",
+ "clauses": [
+  {
+   "text": "The stone the alchemists sought is a projection of the self,",
+   "edge_keys": [
+    "lapis|is-projection-of|the-self",
+    "lapis|symbolizes|the-self"
+   ]
+  },
+  {
+   "text": "the prima materia they worked on is the psychic counterpart of the unconscious,",
+   "edge_keys": [
+    "prima-materia|is-psychic-analogue-of|the-unconscious"
+   ]
+  },
+  {
+   "text": "and individuation is the marriage at the heart of the work.",
+   "edge_keys": [
+    "individuation|is-a|coniunctio",
+    "coniunctio|is-essence-of|the-opus"
+   ]
+  },
+  {
+   "text": "The self is itself an archetype, and the work itself a projection of the unconscious.",
+   "edge_keys": [
+    "the-self|is-a|archetype",
+    "the-opus|is-projection-of|the-unconscious"
+   ]
+  }
+ ]
+}

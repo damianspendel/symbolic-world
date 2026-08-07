@@ -4,43 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Verification log — The Symbolic World</title>
+<link rel="stylesheet" href="./chrome.css">
 <style>
-  :root { --ground:#0e1116; --gold:#d9b25f; --gold-dim:#a9863f; --ink:#c9d0d6; --ink-faint:#7a828b;
-          --surface:rgba(18,23,30,.92); --hairline:#2a323c;
-          --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-          --mono:ui-monospace,"SF Mono",Menlo,monospace; }
+  /* R10.0/R10.7 — palette and chrome come from chrome.css, which is generated
+     from the one token table. Nothing here restates a colour. */
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { background:radial-gradient(120% 90% at 50% 0%, #141b24 0%, var(--ground) 60%, #0a0d12 100%);
-         font-family:var(--serif); color:var(--ink); min-height:100vh; padding:2.5rem 1.2rem 4rem; }
-  main { max-width: 860px; margin: 0 auto; }
-  .eyebrow { font:.6rem/1 var(--mono); letter-spacing:.26em; text-transform:uppercase; color:var(--gold-dim); }
-  h1 { color:#e8e2d0; font-size:1.6rem; font-weight:600; margin:.3rem 0 .8rem; }
+  body { min-height:100vh; }
+  main { max-width: 860px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+  h1 { color:var(--ink); font-family:var(--display); font-size:2rem; font-weight:500; margin:.3rem 0 .8rem; letter-spacing:-.01em; }
   .intro { font-size:.92rem; line-height:1.6; color:var(--ink); max-width:64ch; margin-bottom:.5rem; }
   .meta { font:.62rem var(--mono); color:var(--ink-faint); margin-bottom:1.6rem; }
-  a { color:var(--gold); }
   .card { background:var(--surface); border:1px solid var(--hairline); border-radius:10px;
           padding:.85rem 1rem; margin:.6rem 0; }
-  .edge { font-size:1rem; color:#f0ead8; }
+  .edge { font-size:1rem; color:var(--ink); }
   .cite { font:.62rem var(--mono); color:var(--gold-dim); margin-left:.5rem; white-space:nowrap; }
   .row2 { display:flex; gap:.6rem; align-items:baseline; flex-wrap:wrap; margin:.3rem 0 .35rem; }
   .badge { font:.58rem var(--mono); letter-spacing:.06em; padding:.12rem .45rem; border-radius:99px;
            border:1px solid var(--hairline); white-space:nowrap; }
-  .b-upheld { color:#7fc9a0; border-color:#2f5c46; }
-  .b-partially-upheld { color:#d9b25f; border-color:#6b5726; }
-  .b-both-defensible { color:#9ec9c3; border-color:#39575c; }
+  .b-upheld { color:var(--sage); border-color:var(--b-sage); }
+  .b-partially-upheld { color:var(--amber); border-color:var(--b-amber); }
+  .b-both-defensible { color:var(--teal); border-color:var(--b-teal); }
   .b-not-upheld { color:var(--ink-faint); }
   .src { font:.58rem var(--mono); color:var(--ink-faint); }
   .obj, .res { font-size:.84rem; line-height:1.5; color:var(--ink); }
   .obj b, .res b { color:var(--ink-faint); font-weight:600; font-size:.7rem; letter-spacing:.08em;
                    text-transform:uppercase; font-family:var(--mono); }
-  .back { display:inline-block; margin-bottom:1.4rem; font-size:.85rem; text-decoration:none; }
   .empty { color:var(--ink-faint); font-style:italic; }
 </style>
 </head>
 <body>
+<div class="page-bar"><a class="back" href="/#/atlas">← the atlas</a><span class="where">Verification log</span></div>
 <main>
-  <a class="back" href="/">← back to the atlas</a>
-  <div class="eyebrow">The Symbolic World</div>
   <h1>Verification log</h1>
   <p class="intro">Every challenged connection, the objection raised, and the published outcome —
   whether the challenge came from our own cross-vendor audits or from a reader.
@@ -52,9 +46,9 @@
   a confirmation via the atlas's confirm button — human confirmations enter the edge's public verification
   record. The machine gates are the floor; readers are the ceiling.</p>
   <div class="meta" id="meta"></div>
-  <h2 style="color:#e8e2d0;font-size:1.1rem;margin:1.2rem 0 .2rem">Disputes</h2>
+  <h2 style="color:var(--ink);font-size:1.1rem;margin:1.2rem 0 .2rem">Disputes</h2>
   <div id="log"><p class="empty">Loading…</p></div>
-  <h2 style="color:#e8e2d0;font-size:1.1rem;margin:1.6rem 0 .2rem">Reader confirmations</h2>
+  <h2 style="color:var(--ink);font-size:1.1rem;margin:1.6rem 0 .2rem">Reader confirmations</h2>
   <div id="clog"><p class="empty">Loading…</p></div>
 </main>
 <script>

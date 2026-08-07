@@ -4,67 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Symbolic World — an atlas of Jung</title>
+    <!-- Critical landing styles, inlined so the first frame paints before the
+         module script runs. R0.6: something must be on screen inside 500 ms. -->
+    <style>
+      /* First-paint only. The document must have a ground and an ink colour
+         before any stylesheet is parsed (R0.6: something on screen inside
+         500 ms); every other value comes from tokens.css. These two are the
+         single documented exception to the no-literal-hex contract. */
+      html,body{margin:0;height:100%;background:#0b0a08;color:#eae3d2;overflow:hidden}
+      body{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+      #boot{position:fixed;inset:0;display:flex;flex-direction:column;justify-content:center;
+        padding:6vh clamp(1.5rem,5vw,4rem);max-width:min(46rem,58vw);z-index:5}
+      #boot .k{font:0.62rem ui-monospace,Menlo,monospace;letter-spacing:.32em;
+        text-transform:uppercase;opacity:.55;margin-bottom:1.1rem}
+      #boot h1{font-family:"Hoefler Text",Baskerville,"Iowan Old Style",Palatino,Georgia,serif;
+        font-size:clamp(2.4rem,6vw,4.1rem);font-weight:500;letter-spacing:-.018em;line-height:1.04;margin:0}
+      #boot h1 em{font-style:italic;opacity:.85}
+    </style>
   </head>
   <body>
     <div id="cy"></div>
+    <div id="veil"></div>
+
+    <!-- Painted from static HTML, replaced by #overlay as soon as the app boots. -->
+    <div id="boot">
+      <div class="k">The Symbolic World</div>
+      <h1>A verified atlas of<br />Jung's <em>Collected Works</em></h1>
+    </div>
+
+    <!-- R0.1 — the landing is the atlas at a different zoom. No enter button.
+         R9.1 — above the fold: title, the summary, the v1.3 routing, the counts.
+         Everything else waits below. -->
+    <div id="overlay" hidden>
+      <div id="prose">
+        <div class="eyebrow">The Symbolic World</div>
+        <h1>A verified atlas of<br />Jung's <em>Collected Works</em></h1>
+
+        <div id="summary"></div>
+
+        <div class="landing-counts" id="landing-counts"></div>
+        <button class="scroll-cue" id="scroll-cue" type="button"
+                title="Open the atlas (↵, ↓ or scroll)">scroll into the atlas</button>
+      </div>
+
+      <!-- R9.1 — below the fold. -->
+      <div id="prose-more">
+        <p class="method-claim">
+          The model that proposes a claim is never the model that signs it off.
+        </p>
+        <p class="lede">
+          Every link on this map is anchored to one paragraph of the <em>Collected
+          Works</em>, quoted verbatim and checked against the source before it was
+          allowed in. The graph behind this text is the whole of it, drawing itself.
+        </p>
+      </div>
+      <div id="spacer"></div>
+    </div>
 
     <header id="topbar">
-      <div class="brand">
-        <span class="eyebrow">JungKG</span>
+      <div class="brand" id="brand" title="Back to the summary">
         <h1>The Symbolic World</h1>
       </div>
-      <input id="search" type="search" placeholder="Search a symbol…" autocomplete="off" spellcheck="false" />
+      <span id="version"></span>
+      <button class="navlink" id="open-method" title="About this atlas — the method, the corpus, and how to read it">✦ about</button>
+      <button class="navlink" id="open-concordance" title="Psychology against alchemy — the two-register view">⚯ concordance</button>
+      <button class="navlink" id="open-families" title="The relation-family vocabulary and the review queue">◈ families</button>
+      <a class="navlink" id="ledger-link" href="/ledger.html" title="Construction log — how every batch entered the graph, commit by commit">⛏ ledger</a>
+      <a class="navlink" id="disputes-link" href="/disputes.html" title="Public dispute log — every challenged edge and its outcome">⚖ disputes</a>
+      <button class="navlink" id="fit" title="Fit the graph to the screen">⤢ fit</button>
+      <button class="navlink" id="relayout" title="Clear the selection, the search and every filter">↺ reset</button>
       <div id="stats"></div>
-      <a id="ledger-link" href="/ledger.html" title="Construction log — how every batch entered the graph, commit by commit">⛏ ledger</a>
-      <a id="disputes-link" href="/disputes.html" title="Public dispute log — every challenged edge and its outcome">⚖ disputes</a>
+      <input id="search" class="std-search" type="search" placeholder="A symbol, a relation, a quote, CW 14 §1…" autocomplete="off" spellcheck="false" />
     </header>
+    <div id="search-hint" class="hidden"></div>
 
-    <aside id="filters">
-      <div class="fgroup" id="filter-volume"></div>
-      <div class="fgroup" id="filter-layer"></div>
-      <button id="fit" title="Fit to screen">Fit</button>
-      <button id="relayout" title="Re-run layout">Relayout</button>
-    </aside>
+    <!-- R5.5 — filters live as removable chips beside the search field. There is
+         no persistent filter column; the graph owns the stage. -->
+    <div id="chips"></div>
+
+    <!-- R5.5 — the works bar: one segment per volume, width and brightness set
+         by that volume's reference count. A data statement before it is a
+         control — it shows where the evidence is deep and where it is thin. -->
+    <div id="works" aria-label="Coverage by volume"></div>
 
     <section id="panel" class="hidden"></section>
-
-    <aside id="about">
-      <button id="about-min" title="Minimize">–</button>
-      <div class="about-eyebrow">About this atlas</div>
-      <h2>The Symbolic World</h2>
-      <p>A map of C.&nbsp;G. Jung's symbolic thought — the recurring <em>images, figures, and operations</em> of alchemy and the psyche, and the links Jung drew between them.</p>
-
-      <h3>Grounded &amp; verified</h3>
-      <p>Every connection is anchored to a specific paragraph (§) of the <em>Collected Works</em>, shown with a short verbatim quote and its Bollingen page. Every citation (marked <span class="vcheck">✓</span>) was independently checked by a second AI reviewer against the full source paragraph — claims that were unsupported, reversed, or conflated were corrected or rejected before publication. Nothing here is a paraphrase or a guess.</p>
-
-      <h3>Versions</h3>
-      <p>This atlas is alive: it keeps growing, batch by batch, under the same gates. The exact state described in the research paper (release v1.3.0 — 248 symbols · 669 connections · 699 citations) is preserved unchanged at <a href="/v1.3/" style="color:var(--gold)">/v1.3/</a>.</p>
-
-      <h3>What is mapped</h3>
-      <p>This atlas maps <em>claims</em>, not pages. For the core volumes, Jung's central, repeated theses — what a symbol <em>is</em>, what it corresponds to, on whose authority — are mapped completely; passing amplifications and one-off variants are sampled, not exhausted. Like a good map it keeps every mountain and river without printing every hill: the deeper claim-inventory of a chapter grows batch by batch, and each addition passes the same verification gate.</p>
-
-      <h3>How to explore</h3>
-      <ul>
-        <li><b>Six regions</b> group symbols by kind — the Psyche, the Opus, the Materia, the Symbols, the Figures, and Motifs &amp; Traditions.</li>
-        <li><b>Search</b> a symbol (top right) to fly to it.</li>
-        <li><b>Click</b> a node to read its grounded connections; <b>click a connection</b> to walk onward through the graph.</li>
-        <li><b>Filters</b> (left) narrow by <em>Collected Works</em> volume or by kind of link.</li>
-        <li><b>Scroll</b> to zoom, <b>drag</b> to pan.</li>
-      </ul>
-
-      <h3>Verification status</h3>
-      <p>Every citation carries a status dot: <span style="color:#7fc9a0">●</span> <b>human-validated</b> (a person checked the paragraph), <span style="color:#d9a84f">●</span> <b>AI-verified</b> (machine gates and audits only, so far), <span style="color:#d0685a">●</span> <b>disputed</b> (public objection on record). Human validation is ongoing; amber is the honest default, not a defect.</p>
-
-      <h3>Reading a citation</h3>
-      <p>Each link is tagged with its provenance: <span class="tag">jung-asserts</span> (his own interpretation), <span class="tag">jung-reports-parallel</span> (a tradition he cites without endorsing), or <span class="tag">jung-quotes-source</span> (a named source, e.g. Paracelsus). Click a citation's <span class="vcheck">✓</span> to see its verification record. Quotes are brief excerpts for study; the full text lives in the <em>Collected Works</em>.</p>
-
-      <h3>A standing offer</h3>
-      <p>Every connection names its exact paragraph — anyone with the Bollingen edition can check any link in about two minutes. If you find a connection its cited paragraph does not support, that finding falsifies the link, and we will correct or remove it and say so publicly. Every citation's verification record includes a <em>dispute</em> button and a <em>confirm</em> button — if you check a paragraph and it holds, say so: reader confirmations are the human tier of the verification chain and enter the edge's public record. Outcomes of both are published in the <a href="/disputes.html" style="color:var(--gold)">verification log</a>. The construction pipeline's measured error rates are published with the project.</p>
-
-      <h3>Watch it being built</h3>
-      <p>The graph's construction is itself public: every batch's passage through the pipeline — proposal, quote check, independent review, cross-vendor check, merge — is recorded in the <a href="/ledger.html" style="color:var(--gold)">construction log</a>, with links to the underlying commits. Nothing entered this atlas by an unrecorded path.</p>
-    </aside>
-    <button id="about-open" class="hidden" title="About this atlas">?</button>
+    <section id="family-panel" class="hidden"></section>
+    <section id="mode-panel" class="hidden"></section>
 
     <script type="module" src="/src/main.js"></script>
   </body>
