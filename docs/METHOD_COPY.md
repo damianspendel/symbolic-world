@@ -18,10 +18,10 @@ seed 90507; 86% — family_pass_summary.json; 14 of 20 — themis competency run
 The Symbolic World is a map of C. G. Jung's symbolic thought: {{nodes}}
 symbols, figures and concepts, joined by {{edges}} relations, resting on
 {{refs}} citations to his *Collected Works*. Nothing is here because a model
-said so. A claim enters this graph only after three AI models from three
-different companies have each had a chance to kill it — and every claim keeps
-the receipt: the exact paragraph, a verbatim quote, and the record of who
-checked what.
+said so. A claim enters this graph only after three AI models — two different
+model families from one vendor, and an auditor from another — have each had a
+chance to kill it, and every claim keeps the receipt: the exact paragraph, a
+verbatim quote, and the record of who checked what.
 
 [figure: one claim, drawn — the node `lapis` joined by the labelled relation
 `is-projection-of` to the node `the-self`, with its citation chip CW 9ii §264.
@@ -88,8 +88,9 @@ Five stations, no exceptions.
    corrections.
 
 The rule underneath all five: **the model that proposes a claim is never the
-model that signs it off.** Proposer, gate and auditor are different systems
-from different vendors, and the roles never swap.
+model that signs it off.** Proposer and gate are different model families
+(Anthropic's Opus and Fable lines); the auditor is a different vendor
+altogether (Google's Gemini); and the roles never swap.
 
 The stations bite. In the most recent window, {{last_proposed}} proposed
 citations became {{last_merged}} merged ones; the difference is what the
