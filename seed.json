@@ -1847,6 +1847,26 @@
    "id": "dhulqarnein",
    "label": "Dhulqarnein (the Two-horned One)",
    "type": "Figure"
+  },
+  {
+   "id": "kore",
+   "label": "The Kore (the maiden)",
+   "type": "Figure"
+  },
+  {
+   "id": "dancer",
+   "label": "The dancer (maiden figure)",
+   "type": "Figure"
+  },
+  {
+   "id": "gerard-dorn",
+   "label": "Gerard Dorn",
+   "type": "Figure"
+  },
+  {
+   "id": "bear-goddess",
+   "label": "The bear-goddess (Dea Artio / Ursanna)",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -5874,6 +5894,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 299,
+     "quote": "In this idea the all-embracing nature of psychic wholeness is expressed.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 300,
+     "quote": "This experience has projected itself into the archetype of the child, which expresses man’s wholeness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
     }
    ],
    "relation_family": {
@@ -36438,6 +36480,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 297,
+     "quote": "as a rule the feminine unconscious of a man is projected upon a feminine partner",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 355,
+     "quote": "She is empty and merely glitters—a welcome vessel for masculine projections.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
     }
    ],
    "relation_family": {
@@ -39923,6 +39987,883 @@
     "by": "opus+gemini-agreed (v0.5)",
     "date": "2026-08-08"
    }
+  },
+  {
+   "subject": "divine-child",
+   "relation": "arises-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 289,
+     "quote": "is born out of the womb of the unconscious, begotten out of the depths of human nature, or rather out of living Nature herself.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "divine-child",
+   "relation": "develops-into",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 289,
+     "quote": "although the hero has outgrown the impotence of the “child,” he is still in a menial position.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "divine-child",
+   "relation": "corresponds-to",
+   "object": "atman",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 289,
+     "quote": "The size and invincibility of the “child” are bound up in Hindu speculation with the nature of the atman",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "divine-child",
+   "relation": "parallels",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 289,
+     "quote": "Oddly enough, we have a similar modulation of themes in alchemy—in the synonyms for the lapis",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "rebis",
+   "relation": "is-a",
+   "object": "uniting-symbol",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 293,
+     "quote": "the primordial idea has become a symbol of the creative union of opposites , a “uniting symbol” in the literal sense.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 292,
+     "quote": "The hermaphrodite means nothing less than a union of the strongest and most striking opposites.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "unites",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 293,
+     "quote": "the archetype, because of its power to unite opposites, mediates between the unconscious substratum and the conscious mind.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "animus",
+   "relation": "personifies",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 296,
+     "quote": "a feminine consciousness confronts a masculine personification of the unconscious, which can no longer be called anima but animus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "faust",
+   "relation": "reappears-as",
+   "object": "divine-child",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 298,
+     "quote": "Faust, after his death, is received as a boy into the “choir of blessed youths.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "the-hero",
+   "relation": "induces",
+   "object": "ego-inflation",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 304,
+     "quote": "The epiphany of the hero (the second identification) shows itself in a corresponding inflation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "corresponds-to",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 310,
+     "quote": "The figure of the Kore that interests us here belongs, when observed in a man, to the anima type",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 306,
+     "quote": "counterpart in those archetypes which I have called the self or supraordinate personality on the one hand, and the anima on the other.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 355,
+     "quote": "The “maiden” corresponds to the anima of the man and makes use of it to gain her natural ends",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "corresponds-to",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 310,
+     "quote": "and when observed in a woman to the type of supraordinate personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "demeter",
+   "relation": "pairs-with",
+   "object": "kore",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 306,
+     "quote": "Not only is the figure of Demeter and the Kore in its threefold aspect as maiden, mother, and Hecate",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 316,
+     "quote": "Demeter and Kore, mother and daughter, extend the feminine consciousness both upwards and downwards.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "hecate",
+   "relation": "is-connected-with",
+   "object": "demeter",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 313,
+     "quote": "The underworld nature of Hecate, who is closely connected with Demeter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "appears-as",
+   "object": "unknown-woman",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 311,
+     "quote": "the Kore often appears in woman as an unknown young girl , not infrequently as Gretchen or the unmarried mother.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "appears-as",
+   "object": "dancer",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 311,
+     "quote": "Another frequent modulation is the dancer , who is often formed by borrowings from classical knowledge",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "appears-as",
+   "object": "nixie",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 311,
+     "quote": "An occasional variant is the nixie or water-sprite, who betrays her superhuman nature by her fishtail.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "undergoes",
+   "object": "the-sacrifice",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 311,
+     "quote": "maiden’s helplessness exposes her to all sorts of dangers , for instance of being devoured by reptiles",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 355,
+     "quote": "so here the sacrifice of the maiden hanging on the “cross.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "chthonic-mother",
+   "relation": "is-related-to",
+   "object": "luna",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 312,
+     "quote": "The Earth Mother is always chthonic and is occasionally related to the moon",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "note": "Jung says 'occasionally related'; the node stands for the Earth/Chthonic Mother"
+    }
+   ]
+  },
+  {
+   "subject": "chthonic-mother",
+   "relation": "compensates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 312,
+     "quote": "This shows that in such cases the Earth Mother element in the conscious mind is abnormally weak and requires strengthening.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "chthonic-mother",
+   "relation": "carries-out",
+   "object": "the-sacrifice",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 311,
+     "quote": "Oddly enough, the various tortures and obscenities are carried out by an “Earth Mother.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "correction_note": "gate correction: The paragraph says the tortures and obscenities are carried out by an Earth Mother; nothing states she demands or requires the sacrifice."
+    },
+    {
+     "volume": "9i",
+     "paragraph": 312,
+     "quote": "either through the blood-sacrifice already mentioned, or through a child-sacrifice",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "correction_note": "gate correction: The blood- and child-sacrifice here back-reference the rites the Earth Mother carries out in the preceding paragraph; demand language appears nowhere."
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "includes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 314,
+     "quote": "To this wholeness the unconscious psyche also belongs, which has its requirements and needs just as consciousness has.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 315,
+     "quote": "the whole of the personality, which includes the unconscious as well as the conscious component.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-perceived-through",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 315,
+     "quote": "its unconscious component, which can only come to consciousness indirectly, by way of projection.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "quaternity",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 315,
+     "quote": "These lead on to geometrical figures like the circle, the sphere, the square, the quaternity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 343,
+     "quote": "is indicated not only by the oracle “Vis ut sis” but by the quaternity and the circular central precinct of the temple.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "widens",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 316,
+     "quote": "and widen out the narrowly limited conscious mind bound in space and time",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 351,
+     "quote": "Here it signifies a widening of the conscious personality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "active-imagination",
+   "relation": "weakens",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 320,
+     "quote": "It is based on a deliberate weakening of the conscious mind and its inhibiting effect, which either limits or suppresses the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "syzygy",
+   "relation": "symbolizes",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 326,
+     "quote": "Youth and young girl together form a syzygy or coniunctio which symbolizes the essence of wholeness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "divine-child",
+   "relation": "undergoes",
+   "object": "the-sacrifice",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 324,
+     "quote": "The game of ball with the child is the motif of some secret rite which always has to do with “child-sacrifice.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "gerard-dorn",
+   "relation": "describes",
+   "object": "peregrinatio",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 335,
+     "quote": "describes the “Mundi peregrinatio, quam erroris viam appellamus” (Tour of the world, which we call the way of error)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "sapientia",
+   "relation": "is-symbolized-by",
+   "object": "water",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 336,
+     "quote": "a stream of living water flowing with such wonderful artifice from the mountain peak. (From the Fountain of Wisdom the waters gush forth.)”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "source": "Gerard Dorn, Speculativae philosophiae, quoted by Jung"
+    }
+   ]
+  },
+  {
+   "subject": "demeter",
+   "relation": "exemplifies",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 339,
+     "quote": "The antique Mother-image is not exhausted with the figure of Demeter. It also expresses itself in Cybele-Artemis.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "great-mother",
+   "relation": "appears-as",
+   "object": "bear-goddess",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 341,
+     "quote": "Here we have a maternally protective goddess related to bears, a kind of Diana or the Gallo-Roman Dea Artio.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "chthonic-mother",
+   "relation": "protects",
+   "object": "kore",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 347,
+     "quote": "the latter catches her protectively in her maternal arms.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "correction_note": "gate correction: The protective catch is plain, but Jung hedges the Kore identification: the dreamer 'would therefore seem to be in the role of the Kore'; hedge recorded in confidence."
+    }
+   ]
+  },
+  {
+   "subject": "animus",
+   "relation": "transmits",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 350,
+     "quote": "the unconscious contains pictures which are transmitted, that is, made manifest, by the animus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "animus",
+   "relation": "operates-through",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 350,
+     "quote": "The animus-projection gives rise to fantasied relations of love and hatred for “heroes” or “demons.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "appears-as",
+   "object": "witch",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 349,
+     "quote": "This, together with her peculiar glance, gives her a witchlike look",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "source": "the analysand's dream/vision report",
+     "correction_note": "xv correction: claim_type -> jung-quotes-source (direct quotation of the case material, not a parallel tradition)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "is-identical-with",
+   "object": "dragon",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 351,
+     "quote": "there was a relationship of identity between the sky-woman and the bear, so here between the young girl and the dragon",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "note": "Jung's word is 'relationship of identity'; the claim is about the dream pair, not a general equation"
+    }
+   ]
+  },
+  {
+   "subject": "dancer",
+   "relation": "undergoes",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 353,
+     "quote": "This piece describes the successive transformations of the illusionist (artistry in illusion being a specifically feminine talent) until she becomes a transfigured personality.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 352,
+     "quote": "This is buried, but at night a lily grows out of the grave, and from its cup there rises a white lady",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "source": "the analysand's dream/vision report",
+     "correction_note": "xv correction: claim_type -> jung-quotes-source (direct quotation of the case material, not a parallel tradition)"
+    }
+   ]
+  },
+  {
+   "subject": "kore",
+   "relation": "hinders",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 355,
+     "quote": "their exclusive domination of the feminine psyche hinders the individuation process, that is, the maturation of personality.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)",
+     "correction_note": "gate correction: Jung conditions the hindering on the maidens' exclusive domination of the feminine psyche, not on the Kore as such; scope hedge recorded in confidence."
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "appears-as",
+   "object": "meretrix",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 356,
+     "quote": "now a good fairy, now a witch; now a saint, now a whore.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "differs-from",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 356,
+     "quote": "the feminine figure of the anima cannot be catalogued as a type of supraordinate personality but requires a different evaluation and position.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "frightens",
+   "object": "man",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 357,
+     "quote": "Much of the fear which the female sex arouses in men is due to the projection of the anima-image.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "appears-as",
+   "object": "serpent",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 358,
+     "quote": "The anima also has affinities with animals, which symbolize her characteristics. Thus she can appear as a snake or a tiger or a bird.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    }
+   ]
   }
  ]
 }
