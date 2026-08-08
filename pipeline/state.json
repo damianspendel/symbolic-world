@@ -1,10 +1,10 @@
 {
- "updated": "2026-08-07",
+ "updated": "2026-08-08",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
-  "nodes": 349,
-  "edges": 1218,
-  "references": 1404
+  "nodes": 362,
+  "edges": 1259,
+  "references": 1452
  },
  "batches": [
   {
@@ -520,12 +520,12 @@
   },
   {
    "id": "b-cw9i-3",
-   "status": "HELD at gated — cross-vendor blocked on Gemini credit depletion (2026-08-08)",
+   "status": "merged (branch mining-away, unpublished)",
    "window": "CW9i §145-216",
-   "result": "Mother-archetype essay + rebirth taxonomy opening. Mined 52/63 by hand (scheduler skipped Fri-Sat; run manually). Pre-check 45+6 attaches, 60 refs. Fable gate 54/6... 54 TRUE / 5 CORRECTED / 1 FALSE, 13 new nodes all admitted (mother-complex, witch, kali, demeter, plato, nietzsche, emotion, rebirth taxonomy). Cross-vendor STOPPED: HTTP 429 RESOURCE_EXHAUSTED — \"Your prepayment credits are depleted\" (verbatim). Per the standing rule the batch holds here; nothing merges on a degraded audit. Resume: rerun python3 pipeline/work/xv_b-cw9i-3.py after top-up (chunk-resumable), then merge per the b-cw9i-2 pattern."
+   "result": "The mother-archetype essay and the rebirth taxonomy. Run by hand after the scheduler skipped Fri-Sat. Mined 52/63; pre-check 45+6 attaches, 60 refs. Fable gate 54/5/1 (FALSE: augustine-anticipates-archetype, dating inverted; gate now corrects overstated verbs itself). Cross-vendor PAUSED MID-RUN on Gemini credit depletion (verbatim 429 RESOURCE_EXHAUSTED recorded), resumed after top-up: 48 PASS / 11 FINDING + 2 claim_type corrections applied per precedent. 11 refs dropped — the hardest audit of the arc (22%), concentrated on interpretive typology claims the gate had itself flagged borderline; 5 of 6 attach refs died, their standing edges untouched. Merged +13 nodes (mother-complex, witch, kali, demeter, plato, nietzsche, emotion, metempsychosis, reincarnation, resurrection, abaissement, loss-of-soul, homosexuality) +41 edges +48 refs -> 362/1259/1452. Eighth blind batch at 0% clause predicates. vocabulary_note added to great-mother re: archetype-vs-image conflation (CW 9i §148, §188-189)."
   }
  ],
- "next": "TOP UP GEMINI (ai.studio/projects), then resume b-cw9i-3 cross-vendor; task firings will hold correctly meanwhile",
+ "next": "b-cw9i-4 (§217-288) — launching by hand now; task firings 09:20/13:20/17:20 take over from b-cw9i-5",
  "nodes": 338,
  "edges": 1147,
  "refs": 1304,

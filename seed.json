@@ -375,7 +375,8 @@
   {
    "id": "great-mother",
    "type": "Figure",
-   "label": "Mother Archetype / Great Mother"
+   "label": "Mother Archetype / Great Mother",
+   "vocabulary_note": "This node collapses a distinction CW 9i §148 and §188-189 draw explicitly: the mother ARCHETYPE (the a priori structure) versus the Great Mother (its mythological image, the archetype receded furthest from consciousness: mother -> grandmother -> Great Mother). Both readings route through this node; recorded 2026-08-08 per the standing one-node-one-note rule."
   },
   {
    "id": "rebirth",
@@ -1756,6 +1757,71 @@
    "id": "solar-phallus",
    "label": "The solar phallus (the sun's tube, origin of the wind)",
    "type": "Symbol"
+  },
+  {
+   "id": "plato",
+   "label": "Plato",
+   "type": "Figure"
+  },
+  {
+   "id": "witch",
+   "label": "The Witch",
+   "type": "Figure"
+  },
+  {
+   "id": "kali",
+   "label": "Kali",
+   "type": "Figure"
+  },
+  {
+   "id": "mother-complex",
+   "label": "The mother-complex",
+   "type": "Concept"
+  },
+  {
+   "id": "homosexuality",
+   "label": "Homosexuality",
+   "type": "Concept"
+  },
+  {
+   "id": "demeter",
+   "label": "Demeter",
+   "type": "Figure"
+  },
+  {
+   "id": "emotion",
+   "label": "Emotion / affect",
+   "type": "Concept"
+  },
+  {
+   "id": "metempsychosis",
+   "label": "Metempsychosis (transmigration of souls)",
+   "type": "Concept"
+  },
+  {
+   "id": "reincarnation",
+   "label": "Reincarnation",
+   "type": "Concept"
+  },
+  {
+   "id": "resurrection",
+   "label": "Resurrection",
+   "type": "Motif"
+  },
+  {
+   "id": "abaissement-du-niveau-mental",
+   "label": "Abaissement du niveau mental",
+   "type": "Concept"
+  },
+  {
+   "id": "loss-of-soul",
+   "label": "Loss of soul",
+   "type": "Motif"
+  },
+  {
+   "id": "nietzsche",
+   "label": "Friedrich Nietzsche",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -5774,6 +5840,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "source": "Christian rebirth mysteries"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 204,
+     "quote": "Well-known prototypes of this change are the transfiguration and ascension of Christ, and the assumption of the Mother of God into heaven",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
     }
    ],
    "relation_family": {
@@ -36259,6 +36336,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 168,
+     "quote": "for men with a passive Eros this type offers an excellent hook for anima projections.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 182,
+     "quote": "there is a good chance of the empty vessel being filled by a potent anima projection.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
     }
    ],
    "relation_family": {
@@ -37491,6 +37590,793 @@
     "by": "opus+gemini-agreed (v0.5)",
     "date": "2026-08-07"
    }
+  },
+  {
+   "subject": "plato",
+   "relation": "anticipates",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 149,
+     "quote": "it was not too difficult to understand Plato’s conception of the Idea as supraordinate and pre-existent to all phenomena",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)",
+     "correction_note": "xv correction: claim_type -> jung-asserts (Jung speaks in his own interpretive voice)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 153,
+     "quote": "I do not claim to have been the first to point out this fact. The honour belongs to Plato.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "arises-spontaneously-in",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 153,
+     "quote": "archetypes are not disseminated only by tradition, language, and migration, but that they can rearise spontaneously, at any time, at any place",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "corresponds-to",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 155,
+     "quote": "they correspond in every way to the instincts, which are also determined in form only",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "man",
+   "relation": "inherits",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 152,
+     "quote": "This specific form is hereditary and is already present in the germ-plasm.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 155,
+     "quote": "The representations themselves are not inherited, only the forms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "analytic-process",
+   "relation": "dissolves",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 160,
+     "quote": "Our task is not, therefore, to deny the archetype, but to dissolve the projections, in order to restore their contents to the individual",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "great-mother",
+   "relation": "appears-as",
+   "object": "witch",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 161,
+     "quote": "if the children of an overanxious mother regularly dream that she is a terrifying animal or a witch",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 188,
+     "quote": "Not infrequently she assumes the attributes of wisdom as well as those of a witch.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "mary",
+   "relation": "exemplifies",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 158,
+     "quote": "Perhaps the historical example of the dual nature of the mother most familiar to us is the Virgin Mary",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "kali",
+   "relation": "exemplifies",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 158,
+     "quote": "In India, “the loving and terrible mother” is the paradoxical Kali.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "great-mother",
+   "relation": "is-identified-with",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 158,
+     "quote": "Sankhya philosophy has elaborated the mother archetype into the concept of prakrti (matter)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 170,
+     "quote": "The mother as materia , ‘matter,’ may be at the back of these women’s impatience with objects",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "great-mother",
+   "relation": "is-projected-onto",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 159,
+     "quote": "but rather from the archetype projected upon her, which gives her a mythological background and invests her with authority and numinosity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "great-mother",
+   "relation": "underlies",
+   "object": "mother-complex",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 161,
+     "quote": "The mother archetype forms the foundation of the so-called mother-complex.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "mother-complex",
+   "relation": "produces",
+   "object": "homosexuality",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 162,
+     "quote": "Typical effects on the son are homosexuality and Don Juanism, and sometimes also impotence.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "mother-complex",
+   "relation": "is-mixed-with",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 175,
+     "quote": "in a man, the mother-complex is never “pure,” it is always mixed with the anima archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "demeter",
+   "relation": "exemplifies",
+   "object": "mother-complex",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 167,
+     "quote": "Like Demeter, she compels the gods by her stubborn persistence to grant her the right of possession over her daughter.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)",
+     "correction_note": "xv correction: claim_type -> jung-asserts (Jung speaks in his own interpretive voice)"
+    }
+   ]
+  },
+  {
+   "subject": "mother-complex",
+   "relation": "leads-to",
+   "object": "incest",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 168,
+     "quote": "an overdeveloped Eros results, and this almost invariably leads to an unconscious incestuous relationship with the father.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)",
+     "correction_note": "gate correction: The paragraph's causal subject is the overdeveloped Eros, itself only one daughter-type outcome of the complex; the chain complex-to-Eros-to-incest holds but only conditionally, so confidence drops to medium"
+    }
+   ]
+  },
+  {
+   "subject": "mother-complex",
+   "relation": "paralyses",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 182,
+     "quote": "who is so identified with the mother that her own instincts are paralysed through projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "channels",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 174,
+     "quote": "If the primordial images remain conscious in some form or other, the energy that belongs to them can flow freely into man.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "mother-complex",
+   "relation": "originates-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 187,
+     "quote": "the observed effects of the mother-complex, when stripped of their confusing detail, point to the unconscious as their place of origin",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "the-ego",
+   "relation": "differentiates-from",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 188,
+     "quote": "This leads to differentiation of the ego from the mother, whose personal peculiarities gradually become more distinct.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "archetype",
+   "relation": "recedes-from",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 188,
+     "quote": "For the further the archetype recedes from consciousness and the clearer the latter becomes, the more distinctly does the archetype assume mythological features.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "consciousness",
+   "relation": "requires",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 178,
+     "quote": "There is no consciousness without discrimination of opposites.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "unconsciousness",
+   "relation": "is-equated-with",
+   "object": "evil",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 178,
+     "quote": "Unconsciousness is the primal sin, evil itself, for the Logos.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "emotion",
+   "relation": "generates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 179,
+     "quote": "emotion is the moment when steel meets flint and a spark is struck forth, for emotion is the chief source of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "great-mother",
+   "relation": "splits-into",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 189,
+     "quote": "it frequently happens that the opposites contained in this image split apart. We then get a good fairy and a wicked fairy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "man",
+   "relation": "idealizes",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 192,
+     "quote": "The mother has from the outset a decidedly symbolical significance for a man, which probably accounts for his strong tendency to idealize her.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "the-assumption",
+   "relation": "elevates",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 195,
+     "quote": "the Christian version of the mother archetype would be elevated to the rank of a dogmatic truth.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "mary",
+   "relation": "is-prefigured-by",
+   "object": "isis",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 195,
+     "quote": "The richly varied allegories of the Mother of God have nevertheless retained some connection with her pagan prefigurations in Isis (Io) and Semele.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "dionysos",
+   "relation": "undergoes",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 195,
+     "quote": "this son of Semele is a dying and resurgent god and the youngest of the Olympians.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "rebirth",
+   "relation": "includes",
+   "object": "metempsychosis",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 200,
+     "quote": "The first of the five aspects of rebirth to which I should like to draw attention is that of metempsychosis, or transmigration of souls.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "rebirth",
+   "relation": "includes",
+   "object": "reincarnation",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 201,
+     "quote": "This concept of rebirth necessarily implies the continuity of personality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "reincarnation",
+   "relation": "preserves",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 201,
+     "quote": "Here the human personality is regarded as continuous and accessible to memory",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)",
+     "correction_note": "gate correction: Jung describes the content of the reincarnation belief-form ('the human personality is regarded as continuous'), not his own claim that the ego survives - reportage, not assertion"
+    }
+   ]
+  },
+  {
+   "subject": "resurrection",
+   "relation": "raises-up",
+   "object": "corpus-glorificationis",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 202,
+     "quote": "the resurrection of the dead is the raising up of the corpus glorificationis , the “subtle body,” in the state of incorruptibility",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)",
+     "correction_note": "gate correction: Text: 'it is assumed that the resurrection of the dead is the raising up of the corpus glorificationis' - resurrection IS the raising up, not a producer of it, and 'it is assumed' marks reportage of the higher-level belief-form, not Jung's own assertion"
+    }
+   ]
+  },
+  {
+   "subject": "the-mass",
+   "relation": "effects",
+   "object": "transubstantiation",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 205,
+     "quote": "This rite may be a ceremony such as the Mass, where there is a transformation of substances.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "rebirth",
+   "relation": "rests-on",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 207,
+     "quote": "Rebirth is an affirmation that must be counted among the primordial affirmations of mankind. These primordial affirmations are based on what I call archetypes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "rebirth",
+   "relation": "belongs-to",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 206,
+     "quote": "We have to do here with a purely psychic reality, which is transmitted to us only indirectly through personal statements.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "osiris",
+   "relation": "undergoes",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 208,
+     "quote": "The initiate who ritually enacts the slaying, dismemberment, and scattering of Osiris, and afterwards his resurrection in the green wheat",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "the-mass",
+   "relation": "sacrifices",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 209,
+     "quote": "The Mass is an extramundane and extratemporal act in which Christ is sacrificed and then resurrected in the transformed substances",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "abaissement-du-niveau-mental",
+   "relation": "corresponds-to",
+   "object": "loss-of-soul",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 213,
+     "quote": "This well-known phenomenon corresponds to the primitive’s loss of soul.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "abaissement-du-niveau-mental",
+   "relation": "weakens",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 213,
+     "quote": "It is a slackening of the tensity of consciousness, which might be compared to a low barometric reading, presaging bad weather.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "christ",
+   "relation": "arises-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 216,
+     "quote": "the apparition of Christ came to St. Paul not from the historical Jesus but from the depths of his own unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
+  },
+  {
+   "subject": "nietzsche",
+   "relation": "experiences",
+   "object": "visionary-experience",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 210,
+     "quote": "Nietzsche’s Noontide Vision is a classic example of this kind.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)"
+    }
+   ]
   }
  ]
 }
