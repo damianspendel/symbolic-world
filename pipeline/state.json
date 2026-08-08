@@ -517,9 +517,15 @@
    "status": "merged (branch mining-away, unpublished)",
    "window": "CW9i §73-144",
    "result": "The two definitional essays plus the anima essay. Mined 49 candidates/69 refs (dense theory window, deliberately over band, ~20 weaker candidates cut by the miner); pre-check routed 9 declared attaches, dropped dedup repeats -> 38 candidates + 6 attaches, 63 refs. Fable gate 61/2/0 — cleanest of the arc; corrections: one confidence downgrade, one claim_type. Gemini PRE-merge 56 PASS / 7 FINDING: six wording-overreach refs dropped per the xv-tiebreak rule (eludes-intellect §143, overpowers-consciousness §137, possesses-man §144, is-possessed-by §128, hides-behind attach §135, contrasexuality attach §142 — all edges survive on their other anchors), one claim_type finding applied as a correction per the b-cw9ii-7 precedent. Merged +5 nodes (freud, leonardo, dual-birth, dream, solar-phallus) +38 edges +57 refs -> 349/1218/1404. Seventh consecutive blind batch at 0% clause predicates. The scheduled 14:20 firing was SKIPPED by the app scheduler; window run by hand."
+  },
+  {
+   "id": "b-cw9i-3",
+   "status": "HELD at gated — cross-vendor blocked on Gemini credit depletion (2026-08-08)",
+   "window": "CW9i §145-216",
+   "result": "Mother-archetype essay + rebirth taxonomy opening. Mined 52/63 by hand (scheduler skipped Fri-Sat; run manually). Pre-check 45+6 attaches, 60 refs. Fable gate 54/6... 54 TRUE / 5 CORRECTED / 1 FALSE, 13 new nodes all admitted (mother-complex, witch, kali, demeter, plato, nietzsche, emotion, rebirth taxonomy). Cross-vendor STOPPED: HTTP 429 RESOURCE_EXHAUSTED — \"Your prepayment credits are depleted\" (verbatim). Per the standing rule the batch holds here; nothing merges on a degraded audit. Resume: rerun python3 pipeline/work/xv_b-cw9i-3.py after top-up (chunk-resumable), then merge per the b-cw9i-2 pattern."
   }
  ],
- "next": "b-cw9i-3 (§145-216); scheduler unreliable today — run by hand if the 02:20 firing skips",
+ "next": "TOP UP GEMINI (ai.studio/projects), then resume b-cw9i-3 cross-vendor; task firings will hold correctly meanwhile",
  "nodes": 338,
  "edges": 1147,
  "refs": 1304,
