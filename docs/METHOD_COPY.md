@@ -22,7 +22,9 @@ said so. Every claim was proposed by one AI model and judged against its
 source paragraph by a second, from a different model family; an auditor from a
 different vendor re-reads each new batch in full, and {{xv_pct}}% of all
 {{refs}} citations currently carry its stamp. Every claim keeps the receipt:
-the exact paragraph, a verbatim quote, and the record of who checked what.
+the exact paragraph, a verbatim quote, and the record of who checked what. A graph flattens: a
+claim can be true to its paragraph and still lose the movement of thought
+around it. This is a map of assertions, not a reading.
 
 [figure: one claim, drawn — the node `lapis` joined by the labelled relation
 `is-projection-of` to the node `the-self`, with its citation chip CW 9ii §264.
@@ -81,8 +83,8 @@ Five stations.
    at most 25 words, and that the relation is well formed. Failures are
    dropped, not argued with.
 3. **Gate.** A Fable-family model judges every claim against its full source
-   paragraph. It is hostile by default: the claim survives only if the
-   paragraph actually supports it.
+   paragraph. It is hostile by default: the claim survives only if, in the model's
+   judgment, the paragraph supports it.
 4. **Audit.** A Gemini model re-reads what survived, before any of it touches
    the graph. Universal for every batch since the *Aion* arc (mid-2026);
    earlier material was audited by sampling, and each claim's receipt shows
@@ -122,9 +124,11 @@ Machines verify; people decide. Three places the human hand is in the record:
 
 The checks are themselves checked:
 
-- Every one of the {{refs}} quotes is machine-verified against the corpus; the
-  harness also carries seven deliberately corrupted claims, and all seven are
-  caught on every run.
+- Every one of the {{refs}} quotes is mechanically verified, letter for
+  letter, against the corpus (the harness also carries seven deliberately
+  corrupted claims, and all seven are caught on every run). Whether a
+  paragraph supports its claim is a model's judgment, not a mechanical proof
+  — and the receipts show it as judgment.
 - The family gate was calibrated by hiding planted errors among real
   assignments: it caught 19 of 19 in the first round, 20 of 20 in the second —
   naming the correct family every time — while wrongly flagging only 2 of 40
@@ -140,6 +144,7 @@ What the instruments do not cover, stated plainly:
 | One human reviewer; no second annotator yet | Independent second annotation with agreement statistics |
 | A class of identity drift (two names for one thing entering as two things) is invisible to the current audit | No instrument yet — known gap, on the record |
 | English translation only (Hull) | German cross-check against the *Gesammelte Werke* |
+| Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked | The graph is a map of assertions, not a reading — opposing claims are mined where Jung himself qualifies, and the books remain the reading |
 
 ## The paper
 

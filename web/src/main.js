@@ -344,7 +344,7 @@ function refBlock(e, r, key) {
   const dHist = DISPUTES[key] || [], cHist = CONFIRMS[key] || []
   const hv = HUMANVAL[key + '|' + r.volume + '|' + r.paragraph]
   const ragClass = (dHist.length || (hv && hv.support !== 'supported')) ? 'rag-red' : (hv ? 'rag-green' : 'rag-amber')
-  const ragTitle = ragClass === 'rag-green' ? 'Human-validated' : ragClass === 'rag-red' ? 'Disputed / contested' : 'AI-verified (awaiting human validation)'
+  const ragTitle = ragClass === 'rag-green' ? 'Human-validated' : ragClass === 'rag-red' ? 'Disputed / contested' : 'Machine-checked (awaiting human validation)'
   const pg = page(r.volume, r.paragraph)
   const cite = `<span class="cite-toggle" title="Show verification record">CW ${esc(r.volume)} §${esc(r.paragraph)}${r.verified ? ' <span class="vcheck">✓</span>' : ''}${dHist.length ? ' <span class="dmark" title="This edge has public dispute history">⚖</span>' : ''} <span class="rag ${ragClass}" title="${ragTitle}">●</span></span>`
   const report = (extra) => encodeURIComponent(JSON.stringify(Object.assign({
@@ -978,7 +978,7 @@ $('open-method').addEventListener('click', openMethod)
 const C = META.counts, F = META.frozen
 $('version').textContent = `${META.version} · ${C.nodes}/${C.edges}/${C.references} · updated ${META.built}`
 $('version').title = `${META.version}, built ${META.built} — ${C.nodes} nodes, ${C.edges} relations, ${C.references} references. The paper describes ${F.version} (${F.nodes}/${F.edges}/${F.references}), preserved at ${F.url}`
-$('landing-counts').textContent = `${C.nodes} symbols · ${C.edges} relations · ${C.references} verified citations · ${META.version}`
+$('landing-counts').textContent = `${C.nodes} symbols · ${C.edges} relations · ${C.references} cited claims · ${META.version}`
 // (about panel removed)
 
 function updateStats() {
@@ -1014,7 +1014,7 @@ function buildSummary() {
     <div class="sum-body">${html}</div>
     ${summary.placeholder
       ? `<div class="sum-placeholder">PLACEHOLDER SUMMARY — wired to real edges so the mechanism can be tested. The generated hundred words are produced through the verification chain and replace this file wholesale.</div>`
-      : `<div class="sum-verified">Written from the graph and verified${summary.generated_date ? ` · ${esc(summary.generated_date)}` : ''}</div>`}
+      : `<div class="sum-verified">Written from the graph and checked${summary.generated_date ? ` · ${esc(summary.generated_date)}` : ''}</div>`}
     ${broken.length ? `<div class="clause-error">BROKEN: ${broken.length} clause${broken.length > 1 ? 's' : ''} cite${broken.length > 1 ? '' : 's'} edges that are not in this graph (${esc(broken.map(b => clauseRefs(b.c).join(', ')).join(' | '))}). The summary is stale and must be regenerated before publication.</div>` : ''}`
   box.querySelectorAll('.clause[data-clause]').forEach(el => el.addEventListener('click', () => {
     const i = Number(el.dataset.clause)
