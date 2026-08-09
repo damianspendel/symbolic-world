@@ -1867,6 +1867,51 @@
    "id": "bear-goddess",
    "label": "The bear-goddess (Dea Artio / Ursanna)",
    "type": "Figure"
+  },
+  {
+   "id": "bird",
+   "label": "Bird (theriomorphic form of the anima and messenger of the old man)",
+   "type": "Symbol"
+  },
+  {
+   "id": "matriarchy",
+   "label": "Matriarchy (the matriarchal order)",
+   "type": "Concept"
+  },
+  {
+   "id": "nature",
+   "label": "Nature",
+   "type": "Concept"
+  },
+  {
+   "id": "wind",
+   "label": "Wind (pneuma, anemos)",
+   "type": "Symbol"
+  },
+  {
+   "id": "magician",
+   "label": "The magician (white and black magician, the wicked hunter)",
+   "type": "Figure"
+  },
+  {
+   "id": "dwarf",
+   "label": "The dwarf (gnome, manikin)",
+   "type": "Figure"
+  },
+  {
+   "id": "helpful-animal",
+   "label": "The motif of the helpful animal",
+   "type": "Motif"
+  },
+  {
+   "id": "horse",
+   "label": "The horse (three-legged and four-legged)",
+   "type": "Symbol"
+  },
+  {
+   "id": "triad",
+   "label": "The triad (threeness)",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -35894,6 +35939,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 400,
+     "quote": "In myths and fairytales, as in dreams, the psyche tells its own story",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 432,
+     "quote": "the fairytale cannot very well express anything except what the psyche actually is",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
     }
    ],
    "relation_family": {
@@ -36694,6 +36761,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 396,
+     "quote": "it is the figure of a “wise old man” who symbolizes the spiritual factor",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
     }
    ],
    "relation_family": {
@@ -37392,6 +37470,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 372,
+     "quote": "evidently a parallel to those mystic syzygies which are to be met with in the figures of Simon Magus and Helen",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)",
+     "correction_note": "xv correction: claim_type -> jung-asserts (Jung actively draws the interpretive parallel)"
     }
    ],
    "relation_family": {
@@ -41108,6 +41198,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 376,
+     "quote": "The anima has “accidentally” taken the form of a snake",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
     }
    ],
    "relation_family": {
@@ -41116,6 +41217,898 @@
     "by": "opus+gemini-agreed (v0.5)",
     "date": "2026-08-08"
    }
+  },
+  {
+   "subject": "anima",
+   "relation": "appears-as",
+   "object": "bird",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 371,
+     "quote": "She can just as well be a bird, which means that she may belong wholly to nature and can vanish",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 365,
+     "quote": "A bird speaks with the same voice, but shows herself helpful by trying to rescue the dreamer from a dangerous situation",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)",
+     "source": "the analysand's dream report",
+     "correction_note": "xv correction per b-cw9i-5 precedent: patient dream content is quoted case material, not a parallel tradition"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "appears-as",
+   "object": "unknown-woman",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 370,
+     "quote": "the central figure is a mysterious feminine being with qualities like those of no woman known to the dreamer",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "anima",
+   "relation": "is-projected-onto",
+   "object": "demeter",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 382,
+     "quote": "It seems clear enough that the man’s anima found occasion for projection in the Demeter cult",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "demeter",
+   "relation": "differs-from",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 383,
+     "quote": "But the Demeter-Kore myth is far too feminine to have been merely the result of an anima-projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "demeter",
+   "relation": "reflects",
+   "object": "matriarchy",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 383,
+     "quote": "the psychology of the Demeter cult bears all the features of a matriarchal order of society",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "opposes",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 385,
+     "quote": "Spirit, we say, is the principle that stands in opposition to matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 389,
+     "quote": "spirit is the dynamic principle, forming for that very reason the classical antithesis of matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "opposes",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 385,
+     "quote": "In contradiction to this view there stands the antithesis: spirit and nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 389,
+     "quote": "The subsequent differentiation of this contrast leads to the actually very remarkable opposition of spirit and nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "is-identified-with",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 390,
+     "quote": "The transcendent spirit became the supranatural and transmundane cosmic principle of order and as such was given the name of “God,”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "derives-from",
+   "object": "wind",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 389,
+     "quote": "In keeping with its original wind-nature, spirit is always an active, winged, swift-moving being",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 388,
+     "quote": "a functional complex which originally, on the primitive level, was felt as an invisible, breathlike “presence.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "possesses",
+   "object": "man",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 393,
+     "quote": "the primordial phenomenon of the spirit takes possession of him",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 388,
+     "quote": "then it is somebody else’s spirit, and it may be causing a possession",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "corresponds-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 388,
+     "quote": "to the original, not yet human, anthropoid disposition which we also call the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "produces",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 393,
+     "quote": "the spontaneous capacity to produce images independently of sense perception",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)",
+     "correction_note": "gate correction: §393 says images produced independently of sense perception, never 'archetypal'; the archetypal character of spirit's manifestations is asserted in §396, not here — mapping hedge goes in confidence."
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 396,
+     "quote": "The psychic manifestations of the spirit indicate at once that they are of an archetypal nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "the-father",
+   "relation": "personifies",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 396,
+     "quote": "In dreams, it is always the father-figure from whom the decisive convictions, prohibitions, and wise counsels emanate",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "symbolizes",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 396,
+     "quote": "The pair of them play a considerable role in alchemy as symbols of Mercurius",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)",
+     "correction_note": "xv correction: claim_type -> jung-reports-parallel (Jung reports the alchemical tradition's symbolism)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "compensates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 398,
+     "quote": "The archetype compensates this state of spiritual deficiency by contents designed to fill the gap",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 401,
+     "quote": "the knowledge needed to compensate the deficiency comes in the form of a personified thought",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "appears-in",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 401,
+     "quote": "The frequency with which the spirit-type appears as an old man is about the same in fairytales as in dreams",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "guides",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 405,
+     "quote": "The old man knows what roads lead to the goal and points them out to the hero",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "induces",
+   "object": "self-knowledge",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 404,
+     "quote": "for the purpose of inducing self-reflection and mobilizing the moral forces",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "arises-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 402,
+     "quote": "this purposeful reflection and concentration of moral and physical forces that comes about spontaneously in the psychic space outside consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "represents",
+   "object": "sapientia",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 406,
+     "quote": "The old man thus represents knowledge, reflection, insight, wisdom, cleverness, and intuition on the one hand",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "is-associated-with",
+   "object": "tree",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 406,
+     "quote": "The King of the Forest is here a vegetation or tree numen who reigns in the woods",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 417,
+     "quote": "The old man, appearing at first as a tree-numen",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "tree",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 406,
+     "quote": "his relation to the unconscious since the latter is frequently expressed through wood and water symbols",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "employs",
+   "object": "bird",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 405,
+     "quote": "To this end he makes ready use of animals, particularly birds",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "appears-as",
+   "object": "dwarf",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 407,
+     "quote": "There is equally a connection with the unconscious when the old man appears as a dwarf",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 408,
+     "quote": "the archetype of the wise old man is quite tiny, almost imperceptible, and yet it possesses a fateful potency",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "dwarf",
+   "relation": "parallels",
+   "object": "homunculus",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 408,
+     "quote": "the metallic men who dwell in the mines, the crafty dactyls of antiquity, the homunculi of the alchemists",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "tests",
+   "object": "man",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 410,
+     "quote": "he even tests the moral qualities of others and makes his gifts dependent on this test",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "is-identified-with",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 412,
+     "quote": "The figure of the superior and helpful old man tempts one to connect him somehow or other with God",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "wise-old-man",
+   "relation": "manifests",
+   "object": "evil",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 414,
+     "quote": "And indeed the old man has a wicked aspect too, just as the primitive medicine-man is a healer and helper",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 415,
+     "quote": "seeming, in certain of his forms, to be good incarnate and in others an aspect of evil",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "magician",
+   "relation": "is-aspect-of",
+   "object": "wise-old-man",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 415,
+     "quote": "Then again, he is the wicked magician who, from sheer egoism, does evil for evil’s sake",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 418,
+     "quote": "we see the archetype of the old man in the guise of an evil-doer",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "the-hero",
+   "relation": "seeks",
+   "object": "treasure-hard-to-attain",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 417,
+     "quote": "forced him to go in search of the lost charm, the “treasure hard to attain,” thus making him the mythical hero",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "spirit",
+   "relation": "appears-as",
+   "object": "helpful-animal",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 421,
+     "quote": "In these circumstances we can say with some justification that the archetype of the spirit is being expressed through an animal form",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "helpful-animal",
+   "relation": "assists",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 421,
+     "quote": "Again and again in fairytales we encounter the motif of helpful animals",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 423,
+     "quote": "In the same way he meets a bear and a lion, who also give him some hairs",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "horse",
+   "relation": "represents",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 425,
+     "quote": "The two horses are miraculous animals that talk and know and thus represent the unconscious spirit",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "witch",
+   "relation": "personifies",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 425,
+     "quote": "the witch stands for a mater natura or the original “matriarchal” state of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "the-trinity",
+   "relation": "has-counterpart-in",
+   "object": "triad",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 425,
+     "quote": "we can see clearly how the divine Trinity has its counterpart in a lower, chthonic triad",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "triad",
+   "relation": "derives-from",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 426,
+     "quote": "This simple reflection shows how three can be derived from four",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 430,
+     "quote": "In our fairytale the triad appears as a mutilated quaternity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "axiom-of-maria",
+   "relation": "belongs-to",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 425,
+     "quote": "In alchemy this problem is known as the axiom of Maria and runs all through alchemical philosophy for more than a thousand years",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "raven",
+   "relation": "is-identical-with",
+   "object": "magician",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 427,
+     "quote": "The hunter first appears in the story as a black raven",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "raven",
+   "relation": "parallels",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 427,
+     "quote": "That this is an inverted reflection of the primordial Christian image should be obvious enough",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "remains-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 430,
+     "quote": "while the other remains connected with the matrix, the unconscious, and is known as the “inferior” function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "eludes",
+   "object": "will",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 431,
+     "quote": "The fourth, inferior function proves on the other hand to be inaccessible to our will",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    }
+   ]
   }
  ]
 }
