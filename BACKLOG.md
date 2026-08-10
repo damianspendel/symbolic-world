@@ -151,10 +151,31 @@ Full hostile review: pipeline/work/gemini_hostile_review.json
 
 ## The family layer: public exposition and external validity (added 2026-08-10)
 
-Four connected ideas from Damian's 2026-08-10 adjudication sitting. They belong
-together because the first three make the ontology legible and the fourth asks
-whether it is defensible — publishing without the fourth would state a position
-on Jung that has never been checked against anyone but ourselves.
+Six connected items from Damian's 2026-08-10 adjudication sitting. Items 1–3
+make the ontology legible, item 4 asks whether it is defensible, and items 5–6
+keep the instrument honest over time. Publishing 1–3 without 4 would state a
+position on Jung that has never been checked against anyone but ourselves.
+
+**SEQUENCE (Damian, 2026-08-10) — this order is the decision, not a suggestion:**
+
+1. **Finish the CW 9i arc** — windows 8, 9, 10. (Window 8 is currently HELD at
+   prechecked on Fable capacity; see `pipeline/state.json`.)
+2. **Run the seeded-corruption pass over the family layer**, against the ruleset
+   as it stands at arc close — the item 5 recalibration, using the existing
+   `corrupt_family_assignments.py` harness with a fresh seed and the threshold
+   set in advance.
+3. **Then the codebase update** — fold v0.6 (item 1), build the map (2), write
+   the page (3) under its anti-overclaim checklist, wire the version/calibration
+   CI check (5) and the continuous seeding with its strip step and marker
+   assertion (6).
+4. **Only then further mining** — the CW 8 arc, per `docs/PROPOSAL_NEXT_ARC.md`,
+   and not before Damian's explicit go.
+
+The reason for this order: the codebase does not change mid-arc, so a window is
+never mined under a ruleset different from the one its neighbours got; the
+measurement happens before the rebuild, so the rebuild cannot be tuned to it;
+and the new instruments are standing before the next arc's material — CW 8's
+energetic register — arrives to stress them.
 
 1. **Fold the accumulated rulings into FAMILY_DEFINITIONS v0.6.** The queue has
    been ruling on questions the document does not answer. The 2026-08-10 sitting
@@ -180,6 +201,43 @@ on Jung that has never been checked against anyone but ourselves.
    from (2), name the boundary cases with worked examples, and show the queue
    and the adjudication protocol as evidence rather than decoration. Same
    humility register as the method page.
+
+   **Anti-overclaim checklist — binding on the copy, and the reason this page is
+   riskier than the method page.** The method page describes checks against a
+   text; this page describes a classification of Jung's thought, where a confident
+   register would be asserting an interpretive position we have never tested
+   outside this repo. Every line below is a claim the page must NOT make, paired
+   with what it says instead:
+
+   - NOT "verified families" or any reuse of the verification vocabulary. A
+     family is ASSIGNED, not verified. The word "verified" belongs to the quote
+     and its paragraph, and using it twice for two different kinds of evidence is
+     precisely the conflation the ledger's two row types exist to prevent.
+   - NOT "the gate catches errors" full stop. It catches the errors we know how
+     to plant. Say the class, say the numbers, bind them to the ruleset version
+     they measured (items 5 and 6), and say plainly that a caught planted error
+     is evidence about the instrument, not about Jung.
+   - NOT any implication of scholarly consensus. Until item 4 runs, the page must
+     state that the families are OUR classification, internally calibrated and
+     externally unvalidated — no secondary literature has been consulted, and
+     where scholars would disagree is unknown. If item 4 has run, report its
+     disagreements on the page, not only its agreements.
+   - NOT a tidy total. Show `no-family`, `text-undecided` and the pending queue
+     with real counts beside the assigned ones, and show the homeless relation
+     strings from (2). A vocabulary that covers everything is a vocabulary that
+     has stopped discriminating.
+   - NOT "families reveal the structure of Jung's thought" or similar. They
+     record how WE sorted relations he wrote. The graph is a map of assertions,
+     not a reading — the same sentence the method page already carries, and it
+     applies harder here.
+   - Model agreement is not correctness. The 86% two-arm figure means the
+     document is followable, not that it is right; neither arm is ground truth
+     and the definitions' author is one of the model families. Say that where the
+     number appears, not in a footnote.
+
+   Have the copy written by a family that did not author FAMILY_DEFINITIONS, and
+   run the standing copy assertion over it (banned phrases, count-like literals
+   bound to atlas.json tokens) before it ships.
 
 4. **External-validity sampling against Jungian scholarship — the load-bearing
    one, and the reason to do it BEFORE publishing (2) and (3).** Damian's
