@@ -211,3 +211,48 @@ on Jung that has never been checked against anyone but ourselves.
 
    Until (4) runs, the family layer ships as what it is: our classification,
    internally calibrated, externally unvalidated. Say that on the page.
+
+5. **Recalibration as a release gate on the ruleset — and the CI question,
+   assessed.** The family gate's calibration (`corrupt_family_assignments.py`,
+   19/19 on 2026-08-06, 20/20 with 38/40 specificity on 2026-08-07) has been run
+   twice by hand and is wired into nothing. Both runs measured a gate reading
+   FAMILY_DEFINITIONS v0.4/v0.5 — including the amplification layer-override rule
+   the 2026-08-10 sitting retired, and the harness plants
+   `amplification → correspondence` swaps as one of its near-miss cases. So the
+   published sensitivity figures describe a ruleset that is about to change.
+
+   **The gate, proposed:** a FAMILY_DEFINITIONS version does not ship until the
+   calibration has been re-run against that exact version. Sequence at the v0.6
+   fold (natural moment: the CW 9i arc close, when the accumulated rulings get
+   folded anyway): fold rulings → re-run the corruption harness on a fresh seed →
+   gate it with a family that did NOT author the definitions → score sensitivity
+   AND specificity → commit a calibration record → only then may the version, or
+   any page citing its numbers, ship. Set the pass threshold BEFORE seeing the
+   result, per the standing precedent from the normalization step-0 sample; the
+   near-miss class (K1) is the one that must hold, since far-misses catch
+   themselves. Bind the method page's sentence to the version it measured
+   ("against v0.6, dated") so it cannot silently go stale again.
+
+   **CI assessment — the calibration itself cannot live in CI, and mining volume
+   is the wrong trigger.** Three hard blockers: it requires paid,
+   non-deterministic model calls (CI today is fully offline and deterministic);
+   it needs the Gemini key, which must never reach the repo or a runner; and its
+   inputs sit in `pipeline/work/`, gitignored by design. A fourth, subtler one:
+   re-running a stochastic gate on every push would produce a flapping red build
+   that teaches everyone to ignore it.
+
+   What CI CAN do, cheaply and deterministically, is refuse to let the version
+   drift away from its calibration: commit a small tracked calibration record
+   (version, date, seed, n, sensitivity, specificity — numbers only, no corpus,
+   no keys), then extend `tools/check_paper_facts.py` with a STALE DOC check in
+   its existing shape — if FAMILY_DEFINITIONS declares a version with no matching
+   calibration record, fail with the literal expected string. That is the
+   mechanism the tier-3 docs lacked when they drifted; the same fix applies here.
+
+   On "does more mining change this": more windows add edges, not rules, so
+   mining alone does not invalidate a calibration. But new registers stress the
+   vocabulary in new ways — CW 8's energetics and CW 11's doctrinal material are
+   both expected to force family revisions — and each revision bumps the version,
+   which trips the gate. So the gate fires on ruleset change, and mining is what
+   makes ruleset change happen. Wiring it to the version is strictly better than
+   wiring it to a window count.
