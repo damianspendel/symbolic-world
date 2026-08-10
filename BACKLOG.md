@@ -256,3 +256,48 @@ on Jung that has never been checked against anyone but ourselves.
    which trips the gate. So the gate fires on ruleset change, and mining is what
    makes ruleset change happen. Wiring it to the version is strictly better than
    wiring it to a window count.
+
+6. **Continuous seeded corruption during the per-window family sweep** (Damian,
+   2026-08-10). Item 5 makes the calibration fire on ruleset change; this makes
+   it fire continuously. Plant a small number of corrupted assignments into each
+   window's family stage and measure what the gate returns, so the instrument is
+   watched between versions rather than trusted between them. The repo already
+   runs exactly this pattern one layer down: the quote canaries plant seven
+   corruptions on every test run and fail the build if any survives. The family
+   layer has no equivalent, and that asymmetry is the weakest joint in the trust
+   story — citations are continuously probed, their classification is not.
+
+   **Injection point: the gate's input, never the arms'.** The two blind arms are
+   proposers; corrupting what they see corrupts the proposal. What gets planted
+   are wrong assignments slipped into the stream the gate reviews,
+   indistinguishable from real ones. The gate is already a stateless call blind
+   to any answer key, which is what makes this possible at all.
+
+   **Contamination is the one risk that could reach the published graph**, so it
+   needs three defences rather than one: every planted item carries a synthetic
+   marker; a strip step keyed to that marker runs before merge, unconditionally;
+   and CI asserts no marker survives in `seed.json`. That third check is
+   deterministic, offline and free — so unlike the calibration in item 5, this
+   design gives CI something real to enforce.
+
+   **Read it as a trend, not a per-window verdict.** Five planted items in a
+   ~40-edge window carries no statistical weight alone; fifty across ten windows
+   shows whether the gate is decaying. Drift is precisely what a one-off
+   calibration cannot see, so the accumulating read is the point, not a
+   limitation.
+
+   **It measures reliability, not validity — and the page must say so.** A caught
+   planted error proves the gate still catches the errors WE know how to make. It
+   says nothing about whether the families carve Jung's thought correctly; that is
+   item 4's question and no internal instrument can answer it. Stated carelessly
+   ("we plant errors and catch them all") this reads to an outsider as a far
+   stronger claim than it is — the kind of overclaim the r/alchemy critic caught
+   us in once already.
+
+   **It does not replace item 5.** Live windows contain only whichever families
+   that material happens to use, so coverage is opportunistic and would rarely
+   hit the specific boundaries a version revision changed. Focused recalibration
+   gives stratified coverage of new rules; continuous seeding watches for decay
+   between versions. Two jobs, both needed.
+
+   Cost: roughly 10–15% overhead on the gate stage per window.
