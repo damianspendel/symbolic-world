@@ -106,7 +106,7 @@ checks removed.
 
 Machines verify; people decide. Three places the human hand is in the record:
 
-- **The gold set.** {{human_chips}} claims in the [ledger](/ledger.html) carry
+- **The gold set.** {{human_chips}} claims in the [ledger](/ledger) carry
   a *human-validated* mark: a person read the source paragraph and confirmed
   the claim. This is the reference set the machine verdicts are measured
   against. Most claims are machine-verified only — the amber dot is the

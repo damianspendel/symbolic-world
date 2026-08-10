@@ -370,8 +370,8 @@ function refBlock(e, r, key) {
       ${r.vocabulary_note ? `<div><b>Vocabulary note:</b> ${esc(r.vocabulary_note)}</div>` : ''}
       <div><b>Status:</b> <span class="${ragClass}">●</span> ${ragTitle}${hv ? ` (${esc(hv.date)}${hv.voice !== 'voice-correct' ? '; human corrected the voice label' : ''})` : ''}</div>
       <div><b>Check it yourself:</b> CW ${esc(r.volume)} §${esc(r.paragraph)}${pg ? `, Bollingen p.${pg}` : ''}</div>
-      ${dHist.map(x => `<div class="dhist"><b>Disputed</b> (${esc(x.date)}, ${esc(x.outcome)}): ${esc(x.objection)} <span class="dhist-res">→ ${esc(x.resolution)}</span> <a href="/disputes.html" class="dhist-link">full log</a></div>`).join('')}
-      ${cHist.length ? `<div class="chist"><b>Reader-confirmed ×${cHist.length}</b> — a human checked the cited paragraph${cHist.length > 1 ? 's' : ''} (${cHist.map(x => esc(x.date)).join(', ')}) <a href="/disputes.html" class="dhist-link">log</a></div>` : ''}
+      ${dHist.map(x => `<div class="dhist"><b>Disputed</b> (${esc(x.date)}, ${esc(x.outcome)}): ${esc(x.objection)} <span class="dhist-res">→ ${esc(x.resolution)}</span> <a href="/disputes" class="dhist-link">full log</a></div>`).join('')}
+      ${cHist.length ? `<div class="chist"><b>Reader-confirmed ×${cHist.length}</b> — a human checked the cited paragraph${cHist.length > 1 ? 's' : ''} (${cHist.map(x => esc(x.date)).join(', ')}) <a href="/disputes" class="dhist-link">log</a></div>` : ''}
       <button class="confirm-btn" data-report="${report({})}">Confirm this edge — I checked the book</button>
       <button class="dispute-btn" data-report="${report({ verified_by: r.verified_by || '', verified_date: r.verified_date || '' })}">Dispute this edge — copy report</button>
     </div>
@@ -470,7 +470,7 @@ function wirePanel(p) {
       'My objection (what the cited paragraph actually says):', '  [describe here — please quote the paragraph]', '',
       'Submit at: https://github.com/damianspendel/symbolic-world/issues/new?template=dispute.yml',
       '(use the dispute template). Disputed edges are re-reviewed with this objection',
-      'attached; outcomes are published at https://symbolicworld.observer/disputes.html'
+      'attached; outcomes are published at https://symbolicworld.observer/disputes'
     ], 'Report copied ✓ — submit at github.com/damianspendel/symbolic-world/issues', 'Dispute this edge — copy report')
   }))
 }

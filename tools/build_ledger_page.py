@@ -79,7 +79,7 @@ for e in seed["edges"]:
         rows.append(f'<div class="refrow"><span class="cite">CW {esc(r["volume"])} §{esc(r["paragraph"])}</span>'
                     f'<span class="ctype">{esc(r["claim_type"])}</span>{"".join(chips)}</div>')
     dchips = "".join(
-        f'<div class="drow" title="{esc(d["objection"])}">⚖ disputed ({esc(d["date"])}, {esc(d["outcome"])}) — <a href="/disputes.html">log</a></div>'
+        f'<div class="drow" title="{esc(d["objection"])}">⚖ disputed ({esc(d["date"])}, {esc(d["outcome"])}) — <a href="/disputes">log</a></div>'
         for d in DISPUTES.get(key, []))
 
     # the family-assignment record, visually a different kind of row
@@ -141,6 +141,7 @@ page = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/ledger">
 <title>Ledger — The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
 <style>
@@ -232,7 +233,7 @@ page = f"""<!doctype html>
   <b>quote</b> check, the independent <b>gate</b> (verifier and date), the narrow <b>voice</b> audit,
   the second-vendor <b>cross-vendor</b> check, and — where a person has checked the paragraph —
   <b>human</b> validation from the gold set. Disputed records link to the
-  <a href="/disputes.html">dispute log</a>. Hover any chip for detail.</p>
+  <a href="/disputes">dispute log</a>. Hover any chip for detail.</p>
   <p class="intro">Disclosure, mirrored from the paper: verification timestamps for batches gated
   before 2026-07-26 were batch-backfilled rather than recorded per-operation (the verification is
   real; those timestamps are reconstructions). Since then, stamps are written by the operations

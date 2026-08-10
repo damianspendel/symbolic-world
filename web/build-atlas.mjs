@@ -418,7 +418,7 @@ const STATE_NOTE = {
 }
 
 writeFileSync(here('./src/families.json'), JSON.stringify({
-  version: famVersion, source: 'docs/FAMILY_DEFINITIONS.md', doc_url: './families.html',
+  version: famVersion, source: 'docs/FAMILY_DEFINITIONS.md', doc_url: './families',
   state_note: STATE_NOTE, boundary_rules: boundaryRules, families
 }))
 
@@ -569,6 +569,7 @@ function renderDoc(md, version) {
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/families">
 <title>Relation families ${esc(version)} — The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
 <style>
