@@ -81,9 +81,30 @@ Mac server (port 8788) and tunnel ingress stay AS THEY ARE for 24–48 h after
 the flip. Only after the soak: stop the atlas server via manage.sh and remove
 its ingress rule. The tunnel itself stays — other services use it.
 
-## Redeploys (until automation is authorized)
+## Redeploys
 
 Every subsequent publish = Phase 1 → deploy command → Phase 3 against the
-production URL. Data-only automatic redeploys from the mining task require
-Damian's explicit standing authorization, recorded in CLAUDE.md — not yet
-given as of this writing.
+production URL. Data-only automatic redeploys after merged mining windows are
+covered by Damian's standing authorization of 2026-08-07, recorded in
+CLAUDE.md with its guardrails; UI changes still require his review first.
+
+## URL convention — extensionless, always (2026-08-10)
+
+Cloudflare Pages serves "pretty URLs": every `.html` path 308-redirects to
+its extensionless twin (`/ledger.html` → `/ledger`). The canonical public
+address of every page is therefore the EXTENSIONLESS one, and three things
+must agree on it or Google Search Console files redirect errors (it did, on
+2026-08-10, fixed in commit b6f3ec9):
+
+- `web/public/sitemap.xml` lists `/ledger`, `/families`, `/disputes` — never
+  a `.html` URL.
+- Each generated or static page carries a canonical tag pointing at its
+  extensionless address (ledger's lives in `tools/build_ledger_page.py`,
+  families' in `web/build-atlas.mjs` renderDoc, disputes' in the static file).
+- Internal links across the site (`web/index.html` nav, `web/src/main.js`,
+  `docs/METHOD_COPY.md`) use extensionless hrefs.
+
+Do not reintroduce `.html` links in new pages or copy. The `/v1.3/` frozen
+snapshot is exempt — it is never edited for any reason. Note for local dev:
+the vite dev server does not do this rewrite, so extensionless links resolve
+only on the deployed site; that is expected, not a bug.
