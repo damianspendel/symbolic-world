@@ -148,3 +148,66 @@ Priority order agreed with the hostile review's own "what would change my mind":
 5. ~~Semantic-diffusion terminology~~ ✅ repositioned as shorthand w/ decomposition-literature context.
 Full hostile review: pipeline/work/gemini_hostile_review.json
 - Review great-mother vs the-mother node split (b-union-1 §403 edge may want retargeting to the new the-mother figure node; decided 2026-07-27 when both gates rejected the convention on b-cw12-4 n9)
+
+## The family layer: public exposition and external validity (added 2026-08-10)
+
+Four connected ideas from Damian's 2026-08-10 adjudication sitting. They belong
+together because the first three make the ontology legible and the fourth asks
+whether it is defensible — publishing without the fourth would state a position
+on Jung that has never been checked against anyone but ourselves.
+
+1. **Fold the accumulated rulings into FAMILY_DEFINITIONS v0.6.** The queue has
+   been ruling on questions the document does not answer. The 2026-08-10 sitting
+   alone retired the "amplification layer tag overrides the relation string" rule
+   (three rulings against it, one precedent application), recorded the
+   sentence-subject test that separates archetypal-identity from correspondence
+   at CW 9i §572 vs CW 9ii §60, and added `exemplified-by` to the homeless
+   strings beside `assimilates`. Nine already-assigned edges were assigned under
+   the retired rule and are queued for a two-arm re-run:
+   `pipeline/work/v06_amplification_rerun_queue.json`.
+
+2. **A relation-string → family map, published.** The reverse index: for each
+   family, the relation strings that land in it (`symbolization` ← `symbolizes`,
+   `symbolized-by`, `represents`, `stands-for`, …), with counts. This is the
+   single most useful artifact for a reader trying to understand what the layer
+   claims, and it is derivable from `seed.json` with no new judgment. It also
+   exposes the strings that fit nowhere, which is the honest part.
+
+3. **A public page explaining the families.** `families.html` currently renders
+   the definitions document — written for us, not for a visitor. A reader-facing
+   version would state what a relation family IS (a classification OVER an
+   already-verified relation, never a re-verification of the text), show the map
+   from (2), name the boundary cases with worked examples, and show the queue
+   and the adjudication protocol as evidence rather than decoration. Same
+   humility register as the method page.
+
+4. **External-validity sampling against Jungian scholarship — the load-bearing
+   one, and the reason to do it BEFORE publishing (2) and (3).** Damian's
+   question, verbatim in substance: would a Jungian scholar agree that
+   `mandala is god-image` is *archetypal-identity*, or does our ontology
+   contradict what key figures actually hold? Nothing in the pipeline currently
+   tests this. Every check we run is internal — two model arms against a
+   document we wrote, a gate calibrated against errors we planted. The families
+   could be perfectly self-consistent and still cut Jung's thought at joints no
+   reader of Jung recognizes.
+
+   Shape: draw a stratified sample of assigned edges (say 25, weighted toward
+   the contested families — archetypal-identity, correspondence, symbolization,
+   amplification), and for each, check the assignment against secondary
+   scholarship — Jacobi, von Franz, Samuels' *Critical Dictionary*, Shamdasani,
+   the Journal of Analytical Psychology — asking not "is the claim true" (the
+   gate already asked that) but "is this the relation a scholar would say Jung
+   asserts here". Report agreement, and report the disagreements in full: a
+   family the literature consistently reads differently is a definition defect,
+   not a scholarly error. Cross-vendor is the wrong instrument here — this needs
+   sources outside the corpus, so it is a research task with citations, not a
+   model pass.
+
+   Two known risks to state in the write-up: the scholars disagree with each
+   other (so "consensus" may not exist for some pairs — that itself is the
+   finding), and secondary literature is copyrighted, so quotation stays inside
+   fair-use limits and nothing enters the graph from it. The graph remains
+   single-corpus; this is a check ON the ontology, not new evidence IN it.
+
+   Until (4) runs, the family layer ships as what it is: our classification,
+   internally calibrated, externally unvalidated. Say that on the page.
