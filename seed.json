@@ -1972,6 +1972,46 @@
    "id": "heracles",
    "label": "Heracles",
    "type": "Figure"
+  },
+  {
+   "id": "the-eye",
+   "label": "The eye (pupil and iris)",
+   "type": "Symbol"
+  },
+  {
+   "id": "goat",
+   "label": "The goat (chthonic counterpart of the birds)",
+   "type": "Symbol"
+  },
+  {
+   "id": "yang-yin",
+   "label": "Yang and Yin",
+   "type": "Concept"
+  },
+  {
+   "id": "crab",
+   "label": "The crab (zodiacal Cancer)",
+   "type": "Symbol"
+  },
+  {
+   "id": "shiva",
+   "label": "Shiva (the One Existent, Shiva-bindu)",
+   "type": "Figure"
+  },
+  {
+   "id": "shakti",
+   "label": "Shakti (the feminine creative power)",
+   "type": "Figure"
+  },
+  {
+   "id": "dorje",
+   "label": "The dorje (diamond thunderbolt)",
+   "type": "Symbol"
+  },
+  {
+   "id": "world-wheel",
+   "label": "The Tibetan World Wheel",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -37501,6 +37541,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 581,
+     "quote": "There are products of active imagination, and also dreams, which reproduce the same patterns and arrangements with a spontaneity that cannot be influenced.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
     }
    ],
    "relation_family": {
@@ -42403,6 +42454,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-09",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 611,
+     "quote": "The breaking down of the quaternity into 3 plus 1 is in accord with the archetype.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
     }
    ],
    "relation_family": {
@@ -43957,6 +44019,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 616,
+     "quote": "The individuation process has many stages and is subject to many vicissitudes, as the fictive course of the opus alchymicum amply shows.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
     }
    ],
    "relation_family": {
@@ -44627,6 +44700,17 @@
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)",
      "correction_note": "gate correction: §570: 'an attempt is made to unite the opposites red and blue' — an attempted union in this one picture, not an achieved or general union. The verb stays (modality belongs in the confidence field, not the relation), confidence high -> medium."
+    },
+    {
+     "volume": "9i",
+     "paragraph": 603,
+     "quote": "Miss X’s mandala, on the other hand, comprises and contains the opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
     }
    ],
    "relation_family": {
@@ -44748,6 +44832,1159 @@
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)",
      "correction_note": "gate correction: §576's protected object is not consciousness: the cortices are 'boundary lines marking off the inner unity and protecting it against the outer blackness', and §572 has the wings 'shield the contents of the mandala'. In this essay the sphere's inner unity is the self's totality (§572 'symbol of the self as the psychic totality'), not ego-consciousness — §538 even has the sphere replace the patient. Object -> wholeness ('the inner unity'); the reference should not attach to the standing mandala|protects|consciousness edge, whose §9i §16 basis is a different claim."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "jakob-boehme",
+   "relation": "draws-on",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 581,
+     "quote": "Although Böhme took the idea of the cauda pavonis and the tetrameria from alchemy,",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "correction_note": "gate correction: §581 says Böhme 'took the idea of the cauda pavonis and the tetrameria from alchemy' — borrowing of two named motifs, immediately qualified by 'he, like the alchemists, was working on an empirical basis'. derives-from inflates this paragraph into wholesale intellectual lineage; draws-on (verb + trailing preposition) is what the sentence supports. The lineage claim lives in §603 ('starting-point was philosophical alchemy'), which is not the cited paragraph."
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "four-elements",
+   "relation": "constitute",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 579,
+     "quote": "They constitute a sort of second quaternity, proceeding from the inner, pneumatic quaternity but of a physical nature.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "displays",
+   "object": "cauda-pavonis",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 596,
+     "quote": "The light is composed of the rainbow hues of the rising sun; it is a real cauda pavonis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 580,
+     "quote": "In our mandala, too, the rainbow colours spring from the red layer that means affectivity.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "is-contaminated-with",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 582,
+     "quote": "The “inferior” function, however, just because of its unconsciousness, has the great advantage of being contaminated with the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "bridges-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 582,
+     "quote": "can be used as a bridge to span the gulf between conscious and unconscious and thus restore the vital connection with the latter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "tree",
+   "relation": "signifies",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 585,
+     "quote": "The mother significance of the tree in her previous dream has here been taken up by the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 589,
+     "quote": "The plantlike form of the cross in the middle of the mandala, also noted by the patient, refers back to the tree",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "opposes",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 585,
+     "quote": "She therefore stands for physis opposed to spirit, i.e., for the natural feminine being which the dreamer also is",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "occupies",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 585,
+     "quote": "Into this sphere her mother has intruded and installed herself in the centre, at first under the symbol of the tree.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 584,
+     "quote": "But my mother had moved my bed away from the wall into the middle of the room and had slept in it.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "source": "Miss X's dream, two days before painting Picture 7"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "bird",
+   "relation": "symbolizes",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 586,
+     "quote": "Birds, as aerial beings, are well-known spirit symbols.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "represents",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 588,
+     "quote": "the undifferentiated inner one, which really represents the archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "the-eye",
+   "relation": "is-prototype-of",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 592,
+     "quote": "The eye is the prototype of the mandala",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 593,
+     "quote": "Our mandala is indeed an “eye,” the structure of which symbolizes the centre of order in the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "the-eye",
+   "relation": "stands-for",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 593,
+     "quote": "The eye may well stand for consciousness (which is in fact an organ of perception), looking into its own background.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "correction_note": "gate correction: 'The eye MAY WELL stand for consciousness' — a hedged attribution. The verb stands; the hedge belongs in the confidence field: high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "the-eye",
+   "relation": "symbolizes",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 594,
+     "quote": "The eye is also a well-known symbol for God.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "bird",
+   "relation": "signifies",
+   "object": "the-trinity",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 597,
+     "quote": "Above, there hover three white birds ( pneumata signifying the Trinity); below, a goat is rising up, accompanied by two ravens",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "goat",
+   "relation": "counterbalances",
+   "object": "bird",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 597,
+     "quote": "The underlying thought is clear: no white without black, and no holiness without the devil.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "contains",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 597,
+     "quote": "that of a Western person with a Christian background, whose light throws a dark shadow",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "jakob-boehme",
+   "relation": "fails-to-unite",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 603,
+     "quote": "The attempt failed, inasmuch as he was unable to unite the two halves in a circle.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "jakob-boehme",
+   "relation": "attempts",
+   "object": "christian-mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 603,
+     "quote": "he was the first to try to organize the Christian cosmos, as a total reality, into a mandala",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "correction_note": "gate correction: Jung says Böhme 'was the first to TRY to organize the Christian cosmos, as a total reality, into a mandala' and in the next sentence that 'The attempt failed'. originates-with asserts an origination the paragraph explicitly denies. Corrected to jakob-boehme|attempts|christian-mandala; the first-ness belongs in a note, not the relation."
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "yang-yin",
+   "relation": "makes-possible",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 603,
+     "quote": "Thus the Oriental truth insinuates itself and makes possible—at least by symbolic anticipation—a union of opposites within the irrational life process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "crab",
+   "relation": "signifies",
+   "object": "resurrection",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 604,
+     "quote": "As a zodiacal sign Cancer signifies resurrection , because the crab sheds its shell.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "crab",
+   "relation": "is-ruled-by",
+   "object": "luna",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 604,
+     "quote": "Astrologically, Cancer is the house of the moon.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "crab",
+   "relation": "wounds",
+   "object": "heracles",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 604,
+     "quote": "“Karkinos” was the name of the crab that bit Heracles in the foot in his fight with the Lernaean monster.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "wheel-of-birth",
+   "relation": "resembles",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 606,
+     "quote": "Since she obviously guessed the horoscope’s affinity with the mandala, she introduced her individual sign into the painting",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "the-opposites",
+   "relation": "constellate",
+   "object": "synchronicity",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 608,
+     "quote": "This is the psychological moment when, as the consensus gentium has established since ancient times, synchronistic phenomena occur—that is, when the far appears near",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "marriage-quaternio",
+   "relation": "appears-in",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 612,
+     "quote": "It is a typical marriage quaternio, and for an understanding of its psychology I must refer the reader to my account",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "derives-from",
+   "object": "active-imagination",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 627,
+     "quote": "I repeated the attempt in the preceding paper of the present volume, but there the mandalas did not derive from dreams but from active imagination.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "exemplifies",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 623,
+     "quote": "this motif is one of the best examples of the universal operation of an archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "appears-in",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 623,
+     "quote": "Then God came, but there were really four Gods in the four corners.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "source": "the dream of a ten-year-old girl, written down by the child herself and sent to Jung"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "transforms-into",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 624,
+     "quote": "Then comes the enantiodromia: the dragon changes into pneuma, which stands for a divine quaternity.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "subordinates",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 626,
+     "quote": "Here the many animals are affective states to which man is prone.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 625,
+     "quote": "See how he who thinks himself one is not one, but seems to have as many personalities as he has moods",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "source": "Origen, quoted by Jung"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "is-used-in",
+   "object": "yoga",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 633,
+     "quote": "The goal of contemplating the processes depicted in the mandala is that the yogi shall become inwardly aware of the deity.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "shiva",
+   "relation": "unites-with",
+   "object": "shakti",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 631,
+     "quote": "Creation begins when this unextended point—known as Shiva-bindu— appears in the eternal embrace of its feminine side, the Shakti.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 641,
+     "quote": "It is the same conception as the Shiva-Shakti union in kundalini yoga",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "coils-around",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 646,
+     "quote": "The circle is represented by a snake coiled about a centre, either ring-shaped (uroboros) or spiral (Orphic egg).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 648,
+     "quote": "The inner spiral represents the snake that, like Kundalini, winds three and a half times",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "squaring-of-the-circle",
+   "relation": "underlies",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 634,
+     "quote": "There are innumerable variants of the motif shown here, but they are all based on the squaring of a circle.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "dorje",
+   "relation": "symbolizes",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 636,
+     "quote": "The diamond thunderbolt, the dorje in the centre, symbolizes the perfect state where masculine and feminine are united.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "diamond-body",
+   "relation": "corresponds-to",
+   "object": "corpus-glorificationis",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 637,
+     "quote": "In Chinese alchemy this state is called the “Diamond Body,” corresponding to the corpus incorruptibile of medieval alchemy, which is identical with the corpus glorificationis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "world-wheel",
+   "relation": "differs-from",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 644,
+     "quote": "I now reproduce the Tibetan “World Wheel,” which should be sharply distinguished from the former, since it represents the world.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "triad",
+   "relation": "indicates-disturbance-of",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 646,
+     "quote": "there are also triadic and pentadic ones, though these are much rarer. They should be regarded as “disturbed” totality pictures",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "correction_note": "gate correction: §646: triadic (and pentadic) pictures 'should be regarded as \"disturbed\" totality pictures' — the triadic form marks a disturbed wholeness; 'disturbs' converts the diagnostic reading into agency the text does not assert. Relation -> indicates-disturbance-of (verb + noun + trailing preposition), same pattern as the b-cw9i-8 signifies-change-of correction."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "reveals",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 645,
+     "quote": "Confronted with these pictures, many patients suddenly realize for the first time the reality of the collective unconscious as an autonomous entity.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "temenos",
+   "relation": "appears-in",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 646,
+     "quote": "Castle, city , and courtyard (temenos ) motifs, quadratic or circular.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "the-eye",
+   "relation": "appears-in",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 614,
+     "quote": "In Picture 17 a kind of eye motif appears, which I have also observed in the mandalas of other persons.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "reconnects-with",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 620,
+     "quote": "How can consciousness, our most recent acquisition, which has bounded ahead, be linked up again with the oldest, the unconscious, which has lagged behind?",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "9i",
+     "paragraph": 617,
+     "quote": "their very first goal is to bring a consciousness that has hurried too far ahead into contact again with the unconscious background",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "expresses-itself-in",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 626,
+     "quote": "But the God-image, as we saw from Jakob Böhme, expresses itself in the mandala.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "correction_note": "gate correction: §626: 'the God-image, as we saw from Jakob Böhme, expresses itself in the mandala' — expression, not identity. The standing 'is' edge rests on §572's 'at the same time a God-image'; this paragraph does not support 'is' and should not attach to it. Admitted with Jung's own verb: god-image|expresses-itself-in|mandala (2 tokens + trailing preposition)."
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.5)",
+    "date": "2026-08-12"
+   }
+  },
+  {
+   "subject": "yoga",
+   "relation": "displaces",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "9i",
+     "paragraph": 638,
+     "quote": "The yogin exchanges his ego for Shiva or the Buddha; in this way he induces a shifting of the psychological centre of personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)",
+     "correction_note": "gate correction: §638 has the yogin 'exchange his ego for Shiva or the Buddha', inducing 'a shifting of the psychological centre of personality from the personal ego to the impersonal non-ego' — displacement of the ego from the centre, not dissolution. The standing edge's §520 basis ('the unconscious has swallowed up ego-consciousness') is a stronger, different claim; this reference supports displacement only and should not attach to 'dissolves' as worded."
     }
    ],
    "relation_family": {
