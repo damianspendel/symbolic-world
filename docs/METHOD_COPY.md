@@ -6,10 +6,11 @@ method stats at build time — these are the numbers that move. Bare numbers in
 the text are frozen measured results; the build registers them in the copy
 assertion's method-constants allowlist with their source noted here.
 
-Sources for the frozen numbers: 19/19 — step-0 gate
-calibration 2026-08-06; 20/20 and 38/40 — in-situ recalibration 2026-08-07,
-seed 90507; 86% — family_pass_summary.json; 14 of 20 — themis competency run;
-19 dispute rows — disputes.json; 10 rulings — family_adjudication_rulings.
+Sources for the frozen numbers: 86% — family_pass_summary.json; 14 of 20 —
+themis competency run; 19 dispute rows — disputes.json. The family-calibration
+figures (19/19, 20/20, 38/40) were WITHDRAWN 2026-08-12 after the blind code
+inspection (RULES.md #12) and return only from the rebuilt harness's re-run,
+version-bound per RULES.md #16.
 
 ---
 
@@ -129,13 +130,18 @@ The checks are themselves checked:
   corrupted claims, and all seven are caught on every run). Whether a
   paragraph supports its claim is a model's judgment, not a mechanical proof
   — and the receipts show it as judgment.
-- The family gate was calibrated by hiding planted errors among real
-  assignments: it caught 19 of 19 in the first round, 20 of 20 in the second —
-  naming the correct family every time — while wrongly flagging only 2 of 40
-  clean assignments.
+- The family layer's own check — a gate tested by planting errors among real
+  assignments — reported catching everything planted in its early runs. A code
+  inspection we commissioned in August 2026 found that harness could not fully
+  substantiate what "caught" means, so we have withdrawn those figures. The
+  harness is being rebuilt, and the calibration will be re-run and published
+  with its inputs. Until then, a family label means exactly this: two models,
+  judging independently, agreed — and where they disagreed, a person decides.
 - The two blind classification arms agreed on 86% of {{edges_classified}}
-  relations. Twenty standing questions about Jung's thought are asked of the
-  graph after every change; it currently answers 14 in full.
+  relations. Agreement measures whether the definitions can be followed
+  consistently — not whether they are right. Twenty standing questions about
+  Jung's thought are asked of the graph after every change; it currently
+  answers 14 in full.
 
 What the instruments do not cover, stated plainly:
 

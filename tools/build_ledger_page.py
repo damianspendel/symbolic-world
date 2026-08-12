@@ -48,12 +48,26 @@ def esc(s):
 # R9.5 — family-assignment state, rendered as its own row class so a reader can
 # never mistake a classification for a gate against the text.
 FAM_STATE_NOTE = {
-    "assigned": "classified into a relation family; both model arms agreed and the calibrated gate checked the assignment",
-    "pending-adjudication": "the two model arms disagreed — queued for a human ruling, not yet judged",
+    "pending-adjudication": "the two model arms disagreed — queued for Human review, not yet judged",
     "no-family": "a well-formed relation the family vocabulary does not cover",
     "text-undecided": "the paragraph itself hedges between families",
     "not-a-relation": "the relation slot holds a clause; excluded from every family denominator",
 }
+
+
+def fam_note(fstate, by):
+    """RULES.md #10: the tooltip states what THIS edge's record says, never a
+    blanket claim. 'Verified' belongs to the quote layer; families are assigned."""
+    if fstate != "assigned":
+        return FAM_STATE_NOTE.get(fstate, "")
+    b = (by or "").lower()
+    if "human" in b:
+        return "Human review: a person ruled this classification after the model arms disagreed"
+    if "precedent" in b:
+        return "settled by a recorded precedent from Human review"
+    if "disputes" in b:
+        return "the arms agreed but the check disputed the agreement — treat as contested"
+    return "two model arms, judging independently, assigned the same family; a classification, not a re-verification of the text"
 fam_counts = {}
 
 xv_n = human_n = 0
@@ -93,7 +107,7 @@ for e in seed["edges"]:
         cls = "f-ok" if fstate == "assigned" else ("f-pend" if fstate == "pending-adjudication" else "f-none")
         by = fam.get("by", "")
         date = fam.get("date", "")
-        famrow = (f'<div class="famrow" title="{esc(FAM_STATE_NOTE.get(fstate, ""))}">'
+        famrow = (f'<div class="famrow" title="{esc(fam_note(fstate, by))}">'
                   f'<span class="flabel">family</span>'
                   f'<span class="chip {cls}">{esc(fval)}</span>'
                   f'<span class="fmeta">{esc(by)}{" · " + esc(date) if date else ""} — classification only; '
