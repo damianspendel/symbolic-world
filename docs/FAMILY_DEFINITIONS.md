@@ -1,4 +1,4 @@
-# Relation families — candidate definitions, v0.7
+# Relation families — candidate definitions, v0.7.1
 
 Status: BINDING once this version's calibration PASS record exists under
 `pipeline/family_calibration/records/` (RULES #16, #18b: a version with no
@@ -45,6 +45,15 @@ Its five entries:
    and is NOT resolved here. It reached the document from the window-9 Opus arm.
 5. Version header, this change log, and the calibration-harness reference, which
    pointed at a superseded script.
+
+**v0.7.1 (2026-08-12) is the mechanical close-out of ruling 1's re-run.**
+The 43 `amplified-by` edges were re-classified under v0.7 by two blind arms
+(prior assignments unknown to both): 24 agreed and are assigned —
+archetypal-identity 7, symbolization 4, personification 3, composition 3,
+correspondence 2, manifestation 2, doctrinal-attribution 2, transformation 1
+— and 19 split to the human queue. Neither arm placed any of the 43 in
+amplification. The family's assigned membership after the re-run: 0 edges.
+Nothing else changed in this version.
 
 **v0.7 (2026-08-12) folds in the seven rulings of the external-validity
 check** — the first revision driven by evidence from OUTSIDE the repository:

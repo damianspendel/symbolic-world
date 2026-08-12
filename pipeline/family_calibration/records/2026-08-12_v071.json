@@ -1,0 +1,262 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.1",
+ "definitions_git_hash": "3ffd9a6c486c9ded7bbedcff544c295cbad364c9",
+ "draw_seed": 3761533563,
+ "plant_seed": 224968884,
+ "planted_at": "2026-08-12T18:42:38+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 7,
+   "flagged_misdiagnosed": 0,
+   "partial": 1,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 2,
+   "flagged_misdiagnosed": 1,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "amplification|forms-second-part-of|the-opus",
+   "class": "K1",
+   "was": "composition",
+   "now": "structural-position",
+   "verdict": "PARTIAL",
+   "should_be": "sequence",
+   "diagnosis": "PARTIAL",
+   "gate_reason": "While 'second' suggests ordinal place (structural-position), the opus is a process and its 'second part' denotes a temporal stage, better fitting sequence."
+  },
+  {
+   "id": "artifex|seeks-liberation-of|god-image",
+   "class": "K1",
+   "was": "separation",
+   "now": "union",
+   "verdict": "WRONG",
+   "should_be": "separation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes freeing or extracting God from matter, which is the defining act of the separation family, not union."
+  },
+  {
+   "id": "mercurius|manifests-as|proteus",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject (Mercurius) is the less formulable term showing itself under the guise of the object (Proteus), which is the exact directionality test for manifestation."
+  },
+  {
+   "id": "navaho-sandpainting|is-instance-of|mandala",
+   "class": "K1",
+   "was": "classification",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'is-instance-of' denotes plain taxonomy where the subject is a kind of the object, not a part-whole composition."
+  },
+  {
+   "id": "one-scintilla-monad|symbolizes|the-self",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The object ('the-self') is the less formulable term and the subject is the image carrying it, which fits the directionality test for symbolization, not manifestation."
+  },
+  {
+   "id": "sol|is-a-symbol-of-the-source-of-life-and-the-ultimate-wholeness-of|man",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly states the subject is a symbol of the object, and the direction matches symbolization (image to less formulable term), not manifestation."
+  },
+  {
+   "id": "the-shadow|is-prerequisite-for|consciousness",
+   "class": "K1",
+   "was": "dependence",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "dependence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "A 'prerequisite' is a standing condition or requirement, which defines dependence rather than sequence."
+  },
+  {
+   "id": "yesod|unites|tifereth-malchuth",
+   "class": "K1",
+   "was": "union",
+   "now": "separation",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'unites' is a direct seed for the union family, not separation."
+  },
+  {
+   "id": "great-mother|underlies|mother-complex",
+   "class": "K2",
+   "was": "structural-position",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rule explicitly defaults foundation language ('forms the foundation of') to structural-position, whereas telos requires goal-direction."
+  },
+  {
+   "id": "mandala|is-a|archetype",
+   "class": "K2",
+   "was": "classification",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts that the mandala is an instance or kind of archetype, which is plain taxonomy belonging to classification, not a goal or aim (telos)."
+  },
+  {
+   "id": "the-opus|frees|mercurius",
+   "class": "K2",
+   "was": "separation",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "separation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes Mercurius being 'freed from his chains', which is an act of extraction/freeing belonging to the separation family."
+  },
+  {
+   "id": "the-self|includes|the-ego",
+   "class": "K2",
+   "was": "composition",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'includes' explicitly asserts a part-whole constituency."
+  },
+  {
+   "id": "caelum|unites-with|unus-mundus",
+   "class": "K3",
+   "was": "union",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'unites-with' describes an act of joining, which belongs to union rather than correspondence."
+  },
+  {
+   "id": "filius-regius|born-of|meretrix",
+   "class": "K3",
+   "was": "generation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts a parent-child relationship ('is the son of'), which belongs to generation, not correspondence."
+  },
+  {
+   "id": "mary|exemplifies|great-mother",
+   "class": "K3",
+   "was": "classification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote identifies Mary as a 'historical example' of the mother, making the subject an instance or kind of the object, which is classification."
+  },
+  {
+   "id": "prima-materia|identical-to|the-vessel",
+   "class": "K3",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts that the terms themselves 'were identical', which routes to archetypal-identity per the indistinguishability rule."
+  },
+  {
+   "id": "mandala|symbolizes|the-self",
+   "class": "K4",
+   "was": "symbolization",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The quote's use of 'or' asserts equivalence between the terms themselves, making archetypal-identity plainly available over a refusal."
+  },
+  {
+   "id": "rebirth|includes|metempsychosis",
+   "class": "K4",
+   "was": "composition",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'includes' and the quote's framing of metempsychosis as an aspect contained within rebirth plainly fits composition, so a refusal is unjustified."
+  },
+  {
+   "id": "the-intellect|is-wrongly-equated-by-the-modern-formula-with|spirit",
+   "class": "K4",
+   "was": "doctrinal-attribution",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote frames the equation as an act by a named carrier ('the modern formula'), which outranks the surface verb and routes to doctrinal-attribution."
+  }
+ ],
+ "sensitivity": {
+  "caught": 17,
+  "of": 19,
+  "pct": 89.5
+ },
+ "specificity": {
+  "clean_left_alone": 41,
+  "of": 41,
+  "pct": 100.0
+ },
+ "partial_tally": {
+  "planted_items": 1,
+  "clean_items": 0
+ },
+ "false_positives": [],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

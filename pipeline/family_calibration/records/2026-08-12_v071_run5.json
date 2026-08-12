@@ -1,0 +1,287 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.1",
+ "definitions_git_hash": "3ffd9a6c486c9ded7bbedcff544c295cbad364c9",
+ "draw_seed": 3738135034,
+ "plant_seed": 1292170379,
+ "planted_at": "2026-08-12T19:01:41+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 3,
+   "flagged_misdiagnosed": 1,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 3,
+   "flagged_misdiagnosed": 1,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "augustine|holds-the-perfection-of-man-to-be|christ",
+   "class": "K1",
+   "was": "doctrinal-attribution",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation records an act of predication by a named carrier (Augustine), which dictates doctrinal-attribution over derivation."
+  },
+  {
+   "id": "chaos|gives-birth-to|lapis",
+   "class": "K1",
+   "was": "generation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'gives-birth-to' asserts begetting of an entity, which belongs to generation, whereas derivation is for the transmission of doctrines or traditions."
+  },
+  {
+   "id": "inner-man|is-according-to-origen-made-after-the-likeness-of|christ",
+   "class": "K1",
+   "was": "doctrinal-attribution",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation is an act of predication by a named carrier (Origen), which requires the doctrinal-attribution family per the precedence rule."
+  },
+  {
+   "id": "magic-circle|protects|psyche",
+   "class": "K1",
+   "was": "psychic-effect",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Protecting is a dynamic act with an outcome, which routes to psychic-effect rather than the standing condition of dependence."
+  },
+  {
+   "id": "salt|synonym-of|albedo",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'synonym-of' asserting co-reference between two alchemical terms is explicitly defined as archetypal-identity, not correspondence."
+  },
+  {
+   "id": "saturn|is-identical-with|yahweh",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts identity of the terms themselves, which routes to archetypal-identity rather than correspondence."
+  },
+  {
+   "id": "the-self|lies-at-the-point-between-consciousness-and|the-unconscious",
+   "class": "K1",
+   "was": "structural-position",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The effective relation 'lies-at-border-of' and the quote's 'hypothetical point between' assert a place within a structure, which is a seed for structural-position, not composition."
+  },
+  {
+   "id": "the-self|reborn-as|filius-regius",
+   "class": "K1",
+   "was": "transformation",
+   "now": "generation",
+   "verdict": "WRONG",
+   "should_be": "transformation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'reborn-as' is a direct seed for transformation, as the subject turns into the object."
+  },
+  {
+   "id": "crab|is-ruled-by|luna",
+   "class": "K2",
+   "was": "dependence",
+   "now": "privation",
+   "verdict": "WRONG",
+   "should_be": "dependence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Rulership ('is-ruled-by') is explicitly defined as a standing condition under dependence, not a lack or absence under privation."
+  },
+  {
+   "id": "messiah|is-identified-with|the-centre",
+   "class": "K2",
+   "was": "archetypal-identity",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The quote explicitly attributes the description to a named carrier ('In the Zohar'), which outranks the surface verb and routes the edge to doctrinal-attribution, not kinship."
+  },
+  {
+   "id": "rebirth|includes|metempsychosis",
+   "class": "K2",
+   "was": "composition",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'includes' denotes a part-whole relationship, which belongs to the composition family, not projection."
+  },
+  {
+   "id": "sulphur|corresponds-to|eros",
+   "class": "K2",
+   "was": "correspondence",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'corresponds-to' asserts a structural likeness between terms, which defines the correspondence family, not telos."
+  },
+  {
+   "id": "evil|is-the-equivalent-opposite-of|good",
+   "class": "K3",
+   "was": "opposition",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "opposition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'is-equivalent-opposite-of' is a direct seed for opposition, as the text sets the terms against each other as a pair of opposites."
+  },
+  {
+   "id": "light|symbolizes|consciousness",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The quote asserts synonymy ('are synonyms for'), and the boundary rule dictates that synonymy classifies as archetypal-identity regardless of the surface relation string."
+  },
+  {
+   "id": "the-opus|is-figured-as|ouroboros",
+   "class": "K3",
+   "was": "manifestation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'is-figured-as' is explicitly listed as a string for manifestation, where the subject shows itself under the guise of the object."
+  },
+  {
+   "id": "the-unconscious|overwhelms|consciousness",
+   "class": "K3",
+   "was": "psychic-effect",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'overwhelms' describes a dynamic act of one term acting upon another, which belongs in psychic-effect, not correspondence."
+  },
+  {
+   "id": "mandala|symbolizes|union-of-opposites",
+   "class": "K4",
+   "was": "symbolization",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'symbolizes' with an image subject and a less formulable object is the textbook definition of symbolization; it should not be unclassified."
+  },
+  {
+   "id": "the-self|epitomizes-the-wholeness-of-the-personality-which-by-definition-includes|collective-unconscious",
+   "class": "K4",
+   "was": "composition",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The effective relation 'includes' and the quote's assertion of inclusion denote a part-whole relationship, which is the definition of composition."
+  },
+  {
+   "id": "the-unconscious|is-a-largely-autonomous-psychic-system-for-compensating-the-biases-and-aberrations-of-the-conscious-attitude-namely-of|consciousness",
+   "class": "K4",
+   "was": "psychic-effect",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The effective relation 'compensates-biases-of' describes one term acting dynamically on another to balance it, which is a seed for psychic-effect."
+  }
+ ],
+ "sensitivity": {
+  "caught": 17,
+  "of": 19,
+  "pct": 89.5
+ },
+ "specificity": {
+  "clean_left_alone": 37,
+  "of": 41,
+  "pct": 90.2
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "alchemy|is-the-tradition-whose-practitioners-projected-god-into|matter",
+   "verdict": "WRONG",
+   "should_be": "not-a-relation",
+   "reason": "The relation string is a complex clause rather than a valid relation, failing the P24 screen and requiring the not-a-relation administrative class."
+  },
+  {
+   "id": "cadmus|corresponds-to|mercurius",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "reason": "The quote's 'interpreted alchemically' is a collective ascription, which per the boundary rules stays with the content family (correspondence), rather than routing to doctrinal-attribution."
+  },
+  {
+   "id": "great-mother|is-identified-with|matter",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "reason": "The quote frames the equation as an act by a named tradition ('Sankhya philosophy'), so doctrinal-attribution outranks the surface verb."
+  },
+  {
+   "id": "mary|exemplifies|great-mother",
+   "verdict": "WRONG",
+   "should_be": "unclassified",
+   "reason": "The document explicitly records 'exemplified-by' (and its inverse) as a homeless string with no family, routing to unclassified."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

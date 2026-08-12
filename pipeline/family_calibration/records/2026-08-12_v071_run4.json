@@ -1,0 +1,275 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.1",
+ "definitions_git_hash": "3ffd9a6c486c9ded7bbedcff544c295cbad364c9",
+ "draw_seed": 892252568,
+ "plant_seed": 2737743646,
+ "planted_at": "2026-08-12T18:52:01+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 5,
+   "flagged_misdiagnosed": 3,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "collective-unconscious|underlies|personal-unconscious",
+   "class": "K1",
+   "was": "structural-position",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote's use of 'layer' language defaults the assignment to structural-position per the boundary rules, not composition."
+  },
+  {
+   "id": "diana|is-analogue-of|luna",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "Although the relation string is 'is-analogue-of', the quote asserts identity ('is in the last analysis Luna'), which decides the family."
+  },
+  {
+   "id": "geryon|is-analogue-of|anthropos",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'is-analogue-of' and the quote's 'corresponds to' assert structural likeness without identity, which is correspondence."
+  },
+  {
+   "id": "incest|expresses|rebirth",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The quote defines the subject as a 'longing to attain rebirth', which is a clear statement of goal-direction and attainment belonging to telos, not manifestation."
+  },
+  {
+   "id": "lapis|child-of|sol",
+   "class": "K1",
+   "was": "generation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rule states that generation begets beings while derivation transmits ideas and forms; the lapis as a 'child' is a begotten entity."
+  },
+  {
+   "id": "the-self|is-nucleus-and-ordering-principle-of|collective-unconscious",
+   "class": "K1",
+   "was": "structural-position",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rule explicitly states that nucleus, centre, and foundation language defaults to structural-position."
+  },
+  {
+   "id": "trickster|appears-in|carnival",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The quote explicitly frames the relation as an 'analogy', which asserts structural likeness across traditions and belongs in correspondence."
+  },
+  {
+   "id": "winged-youth|personifies|true-sulphur",
+   "class": "K1",
+   "was": "personification",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "personification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation string is 'personifies' and the quote explicitly states the figure 'personifies' the content, which routes to personification, not manifestation."
+  },
+  {
+   "id": "anima|appears-as|meretrix",
+   "class": "K2",
+   "was": "manifestation",
+   "now": "privation",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject showing itself under a guise (whore/meretrix) is manifestation, whereas privation requires a stated lack or absence."
+  },
+  {
+   "id": "basil-the-great|holds-evil-to-be-a-condition-and-not-a-substance-of|soul",
+   "class": "K2",
+   "was": "doctrinal-attribution",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject is a named carrier (Basil the Great) performing an act of predication ('holds evil to be'), which routes to doctrinal-attribution."
+  },
+  {
+   "id": "circulation-of-light|amounts-to|self-knowledge",
+   "class": "K2",
+   "was": "archetypal-identity",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rules explicitly place 'amounts-to' and flat equivalence of the terms in archetypal-identity."
+  },
+  {
+   "id": "the-devil|is-the-fourth-person-in-the-heavenly-drama-of|the-trinity",
+   "class": "K2",
+   "was": "structural-position",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The edge 'the-devil is-fourth-person-beside the-trinity' is an explicit seed for structural-position, denoting an ordinal place within a structure."
+  },
+  {
+   "id": "lapis-christ-parallel|has-precursor-in|gnosticism",
+   "class": "K3",
+   "was": "derivation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "derivation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Historical or doctrinal descent ('had a pagan Gnostic precursor') is explicitly derivation."
+  },
+  {
+   "id": "magic-circle|prevents-eruption-of|the-unconscious",
+   "class": "K3",
+   "was": "psychic-effect",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "A dynamic act with an outcome ('prevents the unconscious from breaking out') is a psychic-effect, not correspondence."
+  },
+  {
+   "id": "salt-water|synonym-of|aqua-permanens",
+   "class": "K3",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts they are synonyms for the same referent, which the document explicitly places in archetypal-identity."
+  },
+  {
+   "id": "the-sea|unites|the-opposites",
+   "class": "K3",
+   "was": "union",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The act of joining distinct terms ('unites the opposites') is union, not correspondence."
+  },
+  {
+   "id": "aelia-laelia-inscription|symbolizes|arcane-substance",
+   "class": "K4",
+   "was": "doctrinal-attribution",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote frames the relation as an act of interpretation by a named carrier ('Maier obviously has in mind'), which outranks the surface verb and routes to doctrinal-attribution."
+  },
+  {
+   "id": "filius-philosophorum|identified-with|christ",
+   "class": "K4",
+   "was": "archetypal-identity",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The text asserts identity between the terms and no specific carrier is named to route it to doctrinal-attribution, so it belongs in archetypal-identity."
+  },
+  {
+   "id": "hierosgamos|amplified-by|luna",
+   "class": "K4",
+   "was": "composition",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote identifies Luna as a participant in the hierosgamos, establishing a part-whole relationship that belongs in composition."
+  }
+ ],
+ "sensitivity": {
+  "caught": 16,
+  "of": 19,
+  "pct": 84.2
+ },
+ "specificity": {
+  "clean_left_alone": 39,
+  "of": 41,
+  "pct": 95.1
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "benedicta-viriditas|corresponds-to|anima-mundi",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "reason": "The quote asserts naming/synonymy ('might be called'), which classifies as archetypal-identity regardless of the 'corresponds-to' relation string."
+  },
+  {
+   "id": "rebirth|belongs-to|psyche",
+   "verdict": "WRONG",
+   "should_be": "unclassified(no-family)",
+   "reason": "The quote describes rebirth as a 'psychic reality' (a property or domain attribution to the psyche), which does not fit composition's part-whole constituency and belongs in the recorded property-attribution gap."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

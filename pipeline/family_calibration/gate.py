@@ -35,11 +35,11 @@ For each item judge:
 (3) Is a refusal (unclassified / not-a-relation) justified, or is a family plainly available?
 
 VERDICT per item:
-- SUPPORTED — the assignment is right, or defensible against a close alternative.
-- PARTIAL — usable but a better family exists under the rules; name it.
-- WRONG — the assignment contradicts the definition or a boundary rule; name the family that should apply.
+- SUPPORTED — the assigned family is the one the document assigns to this edge.
+- PARTIAL — the assigned family IS the document's assignment, but the record is improvable (confidence, reason). PARTIAL is NEVER the verdict when a different family fits better — if the document assigns a different family than the one recorded, the verdict is WRONG, however close the call.
+- WRONG — the document assigns a different family (or a refusal) than the recorded one; name the family that should apply.
 
-Be strict about boundaries and lenient about genuinely arguable calls. Say which family you would assign whenever you do not answer SUPPORTED.
+The document decides. "Broader fit", "more precise", "usable" are not verdict categories: either the recorded family is the document's answer or it is not. Say which family you would assign whenever you do not answer SUPPORTED.
 
 Respond with ONLY a JSON array: [{"n": <id>, "verdict": "SUPPORTED|PARTIAL|WRONG", "should_be": "<family or empty>", "reason": "<one sentence>"}] covering every item given.
 

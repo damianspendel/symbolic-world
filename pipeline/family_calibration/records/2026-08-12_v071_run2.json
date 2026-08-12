@@ -1,0 +1,275 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.1",
+ "definitions_git_hash": "3ffd9a6c486c9ded7bbedcff544c295cbad364c9",
+ "draw_seed": 403616092,
+ "plant_seed": 3360563644,
+ "planted_at": "2026-08-12T18:45:32+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 1
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "anima|second-stage-of|individuation",
+   "class": "K1",
+   "was": "sequence",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "sequence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'second-stage-of' denotes processual order without requirement, which aligns with the sequence family's seeds like 'is-first-stage-of'."
+  },
+  {
+   "id": "christ|worshipped-as|sol",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'worshipped-as' and the guise relationship route to manifestation, where the subject shows itself under the form of the object."
+  },
+  {
+   "id": "filius-regius|parallels|son-of-man",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'parallels' and the quote's 'like unto' assert structural likeness without identity, which defines correspondence."
+  },
+  {
+   "id": "mercurius|has-affinity-and-indeed-identity-with|christ",
+   "class": "K1",
+   "was": "doctrinal-attribution",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The predication is explicitly attributed to a named carrier (Ripley), which outranks the identity relation and routes it to doctrinal-attribution."
+  },
+  {
+   "id": "oak|symbolizes|the-vessel",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The oak is the image formulating the meaning (vessel/mother), which fits the directionality of symbolization, not manifestation."
+  },
+  {
+   "id": "rebirth|includes|reincarnation",
+   "class": "K1",
+   "was": "composition",
+   "now": "structural-position",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'includes' denotes a part-whole relationship, which belongs to composition, not structural-position."
+  },
+  {
+   "id": "the-shadow|hides-behind|the-self",
+   "class": "K1",
+   "was": "structural-position",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The concealment placement rule routes claims of 'where' (such as hiding behind) to structural-position, not composition."
+  },
+  {
+   "id": "wholeness|is-an-ever-present|archetype",
+   "class": "K1",
+   "was": "classification",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts that wholeness is a kind or instance of an archetype, which is plain taxonomy and belongs in classification."
+  },
+  {
+   "id": "anima|sends-contents-into|consciousness",
+   "class": "K2",
+   "was": "psychic-effect",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Sending contents into consciousness is a dynamic act of one term upon another, fitting psychic-effect rather than a teleological goal."
+  },
+  {
+   "id": "aqua-permanens|identical-with|prima-materia",
+   "class": "K2",
+   "was": "archetypal-identity",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts the two terms are identical, which is archetypal-identity, not derivation."
+  },
+  {
+   "id": "kore|appears-as|witch",
+   "class": "K2",
+   "was": "manifestation",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject showing itself under the guise of the object is manifestation, not a standing familial or consort role (kinship)."
+  },
+  {
+   "id": "monocolus|symbolizes|mercurius",
+   "class": "K2",
+   "was": "doctrinal-attribution",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote frames the symbolization as an act by a named carrier (Albertus), making it doctrinal-attribution rather than telos."
+  },
+  {
+   "id": "christ|shares-a-number-of-allegories-with|the-devil",
+   "class": "K3",
+   "was": "derivation",
+   "now": "correspondence",
+   "verdict": "SUPPORTED",
+   "should_be": "",
+   "diagnosis": "MISSED",
+   "gate_reason": "Although the string appears in the derivation list, the edge context asserts structural likeness (shared symbols) rather than transmission, making correspondence correct per the edge-level assignment rule."
+  },
+  {
+   "id": "diamond-body|symbolizes-the-detachment-of|consciousness",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly states the subject symbolizes the object, which fits the symbolization family, not correspondence."
+  },
+  {
+   "id": "khidr|pairs-with|dhulqarnein",
+   "class": "K3",
+   "was": "kinship",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "kinship",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes them as a 'great pair of friends,' which establishes a standing companion role belonging to the kinship family."
+  },
+  {
+   "id": "luna|is-eye-of|basilisk",
+   "class": "K3",
+   "was": "composition",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation asserts that the subject is materially a constituent (the eye) of the object, which defines composition."
+  },
+  {
+   "id": "christ|arises-from|the-unconscious",
+   "class": "K4",
+   "was": "generation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation describes the subject originating in or being brought forth by the object, which fits the inverse direction of generation."
+  },
+  {
+   "id": "quaternity|underlies|god-image",
+   "class": "K4",
+   "was": "structural-position",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly identifies the subject as a schema, and the document routes foundation language like 'underlies' to structural-position."
+  },
+  {
+   "id": "sulphur|consumes|sol",
+   "class": "K4",
+   "was": "psychic-effect",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Consuming is a dynamic act of one term upon another, which fits psychic-effect rather than being unclassified."
+  }
+ ],
+ "sensitivity": {
+  "caught": 18,
+  "of": 19,
+  "pct": 94.7
+ },
+ "specificity": {
+  "clean_left_alone": 39,
+  "of": 41,
+  "pct": 95.1
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "alchemy|identified-with|sapientia",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "reason": "The phrase 'for him' identifies a specific carrier making the equation, which routes the edge to doctrinal-attribution per the precedence rule."
+  },
+  {
+   "id": "kore|corresponds-to|anima",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "reason": "The quote asserts that the Kore belongs to a type, which is classification, not correspondence."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

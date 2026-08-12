@@ -1,0 +1,269 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.1",
+ "definitions_git_hash": "3ffd9a6c486c9ded7bbedcff544c295cbad364c9",
+ "draw_seed": 2479848956,
+ "plant_seed": 1431200170,
+ "planted_at": "2026-08-12T18:48:57+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 7,
+   "flagged_misdiagnosed": 0,
+   "partial": 1,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "artifex|is-not-the-master-of-the-stone-but-rather-the-minister-of|lapis",
+   "class": "K1",
+   "was": "dependence",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "dependence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation describes subordination or serving ('minister of'), which belongs to the dependence family, not temporal sequence."
+  },
+  {
+   "id": "mandala|tends-towards|quaternity",
+   "class": "K1",
+   "was": "telos",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'tends-towards' indicates goal-direction or striving, which is explicitly listed as a seed for the telos family, not a standing requirement for dependence."
+  },
+  {
+   "id": "mercurius|appears-as|serpent",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject (Mercurius) is the less formulable term showing itself under the guise of the object (serpent), which is the directionality of manifestation, not symbolization."
+  },
+  {
+   "id": "meridian-of-the-sun|is-a-representation-of|arcane-substance",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The direction test for manifestation requires the subject to be the less formulable term, but here the subject is the representation and the object is the substance, which fits symbolization."
+  },
+  {
+   "id": "quaternity|as-the-cross-in-the-spontaneous-symbolism-of-the-unconscious-refers-to|the-self",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly frames this as symbolism where the subject (quaternity/cross) refers to the less formulable object (the self), which matches symbolization and violates manifestation's direction test."
+  },
+  {
+   "id": "rex|corresponds-to|spirit",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly asserts a correspondence ('corresponds to'), which denotes structural likeness rather than archetypal identity."
+  },
+  {
+   "id": "the-father|personifies|spirit",
+   "class": "K1",
+   "was": "personification",
+   "now": "manifestation",
+   "verdict": "PARTIAL",
+   "should_be": "personification",
+   "diagnosis": "PARTIAL-CORRECT-FAMILY",
+   "gate_reason": "While manifestation is a broader fit, the subject is a figure giving personal, enacting form to a content, making personification the more precise and correct family."
+  },
+  {
+   "id": "the-shadow|hides-behind|the-self",
+   "class": "K1",
+   "was": "structural-position",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The concealment placement rule explicitly routes 'where' claims like 'hides behind' to structural-position, not composition."
+  },
+  {
+   "id": "artifex|accompanies-his-chemical-work-with-a-simultaneous-mental-operation-performed-by-means-of|imaginatio",
+   "class": "K2",
+   "was": "instrumentality",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "instrumentality",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly states the operation is performed 'by means of' the imagination, which perfectly fits the instrumentality family."
+  },
+  {
+   "id": "joachim-of-flora|proclaims|holy-ghost",
+   "class": "K2",
+   "was": "doctrinal-attribution",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote reports a named carrier's view ('In Joachim’s view'), making this a doctrinal-attribution rather than a projection."
+  },
+  {
+   "id": "myth|compensates|the-christian-standpoint",
+   "class": "K2",
+   "was": "psychic-effect",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes an active compensatory balancing, which the boundary rules explicitly route to psychic-effect, not derivation."
+  },
+  {
+   "id": "the-self|precedes|the-ego",
+   "class": "K2",
+   "was": "sequence",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "sequence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts temporal priority ('older than'), which belongs to sequence, not doctrinal or historical transmission (derivation)."
+  },
+  {
+   "id": "adam|embodies|quaternity",
+   "class": "K3",
+   "was": "composition",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rule for 'embodies' explicitly routes 'composed of' quotes to composition, using this exact edge as its worked example."
+  },
+  {
+   "id": "christ|appears-from-this-standpoint-as-the-archetype-of|consciousness",
+   "class": "K3",
+   "was": "classification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rule explicitly routes 'appears-as-archetype-of' to classification, as the object is what the subject is the archetype of, not a correspondence."
+  },
+  {
+   "id": "consciousness|reconnects-with|the-unconscious",
+   "class": "K3",
+   "was": "union",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes an act of linking up or joining distinct terms, which belongs to the union family rather than correspondence."
+  },
+  {
+   "id": "lapis|is-goal-of|the-opus",
+   "class": "K3",
+   "was": "telos",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation explicitly states a goal or end pursued, which belongs to telos, not correspondence."
+  },
+  {
+   "id": "christ|appears-as|divine-child",
+   "class": "K4",
+   "was": "manifestation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject showing itself under the guise or form of the object is the exact definition of manifestation, not a gap in the vocabulary."
+  },
+  {
+   "id": "great-mother|appears-as|witch",
+   "class": "K4",
+   "was": "manifestation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject showing itself under the guise of the object perfectly fits the definition of manifestation, so a refusal is unjustified."
+  },
+  {
+   "id": "unconsciousness|is-equated-with|evil",
+   "class": "K4",
+   "was": "archetypal-identity",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts that unconsciousness is 'evil itself', which is a direct assertion of identity between the terms."
+  }
+ ],
+ "sensitivity": {
+  "caught": 18,
+  "of": 19,
+  "pct": 94.7
+ },
+ "specificity": {
+  "clean_left_alone": 40,
+  "of": 41,
+  "pct": 97.6
+ },
+ "partial_tally": {
+  "planted_items": 1,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "lapis|composed-of|four-elements",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "reason": "The quote explicitly asserts 'symbolized by', which routes the edge to symbolization regardless of the 'composed-of' relation string."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}
