@@ -177,6 +177,151 @@ if paras_text:
     cw14_pct = round(100 * len(vc['14']) / vt['14'])
     require(f"{cw14_pct}% of CW 14's paragraphs ({len(vc['14'])} of {vt['14']})", "Imperative 6 CW14 coverage")
 
+# ---- the family layer: schema, coherence, contamination, calibration --------
+# RULES #18. Five checks, all deterministic and offline. The calibration RUN
+# cannot live in CI (paid, non-deterministic, needs a key CI must never hold);
+# what CI can do is refuse to let the ruleset drift away from its calibration,
+# refuse a malformed family record, and refuse a planted corruption marker that
+# reached the graph. Each failure prints the literal string that would satisfy it.
+FAM_DOC = ROOT / 'docs' / 'FAMILY_DEFINITIONS.md'
+FAM_STATES = {'assigned', 'pending-adjudication', 'no-family', 'text-undecided',
+              'not-a-relation'}
+
+if FAM_DOC.exists():
+    fam_text = FAM_DOC.read_text()
+    inventory = set(re.findall(r'^### \d+\.\s+([a-z-]+)', fam_text, re.M))
+    if not inventory:
+        failures.append("FAMILY DOC: no '### <n>. <family>' headings found — "
+                        "the family inventory cannot be parsed")
+
+    # (1) schema: closed state enum; a value iff assigned; assigned values are in
+    #     the document's inventory
+    state_counts = Counter()
+    for e in seed_live['edges']:
+        key = f"{e['subject']}|{e['relation']}|{e['object']}"
+        rf = e.get('relation_family')
+        if rf is None:
+            state_counts['(absent)'] += 1
+            continue
+        if not isinstance(rf, dict):
+            failures.append(f"FAMILY SCHEMA: {key} carries a non-object "
+                            f"relation_family ({type(rf).__name__})")
+            continue
+        st, val = rf.get('state'), rf.get('value')
+        state_counts[st] += 1
+        if st not in FAM_STATES:
+            failures.append(f"FAMILY SCHEMA: {key} has state {st!r}; expected one "
+                            f"of {sorted(FAM_STATES)}")
+        elif st == 'assigned':
+            if not val:
+                failures.append(f"FAMILY SCHEMA: {key} is 'assigned' with value "
+                                f"{val!r}; an assigned edge must name a family")
+            elif val not in inventory:
+                failures.append(f"FAMILY SCHEMA: {key} names family {val!r}, which "
+                                f"{FAM_DOC.name} does not define")
+        elif val is not None:
+            failures.append(f"FAMILY SCHEMA: {key} is {st!r} but carries value "
+                            f"{val!r}; only 'assigned' carries a family")
+
+    # (2) coherence: the states partition the edge set, and the queue on disk is
+    #     exactly as long as the graph says it should be
+    n_live = len(seed_live['edges'])
+    recorded = sum(v for k, v in state_counts.items() if k in FAM_STATES)
+    if recorded != n_live:
+        failures.append(f"FAMILY COUNTS: the four family states account for "
+                        f"{recorded} edges, expected {n_live} — "
+                        f"{n_live - recorded} edge(s) carry no usable record "
+                        f"(states seen: {dict(state_counts)})")
+    queue_path = ROOT / 'pipeline' / 'work' / 'family_pending_queue.json'
+    if queue_path.exists():
+        q = json.load(open(queue_path))
+        n_q = len(q if isinstance(q, list) else q.get('items', q.get('queue', [])))
+        if n_q != state_counts['pending-adjudication']:
+            failures.append(f"FAMILY QUEUE: the queue holds {n_q} items but "
+                            f"{state_counts['pending-adjudication']} edges are "
+                            f"pending-adjudication in seed.json")
+
+    # (3) contamination tripwire: no seeded-corruption marker may survive into the
+    #     published graph (BACKLOG item 6's third defence)
+    MARKERS = ('calibration_seed', 'planted_at', 'planted', 'corruption_class',
+               'corrupted', 'plant_seed')
+    def marker_keys(d):
+        return [k for k in d
+                if k in MARKERS or 'calibration' in k.lower() or 'plant' in k.lower()]
+    for e in seed_live['edges']:
+        key = f"{e['subject']}|{e['relation']}|{e['object']}"
+        for k in marker_keys(e):
+            failures.append(f"CORRUPTION MARKER: edge {key} carries {k!r} — a "
+                            f"planted-calibration field reached seed.json")
+        for r in e['references']:
+            for k in marker_keys(r):
+                failures.append(f"CORRUPTION MARKER: reference on {key} "
+                                f"(CW {r.get('volume')} §{r.get('paragraph')}) "
+                                f"carries {k!r}")
+
+    # (4) calibration handshake: the declared ruleset version must have a
+    #     committed calibration record measured against that same version
+    m = re.search(r'^# Relation families.*?(v[\d.]+)', fam_text, re.M)
+    fam_version = m.group(1) if m else None
+    if not fam_version:
+        failures.append("FAMILY DOC: no version in the header line; expected "
+                        "'# Relation families — candidate definitions, vX.Y'")
+    else:
+        rec_dir = ROOT / 'pipeline' / 'family_calibration' / 'records'
+        matched = []
+        for p in sorted(rec_dir.glob('*.json')) if rec_dir.exists() else []:
+            try:
+                rec = json.load(open(p))
+            except (json.JSONDecodeError, OSError):
+                failures.append(f"CALIBRATION RECORD: {p.name} is not readable JSON")
+                continue
+            if rec.get('definitions_version') == fam_version:
+                matched.append((p, rec))
+        if not matched:
+            failures.append(
+                f"STALE RULESET: {FAM_DOC.name} declares {fam_version} but no file in "
+                f"pipeline/family_calibration/records/ has "
+                f'"definitions_version": "{fam_version}". A ruleset version does not '
+                f"ship until the calibration has been re-run against it (RULES #16).")
+        else:
+            for p, rec in matched:
+                if rec.get('verdict') not in ('PASS', 'FAIL'):
+                    failures.append(f"CALIBRATION RECORD: {p.name} has verdict "
+                                    f"{rec.get('verdict')!r}; expected 'PASS' or 'FAIL'")
+
+    # (5) the ledger's family tooltip must derive from the record, not from one
+    #     blanket sentence (RULES #10). Every `by` that is not an arms-agreed
+    #     record must hit a branch in fam_note(); every non-assigned state must
+    #     have its own note. Anything else falls through to the arms-agreed
+    #     wording and describes an edge as something it is not.
+    ledger_src = (ROOT / 'tools' / 'build_ledger_page.py').read_text()
+    branches = set(re.findall(r'if "([a-z-]+)" in b:', ledger_src))
+    noted_states = set(re.findall(r'^\s+"([a-z-]+)":\s+"', ledger_src, re.M))
+    if not branches:
+        failures.append("LEDGER TOOLTIP: no fam_note() branches parsed from "
+                        "tools/build_ledger_page.py — the check cannot run")
+    for by in sorted({str((e.get('relation_family') or {}).get('by', ''))
+                      for e in seed_live['edges']}):
+        st = {(e.get('relation_family') or {}).get('state')
+              for e in seed_live['edges']
+              if str((e.get('relation_family') or {}).get('by', '')) == by}
+        if 'assigned' not in st:
+            continue
+        if by.startswith('opus+gemini-agreed'):
+            continue                       # the intended fallthrough
+        if not any(b in by.lower() for b in branches):
+            failures.append(
+                f"LEDGER TOOLTIP: assigned edges carry by={by!r}, which matches no "
+                f"fam_note() branch {sorted(branches)} — they would render with the "
+                f"two-arms-agreed wording. Add a branch or the tooltip lies.")
+    for st in sorted(state_counts):
+        if st in ('assigned', '(absent)'):
+            continue
+        if st not in noted_states:
+            failures.append(f"LEDGER TOOLTIP: state {st!r} is present in seed.json "
+                            f"but has no entry in FAM_STATE_NOTE; its tooltip would "
+                            f"render empty")
+
 # ---- release tag ----
 tags = subprocess.run(['git', 'tag', '--list'], capture_output=True, text=True,
                       cwd=ROOT).stdout.split()
