@@ -48,7 +48,7 @@ Its five entries:
 
 **v0.7 (2026-08-12) folds in the seven rulings of the external-validity
 check** — the first revision driven by evidence from OUTSIDE the repository:
-27 sampled assignments checked against six works of Jungian secondary
+27 sampled assignments checked against eight works of Jungian secondary
 literature in three pre-registered passes (record and receipts:
 `docs/experiments/external_validity_2026-08/`; headline 8/16 agreement among
 treated items, disagreements concentrated in amplification and identity).
