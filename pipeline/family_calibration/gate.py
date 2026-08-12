@@ -27,7 +27,7 @@ DEFS = (ROOT / "docs" / "FAMILY_DEFINITIONS.md").read_text(encoding="utf-8")
 
 PROMPT = """You are the independent gate for a relation-FAMILY assignment pass on a verified knowledge graph of C.G. Jung's Collected Works. A proposer has assigned each edge to one family. Your job is to judge each assignment against the definitions document below, which is the governing standard.
 
-The edge itself — subject, relation, object, quote — is already verified and is NOT on trial. Only the FAMILY ASSIGNMENT is.
+The edge itself — subject, relation, object, quote — is already verified and is NOT on trial. Only the FAMILY ASSIGNMENT is. `relation` is the verbatim frozen string; `relation_effective` is the normalized form where one exists (identical otherwise). Judge with both in view — the quote decides, per the definitions.
 
 For each item judge:
 (1) Does the assigned family match the definition, read against this edge's context (subject, object, qualifiers, quote)?

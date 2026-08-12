@@ -20,7 +20,7 @@ Read exactly two files:
 
 HARD RULE — you are blind: do NOT read pipeline/work/family_sweep_gemini.json or any other family_* file; do not read seed.json; do not read any other document. Your assignment must come from the definitions document and the sweep input alone.
 
-For EACH edge assign exactly one family from the document's inventory, or "unclassified(no-family)" if no family covers the relation, or "text-undecided" if the quoted text itself hedges between families. Judge from relation_effective, the node types, and the quotes; apply the boundary rules exactly as written. Confidence "sure" or "unsure"; one-line reason each, naming the deciding rule or seed shape where applicable.
+For EACH edge assign exactly one family from the document's inventory, or "unclassified(no-family)" if no family covers the relation, or "text-undecided" if the quoted text itself hedges between families. Judge from the verbatim relation AND relation_effective (the normalized form where one exists; identical otherwise), the node types, and the quotes; apply the boundary rules exactly as written. Confidence "sure" or "unsure"; one-line reason each, naming the deciding rule or seed shape where applicable.
 
 Write pipeline/work/family_sweep_opus.jsonl — one JSON object per line, OVERWRITING the existing file:
 {"n": <n>, "family": "<family>", "confidence": "sure"|"unsure", "reason": "<one line>"}

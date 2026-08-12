@@ -60,6 +60,7 @@ def main(out_path, limit):
     defs_version = _defs_version()
 
     items = [sweep_item(n, e, types) for n, e in unassigned(graph)]
+    _audit_amplified(graph, types)
     if limit:
         items = items[:limit]
     if not items:
@@ -74,6 +75,29 @@ def main(out_path, limit):
     }, indent=1, ensure_ascii=False))
     print(f"{len(items)} unassigned edges (n {items[0]['n']}..{items[-1]['n']}) "
           f"written to {out_path.relative_to(ROOT)} against {defs_version}")
+
+
+def _audit_amplified(graph, types):
+    """v0.7 ruling 6, second half: audit the amplified-by direction convention.
+    Convention: `X amplified-by Y` — Y is the image/parallel ADDUCED to widen X.
+    Mechanically we can only flag suspects, not judge: an edge whose object is a
+    Concept while its subject is a Symbol/Figure is the inverted shape. Report,
+    never block — direction rulings are human."""
+    suspects = []
+    total = 0
+    for e in graph["edges"]:
+        rn = (e.get("relation_normalized") or {}).get("relation")
+        if e["relation"] != "amplified-by" and rn != "amplified-by":
+            continue
+        total += 1
+        s_t, o_t = types.get(e["subject"]), types.get(e["object"])
+        if o_t == "Concept" and s_t in ("Symbol", "Figure"):
+            suspects.append(f'{e["subject"]}({s_t}) amplified-by {e["object"]}({o_t})')
+    if total:
+        print(f"amplified-by direction audit: {total} edges, "
+              f"{len(suspects)} suspect inversions" + (":" if suspects else ""))
+        for s in suspects:
+            print(f"  SUSPECT: {s}")
 
 
 def _defs_version():

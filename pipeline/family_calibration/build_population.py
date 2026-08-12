@@ -62,8 +62,10 @@ def build(seed, n):
             "quote": refs[0]["quote"],
         }
         rn = e.get("relation_normalized") or {}
-        if rn.get("relation"):
-            item["relation_effective"] = rn["relation"]
+        # v0.7 ruling 6: the verbatim relation always travels beside the
+        # effective one, and both are named — a judge sees the frozen string
+        # even when a normalized form exists
+        item["relation_effective"] = rn.get("relation") or e["relation"]
         if rn.get("qualifiers"):
             item["qualifiers"] = {k: v for k, v in rn["qualifiers"].items() if v}
         if e.get("layer"):
