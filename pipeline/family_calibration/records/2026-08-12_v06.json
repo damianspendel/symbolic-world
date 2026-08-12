@@ -1,0 +1,269 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.6",
+ "definitions_git_hash": "a8b68ae51abd807add7c5b62f305151ab624aabf",
+ "draw_seed": 1587649042,
+ "plant_seed": 3986010382,
+ "planted_at": "2026-08-12T11:17:52+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 3,
+   "flagged_misdiagnosed": 1,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "benedicta-viriditas|symbolizes|holy-ghost",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation is explicitly 'symbolizes' and the direction (image to less formulable term) matches symbolization, not manifestation."
+  },
+  {
+   "id": "chaos|gives-birth-to|lapis",
+   "class": "K1",
+   "was": "generation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Bringing forth or begetting beings/substances is generation; derivation is strictly for doctrinal or historical transmission."
+  },
+  {
+   "id": "god-image|expresses-itself-in|mandala",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject (God-image) is the less formulable term showing itself in the object (mandala), which matches the directionality of manifestation, not symbolization."
+  },
+  {
+   "id": "nigredo|amplified-by|raven",
+   "class": "K1",
+   "was": "amplification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "amplification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'amplified-by' explicitly states the adducing of a parallel, which is the definition of the amplification family."
+  },
+  {
+   "id": "putissimus-homo|cannot-be-since-the-world-has-already-been-redeemed-by-his-blood-from-the-consequences-of-the-fall|christ",
+   "class": "K1",
+   "was": "privation",
+   "now": "opposition",
+   "verdict": "WRONG",
+   "should_be": "privation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Negated identity without enmity is privation, and this exact edge is listed as a seed for the privation family."
+  },
+  {
+   "id": "sapphire|synonym-of|arcane-substance",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'synonym-of' is an explicit seed for archetypal-identity, not correspondence."
+  },
+  {
+   "id": "shadow-confrontation|is-first-stage-of|analytic-process",
+   "class": "K1",
+   "was": "sequence",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "sequence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "'is-first-stage-of' denotes processual order without explicitly stating a requirement, and is a direct seed for the sequence family."
+  },
+  {
+   "id": "unicorn|is-an-allegory-of|christ",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The unicorn is the image carrying the less formulable term (Christ), which matches the direction test for symbolization, not manifestation."
+  },
+  {
+   "id": "arsenic|mediates|coniunctio",
+   "class": "K2",
+   "was": "psychic-effect",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'mediates' is a seed for psychic-effect, whereas projection involves relocating psychic contents into an outer carrier."
+  },
+  {
+   "id": "leviathan|is-shadow-of|yahweh",
+   "class": "K2",
+   "was": "opposition",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "opposition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rules explicitly cite this exact edge (leviathan is-shadow-of yahweh 9ii §183) as the shadow-relation belonging to opposition."
+  },
+  {
+   "id": "serpent|symbolizes|mercurius",
+   "class": "K2",
+   "was": "symbolization",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'symbolizes' is a seed for symbolization, and the quote explicitly states the snake is the symbol of Mercurius."
+  },
+  {
+   "id": "shulamite|amplified-by|meretrix",
+   "class": "K2",
+   "was": "amplification",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "amplification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation string 'amplified-by' explicitly states the adducing of a parallel, which belongs to the amplification family regardless of the layer tag."
+  },
+  {
+   "id": "lapis|symbolizes|anthropos",
+   "class": "K3",
+   "was": "amplification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The verified relation explicitly asserts 'symbolizes', which dictates the symbolization family regardless of the amplification layer tag."
+  },
+  {
+   "id": "libido|belongs-to|the-unconscious",
+   "class": "K3",
+   "was": "composition",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "'Belongs to' indicates that the subject is a constituent or part of the object, which falls under composition rather than correspondence."
+  },
+  {
+   "id": "luna|slays|sol",
+   "class": "K3",
+   "was": "psychic-effect",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Slaying is a dynamic act of one term upon another, fitting psychic-effect, not a structural correspondence."
+  },
+  {
+   "id": "myth|originates-in|the-unconscious",
+   "class": "K3",
+   "was": "generation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'originates-in' for non-traditions is explicitly declared as the inverse direction of generation."
+  },
+  {
+   "id": "sol|symbolizes|spirit",
+   "class": "K4",
+   "was": "symbolization",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'symbolizes' is a direct seed for the symbolization family, and there is no reason to refuse it here."
+  },
+  {
+   "id": "squaring-of-the-circle|symbolizes|the-opus",
+   "class": "K4",
+   "was": "symbolization",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The text explicitly states it is a symbol of the object, which perfectly fits the symbolization family rather than being unclassified."
+  },
+  {
+   "id": "the-eye|symbolizes|god-image",
+   "class": "K4",
+   "was": "symbolization",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'symbolizes' and the quote explicitly stating it is a symbol perfectly fit the symbolization family."
+  }
+ ],
+ "sensitivity": {
+  "caught": 18,
+  "of": 19,
+  "pct": 94.7
+ },
+ "specificity": {
+  "clean_left_alone": 40,
+  "of": 41,
+  "pct": 97.6
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "the-temple|is-an-obvious-paraphrase-of|lapis",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "reason": "A paraphrase functions as a synonym, which falls under archetypal-identity, not correspondence."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}
