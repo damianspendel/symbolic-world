@@ -550,13 +550,13 @@
     },
     {
       "id": "b-cw9i-8",
-      "status": "HELD at prechecked — Fable gate capacity exhausted 2026-08-10",
+      "status": "merged (branch mining-away, unpublished)",
       "window": "CW9i §505-576",
-      "result": "Mined 51 candidates/62 refs (0 clause predicates). Pre-check initially dropped 13, ten of them for a schema omission (jung-quotes-source without the required source field); the proposer completed its own records — nine sources named (Miss X's dream/association/commentary, Philalethes, Böhme), one corrected to jung-reports-parallel where the paragraph attributes the formula to no speaker. Re-check kept 57 refs (42 candidates + 7 attaches, 4 new nodes: lightning, transcendent-function, yoga, heracles); the 5 remaining drops are legitimate dedup. HELD BEFORE THE GATE: Fable 5 usage credits ran out mid-run, verbatim: \"You're out of usage credits. Run /usage-credits to keep using Fable 5 or /model to switch models.\" No gate file was written. Another model family is NEVER substituted for the Fable gate, so the batch waits here rather than merging on a weaker chain. Resume point: run the Fable gate on b-cw9i-8_prechecked.json.",
+      "result": "Individuation essays and the opening of the Miss X picture series. Mined 51 candidates/62 refs (0 clause predicates, thirteenth consecutive blind batch); pre-check recovered 10 refs after the proposer completed missing jung-quotes-source source fields, kept 42+7 attaches, 57 refs. HELD once mid-chain: Fable credits exhausted before the gate; resumed 2026-08-12 after top-up. Fable gate 51/6/0 — corrections incl. frees-from->loosens-attachment-to (§530), alters->signifies-change-of (§533, signification not agency), two confidence demotions on hedged material (§520 yoga/samadhi, §570), and the §576 attach retargeted to wholeness. Cross-vendor 49 PASS / 8 FINDING, adjudicated: 5 substantive drops (incl. both remaining attach refs §524/§548 and the §554 veil edge the gate itself flagged borderline), 1 claim-type correction applied (§525 -> jung-asserts), 2 findings overruled by the standing analysand-source convention with audit_note stamped on both refs. Merged +52 refs, +43 edges, +4 nodes (lightning, transcendent-function, yoga, heracles). Graph 392/1477/1734.",
       "candidates": "pipeline/work/b-cw9i-8_candidates.json"
     }
   ],
-  "next": "b-cw9i-8 (§505-576) HELD at prechecked — awaiting Fable capacity. Resume = Fable gate on pipeline/work/b-cw9i-8_prechecked.json, then xv, merge, family sweep, deploy. Windows 9 (§577-648) and 10 (§649-718) queued behind it. Do NOT gate with another model family.",
+  "next": "b-cw9i-9 (§577-648) — next in this session; then b-cw9i-10 (§649-718) closes the arc",
   "nodes": 338,
   "edges": 1147,
   "refs": 1304,
