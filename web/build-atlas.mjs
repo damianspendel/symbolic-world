@@ -12,6 +12,7 @@
 //   edge → { id, key, source, target, relation, relation_normalized, family,
 //            layer, kind, volumes, confidence, refs }
 import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { familyMap } from './family-map.mjs'
 
 const here = (p) => new URL(p, import.meta.url)
 const seed = JSON.parse(readFileSync(here('../seed.json')))
@@ -417,13 +418,27 @@ const STATE_NOTE = {
   absent: 'The family layer has not merged into this build. No edge carries a family yet.'
 }
 
+// R3.5 — the relation-string -> family map, derived from seed.json every build
+// (web/family-map.mjs). It is emitted as data and consumed by the families page;
+// no hand-maintained copy of it exists anywhere.
+const famMap = familyMap(seed)
+console.log(`family map: ${famMap.totals.families} families over ` +
+  `${famMap.totals.assigned_strings} relation strings ` +
+  `(${famMap.totals.split_strings} land in more than one), ` +
+  `${famMap.totals.homeless_strings} homeless strings, ` +
+  `${famMap.totals.pending} pending`)
+
 writeFileSync(here('./src/families.json'), JSON.stringify({
   version: famVersion, source: 'docs/FAMILY_DEFINITIONS.md', doc_url: './families',
-  state_note: STATE_NOTE, boundary_rules: boundaryRules, families
+  state_note: STATE_NOTE, boundary_rules: boundaryRules, families, map: famMap
 }))
 
-// The complete document, rendered — the "full definitions" destination in R3.3.
-writeFileSync(here('./public/families.html'), renderDoc(famDoc, famVersion))
+// The families page: reader-facing exposition first, then the definitions
+// document in full — the "full definitions" destination in R3.3. The exposition
+// is kept in its own variable because the copy assertions scan it and must NOT
+// scan the rendered source document (see the note above copySources).
+const famPageCopy = famVersion ? familiesPageCopy(famMap, famVersion) : ''
+writeFileSync(here('./public/families.html'), renderDoc(famDoc, famPageCopy))
 
 // ------------------------------------------------ R7 · the review queue -----
 // Copied in when the assignment pass leaves one behind; otherwise an explicit
@@ -564,8 +579,96 @@ function renderMarkdown(md) {
   return out.join('\n')
 }
 
-function renderDoc(md, version) {
-  const out = [renderMarkdown(md)]
+// ------------------------------------------- the families page · the copy ---
+// BACKLOG item 3 and its anti-overclaim checklist bind every sentence below.
+// Six things this page may not do, each paired with what it does instead:
+//   · never "verified families" — a family is ASSIGNED; "verified" belongs to
+//     the quote and its paragraph, and the page says so in as many words
+//   · never "the gate catches errors" flat — it catches the classes we plant;
+//     the figures are version-bound and live in the calibration records, not in
+//     this copy, so they cannot go stale here
+//   · never any implication of scholarly consensus — the page states that the
+//     families are ours, internally calibrated and externally unvalidated
+//   · never a tidy total — no-family, text-undecided, the pending queue and the
+//     homeless strings are shown with real counts beside the assigned ones
+//   · never "families reveal the structure of Jung's thought" — they record how
+//     WE sorted relations he wrote
+//   · agreement is not correctness, said where agreement is described
+// Every number on the page comes from the derived map; the copy assertion at the
+// foot of this file scans the rendered result and fails the build on a literal
+// that atlas.json meta and the map cannot account for.
+function familiesPageCopy(map, version) {
+  const t = map.totals
+  const num = n => `<strong>${n}</strong>`
+  const stringList = (rows) => rows.map(r =>
+    `<span class="sstr"><code>${esc(r.string)}</code><i>${r.edges}</i></span>`).join('')
+
+  const famBlocks = map.families.map(f => `<section class="fam">
+  <h3>${esc(f.family)} <em>${f.edges}</em></h3>
+  <div class="strs">${stringList(f.strings)}</div>
+</section>`).join('\n')
+
+  const provRows = map.provenance.map(p =>
+    `<tr><td>${esc(p.kind)}</td><td>${p.edges}</td></tr>`).join('')
+
+  const worked = boundaryRules
+    .filter(r => /layer: amplification|indistinguishability/i.test(r.title))
+    .map(r => `<li>${r.html}</li>`).join('\n')
+
+  return `<h1>Relation families</h1>
+<p class="sub">The classification layer, ruleset ${esc(version)} — what it claims, what it does not, and every relation string in it.</p>
+
+<h2>What a family is</h2>
+<p>A family is a classification <em>over</em> a relation that has already been checked. The claim underneath — subject, relation, object, the verbatim quote, the paragraph it came from — went through the verification chain before any of this began, and the family layer does not reopen it. It asks a second and much narrower question: what kind of relation is this one? Sorting is the whole of the job.</p>
+<p>So the two words are kept apart, deliberately. A citation is <em>verified</em>: a machine confirmed the quote is letter-exact in its paragraph, and a model from a different family judged that paragraph against the claim. A family is <em>assigned</em>: two models read the definitions document and independently arrived at the same name for the relation. Different evidence, different word. There is no such thing as a verified family on this site.</p>
+<p>These are our families. They record how this project sorted relations Jung wrote — not a structure discovered in his thought, and not a position the field has agreed on. No secondary literature went into building them: no Jacobi, no von Franz, no Samuels, no journals. Where a reader of Jung would cut differently we do not know, because nobody outside this repository has been asked yet. The graph is a map of assertions rather than a reading, and that holds harder here than anywhere else on the site.</p>
+
+<h2>How an edge gets a family</h2>
+<ol>
+<li>Two models classify blind — one Opus-family, one Gemini — each reading the definitions document and the edge, neither able to see the other's answer.</li>
+<li>Where they agree, the family is recorded with the ruleset version it was agreed under, because a later version can retire the rule an assignment rested on.</li>
+<li>Where they disagree, no model breaks the tie. The edge is queued and a person rules on it, and the ruling lands signed and dated.</li>
+<li>Refusals are kept apart. <em>No family</em> means our vocabulary is short. <em>Text undecided</em> means Jung's own sentence hedges between two readings. Pooling them would let a thin vocabulary hide inside a hedge.</li>
+</ol>
+<p>Agreement between the two arms measures whether the document can be followed consistently. It is not evidence that the document is right: neither arm is ground truth, and the definitions were drafted by one of the model families working in this pipeline.</p>
+<p>A separate gate is calibrated by planting classification errors of known kind among real assignments and counting which come back correctly diagnosed. That measures the instrument — whether it still catches the sorts of mistake we know how to make — and says nothing about whether the families cut Jung's thought at the right joints. The figures are recorded per ruleset version in <code>pipeline/family_calibration/records/</code> and are not restated in this copy, because a number written into prose outlives the version it measured.</p>
+
+<h2>Where the layer stands</h2>
+<div class="tw"><table>
+<thead><tr><th>State</th><th>Relations</th><th>What it means</th></tr></thead>
+<tbody>
+<tr><td>assigned</td><td>${t.assigned}</td><td>both arms named the same family, or a person ruled</td></tr>
+<tr><td>pending a ruling</td><td>${t.pending}</td><td>the arms disagreed; queued, not guessed</td></tr>
+<tr><td>no family</td><td>${t.no_family}</td><td>well-formed relation, our vocabulary does not cover it</td></tr>
+<tr><td>text undecided</td><td>${t.text_undecided}</td><td>the source sentence hedges between two families</td></tr>
+</tbody></table></div>
+<p>That is ${num(t.assigned)} of ${num(t.edges)} relations classified, with ${num(t.pending)} still waiting on a person and ${num(t.no_family + t.text_undecided)} that no family was forced onto. The queue is not a backlog to be cleared by machine; clearing it is what the human step is for.</p>
+<p>How the settled records were arrived at:</p>
+<div class="tw"><table><thead><tr><th>Arrived at by</th><th>Relations</th></tr></thead><tbody>${provRows}</tbody></table></div>
+
+<h2>The map: which relation strings land in which family</h2>
+<p>The reverse index, derived from the graph on every build. ${num(t.families)} families over ${num(t.assigned_strings)} distinct relation strings; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family, which is the layer's central commitment made visible: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
+${famBlocks}
+
+<h2>What fits nowhere</h2>
+<p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted rather than absorbed, because a vocabulary that covers everything has stopped discriminating:</p>
+<div class="strs homeless">${stringList(map.homeless)}</div>
+${map.text_undecided.length ? `<p>And the strings where the sentence itself refuses to settle — a property of the text, not of the vocabulary:</p>
+<div class="strs homeless">${stringList(map.text_undecided)}</div>` : ''}
+
+<h2>Where the boundaries are decided</h2>
+<p>Two of the rules that do the discriminating, quoted from the definitions document exactly as they stand at ${esc(version)}. Each was written because a ruling forced it.</p>
+<ul class="worked">
+${worked}
+</ul>
+
+<h2>The definitions document, in full</h2>
+<p class="docnote">What follows is the working document itself, rendered as written. It carries its own history, including measurement sections describing earlier runs of the calibration harness whose figures were withdrawn in August 2026, when a code inspection found they could not be substantiated. Those sections stand as the record of what was done, not as current evidence; the current figures are the version-bound records named above.</p>`
+}
+
+function renderDoc(md, frontCopy) {
+  const version = famVersion
+  const out = [frontCopy || '', '<hr>', renderMarkdown(md)]
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -588,12 +691,25 @@ table { border-collapse: collapse; width: 100%; font-size: .88rem; }
 th, td { border: 1px solid var(--hairline); padding: .5rem .7rem; text-align: left; vertical-align: top; }
 th { color: var(--gold); font-weight: 500; background: var(--panel); }
 .gen { font: .68rem var(--mono); color: var(--ink-faint); margin-top: 3rem; border-top: 1px solid var(--hairline); padding-top: .8rem; }
+.sub { color: var(--ink-faint); font-size: .95rem; margin-bottom: 1.6rem; }
+hr { border: 0; border-top: 1px solid var(--hairline); margin: 3rem 0 2rem; }
+.fam { margin: 1.1rem 0; }
+.fam h3 { margin: 0 0 .35rem; color: var(--ink); }
+.fam h3 em { font-style: normal; font: .7rem var(--mono); color: var(--gold-dim); margin-left: .5rem; letter-spacing: 0; }
+.strs { display: flex; flex-wrap: wrap; gap: .3rem .4rem; margin-bottom: .8rem; }
+.sstr { display: inline-flex; align-items: baseline; gap: .3rem; border: 1px solid var(--hairline);
+  border-radius: 3px; padding: .1rem .35rem; background: var(--panel); }
+.sstr code { background: none; padding: 0; font-size: .78rem; }
+.sstr i { font: .64rem var(--mono); font-style: normal; color: var(--ink-dim); }
+.homeless .sstr { border-color: var(--b-amber); }
+.worked li { border-left: 2px solid var(--hairline); padding-left: .8rem; margin-bottom: 1rem; }
+.docnote { border-left: 2px solid var(--b-amber); padding-left: .8rem; color: var(--ink-faint); font-size: .92rem; }
 </style></head>
 <body>
 <div class="page-bar"><a class="back" href="./#/atlas">\u2190 the atlas</a><span class="where">Relation families</span></div>
 <main>
 ${out.join('\n')}
-<p class="gen">Rendered from <code>docs/FAMILY_DEFINITIONS.md</code> at build time. The atlas quotes this document; it never paraphrases it.</p>
+<p class="gen">The exposition above is generated by <code>web/build-atlas.mjs</code>; every count in it is derived from <code>seed.json</code> at build time. The document below it is rendered from <code>docs/FAMILY_DEFINITIONS.md</code> as written \u2014 the atlas quotes that document, it never paraphrases it.</p>
 </main></body></html>`
 }
 
@@ -749,7 +865,14 @@ const allowedNumbers = new Set([
   ...Object.values(meta.familyLayer.states || {}), meta.familyLayer.families, meta.normalized,
   core.length, bridges.length, guided.length, guidedReverse.length,
   ...volumes.flatMap(v => [v.references, v.edges]), ...Object.values(meta.voices || {}),
-  ...Object.values(meta.layers || {})
+  ...Object.values(meta.layers || {}),
+  // R3.5 — every count the families page prints comes from the derived map, so
+  // the map's own numbers join the allowlist. A literal on that page that the
+  // map cannot produce is exactly what this check exists to catch.
+  ...Object.values(famMap.totals), famMap.totals.no_family + famMap.totals.text_undecided,
+  ...famMap.provenance.map(p => p.edges),
+  ...famMap.families.flatMap(f => [f.edges, ...f.strings.map(s => s.edges)]),
+  ...famMap.homeless.map(r => r.edges), ...famMap.text_undecided.map(r => r.edges)
 ].filter(n => Number.isFinite(n)))
 
 // Frozen measured results quoted in the method copy, with the sources the copy
@@ -759,6 +882,11 @@ const METHOD_CONSTANTS = new Set([
 ])
 const copySources = [
   ['docs/METHOD_COPY.md (wired verbatim)', methodHTML, METHOD_CONSTANTS],
+  // The families page's own exposition (NOT the definitions document it renders
+  // below the rule — that is the source, and paraphrasing it is the stronger
+  // prohibition). BACKLOG item 3's checklist binds this copy, so it is scanned
+  // like any other page we write.
+  ['public/families.html (generated exposition)', famPageCopy],
   ['index.html', readFileSync(here('./index.html'), 'utf8')
     .replace(/<style[\s\S]*?<\/style>/g, '').replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<[^>]+>/g, ' ')],

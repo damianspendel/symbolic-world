@@ -61,10 +61,13 @@ def fam_note(fstate, by):
     if fstate != "assigned":
         return FAM_STATE_NOTE.get(fstate, "")
     b = (by or "").lower()
-    if "human" in b:
-        return "Human review: a person ruled this classification after the model arms disagreed"
+    # precedent is tested BEFORE human: a precedent record names the sitting it
+    # came from ("precedent (human-adjudication 2026-08-10: ...)"), so testing
+    # for "human" first swallows it and the tooltip claims a ruling nobody made
     if "precedent" in b:
         return "settled by a recorded precedent from Human review"
+    if "human" in b:
+        return "Human review: a person ruled this classification after the model arms disagreed"
     if "disputes" in b:
         return "the arms agreed but the check disputed the agreement — treat as contested"
     return "two model arms, judging independently, assigned the same family; a classification, not a re-verification of the text"
