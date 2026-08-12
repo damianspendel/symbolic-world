@@ -19,6 +19,12 @@ step-0 tail test. The test sample was drawn stratified by STRUCTURE
 invalidate the draw.
 
 **v0.6 (2026-08-12) is a mechanical fold of the second adjudication sitting.**
+Sharpened the same day, inside the calibration loop: the doctrinal-attribution
+precedence (attribution outranks the surface verb) made explicit with the
+peregrinatio worked example, after the run-2 gate misdiagnosed exactly that
+boundary. The failing and passing runs are both on file:
+`records/2026-08-12_v06_run2.json` (FAIL), `records/2026-08-12_v06_run3.json`
+(PASS, bound to this text).
 Nothing here is new reasoning: every change transcribes a ruling already made and
 recorded, and the fold deliberately resolves nothing that the rulings left open.
 Its five entries:
@@ -567,6 +573,15 @@ subject and object.
 **Boundary:** the decisive test — remove the carrier and the claim collapses.
 Voice often co-varies but never decides (rule 3). Tradition-to-tradition
 transmission is derivation; a single carrier's predication is attribution.
+**Attribution outranks the surface verb.** When a NAMED carrier performs the
+predication, the family is attribution no matter what the relation string
+says — a `symbolizes`/`symbolized-by`/`parallels` string does not send the
+edge to symbolization or correspondence if the quote's claim is the carrier's
+act of reading. Worked example: `the-opus symbolized-by peregrinatio` (14
+§199, "Maier imagined the opus as a wandering") is doctrinal-attribution, not
+symbolization — Maier's act; remove Maier and this quote's claim collapses.
+Contrast a symbolization edge whose quote asserts the image relation with no
+carrier named in the quote itself.
 **Seeds:** `hun is-translated-as animus {carrier: Wilhelm}` (13 §57);
 `prima-materia was-designated-as mercurius` (12 §517); `the-wheel
 is-in-boehme-a-concept-for wholeness` (12 §216); `augustine

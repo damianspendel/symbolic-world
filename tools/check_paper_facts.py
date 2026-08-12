@@ -288,6 +288,14 @@ if FAM_DOC.exists():
                 if rec.get('verdict') not in ('PASS', 'FAIL'):
                     failures.append(f"CALIBRATION RECORD: {p.name} has verdict "
                                     f"{rec.get('verdict')!r}; expected 'PASS' or 'FAIL'")
+            # a FAIL on file is a result, but it does not license the version:
+            # the ruleset ships only on a PASS (Damian 2026-08-12; RULES #16)
+            if not any(rec.get('verdict') == 'PASS' for _, rec in matched):
+                failures.append(
+                    f"STALE RULESET: {FAM_DOC.name} declares {fam_version} and "
+                    f"records exist, but none has \"verdict\": \"PASS\". A failed "
+                    f"calibration is on the record and the ruleset does not ship "
+                    f"until a PASS record for {fam_version} exists.")
 
     # (5) the ledger's family tooltip must derive from the record, not from one
     #     blanket sentence (RULES #10). Every `by` that is not an arms-agreed

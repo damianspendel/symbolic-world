@@ -1,0 +1,262 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.6",
+ "definitions_git_hash": "10cc88e9074a06a0bfbd006babc30485a620cc06",
+ "draw_seed": 2230022601,
+ "plant_seed": 3305637252,
+ "planted_at": "2026-08-12T11:45:08+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 7,
+   "flagged_misdiagnosed": 1,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "circulatio|aims-to-reproduce|anthropos",
+   "class": "K1",
+   "was": "telos",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'aims-to-reproduce' asserts a goal or end pursued by the subject, which belongs in telos, not dependence."
+  },
+  {
+   "id": "divine-child|aims-at|the-self",
+   "class": "K1",
+   "was": "telos",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'aims-at' expresses goal-direction, which belongs to the telos family, not dependence."
+  },
+  {
+   "id": "horse|represents|spirit",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The spirit is the less formulable term and the horse is the image, fitting symbolization rather than manifestation."
+  },
+  {
+   "id": "lightning|represents|intuition",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Intuition is the less formulable term and lightning is the image, which matches symbolization's direction test, whereas manifestation requires the opposite direction."
+  },
+  {
+   "id": "serpent|represents|the-shadow",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The object (the shadow) is the less formulable term and the subject (serpent) is the image, which matches symbolization's direction test, not manifestation's."
+  },
+  {
+   "id": "the-opus|symbolized-by|peregrinatio",
+   "class": "K1",
+   "was": "doctrinal-attribution",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The relation 'symbolized-by' asserts that peregrinatio is the image for the opus, fitting symbolization, not doctrinal transmission (derivation)."
+  },
+  {
+   "id": "transference|aspect-of|individuation",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'aspect-of' is explicitly defined as the inverse direction of the manifestation family, not symbolization."
+  },
+  {
+   "id": "tree|is-explained-by-this-remarkable-text-as-a-metaphorical-form-of|arcane-substance",
+   "class": "K1",
+   "was": "doctrinal-attribution",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote frames the claim as an act of interpretation by a specific carrier ('This remarkable text explains...'), which outranks other families and belongs in doctrinal-attribution."
+  },
+  {
+   "id": "alchemical-fish|symbolizes|christ",
+   "class": "K2",
+   "was": "symbolization",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation asserts that the fish is a symbol for Christ, which belongs in symbolization regardless of the 'attains' language in the quote."
+  },
+  {
+   "id": "anthropos|corresponds-to|lower-adam",
+   "class": "K2",
+   "was": "correspondence",
+   "now": "privation",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'corresponds-to' asserts structural likeness without identity, which is correspondence, not privation (which requires lack or negated identity)."
+  },
+  {
+   "id": "the-devil|is-the-fourth-person-in-the-heavenly-drama-of|the-trinity",
+   "class": "K2",
+   "was": "structural-position",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Being the fourth person beside the Trinity is a structural-position claim, not a doctrinal derivation."
+  },
+  {
+   "id": "the-intellect|is-wrongly-equated-by-the-modern-formula-with|spirit",
+   "class": "K2",
+   "was": "doctrinal-attribution",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The equation is explicitly framed as an act of predication by a carrier ('the modern formula'), which dictates doctrinal-attribution over any other family."
+  },
+  {
+   "id": "archetypal-image|lacks|the-ego",
+   "class": "K3",
+   "was": "privation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "privation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'lacks' asserts an absence or negated capacity, which is the definition of privation, not structural likeness (correspondence)."
+  },
+  {
+   "id": "dragon|represents-the-initial-state-of|unconsciousness",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The dragon is an image representing the less formulable unconsciousness, which fits symbolization rather than correspondence."
+  },
+  {
+   "id": "the-devil|strives-after-perfection-in|evil",
+   "class": "K3",
+   "was": "telos",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Striving after a goal or end state belongs to the telos family, not correspondence."
+  },
+  {
+   "id": "the-self|is-indistinguishable-from|god-image",
+   "class": "K3",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The indistinguishability rule states that when indistinguishability is asserted of the terms THEMSELVES (not their symbols), it is archetypal-identity."
+  },
+  {
+   "id": "coniunctio|amplified-by|regina",
+   "class": "K4",
+   "was": "amplification",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "amplification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'amplified-by' explicitly adduces a parallel to widen the interpretive basis, which defines the amplification family."
+  },
+  {
+   "id": "the-centre|is-called|the-self",
+   "class": "K4",
+   "was": "doctrinal-attribution",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Naming or designating a term ('is called') is an act of predication by a carrier, which belongs to doctrinal-attribution."
+  },
+  {
+   "id": "the-trinity|has-counterpart-in|triad",
+   "class": "K4",
+   "was": "correspondence",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Having a counterpart in a lower triad asserts structural likeness across registers without identity, which perfectly fits correspondence."
+  }
+ ],
+ "sensitivity": {
+  "caught": 18,
+  "of": 19,
+  "pct": 94.7
+ },
+ "specificity": {
+  "clean_left_alone": 41,
+  "of": 41,
+  "pct": 100.0
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

@@ -1,0 +1,269 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.6",
+ "definitions_git_hash": "c3d3f0a46dcee0b9942b6f18a224017db2dfb997",
+ "draw_seed": 2182636528,
+ "plant_seed": 797439427,
+ "planted_at": "2026-08-12T11:48:07+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "balsam|synonym-of|arcane-substance",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'synonym-of' and the quote's 'identifies the latter with' explicitly assert identity, which belongs to archetypal-identity."
+  },
+  {
+   "id": "coniunctio|corresponds-to|tao",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'corresponds-to' and quote 'Western equivalent' assert a structural likeness across traditions, which is correspondence, not archetypal-identity."
+  },
+  {
+   "id": "libido|symbolized-by|sol",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation is 'symbolized-by' and the quote explicitly uses 'symbolizes', which fits the inverse pair of symbolization, not manifestation."
+  },
+  {
+   "id": "quaternity|symbolizes|the-self",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject is the image (quaternity) and the object is the less formulable term (the-self), which matches the directionality of symbolization, not manifestation."
+  },
+  {
+   "id": "rex|unites|the-opposites",
+   "class": "K1",
+   "was": "union",
+   "now": "separation",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'unites' and quote 'unite the polarity' describe an act of joining, which is union, not separation."
+  },
+  {
+   "id": "salt|regarded-as|spirit",
+   "class": "K1",
+   "was": "classification",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote 'salt is a spirit' asserts taxonomy or kind, not a part-whole composition."
+  },
+  {
+   "id": "sol-niger|corresponds-to|animus",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'corresponds-to' and the quote's 'is connected with' assert structural likeness rather than the strict oneness required for archetypal-identity."
+  },
+  {
+   "id": "the-sacrifice|amplified-by|christ",
+   "class": "K1",
+   "was": "amplification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "amplification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation string 'amplified-by' explicitly states the adducing of a parallel, which is the definition and seed for the amplification family."
+  },
+  {
+   "id": "animus|corresponds-to|hermes",
+   "class": "K2",
+   "was": "correspondence",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts a structural likeness ('rather like'), which fits correspondence, not historical transmission (derivation)."
+  },
+  {
+   "id": "caelum|symbolizes|the-self",
+   "class": "K2",
+   "was": "symbolization",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation is 'symbolizes' and the quote links an alchemical image to a psychological concept, fitting symbolization rather than projection."
+  },
+  {
+   "id": "eagle|is-ultimately-identical-with|anthropos",
+   "class": "K2",
+   "was": "archetypal-identity",
+   "now": "privation",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly asserts identity ('is ultimately identical with'), which contradicts privation (negated identity)."
+  },
+  {
+   "id": "spirit|is-identified-with|god-image",
+   "class": "K2",
+   "was": "archetypal-identity",
+   "now": "privation",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'is-identified-with' and the quote asserting the spirit was given the name of God indicate archetypal-identity, whereas privation requires a stated lack or absence."
+  },
+  {
+   "id": "adam|personifies|psyche",
+   "class": "K3",
+   "was": "personification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "personification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'personifies' with a figure subject (Adam) enacting a content (psyche) is the exact definition of personification, not correspondence."
+  },
+  {
+   "id": "anthropos|proceeded-from|en-soph",
+   "class": "K3",
+   "was": "generation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote 'was produced' between two beings/figures describes begetting or bringing forth, which is generation, not correspondence."
+  },
+  {
+   "id": "artifex|is-unconsciously-identical-with|arcane-substance",
+   "class": "K3",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly asserts an identity between the terms themselves, which the indistinguishability rule routes to archetypal-identity, not correspondence."
+  },
+  {
+   "id": "shulamite|amplified-by|meretrix",
+   "class": "K3",
+   "was": "amplification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "amplification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'amplified-by' is the defining seed for the amplification family, not correspondence."
+  },
+  {
+   "id": "coniunctio|produces|balsam",
+   "class": "K4",
+   "was": "generation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'produces' and the quote describing the conjunction bringing forth the balsam perfectly fit the generation family."
+  },
+  {
+   "id": "crab|is-ruled-by|luna",
+   "class": "K4",
+   "was": "dependence",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "dependence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Rulership relations like 'is-ruled-by' are explicitly defined as belonging to the dependence family, not unclassified."
+  },
+  {
+   "id": "mandala|is-vessel-of|rebirth",
+   "class": "K4",
+   "was": "structural-position",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "A vessel or birth-place designates a location or container for a process, fitting structural-position alongside abode and seat."
+  }
+ ],
+ "sensitivity": {
+  "caught": 19,
+  "of": 19,
+  "pct": 100.0
+ },
+ "specificity": {
+  "clean_left_alone": 40,
+  "of": 41,
+  "pct": 97.6
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "raven|is-identical-with|magician",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "reason": "The quote 'appears in the story as' describes a guise or showing (manifestation), not an assertion of archetypal identity."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "PASS",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}
