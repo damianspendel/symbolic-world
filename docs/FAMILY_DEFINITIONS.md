@@ -1,4 +1,4 @@
-# Relation families — candidate definitions, v0.5
+# Relation families — candidate definitions, v0.6
 
 Status: BINDING for the full assignment pass, per the sign-off ladder: the two
 model arms cleared the benchmark on controls, the gate is calibrated (and is
@@ -17,6 +17,28 @@ separation) plus nine corrections. v0.3 lands them. Human sign-off comes from th
 step-0 tail test. The test sample was drawn stratified by STRUCTURE
 (singleton/normalized/volume), never by family, so the v0.2→v0.3 fixes did not
 invalidate the draw.
+
+**v0.6 (2026-08-12) is a mechanical fold of the second adjudication sitting.**
+Nothing here is new reasoning: every change transcribes a ruling already made and
+recorded, and the fold deliberately resolves nothing that the rulings left open.
+Its five entries:
+
+1. **The amplification layer tag no longer overrides the content family.** Three
+   rulings of the 2026-08-10 sitting decided this — `dragon symbolizes
+   unconsciousness` → symbolization, `mercurius is-identified-with hermes` →
+   archetypal-identity, `mercurius is-a psychopomp` → classification, each against
+   a model arm that had answered `amplification` because the edge carried
+   `layer: amplification`. One precedent application followed, on `leviathan
+   symbolizes the-unconscious`. The rule the arms were reading is deleted below
+   and replaced by its negation, stated as a boundary rule.
+2. **The sentence-subject test gains its worked contrast**, from the ruling on
+   `mandala is god-image` (CW 9i §572), recorded in the indistinguishability rule.
+3. **`exemplified-by` is recorded as a homeless string**, per the ruling on
+   `quaternity exemplified-by four-elements`.
+4. **The `underlies` / `based-on` collision is recorded as a KNOWN AMBIGUITY**
+   and is NOT resolved here. It reached the document from the window-9 Opus arm.
+5. Version header, this change log, and the calibration-harness reference, which
+   pointed at a superseded script.
 
 **v0.5 folds in the first human adjudication run** — ten rulings over the
 step-0 disagreement set, 2026-08-06, recorded in "The first adjudication run"
@@ -152,6 +174,14 @@ measured the interface as much as the vocabulary.
   nodes are: sentence subject "the symbols of X" → correspondence; sentence
   subject X itself → identity, even when X is a Symbol-typed node (worked
   contrast: `mercurius is-identical-with saturn`, two image-terms, identity).
+  **Worked contrast, one relation across two paragraphs** *(v0.6, ruling of
+  2026-08-10)*: `mandala is god-image` at CW 9i §572 is `archetypal-identity`,
+  because §572 predicates God-image-hood of the mandala itself; the CW 9ii §60
+  edges stay `correspondence`, because §60 predicates indistinguishability of
+  *the symbols of* the two terms. Same two nodes, same copula, different family —
+  and the difference is the sentence subject, not the node types. The
+  distinguishing note is recorded on the §572 edge in `seed.json`, so the ruling
+  travels with the data as well as with this document.
   Placements: `is-psychic-analogue-of`, `coincides-with`, `comes-closest-to`,
   `is-symbolical-equivalent-of`, `felt-as-equivalent-of` → correspondence;
   `is-essentially-same-as`, `revealed-identity-with`, `made-equal-to`,
@@ -197,6 +227,25 @@ measured the interface as much as the vocabulary.
   and instrumentality now also claims it. Decide by what the quote asserts: the
   standing requirement (dependence), the acting-upon (psychic-effect), or the
   route travelled (instrumentality).
+- **The `layer: amplification` tag never overrides the content family**
+  *(v0.6; replaces the rule the arms were reading at v0.5)*. The layer tag is a
+  hand-built annotation on the MATERIAL — it marks an edge as belonging to the
+  amplificatory apparatus of the text. It is not a family assignment and it does
+  not outrank the relation. Classify the edge by what the relation asserts, the
+  same way as any untagged edge; a tagged edge lands in `amplification` only when
+  the amplification definition itself fits it. Three rulings of 2026-08-10
+  decided this against three model-arm answers that had cited the tag as
+  decisive, with one precedent application after; the tag currently sits on 57
+  edges that are spread across six families.
+- **KNOWN AMBIGUITY, awaiting a ruling: `underlies` versus `based-on`**
+  *(recorded v0.6; NOT resolved here)*. Two rules in this document reach opposite
+  families for what may be one sense of "rests on". The composition/position rule
+  routes foundation language to `structural-position` — `is-foundation-of` is
+  named there, and all seven live `underlies` edges follow it. Derivation's
+  string list, meanwhile, carries `based-on` and `develops-on-basis-of`. The
+  window-9 Opus arm hit the collision head-on and reported it rather than
+  choosing. Until a ruling: an edge caught between the two rules queues for
+  adjudication; neither rule is amended, and neither is the tiebreak.
 - **Per-edge caveats on promiscuous strings:** `is-a` (identity-flavoured at
   9ii §42, taxonomic at 9ii §33), `embodies` ("consists of/composed of"
   quotes → composition: `adam embodies quaternity` 14 §555; fusion/reunion
@@ -229,7 +278,8 @@ personification (a figure enacting).
 **Seeds:** `quaternity symbolizes wholeness` (9ii §59); `fish symbolizes soul`
 (9ii §187); `sol is-classical-symbol-for the-self` (12 §108, normalized);
 `the-wheel is-symbol-for circulatio` (12 §214); `christ symbolized-by fish`
-(9ii §147). Strings: symbolizes (90, minus the 9 amplification-layer edges),
+(9ii §147). Strings: symbolizes (90; the amplification-layer edges among them
+are no longer subtracted — v0.6 classifies them by content like any other),
 symbolized-by (10), signifies (10), stands-for (6), represents (7).
 **Inverse pair declared:** symbolizes / symbolized-by.
 
@@ -309,13 +359,19 @@ pp. 16–17) — BY WHOEVER adduces it (agent-neutral per rule 3; 28 of the 43
 definition would contradict the data and pre-decide E11).
 **Boundary:** correspondence asserts a relation between the terms;
 amplification adduces material to read an image by. The `layer: amplification`
-field is the hand-built seed set: it tags 41 of the 43 `amplified-by` edges
-(`lapis amplified-by shulamite` 14 §185 and `prima-materia amplified-by isis`
-14 §16 lack the tag — a layer repair item) plus 9 `symbolizes`, 2
-`symbolized-by`, 2 `parallels`, and 3 singletons: 57 edges over seven strings,
-the standing proof that one string splits across families.
-**Seeds:** `coniunctio amplified-by rex`; the 9 layer-tagged `symbolizes`
-edges.
+field is a hand-built annotation on the material, NOT a family assignment and
+never a tiebreak — see the layer-tag boundary rule above, which the 2026-08-10
+sitting installed in place of the reading it retired. It tags 41 of the 43
+`amplified-by` edges (`lapis amplified-by shulamite` 14 §185 and `prima-materia
+amplified-by isis` 14 §16 lack the tag — a layer repair item) plus 9
+`symbolizes`, 2 `symbolized-by`, 2 `parallels`, and 3 singletons: 57 edges over
+seven strings, which is why one string splits across families — and why the tag
+itself splits across families too.
+**Seeds:** `coniunctio amplified-by rex`, and the `amplified-by` edges
+generally, where the relation states the adducing. A layer-tagged `symbolizes`
+edge is NOT a seed here: those are classified by what they assert, and the three
+ruled on in 2026-08-10 came out symbolization, archetypal-identity and
+classification.
 
 ### 7. classification
 Plain taxonomy: the subject is an instance or kind of the object.
@@ -606,6 +662,26 @@ addition cleared.
   instrumentality (a principle by which something proceeds). Route to
   `unclassified(no-family)` and let the assignment pass decide.
 
+### Homeless strings — recorded, not force-fitted
+
+Relation strings ruled to have no family, kept as a named list so a `no-family`
+on one of them is a known gap rather than an unexplained miss.
+
+- **`exemplified-by`** *(v0.6, ruling of 2026-08-10)*. `quaternity exemplified-by
+  four-elements` (14 §261) was ruled `unclassified(no-family)`: one arm read it as
+  classification run inverse, the other refused it, and the quote ("rests on the
+  four elements") pulls toward composition as well. The ruling records it as a
+  homeless string with the family decision left open, not as an instance of any
+  existing family. One live edge.
+- **Characterization / appearance** (`is-characterized-by`) — ruling 44 of the
+  first adjudication run, above, decided `unclassified(no-family)` over the
+  composition reading. A candidate gap, not a family.
+- **Epistemic concealment acts** (`unlocks-secret-of`, `obstructs-discovery-of`,
+  `covers-up`) — routed by the concealment placement under composition.
+- **Property attribution** (`is-characterized-by`, `possesses`,
+  `has-affinity-with`) and **governing principle** (`is-principle-of`, `orders`)
+  — the two v0.4 refusals recorded just above.
+
 Recording refusals as refusals, with their counts, is how the `unclassified`
 reason codes stay meaningful: a `no-family` on `is-principle-of` is now a known
 gap under review, not an unexplained miss.
@@ -670,10 +746,15 @@ resource in the pipeline. What replaces it:
 
 1. **Two model arms classify, blind to each other** — one Opus-family, one Gemini.
    Neither may be the family that authored the definitions.
-2. **The calibrated gate checks both.** Sensitivity 19/19 and specificity ≥85%
-   are measured, not assumed, and both are re-measured whenever the definitions
-   change materially (the corruption harness is seed-reproducible:
-   `pipeline/work/corrupt_family_assignments.py`).
+2. **The calibrated gate checks both.** Sensitivity and specificity are measured,
+   not assumed, and both are re-measured whenever the definitions change — a new
+   version voids the previous version's numbers (RULES #16). The harness is
+   `pipeline/family_calibration/` (seeded and reproducible: draw, plant, gate,
+   score), and it supersedes `pipeline/work/corrupt_family_assignments.py`, whose
+   figures were withdrawn under RULES #12. **The figures themselves live in the
+   version-bound records under `pipeline/family_calibration/records/`, and
+   nowhere in this prose** — a number written into a document outlives the
+   ruleset it measured, which is how the last set went stale unnoticed.
 3. **The human adjudicates only genuine disagreement** — cases where the two model
    arms differ, plus any the gate marks WRONG on an uncorrupted assignment. On the
    60-item sample that was ~10 items, not 60.
