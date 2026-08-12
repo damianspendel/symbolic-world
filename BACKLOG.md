@@ -440,3 +440,42 @@ energetic register — arrives to stress them.
      gate model is the same model as one production proposer arm (both
      gemini-3.1-pro). Within-vendor role separation, not cross-vendor. Any
      public sentence about the family gate must not imply otherwise.
+
+## Release notes and the v2.0 milestone (added 2026-08-12, Damian's direction)
+
+**A. Release-notes section on the website, going forward.** Every release from
+the next one onward gets a notes page: what changed in the graph, the ruleset
+version shipped (per the version-pin rule in CLAUDE.md), instrument changes
+with their calibration records, and anything withdrawn or corrected. Same
+register as the method page — the ledger tells a reader what IS; the notes
+tell them what CHANGED and why. Candidate implementation: a `/releases` page
+built from a `docs/RELEASES.md` that the ceremony appends to, counts bound by
+the copy contract.
+
+**B. v2.0 — the milestone sketch (decisions Damian's; this is the candidate
+scope, not a commitment).** Current sequence stands: v1.4 (trilogy + family
+layer, waits on arXiv), v1.5 (Aion + the vocabulary-transfer study). v2.0 is
+the right label for the release where the graph stops being only a verified
+record and becomes a queryable instrument:
+
+1. **CW 8 mined** (fourteen windows, §1–997, per PROPOSAL_NEXT_ARC.md) — the
+   theoretical register in, after its pre-arc external check on
+   psychic-effect / dependence / instrumentality.
+2. **The query layer**: family-aware querying (the map as query surface),
+   declared inverses and symmetry applied at read time, an upgraded query.py
+   (filter by family, provenance, claim_type, volume, state), and the
+   RDF/Turtle export with the families as subPropertyOf super-properties —
+   the W3C shape the design already claims, made demonstrable.
+3. **Family layer complete under a stable ruleset**: the amplified-by re-run
+   merged (v0.7.1), the adjudication queue drained to ruled-or-recorded, and
+   a second external spot-check on the families CW 8 stresses.
+4. **Ontology QA items worth fixing by then**: the detached Shiva/Shakti
+   component, the 19 definition-shaped node labels, the three
+   both-direction inverse duplicates. The 30-node identity chain stays — the
+   no-transitivity ruling is a feature; v2.0 ships the depth-bounded
+   identity-walk view instead of a collapse.
+5. **Release-notes page live** (item A), with v2.0 as its first full entry.
+
+Not in v2.0: CW 11 (needs the exegesis clause and a minting-aware budget —
+the arc after), CW 5/16, any NL query interface (verification-first: a
+query layer that cites edges precedes any interface that paraphrases them).
