@@ -113,6 +113,15 @@ comment stating why. If not reached, say so in the report — an honest
    conservative reading, do it, and flag it prominently in the report —
    do not block waiting for a human at 3am, and do not widen scope.
 
+## Rides along at merge time (main tree, after review — NOT overnight)
+
+Approved by Damian 2026-08-12 evening: when the branch merges, the same
+commit series also wires the ledger-freshness assertion into
+`tools/check_paper_facts.py` — the rendered `web/public/ledger.html`'s
+stated node/edge/reference counts must equal seed.json's, failing closed
+like every other count check. Deferred past the overnight deliberately:
+CI must not change under the mining pipeline's active windows.
+
 ## Acceptance for the morning review
 
 The dev build is reviewable if: the branch exists with D1–D6 committed;
