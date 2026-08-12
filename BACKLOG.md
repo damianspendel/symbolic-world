@@ -291,6 +291,23 @@ energetic register — arrives to stress them.
    themselves. Bind the method page's sentence to the version it measured
    ("against v0.6, dated") so it cannot silently go stale again.
 
+   **THRESHOLD — SET 2026-08-12, BEFORE THE RUN. Does not move after the result
+   is seen (Damian's decision, same rule as the normalization sample):**
+   - **PASS requires every K1 near-miss caught with the correct family named**
+     (measured precedent: 8/8, then 20/20 overall at recalibration). One K1
+     miss = FAIL → the missed boundary's wording is sharpened in the
+     definitions doc and the calibration re-runs with a fresh seed. K2/K3/K4
+     misses also fail the run — a gate missing a far-miss or a sink-swap is
+     broken, not miscalibrated.
+   - **Specificity is reported, never gating.** Below 85% (the measured
+     first-run floor) it triggers a manual look at each false flag — precedent
+     says some "false" flags are real errors in the uncorrupted set — but no
+     automatic verdict either way.
+   - Quotas per the standing harness (8 K1 / 4 K2 / 4 K3 / 3 K4, remainder
+     clean), fresh seed drawn at run time and recorded; input drawn from the
+     graph's CURRENT assigned edges, not the 2026-08-06 proposer file; planter
+     and gate from different model families, gate blind to the key, as before.
+
    **CI assessment — the calibration itself cannot live in CI, and mining volume
    is the wrong trigger.** Three hard blockers: it requires paid,
    non-deterministic model calls (CI today is fully offline and deterministic);
