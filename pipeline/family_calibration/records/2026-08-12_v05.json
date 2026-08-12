@@ -1,0 +1,262 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.5",
+ "definitions_git_hash": "fba9ff82c3860009668dd936139c115872253ec4",
+ "draw_seed": 1900865697,
+ "plant_seed": 4010608391,
+ "planted_at": "2026-08-12T10:49:54+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "circulation-of-light|amounts-to|self-knowledge",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rules explicitly place 'amounts-to' and flat equivalence of the terms themselves into archetypal-identity, not correspondence."
+  },
+  {
+   "id": "god-image|is-a|archetype",
+   "class": "K1",
+   "was": "classification",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The 'is-a' relation assigning a concept to the class of archetypes is plain taxonomy (classification), not a part-whole composition."
+  },
+  {
+   "id": "mercurius|appears-as|serpent",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject (Mercurius) is the less formulable term showing itself under a guise (serpent), which matches the directionality test for manifestation, not symbolization."
+  },
+  {
+   "id": "mercurius|symbolized-by|dragon",
+   "class": "K1",
+   "was": "amplification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "amplification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The edge is explicitly tagged with the amplification layer, which overrides the surface string according to the boundary rules."
+  },
+  {
+   "id": "rex|symbolizes|arcane-substance",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The directionality test for manifestation requires the subject to be the less formulable term, but here the subject (rex) is the image symbolizing the less formulable term (arcane-substance), which is symbolization."
+  },
+  {
+   "id": "serpent|signifies|sapientia",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'signifies' with the image as the subject and the less formulable term as the object fits symbolization, whereas manifestation would require the inverted direction."
+  },
+  {
+   "id": "the-self|precedes|the-ego",
+   "class": "K1",
+   "was": "sequence",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "sequence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts bare temporal order ('older than') without stating a requirement or condition, which places it in sequence rather than dependence."
+  },
+  {
+   "id": "the-self|symbolized-by|quaternity",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'symbolized-by' is the declared inverse of 'symbolizes' and belongs to the symbolization family, not manifestation."
+  },
+  {
+   "id": "jakob-boehme|envisages|god-image",
+   "class": "K2",
+   "was": "doctrinal-attribution",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes an act of envisaging/predication by a named author (Jakob Böhme), not a temporal sequence."
+  },
+  {
+   "id": "prima-materia|amplified-by|venus",
+   "class": "K2",
+   "was": "amplification",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "amplification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'amplified-by' and the presence of the amplification layer tag strictly place this edge in the amplification family, not telos."
+  },
+  {
+   "id": "privatio-boni|reduces-evil-to-a-mere-diminution-of|good",
+   "class": "K2",
+   "was": "privation",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "privation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The edge explicitly asserts a lack or negated capacity (evil as a mere diminution of good), which is the exact seed for the privation family, not projection."
+  },
+  {
+   "id": "quintessence|corresponds-to|mary",
+   "class": "K2",
+   "was": "correspondence",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The text asserts a structural likeness or correspondence between their positions, not a familial or consort role."
+  },
+  {
+   "id": "arcane-substance|symbolizes|the-self",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'symbolizes' where the subject is the image and the object is the less formulable term is the definition of symbolization, not correspondence."
+  },
+  {
+   "id": "cadmus|corresponds-to|mercurius",
+   "class": "K3",
+   "was": "doctrinal-attribution",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly frames the relation as an act of interpretation by a named tradition ('interpreted alchemically as'), which outranks the surface verb per the boundary rules."
+  },
+  {
+   "id": "wholeness|is-an-ever-present|archetype",
+   "class": "K3",
+   "was": "classification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Asserting that a concept is an archetype is a taxonomic 'is-a' relation, which belongs to classification, not correspondence."
+  },
+  {
+   "id": "yesod|unites|tifereth-malchuth",
+   "class": "K3",
+   "was": "union",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "This exact edge is explicitly listed as a seed for the union family, and the quote describes the accomplishment of the 'unitio'."
+  },
+  {
+   "id": "christianity|coincides-with|aeon-of-the-fishes",
+   "class": "K4",
+   "was": "correspondence",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'coincides-with' is explicitly listed as a seed string for correspondence, asserting structural or temporal alignment."
+  },
+  {
+   "id": "lapis|amplified-by|orphan",
+   "class": "K4",
+   "was": "amplification",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "amplification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The edge carries the 'amplification' layer tag and uses the 'amplified-by' relation, which is the definitional core of the amplification family."
+  },
+  {
+   "id": "mandala|is-derived-from|magic-circle",
+   "class": "K4",
+   "was": "derivation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "derivation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The transmission or descent of a form or idea from an earlier one perfectly fits the definition of derivation, so a refusal is unjustified."
+  }
+ ],
+ "sensitivity": {
+  "caught": 19,
+  "of": 19,
+  "pct": 100.0
+ },
+ "specificity": {
+  "clean_left_alone": 41,
+  "of": 41,
+  "pct": 100.0
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "PASS",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

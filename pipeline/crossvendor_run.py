@@ -40,13 +40,14 @@ def run(items, prompt, out_path):
     except json.JSONDecodeError:
         # Gemini sometimes drops the closing bracket despite finishReason STOP
         verdicts = json.loads(text.rstrip().rstrip(',') + "]")
-    # a salvaged (or even clean) response must still cover the whole batch —
-    # otherwise treat as failure so run_chunked retries instead of silently
-    # accepting a truncated verdict set
+    # a salvaged (or even clean) response must cover the whole batch and NOTHING
+    # ELSE — a truncated set and a hallucinated extra n are both failures, so
+    # run_chunked retries instead of silently accepting either
     expected = {it['n'] for it in items if isinstance(it, dict) and 'n' in it}
     got = {v.get('n') for v in verdicts if isinstance(v, dict)}
-    if expected and got < expected:
-        raise KeyError(f"verdicts cover {len(got)}/{len(expected)} items")
+    if expected and got != expected:
+        raise KeyError(f"verdicts cover {len(got & expected)}/{len(expected)} items"
+                       f" and invent {len(got - expected)}")
     json.dump(verdicts, open(out_path, "w"), indent=1)
     usage = resp.get("usageMetadata", {})
     print(f"{out_path}: {len(verdicts)} entries | tokens in/out: {usage.get('promptTokenCount')}/{usage.get('candidatesTokenCount')}")
