@@ -479,3 +479,40 @@ record and becomes a queryable instrument:
 Not in v2.0: CW 11 (needs the exegesis clause and a minting-aware budget —
 the arc after), CW 5/16, any NL query interface (verification-first: a
 query layer that cites edges precedes any interface that paraphrases them).
+
+### v2.0 candidates from the 2026-08-12 night session — ledger and families reporting (proposals only)
+
+Damian asked for thinking on ledger and families query/reporting. Recorded
+here so the morning finds it; nothing below is committed scope.
+
+1. **Assignment history on the edge.** The v0.7.1 re-run overwrote 43
+   `relation_family` values in place; the prior assignment survives only in
+   git. Add `relation_family.history` — each reassignment appends {value,
+   ruleset version, date, by} — so the ledger can show "amplification
+   (v0.6) → archetypal-identity (v0.7.1)" on the edge itself. The single
+   biggest auditability gain available, and it must land before the queue's
+   19 re-run splits are ruled, or their history starts incomplete.
+2. **Ledger facets and permalinks.** The ledger is one long page. Add
+   client-side filters (volume, batch, claim_type, verification state,
+   family, provenance) and stable per-edge anchors so atlas rows and
+   external citations can link straight to a ledger entry.
+3. **Per-batch delta pages.** "What changed in b-cw8-3": edges added,
+   families assigned, queue growth, evidence-mix shift. Generated at merge
+   time by the existing ledger builder; doubles as the raw material for the
+   release-notes page (item A above).
+4. **Per-family pages.** Definition excerpt, live counts, string map slice,
+   seed examples, pending-queue items for that family, and its
+   external-validity row (extend results.json with the per-family table
+   from report v3 so the numbers interpolate, not get typed).
+5. **Queue analytics for sittings.** Auto-rank the pending queue by
+   disagreement shape (identity|correspondence 14, composition|position 13,
+   ... as of tonight) and surface the governing boundary rule beside each
+   shape — the sitting starts where the mass is.
+6. **Query-to-citation export.** `kg_query.py --cite` emitting an edge list
+   with quotes and CW citations in a copy-pasteable scholarly form — the
+   graph answering a question WITH its receipts is the whole point of the
+   instrument.
+7. **State-of-the-graph report generator.** One command: counts, family
+   distribution and provenance mix, per-volume evidence mix, queue health,
+   calibration status, external-validity status. Run at each release; its
+   output is most of a release note.
