@@ -95,7 +95,7 @@ def run_one(items, out_path):
 
     expected = {it["n"] for it in items}
     got = {r.get("n") for r in results if isinstance(r, dict)}
-    if got < expected:
+    if got != expected:
         raise KeyError(f"results cover {len(got)}/{len(expected)} items")
 
     json.dump(results, open(out_path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)

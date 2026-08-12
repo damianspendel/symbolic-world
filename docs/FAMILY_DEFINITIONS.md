@@ -92,14 +92,18 @@ near-miss across a boundary this document explicitly rules on (8), K2 far-miss (
 K3 swap to `correspondence`, the family the human arm showed behaving as a sink (4),
 K4 replacing a confident family with a refusal (3).
 
-| | |
-|---|---|
-| Sensitivity | **19/19 = 100%**, including 8/8 on near-misses |
-| Specificity | 35/41 = 85%, **a floor** — several "false positives" are real errors in the uncorrupted set (the gate flagged `christ is-a anthropos` as classification-should-be-identity, and both other arms agree) |
-
-The gate cited boundary rules by name when rejecting near-misses. This is the
-evidence that the assignment pipeline can run at scale: the family gate is now a
-calibrated instrument rather than an assumed one.
+The run's figures were WITHDRAWN on 2026-08-12 after a blind code inspection
+found the original harness could not substantiate what "caught" meant
+(RULES.md #12); its artifacts were also deleted before being committed, so the
+numbers cannot be re-derived. What stands from this arm is the design — the
+four corruption classes above — which the rebuilt, receipted harness at
+`pipeline/family_calibration/` reuses. Current calibration figures live only
+in the version-bound records under `pipeline/family_calibration/records/`,
+never in this prose. One detail worth keeping from the withdrawn run: several
+of its "false positives" were arguably real errors in the uncorrupted set
+(the gate flagged `christ is-a anthropos` as classification-should-be-identity,
+and both other arms agreed) — the reason specificity is reported but never
+gates.
 
 **Arms 2 and 3 — followability.** Opus vs Gemini agreed on 83% of 60 (100% on the
 amplification control, 80% on head-string controls). Two independent model families
