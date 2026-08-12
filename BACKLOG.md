@@ -376,3 +376,67 @@ energetic register — arrives to stress them.
    between versions. Two jobs, both needed.
 
    Cost: roughly 10–15% overhead on the gate stage per window.
+
+7. **Blind code inspection findings (2026-08-12) — fold into the step-3 codebase
+   update; items marked PRE-STEP-2 must be fixed before the calibration runs.**
+   An independent Fable agent read the family-layer code with all comments and
+   docstrings mechanically stripped, no access to docs or intent. Its verdict on
+   the corruption harness: "a one-shot demo, not an instrument — it proves
+   flagging, not diagnosis; it measures the easy stratum by construction; and
+   its evidentiary chain is already broken on disk." Findings, ranked as the
+   inspector ranked them:
+
+   - **PRE-STEP-2. No provenance binding between plant, gate, and score.** The
+     chunk runner skips any chunk whose output file exists; the scorer globs
+     whatever chunk files are present and checks nothing against the key. One
+     concrete failure: replant with a new seed, re-run the gate (all chunks
+     "already done, skipping"), score — the new key is scored against the OLD
+     verdicts, silently, with plausible numbers. Fix: stamp the plant seed into
+     every artifact and make score() refuse mismatches; delete stale chunks on
+     replant.
+   - **PRE-STEP-2. Detection is credited without diagnosis.** score() never
+     compares the gate's should_be against the planted was — "flagged for any
+     reason" counts as caught, and PARTIAL (defined in the prompt as "usable but
+     a better family exists") is scored as full detection. The threshold set
+     2026-08-12 requires "caught WITH the correct family named"; the code
+     cannot currently measure that. Fix: score should_be == was, and score
+     PARTIAL separately from WRONG.
+   - **PRE-STEP-2. Fabricated confidence in the new population builder.**
+     build_calibration_input.py stamps confidence:"sure" on every drawn edge,
+     which (a) makes everything corruption-eligible, silently changing what the
+     eligibility filter means, and (b) feeds a fictitious proposer_confidence
+     signal to the gate. Fix: drop the fabricated field; make eligibility
+     explicit (arms-agreed IS the population's confidence basis) and stop
+     forwarding a proposer_confidence the population does not have.
+   - **PRE-STEP-2. Hallucinated item numbers count as clean.** The runner
+     rejects only missing n's; extra invented n's pass through and the scorer
+     counts them toward specificity. Fix: reject supersets too.
+   - **PRE-STEP-2. Quota stall.** An ineligible pick is re-appended to the end
+     of the eligible list and immediately re-drawn forever, burning the rest of
+     that class's quota (concrete: a correspondence tail item when K3 starts).
+     Fix: skip-and-continue instead of re-append, assert quotas met.
+   - **PRE-STEP-2 (cheap). Corrupted items get reason="" while clean items keep
+     prose reasons** — harmless today only because the gate happens not to
+     forward reasons; a perfect corrupted/clean marker if any future gate does.
+     Fix: blank all reasons in the gated file.
+   - **STEP-3. The ledger tooltip overclaims.** Every "assigned" edge gets
+     "both model arms agreed and the calibrated gate checked the assignment" —
+     including the 20 human-adjudication and 2 gate-disputes-agreed edges,
+     and no committed code shows a gate run over the full production pass at
+     all. LIVE OVERCLAIM on the site; text must derive from the by field.
+   - **STEP-3, structural. Most of the family layer is artifact-only.** Input
+     builders, the Opus arms, the 1,146-edge agreement/assembly into seed.json,
+     the recalibration harness, and the per-window sweep runner/merger exist as
+     outputs with no committed code (the sweep runner lived in a session
+     scratchpad and was lost; recreated 2026-08-12). The calibration's own key
+     files were deleted — score() currently crashes; the published 19/19 and
+     20/20 rest on artifacts that cannot be regenerated from the repo. Fix:
+     commit every family-layer script (they contain no corpus text); the
+     step-2 rerun then supersedes the unauditable numbers with auditable ones.
+   - **STEP-3. Failed Gemini full-pass chunks are never retried** without
+     hand-editing the failures file, and nothing downstream is forced to
+     notice the hole.
+   - **NOTED, for the record: gate independence is nominal.** The calibration
+     gate model is the same model as one production proposer arm (both
+     gemini-3.1-pro). Within-vendor role separation, not cross-vendor. Any
+     public sentence about the family gate must not imply otherwise.
