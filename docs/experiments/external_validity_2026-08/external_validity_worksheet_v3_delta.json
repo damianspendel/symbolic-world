@@ -1,0 +1,440 @@
+{
+  "executor": "opus",
+  "date": "2026-08-12",
+  "pass": "v3-delta",
+  "execution_notes": {
+    "sources_used": [
+      "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis (Routledge, 1986). Clean extraction, 8,163 lines, with the book's own List of Entries and index intact. Cited by s.v. headword; printed page added from the List of Entries where it is unambiguous.",
+      "von Franz, Alchemy: An Introduction (Inner City Books, 1980). Full epub extraction with continuous 'page_N Page N' markers matching the book's own Contents (L1 p.13, L2 p.39, L3 p.65, L4 p.93, L5 p.125, L6 p.155, L7 p.177, L8 p.207, L9 p.241, Index p.273). Cited by page marker plus lecture.",
+      "Edinger, Ego and Archetype (Putnam 1972 / Shambhala 1991). NOISY OCR. Cited by chapter and section; every printed page number below was located by mapping the OCR text to the PDF and every quoted sentence was read off the PDF page image before being used."
+    ],
+    "pdf_verification_log": "Six PDF pages read as images to verify wording: p.3-4 (PDF 18-19), p.81 (PDF 109), p.132 (PDF 159), p.168 (PDF 196, negative check), p.175-176 (PDF 203-204), p.251 (PDF 277), p.267 (PDF 293). Every quote attributed to Ego and Archetype below comes from one of these verified pages.",
+    "caption_attribution_finding": "In the von Franz volume the illustration captions were written by the editor, Daryl Sharp, not by von Franz (stated in the Acknowledgements, p.6). This matters for three items. Every occurrence of 'Mercurius' in the book (pp. 86, 100, 129, 168, 247 - exactly the index entry) is in a caption; von Franz's own lecture text never uses the word. 'Green lion' occurs once, in the caption to illustration 30 (p.105). The only lapis|Christ rendering in the book is the caption to illustration 42 (p.148). Renderings drawn from captions are labelled as Sharp's below and are not counted as von Franz renderings.",
+    "standing_finding_v3": "The v2 finding about idiom instability inside one author now has a second instance and a partial reversal. Edinger equates Christ and the Anthropos flatly in Ego and Archetype (p.132) after rendering the same relation as doctrine-plus-quaternity in the Mysterium Lectures; and he refuses the lapis-Christ equation in Ego and Archetype (p.267) after asserting it flatly in Anatomy (ch. 3). The instability is not a drift in one direction - the same author tightens and loosens the same idiom across books.",
+    "excluded": "Aurora Consurgens treatise and the ARAS blurb, per the addendum. No web search. v1/v2 renderings not re-litigated except where the addendum's sub-tasks require it."
+  },
+  "claim_verifications": [
+    {
+      "claim_id": "a",
+      "item": 2,
+      "v1_reviewer_claim": "A Critical Dictionary of Jungian Analysis, s.v. 'Anthropos', renders Christ as the Anthropos.",
+      "verdict": "NOT-FOUND",
+      "location": null,
+      "what_was_checked": "Whole extraction searched for 'anthrop' (9 hits, all 'anthropology'/'anthropologist'), and the book's own List of Entries (pp. 169-170) read in full. The A-section runs abaissement, abreaction, acting out, active imagination, adaptation, aetiology, affect, alchemy, ambivalence, amplification, analysis, analyst and patient, analytical psychology, androgyne, anima and animus, anxiety, apperception, archetype, association, Assumption of the Virgin Mary. There is no 'Anthropos' headword and the term does not occur anywhere in the book.",
+      "note": "The pre-registered signal is confirmed, not merely reproduced: the null holds against the entry list as well as the text."
+    },
+    {
+      "claim_id": "b",
+      "item": 5,
+      "v1_reviewer_claim": "A Critical Dictionary of Jungian Analysis, s.v. 'Self', renders the Self as corresponding to Atman.",
+      "verdict": "NOT-FOUND",
+      "location": null,
+      "what_was_checked": "Zero occurrences of 'atman' in the extraction (the apparent hits are 'that man', 'the great mandalas'). The s.v. 'self' entry (pp. 135-137) was read in full: three printed pages, no Eastern term anywhere, no Sanskrit, no comparative-religion paragraph. Its one comparison term is the God-image - 'One cannot consider the concept of the self apart from its similarity to a GOD-IMAGE'. Also checked: 'purusha', 'Upanishad', 'Vedanta', 'Hindu' - zero.",
+      "note": "The entry that the claim points to exists and is substantial, which makes this a substantive null rather than a missing-entry null."
+    },
+    {
+      "claim_id": "c",
+      "item": 19,
+      "v1_reviewer_claim": "A Critical Dictionary of Jungian Analysis, s.v. 'Trickster', renders the trickster as a collective shadow figure.",
+      "verdict": "VERIFIED",
+      "location": "s.v. 'Trickster', pp. 152-153",
+      "what_is_there": "The entry states 'Psychologically, Jung saw the Trickster-figure as equivalent to the SHADOW' and then quotes CW 9i para. 484 verbatim: 'The Trickster is a COLLECTIVE shadow figure, a summation of all the inferior traits of character in individuals'. The reviewer's wording matches the source.",
+      "note": "The introducing clause uses equivalence idiom while the quoted sentence uses figure-of idiom. Recorded as counter-pressure under item 19, not as a defect in the claim."
+    }
+  ],
+  "vonfranz_verifications": [
+    {
+      "item": 1,
+      "v1_rendering_under_test": "von Franz, Alchemy, Lecture 2 (Greek Alchemy), pp. 45-48 and Lecture 4, pp. 86-87: the vessel of the Isis-to-Horus text is treated as a mystery object and a sign, with no equation to Mercurius.",
+      "verdict": "CONFIRMED, with a locator correction",
+      "locator": "pp. 45-46 and p. 66 (Lectures 2 and 3); pp. 86-87 (Lecture 3, not Lecture 4)",
+      "detail": "The Isis material is where v1 put it. The angel's vessel is introduced as his recognition-sign ('he told me about his sign ... a ceramic vessel full of shining water', p. 45) and the exegesis at p. 66 assigns the symbol value to the water it holds, not to the vessel. The second locator is off by one lecture: Lecture 3 runs pp. 65-92, so pp. 86-87 is Lecture 3. The content there is as v1 described plus more - the Osiris-coffin parallel and von Franz's own gloss that 'The vessel is a symbol for the attitude which prevents anything escaping outside; it is a basic attitude of introversion' (p. 87).",
+      "new_fact_v1_could_not_have": "von Franz's own text never uses the word Mercurius. All five occurrences are in the editor's captions."
+    },
+    {
+      "item": 3,
+      "v1_rendering_under_test": "von Franz, Alchemy, Lecture 3, pp. 70-72 and Lecture 4, pp. 104-106: lion material, no green-lion/dragon equation.",
+      "verdict": "CONFIRMED",
+      "locator": "pp. 70-72 (Lecture 3: Ouroboros as crowned dragon, illustration 16; Double Lion with Sun Disc, illustration 17) and pp. 104-106 (Lecture 4: the devouring-lion and frustrated-desire material)",
+      "detail": "Both locators are right and both lectures are right. No equation of green lion and dragon anywhere in the book. The book's index keeps the two apart ('lion: 47, 104-106, 112, 170-171, 195, 271' / 'dragon, 14, 243'). 'Green lion' occurs once, in Sharp's caption to illustration 30 (p. 105), where it is glossed against frustrated desire, not against the dragon. Where von Franz herself puts lions and dragons in one sentence (p. 104) they are two kinds of devouring dream animal, not one referent."
+    },
+    {
+      "item": 21,
+      "v1_rendering_under_test": "von Franz, Alchemy, Lectures 7-9 (Aurora consurgens), pp. 177-272: no lapis|Christ rendering located.",
+      "verdict": "CONFIRMED, and extendable to the whole book",
+      "locator": "Lectures 7-9, pp. 177-272; and by exhaustive check of all 53 'stone' and 123 'Christ' occurrences, the whole text",
+      "detail": "von Franz's own prose nowhere renders a lapis|Christ relation. The only place in the volume where the two terms meet is Sharp's caption to illustration 42 (p. 148), which glosses the lapis angularis as 'cornerstone, a symbol for Christ' and calls the night-sea-journey goal equivalent to the philosopher's stone. The index entry 'Christ: ... as cornerstone, 148' points at that caption. von Franz's own index entry for the philosopher's stone lists it as divine child, golden flower, instinct of truth, temple of the wise, widow and Wisdom of God - never as Christ."
+    }
+  ],
+  "items": [
+    {
+      "item": 1,
+      "edge": "the-vessel | symbolizes | mercurius",
+      "family_under_test": "archetypal-identity",
+      "baseline_score": "NOT-TREATED (v2)",
+      "new_evidence": [
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "s.v. 'alchemy', glossary, pp. 13-14",
+          "rendering": "containment, with the two terms defined as separate glossary items twelve lines apart. The vas is given a container function in the analytic relationship; Mercurius is given his own entry as a shape-shifting god and 'a personification of the coniunctio'. No relation is drawn between them.",
+          "quote": "\"Vas: Alchemical vessel. In analysis, refers to containing aspects of analytical relationship\" (Samuels et al., s.v. 'alchemy')"
+        },
+        {
+          "source": "von Franz, Alchemy: An Introduction",
+          "locator": "pp. 45-48, 66 (Lectures 2-3); pp. 83, 86-87 (Lecture 3); pp. 159, 168, 257, 264 (Lectures 6, 8, 9)",
+          "rendering": "sign, container and psychological attitude. The vas runs through the whole book as the round vessel that prevents escape, the closed house where sun and moon unite, the Pelican, the philosopher's egg. Its symbol value is assigned to introversion, not to an arcane substance.",
+          "quote": "\"The vessel is a symbol for the attitude which prevents anything escaping outside\" (von Franz, p. 87)"
+        },
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "whole text searched (11 'vessel', 10 'Mercurius')",
+          "rendering": "texts silent on the pair. Where Edinger does give Mercurius a relation it is to the dragon and the lion (p. 251), not to the vas."
+        }
+      ],
+      "v3_score": "NOT-TREATED",
+      "score_reason": "Four sources across three passes now treat the vas at length and none predicates Mercurius of it. The strongest form of the null is the Critical Dictionary's alchemy glossary, which defines both terms on the same two pages and relates neither to the other. Reviewer note: von Franz's own text never uses the word Mercurius at all, so her silence is not a choice about this pair but about the term."
+    },
+    {
+      "item": 2,
+      "edge": "christ | is-a | anthropos",
+      "family_under_test": "archetypal-identity",
+      "baseline_score": "DISAGREES (v2)",
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 5 ('Christ as Paradigm of the Individuating Ego'), section 1, p. 132 - verified against the PDF page image",
+          "rendering": "identity, stated as an equation and carried by a title. Edinger lists the features by which Jung made Christ a symbol of the Self, and the cognomen 'Son of man' is given as what equates him with the Anthropos. The verb is 'equates' and the object is 'the original Anthropos or primordial man'.",
+          "quote": "\"his cognomen 'Son of man' which equates him with the original Anthropos or primordial man\" (Edinger, Ego and Archetype, p. 132)"
+        },
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "whole text and List of Entries searched",
+          "rendering": "texts silent - the term Anthropos does not occur in the book and is not a headword (see claim verification a)"
+        }
+      ],
+      "v3_score": "SCHOLARS-SPLIT",
+      "score_reason": "Ego and Archetype supplies the first direct predication of the pair found in three passes, and it is an identity predication, which is the family under test. It stands beside v2's evidence from the same author's Mysterium Lectures, where the same relation is rendered as a doctrine attributed to Paul plus a place-for-place correspondence in Jung's quaternity. Camps: identity (Edinger, Ego and Archetype, ch. 5) vs doctrinal-attribution-plus-correspondence (Edinger, Mysterium Lectures, L20 and L22). This is the second within-author split in the sample, after item 21."
+    },
+    {
+      "item": 3,
+      "edge": "green-lion | synonym-of | dragon",
+      "family_under_test": "archetypal-identity",
+      "baseline_score": "SCHOLARS-SPLIT (v1 as finalized; within-Abraham)",
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 9 ('The Blood of Christ'), section 6 ('Relations to Alchemy'), p. 251 - verified against the PDF page image",
+          "rendering": "identity of referent, with the two terms taken as one pair sharing one meaning. Dragon and lion are named together, given one predicate, and assigned the same stage of the work - the passionate, concupiscent form that has to be extracted and transformed.",
+          "quote": "\"The dragon and lion are early forms of Mercurius manifested as passion and concupiscence\" (Edinger, Ego and Archetype, p. 251)"
+        },
+        {
+          "source": "von Franz, Alchemy: An Introduction",
+          "locator": "pp. 70-72, 104-106; index entries 'lion' and 'dragon'",
+          "rendering": "no relation. The two images are kept apart in the text and in the index; where they share a sentence (p. 104) they are alternative devouring animals in depressive dreams. 'Green lion' occurs only in the editor's caption at p. 105."
+        },
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "whole text searched",
+          "rendering": "texts silent - neither image is treated"
+        }
+      ],
+      "v3_score": "SCHOLARS-SPLIT",
+      "score_reason": "Score unchanged but the split is no longer inside one book. The identity-of-referent camp now has Abraham's entries and Edinger at p. 251; the against-camp remains Abraham's Introduction, which lists both images among the symbols FOR Mercurius. Edinger's sentence is itself readable both ways - 'early forms of Mercurius' asserts a shared referent, which is the identity reading, but it does so by making both terms forms of a third term, which is the symbol reading. The pair reproduces its own ambiguity in a second author."
+    },
+    {
+      "item": 4,
+      "edge": "lapis | is-identified-with | homo-maximus",
+      "family_under_test": "archetypal-identity",
+      "baseline_score": "NOT-TREATED (v2)",
+      "new_evidence": [
+        {
+          "source": "all three texts",
+          "locator": "searched in full for 'homo maximus', 'homo altus'",
+          "rendering": "texts silent - zero occurrences of either term in any of the three books"
+        },
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 9 ('The Blood of Christ'), section 5, p. 254; index entry 'Philosophers' Stone: ... as homo totus, 254'",
+          "rendering": "adjacent term, in quoted material. The nearest thing to the edge's claim anywhere in the new texts is Jung's sentence, quoted by Edinger without gloss, that the stone represents the homo totus. Edinger's own index files the Stone under that phrase, but his running text introduces it as 'Jung gives the following commentary to Dorn's text'."
+        }
+      ],
+      "v3_score": "NOT-TREATED",
+      "score_reason": "Unchanged, texts silent on the term itself. One correction to v2's note for the finalizer: v2 recorded that the new evidence 'leans against' the edge because Edinger placed the homo maximus with Adam and the prima materia, at the start of the opus rather than at its terminus. Ego and Archetype partly reverses that lean - a whole-man term does get predicated of the Stone here, at the end of the opus - but the term is homo totus, not homo maximus, and the sentence is Jung's, not Edinger's."
+    },
+    {
+      "item": 5,
+      "edge": "the-self | corresponds-to | atman",
+      "family_under_test": "correspondence",
+      "baseline_score": "NOT-TREATED (v2)",
+      "new_evidence": [
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "s.v. 'self', pp. 135-137, read in full",
+          "rendering": "the entry treats the self over three printed pages - as archetypal image, unifying principle, daemon, developmental concept - and reaches for exactly one comparison term, which is the God-image, not an Eastern one. Zero occurrences of atman, purusha or any Sanskrit term in the whole book.",
+          "quote": "\"One cannot consider the concept of the self apart from its similarity to a GOD-IMAGE\" (Samuels et al., s.v. 'self')"
+        },
+        {
+          "source": "von Franz, Alchemy; Edinger, Ego and Archetype",
+          "locator": "both searched in full",
+          "rendering": "texts silent - zero occurrences of atman in either"
+        }
+      ],
+      "v3_score": "NOT-TREATED",
+      "score_reason": "Unchanged, and the null is now as strong as it can get. The source the v1 reviewer named for this claim has been read at the entry the claim named, and the entry is substantial and reaches for a different comparison term. Three passes, six books, zero occurrences of the object node."
+    },
+    {
+      "item": 7,
+      "edge": "quintessence | corresponds-to | anima-mundi",
+      "family_under_test": "correspondence",
+      "baseline_score": "NOT-TREATED (v2)",
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 11 ('The Philosophers' Stone'), section 5 ('Ubiquity'), pp. 286-287",
+          "rendering": "correspondence idiom with a different object. The quintessence is defined as the fifth substance produced by uniting the four elements and is then set against the unified personality and the four functions. The anima mundi does not enter.",
+          "quote": "\"The quintessence is the fifth unified substance that results from the union of the four elements\" (Edinger, Ego and Archetype, p. 287)"
+        },
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 9 ('The Blood of Christ'), section 2, p. 213",
+          "rendering": "the anima mundi enters the book once, under the benedicta viriditas, glossed through greenness, the Holy Ghost and generation, in a Mylius quotation. It is nowhere near the quintessence material seventy pages later."
+        },
+        {
+          "source": "von Franz, Alchemy; Samuels et al., Critical Dictionary",
+          "locator": "both searched in full",
+          "rendering": "effectively silent. The Dictionary has neither term. von Franz has the anima mundi twice (p. 210 body text, p. 213 caption) as the Wisdom of God, and 'quintessence' once, inside a quoted book title in the Aurora text (p. 244)."
+        }
+      ],
+      "v3_score": "NOT-TREATED",
+      "score_reason": "Unchanged. Three more books treat one term or the other and none pairs them. Worth flagging alongside item 23: Edinger's idiom for the quintessence in Ego and Archetype is the correspondence verb itself, but the term it corresponds to is the unified personality, not the anima mundi and not the God-image."
+    },
+    {
+      "item": 10,
+      "edge": "raven | symbolizes | the-devil",
+      "family_under_test": "symbolization",
+      "baseline_score": "NOT-TREATED (v2)",
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 3 ('Encounter with the Self'), section 1; Pictures 10 and 11 (illus., pp. 50 and 53)",
+          "rendering": "provision and nourishment, the opposite valence. The raven appears in this book only as the bird that feeds Elijah in the wilderness and St Anthony and St Paul in the desert, read as the unconscious sustaining the ego. No devil reading, no nigredo reading."
+        },
+        {
+          "source": "Samuels et al., Critical Dictionary; von Franz, Alchemy",
+          "locator": "both searched in full",
+          "rendering": "texts silent - zero occurrences of raven, crow or corvus in either. The Dictionary's alchemy glossary defines the nigredo without the bird, referring it instead to confrontation with the shadow."
+        }
+      ],
+      "v3_score": "NOT-TREATED",
+      "score_reason": "Unchanged. The pair now has five books' worth of silence, and the one new source that uses the image at all uses it with the opposite valence, which makes the v1 reviewer's devil claim look less like a locator error and more like a construction."
+    },
+    {
+      "item": 11,
+      "edge": "lightning | signifies-change-of | psyche",
+      "family_under_test": "symbolization",
+      "baseline_score": "NOT-TREATED (v2)",
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 3 ('Encounter with the Self'), section 2 ('The Breakthrough'), p. 81 - verified against the PDF page image",
+          "rendering": "symbolization, with the psychic change as the object. Edinger reads a patient's painting published by Jung: the paragraph is about old conditions being destroyed, destructive or liberating effects predominating, and the lightning is what performs the change - it blasts the sphere free and the Self is born. He then reads tarot XVI, the tower, in the same key.",
+          "quote": "\"the lightning from heaven is blasting a sphere out of its surrounding matrix - the Self is being born\" (Edinger, Ego and Archetype, p. 81)"
+        },
+        {
+          "source": "von Franz, Alchemy: An Introduction",
+          "locator": "pp. 27, 169, 249-250",
+          "rendering": "off-pair. Lightning appears as what makes a tree carry mana, and once as a figure in a Golden Flower simile about standing above a thunderstorm. Neither is a rendering of lightning as psychic change."
+        },
+        {
+          "source": "Samuels/Shorter/Plaut, Critical Dictionary",
+          "locator": "whole text searched",
+          "rendering": "texts silent - zero occurrences"
+        }
+      ],
+      "v3_score": "AGREES",
+      "score_reason": "First source in three passes to render this relation, and it renders it in the family's sense: an image that carries a sudden and overpowering change of psychic condition, which is close to a paraphrase of the CW 9i para. 533 sentence the edge comes from. Nothing in the three texts renders it against. Note the picture Edinger is reading is Jung's own case material, so the rendering is not independent of Jung's, but the gloss and the tarot amplification are Edinger's."
+    },
+    {
+      "item": 15,
+      "edge": "paracelsus | places-the-regio-nymphididica-at-the-initial-stage-of | individuation",
+      "family_under_test": "doctrinal-attribution",
+      "baseline_score": "NOT-TREATED (v2)",
+      "new_evidence": [
+        {
+          "source": "all three texts",
+          "locator": "searched in full for 'regio nymphididica', 'nymphidid', 'De vita longa'",
+          "rendering": "texts silent - zero hits for the term or the treatise in any of the three books"
+        },
+        {
+          "source": "von Franz, Alchemy: An Introduction",
+          "locator": "Lecture 7, p. 177",
+          "rendering": "an explicit refusal, which explains rather than merely records the null. Setting out which text to lecture on, von Franz says she has avoided Paracelsus because of the amount of explanation his vocabulary would require, and takes the Aurora instead. He is named once in the book and never again."
+        },
+        {
+          "source": "Samuels et al., Critical Dictionary; Edinger, Ego and Archetype",
+          "locator": "s.v. 'personification', p. 108; Edinger ch. 10, p. 186",
+          "rendering": "Paracelsus is cited once in each, on personifying concepts and on the tria prima respectively. Neither reaches De vita longa."
+        }
+      ],
+      "v3_score": "NOT-TREATED",
+      "score_reason": "Unchanged, texts silent. Six books over three passes; the deepest tail item in the sample. The von Franz sentence is worth keeping because it shows the null is a curatorial decision by the secondary literature about Paracelsus generally, not a gap around this one doctrine."
+    },
+    {
+      "item": 19,
+      "edge": "trickster | personifies | the-shadow",
+      "family_under_test": "personification",
+      "baseline_score": "NOT-TREATED (v2)",
+      "new_evidence": [
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "s.v. 'Trickster', pp. 152-153",
+          "rendering": "personification. The Trickster is given as a figure that sums up a collective content - the head noun is 'figure' on both sides of the relation, and what the figure gathers is the inferior traits of individuals. The entry runs the image as mythical figure and inner experience together throughout.",
+          "quote": "\"The Trickster is a COLLECTIVE shadow figure, a summation of all the inferior traits of character in individuals\" (CW 9i para. 484, quoted s.v. 'Trickster')"
+        },
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "s.v. 'personification', pp. 108-109",
+          "rendering": "supporting: the shadow is named first in the list of concepts the dictionary says Jung personified, alongside the self, the Great Mother, the wise old man and the anima/animus, so a shadow-figure is exactly the form the dictionary expects this content to take."
+        },
+        {
+          "source": "von Franz, Alchemy; Edinger, Ego and Archetype",
+          "locator": "both searched in full",
+          "rendering": "texts silent - zero occurrences of trickster in either"
+        }
+      ],
+      "v3_score": "AGREES",
+      "score_reason": "The source the charter names, at the headword the reviewer named, renders the relation in the family's sense, and nothing in the three texts renders it against. Counter-pressure the finalizer should weigh: the clause introducing the quotation is 'Jung saw the Trickster-figure as equivalent to the SHADOW', which is identity idiom. I do not score this a split, because the equivalence is asserted between the Trickster-FIGURE and the shadow rather than between two bare terms, so the two clauses are one rendering rather than two competing ones. A finalizer who reads 'equivalent to' as decisive would score SCHOLARS-SPLIT inside this entry, on the item-3 precedent."
+    },
+    {
+      "item": 21,
+      "edge": "lapis | symbolizes | christ",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "symbolization"},
+      "baseline_score": {"opus_arm": "SCHOLARS-SPLIT (v2)", "gemini_arm": "DISAGREES (v2)"},
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 11 ('The Philosophers' Stone'), section 2 ('Transformation and Revelation'), p. 267 - verified against the PDF page image",
+          "rendering": "analogy, with the identity reading explicitly refused. Edinger says the Stone outruns the figure of Christ, then quotes Jung to the same effect - the stone symbol, despite the analogy with Christ, holds something Christianity cannot absorb. Elsewhere in the same chapter the idiom stays comparative: the Stone casts out devils as Christ did (p. 286), and is Alpha and Omega like Christ (p. 294).",
+          "quote": "\"the Stone means more than the figure of Christ means if understood in the usual purely spiritual sense\" (Edinger, Ego and Archetype, p. 267)"
+        },
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "s.v. 'alchemy', glossary, p. 13; s.v. 'self', p. 136",
+          "rendering": "different object. The glossary sends the lapis to self-realisation and individuation; the self entry sends alchemical statements about the lapis to the archetype of the self. Christ is not brought in at either place."
+        },
+        {
+          "source": "Sharp (editor), caption to illustration 42 in von Franz, Alchemy",
+          "locator": "p. 148",
+          "rendering": "symbolization, in the only place in that volume where the pair meets: the lapis angularis is glossed as cornerstone, 'a symbol for Christ'. Recorded because it is the single symbolization-shaped rendering found in three passes, and flagged because the caption is the editor's, not von Franz's, and because its subject is the cornerstone rather than the philosophers' stone."
+        }
+      ],
+      "v3_score": {"opus_arm": "SCHOLARS-SPLIT", "gemini_arm": "DISAGREES"},
+      "score_reason": "Both arms unchanged, but the correspondence camp is now much heavier and the split has changed shape. Camps: identity - Abraham s.v. 'cornerstone' and s.v. 'pelican', Edinger in Anatomy ch. 3; analogy/parallel - Edinger in Mysterium L17 and, more strongly, Edinger in Ego and Archetype ch. 11, where he does not merely prefer the analogy idiom but says in as many words that the equation understates the Stone. The finalizer should note that one author now asserts and refuses the same identity in two different books, which weakens the identity camp's weight rather than adding to a genuine scholarly disagreement. The gemini arm stays DISAGREES: the only symbolization rendering located in any pass is an editor's caption about a different stone."
+    },
+    {
+      "item": 22,
+      "edge": "lapis | symbolizes | anthropos",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "symbolization"},
+      "baseline_score": {"opus_arm": "AGREES (v2)", "gemini_arm": "DISAGREES (v2)"},
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "Anthropos at pp. 132, 173, 207-208; the Philosophers' Stone at pp. 260-295; the book's own index entries for both",
+          "rendering": "both terms treated at length, never in one predication. The Anthropos is run against Christ (p. 132), the original Monad (p. 173) and Adam as Primal Man of the Poimandres (pp. 207-208). The Stone's index sub-entries are Alpha and Omega, eye of God, fertility principle, homo totus, prima materia, tree of life, viaticum and symbol of the Self - no Anthropos among them."
+        },
+        {
+          "source": "Samuels et al., Critical Dictionary; von Franz, Alchemy",
+          "locator": "both searched in full",
+          "rendering": "texts silent - the term Anthropos does not occur in either book"
+        }
+      ],
+      "v3_score": {"opus_arm": "AGREES", "gemini_arm": "DISAGREES"},
+      "score_reason": "Unchanged, texts silent on the pair. The v2 basis - two passages in Anatomy and the Mysterium Lectures rendering the relation as a likeness between two fully known terminal figures - is untouched. Worth one flag: Ego and Archetype has the terms 40 pages apart in the same book with an obvious bridge available (homo totus at p. 254) and does not build it, which is mild counter-pressure on how load-bearing the pair is."
+    },
+    {
+      "item": 23,
+      "edge": "quintessence | corresponds-to | god-image",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "archetypal-identity"},
+      "baseline_score": {"opus_arm": "SCHOLARS-SPLIT (v2)", "gemini_arm": "SCHOLARS-SPLIT (v2)"},
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 11 ('The Philosophers' Stone'), section 5, pp. 286-287",
+          "rendering": "correspondence, in the verb, but with the unified personality as the object rather than the God-image. Edinger takes the quintessence as the fifth substance uniting the four elements and corresponds it to a personality giving equal weight to all four functions.",
+          "quote": "\"It corresponds to the unified personality which gives equal consideration to all four functions\" (Edinger, Ego and Archetype, p. 287)"
+        },
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 1 ('The Inflated Ego'), section 1, p. 3 - verified against the PDF page image",
+          "rendering": "the identity predication in this book attaches to a different subject. Where the imago Dei is predicated at all, its subject is the Self, not the quintessence: 'The Self is most simply described as the inner empirical deity and is identical with the imago Dei'."
+        },
+        {
+          "source": "Samuels et al., Critical Dictionary; von Franz, Alchemy",
+          "locator": "both searched in full",
+          "rendering": "texts silent - the Dictionary has no quintessence; von Franz has it once, inside a quoted book title"
+        }
+      ],
+      "v3_score": {"opus_arm": "SCHOLARS-SPLIT", "gemini_arm": "SCHOLARS-SPLIT"},
+      "score_reason": "Both arms unchanged; the new text does not render the pair. It does put a small weight on the opus arm's side of the existing split, because the one book that discusses the quintessence at length reaches for the correspondence verb rather than the copula, and reserves the copula for the Self and the imago Dei. Camps as in v2: Jacobi (correspondence, symbol of an unknown content) vs Edinger in the Mysterium Lectures (identity at para. 681 itself)."
+    },
+    {
+      "item": 26,
+      "edge": "mandala | is | god-image",
+      "kind": "purposive",
+      "family_under_test": "archetypal-identity",
+      "baseline_score": "DISAGREES at pair level (v1 as finalized)",
+      "new_evidence": [
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 1 ('The Inflated Ego'), section 1, pp. 3-4 - both sentences verified against the PDF page images",
+          "rendering": "two moves, never joined. The identity predication runs Self = imago Dei; the mandala enters on the next page as what expresses the Self. The two sentences are twenty lines apart and Edinger makes nothing of the change of subject.",
+          "quote": "\"The Self ... is identical with the imago Dei\" and, overleaf, \"It is expressed by certain typical symbolic images called mandalas\" (Edinger, pp. 3-4)"
+        },
+        {
+          "source": "Edinger, Ego and Archetype",
+          "locator": "ch. 7 ('Being an Individual'), section 2, pp. 175-176 - verified against the PDF page images",
+          "rendering": "symbolization throughout, with the experience of individuality as the object, and one containment statement which is the closest the book comes to a direct mandala/God-image predication: the deity's image is IN the centre of the mandala, not the mandala.",
+          "quote": "\"traditional religious mandalas have the image of the deity in the center\" (Edinger, Ego and Archetype, p. 175)"
+        },
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "s.v. 'mandala' (p. 90); s.v. 'God-image' (pp. 61-62); s.v. 'religion' (p. 130)",
+          "rendering": "the same two moves, in a second book. s.v. 'mandala': 'Jung interpreted it as an expression of the PSYCHE and, in particular, the SELF' - the God-image is not mentioned in the entry at all. s.v. 'God-image': the God-image is 'immediately related to, or identical with, the SELF' (CW 9ii para. 170 quoted). s.v. 'religion': the Self is 'the psychological carrier of the God-image', and the mandala is one of the collective symbols of the Self."
+        }
+      ],
+      "v3_score": "DISAGREES",
+      "score_reason": "Unchanged and now four-source. In every new rendering the identity predication attaches to the Self and the God-image, while the mandala sits on the symbol side of a second relation. No source in any pass predicates the God-image of the mandala itself. The family the sources imply for this edge is symbolization, with the Self as the object term - which means the edge is wrong about the family and arguably about the object node too."
+    },
+    {
+      "item": 27,
+      "edge": "mandala | indistinguishable-from | god-image",
+      "kind": "purposive",
+      "family_under_test": "correspondence",
+      "baseline_score": "AGREES (v1 as finalized)",
+      "new_evidence": [
+        {
+          "source": "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis",
+          "locator": "s.v. 'self', p. 136",
+          "rendering": "correspondence, predicated of the symbols and not of the terms - the closest thing in any of the six books to the grammar of CW 9ii para. 60. The sentence subject is 'Symbols of the self' and the God-image is what they carry.",
+          "quote": "\"Symbols of the self often possess a numinosity ... They carry the authority of a God-image\" (Samuels et al., s.v. 'self')"
+        },
+        {
+          "source": "Samuels et al., Critical Dictionary; Edinger, Ego and Archetype",
+          "locator": "Dictionary s.v. 'mandala' (p. 90) and s.v. 'religion' (p. 130); Edinger pp. 4 and 176",
+          "rendering": "against, in the sense of a different object: wherever the mandala is the sentence subject in either book, what it expresses or symbolizes is the Self or the experience of individuality, not the God-image.",
+          "quote": "\"The mandala, as Jung has demonstrated, is the major symbolic expression for the experience of being an individual\" (Edinger, p. 176)"
+        }
+      ],
+      "v3_score": "SCHOLARS-SPLIT",
+      "score_reason": "Moved on new evidence, and the finalizer should read the reason before accepting the move. The correspondence camp gains its best support yet - the Critical Dictionary predicates the God-image relation of the self's symbols, exactly the construction v0.6's rule keys on. But the same book, and Edinger, also render every mandala-as-subject sentence with a different object, which under the v2 handling of item 18 counts as rendering against, and AGREES requires that none render it against. Camps: correspondence (Jacobi; Samuels et al. s.v. 'self') vs symbolization-with-the-Self-as-object (Samuels et al. s.v. 'mandala' and s.v. 'religion'; Edinger, Ego and Archetype, chs. 1 and 7). A finalizer who instead follows v2's handling of item 7, where a different-object rendering left the score alone, should keep AGREES; I flag the inconsistency rather than resolve it.",
+      "sentence_subject_answer": {
+        "question": "Does Ego and Archetype mark anything like the sentence-subject distinction - identity when predicated of the term itself, correspondence when predicated of its symbols?",
+        "answer": "No, and the way it fails to is more informative than v1's null was. Edinger's own predications fall out along exactly the line v0.6 draws: the copula goes to the term-pair ('The Self ... is identical with the imago Dei', p. 3) and symbol language goes to the image ('It is expressed by certain typical symbolic images called mandalas', p. 4). But the two sentences are twenty lines apart in one section and he never remarks that the subject changed, never treats the difference as carrying any weight, and never returns to it in the mandala chapter 170 pages later. The Critical Dictionary does the same thing across three entries. So the distinction is present in the literature's usage and absent from its concepts.",
+        "second_finding": "Neither new source ever puts the mandala on the identity side of any sentence. In both books the mandala's relation is to the Self, and it is the Self that then carries the identity with the God-image. That routes around the charter-named pair entirely and is the strongest external-validity result in this pass on items 26-27: the pair the graph asserts is not a pair these sources form."
+      }
+    }
+  ]
+}

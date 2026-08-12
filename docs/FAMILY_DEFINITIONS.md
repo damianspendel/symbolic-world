@@ -1,10 +1,10 @@
-# Relation families — candidate definitions, v0.6
+# Relation families — candidate definitions, v0.7
 
-Status: BINDING for the full assignment pass, per the sign-off ladder: the two
-model arms cleared the benchmark on controls, the gate is calibrated (and is
-re-calibrated in situ during the full pass — see the adjudication-run section),
-and the human has adjudicated the first disagreement set. Nothing is assigned to
-any edge until the full pass merges.
+Status: BINDING once this version's calibration PASS record exists under
+`pipeline/family_calibration/records/` (RULES #16, #18b: a version with no
+matching committed record fails CI). The sign-off ladder stands as at v0.6:
+arms benchmarked on controls, gate calibrated per version, human adjudication
+of disagreement sets.
 
 Provenance: v0.1 drafted 2026-08-06 by the Fable-family planning session from the
 live graph (328 nodes / 1062 edges / 1180 references). Reviewed the same day by an
@@ -45,6 +45,45 @@ Its five entries:
    and is NOT resolved here. It reached the document from the window-9 Opus arm.
 5. Version header, this change log, and the calibration-harness reference, which
    pointed at a superseded script.
+
+**v0.7 (2026-08-12) folds in the seven rulings of the external-validity
+check** — the first revision driven by evidence from OUTSIDE the repository:
+27 sampled assignments checked against six works of Jungian secondary
+literature in three pre-registered passes (record and receipts:
+`docs/experiments/external_validity_2026-08/`; headline 8/16 agreement among
+treated items, disagreements concentrated in amplification and identity).
+Rulings by Damian, 2026-08-12 evening, adopting the check's proposals P1–P7.
+Each transcribed below at its boundary; the seven in brief:
+
+1. **Amplification requires the adducing act in the quote** (P1). The
+   relation string never routes an edge here; a quote asserting
+   signification, synonymy or naming classifies by that content relation.
+   The literature rendered every sampled `amplified-by` edge as a content
+   relation (0/3 agreement, two independent reference authors). The 43
+   `amplified-by` edges queue for a two-arm re-run under this version; their
+   current assignments stand as v0.6 records until that run merges.
+2. **Secondary-literature idiom never anchors identity** (P2). Measured:
+   Abraham and Edinger each write identity and symbol idioms for the same
+   pair interchangeably, Edinger within one book in both directions. Only
+   the primary text's own predication carries an identity assignment.
+3. **Layer/stratum/sphere language defaults to structural-position** (P3),
+   external anchor Jacobi (the layer picture as spatial "topology", a
+   methodological overlay).
+4. **The sentence-subject test is declared our instrument** (P4), with the
+   measured qualification that scholarly USAGE follows its line unremarked
+   (Edinger, Ego and Archetype pp. 3–4; the Critical Dictionary across three
+   entries) while no scholar names the distinction.
+5. **A carrier is "named" by definite reference, not only by name** (P5);
+   collective ascription stays with the content family unless the claim
+   collapses without it; dictionary-genre evidence is weighed accordingly.
+6. **Classify-input carries the verbatim relation beside the normalized
+   one, and the `amplified-by` direction convention is audited** (P6 —
+   pipeline ruling; lands with the classify-input builder, not in this
+   document).
+7. **The named-figure `is-a` rule narrows** (P7): an attributed equation
+   routes to doctrinal-attribution; its own worked example (`christ is-a
+   anthropos`) is a measured scholars-split and such pairs queue rather
+   than auto-assign.
 
 **v0.5 folds in the first human adjudication run** — ten rulings over the
 step-0 disagreement set, 2026-08-06, recorded in "The first adjudication run"
@@ -198,12 +237,33 @@ measured the interface as much as the vocabulary.
   `amounts-to`, flat `is-equivalent-*` of the terms → identity;
   `identical-or-connected-with` (12 §476, Jung's own hedge) →
   `unclassified(text-undecided)`.
+  **Secondary idiom never anchors identity** *(v0.7, ruling 2)*: the
+  reference literature writes identity and symbol idioms for one pair
+  interchangeably (measured 2026-08-12 — Abraham's entries vs his
+  Introduction; Edinger across and within his own books, in both
+  directions), so a scholar's equation is not evidence for
+  `archetypal-identity`; only the primary quote's own predication is. Over
+  alchemical image pairs specifically: a synonym-class string is identity
+  only when the quote asserts co-reference — two names, one referent, one
+  stage of the opus; a "likens"/parallel framing is correspondence;
+  otherwise `unclassified(text-undecided)`.
+  **Standing of this test** *(v0.7, ruling 4)*: the sentence-subject test is
+  this project's instrument. The external check found scholarly usage
+  falling along exactly its line without any scholar naming the distinction
+  (Edinger, *Ego and Archetype* pp. 3–4: copula for the term-pair, symbol
+  language for the image, twenty lines apart, unremarked; the Critical
+  Dictionary reproduces the pattern across three entries). The test tracks
+  usage; it claims no scholarly endorsement, and copy that cites it says so.
 - **Composition vs structural-position:** if the claim entails the subject is
   materially a constituent of the object → composition; if it locates the
   subject within the object's structure without asserting constituency →
   position. Nucleus, centre, foundation default to POSITION (`is-nucleus-of`,
   `is-centre-of`, `is-foundation-of`, `chief-constituent-of` reads literally →
-  composition). Totality/unity claims where the subject IS the whole
+  composition). **Layer, stratum and sphere language defaults to POSITION**
+  *(v0.7, ruling 3)* even when the container noun suggests parthood —
+  external anchor: Jacobi renders the layer picture as a spatial "topology",
+  a methodological overlay on a genetic way of seeing (external-validity
+  item 24, the check's cleanest result). Totality/unity claims where the subject IS the whole
   (`the-self is-totality-of psyche`, 12 §44) → composition, whole-side;
   `unifies-…-into` as an act → union.
 - **Psychic-effect vs dependence:** a standing condition ("unless X, no Y";
@@ -225,6 +285,14 @@ measured the interface as much as the vocabulary.
   not membership of a class. Rule: when both endpoints are named Figures and the
   quote asserts they ARE one another, `is-a` is `archetypal-identity`.
   Classification requires the object to be a genuine kind or class.
+  **Narrowed** *(v0.7, ruling 7)*: the predication must be the quote's OWN.
+  An attributed equation — the paragraph frames the equating as a
+  tradition's or author's act — routes to `doctrinal-attribution` per the
+  precedence rule. And this rule's worked example is itself a measured
+  scholars-split (Edinger equates Christ and Anthropos in one book and
+  renders the relation as reported Pauline doctrine plus correspondence in
+  another), so a named-figure pair on which the reference literature splits
+  queues for adjudication rather than auto-assigning.
 - **Doctrinal-attribution outranks the relation's surface verb** *(v0.4)*. Where
   the quote frames the claim as an act of interpretation by a named tradition or
   author, attribution wins even when the relation string looks like another
@@ -368,7 +436,16 @@ pp. 16–17) — BY WHOEVER adduces it (agent-neutral per rule 3; 28 of the 43
 `amplified-by` edges carry reported or quoted voice, so an agent-bound
 definition would contradict the data and pre-decide E11).
 **Boundary:** correspondence asserts a relation between the terms;
-amplification adduces material to read an image by. The `layer: amplification`
+amplification adduces material to read an image by. **An edge lands here only
+when the quote asserts the adducing act itself** *(v0.7, ruling 1)*: a quote
+asserting signification, synonymy or naming ("signifies", "is a synonym
+for", "is the traditional name for") classifies by that content relation,
+whatever the relation string says — the same precedence attribution already
+holds over surface verbs. The external check measured the old
+string-following practice at 0/3 against the reference literature, with
+both independent reference authors rendering every sampled `amplified-by`
+edge as a content relation; the 43 `amplified-by` edges queue for a two-arm
+re-run under v0.7. The `layer: amplification`
 field is a hand-built annotation on the material, NOT a family assignment and
 never a tiebreak — see the layer-tag boundary rule above, which the 2026-08-10
 sitting installed in place of the reading it retired. It tags 41 of the 43
@@ -573,6 +650,13 @@ subject and object.
 **Boundary:** the decisive test — remove the carrier and the claim collapses.
 Voice often co-varies but never decides (rule 3). Tradition-to-tradition
 transmission is derivation; a single carrier's predication is attribution.
+**A carrier is "named" by definite reference, not only by proper name**
+*(v0.7, ruling 5)*: "this remarkable text explains…" identifies a carrier;
+collective ascription ("the alchemists say") stays with the content family
+unless the claim collapses without the ascription. Genre note, from the
+external check: dictionary-genre sources state relations carrier-free, so
+dictionary evidence systematically under-reports attribution — weigh
+attribution questions toward discursive sources.
 **Attribution outranks the surface verb.** When a NAMED carrier performs the
 predication, the family is attribution no matter what the relation string
 says — a `symbolizes`/`symbolized-by`/`parallels` string does not send the

@@ -1,0 +1,554 @@
+{
+  "executor": "opus",
+  "date": "2026-08-12",
+  "execution_notes": {
+    "sources_obtained_in_full_text": [
+      "Jacobi, The Psychology of C.G. Jung (scanned English edition, Internet Archive; page numbers below are the scan's running heads)",
+      "Edinger, The Aion Lectures (Inner City Books 1996 ebook; page numbers below are the ebook's embedded page markers, and are cross-checked against the book's own Contents, which maps each lecture to a CW 9ii paragraph range)",
+      "von Franz, Alchemy: An Introduction to the Symbolism and the Psychology (Inner City Books 1980; nine lectures, page markers embedded)",
+      "Abraham, A Dictionary of Alchemical Imagery (Cambridge 1998; cited s.v. entry, per protocol)"
+    ],
+    "sources_NOT_obtainable_this_session": [
+      "Samuels/Shorter/Plaut, A Critical Dictionary of Jungian Analysis — no full text reachable (the one PDF link found returns a login page). NOT counted as consulted on any item, even where I expect it treats the pair (notably self|atman, shadow, mandala, God-image). This is the single largest gap in this worksheet.",
+      "Edinger, Anatomy of the Psyche — only the Coagulatio chapter is reachable; not counted as consulted.",
+      "Edinger, The Mysterium Lectures — not reachable; not counted as consulted. Its absence bites hardest on the CW 14 items (3, 7, 8, 10, 16, 17, 18, 23).",
+      "von Franz, Aurora Consurgens and Alchemical Active Imagination — not reachable.",
+      "Journal of Analytical Psychology — no paper identified that treats any sample pair at the level of the relation. One near-miss located and read (Stefanazzi, 'Privatio Boni: Evil Through the Eyes of Carl Jung and Victor White', Irish Judicial Studies Journal, 2021) — it treats the doctrine but never names Origen in connection with it, so it does not bear on item 14's pair."
+    ],
+    "abraham_usage_rule": "Abraham is marked on every item where it is used. On this sample the charter's named list is silent on almost every alchemical image pair, so Abraham carries most of the alchemical stratum. Flagged per item.",
+    "standing_finding": "Abraham's dictionary uses 'X IS Mercurius' and 'X is a SYMBOL OF Mercurius' interchangeably for the same pair inside one work (dragon: defined as 'the dual-natured Mercurius', listed in the Introduction among 'the symbols for Mercurius'). The archetypal-identity / symbolization boundary the graph draws over alchemical image pairs has no stable counterpart in the reference literature."
+  },
+  "items": [
+    {
+      "item": 1,
+      "edge": "the-vessel | symbolizes | mercurius",
+      "family_under_test": "archetypal-identity",
+      "citation": "CW 12 §338",
+      "graph_quote": "the vas is the water ... none other than the Mercurius of the philosophers",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'vessel' (cross-reference to 'alembic'); s.v. 'alembic, limbeck'; Introduction"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction to the Symbolism and the Psychology", "locator": "Lecture 2 (Greek Alchemy), pp. 45-48; Lecture 4, pp. 86-87"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "whole text searched; no alchemical vas material"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'alembic, limbeck'", "renders": "one-vessel topos, not identity with Mercurius", "evidence": "\"although the vessel is known by many names there is but one vessel\" — the names are the vessel's operational states (coffin, grave, bed, egg), not the arcane substance."},
+        {"source": "von Franz, Alchemy, Lecture 2, pp. 45-48", "renders": "the vessel of the Isis-to-Horus text is treated as a mystery object and a sign, with no equation to Mercurius"}
+      ],
+      "score": "NOT-TREATED",
+      "score_reason": "The sources that treat the vas treat its polyonymy and its function, not an identity between vas and Mercurius, so nothing in them either confirms or contradicts the archetypal-identity assignment.",
+      "boundary_rule_implicated": "demand the text's own identity assertion of the TERMS",
+      "notes": "Abraham consulted, named list not silent but unhelpful. Samuels et al. unobtainable; Edinger's Mysterium Lectures, the likeliest place for a CW 12 §338 rendering, unobtainable."
+    },
+    {
+      "item": 2,
+      "edge": "christ | is-a | anthropos",
+      "family_under_test": "archetypal-identity",
+      "citation": "CW 14 §565",
+      "graph_quote": "The second Adam is Christ",
+      "sources_consulted": [
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 6 (CW 9ii §§68-80, 'Christ, A Symbol of the Self'), pp. 44-49; Lectures 19-21 (CW 9ii §§287-346, 'Gnostic Symbols of the Self'), pp. 139-160"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "whole text searched; 'anthropos' does not occur"},
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'cornerstone' — treats Christ/filius macrocosmi and the stone, a different pair"}
+      ],
+      "scholar_renderings": [
+        {"source": "Edinger, The Aion Lectures, Lectures 19-21", "renders": "Anthropos as the original-man archetype and a structural term in the quaternio series; Christ handled under the heading Jung gave him, 'a symbol of the Self'. I found no passage predicating identity of Christ and the Anthropos."}
+      ],
+      "score": "NOT-TREATED",
+      "score_reason": "No consulted source renders the Christ|Anthropos relation as such; Edinger's frame relates each separately to the Self.",
+      "boundary_rule_implicated": "when both endpoints are named Figures and the quote asserts they ARE one another, `is-a` is `archetypal-identity`",
+      "notes": "This is a NOT-TREATED I am least comfortable with: the second-Adam typology is standard and is almost certainly rendered somewhere in the named list (Edinger's The Christian Archetype is the obvious place, but it is outside the charter's list). Recording the gap rather than guessing."
+    },
+    {
+      "item": 3,
+      "edge": "green-lion | synonym-of | dragon",
+      "family_under_test": "archetypal-identity",
+      "citation": "CW 14 §408",
+      "graph_quote": "the green lion, I say, who in truth is the Babylonish dragon",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'green lion'; s.v. 'dragon'; s.v. 'lion'; Introduction"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "Lecture 3, pp. 70-72; Lecture 4, pp. 104-106 (lion material; no green-lion/dragon equation)"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "searched; neither image treated"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'green lion'", "renders": "identity of referent — the green lion is defined as \"raw antimony ore, the unclean matter of the Stone, philosophical mercury\" at the earliest stage of the opus"},
+        {"source": "Abraham, s.v. 'dragon'", "renders": "identity of referent — the dragon is defined as \"the dual-natured Mercurius in his first dark chthonic phase\"; s.v. 'lion' is a bare cross-reference to 'green lion'"}
+      ],
+      "score": "AGREES",
+      "score_reason": "Abraham defines both terms by the same referent at the same stage of the opus, which is synonymy of alchemical names rather than one image standing for another.",
+      "boundary_rule_implicated": "demand the text's own identity assertion of the TERMS",
+      "notes": "Abraham used, named list silent on the pair. Counter-pressure inside the same source: Abraham's Introduction lists both dragon and lion among \"the symbols for Mercurius\", so the same author writes the relation both ways. I score AGREES because the entries — the place the relation is defined — are identity-form, but the reviewer should see the tension."
+    },
+    {
+      "item": 4,
+      "edge": "lapis | is-identified-with | homo-maximus",
+      "family_under_test": "archetypal-identity",
+      "citation": "CW 9i §555",
+      "graph_quote": "its conception of the lapis or its minera (raw material) together with the idea of the homo altus or maximus",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'microcosm' (the single occurrence of homo maximus in the dictionary); s.v. 'philosopher's stone'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "whole text searched; 'homo maximus' and 'homo altus' do not occur"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "whole text searched; neither term occurs"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'microcosm'", "renders": "the opus as \"the metamorphosis of base metal into silver and gold, of infantile, bestial man into the mystical homo maximus\" — a transformation of man in parallel with the metals, not an identification of the stone with the homo maximus"}
+      ],
+      "score": "NOT-TREATED",
+      "score_reason": "The only source that names the homo maximus places it as the term of a human transformation running parallel to the metallic one, and does not render a lapis|homo-maximus relation.",
+      "boundary_rule_implicated": "demand the text's own identity assertion of the TERMS",
+      "notes": "Abraham used, named list silent. Abraham's framing, if pressed into the vocabulary, would read as correspondence (two parallel transformations) rather than identity — but it is not a rendering of this pair and I decline to score on it."
+    },
+    {
+      "item": 5,
+      "edge": "the-self | corresponds-to | atman",
+      "family_under_test": "correspondence",
+      "citation": "CW 9ii §223",
+      "graph_quote": "it is the self, the atman",
+      "sources_consulted": [
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 15 (CW 9ii §§213-235, 'The Fish in Alchemy'), pp. 111-117 — the lecture covering §223; 'atman' does not occur anywhere in the book"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "whole text searched; 'atman' does not occur"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "whole text searched; 'atman' does not occur"},
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'pelican' — the stone \"often identified with Christ as creative Logos, or with the Eastern idea of the atman\"; a stone|atman rendering, not self|atman"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'pelican'", "renders": "identity — the stone 'identified with' the atman, adduced alongside Christ-as-Logos; but the subject term is the stone, not the self"}
+      ],
+      "score": "NOT-TREATED",
+      "score_reason": "No consulted source renders the self|atman relation; the one adjacent rendering has a different subject term.",
+      "boundary_rule_implicated": "Two terms answer each other across registers or traditions — structural likeness asserted without identity",
+      "notes": "The most damaging consequence of the Samuels/Shorter/Plaut gap. Their s.v. 'self' almost certainly renders this pair, and Jung's own §223 phrasing ('it is the self, the atman') sits right on the identity/correspondence line the assignment picks. Treat this NOT-TREATED as an artefact of source access, not as evidence the pair is untreated in the literature."
+    },
+    {
+      "item": 6,
+      "edge": "the-opus | parallels-redemptive-work-of | christ",
+      "family_under_test": "correspondence",
+      "citation": "CW 12 §453",
+      "graph_quote": "as Jesus Christ, of the house of David, took on human nature for the deliverance and redemption of mankind ... so likewise in our art",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'conversion'; s.v. 'cornerstone'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "Lectures 7-9 (Aurora consurgens), pp. 177-272 — Christ/Sapientia material at pp. 210, 213; no opus|Christ parallel located"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 18 (CW 9ii §§267-286, 'The Psychology of Christian Alchemical Symbolism'), pp. 134-138"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'conversion'", "renders": "analogy — \"the spiritual conversion of man was seen as analogous to the purification of metals\": two processes set beside each other, neither absorbed into the other"},
+        {"source": "Abraham, s.v. 'cornerstone'", "renders": "an alchemical reading laid over a Christian image — \"one of the central images of Christianity which has been given an alchemical interpretation\""}
+      ],
+      "score": "AGREES",
+      "score_reason": "Abraham renders the redemptive work and the opus as analogues across two registers, which is exactly correspondence's 'structural likeness asserted without identity'.",
+      "boundary_rule_implicated": "Two terms answer each other across registers or traditions — structural likeness asserted without identity",
+      "notes": "Abraham used, named list silent on the pair. Note that the s.v. 'cornerstone' framing ('has been given an alchemical interpretation') would, if it were the governing rendering, pull toward doctrinal-attribution; it is not, because no carrier is named there either."
+    },
+    {
+      "item": 7,
+      "edge": "quintessence | corresponds-to | anima-mundi",
+      "family_under_test": "correspondence",
+      "citation": "CW 14 §450",
+      "graph_quote": "in her we recognize the crowned Virgin ... who recalls the old pictures of the anima media natura or anima mundi",
+      "sources_consulted": [
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "Lecture 8 (Aurora consurgens), p. 210 and fig. 64 caption p. 213 — the Wisdom of God rendered as anima mundi"},
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'quintessence' (bare cross-reference to 'fifth element'); s.v. 'radical humidity/moisture'; s.v. 'virgin'"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "searched; 'quintessence' occurs once, not on this relation"}
+      ],
+      "scholar_renderings": [
+        {"source": "von Franz, Alchemy, p. 213 (caption to fig. 64)", "renders": "identity of the Wisdom of God with the anima mundi — 'the Wisdom of God as anima mundi (world soul)' — but the subject term is Sapientia, not the quintessence"},
+        {"source": "Abraham, s.v. 'radical humidity'", "renders": "identity — the philosophical mercury is the anima mundi, the spirit imprisoned in matter; again a different subject term"}
+      ],
+      "score": "NOT-TREATED",
+      "score_reason": "Both sources render an anima-mundi relation, but neither takes the quintessence as the subject term, so neither is a rendering of this pair.",
+      "boundary_rule_implicated": "Two terms answer each other across registers or traditions — structural likeness asserted without identity",
+      "notes": "Abraham used, named list not silent but off-pair. Worth flagging for the reviewer: where the literature does connect anima mundi to an alchemical substance it uses flat identity, so if a source were found on the exact pair, the pressure would be toward archetypal-identity, against the assignment."
+    },
+    {
+      "item": 8,
+      "edge": "luna | correlated-with | sapientia",
+      "family_under_test": "correspondence",
+      "citation": "CW 14 §164",
+      "graph_quote": "in my sister the moon the degree of your wisdom increases",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'sapientia'; s.v. 'Luna'; s.v. 'virgin'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "Lectures 7-9 (Aurora consurgens), pp. 177-272; Sapientia treated at pp. 210, 213 as the feminine divine wisdom / anima mundi, with no Luna pairing located"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "searched; 'sapientia' does not occur"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'sapientia'", "renders": "personification — the stone is born of the union of power and wisdom, \"personified in alchemy by Sol (the male principle) and Luna (the female principle)\"; wisdom is \"the female aspect of the philosopher's stone\""},
+        {"source": "Abraham, s.v. 'virgin'", "renders": "personification again — the crowned virgin \"is associated with Sapientia (wisdom) and salt\", and wisdom is \"frequently personified as a beautiful female figure\""}
+      ],
+      "score": "DISAGREES",
+      "score_reason": "Abraham renders Luna as the figure that gives Sapientia personal form, which is personification, not two terms answering each other across registers.",
+      "boundary_rule_implicated": "a symbol presents; a personification acts",
+      "notes": "Abraham used, named list silent on the pair. Single-source DISAGREES — thin. The implied family is personification; a reviewer could reasonably read Abraham's 'personified by' loosely enough to leave correspondence standing, so treat this as the weakest of the five DISAGREES."
+    },
+    {
+      "item": 9,
+      "edge": "tree | represents | the-opus",
+      "family_under_test": "symbolization",
+      "citation": "CW 13 §414",
+      "graph_quote": "It is clear from this that the life of the tree represents the opus, which as we know coincides with the seasons.",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'philosophical tree'; s.v. 'inverted tree'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "tree material at pp. 187-192 (Lecture 8) and pp. 249, 265-267 (Lecture 9)"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'philosophical tree'", "renders": "symbol — \"an ancient symbol used to represent the course of the opus alchymicum\", the growth of gold, the alchemical process itself, and the unfolding of the psyche during the opus"}
+      ],
+      "score": "AGREES",
+      "score_reason": "Abraham renders the tree as the image that carries the opus — the direction symbolization requires, with the tree as the image and the process as the term carried.",
+      "boundary_rule_implicated": "Directionality test: the OBJECT is the less formulable term; the subject is the image carrying it.",
+      "notes": "Abraham used, named list silent on the pair at the level of the relation."
+    },
+    {
+      "item": 10,
+      "edge": "raven | symbolizes | the-devil",
+      "family_under_test": "symbolization",
+      "citation": "CW 14 §727",
+      "graph_quote": "the raven is an allegory of the devil",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'raven, raven's head'; s.v. 'crow'; s.v. 'caput corvi'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "whole text searched; 'raven' does not occur"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "searched; no raven/devil material"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "searched; not treated"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'raven, raven's head'", "renders": "the raven as \"a symbol of the nigredo\" — the alchemical stage, with no devil reading anywhere in the entry"}
+      ],
+      "score": "NOT-TREATED",
+      "score_reason": "The consulted sources render the raven only against the nigredo; none renders a raven|devil relation.",
+      "boundary_rule_implicated": "The `layer: amplification` tag never overrides the content family",
+      "notes": "This edge carries layer: amplification and was re-run under v0.6 to symbolization. The literature I could reach does not bear on it either way. Edinger's Anatomy of the Psyche ch. 'Mortificatio' is the likely place for a devil reading of the raven and was not obtainable."
+    },
+    {
+      "item": 11,
+      "edge": "lightning | signifies-change-of | psyche",
+      "family_under_test": "symbolization",
+      "citation": "CW 9i §533",
+      "graph_quote": "Lightning signifies a sudden, unexpected, and overpowering change of psychic condition",
+      "sources_consulted": [
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "searched; 'lightning' occurs once, in a plate description, not as a rendering"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "searched; two occurrences, neither on this relation"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "searched; three occurrences, none on this relation"},
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "no 'lightning' entry"}
+      ],
+      "scholar_renderings": [],
+      "score": "NOT-TREATED",
+      "score_reason": "None of the consulted sources treats lightning as an image of psychic change.",
+      "boundary_rule_implicated": "Directionality test: the OBJECT is the less formulable term; the subject is the image carrying it.",
+      "notes": "Samuels et al. unobtainable; if they carry a 'symbol' entry example set it may include this."
+    },
+    {
+      "item": 12,
+      "edge": "tree | symbolizes | the-unconscious",
+      "family_under_test": "symbolization",
+      "citation": "CW 9i §406",
+      "graph_quote": "his relation to the unconscious since the latter is frequently expressed through wood and water symbols",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'philosophical tree'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "tree material pp. 187-192, 249, 265-267"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'philosophical tree'", "renders": "symbol — the tree stands for, among other things, \"the unfolding of the psyche during the opus\"; the image carries the psychic process, not the reverse"}
+      ],
+      "score": "AGREES",
+      "score_reason": "Abraham renders the tree as an image carrying an unformulable psychic process, which is symbolization in the required direction.",
+      "boundary_rule_implicated": "Directionality test: the OBJECT is the less formulable term; the subject is the image carrying it.",
+      "notes": "Abraham used, named list silent. Abraham's object is 'the psyche' / 'the unfolding of the psyche', not 'the unconscious' specifically — a near-match, not an exact one."
+    },
+    {
+      "item": 13,
+      "edge": "tree | is-metaphorical-form-of | arcane-substance",
+      "family_under_test": "doctrinal-attribution",
+      "citation": "CW 13 §382",
+      "graph_quote": "This remarkable text explains the tree as a metaphorical form of the arcane substance",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'philosophical tree'; s.v. 'inverted tree'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "tree material pp. 187-192; 'arcane substance' does not occur in the text"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "'arcane substance' occurs three times, none on the tree"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'philosophical tree'", "renders": "symbol — \"It represents the development of the arcane substance from the prima materia\" to the ultima materia: the tree is the image, stated flatly, with no carrier"},
+        {"source": "Abraham, s.v. 'inverted tree'", "renders": "a comparison ascribed to 'the alchemists' collectively — a tradition-wide reading, not one author's act of interpretation"}
+      ],
+      "score": "DISAGREES",
+      "score_reason": "The literature renders the tree|arcane-substance relation as a symbol relation asserted in its own right, with no carrier whose removal would collapse the claim, which is symbolization rather than doctrinal-attribution.",
+      "boundary_rule_implicated": "When a NAMED carrier performs the predication, the family is attribution no matter what the relation string says",
+      "notes": "This item tests the word NAMED in that rule directly. Jung's carrier here is 'this remarkable text' — a carrier that is referred to but not named in the quote. The graph read that as sufficient for attribution; the literature renders the same relation without any carrier at all. Abraham used, named list silent."
+    },
+    {
+      "item": 14,
+      "edge": "origen | first-propounded | privatio-boni",
+      "family_under_test": "doctrinal-attribution",
+      "citation": "CW 9ii §74",
+      "graph_quote": "the doctrine of the privatio boni first propounded by Origen",
+      "sources_consulted": [
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 7 (CW 9ii §§81-104, 'Christ, A Symbol of the Self' cont.), pp. 50-55; Origen biography and the apocatastasis doctrine at Lecture 6, pp. 45-47"},
+        {"author": "Stefanazzi", "work": "'Privatio Boni: Evil Through the Eyes of Carl Jung and Victor White', Irish Judicial Studies Journal (2021)", "locator": "whole article read; traces the doctrine to Augustine and Aquinas and never names Origen"}
+      ],
+      "scholar_renderings": [
+        {"source": "Edinger, The Aion Lectures, Lecture 7, p. 50", "renders": "doctrine reported and attributed — privatio boni presented as \"a fundamental doctrine of the Christian aeon\", with Jung's exposition tracked through named Fathers (Basil the Great at §83, Basilius Magnus in the White correspondence)"},
+        {"source": "Edinger, Lecture 6, pp. 45-47", "renders": "the same shape for Origen: a named Father who 'subscribed to' / 'first put forth' a doctrine, which is a carrier's act of propounding"}
+      ],
+      "score": "AGREES",
+      "score_reason": "Edinger renders the relation between a named Father and the doctrine as an act of propounding and holding, which is exactly the carrier-predication that doctrinal-attribution names.",
+      "boundary_rule_implicated": "the decisive test — remove the carrier and the claim collapses",
+      "notes": "Edinger's attributions for privatio boni run to Basil rather than Origen; that bears on the claim's truth (already verified against the primary text) and not on family fit, so I do not score it against. Locator confidence: high — the Contents of The Aion Lectures maps lecture to paragraph range, and the page markers are the ebook's own."
+    },
+    {
+      "item": 15,
+      "edge": "paracelsus | places-the-regio-nymphididica-at-the-initial-stage-of | individuation",
+      "family_under_test": "doctrinal-attribution",
+      "citation": "CW 12 §116",
+      "graph_quote": "the Paracelsan regio nymphididica, mentioned in the treatise De vita longa as the initial stage of the individuation process",
+      "sources_consulted": [
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "Paracelsus material searched; 'regio nymphididica' does not occur"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Paracelsus material searched; term does not occur"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "Paracelsus material searched; term does not occur"},
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "no entry; term does not occur"}
+      ],
+      "scholar_renderings": [],
+      "score": "NOT-TREATED",
+      "score_reason": "The term does not appear in any consulted source.",
+      "boundary_rule_implicated": "the decisive test — remove the carrier and the claim collapses",
+      "notes": "A genuine tail item. Jung's own De vita longa commentary (CW 13, 'Paracelsus as a Spiritual Phenomenon') is the only sustained treatment I know of, and it is primary text."
+    },
+    {
+      "item": 16,
+      "edge": "luna | amplified-by | silver",
+      "family_under_test": "amplification",
+      "citation": "CW 14 §154",
+      "graph_quote": "Luna also signifies silver",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'Luna'; s.v. 'silver'; s.v. 'albedo'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "silver material pp. 44, 47, 50, 76, 81, 83, 203-204; no Luna|silver rendering located ('Luna' does not occur as a term)"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "searched; not treated"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'Luna'", "renders": "symbol — \"Luna, the moon, or Diana, symbolizes philosophical silver\", with the entry then insisting philosophical silver differs from vulgar silver"},
+        {"source": "Abraham, s.v. 'silver'", "renders": "symbol in the other direction — silver as \"a symbol of the albedo, the pure white stage\", with Luna listed among the albedo's images"}
+      ],
+      "score": "DISAGREES",
+      "score_reason": "Abraham renders Luna and silver as a symbol relation asserted between the terms, not as material adduced from outside to widen the reading of an image.",
+      "boundary_rule_implicated": "correspondence asserts a relation between the terms; amplification adduces material to read an image by",
+      "notes": "Abraham used, named list silent. This is one of three amplification-stratum items that come out the same way — see the standing note on the stratum."
+    },
+    {
+      "item": 17,
+      "edge": "nigredo | amplified-by | raven",
+      "family_under_test": "amplification",
+      "citation": "CW 14 §727",
+      "graph_quote": "raven...is the traditional name for the nigredo",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'raven, raven's head'; s.v. 'nigredo'; s.v. 'caput corvi'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "nigredo material pp. 196, 208-225, 267-273; 'raven' does not occur"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "searched; not treated"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'raven, raven's head'", "renders": "symbol and name — the raven is \"a symbol of the nigredo, the initial step of the opus\", and \"The nigredo is referred to as the raven or raven's head because it is a time of death and putrefaction\""},
+        {"source": "Abraham, s.v. 'caput corvi'", "renders": "a bare cross-reference chain (crow, raven, nigredo, beheading) — the terms are treated as one lexical cluster"}
+      ],
+      "score": "DISAGREES",
+      "score_reason": "The relation the literature renders is the image standing for the stage — symbolization run from raven to nigredo — not a parallel adduced to widen the reading of the nigredo.",
+      "boundary_rule_implicated": "correspondence asserts a relation between the terms; amplification adduces material to read an image by",
+      "notes": "Abraham used, named list silent. Note also the direction: the graph edge runs nigredo → raven, while the literature's relation runs raven → nigredo. If the family were changed to symbolization the edge would need inverting or the symbolized-by string."
+    },
+    {
+      "item": 18,
+      "edge": "mercurius | amplified-by | lion",
+      "family_under_test": "amplification",
+      "citation": "CW 14 §404",
+      "graph_quote": "the lion... is a synonym for Mercurius",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'lion' (cross-reference to 'green lion', 'red lion'); s.v. 'green lion'; Introduction"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "lion material pp. 70-72, 104-106, 112-113, 170-171; Mercurius material pp. 86, 100, 129, 168, 197; no lion|Mercurius rendering located"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "searched; not treated"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, Introduction", "renders": "symbol — \"Some of the symbols for Mercurius are the dragon, serpent, mermaid, whore, virgin, wife\", the list continuing through 'lion'"},
+        {"source": "Abraham, s.v. 'green lion'", "renders": "identity of referent — the (green) lion IS philosophical mercury, the prima materia at the earliest stage"}
+      ],
+      "score": "DISAGREES",
+      "score_reason": "Abraham renders lion and Mercurius either as a symbol relation or as one referent under two names, and in neither case as material adduced to widen a reading, so amplification is the one family the literature does not support.",
+      "boundary_rule_implicated": "correspondence asserts a relation between the terms; amplification adduces material to read an image by",
+      "notes": "Abraham used, named list silent. The two Abraham renderings point at different replacement families (symbolization vs archetypal-identity), so this item disagrees with the assignment without settling what should replace it. Jung's own quote says 'synonym', which points to identity."
+    },
+    {
+      "item": 19,
+      "edge": "trickster | personifies | the-shadow",
+      "family_under_test": "personification",
+      "citation": "CW 9i §484",
+      "graph_quote": "The trickster is a collective shadow figure",
+      "sources_consulted": [
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "whole text searched; 'trickster' does not occur; the shadow is treated at ch. III with Plate 3, 'The Helpful Shadow'"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 4 (CW 9ii §§13-42, 'The Shadow'), pp. 26-33; 'trickster' does not occur in the book"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "one passing occurrence, not a rendering"}
+      ],
+      "scholar_renderings": [],
+      "score": "NOT-TREATED",
+      "score_reason": "No consulted source renders the trickster|shadow relation.",
+      "boundary_rule_implicated": "a symbol presents; a personification acts",
+      "notes": "Second NOT-TREATED I distrust. This is a control item and the claim is a commonplace; Samuels et al. is the obvious place for it and was unobtainable. Do not read this as evidence the control is unsupported."
+    },
+    {
+      "item": 20,
+      "edge": "lapis | unites | the-opposites",
+      "family_under_test": "union",
+      "citation": "CW 12 §140",
+      "graph_quote": "I beget the light, but the darkness too is of my nature",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'philosopher's stone'; s.v. 'conversion'; s.v. 'chemical wedding'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "Lecture 8, pp. 208-225 (the coniunctio and the union of contraries in Aurora)"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 22 (CW 9ii §§347-365, 'The Structure and Dynamics of the Self'), pp. 161-168"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'conversion'", "renders": "an achieved joining — converting the contrary four elements \"into a state of union to form the fifth element or philosopher's stone\", the process being \"synonymous with the union of opposites\""},
+        {"source": "Abraham, s.v. 'philosopher's stone'", "renders": "the stone as the state in which body, soul and spirit are united \"in perfect harmony\", and as the embodiment of what is \"unchanging, eternal, and unified\""}
+      ],
+      "score": "AGREES",
+      "score_reason": "The literature renders the stone as the achieved joining of contraries, which is union's act-or-achieved-state rather than composition's standing parthood.",
+      "boundary_rule_implicated": "an act or achieved state of joining distinct terms, vs composition's standing parthood",
+      "notes": "Abraham used; von Franz's Aurora lectures treat the same theme but I could not tie a specific page to the lapis|opposites relation, so the score rests on Abraham. Note the mild pull toward composition in the 'body, soul and spirit' phrasing — the entry uses both idioms."
+    },
+    {
+      "item": 21,
+      "edge": "lapis | symbolizes | christ",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "symbolization"},
+      "citation": "CW 12 §451",
+      "graph_quote": "the coveted substance, the lapis , that he likens to Christ",
+      "sources_consulted": [
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'cornerstone'; s.v. 'philosopher's stone'; s.v. 'pelican'"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "Lectures 7-9 (Aurora consurgens), pp. 177-272; no lapis|Christ rendering located"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 18 (CW 9ii §§267-286, 'The Psychology of Christian Alchemical Symbolism'), pp. 134-138; 'lapis' and 'Christ' never co-occur on this relation"}
+      ],
+      "scholar_renderings": [
+        {"source": "Abraham, s.v. 'cornerstone'", "renders": "identity — \"Christ the Cornerstone or filius macrocosmi was identified with the all-healing philosopher's stone\""},
+        {"source": "Abraham, s.v. 'pelican'", "renders": "identity again — the stone \"often identified with Christ as creative Logos\""}
+      ],
+      "score": {"opus_arm": "DISAGREES", "gemini_arm": "DISAGREES"},
+      "score_reason": "The only source that renders this pair renders it as identification of the two terms, which is archetypal-identity and matches neither arm's answer.",
+      "boundary_rule_implicated": "indistinguishability or equivalence asserted of the terms THEMSELVES → `archetypal-identity`; asserted of their symbols, images, functions or roles → `correspondence`",
+      "notes": "Abraham used, named list silent. Counter-context the reviewer should weigh: Jung's own chapter heading for the passage the edge comes from is 'The Lapis-Christ Parallel' (CW 12, Part III, ch. 5), and the quoted verb is 'likens' — both of which favour the Opus arm. So the arms' disagreement is between two readings the primary text supports and the secondary source supports a third. Scoring both arms DISAGREES is the literal application of the rule; a reviewer may prefer 'literature sides with neither, primary framing favours Opus'."
+    },
+    {
+      "item": 22,
+      "edge": "lapis | symbolizes | anthropos",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "symbolization"},
+      "citation": "CW 12 §335",
+      "graph_quote": "filius macrocosmi , a figure we can only compare with the Gnostic Anthropos",
+      "sources_consulted": [
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lectures 19-21 (CW 9ii §§287-346, 'Gnostic Symbols of the Self'), pp. 139-160, esp. the four-quaternio structure at p. 166"},
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'cornerstone' (filius macrocosmi and the stone); no 'anthropos' entry"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "searched; the pair is not rendered"}
+      ],
+      "scholar_renderings": [
+        {"source": "Edinger, The Aion Lectures, p. 166", "renders": "structural, not symbolic — the anthropos and the lapis are two of the \"common terms\" that link Jung's four quaternios into a chain, with anthropos and rotundum overlapping at the closure. This is a place-in-a-schema relation, not one term standing for the other."}
+      ],
+      "score": {"opus_arm": "NOT-TREATED", "gemini_arm": "NOT-TREATED"},
+      "score_reason": "The one source that puts the two terms in relation puts them in a structural series rather than in either a likeness or a symbol relation, so neither arm's answer is tested.",
+      "boundary_rule_implicated": "not correspondence (two knowns)",
+      "notes": "Abraham used and off-pair. Edinger's quaternio rendering, if it were pressed into the vocabulary, would read as structural-position — a third family neither arm considered. Recorded, not scored."
+    },
+    {
+      "item": 23,
+      "edge": "quintessence | corresponds-to | god-image",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "archetypal-identity"},
+      "citation": "CW 14 §681",
+      "graph_quote": "it consists in the imago Dei imprinted in man. This imago is the true quintessence",
+      "sources_consulted": [
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "ch. III, pp. 167-68 (running heads of the scanned edition), on the archetype of the image of God"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 5 (CW 9ii §§43-67, 'The Self'), p. 36; and pp. 93-94 on CW 9ii §170"},
+        {"author": "Abraham", "work": "A Dictionary of Alchemical Imagery", "locator": "s.v. 'quintessence' (cross-reference to 'fifth element'); s.v. 'fifth element' — no imago Dei rendering"}
+      ],
+      "scholar_renderings": [
+        {"source": "Jacobi, ch. III, pp. 167-68", "renders": "correspondence, insisted on as a limit — she frames the psyche's relation to God as a correspondence that psychology may register but not resolve, and calls what psychology finds a symbol of an unknown content, asserting nothing about God either way"},
+        {"source": "Edinger, The Aion Lectures, p. 36", "renders": "equivalence — \"The Self is equivalent to the inner God-image\""}
+      ],
+      "score": {"opus_arm": "SCHOLARS-SPLIT", "gemini_arm": "SCHOLARS-SPLIT"},
+      "score_reason": "Named sources land on both sides of the exact boundary the two arms disagree over: Jacobi renders the imago-Dei relation as correspondence and refuses identity on methodological grounds, while Edinger states equivalence flatly.",
+      "boundary_rule_implicated": "indistinguishability or equivalence asserted of the terms THEMSELVES → `archetypal-identity`; asserted of their symbols, images, functions or roles → `correspondence`",
+      "notes": "Camps: Jacobi (correspondence / symbol-of-an-unknown) vs Edinger (equivalence / identity). Caveat the reviewer must weigh: both sources render imago Dei against the SELF, not against the quintessence, so the split is on the mode of predication rather than on this exact pair. Jacobi page numbers are running heads from a scan and may differ across printings."
+    },
+    {
+      "item": 24,
+      "edge": "personal-unconscious | is-layer-of | the-unconscious",
+      "kind": "queued",
+      "arm_answers": {"opus": "composition", "gemini": "structural-position"},
+      "citation": "CW 9i §3",
+      "graph_quote": "A more or less superficial layer of the unconscious is undoubtedly personal",
+      "sources_consulted": [
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "ch. I, 'The Nature and Structure of the Psyche', the passage introducing Diagram III (the concentric diagram whose legend reads 'The sphere of the personal unconscious' / 'The sphere of the collective unconscious')"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 3 (CW 9ii §§1-12, 'The Ego'), pp. 22-25"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "not treated"}
+      ],
+      "scholar_renderings": [
+        {"source": "Jacobi, ch. I, on Diagram III", "renders": "position, explicitly and self-consciously — she names the layer language as a spatial rendering: \"we transform a genetic way of looking at a problem, as it were, into a spatial one\" and calls the resulting topology a methodological help. Her diagram legends call each region a sphere, and elsewhere she writes of a layer of the personal overlying the collective unconscious."}
+      ],
+      "score": {"opus_arm": "DISAGREES", "gemini_arm": "AGREES"},
+      "score_reason": "Jacobi renders 'layer' as a locating device inside a topology of the psyche and says so in as many words, which is structural-position and not material constituency.",
+      "boundary_rule_implicated": "if the claim entails the subject is materially a constituent of the object → composition; if it locates the subject within the object's structure without asserting constituency → position",
+      "notes": "The strongest single result in this worksheet: the source states the very distinction the boundary rule draws, and lands on the position side. It also supplies a caution the graph may want — Jacobi treats the spatial reading as a heuristic overlay on a genetic one, so an edge that records position is recording her methodological help, not a claim of the text."
+    },
+    {
+      "item": 25,
+      "edge": "the-unconscious | transforms | the-trinity",
+      "kind": "queued",
+      "arm_answers": {"opus": "transformation", "gemini": "psychic-effect"},
+      "citation": "CW 11 §107",
+      "graph_quote": "transforms it into a quaternity, which is at the same time a unity",
+      "sources_consulted": [
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Trinity and quaternity material searched throughout (55 quaternity occurrences, 20 Trinity); no passage renders the unconscious as transforming the Trinity"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "searched; 'Trinity' does not occur"},
+        {"author": "von Franz", "work": "Alchemy: An Introduction...", "locator": "searched; Trinity occurs six times, none on this relation"}
+      ],
+      "scholar_renderings": [],
+      "score": {"opus_arm": "NOT-TREATED", "gemini_arm": "NOT-TREATED"},
+      "score_reason": "No consulted source renders a relation between the unconscious and the Trinity.",
+      "boundary_rule_implicated": "A process classifies by its stated terminus",
+      "notes": "Edinger's Mysterium Lectures and CW 11 commentary literature would be the place to look; unobtainable. The item's own quote states its terminus ('into a quaternity'), which under the v0.5 ruling on termini favours the Opus arm, but that is the graph's rule, not the literature's."
+    },
+    {
+      "item": 26,
+      "edge": "mandala | is | god-image",
+      "kind": "purposive",
+      "family_under_test": "archetypal-identity",
+      "assigned_by": "human-adjudication",
+      "citation": "CW 9i §572",
+      "graph_quote": "at the same time a God-image",
+      "sources_consulted": [
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "ch. III, mandala section (Plates 8-16), pp. 154-158; and pp. 167-68 on the image of God"},
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 5 (CW 9ii §§43-67, 'The Self'), pp. 36 and 42"}
+      ],
+      "scholar_renderings": [
+        {"source": "Jacobi, ch. III, pp. 154-58", "renders": "symbol, and deliberately not identity — mandalas are 'symbolic images' of the middle way and of totality, and she warns against reading them as representations of completed individuation; East and West mandalas are set beside each other, in her words, \"only as parallels\""},
+        {"source": "Jacobi, ch. III, pp. 167-68", "renders": "correspondence — psychology can register a correspondence between psyche and God and may call what it finds an image of God, while asserting nothing about God"},
+        {"source": "Edinger, The Aion Lectures, p. 36", "renders": "identity — \"The Self is equivalent to the inner God-image\""},
+        {"source": "Edinger, The Aion Lectures, p. 42", "renders": "symbol, on §60 itself — he takes up mandalas there as symbols of order and does not pick up the indistinguishability clause at all"}
+      ],
+      "score": "SCHOLARS-SPLIT",
+      "score_reason": "Jacobi renders the mandala|God-image relation as symbol-plus-correspondence and refuses the identity reading on methodological grounds, while Edinger states the equivalence of Self and inner God-image flatly.",
+      "boundary_rule_implicated": "The test is what the text predicates indistinguishability OF, not what the nodes are: sentence subject \"the symbols of X\" → correspondence; sentence subject X itself → identity",
+      "notes": "Camps: Jacobi (symbol/correspondence) vs Edinger (equivalence). See item 27 for the joint finding on the sentence-subject test."
+    },
+    {
+      "item": 27,
+      "edge": "mandala | indistinguishable-from | god-image",
+      "kind": "purposive",
+      "family_under_test": "correspondence",
+      "assigned_by": "opus+gemini-agreed",
+      "citation": "CW 9ii §60",
+      "graph_quote": "their symbols can no longer be distinguished from the imago Dei",
+      "sources_consulted": [
+        {"author": "Edinger", "work": "The Aion Lectures", "locator": "Lecture 5 (CW 9ii §§43-67, 'The Self'), pp. 41-43 — the lecture that covers §60 paragraph by paragraph, quoting §59 and §60 and then moving to §65"},
+        {"author": "Jacobi", "work": "The Psychology of C.G. Jung", "locator": "ch. III, pp. 154-58 and 167-68"}
+      ],
+      "scholar_renderings": [
+        {"source": "Edinger, The Aion Lectures, p. 42", "renders": "symbol — he takes §60 up only for its clinical point about mandalas as symbols of order appearing in disorientation, and does not treat the indistinguishability clause as a claim about the terms"},
+        {"source": "Edinger, The Aion Lectures, p. 36", "renders": "identity, six pages earlier and about the same two contents — the Self equivalent to the inner God-image"},
+        {"source": "Jacobi, ch. III, pp. 167-68", "renders": "correspondence — the psyche's relation to God is a correspondence registered by an image, never an assertion about God"}
+      ],
+      "score": "SCHOLARS-SPLIT",
+      "score_reason": "Jacobi's rendering supports correspondence and Edinger's supports identity for the same relation, so named sources land in different families.",
+      "boundary_rule_implicated": "both CW 9ii §60 edges ... are `correspondence`. The test is what the text predicates indistinguishability OF, not what the nodes are",
+      "notes": "JOINT FINDING FOR 26 AND 27, which is what the purposive pair was drawn to test. The literature does NOT recognize the sentence-subject distinction. Edinger discusses §60 directly and does not mark it off from any other mandala/God-image statement; his own equivalence claim at p. 36 makes no reference to whether the predication falls on the terms or on their symbols. Jacobi renders every mandala/God-image statement the same way — symbol and correspondence — regardless of grammatical subject. The split that the literature does show is a split between scholars (Jacobi vs Edinger), and it runs across both paragraphs identically rather than between them. So: the v0.6 sentence-subject test produces a difference the secondary literature does not make, and the two families it assigns to §572 and §60 correspond to two scholarly camps, not to two Jungian claims. That is a real external-validity finding and it cuts against the rule as a general instrument, though it does not show the individual assignments are wrong."
+    }
+  ]
+}

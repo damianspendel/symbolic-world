@@ -1,0 +1,299 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7",
+ "definitions_git_hash": "1c59653cf51db66958e1f9d9830f189d3c2e9135",
+ "draw_seed": 3866299127,
+ "plant_seed": 412822701,
+ "planted_at": "2026-08-12T16:31:39+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "consciousness|suppresses|the-unconscious",
+   "class": "K1",
+   "was": "psychic-effect",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The act of suppressing is a dynamic action of one term on another, which explicitly falls under psychic-effect rather than a standing dependence."
+  },
+  {
+   "id": "divine-child|separates-from|the-mother",
+   "class": "K1",
+   "was": "separation",
+   "now": "union",
+   "verdict": "WRONG",
+   "should_be": "separation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly describes the subject being separated or isolated from the object, which is separation, not union."
+  },
+  {
+   "id": "echeneis|symbolizes|the-self",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The direction test dictates that when the object is the less formulable term (the-self) and the subject is the image (echeneis), the family is symbolization; manifestation inverts this direction."
+  },
+  {
+   "id": "lapis|is-in-khunraths-formulation-the-filius-macrocosmi-as-opposed-to-the-son-of-man|filius-macrocosmi",
+   "class": "K1",
+   "was": "doctrinal-attribution",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote frames the equation as the act of a named carrier (Khunrath), which routes it to doctrinal-attribution per the precedence rule, rather than derivation."
+  },
+  {
+   "id": "salt|analogue-of|god-image",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The term 'analogue' asserts structural likeness without identity, which routes to correspondence according to the boundary rules."
+  },
+  {
+   "id": "the-mother|opposes|spirit",
+   "class": "K1",
+   "was": "opposition",
+   "now": "privation",
+   "verdict": "WRONG",
+   "should_be": "opposition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The text explicitly sets the terms against each other as opposites ('opposed to'), which defines opposition rather than mere privation or lack."
+  },
+  {
+   "id": "the-vessel|is-identical-with|lapis",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts indistinguishability of the terms themselves ('no difference between the vessel and its content'), which the boundary rules strictly route to archetypal-identity, not correspondence."
+  },
+  {
+   "id": "wholeness|its-spontaneous-symbols-cannot-in-practice-be-distinguished-from|god-image",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The indistinguishability rule dictates that when indistinguishability is predicated of the symbols rather than the terms themselves, the family is correspondence."
+  },
+  {
+   "id": "anima|second-stage-of|individuation",
+   "class": "K2",
+   "was": "sequence",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "sequence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Stages of a process denote temporal or processual order, which belongs to sequence (where 'is-first-stage-of' is a seed), not kinship."
+  },
+  {
+   "id": "aqua-permanens|mediates|coniunctio",
+   "class": "K2",
+   "was": "psychic-effect",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'mediates' is explicitly listed as a seed for psychic-effect, whereas sequence implies temporal order without dynamic action."
+  },
+  {
+   "id": "paracelsus|places-the-regio-nymphididica-at-the-initial-stage-of|individuation",
+   "class": "K2",
+   "was": "doctrinal-attribution",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation records an act of placement by a named carrier (Paracelsus), which routes to doctrinal-attribution per the precedence rule."
+  },
+  {
+   "id": "projection|leads-to-destructive-mass-psychoses-of|mass-psyche",
+   "class": "K2",
+   "was": "psychic-effect",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "'leads-to-psychoses-of' is explicitly listed as a seed for psychic-effect, as it describes a dynamic state produced in the object."
+  },
+  {
+   "id": "emotion|generates|consciousness",
+   "class": "K3",
+   "was": "generation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes emotion as the 'chief source of' consciousness, which is a generation claim (bringing forth), not a structural correspondence."
+  },
+  {
+   "id": "luna|personifies|anima",
+   "class": "K3",
+   "was": "personification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "personification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'personifies' explicitly assigns a figure enacting a content to the personification family, not correspondence."
+  },
+  {
+   "id": "magnet-of-the-wise|attracts|echeneis",
+   "class": "K3",
+   "was": "psychic-effect",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "'attracts' describes a dynamic act of one term acting upon another, which belongs to psychic-effect, not the structural likeness of correspondence."
+  },
+  {
+   "id": "pisces|signifies|consciousness",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'signifies' with an image subject and a less formulable object fits the definition and string list for symbolization, not correspondence."
+  },
+  {
+   "id": "anima-mundi|is-feminine-half-of|mercurius",
+   "class": "K4",
+   "was": "kinship",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "kinship",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "'is-feminine-half-of' is explicitly listed as a seed string for the kinship family, representing a standing consort role."
+  },
+  {
+   "id": "archetype|polarizes-with|instinct",
+   "class": "K4",
+   "was": "opposition",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "opposition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'polarizes-with' and the quote describing them as 'polar opposites' perfectly match the seeds and definition for opposition."
+  },
+  {
+   "id": "spirit|is-a|archetype",
+   "class": "K4",
+   "was": "classification",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts that the subject is of an archetypal nature (an instance or kind of the object), which is plain taxonomy and belongs in classification."
+  }
+ ],
+ "sensitivity": {
+  "caught": 19,
+  "of": 19,
+  "pct": 100.0
+ },
+ "specificity": {
+  "clean_left_alone": 35,
+  "of": 41,
+  "pct": 85.4
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "adam|is-identical-with|christ",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "reason": "The quote frames the identity as an Ebionite teaching mentioned by Epiphanius, making it an attributed equation that routes to doctrinal-attribution."
+  },
+  {
+   "id": "light|symbolizes|consciousness",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "reason": "The quote explicitly asserts synonymy ('synonyms for'), which routes the edge to archetypal-identity regardless of the surface string 'symbolizes'."
+  },
+  {
+   "id": "night-sea-journey|symbolizes|rebirth",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "reason": "Although the relation string is 'symbolizes', the quote explicitly asserts a goal ('longing to attain rebirth'), which routes the edge to telos."
+  },
+  {
+   "id": "rex|amplified-by|rex-marinus",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "reason": "Under v0.7, amplification requires the quote to assert the adducing act; without it, the edge must be classified by its implied content relation, such as correspondence."
+  },
+  {
+   "id": "salt|amplified-by|scintilla",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "reason": "Under v0.7, amplification requires the quote to assert the adducing act; this quote asserts a content relation between the terms, fitting correspondence or identity."
+  },
+  {
+   "id": "sol|amplified-by|lion",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "reason": "The quote describes a guise or form ('theriomorphic form of Sol as a lion') rather than asserting an adducing act, which routes it to manifestation despite the amplification layer tag and string."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "PASS",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

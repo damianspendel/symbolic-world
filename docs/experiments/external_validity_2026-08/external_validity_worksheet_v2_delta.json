@@ -1,0 +1,362 @@
+{
+  "executor": "opus",
+  "date": "2026-08-12",
+  "pass": "v2-delta",
+  "execution_notes": {
+    "sources_used": [
+      "Edinger, Anatomy of the Psyche (Open Court, 1985/1994 print-on-demand). The extraction does NOT preserve running page numbers (65 bare-number lines in 7,980, most of them footnote markers), so every Anatomy locator below is by chapter and, where the book supplies one, section head or footnote number. No page number is asserted for this book.",
+      "Edinger, The Mysterium Lectures (Inner City Books, 1995 ebook). The extraction carries 350 embedded 'Page N' markers that run continuously with the book's own Contents (which maps each of the 27 lectures to a CW 14 paragraph range and a printed page). Locators below are lecture number plus that page marker."
+    ],
+    "excluded": "von Franz fragment (per addendum). No web search used. v1 renderings not re-litigated.",
+    "lecture_paragraph_map_used": "L8 = §§154-178 (pp. 105-115); L15 = §§368-404 (pp. 181-190); L16 = §§405-463 (pp. 191-205); L17 = §§464-497 (pp. 206-215); L19 = §§532-569 (pp. 228-239); L20 = §§570-595 (pp. 240-251); L22 = §§622-653 (pp. 262-273); L24 = §§681-706 (pp. 285-295); L25 = §§707-737 (pp. 296-306). From the book's own Contents.",
+    "standing_finding_v2": "Edinger uses identity idiom and analogy idiom for the same pair, sometimes inside one section. 'The Symbolic Equation Between Luna and the Church' (Mysterium, L8, p. 114) opens by saying Mary and the Church 'are equated with the moon' and two paragraphs later that 'the Church becomes comparable to Selene'. The Philosophers' Stone is 'identified with Christ' in Anatomy (ch. 3) and the object of 'the alchemists' parallel' in Mysterium (L17, p. 213). This reproduces, in a second author and across two of his own books, the instability recorded in v1 for Abraham."
+  },
+  "items": [
+    {
+      "item": 1,
+      "edge": "the-vessel | symbolizes | mercurius",
+      "family_under_test": "archetypal-identity",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 5 ('Sublimatio'); ch. 6 ('Mortificatio')",
+          "rendering": "container and cosmic analogue, not arcane substance. The vessel is 'equated with the macrocosm, its lower part being the earth and its upper part, heaven' (ch. 5), and later equated with the sealed tomb of Osiris (ch. 6). Mercurius is never predicated of it.",
+          "quote": "\"The alchemical vessel was equated with the macrocosm\" (Edinger, Anatomy, ch. 5)"
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L15, pp. 184-185; also L2, p. 70 and L5, p. 79",
+          "rendering": "vessel as tomb, as vas rotundum standing for the cosmos and the world-soul (Jung §373 quoted), and as the modern analytic container. Edinger's own identity claim for Mercurius in this volume runs elsewhere: the index entry is 'Mercurius: as lapis, 130'.",
+          "quote": "\"the whole world is in a great process of psychological evolution; it's like a vast alchemical vessel\" (Edinger, Mysterium Lectures, p. 185)"
+        }
+      ],
+      "v2_score": "NOT-TREATED",
+      "score_reason": "Both new texts treat the vas at length and neither identifies it with Mercurius; they render it as a place or container that things happen inside. The null is now evidenced rather than merely unfilled: two sources that had every occasion to state the CW 12 §338 identity do not state it."
+    },
+    {
+      "item": 2,
+      "edge": "christ | is-a | anthropos",
+      "family_under_test": "archetypal-identity",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L22, pp. 256-257",
+          "rendering": "doctrine reported with a named carrier, then structural correspondence. Edinger derives the Christ/second-Adam equation from Paul by name ('The term derives from the apostle Paul'), and then places the Second Adam and Adam Kadmon - whom he identifies as the Anthropos - as corresponding corners of Jung's §611 quaternity.",
+          "quote": "\"The Second Adam in this diagram would correspond to Adam Kadmon\" (Edinger, Mysterium Lectures, p. 257)"
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L20, p. 246; L22, pp. 268-269",
+          "rendering": "analogy, not identity. §590 is quoted for 'Adam is the homo maximus, the Anthropos'; where Christ and the Anthropos-figure meet (Jung's 1939 viriditas vision, quoted at p. 269) the relation is Christ and 'his analogue in matter, the filius macrocosmi'.",
+          "quote": "\"a union of the Christ-image with his analogue in matter, the filius macrocosmi\" (Jung, quoted by Edinger, p. 269)"
+        }
+      ],
+      "v2_score": "DISAGREES",
+      "score_reason": "Edinger never predicates identity of Christ and the Anthropos. The relation he renders runs through two other families: a doctrine attributed to Paul (Christ is the second Adam) and a place-for-place correspondence in a quaternity (Second Adam answers Adam Kadmon/Anthropos). Caveat for the reviewer: the two terms never appear in one predication, so this is a rendering of the chain rather than of the bare pair."
+    },
+    {
+      "item": 4,
+      "edge": "lapis | is-identified-with | homo-maximus",
+      "family_under_test": "archetypal-identity",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L20, p. 246 (§590 quoted); L21, pp. 260-261 (§605 quoted, with Edinger's gloss)",
+          "rendering": "homo maximus is now treated, and rendered as identical with Adam and the Anthropos and as 'the archetype of Man'. Jung's quoted sentence puts it on the prima materia side ('not only the prima materia but a universal soul'), never on the lapis side. No lapis relation is rendered.",
+          "quote": "\"something of the idea of the homo maximus ... the archetype of Man - is activated\" (Edinger, Mysterium Lectures, p. 260)"
+        },
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "whole text searched",
+          "rendering": "texts silent - 'homo maximus' and 'homo altus' do not occur"
+        }
+      ],
+      "v2_score": "NOT-TREATED",
+      "score_reason": "The term is now rendered but the pair is not. Worth flagging: Edinger's chain puts the homo maximus with Adam, the Anthropos and the prima materia, i.e. at the start of the opus, whereas the lapis is its terminus, so the new evidence leans against the edge's identity claim without testing it."
+    },
+    {
+      "item": 5,
+      "edge": "the-self | corresponds-to | atman",
+      "family_under_test": "correspondence",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L7, p. 95",
+          "rendering": "off-pair. The one occurrence of atman in either book is Edinger issuing a correction to the English translation of Jung's §145, whose subject is atman-purusha and whose object is Christ, not the self.",
+          "quote": "\"The Eastern idea of atman-purusha corresponds psychologically to the Western figure of Christ\" (Jung §145, as corrected by Edinger, p. 95)"
+        },
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 4 ('Coagulatio'), inside a quoted Upanishadic passage",
+          "rendering": "texts silent on the relation - the word appears only within quoted primary material"
+        }
+      ],
+      "v2_score": "NOT-TREATED",
+      "score_reason": "Pre-registered expected null, confirmed. Neither volume renders a self|atman relation. The item's status remains an artefact of the Samuels/Shorter/Plaut gap, as v1 recorded."
+    },
+    {
+      "item": 7,
+      "edge": "quintessence | corresponds-to | anima-mundi",
+      "family_under_test": "correspondence",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L16, p. 201 - the lecture covering §450, on Ripley's Cantilena verse 30",
+          "rendering": "personification. Edinger renders the quintessence as the 'Fifth Circle' in which the four elements are unified, and that circle as personified by the 'Crowned Maid', whom he identifies with Luna and with the coronation of the Virgin Mary. The anima mundi does not enter.",
+          "quote": "\"This fifth circle is personified as the ''Crownèd Maid'' and she's Luna\" (Edinger, Mysterium Lectures, p. 201)"
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L24, p. 295 - Jung §704 quoted whole, without gloss",
+          "rendering": "the only place the two terms are paired in either volume is inside a block quotation of Jung, where the idiom is bare apposition (quintessence, anima mundi, God-image set as alternative names for one thing). Edinger passes to Dorn without commenting on it."
+        }
+      ],
+      "v2_score": "NOT-TREATED",
+      "score_reason": "Edinger's own rendering at the cited paragraph is a personification of the quintessence, with a different object term; the quintessence|anima-mundi pairing survives only as unglossed primary text. v1's counter-pressure note holds and strengthens: where the pairing does surface, the idiom is apposition, which reads as identity, not as correspondence."
+    },
+    {
+      "item": 8,
+      "edge": "luna | correlated-with | sapientia",
+      "family_under_test": "correspondence",
+      "v1_score": "DISAGREES (single-source, Abraham; flagged weakest of the five)",
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L8, p. 112, section 6, 'The Moon's Noetic Aspect' - the lecture covering §164",
+          "rendering": "naming and aspect-designation. Sapientia is listed with Ennoia and Epinoia as terms associated with the moon; the Gnostic pair are called personal names equated with the moon, and the whole group is said to designate one aspect of Luna, her Nous-like side.",
+          "quote": "\"Ennoia and Epinoia were personal names equated with the moon\" (Edinger, Mysterium Lectures, p. 112)"
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L13, p. 165 - comparison case for the idiom",
+          "rendering": "where Edinger does render a Sapientia relation at length, for salt, the idiom is flat synonymy: 'Salt is synonymous with the anima mundi, soul and Sapientia Dei.'"
+        }
+      ],
+      "v2_score": "DISAGREES",
+      "score_reason": "Score unchanged but no longer single-source. Edinger renders Sapientia as a name for one aspect of Luna, which is naming or synonymy, not two terms answering each other across registers. Note for the reviewer: the two sources now disagree about the replacement family - Abraham says personification, Edinger says naming/synonymy - so the item disagrees with the assignment without settling what should replace it."
+    },
+    {
+      "item": 10,
+      "edge": "raven | symbolizes | the-devil",
+      "family_under_test": "symbolization",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 6 ('Mortificatio'), at n. 37, which cites CW 14, par. 727 - the same Jung paragraph the edge comes from",
+          "rendering": "name for a stage, then mythological amplification. The raven is given as a term for the nigredo, explained by its blackness and carrion-eating, and then amplified with the Coronis/Asklepios myth and the wounded-healer archetype. No devil reading appears.",
+          "quote": "\"A common term for the nigredo is 'corvus,' crow or raven\" (Edinger, Anatomy, ch. 6)"
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L25, pp. 302-303 - the lecture covering §§727-737",
+          "rendering": "chemical residue and extraction image. Caput corvi is glossed with caput mortuum as the residue left after distillation, and then read as beheading, i.e. the extraction of the rotundum. No devil reading."
+        }
+      ],
+      "v2_score": "NOT-TREATED",
+      "score_reason": "Both volumes treat the raven, and neither renders a raven|devil relation. This is now a substantive null on a pair the sources had occasion to render, not an access gap.",
+      "item10_verification": {
+        "claim": "v1 Gemini reviewer: Anatomy of the Psyche's Mortificatio chapter renders the raven as an image of the devil/shadow.",
+        "result": "NOT-FOUND",
+        "where_checked": "Anatomy, ch. 6 'Mortificatio', read in full for every occurrence of raven, crow, corvus, devil, Satan and shadow",
+        "what_is_actually_there": "Three separate things the claim appears to have compressed. (1) The raven is rendered against the nigredo only, at n. 37 citing CW 14 par. 727. (2) The devil enters the chapter once, in Jung's quoted 1952 interview at the chapter opening, where it is attached to the dragon and the blackness, not to the raven: Jung's sequence is 'the dragon, the chthonic spirit, the devil ... the blackness, the nigredo'. (3) The shadow enters separately, predicated of blackness, not of the raven: 'In psychological terms blackness refers to the shadow.' A raven-devil reading can be assembled from these only by chaining raven to nigredo to blackness to dragon/devil, which is three steps and which Edinger nowhere makes. The one place the raven stands near sin is a quoted alchemical text ('I am likened to the black raven, for that is the wages of sin'), spoken by the dragon-king, and it is primary material, not Edinger's rendering.",
+        "effect_on_score": "none - item 10 stays NOT-TREATED"
+      }
+    },
+    {
+      "item": 11,
+      "edge": "lightning | signifies-change-of | psyche",
+      "family_under_test": "symbolization",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 6 ('Mortificatio'), analysand's dream; ch. 8 ('Coniunctio'), Dante's Paradiso quoted",
+          "rendering": "texts silent on the relation. Lightning appears as a feature of a patient's dream image (a lightning-struck tree whose power fertilizes its surroundings) and inside a quoted Dante tercet; in neither case does Edinger gloss lightning itself."
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L11, pp. 145-146",
+          "rendering": "texts silent - the single occurrence is inside the quoted first chapter of Ezekiel"
+        }
+      ],
+      "v2_score": "NOT-TREATED",
+      "score_reason": "Neither volume treats lightning as an image carrying psychic change. Unchanged, texts silent on the relation."
+    },
+    {
+      "item": 15,
+      "edge": "paracelsus | places-the-regio-nymphididica-at-the-initial-stage-of | individuation",
+      "family_under_test": "doctrinal-attribution",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, Anatomy of the Psyche and The Mysterium Lectures",
+          "locator": "both texts searched in full for 'regio nymphididica', 'nymphidid', 'De vita longa'",
+          "rendering": "texts silent. Zero hits for the term or the treatise in either book. Paracelsus is cited eleven times in Anatomy (on fire, sweetness, tartar, phlegmatic water, mumia) and seven in Mysterium (chiefly the moon-as-poisonous-mirror text at §215), never on this material."
+        }
+      ],
+      "v2_score": "NOT-TREATED",
+      "score_reason": "Unchanged, texts silent. A genuine tail item; the two volumes that cite Paracelsus most heavily in the charter's list do not reach De vita longa."
+    },
+    {
+      "item": 16,
+      "edge": "luna | amplified-by | silver",
+      "family_under_test": "amplification",
+      "v1_score": "DISAGREES (single-source, Abraham)",
+      "new_evidence": [
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 1 ('Introduction'), section 'The Alchemical World View'",
+          "rendering": "correspondence across registers, set out as a table under the Emerald Tablet's as-above-so-below. The planet-metal series is given as a correspondence, with Moon and silver as one of its seven pairs, and the surrounding sentence frames the whole scheme as hidden connections and identities between upper and lower.",
+          "quote": "\"The planets in heaven correspond to the metals in the earth: Sun = gold, Moon = silver\" (Edinger, Anatomy, ch. 1)"
+        },
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 3 ('Solutio')",
+          "rendering": "naming. Glossing a quoted text, Edinger writes of 'gold and silver, here referred to as Sol and Luna', i.e. Luna is the alchemical name under which silver is being spoken of."
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L8, pp. 105-115 - the lecture covering §154, organized under seven headings",
+          "rendering": "texts silent. Edinger's seven-part treatment of the moon does not include the metal at all; silver appears nowhere in the lecture."
+        }
+      ],
+      "v2_score": "DISAGREES",
+      "score_reason": "Score unchanged, now two-source, and the replacement family is now named rather than inferred. Edinger renders Luna and silver as a heaven-earth correspondence and as one name for the other. Neither is material adduced from outside to widen the reading of an image. Note that the lecture devoted to §154 drops the metal entirely, which is itself evidence that the pair is not doing amplificatory work for him."
+    },
+    {
+      "item": 17,
+      "edge": "nigredo | amplified-by | raven",
+      "family_under_test": "amplification",
+      "v1_score": "DISAGREES (single-source, Abraham)",
+      "new_evidence": [
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 6 ('Mortificatio'), at n. 37 citing CW 14, par. 727",
+          "rendering": "naming, with the nigredo as the sentence subject, followed by amplification of the raven image. Edinger states the term relation first and only then adduces the Coronis/Asklepios myth. The adduced material is brought to the raven, not to the nigredo.",
+          "quote": "\"A common term for the nigredo is 'corvus,' crow or raven\" (Edinger, Anatomy, ch. 6)"
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L25, pp. 302-303",
+          "rendering": "technical gloss - caput corvi and caput mortuum as the residue left after distillation or sublimation, then read through beheading and the extraction of the rotundum. Not a widening of the nigredo."
+        }
+      ],
+      "v2_score": "DISAGREES",
+      "score_reason": "Score unchanged, now two-source. The relation the literature renders between these two terms is a term-for-a-stage relation, not adduced parallel material. One qualification to v1's note: because Edinger's sentence takes the nigredo as subject and the raven as its name, the graph's edge direction (nigredo to raven) matches his, so the inversion v1 flagged is less pressing than it looked; the objection is to the family, not the direction."
+    },
+    {
+      "item": 18,
+      "edge": "mercurius | amplified-by | lion",
+      "family_under_test": "amplification",
+      "v1_score": "DISAGREES (single-source, Abraham)",
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L16, pp. 191-192 and p. 199 n. 167 - the lecture covering §§404-408, the exact paragraphs the edge cites",
+          "rendering": "symbol relation with a different object. Edinger renders the lion as the theriomorphic form of the king and the animal aspect of Sol, tying it to §§169 and 173, and quotes Jung's §405 to the same effect. Mercurius is not brought in anywhere in the lion material.",
+          "quote": "\"the lion is symbolically associated with the sun; it's the theriomorphic aspect of Sol\" (Edinger, Mysterium Lectures, p. 191)"
+        },
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 2 ('Calcinatio'); ch. 6 ('Mortificatio')",
+          "rendering": "identity with a different term, and separation from Mercurius. The lion is equated with fire and called the 'lower sun' and, psychologically, the egocentric power drive. Where lion and Mercurius do co-occur, in quoted texts, they are distinct agents: the lion is eclipsed 'with the help of the moisture of Mercurius'."
+        }
+      ],
+      "v2_score": "DISAGREES",
+      "score_reason": "Score unchanged, now two-source. Edinger, commenting paragraph by paragraph on the very passage the edge cites, renders the lion as an image of Sol and the king and never as amplificatory material for Mercurius. The new evidence also declines to confirm Abraham's identity reading and Jung's own word 'synonym', so it disagrees with the assignment while pushing the replacement toward symbolization with a different object term."
+    },
+    {
+      "item": 19,
+      "edge": "trickster | personifies | the-shadow",
+      "family_under_test": "personification",
+      "v1_score": "NOT-TREATED",
+      "new_evidence": [
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "whole text searched",
+          "rendering": "texts silent - 'trickster' does not occur"
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L3, p. 56 and L25, p. 300 (Jung's summary list of Mercurius quoted twice); L27, pp. 309-310",
+          "rendering": "off-pair. Trickster appears only as one attribute of Mercurius in a quoted Jung list, and once as Edinger's own characterization of the unconscious in relation to a naive ego. The shadow is never the object."
+        }
+      ],
+      "v2_score": "NOT-TREATED",
+      "score_reason": "Pre-registered expected null, confirmed. As in v1, do not read this as evidence that the control item is unsupported; it is the wrong subject matter for these two volumes."
+    },
+    {
+      "item": 21,
+      "edge": "lapis | symbolizes | christ",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "symbolization"},
+      "v1_score": {"opus_arm": "DISAGREES", "gemini_arm": "DISAGREES"},
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L17, pp. 213-215 - commentary on §§485-492",
+          "rendering": "parallel, attributed to the alchemists as a collective carrier, and named as an assimilation of Christian imagery into an alchemical frame. Jung's §492, quoted immediately after, keeps the same idiom: the adept 'encounters the analogy of the true man - Christ'.",
+          "quote": "\"the alchemists' parallel of the Philosophers' Stone to Christ\" (Edinger, Mysterium Lectures, p. 213)"
+        },
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 3 ('Solutio')",
+          "rendering": "identity, flat and unattributed, used as a settled premise for a further claim about the divine water.",
+          "quote": "\"the Philosophers' Stone was identified with Christ\" (Edinger, Anatomy, ch. 3)"
+        }
+      ],
+      "v2_score": {"opus_arm": "SCHOLARS-SPLIT", "gemini_arm": "DISAGREES"},
+      "score_reason": "The opus arm's answer (correspondence) is now supported by one source and contradicted by others, so the item becomes a split. Camps: identity - Abraham s.v. 'cornerstone' and s.v. 'pelican', and Edinger in Anatomy ch. 3; parallel/analogy - Edinger in Mysterium L17, who attributes the parallel to the alchemists rather than asserting it. The gemini arm stays DISAGREES: no source renders the lapis as an image carrying Christ. The reviewer should weigh that this split runs through one author across two of his books, not between two scholars, which makes it weaker as a camp finding and stronger as evidence about idiom instability."
+    },
+    {
+      "item": 22,
+      "edge": "lapis | symbolizes | anthropos",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "symbolization"},
+      "v1_score": {"opus_arm": "NOT-TREATED", "gemini_arm": "NOT-TREATED"},
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L19, pp. 234-236 - the statue section, commentary on §§563-567",
+          "rendering": "cross-tradition parallel between two opus terminals. The Manichaean statue-pillar, in which 'the first man and the perfect final man manifest', is set beside the lapis as the corresponding end-product of the other tradition's work.",
+          "quote": "\"the statue is the final product of the Manichaean opus just as the Philosophers' Stone is the final product of the alchemical opus\" (Edinger, Mysterium Lectures, p. 236)"
+        },
+        {
+          "source": "Edinger, Anatomy of the Psyche",
+          "locator": "ch. 6 ('Mortificatio')",
+          "rendering": "correspondence, with both terms named. The Gnostic corpse and Paracelsian mumia are called symbolically identical with the original man or Anthropos, and that figure is then said to correspond to the alchemical idea that death is the conception of the Philosophers' Stone."
+        }
+      ],
+      "v2_score": {"opus_arm": "AGREES", "gemini_arm": "DISAGREES"},
+      "score_reason": "Two passages, both rendering the relation as a likeness holding between two terms each of which is fully known in its own tradition - which is what the correspondence family names, and what the opus arm answered. Nothing in either volume runs the symbolization direction (an image carrying the less formulable term). Two qualifications for the reviewer: at p. 234 Edinger also writes that the statue 'becomes a synonym for the lapis', the identity idiom again inside the same passage; and the Anthropos enters the Mysterium passage under the Manichaean text's names, 'the first man' and 'the perfect man', though Anatomy names it directly."
+    },
+    {
+      "item": 23,
+      "edge": "quintessence | corresponds-to | god-image",
+      "kind": "queued",
+      "arm_answers": {"opus": "correspondence", "gemini": "archetypal-identity"},
+      "v1_score": {"opus_arm": "SCHOLARS-SPLIT", "gemini_arm": "SCHOLARS-SPLIT"},
+      "new_evidence": [
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L24, pp. 287-288 - commentary on §681 itself, the paragraph the edge cites",
+          "rendering": "identity, stated in the copula. Edinger takes the caelum - which Jung, quoted at p. 295, calls 'the azure quintessence' - and predicates the imago Dei of it directly, then the image of the Self, then the ground plan of the ego, with no hedge.",
+          "quote": "\"As Jung states specifically in paragraph 681, it's the imago Dei in the individual. It's the image of the Self\" (Edinger, Mysterium Lectures, p. 287)"
+        },
+        {
+          "source": "Edinger, The Mysterium Lectures",
+          "locator": "L24, p. 295 - Jung §704 quoted whole",
+          "rendering": "supporting context, primary text: quintessence, anima mundi and God-image set in apposition as names for one thing"
+        }
+      ],
+      "v2_score": {"opus_arm": "SCHOLARS-SPLIT", "gemini_arm": "SCHOLARS-SPLIT"},
+      "score_reason": "Score unchanged, but the split is now anchored where v1 could not anchor it. v1's own caveat was that both camps rendered the imago Dei against the Self rather than against the quintessence; Edinger now renders §681's caelum/quintessence as the imago Dei in as many words, so the identity camp sits on the exact pair. Jacobi's correspondence-and-refusal rendering is untouched by the new texts. Camps: Jacobi (correspondence, symbol of an unknown content) vs Edinger (identity)."
+    }
+  ]
+}
