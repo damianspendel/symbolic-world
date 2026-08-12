@@ -1,0 +1,30 @@
+{
+ "label": "preserved-artifact",
+ "what": "Raw per-window family-sweep artifacts for CW 9i window 10 (b-cw9i-10), committed 2026-08-12 under RULES #12 and #23. These are the inputs a third party needs to re-derive that window's family assignments from pipeline/family/assemble_sweep.py.",
+ "window": "b-cw9i-10",
+ "definitions_version": "v0.5",
+ "preserved_on": "2026-08-12",
+ "provenance": "copied unchanged from pipeline/work/ (gitignored). The equivalent artifacts for windows 8 and 9 did NOT survive — pipeline/work/ holds one sweep at a time and each window overwrote the last. Their assignments live in seed.json; their raw arm votes do not exist anywhere and are not reconstructible.",
+ "verified": "Replaying these two arm files through the agreement rule reproduces the merged graph exactly: 30 agreements assigned, 4 disagreements queued, and all four queue entries in pipeline/work/family_pending_queue.json carry the arms' own words verbatim. Checked 2026-08-12 before committing.",
+ "corpus_channel": "Quotes here are the verified <=25-letter-token excerpts (longest in this set: 24). Publishable channel, per RULES #20.",
+ "files": [
+  {
+   "file": "b-cw9i-10_sweep_input.json",
+   "describes": "the sweep input both arms received (34 edges, n = index into seed.json edges)",
+   "bytes": 18085,
+   "sha256": "232bb2f92e61ceac6dddafdf6b42fe6cbefffea14a0707544829218fb2955822"
+  },
+  {
+   "file": "b-cw9i-10_sweep_opus.jsonl",
+   "describes": "the blind Opus arm's raw output, one row per edge",
+   "bytes": 7649,
+   "sha256": "246a35fe0903006edded53f0789d285ab6ee25e05535d7a5487b42a2d6179100"
+  },
+  {
+   "file": "b-cw9i-10_sweep_gemini.json",
+   "describes": "the blind Gemini arm's raw output, one row per edge",
+   "bytes": 5804,
+   "sha256": "644b2cb2e45d092d3f45a9b340ca377bcfe7bb5e73941955c1a12e3ed19f6225"
+  }
+ ]
+}
