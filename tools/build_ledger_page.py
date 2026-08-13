@@ -182,6 +182,11 @@ def facet_row(label, name, items, note=""):
 
 
 def volume_key(v):
+    """V2-R8 — collection order, and the only place Python defines it. A CW
+    volume is a position in an edition, not a string: sorted as text "11" lands
+    before "5" and "9ii" before "9i", which puts Aion ahead of the Archetypes
+    volume and reads as an error to anyone who knows the edition. Every list of
+    volumes this generator writes sorts through here."""
     m = re.match(r"^(\d+)(i*)$", str(v))
     if not m:
         return 999.0

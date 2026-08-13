@@ -571,6 +571,17 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   anti-overclaim rules: several "pitfalls" are recorded design decisions,
   and the panel says which. Give `tools/ontology_qa/quality.py` a `--json`
   mode rather than scraping its prose output; the builder consumes that.
+- **V2-R8 volumes sort in collection order (standing rule, 2026-08-13).**
+  Wherever CW volumes appear — a filter, a dropdown, a panel, a tile row,
+  the works bar, a facet strip, on any page now or later — they are
+  ordered as the edition orders them: 5, 8, 9i, 9ii, 11, 12, 13, 14, 16.
+  Never lexicographic (which puts 11 before 5 and Aion before the
+  Archetypes volume), and never by frequency, which makes the same list
+  reorder itself between builds. One comparator per generator language,
+  in one place: `volumeKey` / `byVolume` in `web/query-semantics.mjs` for
+  JavaScript, `volume_key` in `tools/build_ledger_page.py` for Python.
+  A new list of volumes imports the comparator rather than sorting.
+
 - **V2-R6 discipline.** Worktree-isolated build; tokens only; new pages
   join the copy-contract scan (numbers + banned vocabulary) on creation;
   extensionless links throughout; tests for every generator; NO deploy

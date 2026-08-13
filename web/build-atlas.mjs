@@ -13,6 +13,7 @@
 //            layer, kind, volumes, confidence, refs }
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 import { familyMap } from './family-map.mjs'
+import { byVolume } from './query-semantics.mjs'
 
 const here = (p) => new URL(p, import.meta.url)
 const seed = JSON.parse(readFileSync(here('../seed.json')))
@@ -507,13 +508,9 @@ for (const e of atlasEdges) {
   for (const r of e.refs) volRefs[String(r.volume)] = (volRefs[String(r.volume)] || 0) + 1
   for (const v of e.volumes) volEdges[v] = (volEdges[v] || 0) + 1
 }
-const volumes = Object.keys(volRefs)
-  .sort((a, b) => volKeyBuild(a) - volKeyBuild(b))
+// V2-R8 — collection order, through the one comparator (web/query-semantics.mjs).
+const volumes = Object.keys(volRefs).sort(byVolume)
   .map(v => ({ volume: v, label: VOL_LABEL[v] || '', references: volRefs[v], edges: volEdges[v] || 0 }))
-function volKeyBuild(v) {
-  const m = String(v).match(/^(\d+)(i*)$/)
-  return m ? parseInt(m[1], 10) + (m[2] === 'ii' ? 0.2 : m[2] === 'i' ? 0.1 : 0) : 999
-}
 
 // The voice facet (claim_type) joins the chip row; its values come from the data.
 const voices = {}
@@ -1368,7 +1365,7 @@ if (DECL) {
   const ROW_CAP = 300
   derived(ROW_CAP)
   const queryHead = `<script type="module">
-import { select, walk, labelIndex, identityEdges, effectiveRelation, derivedRows } from '/query.js'
+import { select, walk, labelIndex, identityEdges, effectiveRelation, derivedRows, byVolume } from '/query.js'
 
 const ROW_CAP = ${ROW_CAP}
 const $ = (id) => document.getElementById(id)
@@ -1401,7 +1398,8 @@ function ready () {
     vols.set(String(r.volume), (vols.get(String(r.volume)) || 0) + 1)
     if (r.claim_type) cts.set(r.claim_type, (cts.get(r.claim_type) || 0) + 1)
   }
-  fill('f-volume', [...vols.entries()].sort((a, b) => b[1] - a[1]), 'any volume')
+  // V2-R8 — volumes read in collection order, never by frequency or as strings
+  fill('f-volume', [...vols.entries()].sort((a, b) => byVolume(a[0], b[0])), 'any volume')
   fill('f-claim_type', [...cts.entries()].sort((a, b) => b[1] - a[1]), 'any claim type')
   const normalized = graph.edges.filter(e => e.relation_normalized && e.relation_normalized.relation).length
   $('h-normalized').textContent = normalized + ' relations carry a normalized string beside the verbatim one'

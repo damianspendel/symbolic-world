@@ -76,7 +76,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .hop .against { font: .56rem var(--mono); color: var(--m-motif); }
 </style>
 <script type="module">
-import { select, walk, labelIndex, identityEdges, effectiveRelation, derivedRows } from '/query.js'
+import { select, walk, labelIndex, identityEdges, effectiveRelation, derivedRows, byVolume } from '/query.js'
 
 const ROW_CAP = 300
 const $ = (id) => document.getElementById(id)
@@ -109,7 +109,8 @@ function ready () {
     vols.set(String(r.volume), (vols.get(String(r.volume)) || 0) + 1)
     if (r.claim_type) cts.set(r.claim_type, (cts.get(r.claim_type) || 0) + 1)
   }
-  fill('f-volume', [...vols.entries()].sort((a, b) => b[1] - a[1]), 'any volume')
+  // V2-R8 — volumes read in collection order, never by frequency or as strings
+  fill('f-volume', [...vols.entries()].sort((a, b) => byVolume(a[0], b[0])), 'any volume')
   fill('f-claim_type', [...cts.entries()].sort((a, b) => b[1] - a[1]), 'any claim type')
   const normalized = graph.edges.filter(e => e.relation_normalized && e.relation_normalized.relation).length
   $('h-normalized').textContent = normalized + ' relations carry a normalized string beside the verbatim one'

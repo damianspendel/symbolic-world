@@ -310,6 +310,43 @@ def test_active_declarations_are_all_on_the_page():
         assert pair in html, decl["id"]
 
 
+# ------------------------------------------- V2-R8 · volumes are ordered ---
+
+def test_query_volume_dropdown_is_in_collection_order():
+    """5, 8, 9i, 9ii, 11, 12, 13, 14, 16 — the edition's order. Lexicographic
+    sorting puts 11 before 5 and Aion before the Archetypes volume."""
+    html = read(os.path.join(PUBLIC, "query.html"))
+    assert "byVolume(a[0], b[0])" in html, (
+        "the volume dropdown does not sort through the shared comparator")
+    source = read(os.path.join(ROOT, "web", "query-semantics.mjs"))
+    assert "export function volumeKey" in source
+    assert "export const byVolume" in source
+
+
+def test_one_volume_comparator_per_generator_language():
+    """V2-R8 wants the rule in one place per language, not restated per page."""
+    js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
+    assert "byVolume" in js
+    assert "function volKeyBuild" not in js, "a second JavaScript comparator survives"
+    assert js.count("=== 'ii' ? 0.2") == 0, "the comparator's body is restated in build-atlas.mjs"
+
+
+def test_the_python_comparator_orders_the_edition():
+    volumes = ["11", "5", "9ii", "14", "9i", "8", "16", "12", "13"]
+    assert sorted(volumes, key=ledger_gen.volume_key) == [
+        "5", "8", "9i", "9ii", "11", "12", "13", "14", "16"]
+
+
+def test_generated_volume_lists_are_in_collection_order():
+    """Every list of volumes a generator writes, read back off the pages."""
+    ledger = read(os.path.join(PUBLIC, "ledger.html"))
+    facets = re.findall(r'data-g="vol" data-v="([^"]+)"', ledger)
+    assert facets == sorted(facets, key=ledger_gen.volume_key)
+    atlas = json.loads(read(os.path.join(SRC, "atlas.json")))
+    bar = [v["volume"] for v in atlas["meta"]["volumes"]]
+    assert bar == sorted(bar, key=ledger_gen.volume_key)
+
+
 # ------------------------------------------------------------ the query ---
 
 def test_query_page_ships_the_semantics_module_unmodified():
