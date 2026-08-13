@@ -106,18 +106,22 @@ const rootBlock = () => ':root {\n' + Object.entries(TOKENS).map(([k, v]) => `  
 // holds the same list for the pages python writes, and a test compares the two
 // rendered menus link for link. Order is fixed: the atlas first, then the
 // surfaces that read it, then the record of how it was built.
+// The taxonomy (editorial ruling, 2026-08-13): four groups, fixed order. The
+// group label is a quiet signpost, not a heading — it says what kind of place
+// the links under it lead to, and carries no weight of its own. Batches are
+// deliberately absent: they are reached through the ledger's facet links and
+// through the release entries that shipped them, and putting 57 of them behind
+// a menu item is what made the ledger unwieldy in the first place.
 const MENU = [
-  ['/#/atlas', 'atlas'],
-  ['/query', 'query'],
-  ['/families', 'families'],
-  ['/ledger', 'ledger'],
-  ['/releases', 'releases'],
-  ['/ontology', 'ontology'],
-  ['/disputes', 'disputes'],
-  ['/#/method', 'method']
+  ['explore', [['/#/atlas', 'atlas'], ['/query', 'query'], ['/#/concordance', 'concordance']]],
+  ['reference', [['/families', 'families']]],
+  ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
+  ['about', [['/#/method', 'method'], ['/ontology', 'ontology']]]
 ]
-const topMenu = (current) => '<nav class="topmenu">' + MENU.map(([href, label]) =>
-  `<a href="${href}"${href === current ? ' aria-current="page"' : ''}>${label}</a>`).join('') + '</nav>'
+const topMenu = (current) => '<nav class="topmenu">' + MENU.map(([group, items]) =>
+  `<span class="mgroup">${group}</span>` + items.map(([href, label]) =>
+    `<a href="${href}"${href === current ? ' aria-current="page"' : ''}>${label}</a>`).join('')
+).join('') + '</nav>'
 
 const nbr = new Map(seed.nodes.map(n => [n.id, new Set()]))
 for (const e of seed.edges) {
@@ -502,7 +506,12 @@ const chromeBlock = () => `
 .page-bar .spacer { margin-left: auto; }
 /* V2-R10 — the site menu. One definition, used by the app's topbar, by every
    generated page's page-bar, and by the pages the python generator writes. */
-.topmenu { display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.85rem; }
+.topmenu { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.7rem; }
+.topmenu .mgroup {
+  font: 0.5rem var(--mono); letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-dim); margin-left: 0.45rem;
+}
+.topmenu .mgroup:first-child { margin-left: 0; }
 .topmenu a {
   font: 0.62rem var(--mono); letter-spacing: 0.05em; color: var(--ink-faint);
   text-decoration: none; white-space: nowrap; padding: 0.1rem 0;

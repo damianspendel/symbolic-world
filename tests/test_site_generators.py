@@ -418,6 +418,33 @@ def menu_items(html):
     return re.findall(r'<a href="([^"]+)"[^>]*>([^<]+)</a>', found.group(1))
 
 
+def menu_shape(html):
+    """[(group, [(href, label), ...]), ...] — the taxonomy as rendered."""
+    found = MENU_RE.search(html)
+    assert found, "no top menu on the page"
+    groups, current = [], None
+    for token in re.finditer(
+            r'<span class="mgroup">([^<]+)</span>|<a href="([^"]+)"[^>]*>([^<]+)</a>',
+            found.group(1)):
+        if token.group(1):
+            current = (token.group(1), [])
+            groups.append(current)
+        else:
+            assert current, "a menu link appears before any group label"
+            current[1].append((token.group(2), token.group(3)))
+    return groups
+
+
+EXPECTED_MENU = [
+    ("explore", [("/#/atlas", "atlas"), ("/query", "query"),
+                 ("/#/concordance", "concordance")]),
+    ("reference", [("/families", "families")]),
+    ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
+                    ("/disputes", "disputes")]),
+    ("about", [("/#/method", "method"), ("/ontology", "ontology")]),
+]
+
+
 def test_every_generated_page_carries_the_same_menu():
     reference = None
     for path in generated_pages():
@@ -427,8 +454,7 @@ def test_every_generated_page_carries_the_same_menu():
         assert items == reference, os.path.basename(path)
     assert reference, "no generated page carried a menu"
     assert [label for _href, label in reference] == [
-        "atlas", "query", "families", "ledger", "releases",
-        "ontology", "disputes", "method"]
+        label for _group, items in EXPECTED_MENU for _href, label in items]
 
 
 def test_the_app_carries_the_same_menu_as_the_generated_pages():
@@ -437,11 +463,50 @@ def test_the_app_carries_the_same_menu_as_the_generated_pages():
     assert app == page
 
 
+def test_the_menu_carries_the_ruled_taxonomy_everywhere():
+    """Same groups, same items, same order — on every generated page and in the
+    app. The group labels are signposts, so they are part of the contract."""
+    pages = [p for p in generated_pages()] + [os.path.join(ROOT, "web", "index.html")]
+    for path in pages:
+        shape = [(group, list(items)) for group, items in menu_shape(read(path))]
+        assert shape == [(g, list(i)) for g, i in EXPECTED_MENU], os.path.basename(path)
+
+
+def test_the_app_toolbar_holds_no_second_navigation():
+    """Item 10: one menu, once. Every destination appears in index.html exactly
+    once, and the toolbar keeps controls only — search, fit, reset, counts."""
+    html = read(os.path.join(ROOT, "web", "index.html"))
+    for _group, items in EXPECTED_MENU:
+        for href, _label in items:
+            assert html.count(f'href="{href}"') == 1, href
+    toolbar = re.search(r'<header id="topbar">(.*?)</header>', html, re.S).group(1)
+    for gone in ("open-concordance", "open-families", "ledger-link",
+                 "disputes-link", "open-method"):
+        assert gone not in toolbar, f"{gone} is still a second way to navigate"
+    for kept in ('id="search"', 'id="fit"', 'id="relayout"', 'id="stats"', 'id="version"'):
+        assert kept in toolbar, kept
+
+
+def test_the_app_survives_the_removed_toolbar_buttons():
+    """The handlers those buttons carried must bind optionally, or the app
+    throws on load and the whole atlas goes blank."""
+    js = read(os.path.join(ROOT, "web", "src", "main.js"))
+    for handler in ("open-concordance", "open-families", "open-method"):
+        assert f"$('{handler}')?." in js, (
+            f"$('{handler}') is bound without a guard and the button is gone")
+    for route in ("'#/concordance'", "'#/method'", "'#/families'"):
+        assert route in js, f"{route} is no longer routable"
+
+
 def test_both_generator_languages_hold_the_same_menu_list():
     """One list per language; this is what keeps them one menu."""
     js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
-    js_menu = re.findall(r"\['(/[^']*)', '(\w+)'\]", js[js.index("const MENU = ["):])
-    assert js_menu[:len(ledger_gen.MENU)] == [tuple(x) for x in ledger_gen.MENU]
+    block = js[js.index("const MENU = ["):js.index("const topMenu")]
+    js_groups = re.findall(r"^\s*\['(\w+)', \[(.*)\]\],?$", block, re.M)
+    parsed = [(group, re.findall(r"\['(/[^']*)', '(\w+)'\]", items))
+              for group, items in js_groups]
+    assert parsed == [(g, list(i)) for g, i in ledger_gen.MENU]
+    assert parsed == [(g, list(i)) for g, i in EXPECTED_MENU]
 
 
 def test_the_menu_marks_the_page_it_is_on():

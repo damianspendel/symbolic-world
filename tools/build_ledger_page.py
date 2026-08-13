@@ -38,22 +38,29 @@ def esc(s):
 # same list for the pages node writes, and a test compares the two rendered
 # menus link for link, so a route added to one and forgotten in the other fails
 # the suite rather than stranding a page.
+# The taxonomy (editorial ruling, 2026-08-13): four groups, fixed order, the
+# same list web/build-atlas.mjs holds for the pages node writes. Batches are
+# deliberately not a menu item — they are reached from the ledger's facet links
+# and from the release entries that shipped them.
 MENU = [
-    ("/#/atlas", "atlas"),
-    ("/query", "query"),
-    ("/families", "families"),
-    ("/ledger", "ledger"),
-    ("/releases", "releases"),
-    ("/ontology", "ontology"),
-    ("/disputes", "disputes"),
-    ("/#/method", "method"),
+    ("explore", [("/#/atlas", "atlas"), ("/query", "query"),
+                 ("/#/concordance", "concordance")]),
+    ("reference", [("/families", "families")]),
+    ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
+                    ("/disputes", "disputes")]),
+    ("about", [("/#/method", "method"), ("/ontology", "ontology")]),
 ]
 
 
 def top_menu(current=""):
-    return '<nav class="topmenu">' + "".join(
-        f'<a href="{href}"{" aria-current=" + chr(34) + "page" + chr(34) if href == current else ""}>{label}</a>'
-        for href, label in MENU) + "</nav>"
+    out = ['<nav class="topmenu">']
+    for group, items in MENU:
+        out.append(f'<span class="mgroup">{group}</span>')
+        for href, label in items:
+            current_mark = ' aria-current="page"' if href == current else ""
+            out.append(f'<a href="{href}"{current_mark}>{label}</a>')
+    out.append("</nav>")
+    return "".join(out)
 
 
 # ---------- section 1: every record and its gates ----------

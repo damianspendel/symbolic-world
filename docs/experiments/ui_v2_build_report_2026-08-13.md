@@ -463,3 +463,58 @@ reaches them from the ledger will index them whether or not they are listed, and
 leaving them out would only make the sitemap a partial account of the site. If
 the crawl budget ever argues otherwise, the entries come from one loop in
 `build-atlas.mjs` and are cheap to drop.
+
+## Item 10 — one menu, grouped; the toolbar loses its second navigation
+
+The topbar carried two navigation systems: the site menu added in V2-R10 and the
+app's own concordance / families / ledger / disputes / about links beside it.
+
+**The taxonomy** (editorial ruling, 2026-08-13), rendered in this order with the
+group label set quietly in the mono face at `--ink-dim`, not as a heading:
+
+| group | items |
+|---|---|
+| explore | atlas · query · concordance |
+| reference | families |
+| provenance | ledger · releases · disputes |
+| about | method · ontology |
+
+`atlas`, `concordance` and `method` are SPA routes (`/#/atlas`,
+`/#/concordance`, `/#/method`); the rest are extensionless static pages. Still
+one source per generator language — `MENU` in `web/build-atlas.mjs` and in
+`tools/build_ledger_page.py`, now a list of groups — still no script, still
+wrapping on narrow screens.
+
+**Batches are deliberately not a menu item.** They are reached from the ledger's
+facet links and from the release entries that shipped them. Nine destinations is
+already the ceiling; adding a tenth that fans out to 57 pages is the thing that
+made the ledger unwieldy.
+
+**The toolbar was deduplicated.** `index.html` loses `open-concordance`,
+`open-families`, `ledger-link`, `disputes-link` and `open-method` — "about"
+folds into the menu's *method* and *ontology* entries — and keeps controls only:
+brand, version, fit, reset, counts, search. Nothing else in the toolbar was
+touched; the search field and the counts wiring are untouched.
+
+**One consequence had to be handled.** `web/src/main.js` bound three of those
+buttons unconditionally, so removing them from the template would have thrown on
+load and blanked the atlas. The three bindings are now optional (`?.`), which is
+the smallest change that survives the removal; the routes themselves are
+unchanged and the router still serves `#/concordance`, `#/families`, `#/method`
+and `#/queue`. Verified by building the app and loading it: no console errors,
+the toolbar holds six control ids and no links, and all three routes open. The
+same check against a build of the pre-change tree behaves identically, so
+nothing in the route handling regressed.
+
+**One discrepancy, flagged rather than resolved silently.** The instruction said
+"keep the menu eight destinations", and the ruled taxonomy lists nine (the
+previous menu had eight; `concordance` is the addition). The explicit list was
+followed. If eight was the binding number, `concordance` is the item to
+reconsider, since it is the only SPA view that has a full page elsewhere in the
+in-app routes.
+
+**Tests**: the menu contract is now the whole shape — groups, items and order —
+compared across every generated page, `index.html`, and both generator sources;
+plus a check that each destination appears in `index.html` exactly once, that
+the removed ids are gone from the toolbar while the control ids remain, and that
+the three optional bindings are guarded and their routes still exist.

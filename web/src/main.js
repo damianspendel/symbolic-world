@@ -966,11 +966,15 @@ function queueRow(it) {
   </div>`
 }
 
-$('open-concordance').addEventListener('click', openConcordance)
-$('open-families').addEventListener('click', openFamiliesPage)
-
-// R11 — the "?" is gone entirely; the topbar "about" link is the only entry.
-$('open-method').addEventListener('click', openMethod)
+// V2-R10 (editorial ruling, 2026-08-13) — the toolbar's navigation buttons were
+// removed when the site menu arrived: two navigation systems in one bar is one
+// too many. The routes they opened are unchanged and are reached from the menu
+// (#/concordance, /families, #/method) and from the router below, so these
+// bindings are optional now — they attach if the buttons exist and are silent
+// if they do not, which keeps a stale template from breaking the whole app.
+$('open-concordance')?.addEventListener('click', openConcordance)
+$('open-families')?.addEventListener('click', openFamiliesPage)
+$('open-method')?.addEventListener('click', openMethod)
 
 // ------------------------------------------------------- R1.4/R1.5 · counts ---
 // Every live number is read from atlas.json, which is regenerated from seed.json

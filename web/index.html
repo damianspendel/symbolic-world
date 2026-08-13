@@ -95,19 +95,17 @@
         <h1>The Symbolic World</h1>
       </div>
       <span id="version"></span>
-      <!-- V2-R10 — the site menu, identical on every page. The list is held in
-           web/build-atlas.mjs for the pages node writes and in
-           tools/build_ledger_page.py for the pages python writes; a test
-           compares all three renderings link for link. The app's own controls
-           below it are unchanged: they drive in-app routes and the camera. -->
-      <nav class="topmenu"><a href="/#/atlas" aria-current="page">atlas</a><a href="/query">query</a><a href="/families">families</a><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/ontology">ontology</a><a href="/disputes">disputes</a><a href="/#/method">method</a></nav>
-      <button class="navlink" id="open-concordance" title="Psychology against alchemy — the two-register view">⚯ concordance</button>
-      <button class="navlink" id="open-families" title="The relation-family vocabulary and the review queue">◈ families</button>
-      <a class="navlink" id="ledger-link" href="/ledger" title="Construction log — how every batch entered the graph, commit by commit">⛏ ledger</a>
-      <a class="navlink" id="disputes-link" href="/disputes" title="Public dispute log — every challenged edge and its outcome">⚖ disputes</a>
+      <!-- V2-R10 — the site menu, identical on every page, grouped by the
+           taxonomy ruled on 2026-08-13. The list is held in web/build-atlas.mjs
+           for the pages node writes and in tools/build_ledger_page.py for the
+           pages python writes; a test compares all three renderings link for
+           link. Every destination appears here exactly once: the toolbar's own
+           navigation links were removed when this menu arrived, and what
+           remains beside it are app controls, not destinations. The in-app
+           queue keeps its entry inside the families view. -->
+      <nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas" aria-current="page">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/#/method">method</a><a href="/ontology">ontology</a></nav>
       <button class="navlink" id="fit" title="Fit the graph to the screen">⤢ fit</button>
       <button class="navlink" id="relayout" title="Clear the selection, the search and every filter">↺ reset</button>
-      <button class="navlink" id="open-method" title="About this atlas — the method, the corpus, and how to read it">✦ about</button>
       <div id="stats"></div>
       <input id="search" class="std-search" type="search" placeholder="A symbol, a relation, a quote, CW 14 §1…" autocomplete="off" spellcheck="false" />
     </header>
