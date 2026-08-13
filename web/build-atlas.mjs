@@ -1568,6 +1568,29 @@ const QA_STANCE = [
   [/^P02 duplicate/, 'open', 'Two ids carrying the same label is a defect in the node set.'],
   [/^evidence gap/, 'design', 'The structural relations (sequence between stages) carry no citation by design and are excluded from the verified count. Any other relation without a reference is a defect and the structural check refuses it.']
 ]
+// V2-R6 addendum (Damian's review, 2026-08-13): the panel says where its checks
+// come from. OOPS! numbers pitfalls; quality.py implements a subset of them and
+// borrows the numbering. Two of the tool's uses are adaptations rather than the
+// catalogue's literal case — the catalogue was written for class-shaped
+// ontologies and this graph is relation-shaped — and the table says which, since
+// a borrowed number presented as the catalogue's own finding would overclaim.
+const PITFALLS = {
+  P02: ['synonymous elements not declared equivalent', ''],
+  P03: ['a bare `is` used where a subclass or type relation is meant', ''],
+  P04: ['elements left unconnected to the rest of the ontology', ''],
+  P05: ['an inverse relationship defined the wrong way round', 'read here as inverse pairs present in the vocabulary but undeclared'],
+  P06: ['a defect in the class hierarchy', 'read here as the absence of a hierarchy to have a defect in'],
+  P08: ['elements left without human-readable annotation', ''],
+  P10: ['classes never declared disjoint', ''],
+  P11: ['a property with no declared domain', ''],
+  P12: ['equivalent properties not declared equivalent', ''],
+  P13: ['inverse relationships not declared', ''],
+  P21: ['a catch-all class doing the work of a distinction', ''],
+  P22: ['no naming regularity across the vocabulary', ''],
+  P24: ['a name that carries a definition instead of naming a term', 'applied here to predicates that carry a whole proposition, and to labels that are sentences'],
+  P25: ['a relationship declared inverse to itself', 'read here as a symmetric relation asserted in one direction only'],
+  P30: ['equivalent elements not declared equivalent', 'read here over identity chains between nodes']
+}
 const STANCE_LABEL = {
   design: 'recorded design decision',
   declared: 'answered by the declarations layer',
@@ -1618,6 +1641,20 @@ if (QA && DECL) {
 <td class="n">${esc(r.date)}</td><td class="ev">${esc(r.ruled_by)}</td><td class="ev">${esc(r.ruling)}</td>
 </tr>`).join('\n')
 
+  // the codes the tool actually cites, read out of its findings and its source,
+  // so the table cannot list a pitfall the scan does not implement
+  const toolSrc = readFileSync(here('../tools/ontology_qa/quality.py'), 'utf8')
+  const cited = [...new Set([
+    ...['critical', 'important', 'minor'].flatMap(sev => QA[sev].flatMap(f => f.tag.match(/P\d{2}/g) || [])),
+    ...(toolSrc.match(/P\d{2}/g) || [])
+  ])].sort()
+  const pitfallRows = cited.map(code => {
+    const entry = PITFALLS[code]
+    return `<tr><td class="n">${esc(code)}</td><td>${entry ? esc(entry[0]) : 'no gloss recorded for this code'}</td>` +
+      `<td class="dim">${entry && entry[1] ? esc(entry[1]) : 'as the catalogue has it'}</td></tr>`
+  }).join('\n')
+  derived(cited.length)
+
   const ontBody = `<p class="eyebrow">the ontology</p>
 <h1>What this graph is, as an ontology</h1>
 <p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, and then runs the standard pitfall scan over the graph and reports what it finds — including the findings that are these decisions showing up as defects.</p>
@@ -1646,6 +1683,14 @@ ${rulingRows}
 <li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
 <li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
 </ul>
+
+<h2>Where the checks come from</h2>
+<p>The scan follows the OOPS! catalogue — OntOlogy Pitfall Scanner — which numbers the modelling faults that recur across published ontologies and describes how each can be detected. A pitfall catalogue is not a standard to comply with; it is a list of the places ontologies are known to go wrong, so that an evaluation can be systematic instead of a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset of it locally against this graph, and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
+<p class="meta">Poveda-Villal\u00f3n, G\u00f3mez-P\u00e9rez and Su\u00e1rez-Figueroa, "OOPS! (OntOlogy Pitfall Scanner!): An On-line Tool for Ontology Evaluation", <i>International Journal on Semantic Web and Information Systems</i> 10(2), 2014.</p>
+<div class="tw"><table><thead><tr><th>pitfall</th><th>what the catalogue names</th><th>use here</th></tr></thead><tbody>
+${pitfallRows}
+</tbody></table></div>
+<p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is built out of relations between named things. Where a number is borrowed for a fault of a different shape, the third column says so — a borrowed number presented as the catalogue's own finding would claim more agreement with the literature than there is. The standing frame holds over all of it: a finding maps to the catalogue where one applies, and several of the findings below are decisions recorded above rather than defects.</p>
 
 <h2>The pitfall scan</h2>
 <p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects carried in the record.</p>

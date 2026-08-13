@@ -130,6 +130,28 @@ table.findings .src { font: .58rem var(--mono); }
 <li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
 </ul>
 
+<h2>Where the checks come from</h2>
+<p>The scan follows the OOPS! catalogue — OntOlogy Pitfall Scanner — which numbers the modelling faults that recur across published ontologies and describes how each can be detected. A pitfall catalogue is not a standard to comply with; it is a list of the places ontologies are known to go wrong, so that an evaluation can be systematic instead of a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset of it locally against this graph, and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
+<p class="meta">Poveda-Villalón, Gómez-Pérez and Suárez-Figueroa, "OOPS! (OntOlogy Pitfall Scanner!): An On-line Tool for Ontology Evaluation", <i>International Journal on Semantic Web and Information Systems</i> 10(2), 2014.</p>
+<div class="tw"><table><thead><tr><th>pitfall</th><th>what the catalogue names</th><th>use here</th></tr></thead><tbody>
+<tr><td class="n">P02</td><td>synonymous elements not declared equivalent</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P03</td><td>a bare `is` used where a subclass or type relation is meant</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P04</td><td>elements left unconnected to the rest of the ontology</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P05</td><td>an inverse relationship defined the wrong way round</td><td class="dim">read here as inverse pairs present in the vocabulary but undeclared</td></tr>
+<tr><td class="n">P06</td><td>a defect in the class hierarchy</td><td class="dim">read here as the absence of a hierarchy to have a defect in</td></tr>
+<tr><td class="n">P08</td><td>elements left without human-readable annotation</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P10</td><td>classes never declared disjoint</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P11</td><td>a property with no declared domain</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P12</td><td>equivalent properties not declared equivalent</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P13</td><td>inverse relationships not declared</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P21</td><td>a catch-all class doing the work of a distinction</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P22</td><td>no naming regularity across the vocabulary</td><td class="dim">as the catalogue has it</td></tr>
+<tr><td class="n">P24</td><td>a name that carries a definition instead of naming a term</td><td class="dim">applied here to predicates that carry a whole proposition, and to labels that are sentences</td></tr>
+<tr><td class="n">P25</td><td>a relationship declared inverse to itself</td><td class="dim">read here as a symmetric relation asserted in one direction only</td></tr>
+<tr><td class="n">P30</td><td>equivalent elements not declared equivalent</td><td class="dim">read here over identity chains between nodes</td></tr>
+</tbody></table></div>
+<p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is built out of relations between named things. Where a number is borrowed for a fault of a different shape, the third column says so — a borrowed number presented as the catalogue's own finding would claim more agreement with the literature than there is. The standing frame holds over all of it: a finding maps to the catalogue where one applies, and several of the findings below are decisions recorded above rather than defects.</p>
+
 <h2>The pitfall scan</h2>
 <p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. 7 of the 19 findings are decisions recorded above, 8 are answered by the declarations, and 4 are open defects carried in the record.</p>
 <div class="qa">
@@ -240,7 +262,7 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-13 at commit 60deb70
+built 2026-08-13 at commit a7151f7
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

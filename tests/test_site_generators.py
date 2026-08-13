@@ -291,6 +291,24 @@ def test_every_scan_finding_reaches_the_page_with_a_stance(qa_json):
         assert f["tag"] in html, f["tag"]
 
 
+def test_the_ontology_page_states_where_its_checks_come_from(qa_json):
+    """The scan borrows the OOPS! catalogue's numbering; the page says so, cites
+    it, and lists every pitfall code the tool actually uses."""
+    html = read(os.path.join(PUBLIC, "ontology.html"))
+    section = html[html.index("Where the checks come from"):html.index("<h2>The pitfall scan")]
+    assert "OntOlogy Pitfall Scanner" in section
+    assert "Poveda-Villal" in section
+    assert "not the OOPS! service" in section
+    source = read(os.path.join(ROOT, "tools", "ontology_qa", "quality.py"))
+    cited = set(re.findall(r"P\d{2}", source))
+    cited |= {code for sev in ("critical", "important", "minor")
+              for f in qa_json[sev] for code in re.findall(r"P\d{2}", f["tag"])}
+    listed = set(re.findall(r'<td class="n">(P\d{2})</td>', section))
+    assert listed == cited, cited ^ listed
+    assert "no gloss recorded" not in section, (
+        "a pitfall code the scan cites has no gloss — add it to PITFALLS in build-atlas.mjs")
+
+
 def test_the_ontology_page_names_what_is_deliberately_absent():
     html = read(os.path.join(PUBLIC, "ontology.html"))
     section = html[html.index("Deliberately absent"):html.index("The pitfall scan")]
