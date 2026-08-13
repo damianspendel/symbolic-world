@@ -592,3 +592,43 @@ is R0.1's staging, not a bug, and changing it would be a landing redesign.
 Tests: the emitted template's order (brand before menu before row two), its menu
 matching the generated pages link for link, `main.js` importing and rendering it
 with no bespoke bar left behind, and the dev server's extensionless resolution.
+
+## Item 13 — atlas stability, minimal profile
+
+**The ruling (editorial ruling, 2026-08-13).** Layout stays fresh per visit — no
+build-time positions, no stored layout. Viewport and selection survive
+view-switches only, in memory; a reload may start fresh. A full re-layout per
+release is fine. URL deep links: yes.
+
+**1. The atlas across routes was already alive — measured, not assumed.** The
+cytoscape instance is constructed once at module load and never destroyed; the
+route views are an overlay (`#mode-panel`) that is shown and hidden over it, and
+`enterAtlas()` returns early when the atlas is already up, so returning to
+`#/atlas` does not re-frame. Measured on the built app: zoom, pan, node
+positions, the selection and the faded/neighbour state are **bit-identical**
+before and after five `#/concordance ↔ #/atlas` round-trips (`z` 0.37 → 0.37,
+pan `{-40, 60}` → `{-40, 60}`, `sol` still selected). A node tap after those
+round-trips fires **once**, so nothing doubles up on re-entry. The container is
+covered rather than hidden with `display: none`, so no `resize()` is needed and
+none was added.
+
+**2. Deep links.** `#/atlas?node=<id>` selects on arrival and focuses the
+node's neighbourhood through the existing capped zoom (R9.2), not a maximum
+zoom: loading `#/atlas?node=mercurius` cold selects mercurius, opens its panel
+and lands with the node on screen at zoom 0.106 — the fit its 52-edge
+neighbourhood asks for. `#/atlas?edge=<id>` works the same way. Selection is now
+reflected with `history.replaceState`, so three selections in a row grow history
+by **0** entries (it used to push one per selection), and clearing the selection
+clears the parameter back to `#/atlas`. The older `#/n/<id>` and `#/e/<id>`
+permalinks are still read on arrival, so links already copied out of the site
+keep working. A deep link naming a node the graph does not carry warns in the
+console and leaves the atlas alone rather than half-selecting.
+
+**3. Not done, deliberately.** No "view in atlas" links were added to the other
+pages — the ruling says inbound links only for now, and that is the follow-up.
+
+Headless tests cover the mechanism: one construction and no `destroy()`, the
+early return in `enterAtlas`, `replaceState` rather than `setHash` on selection,
+the parameter form read by the router with the old permalinks still matched, and
+the parameter cleared when the selection is. The behavioural claims above are
+browser measurements and are reported as such.

@@ -193,6 +193,26 @@ if (MOBILE) {
 let routing = false
 function setHash(h) { routing = true; location.hash = h; setTimeout(() => { routing = false }, 0) }
 
+// Item 13 (editorial ruling, 2026-08-13) — the selection is reflected into the
+// URL, not pushed onto history: a reader clicking through twenty nodes should
+// not have to press Back twenty times to leave. replaceState does not fire
+// hashchange either, so reflecting a selection cannot re-enter the router.
+// #/atlas?node=<id> is the form the atlas emits; the older #/n/<id> and
+// #/e/<id> permalinks are still read on arrival, so links already copied out of
+// the site keep working.
+function routeOf(hash) {
+  const raw = (hash || '').replace(/^#/, '')
+  const [path, query] = raw.split('?')
+  return { path: '#' + path, params: new URLSearchParams(query || '') }
+}
+function reflect(hash) {
+  if (location.hash === hash) return
+  history.replaceState(null, '', hash || location.pathname + location.search)
+}
+function reflectSelection(kind, id) {
+  reflect(id ? `#/atlas?${kind}=${encodeURIComponent(id)}` : '#/atlas')
+}
+
 // R9.2 — land on the REGION, not on the edge. Fit the given elements with
 // generous padding and then cap the zoom, so a two-node selection does not fill
 // the screen at 12× and lose every landmark around it.
@@ -242,7 +262,7 @@ function selectNode(node, { hash = true } = {}) {
   hood.removeClass('faded'); hood.nodes().addClass('nbr')
   SELECTION = { kind: 'node', id: node.id(), label: node.data('label') }
   renderPanel(node); drawChips()
-  if (hash) setHash('#/n/' + node.id())
+  if (hash) reflectSelection('node', node.id())
 }
 function selectEdge(edge, { hash = true } = {}) {
   closeMode()
@@ -252,14 +272,17 @@ function selectEdge(edge, { hash = true } = {}) {
   const e = edgeData(edge.id())
   SELECTION = { kind: 'edge', id: edge.id(), label: e ? `${labelOf(e.source)} ${e.relation} ${labelOf(e.target)}` : edge.id() }
   renderPanel(edge); drawChips()
-  if (hash) setHash('#/e/' + edge.id())
+  if (hash) reflectSelection('edge', edge.id())
 }
 function clearSelection() {
   cy.$(':selected').unselect(); cy.elements().removeClass('faded nbr lit')
   $('panel').classList.add('hidden')
   SELECTION = null
   if (typeof drawChips === 'function') drawChips()
-  if (location.hash.startsWith('#/n/') || location.hash.startsWith('#/e/')) setHash('')
+  // clearing the selection clears the parameter, and leaves the route alone
+  const here = routeOf(location.hash)
+  if (here.params.has('node') || here.params.has('edge')) reflectSelection(null, null)
+  else if (here.path.startsWith('#/n/') || here.path.startsWith('#/e/')) setHash('')
 }
 cy.on('tap', 'node[kind != "region"]', e => selectNode(e.target))
 cy.on('tap', 'edge', e => selectEdge(e.target))
@@ -1363,6 +1386,22 @@ function applyHash() {
   const h = location.hash
   if (!h || h === '#' || h === '#/') return
   enterAtlas()
+  const { path, params } = routeOf(h)
+  // #/atlas?node=<id> / ?edge=<id> — the form the atlas emits and the one an
+  // inbound deep link uses. Selecting focuses the neighbourhood, not the node
+  // alone, so the reader lands seeing where they are (R9.2's zoom cap).
+  if (path === '#/atlas' && (params.get('node') || params.get('edge'))) {
+    closeMode(); $('family-panel').classList.add('hidden')
+    const id = params.get('node') || params.get('edge')
+    const el = cy.getElementById(id)
+    if (el.nonempty()) {
+      if (el.isNode()) selectNode(el, { hash: false }); else selectEdge(el, { hash: false })
+      focusOn(around(el))
+    } else {
+      console.warn(`deep link: no ${params.get('node') ? 'node' : 'edge'} "${id}" in this graph`)
+    }
+    return
+  }
   let m
   if ((m = h.match(/^#\/n\/(.+)$/))) {
     const n = cy.getElementById(decodeURIComponent(m[1]))
@@ -1371,11 +1410,11 @@ function applyHash() {
     const e = cy.getElementById(decodeURIComponent(m[1]))
     if (e.nonempty() && e.isEdge()) { selectEdge(e, { hash: false }); focusOn(around(e)) }
   } else if ((m = h.match(/^#\/family\/(.*)$/))) openFamily(decodeURIComponent(m[1]))
-  else if (h === '#/concordance') openConcordance()
-  else if (h === '#/queue') openQueue()
-  else if (h === '#/families') openFamiliesPage()
-  else if (h === '#/method') openMethod()
-  else if (h === '#/atlas') { closeMode(); $('family-panel').classList.add('hidden') }
+  else if (path === '#/concordance') openConcordance()
+  else if (path === '#/queue') openQueue()
+  else if (path === '#/families') openFamiliesPage()
+  else if (path === '#/method') openMethod()
+  else if (path === '#/atlas') { closeMode(); $('family-panel').classList.add('hidden') }
 }
 window.addEventListener('hashchange', applyHash)
 

@@ -584,6 +584,59 @@ def test_the_app_routes_render_the_shared_header_fragment():
         "a route still builds its own bar instead of the shared header")
 
 
+# ------------------------------------- item 13 · the atlas across routes ----
+# What is testable without a browser is the mechanism: the instance is built
+# once, the routes hide rather than rebuild, and the selection is reflected into
+# the URL instead of pushed onto history. The behavioural claims (viewport and
+# selection bit-identical across route round-trips, one tap after five of them,
+# a deep link focusing the right node) are measured in a real browser and
+# reported in docs/experiments/ui_v2_build_report_2026-08-13.md.
+
+def app_js():
+    return read(os.path.join(ROOT, "web", "src", "main.js"))
+
+
+def test_the_graph_is_built_once_and_never_destroyed():
+    js = app_js()
+    assert js.count("cytoscape({") == 1, "the atlas is constructed more than once"
+    assert ".destroy()" not in js, "a route destroys the graph instead of hiding it"
+    assert "function closeMode() { modeEl.classList.add('hidden') }" in js, (
+        "leaving a route no longer hides the panel — check it does not tear down the atlas")
+
+
+def test_route_entry_does_not_reframe_a_live_atlas():
+    """enterAtlas returns early when the atlas is already up, which is what keeps
+    the viewport across a route round-trip."""
+    js = app_js()
+    body = js[js.index("function enterAtlas("):]
+    assert body.index("if (inAtlas) return") < body.index("cy.stop()")
+
+
+def test_selection_is_reflected_not_pushed():
+    js = app_js()
+    assert "history.replaceState" in js
+    assert "reflectSelection('node', node.id())" in js
+    assert "reflectSelection('edge', edge.id())" in js
+    assert "setHash('#/n/'" not in js, "node selection still pushes a history entry"
+    assert "setHash('#/e/'" not in js, "edge selection still pushes a history entry"
+
+
+def test_the_deep_link_form_is_read_and_the_old_one_still_works():
+    js = app_js()
+    assert "params.get('node')" in js and "params.get('edge')" in js
+    assert "function routeOf(" in js
+    # the older permalinks stay readable
+    assert "#\\/n\\/(.+)$" in js.replace("\\", "\\\\") or "^#\\/n\\/" in js
+    assert "focusOn(around(el))" in js, "a deep link selects without focusing"
+
+
+def test_clearing_the_selection_clears_the_parameter():
+    js = app_js()
+    body = js[js.index("function clearSelection()"):]
+    body = body[:body.index("cy.on('tap'")]
+    assert "reflectSelection(null, null)" in body
+
+
 def test_the_dev_server_resolves_extensionless_urls():
     """The reported failure on /ontology reproduced as a dev-server artifact:
     serve.mjs answered every extensionless URL with the atlas shell, so the
