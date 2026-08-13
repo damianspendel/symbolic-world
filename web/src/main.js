@@ -867,10 +867,28 @@ function wirePageSearch(rootEl, { localFilter } = {}) {
   })
 }
 
-function openPage(render) {
+// Item 14 — the menu marks where you are on an in-app route too. The generated
+// pages get their mark at build time; a route rendering the shared template got
+// none, so concordance, method, families and the queue never lit gold. Marked
+// here, at the one place every route passes through, rather than in each view.
+const MENU_HREF = {
+  '#/atlas': '/#/atlas',
+  '#/concordance': '/#/concordance',
+  '#/method': '/#/method',
+  '#/families': '/families',
+  '#/queue': '/families'        // R10.5 — the queue is a section of families
+}
+function markCurrent(root, href) {
+  root.querySelectorAll('.topmenu a[aria-current]').forEach(a => a.removeAttribute('aria-current'))
+  if (!href) return
+  const link = root.querySelector(`.topmenu a[href="${href}"]`)
+  if (link) link.setAttribute('aria-current', 'page')
+}
+function openPage(render, route = '') {
   enterAtlas(); $('family-panel').classList.add('hidden')
   modeEl.classList.remove('hidden'); modeEl.scrollTop = 0
   render()
+  markCurrent(modeEl, MENU_HREF[route] || '')
 }
 function openEdgeFromPage(id) {
   closeMode()
@@ -884,11 +902,11 @@ function openMethod() {
     modeEl.innerHTML = `${pageBar({ where: 'about', search: true })}<div class="page method-page">${method.html}</div>`
     modeEl.querySelector('[data-back]').addEventListener('click', goAtlas)
     wirePageSearch(modeEl)
-  })
+  }, '#/method')
   setHash('#/method')
 }
 function openConcordance() {
-  openPage(() => { renderConcordance(modeEl, atlas, { onOpenEdge: openEdgeFromPage, onBack: goAtlas, mixStrip, pageBar }); wirePageSearch(modeEl) })
+  openPage(() => { renderConcordance(modeEl, atlas, { onOpenEdge: openEdgeFromPage, onBack: goAtlas, mixStrip, pageBar }); wirePageSearch(modeEl) }, '#/concordance')
   setHash('#/concordance')
 }
 
@@ -907,7 +925,7 @@ function openFamiliesPage({ scrollTo = '' } = {}) {
       const el = $(scrollTo)
       if (el) modeEl.scrollTop = el.offsetTop - 56
     }, 60)
-  })
+  }, scrollTo === 'queue-section' ? '#/queue' : '#/families')
   setHash(scrollTo === 'queue-section' ? '#/queue' : '#/families')
 }
 
@@ -1417,6 +1435,24 @@ function applyHash() {
   else if (path === '#/atlas') { closeMode(); $('family-panel').classList.add('hidden') }
 }
 window.addEventListener('hashchange', applyHash)
+
+// Item 14 — the menu's hash destinations are routes, not documents. Their hrefs
+// are absolute (`/#/atlas`) because a generated page must be able to load the
+// app; inside the app that same href is a different PATH whenever the app is not
+// served from exactly `/`, so the browser reloaded the document and the graph
+// came back re-laid-out with the selection gone. Delegated on the document, so
+// the topbar's menu and any route panel's menu are both covered, and so a route
+// added later needs nothing.
+document.addEventListener('click', ev => {
+  const link = ev.target.closest && ev.target.closest('.topmenu a, .brand[href]')
+  if (!link || ev.defaultPrevented || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button) return
+  const href = link.getAttribute('href') || ''
+  const route = href.match(/^\/?(#\/.*)$/)
+  if (!route) return                       // a real page: let the browser go
+  ev.preventDefault()
+  if (location.hash === route[1]) applyHash()
+  else location.hash = route[1]
+})
 
 // ----------------------------------------------------------------- buttons ---
 $('fit').addEventListener('click', () => cy.animate({ fit: { padding: 50 } }, { duration: 450 }))
