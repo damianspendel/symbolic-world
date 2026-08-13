@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Invariant tests for the query layer (tools/query/kg_query.py).
+Invariant tests for the query layer (tools/query/kg_query.py, and the Turtle
+export in tools/query/export_rdf.py).
 
 Deliberately no pinned counts. seed.json changes as mining windows merge, so a
 test that asserts "22 synonym-of edges" is a test that rots. Every assertion
@@ -12,12 +13,16 @@ here is a relationship that must hold whatever the graph currently says:
     row is labelled as derived;
   * every walk hop is a real edge, and the walk never claims transitivity;
   * the declarations file is internally consistent and grounded in the graph;
-  * the CLI exits 0 and prints its graph state.
+  * the CLI exits 0 and prints its graph state;
+  * the Turtle export declares no transitivity, asserts a super-property only
+    where a string sits in one family, and withholds the family-restricted
+    declaration.
 
 Run: python3 -m pytest tests/test_query.py
 """
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -369,4 +374,90 @@ def test_cli_leaves_the_seed_file_untouched():
     before = kg_query.file_digest(SEED)
     run("--closure", "--count")
     run("--walk", "identity", "--subject", "mercurius", "--depth", "3")
+    assert kg_query.file_digest(SEED) == before
+
+
+# ------------------------------------------------------- the RDF export (D7) ---
+
+import export_rdf  # noqa: E402
+
+
+@pytest.fixture(scope="module")
+def turtle(graph, declarations):
+    return export_rdf.build(graph, declarations)
+
+
+def test_turtle_declares_no_transitivity(turtle):
+    assert "TransitiveProperty" not in turtle
+    assert "owl:TransitiveProperty" not in turtle
+    assert "NO TRANSITIVITY AXIOM APPEARS IN THIS FILE" in turtle
+    assert "uroboros" in turtle
+
+
+def test_turtle_emits_one_triple_per_edge(graph, turtle):
+    triples = [line for line in turtle.split("\n")
+               if line.startswith("jkgn:") and line.endswith(" .")
+               and " a jkg:Node" not in line]
+    assert len(triples) == len(graph.edges)
+
+
+def test_turtle_subproperty_only_for_unambiguous_strings(graph, turtle):
+    families = graph.family_of_string()
+    spread = {}
+    for family, strings in families.items():
+        for string in strings:
+            spread.setdefault(string, set()).add(family)
+    for string, fams in spread.items():
+        if len(fams) > 1:
+            block = f'rdfs:label "{string}" ;\n    rdfs:subPropertyOf'
+            assert block not in turtle, string
+    unambiguous = [s for s, f in spread.items() if len(f) == 1]
+    assert unambiguous, "no unambiguous string to assert a super-property for"
+    assert "rdfs:subPropertyOf" in turtle
+
+
+def test_turtle_withholds_family_restricted_declarations(declarations, turtle):
+    for decl in kg_query.active_declarations(declarations):
+        if not decl.get("applies_to_family"):
+            continue
+        pair = f"jkgp:{decl['forward']} owl:inverseOf jkgp:{decl['inverse']} ."
+        assert pair not in turtle
+        assert f"withheld: {decl['id']}" in turtle
+
+
+def test_turtle_emits_the_unrestricted_declarations(declarations, turtle):
+    for decl in kg_query.active_declarations(declarations):
+        if decl.get("applies_to_family"):
+            continue
+        if decl["kind"] == "inverse":
+            assert f"jkgp:{decl['forward']} owl:inverseOf jkgp:{decl['inverse']} ." in turtle
+        else:
+            assert f"jkgp:{decl['relation']} a owl:SymmetricProperty ." in turtle
+
+
+def test_turtle_statements_are_terminated_and_prefixes_declared(turtle):
+    statements, buffer = [], []
+    for line in turtle.split("\n"):
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        buffer.append(stripped)
+        if stripped.endswith("."):
+            statements.append(" ".join(buffer))
+            buffer = []
+    assert not buffer, "a statement was left open at the end of the file"
+    assert all(s.endswith(" .") for s in statements)
+    assert all(s.count('"') % 2 == 0 for s in statements)
+    assert all(s.count("<") == s.count(">") for s in statements)
+    declared = {name for name, _ in export_rdf.PREFIXES}
+    for statement in statements:
+        if statement.startswith("@prefix"):
+            continue
+        for match in re.finditer(r"(?<![<\w])([A-Za-z][A-Za-z0-9]*):(?![/\s])", statement):
+            assert match.group(1) in declared, match.group(1)
+
+
+def test_turtle_export_leaves_the_seed_file_untouched(graph, declarations):
+    before = kg_query.file_digest(SEED)
+    export_rdf.build(graph, declarations)
     assert kg_query.file_digest(SEED) == before
