@@ -527,3 +527,53 @@ design choice.
    plain text.
 8. Nothing is deployed. `./manage.sh deploy` is not run; publication is a
    separate, explicit decision.
+
+---
+
+## V2 — the v2.0 UI slice (added 2026-08-13, spec for the ui-v2-dev build)
+
+Damian's go of 2026-08-13. Conservative defaults chosen where the mockup
+left questions open; each is flagged [DEFAULT] and reversible at review.
+
+- **V2-R1 releases page.** A `/releases` generator reading `docs/RELEASES.md`
+  (create it with the v1.4-pending skeleton entry and the pin-line format
+  from CLAUDE.md). Extensionless URL, canonical tag, sitemap entry, copy
+  contract scan — all in the same commit that creates the page.
+- **V2-R2 per-family pages.** One generated page per family
+  (`/family-<name>`): definition excerpt quoted from FAMILY_DEFINITIONS
+  (never paraphrased), live counts from the derived map, string chips,
+  seeds, pending items for the family, and its external-validity row read
+  from `docs/experiments/external_validity_2026-08/results.json` (extend
+  that file with the per-family table from report v3 — receipts first,
+  then interpolation; no typed numbers). [DEFAULT] family-scoped counts on
+  one line, graph-wide totals on the next, per the mockup's choice.
+- **V2-R3 faceted ledger.** Client-side facet chips over the existing
+  cards (volume, batch, claim_type, state, family, provenance); a `§`
+  permalink anchor per card with stable ids; an assignment-history chip
+  that renders ONLY when an edge carries `relation_family.history` (the
+  data-model change is the mining pipeline's; the UI is ready for it).
+  [DEFAULT] history chip shows latest transition + "n earlier" if long.
+  [DEFAULT] `reassigned` facet included, visibly labeled derived.
+- **V2-R4 query panel.** A page running the kg_query semantics client-side
+  over the emitted data (emit `relation_declarations.json` into web/src at
+  build). Filters as in the CLI; closure toggle; derived rows visibly
+  marked with origin and carried qualifier; identity walk depth-bounded
+  with the non-transitivity header; the receipts footer verbatim.
+  [DEFAULT] the headline count is STORED EDGES, derived rows shown as
+  "+M derived" — a copied number is always an edge count.
+- **V2-R5 ontology QA panel (Damian, 2026-08-13).** The method/about page
+  gains a section on the ontology and its practices: the two-tier design,
+  the declarations with their rulings, what is deliberately absent
+  (transitivity, domain/range as constraints), AND a build-time panel of
+  the ontology-QA scan's headline results (hapax share, sentence-shaped
+  predicates remaining, declared-inverse coverage, detached components) —
+  regenerated on every build with date and commit, framed per the
+  anti-overclaim rules: several "pitfalls" are recorded design decisions,
+  and the panel says which. Give `tools/ontology_qa/quality.py` a `--json`
+  mode rather than scraping its prose output; the builder consumes that.
+- **V2-R6 discipline.** Worktree-isolated build; tokens only; new pages
+  join the copy-contract scan (numbers + banned vocabulary) on creation;
+  extensionless links throughout; tests for every generator; NO deploy
+  from the build — after merge, the next deploy carries UI and therefore
+  waits for Damian's review, and the standing data-only authorization does
+  not cover it.
