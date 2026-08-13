@@ -1,0 +1,269 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.1",
+ "definitions_git_hash": "3ffd9a6c486c9ded7bbedcff544c295cbad364c9",
+ "draw_seed": 1256770286,
+ "plant_seed": 2413973775,
+ "planted_at": "2026-08-13T07:30:28+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "albedo|corresponds-to|luna",
+   "class": "K1",
+   "was": "correspondence",
+   "now": "archetypal-identity",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'corresponds-to' and the appositional quote assert structural likeness rather than the strong identity of the terms themselves required for archetypal-identity."
+  },
+  {
+   "id": "dove|assuages|rebis",
+   "class": "K1",
+   "was": "psychic-effect",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Assuaging madness is a dynamic act that produces a state in or heals the object, which fits psychic-effect rather than a standing requirement for dependence."
+  },
+  {
+   "id": "mother-complex|originates-in|the-unconscious",
+   "class": "K1",
+   "was": "generation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rules explicitly state that 'originates-in' for psychological entities (like complexes and the unconscious) is generation in the inverse direction, whereas derivation is strictly for tradition-to-tradition transmission."
+  },
+  {
+   "id": "rex|symbolizes|the-self",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The direction test for manifestation requires the subject to be the less formulable term, but here the king (subject) is the image carrying the symbol of the self (object), which is symbolization."
+  },
+  {
+   "id": "spirit|possesses|man",
+   "class": "K1",
+   "was": "psychic-effect",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Taking possession of a person is a dynamic act of overpowering, which fits psychic-effect rather than a standing condition for dependence."
+  },
+  {
+   "id": "the-opposites|cancel-out-in|the-self",
+   "class": "K1",
+   "was": "union",
+   "now": "separation",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Opposites canceling out in an archetype of unity describes the resolution and fusion of opposites, which belongs to union, not separation."
+  },
+  {
+   "id": "the-opus|symbolizes|individuation",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'symbolizes' and the quote's assertion that the symbolism expresses the process clearly place this in symbolization, not manifestation."
+  },
+  {
+   "id": "trickster|lacks|instinct",
+   "class": "K1",
+   "was": "privation",
+   "now": "opposition",
+   "verdict": "WRONG",
+   "should_be": "privation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "A stated lack or absence belongs to privation, whereas opposition requires active enmity or counter-position."
+  },
+  {
+   "id": "christ|corresponds-as-adam-secundus-to-the-unfallen|adam",
+   "class": "K2",
+   "was": "correspondence",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'corresponds-to' and the quote's assertion of structural likeness without identity place this in correspondence, not telos."
+  },
+  {
+   "id": "luna|personifies|anima",
+   "class": "K2",
+   "was": "personification",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "personification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'personifies' clearly belongs to the personification family, not telos."
+  },
+  {
+   "id": "tree|is-identical-with-and-like-it-a-symbol-of-wholeness|lapis",
+   "class": "K2",
+   "was": "archetypal-identity",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly asserts that the tree is identical with the stone, which routes to archetypal-identity, not a kinship role."
+  },
+  {
+   "id": "wise-old-man|appears-as|dwarf",
+   "class": "K2",
+   "was": "manifestation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'appears-as' describes a subject showing itself under a specific guise, which is the definition of manifestation, not derivation."
+  },
+  {
+   "id": "lapis|is|homunculus",
+   "class": "K3",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts what the lapis itself is ('is a living being, a homunculus'), which routes to archetypal-identity rather than correspondence."
+  },
+  {
+   "id": "philosophical-egg|produces|homunculus",
+   "class": "K3",
+   "was": "generation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'produces' and the quote describing emergence from a vessel belong to the generation family, not correspondence."
+  },
+  {
+   "id": "the-unconscious|once-recognized-appears-as-something-objective-in-which-is-included|the-ego",
+   "class": "K3",
+   "was": "composition",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The claim that the ego is included within the unconscious is a statement of parthood or containment, which belongs to composition, not correspondence."
+  },
+  {
+   "id": "wholeness|is-an-ever-present|archetype",
+   "class": "K3",
+   "was": "classification",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote 'archetype of wholeness' asserts that wholeness is a kind of archetype, which is taxonomy fitting classification, not correspondence."
+  },
+  {
+   "id": "mass-psyche|mobilizes|the-shadow",
+   "class": "K4",
+   "was": "psychic-effect",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The act of mobilizing is a dynamic action where one term activates another, which fits psychic-effect rather than a refusal."
+  },
+  {
+   "id": "rex|renewed-by|holy-ghost",
+   "class": "K4",
+   "was": "psychic-effect",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The Holy Ghost dynamically acts upon the king to renew or rebirth him, which fits psychic-effect rather than a refusal."
+  },
+  {
+   "id": "triad|corresponds-to|animus",
+   "class": "K4",
+   "was": "correspondence",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'corresponds-to' is the primary seed string for the correspondence family and should not be unclassified."
+  }
+ ],
+ "sensitivity": {
+  "caught": 19,
+  "of": 19,
+  "pct": 100.0
+ },
+ "specificity": {
+  "clean_left_alone": 40,
+  "of": 41,
+  "pct": 97.6
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "raven|is-identical-with|magician",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "reason": "The quote 'appears as' indicates a guise, and since the subject (raven) is the image carrying the less formulable term (magician), the direction test places this in symbolization, not manifestation."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "PASS",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

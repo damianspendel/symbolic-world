@@ -570,7 +570,7 @@
       "candidates": "pipeline/work/b-cw9i-10_candidates.json"
     }
   ],
-  "next": "v0.7.1 close-out HELD at calibration (2026-08-12 night). The 43-edge rerun IS merged and committed; FAMILY_DEFINITIONS declares v0.7.1; five calibration runs FAILED (records run1-run5 on file) — NOT a gate defect: each failure is the gate disputing pre-v0.7 labels using v0.7's own rulings. Measured contest rate ~5-10% of the ~1,250 pre-v0.7 assignments (~60-120 edges). CI is deliberately RED on the PASS handshake; ALL deploys fail closed until resolved. Damian's decision needed: (A) systematic re-audit sweep of pre-v0.7 assignments under v0.7.1, then recalibrate (est. $25-50); (B) rule the flagged queue items in sittings and loop calibration between sittings; (C) other. 14 calibration-flagged edges already queued (queue 248). CW 8 arc authorized; task must STAND DOWN until this resolves AND the pre-arc check runs.",
+  "next": "v0.7.1 CLOSE-OUT COMPLETE (2026-08-13): option-A re-audit done (1220 audited: 1167 stand+stamped, 53 contested -> 39 two-arm resolved, 14 queued), calibration PASS on the reconciled key (records/2026-08-13_v071_run6.json, 19/19 with diagnosis, spec 40/41; runs 1-5 FAIL kept on file). Queue 262. NEXT: the CW 8 pre-arc check (external-validity mini-pass over psychic-effect/dependence/instrumentality, sources in data/secondary/) — then set CW8-DUE marker and re-enable jungkg-cw8-mining.",
   "nodes": 338,
   "edges": 1147,
   "refs": 1304,
