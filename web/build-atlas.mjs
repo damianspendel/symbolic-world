@@ -1643,7 +1643,17 @@ table.findings .src { font: .58rem var(--mono); }
     nav: 'ontology', changefreq: 'daily', priority: '0.5', style: ontStyle, body: ontBody
   })
   V2_COPY.push(['public/ontology.html (generated)', stripEvidence(ontBody)])
-  writeFileSync(here('./src/ontology_qa.json'), JSON.stringify(QA))
+  // The scan's findings, kept for whatever reads them next (the #/method route
+  // is the obvious candidate). The example lists are dropped: they come out of
+  // set iteration inside the tool and are not stable between two runs over the
+  // same graph, so committing them would churn a tracked file for no reading.
+  writeFileSync(here('./src/ontology_qa.json'), JSON.stringify({
+    ...QA,
+    critical: QA.critical.map(({ tag, message }) => ({ tag, message })),
+    important: QA.important.map(({ tag, message }) => ({ tag, message })),
+    minor: QA.minor.map(({ tag, message }) => ({ tag, message })),
+    _examples_dropped: 'the scan prints examples; their order is not stable between runs, so they are not carried into this file'
+  }))
   console.log(`ontology page: scan ${QA.totals.critical}/${QA.totals.important}/${QA.totals.minor} findings — ` +
     `${counts.design} design, ${counts.declared} declared, ${counts.open} open, ${counts.unclassified} unclassified`)
 }

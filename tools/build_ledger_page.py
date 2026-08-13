@@ -299,7 +299,9 @@ def build():
             f' data-vol="{esc(" ".join(vols))}" data-batch="{esc(" ".join(bids))}"'
             f' data-ct="{esc(" ".join(ctypes))}" data-state="{esc(fstate)}"'
             f' data-family="{esc(fvalue)}" data-prov="{esc(" ".join(provs))}"'
-            f' data-s="{esc(labels.get(e["subject"], e["subject"]))} {esc(e["relation"])} {esc(labels.get(e["object"], e["object"]))} cw{" cw".join({str(r["volume"]) for r in e["references"]})}{esc(famsearch)}">'
+            # the volume list is sorted: an unordered set made this page differ
+            # between two builds of the same graph, which buries a real change
+            f' data-s="{esc(labels.get(e["subject"], e["subject"]))} {esc(e["relation"])} {esc(labels.get(e["object"], e["object"]))} cw{" cw".join(vols)}{esc(famsearch)}">'
             f'<a class="anchor" href="#{ident}" title="permalink to this record"><span class="id">#{ident}</span>§</a>'
             f'<div class="edge">{esc(labels.get(e["subject"], e["subject"]))} <span class="rel">{esc(e["relation"])}</span> {esc(labels.get(e["object"], e["object"]))}</div>'
             f'{"".join(rows)}{dchips}{famrow}</div>')
