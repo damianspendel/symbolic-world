@@ -22,6 +22,8 @@ is byte-identical: `git status` reports it untouched.
 | `2f239f2` | V2-R4 — `/query`, the kg_query semantics ported and run in the browser |
 | `8a562a5` | V2-R5 — `/ontology`, the design, the declarations, and the pitfall scan with a stance per finding; `quality.py --json` |
 | `72e1d48` | tests — `tests/test_site_generators.py`, invariants, no pinned counts |
+| `5fa18e7` | this report |
+| `8c80b40` | determinism — same graph in, same bytes out from both generators |
 
 ## What each requirement produced
 
@@ -204,7 +206,15 @@ the console is clean. The ontology and family pages were rendered and read.
    not derived from a document the project already owns. It should be read as a
    draft of the release note rather than as a record.
 
-5. **The ruleset may have moved.** This worktree built against the committed
+5. **`/ontology` names the commit it was built at, which is the commit before
+   the one that commits it.** V2-R5 asks the panel for a date and a commit, and a
+   page cannot name the commit that contains it. The stamp reads as "generated
+   from this tree state", which is what it is, but it means the page is one
+   commit behind after every rebuild-and-commit cycle. Two builds of an unchanged
+   graph are otherwise byte-identical — `8c80b40` fixed the two places where they
+   were not.
+
+6. **The ruleset may have moved.** This worktree built against the committed
    `FAMILY_DEFINITIONS.md` at v0.7.1. The main tree has that file modified. If
    the version has moved, `/releases` and every family page will say so on the
    next build, and the pin will refuse to render without a PASS record for the
