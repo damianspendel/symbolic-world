@@ -1080,7 +1080,10 @@ if (existsSync(releasesPath)) {
     ev_passes: EV ? EV.passes : '', ev_works: EV ? EV.works_consulted : '',
     ev_treated: EV ? EV.treated : '', ev_agrees: EV ? EV.agrees : '',
     ev_disagrees: EV ? EV.disagrees : '', ev_split: EV ? EV.scholars_split : '',
-    ev_not_treated: EV ? EV.not_treated : '', ev_rulings: EV ? EV.rulings_produced : ''
+    ev_not_treated: EV ? EV.not_treated : '', ev_rulings: EV ? EV.rulings_produced : '',
+    // the same rule tools/ontology_qa/quality.py applies for its P24 check: a
+    // predicate of four or more hyphen tokens is carrying a proposition
+    clause_edges: seed.edges.filter(e => (e.relation.match(/-/g) || []).length >= 4).length
   }
   derived(...Object.values(relTokens))
   let relMd = readFileSync(releasesPath, 'utf8')
@@ -1101,6 +1104,20 @@ if (existsSync(releasesPath)) {
       body: renderMarkdown(s.slice(s.indexOf('\n') + 1))
     }))
     return { heading, status, pin, sections, future: /^skeleton/i.test(status) }
+  })
+  // Newest first, from the version in each heading rather than from the order
+  // the file happens to be written in. An entry whose heading carries no
+  // version keeps its position at the end rather than sorting as zero.
+  const versionOf = (h) => {
+    const m = h.match(/v(\d+)\.(\d+)(?:\.(\d+))?/)
+    return m ? [Number(m[1]), Number(m[2]), Number(m[3] || 0)] : null
+  }
+  entries.sort((a, b) => {
+    const va = versionOf(a.heading), vb = versionOf(b.heading)
+    if (!va && !vb) return 0
+    if (!va) return 1
+    if (!vb) return -1
+    return (vb[0] - va[0]) || (vb[1] - va[1]) || (vb[2] - va[2])
   })
   // V2-R7 — a batch named in a release entry links to its delta page. The link
   // is made from pipeline/state.json's own ids, in text nodes only, so a batch

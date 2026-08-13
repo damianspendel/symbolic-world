@@ -242,10 +242,18 @@ def test_no_family_page_calls_a_family_verified():
 
 # -------------------------------------------------------- the releases ---
 
+def live_entry(html):
+    """The pending entry — the one that is not a skeleton. Entries are ordered
+    newest first, and the newest is a skeleton, so position is not the test."""
+    entry = re.search(r'<section class="rel-entry">(.*?)</section>', html, re.S)
+    assert entry, "no pending (non-skeleton) entry on the page"
+    return entry.group(1)
+
+
 def test_releases_page_renders_the_version_pin():
     html = read(os.path.join(PUBLIC, "releases.html"))
-    pins = re.findall(r'<div class="pin">(.*?)</div>', html, re.S)
-    assert pins, "no version pin on the releases page"
+    pins = re.findall(r'<div class="pin">(.*?)</div>', live_entry(html), re.S)
+    assert pins, "no version pin on the pending release entry"
     text = re.sub(r"<[^>]+>", "", pins[0])
     assert re.search(r"graph v[\d.]+", text), text
     assert re.search(r"ruleset v[\d.]+", text), text
@@ -260,8 +268,40 @@ def test_releases_pin_names_the_binding_ruleset():
     html = read(os.path.join(PUBLIC, "releases.html"))
     doc = read(os.path.join(ROOT, "docs", "FAMILY_DEFINITIONS.md"))
     version = re.search(r"^# Relation families.*?(v[\d.]+)", doc, re.M).group(1)
-    pin = re.sub(r"<[^>]+>", "", re.findall(r'<div class="pin">(.*?)</div>', html, re.S)[0])
+    pin = re.sub(r"<[^>]+>", "", re.findall(r'<div class="pin">(.*?)</div>', live_entry(html), re.S)[0])
     assert f"ruleset {version}" in pin, pin
+
+
+def test_releases_are_ordered_newest_first():
+    """The generator sorts by the version in each heading; it does not trust the
+    order the file happens to be written in."""
+    html = read(os.path.join(PUBLIC, "releases.html"))
+    headings = re.findall(r'<section class="rel-entry[^"]*">\s*<h2>(.*?)</h2>', html, re.S)
+    versions = [tuple(int(n) for n in re.search(r"v(\d+)\.(\d+)", h).groups())
+                for h in headings]
+    assert versions == sorted(versions, reverse=True), headings
+    source = read(os.path.join(ROOT, "docs", "RELEASES.md"))
+    in_file = [tuple(int(n) for n in m.groups())
+               for m in re.finditer(r"^## v(\d+)\.(\d+)", source, re.M)]
+    assert in_file != versions, (
+        "the file is already in display order, so this test cannot see whether "
+        "the generator sorts — reorder the file or the assertion is vacuous")
+
+
+def test_the_pending_release_entry_has_substance():
+    """A skeleton is allowed to be a skeleton; the pending entry is not."""
+    html = read(os.path.join(PUBLIC, "releases.html"))
+    entry = re.search(r'<section class="rel-entry">(.*?)</section>', html, re.S)
+    assert entry, "no pending (non-skeleton) entry on the page"
+    body = entry.group(1)
+    for heading in ("the graph", "ruleset", "instruments and calibration",
+                    "checked outside the repository", "corrected or withdrawn"):
+        assert f">{heading}<" in body, heading
+    assert "clause-predicate" in body, "the defect story is not in the entry"
+    assert "form rule" in body
+    assert re.search(r"href=\"/batch-b-cw\w+-\d+\"", body), (
+        "the entry names no batch that links to its delta page")
+    assert len(re.sub(r"<[^>]+>", "", body).split()) > 400, "the entry is thin"
 
 
 def test_releases_page_carries_no_unbound_token():
