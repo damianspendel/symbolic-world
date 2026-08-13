@@ -1495,6 +1495,159 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
   console.log(`query panel: declarations ${activeDecls.length} active, walk header lifted from kg_query.py (${walkHeader.length} chars)`)
 }
 
+// ------------------------------------------------ V2-R5 · /ontology -------
+// What the ontology is, what it deliberately is not, and the pitfall scan run
+// fresh at build. The scan is consumed as JSON from tools/ontology_qa/quality.py
+// rather than scraped from its prose, and every figure below is its output.
+//
+// The framing rule, from the anti-overclaim checklist: several of the scan's
+// findings are decisions this project made on purpose, and one of them is the
+// reason the project exists. The panel says which is which, in a column, and it
+// neither counts a decision as a defect nor hides what a decision costs.
+const QA_STANCE = [
+  [/^P22/, 'design', 'The relation slot holds Jung\u2019s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it.'],
+  [/^P24 relation name/, 'open', 'A predicate carrying a whole proposition is the project\u2019s named defect. New mining is constrained by a form rule, and the normalization layer repairs the old edges beside their frozen originals rather than over them.'],
+  [/^P24 node label/, 'open', 'A label that is a sentence cannot be matched across edges. Counted here, not yet repaired.'],
+  [/^P02\/P30 synonymous/, 'declared', 'Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.'],
+  [/^P05\/P13/, 'declared', 'The declarations name the inverse pairs the document rules on. They are applied when a query asks for closure and are never written into the graph.'],
+  [/^P25/, 'declared', 'Same answer: a symmetric declaration is read at query time. Asserting the second direction in the graph would put a claim in it that no paragraph was gated for.'],
+  [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains are traversed by a depth-bounded walk that prints each hop\u2019s own citation and asserts nothing about the ends.'],
+  [/^P04/, 'open', 'A detached component is a gap in what has been mined, not a decision.'],
+  [/^P11\/P12/, 'design', 'No relation is given a domain or a range as a constraint. The observed signatures are a measurement of the corpus; a constraint would reject an edge because of what the schema expects rather than what the paragraph says.'],
+  [/^P21/, 'open', 'The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.'],
+  [/^P10/, 'design', 'Types are not declared disjoint. A node can function in two registers at once, and the graph would have to choose one to satisfy a disjointness axiom.'],
+  [/^P06/, 'design', 'This is an associative network with a type tag, not a subsumption ontology, and the paper describes it as one. There is no hierarchy to inherit through because none was claimed.'],
+  [/^P02 ambiguous/, 'design', '`is` is the word Jung used. The family assignment disambiguates it per edge, in the paragraph it came from, and the verbatim string stays as written.'],
+  [/^P02 duplicate/, 'open', 'Two ids carrying the same label is a defect in the node set.'],
+  [/^evidence gap/, 'design', 'The structural relations (sequence between stages) carry no citation by design and are excluded from the verified count. Any other relation without a reference is a defect and the structural check refuses it.']
+]
+const STANCE_LABEL = {
+  design: 'recorded design decision',
+  declared: 'answered by the declarations layer',
+  open: 'open — recorded as a defect',
+  unclassified: 'not classified'
+}
+let QA = null
+try {
+  QA = JSON.parse(execFileSync('python3',
+    [`${repoDir}tools/ontology_qa/quality.py`, `${repoDir}seed.json`, '--json'],
+    { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }))
+} catch (err) {
+  console.warn(`ontology page: the QA scan did not run (${String(err.message).split('\n')[0]}). ` +
+    `The page is not written this build — a panel dated today carrying yesterday's numbers would be worse than no panel.`)
+}
+
+if (QA && DECL) {
+  const h = QA.headline
+  const di = h.declared_inverses || {}
+  const stanceOf = (tag) => {
+    const hit = QA_STANCE.find(([re]) => re.test(tag))
+    return hit ? { kind: hit[1], why: hit[2] } : { kind: 'unclassified', why: 'This finding has no recorded stance. It is shown as the scan reported it.' }
+  }
+  const findingRows = ['critical', 'important', 'minor'].flatMap(sev =>
+    QA[sev].map(f => {
+      const s = stanceOf(f.tag)
+      return `<tr class="st-${s.kind}">
+<td class="sev">${esc(sev)}</td>
+<td><div class="ev tag">${esc(f.tag)}</div><div class="ev fmsg">${esc(f.message)}</div></td>
+<td><span class="chip st-${s.kind}">${esc(STANCE_LABEL[s.kind])}</span><div class="why">${esc(s.why)}</div></td>
+</tr>`
+    })).join('\n')
+  const counts = { design: 0, declared: 0, open: 0, unclassified: 0 }
+  for (const sev of ['critical', 'important', 'minor']) for (const f of QA[sev]) counts[stanceOf(f.tag).kind]++
+  derived(...Object.values(counts), QA.totals.critical + QA.totals.important + QA.totals.minor,
+    h.hapax_relations, h.distinct_relations, h.sentence_shaped_relations, h.sentence_shaped_edges,
+    h.detached_components, h.largest_component, h.components,
+    di.active_declarations, di.observed_inverse_pairs_in_vocabulary, di.observed_pairs_declared,
+    di.edges_carrying_a_declared_string, DECL.candidates_awaiting_ruling.length, DECL.rulings.length)
+
+  const declRows = activeDecls.map(d => `<tr>
+<td class="ev"><code>${esc(d.kind === 'inverse' ? `${d.forward} / ${d.inverse}` : d.relation)}</code></td>
+<td>${esc(d.kind)}${d.applies_to_family ? `<br><span class="dim">only where the edge carries <span class="ev">${esc(d.applies_to_family)}</span></span>` : ''}${d.carried_qualifier ? `<br><span class="dim">carries <span class="ev">${esc(d.carried_qualifier)}</span> into the derived row</span>` : ''}</td>
+<td class="ev src">${d.source.map(s => `${esc(s.section)} (line ${s.line})`).join('<br>')}</td>
+</tr>`).join('\n')
+
+  const rulingRows = (DECL.rulings || []).map(r => `<tr>
+<td class="n">${esc(r.date)}</td><td class="ev">${esc(r.ruled_by)}</td><td class="ev">${esc(r.ruling)}</td>
+</tr>`).join('\n')
+
+  const ontBody = `<p class="eyebrow">the ontology</p>
+<h1>What this graph is, as an ontology</h1>
+<p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, and then runs the standard pitfall scan over the graph and reports what it finds — including the findings that are these decisions showing up as defects.</p>
+
+<h2>Two tiers</h2>
+<p>The first tier is the relation as Jung's sentence phrased it. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
+<p>The second tier is the family — a classification <em>over</em> the verified relation, drawn from a fixed vocabulary in a versioned document, assigned when two models reading that document independently name the same family, and ruled by a person when they do not. The second tier never reopens the first. Nothing on this site calls a family verified, and no family assignment changes a relation string.</p>
+<p>Where a relation carried a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original, with the qualifiers pulled out into their own fields. ${meta.normalized} relations carry that layer. The family layer classifies the normalized form where it exists, which is why the map counts effective strings rather than surface ones.</p>
+
+<h2>The declarations</h2>
+<p>Two properties are declared, and only two: which relation strings are inverses of each other, and which are symmetric. Each declaration is transcribed from a line of the definitions document, cites that line, and is applied only when a reader asks for closure — the derived row is labelled, carries its source edge's references, and is never written into the graph.</p>
+<div class="tw"><table><thead><tr><th>strings</th><th>kind</th><th>transcribed from</th></tr></thead><tbody>
+${declRows}
+</tbody></table></div>
+<p class="meta">${activeDecls.length} active. ${DECL.candidates_awaiting_ruling.length} further pairs are recorded as candidates and are inert: the document has not ruled on them, and a declaration without a document line to cite would be this build's opinion rather than the ruleset's.</p>
+${rulingRows ? `<h4>rulings behind them</h4>
+<div class="tw"><table><thead><tr><th>date</th><th>ruled by</th><th>ruling</th></tr></thead><tbody>
+${rulingRows}
+</tbody></table></div>` : ''}
+
+<h2>Deliberately absent</h2>
+<ul class="absent">
+<li><b>Transitivity.</b> No family is transitive, and the identity walk says so above its first hop. Two terms joined through a third are joined through a third; the graph does not claim they are the same.</li>
+<li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
+<li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
+<li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
+<li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
+</ul>
+
+<h2>The pitfall scan</h2>
+<p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects carried in the record.</p>
+<div class="qa">
+  <div class="fig"><span class="figv ev">${h.hapax_pct}%</span><span class="figl">of relation strings are used exactly once <span class="ev">(${h.hapax_relations} of ${h.distinct_relations})</span></span></div>
+  <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
+  <div class="fig"><span class="figv ev">${di.observed_pairs_declared}/${di.observed_inverse_pairs_in_vocabulary}</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(${di.edges_carrying_a_declared_string}</span> relations carry a declared string)</span></div>
+  <div class="fig"><span class="figv ev">${h.detached_components}</span><span class="figl">component detached from the main graph <span class="ev">(${h.largest_component}</span> of ${h.nodes} nodes are in it)</span></div>
+</div>
+<div class="tw"><table class="findings"><thead><tr><th>severity</th><th>the scan's finding</th><th>stance</th></tr></thead><tbody>
+${findingRows}
+</tbody></table></div>
+<p class="meta">A stance is not a rebuttal. Every design decision here has a cost, and the scan is a fair statement of it: an open vocabulary does make the graph hard to query by predicate, which is exactly why the family layer exists and why its coverage is published with its gaps. What the panel refuses is the other reading — that a decision taken deliberately, with a reason on record, is a defect discovered by a tool.</p>
+
+<div class="receipts"><b>receipts</b>
+scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span>, run at build;<br>
+declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS ${esc((DECL.transcribed_from || {}).document_version || '?')};<br>
+built ${buildDate}${gitCommit ? ` at commit ${gitCommit}` : ''}
+</div>`
+
+  const ontStyle = `
+.absent { list-style: none; margin: .6rem 0; }
+.absent li { font-size: .92rem; line-height: 1.6; padding: .3rem 0 .3rem 1rem; border-left: 2px solid var(--hairline); margin-bottom: .4rem; max-width: 68ch; }
+.qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; margin: 1rem 0; }
+.qa .fig { border: 1px solid var(--hairline); border-radius: 8px; padding: .6rem .75rem; background: var(--surface); }
+.qa .figv { display: block; font-family: var(--display); font-size: 1.5rem; color: var(--gold); }
+.qa .figl { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); margin-top: .2rem; }
+table.findings td { font-size: .82rem; }
+table.findings .sev { font: .55rem var(--mono); text-transform: uppercase; color: var(--ink-dim); white-space: nowrap; }
+table.findings .tag { font: .62rem var(--mono); color: var(--ink-label); margin-bottom: .2rem; }
+table.findings .fmsg { color: var(--ink-faint); font-size: .8rem; line-height: 1.5; }
+table.findings .why { font-size: .78rem; line-height: 1.5; color: var(--ink-faint); margin-top: .25rem; max-width: 40ch; }
+table.findings .src { font: .58rem var(--mono); }
+.chip.st-design { color: var(--m-substance); border-color: var(--b-ok); }
+.chip.st-declared { color: var(--teal); border-color: var(--b-teal); }
+.chip.st-open { color: var(--amber); border-color: var(--b-amber); }
+.chip.st-unclassified { color: var(--rubedo); border-color: var(--b-rubedo); }
+.src { font: .58rem var(--mono); }
+`
+  registerPage({
+    slug: 'ontology', title: 'The ontology and its practices', where: 'ontology',
+    nav: 'ontology', changefreq: 'daily', priority: '0.5', style: ontStyle, body: ontBody
+  })
+  V2_COPY.push(['public/ontology.html (generated)', stripEvidence(ontBody)])
+  writeFileSync(here('./src/ontology_qa.json'), JSON.stringify(QA))
+  console.log(`ontology page: scan ${QA.totals.critical}/${QA.totals.important}/${QA.totals.minor} findings — ` +
+    `${counts.design} design, ${counts.declared} declared, ${counts.open} open, ${counts.unclassified} unclassified`)
+}
+
 // ------------------------------------------------ the pages are written ----
 function emitPages() {
   for (const p of NEW_PAGES) writeFileSync(here(`./public/${p.slug}.html`), renderPage(p))
