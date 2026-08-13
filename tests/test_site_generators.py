@@ -192,6 +192,44 @@ def test_family_pages_show_graph_wide_totals_beside_the_family_count(families_ma
             assert str(value) in text, (row["family"], value)
 
 
+def test_the_external_validity_table_sits_behind_a_headline(families_map):
+    """V2-R9 — headline in words, table behind a native details, and the limit
+    stated outside the fold."""
+    for row in families_map["families"][:5]:
+        html = read(family_page(row["family"]))
+        section = html[html.index("Checked against readers of Jung"):]
+        block = re.search(r"<details class=\"disclose\">(.*?)</details>", section, re.S)
+        assert block, row["family"]
+        summary = re.search(r"<summary>(.*?)</summary>", block.group(1), re.S).group(1)
+        assert "works of scholarship" in summary, row["family"]
+        assert "<table>" in block.group(1), row["family"]
+        after = section[section.index("</details>"):]
+        assert "Agreement is not endorsement" in after, (
+            f"{row['family']}: the limit is inside the fold")
+
+
+def test_progressive_disclosure_needs_no_script():
+    """Native details/summary only — a page that hides its table behind JS hides
+    it from anything that does not run JS."""
+    for name in ("family-symbolization.html", "ontology.html"):
+        html = read(os.path.join(PUBLIC, name))
+        for block in re.findall(r"<details class=\"disclose\">.*?</details>", html, re.S):
+            assert "<script" not in block, name
+            assert "onclick" not in block, name
+
+
+def test_the_ontology_findings_list_sits_behind_its_counts(qa_json):
+    html = read(os.path.join(PUBLIC, "ontology.html"))
+    block = re.search(r"<details class=\"disclose\">(.*?)</details>", html, re.S).group(1)
+    summary = re.search(r"<summary>(.*?)</summary>", block, re.S).group(1)
+    total = sum(qa_json["totals"].values())
+    assert f"{total} findings" in summary
+    assert "table class=\"findings\"" in block
+    # the four headline figures stay outside the fold
+    panel = html[html.index("<h2>The pitfall scan"):html.index("<details class=\"disclose\">")]
+    assert str(qa_json["headline"]["hapax_pct"]) in panel
+
+
 def test_no_family_page_calls_a_family_verified():
     """The standing vocabulary rule: a family is assigned; verification belongs
     to the quote and its paragraph."""

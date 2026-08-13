@@ -571,6 +571,19 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   anti-overclaim rules: several "pitfalls" are recorded design decisions,
   and the panel says which. Give `tools/ontology_qa/quality.py` a `--json`
   mode rather than scraping its prose output; the builder consumes that.
+- **V2-R9 progressive disclosure on heavy pages (standing rule,
+  2026-08-13).** A detail table on a page that already carries a lot sits
+  behind a one-line headline and a native `<details>`/`<summary>`: the
+  headline states the result in words, the table is one click away, and
+  no JavaScript is involved, so the page works with the fold closed and
+  in a reader that ignores scripts. The limit on what the table shows
+  stays OUTSIDE the fold — a reader who never expands must still read
+  what the figures do not support. Applied to the external-validity
+  table on every family page and to the ontology page's findings list.
+  Not applied where a table IS the page's subject (the declarations
+  register, the string map, the batch index): folding those away hides
+  the thing the reader came for.
+
 - **V2-R10 one site menu, everywhere (standing rule, 2026-08-13).** Every
   page — the app and every generated page, including the ones the python
   generator writes — carries the same top menu in the same position, with

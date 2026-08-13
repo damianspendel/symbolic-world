@@ -992,6 +992,15 @@ table { border-collapse: collapse; width: 100%; font-size: .86rem; }
 th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
 th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
 td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
 .sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
   display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
 .sitenav a { color: var(--ink-faint); text-decoration: none; }
@@ -1205,11 +1214,19 @@ ${pend.length > 6 ? `<p class="meta">${pend.length - 6} more. These are edges wh
 </div>` : `<h4>pending a ruling</h4>
 <p class="dim">No queued item carries a relation string this family covers.</p>`
 
+  // V2-R9 — headline in a line, the table behind a native <details>. The limit
+  // stays outside the fold: a reader who never expands still reads what the
+  // check does not show.
+  const evHeadline = evRow
+    ? `Checked against ${EV.works_consulted} works of scholarship: across the sample, ${EV.agrees} of ${EV.treated} treated items agreed with our family. This family: ${esc(evRow.agrees)} agreed, ${esc(evRow.disagrees)} disagreed, ${esc(evRow.split)} split, ${evRow.not_treated} not treated.`
+    : `Checked against ${EV.works_consulted} works of scholarship: across the sample, ${EV.agrees} of ${EV.treated} treated items agreed with our family. The sample did not reach this family.`
   const evBlock = EVROWS.length ? `<h2>Checked against readers of Jung</h2>
-${evRow ? `<p>In August 2026 a sample of these assignments was put to the secondary literature, and this family has a row in the result. Of the sampled items the consulted works treat at all, scholars' renderings agreed with this family on ${esc(evRow.agrees)}, disagreed on ${esc(evRow.disagrees)} and split among themselves on ${esc(evRow.split)}; ${evRow.not_treated} sampled ${evRow.not_treated === 1 ? 'item was' : 'items were'} not treated anywhere.</p>`
-    : `<p>In August 2026 a sample of assignments was put to the secondary literature. The sample did not reach this family, so it has no row below, and nothing about this family follows from the table either way.</p>`}
+<details class="disclose">
+<summary>${evHeadline}<span class="more">the whole table</span></summary>
 ${evTable(fam.id)}
-<p class="meta">Rows of three treated items are three items, and no rate over three items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts — not whether Jung's claim is true, which the verification chain had already asked of the paragraph. Agreement is not endorsement: no scholar reviewed this vocabulary. The disagreements stand beside the agreements here because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>` : ''
+<p class="meta">Rows of three treated items are three items, and no rate over three items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts — not whether Jung's claim is true, which the verification chain had already asked of the paragraph. The disagreements stand beside the agreements because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>
+</details>
+<p class="meta">Agreement is not endorsement: no scholar reviewed this vocabulary, and the sample is small enough to name in a sentence.</p>` : ''
 
   const zeroNote = row.edges === 0 ? `<p>No edge in the graph currently carries this family. A family with no members stays in the ruleset and is reported at zero rather than dropped: dropping it would hide the reclassification that emptied it, and the empty count is a finding about the definition.</p>` : ''
 
@@ -1700,9 +1717,12 @@ ${pitfallRows}
   <div class="fig"><span class="figv ev">${di.observed_pairs_declared}/${di.observed_inverse_pairs_in_vocabulary}</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(${di.edges_carrying_a_declared_string}</span> relations carry a declared string)</span></div>
   <div class="fig"><span class="figv ev">${h.detached_components}</span><span class="figl">component detached from the main graph <span class="ev">(${h.largest_component}</span> of ${h.nodes} nodes are in it)</span></div>
 </div>
+<details class="disclose">
+<summary>${QA.totals.critical + QA.totals.important + QA.totals.minor} findings: ${counts.design} recorded design decisions, ${counts.declared} answered by the declarations, ${counts.open} open defects.<span class="more">every finding, with its stance</span></summary>
 <div class="tw"><table class="findings"><thead><tr><th>severity</th><th>the scan's finding</th><th>stance</th></tr></thead><tbody>
 ${findingRows}
 </tbody></table></div>
+</details>
 <p class="meta">A stance is not a rebuttal. Every design decision here has a cost, and the scan is a fair statement of it: an open vocabulary does make the graph hard to query by predicate, which is exactly why the family layer exists and why its coverage is published with its gaps. What the panel refuses is the other reading — that a decision taken deliberately, with a reason on record, is a defect discovered by a tool.</p>
 
 <div class="receipts"><b>receipts</b>

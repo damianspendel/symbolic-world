@@ -38,6 +38,15 @@ table { border-collapse: collapse; width: 100%; font-size: .86rem; }
 th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
 th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
 td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
 .sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
   display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
 .sitenav a { color: var(--ink-faint); text-decoration: none; }
@@ -160,6 +169,8 @@ table.findings .src { font: .58rem var(--mono); }
   <div class="fig"><span class="figv ev">2/8</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(187</span> relations carry a declared string)</span></div>
   <div class="fig"><span class="figv ev">1</span><span class="figl">component detached from the main graph <span class="ev">(405</span> of 407 nodes are in it)</span></div>
 </div>
+<details class="disclose">
+<summary>19 findings: 7 recorded design decisions, 8 answered by the declarations, 4 open defects.<span class="more">every finding, with its stance</span></summary>
 <div class="tw"><table class="findings"><thead><tr><th>severity</th><th>the scan's finding</th><th>stance</th></tr></thead><tbody>
 <tr class="st-design">
 <td class="sev">critical</td>
@@ -257,12 +268,13 @@ table.findings .src { font: .58rem var(--mono); }
 <td><span class="chip st-design">recorded design decision</span><div class="why">Types are not declared disjoint. A node can function in two registers at once, and the graph would have to choose one to satisfy a disjointness axiom.</div></td>
 </tr>
 </tbody></table></div>
+</details>
 <p class="meta">A stance is not a rebuttal. Every design decision here has a cost, and the scan is a fair statement of it: an open vocabulary does make the graph hard to query by predicate, which is exactly why the family layer exists and why its coverage is published with its gaps. What the panel refuses is the other reading — that a decision taken deliberately, with a reason on record, is a defect discovered by a tool.</p>
 
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-13 at commit a7151f7
+built 2026-08-13 at commit 1dfab7f
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

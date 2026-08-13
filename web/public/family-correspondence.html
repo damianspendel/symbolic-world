@@ -38,6 +38,15 @@ table { border-collapse: collapse; width: 100%; font-size: .86rem; }
 th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
 th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
 td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
 .sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
   display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
 .sitenav a { color: var(--ink-faint); text-decoration: none; }
@@ -117,7 +126,8 @@ tr.total td { color: var(--ink-faint); }
 <p class="meta">30 more. These are edges whose two model arms did not agree, or whose agreement the calibrated gate disputed. They carry a relation string this family covers, which is not the same as belonging here — the ruling has not been made, and the queue is not a backlog to be cleared by machine.</p>
 </div>
 <h2>Checked against readers of Jung</h2>
-<p>In August 2026 a sample of these assignments was put to the secondary literature, and this family has a row in the result. Of the sampled items the consulted works treat at all, scholars' renderings agreed with this family on 2/3, disagreed on 1/3 and split among themselves on 0/3; 2 sampled items were not treated anywhere.</p>
+<details class="disclose">
+<summary>Checked against 8 works of scholarship: across the sample, 8 of 16 treated items agreed with our family. This family: 2/3 agreed, 1/3 disagreed, 0/3 split, 2 not treated.<span class="more">the whole table</span></summary>
 <div class="tw"><table>
 <thead><tr><th>family</th><th>agrees</th><th>disagrees</th><th>split</th><th>not treated</th></tr></thead>
 <tbody><tr class=""><td>archetypal-identity (incl. 26)</td><td class="n">0/3</td><td class="n">1/3</td><td class="n">2/3</td><td class="n">2</td></tr>
@@ -127,7 +137,9 @@ tr.total td { color: var(--ink-faint); }
 <tr class=""><td>amplification</td><td class="n">0/3</td><td class="n">3/3</td><td class="n">0/3</td><td class="n">0</td></tr>
 <tr class=""><td>controls (personif., union)</td><td class="n">2/2</td><td class="n">0/2</td><td class="n">0/2</td><td class="n">0</td></tr>
 <tr class="total"><td>All</td><td class="n">8/16</td><td class="n">6/16</td><td class="n">2/16</td><td class="n">6</td></tr></tbody></table></div>
-<p class="meta">Rows of three treated items are three items, and no rate over three items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts — not whether Jung's claim is true, which the verification chain had already asked of the paragraph. Agreement is not endorsement: no scholar reviewed this vocabulary. The disagreements stand beside the agreements here because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>
+<p class="meta">Rows of three treated items are three items, and no rate over three items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts — not whether Jung's claim is true, which the verification chain had already asked of the paragraph. The disagreements stand beside the agreements because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>
+</details>
+<p class="meta">Agreement is not endorsement: no scholar reviewed this vocabulary, and the sample is small enough to name in a sentence.</p>
 
 <div class="receipts"><b>receipts</b>
 counts read from seed.json <span class="hash">sha256:281b3e328f12</span> via web/family-map.mjs;<br>
