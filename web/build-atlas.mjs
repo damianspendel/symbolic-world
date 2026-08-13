@@ -910,6 +910,20 @@ const derived = (...ns) => { for (const n of ns) if (Number.isFinite(Number(n)))
 const stripEvidence = (html) => html
   .replace(/<(\w+)[^>]*class="[^"]*\bev\b[^"]*"[^>]*>[\s\S]*?<\/\1>/g, ' ')
 
+// V2-R7 — the batch delta pages are written by tools/build_ledger_page.py, from
+// the same pass over the same data that writes the ledger. They are registered
+// here so the sitemap is generated whole: one list of the site's URLs, whichever
+// generator produced the page behind each one. The slug rule is the ledger
+// generator's, restated in one line rather than imported across languages, and
+// the test that matches sitemap entries against files on disk is what keeps the
+// two honest.
+const batchSlug = (id) => 'batch-' + String(id).toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
+
+function registerExternalPage(p) {
+  SITE_PAGES.push({ slug: p.slug, title: p.title, nav: null, changefreq: p.changefreq || 'monthly', priority: p.priority || '0.3' })
+}
+
 function registerPage(p) {
   NEW_PAGES.push(p)
   SITE_PAGES.push({ slug: p.slug, title: p.title, nav: p.nav || null, changefreq: p.changefreq || 'weekly', priority: p.priority || '0.5' })
@@ -1053,6 +1067,15 @@ if (existsSync(releasesPath)) {
     }))
     return { heading, status, pin, sections, future: /^skeleton/i.test(status) }
   })
+  // V2-R7 — a batch named in a release entry links to its delta page. The link
+  // is made from pipeline/state.json's own ids, in text nodes only, so a batch
+  // that does not exist is left as plain text rather than linked into a 404.
+  const batchIds = new Set(state.batches.map(b => b.id))
+  const idPattern = /\b(b-[a-z0-9]+(?:-[a-z0-9]+)*|cw\d+_candidates\d+)\b/g
+  const linkBatches = (html) => html.replace(/>([^<]+)</g, (whole, text) =>
+    '>' + text.replace(idPattern, (id) =>
+      batchIds.has(id) ? `<a href="/${batchSlug(id)}">${id}</a>` : id) + '<')
+
   const pinHtml = (pin) => `<div class="pin">` + inline(pin)
     .replace(/(graph|ruleset)\s+(v[\d.]+|pending)/g, '$1 <span class="v">$2</span>') + `</div>`
   const relBody = `<p class="eyebrow">release notes</p>
@@ -1062,7 +1085,7 @@ ${entries.map(e => `<section class="rel-entry${e.future ? ' future' : ''}">
 <h2>${inline(e.heading)}</h2>
 <div class="meta">${inline(e.status)}</div>
 ${pinHtml(e.pin)}
-${e.sections.map(s => `<h4>${inline(s.title)}</h4>\n${s.body}`).join('\n')}
+${e.sections.map(s => `<h4>${inline(s.title)}</h4>\n${linkBatches(s.body)}`).join('\n')}
 </section>`).join('\n')}
 <div class="receipts"><b>receipts</b>
 prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span>;<br>
@@ -1657,6 +1680,13 @@ table.findings .src { font: .58rem var(--mono); }
 }
 
 // ------------------------------------------------ the pages are written ----
+// The batch delta pages, listed from pipeline/state.json.
+{
+  const st = JSON.parse(readFileSync(here('../pipeline/state.json'), 'utf8'))
+  for (const b of st.batches) registerExternalPage({ slug: batchSlug(b.id), title: `${b.id} — a batch delta` })
+  console.log(`batch deltas: ${st.batches.length} pages listed in the sitemap (written by tools/build_ledger_page.py)`)
+}
+
 function emitPages() {
   for (const p of NEW_PAGES) writeFileSync(here(`./public/${p.slug}.html`), renderPage(p))
   const urls = SITE_PAGES.map(p =>

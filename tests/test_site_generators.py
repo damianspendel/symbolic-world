@@ -310,6 +310,77 @@ def test_active_declarations_are_all_on_the_page():
         assert pair in html, decl["id"]
 
 
+# ---------------------------------------------- V2-R7 · the batch deltas ---
+
+@pytest.fixture(scope="module")
+def state():
+    return json.loads(read(os.path.join(ROOT, "pipeline", "state.json")))
+
+
+def test_every_batch_has_a_delta_page(state):
+    for batch in state["batches"]:
+        path = os.path.join(PUBLIC, ledger_gen.batch_slug(batch["id"]) + ".html")
+        assert os.path.exists(path), batch["id"]
+
+
+def test_batch_pages_belong_to_batches_that_exist(state):
+    ids = {ledger_gen.batch_slug(b["id"]) for b in state["batches"]}
+    for path in generated_pages():
+        name = os.path.basename(path)[: -len(".html")]
+        if name.startswith("batch-"):
+            assert name in ids, name
+
+
+def test_the_ledger_no_longer_carries_the_batch_narrative(state):
+    """The narrative moved; the ledger keeps the facet and a link per batch."""
+    html = read(os.path.join(PUBLIC, "ledger.html"))
+    stories = [b.get("result") or b.get("note") or "" for b in state["batches"]]
+    for story in stories:
+        if len(story) > 80:
+            assert story[:80] not in html, "a batch narrative is still inline on the ledger"
+    for batch in state["batches"]:
+        assert f'href="/{ledger_gen.batch_slug(batch["id"])}"' in html, batch["id"]
+
+
+def test_a_batch_delta_states_its_derivation_or_declines_to_derive(state):
+    for batch in state["batches"]:
+        html = read(os.path.join(PUBLIC, ledger_gen.batch_slug(batch["id"]) + ".html"))
+        if ledger_gen.parse_window(batch.get("window")):
+            assert "records cite this window" in html, batch["id"]
+            assert "do not partition" in html, batch["id"]
+        else:
+            assert "declares no paragraph window" in html, batch["id"]
+
+
+def test_batch_delta_counts_are_the_records_that_cite_the_window(state):
+    """Recomputed here from seed.json by a separate walk, for the three largest
+    windowed batches."""
+    seed = json.loads(read(SEED))
+    windows = ledger_gen.batch_windows(state)
+    checked = 0
+    for batch in state["batches"]:
+        ranges = ledger_gen.parse_window(batch.get("window"))
+        if not ranges:
+            continue
+        records = sum(1 for e in seed["edges"]
+                      if batch["id"] in ledger_gen.batches_for(e["references"], windows))
+        html = read(os.path.join(PUBLIC, ledger_gen.batch_slug(batch["id"]) + ".html"))
+        assert f"<b>{records}</b> records cite this window" in html, batch["id"]
+        checked += 1
+    assert checked >= 3
+
+
+def test_release_entries_link_the_batches_they_name(state):
+    html = read(os.path.join(PUBLIC, "releases.html"))
+    body = html[html.index("<main>"):]
+    for batch in state["batches"]:
+        bid = batch["id"]
+        # a batch id appearing as text in an entry must be a link to its page
+        for match in re.finditer(re.escape(bid), body):
+            window = body[max(0, match.start() - 120):match.start()]
+            assert f'href="/{ledger_gen.batch_slug(bid)}"' in window or "<a " in window, bid
+
+
 # ------------------------------------------- V2-R8 · volumes are ordered ---
 
 def test_query_volume_dropdown_is_in_collection_order():

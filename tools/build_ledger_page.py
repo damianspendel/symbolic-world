@@ -170,12 +170,14 @@ def history_chip(fam):
             f'history: {esc(previous)} → {esc(current)}{esc(earlier)}</span>')
 
 
-def facet_row(label, name, items, note=""):
+def facet_row(label, name, items, note="", link=None):
     if not items:
         return ""
     chips = "".join(
         f'<button class="facet" type="button" data-g="{esc(name)}" data-v="{esc(value)}">'
         f'{esc(value)}{f" <span class=n>·{count}</span>" if count is not None else ""}</button>'
+        + (f'<a class="flink" href="{link(value)}" title="the delta page for {esc(value)}">↗</a>'
+           if link else "")
         for value, count in items)
     return (f'<div class="facetrow"><span class="lab">{esc(label)}</span>{chips}'
             f'{f"<span class=fnote>{esc(note)}</span>" if note else ""}</div>')
@@ -191,6 +193,125 @@ def volume_key(v):
     if not m:
         return 999.0
     return int(m.group(1)) + (0.2 if m.group(2) == "ii" else 0.1 if m.group(2) == "i" else 0.0)
+
+
+# ---------- V2-R7: the per-batch delta pages ----------
+# The batch history used to sit at the foot of the ledger, which put a mining
+# narrative under 1,555 record cards on a page that is already long. It moves to
+# one page per batch, generated here from the same pass over the same data, and
+# the ledger keeps the batch facet and a link. One generator, one set of
+# numbers, three places that link to it: the facet strip, the delta index, and
+# the release entry that shipped the batch.
+
+def batch_slug(batch_id):
+    return f"batch-{slug(batch_id)}"
+
+
+def batch_page(batch, delta, commits):
+    """One batch: what it declared, what it merged, and what the graph carries
+    from it now. The delta is derived — records with at least one reference
+    inside the batch's declared paragraph window — so a batch that declared no
+    window gets the record it wrote and no derived count, rather than a guess."""
+    window = batch.get("window") or ""
+    story = batch.get("result") or batch.get("note") or ""
+    commit_rows = "".join(
+        f'<tr><td class="n"><a href="{REPO_URL}/commit/{sha}">{sha}</a></td>'
+        f'<td class="n">{esc(date)}</td><td>{esc(subject)}</td></tr>'
+        for sha, date, subject in commits)
+
+    if delta is None:
+        derived_block = (
+            '<h2>What the graph carries from it</h2>'
+            '<p class="dim">This batch declares no paragraph window. The windowed pipeline '
+            'came later, so the records it merged cannot be identified from the graph without '
+            'guessing, and nothing is derived here. Its commits are below.</p>')
+    else:
+        fam_chips = "".join(
+            f'<span class="chip">{esc(name)} <span class="n">{count}</span></span>'
+            for name, count in delta["families"])
+        state_rows = "".join(
+            f'<tr><td>{esc(name)}</td><td class="n">{count}</td></tr>'
+            for name, count in delta["states"])
+        derived_block = f"""<h2>What the graph carries from it</h2>
+  <div class="nums">
+    <span><b>{delta["records"]}</b> records cite this window</span>
+    <span><b>{delta["references"]}</b> references fall inside it</span>
+    <span><b>{len(delta["families"])}</b> families over those records</span>
+  </div>
+  <p class="note">A record is counted here when at least one of its references falls in the
+  window. A record citing two windows is counted under both, so these figures do not partition
+  the graph and do not add up to it. The family layer was applied later and in its own passes:
+  the mix below is what those records carry today, not what this batch decided.</p>
+  <div class="tw"><table><thead><tr><th>family state</th><th>records</th></tr></thead>
+  <tbody>{state_rows}</tbody></table></div>
+  <div class="mix">{fam_chips}</div>"""
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/{batch_slug(batch["id"])}">
+<title>{esc(batch["id"])} — a batch delta — The Symbolic World</title>
+<link rel="stylesheet" href="./chrome.css">
+<style>
+  * {{ box-sizing:border-box; margin:0; padding:0; }}
+  body {{ min-height:100vh; }}
+  main {{ max-width:820px; margin:0 auto; padding:1.6rem 1.2rem 4rem; }}
+  .eyebrow {{ font:.6rem/1 var(--mono); letter-spacing:.26em; text-transform:uppercase; color:var(--gold-dim); }}
+  h1 {{ font-family:var(--mono); font-size:1.5rem; font-weight:500; margin:.3rem 0 .5rem; color:var(--ink); }}
+  h2 {{ font-family:var(--display); font-size:1.25rem; font-weight:500; color:var(--gold); margin:2rem 0 .5rem; }}
+  p {{ font-size:.92rem; line-height:1.62; max-width:68ch; }}
+  a {{ color:var(--gold); }}
+  .meta {{ font:.62rem/1.7 var(--mono); color:var(--ink-faint); }}
+  .dim {{ color:var(--ink-faint); }}
+  .badge {{ font:.58rem var(--mono); letter-spacing:.06em; padding:.12rem .45rem; border-radius:99px;
+           border:1px solid var(--hairline); white-space:nowrap; }}
+  .cite {{ font:.62rem var(--mono); color:var(--gold-dim); }}
+  .story {{ border-left:2px solid var(--hairline); padding:.2rem 0 .2rem .9rem; margin:.6rem 0 1rem;
+           font-size:.9rem; line-height:1.6; color:var(--ink); }}
+  .nums {{ display:flex; flex-wrap:wrap; gap:.5rem 1.1rem; margin:.6rem 0; font:.62rem var(--mono); color:var(--ink-faint); }}
+  .nums b {{ color:var(--ink); font-weight:400; }}
+  .note {{ font-size:.82rem; color:var(--ink-faint); max-width:68ch; }}
+  .mix {{ display:flex; flex-wrap:wrap; gap:.3rem; margin:.6rem 0 0; }}
+  .chip {{ font:.56rem var(--mono); padding:.12rem .46rem; border-radius:99px;
+          border:1px solid var(--hairline); color:var(--ink-faint); }}
+  .chip .n {{ color:var(--ink-dim); }}
+  .tw {{ overflow-x:auto; margin:.6rem 0 1rem; }}
+  table {{ border-collapse:collapse; width:100%; font-size:.86rem; }}
+  th, td {{ border-bottom:1px solid var(--hairline); padding:.35rem .5rem; text-align:left; }}
+  th {{ font:.55rem var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--ink-dim); }}
+  td.n {{ font-family:var(--mono); font-size:.76rem; }}
+  .sitenav {{ margin-top:3rem; border-top:1px solid var(--hairline); padding-top:1rem;
+             display:flex; flex-wrap:wrap; gap:.3rem .9rem; font:.62rem var(--mono); }}
+  .sitenav a {{ color:var(--ink-faint); text-decoration:none; }}
+  .sitenav a:hover {{ color:var(--gold); }}
+</style>
+</head>
+<body>
+<div class="page-bar"><a class="back" href="/ledger">← the ledger</a><span class="where">batch · {esc(batch["id"])}</span></div>
+<main>
+  <p class="eyebrow">batch delta</p>
+  <h1>{esc(batch["id"])}</h1>
+  <div class="meta">{f'<span class="cite">{esc(window)}</span> · ' if window else ''}<span class="badge">{esc(batch["status"])}</span></div>
+  {f'<h2>What it merged</h2><div class="story">{esc(story)}</div>' if story else ''}
+  {derived_block}
+  <h2>Commits</h2>
+  {f'<div class="tw"><table><thead><tr><th>commit</th><th>date</th><th>subject</th></tr></thead><tbody>{commit_rows}</tbody></table></div>'
+     if commit_rows else '<p class="dim">No commit names this batch.</p>'}
+  <p class="note">Every claim this batch merged is on the <a href="/ledger">ledger</a> with the
+  gates it passed; this page is the batch-level record around them. Releases that shipped it link
+  here from <a href="/releases">the release notes</a>.</p>
+  <nav class="sitenav"><a href="/">the atlas</a>
+    <a href="/ledger">ledger</a>
+    <a href="/releases">releases</a>
+    <a href="/families">families</a>
+    <a href="/query">query</a>
+    <a href="/ontology">ontology</a></nav>
+</main>
+</body>
+</html>
+"""
 
 
 # ---------- section 2: batch history ----------
@@ -225,6 +346,7 @@ def build():
             DISPUTES.setdefault(k, []).append(d)
 
     windows = batch_windows(state)
+    by_batch = {}          # V2-R7 — the derived delta behind each batch page
     fam_counts = {}
     facet_counts = {g: {} for g in ("vol", "batch", "ct", "state", "family", "prov")}
 
@@ -284,6 +406,19 @@ def build():
         vols = sorted({str(r["volume"]) for r in e["references"]}, key=volume_key)
         ctypes = sorted({r["claim_type"] for r in e["references"] if r.get("claim_type")})
         bids = batches_for(e["references"], windows)
+        for bid in bids:
+            d = by_batch.setdefault(bid, {"records": 0, "references": 0,
+                                          "families": {}, "states": {}})
+            d["records"] += 1
+            d["references"] += sum(
+                1 for r in e["references"]
+                for wbid, wvol, lo, hi in windows
+                if wbid == bid and wvol == str(r["volume"]) and lo <= int(r["paragraph"]) <= hi)
+            key = (fam or {}).get("value")
+            if key:
+                d["families"][key] = d["families"].get(key, 0) + 1
+            st = (fam or {}).get("state") or "unrecorded"
+            d["states"][st] = d["states"].get(st, 0) + 1
         provs = provenance_facets(fam or {})
         fvalue = (fam or {}).get("value") or ""
         for v in vols:
@@ -320,7 +455,9 @@ def build():
         facet_row("volume", "vol", sorted(facet_counts["vol"].items(),
                                           key=lambda kv: volume_key(kv[0]))),
         facet_row("batch", "batch", ordered("batch", key=lambda kv: kv[0]),
-                  "windowed batches only — earlier batches declare no paragraph range"),
+                  "windowed batches only — earlier batches declare no paragraph range; "
+                  "↗ opens the batch's delta page",
+                  link=lambda bid: "/" + batch_slug(bid)),
         facet_row("claim type", "ct", ordered("ct")),
         facet_row("state", "state", ordered("state")),
         facet_row("family", "family", ordered("family")),
@@ -328,23 +465,30 @@ def build():
                   "reassigned is derived from the provenance string or a recorded history entry"),
     ])
 
-    batch_cards = []
+    # V2-R7 — one delta page per batch, and an index row per batch for the
+    # ledger. The batch narrative leaves this page; what stays is the facet and
+    # the link.
+    batch_rows = []
+    written = 0
     for b in reversed(state["batches"]):
-        rows = commits_for(b)
-        commit_html = ""
-        if rows:
-            links = " · ".join(f'<a href="{REPO_URL}/commit/{sha}" title="{esc(subj)}">{sha}</a>'
-                               f'<span class="cdate"> {date}</span>' for sha, date, subj in rows[:6])
-            more = f' <span class="cdate">(+{len(rows)-6} more)</span>' if len(rows) > 6 else ""
-            commit_html = f'<div class="commits"><b>commits</b> {links}{more}</div>'
-        story = b.get("result") or b.get("note") or ""
+        has_window = bool(parse_window(b.get("window")))
+        delta = None
+        if has_window:
+            d = by_batch.get(b["id"], {"records": 0, "references": 0, "families": {}, "states": {}})
+            delta = {
+                "records": d["records"], "references": d["references"],
+                "families": sorted(d["families"].items(), key=lambda kv: (-kv[1], kv[0])),
+                "states": sorted(d["states"].items(), key=lambda kv: (-kv[1], kv[0])),
+            }
+        (ROOT / "web" / "public" / f'{batch_slug(b["id"])}.html').write_text(
+            batch_page(b, delta, commits_for(b)))
+        written += 1
         window = f'<span class="cite">{esc(b["window"])}</span>' if b.get("window") else ""
-        batch_cards.append(f"""  <div class="card">
-    <div class="row2"><span class="bid">{esc(b["id"])}</span>{window}
-      <span class="badge b-{esc(b["status"])}">{esc(b["status"])}</span></div>
-    {f'<p class="res">{esc(story)}</p>' if story else ""}
-    {commit_html}
-  </div>""")
+        counts = (f'<span class="bnums">{delta["records"]} records · {delta["references"]} references</span>'
+                  if delta else '<span class="bnums dimmer">no declared window</span>')
+        batch_rows.append(
+            f'  <div class="brow"><a class="bid" href="/{batch_slug(b["id"])}">{esc(b["id"])}</a>'
+            f'{window}<span class="badge b-{esc(b["status"])}">{esc(b["status"])}</span>{counts}</div>')
 
     page = f"""<!doctype html>
 <html lang="en">
@@ -437,6 +581,15 @@ def build():
   .commits b {{ font-size:.56rem; letter-spacing:.08em; text-transform:uppercase; margin-right:.3rem; }}
   .cdate {{ color:var(--ink-faint); }}
   .hidden {{ display:none; }}
+  .flink {{ font:.62rem var(--mono); color:var(--ink-dim); text-decoration:none; margin:0 .35rem 0 -.1rem; }}
+  .flink:hover {{ color:var(--gold); }}
+  .brows {{ display:flex; flex-direction:column; gap:.15rem; margin-top:.6rem; }}
+  .brow {{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.55rem;
+          padding:.35rem .2rem; border-bottom:1px solid var(--hairline); }}
+  .brow .bid {{ font:.78rem var(--mono); color:var(--gold); text-decoration:none; min-width:11rem; }}
+  .brow .bid:hover {{ text-decoration:underline; }}
+  .bnums {{ font:.6rem var(--mono); color:var(--ink-faint); margin-left:auto; }}
+  .bnums.dimmer {{ color:var(--ink-dim); }}
   .sitenav {{ margin-top:3rem; border-top:1px solid var(--hairline); padding-top:1rem;
              display:flex; flex-wrap:wrap; gap:.3rem .9rem; font:.62rem var(--mono); }}
   .sitenav a {{ color:var(--ink-faint); text-decoration:none; }}
@@ -497,12 +650,15 @@ def build():
 {chr(10).join(edge_cards)}
   </div>
 
-  <h2>Batch history</h2>
-  <p class="intro">The batch-level transaction log: each entry is one batch's passage
-  through the pipeline (<i>input-built → mined → pre-checked → gated → merged</i>), with the
-  underlying commits. Experiment entries record audits and calibrations against the published
+  <h2>Batches</h2>
+  <p class="intro">Each batch is one passage through the pipeline (<i>input-built → mined →
+  pre-checked → gated → merged</i>). The narrative, the commits behind it and what the graph
+  carries from it are on the batch's own page; the batch facet above filters these records to
+  the ones it merged. Experiment entries record audits and calibrations against the published
   graph; designs and results are in the <a href="{REPO_URL}/blob/master/docs/PAPER.md">paper</a>.</p>
-{chr(10).join(batch_cards)}
+  <div class="brows">
+{chr(10).join(batch_rows)}
+  </div>
   <nav class="sitenav"><a href="/">the atlas</a>
     <a href="/families">families</a>
     <a href="/releases">releases</a>
@@ -544,7 +700,7 @@ for (const button of document.querySelectorAll('.facet')) {{
 """
     out = ROOT / "web" / "public" / "ledger.html"
     out.write_text(page)
-    print(f"built {out.relative_to(ROOT)}: {len(seed['edges'])} edge records, {len(state['batches'])} batches, "
+    print(f"built {out.relative_to(ROOT)}: {len(seed['edges'])} edge records, {written} batch delta pages, "
           f"{human_n} human chips, {sum(len(v) for v in DISPUTES.values())} dispute rows, "
           f"{sum(len(v) for v in facet_counts.values())} facet chips over "
           f"{len([1 for c in facet_counts['batch']])} windowed batches")
