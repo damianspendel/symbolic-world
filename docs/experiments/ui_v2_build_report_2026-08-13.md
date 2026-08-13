@@ -409,3 +409,57 @@ v0.7.2 with a new ruling on instrumentality. Three consequences for the merge:
   take this branch's copy wholesale, or the v0.7.2 ruling is lost.
 - **`b-cw8-1` is a new batch.** It gets its delta page automatically on the next
   ledger build; nothing needs adding by hand.
+
+## Item 9 — the batch pages join the deploy gate
+
+Regeneration was already automatic: one generator writes the ledger and all 57
+batch pages in one pass, so they cannot drift from each other. What was missing
+was enforcement on the shipped result, and one thing worse than missing.
+
+**The allowlist would have blocked the whole slice.** `tools/pages/preflight.py`
+checks `dist` against an exact list of filenames, and every page this slice adds
+— releases, query, ontology, 25 family pages, 57 batch pages, `query.js`,
+`relation_declarations.json` — was an "unexpected file", which is a hard deploy
+failure. Found by running the real preflight rather than reading it. Fixed here:
+the fixed pages join `ALLOW`; the two generated families are admitted by pattern
+*and* by vouching — a `family-<name>.html` must name a family the ruleset holds,
+a `batch-<id>.html` must be listed in the manifest — so a page from a retired
+family or a renamed batch is still rejected.
+
+**A batch id can contain the word "candidates".** The pre-window CW 14 sets are
+named `cw14_candidates10`, and `candidates` is one of preflight's forbidden
+patterns (it exists to stop mining working files shipping). The pattern is
+unchanged; the sweep now skips it only for a file the batch manifest vouches
+for, which a stray candidates file cannot be — it would have to be named
+`batch-<id>.html` and appear in a manifest the ledger generator wrote.
+
+**The manifest.** `tools/build_ledger_page.py` writes
+`web/public/batch_pages.json` on every run: the ids it wrote, the page filenames,
+the count, and the `seed.json` node and edge counts it derived them from.
+
+**The gate**, beside the ledger-freshness gate:
+- every id in the manifest has its page in `dist`;
+- no batch page in `dist` is absent from the manifest (an orphan from a renamed
+  batch cannot survive a redeploy);
+- the manifest's edge count equals `seed.json`'s (a lagging set cannot ship);
+- the manifest's count equals its own id list.
+
+**Verified by running it**, not by reading it. `npm run build` then
+`python3 tools/pages/preflight.py`: `manifest clean` ok, and all four new gates
+ok. Three failures remain and none is from this work — `pages.json` is missing
+(it comes from the gitignored `app/` tree), the test harness needs
+`data/paragraphs.jsonl` (the corpus is local-only by design), and the family
+queue check compares `pipeline/work/family_pending_queue.json` (271 items,
+copied in from the newer main tree) against this worktree's older `seed.json`
+(262 pending). All three are environmental to a worktree and resolve in the main
+tree. The gate's failure modes were exercised directly: a removed page, an
+injected orphan, a lagging manifest and a non-batch `candidates` file each trip
+the check they should.
+
+**Sitemap decision: yes, the batch pages are in `sitemap.xml`** — they were from
+the commit that created them, and the sitemap now lists 91 urls. They are public
+pages with real content that the ledger links from two places; a crawler that
+reaches them from the ledger will index them whether or not they are listed, and
+leaving them out would only make the sitemap a partial account of the site. If
+the crawl budget ever argues otherwise, the entries come from one loop in
+`build-atlas.mjs` and are cheap to drop.

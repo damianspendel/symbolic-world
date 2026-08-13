@@ -19,6 +19,7 @@ only when an edge actually carries `relation_family.history`.
 Writes web/public/ledger.html ONLY. web/public/v1.3/ledger.html is the frozen
 published snapshot and is never written by this script.
 """
+import datetime
 import html
 import json
 import pathlib
@@ -491,6 +492,7 @@ def build():
     # ledger. The batch narrative leaves this page; what stays is the facet and
     # the link.
     batch_rows = []
+    written_ids = []
     written = 0
     for b in reversed(state["batches"]):
         has_window = bool(parse_window(b.get("window")))
@@ -504,6 +506,7 @@ def build():
             }
         (ROOT / "web" / "public" / f'{batch_slug(b["id"])}.html').write_text(
             batch_page(b, delta, commits_for(b)))
+        written_ids.append(b["id"])
         written += 1
         window = f'<span class="cite">{esc(b["window"])}</span>' if b.get("window") else ""
         counts = (f'<span class="bnums">{delta["records"]} records · {delta["references"]} references</span>'
@@ -720,6 +723,26 @@ for (const button of document.querySelectorAll('.facet')) {{
 </body>
 </html>
 """
+    # V2-R7 / item 9 — the manifest the deploy preflight gates on. It records
+    # what this run wrote and the graph it wrote it from, so a dist carrying a
+    # stale or incomplete set of batch pages cannot pass the gate. It is not a
+    # second source of truth: state.json remains the list of batches, and this
+    # file is the receipt for one run of this generator.
+    manifest = {
+        "_about": "Batch delta pages written by tools/build_ledger_page.py. "
+                  "tools/pages/preflight.py refuses a deploy whose dist does not "
+                  "carry exactly these pages, derived from this many edges.",
+        "generated": datetime.date.today().isoformat(),
+        "source": "tools/build_ledger_page.py",
+        "seed_edges": len(seed["edges"]),
+        "seed_nodes": len(seed["nodes"]),
+        "count": len(written_ids),
+        "ids": written_ids,
+        "pages": [f"{batch_slug(bid)}.html" for bid in written_ids],
+    }
+    (ROOT / "web" / "public" / "batch_pages.json").write_text(
+        json.dumps(manifest, indent=1) + "\n")
+
     out = ROOT / "web" / "public" / "ledger.html"
     out.write_text(page)
     print(f"built {out.relative_to(ROOT)}: {len(seed['edges'])} edge records, {written} batch delta pages, "

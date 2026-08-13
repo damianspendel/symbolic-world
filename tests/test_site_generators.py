@@ -533,6 +533,84 @@ def test_release_entries_link_the_batches_they_name(state):
             assert f'href="/{ledger_gen.batch_slug(bid)}"' in window or "<a " in window, bid
 
 
+# ------------------------------- the batch manifest and the deploy gate ----
+
+@pytest.fixture(scope="module")
+def batch_manifest():
+    return json.loads(read(os.path.join(PUBLIC, "batch_pages.json")))
+
+
+def test_manifest_ids_are_exactly_the_batch_pages_written(batch_manifest):
+    on_disk = {os.path.basename(p) for p in generated_pages()
+               if os.path.basename(p).startswith("batch-")}
+    assert set(batch_manifest["pages"]) == on_disk
+    assert batch_manifest["count"] == len(batch_manifest["ids"]) == len(on_disk)
+    assert len(set(batch_manifest["ids"])) == len(batch_manifest["ids"])
+
+
+def test_manifest_names_the_graph_it_was_derived_from(batch_manifest):
+    seed = json.loads(read(SEED))
+    assert batch_manifest["seed_edges"] == len(seed["edges"])
+    assert batch_manifest["seed_nodes"] == len(seed["nodes"])
+
+
+def test_manifest_ids_match_the_batches_state_declares(batch_manifest, state):
+    assert set(batch_manifest["ids"]) == {b["id"] for b in state["batches"]}
+    for bid in batch_manifest["ids"]:
+        assert f"{ledger_gen.batch_slug(bid)}.html" in batch_manifest["pages"]
+
+
+def test_every_batch_the_ledger_links_has_a_page(batch_manifest):
+    """Facet chips and index rows both point at batch pages; neither may point
+    at one that was never written."""
+    ledger = read(os.path.join(PUBLIC, "ledger.html"))
+    linked = set(re.findall(r'href="/(batch-[a-z0-9-]+)"', ledger))
+    assert linked, "the ledger links no batch page"
+    pages = {p[: -len(".html")] for p in batch_manifest["pages"]}
+    assert linked <= pages, sorted(linked - pages)
+    faceted = {ledger_gen.batch_slug(bid)
+               for bid in re.findall(r'data-g="batch" data-v="([^"]+)"', ledger)}
+    assert faceted <= linked, sorted(faceted - linked)
+
+
+def test_the_deploy_gate_covers_the_batch_pages():
+    """The manifest is only worth writing if the deploy refuses without it."""
+    src = read(os.path.join(ROOT, "tools", "pages", "preflight.py"))
+    assert "batch_pages.json" in src
+    for gate in ("every batch page in dist",
+                 "no orphan batch pages in dist",
+                 "batch pages are fresh (manifest edges == seed.json)"):
+        assert gate in src, gate
+
+
+def test_the_deploy_allowlist_admits_every_page_this_slice_ships():
+    """preflight's allowlist is exact. A page it does not know is an unexpected
+    file, and an unexpected file stops the deploy — so a new page joins the
+    allowlist in the commit that creates it."""
+    src = read(os.path.join(ROOT, "tools", "pages", "preflight.py"))
+    allow = set(re.findall(r"'([\w.-]+\.(?:html|json|js|css|txt|xml))'", src))
+    family_re = re.compile(re.search(r"FAMILY_PAGE = re\.compile\(r'([^']+)'\)", src).group(1))
+    batch_re = re.compile(re.search(r"BATCH_PAGE = re\.compile\(r'([^']+)'\)", src).group(1))
+    for path in generated_pages():
+        name = os.path.basename(path)
+        assert name in allow or family_re.match(name) or batch_re.match(name), name
+    for extra in ("query.js", "relation_declarations.json", "batch_pages.json"):
+        assert extra in allow, extra
+
+
+def test_the_forbidden_pattern_still_bites_outside_the_manifest():
+    """A batch id may contain the word 'candidates' (the pre-window CW 14 sets
+    do), and those pages are vouched for by the manifest. The pattern must still
+    reject anything else carrying it."""
+    src = read(os.path.join(ROOT, "tools", "pages", "preflight.py"))
+    assert "re.compile(r'candidates')" in src, "the forbidden pattern was removed"
+    assert "if not vouched_batch:" in src, (
+        "the forbidden sweep no longer has an exemption boundary")
+    manifest = json.loads(read(os.path.join(PUBLIC, "batch_pages.json")))
+    vouched = [p for p in manifest["pages"] if "candidates" in p]
+    assert vouched, "no batch page exercises the exemption — check the id set"
+
+
 # ------------------------------------------- V2-R8 · volumes are ordered ---
 
 def test_query_volume_dropdown_is_in_collection_order():

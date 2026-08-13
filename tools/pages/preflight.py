@@ -20,9 +20,24 @@ ALLOW = {
     'james.html', 'chrome.css',
     'graph.json', 'pages.json', 'confirmations.json', 'disputes.json',
     'validations.json', 'robots.txt', 'sitemap.xml',
+    # the v2.0 slice: release notes, the query panel and its two data files,
+    # the ontology page, and the manifest of batch pages gated below
+    'releases.html', 'query.html', 'query.js', 'ontology.html',
+    'relation_declarations.json', 'batch_pages.json',
 }
 ALLOW_DIRS = {'v1.3'}
-# Anything matching these anywhere in dist is an instant failure.
+# Generated page families. A file matching one of these is allowed only if the
+# generator that writes it vouches for it: a family page must name a family the
+# ruleset holds, and a batch page must be listed in batch_pages.json. A blanket
+# `family-*.html` glob would let a page from a retired family ride along.
+FAMILY_PAGE = re.compile(r'^family-([a-z-]+)\.html$')
+BATCH_PAGE = re.compile(r'^batch-([a-z0-9-]+)\.html$')
+# Anything matching these anywhere in dist is an instant failure — unless the
+# batch manifest vouches for the exact file. A batch id may legitimately contain
+# the word "candidates" (the pre-window CW 14 sets are named that way), and the
+# manifest is written by the ledger generator from state.json, so a stray mining
+# candidates file cannot hide behind it: it would have to be named
+# batch-<id>.html AND be listed in a manifest this build wrote.
 FORBIDDEN = [
     re.compile(r'paragraphs\.jsonl'), re.compile(r'\.epub$'),
     re.compile(r'gemini\.key'), re.compile(r'\.token$'),
@@ -39,20 +54,42 @@ def check(name, ok, detail=''):
         fails.append(name)
 
 
+# What the generators say they wrote. Read before the sweep, because the sweep
+# asks each file whether a generator vouches for it.
+batch_manifest = {}
+bm_path = ROOT / 'web' / 'public' / 'batch_pages.json'
+if bm_path.exists():
+    batch_manifest = json.loads(bm_path.read_text())
+batch_pages_expected = set(batch_manifest.get('pages', []))
+ruleset_families = set()
+fam_path = ROOT / 'web' / 'src' / 'families.json'
+if fam_path.exists():
+    ruleset_families = {f['id'] for f in json.loads(fam_path.read_text()).get('families', [])}
+
 print('== manifest ==')
 seen = set()
+dist_batch_pages = set()
 for p in sorted(DIST.rglob('*')):
     if p.is_dir():
         continue
     rel = p.relative_to(DIST)
     seen.add(str(rel))
     top = rel.parts[0]
-    allowed = str(rel) in ALLOW or top in ALLOW_DIRS
+    name = rel.name
+    fam_hit = FAMILY_PAGE.match(name) if len(rel.parts) == 1 else None
+    batch_hit = BATCH_PAGE.match(name) if len(rel.parts) == 1 else None
+    vouched_batch = bool(batch_hit) and name in batch_pages_expected
+    if batch_hit:
+        dist_batch_pages.add(name)
+    allowed = (str(rel) in ALLOW or top in ALLOW_DIRS
+               or (fam_hit and fam_hit.group(1) in ruleset_families)
+               or vouched_batch)
     if not allowed:
         check(f'unexpected file: {rel}', False)
-    for pat in FORBIDDEN:
-        if pat.search(str(rel)):
-            check(f'forbidden pattern in dist: {rel}', False)
+    if not vouched_batch:
+        for pat in FORBIDDEN:
+            if pat.search(str(rel)):
+                check(f'forbidden pattern in dist: {rel}', False)
 missing = ALLOW - seen
 check('all expected files present', not missing, f'missing: {sorted(missing)}' if missing else '')
 check('manifest clean', not any(f.startswith(('unexpected', 'forbidden')) for f in fails))
@@ -79,6 +116,26 @@ if ldg_path.exists():
           f'expected "{sc[0]} nodes", "{sc[1]} edges", "{sc[2]} references" in ledger.html')
 else:
     check('ledger present in dist', False, 'ledger.html missing from dist')
+
+# Batch pages (item 9, 2026-08-13): they regenerate with the ledger by
+# construction — one generator, one pass — so what this gates is the shipped
+# result: a dist that lacks a batch page, lags seed.json, or carries an orphan
+# from a renamed batch does not deploy.
+if not batch_manifest:
+    check('batch page manifest present', False,
+          'web/public/batch_pages.json missing — run tools/build_ledger_page.py')
+else:
+    missing_batches = sorted(batch_pages_expected - dist_batch_pages)
+    check('every batch page in dist', not missing_batches,
+          f'missing from dist: {missing_batches[:5]}' if missing_batches else '')
+    orphans = sorted(dist_batch_pages - batch_pages_expected)
+    check('no orphan batch pages in dist', not orphans,
+          f'in dist but not in the manifest: {orphans[:5]}' if orphans else '')
+    check('batch pages are fresh (manifest edges == seed.json)',
+          batch_manifest.get('seed_edges') == sc[1],
+          f'manifest {batch_manifest.get("seed_edges")} vs seed {sc[1]}')
+    check('manifest count == manifest ids',
+          batch_manifest.get('count') == len(batch_manifest.get('ids', [])))
 
 print('== frozen snapshot ==')
 h = hashlib.md5()
