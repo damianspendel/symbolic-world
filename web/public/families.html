@@ -21,7 +21,6 @@ table { border-collapse: collapse; width: 100%; font-size: .88rem; }
 th, td { border: 1px solid var(--hairline); padding: .5rem .7rem; text-align: left; vertical-align: top; }
 th { color: var(--gold); font-weight: 500; background: var(--panel); }
 .gen { font: .68rem var(--mono); color: var(--ink-faint); margin-top: 3rem; border-top: 1px solid var(--hairline); padding-top: .8rem; }
-.sub { color: var(--ink-faint); font-size: .95rem; margin-bottom: 1.6rem; }
 hr { border: 0; border-top: 1px solid var(--hairline); margin: 3rem 0 2rem; }
 .fam { margin: 1.1rem 0; }
 .fam h3 { margin: 0 0 .35rem; color: var(--ink); }
@@ -41,8 +40,9 @@ hr { border: 0; border-top: 1px solid var(--hairline); margin: 3rem 0 2rem; }
 <div class="hrow hrow-2"><span class="where">Relation families</span></div>
 </header>
 <main>
+<div class="titleband"><p class="eyebrow">reference</p>
 <h1>Relation families</h1>
-<p class="sub">The classification layer, ruleset v0.7.1 — what it claims, what it does not, and every relation string in it.</p>
+<p class="sub">The classification layer, ruleset v0.7.1 — what it claims, what it does not, and every relation string in it.</p></div>
 
 <h2>What a family is</h2>
 <p>A family is a classification <em>over</em> a relation that has already been checked. The claim underneath — subject, relation, object, the verbatim quote, the paragraph it came from — went through the verification chain before any of this began, and the family layer does not reopen it. It asks a second and much narrower question: what kind of relation is this one?</p>

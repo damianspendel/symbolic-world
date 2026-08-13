@@ -562,6 +562,79 @@ def test_menu_hash_destinations_are_routed_in_app_not_reloaded():
     assert "if (!route) return" in js
 
 
+# ------------------------------------- item 15 · the title band and search ---
+
+TITLE_CLASSES = ("titleband", "eyebrow", "sub")
+
+
+def test_every_surface_announces_itself_the_same_way():
+    """A page's title band is eyebrow + h1 (+ optional sub), inside .titleband,
+    on generated pages and in the app's views alike."""
+    for path in generated_pages():
+        html = read(path)
+        band = re.search(r'<div class="titleband">(.*?)</div>', html, re.S)
+        assert band, f"{os.path.basename(path)}: no title band"
+        assert 'class="eyebrow"' in band.group(1), os.path.basename(path)
+        assert "<h1" in band.group(1), os.path.basename(path)
+    # the app's four views build the same band
+    js = app_js() + read(os.path.join(ROOT, "web", "src", "concordance.js"))
+    assert js.count('<div class="titleband">') >= 3, "an in-app view has no title band"
+    assert "<h2>The relation-family vocabulary</h2>" not in js, (
+        "a view still titles itself with an h2")
+
+
+def test_no_surface_sets_its_own_title_band_type():
+    """Face, size and colour of the band come from the shared chrome. A page or
+    a view that styles .eyebrow, .sub, .titleband or .where itself fails here."""
+    sources = {os.path.basename(p): "\n".join(re.findall(r"<style>(.*?)</style>", read(p), re.S))
+               for p in generated_pages()}
+    sources["style.css"] = read(os.path.join(ROOT, "web", "src", "style.css"))
+    for name, css in sources.items():
+        for selector in TITLE_CLASSES + ("where",):
+            for body in re.findall(rf"\.{selector}\s*{{([^}}]*)}}", css):
+                for banned in ("font-family", "font-size", "font:", "color"):
+                    assert banned not in body, f"{name}: .{selector} sets {banned}"
+
+
+def test_the_band_outranks_a_view_that_styles_its_paragraphs():
+    """The method view sets .method-page p; without the scoped selector its
+    eyebrow rendered as body text in ink."""
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    assert ".titleband .eyebrow" in css
+    assert ".titleband .sub" in css
+
+
+def test_a_search_input_sits_in_the_shared_right_hand_cluster():
+    """Item 15 — page-level search and filter inputs are in the header's second
+    row, inside .hdr-tools, which is what pushes them right. A page that puts
+    one in its content, or loose in the row, fails."""
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    tools = re.search(r"\.site-header \.hdr-tools {([^}]*)}", css).group(1)
+    assert "margin-left: auto" in tools
+    for path in generated_pages():
+        html = read(path)
+        for match in re.finditer(r"<input[^>]*type=\"search\"[^>]*>", html):
+            before = html[:match.start()]
+            assert before.rindex('<span class="hdr-tools">') > before.rindex("</header>") - 1 \
+                if "</header>" in before else True, os.path.basename(path)
+            header = re.search(HEADER_RE, html).group(0)
+            assert match.group(0) in header, (
+                f"{os.path.basename(path)}: a search input outside the header")
+            assert '<span class="hdr-tools">' in header
+    # the app renders its two searches into the same cluster
+    js = app_js()
+    assert '<span class="hdr-tools">${tools}</span>' in js
+    index = read(os.path.join(ROOT, "web", "index.html"))
+    tools_block = re.search(r'<span class="hdr-tools">(.*?)</span>\s*</div>', index, re.S).group(1)
+    assert 'id="search"' in tools_block, "the app's search left the shared cluster"
+
+
+def test_no_generated_page_styles_its_own_search_input():
+    for path in generated_pages():
+        style = "\n".join(re.findall(r"<style>(.*?)</style>", read(path), re.S))
+        assert not re.search(r"#q\s*{", style), f"{os.path.basename(path)}: #q restyled locally"
+
+
 # ---------------------------------------------- item 14 · one heading scale ---
 
 def test_the_heading_scale_is_defined_once_in_the_shared_chrome():

@@ -49,7 +49,11 @@ body.atlas #overlay { pointer-events: none; opacity: 0; visibility: hidden; }
   #prose, #prose-more { max-width: none; }
 }
 
-.eyebrow {
+/* Item 15 — the landing HERO's eyebrow, which is a different kind of thing from
+   a page's title band: it sits over a 4rem hero, not over an h1, and it names
+   the site rather than the kind of page. Renamed so that `.eyebrow` means one
+   thing everywhere else. */
+.hero-eyebrow {
   font: 0.62rem var(--mono); letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--gold-dim); margin-bottom: 1.1rem;
 }

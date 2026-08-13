@@ -18,7 +18,6 @@ p { font-size: .92rem; line-height: 1.62; max-width: 68ch; }
 p + p { margin-top: .6rem; }
 a { color: var(--gold); }
 code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
-.eyebrow { font: .6rem/1 var(--mono); letter-spacing: .26em; text-transform: uppercase; color: var(--gold-dim); }
 .dim { color: var(--ink-faint); }
 .meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
 .chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
@@ -212,8 +211,8 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 <div class="hrow hrow-2"><span class="where">query</span></div>
 </header>
 <main>
-<p class="eyebrow">read-only</p>
-<h1>Query the graph</h1>
+<div class="titleband"><p class="eyebrow">read-only</p>
+<h1>Query the graph</h1></div>
 <p>The filters <code>tools/query/kg_query.py</code> takes, given a surface. They combine with AND, exactly as the tool combines them, and each one reads a field the graph already stores rather than computing a judgement of its own. The closure toggle adds the rows the active declarations license and marks every one of them as derived.</p>
 <p>Nothing on this page writes anything. The panel reads the published dataset at <a href="/graph.json">/graph.json</a> and the declarations beside it; the same query on the command line prints the same rows with a footer naming the graph it ran against. Two results carrying different seed digests are not comparable, which is why the digest sits under the results rather than in a help page.</p>
 

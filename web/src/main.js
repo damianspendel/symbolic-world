@@ -849,11 +849,15 @@ function goAtlas() {
 // scrolled away with the content. Rendered as the panel's first child, the
 // shared header sticks against the panel's own scroll.
 function pageBar({ where, search = false, extra = '' } = {}) {
-  const row2 = `<span class="where">${esc(where || '')}</span>
-    <span class="spacer"></span>
-    ${extra}
+  // Item 15 — the tools cluster is right-aligned by the shared rule, so an
+  // in-app view's search sits where the atlas's search sits. It used to inherit
+  // its position from a .page-bar spacer rule that went away with the bar, and
+  // came out on the left.
+  const tools = `${extra}
     ${search ? `<input class="std-search page-search" type="search" autocomplete="off" spellcheck="false"
         placeholder="A symbol, a relation, a quote, CW 14 §1…">` : ''}`
+  const row2 = `<span class="where">${esc(where || '')}</span>` +
+    (tools.trim() ? `<span class="hdr-tools">${tools}</span>` : '')
   return chrome.header.replace('{{BRAND_HREF}}', '#/atlas').replace('{{ROW2}}', row2)
 }
 // Every page-bar search is the same search: the same index, the same typeahead,
@@ -899,7 +903,10 @@ function openEdgeFromPage(id) {
 }
 function openMethod() {
   openPage(() => {
-    modeEl.innerHTML = `${pageBar({ where: 'about', search: true })}<div class="page method-page">${method.html}</div>`
+    modeEl.innerHTML = `${pageBar({ where: 'about', search: true })}<div class="page method-page">` +
+      `<div class="titleband"><p class="eyebrow">about</p><h1>The method</h1>` +
+      `<p class="sub">How a claim gets into this graph, and what the checks do and do not cover.</p></div>` +
+      `${method.html}</div>`
     modeEl.querySelector('[data-back]').addEventListener('click', goAtlas)
     wirePageSearch(modeEl)
   }, '#/method')
@@ -939,7 +946,8 @@ function drawFamilies() {
   modeEl.innerHTML = `
     ${pageBar({ where: 'families', search: true, extra: `<a class="back" href="${esc(families.doc_url)}">the full document →</a>` })}
     <div class="page">
-      <h2>The relation-family vocabulary</h2>
+      <div class="titleband"><p class="eyebrow">reference</p>
+      <h1>The relation-family vocabulary</h1></div>
       <p class="lede2">${families.families.length} families, ${esc(families.version)}, quoted from <code>docs/FAMILY_DEFINITIONS.md</code> — never paraphrased. A family classifies what KIND of relation an edge asserts, per edge and in its paragraph context, never per relation string. ${FAMILY_ON ? `<b>${META.familyLayer.states.family || 0}</b> edges carry a family, <b>${META.familyLayer.states.pending || 0}</b> await a human ruling, <b>${META.familyLayer.states.unclassified || 0}</b> carry none.` : 'The assignment pass has not merged, so no edge carries a family yet.'}</p>
 
       <div class="fam-jump">

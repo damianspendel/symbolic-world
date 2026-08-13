@@ -60,6 +60,38 @@
   color: var(--gold-dim); white-space: nowrap;
 }
 .page-bar .spacer { margin-left: auto; }
+/* Item 15 (editorial ruling, 2026-08-13) — the title band, defined once. A page
+   announces itself the same way everywhere: a quiet eyebrow naming the KIND of
+   surface, the title at h1, and an optional one-line subtitle under it. Before
+   this the breadcrumb was rendering at body size in ink — the .page-bar rule
+   that used to style it went away with the bar — so on a page with no eyebrow
+   it read as a second title. */
+.site-header .where {
+  font: 0.62rem var(--mono); letter-spacing: 0.05em; color: var(--gold-dim);
+  white-space: nowrap; text-transform: none;
+}
+.site-header .where a { color: var(--gold-dim); text-decoration: none; }
+.site-header .where a:hover { color: var(--gold); }
+.eyebrow, .titleband .eyebrow {
+  font: 0.6rem/1 var(--mono); letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--gold-dim); margin: 0 0 0.35rem;
+}
+.sub, .titleband .sub {
+  font-size: 0.95rem; line-height: 1.6; color: var(--ink-faint);
+  margin-bottom: 1.2rem; max-width: 68ch;
+}
+.titleband { margin-bottom: 1rem; }
+/* The band's two selectors carry a class more than a view's own paragraph rule,
+   so a view that styles its paragraphs cannot repaint the band by accident —
+   which is exactly what the method view was doing to its eyebrow. */
+
+/* Item 15 — page-level search and filter inputs sit at the right of the second
+   row, on every surface that has one. The cluster is the mechanism: anything in
+   it is pushed right together, so a page cannot half-do it. */
+.site-header .hdr-tools { margin-left: auto; display: flex; align-items: center; gap: 0.9rem; }
+.site-header .hrow-2 .spacer { margin-left: auto; }
+.site-header .std-search { width: min(320px, 34vw); }
+
 /* Item 14 (editorial ruling, 2026-08-13) — one heading scale for the whole
    site. The face, the size step and the colour of a heading level are the same
    on a generated page and in an in-app view; only margins stay with the page

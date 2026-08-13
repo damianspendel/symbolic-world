@@ -694,3 +694,95 @@ Bit-identical means zoom, pan, the first six node positions, the selection and
 the faded-element count. Search and filter are untouched: search still dims the
 non-matching graph (1,796 elements on `mercurius`) and reset still re-fits, which
 is what those actions are for.
+
+## Item 15 — title-band and search-position audit
+
+Enumerated first, across every surface, measured in the browser at 1280px. The
+two reported symptoms were each one instance of a wider drift, and the audit
+turned up a third that nobody had reported.
+
+### Before
+
+| surface | title band | computed | search / filter |
+|---|---|---|---|
+| app · landing | `.eyebrow` + `#prose h1` | Hoefler 65.6px ink | in header, RIGHT |
+| app · atlas | brand only | Hoefler 16.8px ink | in header, RIGHT (x=900) |
+| app · #/method | `h2` (first content heading) | Hoefler 21.6px **gold** | in header, **LEFT (x=109)** |
+| app · #/concordance | `h2` | Hoefler 21.6px **gold** | in header, **LEFT (x=157)** |
+| app · #/families | `h2` | Hoefler 21.6px **gold** | in header, **LEFT (x=287)** |
+| app · #/queue | `h2` | Hoefler 21.6px **gold** | in header, **LEFT (x=287)** |
+| releases | eyebrow + h1 | Hoefler 32px ink | none |
+| ontology | eyebrow + h1 | Hoefler 32px ink | none |
+| query | eyebrow + h1 | Hoefler 32px ink | none (form in content) |
+| families | **h1 only, no eyebrow** | Hoefler 32px ink | none |
+| ledger | **h1 only, no eyebrow** | Hoefler 32px ink | **in content, LEFT (x=200)** |
+| disputes | **h1 only, no eyebrow** | Hoefler 32px ink | none |
+| family page | eyebrow + h1 | Hoefler 32px ink | none |
+| batch page | eyebrow + h1 | Hoefler 32px ink | none |
+| james | no header at all | — | none |
+
+And the finding nobody reported: **the `.where` breadcrumb had lost its styling
+entirely**. The rule that set it was `.page-bar .where`, and `.page-bar` went
+away with item 11's header, so on every surface it was rendering as
+`Iowan Old Style / 16px / ink` — body copy at title weight, immediately under
+the menu. On the three pages with no eyebrow it read as a second title. That is
+almost certainly what "page titles still have inconsistent fonts" was seeing.
+
+Two further splits: subtitle lines were `.sub` ink-faint on family pages and
+`.intro` **ink** on ledger and disputes for the same role, and the eyebrow was
+absent on three pages entirely.
+
+### After
+
+| surface | eyebrow | title | breadcrumb | search / filter |
+|---|---|---|---|---|
+| app · atlas | — | brand | — | RIGHT x=900 `[tools]` |
+| app · #/method | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | RIGHT x=905 `[tools]` |
+| app · #/concordance | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | RIGHT x=905 `[tools]` |
+| app · #/families | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | RIGHT x=905 `[tools]` |
+| app · #/queue | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | RIGHT x=905 `[tools]` |
+| releases | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | none |
+| ontology | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | none |
+| query | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | none |
+| families | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | none |
+| ledger | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | RIGHT x=901 `[tools]` |
+| disputes | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | none |
+| family page | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | none |
+| batch page | mono 9.6px gold-dim | Hoefler 32px ink | mono 9.92px gold-dim | none |
+
+One number differs across the table and it is the same everywhere it appears:
+the eyebrow is 9.6px in a title band and the breadcrumb 9.92px in the header —
+two different components, each consistent with itself.
+
+### What changed, at the shared level
+
+`.titleband`, `.eyebrow`, `.sub` and `.site-header .where` are defined once in
+the chrome block that feeds `chrome.css` and `tokens.css`. Every generated page
+and every in-app view now emits eyebrow + h1 (+ optional sub) inside
+`.titleband`; the method, concordance, families and queue views gained a real
+title where they had been leading with a section heading. The band's selectors
+carry one more class than a view's own paragraph rule, because `.method-page p`
+was repainting its eyebrow as body text in ink.
+
+Search and filter inputs sit in `.hdr-tools`, a right-aligned cluster in the
+header's second row: the atlas search, the in-app views' searches and the
+ledger's record filter, which moved out of the content. The `.page-bar .spacer`
+rule that used to right-align the in-app search had gone the same way as the
+breadcrumb's.
+
+### Exceptions, named in the spec (V2-R12)
+
+The landing hero (`.hero-eyebrow` over a 4rem hero, naming the site rather than
+a kind of page — renamed so `.eyebrow` means one thing everywhere else), the
+batch identifier (`.idtok`, mono inside an otherwise standard h1, because it is
+a machine id), the selection and family side panels (components docked beside
+the graph), and the query panel's filter grid (the page's subject, not a filter
+over it).
+
+### Tests
+
+Every generated page carries a title band with an eyebrow and an h1; no page or
+view styles `.eyebrow`, `.sub`, `.titleband` or `.where` itself; the band's
+scoped selectors exist so a view cannot repaint it; every search input lives
+inside the header's `.hdr-tools`, which is right-aligned by the shared rule; and
+no page restyles the filter input. Drift in any of these fails the suite.

@@ -18,7 +18,6 @@ p { font-size: .92rem; line-height: 1.62; max-width: 68ch; }
 p + p { margin-top: .6rem; }
 a { color: var(--gold); }
 code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
-.eyebrow { font: .6rem/1 var(--mono); letter-spacing: .26em; text-transform: uppercase; color: var(--gold-dim); }
 .dim { color: var(--ink-faint); }
 .meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
 .chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
@@ -79,8 +78,8 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="hrow hrow-2"><span class="where">ontology</span></div>
 </header>
 <main>
-<p class="eyebrow">the ontology</p>
-<h1>What this graph is, as an ontology</h1>
+<div class="titleband"><p class="eyebrow">the ontology</p>
+<h1>What this graph is, as an ontology</h1></div>
 <p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, and then runs the standard pitfall scan over the graph and reports what it finds — including the findings that are these decisions showing up as defects.</p>
 
 <h2>Two tiers</h2>
@@ -279,7 +278,7 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-13 at commit f319d86
+built 2026-08-13 at commit a83e427
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

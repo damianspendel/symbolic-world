@@ -571,6 +571,25 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   anti-overclaim rules: several "pitfalls" are recorded design decisions,
   and the panel says which. Give `tools/ontology_qa/quality.py` a `--json`
   mode rather than scraping its prose output; the builder consumes that.
+- **V2-R12 one title band and one search position (standing rule,
+  2026-08-13).** Every surface announces itself the same way: an eyebrow
+  naming the KIND of surface, the title at h1, an optional one-line
+  subtitle, all inside `.titleband`. Face, size and colour come from the
+  shared chrome block; a page or view that styles `.eyebrow`, `.sub`,
+  `.titleband` or the `.where` breadcrumb itself is a drift and fails the
+  suite. Page-level search and filter inputs — the atlas search, an
+  in-app view's search, the ledger's record filter — sit in the header's
+  second row inside `.hdr-tools`, which is what right-aligns them; facet
+  chips and form controls that ARE the page's subject stay in content.
+  Three deliberate exceptions, each a different kind of thing rather
+  than a slightly different title: the **landing hero** (`.hero-eyebrow`
+  over a 4rem hero naming the site, not a page), the **batch
+  identifier** (`.idtok`, mono inside an otherwise standard h1, because
+  it is a machine id), and the **selection and family side panels**
+  (components docked beside the graph, not pages). The query panel's
+  filter grid is the fourth: it is the page's subject, not a filter over
+  it.
+
 - **V2-R9 progressive disclosure on heavy pages (standing rule,
   2026-08-13).** A detail table on a page that already carries a lot sits
   behind a one-line headline and a native `<details>`/`<summary>`: the

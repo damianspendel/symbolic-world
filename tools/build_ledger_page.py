@@ -52,7 +52,7 @@ MENU = [
 ]
 
 
-def site_header(current="", where=""):
+def site_header(current="", where="", tools=""):
     """V2-R11 — the header fragment, the same structure web/build-atlas.mjs
     emits: row one is brand then menu and is identical on every surface; row two
     carries the breadcrumb, which is the part that varies."""
@@ -60,8 +60,9 @@ def site_header(current="", where=""):
         '<header class="site-header">'
         '<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a>'
         f'{top_menu(current)}</div>'
-        f'<div class="hrow hrow-2"><span class="where">{where}</span></div>'
-        "</header>")
+        f'<div class="hrow hrow-2"><span class="where">{where}</span>'
+        + (f'<span class="hdr-tools">{tools}</span>' if tools else "")
+        + "</div></header>")
 
 
 def top_menu(current=""):
@@ -300,7 +301,6 @@ def batch_page(batch, delta, commits):
   * {{ box-sizing:border-box; margin:0; padding:0; }}
   body {{ min-height:100vh; }}
   main {{ max-width:820px; margin:0 auto; padding:1.6rem 1.2rem 4rem; }}
-  .eyebrow {{ font:.6rem/1 var(--mono); letter-spacing:.26em; text-transform:uppercase; color:var(--gold-dim); }}
   /* face, size and colour come from the shared scale in chrome.css; the batch
      id inside the heading keeps the mono face, because it is an identifier */
   h1 {{ margin:.3rem 0 .5rem; }}
@@ -336,8 +336,8 @@ def batch_page(batch, delta, commits):
 <body>
 {site_header("/ledger", f'<a href="/ledger">ledger</a> · {esc(batch["id"])}')}
 <main>
-  <p class="eyebrow">batch delta</p>
-  <h1><span class="idtok">{esc(batch["id"])}</span></h1>
+  <div class="titleband"><p class="eyebrow">batch delta</p>
+  <h1><span class="idtok">{esc(batch["id"])}</span></h1></div>
   <div class="meta">{f'<span class="cite">{esc(window)}</span> · ' if window else ''}<span class="badge">{esc(batch["status"])}</span></div>
   {f'<h2>What it merged</h2><div class="story">{esc(story)}</div>' if story else ''}
   {derived_block}
@@ -551,7 +551,6 @@ def build():
   * {{ box-sizing:border-box; margin:0; padding:0; }}
   body {{ min-height:100vh; }}
   main {{ max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }}
-  .eyebrow {{ font:.6rem/1 var(--mono); letter-spacing:.26em; text-transform:uppercase; color:var(--gold-dim); }}
   /* face, size and colour come from the shared scale in chrome.css */
   h1 {{ margin:.3rem 0 .8rem; }}
   h2 {{ margin:2.4rem 0 .3rem; }}
@@ -567,8 +566,7 @@ def build():
   .intro {{ font-size:.92rem; line-height:1.6; color:var(--ink); max-width:66ch; margin-bottom:.5rem; }}
   .meta {{ font:.62rem var(--mono); color:var(--ink-faint); margin-bottom:1rem; }}
   a {{ color:var(--gold); }}
-  #q {{ width:100%; max-width:30rem; background:var(--panel); color:var(--ink); border:1px solid var(--hairline);
-       border-radius:8px; padding:.5rem .8rem; font:inherit; font-size:.9rem; margin:.4rem 0 1rem; }}
+  /* the filter input is styled by the shared .std-search rule in chrome.css */
   /* V2-R3 — the facet strip. Facets filter; they never aggregate into a claim. */
   .facets {{ display:flex; flex-direction:column; gap:.4rem; margin:.3rem 0 1rem;
             padding-bottom:.9rem; border-bottom:1px solid var(--hairline); }}
@@ -645,11 +643,12 @@ def build():
 </style>
 </head>
 <body>
-{site_header("/ledger", "ledger")}
+{site_header("/ledger", "ledger", '<input id="q" class="std-search" type="search" placeholder="Filter records — a symbol, a relation, cw14…" autocomplete="off">')}
 <main>
+  <div class="titleband"><p class="eyebrow">provenance</p>
   <h1>Ledger</h1>
-  <p class="intro">Every published record and the gates it passed. Nothing entered this graph by an
-  unrecorded path.</p>
+  <p class="sub">Every published record and the gates it passed. Nothing entered this graph by an
+  unrecorded path.</p></div>
   <p class="intro">Two different kinds of record appear on every card below, and they are not the
   same kind of evidence:</p>
   <div class="kinds">
@@ -685,7 +684,6 @@ def build():
     <a href="{REPO_URL}/commits/master">full commit history</a></div>
 
   <h2>Records</h2>
-  <input id="q" type="search" placeholder="Filter records — try a symbol, a relation, or cw14…" autocomplete="off">
   <div class="facets">
 {facets}
   </div>

@@ -120,9 +120,9 @@ const MENU = [
 ]
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
-const siteHeader = (current, where) => `<header class="site-header">
+const siteHeader = (current, where, tools = '') => `<header class="site-header">
 <div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a>${topMenu(current)}</div>
-<div class="hrow hrow-2"><span class="where">${esc(where || '')}</span></div>
+<div class="hrow hrow-2"><span class="where">${esc(where || '')}</span>${tools ? `<span class="hdr-tools">${tools}</span>` : ''}</div>
 </header>`
 const topMenu = (current) => '<nav class="topmenu">' + MENU.map(([group, items]) =>
   `<span class="mgroup">${group}</span>` + items.map(([href, label]) =>
@@ -510,6 +510,38 @@ const chromeBlock = () => `
   color: var(--gold-dim); white-space: nowrap;
 }
 .page-bar .spacer { margin-left: auto; }
+/* Item 15 (editorial ruling, 2026-08-13) — the title band, defined once. A page
+   announces itself the same way everywhere: a quiet eyebrow naming the KIND of
+   surface, the title at h1, and an optional one-line subtitle under it. Before
+   this the breadcrumb was rendering at body size in ink — the .page-bar rule
+   that used to style it went away with the bar — so on a page with no eyebrow
+   it read as a second title. */
+.site-header .where {
+  font: 0.62rem var(--mono); letter-spacing: 0.05em; color: var(--gold-dim);
+  white-space: nowrap; text-transform: none;
+}
+.site-header .where a { color: var(--gold-dim); text-decoration: none; }
+.site-header .where a:hover { color: var(--gold); }
+.eyebrow, .titleband .eyebrow {
+  font: 0.6rem/1 var(--mono); letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--gold-dim); margin: 0 0 0.35rem;
+}
+.sub, .titleband .sub {
+  font-size: 0.95rem; line-height: 1.6; color: var(--ink-faint);
+  margin-bottom: 1.2rem; max-width: 68ch;
+}
+.titleband { margin-bottom: 1rem; }
+/* The band's two selectors carry a class more than a view's own paragraph rule,
+   so a view that styles its paragraphs cannot repaint the band by accident —
+   which is exactly what the method view was doing to its eyebrow. */
+
+/* Item 15 — page-level search and filter inputs sit at the right of the second
+   row, on every surface that has one. The cluster is the mechanism: anything in
+   it is pushed right together, so a page cannot half-do it. */
+.site-header .hdr-tools { margin-left: auto; display: flex; align-items: center; gap: 0.9rem; }
+.site-header .hrow-2 .spacer { margin-left: auto; }
+.site-header .std-search { width: min(320px, 34vw); }
+
 /* Item 14 (editorial ruling, 2026-08-13) — one heading scale for the whole
    site. The face, the size step and the colour of a heading level are the same
    on a generated page and in an in-app view; only margins stay with the page
@@ -713,8 +745,9 @@ function familiesPageCopy(map, version) {
     .filter(r => /layer: amplification|indistinguishability/i.test(r.title))
     .map(r => `<li>${r.html}</li>`).join('\n')
 
-  return `<h1>Relation families</h1>
-<p class="sub">The classification layer, ruleset ${esc(version)} — what it claims, what it does not, and every relation string in it.</p>
+  return `<div class="titleband"><p class="eyebrow">reference</p>
+<h1>Relation families</h1>
+<p class="sub">The classification layer, ruleset ${esc(version)} — what it claims, what it does not, and every relation string in it.</p></div>
 
 <h2>What a family is</h2>
 <p>A family is a classification <em>over</em> a relation that has already been checked. The claim underneath — subject, relation, object, the verbatim quote, the paragraph it came from — went through the verification chain before any of this began, and the family layer does not reopen it. It asks a second and much narrower question: what kind of relation is this one?</p>
@@ -796,7 +829,6 @@ table { border-collapse: collapse; width: 100%; font-size: .88rem; }
 th, td { border: 1px solid var(--hairline); padding: .5rem .7rem; text-align: left; vertical-align: top; }
 th { color: var(--gold); font-weight: 500; background: var(--panel); }
 .gen { font: .68rem var(--mono); color: var(--ink-faint); margin-top: 3rem; border-top: 1px solid var(--hairline); padding-top: .8rem; }
-.sub { color: var(--ink-faint); font-size: .95rem; margin-bottom: 1.6rem; }
 hr { border: 0; border-top: 1px solid var(--hairline); margin: 3rem 0 2rem; }
 .fam { margin: 1.1rem 0; }
 .fam h3 { margin: 0 0 .35rem; color: var(--ink); }
@@ -1054,7 +1086,6 @@ p { font-size: .92rem; line-height: 1.62; max-width: 68ch; }
 p + p { margin-top: .6rem; }
 a { color: var(--gold); }
 code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
-.eyebrow { font: .6rem/1 var(--mono); letter-spacing: .26em; text-transform: uppercase; color: var(--gold-dim); }
 .dim { color: var(--ink-faint); }
 .meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
 .chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
@@ -1214,8 +1245,8 @@ if (existsSync(releasesPath)) {
 
   const pinHtml = (pin) => `<div class="pin">` + inline(pin)
     .replace(/(graph|ruleset)\s+(v[\d.]+|pending)/g, '$1 <span class="v">$2</span>') + `</div>`
-  const relBody = `<p class="eyebrow">release notes</p>
-<h1>Releases</h1>
+  const relBody = `<div class="titleband"><p class="eyebrow">release notes</p>
+<h1>Releases</h1></div>
 ${renderMarkdown(preamble.split('\n').slice(1).join('\n'))}
 ${entries.map(e => `<section class="rel-entry${e.future ? ' future' : ''}">
 <h2>${inline(e.heading)}</h2>
@@ -1331,9 +1362,9 @@ ${evTable(fam.id)}
 
   const zeroNote = row.edges === 0 ? `<p>No edge in the graph currently carries this family. A family with no members stays in the ruleset and is reported at zero rather than dropped: dropping it would hide the reclassification that emptied it, and the empty count is a finding about the definition.</p>` : ''
 
-  const body = `<p class="eyebrow">relation family</p>
+  const body = `<div class="titleband"><p class="eyebrow">relation family</p>
 <h1><span class="ev">${esc(fam.name)}</span> <span class="chip f-ok">assigned, not verified</span></h1>
-<p class="sub dim">What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer — a quote checked letter-exact against its paragraph and judged by a model of a different family — and it was already done before any of this began.</p>
+<p class="sub">What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer — a quote checked letter-exact against its paragraph and judged by a model of a different family — and it was already done before any of this began.</p></div>
 <div class="countstrip">
   <span><b>${row.edges}</b> assigned relations</span>
   <span><b>${strings.length}</b> effective relation strings</span>
@@ -1388,7 +1419,6 @@ if (famPageTotal !== famMap.totals.assigned) {
   process.exit(1)
 }
 const styleFamily = `
-.sub { font-size: .92rem; margin-bottom: 1rem; }
 .countstrip { display: flex; flex-wrap: wrap; gap: .5rem .9rem; margin: .7rem 0 .2rem; font: .62rem var(--mono); color: var(--ink-faint); }
 .countstrip b { color: var(--ink); font-weight: 400; }
 .quotebox { border-left: 2px solid var(--hairline); padding: .2rem 0 .2rem .9rem; margin: .5rem 0 .7rem; font-size: .95rem; line-height: 1.6; max-width: 68ch; }
@@ -1458,8 +1488,8 @@ if (DECL) {
     `${(DECL.transcribed_from || {}).document_version || '?'}, ${activeDecls.length} active`
   derived(seed.nodes.length, seed.edges.length, ...Object.values(tally), activeDecls.length)
 
-  const queryBody = `<p class="eyebrow">read-only</p>
-<h1>Query the graph</h1>
+  const queryBody = `<div class="titleband"><p class="eyebrow">read-only</p>
+<h1>Query the graph</h1></div>
 <p>The filters <code>tools/query/kg_query.py</code> takes, given a surface. They combine with AND, exactly as the tool combines them, and each one reads a field the graph already stores rather than computing a judgement of its own. The closure toggle adds the rows the active declarations license and marks every one of them as derived.</p>
 <p>Nothing on this page writes anything. The panel reads the published dataset at <a href="/graph.json">/graph.json</a> and the declarations beside it; the same query on the command line prints the same rows with a footer naming the graph it ran against. Two results carrying different seed digests are not comparable, which is why the digest sits under the results rather than in a help page.</p>
 
@@ -1773,8 +1803,8 @@ if (QA && DECL) {
   }).join('\n')
   derived(cited.length)
 
-  const ontBody = `<p class="eyebrow">the ontology</p>
-<h1>What this graph is, as an ontology</h1>
+  const ontBody = `<div class="titleband"><p class="eyebrow">the ontology</p>
+<h1>What this graph is, as an ontology</h1></div>
 <p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, and then runs the standard pitfall scan over the graph and reports what it finds — including the findings that are these decisions showing up as defects.</p>
 
 <h2>Two tiers</h2>
