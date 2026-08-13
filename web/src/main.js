@@ -1,6 +1,7 @@
 import cytoscape from 'cytoscape'
 import atlas from './atlas.json'
 import families from './families.json'
+import chrome from './chrome.json'
 import summary from './summary.json'
 import pending from './pending.json'
 import method from './method.json'
@@ -818,15 +819,19 @@ function goAtlas() {
 // R10.0 / R10.6 — the breadcrumb is emitted from ONE place, so every route gets
 // the same control in the same position. R10.4 — and the same search field, in
 // the same slot, with the same behaviour.
+// Item 12 — every in-app route renders the SAME header the generated pages
+// carry, from the template build-atlas.mjs emits. #mode-panel is a fixed,
+// scrolling overlay that covers the topbar, so a route that drew its own bar
+// showed the reader a different set of links in a different place, and one that
+// scrolled away with the content. Rendered as the panel's first child, the
+// shared header sticks against the panel's own scroll.
 function pageBar({ where, search = false, extra = '' } = {}) {
-  return `<div class="page-bar">
-    <button class="back" data-back>← the atlas</button>
-    <span class="where">${esc(where || '')}</span>
+  const row2 = `<span class="where">${esc(where || '')}</span>
     <span class="spacer"></span>
     ${extra}
     ${search ? `<input class="std-search page-search" type="search" autocomplete="off" spellcheck="false"
-        placeholder="A symbol, a relation, a quote, CW 14 §1…">` : ''}
-  </div>`
+        placeholder="A symbol, a relation, a quote, CW 14 §1…">` : ''}`
+  return chrome.header.replace('{{BRAND_HREF}}', '#/atlas').replace('{{ROW2}}', row2)
 }
 // Every page-bar search is the same search: the same index, the same typeahead,
 // the same Enter-selects. Pages that carry a record list also filter it live.

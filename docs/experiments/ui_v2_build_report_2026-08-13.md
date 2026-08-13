@@ -547,3 +547,48 @@ asserted in `index.html` with nothing but the brand block between the row and
 the menu, and every control id on the second row; and the shared class checked
 for sticky, top 0, the ground and hairline tokens, and a fixed-width brand —
 defined once, not once per page.
+
+## Item 12 — the header on the app's own routes, and what "ontology" turned out to be
+
+Reproduced all three before changing anything.
+
+**#/method, #/concordance (and #/families, #/queue, which were not in the
+report but fail the same way).** `#mode-panel` is `position: fixed; inset: 0;
+z-index: 13` with its own scroll, and `#topbar` is `z-index: 10`. The panel
+covers the header completely — measured `headerReachable: false` at a point
+inside the header's own box — and each route drew a different bar of its own
+(`.page-bar`: a back button, a breadcrumb, a search field), which is not sticky
+against the panel's scroll. So the header was not merely unpinned on those
+routes; it was not on screen, and what replaced it scrolled away.
+
+**/ontology.** Not a header fault. Loaded directly it holds — `top: 0`,
+menu at x=264, y=17, unchanged after scrolling 2,500px. It reproduces as a
+dev-server artifact: `web/serve.mjs` answers anything it cannot find with
+`index.html`, so an extensionless `/ontology` — the site's own URL convention,
+which Cloudflare Pages serves from `ontology.html` — returned the atlas shell.
+A reader clicking *ontology* in a dev build landed on the app's landing view,
+where the topbar is deliberately invisible until the atlas takes over. Fixed in
+`serve.mjs`: try `<path>.html` before the shell, which is what Pages does.
+
+**The fix is one header, not three.** `build-atlas.mjs` now emits
+`web/src/chrome.json` — the header as a template — and `main.js` renders it for
+every in-app route, with the brand pointing at `#/atlas` instead of `/` and the
+breadcrumb, search field and any per-route extra on the second row. Rendered as
+the panel's first child, `position: sticky; top: 0` pins it against the panel's
+own scroll. There is now one header fragment in the project rather than one per
+surface, which is what stops the next route from regressing it.
+
+**Measured after the fix**, at 1280px: menu box x=264, y=17 on the atlas view and
+on #/method, #/concordance, #/families and #/queue — the same coordinates the
+eight generated pages report — and `header.top` stays 0 with the menu unmoved
+when each route's own container is scrolled 1,500px (916px on concordance, its
+full height). No `.page-bar` remains in the DOM on any route, and no console
+errors.
+
+**The landing view is the one surface without the header, by design.** The
+topbar is invisible until `body.atlas`; the header fades in with the atlas. That
+is R0.1's staging, not a bug, and changing it would be a landing redesign.
+
+Tests: the emitted template's order (brand before menu before row two), its menu
+matching the generated pages link for link, `main.js` importing and rendering it
+with no bespoke bar left behind, and the dev server's extensionless resolution.

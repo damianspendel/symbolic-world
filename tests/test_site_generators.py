@@ -564,6 +564,34 @@ def test_the_app_header_matches_that_structure():
         assert control in body[body.index("hrow-2"):], control
 
 
+def test_the_app_routes_render_the_shared_header_fragment():
+    """Item 12 — #mode-panel is a fixed, scrolling overlay that covers the
+    topbar, so an in-app route that drew its own bar showed a different set of
+    links in a different place, and one that scrolled away. Every route now
+    renders the emitted template."""
+    chrome = json.loads(read(os.path.join(SRC, "chrome.json")))
+    header = chrome["header"]
+    assert header.index('class="brand"') < header.index('class="topmenu"')
+    assert header.index('class="topmenu"') < header.index("{{ROW2}}")
+    assert "{{BRAND_HREF}}" in header
+    # the same menu the generated pages carry, link for link
+    assert menu_items(header) == menu_items(read(os.path.join(PUBLIC, "releases.html")))
+
+    js = read(os.path.join(ROOT, "web", "src", "main.js"))
+    assert "import chrome from './chrome.json'" in js
+    assert "chrome.header.replace('{{BRAND_HREF}}'" in js
+    assert '<div class="page-bar">' not in js, (
+        "a route still builds its own bar instead of the shared header")
+
+
+def test_the_dev_server_resolves_extensionless_urls():
+    """The reported failure on /ontology reproduced as a dev-server artifact:
+    serve.mjs answered every extensionless URL with the atlas shell, so the
+    reader got a landing view where a page should be."""
+    src = read(os.path.join(ROOT, "web", "serve.mjs"))
+    assert "existsSync(file + '.html')" in src
+
+
 def test_the_header_is_pinned_and_its_brand_cannot_shift_the_menu():
     css = read(os.path.join(PUBLIC, "chrome.css"))
     block = css[css.index(".site-header {"):]
