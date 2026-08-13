@@ -60,8 +60,36 @@
   color: var(--gold-dim); white-space: nowrap;
 }
 .page-bar .spacer { margin-left: auto; }
-/* V2-R10 — the site menu. One definition, used by the app's topbar, by every
-   generated page's page-bar, and by the pages the python generator writes. */
+/* V2-R11 — the site header. One structure and one geometry everywhere: a
+   fixed-width brand block, then the menu. Nothing whose width varies with the
+   page may sit before the menu, so it lands on the same pixel whichever page
+   you arrive on; the breadcrumb, the version chip and the app's controls go on
+   the second row. Sticky, so it stays put while a long page scrolls. */
+.site-header {
+  position: sticky; top: 0; z-index: 60;
+  background: var(--ground); border-bottom: 1px solid var(--hairline);
+}
+.site-header .hrow { display: flex; align-items: center; gap: 1rem; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+.site-header .hrow-1 { height: 3rem; }
+.site-header .hrow-2 { min-height: 2.15rem; padding-bottom: 0.4rem; gap: 0.9rem; flex-wrap: wrap; }
+.site-header .brand {
+  flex: 0 0 13rem; font-family: var(--display); font-size: 1.05rem; font-weight: 500;
+  color: var(--ink); text-decoration: none; white-space: nowrap; letter-spacing: 0.005em;
+}
+.site-header .brand h1 { font: inherit; margin: 0; }
+.site-header .hdr-right { margin-left: auto; display: flex; align-items: center; gap: 0.9rem; }
+/* The app's header is the same structure. style.css keeps #topbar fixed rather
+   than sticky — the atlas body does not scroll, so fixed and sticky look the
+   same there — and its id outranks this class, which is why only the box model
+   is restated here. */
+#topbar.site-header { display: block; height: auto; padding: 0; }
+@media (max-width: 760px) {
+  .site-header .brand { flex: 0 0 auto; }
+  .site-header .hrow { gap: 0.6rem; padding: 0 0.75rem; }
+  .site-header .hrow-1 { height: auto; padding-top: 0.45rem; flex-wrap: wrap; }
+}
+/* V2-R10 — the site menu. One definition, used by the app's header, by every
+   generated page's header, and by the pages the python generator writes. */
 .topmenu { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.7rem; }
 .topmenu .mgroup {
   font: 0.5rem var(--mono); letter-spacing: 0.18em; text-transform: uppercase;

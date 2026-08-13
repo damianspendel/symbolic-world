@@ -52,6 +52,18 @@ MENU = [
 ]
 
 
+def site_header(current="", where=""):
+    """V2-R11 — the header fragment, the same structure web/build-atlas.mjs
+    emits: row one is brand then menu and is identical on every surface; row two
+    carries the breadcrumb, which is the part that varies."""
+    return (
+        '<header class="site-header">'
+        '<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a>'
+        f'{top_menu(current)}</div>'
+        f'<div class="hrow hrow-2"><span class="where">{where}</span></div>'
+        "</header>")
+
+
 def top_menu(current=""):
     out = ['<nav class="topmenu">']
     for group, items in MENU:
@@ -319,7 +331,7 @@ def batch_page(batch, delta, commits):
 </style>
 </head>
 <body>
-<div class="page-bar">{top_menu("/ledger")}<span class="where"><a href="/ledger">ledger</a> · {esc(batch["id"])}</span></div>
+{site_header("/ledger", f'<a href="/ledger">ledger</a> · {esc(batch["id"])}')}
 <main>
   <p class="eyebrow">batch delta</p>
   <h1>{esc(batch["id"])}</h1>
@@ -629,7 +641,7 @@ def build():
 </style>
 </head>
 <body>
-<div class="page-bar">{top_menu("/ledger")}<span class="where">ledger</span></div>
+{site_header("/ledger", "ledger")}
 <main>
   <h1>Ledger</h1>
   <p class="intro">Every published record and the gates it passed. Nothing entered this graph by an

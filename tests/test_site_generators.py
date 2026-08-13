@@ -479,7 +479,7 @@ def test_the_app_toolbar_holds_no_second_navigation():
     for _group, items in EXPECTED_MENU:
         for href, _label in items:
             assert html.count(f'href="{href}"') == 1, href
-    toolbar = re.search(r'<header id="topbar">(.*?)</header>', html, re.S).group(1)
+    toolbar = re.search(r'<header id="topbar"[^>]*>(.*?)</header>', html, re.S).group(1)
     for gone in ("open-concordance", "open-families", "ledger-link",
                  "disputes-link", "open-method"):
         assert gone not in toolbar, f"{gone} is still a second way to navigate"
@@ -516,15 +516,68 @@ def test_the_menu_marks_the_page_it_is_on():
         assert current == [f"/{slug}"], (slug, current)
 
 
-def test_the_breadcrumb_keeps_its_place_beside_the_menu():
-    """R10.6 — the menu did not displace the breadcrumb."""
+HEADER_RE = re.compile(r'<header[^>]*class="[^"]*\bsite-header\b[^"]*"[^>]*>(.*?)</header>', re.S)
+
+
+def header_shape(html):
+    """The order of the header's parts, as markup: what comes before the menu is
+    what can push it around, so the order IS the geometry contract."""
+    found = HEADER_RE.search(html)
+    assert found, "no site header on the page"
+    body = found.group(1)
+    parts = []
+    for token in re.finditer(r'class="(?:hrow hrow-(\d)|brand[^"]*|topmenu|where)"', body):
+        parts.append(token.group(0))
+    return body, parts
+
+
+def test_the_header_has_the_same_structural_order_everywhere():
+    """V2-R11 — brand, then nav, then everything else, on every generated page.
+    Anything of variable width before the menu moves the menu between pages."""
+    reference = None
     for path in generated_pages():
-        html = read(path)
-        bar = re.search(r'<div class="page-bar">(.*?)</div>\s*<main', html, re.S)
-        assert bar, os.path.basename(path)
-        assert '<nav class="topmenu">' in bar.group(1), os.path.basename(path)
-        assert 'class="where"' in bar.group(1), os.path.basename(path)
-        assert bar.group(1).index("topmenu") < bar.group(1).index('class="where"')
+        body, parts = header_shape(read(path))
+        shape = [p for p in parts if "hrow" in p or "brand" in p or "topmenu" in p]
+        if reference is None:
+            reference = shape
+        assert shape == reference, os.path.basename(path)
+        assert body.index('class="brand"') < body.index('class="topmenu"'), os.path.basename(path)
+        assert body.index('class="topmenu"') < body.index('class="where"'), os.path.basename(path)
+        assert body.index('hrow-1') < body.index('hrow-2'), os.path.basename(path)
+        # the breadcrumb is on the second row, not beside the menu
+        row_two = body[body.index("hrow-2"):]
+        assert 'class="where"' in row_two, os.path.basename(path)
+
+
+def test_the_app_header_matches_that_structure():
+    html = read(os.path.join(ROOT, "web", "index.html"))
+    body, _ = header_shape(html)
+    assert body.index('id="brand"') < body.index('class="topmenu"')
+    # nothing but the brand block sits between the row and the menu: anything
+    # else there is something whose width could move the menu
+    between = re.sub(r"<!--.*?-->", "", body[body.index('class="hrow hrow-1"'):
+                                             body.index('class="topmenu"')], flags=re.S)
+    tags = re.findall(r"<(/?\w+)", between)
+    assert tags == ["div", "h1", "/h1", "/div", "nav"], tags
+    for control in ('id="version"', 'id="search"', 'id="stats"', 'id="fit"', 'id="relayout"'):
+        assert body.index(control) > body.index('class="topmenu"'), control
+        assert control in body[body.index("hrow-2"):], control
+
+
+def test_the_header_is_pinned_and_its_brand_cannot_shift_the_menu():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    block = css[css.index(".site-header {"):]
+    assert "position: sticky" in block.split("}")[0]
+    assert "top: 0" in block.split("}")[0]
+    assert "var(--ground)" in block.split("}")[0]
+    assert "var(--hairline)" in block.split("}")[0]
+    brand = css[css.index(".site-header .brand {"):]
+    assert "flex: 0 0 " in brand.split("}")[0], (
+        "the brand has no fixed width, so its content can move the menu")
+    # one definition, not one per page: the app and the pages read the same block
+    tokens = read(os.path.join(ROOT, "web", "src", "tokens.css"))
+    assert tokens.count("\n.site-header {") == 1
+    assert css.count("\n.site-header {") == 1
 
 
 # ---------------------------------------------- V2-R7 · the batch deltas ---

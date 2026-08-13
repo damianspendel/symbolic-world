@@ -90,11 +90,16 @@
       <div id="spacer"></div>
     </div>
 
-    <header id="topbar">
+    <!-- V2-R11 — the same header structure the generated pages carry: row one is
+         the brand block then the menu, at the same height and padding, so the
+         menu does not move when a reader crosses from the app to a page. Row two
+         holds everything whose width varies — the version chip, the controls,
+         the counts and the search field. -->
+    <header id="topbar" class="site-header">
+      <div class="hrow hrow-1">
       <div class="brand" id="brand" title="Back to the summary">
         <h1>The Symbolic World</h1>
       </div>
-      <span id="version"></span>
       <!-- V2-R10 — the site menu, identical on every page, grouped by the
            taxonomy ruled on 2026-08-13. The list is held in web/build-atlas.mjs
            for the pages node writes and in tools/build_ledger_page.py for the
@@ -104,10 +109,14 @@
            remains beside it are app controls, not destinations. The in-app
            queue keeps its entry inside the families view. -->
       <nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas" aria-current="page">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/#/method">method</a><a href="/ontology">ontology</a></nav>
-      <button class="navlink" id="fit" title="Fit the graph to the screen">⤢ fit</button>
-      <button class="navlink" id="relayout" title="Clear the selection, the search and every filter">↺ reset</button>
-      <div id="stats"></div>
-      <input id="search" class="std-search" type="search" placeholder="A symbol, a relation, a quote, CW 14 §1…" autocomplete="off" spellcheck="false" />
+      </div>
+      <div class="hrow hrow-2">
+        <span id="version"></span>
+        <button class="navlink" id="fit" title="Fit the graph to the screen">⤢ fit</button>
+        <button class="navlink" id="relayout" title="Clear the selection, the search and every filter">↺ reset</button>
+        <div id="stats"></div>
+        <input id="search" class="std-search" type="search" placeholder="A symbol, a relation, a quote, CW 14 §1…" autocomplete="off" spellcheck="false" />
+      </div>
     </header>
     <div id="search-hint" class="hidden"></div>
 

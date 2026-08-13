@@ -518,3 +518,32 @@ compared across every generated page, `index.html`, and both generator sources;
 plus a check that each destination appears in `index.html` exactly once, that
 the removed ids are gone from the toolbar while the control ids remain, and that
 the three optional bindings are guarded and their routes still exist.
+
+## Item 11 — the header is pinned, and one structure
+
+The menu moved between surfaces: in the app it sat after the brand block *and*
+the version chip, whose width changes with the graph counts, so it landed at a
+different x than on a generated page, which had no brand at all.
+
+One header fragment per generator language now emits the same structure
+everywhere — `<header class="site-header">`, row one `brand` then `topmenu`, row
+two whatever varies. The brand is `flex: 0 0 13rem`, so its content cannot move
+the menu; the breadcrumb, the version chip, fit/reset, the counts and the search
+field all sit on the second row. The header is `position: sticky; top: 0` with
+the ground colour and the hairline border from tokens. The app keeps
+`position: fixed` — style.css's id rule outranks the class, and the atlas body
+does not scroll, so fixed and sticky are the same picture there; only the box
+model is restated for the two-row layout.
+
+Measured rather than asserted, at 1280px: the menu's box is x=264, y=17 with a
+48px first row on `releases`, `ledger`, `ontology`, a family page, a batch page,
+`query`, `disputes`, `families` **and** the app — the same numbers on all nine.
+Scrolled 4,000px down the ledger the header stays at top 0 with the menu
+unmoved. No console errors after the restructure.
+
+Tests: the header's structural order (brand before menu, menu before breadcrumb,
+row one before row two) compared across every generated page; the same order
+asserted in `index.html` with nothing but the brand block between the row and
+the menu, and every control id on the second row; and the shared class checked
+for sticky, top 0, the ground and hairline tokens, and a fixed-width brand —
+defined once, not once per page.
