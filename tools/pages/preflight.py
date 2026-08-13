@@ -67,6 +67,18 @@ check('atlas nodes/edges == seed', ac == sc[:2], f'atlas {ac} vs seed {sc[:2]}')
 idx = (DIST / 'index.html').read_text(errors='replace')
 check('dist carries current counts', all(str(n) in idx for n in sc),
       f'expected {sc[0]}/{sc[1]}/{sc[2]} in landing copy')
+# Ledger freshness (Damian, 2026-08-13): the ledger regenerates per merged
+# batch by practice; this gate makes a stale one undeployable. The rendered
+# ledger's stated counts must equal seed.json's, or the deploy stops here.
+ldg_path = DIST / 'ledger.html'
+if ldg_path.exists():
+    ldg = ldg_path.read_text(errors='replace')
+    stated = all(s in ldg for s in
+                 (f'{sc[0]} nodes', f'{sc[1]} edges', f'{sc[2]} references'))
+    check('ledger is fresh (counts == seed.json)', stated,
+          f'expected "{sc[0]} nodes", "{sc[1]} edges", "{sc[2]} references" in ledger.html')
+else:
+    check('ledger present in dist', False, 'ledger.html missing from dist')
 
 print('== frozen snapshot ==')
 h = hashlib.md5()

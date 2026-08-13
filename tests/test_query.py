@@ -302,15 +302,38 @@ def test_candidates_are_inert_and_disjoint_from_active(declarations):
 
 
 def test_every_active_declaration_cites_its_document_line(declarations):
-    if not os.path.exists(FAMILY_DOC):
-        pytest.skip("FAMILY_DEFINITIONS.md not present")
-    lines = open(FAMILY_DOC, encoding="utf-8").read().split("\n")
+    # line numbers bind to the TRANSCRIPTION commit the file records, not the
+    # working tree: the document moves (v0.7.2 landed within hours of v0.7.1)
+    # and a citation is to the version it transcribed
+    base = declarations["transcribed_from"]["base_commit"]
+    try:
+        doc = subprocess.run(
+            ["git", "show", f"{base}:docs/FAMILY_DEFINITIONS.md"],
+            capture_output=True, text=True, check=True, cwd=ROOT).stdout
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        pytest.skip("transcription commit not reachable")
+    lines = doc.split("\n")
     for decl in declarations["active"]:
         assert decl["source"], decl["id"]
         for source in decl["source"]:
             window = " ".join(" ".join(lines[source["line"] - 1:source["line"] + 8]).split())
             quoted = " ".join(source["quote"].split())
             assert quoted in window, f"{decl['id']} line {source['line']}"
+
+
+def test_active_quotes_survive_in_current_document(declarations):
+    # the drift alarm: if the CURRENT document no longer contains a declared
+    # pair's wording anywhere, the declaration may be transcribing a retired
+    # rule and needs re-transcription against the new version
+    if not os.path.exists(FAMILY_DOC):
+        pytest.skip("FAMILY_DEFINITIONS.md not present")
+    doc = " ".join(open(FAMILY_DOC, encoding="utf-8").read().split())
+    for decl in declarations["active"]:
+        for source in decl["source"]:
+            quoted = " ".join(source["quote"].split())
+            assert quoted in doc, (
+                f"{decl['id']}: its doc wording is gone from the current "
+                f"FAMILY_DEFINITIONS — re-transcribe or retire the declaration")
 
 
 def test_no_transitivity_is_declared_anywhere(declarations):
