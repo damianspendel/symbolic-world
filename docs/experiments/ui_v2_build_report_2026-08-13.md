@@ -390,3 +390,22 @@ now exercises seven of them).
 copy contract green; `python3 -m pytest tests/ -q` — 99 passed;
 `python3 tools/check_paper_facts.py` — all checks pass. `web/public/v1.3/`
 untouched. Nothing deployed.
+
+## The main tree has moved while this branch was built
+
+Checked at the end of the round, read-only: the main tree is at `c1051c0`
+("b-cw8-1 merged + v0.7.2 calibrated"), its graph reads 426 nodes / 1601 edges
+against this worktree's 407 / 1555, and `docs/FAMILY_DEFINITIONS.md` is now
+v0.7.2 with a new ruling on instrumentality. Three consequences for the merge:
+
+- **Nothing on these pages is pinned to those numbers.** Counts derive at build,
+  so a rebuild after the merge reports 426/1601 and whatever the family states
+  then are. The release pin will read v0.7.2 — and will refuse to render unless
+  a calibration PASS record for v0.7.2 is committed, which is the check working.
+- **The depersonalization of `docs/FAMILY_DEFINITIONS.md` will conflict.** That
+  file changed on both sides: three occurrences here (two swept, one new on
+  their side at the v0.7.2 changelog line, "a single ruling, Damian's"). Take
+  their version of the document and re-apply the three name edits on top; do not
+  take this branch's copy wholesale, or the v0.7.2 ruling is lost.
+- **`b-cw8-1` is a new batch.** It gets its delta page automatically on the next
+  ledger build; nothing needs adding by hand.
