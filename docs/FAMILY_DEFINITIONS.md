@@ -1,4 +1,4 @@
-# Relation families — candidate definitions, v0.7.1
+# Relation families — candidate definitions, v0.7.2
 
 Status: BINDING once this version's calibration PASS record exists under
 `pipeline/family_calibration/records/` (RULES #16, #18b: a version with no
@@ -45,6 +45,15 @@ Its five entries:
    and is NOT resolved here. It reached the document from the window-9 Opus arm.
 5. Version header, this change log, and the calibration-harness reference, which
    pointed at a superseded script.
+
+**v0.7.2 (2026-08-13) is a single ruling, Damian's, on instrumentality's
+slot geometry.** The definition's opening fixed the means to the object slot
+while the family's own seeds carry it in either; the sentence now says so
+("the means term may sit in either slot"). No item flips; the risk closed
+is a strict-reading arm routing subject-as-means edges away from the family
+— CW 8's register is thick with by-means-of constructions. Proposed by the
+pre-arc check (docs/experiments/external_validity_2026-08/prearc_cw8_check.md),
+ruled 2026-08-13. Nothing else changed.
 
 **v0.7.1 (2026-08-12) is the mechanical close-out of ruling 1's re-run.**
 The 43 `amplified-by` edges were re-classified under v0.7 by two blind arms
@@ -722,9 +731,10 @@ leads-to-psychoses-of mass-psyche` (13 §52); `artifex activates
 the-unconscious` (13 §220); `mediates` (4); `undergoes` (5);
 `consciousness leads-to-crucifixion-of the-ego` (9ii §79).
 
-### 25. instrumentality  *(added at v0.4 — earned by measured refusal)*
-The object is the MEANS by which the subject is reached, enabled, effected or
-made possible. Not what happens, but what it happens *through*.
+### 25. instrumentality  *(added at v0.4 — earned by measured refusal; slot rule v0.7.2)*
+One term is the MEANS by which the other is reached, enabled, effected or
+made possible; the means term may sit in either slot (see seeds). Not what
+happens, but what it happens *through*.
 **Boundary:** telos names the END pursued; instrumentality names the route to it
 (`homo-maximus is-approached-through the-opus` — the opus is the road, the homo
 maximus the destination). Not dependence: a precondition must be satisfied

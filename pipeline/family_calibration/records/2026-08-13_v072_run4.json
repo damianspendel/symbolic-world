@@ -1,0 +1,275 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.2",
+ "definitions_git_hash": "44eab8eb5681b32c45e38354dd5f0ba922236f40",
+ "draw_seed": 976453290,
+ "plant_seed": 1063433294,
+ "planted_at": "2026-08-13T08:15:56+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "christ|arises-from|the-unconscious",
+   "class": "K1",
+   "was": "generation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Per the boundary rules, a figure or image arising from the unconscious is generation (inverse direction); derivation is strictly for tradition-to-tradition transmission."
+  },
+  {
+   "id": "great-mother|appears-as|witch",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject (great-mother) shows itself under the guise of the object (witch), which fits the directionality and definition of manifestation, not symbolization."
+  },
+  {
+   "id": "lapis|contains|god-image",
+   "class": "K1",
+   "was": "composition",
+   "now": "structural-position",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "'contains' is a direct seed for the composition family, representing a part-whole relationship rather than a structural position."
+  },
+  {
+   "id": "night-sea-journey|symbolizes|rebirth",
+   "class": "K1",
+   "was": "telos",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts a goal-direction ('longing to attain rebirth'), which classifies as telos regardless of the surface relation string."
+  },
+  {
+   "id": "salt|symbolizes|union-of-opposites",
+   "class": "K1",
+   "was": "symbolization",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject is the image formulating the less formulable object ('union of opposites'), which fits symbolization rather than manifestation."
+  },
+  {
+   "id": "sophia-wisdom|is|psychopomp",
+   "class": "K1",
+   "was": "classification",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "classification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote identifies the subject as an instance of a kind or role ('As a psychopomp'), which is classification, not composition."
+  },
+  {
+   "id": "the-centre|is-identified-with|the-self",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts equivalence of the terms themselves ('the centre, or what we would call the self'), which routes to archetypal-identity per the indistinguishability rule."
+  },
+  {
+   "id": "the-sea|domain-of|the-devil",
+   "class": "K1",
+   "was": "structural-position",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "'domain-of' designates a place or abode, which falls under structural-position, not the part-whole relationship of composition."
+  },
+  {
+   "id": "anima|appears-as|meretrix",
+   "class": "K2",
+   "was": "manifestation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject showing itself under various guises ('now a witch... now a whore') is manifestation, not doctrinal derivation."
+  },
+  {
+   "id": "church-fathers|before-manichaeism-had-always-believed-in-the-substantiality-of|evil",
+   "class": "K2",
+   "was": "doctrinal-attribution",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote records an act of belief by a named carrier (the Church Fathers), which routes to doctrinal-attribution rather than projection."
+  },
+  {
+   "id": "dragon|prefigures|the-self",
+   "class": "K2",
+   "was": "prefiguration",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "prefiguration",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'prefigures' and the quote's 'forerunner of' indicate typological anticipation, which is prefiguration, not projection."
+  },
+  {
+   "id": "transcendent-function|unites|the-opposites",
+   "class": "K2",
+   "was": "union",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly asserts an act of joining ('the union of opposites'), which belongs to the union family, not kinship."
+  },
+  {
+   "id": "kore|is-identical-with|dragon",
+   "class": "K3",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly asserts a 'relationship of identity' between the terms themselves, which routes to archetypal-identity per the indistinguishability rule."
+  },
+  {
+   "id": "lion|signifies|the-shadow",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'signifies' and the quote's use of 'emblems... signify' point to symbolization, not correspondence."
+  },
+  {
+   "id": "myth|expresses|psyche",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The boundary rules explicitly map expression relations ('dogma expresses collective-unconscious') to symbolization, not correspondence."
+  },
+  {
+   "id": "unio-mentalis|conjoined-with|the-body",
+   "class": "K3",
+   "was": "union",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'conjoined-with' and the quote describe an act of joining distinct terms, which is the definition of union, not correspondence."
+  },
+  {
+   "id": "dragon|transforms-into|spirit",
+   "class": "K4",
+   "was": "transformation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "transformation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly states the subject 'changes into' the object, which is the definition of transformation."
+  },
+  {
+   "id": "ogdoad|symbolizes|anthropos",
+   "class": "K4",
+   "was": "symbolization",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote states the subject 'stands for' the object, which is a clear case of symbolization, not an unclassified relation."
+  },
+  {
+   "id": "visionary-experience|is-projection-of|the-unconscious",
+   "class": "K4",
+   "was": "projection",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "projection",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly identifies the subject as 'projections of' the object, which belongs in the projection family."
+  }
+ ],
+ "sensitivity": {
+  "caught": 19,
+  "of": 19,
+  "pct": 100.0
+ },
+ "specificity": {
+  "clean_left_alone": 39,
+  "of": 41,
+  "pct": 95.1
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "mandala|appears-in|dream",
+   "verdict": "WRONG",
+   "should_be": "unclassified",
+   "reason": "A dream is an event or state, not a structure, so 'appears-in' a dream does not fit structural-position and has no clear family."
+  },
+  {
+   "id": "the-devil|is-identified-with|demiurge",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "reason": "The quote asserts the devil 'appears as' the demiurge, which is a manifestation relation, overriding the 'is-identified-with' string."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "PASS",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

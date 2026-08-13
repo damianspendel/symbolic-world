@@ -1,0 +1,269 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.2",
+ "definitions_git_hash": "44eab8eb5681b32c45e38354dd5f0ba922236f40",
+ "draw_seed": 2120257820,
+ "plant_seed": 398025928,
+ "planted_at": "2026-08-13T08:06:54+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 8,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 2,
+   "flagged_misdiagnosed": 1,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "caelum|unites-with|unus-mundus",
+   "class": "K1",
+   "was": "union",
+   "now": "separation",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'unites-with' and the quote asserting 'the union of' clearly belong to the union family, not separation."
+  },
+  {
+   "id": "magician|is-projected-in|transference",
+   "class": "K1",
+   "was": "projection",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "projection",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly describes an archetype being 'projected on to me', which is the definition of projection."
+  },
+  {
+   "id": "mary|is-prefigured-by|isis",
+   "class": "K1",
+   "was": "prefiguration",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "prefiguration",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation and quote explicitly assert typological anticipation ('prefigurations'), which belongs to the prefiguration family, not sequence."
+  },
+  {
+   "id": "mass-psyche|mobilizes|the-shadow",
+   "class": "K1",
+   "was": "psychic-effect",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The act of mobilizing is a dynamic action with an outcome, fitting psychic-effect rather than a standing requirement of dependence."
+  },
+  {
+   "id": "moses-quaternio|derives-from|cross-cousin-marriage",
+   "class": "K1",
+   "was": "derivation",
+   "now": "generation",
+   "verdict": "WRONG",
+   "should_be": "derivation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation asserts transmission between schemas/forms, which belongs to derivation, whereas generation is for begetting beings."
+  },
+  {
+   "id": "the-devil|strives-after-perfection-in|evil",
+   "class": "K1",
+   "was": "telos",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "telos",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts that the subject 'strives after' the object, which is goal-direction and belongs in the telos family."
+  },
+  {
+   "id": "the-opposites|cancel-out-in|the-self",
+   "class": "K1",
+   "was": "union",
+   "now": "separation",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The opposites 'canceling out' in the archetype of unity describes their fusion or resolution, which belongs to union, not separation."
+  },
+  {
+   "id": "the-unconscious|is-personified-in-a-man-by|anima",
+   "class": "K1",
+   "was": "personification",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "personification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'is-personified-by' routes to personification, where a figure gives personal form to a content, rather than manifestation."
+  },
+  {
+   "id": "mercurius|is|prima-materia",
+   "class": "K2",
+   "was": "archetypal-identity",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts co-reference between two alchemical terms ('is the arcanum, the prima materia'), which routes to archetypal-identity, not projection."
+  },
+  {
+   "id": "the-opus|is-figured-as|ouroboros",
+   "class": "K2",
+   "was": "manifestation",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'is-figured-as' is explicitly listed as a seed string for manifestation, and the quote describes the opus appearing under the guise of the uroboros, not a relocation of a psychic content."
+  },
+  {
+   "id": "tree|is-explained-by-this-remarkable-text-as-a-metaphorical-form-of|arcane-substance",
+   "class": "K2",
+   "was": "doctrinal-attribution",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote attributes the explanation to a named carrier ('This remarkable text explains...'), which outranks the content relation and routes to doctrinal-attribution."
+  },
+  {
+   "id": "wholeness|its-spontaneous-symbols-cannot-in-practice-be-distinguished-from|god-image",
+   "class": "K2",
+   "was": "correspondence",
+   "now": "projection",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The indistinguishability is predicated of the 'symbols' of wholeness, which the boundary rules explicitly route to correspondence, not projection."
+  },
+  {
+   "id": "magician|is-aspect-of|wise-old-man",
+   "class": "K3",
+   "was": "manifestation",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'is-aspect-of' is explicitly declared as the inverse pair for manifestation, not correspondence."
+  },
+  {
+   "id": "mandala|protects|wholeness",
+   "class": "K3",
+   "was": "psychic-effect",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The act of 'protecting' is a dynamic action of one term upon another, which belongs in psychic-effect rather than correspondence."
+  },
+  {
+   "id": "serpent|signifies|instinct",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The string 'signifies' is a seed for symbolization, and the directionality test holds (the serpent is the image carrying the less formulable instinct)."
+  },
+  {
+   "id": "tree-nymph|is-as-the-feminine-representation-of-the-tree-for-alchemists-and-humanists-a-projection-of|anima",
+   "class": "K3",
+   "was": "projection",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "projection",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation and quote explicitly assert a projection, which belongs to the projection family, not correspondence."
+  },
+  {
+   "id": "raven|is-identical-with|magician",
+   "class": "K4",
+   "was": "manifestation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The quote asserts the subject (raven) is the guise or image carrying the object (magician), which fits the direction test for symbolization."
+  },
+  {
+   "id": "the-intellect|is-wrongly-equated-by-the-modern-formula-with|spirit",
+   "class": "K4",
+   "was": "doctrinal-attribution",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The claim is an attributed equation made by a named carrier ('the modern formula'), which routes it to doctrinal-attribution per the precedence rule."
+  },
+  {
+   "id": "winged-youth|personifies|true-sulphur",
+   "class": "K4",
+   "was": "personification",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "personification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'personifies' and the quote describing a figure enacting a content directly match the definition and seeds for personification."
+  }
+ ],
+ "sensitivity": {
+  "caught": 18,
+  "of": 19,
+  "pct": 94.7
+ },
+ "specificity": {
+  "clean_left_alone": 40,
+  "of": 41,
+  "pct": 97.6
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "man|could-according-to-the-alchemists-deo-concedente-produce-out-of-his-own-nature|christ",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "reason": "The claim that man produces Christ is explicitly framed as an alchemical heresy that collapses without the collective ascription, routing it to doctrinal-attribution."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

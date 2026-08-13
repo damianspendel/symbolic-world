@@ -2047,6 +2047,101 @@
    "id": "navaho-sandpainting",
    "label": "The Navaho sand-painting",
    "type": "Motif"
+  },
+  {
+   "id": "energic-standpoint",
+   "label": "The energic (final) standpoint",
+   "type": "Concept"
+  },
+  {
+   "id": "mechanistic-standpoint",
+   "label": "The mechanistic (causal) standpoint",
+   "type": "Concept"
+  },
+  {
+   "id": "psychological-attitude",
+   "label": "Psychological attitude",
+   "type": "Concept"
+  },
+  {
+   "id": "psychological-value",
+   "label": "Psychological value (value intensity)",
+   "type": "Concept"
+  },
+  {
+   "id": "wundt",
+   "label": "Wilhelm Wundt",
+   "type": "Figure"
+  },
+  {
+   "id": "psychic-development",
+   "label": "Psychic development",
+   "type": "Concept"
+  },
+  {
+   "id": "von-grot",
+   "label": "Nicolas von Grot",
+   "type": "Figure"
+  },
+  {
+   "id": "relatively-closed-system",
+   "label": "The relatively closed system",
+   "type": "Concept"
+  },
+  {
+   "id": "theodor-lipps",
+   "label": "Theodor Lipps",
+   "type": "Figure"
+  },
+  {
+   "id": "psychic-force",
+   "label": "Psychic force",
+   "type": "Concept"
+  },
+  {
+   "id": "life-energy",
+   "label": "Life-energy",
+   "type": "Concept"
+  },
+  {
+   "id": "nuclear-element",
+   "label": "The nuclear element of the complex",
+   "type": "Concept"
+  },
+  {
+   "id": "principle-of-equivalence",
+   "label": "The principle of equivalence",
+   "type": "Concept"
+  },
+  {
+   "id": "principle-of-constancy",
+   "label": "The principle of constancy",
+   "type": "Concept"
+  },
+  {
+   "id": "entropy",
+   "label": "Entropy",
+   "type": "Concept"
+  },
+  {
+   "id": "symbol",
+   "label": "The symbol",
+   "type": "Concept"
+  },
+  {
+   "id": "progression",
+   "label": "Progression of libido",
+   "type": "Concept"
+  },
+  {
+   "id": "adaptation",
+   "label": "Adaptation",
+   "type": "Concept"
+  },
+  {
+   "id": "regression",
+   "label": "Regression of libido",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -7882,10 +7977,10 @@
     }
    ],
    "relation_family": {
-    "value": "archetypal-identity",
-    "state": "assigned",
-    "by": "opus+gemini-agreed (v0.7 rerun of amplified-by, ruling 1)",
-    "date": "2026-08-12"
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "gate-disputes-agreed (v0.7.2 calibration: gate reads the \"as\"-framing as correspondence against the arms' archetypal-identity)",
+    "date": "2026-08-13"
    }
   },
   {
@@ -9749,11 +9844,10 @@
     }
    ],
    "relation_family": {
-    "value": "psychic-effect",
-    "state": "assigned",
-    "by": "opus+gemini-agreed",
-    "date": "2026-08-07",
-    "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "calibration-flag (v0.7.2 run 3: the quote's \"means whereby\" fits the new slot-flexible instrumentality rule; label predates the ruling)",
+    "date": "2026-08-13"
    }
   },
   {
@@ -43677,9 +43771,9 @@
     }
    ],
    "relation_family": {
-    "value": "manifestation",
-    "state": "assigned",
-    "by": "opus+gemini-agreed (v0.7.1 re-audit)",
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "calibration-flag (recurrent: five calibration appearances, three different model opinions — identity, manifestation, symbolization; genuinely polysemous, human ruling needed)",
     "date": "2026-08-13"
    }
   },
@@ -48277,6 +48371,1258 @@
     "by": "opus+gemini-agreed (v0.5)",
     "date": "2026-08-12",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   }
+  },
+  {
+   "subject": "energic-standpoint",
+   "relation": "reverses",
+   "object": "mechanistic-standpoint",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 4,
+     "quote": "the principle of finality is the logical reverse of the principle of causality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "psychological-attitude",
+   "relation": "determines",
+   "object": "energic-standpoint",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 5,
+     "quote": "The predominance of one or the other point of view depends less upon the objective behaviour of things than upon the psychological attitude",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 41,
+     "quote": "points of view correspond to fundamental psychological attitudes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "energic-standpoint",
+   "relation": "depends-on",
+   "object": "psychological-value",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 14,
+     "quote": "The applicability of the energic standpoint to psychology rests, then, exclusively on the question whether a quantitative estimate of psychic energy is possible",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 13,
+     "quote": "if there is not at least a possibility of a quantitative estimate the energic standpoint is quite superfluous",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "energic-standpoint",
+   "relation": "applies-to",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 28,
+     "quote": "the energic view of psychic phenomena is a valuable one because it enables us to recognize just those quantitative relations",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "wundt",
+   "relation": "adopts",
+   "object": "mechanistic-standpoint",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 41,
+     "quote": "energy is attached to substance, so that Wundt can speak of an “energy of the psychic”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)",
+     "source": "Wilhelm Wundt"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "adopts",
+   "object": "mechanistic-standpoint",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 51,
+     "quote": "the causal-mechanistic standpoint of Freudian psychoanalysis was not sufficient to do justice to psychological values",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 35,
+     "quote": "The defect of the Freudian view lies in the one-sidedness to which the mechanistic-causal standpoint always inclines",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "abbreviates",
+   "object": "energic-standpoint",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 56,
+     "quote": "Libido, therefore, is nothing but an abbreviated expression for the “energic standpoint.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "von-grot",
+   "relation": "proposes",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 8,
+     "quote": "The concept of psychic energy is as much justified in science as that of physical energy",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)",
+     "source": "Nicolas von Grot"
+    },
+    {
+     "volume": "8",
+     "paragraph": 11,
+     "quote": "Psychic energies possess quantity and mass, just like physical energies.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)",
+     "source": "Nicolas von Grot"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "is-regarded-as",
+   "object": "relatively-closed-system",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 10,
+     "quote": "the psychologist need not be held up by this difficulty, but can regard the psyche as a relatively closed system",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 49,
+     "quote": "The psyche, too, can be regarded as such a relatively closed system, in which transformations of energy lead to an equalization of differences",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "theodor-lipps",
+   "relation": "defines",
+   "object": "psychic-force",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 26,
+     "quote": "For Lipps, psychic force is the possibility of processes arising in the psyche at all and of attaining a certain degree of efficiency",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "psychic-energy",
+   "relation": "distinct-from",
+   "object": "psychic-force",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 26,
+     "quote": "The distinction between force and energy is a conceptual necessity, for energy is really a concept",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "psychic-energy",
+   "relation": "appears-as",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 26,
+     "quote": "Psychic energy appears, when actual, in the specific, dynamic phenomena of the psyche, such as instinct, wishing, willing, affect, attention",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "life-energy",
+   "relation": "includes",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 31,
+     "quote": "we enlarge the narrower concept of psychic energy to a broader one of life-energy, which includes “psychic energy” as a specific part",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "names",
+   "object": "life-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 32,
+     "quote": "I have therefore suggested that, in view of the psychological use we intend to make of it, we call our hypothetical life-energy “libido.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "restricts",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 54,
+     "quote": "Since Freud confines himself almost exclusively to sexuality and its manifold ramifications in the psyche",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 35,
+     "quote": "Freud’s very understandable over-valuation of sexuality led him to reduce transformations of other specific psychic forces co-ordinated with sexuality to sexuality",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "psychological-value",
+   "relation": "estimates",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 14,
+     "quote": "Values are quantitative estimates of energy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "psychological-value",
+   "relation": "transcends",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 16,
+     "quote": "we are concerned with valuations that go beyond the boundaries of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "reappears-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 17,
+     "quote": "we should theoretically expect their appearance in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 35,
+     "quote": "the libido which disappeared from consciousness generated a product in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "forms-around",
+   "object": "nuclear-element",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 18,
+     "quote": "The feeling-toned content, the complex, consists of a nuclear element and a large number of secondarily constellated associations.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "nuclear-element",
+   "relation": "carries",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 19,
+     "quote": "The nuclear element is characterized by its feeling-tone, the emphasis resulting from the intensity of affect.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "nuclear-element",
+   "relation": "corresponds-to",
+   "object": "psychological-value",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 19,
+     "quote": "the constellating power of the nuclear element corresponds to its value intensity, i.e., to its energy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "disturbs",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 62,
+     "quote": "The indirect manifestation of the unconscious takes the form of disturbances of conscious behaviour. In the association experiment they appear as complex-indicators",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 22,
+     "quote": "Freud has described the greater part of them under the head of lapses of speech, mistakes in writing, slips of memory",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "instinct",
+   "relation": "registers",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 25,
+     "quote": "There is present in each of us a direct instinct for registering this, which animals also possess in high degree",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)",
+     "correction_note": "gate correction: §25 posits 'a direct instinct for registering' affective phenomena in others — one specific instinctive capacity, not a general property of instinct as such. The edge survives (the paragraph does assert an instinct that registers affect) but the generalization from 'a direct instinct for' to the standing Instinct node costs it high confidence."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "principle-of-equivalence",
+   "relation": "governs",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 35,
+     "quote": "the disappearance of a given quantum of libido is followed by the appearance of an equivalent value in another form",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 39,
+     "quote": "a psychic activity can find a substitute only on the basis of equivalence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "principle-of-constancy",
+   "relation": "follows-from",
+   "object": "principle-of-equivalence",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 34,
+     "quote": "the principle of constancy is a logically necessary but generalized conclusion from the principle of equivalence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "christianity",
+   "relation": "transforms",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 36,
+     "quote": "the psychology of Christianity, where the repression of instincts (i.e., of primitive instinctuality) leads to religious substitute formations",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "entropy",
+   "relation": "operates-in",
+   "object": "relatively-closed-system",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 49,
+     "quote": "the principle of entropy is known to us only as a principle of partial processes which make up a relatively closed system",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "the-opposites",
+   "relation": "generates",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 49,
+     "quote": "The greater the tension between the pairs of opposites, the greater will be the energy that comes from them",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "entropy",
+   "relation": "stabilizes",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 49,
+     "quote": "an attitude that has been formed out of a far-reaching process of equalization is an especially lasting one",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "psychosis",
+   "relation": "manifests",
+   "object": "entropy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 50,
+     "quote": "The so-called “dulling of affect” in dementia praecox or schizophrenia may well be understood as a phenomenon of entropy.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "attracts",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 46,
+     "quote": "emerges again in the symbol, whose power of attraction represents the equivalent quantum of libido",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 47,
+     "quote": "it needs the attraction of the symbol, whose value quantum exceeds that of the cause",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "psychic-development",
+   "relation": "requires",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 47,
+     "quote": "Psychic development cannot be accomplished by intention and will alone; it needs the attraction of the symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "progression",
+   "relation": "achieves",
+   "object": "adaptation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 60,
+     "quote": "Progression could be defined as the daily advance of the process of psychological adaptation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 61,
+     "quote": "progression, which is the successful achievement of adaptation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "progression",
+   "relation": "requires",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 61,
+     "quote": "This is possible only by means of an attitude, which as such is necessarily directed and therefore characterized by a certain one-sidedness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "progression",
+   "relation": "unites",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 61,
+     "quote": "During the progression of libido the pairs of opposites are united in the co-ordinated flow of psychic processes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "arises-from",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 61,
+     "quote": "if one of the opposing forces is successfully repressed a dissociation ensues, a splitting of the personality, or disunion with oneself",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "reverses",
+   "object": "progression",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 62,
+     "quote": "the process of regression, the backward movement of libido, did not set in with the outbreak of the conflict",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 70,
+     "quote": "They correspond to what Goethe has aptly described as systole and diastole.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)",
+     "source": "Goethe"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "activates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 66,
+     "quote": "By activating an unconscious factor, regression confronts consciousness with the problem of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 63,
+     "quote": "Since regression raises the value of contents that were previously excluded from the conscious process of adaptation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "activates",
+   "object": "inferior-function",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 65,
+     "quote": "the unconscious material activated by regression will contain the missing feeling function, although still in embryonic form, archaic and undeveloped",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "inhibits",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 62,
+     "quote": "On account of the inhibiting influence which the conscious exercises over the unconscious, the unconscious values assert themselves at first only indirectly",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "excludes",
+   "object": "inferior-function",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 64,
+     "quote": "the other unsuitable functions, so far as they are incompatible with the prevailing attitude, are relatively unconscious, and hence unused, untrained, and undifferentiated",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "redirects",
+   "object": "adaptation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 66,
+     "quote": "regression leads to the necessity of adapting to the inner world of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "is-phase-of",
+   "object": "psychic-development",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 69,
+     "quote": "regression is not necessarily a retrograde step in the sense of a backwards development or degeneration, but rather represents a necessary phase of development",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "regresses-to",
+   "object": "mother-imago",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 43,
+     "quote": "from the final standpoint the libido regresses to the imago of the mother in order to find there the memory associations",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "arises-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 71,
+     "quote": "in so far as the myth is nothing but a projection from the unconscious and not a conscious invention at all",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "represents",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 71,
+     "quote": "myths actually represent typical psychic phenomena",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-13"
    }
   }
  ]

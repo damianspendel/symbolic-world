@@ -1,0 +1,269 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.2",
+ "definitions_git_hash": "44eab8eb5681b32c45e38354dd5f0ba922236f40",
+ "draw_seed": 4056697665,
+ "plant_seed": 953467481,
+ "planted_at": "2026-08-13T08:12:50+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 7,
+   "flagged_misdiagnosed": 1,
+   "partial": 0,
+   "missed": 0
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "arsenic|mediates|coniunctio",
+   "class": "K1",
+   "was": "psychic-effect",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "instrumentality",
+   "diagnosis": "FLAGGED-MISDIAGNOSED",
+   "gate_reason": "The quote explicitly defines arsenic as 'the means whereby' the union is achieved, which is the exact definition of instrumentality."
+  },
+  {
+   "id": "coniunctio|amplified-by|rex",
+   "class": "K1",
+   "was": "personification",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "personification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly states the opposition is 'personified as' King and Queen, which routes the edge to personification, overriding the amplified-by relation string."
+  },
+  {
+   "id": "mercurius|is|nous",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts identity between two named figures ('Mercurius is the light-bringing Nous'), which routes to archetypal-identity per the named-figure rule."
+  },
+  {
+   "id": "rebirth|includes|metempsychosis",
+   "class": "K1",
+   "was": "composition",
+   "now": "structural-position",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'includes' is a direct seed for composition, denoting that the object is a constituent or part of the subject."
+  },
+  {
+   "id": "salt-water|synonym-of|aqua-permanens",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'synonym-of' asserting co-reference between terms is a declared seed for archetypal-identity, not correspondence."
+  },
+  {
+   "id": "scintilla|aggregate-into|gold",
+   "class": "K1",
+   "was": "composition",
+   "now": "structural-position",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes the scintillulae being put together to form the gold, which is a part-whole constituency relation belonging to composition, not a structural position."
+  },
+  {
+   "id": "self-knowledge|is-beginning-of|wholeness",
+   "class": "K1",
+   "was": "sequence",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "sequence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Being the 'beginning of' indicates temporal or processual order (like the seed 'is-first-stage-of'), which belongs to sequence rather than a standing dependence."
+  },
+  {
+   "id": "the-vessel|symbolizes|mercurius",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote's phrase 'none other than' asserts indistinguishability and identity between the terms themselves, which routes to archetypal-identity rather than correspondence."
+  },
+  {
+   "id": "anthropos|is-identified-with|indivisible-point",
+   "class": "K2",
+   "was": "archetypal-identity",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts identity ('he is the undivided point'), and 'is-identified-with' is a seed string for archetypal-identity, not sequence."
+  },
+  {
+   "id": "archetype|prefigures|christ",
+   "class": "K2",
+   "was": "prefiguration",
+   "now": "telos",
+   "verdict": "WRONG",
+   "should_be": "prefiguration",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'prefigures' asserting typological anticipation ('prototypes of') belongs to prefiguration, not the goal-attainment of telos."
+  },
+  {
+   "id": "ascent-descent|unites|the-opposites",
+   "class": "K2",
+   "was": "union",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'unites' describes an act of joining distinct terms, which belongs to union, not the standing familial roles of kinship."
+  },
+  {
+   "id": "divine-child|arises-from|the-unconscious",
+   "class": "K2",
+   "was": "generation",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly uses begetting language ('born out of the womb', 'begotten out of'), which defines generation, not mere sequence."
+  },
+  {
+   "id": "anima|stands-for|inferior-function",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'stands-for' is a designated string for symbolization, and the quote asserts the anima acts as the image formulating the inferior function."
+  },
+  {
+   "id": "consciousness|checks|instinct",
+   "class": "K3",
+   "was": "psychic-effect",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Checking instincts is a dynamic act of one term acting upon another, which belongs to psychic-effect, not structural correspondence."
+  },
+  {
+   "id": "consciousness|is-in-the-perilous-descent-overpowered-by|the-unconscious",
+   "class": "K3",
+   "was": "psychic-effect",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes one term dynamically acting upon and overpowering another, which is a verbatim seed for psychic-effect."
+  },
+  {
+   "id": "sol|is-a-symbol-of-the-source-of-life-and-the-ultimate-wholeness-of|man",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly states 'is a symbol of', which routes to symbolization, not correspondence."
+  },
+  {
+   "id": "animus|corresponds-to|hermes",
+   "class": "K4",
+   "was": "correspondence",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'corresponds-to' asserting structural likeness ('rather like Hermes') is the defining seed for correspondence."
+  },
+  {
+   "id": "libido|is|psychic-energy",
+   "class": "K4",
+   "was": "archetypal-identity",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly asserts the identification of the two terms ('identify psychic energy with libido'), which belongs to archetypal-identity."
+  },
+  {
+   "id": "mercurius|manifests-as|proteus",
+   "class": "K4",
+   "was": "manifestation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The edge is a verbatim seed for the manifestation family, where Mercurius shows himself under the guise of Proteus."
+  }
+ ],
+ "sensitivity": {
+  "caught": 18,
+  "of": 19,
+  "pct": 94.7
+ },
+ "specificity": {
+  "clean_left_alone": 40,
+  "of": 41,
+  "pct": 97.6
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "mandala|appears-in|psychosis",
+   "verdict": "WRONG",
+   "should_be": "unclassified(no-family)",
+   "reason": "Psychosis is a clinical state or event, not a structural position like a centre or abode, making this a candidate gap rather than structural-position."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}

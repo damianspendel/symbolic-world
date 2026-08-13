@@ -1,0 +1,269 @@
+{
+ "run": "family-gate calibration",
+ "definitions_version": "v0.7.2",
+ "definitions_git_hash": "44eab8eb5681b32c45e38354dd5f0ba922236f40",
+ "draw_seed": 3165353941,
+ "plant_seed": 3286687515,
+ "planted_at": "2026-08-13T08:10:03+00:00",
+ "n": 60,
+ "n_planted": 19,
+ "quotas": {
+  "K1": 8,
+  "K2": 4,
+  "K3": 4,
+  "K4": 3
+ },
+ "quotas_met": true,
+ "gate_model": "gemini-3.1-pro-preview",
+ "per_class": {
+  "K1": {
+   "planted": 8,
+   "quota": 8,
+   "caught": 7,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 1
+  },
+  "K2": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K3": {
+   "planted": 4,
+   "quota": 4,
+   "caught": 4,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  },
+  "K4": {
+   "planted": 3,
+   "quota": 3,
+   "caught": 3,
+   "flagged_misdiagnosed": 0,
+   "partial": 0,
+   "missed": 0
+  }
+ },
+ "items": [
+  {
+   "id": "abaissement-du-niveau-mental|weakens|consciousness",
+   "class": "K1",
+   "was": "psychic-effect",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote describes a dynamic act producing a state in consciousness ('slackening of the tensity'), which fits psychic-effect, not a standing requirement for dependence."
+  },
+  {
+   "id": "consciousness|checks|instinct",
+   "class": "K1",
+   "was": "psychic-effect",
+   "now": "dependence",
+   "verdict": "WRONG",
+   "should_be": "psychic-effect",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "Checking the instincts is a dynamic act of one term acting upon another, which belongs to psychic-effect rather than being a standing requirement or precondition for dependence."
+  },
+  {
+   "id": "maya|personifies|projection-making-factor",
+   "class": "K1",
+   "was": "personification",
+   "now": "manifestation",
+   "verdict": "WRONG",
+   "should_be": "personification",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The edge is explicitly listed as a seed for personification, not manifestation."
+  },
+  {
+   "id": "prima-materia|amplified-by|widow",
+   "class": "K1",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "SUPPORTED",
+   "should_be": "",
+   "diagnosis": "MISSED",
+   "gate_reason": "The quote ('a vidua as the prima materia') uses a parallel framing ('as') which the boundary rules route to correspondence."
+  },
+  {
+   "id": "psychic-energy|produces|god-image",
+   "class": "K1",
+   "was": "generation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote ('creates the God-image') describes psychological generation, not the doctrinal or historical transmission required for derivation."
+  },
+  {
+   "id": "syzygy|appears-as|christ-and-church",
+   "class": "K1",
+   "was": "manifestation",
+   "now": "symbolization",
+   "verdict": "WRONG",
+   "should_be": "manifestation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject (syzygy) showing itself under the guise of the object (Christ and Church) is the defining direction of manifestation, not symbolization."
+  },
+  {
+   "id": "the-north|is-abode-of|the-devil",
+   "class": "K1",
+   "was": "structural-position",
+   "now": "composition",
+   "verdict": "WRONG",
+   "should_be": "structural-position",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The edge is explicitly listed as a seed for structural-position, not composition."
+  },
+  {
+   "id": "the-unconscious|produces-the-symbols-of|wholeness",
+   "class": "K1",
+   "was": "generation",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "generation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The verb 'produces' is a direct seed for generation, whereas derivation is strictly for doctrinal, historical, or textual transmission."
+  },
+  {
+   "id": "artifex|accompanies-his-chemical-work-with-a-simultaneous-mental-operation-performed-by-means-of|imaginatio",
+   "class": "K2",
+   "was": "instrumentality",
+   "now": "sequence",
+   "verdict": "WRONG",
+   "should_be": "instrumentality",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The phrase 'by means of' explicitly marks the object as the instrument or route through which the operation is performed, fitting instrumentality rather than sequence."
+  },
+  {
+   "id": "fish|symbolizes|soul",
+   "class": "K2",
+   "was": "symbolization",
+   "now": "kinship",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'symbolizes' is the defining string and a direct seed for the symbolization family, not kinship."
+  },
+  {
+   "id": "luna|parallels|christ",
+   "class": "K2",
+   "was": "correspondence",
+   "now": "derivation",
+   "verdict": "WRONG",
+   "should_be": "correspondence",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts a structural parallel between the two terms without claiming historical transmission or derivation, which fits correspondence."
+  },
+  {
+   "id": "the-unconscious|once-recognized-appears-as-something-objective-in-which-is-included|the-ego",
+   "class": "K2",
+   "was": "composition",
+   "now": "privation",
+   "verdict": "WRONG",
+   "should_be": "composition",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote asserts that the ego is included within the unconscious, which is a part-whole relationship defining composition, not a lack or absence defining privation."
+  },
+  {
+   "id": "filius-regius|identical-to|mercurius",
+   "class": "K3",
+   "was": "archetypal-identity",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "An assertion of identity between the terms themselves ('identical with') belongs to archetypal-identity, not correspondence."
+  },
+  {
+   "id": "luna|symbolizes|the-unconscious",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The quote explicitly states the moon is a symbol for the unconscious, which routes to symbolization, not correspondence."
+  },
+  {
+   "id": "mercurius|unites|the-opposites",
+   "class": "K3",
+   "was": "union",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "union",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'unites' is explicitly defined as the union family, and 'mercurius unites the-opposites' is a seed for it."
+  },
+  {
+   "id": "quaternity|symbolizes|the-self",
+   "class": "K3",
+   "was": "symbolization",
+   "now": "correspondence",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'symbolizes' belongs to the symbolization family, not correspondence."
+  },
+  {
+   "id": "aqua-permanens|stands-for-the-soul-imprisoned-in-matter-namely|anima-mundi",
+   "class": "K4",
+   "was": "symbolization",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "symbolization",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The relation 'stands-for' asserts that the water is a symbol or formulation of the anima mundi, which squarely fits symbolization."
+  },
+  {
+   "id": "basil-the-great|makes-the-first-author-of-evil|man",
+   "class": "K4",
+   "was": "doctrinal-attribution",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "doctrinal-attribution",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The subject 'basil-the-great' is a named carrier performing an act of predication, which routes the edge to doctrinal-attribution."
+  },
+  {
+   "id": "the-centre|lies-on-a-different-plane-from-and-unlike-it-has-the-quality-of-eternity|the-ego",
+   "class": "K4",
+   "was": "privation",
+   "now": "unclassified(no-family)",
+   "verdict": "WRONG",
+   "should_be": "privation",
+   "diagnosis": "CAUGHT",
+   "gate_reason": "The effective relation 'occupies-different-plane-from' is a direct seed for the privation family."
+  }
+ ],
+ "sensitivity": {
+  "caught": 18,
+  "of": 19,
+  "pct": 94.7
+ },
+ "specificity": {
+  "clean_left_alone": 40,
+  "of": 41,
+  "pct": 97.6
+ },
+ "partial_tally": {
+  "planted_items": 0,
+  "clean_items": 0
+ },
+ "false_positives": [
+  {
+   "id": "adam|personifies|psyche",
+   "verdict": "WRONG",
+   "should_be": "archetypal-identity",
+   "reason": "The quote ('he is the psyche par excellence') asserts identity between the terms, not an enacting or speaking role, overriding the surface relation string."
+  }
+ ],
+ "threshold": "PASS = every planted item caught with the correct family named (should_be == was) and every class at quota; one miss or misdiagnosis in any class = FAIL. Set 2026-08-12 before the run (RULES #11). Specificity is reported, never gating.",
+ "verdict": "FAIL",
+ "independence_note": "Gate independence is NOMINAL, not cross-vendor: the gate model is the same model as one of the two production proposer arms (both gemini-3.1-pro). Within-vendor role separation only — see docs/RULES.md #1 and the 2026-08-12 inspection note in BACKLOG.md item 7."
+}
