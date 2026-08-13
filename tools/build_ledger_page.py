@@ -301,8 +301,11 @@ def batch_page(batch, delta, commits):
   body {{ min-height:100vh; }}
   main {{ max-width:820px; margin:0 auto; padding:1.6rem 1.2rem 4rem; }}
   .eyebrow {{ font:.6rem/1 var(--mono); letter-spacing:.26em; text-transform:uppercase; color:var(--gold-dim); }}
-  h1 {{ font-family:var(--mono); font-size:1.5rem; font-weight:500; margin:.3rem 0 .5rem; color:var(--ink); }}
-  h2 {{ font-family:var(--display); font-size:1.25rem; font-weight:500; color:var(--gold); margin:2rem 0 .5rem; }}
+  /* face, size and colour come from the shared scale in chrome.css; the batch
+     id inside the heading keeps the mono face, because it is an identifier */
+  h1 {{ margin:.3rem 0 .5rem; }}
+  h1 .idtok {{ font-family:var(--mono); font-size:1.5rem; }}
+  h2 {{ margin:2rem 0 .5rem; }}
   p {{ font-size:.92rem; line-height:1.62; max-width:68ch; }}
   a {{ color:var(--gold); }}
   .meta {{ font:.62rem/1.7 var(--mono); color:var(--ink-faint); }}
@@ -334,7 +337,7 @@ def batch_page(batch, delta, commits):
 {site_header("/ledger", f'<a href="/ledger">ledger</a> · {esc(batch["id"])}')}
 <main>
   <p class="eyebrow">batch delta</p>
-  <h1>{esc(batch["id"])}</h1>
+  <h1><span class="idtok">{esc(batch["id"])}</span></h1>
   <div class="meta">{f'<span class="cite">{esc(window)}</span> · ' if window else ''}<span class="badge">{esc(batch["status"])}</span></div>
   {f'<h2>What it merged</h2><div class="story">{esc(story)}</div>' if story else ''}
   {derived_block}
@@ -549,8 +552,9 @@ def build():
   body {{ min-height:100vh; }}
   main {{ max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }}
   .eyebrow {{ font:.6rem/1 var(--mono); letter-spacing:.26em; text-transform:uppercase; color:var(--gold-dim); }}
-  h1 {{ color:var(--ink); font-family:var(--display); font-size:2rem; font-weight:500; margin:.3rem 0 .8rem; letter-spacing:-.01em; }}
-  h2 {{ color:var(--ink); font-family:var(--display); font-size:1.3rem; font-weight:500; margin:2.4rem 0 .3rem; }}
+  /* face, size and colour come from the shared scale in chrome.css */
+  h1 {{ margin:.3rem 0 .8rem; }}
+  h2 {{ margin:2.4rem 0 .3rem; }}
   .kinds {{ display:grid; grid-template-columns:1fr 1fr; gap:.7rem; margin:1rem 0 1.2rem; }}
   @media (max-width:700px) {{ .kinds {{ grid-template-columns:1fr; }} }}
   .kind {{ border:1px solid var(--hairline); border-radius:8px; padding:.7rem .85rem; }}

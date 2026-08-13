@@ -8,10 +8,12 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { min-height: 100vh; }
 main { max-width: 940px; margin: 0 auto; padding: 1.6rem clamp(1rem, 4vw, 2rem) 5rem; }
-h1 { font-family: var(--display); font-size: 2rem; font-weight: 500; letter-spacing: -.01em; margin: .3rem 0 .6rem; }
-h2 { font-family: var(--display); font-size: 1.35rem; font-weight: 500; color: var(--gold); margin: 2.2rem 0 .5rem; }
-h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 500; margin: 1.4rem 0 .35rem; }
-h4 { font: .6rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); margin: 1.3rem 0 .45rem; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
 p { font-size: .92rem; line-height: 1.62; max-width: 68ch; }
 p + p { margin-top: .6rem; }
 a { color: var(--gold); }
@@ -277,7 +279,7 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-13 at commit 910036d
+built 2026-08-13 at commit f319d86
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

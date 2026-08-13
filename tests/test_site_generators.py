@@ -510,10 +510,86 @@ def test_both_generator_languages_hold_the_same_menu_list():
 
 
 def test_the_menu_marks_the_page_it_is_on():
-    for slug in ("releases", "query", "ontology", "families", "ledger"):
+    """Every static destination marks itself, and only itself."""
+    for slug in ("releases", "query", "ontology", "families", "ledger", "disputes"):
         html = read(os.path.join(PUBLIC, slug + ".html"))
         current = re.findall(r'<a href="([^"]+)" aria-current="page">', MENU_RE.search(html).group(1))
         assert current == [f"/{slug}"], (slug, current)
+
+
+def test_every_destination_can_be_marked_current_somewhere():
+    """Item 14 — the gold state was applied for static pages and for nothing
+    else, so concordance, method, families and the queue never lit. Each of the
+    nine destinations is marked either by a generated page or by the app's route
+    map; a destination in neither can never show you where you are."""
+    js = app_js()
+    block = js[js.index("const MENU_HREF = {"):]
+    block = block[:block.index("}")]
+    routed = set(re.findall(r"'(/[^']*)'", block))
+    static = set()
+    for path in generated_pages():
+        for href in re.findall(r'<a href="([^"]+)" aria-current="page">',
+                               MENU_RE.search(read(path)).group(1)):
+            static.add(href)
+    destinations = {href for _group, items in EXPECTED_MENU for href, _label in items}
+    missing = destinations - routed - static
+    assert not missing, f"never marked current anywhere: {sorted(missing)}"
+
+
+def test_the_app_marks_the_route_it_is_on():
+    js = app_js()
+    assert "function markCurrent(" in js
+    assert "markCurrent(modeEl, MENU_HREF[route] || '')" in js
+    for route in ("'#/concordance'", "'#/method'", "'#/families'", "'#/queue'"):
+        assert route in js[js.index("const MENU_HREF = {"):], route
+    # every route that opens a page passes its route to the choke point
+    for call in ("}, '#/method')", "}, '#/concordance')",
+                 "scrollTo === 'queue-section' ? '#/queue' : '#/families')"):
+        assert call in js, call
+
+
+def test_menu_hash_destinations_are_routed_in_app_not_reloaded():
+    """Item 14 — the hrefs are absolute so a generated page can load the app;
+    inside the app that same href is a different PATH unless the app is served
+    from exactly /, and the browser reloaded the document, which threw the
+    viewport and the selection away."""
+    js = app_js()
+    assert ".closest('.topmenu a, .brand[href]')" in js
+    assert "ev.preventDefault()" in js
+    assert "location.hash = route[1]" in js
+    # modified clicks and real pages are left to the browser
+    assert "ev.metaKey || ev.ctrlKey" in js
+    assert "if (!route) return" in js
+
+
+# ---------------------------------------------- item 14 · one heading scale ---
+
+def test_the_heading_scale_is_defined_once_in_the_shared_chrome():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    for level in ("h1", "h2", "h3", "h4"):
+        assert re.search(rf"^{level} {{", css, re.M), level
+    block = css[css.index("\nh1 {"):css.index("\nh3 {")]
+    assert "var(--display)" in block and "var(--ink)" in block and "var(--gold)" in block
+    tokens = read(os.path.join(ROOT, "web", "src", "tokens.css"))
+    assert re.search(r"^h2 {", tokens, re.M), "the app does not receive the shared scale"
+
+
+def test_no_generated_page_restates_the_heading_face_size_or_colour():
+    """Margins belong to the page; face, size and colour belong to the scale."""
+    for path in generated_pages():
+        style = "\n".join(re.findall(r"<style>(.*?)</style>", read(path), re.S))
+        for rule in re.findall(r"^\s*(h[1-4])\s*{([^}]*)}", style, re.M):
+            level, body = rule
+            for banned in ("font-family", "font-size", "color"):
+                assert banned not in body, f"{os.path.basename(path)}: {level} restates {banned}"
+
+
+def test_the_app_views_take_the_shared_heading_scale():
+    css = read(os.path.join(ROOT, "web", "src", "style.css"))
+    for selector in ("#mode-panel h2", ".method-page h2"):
+        body = re.search(rf"{re.escape(selector)} {{([^}}]*)}}", css).group(1)
+        for banned in ("font-family", "font-size", "color"):
+            assert banned not in body, f"{selector} still sets {banned} of its own"
 
 
 HEADER_RE = re.compile(r'<header[^>]*class="[^"]*\bsite-header\b[^"]*"[^>]*>(.*?)</header>', re.S)

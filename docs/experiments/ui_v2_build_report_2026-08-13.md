@@ -632,3 +632,65 @@ early return in `enterAtlas`, `replaceState` rather than `setHash` on selection,
 the parameter form read by the router with the old permalinks still matched, and
 the parameter cleared when the selection is. The behavioural claims above are
 browser measurements and are reported as such.
+
+## Item 14 — three findings from the re-review
+
+### 14.1 The current-page mark
+
+The gold state was written at build time into generated pages and nowhere else.
+The app rendered the shared header with no destination marked, so *concordance*
+— and *method*, *families* and the queue — never lit. Marked now in
+`openPage()`, the one place every route passes through, from a route map that
+sends `#/queue` to the *families* item (R10.5 nests the queue there). Measured:
+`#/concordance → /#/concordance`, `#/method → /#/method`, `#/families →
+/families`, `#/queue → /families`, `#/atlas → /#/atlas`, one marked item each.
+
+### 14.2 One heading scale
+
+Measured before: the same heading level was 1.25rem gold on a batch page,
+1.3rem ink on the ledger, 1.35rem gold on a family page, 1.45rem gold in the
+method view and 1.7rem ink everywhere else in `#mode-panel`. Five settings for
+one level.
+
+The scale is now defined once, in the shared chrome block that feeds both
+`chrome.css` (pages) and `tokens.css` (app): h1 display/2rem/ink, h2
+display/1.35rem/gold, h3 display/1.1rem/ink, h4 mono/0.6rem/gold-dim. Every page
+and view keeps only its margins. `#mode-panel h2` and `.method-page h2` in
+`style.css` lost their faces, sizes and colours; the batch page's h1 keeps the
+mono face for the id itself, inside a heading set like every other.
+
+Measured after, computed styles: h2 is Hoefler Text / 21.6px / 500 / gold on
+`#/method`, `#/concordance`, `#/families` and on releases, ledger, ontology, a
+family page, a batch page and families; h1 is Hoefler Text / 32px / ink on all
+six page types. Two deliberate exceptions, both left alone: the landing hero
+(`#prose h1`) is a hero rather than a heading level, and the selection and
+family side panels are components with their own scale.
+
+### 14.3 Identity-preserving returns from every route
+
+Diagnosed rather than guessed. Driven by hash, all four routes already
+preserved. The failure is in the return path a reader actually uses: the menu's
+hash destinations carry absolute hrefs (`/#/atlas`) so a generated page can load
+the app, and inside the app that href is a different PATH whenever the app is not
+served from exactly `/` — every dev build and every preview. Clicking *atlas*
+from a route therefore reloaded the document and the graph came back
+re-laid-out with the selection gone. Concordance appeared to work because its own
+back control is a hash link; the menu's was not.
+
+Fixed with one delegated click handler: any `/#/…` href is routed in place, and
+real pages, modified clicks and middle clicks are left to the browser.
+
+Measured, returning by clicking the menu's *atlas* item, with zoom 0.34, pan
+`{-19, 88}` and `coniunctio` selected before each:
+
+| route | identical on return | reloaded |
+|---|---|---|
+| #/concordance | yes | no |
+| #/method | yes | no |
+| #/families | yes | no |
+| #/queue | yes | no |
+
+Bit-identical means zoom, pan, the first six node positions, the selection and
+the faded-element count. Search and filter are untouched: search still dims the
+non-matching graph (1,796 elements on `mercurius`) and reset still re-fits, which
+is what those actions are for.

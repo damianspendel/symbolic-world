@@ -510,6 +510,28 @@ const chromeBlock = () => `
   color: var(--gold-dim); white-space: nowrap;
 }
 .page-bar .spacer { margin-left: auto; }
+/* Item 14 (editorial ruling, 2026-08-13) — one heading scale for the whole
+   site. The face, the size step and the colour of a heading level are the same
+   on a generated page and in an in-app view; only margins stay with the page
+   that sets them. Before this the same level was 1.25rem gold on a batch page,
+   1.3rem ink on the ledger, 1.35rem gold on a family page and 1.7rem ink in the
+   method view, which read as four different sites. Bare element selectors, so
+   any component that genuinely needs its own treatment can still say so with a
+   class and win on specificity. */
+h1 {
+  font-family: var(--display); font-size: 2rem; font-weight: 500;
+  color: var(--ink); letter-spacing: -0.01em; line-height: 1.16;
+}
+h2 {
+  font-family: var(--display); font-size: 1.35rem; font-weight: 500;
+  color: var(--gold); letter-spacing: -0.005em;
+}
+h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 500; color: var(--ink); }
+h4 {
+  font: 0.6rem var(--mono); letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold-dim); font-weight: 400;
+}
+
 /* V2-R11 — the site header. One structure and one geometry everywhere: a
    fixed-width brand block, then the menu. Nothing whose width varies with the
    page may sit before the menu, so it lands on the same pixel whichever page
@@ -762,9 +784,10 @@ function renderDoc(md, frontCopy) {
 * { box-sizing: border-box; }
 body { line-height: 1.62; }
 main { max-width: 44rem; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
-h1 { font-family: var(--display); font-size: 2rem; font-weight: 500; margin-bottom: .4rem; letter-spacing: -.01em; }
-h2 { font-size: 1.3rem; font-weight: 500; color: var(--gold); margin: 2.6rem 0 .6rem; font-family: var(--display); }
-h3 { font-size: 1.02rem; font-weight: 600; margin: 1.8rem 0 .4rem; font-variant: small-caps; letter-spacing: .06em; }
+/* the shared scale sets face, size and colour (chrome.css) */
+h1 { margin-bottom: .4rem; }
+h2 { margin: 2.6rem 0 .6rem; }
+h3 { margin: 1.8rem 0 .4rem; }
 p, li { margin-bottom: .7rem; font-size: 1rem; }
 ul, ol { padding-left: 1.3rem; margin-bottom: .7rem; }
 code { font: .86em var(--mono); color: var(--gold); background: rgba(212, 175, 55, .07); padding: .05em .3em; border-radius: 3px; }
@@ -1021,10 +1044,12 @@ const V2_STYLE = `
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { min-height: 100vh; }
 main { max-width: 940px; margin: 0 auto; padding: 1.6rem clamp(1rem, 4vw, 2rem) 5rem; }
-h1 { font-family: var(--display); font-size: 2rem; font-weight: 500; letter-spacing: -.01em; margin: .3rem 0 .6rem; }
-h2 { font-family: var(--display); font-size: 1.35rem; font-weight: 500; color: var(--gold); margin: 2.2rem 0 .5rem; }
-h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 500; margin: 1.4rem 0 .35rem; }
-h4 { font: .6rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); margin: 1.3rem 0 .45rem; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
 p { font-size: .92rem; line-height: 1.62; max-width: 68ch; }
 p + p { margin-top: .6rem; }
 a { color: var(--gold); }
