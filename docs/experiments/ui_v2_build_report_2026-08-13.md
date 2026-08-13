@@ -230,3 +230,163 @@ git -C ~/Documents/github/JungKG branch -D ui-v2-dev
 ```
 
 Nothing outside that worktree and that branch was written.
+
+---
+
+# Revision round — 2026-08-13, after review
+
+Eight items came back from review of the dev build. Same branch, same worktree,
+same constraints: no writes in the main tree, no deploy, no push.
+
+**Interruption, stated plainly.** The session hit its usage window after items 1
+and 4 were committed and resumed at 12:00. The tree was clean at the pause and
+nothing was lost; the check on resumption was that `f4c2c53` and `60deb70` were
+in and that the release-to-batch linking they depend on was finished (it was —
+the links had no batch ids to bind until item 5 wrote them, and item 5's entry
+now exercises seven of them).
+
+## Commits
+
+| Commit | Item | What |
+|---|---|---|
+| `f4c2c53` | 4 | V2-R8 — volumes sort in collection order, one comparator per language |
+| `60deb70` | 1 | V2-R7 — batch history moves to a page per batch |
+| `a7151f7` | 8 | V2-R10 — one site menu on every page |
+| `1dfab7f` | 3 | ontology page: where the checks come from (the OOPS! catalogue) |
+| `78054d3` | 6 | V2-R9 — heavy tables behind a headline and a native `<details>` |
+| `1a8a6dd` | 5 | releases newest-first, and the v1.4 entry drafted |
+| `5e96536` | 2 | depersonalize the published documents |
+| `2dc2bb4` | — | chrome.css carries the menu styles it was generated with |
+
+## Changes, old → new
+
+1. **Batch history off the ledger** (V2-R7, added to the spec).
+   - Ledger, was: `<h2>Batch history</h2>` followed by 57 cards, each carrying
+     that batch's full narrative and commit list, under 1,555 record cards.
+   - Ledger, now: `<h2>Batches</h2>` and one index row per batch — id linking to
+     its page, window, status, and "N records · M references" — plus a `↗` on
+     every batch facet chip.
+   - New: `/batch-<id>`, 57 pages, written by the same generator in the same
+     pass. Each carries the batch's window, status, its own account of what it
+     merged, its commits, and a derived delta. The derivation is stated on the
+     page: *"A record is counted here when at least one of its references falls
+     in the window. A record citing two windows is counted under both, so these
+     figures do not partition the graph and do not add up to it."* A batch with
+     no declared window says so instead of deriving: *"This batch declares no
+     paragraph window … nothing is derived here."* (24 of 57.)
+   - Release entries linkify any batch id they name, from `state.json`'s own ids
+     and in text nodes only.
+
+2. **Depersonalization**, 36 occurrences, hand-read one by one.
+   - `docs/FAMILY_DEFINITIONS.md`: "Rulings by Damian, 2026-08-12 evening" →
+     "Editorial rulings, 2026-08-12 evening"; "ruled by Damian in the
+     adjudication interface" → "ruled by the author in the adjudication
+     interface".
+   - `pipeline/family/relation_declarations.json`: `"ruled_by": "Damian
+     (validation chat)"` → `"ruled_by": "the maintainer (validation session)"`
+     (this one renders on `/ontology`); "(Damian's ruling, 2026-08-13)" →
+     "(editorial ruling, 2026-08-13)".
+   - `docs/QUERY.md`: "activated by Damian's ruling" → "activated by an
+     editorial ruling".
+   - `docs/ATLAS_REQUIREMENTS.md` (9): "taken by Damian" → "taken by the
+     author"; "(DECIDED, Damian, 2026-08-06)" → "(DECIDED, editorial ruling,
+     2026-08-06)"; "Damian's go of 2026-08-13" → "Editorial go-ahead of
+     2026-08-13"; "waits for Damian's review" → "waits for the maintainer's
+     review"; and the same pattern through R0, R8, R9 and V2-R5.
+   - `BACKLOG.md` (10), `docs/experiments/` (9 across the protocol, the two
+     reports, the sample, the README, the pre-arc check and the query-layer
+     build report), and one comment in `web/build-atlas.mjs`.
+   - Left as attribution, deliberately: `.zenodo.json`, the schema.org creator
+     in `index.html`, and the method page's citation block ("Spendel, Damian").
+     Left alone as out of scope: `CLAUDE.md`, git history, and `seed.json` —
+     whose single occurrence is in a `_citation_key` note that no generator
+     reads and that never reaches the site.
+
+3. **Ontology page: where the checks come from.** New section before the panel —
+   what a pitfall catalogue is, the OOPS! citation in one line
+   (Poveda-Villalón, Gómez-Pérez and Suárez-Figueroa, IJSWIS 10(2), 2014), and a
+   table of every pitfall code the scan cites, read out of the tool's findings
+   and source rather than typed. Three codes are borrowed for faults of a
+   different shape and a third column says so, because the catalogue was written
+   for class-shaped ontologies. The page states it is a local implementation of
+   a subset and not the OOPS! service.
+
+4. **Volume ordering** (V2-R8, added to the spec). The `/query` volume dropdown
+   was ordered by reference count (9i, 14, 9ii, 12, 13, 5, 11, 16, 8); it now
+   reads 5, 8, 9i, 9ii, 11, 12, 13, 14, 16. `volKeyBuild` in `build-atlas.mjs`
+   was a second JavaScript copy of the comparator and is gone; both JS call
+   sites now import `byVolume` from `web/query-semantics.mjs`, and
+   `volume_key` in the ledger builder is the one Python copy.
+
+5. **Releases.** The generator sorts entries by the version in each heading, so
+   the page reads v2.0, v1.5, v1.4 while the file stays in ascending order (a
+   test asserts the two disagree, so the sort is actually exercised). The v1.4
+   entry went from a five-bullet sketch to a drafted release note: five arcs
+   with their closing batches linked, the family layer and its external check,
+   the site launch and the URL convention, and a section on the clause-predicate
+   defect — no form rule on disk, the briefing line that caused it, 77% on the
+   blind batch that followed it, 0% on every blind batch since, and the decision
+   not to re-mine relations that are true but mis-shaped. The clause count binds
+   to the same rule `quality.py`'s P24 check applies.
+
+6. **Progressive disclosure** (V2-R9, added to the spec). Family pages, was: the
+   whole six-row external-validity table inline on all 25. Now: one headline
+   line — *"Checked against 8 works of scholarship: across the sample, 8 of 16
+   treated items agreed with our family. This family: 3/3 agreed …"* — with the
+   table behind a native `<details>`, and the limit *outside* the fold. Ontology
+   page: the 19-row findings table now sits behind *"19 findings: 7 recorded
+   design decisions, 8 answered by the declarations, 4 open defects"*, with the
+   four headline figures still in the open.
+
+7. **One site menu** (V2-R10, added to the spec). Was: a single `← the atlas`
+   link on each generated page, so `/query`, `/releases` and `/ontology` were
+   reachable only from the sitemap. Now: atlas · query · families · ledger ·
+   releases · ontology · disputes · method, in the same position on every
+   generated page, on `index.html`, and on the pages python writes, with the
+   current page marked and the breadcrumb keeping its slot.
+
+## Where V2-R9 was not applied, and why
+
+- The **declarations register** on `/ontology` and the **string map** on family
+  pages: the table is what the reader came for; folding it hides the subject.
+- The **batch index** on the ledger: it is already one line per batch.
+- The **ledger's own record list**: it is the page, and it has facets and a
+  search rather than a fold.
+- The **query results**: interactive, capped at 300 rows, and already summarised
+  by the count line under them.
+
+## Ambiguities resolved
+
+1. **v1.4 versus v1.5 scope.** The plan of 2026-08-05 put Aion and CW 9i in
+   v1.5; the instruction for this entry names them under v1.4. The arcs closed
+   before the ceremony did, so the entry describes the graph as it stands and
+   says so in its status line, and v1.5 is re-scoped in the file to the transfer
+   study the arcs were mined for. Both statements are on the page rather than
+   one of them being quietly dropped.
+2. **The menu duplicates three of the app's own controls** in `index.html`
+   (families, ledger, disputes). The instruction was additive and explicitly not
+   a restructure, so both are present. Deduplicating them is a small change to
+   `index.html` and is proposed, not made.
+3. **`disputes.html` is hand-maintained** — no generator writes it — so it got
+   the same menu markup by hand.
+4. **The footer nav on the v2.0 pages now repeats the top menu.** Left in place;
+   removing it is a three-line change and is proposed, not made.
+5. **`ruled_by` is a who-field**, so it takes "the maintainer" rather than an
+   "editorial ruling" phrasing that would not answer the question the field
+   asks. The rulings test asserts the field exists with any value and stays
+   green.
+6. **Files outside the given scope still carry the name**: `README.md`,
+   `docs/ABSTRACT.md`, `docs/LEGAL.md`, `docs/PAPER.md`,
+   `docs/PROPOSAL_RELATION_TYPING.md`, `docs/PROPOSAL_NEXT_ARC.md`,
+   `docs/PLAN_QUERY_LAYER_BUILD.md`, `docs/EXECUTION_PLAN_STEPS_2_3.md`,
+   `tools/pages/RUNBOOK.md`, `tools/pages/preflight.py`,
+   `tools/check_paper_facts.py`, `pipeline/family_calibration/audit_v071.py`.
+   Several are owned by another track and `docs/PAPER.md` is out of bounds
+   entirely, so they are listed here for a decision rather than swept.
+
+## Verification after the revision round
+
+`node web/build-atlas.mjs` and `python3 tools/build_ledger_page.py` both clean;
+copy contract green; `python3 -m pytest tests/ -q` — 99 passed;
+`python3 tools/check_paper_facts.py` — all checks pass. `web/public/v1.3/`
+untouched. Nothing deployed.
