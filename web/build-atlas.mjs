@@ -854,6 +854,250 @@ if (existsSync(methodPath)) {
 }
 function nodeLabel(id) { const n = atlasNodes.find(x => x.id === id); return n ? n.label : id }
 
+// ===========================================================================
+// V2 — the v2.0 UI slice (docs/ATLAS_REQUIREMENTS.md, V2-R1..R6)
+//
+// Four generated surfaces join the site: release notes, one page per relation
+// family, a query panel over the kg_query semantics, and an ontology page
+// carrying the QA scan. They are built here rather than hand-written for the
+// same reason the families page is: every number on them has to come from the
+// graph, the committed receipts or a tool's own output, and a page whose
+// figures are typed goes stale the next time a window merges.
+//
+// Three rules bind every page below, and the build enforces each of them:
+//   · the canonical URL is extensionless (CLAUDE.md, 2026-08-10), so a page
+//     registers a slug and the file name is derived from it, never the reverse;
+//   · registration also writes the sitemap entry and the footer nav, so a page
+//     cannot ship unreachable or unlisted;
+//   · the page's prose joins the copy contract at the foot of this file.
+// ===========================================================================
+import { execFileSync } from 'node:child_process'
+import { createHash } from 'node:crypto'
+import { readdirSync } from 'node:fs'
+
+const repoDir = new URL('../', import.meta.url).pathname
+const seedDigest = createHash('sha256').update(readFileSync(here('../seed.json'))).digest('hex')
+const buildDate = new Date().toISOString().slice(0, 10)
+const gitCommit = (() => {
+  try { return execFileSync('git', ['rev-parse', '--short', 'HEAD'], { cwd: repoDir, encoding: 'utf8' }).trim() }
+  catch { return '' }
+})()
+
+// Pages already on the site, described here so the sitemap and the footer nav
+// can be generated whole rather than maintained in two places.
+const SITE_PAGES = [
+  { slug: '', title: 'The atlas', nav: 'the atlas', changefreq: 'daily', priority: '1.0' },
+  { slug: 'ledger', title: 'Ledger', nav: 'ledger', changefreq: 'daily', priority: '0.8' },
+  { slug: 'families', title: 'Relation families', nav: 'families', changefreq: 'weekly', priority: '0.6' },
+  { slug: 'disputes', title: 'Dispute log', nav: 'disputes', changefreq: 'weekly', priority: '0.5' },
+  { slug: 'graph.json', title: 'The dataset', nav: null, changefreq: 'daily', priority: '0.7' },
+  { slug: 'v1.3/', title: 'The frozen v1.3.0 snapshot', nav: null, changefreq: 'yearly', priority: '0.3' }
+]
+const NEW_PAGES = []          // { slug, title, where, style, body, nav, changefreq, priority }
+const V2_COPY = []            // [name, prose] pairs for the copy contract
+// Every figure these pages interpolate, collected as it is computed and handed
+// to the copy contract. The check keeps its teeth: a literal that none of these
+// derivations produced still fails the build.
+const V2_NUMBERS = []
+const derived = (...ns) => { for (const n of ns) if (Number.isFinite(Number(n))) V2_NUMBERS.push(Number(n)); return ns[0] }
+
+// Evidence — quotes, relation strings, node labels, citations — is the graph's
+// own record and is not copy. It is marked with class="ev" where it lands in a
+// generated page and stripped before the copy scan, on the same reasoning the
+// scan already applies to atlas.json: rewriting the record to suit a style rule
+// would falsify it.
+const stripEvidence = (html) => html
+  .replace(/<(\w+)[^>]*class="[^"]*\bev\b[^"]*"[^>]*>[\s\S]*?<\/\1>/g, ' ')
+
+function registerPage(p) {
+  NEW_PAGES.push(p)
+  SITE_PAGES.push({ slug: p.slug, title: p.title, nav: p.nav || null, changefreq: p.changefreq || 'weekly', priority: p.priority || '0.5' })
+  return p
+}
+
+// The shared shell: page-bar in the fixed position R10.6 wants, chrome.css for
+// the palette, an extensionless canonical, and the footer nav.
+const V2_STYLE = `
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+main { max-width: 940px; margin: 0 auto; padding: 1.6rem clamp(1rem, 4vw, 2rem) 5rem; }
+h1 { font-family: var(--display); font-size: 2rem; font-weight: 500; letter-spacing: -.01em; margin: .3rem 0 .6rem; }
+h2 { font-family: var(--display); font-size: 1.35rem; font-weight: 500; color: var(--gold); margin: 2.2rem 0 .5rem; }
+h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 500; margin: 1.4rem 0 .35rem; }
+h4 { font: .6rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; max-width: 68ch; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.eyebrow { font: .6rem/1 var(--mono); letter-spacing: .26em; text-transform: uppercase; color: var(--gold-dim); }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+`
+
+function siteNav(current) {
+  return `<nav class="sitenav">` + SITE_PAGES.filter(p => p.nav)
+    .map(p => p.slug === current
+      ? `<span class="dim">${esc(p.nav)}</span>`
+      : `<a href="/${p.slug}">${esc(p.nav)}</a>`).join('\n') + `</nav>`
+}
+
+function renderPage(p) {
+  return `<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/${p.slug}">
+<title>${esc(p.title)} — The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>${V2_STYLE}${p.style || ''}</style>
+${p.head || ''}</head>
+<body>
+<div class="page-bar"><a class="back" href="/#/atlas">← the atlas</a><span class="where">${esc(p.where)}</span></div>
+<main>
+${p.body}
+${siteNav(p.slug)}
+</main></body></html>`
+}
+
+// --------------------------------------------------- V2-R1 · /releases -----
+// The page is assembled from docs/RELEASES.md. The prose is that file's; the
+// figures are tokens bound here, so an entry cannot state a count the graph and
+// the receipts do not currently produce, and an unbound token fails the build
+// rather than shipping as literal braces.
+const calibRecords = []
+const calibDir = here('../pipeline/family_calibration/records')
+try {
+  for (const f of readdirSync(calibDir)) {
+    if (!f.endsWith('.json')) continue
+    const rec = JSON.parse(readFileSync(new URL(`../pipeline/family_calibration/records/${f}`, import.meta.url), 'utf8'))
+    calibRecords.push({ file: `pipeline/family_calibration/records/${f}`, ...rec })
+  }
+} catch { /* no records directory — handled below */ }
+const bindingCalib = calibRecords
+  .filter(r => r.definitions_version === famVersion && r.verdict === 'PASS')
+  .sort((a, b) => String(a.planted_at || a.file).localeCompare(String(b.planted_at || b.file)))
+  .pop()
+
+const declPath = here('../pipeline/family/relation_declarations.json')
+const DECL = existsSync(declPath) ? JSON.parse(readFileSync(declPath, 'utf8')) : null
+const activeDecls = DECL ? DECL.active.filter(d => !d.dormant) : []
+
+const releasesPath = here('../docs/RELEASES.md')
+if (existsSync(releasesPath)) {
+  if (!bindingCalib) {
+    console.error(`RELEASES PAGE: no calibration record with verdict PASS for ruleset ${famVersion || '(none)'} under ` +
+      `pipeline/family_calibration/records/. The version pin names that record, so the build refuses rather than print a pin it cannot evidence.`)
+    process.exit(1)
+  }
+  const state = JSON.parse(readFileSync(here('../pipeline/state.json'), 'utf8'))
+  const mergedBatches = state.batches.filter(b => String(b.status || '').startsWith('merged')).length
+  const relTokens = {
+    ruleset: famVersion,
+    calibration_record: bindingCalib.file,
+    nodes: meta.counts.nodes, edges: meta.counts.edges, refs: meta.counts.references,
+    batches: mergedBatches, normalized: meta.normalized,
+    assigned: famMap.totals.assigned, pending: famMap.totals.pending,
+    no_family: famMap.totals.no_family, text_undecided: famMap.totals.text_undecided,
+    // the DOCUMENT's family count, not the map's: the map counts families that
+    // currently hold an assigned edge, and a family holding none is still in
+    // the ruleset (amplification, after ruling 1's re-run, is exactly that)
+    families: families.length, declarations_active: activeDecls.length,
+    cal_caught: bindingCalib.sensitivity.caught, cal_planted: bindingCalib.sensitivity.of,
+    cal_clean: bindingCalib.specificity.clean_left_alone, cal_clean_of: bindingCalib.specificity.of,
+    gate_model: bindingCalib.gate_model,
+    ev_passes: EV ? EV.passes : '', ev_works: EV ? EV.works_consulted : '',
+    ev_treated: EV ? EV.treated : '', ev_agrees: EV ? EV.agrees : '',
+    ev_disagrees: EV ? EV.disagrees : '', ev_split: EV ? EV.scholars_split : '',
+    ev_not_treated: EV ? EV.not_treated : '', ev_rulings: EV ? EV.rulings_produced : ''
+  }
+  derived(...Object.values(relTokens))
+  let relMd = readFileSync(releasesPath, 'utf8')
+  for (const [k, v] of Object.entries(relTokens)) relMd = relMd.split(`{{${k}}}`).join(String(v))
+  const relLeft = relMd.match(/\{\{(\w+)\}\}/)
+  if (relLeft) { console.error(`RELEASES PAGE: unbound token {{${relLeft[1]}}} in docs/RELEASES.md`); process.exit(1) }
+
+  // one entry per "## " heading; `status:` and `pin:` are the two labelled
+  // lines an entry opens with, and everything after a "### " is a section
+  const [preamble, ...rawEntries] = relMd.split(/\n(?=## )/)
+  const entries = rawEntries.map(chunk => {
+    const lines = chunk.split('\n')
+    const heading = lines[0].replace(/^##\s+/, '')
+    const status = (chunk.match(/^status:\s*([\s\S]*?)(?=\n(?:pin:|###|$))/m) || [, ''])[1].trim().replace(/\s*\n\s*/g, ' ')
+    const pin = (chunk.match(/^pin:\s*(.*)$/m) || [, ''])[1].trim()
+    const sections = chunk.split(/\n(?=### )/).slice(1).map(s => ({
+      title: s.split('\n')[0].replace(/^###\s+/, ''),
+      body: renderMarkdown(s.slice(s.indexOf('\n') + 1))
+    }))
+    return { heading, status, pin, sections, future: /^skeleton/i.test(status) }
+  })
+  const pinHtml = (pin) => `<div class="pin">` + inline(pin)
+    .replace(/(graph|ruleset)\s+(v[\d.]+|pending)/g, '$1 <span class="v">$2</span>') + `</div>`
+  const relBody = `<p class="eyebrow">release notes</p>
+<h1>Releases</h1>
+${renderMarkdown(preamble.split('\n').slice(1).join('\n'))}
+${entries.map(e => `<section class="rel-entry${e.future ? ' future' : ''}">
+<h2>${inline(e.heading)}</h2>
+<div class="meta">${inline(e.status)}</div>
+${pinHtml(e.pin)}
+${e.sections.map(s => `<h4>${inline(s.title)}</h4>\n${s.body}`).join('\n')}
+</section>`).join('\n')}
+<div class="receipts"><b>receipts</b>
+prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span>;<br>
+ruleset ${esc(famVersion)} with calibration record <code>${esc(bindingCalib.file)}</code> (${esc(bindingCalib.verdict)});<br>
+external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built ${buildDate}${gitCommit ? ` at ${gitCommit}` : ''}
+</div>`
+  const relStyle = `
+.rel-entry { border: 1px solid var(--hairline); border-radius: 10px; padding: 1rem 1.1rem; margin: 1rem 0; background: var(--surface); }
+.rel-entry.future { opacity: .6; border-style: dashed; }
+.rel-entry h2 { margin-top: 0; }
+.pin { font: .62rem/1.7 var(--mono); color: var(--ink-label); border-left: 3px solid var(--gold-dim);
+  padding: .4rem .7rem; background: rgba(212,175,55,.05); border-radius: 0 6px 6px 0; margin: .5rem 0 .8rem; overflow-x: auto; }
+.pin .v { color: var(--gold); }
+.rel-entry ul { list-style: none; margin: .3rem 0 .2rem; }
+.rel-entry li { font-size: .89rem; line-height: 1.6; padding: .16rem 0 .16rem .95rem; position: relative; max-width: 68ch; }
+.rel-entry li::before { content: "\\00b7"; position: absolute; left: .2rem; color: var(--edge-idle); }
+`
+  registerPage({
+    slug: 'releases', title: 'Releases', where: 'releases', nav: 'releases',
+    changefreq: 'monthly', priority: '0.5', style: relStyle, body: relBody
+  })
+  V2_COPY.push(['public/releases.html (generated from docs/RELEASES.md)', stripEvidence(relBody)])
+  console.log(`releases: ${entries.length} entries — pin ruleset ${famVersion}, record ${bindingCalib.file} (${bindingCalib.verdict})`)
+}
+
+// ------------------------------------------------ the pages are written ----
+function emitPages() {
+  for (const p of NEW_PAGES) writeFileSync(here(`./public/${p.slug}.html`), renderPage(p))
+  const urls = SITE_PAGES.map(p =>
+    `  <url><loc>https://symbolicworld.observer/${p.slug}</loc><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>`)
+  writeFileSync(here('./public/sitemap.xml'),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`)
+  console.log(`pages: ${NEW_PAGES.length} generated (${NEW_PAGES.map(p => '/' + p.slug).join(' ')}) · sitemap ${SITE_PAGES.length} urls`)
+}
+emitPages()
+
 // ------------------------------------ R10.0 / R10.9 · the copy assertions ---
 // Two rules the build enforces rather than trusts:
 //  1. Every count-like number in user-facing copy must come from atlas.json meta.
@@ -884,7 +1128,10 @@ const allowedNumbers = new Set([
   ...Object.values(famMap.totals), famMap.totals.no_family + famMap.totals.text_undecided,
   ...famMap.provenance.map(p => p.edges),
   ...famMap.families.flatMap(f => [f.edges, ...f.strings.map(s => s.edges)]),
-  ...famMap.homeless.map(r => r.edges), ...famMap.text_undecided.map(r => r.edges)
+  ...famMap.homeless.map(r => r.edges), ...famMap.text_undecided.map(r => r.edges),
+  // V2 — the figures the v2.0 pages interpolate, collected at the point each
+  // one is computed (see `derived` above).
+  ...V2_NUMBERS
 ].filter(n => Number.isFinite(n)))
 
 // Frozen measured results quoted in the method copy, with the sources the copy
@@ -904,7 +1151,11 @@ const copySources = [
     .replace(/<[^>]+>/g, ' ')],
   ['src/main.js', readFileSync(here('./src/main.js'), 'utf8')],
   ['src/concordance.js', readFileSync(here('./src/concordance.js'), 'utf8')],
-  ['src/assembly.js', readFileSync(here('./src/assembly.js'), 'utf8')]
+  ['src/assembly.js', readFileSync(here('./src/assembly.js'), 'utf8')],
+  // V2-R6 — a new page joins this scan in the commit that creates it. The
+  // evidence it carries (quotes, relation strings, citations) is stripped
+  // first, for the reason recorded above `stripEvidence`.
+  ...V2_COPY
 ]
 const copyProblems = []
 for (const [name, text, extraAllowed] of copySources) {
