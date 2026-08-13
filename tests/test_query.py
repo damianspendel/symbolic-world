@@ -461,3 +461,32 @@ def test_turtle_export_leaves_the_seed_file_untouched(graph, declarations):
     before = kg_query.file_digest(SEED)
     export_rdf.build(graph, declarations)
     assert kg_query.file_digest(SEED) == before
+
+
+# ---- the 2026-08-13 middle ruling: aspect flips, qualifier carried ----------
+
+def test_aspect_of_flip_derives_manifests_as(graph, declarations):
+    derived = kg_query.derived_rows(graph, declarations)
+    flips = {(r["subject"], r["relation"], r["object"]) for r in derived}
+    assert ("individuation", "manifests-as", "transference") in flips
+    assert ("adam", "manifests-as", "lilith") in flips
+
+def test_dark_aspect_flip_carries_qualifier(graph, declarations):
+    derived = kg_query.derived_rows(graph, declarations)
+    rows = [r for r in derived
+            if r["derived_from"]["relation"] == "is-dark-aspect-of"]
+    assert rows, "the is-dark-aspect-of edge must derive a row"
+    for r in rows:
+        assert "[dark aspect]" in r["origin"], (
+            "the ruling: the qualifier travels with the flip, visibly")
+
+def test_carried_qualifiers_are_nonempty_strings(declarations):
+    for decl in declarations["active"]:
+        if "carried_qualifier" in decl:
+            assert isinstance(decl["carried_qualifier"], str)
+            assert decl["carried_qualifier"].strip()
+
+def test_rulings_log_present_and_dated(declarations):
+    assert declarations.get("rulings"), "an adopted declaration requires a logged ruling"
+    for r in declarations["rulings"]:
+        assert r.get("date") and r.get("ruled_by") and r.get("ruling")

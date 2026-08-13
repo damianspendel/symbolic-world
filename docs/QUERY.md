@@ -188,3 +188,14 @@ the declarations in force, which is the ACTIVE list minus the dormant entries.
 - It does not edit declarations. Adopting an inverse pair, or retiring one, is a
   human decision recorded in `relation_declarations.json` with the
   FAMILY_DEFINITIONS line it transcribes.
+
+## The carried-qualifier rule (ruling of 2026-08-13)
+
+Two doc-listed manifestation inverse strings were activated by Damian's
+ruling: `aspect-of` flips losslessly; `is-dark-aspect-of` flips WITH its
+qualifier carried — the derived row displays "dark aspect" beside its
+origin, so the reverse reading asserts exactly as much as the stored edge.
+The general principle, adopted as precedent: a derived row must carry
+everything the stored row asserted; if a flip cannot carry its qualifier,
+the declaration is not made. The ruling is logged in
+`pipeline/family/relation_declarations.json` under `rulings`.

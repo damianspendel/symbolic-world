@@ -127,11 +127,15 @@ def derived_rows(graph, declarations):
     seen = set()
     out = []
 
-    def emit(edge, new_relation, origin):
+    def emit(edge, new_relation, origin, carried_qualifier=None):
         triple = (edge["object"], new_relation, edge["subject"])
         if triple in present or triple in seen:
             return
         seen.add(triple)
+        # the 2026-08-13 ruling: a derived row carries everything the stored row
+        # asserted — a declaration's qualifier travels with the flip, visibly
+        if carried_qualifier:
+            origin = f"{origin} [{carried_qualifier}]"
         fam = edge.get("relation_family") or {}
         out.append({
             "subject": edge["object"],
@@ -159,14 +163,15 @@ def derived_rows(graph, declarations):
                 if (edge.get("relation_family") or {}).get("value") != restrict:
                     continue
             rel = effective_relation(edge)
+            cq = decl.get("carried_qualifier")
             if decl["kind"] == "inverse":
                 if rel == decl["forward"]:
-                    emit(edge, decl["inverse"], f"derived:inverse-of({rel})")
+                    emit(edge, decl["inverse"], f"derived:inverse-of({rel})", cq)
                 elif rel == decl["inverse"]:
-                    emit(edge, decl["forward"], f"derived:inverse-of({rel})")
+                    emit(edge, decl["forward"], f"derived:inverse-of({rel})", cq)
             elif decl["kind"] == "symmetric":
                 if rel == decl["relation"]:
-                    emit(edge, rel, "derived:symmetric")
+                    emit(edge, rel, "derived:symmetric", cq)
     return out
 
 
