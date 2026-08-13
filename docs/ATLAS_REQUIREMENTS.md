@@ -571,6 +571,20 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   anti-overclaim rules: several "pitfalls" are recorded design decisions,
   and the panel says which. Give `tools/ontology_qa/quality.py` a `--json`
   mode rather than scraping its prose output; the builder consumes that.
+- **V2-R10 one site menu, everywhere (standing rule, 2026-08-13).** Every
+  page — the app and every generated page, including the ones the python
+  generator writes — carries the same top menu in the same position, with
+  the same items in the same order: atlas, query, families, ledger,
+  releases, ontology, disputes, method. The current page is marked with
+  `aria-current="page"`, and the breadcrumb keeps its fixed position
+  beside the menu (R10.6 stands). The list lives in one place per
+  generator language — `MENU` in `web/build-atlas.mjs`, `MENU` in
+  `tools/build_ledger_page.py` — and a test compares the rendered menus
+  link for link across all of them and `web/index.html`, so a route added
+  to one and forgotten in another fails the suite instead of stranding a
+  page. A new full-page route joins the menu in the commit that creates
+  it, the same way it joins the sitemap and the copy contract.
+
 - **V2-R7 the batch history moves off the ledger (2026-08-13).** With the
   facets in, the ledger carries 1,555 record cards and a mining narrative
   underneath them, and the narrative is the part nobody reaches. One page

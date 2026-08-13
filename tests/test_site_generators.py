@@ -310,6 +310,62 @@ def test_active_declarations_are_all_on_the_page():
         assert pair in html, decl["id"]
 
 
+# ------------------------------------------------ V2-R10 · the site menu ---
+
+MENU_RE = re.compile(r'<nav class="topmenu">(.*?)</nav>', re.S)
+
+
+def menu_items(html):
+    """[(href, label)] for the page's top menu, aria-current stripped."""
+    found = MENU_RE.search(html)
+    assert found, "no top menu on the page"
+    return re.findall(r'<a href="([^"]+)"[^>]*>([^<]+)</a>', found.group(1))
+
+
+def test_every_generated_page_carries_the_same_menu():
+    reference = None
+    for path in generated_pages():
+        items = menu_items(read(path))
+        if reference is None:
+            reference = items
+        assert items == reference, os.path.basename(path)
+    assert reference, "no generated page carried a menu"
+    assert [label for _href, label in reference] == [
+        "atlas", "query", "families", "ledger", "releases",
+        "ontology", "disputes", "method"]
+
+
+def test_the_app_carries_the_same_menu_as_the_generated_pages():
+    app = menu_items(read(os.path.join(ROOT, "web", "index.html")))
+    page = menu_items(read(os.path.join(PUBLIC, "releases.html")))
+    assert app == page
+
+
+def test_both_generator_languages_hold_the_same_menu_list():
+    """One list per language; this is what keeps them one menu."""
+    js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
+    js_menu = re.findall(r"\['(/[^']*)', '(\w+)'\]", js[js.index("const MENU = ["):])
+    assert js_menu[:len(ledger_gen.MENU)] == [tuple(x) for x in ledger_gen.MENU]
+
+
+def test_the_menu_marks_the_page_it_is_on():
+    for slug in ("releases", "query", "ontology", "families", "ledger"):
+        html = read(os.path.join(PUBLIC, slug + ".html"))
+        current = re.findall(r'<a href="([^"]+)" aria-current="page">', MENU_RE.search(html).group(1))
+        assert current == [f"/{slug}"], (slug, current)
+
+
+def test_the_breadcrumb_keeps_its_place_beside_the_menu():
+    """R10.6 — the menu did not displace the breadcrumb."""
+    for path in generated_pages():
+        html = read(path)
+        bar = re.search(r'<div class="page-bar">(.*?)</div>\s*<main', html, re.S)
+        assert bar, os.path.basename(path)
+        assert '<nav class="topmenu">' in bar.group(1), os.path.basename(path)
+        assert 'class="where"' in bar.group(1), os.path.basename(path)
+        assert bar.group(1).index("topmenu") < bar.group(1).index('class="where"')
+
+
 # ---------------------------------------------- V2-R7 · the batch deltas ---
 
 @pytest.fixture(scope="module")

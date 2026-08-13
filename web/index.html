@@ -95,6 +95,12 @@
         <h1>The Symbolic World</h1>
       </div>
       <span id="version"></span>
+      <!-- V2-R10 — the site menu, identical on every page. The list is held in
+           web/build-atlas.mjs for the pages node writes and in
+           tools/build_ledger_page.py for the pages python writes; a test
+           compares all three renderings link for link. The app's own controls
+           below it are unchanged: they drive in-app routes and the camera. -->
+      <nav class="topmenu"><a href="/#/atlas" aria-current="page">atlas</a><a href="/query">query</a><a href="/families">families</a><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/ontology">ontology</a><a href="/disputes">disputes</a><a href="/#/method">method</a></nav>
       <button class="navlink" id="open-concordance" title="Psychology against alchemy — the two-register view">⚯ concordance</button>
       <button class="navlink" id="open-families" title="The relation-family vocabulary and the review queue">◈ families</button>
       <a class="navlink" id="ledger-link" href="/ledger" title="Construction log — how every batch entered the graph, commit by commit">⛏ ledger</a>

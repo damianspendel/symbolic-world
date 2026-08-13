@@ -33,6 +33,28 @@ def esc(s):
     return html.escape(str(s))
 
 
+# V2-R10 — the site menu, in one place for Python. web/build-atlas.mjs holds the
+# same list for the pages node writes, and a test compares the two rendered
+# menus link for link, so a route added to one and forgotten in the other fails
+# the suite rather than stranding a page.
+MENU = [
+    ("/#/atlas", "atlas"),
+    ("/query", "query"),
+    ("/families", "families"),
+    ("/ledger", "ledger"),
+    ("/releases", "releases"),
+    ("/ontology", "ontology"),
+    ("/disputes", "disputes"),
+    ("/#/method", "method"),
+]
+
+
+def top_menu(current=""):
+    return '<nav class="topmenu">' + "".join(
+        f'<a href="{href}"{" aria-current=" + chr(34) + "page" + chr(34) if href == current else ""}>{label}</a>'
+        for href, label in MENU) + "</nav>"
+
+
 # ---------- section 1: every record and its gates ----------
 # R9.5 — family-assignment state, rendered as its own row class so a reader can
 # never mistake a classification for a gate against the text.
@@ -289,7 +311,7 @@ def batch_page(batch, delta, commits):
 </style>
 </head>
 <body>
-<div class="page-bar"><a class="back" href="/ledger">← the ledger</a><span class="where">batch · {esc(batch["id"])}</span></div>
+<div class="page-bar">{top_menu("/ledger")}<span class="where"><a href="/ledger">ledger</a> · {esc(batch["id"])}</span></div>
 <main>
   <p class="eyebrow">batch delta</p>
   <h1>{esc(batch["id"])}</h1>
@@ -597,7 +619,7 @@ def build():
 </style>
 </head>
 <body>
-<div class="page-bar"><a class="back" href="/#/atlas">← the atlas</a><span class="where">ledger</span></div>
+<div class="page-bar">{top_menu("/ledger")}<span class="where">ledger</span></div>
 <main>
   <h1>Ledger</h1>
   <p class="intro">Every published record and the gates it passed. Nothing entered this graph by an
