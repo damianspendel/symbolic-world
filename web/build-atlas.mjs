@@ -610,10 +610,13 @@ function familiesPageCopy(map, version) {
   const stringList = (rows) => rows.map(r =>
     `<span class="sstr"><code>${esc(r.string)}</code><i>${r.edges}</i></span>`).join('')
 
+  // V2-R2 — each family name links to its own page, where the definition is
+  // quoted in full beside the family's live counts and its queued items.
   const famBlocks = map.families.map(f => `<section class="fam">
-  <h3>${esc(f.family)} <em>${f.edges}</em></h3>
+  <h3><a href="/family-${esc(f.family)}">${esc(f.family)}</a> <em>${f.edges}</em></h3>
   <div class="strs">${stringList(f.strings)}</div>
 </section>`).join('\n')
+  const empty = families.map(f => f.id).filter(id => !map.families.some(f => f.family === id))
 
   const provRows = map.provenance.map(p =>
     `<tr><td>${esc(p.kind)}</td><td>${p.edges}</td></tr>`).join('')
@@ -661,6 +664,7 @@ ${EV ? `<h2>Checked against readers of Jung</h2>
 <h2>The map: which relation strings land in which family</h2>
 <p>The reverse index, derived from the graph on every build. ${num(t.families)} families over ${num(t.assigned_strings)} distinct relation strings; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family, which is the layer's central commitment made visible: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
 ${famBlocks}
+${empty.length ? `<p>${empty.map(id => `<a href="/family-${esc(id)}">${esc(id)}</a>`).join(', ')} ${empty.length === 1 ? 'is a family in the ruleset that currently holds no assigned relation' : 'are families in the ruleset that currently hold no assigned relation'}, so ${empty.length === 1 ? 'it has' : 'they have'} no block above. ${empty.length === 1 ? 'The page is' : 'The pages are'} kept, and ${empty.length === 1 ? 'reports' : 'report'} the count as zero: a family emptied by a reclassification is a finding, and dropping it would hide the finding.</p>` : ''}
 
 <h2>What fits nowhere</h2>
 <p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted rather than absorbed, because a vocabulary that covers everything has stopped discriminating:</p>
@@ -1086,6 +1090,163 @@ external-validity figures from <code>docs/experiments/external_validity_2026-08/
   V2_COPY.push(['public/releases.html (generated from docs/RELEASES.md)', stripEvidence(relBody)])
   console.log(`releases: ${entries.length} entries — pin ruleset ${famVersion}, record ${bindingCalib.file} (${bindingCalib.verdict})`)
 }
+
+// ------------------------------------------- V2-R2 · /family-<name> -------
+// One page per family in the ruleset — including a family that currently holds
+// no edge, which is reported at zero rather than dropped. The definition is
+// quoted from docs/FAMILY_DEFINITIONS.md through the same extraction the
+// families page uses; nothing here paraphrases it. Counts come from the derived
+// map, pending items from the graph, and the external-validity row from the
+// committed receipts, so no figure on these pages is typed.
+const effRel = (e) => (e.relation_normalized && e.relation_normalized.relation) || e.relation
+const famRows = new Map(famMap.families.map(f => [f.family, f]))
+const pendingRows = atlasEdges
+  .filter(e => e.family && e.family.state === 'pending')
+  .map(e => ({
+    subject: nodeLabel(e.source), object: nodeLabel(e.target),
+    rel: e.relation, eff: effRel(e),
+    by: (e.family.assigned_by || '').trim(), reason: (e.family.reason_text || '').trim(),
+    cite: e.refs.length ? `CW ${e.refs[0].volume} §${e.refs[0].paragraph}` : '',
+    quote: e.refs.length ? (e.refs[0].quote || '') : ''
+  }))
+
+const EVROWS = (EV && EV.per_family && EV.per_family.rows) || []
+const evTable = (currentFamily) => {
+  if (!EVROWS.length) return ''
+  const rows = EVROWS.map(r => `<tr class="${r.total ? 'total' : ''}${r.family === currentFamily ? ' this' : ''}">` +
+    `<td>${esc(r.label)}</td><td class="n">${esc(r.agrees)}</td><td class="n">${esc(r.disagrees)}</td>` +
+    `<td class="n">${esc(r.split)}</td><td class="n">${esc(r.not_treated)}</td></tr>`).join('\n')
+  return `<div class="tw"><table>
+<thead><tr><th>family</th><th>agrees</th><th>disagrees</th><th>split</th><th>not treated</th></tr></thead>
+<tbody>${rows}</tbody></table></div>`
+}
+
+const famPages = []
+for (const fam of families) {
+  const row = famRows.get(fam.id) || { edges: 0, strings: [] }
+  const strings = row.strings
+  const stringSet = new Set(strings.map(s => s.string))
+  const singles = strings.filter(s => s.edges === 1).length
+  const pend = pendingRows.filter(p => stringSet.has(p.eff))
+  const decls = activeDecls.filter(d => d.kind === 'inverse'
+    ? (stringSet.has(d.forward) || stringSet.has(d.inverse))
+    : stringSet.has(d.relation))
+  const evRow = EVROWS.find(r => r.family === fam.id)
+  derived(row.edges, strings.length, singles, pend.length, decls.length,
+    ...strings.map(s => s.edges))
+
+  const lead = strings.slice(0, 12)
+  const tail = strings.slice(12)
+  const stringChips = lead.map(s =>
+    `<span class="chip ev${s.edges >= 5 ? ' lead' : ''}"><code>${esc(s.string)}</code> <span class="n">${s.edges}</span></span>`).join('')
+    + (tail.length ? `<span class="chip f-none">and ${tail.length} more, ${tail.reduce((a, s) => a + s.edges, 0)} relations between them</span>` : '')
+
+  const seedList = fam.seeds.length ? `<ul class="seeds">${fam.seeds.map(s =>
+    `<li class="ev">${esc(s.text)}${s.cite ? ` <span class="cite">${esc(s.cite)}</span>` : ''}</li>`).join('')}</ul>`
+    : `<p class="dim">The definition names no worked example, so none is shown. Inventing one here would put a claim on the page that the document does not make.</p>`
+
+  const declBlock = decls.length ? `<h4>declared pairs</h4>
+<ul class="seeds">${decls.map(d => `<li><span class="ev"><code>${esc(d.kind === 'inverse' ? `${d.forward} / ${d.inverse}` : d.relation)}</code></span> — ${esc(d.kind)}${d.applies_to_family ? `, restricted to the ${esc(d.applies_to_family)} family` : ''}, transcribed from <span class="ev">${esc(d.source[0].section)} (line ${d.source[0].line})</span></li>`).join('')}</ul>
+<p class="meta">A declaration licenses a row in the other direction when the query panel's closure toggle is on, and nothing else. It is read at query time and never written into the graph.</p>` : ''
+
+  const pendBlock = pend.length ? `<h4>pending a ruling — items carrying a string this family covers</h4>
+<div class="queue">${pend.slice(0, 6).map(p => `<div class="qitem">
+<div class="triple ev">${esc(p.subject)} <span class="rel">${esc(p.rel)}</span> ${esc(p.object)} <span class="cite">${esc(p.cite)}</span></div>
+<div class="why ev">${esc(p.by)}${p.reason ? ` — ${esc(p.reason)}` : ''}</div>
+</div>`).join('')}
+${pend.length > 6 ? `<p class="meta">${pend.length - 6} more. These are edges whose two model arms did not agree, or whose agreement the calibrated gate disputed. They carry a relation string this family covers, which is not the same as belonging here — the ruling has not been made, and the queue is not a backlog to be cleared by machine.</p>`
+    : `<p class="meta">These are edges whose two model arms did not agree, or whose agreement the calibrated gate disputed. Carrying a string this family covers is not the same as belonging here; the ruling has not been made.</p>`}
+</div>` : `<h4>pending a ruling</h4>
+<p class="dim">No queued item carries a relation string this family covers.</p>`
+
+  const evBlock = EVROWS.length ? `<h2>Checked against readers of Jung</h2>
+${evRow ? `<p>In August 2026 a sample of these assignments was put to the secondary literature, and this family has a row in the result. Of the sampled items the consulted works treat at all, scholars' renderings agreed with this family on ${esc(evRow.agrees)}, disagreed on ${esc(evRow.disagrees)} and split among themselves on ${esc(evRow.split)}; ${evRow.not_treated} sampled ${evRow.not_treated === 1 ? 'item was' : 'items were'} not treated anywhere.</p>`
+    : `<p>In August 2026 a sample of assignments was put to the secondary literature. The sample did not reach this family, so it has no row below, and nothing about this family follows from the table either way.</p>`}
+${evTable(fam.id)}
+<p class="meta">Rows of three treated items are three items, and no rate over three items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts — not whether Jung's claim is true, which the verification chain had already asked of the paragraph. Agreement is not endorsement: no scholar reviewed this vocabulary. The disagreements stand beside the agreements here because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>` : ''
+
+  const zeroNote = row.edges === 0 ? `<p>No edge in the graph currently carries this family. A family with no members stays in the ruleset and is reported at zero rather than dropped: dropping it would hide the reclassification that emptied it, and the empty count is a finding about the definition.</p>` : ''
+
+  const body = `<p class="eyebrow">relation family</p>
+<h1><span class="ev">${esc(fam.name)}</span> <span class="chip f-ok">assigned, not verified</span></h1>
+<p class="sub dim">What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer — a quote checked letter-exact against its paragraph and judged by a model of a different family — and it was already done before any of this began.</p>
+<div class="countstrip">
+  <span><b>${row.edges}</b> assigned relations</span>
+  <span><b>${strings.length}</b> effective relation strings</span>
+  <span><b>${pend.length}</b> queued items carry a string this family covers</span>
+  <span><b>${decls.length}</b> declared ${decls.length === 1 ? 'pair' : 'pairs'}</span>
+</div>
+<div class="countstrip dim">
+  <span>graph-wide: ${famMap.totals.assigned} assigned · ${famMap.totals.pending} awaiting a ruling · ${famMap.totals.no_family} no family · ${famMap.totals.text_undecided} text undecided · ${famMap.totals.edges} relations</span>
+</div>
+${zeroNote}
+
+<h2>Definition</h2>
+<p class="meta">Quoted from <code>docs/FAMILY_DEFINITIONS.md</code> ${esc(famVersion)}, family ${fam.n}${fam.added ? `, ${esc(fam.added)}` : ''}. The atlas quotes that document; it never paraphrases it.</p>
+<blockquote class="quotebox ev">${fam.definition_html}</blockquote>
+${fam.boundary_html ? `<p class="dim ev"><b>Boundary.</b> ${fam.boundary_html}</p>` : ''}
+${fam.notes.length ? fam.notes.map(n => `<p class="dim ev"><b>${esc(n.label)}.</b> ${n.html}</p>`).join('\n') : ''}
+
+<h2>Relation strings that land here</h2>
+${strings.length ? `<div class="stringmap">${stringChips}</div>
+<p class="meta">The number beside a string is how many relations carry it. ${singles ? `${singles} of these strings ${singles === 1 ? 'occurs' : 'occur'} exactly once` : 'No string here occurs only once'} — the tail is the informative part, because a string used once usually carried its own qualifier in the sentence it came from. A string can appear under more than one family, and does: assignment is made to an edge in its paragraph, never to a string in the abstract.</p>`
+    : `<p class="dim">No relation string lands here.</p>`}
+
+<h4>seeds — the examples the definition names</h4>
+${seedList}
+${declBlock}
+${pendBlock}
+${evBlock}
+
+<div class="receipts"><b>receipts</b>
+counts read from seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span> via web/family-map.mjs;<br>
+definition and seeds quoted from docs/FAMILY_DEFINITIONS.md ${esc(famVersion)};<br>
+${EVROWS.length ? `external-validity row from docs/experiments/external_validity_2026-08/results.json (report v3, closed 2026-08-12);<br>` : ''}
+built ${buildDate}${gitCommit ? ` at ${gitCommit}` : ''}
+</div>
+<div class="callout"><p>These families are this project's classification. They are calibrated inside this repository, checked once against outside scholarship on a small sample, and endorsed by nobody. What the layer records is how we sorted relations Jung wrote — a map of assertions, not a reading of him.</p></div>`
+
+  const p = registerPage({
+    slug: `family-${fam.id}`, title: `${fam.name} — a relation family`,
+    where: `families · ${fam.name}`, nav: null, changefreq: 'weekly', priority: '0.4',
+    style: '', body
+  })
+  famPages.push({ page: p, fam, edges: row.edges })
+  V2_COPY.push([`public/family-${fam.id}.html (generated)`, stripEvidence(body)])
+}
+// The per-family pages must account for every assigned relation exactly once:
+// the pages are the map, page by page, and a page that quietly dropped or
+// double-counted a family would be a different claim about the layer.
+const famPageTotal = famPages.reduce((a, f) => a + f.edges, 0)
+if (famPageTotal !== famMap.totals.assigned) {
+  console.error(`FAMILY PAGES: the per-family counts sum to ${famPageTotal}, the map's assigned total is ${famMap.totals.assigned}. ` +
+    `A family in the graph has no page, or a page counts twice.`)
+  process.exit(1)
+}
+const styleFamily = `
+.sub { font-size: .92rem; margin-bottom: 1rem; }
+.countstrip { display: flex; flex-wrap: wrap; gap: .5rem .9rem; margin: .7rem 0 .2rem; font: .62rem var(--mono); color: var(--ink-faint); }
+.countstrip b { color: var(--ink); font-weight: 400; }
+.quotebox { border-left: 2px solid var(--hairline); padding: .2rem 0 .2rem .9rem; margin: .5rem 0 .7rem; font-size: .95rem; line-height: 1.6; max-width: 68ch; }
+.stringmap { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
+.stringmap .chip code { background: none; padding: 0; font-size: .78rem; color: inherit; }
+.stringmap .chip .n { color: var(--ink-dim); }
+.stringmap .chip.lead { color: var(--gold); border-color: var(--b-amber); }
+.seeds { list-style: none; margin-top: .5rem; }
+.seeds li { padding: .22rem 0; font-size: .9rem; max-width: 68ch; }
+.seeds .cite { font: .6rem var(--mono); color: var(--gold-dim); margin-left: .35rem; }
+.queue { margin-top: .5rem; }
+.qitem { border-left: 3px solid var(--b-amber); background: rgba(217,168,79,.05); border-radius: 0 6px 6px 0; padding: .45rem .7rem; margin: .4rem 0; }
+.qitem .triple { font-size: .92rem; }
+.qitem .rel { color: var(--gold); font-style: italic; }
+.qitem .cite { font: .6rem var(--mono); color: var(--gold-dim); }
+.qitem .why { font: .6rem/1.6 var(--mono); color: var(--ink-faint); margin-top: .2rem; }
+tr.this td { color: var(--ink); background: rgba(212,175,55,.05); }
+tr.total td { color: var(--ink-faint); }
+`
+for (const f of famPages) f.page.style = styleFamily
+console.log(`family pages: ${famPages.length} written, ${famPageTotal} assigned relations accounted for ` +
+  `(${famPages.filter(f => !f.edges).length} family with no assigned edge)`)
 
 // ------------------------------------------------ the pages are written ----
 function emitPages() {
