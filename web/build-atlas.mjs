@@ -1070,7 +1070,7 @@ ${e.sections.map(s => `<h4>${inline(s.title)}</h4>\n${s.body}`).join('\n')}
 <div class="receipts"><b>receipts</b>
 prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span>;<br>
 ruleset ${esc(famVersion)} with calibration record <code>${esc(bindingCalib.file)}</code> (${esc(bindingCalib.verdict)});<br>
-external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built ${buildDate}${gitCommit ? ` at ${gitCommit}` : ''}
+external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built ${buildDate}
 </div>`
   const relStyle = `
 .rel-entry { border: 1px solid var(--hairline); border-radius: 10px; padding: 1rem 1.1rem; margin: 1rem 0; background: var(--surface); }
@@ -1202,7 +1202,7 @@ ${evBlock}
 counts read from seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span> via web/family-map.mjs;<br>
 definition and seeds quoted from docs/FAMILY_DEFINITIONS.md ${esc(famVersion)};<br>
 ${EVROWS.length ? `external-validity row from docs/experiments/external_validity_2026-08/results.json (report v3, closed 2026-08-12);<br>` : ''}
-built ${buildDate}${gitCommit ? ` at ${gitCommit}` : ''}
+built ${buildDate}
 </div>
 <div class="callout"><p>These families are this project's classification. They are calibrated inside this repository, checked once against outside scholarship on a small sample, and endorsed by nobody. What the layer records is how we sorted relations Jung wrote — a map of assertions, not a reading of him.</p></div>`
 
