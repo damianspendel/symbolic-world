@@ -1248,6 +1248,253 @@ for (const f of famPages) f.page.style = styleFamily
 console.log(`family pages: ${famPages.length} written, ${famPageTotal} assigned relations accounted for ` +
   `(${famPages.filter(f => !f.edges).length} family with no assigned edge)`)
 
+// ------------------------------------------------- V2-R4 · /query ---------
+// The query panel runs the kg_query semantics in the browser: web/query-semantics.mjs
+// is copied verbatim to public/query.js, the declarations travel with it, and the
+// page reads the published dataset at /graph.json. Nothing is recomputed here that
+// the CLI computes differently — the CLI stays the reference implementation, and
+// tests/test_site_generators.py compares the two on real filters.
+if (DECL) {
+  const declOut = JSON.stringify({
+    _emitted_by: 'web/build-atlas.mjs from pipeline/family/relation_declarations.json',
+    ...DECL
+  })
+  writeFileSync(here('./src/relation_declarations.json'), declOut)
+  writeFileSync(here('./public/relation_declarations.json'), declOut)
+
+  const semantics = readFileSync(here('./query-semantics.mjs'), 'utf8')
+  writeFileSync(here('./public/query.js'), semantics)
+
+  // The walk's header is not restated here: it is lifted out of kg_query.py, so
+  // the page cannot promise a limit the tool has stopped honouring.
+  const cliSrc = readFileSync(here('../tools/query/kg_query.py'), 'utf8')
+  const headerMatch = cliSrc.match(/WALK_HEADER = \(\n([\s\S]*?)\n\)/)
+  const identityMatch = cliSrc.match(/IDENTITY_FAMILY = "([^"]+)"/)
+  if (!headerMatch || !identityMatch) {
+    console.error('QUERY PAGE: cannot lift WALK_HEADER / IDENTITY_FAMILY out of tools/query/kg_query.py. ' +
+      'The page states the walk\'s limits in the tool\'s own words, so the build refuses to invent them.')
+    process.exit(1)
+  }
+  const walkHeader = (headerMatch[1].match(/"([^"]*)"/g) || [])
+    .map(s => s.slice(1, -1)).join('').replace(/\\n/g, ' ').replace(/\s+/g, ' ')
+    .replace('{family}', identityMatch[1]).trim()
+
+  // the CLI's receipts footer, in the CLI's own format
+  const tally = {}
+  for (const e of seed.edges) {
+    const st = (e.relation_family || {}).state || 'unrecorded'
+    tally[st] = (tally[st] || 0) + 1
+  }
+  const order = ['assigned', 'pending-adjudication', 'no-family', 'text-undecided']
+  const tallyParts = order.filter(k => k in tally).map(k => `${tally[k]} ${k}`)
+    .concat(Object.keys(tally).sort().filter(k => !order.includes(k)).map(k => `${tally[k]} ${k}`))
+  const receiptsFooter = `graph state: ${seed.nodes.length} nodes / ${seed.edges.length} edges; ` +
+    `families ${tallyParts.join(', ')}; seed.json sha256:${seedDigest.slice(0, 12)}; ` +
+    `declarations relation_declarations.json from FAMILY_DEFINITIONS ` +
+    `${(DECL.transcribed_from || {}).document_version || '?'}, ${activeDecls.length} active`
+  derived(seed.nodes.length, seed.edges.length, ...Object.values(tally), activeDecls.length)
+
+  const queryBody = `<p class="eyebrow">read-only</p>
+<h1>Query the graph</h1>
+<p>The filters <code>tools/query/kg_query.py</code> takes, given a surface. They combine with AND, exactly as the tool combines them, and each one reads a field the graph already stores rather than computing a judgement of its own. The closure toggle adds the rows the active declarations license and marks every one of them as derived.</p>
+<p>Nothing on this page writes anything. The panel reads the published dataset at <a href="/graph.json">/graph.json</a> and the declarations beside it; the same query on the command line prints the same rows with a footer naming the graph it ran against. Two results carrying different seed digests are not comparable, which is why the digest sits under the results rather than in a help page.</p>
+
+<div class="filters" id="filters">
+  <div class="fld"><label for="f-family">family</label><select id="f-family"></select><span class="hint" id="h-family"></span></div>
+  <div class="fld"><label for="f-state">state</label><select id="f-state"></select><span class="hint">assigned, or one of the three ways an edge carries no family</span></div>
+  <div class="fld"><label for="f-subject">subject</label><input id="f-subject" placeholder="any"><span class="hint">node id, else substring of an id or a label</span></div>
+  <div class="fld"><label for="f-object">object</label><input id="f-object" placeholder="any"><span class="hint">same matching rule as subject</span></div>
+  <div class="fld"><label for="f-volume">volume</label><select id="f-volume"></select><span class="hint">a reference cites this CW volume</span></div>
+  <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">read off the reference, not the edge</span></div>
+  <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">substring of relation_family.by</span></div>
+  <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>
+</div>
+
+<div class="toggles">
+  <label class="tog"><input type="checkbox" id="t-closure"> closure — add the rows the active declarations license</label>
+  <label class="tog"><input type="checkbox" id="t-quotes" checked> quotes — the graph's own excerpts</label>
+  <button class="runbtn" type="button" id="run">run</button>
+</div>
+
+<div class="rows" id="rows"><p class="dim" id="status">Reading the dataset…</p></div>
+<div class="receipts"><b>receipts</b><span id="receipts">${esc(receiptsFooter)}</span></div>
+
+<h2>Identity walk</h2>
+<div class="callout"><p id="walkhead" class="ev">${esc(walkHeader)}</p></div>
+<div class="filters" style="margin-top:.8rem">
+  <div class="fld"><label for="w-start">start node</label><input id="w-start" placeholder="mercurius"><span class="hint">node id, else substring of an id or a label</span></div>
+  <div class="fld"><label for="w-depth">depth</label><select id="w-depth"><option>1</option><option selected>2</option><option>3</option></select><span class="hint">a budget, not a measure of closeness</span></div>
+  <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runwalk" style="margin:0">walk</button></div>
+</div>
+<div class="walk" id="walk"></div>
+
+<div class="callout" style="margin-top:1.4rem"><p>A derived row is not an edge. It carries its source edge's references and no citation of its own, it is not written to the graph, and it does not compound: closure is applied once to the stored edges and never to its own output. A count of rows is therefore not a count of edges, and the line under the results says which is which.</p></div>`
+
+  const queryStyle = `
+.filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }
+.fld { display: flex; flex-direction: column; gap: .25rem; }
+.fld label { font: .55rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
+.fld input, .fld select { background: var(--panel); color: var(--ink); border: 1px solid var(--hairline);
+  border-radius: 7px; padding: .42rem .6rem; font-family: var(--serif); font-size: .88rem; appearance: none; width: 100%; }
+.fld select { font-family: var(--mono); font-size: .74rem; }
+.fld .hint { font: .55rem var(--mono); color: var(--ink-dim); }
+.toggles { display: flex; flex-wrap: wrap; gap: 1.1rem; align-items: center; margin: .95rem 0 .2rem;
+  padding-top: .8rem; border-top: 1px solid var(--hairline); }
+.tog { display: flex; align-items: center; gap: .45rem; font: .62rem var(--mono); color: var(--ink-label); cursor: pointer; }
+.tog input { accent-color: var(--gold-dim); width: .85rem; height: .85rem; }
+.runbtn { margin-left: auto; background: transparent; color: var(--gold); border: 1px solid var(--gold-dim);
+  border-radius: 999px; padding: .34rem 1.1rem; font: .62rem var(--mono); letter-spacing: .1em; cursor: pointer; }
+.rows { margin-top: 1rem; border-top: 1px solid var(--hairline); }
+.row { padding: .55rem .2rem .55rem .55rem; border-bottom: 1px solid var(--hairline); }
+.row .triple { display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem; font-size: .96rem; }
+.row .rel { color: var(--gold); font-style: italic; }
+.row .cite { font: .6rem var(--mono); color: var(--gold-dim); }
+.row .quote { font-size: .85rem; color: var(--ink-faint); margin-top: .22rem; }
+.row.derived { border-left: 3px dashed var(--m-motif); background: rgba(139,150,165,.05);
+  border-radius: 0 6px 6px 0; padding-left: .7rem; }
+.row .prov { font: .58rem var(--mono); color: var(--m-motif); margin-top: .24rem; }
+.c-derived { color: var(--m-motif); border-color: var(--m-motif); border-style: dashed; }
+.rowcount { font: .62rem/1.7 var(--mono); color: var(--ink-faint); padding: .55rem .2rem; }
+.walk .depth { font: .56rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); margin: .9rem 0 .35rem; }
+.hop { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem; padding: .3rem 0 .3rem .9rem; border-left: 1px solid var(--hairline); font-size: .9rem; }
+.hop .arrow { color: var(--edge-idle); }
+.hop .via { font: .6rem var(--mono); color: var(--ink-dim); }
+.hop .rel { color: var(--gold); font-style: italic; }
+.hop .cite { font: .6rem var(--mono); color: var(--gold-dim); }
+.hop .against { font: .56rem var(--mono); color: var(--m-motif); }
+`
+
+  // The page's own script. It renders; the semantics live in query.js.
+  const ROW_CAP = 300
+  derived(ROW_CAP)
+  const queryHead = `<script type="module">
+import { select, walk, labelIndex, identityEdges, effectiveRelation, derivedRows } from '/query.js'
+
+const ROW_CAP = ${ROW_CAP}
+const $ = (id) => document.getElementById(id)
+const esc = (s) => String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c])
+let graph = null, decls = null, labels = {}
+
+const cite = (refs) => refs.map(r => 'CW ' + r.volume + ' \\u00a7' + r.paragraph).join(', ')
+const firstQuote = (refs) => { for (const r of refs) if (r.quote) return r.quote; return '' }
+
+function fill (id, values, allLabel) {
+  const el = $(id)
+  el.innerHTML = '<option value="">' + allLabel + '</option>' +
+    values.map(([v, n]) => '<option value="' + esc(v) + '">' + esc(v) + (n === null ? '' : ' \\u00b7 ' + n) + '</option>').join('')
+}
+
+function tallyBy (fn) {
+  const t = new Map()
+  for (const e of graph.edges) { const k = fn(e); if (k !== null && k !== undefined && k !== '') t.set(k, (t.get(k) || 0) + 1) }
+  return [...t.entries()].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])))
+}
+
+function ready () {
+  labels = labelIndex(graph)
+  const fams = tallyBy(e => (e.relation_family || {}).value)
+  fill('f-family', fams, 'any family')
+  $('h-family').textContent = fams.length + ' families hold at least one assigned relation'
+  fill('f-state', tallyBy(e => (e.relation_family || {}).state), 'any state')
+  const vols = new Map(); const cts = new Map()
+  for (const e of graph.edges) for (const r of (e.references || [])) {
+    vols.set(String(r.volume), (vols.get(String(r.volume)) || 0) + 1)
+    if (r.claim_type) cts.set(r.claim_type, (cts.get(r.claim_type) || 0) + 1)
+  }
+  fill('f-volume', [...vols.entries()].sort((a, b) => b[1] - a[1]), 'any volume')
+  fill('f-claim_type', [...cts.entries()].sort((a, b) => b[1] - a[1]), 'any claim type')
+  const normalized = graph.edges.filter(e => e.relation_normalized && e.relation_normalized.relation).length
+  $('h-normalized').textContent = normalized + ' relations carry a normalized string beside the verbatim one'
+  $('status').textContent = 'Ready. Run with no filter to read the whole graph.'
+  run()
+}
+
+function filters () {
+  const f = { closure: $('t-closure').checked }
+  for (const k of ['family', 'state', 'subject', 'object', 'volume', 'claim_type', 'provenance']) f[k] = $('f-' + k).value.trim()
+  f.relation = $('f-relation').value.trim()
+  return f
+}
+
+function rowHtml (row) {
+  const derivedRow = row.origin !== 'graph'
+  const q = $('t-quotes').checked ? firstQuote(row.references) : ''
+  return '<div class="row' + (derivedRow ? ' derived' : '') + '">' +
+    '<div class="triple"><span>' + esc(labels[row.subject] || row.subject) + '</span> ' +
+    '<span class="rel">' + esc(row.relation) + '</span> ' +
+    '<span>' + esc(labels[row.object] || row.object) + '</span> ' +
+    '<span class="cite">' + esc(cite(row.references)) + '</span>' +
+    '<span class="chip ' + (row.family ? 'f-ok' : 'f-none') + '">' + esc(row.family || ('unclassified(' + (row.state || 'unrecorded') + ')')) + '</span>' +
+    (derivedRow ? '<span class="chip c-derived">derived row \\u00b7 not an edge</span>' : '') +
+    '</div>' +
+    (q ? '<div class="quote">\\u201c' + esc(q) + '\\u201d</div>' : '') +
+    (derivedRow ? '<div class="prov">' + esc(row.origin) + ' of ' + esc(row.derived_from.subject + ' ' + row.derived_from.relation + ' ' + row.derived_from.object) + '</div>' : '') +
+    '</div>'
+}
+
+function run () {
+  const f = filters()
+  const rows = select(graph, decls, f)
+  const stored = rows.filter(r => r.origin === 'graph').length
+  const derivedCount = rows.length - stored
+  const shown = rows.slice(0, ROW_CAP)
+  const closureAll = f.closure ? derivedRows(graph, decls).length : null
+  $('rows').innerHTML = shown.map(rowHtml).join('') +
+    '<div class="rowcount"><b>' + stored + '</b> stored edges' +
+    (f.closure ? ', +' + derivedCount + ' derived' : '') + '. ' +
+    (rows.length > ROW_CAP ? 'The first ' + ROW_CAP + ' rows are drawn; narrow the filters, or run the same query on the command line for the whole set. ' : '') +
+    (closureAll !== null ? 'Closure over the whole graph reads ' + closureAll + ' derived rows from ' + graph.edges.length + ' stored edges. ' : '') +
+    'A copied number is an edge count: derived rows are readings of those edges in the other direction, not additions to them.</div>'
+}
+
+function runWalk () {
+  const needle = $('w-start').value.trim()
+  const depth = Number($('w-depth').value)
+  const out = $('walk')
+  if (!needle) { out.innerHTML = '<p class="dim">Name a start node.</p>'; return }
+  const ids = Object.keys(labels)
+  let start = ids.includes(needle) ? needle : ids.find(id => id.toLowerCase() === needle.toLowerCase())
+  if (!start) start = ids.filter(id => id.toLowerCase().includes(needle.toLowerCase()) || String(labels[id]).toLowerCase().includes(needle.toLowerCase())).sort()[0]
+  if (!start) { out.innerHTML = '<p class="dim">No node matches that.</p>'; return }
+  const levels = walk(graph, start, depth)
+  const family = identityEdges(graph).length
+  let html = '<p class="meta">start: ' + esc(labels[start] || start) + ' (' + esc(start) + ') \\u00b7 depth ' + depth +
+    ' \\u00b7 ' + family + ' edges carry the identity family</p>'
+  let hops = 0
+  for (const level of levels) {
+    if (!level.length) continue
+    html += '<div class="depth">depth ' + level[0].depth + '</div>'
+    for (const hop of level) {
+      hops++
+      html += '<div class="hop"><span>' + esc(labels[hop.from] || hop.from) + '</span><span class="arrow">\\u2192</span>' +
+        '<span>' + esc(labels[hop.to] || hop.to) + '</span>' +
+        '<span class="via">via ' + esc(labels[hop.edge.subject] || hop.edge.subject) + ' <span class="rel">' + esc(hop.edge.relation) + '</span> ' + esc(labels[hop.edge.object] || hop.edge.object) + '</span>' +
+        '<span class="cite">' + esc(cite(hop.references)) + '</span>' +
+        (hop.direction === 'reverse' ? '<span class="against">traversed against the edge</span>' : '') + '</div>'
+    }
+  }
+  html += '<div class="rowcount">' + hops + ' hops. Each is one edge with its own citation. Reaching a term in two hops is not identity with the start, and the paragraph above the first hop says so rather than the line under the last.</div>'
+  out.innerHTML = html
+}
+
+$('run').addEventListener('click', run)
+$('runwalk').addEventListener('click', runWalk)
+for (const el of document.querySelectorAll('#filters input')) el.addEventListener('keydown', e => { if (e.key === 'Enter') run() })
+$('w-start').addEventListener('keydown', e => { if (e.key === 'Enter') runWalk() })
+
+Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarations.json').then(r => r.json())])
+  .then(([g, d]) => { graph = g; decls = d; ready() })
+  .catch(err => { $('status').textContent = 'The dataset did not load: ' + err })
+</script>`
+
+  registerPage({
+    slug: 'query', title: 'Query the graph', where: 'query', nav: 'query',
+    changefreq: 'daily', priority: '0.6', style: queryStyle, body: queryBody, head: queryHead
+  })
+  V2_COPY.push(['public/query.html (generated)', stripEvidence(queryBody)])
+  console.log(`query panel: declarations ${activeDecls.length} active, walk header lifted from kg_query.py (${walkHeader.length} chars)`)
+}
+
 // ------------------------------------------------ the pages are written ----
 function emitPages() {
   for (const p of NEW_PAGES) writeFileSync(here(`./public/${p.slug}.html`), renderPage(p))
