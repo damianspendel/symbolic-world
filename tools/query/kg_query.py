@@ -295,6 +295,10 @@ def first_quote(references):
     return ""
 
 
+def plural(count, word):
+    return f"{count} {word}" if count == 1 else f"{count} {word}s"
+
+
 def clip(text, width=MAX_LABEL):
     return text if len(text) <= width else text[: width - 1] + "…"
 
@@ -354,7 +358,7 @@ def print_table(graph, rows, args, declarations):
             f"(membership read from seed.json's relation_family records): "
             + ", ".join(f"{s} ({n})" for s, n in strings)
         )
-    print(f"{len(rows)} rows.  {footer(graph, declarations)}")
+    print(f"{plural(len(rows), 'row')}.  {footer(graph, declarations)}")
 
 
 def print_walk(graph, levels, start, args, declarations):
@@ -380,7 +384,7 @@ def print_walk(graph, levels, start, args, declarations):
     if total == 0:
         print("\n(no identity-family edges reach out of this node)")
     print()
-    print(f"{total} hops.  {footer(graph, declarations)}")
+    print(f"{plural(total, 'hop')}.  {footer(graph, declarations)}")
 
 
 def strip_private(obj):
@@ -515,7 +519,8 @@ def main(argv=None):
                 "graph_state": footer(graph, declarations),
             }, indent=2, ensure_ascii=False))
         elif args.count:
-            print(f"{sum(len(lv) for lv in levels)} hops.  {footer(graph, declarations)}")
+            print(f"{plural(sum(len(lv) for lv in levels), 'hop')}.  "
+                  f"{footer(graph, declarations)}")
         else:
             print_walk(graph, levels, start, args, declarations)
         return 0
@@ -533,8 +538,8 @@ def main(argv=None):
         }, indent=2, ensure_ascii=False))
     elif args.count:
         derived = sum(1 for r in rows if r["origin"] != "graph")
-        print(f"{len(rows)} rows ({len(rows) - derived} from the graph, {derived} derived).  "
-              f"{footer(graph, declarations)}")
+        print(f"{plural(len(rows), 'row')} ({len(rows) - derived} from the graph, "
+              f"{derived} derived).  {footer(graph, declarations)}")
     else:
         print_table(graph, rows, args, declarations)
     return 0
