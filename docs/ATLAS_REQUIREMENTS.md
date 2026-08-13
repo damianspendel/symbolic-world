@@ -1,6 +1,6 @@
 # Atlas UI requirements — v1.4
 
-Status: agreed scope, 2026-08-06. Four decisions taken by Damian via structured
+Status: agreed scope, 2026-08-06. Four decisions taken by the author via structured
 questions; recorded in "Decisions" below with the reasoning that produced them.
 This document is the build spec for a session that has not been part of the
 conversation, so it names existing code and states what is already true rather
@@ -53,7 +53,7 @@ invisible without UI work.
 
 ## R0 — Aesthetic direction: the spectacle is the evidence
 
-Added 2026-08-06 on Damian's brief: *"a sexy slick build that wows aesthetically,
+Added 2026-08-06 on the author's brief: *"a sexy slick build that wows aesthetically,
 grabs attention and then buries with the knowledge graph."* This supersedes R1's
 "thin gateway" framing, which was too modest. R1's *content* requirements all stand;
 R0 governs how they are presented.
@@ -84,7 +84,7 @@ atlas at a different zoom.
 That sequence is the whole brief in one gesture: it grabs attention, and what it grabs
 attention *with* is the verification chain.
 
-### R0.2 The palette: the Seven Metals (DECIDED, Damian, 2026-08-06)
+### R0.2 The palette: the Seven Metals (DECIDED, editorial ruling, 2026-08-06)
 
 Chosen from four candidates (`pipeline/work/atlas_palettes_v14.html`): warm
 near-black ground, gold accent, cream prose — and **node type coloured by metal**,
@@ -256,7 +256,7 @@ reference at this scale.
 visibly closes for a reader. It is the headline capability of v1.4 and should be
 discoverable without instruction.
 
-**R5.5 The works bar replaces the left-hand filter column (DECIDED, Damian,
+**R5.5 The works bar replaces the left-hand filter column (DECIDED, editorial ruling,
 2026-08-06).** The persistent checkbox stack is removed entirely. In its place:
 
 - A **thin coverage strip along the bottom edge**: one segment per volume,
@@ -311,7 +311,7 @@ needs identity, moderation and abuse handling that are out of scope here.
 
 ## R8 — The Concordance: psychology against alchemy
 
-Added 2026-08-06 on Damian's brief: *"consider how we want to play off the core
+Added 2026-08-06 on the author's brief: *"consider how we want to play off the core
 concepts against alchemy — perhaps there is a way to show the parallels in a
 clever way, make this a real didactic tool."* Mockup:
 `pipeline/work/atlas_mockup_v14.html`, section III.
@@ -353,7 +353,7 @@ a short walk, each step one verified edge with its quote. Curation selects
 node `type` plus a small explicit list for ambiguous Concept nodes, recorded in
 the build script — never inferred silently at runtime.
 
-## R9 — First user review, 2026-08-07 (Damian, on the served v1.4-dev build)
+## R9 — First user review, 2026-08-07 (the author, on the served v1.4-dev build)
 
 All decided; supersedes anything above where they conflict.
 
@@ -532,7 +532,7 @@ design choice.
 
 ## V2 — the v2.0 UI slice (added 2026-08-13, spec for the ui-v2-dev build)
 
-Damian's go of 2026-08-13. Conservative defaults chosen where the mockup
+Editorial go-ahead of 2026-08-13. Conservative defaults chosen where the mockup
 left questions open; each is flagged [DEFAULT] and reversible at review.
 
 - **V2-R1 releases page.** A `/releases` generator reading `docs/RELEASES.md`
@@ -561,7 +561,7 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   with the non-transitivity header; the receipts footer verbatim.
   [DEFAULT] the headline count is STORED EDGES, derived rows shown as
   "+M derived" — a copied number is always an edge count.
-- **V2-R5 ontology QA panel (Damian, 2026-08-13).** The method/about page
+- **V2-R5 ontology QA panel (editorial ruling, 2026-08-13).** The method/about page
   gains a section on the ontology and its practices: the two-tier design,
   the declarations with their rulings, what is deliberately absent
   (transitivity, domain/range as constraints), AND a build-time panel of
@@ -626,5 +626,5 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   join the copy-contract scan (numbers + banned vocabulary) on creation;
   extensionless links throughout; tests for every generator; NO deploy
   from the build — after merge, the next deploy carries UI and therefore
-  waits for Damian's review, and the standing data-only authorization does
+  waits for the maintainer's review, and the standing data-only authorization does
   not cover it.

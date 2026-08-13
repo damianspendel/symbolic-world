@@ -2,7 +2,7 @@
 
 Built overnight 2026-08-12/13 by an Opus-family executor, against
 `docs/PLAN_QUERY_LAYER_BUILD.md` (drafted by the Fable-family validation
-session). For Damian's morning review. Nothing was pushed, deployed, tagged or
+session). For the author's morning review. Nothing was pushed, deployed, tagged or
 merged, and nothing outside this worktree was written.
 
 **Base commit:** `f83f6bfe604b23c90dbbaefc887bf3d39a1fa9d6`
@@ -236,7 +236,7 @@ git worktree remove /Users/damianspendel/Documents/github/JungKG-query-dev
 git branch -D query-layer-dev
 ```
 
-**Merge.** Damian's decision, not the executor's, and not before review. When it
+**Merge.** The author's decision, not the executor's, and not before review. When it
 happens, the plan's ride-along applies: the same commit series also wires the
 ledger-freshness assertion into `tools/check_paper_facts.py`, and BACKLOG's v2.0
 item 2 changes status in the main tree at that point. Neither was done overnight,

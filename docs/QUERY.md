@@ -191,7 +191,7 @@ the declarations in force, which is the ACTIVE list minus the dormant entries.
 
 ## The carried-qualifier rule (ruling of 2026-08-13)
 
-Two doc-listed manifestation inverse strings were activated by Damian's
+Two doc-listed manifestation inverse strings were activated by an editorial
 ruling: `aspect-of` flips losslessly; `is-dark-aspect-of` flips WITH its
 qualifier carried — the derived row displays "dark aspect" beside its
 origin, so the reverse reading asserts exactly as much as the stored edge.

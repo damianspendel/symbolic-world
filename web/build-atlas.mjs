@@ -378,7 +378,7 @@ const inline = s => esc(s)
 let families = [], famVersion = '', boundaryRules = [], famDoc = ''
 // R3.6 — the external-validity figures on the families page interpolate from
 // the committed receipts, never from typed literals, so the copy cannot drift
-// from the record (Damian, 2026-08-12: "no drift"). Missing file = no section
+// from the record (editorial ruling, 2026-08-12: "no drift"). Missing file = no section
 // rather than stale numbers.
 const evPath = here('../docs/experiments/external_validity_2026-08/results.json')
 const EV = existsSync(evPath) ? JSON.parse(readFileSync(evPath, 'utf8')) : null
@@ -1602,7 +1602,7 @@ const QA_STANCE = [
   [/^P02 duplicate/, 'open', 'Two ids carrying the same label is a defect in the node set.'],
   [/^evidence gap/, 'design', 'The structural relations (sequence between stages) carry no citation by design and are excluded from the verified count. Any other relation without a reference is a defect and the structural check refuses it.']
 ]
-// V2-R6 addendum (Damian's review, 2026-08-13): the panel says where its checks
+// V2-R6 addendum (editorial review, 2026-08-13): the panel says where its checks
 // come from. OOPS! numbers pitfalls; quality.py implements a subset of them and
 // borrows the numbering. Two of the tool's uses are adaptations rather than the
 // catalogue's literal case — the catalogue was written for class-shaped

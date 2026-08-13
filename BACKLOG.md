@@ -120,7 +120,7 @@ Journal of Cultural Analytics. Check each venue's AI-assisted-work stance before
 submitting; lead with the radical-disclosure posture.
 
 ## Reader's guide to the papers we cite (added 2026-07-27)
-Damian wants plain-language breakdowns of the papers cited in docs/PAPER.md to
+The author wants plain-language breakdowns of the papers cited in docs/PAPER.md to
 understand the core claims — especially the hallucination-rate and KG-extraction
 benchmarks (KGGen, GraphRAG accuracy studies, citation-hallucination surveys) and
 which citations are preprints/non-peer-reviewed ("nonpublications") vs published.
@@ -151,12 +151,12 @@ Full hostile review: pipeline/work/gemini_hostile_review.json
 
 ## The family layer: public exposition and external validity (added 2026-08-10)
 
-Six connected items from Damian's 2026-08-10 adjudication sitting. Items 1–3
+Six connected items from the 2026-08-10 adjudication sitting. Items 1–3
 make the ontology legible, item 4 asks whether it is defensible, and items 5–6
 keep the instrument honest over time. Publishing 1–3 without 4 would state a
 position on Jung that has never been checked against anyone but ourselves.
 
-**SEQUENCE (Damian, 2026-08-10) — this order is the decision, not a suggestion:**
+**SEQUENCE (editorial ruling, 2026-08-10) — this order is the decision, not a suggestion:**
 
 1. **Finish the CW 9i arc** — windows 8, 9, 10. (Window 8 is currently HELD at
    prechecked on Fable capacity; see `pipeline/state.json`.)
@@ -169,7 +169,7 @@ position on Jung that has never been checked against anyone but ourselves.
    CI check (5) and the continuous seeding with its strip step and marker
    assertion (6).
 4. **Only then further mining** — the CW 8 arc, per `docs/PROPOSAL_NEXT_ARC.md`,
-   and not before Damian's explicit go.
+   and not before the maintainer's explicit go.
 
 The reason for this order: the codebase does not change mid-arc, so a window is
 never mined under a ruleset different from the one its neighbours got; the
@@ -240,7 +240,7 @@ energetic register — arrives to stress them.
    bound to atlas.json tokens) before it ships.
 
 4. **External-validity sampling against Jungian scholarship — the load-bearing
-   one, and the reason to do it BEFORE publishing (2) and (3).** Damian's
+   one, and the reason to do it BEFORE publishing (2) and (3).** The author's
    question, verbatim in substance: would a Jungian scholar agree that
    `mandala is god-image` is *archetypal-identity*, or does our ontology
    contradict what key figures actually hold? Nothing in the pipeline currently
@@ -292,7 +292,7 @@ energetic register — arrives to stress them.
    ("against v0.6, dated") so it cannot silently go stale again.
 
    **THRESHOLD — SET 2026-08-12, BEFORE THE RUN. Does not move after the result
-   is seen (Damian's decision, same rule as the normalization sample):**
+   is seen (editorial ruling, same rule as the normalization sample):**
    - **PASS requires every K1 near-miss caught with the correct family named**
      (measured precedent: 8/8, then 20/20 overall at recalibration). One K1
      miss = FAIL → the missed boundary's wording is sharpened in the
@@ -332,7 +332,7 @@ energetic register — arrives to stress them.
    makes ruleset change happen. Wiring it to the version is strictly better than
    wiring it to a window count.
 
-6. **Continuous seeded corruption during the per-window family sweep** (Damian,
+6. **Continuous seeded corruption during the per-window family sweep** (editorial ruling,
    2026-08-10). Item 5 makes the calibration fire on ruleset change; this makes
    it fire continuously. Plant a small number of corrupted assignments into each
    window's family stage and measure what the gate returns, so the instrument is
@@ -441,7 +441,7 @@ energetic register — arrives to stress them.
      gemini-3.1-pro). Within-vendor role separation, not cross-vendor. Any
      public sentence about the family gate must not imply otherwise.
 
-## Release notes and the v2.0 milestone (added 2026-08-12, Damian's direction)
+## Release notes and the v2.0 milestone (added 2026-08-12, on the author's direction)
 
 **A. Release-notes section on the website, going forward.** Every release from
 the next one onward gets a notes page: what changed in the graph, the ruleset
@@ -452,7 +452,7 @@ tell them what CHANGED and why. Candidate implementation: a `/releases` page
 built from a `docs/RELEASES.md` that the ceremony appends to, counts bound by
 the copy contract.
 
-**B. v2.0 — the milestone sketch (decisions Damian's; this is the candidate
+**B. v2.0 — the milestone sketch (the decisions are the author's; this is the candidate
 scope, not a commitment).** Current sequence stands: v1.4 (trilogy + family
 layer, waits on arXiv), v1.5 (Aion + the vocabulary-transfer study). v2.0 is
 the right label for the release where the graph stops being only a verified
@@ -482,7 +482,7 @@ query layer that cites edges precedes any interface that paraphrases them).
 
 ### v2.0 candidates from the 2026-08-12 night session — ledger and families reporting (proposals only)
 
-Damian asked for thinking on ledger and families query/reporting. Recorded
+The author asked for thinking on ledger and families query/reporting. Recorded
 here so the morning finds it; nothing below is committed scope.
 
 1. **Assignment history on the edge.** The v0.7.1 re-run overwrote 43

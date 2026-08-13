@@ -5,7 +5,7 @@ Jungian scholarship agree with how the graph's families classify Jung's
 assertions? Family fit, not claim truth.
 
 27 items (25 seeded-stratified from seed.json at 407/1555, seed 20260812;
-item 25 seed 20260812+1; items 26–27 purposive on Damian's instruction).
+item 25 seed 20260812+1; items 26–27 purposive on editorial instruction).
 Three passes as source access improved; scope and rules pre-registered per
 pass BEFORE any search (protocol files here). Chain per pass: Opus-family
 executor searched the literature, a Gemini pass reviewed every item, the
