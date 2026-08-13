@@ -461,7 +461,7 @@ record and becomes a queryable instrument:
 1. **CW 8 mined** (fourteen windows, §1–997, per PROPOSAL_NEXT_ARC.md) — the
    theoretical register in, after its pre-arc external check on
    psychic-effect / dependence / instrumentality.
-2. **The query layer**: family-aware querying (the map as query surface),
+2. **The query layer** *(slice 1 SHIPPED 2026-08-13: declarations with rulings log, kg_query.py with closure and walks, tests, RDF export rdflib-validated — merge 4648674; remaining: site facets, query UI)*: family-aware querying (the map as query surface),
    declared inverses and symmetry applied at read time, an upgraded query.py
    (filter by family, provenance, claim_type, volume, state), and the
    RDF/Turtle export with the families as subPropertyOf super-properties —

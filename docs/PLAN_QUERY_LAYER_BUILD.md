@@ -1,5 +1,11 @@
 # Query layer v1 — overnight build plan
 
+**EXECUTED 2026-08-13, merged same day** (merge commit 4648674; built in the
+isolated worktree per this plan, D1–D7 all delivered, 37 tests; the
+carried-qualifier ruling landed on the branch before merge; BUILD_REPORT at
+docs/experiments/query_layer_build_report_2026-08-13.md). This document is
+now a record.
+
 Drafted by the Fable-family validation session, 2026-08-12 ~21:00, on
 Damian's instruction. Executor: an Opus-family agent, overnight
 2026-08-12/13. Reviewer of the result: Damian (morning), with the
