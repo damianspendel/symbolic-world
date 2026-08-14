@@ -272,6 +272,43 @@ def test_releases_pin_names_the_binding_ruleset():
     assert f"ruleset {version}" in pin, pin
 
 
+# item 19 — every entry carries the same four sections, in this order
+RELEASE_SECTIONS = ("mining status", "governance", "core build", "UI")
+
+
+def test_every_release_entry_has_the_same_four_sections_in_order():
+    html = read(os.path.join(PUBLIC, "releases.html"))
+    entries = re.findall(r'<section class="rel-entry[^"]*">(.*?)</section>', html, re.S)
+    assert len(entries) >= 3, "expected the pending entry, the skeletons and the baseline"
+    for entry in entries:
+        headings = re.findall(r"<h4>(.*?)</h4>", entry)
+        assert headings == list(RELEASE_SECTIONS), (
+            re.search(r"<h2>(.*?)</h2>", entry, re.S).group(1).strip()[:40], headings)
+
+
+def test_the_baseline_entry_is_present_and_last():
+    html = read(os.path.join(PUBLIC, "releases.html"))
+    headings = re.findall(r'<section class="rel-entry[^"]*">\s*<h2>(.*?)</h2>', html, re.S)
+    assert "v1.3.0" in headings[-1], headings
+    entry = re.findall(r'<section class="rel-entry[^"]*">(.*?)</section>', html, re.S)[-1]
+    seed_meta = json.loads(read(os.path.join(SRC, "atlas.json")))["meta"]["frozen"]
+    for value in (seed_meta["nodes"], seed_meta["edges"], seed_meta["references"]):
+        assert str(value) in entry, value
+    assert "zenodo" in entry.lower()
+
+
+def test_release_entries_point_at_their_artifacts():
+    """Repo-side artifacts are named paths in code formatting; site-side ones
+    are real extensionless links."""
+    html = read(os.path.join(PUBLIC, "releases.html"))
+    body = html[html.index("<main"):]
+    for path in ("tools/query/kg_query.py", "docs/ATLAS_REQUIREMENTS.md",
+                 "tools/pages/preflight.py", "web/build-atlas.mjs"):
+        assert f"<code>{path}</code>" in body, path
+    for link in ("/ledger", "/families", "/ontology", "/query", "/v1.3/"):
+        assert f'href="{link}"' in body, link
+
+
 def test_releases_are_ordered_newest_first():
     """The generator sorts by the version in each heading; it does not trust the
     order the file happens to be written in."""
@@ -294,8 +331,7 @@ def test_the_pending_release_entry_has_substance():
     entry = re.search(r'<section class="rel-entry">(.*?)</section>', html, re.S)
     assert entry, "no pending (non-skeleton) entry on the page"
     body = entry.group(1)
-    for heading in ("the graph", "ruleset", "instruments and calibration",
-                    "checked outside the repository", "corrected or withdrawn"):
+    for heading in RELEASE_SECTIONS:
         assert f">{heading}<" in body, heading
     assert "clause-predicate" in body, "the defect story is not in the entry"
     assert "form rule" in body

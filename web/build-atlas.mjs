@@ -1213,7 +1213,12 @@ if (existsSync(releasesPath)) {
     ev_not_treated: EV ? EV.not_treated : '', ev_rulings: EV ? EV.rulings_produced : '',
     // the same rule tools/ontology_qa/quality.py applies for its P24 check: a
     // predicate of four or more hyphen tokens is carrying a proposition
-    clause_edges: seed.edges.filter(e => (e.relation.match(/-/g) || []).length >= 4).length
+    clause_edges: seed.edges.filter(e => (e.relation.match(/-/g) || []).length >= 4).length,
+    // the frozen release the paper describes, from the same constants CI pins
+    // the paper's assertions to — a retrospective entry states them, and they
+    // do not move
+    frozen_nodes: meta.frozen.nodes, frozen_edges: meta.frozen.edges,
+    frozen_refs: meta.frozen.references
   }
   derived(...Object.values(relTokens))
   let relMd = readFileSync(releasesPath, 'utf8')

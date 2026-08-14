@@ -873,3 +873,32 @@ Tests: every page declares a kind, no page sets its own main-column width or
 padding, the two kinds are defined once and differ from each other, the base
 rule is uncentred with the header's gutter, and the app's views take the same
 kinds rather than restating them.
+
+## Item 19 — one structure for every release entry
+
+`docs/RELEASES.md` now runs the same four sections in the same order on every
+entry: **mining status** (arcs, counts, verification chain, defects in the
+material or the pipeline and their remediations — the clause-predicate story
+lives here), **governance** (rules and rulings, CI gates, calibration, external
+checks, and the corrected-or-withdrawn material folded in, because honesty is
+governance), **core build** (Pages, URL convention, generator determinism,
+emitted data artifacts, the query engine and the Turtle export as tools), and
+**UI** (surfaces added or changed, design rules adopted, and what is
+deliberately not exposed).
+
+The v1.4 entry was rearranged into the template, not rewritten: every sentence
+it had is still there, token binding untouched. v1.5 and v2.0 carry the same
+four headings as skeletons. A **v1.3.0 retrospective** was added at the bottom so
+the published baseline reads in the same shape; its counts bind from the frozen
+constants CI already pins the paper's assertions to, and its artifacts are the
+paper, the concept DOI and the `/v1.3/` snapshot.
+
+Pointers follow one convention, stated at the top of the file: repo-side
+artifacts are repo-relative paths in code formatting — the repository is not
+public until the ceremony, so they are paths today and become links then — while
+site-side artifacts are real extensionless links.
+
+Order is unchanged: newest first, sorted by the version in each heading, so the
+retrospective sits last without any special casing. Tests now assert the
+four-section template on every entry, the baseline entry's presence and its
+frozen counts, and that the entries point at their artifacts in both conventions.
