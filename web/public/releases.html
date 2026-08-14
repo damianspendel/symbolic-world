@@ -71,10 +71,10 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">release notes</p>
 <h1>Releases</h1></div>
-<p>What changed between one release of the graph and the next, and why. The ledger records every individual claim and the gates it passed; this file records the release-level story.</p>
+<p>What changed between one release of the graph and the next, and why. The ledger records every individual claim and the gates it passed; this page records the release-level story.</p>
 <p>Every entry has the same four sections in the same order — <strong>mining status</strong>, <strong>governance</strong>, <strong>core build</strong>, <strong>UI</strong> — so two releases can be read against each other line for line.</p>
 <p>Every entry opens with a version pin. A graph release and a ruleset version are deliberately separate numbers — a release <em>pins</em> the ruleset it ships with rather than sharing its number — and the pin names the calibration record that was binding at tag time.</p>
-<p><strong>Pointers.</strong> Artifacts inside the repository are named as repo-relative paths in <code>code formatting</code>: the repository is not public until the ceremony, so they are paths today and become links when it is. Pages on the site are given as real links, extensionless by the site's own convention.</p>
+<p><strong>Pointers.</strong> Artifacts inside the repository are named as repo-relative paths in <code>code formatting</code>: the repository is not public until the release ceremony, so they are paths today and become links when it is. Pages on the site are given as real links, extensionless by the site's own convention.</p>
 <p>This file carries no typed figure. Counts are written as named tokens in double braces and bound from the graph, the calibration records and the committed experiment receipts by <code>web/build-atlas.mjs</code>; a token the build cannot bind fails the build rather than shipping as literal braces.</p>
 <section class="rel-entry future">
 <h2>v2.0 — the graph as a queryable instrument</h2>

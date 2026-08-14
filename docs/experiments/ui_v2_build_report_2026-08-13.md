@@ -1235,3 +1235,42 @@ column all take it with `margin-inline: auto` and the gutter; the bar itself
 carries no cap, so it stays full-bleed; the kinds cap the container's children
 rather than the container; and centring is permitted at the container level
 only — anything inside it that centres fails, which is item 24's ban intact.
+
+## Item 27 — text pass, design frozen
+
+Twelve edits, no design change. Review provenance: a Fable editorial pass
+proposed 10; a Gemini pass run BLIND to those edits found 7; the two sets
+overlapped on 1. Gemini then reviewed Fable's set, and Fable finalized. Two of
+the blind findings — spacing on a summary line, and a bare "is" — were dismissed
+after checking the source: extraction artifacts, the generators are clean. One
+blind fix was rejected as factually wrong: it proposed changing 22 to 27 in the
+external-validity sentence, which would have falsified the record, since 22 is
+the assigned-plus-purposive set that was scored and the remaining 5 of 27 were
+queued arm-disagreements. That distinction is now stated on the page instead,
+with both numbers derived from the receipts rather than typed.
+
+Applied: /releases — "this file records the release-level story" → "this page…"
+(the later "This file carries no typed figure" keeps *file*, since it describes
+the source file's contract, and Gemini's reject was right); "until the ceremony"
+→ "until the release ceremony". /query — "given a surface" → "as a web page".
+/families — "the KIND of relation" → "the *kind* of relation"; the queued-items
+parenthetical above; "Those sections stand as the record … not as current
+evidence" → "are the record … not current evidence" (the banned "stand as", a
+blind catch); "dropping it would hide the finding" → "dropping the page…".
+/ledger — "verification passage" → "verification trail"; "the second-vendor
+cross-vendor check" → "the cross-vendor check". Family pages — the
+three-treated-items sentence is static text that renders on pages whose rows
+differ, so it now reads "A row this small is the items themselves; no rate over
+a handful of items carries precision worth reporting", which is true for any
+family's row; the h1 was a single string carrying the name AND the status chip,
+so the chip moved to the `.sub` line and the heading is the family name alone;
+"Boundary." → "Boundary:" in the renderer, restoring the colon the document's
+own bold label carries, without touching the quoted document.
+
+Not adopted, recorded: Fable's E8 (numeral-initial sentences on /ontology) —
+Gemini rejected it, digits are house style, and the rejection was accepted.
+
+One adjacent case left alone deliberately: the family pages' *other* bold labels
+(the document's "Notes", "Seeds" and so on) render with a full stop by the same
+renderer line that T12 fixed for Boundary. The ruling named Boundary; the
+sibling is flagged rather than swept.

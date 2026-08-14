@@ -829,8 +829,8 @@ function familiesPageCopy(map, version) {
 <p>These are our families. They record how this project sorted relations Jung wrote — not a structure discovered in his thought, and not a position the field has agreed on. The graph is a map of assertions rather than a reading, and that holds harder here than anywhere else on the site.</p>
 
 ${EV ? `<h2>Checked against readers of Jung</h2>
-<p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>Psychology of C.G. Jung</em>, the <em>Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>Dictionary of Alchemical Imagery</em>. The question was not whether Jung's claim is true — the verification chain had already asked that. It was whether the KIND of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
-<p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments; scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all — Jung's image-level assertions are often simply not discussed anywhere. The disagreements were not absorbed: they produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}, the largest of which sends every <code>amplified-by</code> edge back for reclassification because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>Psychology of C.G. Jung</em>, the <em>Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>Dictionary of Alchemical Imagery</em>. The question was not whether Jung's claim is true — the verification chain had already asked that. It was whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
+<p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all — Jung's image-level assertions are often simply not discussed anywhere. The disagreements were not absorbed: they produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}, the largest of which sends every <code>amplified-by</code> edge back for reclassification because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. And the check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. On the hardest boundary this layer draws, the field the check consulted does not hold a stable line either. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>` : ''}
 
 <h2>How an edge gets a family</h2>
@@ -859,7 +859,7 @@ ${EV ? `<h2>Checked against readers of Jung</h2>
 <h2>The map: which relation strings land in which family</h2>
 <p>The reverse index, derived from the graph on every build. ${num(t.families)} families over ${num(t.assigned_strings)} distinct relation strings; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family, which is the layer's central commitment made visible: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
 ${famBlocks}
-${empty.length ? `<p>${empty.map(id => `<a href="/family-${esc(id)}">${esc(id)}</a>`).join(', ')} ${empty.length === 1 ? 'is a family in the ruleset that currently holds no assigned relation' : 'are families in the ruleset that currently hold no assigned relation'}, so ${empty.length === 1 ? 'it has' : 'they have'} no block above. ${empty.length === 1 ? 'The page is' : 'The pages are'} kept, and ${empty.length === 1 ? 'reports' : 'report'} the count as zero: a family emptied by a reclassification is a finding, and dropping it would hide the finding.</p>` : ''}
+${empty.length ? `<p>${empty.map(id => `<a href="/family-${esc(id)}">${esc(id)}</a>`).join(', ')} ${empty.length === 1 ? 'is a family in the ruleset that currently holds no assigned relation' : 'are families in the ruleset that currently hold no assigned relation'}, so ${empty.length === 1 ? 'it has' : 'they have'} no block above. ${empty.length === 1 ? 'The page is' : 'The pages are'} kept, and ${empty.length === 1 ? 'reports' : 'report'} the count as zero: a family emptied by a reclassification is a finding, and dropping the page would hide the finding.</p>` : ''}
 
 <h2>What fits nowhere</h2>
 <p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted rather than absorbed, because a vocabulary that covers everything has stopped discriminating:</p>
@@ -874,7 +874,7 @@ ${worked}
 </ul>
 
 <h2>The definitions document, in full</h2>
-<p class="docnote">What follows is the working document itself, rendered as written. It carries its own history, including measurement sections describing earlier runs of the calibration harness whose figures were withdrawn in August 2026, when a code inspection found they could not be substantiated. Those sections stand as the record of what was done, not as current evidence; the current figures are the version-bound records named above.</p>`
+<p class="docnote">What follows is the working document itself, rendered as written. It carries its own history, including measurement sections describing earlier runs of the calibration harness whose figures were withdrawn in August 2026, when a code inspection found they could not be substantiated. Those sections are the record of what was done, not current evidence; the current figures are the version-bound records named above.</p>`
 }
 
 function renderDoc(md, frontCopy) {
@@ -1433,15 +1433,15 @@ ${pend.length > 6 ? `<p class="meta">${pend.length - 6} more. These are edges wh
 <details class="disclose">
 <summary>${evHeadline}<span class="more">the whole table</span></summary>
 ${evTable(fam.id)}
-<p class="meta">Rows of three treated items are three items, and no rate over three items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts — not whether Jung's claim is true, which the verification chain had already asked of the paragraph. The disagreements stand beside the agreements because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>
+<p class="meta">A row this small is the items themselves; no rate over a handful of items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts — not whether Jung's claim is true, which the verification chain had already asked of the paragraph. The disagreements stand beside the agreements because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>
 </details>
 <p class="meta">Agreement is not endorsement: no scholar reviewed this vocabulary, and the sample is small enough to name in a sentence.</p>` : ''
 
   const zeroNote = row.edges === 0 ? `<p>No edge in the graph currently carries this family. A family with no members stays in the ruleset and is reported at zero rather than dropped: dropping it would hide the reclassification that emptied it, and the empty count is a finding about the definition.</p>` : ''
 
   const body = `<div class="titleband"><p class="eyebrow">relation family</p>
-<h1><span class="ev">${esc(fam.name)}</span> <span class="chip f-ok">assigned, not verified</span></h1>
-<p class="sub">What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer — a quote checked letter-exact against its paragraph and judged by a model of a different family — and it was already done before any of this began.</p></div>
+<h1><span class="ev">${esc(fam.name)}</span></h1>
+<p class="sub"><span class="chip f-ok">assigned, not verified</span> What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer — a quote checked letter-exact against its paragraph and judged by a model of a different family — and it was already done before any of this began.</p></div>
 <div class="countstrip">
   <span><b>${row.edges}</b> assigned relations</span>
   <span><b>${strings.length}</b> effective relation strings</span>
@@ -1456,7 +1456,7 @@ ${zeroNote}
 <h2>Definition</h2>
 <p class="meta">Quoted from <code>docs/FAMILY_DEFINITIONS.md</code> ${esc(famVersion)}, family ${fam.n}${fam.added ? `, ${esc(fam.added)}` : ''}. The atlas quotes that document; it never paraphrases it.</p>
 <blockquote class="quotebox ev">${fam.definition_html}</blockquote>
-${fam.boundary_html ? `<p class="dim ev"><b>Boundary.</b> ${fam.boundary_html}</p>` : ''}
+${fam.boundary_html ? `<p class="dim ev"><b>Boundary:</b> ${fam.boundary_html}</p>` : ''}
 ${fam.notes.length ? fam.notes.map(n => `<p class="dim ev"><b>${esc(n.label)}.</b> ${n.html}</p>`).join('\n') : ''}
 
 <h2>Relation strings that land here</h2>
@@ -1573,7 +1573,7 @@ if (DECL) {
 
   const queryBody = `<div class="titleband"><p class="eyebrow">read-only</p>
 <h1>Query the graph</h1></div>
-<p>The filters <code>tools/query/kg_query.py</code> takes, given a surface. They combine with AND, exactly as the tool combines them, and each one reads a field the graph already stores rather than computing a judgement of its own. The closure toggle adds the rows the active declarations license and marks every one of them as derived.</p>
+<p>The filters <code>tools/query/kg_query.py</code> takes, as a web page. They combine with AND, exactly as the tool combines them, and each one reads a field the graph already stores rather than computing a judgement of its own. The closure toggle adds the rows the active declarations license and marks every one of them as derived.</p>
 <p>Nothing on this page writes anything. The panel reads the published dataset at <a href="/graph.json">/graph.json</a> and the declarations beside it; the same query on the command line prints the same rows with a footer naming the graph it ran against. Two results carrying different seed digests are not comparable, which is why the digest sits under the results rather than in a help page.</p>
 
 <div class="filters" id="filters">

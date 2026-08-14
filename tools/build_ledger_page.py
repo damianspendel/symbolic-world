@@ -665,9 +665,9 @@ def build():
       gate above it.</p>
     </div>
   </div>
-  <p class="intro">Each reference shows its full verification passage: the deterministic
+  <p class="intro">Each reference shows its full verification trail: the deterministic
   <b>quote</b> check, the independent <b>gate</b> (verifier and date), the narrow <b>voice</b> audit,
-  the second-vendor <b>cross-vendor</b> check, and — where a person has checked the paragraph —
+  the <b>cross-vendor</b> check, and — where a person has checked the paragraph —
   <b>human</b> validation from the gold set. Disputed records link to the
   <a href="/disputes">dispute log</a>. Hover any chip for detail.</p>
   <p class="intro">Disclosure, mirrored from the paper: verification timestamps for batches gated

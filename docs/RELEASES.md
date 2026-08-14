@@ -1,7 +1,7 @@
 # Releases
 
 What changed between one release of the graph and the next, and why. The ledger
-records every individual claim and the gates it passed; this file records the
+records every individual claim and the gates it passed; this page records the
 release-level story.
 
 Every entry has the same four sections in the same order — **mining status**,
@@ -14,7 +14,8 @@ rather than sharing its number — and the pin names the calibration record that
 was binding at tag time.
 
 **Pointers.** Artifacts inside the repository are named as repo-relative paths
-in `code formatting`: the repository is not public until the ceremony, so they
+in `code formatting`: the repository is not public until the release ceremony,
+so they
 are paths today and become links when it is. Pages on the site are given as real
 links, extensionless by the site's own convention.
 
