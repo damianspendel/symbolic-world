@@ -49,6 +49,11 @@
       #boot h1{font-family:"Hoefler Text",Baskerville,"Iowan Old Style",Palatino,Georgia,serif;
         font-size:clamp(2.4rem,6vw,4.1rem);font-weight:500;letter-spacing:-.018em;line-height:1.04;margin:0}
       #boot h1 em{font-style:italic;opacity:.85}
+      /* Item 20 — the panel layer, in the first-paint block: on a cold load of
+         a panel route it must be opaque in frame one, before any stylesheet is
+         parsed. Same ground colour as the body above, the documented exception. */
+      #mode-panel{position:fixed;inset:0;z-index:13;background:#0b0a08;overflow-y:auto}
+      html.route-panel #mode-panel{display:block}
     </style>
   </head>
   <body>
@@ -95,6 +100,17 @@
          menu does not move when a reader crosses from the app to a page. Row two
          holds everything whose width varies — the version chip, the controls,
          the counts and the search field. -->
+    <!-- Item 20 — raise the opaque panel layer from the URL before anything is
+         painted. Classic inline script on purpose: it must run in document
+         order, ahead of the module bundle and ahead of the first paint, so a
+         cold load of a panel route never shows the atlas underneath. -->
+    <script>
+      (function () {
+        var h = location.hash || ''
+        if (/^#\/(method|concordance|families|queue)/.test(h)) document.documentElement.className += ' route-panel'
+      })()
+    </script>
+
     <header id="topbar" class="site-header">
       <div class="hrow hrow-1">
       <div class="brand" id="brand" title="Back to the summary">

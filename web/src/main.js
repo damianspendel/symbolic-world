@@ -833,7 +833,12 @@ $('search').addEventListener('keydown', ev => {
 // sheet floating over the graph, and every page's "back" goes to #/atlas — the
 // atlas as it stands, never the landing sequence again.
 const modeEl = $('mode-panel')
-function closeMode() { modeEl.classList.add('hidden') }
+// Item 20 — the layer is raised by the route and lowered only when the route
+// leaves the panel class. Between two panel routes it is never lowered, so a
+// swap cannot expose the graph however long the incoming view takes to build.
+function raiseLayer() { document.documentElement.classList.add('route-panel') }
+function lowerLayer() { document.documentElement.classList.remove('route-panel') }
+function closeMode() { lowerLayer(); modeEl.classList.add('hidden') }
 function goAtlas() {
   enterAtlas(); closeMode()
   $('family-panel').classList.add('hidden')
@@ -894,6 +899,12 @@ function markCurrent(root, href) {
 // frame's worth of empty panel available to paint, and any future render that
 // yields would put the live graph on screen under it.
 function openPage(render, route = '') {
+  // The layer goes up FIRST and stays up: opaque, viewport-covering, empty at
+  // worst. `html.route-panel #mode-panel` outranks `.hidden`, so raising it does
+  // not depend on the panel's own class — which is what lets the content still
+  // be mounted before that class is cleared (item 16's mount-then-reveal), with
+  // the layer already covering the graph either way.
+  raiseLayer()
   enterAtlas(); $('family-panel').classList.add('hidden')
   modeEl.scrollTop = 0
   render()

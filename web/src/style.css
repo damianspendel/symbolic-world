@@ -331,6 +331,16 @@ body.atlas #works { opacity: 1; pointer-events: auto; }
   overflow-y: auto; color: var(--ink);
 }
 #mode-panel.hidden { display: none; }
+/* Item 20 (editorial ruling, 2026-08-14) — the panel is a PERSISTENT OPAQUE
+   LAYER, and the route raises it, not the render. The inline boot script in
+   index.html sets .route-panel on <html> from the hash before anything is
+   painted, and this rule outranks .hidden, so on a cold load of /#/method the
+   opaque surface is up in the first frame — before cytoscape exists, before any
+   content is built. Content then swaps INSIDE the layer, which is never lowered
+   between routes. The worst frame any transition can produce is therefore a
+   blank tokened surface; the graph cannot appear through it whatever the
+   scheduler does or how heavy the incoming view is to build. */
+html.route-panel #mode-panel { display: block; }
 /* Item 18 — the panel's content column is one of the two shared kinds; its
    geometry is in the chrome block, beside the generated pages' own. */
 /* Item 14 — the view's headings come from the shared scale in tokens.css, the
@@ -475,7 +485,9 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 @media (max-width: 760px) {
   #panel, #about, #family-panel { width: auto; left: 0.75rem; right: 0.75rem; top: auto; height: 52%; bottom: 3.9rem; }
   #about-open { top: auto; bottom: 3.9rem; }
-  #mode-panel { inset: 3.2rem 0.5rem 2.4rem; }
+  /* Item 20 — the panel layer covers the viewport at every width. It used to
+     inset here, which left the live graph visible around its edges. */
+  #mode-panel { inset: 0; }
   .conc-head, .crow { grid-template-columns: 1fr 120px 1fr; }
 }
 

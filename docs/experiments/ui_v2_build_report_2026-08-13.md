@@ -902,3 +902,70 @@ Order is unchanged: newest first, sorted by the version in each heading, so the
 retrospective sits last without any special casing. Tests now assert the
 four-section template on every entry, the baseline entry's presence and its
 frozen counts, and that the entries point at their artifacts in both conventions.
+
+## Item 20 — the panel layer, and centring restored
+
+### 20.1 Why no panel route can flash now, by construction
+
+The item-16 fixes were timing fixes: they closed the gaps I could measure, and
+they missed whatever Safari does with a heavy view. This one does not depend on
+timing at all.
+
+`#mode-panel` is a persistent element that already existed and was already
+opaque. Three changes make it a layer rather than a rendered result:
+
+1. **The route raises it, not the render.** `html.route-panel #mode-panel {
+   display: block }` outranks `#mode-panel.hidden`, and an inline classic script
+   in `index.html` — placed before the header, ahead of the module bundle — sets
+   `route-panel` on `<html>` from `location.hash`. On a cold load of
+   `/#/concordance` the opaque surface is therefore up in the first frame,
+   before cytoscape is constructed and before any view is built.
+2. **It is opaque in the first-paint block.** `#mode-panel` now carries its
+   `position/inset/z-index/background` in `index.html`'s inline style, so it is
+   opaque even before the stylesheet is parsed.
+3. **It covers the viewport at every width.** One media query inset it to
+   `3.2rem 0.5rem 2.4rem`, which left the live graph visible around its edges;
+   that is now `inset: 0` like every other width.
+
+`openPage` raises the layer before it does anything else and never lowers it
+between panel routes; `closeMode` lowers it, and only when the route leaves the
+panel class. Item 16's improvements are kept — the click still routes in its own
+task, and the content is still mounted before `.hidden` is cleared — but they
+are no longer load-bearing.
+
+**The structural argument.** From the instant the URL names a panel route until
+the instant it stops naming one, an opaque element at `z-index: 13` covers the
+viewport. Nothing in the transition path removes it: the incoming view is built
+inside it, the outgoing view's DOM is replaced inside it, and the layer's
+`display` is a function of the route, not of any render finishing. So the worst
+frame a transition can produce is that layer with stale or no content — a blank
+tokened surface. The graph sits at `z-index: 2` underneath and cannot be
+reached, whatever the scheduler does, however heavy concordance is to build, and
+whether the arrival is cold, warm from the atlas, or warm from another panel.
+That is the property Damian's eye is the acceptance test for; I cannot capture
+frames here, so the guarantee is stated as a covering invariant rather than as a
+frame count.
+
+Checked on every route and origin: cold load of `#/method`, `#/concordance` and
+`#/queue` (layer up, `route-panel` set, opaque `rgb(11, 10, 8)`, covering, and
+the viewport centre reading panel content); atlas→each of the four; each of the
+four→atlas (layer lowered, class cleared, the graph revealed with no blank
+frame); and the panel→panel round: concordance→method→families→queue→
+concordance, layer up throughout.
+
+### 20.2 Centring restored, and measured
+
+V2-R13 is reversed: both kinds centre in the viewport at their own max-width,
+`margin: 0 auto`, identical centring math on every page and in the app's views.
+
+| width | prose pages | records pages | app views |
+|---|---|---|---|
+| 1280px | centre 638, width 816 | centre 638, width 1104 | centre 640 |
+| 1024px | centre 510, width 816 | centre 510, width 1020 | — |
+
+Prose pages measured: releases, ontology, families, disputes, a family page, a
+batch page. Records: query, ledger. The column's centre is the viewport's centre
+on every surface and at both widths, so moving between pages — or between kinds
+— never shifts it. The tests now require `margin: 0 auto` in both the page rule
+and the app's panel rule; "no page defines its own column geometry" stands
+unchanged.
