@@ -13,7 +13,7 @@ h1 { margin: .3rem 0 .6rem; }
 h2 { margin: 2.2rem 0 .5rem; }
 h3 { margin: 1.4rem 0 .35rem; }
 h4 { margin: 1.3rem 0 .45rem; }
-p { font-size: .92rem; line-height: 1.62; max-width: 68ch; }
+p { font-size: .92rem; line-height: 1.62; }
 p + p { margin-top: .6rem; }
 a { color: var(--gold); }
 code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
@@ -53,7 +53,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .sitenav a:hover { color: var(--gold); }
 
 .absent { list-style: none; margin: .6rem 0; }
-.absent li { font-size: .92rem; line-height: 1.6; padding: .3rem 0 .3rem 1rem; border-left: 2px solid var(--hairline); margin-bottom: .4rem; max-width: 68ch; }
+.absent li { font-size: .92rem; line-height: 1.6; padding: .3rem 0 .3rem 1rem; border-left: 2px solid var(--hairline); margin-bottom: .4rem; max-width: var(--measure); }
 .qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; margin: 1rem 0; }
 .qa .fig { border: 1px solid var(--hairline); border-radius: 8px; padding: .6rem .75rem; background: var(--surface); }
 .qa .figv { display: block; font-family: var(--display); font-size: 1.5rem; color: var(--gold); }
@@ -277,7 +277,7 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-14 at commit 41eff7b
+built 2026-08-14 at commit 64cff62
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

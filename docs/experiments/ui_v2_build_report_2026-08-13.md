@@ -1161,3 +1161,36 @@ filters, per item 21's rule for page-local filters, and it touches nothing but
 those cards: no typeahead into the graph, no selection, no camera. Measured:
 no header input on any of the four panel views or any of the eight generated
 pages, and the search present on the atlas view.
+
+### Item 24 addendum — the page-local measure on disputes
+
+Reported and confirmed on disk: `disputes.html` carried `max-width: 64ch` on
+`.intro` inside its own `<style>` block while the generated pages drew 68ch from
+the shared chrome. Different measure plus centring meant a different left edge at
+a wide viewport — invisible in a narrow review pane, plain on a full screen. The
+new left-alignment ruling makes left edges independent of width, so it resolves
+either way; the local rule is gone regardless, because a page-local geometry rule
+is the fault, not its symptom.
+
+It was not the only one: the ledger's `.intro` was 66ch and the v2 pages' bare
+`p` was 68ch, three numbers for one paragraph role. The reading measure is now a
+token — `--measure: 68ch` — with one shared rule (`p, .intro, .sub, .lede2,
+.note`) in the chrome block, and the components that deliberately differ
+(`.callout p`, the findings table's `.why`) are unchanged and still say so
+locally.
+
+**The test now reads inline styles.** A class-based check is blind to exactly
+the surface that broke here, so the geometry scan opens every `<style>` block in
+`web/public` — the hand-maintained pages and the exempted `james.html`
+included — and fails on a `width`, `max-width` or horizontal `margin`/`padding`
+set on a column, a band or a bare reading paragraph. Vertical rhythm is left
+alone.
+
+**disputes, measured as a real navigation at 1280px:**
+
+| surface | brand | breadcrumb | h1 | first paragraph | first card | right cap | own width rules |
+|---|---|---|---|---|---|---|---|
+| disputes | 72 | 72 | 72 | 72 | 72 | 880 | 0 |
+
+Its `.intro` now computes to 556.7px — 68ch from the chrome — and its style block
+contains no `max-width` at all.

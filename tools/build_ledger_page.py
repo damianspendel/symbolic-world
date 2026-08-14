@@ -305,7 +305,7 @@ def batch_page(batch, delta, commits):
   h1 {{ margin:.3rem 0 .5rem; }}
   h1 .idtok {{ font-family:var(--mono); font-size:1.5rem; }}
   h2 {{ margin:2rem 0 .5rem; }}
-  p {{ font-size:.92rem; line-height:1.62; max-width:68ch; }}
+  p {{ font-size:.92rem; line-height:1.62; }}
   a {{ color:var(--gold); }}
   .meta {{ font:.62rem/1.7 var(--mono); color:var(--ink-faint); }}
   .dim {{ color:var(--ink-faint); }}
@@ -316,7 +316,7 @@ def batch_page(batch, delta, commits):
            font-size:.9rem; line-height:1.6; color:var(--ink); }}
   .nums {{ display:flex; flex-wrap:wrap; gap:.5rem 1.1rem; margin:.6rem 0; font:.62rem var(--mono); color:var(--ink-faint); }}
   .nums b {{ color:var(--ink); font-weight:400; }}
-  .note {{ font-size:.82rem; color:var(--ink-faint); max-width:68ch; }}
+  .note {{ font-size:.82rem; color:var(--ink-faint); }}
   .mix {{ display:flex; flex-wrap:wrap; gap:.3rem; margin:.6rem 0 0; }}
   .chip {{ font:.56rem var(--mono); padding:.12rem .46rem; border-radius:99px;
           border:1px solid var(--hairline); color:var(--ink-faint); }}
@@ -561,7 +561,7 @@ def build():
   .kind.k-fam {{ border-left:3px solid var(--m-substance); }}
   .kind.k-fam h3 {{ color:var(--m-substance); }}
   .kind p {{ font-size:.82rem; line-height:1.55; color:var(--ink-faint); }}
-  .intro {{ font-size:.92rem; line-height:1.6; color:var(--ink); max-width:66ch; margin-bottom:.5rem; }}
+  .intro {{ font-size:.92rem; line-height:1.6; color:var(--ink); margin-bottom:.5rem; }}
   .meta {{ font:.62rem var(--mono); color:var(--ink-faint); margin-bottom:1rem; }}
   a {{ color:var(--gold); }}
   /* the filter input is styled by the shared .std-search rule in chrome.css */

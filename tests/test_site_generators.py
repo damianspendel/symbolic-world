@@ -615,6 +615,70 @@ def test_the_gutter_is_one_token_defined_once():
         assert "var(--page-gutter)" in rule, selector
 
 
+# the selectors that carry the column, the band, or the reading measure — the
+# places where a page-local width or horizontal margin moves text sideways
+GEOMETRY_SELECTORS = re.compile(
+    r"^(main|p|\.page-main|\.titleband|\.intro|\.sub|\.lede2|\.note)$")
+HORIZONTAL = re.compile(
+    r"(^|;)\s*(width|max-width|min-width|margin|padding|margin-left|margin-right"
+    r"|padding-left|padding-right)\s*:")
+
+
+def test_no_page_sets_its_own_column_band_or_measure_geometry():
+    """Item 24 addendum. disputes.html carried max-width: 64ch on .intro in its
+    OWN style block while the generated pages drew 68ch from the chrome, which
+    at a wide viewport put its text on a different left edge. Hand-maintained
+    pages are exactly where a class-based test is blind, so this one reads the
+    inline styles of EVERY page in web/public — the exempted ones included."""
+    pages = sorted(os.path.join(PUBLIC, f) for f in os.listdir(PUBLIC) if f.endswith(".html"))
+    offenders = []
+    for path in pages:
+        for block in re.findall(r"<style>(.*?)</style>", read(path), re.S):
+            for selector, body in re.findall(r"([^{}]+){([^}]*)}", block):
+                sel = selector.strip().split("\n")[-1].strip()
+                if sel.startswith("@"):
+                    continue
+                parts = [x.strip() for x in sel.split(",")]
+                if not any(GEOMETRY_SELECTORS.match(x) for x in parts):
+                    continue
+                for decl in body.split(";"):
+                    if not HORIZONTAL.match(decl.strip() and ";" + decl or ""):
+                        continue
+                    prop = decl.split(":")[0].strip()
+                    if prop in ("margin-bottom", "margin-top", "padding-bottom", "padding-top"):
+                        continue
+                    if prop in ("margin", "padding") and _vertical_only(decl):
+                        continue
+                    offenders.append(f"{os.path.basename(path)}: {sel} {{{decl.strip()}}}")
+    assert not offenders, offenders
+
+
+def _vertical_only(decl):
+    """`margin: .3rem 0 .8rem` touches no left edge; `margin: 0 auto` does."""
+    value = decl.split(":", 1)[1].strip()
+    parts = value.split()
+    if len(parts) == 1:
+        return parts[0] in ("0", "0px", "0rem")
+    horizontal = parts[1] if len(parts) > 1 else parts[0]
+    return horizontal in ("0", "0px", "0rem")
+
+
+def test_the_reading_measure_is_one_number_from_the_chrome():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    assert "--measure:" in css, "the reading measure is not a token"
+    rule = re.search(r"\np, \.intro, \.sub, \.lede2, \.note {([^}]*)}", css)
+    assert rule and "var(--measure)" in rule.group(1), "the shared measure rule is gone"
+    # and no page sets a measure on a reading paragraph of its own — the
+    # disputes case, which was 64ch against the chrome's 68ch
+    for path in sorted(os.path.join(PUBLIC, f) for f in os.listdir(PUBLIC) if f.endswith(".html")):
+        for block in re.findall(r"<style>(.*?)</style>", read(path), re.S):
+            for selector, body in re.findall(r"([^{}]+){([^}]*)}", block):
+                sel = selector.strip().split("\n")[-1].strip()
+                if any(GEOMETRY_SELECTORS.match(x.strip()) for x in sel.split(",")):
+                    assert "max-width" not in body, (
+                        f"{os.path.basename(path)}: {sel} sets its own measure")
+
+
 def test_nothing_centres_except_the_landing_hero():
     """Item 24 — the hero is the sole exception. A column or band that centres
     anywhere else reintroduces the drift the interview settled."""

@@ -9,6 +9,7 @@
   --ink-bright: #ffffff;
   --ink-label: #c9c2b0;
   --page-gutter: 4.5rem;
+  --measure: 68ch;
   --gold: #d4af37;
   --gold-dim: #94782a;
   --surface: rgba(23, 20, 16, 0.94);
@@ -101,8 +102,11 @@ html { scrollbar-gutter: stable; }
 }
 .sub, .titleband .sub {
   font-size: 0.95rem; line-height: 1.6; color: var(--ink-faint);
-  margin-bottom: 1.2rem; max-width: 68ch;
+  margin-bottom: 1.2rem;
 }
+/* every paragraph that is read, at one measure, from the chrome — a page may
+   not set its own */
+p, .intro, .sub, .lede2, .note { max-width: var(--measure); }
 /* Item 22 — the band's geometry, fixed and defined once. Its top is the content
    column's padding-top and nothing else: no element inside it carries a margin
    of its own, so a page that leaves a browser default on its h1 (the families

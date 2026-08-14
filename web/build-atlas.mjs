@@ -80,6 +80,11 @@ const TOKENS = {
   // token, consumed by the header, the title band and every content column, so
   // the site has a single left edge. Overridden once for narrow screens below.
   'page-gutter': '4.5rem',
+  // Item 24 addendum — the reading measure, one number. Three surfaces had
+  // drifted to 64ch, 66ch and 68ch for the same paragraph role, and a page-local
+  // measure is what put disputes on a different left edge before the gutter
+  // ruling made left edges independent of width.
+  measure: '68ch',
   gold: '#d4af37', 'gold-dim': '#94782a',
   surface: 'rgba(23, 20, 16, 0.94)', hairline: '#2b261e',
   'm-concept': TYPE_COLOR.Concept, 'm-symbol': TYPE_COLOR.Symbol, 'm-figure': TYPE_COLOR.Figure,
@@ -554,8 +559,11 @@ html { scrollbar-gutter: stable; }
 }
 .sub, .titleband .sub {
   font-size: 0.95rem; line-height: 1.6; color: var(--ink-faint);
-  margin-bottom: 1.2rem; max-width: 68ch;
+  margin-bottom: 1.2rem;
 }
+/* every paragraph that is read, at one measure, from the chrome — a page may
+   not set its own */
+p, .intro, .sub, .lede2, .note { max-width: var(--measure); }
 /* Item 22 — the band's geometry, fixed and defined once. Its top is the content
    column's padding-top and nothing else: no element inside it carries a margin
    of its own, so a page that leaves a browser default on its h1 (the families
@@ -1135,7 +1143,7 @@ h1 { margin: .3rem 0 .6rem; }
 h2 { margin: 2.2rem 0 .5rem; }
 h3 { margin: 1.4rem 0 .35rem; }
 h4 { margin: 1.3rem 0 .45rem; }
-p { font-size: .92rem; line-height: 1.62; max-width: 68ch; }
+p { font-size: .92rem; line-height: 1.62; }
 p + p { margin-top: .6rem; }
 a { color: var(--gold); }
 code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
@@ -1325,7 +1333,7 @@ external-validity figures from <code>docs/experiments/external_validity_2026-08/
   padding: .4rem .7rem; background: rgba(212,175,55,.05); border-radius: 0 6px 6px 0; margin: .5rem 0 .8rem; overflow-x: auto; }
 .pin .v { color: var(--gold); }
 .rel-entry ul { list-style: none; margin: .3rem 0 .2rem; }
-.rel-entry li { font-size: .89rem; line-height: 1.6; padding: .16rem 0 .16rem .95rem; position: relative; max-width: 68ch; }
+.rel-entry li { font-size: .89rem; line-height: 1.6; padding: .16rem 0 .16rem .95rem; position: relative; max-width: var(--measure); }
 .rel-entry li::before { content: "\\00b7"; position: absolute; left: .2rem; color: var(--edge-idle); }
 `
   registerPage({
@@ -1479,13 +1487,13 @@ if (famPageTotal !== famMap.totals.assigned) {
 const styleFamily = `
 .countstrip { display: flex; flex-wrap: wrap; gap: .5rem .9rem; margin: .7rem 0 .2rem; font: .62rem var(--mono); color: var(--ink-faint); }
 .countstrip b { color: var(--ink); font-weight: 400; }
-.quotebox { border-left: 2px solid var(--hairline); padding: .2rem 0 .2rem .9rem; margin: .5rem 0 .7rem; font-size: .95rem; line-height: 1.6; max-width: 68ch; }
+.quotebox { border-left: 2px solid var(--hairline); padding: .2rem 0 .2rem .9rem; margin: .5rem 0 .7rem; font-size: .95rem; line-height: 1.6; max-width: var(--measure); }
 .stringmap { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
 .stringmap .chip code { background: none; padding: 0; font-size: .78rem; color: inherit; }
 .stringmap .chip .n { color: var(--ink-dim); }
 .stringmap .chip.lead { color: var(--gold); border-color: var(--b-amber); }
 .seeds { list-style: none; margin-top: .5rem; }
-.seeds li { padding: .22rem 0; font-size: .9rem; max-width: 68ch; }
+.seeds li { padding: .22rem 0; font-size: .9rem; max-width: var(--measure); }
 .seeds .cite { font: .6rem var(--mono); color: var(--gold-dim); margin-left: .35rem; }
 .queue { margin-top: .5rem; }
 .qitem { border-left: 3px solid var(--b-amber); background: rgba(217,168,79,.05); border-radius: 0 6px 6px 0; padding: .45rem .7rem; margin: .4rem 0; }
@@ -1929,7 +1937,7 @@ built ${buildDate}${gitCommit ? ` at commit ${gitCommit}` : ''}
 
   const ontStyle = `
 .absent { list-style: none; margin: .6rem 0; }
-.absent li { font-size: .92rem; line-height: 1.6; padding: .3rem 0 .3rem 1rem; border-left: 2px solid var(--hairline); margin-bottom: .4rem; max-width: 68ch; }
+.absent li { font-size: .92rem; line-height: 1.6; padding: .3rem 0 .3rem 1rem; border-left: 2px solid var(--hairline); margin-bottom: .4rem; max-width: var(--measure); }
 .qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; margin: 1rem 0; }
 .qa .fig { border: 1px solid var(--hairline); border-radius: 8px; padding: .6rem .75rem; background: var(--surface); }
 .qa .figv { display: block; font-family: var(--display); font-size: 1.5rem; color: var(--gold); }
