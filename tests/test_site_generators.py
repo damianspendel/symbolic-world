@@ -765,29 +765,43 @@ def test_the_band_outranks_a_view_that_styles_its_paragraphs():
     assert ".titleband .sub" in css
 
 
-def test_a_search_input_sits_in_the_shared_right_hand_cluster():
-    """Item 15 — page-level search and filter inputs are in the header's second
-    row, inside .hdr-tools, which is what pushes them right. A page that puts
-    one in its content, or loose in the row, fails."""
+def test_the_header_slot_carries_only_site_wide_search():
+    """Item 21 (editorial ruling, 2026-08-14) — the header's tools slot is for
+    search that reaches the whole graph. The app qualifies and keeps it; a
+    generated page's filter, which narrows only that page's own list, does not
+    and must not be there."""
     css = read(os.path.join(PUBLIC, "chrome.css"))
     tools = re.search(r"\.site-header \.hdr-tools {([^}]*)}", css).group(1)
     assert "margin-left: auto" in tools
     for path in generated_pages():
         html = read(path)
-        for match in re.finditer(r"<input[^>]*type=\"search\"[^>]*>", html):
-            before = html[:match.start()]
-            assert before.rindex('<span class="hdr-tools">') > before.rindex("</header>") - 1 \
-                if "</header>" in before else True, os.path.basename(path)
-            header = re.search(HEADER_RE, html).group(0)
-            assert match.group(0) in header, (
-                f"{os.path.basename(path)}: a search input outside the header")
-            assert '<span class="hdr-tools">' in header
-    # the app renders its two searches into the same cluster
+        header = re.search(HEADER_RE, html).group(0)
+        assert not re.search(r"<input[^>]*type=\"search\"", header), (
+            f"{os.path.basename(path)}: a page-local filter is in the header slot")
+    # the app's graph-wide search stays in the cluster, in both surfaces
     js = app_js()
     assert '<span class="hdr-tools">${tools}</span>' in js
     index = read(os.path.join(ROOT, "web", "index.html"))
     tools_block = re.search(r'<span class="hdr-tools">(.*?)</span>\s*</div>', index, re.S).group(1)
     assert 'id="search"' in tools_block, "the app's search left the shared cluster"
+
+
+def test_a_page_local_filter_sits_with_its_facets():
+    """And first among them: it is the broadest control in the family."""
+    html = read(os.path.join(PUBLIC, "ledger.html"))
+    facets = re.search(r'<div class="facets">(.*?)</div>\s*<p class="facthow"', html, re.S)
+    assert facets, "the ledger has no facet block"
+    block = facets.group(1)
+    assert 'id="q"' in block, "the ledger's filter is not in the facet block"
+    assert "facet-filter" in block, "the filter does not take the shared filter styling"
+    assert block.index('id="q"') < block.index('data-g="vol"'), (
+        "the filter is not the first row of the facet block")
+    for path in generated_pages():
+        page = read(path)
+        for match in re.finditer(r'<input[^>]*type="search"[^>]*>', page):
+            after = page[match.start():]
+            assert "facet-filter" in match.group(0), (
+                f"{os.path.basename(path)}: a filter input outside the facet family")
 
 
 def test_no_generated_page_styles_its_own_search_input():

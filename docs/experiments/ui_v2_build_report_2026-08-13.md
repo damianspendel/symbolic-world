@@ -969,3 +969,25 @@ on every surface and at both widths, so moving between pages — or between kind
 — never shifts it. The tests now require `margin: 0 auto` in both the page rule
 and the app's panel rule; "no page defines its own column geometry" stands
 unchanged.
+
+## Item 21 — the ledger's filter joins its facets
+
+Editorial ruling, 2026-08-14. The filtering system was in two places: chips in a
+block under *Records*, and a text box in the header that filtered the same
+cards. The rule (V2-R12) is refined rather than reversed — the header's
+`.hdr-tools` slot is for SITE- or GRAPH-WIDE search, which the atlas search and
+the in-app views' searches are and keep; a PAGE-LOCAL filter, which narrows only
+what that page lists, belongs with its facets. Position: **first row of the
+facet block**, above the chips, because it is the broadest control in the family
+and every row under it narrows further. The caption now reads that way too.
+
+Same styling tokens: the input keeps `.std-search` and takes its width from a
+shared `.facet-filter` rule rather than anything page-local. Checked on the
+built page: the header carries no input, the filter is the first facet row, and
+the controls still compose — `mercurius` alone leaves 88 of 1,555 cards, with
+the CW 14 chip on top of it 32, and clearing both restores 1,555.
+
+The query page needed nothing: its filter grid is page content and was already
+correct. Tests: a search input in a generated page's header slot now fails, the
+app's graph-wide search in the cluster is the asserted state, and the ledger's
+filter is asserted inside the facet block and first among its rows.

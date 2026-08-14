@@ -108,6 +108,10 @@
 .site-header .hdr-tools { margin-left: auto; display: flex; align-items: center; gap: 0.9rem; }
 .site-header .hrow-2 .spacer { margin-left: auto; }
 .site-header .std-search { width: min(320px, 34vw); }
+/* Item 21 — a PAGE-LOCAL filter is not header furniture: it sits with the facets
+   it belongs to and takes the same input styling, so the filtering system reads
+   as one control family in one place. */
+.facet-filter { width: min(28rem, 100%); }
 
 /* Item 14 (editorial ruling, 2026-08-13) — one heading scale for the whole
    site. The face, the size step and the colour of a heading level are the same

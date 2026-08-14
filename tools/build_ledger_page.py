@@ -641,7 +641,7 @@ def build():
 </style>
 </head>
 <body>
-{site_header("/ledger", "ledger", '<input id="q" class="std-search" type="search" placeholder="Filter records — a symbol, a relation, cw14…" autocomplete="off">')}
+{site_header("/ledger", "ledger")}
 <main class="page-main records">
   <div class="titleband"><p class="eyebrow">provenance</p>
   <h1>Ledger</h1>
@@ -683,10 +683,14 @@ def build():
 
   <h2>Records</h2>
   <div class="facets">
+    <div class="facetrow"><span class="lab">filter</span>
+      <input id="q" class="std-search facet-filter" type="search"
+             placeholder="a symbol, a relation, a family, cw14…" autocomplete="off"></div>
 {facets}
   </div>
-  <p class="facthow">Chips in one row combine with OR, rows combine with AND, and the search box
-  narrows whatever they leave. The counts beside a chip are graph-wide and do not change as you
+  <p class="facthow">The text filter is the broadest control here and the rows under it narrow
+  further: chips in one row combine with OR, rows combine with AND, and the filter applies to
+  whatever they leave. The counts beside a chip are graph-wide and do not change as you
   filter, so a filtered view can never read as a total. A volume count is records citing that
   volume, so a record with references in two volumes is counted under both. Every card carries a
   § permalink.</p>

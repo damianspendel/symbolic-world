@@ -593,10 +593,17 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   subtitle, all inside `.titleband`. Face, size and colour come from the
   shared chrome block; a page or view that styles `.eyebrow`, `.sub`,
   `.titleband` or the `.where` breadcrumb itself is a drift and fails the
-  suite. Page-level search and filter inputs — the atlas search, an
-  in-app view's search, the ledger's record filter — sit in the header's
-  second row inside `.hdr-tools`, which is what right-aligns them; facet
-  chips and form controls that ARE the page's subject stay in content.
+  suite. **Two kinds of input, two homes** (refined by editorial ruling,
+  2026-08-14). The header's `.hdr-tools` slot is for SITE- or
+  GRAPH-WIDE search only — the atlas search and the in-app views'
+  searches, which reach the whole graph — and it is right-aligned there.
+  A PAGE-LOCAL filter, which narrows only what that page lists, belongs
+  with its facets: it is the FIRST row of the facet block, above the chip
+  rows, because it is the broadest control in the family and everything
+  under it narrows further. Splitting the two across a header box and a
+  facet block put one filtering system in two places, which is the fault
+  this rule now names. Facet chips and form controls that ARE the page's
+  subject stay in content.
   Three deliberate exceptions, each a different kind of thing rather
   than a slightly different title: the **landing hero** (`.hero-eyebrow`
   over a 4rem hero naming the site, not a page), the **batch
