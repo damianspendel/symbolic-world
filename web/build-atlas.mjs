@@ -834,16 +834,6 @@ ${EV ? `<h2 id="checked">Checked against readers of Jung</h2>
 <p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements were not absorbed: they produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}, the largest of which sends every <code>amplified-by</code> edge back for reclassification because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. And the check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. On the hardest boundary this layer draws, the field the check consulted does not hold a stable line either. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>` : ''}
 
-<h2>How an edge gets a family</h2>
-<ol>
-<li>Two models classify blind, one Opus-family and one Gemini, each reading the definitions document and the edge, neither able to see the other's answer.</li>
-<li>Where they agree, the family is recorded with the ruleset version it was agreed under, because a later version can retire the rule an assignment rested on.</li>
-<li>Where they disagree, no model breaks the tie. The edge is queued and a person rules on it, and the ruling lands signed and dated.</li>
-<li>Refusals are kept apart. <em>No family</em> means our vocabulary is short. <em>Text undecided</em> means Jung's own sentence hedges between two readings. Pooling them would let a thin vocabulary hide inside a hedge.</li>
-</ol>
-<p>Agreement between the two arms measures whether the document can be followed consistently. It is not evidence that the document is right: neither arm is ground truth, and the definitions were drafted by one of the model families working in this pipeline.</p>
-<p>A separate gate is calibrated by planting classification errors of known kind among real assignments and counting which come back correctly diagnosed. That measures the instrument: whether it still catches the sorts of mistake we know how to make. It says nothing about whether the families cut Jung's thought at the right joints. The figures are recorded per ruleset version in <code>pipeline/family_calibration/records/</code> and are not restated in this copy, because a number written into prose outlives the version it measured.</p>
-
 <h2>Where the layer stands</h2>
 <div class="tw"><table>
 <thead><tr><th>State</th><th>Relations</th><th>What it means</th></tr></thead>

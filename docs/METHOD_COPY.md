@@ -111,9 +111,16 @@ rules on disagreements, decides releases, and answers for what is published.
 - **Gold set.** {{human_chips}} claims carry a *human-validated* mark in the
   [ledger](/ledger): a person read the cited paragraph. The rest carry the
   amber dot: machine-verified without human validation.
-- **Adjudication.** Two blind arms sort relations into {{families}} families.
-  They disagree on {{queue}} claims today. No model breaks the tie. A person
-  rules, in sittings, and every ruling lands signed and dated.
+- **Adjudication.** Two blind arms sort relations into {{families}} families:
+  one Opus-family model, one Gemini, each reading the definitions document and
+  the edge, neither able to see the other's answer. They disagree on {{queue}}
+  claims today. No model breaks the tie. A person rules, in sittings, and every
+  ruling lands signed and dated. An assignment is recorded with the ruleset
+  version it was agreed under, because a later version can retire the rule it
+  rested on.
+- **Refusals are kept apart.** *No family* means our vocabulary is short. *Text
+  undecided* means Jung's own sentence hedges between two readings. Pooling them
+  would let a thin vocabulary hide inside a hedge.
 - **Disputes.** {{disputes}} challenges are on the record with their outcomes,
   in the [dispute log](/disputes).
 - **Publication.** Releases, deploys and rulings are human decisions. Nothing
@@ -135,7 +142,9 @@ The checks are themselves checked:
   harness was rebuilt in tracked code; calibration re-runs per ruleset version,
   and its figures live in the version-bound records
   (`pipeline/family_calibration/records/`) rather than in this prose, because a
-  number written here outlives the version it measured. A family label means
+  number written here outlives the version it measured. It measures the
+  instrument, not the vocabulary: it says nothing about whether the families cut
+  Jung's thought at the right joints. A family label means
   this: two models, judging independently, agreed. Where they disagreed, a
   person decides.
 - The classification vocabulary was checked outside this repository, against
@@ -145,7 +154,9 @@ The checks are themselves checked:
   claim is true.
 - The two blind classification arms agreed on 86% of {{edges_classified}}
   relations. Agreement measures whether the definitions can be followed
-  consistently, not whether they are right. Twenty standing questions about
+  consistently, not whether they are right: neither arm is ground truth, and the
+  definitions were drafted by one of the model families working in this
+  pipeline. Twenty standing questions about
   Jung's thought are asked of the graph after every change; it currently
   answers 14 in full.
 
