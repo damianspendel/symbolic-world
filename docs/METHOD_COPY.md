@@ -7,10 +7,12 @@ the text are frozen measured results; the build registers them in the copy
 assertion's method-constants allowlist with their source noted here.
 
 Sources for the frozen numbers: 86% — family_pass_summary.json; 14 of 20 —
-themis competency run; 19 dispute rows — disputes.json. The family-calibration
-figures (19/19, 20/20, 38/40) were WITHDRAWN 2026-08-12 after the blind code
-inspection (RULES.md #12) and return only from the rebuilt harness's re-run,
-version-bound per RULES.md #16.
+themis competency run. The dispute count is no longer frozen: it binds from
+disputes.json as {{disputes}} (2026-08-14 — the typed 19 counted edge
+attachments, of which there are 19 across 18 challenges). The
+family-calibration figures (19/19, 20/20, 38/40) were WITHDRAWN 2026-08-12
+after the blind code inspection (RULES.md #12) and live only in the
+version-bound records per RULES.md #16.
 
 ---
 
@@ -103,23 +105,20 @@ The stations bite. In the most recent window, {{last_proposed}} proposed
 citations became {{last_merged}} merged ones; the difference is what the
 checks removed.
 
-## Where people rule
+## Human oversight
 
-Machines verify; people decide. Three places the human hand is in the record:
+Machines verify; people decide.
 
-- **The gold set.** {{human_chips}} claims in the [ledger](/ledger) carry
-  a *human-validated* mark: a person read the source paragraph and confirmed
-  the claim. This is the reference set the machine verdicts are measured
-  against. Most claims are machine-verified only — the amber dot is the
-  honest default, not a defect.
-- **The dispute log.** 19 public challenges to specific claims, each with its
-  outcome on the record. A graph that cannot show you its corrections is
-  asking for trust it has not earned.
-- **The family layer.** Relations are sorted into {{families}} families of
-  meaning by two blind model arms. Where the arms disagree — {{queue}} claims
-  today — no model breaks the tie. The claim is marked *pending review* and
-  queued for a human ruling, and every ruling lands in the ledger signed and
-  dated, the same treatment the machine verdicts get.
+- **Gold set.** {{human_chips}} claims carry a *human-validated* mark in the
+  [ledger](/ledger): a person read the cited paragraph. The rest are
+  machine-verified — the amber dot is the honest default, not a defect.
+- **Adjudication.** Two blind arms sort relations into {{families}} families.
+  Where they disagree — {{queue}} claims today — no model breaks the tie. A
+  person rules, in sittings, and every ruling lands signed and dated.
+- **Disputes.** {{disputes}} challenges are on the record with their outcomes,
+  in the [dispute log](/disputes).
+- **Publication.** Releases, deploys and rulings are human decisions. Nothing
+  here publishes itself.
 
 ## Confidence levels
 
@@ -133,10 +132,18 @@ The checks are themselves checked:
 - The family layer's own check — a gate tested by planting errors among real
   assignments — reported catching everything planted in its early runs. A code
   inspection we commissioned in August 2026 found that harness could not fully
-  substantiate what "caught" means, so we have withdrawn those figures. The
-  harness is being rebuilt, and the calibration will be re-run and published
-  with its inputs. Until then, a family label means exactly this: two models,
-  judging independently, agreed — and where they disagreed, a person decides.
+  substantiate what "caught" means, so we withdrew those figures. The
+  harness was rebuilt in tracked code; calibration re-runs per ruleset version,
+  and its figures live in the version-bound records
+  (`pipeline/family_calibration/records/`) rather than in this prose, because a
+  number written here outlives the version it measured. A family label means
+  this: two models, judging independently, agreed — and where they disagreed, a
+  person decides.
+- The classification vocabulary was checked outside this repository, against
+  {{ev_works}} works of scholarship: {{ev_agrees}} of {{ev_treated}} treated
+  items agreed with our family, and the disagreements are published beside them
+  ([the check](/families#checked)). It tests the classification, not whether a
+  claim is true.
 - The two blind classification arms agreed on 86% of {{edges_classified}}
   relations. Agreement measures whether the definitions can be followed
   consistently — not whether they are right. Twenty standing questions about

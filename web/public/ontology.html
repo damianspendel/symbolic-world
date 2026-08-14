@@ -52,6 +52,18 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .sitenav a { color: var(--ink-faint); text-decoration: none; }
 .sitenav a:hover { color: var(--gold); }
 
+.ofig { border: 1px solid var(--hairline); border-radius: 10px; padding: .8rem .9rem; margin: 1rem 0; background: var(--surface); }
+.ofig-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; }
+.ofig-node { font-size: .98rem; color: var(--ink); border-bottom: 1px solid var(--hairline); }
+.ofig-rel { color: var(--gold); font-style: italic; font-size: .92rem; }
+.ofig-rel i { font-style: normal; color: var(--edge-idle); }
+.ofig-quote { font-size: .88rem; color: var(--ink-faint); margin-top: .45rem; }
+.ofig-tier { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.ofig-strings { display: flex; flex-wrap: wrap; gap: .3rem; }
+.ofig-strings code { background: none; padding: 0; font-size: .78rem; color: inherit; }
+.ofig .n { color: var(--ink-dim); }
+.ofig-arm { color: var(--edge-idle); font-size: 1.1rem; }
+.ofig figcaption { font: .6rem/1.7 var(--mono); color: var(--ink-faint); margin-top: .55rem; }
 .absent { list-style: none; margin: .6rem 0; }
 .absent li { font-size: .92rem; line-height: 1.6; padding: .3rem 0 .3rem 1rem; border-left: 2px solid var(--hairline); margin-bottom: .4rem; max-width: var(--measure); }
 .qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; margin: 1rem 0; }
@@ -84,45 +96,63 @@ table.findings .src { font: .58rem var(--mono); }
 <h2>Two tiers</h2>
 <p>The first tier is the relation as Jung's sentence phrased it. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
 <p>The second tier is the family — a classification <em>over</em> the verified relation, drawn from a fixed vocabulary in a versioned document, assigned when two models reading that document independently name the same family, and ruled by a person when they do not. The second tier never reopens the first. Nothing on this site calls a family verified, and no family assignment changes a relation string.</p>
+<figure class="ofig">
+<div class="ofig-row">
+  <span class="ofig-node ev">Lapis philosophorum</span>
+  <span class="ofig-rel ev">is-projection-of <i>&rarr;</i></span>
+  <span class="ofig-node ev">The Self</span>
+  <span class="chip ev">CW 9ii §264</span>
+</div>
+<div class="ofig-quote ev">&ldquo;we would say that the stone is a projection of the unified self&rdquo;</div>
+<figcaption>One relation, drawn. Subject, the relation as Jung's sentence phrased it, object, the quote it was gated against, and the paragraph it came from.</figcaption>
+</figure>
 <p>Where a relation carried a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original, with the qualifiers pulled out into their own fields. 260 relations carry that layer. The family layer classifies the normalized form where it exists, which is why the map counts effective strings rather than surface ones.</p>
 
+<figure class="ofig">
+<div class="ofig-tier">
+  <div class="ofig-strings"><span class="chip ev"><code>symbolizes</code> <span class="n">94</span></span><span class="chip ev"><code>represents</code> <span class="n">18</span></span><span class="chip ev"><code>signifies</code> <span class="n">18</span></span><span class="chip ev"><code>stands-for</code> <span class="n">7</span></span></div>
+  <span class="ofig-arm">&rarr;</span>
+  <span class="chip f-ok ev">symbolization <span class="n">195</span></span>
+</div>
+<figcaption>Tier two, drawn. Different relation strings, each verified in its own paragraph, carry one family. The family classifies them; it does not re-verify them, and the strings are unchanged by the classification.</figcaption>
+</figure>
 <h2>The declarations</h2>
 <p>Two properties are declared, and only two: which relation strings are inverses of each other, and which are symmetric. Each declaration is transcribed from a line of the definitions document, cites that line, and is applied only when a reader asks for closure — the derived row is labelled, carries its source edge's references, and is never written into the graph.</p>
 <div class="tw"><table><thead><tr><th>strings</th><th>kind</th><th>transcribed from</th></tr></thead><tbody>
 <tr>
 <td class="ev"><code>symbolizes / symbolized-by</code></td>
 <td>inverse</td>
-<td class="ev src">### 1. symbolization (line 371)<br>## Method and precedents — what is reused, what is rejected, and why (table row: OWL characteristics) (line 131)</td>
+<td class="ev src">1. symbolization (line 371)<br>Method and precedents — what is reused, what is rejected, and why (table row: OWL characteristics) (line 131)</td>
 </tr>
 <tr>
 <td class="ev"><code>produces / produced-by</code></td>
 <td>inverse</td>
-<td class="ev src">## Method and precedents — what is reused, what is rejected, and why (table row: OWL characteristics) (line 131)<br>### 13. generation (line 559)</td>
+<td class="ev src">Method and precedents — what is reused, what is rejected, and why (table row: OWL characteristics) (line 131)<br>13. generation (line 559)</td>
 </tr>
 <tr>
 <td class="ev"><code>produces / originates-in</code></td>
 <td>inverse<br><span class="dim">only where the edge carries <span class="ev">generation</span></span></td>
-<td class="ev src">### 13. generation (line 559)</td>
+<td class="ev src">13. generation (line 559)</td>
 </tr>
 <tr>
 <td class="ev"><code>manifests-as / is-aspect-of</code></td>
 <td>inverse</td>
-<td class="ev src">### 3. manifestation (line 393)</td>
+<td class="ev src">3. manifestation (line 393)</td>
 </tr>
 <tr>
 <td class="ev"><code>synonym-of</code></td>
 <td>symmetric</td>
-<td class="ev src">### 4. archetypal-identity (line 415)<br>## Method and precedents — what is reused, what is rejected, and why (table row: OWL characteristics) (line 131)</td>
+<td class="ev src">4. archetypal-identity (line 415)<br>Method and precedents — what is reused, what is rejected, and why (table row: OWL characteristics) (line 131)</td>
 </tr>
 <tr>
 <td class="ev"><code>manifests-as / aspect-of</code></td>
 <td>inverse</td>
-<td class="ev src">### 3. manifestation (line 405)</td>
+<td class="ev src">3. manifestation (line 405)</td>
 </tr>
 <tr>
 <td class="ev"><code>manifests-as / is-dark-aspect-of</code></td>
 <td>inverse<br><span class="dim">carries <span class="ev">dark aspect</span> into the derived row</span></td>
-<td class="ev src">### 3. manifestation (line 405)</td>
+<td class="ev src">3. manifestation (line 405)</td>
 </tr>
 </tbody></table></div>
 <p class="meta">7 active. 6 further pairs are recorded as candidates and are inert: the document has not ruled on them, and a declaration without a document line to cite would be this build's opinion rather than the ruleset's.</p>
@@ -132,15 +162,6 @@ table.findings .src { font: .58rem var(--mono); }
 <td class="n">2026-08-13</td><td class="ev">the maintainer (validation session)</td><td class="ev">The middle ruling on the doc-listed manifestation inverse strings: `aspect-of` activates as a plain inverse of manifests-as (lossless flip); `is-dark-aspect-of` activates WITH its qualifier carried — derived rows display 'dark aspect' so the reverse reading stays exactly as strong as Jung's stored assertion. General principle adopted as precedent for all future strings: a derived row must carry everything the stored row asserted; if the flip cannot carry a qualifier, the declaration is not made.</td>
 </tr>
 </tbody></table></div>
-
-<h2>Deliberately absent</h2>
-<ul class="absent">
-<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
-<li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
-<li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
-<li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
-<li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
-</ul>
 
 <h2>Where the checks come from</h2>
 <p>The scan follows the OOPS! catalogue — OntOlogy Pitfall Scanner — which numbers the modelling faults that recur across published ontologies and describes how each can be detected. A pitfall catalogue is not a standard to comply with; it is a list of the places ontologies are known to go wrong, so that an evaluation can be systematic instead of a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset of it locally against this graph, and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
@@ -272,12 +293,22 @@ table.findings .src { font: .58rem var(--mono); }
 </tr>
 </tbody></table></div>
 </details>
-<p class="meta">A stance is not a rebuttal. Every design decision here has a cost, and the scan is a fair statement of it: an open vocabulary does make the graph hard to query by predicate, which is exactly why the family layer exists and why its coverage is published with its gaps. What the panel refuses is the other reading — that a decision taken deliberately, with a reason on record, is a defect discovered by a tool.</p>
+<p class="meta">A stance is not a rebuttal of the finding. An open vocabulary is hard to query by predicate, which is why the family layer exists. That was a conscious design decision.</p>
+
+<h2>Deliberately absent</h2>
+<p>7 of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight. Each was taken for a reason, and the reason is here.</p>
+<ul class="absent">
+<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
+<li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
+<li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
+<li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
+<li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
+</ul>
 
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-14 at commit d8625d2
+built 2026-08-14 at commit 6c25efb
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

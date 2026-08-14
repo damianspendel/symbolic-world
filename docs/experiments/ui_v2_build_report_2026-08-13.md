@@ -1407,3 +1407,69 @@ in public", "without adjudication", and "the machine gates are the floor;
 readers are the ceiling". Everything from the disputes-on-record line down is
 untouched, including both log sections and the fetch that fills them. No test
 asserted the old sentences.
+
+## Item 34 — method and ontology
+
+**(a) Heading.** "Where people rule" → "Human oversight".
+
+**(b) Section rewritten** in the releases razor: four labelled facts, no
+connective tissue, links for depth — gold set ({{human_chips}} claims,
+human-validated in the ledger), adjudication (two blind arms, {{queue}} claims
+queued, a person rules in sittings, rulings signed and dated), disputes
+({{disputes}} on the record with outcomes), publication (releases, deploys and
+rulings are human decisions; nothing publishes itself). Every fact kept.
+
+**(c) Confidence levels** gained the external check: the vocabulary checked
+against {{ev_works}} works of scholarship, {{ev_agrees}} of {{ev_treated}}
+treated items agreeing, disagreements published beside them, linked to
+[/families#checked]. Phrased as a check on the classification, not on whether a
+claim is true. The anchor is new: the families page's "Checked against readers
+of Jung" heading now carries `id="checked"`.
+
+**(d) Number provenance.**
+1. The stale sentence said the harness "is being rebuilt" and the calibration
+   "will be re-run and published". It was rebuilt: the copy now says calibration
+   re-runs per ruleset version and its figures live in the version-bound records
+   under `pipeline/family_calibration/records/` rather than in prose.
+2. "19 public challenges" was typed and disagreed with the disputes page. The
+   count now binds from `disputes.json`, the same file that page reads, as
+   `{{disputes}}` = **18**. The reconciliation: there are **18 challenges**
+   carrying **19 edge attachments** — a dispute may attach to two edges, and the
+   typed 19 had counted attachments as challenges. The disputes page was right.
+3. `METHOD_CONSTANTS` audited. **Moved to tokens:** the dispute count.
+   **Removed as inert:** 19, 20, 38, 40, 2, 86, 14, 7, 25, 5 — the copy scan
+   only reads 3- and 4-digit literals, so every sub-100 entry in that list was
+   enforcing nothing. **Stayed, with reason:** 248/669/699, the release the
+   paper describes, pinned to the `v1.3.0` tag by CI and quoted as frozen; and
+   5281/21631523, the two parts of the concept DOI. Nothing derivable from live
+   data remains typed.
+
+**(e) Two drawn figures** on the ontology page, in the method page's claim-box
+idiom, tokens and existing chip classes only. The **edge anatomy** box draws a
+real edge — subject, the relation as Jung's sentence phrased it, object, its
+citation chip and its own ≤25-word quote. The **two-tier** box draws the largest
+family's top four relation strings with their real counts, arrowed into the
+family chip with its own count, captioned that the family classifies and does
+not re-verify. Both read the graph at build; a test compares the drawn quote and
+every count against `seed.json` and the derived map.
+
+**(f) Reordered.** The page now runs: what this is → two tiers → the
+declarations → where the checks come from → the pitfall scan → deliberately
+absent. The absences open with a derived line — "7 of the findings above are
+these decisions, showing up as defects because the catalogue has no way to tell
+a choice from an oversight" — so they read as conclusions after the evidence. A
+test pins the order.
+
+**Addendum.** The stance paragraph is the re-ruled text exactly: "A stance is
+not a rebuttal of the finding. An open vocabulary is hard to query by predicate,
+which is why the family layer exists. That was a conscious design decision."
+
+**The `###` leak.** Found: a declaration's `source.section` is the definitions
+document's own markdown heading ("### 1. symbolization"), rendered verbatim as a
+label on the family pages' declared-pairs list and in the ontology page's
+declarations table. Fixed at the renderer with one `sectionLabel` helper that
+strips the marker; the document and the transcription are untouched. The sweep
+found it on seven family pages and seven times on the ontology page, not the two
+reported. No `**` or raw backticks leak anywhere. A test now sweeps every page
+for heading markers and unrendered emphasis outside code elements, and a second
+checks the label still names the document's section.

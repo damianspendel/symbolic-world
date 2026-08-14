@@ -832,7 +832,7 @@ function familiesPageCopy(map, version) {
 <p>So the two words are kept apart, deliberately. A citation is <em>verified</em>: a machine confirmed the quote is letter-exact in its paragraph, and a model from a different family judged that paragraph against the claim. A family is <em>assigned</em>: two models read the definitions document and independently arrived at the same name for the relation. Different evidence, different word. There is no such thing as a verified family on this site.</p>
 <p>These are our families. They record how this project sorted relations Jung wrote — not a structure discovered in his thought, and not a position the field has agreed on. The graph is a map of assertions rather than a reading, and that holds harder here than anywhere else on the site.</p>
 
-${EV ? `<h2>Checked against readers of Jung</h2>
+${EV ? `<h2 id="checked">Checked against readers of Jung</h2>
 <p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The question was not whether Jung's claim is true — the verification chain had already asked that. It was whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
 <p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all — Jung's image-level assertions are often simply not discussed anywhere. The disagreements were not absorbed: they produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}, the largest of which sends every <code>amplified-by</code> edge back for reclassification because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. And the check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. On the hardest boundary this layer draws, the field the check consulted does not hold a stable line either. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>` : ''}
@@ -988,6 +988,11 @@ if (existsSync(methodPath)) {
     xv_pct: Math.round(100 * xvStamped / meta.counts.references),
     last_proposed: Number(mProp[1]), last_merged: Number(mMerg[1]),
     human_chips: validations.length,
+    // item 34 — the dispute count is derived from the same file the disputes
+    // page reads, so the two surfaces cannot disagree again
+    disputes: JSON.parse(readFileSync(here('./public/disputes.json'), 'utf8')).disputes.length,
+    ev_works: EV ? EV.works_consulted : 0, ev_agrees: EV ? EV.agrees : 0,
+    ev_treated: EV ? EV.treated : 0,
     families: families.length,
     queue: pending.items ? pending.items.length : 0,
     edges_classified: atlasEdges.filter(e => e.family).length
@@ -1244,6 +1249,10 @@ const bindingCalib = calibRecords
 const declPath = here('../pipeline/family/relation_declarations.json')
 const DECL = existsSync(declPath) ? JSON.parse(readFileSync(declPath, 'utf8')) : null
 const activeDecls = DECL ? DECL.active.filter(d => !d.dormant) : []
+// Item 34 — a declaration's `source.section` is the document's own markdown
+// heading ("### 1. symbolization"). It is displayed as a label, so the marker is
+// stripped here at the renderer, never in the transcription or the document.
+const sectionLabel = (t) => String(t).replace(/^\s*#+\s*/, '')
 
 const releasesPath = here('../docs/RELEASES.md')
 if (existsSync(releasesPath)) {
@@ -1417,7 +1426,7 @@ for (const fam of families) {
     : `<p class="dim">The definition names no worked example, so none is shown. Inventing one here would put a claim on the page that the document does not make.</p>`
 
   const declBlock = decls.length ? `<h4>declared pairs</h4>
-<ul class="seeds">${decls.map(d => `<li><span class="ev"><code>${esc(d.kind === 'inverse' ? `${d.forward} / ${d.inverse}` : d.relation)}</code></span> — ${esc(d.kind)}${d.applies_to_family ? `, restricted to the ${esc(d.applies_to_family)} family` : ''}, transcribed from <span class="ev">${esc(d.source[0].section)} (line ${d.source[0].line})</span></li>`).join('')}</ul>
+<ul class="seeds">${decls.map(d => `<li><span class="ev"><code>${esc(d.kind === 'inverse' ? `${d.forward} / ${d.inverse}` : d.relation)}</code></span> — ${esc(d.kind)}${d.applies_to_family ? `, restricted to the ${esc(d.applies_to_family)} family` : ''}, transcribed from <span class="ev">${esc(sectionLabel(d.source[0].section))} (line ${d.source[0].line})</span></li>`).join('')}</ul>
 <p class="meta">A declaration licenses a row in the other direction when the query panel's closure toggle is on, and nothing else. It is read at query time and never written into the graph.</p>` : ''
 
   const pendBlock = pend.length ? `<h4>pending a ruling — items carrying a string this family covers</h4>
@@ -1873,7 +1882,7 @@ if (QA && DECL) {
   const declRows = activeDecls.map(d => `<tr>
 <td class="ev"><code>${esc(d.kind === 'inverse' ? `${d.forward} / ${d.inverse}` : d.relation)}</code></td>
 <td>${esc(d.kind)}${d.applies_to_family ? `<br><span class="dim">only where the edge carries <span class="ev">${esc(d.applies_to_family)}</span></span>` : ''}${d.carried_qualifier ? `<br><span class="dim">carries <span class="ev">${esc(d.carried_qualifier)}</span> into the derived row</span>` : ''}</td>
-<td class="ev src">${d.source.map(s => `${esc(s.section)} (line ${s.line})`).join('<br>')}</td>
+<td class="ev src">${d.source.map(s => `${esc(sectionLabel(s.section))} (line ${s.line})`).join('<br>')}</td>
 </tr>`).join('\n')
 
   const rulingRows = (DECL.rulings || []).map(r => `<tr>
@@ -1894,6 +1903,39 @@ if (QA && DECL) {
   }).join('\n')
   derived(cited.length)
 
+  // Item 34(e) — two drawn figures in the method page's claim-box idiom. Both
+  // read the graph: the anatomy box shows a real edge with its own quote and
+  // citation, and the two-tier box shows real strings with their real counts
+  // clustering into the family they carry. Nothing here is typed.
+  const anatomyEdge = atlasEdges.find(e => e.key === 'lapis|is-projection-of|the-self' && e.refs.length)
+    || atlasEdges.find(e => e.refs.length && e.refs[0].quote && e.family && e.family.state === 'family')
+  if (!anatomyEdge) { console.error('ONTOLOGY PAGE: no edge with a quote to draw'); process.exit(1) }
+  const anatomyRef = anatomyEdge.refs.find(r => r.quote) || anatomyEdge.refs[0]
+  const tierFamily = famMap.families[0]
+  const tierStrings = tierFamily.strings.slice(0, 4)
+  derived(tierFamily.edges, ...tierStrings.map(r => r.edges))
+
+  const figAnatomy = `<figure class="ofig">
+<div class="ofig-row">
+  <span class="ofig-node ev">${esc(nodeLabel(anatomyEdge.source))}</span>
+  <span class="ofig-rel ev">${esc(anatomyEdge.relation)} <i>&rarr;</i></span>
+  <span class="ofig-node ev">${esc(nodeLabel(anatomyEdge.target))}</span>
+  <span class="chip ev">CW ${esc(anatomyRef.volume)} §${esc(anatomyRef.paragraph)}</span>
+</div>
+<div class="ofig-quote ev">&ldquo;${esc(anatomyRef.quote)}&rdquo;</div>
+<figcaption>One relation, drawn. Subject, the relation as Jung's sentence phrased it, object, the quote it was gated against, and the paragraph it came from.</figcaption>
+</figure>`
+
+  const figTiers = `<figure class="ofig">
+<div class="ofig-tier">
+  <div class="ofig-strings">${tierStrings.map(r =>
+    `<span class="chip ev"><code>${esc(r.string)}</code> <span class="n">${r.edges}</span></span>`).join('')}</div>
+  <span class="ofig-arm">&rarr;</span>
+  <span class="chip f-ok ev">${esc(tierFamily.family)} <span class="n">${tierFamily.edges}</span></span>
+</div>
+<figcaption>Tier two, drawn. Different relation strings, each verified in its own paragraph, carry one family. The family classifies them; it does not re-verify them, and the strings are unchanged by the classification.</figcaption>
+</figure>`
+
   const ontBody = `<div class="titleband"><p class="eyebrow">the ontology</p>
 <h1>What this graph is, as an ontology</h1></div>
 <p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, and then runs the standard pitfall scan over the graph and reports what it finds — including the findings that are these decisions showing up as defects.</p>
@@ -1901,8 +1943,10 @@ if (QA && DECL) {
 <h2>Two tiers</h2>
 <p>The first tier is the relation as Jung's sentence phrased it. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
 <p>The second tier is the family — a classification <em>over</em> the verified relation, drawn from a fixed vocabulary in a versioned document, assigned when two models reading that document independently name the same family, and ruled by a person when they do not. The second tier never reopens the first. Nothing on this site calls a family verified, and no family assignment changes a relation string.</p>
+${figAnatomy}
 <p>Where a relation carried a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original, with the qualifiers pulled out into their own fields. ${meta.normalized} relations carry that layer. The family layer classifies the normalized form where it exists, which is why the map counts effective strings rather than surface ones.</p>
 
+${figTiers}
 <h2>The declarations</h2>
 <p>Two properties are declared, and only two: which relation strings are inverses of each other, and which are symmetric. Each declaration is transcribed from a line of the definitions document, cites that line, and is applied only when a reader asks for closure — the derived row is labelled, carries its source edge's references, and is never written into the graph.</p>
 <div class="tw"><table><thead><tr><th>strings</th><th>kind</th><th>transcribed from</th></tr></thead><tbody>
@@ -1913,15 +1957,6 @@ ${rulingRows ? `<h4>rulings behind them</h4>
 <div class="tw"><table><thead><tr><th>date</th><th>ruled by</th><th>ruling</th></tr></thead><tbody>
 ${rulingRows}
 </tbody></table></div>` : ''}
-
-<h2>Deliberately absent</h2>
-<ul class="absent">
-<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
-<li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
-<li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
-<li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
-<li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
-</ul>
 
 <h2>Where the checks come from</h2>
 <p>The scan follows the OOPS! catalogue — OntOlogy Pitfall Scanner — which numbers the modelling faults that recur across published ontologies and describes how each can be detected. A pitfall catalogue is not a standard to comply with; it is a list of the places ontologies are known to go wrong, so that an evaluation can be systematic instead of a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset of it locally against this graph, and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
@@ -1945,7 +1980,17 @@ ${pitfallRows}
 ${findingRows}
 </tbody></table></div>
 </details>
-<p class="meta">A stance is not a rebuttal. Every design decision here has a cost, and the scan is a fair statement of it: an open vocabulary does make the graph hard to query by predicate, which is exactly why the family layer exists and why its coverage is published with its gaps. What the panel refuses is the other reading — that a decision taken deliberately, with a reason on record, is a defect discovered by a tool.</p>
+<p class="meta">A stance is not a rebuttal of the finding. An open vocabulary is hard to query by predicate, which is why the family layer exists. That was a conscious design decision.</p>
+
+<h2>Deliberately absent</h2>
+<p>${counts.design} of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight. Each was taken for a reason, and the reason is here.</p>
+<ul class="absent">
+<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
+<li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
+<li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
+<li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
+<li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
+</ul>
 
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span>, run at build;<br>
@@ -1954,6 +1999,18 @@ built ${buildDate}${gitCommit ? ` at commit ${gitCommit}` : ''}
 </div>`
 
   const ontStyle = `
+.ofig { border: 1px solid var(--hairline); border-radius: 10px; padding: .8rem .9rem; margin: 1rem 0; background: var(--surface); }
+.ofig-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; }
+.ofig-node { font-size: .98rem; color: var(--ink); border-bottom: 1px solid var(--hairline); }
+.ofig-rel { color: var(--gold); font-style: italic; font-size: .92rem; }
+.ofig-rel i { font-style: normal; color: var(--edge-idle); }
+.ofig-quote { font-size: .88rem; color: var(--ink-faint); margin-top: .45rem; }
+.ofig-tier { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.ofig-strings { display: flex; flex-wrap: wrap; gap: .3rem; }
+.ofig-strings code { background: none; padding: 0; font-size: .78rem; color: inherit; }
+.ofig .n { color: var(--ink-dim); }
+.ofig-arm { color: var(--edge-idle); font-size: 1.1rem; }
+.ofig figcaption { font: .6rem/1.7 var(--mono); color: var(--ink-faint); margin-top: .55rem; }
 .absent { list-style: none; margin: .6rem 0; }
 .absent li { font-size: .92rem; line-height: 1.6; padding: .3rem 0 .3rem 1rem; border-left: 2px solid var(--hairline); margin-bottom: .4rem; max-width: var(--measure); }
 .qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; margin: 1rem 0; }
@@ -2048,8 +2105,15 @@ const allowedNumbers = new Set([
 
 // Frozen measured results quoted in the method copy, with the sources the copy
 // document itself records. They are constants, not counts that move.
+// Item 34(d3) — audited 2026-08-14. The scan only reads 3- and 4-digit
+// literals, so every sub-100 entry this list used to carry (19, 20, 38, 40, 2,
+// 86, 14, 7, 25, 5) was inert and is gone. What remains is enforced and is
+// legitimately frozen: the paper-pinned v1.3.0 counts, which CI holds against
+// the tag, and the DOI's two parts. The dispute count left this list entirely —
+// it derives from disputes.json now.
 const METHOD_CONSTANTS = new Set([
-  19, 20, 38, 40, 2, 86, 14, 7, 25, 5, 248, 669, 699, 5281, 21631523
+  248, 669, 699,        // the release the paper describes, pinned to v1.3.0
+  5281, 21631523        // the concept DOI
 ])
 const copySources = [
   ['docs/METHOD_COPY.md (wired verbatim)', methodHTML, METHOD_CONSTANTS],

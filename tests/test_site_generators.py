@@ -473,6 +473,72 @@ def test_every_scan_finding_reaches_the_page_with_a_stance(qa_json):
         assert f["tag"] in html, f["tag"]
 
 
+def test_no_rendered_page_leaks_raw_markdown():
+    """Item 34 — a declaration's `source.section` is the document's own markdown
+    heading ("### 1. symbolization") and was rendered verbatim as a label. The
+    marker is stripped at the renderer; the document is never edited. Sweeps
+    every page for heading markers and unrendered emphasis outside code."""
+    offenders = []
+    for path in sorted(os.path.join(PUBLIC, f) for f in os.listdir(PUBLIC) if f.endswith(".html")):
+        html = read(path)
+        body = re.sub(r"<(script|style)[\s\S]*?</\1>", " ", html)
+        body = re.sub(r"<code>[\s\S]*?</code>", " ", body)
+        body = re.sub(r"<pre>[\s\S]*?</pre>", " ", body)
+        for marker in ("###", "**"):
+            if marker in body:
+                hit = body[max(0, body.index(marker) - 60):body.index(marker) + 40]
+                offenders.append(f"{os.path.basename(path)}: {marker} in ...{hit.strip()}...")
+    assert not offenders, offenders
+
+
+def test_a_declaration_section_renders_as_a_label(qa_json):
+    """The label still names the document's section, minus the marker."""
+    decls = json.loads(read(DECLARATIONS))
+    html = read(os.path.join(PUBLIC, "ontology.html"))
+    for decl in decls["active"]:
+        if decl.get("dormant"):
+            continue
+        for source in decl["source"]:
+            label = re.sub(r"^\s*#+\s*", "", source["section"])
+            assert f"{label} (line {source['line']})" in html, label
+    js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
+    assert "const sectionLabel = (t) =>" in js
+    assert "esc(sectionLabel(" in js
+
+
+def test_the_ontology_page_puts_the_evidence_before_the_conclusions():
+    """Item 34(f) — the scan and its findings come BEFORE what is deliberately
+    absent, so the absences read as conclusions drawn from the evidence rather
+    than assertions made ahead of it."""
+    html = read(os.path.join(PUBLIC, "ontology.html"))
+    order = [re.sub(r"<[^>]+>", "", h) for h in re.findall(r"<h2[^>]*>.*?</h2>", html)]
+    assert order == ["Two tiers", "The declarations", "Where the checks come from",
+                     "The pitfall scan", "Deliberately absent"], order
+
+
+def test_the_ontology_figures_carry_real_data():
+    """Item 34(e) — both drawn boxes read the graph; nothing in them is typed."""
+    html = read(os.path.join(PUBLIC, "ontology.html"))
+    figures = re.findall(r'<figure class="ofig">(.*?)</figure>', html, re.S)
+    assert len(figures) == 2, f"{len(figures)} figures"
+    anatomy, tiers = figures
+    seed = json.loads(read(SEED))
+    quotes = {r.get("quote") for e in seed["edges"] for r in e["references"]}
+    drawn = re.search(r'<div class="ofig-quote ev">&ldquo;(.*?)&rdquo;</div>', anatomy)
+    assert drawn, "the anatomy box draws no quote"
+    quote = drawn.group(1).replace("&amp;", "&").replace("&#39;", "'")
+    assert any(quote == (q or "").replace("&", "&") for q in quotes) or quote in {q or "" for q in quotes}, (
+        "the drawn quote is not a quote in the graph")
+    assert re.search(r"CW \w+ §\d+", anatomy), "the anatomy box draws no citation"
+
+    fam_map = json.loads(read(os.path.join(SRC, "families.json")))["map"]
+    top = fam_map["families"][0]
+    assert f'{top["family"]} <span class="n">{top["edges"]}</span>' in tiers, (
+        "the family chip's count is not the map's")
+    for row in top["strings"][:4]:
+        assert f'<code>{row["string"]}</code> <span class="n">{row["edges"]}</span>' in tiers, row["string"]
+
+
 def test_the_ontology_page_states_where_its_checks_come_from(qa_json):
     """The scan borrows the OOPS! catalogue's numbering; the page says so, cites
     it, and lists every pitfall code the tool actually uses."""
@@ -493,7 +559,8 @@ def test_the_ontology_page_states_where_its_checks_come_from(qa_json):
 
 def test_the_ontology_page_names_what_is_deliberately_absent():
     html = read(os.path.join(PUBLIC, "ontology.html"))
-    section = html[html.index("Deliberately absent"):html.index("The pitfall scan")]
+    # item 34(f) — the absences now follow the scan, so the slice runs to the end
+    section = html[html.index("Deliberately absent"):]
     for phrase in ("Transitivity", "Domain and range", "Disjoint types",
                    "subsumption backbone", "closed relation vocabulary"):
         assert phrase in section, phrase
