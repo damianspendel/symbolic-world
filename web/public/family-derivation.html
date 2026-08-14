@@ -7,7 +7,6 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { min-height: 100vh; }
-main { max-width: 940px; margin: 0 auto; padding: 1.6rem clamp(1rem, 4vw, 2rem) 5rem; }
 /* face, size and colour come from the shared scale in chrome.css; only the
    rhythm between headings and text belongs to the page */
 h1 { margin: .3rem 0 .6rem; }
@@ -78,7 +77,7 @@ tr.total td { color: var(--ink-faint); }
 <div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/#/method">method</a><a href="/ontology">ontology</a></nav></div>
 <div class="hrow hrow-2"><span class="where">families · derivation</span></div>
 </header>
-<main>
+<main class="page-main prose">
 <div class="titleband"><p class="eyebrow">relation family</p>
 <h1><span class="ev">derivation</span> <span class="chip f-ok">assigned, not verified</span></h1>
 <p class="sub">What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer — a quote checked letter-exact against its paragraph and judged by a model of a different family — and it was already done before any of this began.</p></div>
@@ -138,7 +137,7 @@ tr.total td { color: var(--ink-faint); }
 counts read from seed.json <span class="hash">sha256:281b3e328f12</span> via web/family-map.mjs;<br>
 definition and seeds quoted from docs/FAMILY_DEFINITIONS.md v0.7.1;<br>
 external-validity row from docs/experiments/external_validity_2026-08/results.json (report v3, closed 2026-08-12);<br>
-built 2026-08-13
+built 2026-08-14
 </div>
 <div class="callout"><p>These families are this project's classification. They are calibrated inside this repository, checked once against outside scholarship on a small sample, and endorsed by nobody. What the layer records is how we sorted relations Jung wrote — a map of assertions, not a reading of him.</p></div>
 <nav class="sitenav"><a href="/">the atlas</a>

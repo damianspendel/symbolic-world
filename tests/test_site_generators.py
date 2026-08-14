@@ -564,6 +564,48 @@ def test_menu_hash_destinations_are_routed_in_app_not_reloaded():
     assert "if (!route) return" in js
 
 
+# ------------------------------------ item 18 · the content column kinds ----
+
+def test_every_page_declares_a_content_kind():
+    for path in generated_pages():
+        html = read(path)
+        main = re.search(r"<main([^>]*)>", html)
+        assert main, os.path.basename(path)
+        assert "page-main" in main.group(1), os.path.basename(path)
+        assert re.search(r"\b(prose|records)\b", main.group(1)), (
+            f"{os.path.basename(path)}: no content kind declared")
+
+
+def test_no_page_sets_its_own_main_column_geometry():
+    for path in generated_pages():
+        style = "\n".join(re.findall(r"<style>(.*?)</style>", read(path), re.S))
+        for body in re.findall(r"(?:^|\})\s*main\s*{([^}]*)}", style):
+            for banned in ("max-width", "margin", "padding", "width"):
+                assert banned not in body, f"{os.path.basename(path)}: main sets {banned}"
+
+
+def test_the_two_kinds_are_defined_once_in_the_chrome():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    assert css.count("\n.page-main {") == 1
+    prose = re.search(r"\.page-main\.prose[^{]*{([^}]*)}", css).group(1)
+    records = re.search(r"\.page-main\.records[^{]*{([^}]*)}", css).group(1)
+    assert "max-width" in prose and "max-width" in records
+    assert prose != records, "the two kinds have the same geometry"
+    base = re.search(r"\n\.page-main {([^}]*)}", css).group(1)
+    assert "margin: 0" in base, "the column is centred, so its left edge moves"
+    assert "clamp(1rem, 4vw, 2.5rem)" in base, (
+        "the column's gutter is not the header's, so text will not align with the brand")
+
+
+def test_the_app_views_take_their_column_from_the_same_kinds():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    assert "#mode-panel .page" in css
+    style = read(os.path.join(ROOT, "web", "src", "style.css"))
+    assert not re.search(r"^\.page {", style, re.M), "the app restates its content column"
+    # a mobile override (max-width: none) is not a geometry of its own
+    assert not re.search(r"\.method-page { max-width: \d", style)
+
+
 # --------------------------------------- item 16 · flashless transitions ----
 
 def test_a_route_panel_is_filled_before_it_is_revealed():
@@ -917,7 +959,7 @@ def test_batch_delta_counts_are_the_records_that_cite_the_window(state):
 
 def test_release_entries_link_the_batches_they_name(state):
     html = read(os.path.join(PUBLIC, "releases.html"))
-    body = html[html.index("<main>"):]
+    body = html[html.index("<main"):]
     for batch in state["batches"]:
         bid = batch["id"]
         # a batch id appearing as text in an entry must be a link to its page
@@ -1069,7 +1111,7 @@ def test_the_identity_walk_is_not_exposed_on_the_site():
     back, and the header it would print is still lifted from the tool, so
     re-enabling cannot resurrect stale copy."""
     html = read(os.path.join(PUBLIC, "query.html"))
-    body = html[html.index("<main>"):]
+    body = html[html.index("<main"):]
     for marker in ("Identity walk", "walkhead", "runwalk", 'id="w-start"'):
         assert marker not in body, f"the walk is still on the query page: {marker}"
     js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))

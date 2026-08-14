@@ -786,3 +786,90 @@ view styles `.eyebrow`, `.sub`, `.titleband` or `.where` itself; the band's
 scoped selectors exist so a view cannot repaint it; every search input lives
 inside the header's `.hdr-tools`, which is right-aligned by the shared rule; and
 no page restyles the filter input. Drift in any of these fails the suite.
+
+## Item 16 — the frame of graph between click and view
+
+rAF sampling is throttled in this environment (the browser pane is backgrounded
+while a tool call runs), so the panel's class and content changes were
+instrumented against a task counter instead — a paint can only escape where two
+steps fall in different tasks.
+
+Measured before: `CLICK@task N`, then `SHOW` and `CONTENT` together at
+`task N+1`. The swap itself was tight; the gap was in front of it. The delegated
+menu handler assigned `location.hash`, which queues the route as its own task,
+so the frame after the click still showed the origin surface — the graph, when
+the click came from the atlas. That is the reported flash.
+
+Three changes, all structural:
+
+- the click routes in its own task — `history.pushState` (which fires no
+  hashchange) then `applyHash()` inline, with a `popstate` listener for the Back
+  button that entry creates;
+- `openPage` mounts and then reveals: content in, menu marked, `.hidden`
+  removed last, so an empty panel cannot paint and a future render that yields
+  cannot expose the graph under it;
+- a cold deep link to a panel route applies in the same task as `enterAtlas()`
+  rather than a tick later, which is what made arriving at `/#/method` from a
+  page flash the assembled atlas. Node and edge deep links keep the tick because
+  `focusOn` measures the viewport.
+
+Measured after, from every warm origin — atlas→method, atlas→concordance,
+method→concordance, concordance→method, families→method, queue→concordance:
+`CONTENT` then `SHOW`, both in the click's own task, zero frames with the graph
+exposed. The in-app families and queue views have no menu link of their own (the
+menu's *families* is the static page), so those origins were driven by hash and
+measured the same. App→static navigation is a document load: the browser holds
+the old page until the new one paints, and no graph is involved.
+
+## Item 17 — the identity walk, kept and unexposed
+
+The walk section on `/query` sits behind `WALK_IN_UI`, a named flag set false in
+`web/build-atlas.mjs`; one line re-enables it, and the non-transitivity header it
+prints is still lifted from `tools/query/kg_query.py` at build, so re-enabling
+cannot resurrect stale copy. The tool, its `--walk` flag, its CLI tests and the
+`docs/QUERY.md` section are untouched, and that section now opens with its
+status. Swept: the ontology page named the walk twice as the site's answer to
+transitivity and now says it is a command-line tool in this release; the v2.0
+skeleton in `docs/RELEASES.md` records it as built and kept for later; the
+repo-side demo carries the same note above its walk output.
+
+## Item 18 — the content column
+
+### Before, measured at 1280px
+
+| surface | main x | width | max-width | first character |
+|---|---|---|---|---|
+| releases | 168 | 940 | 940px | 200 |
+| ontology | 168 | 940 | 940px | 200 |
+| query | 168 | 940 | 940px | 200 |
+| family page | 168 | 940 | 940px | 200 |
+| families | 286 | 704 | 44rem | 310 |
+| ledger | 188 | 900 | 900px | 207 |
+| disputes | 208 | 860 | 860px | 227 |
+| batch page | 228 | 820 | 820px | 247 |
+| app · method | — | 672 | 42rem | 344 |
+| app · concordance | — | 1100 | 1100px | 130 |
+| app · families | — | 1100 | 1100px | 130 |
+
+Five widths, six different left edges, and the header's brand at x=40 on every
+one of them — so no page's text lined up with its own header, and moving between
+the ledger and disputes shifted the column by 20px.
+
+### After
+
+| surface | kind | width | first character | brand |
+|---|---|---|---|---|
+| releases · ontology · families · disputes · family page · batch page | prose | 816 | 40 | 40 |
+| query · ledger | records | 1104 | 40 | 40 |
+| app · method | prose | 816 | 40 | 40 |
+| app · concordance · families · queue | records | 1104 | 40 | 40 |
+
+Two kinds, defined once in the chrome block. Both are capped on the right rather
+than centred and take the header's own gutter, so the first character of every
+surface sits directly under the brand and nothing moves as you cross between
+pages. Recorded as V2-R13 with the kinds named.
+
+Tests: every page declares a kind, no page sets its own main-column width or
+padding, the two kinds are defined once and differ from each other, the base
+rule is uncentred with the header's gutter, and the app's views take the same
+kinds rather than restating them.

@@ -300,7 +300,6 @@ def batch_page(batch, delta, commits):
 <style>
   * {{ box-sizing:border-box; margin:0; padding:0; }}
   body {{ min-height:100vh; }}
-  main {{ max-width:820px; margin:0 auto; padding:1.6rem 1.2rem 4rem; }}
   /* face, size and colour come from the shared scale in chrome.css; the batch
      id inside the heading keeps the mono face, because it is an identifier */
   h1 {{ margin:.3rem 0 .5rem; }}
@@ -335,7 +334,7 @@ def batch_page(batch, delta, commits):
 </head>
 <body>
 {site_header("/ledger", f'<a href="/ledger">ledger</a> · {esc(batch["id"])}')}
-<main>
+<main class="page-main prose">
   <div class="titleband"><p class="eyebrow">batch delta</p>
   <h1><span class="idtok">{esc(batch["id"])}</span></h1></div>
   <div class="meta">{f'<span class="cite">{esc(window)}</span> · ' if window else ''}<span class="badge">{esc(batch["status"])}</span></div>
@@ -550,7 +549,6 @@ def build():
      token table in web/build-atlas.mjs. No colour is restated here. */
   * {{ box-sizing:border-box; margin:0; padding:0; }}
   body {{ min-height:100vh; }}
-  main {{ max-width: 900px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }}
   /* face, size and colour come from the shared scale in chrome.css */
   h1 {{ margin:.3rem 0 .8rem; }}
   h2 {{ margin:2.4rem 0 .3rem; }}
@@ -644,7 +642,7 @@ def build():
 </head>
 <body>
 {site_header("/ledger", "ledger", '<input id="q" class="std-search" type="search" placeholder="Filter records — a symbol, a relation, cw14…" autocomplete="off">')}
-<main>
+<main class="page-main records">
   <div class="titleband"><p class="eyebrow">provenance</p>
   <h1>Ledger</h1>
   <p class="sub">Every published record and the gates it passed. Nothing entered this graph by an

@@ -571,6 +571,20 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   anti-overclaim rules: several "pitfalls" are recorded design decisions,
   and the panel says which. Give `tools/ontology_qa/quality.py` a `--json`
   mode rather than scraping its prose output; the builder consumes that.
+- **V2-R13 two content-column kinds, and they do not wander (standing
+  rule, 2026-08-13).** Every reading surface declares a KIND and takes
+  its geometry from that kind alone: **prose** for pages that are read
+  (releases, ontology, families, disputes, a family page, a batch page,
+  the method view) and **records** for surfaces carrying rows and tables
+  (the ledger, the query panel, the concordance and queue views). Within
+  a kind the column is identical page to page. Both kinds are capped on
+  the right and NOT centred, and their left gutter is the header's, so
+  the first character of every page sits directly under the brand — a
+  centred column moves with the width of the page's own content, which
+  is what made the text appear to shift between the ledger and disputes.
+  The geometry lives once in the chrome block; a page that sets its own
+  main-column width or padding is a drift and fails the suite.
+
 - **V2-R12 one title band and one search position (standing rule,
   2026-08-13).** Every surface announces itself the same way: an eyebrow
   naming the KIND of surface, the title at h1, an optional one-line

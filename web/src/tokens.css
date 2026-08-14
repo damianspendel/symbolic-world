@@ -60,6 +60,23 @@
   color: var(--gold-dim); white-space: nowrap;
 }
 .page-bar .spacer { margin-left: auto; }
+/* Item 18 / V2-R13 (editorial ruling, 2026-08-13) — the content column. Two
+   kinds and no more: PROSE for pages that are read, RECORDS for surfaces that
+   carry rows and tables. Within a kind the column is identical page to page,
+   and both kinds start at the same left gutter as the header's brand and menu —
+   the column is capped on the right, not centred, so the text does not slide
+   sideways as the width of the page's own content changes. Before this the
+   eight generated pages had five different widths and four different left
+   edges, and moving between the ledger and disputes visibly shifted the text. */
+.page-main {
+  width: 100%; margin: 0;
+  padding: 1.6rem clamp(1rem, 4vw, 2.5rem) 5rem;
+}
+.page-main.prose, .method-page { max-width: calc(46rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
+.page-main.records, #mode-panel .page { max-width: calc(64rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
+#mode-panel .page { width: 100%; margin: 0; padding: 1.2rem clamp(1rem, 4vw, 2.5rem) 5rem; }
+#mode-panel .page.method-page { max-width: calc(46rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
+
 /* Item 15 (editorial ruling, 2026-08-13) — the title band, defined once. A page
    announces itself the same way everywhere: a quiet eyebrow naming the KIND of
    surface, the title at h1, and an optional one-line subtitle under it. Before
