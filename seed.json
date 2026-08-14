@@ -2142,6 +2142,106 @@
    "id": "regression",
    "label": "Regression of libido",
    "type": "Concept"
+  },
+  {
+   "id": "extraversion",
+   "label": "Extraversion",
+   "type": "Concept"
+  },
+  {
+   "id": "introversion",
+   "label": "Introversion",
+   "type": "Concept"
+  },
+  {
+   "id": "canalization-of-libido",
+   "label": "Canalization of libido",
+   "type": "Operation"
+  },
+  {
+   "id": "culture",
+   "label": "Culture",
+   "type": "Concept"
+  },
+  {
+   "id": "wachandi-ceremony",
+   "label": "The Wachandi spring ceremony",
+   "type": "Motif"
+  },
+  {
+   "id": "primitive-mentality",
+   "label": "The primitive mentality",
+   "type": "Concept"
+  },
+  {
+   "id": "sign",
+   "label": "The sign (semiotic expression)",
+   "type": "Concept"
+  },
+  {
+   "id": "magic",
+   "label": "Magic",
+   "type": "Concept"
+  },
+  {
+   "id": "science",
+   "label": "Science",
+   "type": "Concept"
+  },
+  {
+   "id": "excess-libido",
+   "label": "Excess libido",
+   "type": "Concept"
+  },
+  {
+   "id": "libido-analogue",
+   "label": "The libido analogue",
+   "type": "Concept"
+  },
+  {
+   "id": "churinga",
+   "label": "The churinga",
+   "type": "Symbol"
+  },
+  {
+   "id": "reductive-method",
+   "label": "The reductive method",
+   "type": "Operation"
+  },
+  {
+   "id": "sexuality",
+   "label": "Sexuality",
+   "type": "Concept"
+  },
+  {
+   "id": "wakonda",
+   "label": "Wakonda",
+   "type": "Concept"
+  },
+  {
+   "id": "codrington",
+   "label": "R. H. Codrington",
+   "type": "Figure"
+  },
+  {
+   "id": "mana",
+   "label": "Mana",
+   "type": "Concept"
+  },
+  {
+   "id": "primitive-energetics",
+   "label": "Primitive energetics (the primitive concept of energy)",
+   "type": "Concept"
+  },
+  {
+   "id": "lovejoy",
+   "label": "Arthur O. Lovejoy",
+   "type": "Figure"
+  },
+  {
+   "id": "participation-mystique",
+   "label": "Participation mystique",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -49139,6 +49239,29 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-13",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 98,
+     "quote": "this opposition is the expression, and perhaps also the basis, of the tension we call psychic energy",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)",
+     "correction_note": "gate correction: Attach. §98: the opposition 'is the expression, and PERHAPS ALSO THE BASIS, of the tension we call psychic energy.' Jung marks the generative reading with an explicit 'perhaps' — expression is asserted, basis is hedged. The standing relation is 'generates,' so this reference supports it only at medium."
+    },
+    {
+     "volume": "8",
+     "paragraph": 99,
+     "quote": "there must be some such tension of opposites in the child, otherwise no energy would be possible",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
     }
    ],
    "relation_family": {
@@ -49222,6 +49345,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-13",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 91,
+     "quote": "Only where a symbol offers a steeper gradient than nature is it possible to canalize libido into other forms.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
     }
    ],
    "relation_family": {
@@ -49281,6 +49415,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-13",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 74,
+     "quote": "Progression as a continuous process of adaptation to environmental conditions springs from the vital need for such adaptation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
     }
    ],
    "relation_family": {
@@ -49623,6 +49768,1217 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-08-13"
+   }
+  },
+  {
+   "subject": "progression",
+   "relation": "suppresses",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 74,
+     "quote": "Necessity enforces complete orientation to these conditions and the suppression of all those tendencies and possibilities which subserve individuation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "serves",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 75,
+     "quote": "as an adaptation to the conditions of the inner world, springs from the vital need to satisfy the demands of individuation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "extraversion",
+   "relation": "polarizes-with",
+   "object": "introversion",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 77,
+     "quote": "These two different ways of reacting, which I have called introversion and extraversion, correspond to two opposite types of attitude",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "progression",
+   "relation": "occurs-as",
+   "object": "extraversion",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 77,
+     "quote": "This movement can occur in two different forms: either extraverted, when the progression is predominantly influenced by objects and environmental conditions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "extraversion",
+   "relation": "distinct-from",
+   "object": "progression",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 77,
+     "quote": "progression and regression are at best only vague analogies of extraversion and introversion",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "canalization-of-libido",
+   "relation": "transfers",
+   "object": "psychological-value",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 79,
+     "quote": "I mean by this a transfer of psychic intensities or values from one content to another",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "culture",
+   "relation": "exploits",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 80,
+     "quote": "It is culture that provides the machine whereby the natural gradient is exploited for the performance of work.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "culture",
+   "relation": "transforms",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 81,
+     "quote": "also a psychic machine that utilizes psychic conditions for the transformation of libido",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "canalization-of-libido",
+   "relation": "converts",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 82,
+     "quote": "he has succeeded, with the help of a psychic mechanism, in converting natural instincts, which would otherwise follow their gradient without performing work",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 83,
+     "quote": "The transformation of instinctual energy is achieved by its canalization into an analogue of the object of instinct",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "wachandi-ceremony",
+   "relation": "canalizes",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 83,
+     "quote": "They dig a hole in the ground, oval in shape and set about with bushes so that it looks like a woman’s genitals.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, FINDING-adjudicated, 2026-08-14)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is applying his own theoretical interpretation (canalization of libido) to the ceremony, not reporting the Wachandi's own doctrine."
+    },
+    {
+     "volume": "8",
+     "paragraph": 84,
+     "quote": "There can be no doubt that this is a canalization of energy and its transference to an analogue of the original object",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "primitive-mentality",
+   "relation": "canalizes",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 86,
+     "quote": "All major undertakings and efforts, such as tilling the soil, hunting, war, etc., are entered upon with ceremonies of magical analogy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "transforms",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 88,
+     "quote": "The psychological mechanism that transforms energy is the symbol.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 113,
+     "quote": "This transformation process is an individual one and cannot be enforced by general rules and maxims. It is achieved by means of the symbol.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "distinct-from",
+   "object": "sign",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 88,
+     "quote": "I mean by this a real symbol and not a sign.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "magic",
+   "relation": "canalizes",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 89,
+     "quote": "The first achievement wrested by primitive man from instinctual energy, through analogy-building, is magic.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "magic",
+   "relation": "generates",
+   "object": "science",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 90,
+     "quote": "Not for nothing is magic called the “mother of science.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "expresses",
+   "object": "excess-libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 91,
+     "quote": "symbols are religious ideas; in the form of action, they are rites or ceremonies. They are the manifestation and expression of excess libido",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "is",
+   "object": "libido-analogue",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 92,
+     "quote": "I have called a symbol that converts energy a “libido analogue.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "churinga",
+   "relation": "carries",
+   "object": "life-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 92,
+     "quote": "rubs his churinga rhythmically and takes the magic power of the fetish into himself, at the same time giving it a fresh “charge.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 119,
+     "quote": "the body of an individual ancestor (from whom the life force comes)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "produces",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 92,
+     "quote": "Symbols were never devised consciously, but were always produced out of the unconscious by way of revelation or intuition.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "christianity",
+   "relation": "suppresses",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 92,
+     "quote": "We know the extraordinary part played by Christianity in the suppression of individual symbol-formation.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)",
+     "correction_note": "gate correction: §92's claim is 'the suppression of INDIVIDUAL symbol-formation' — Christianity is itself a collective symbol system (§111), so the bare symbol node overstates the target. No standing symbol-formation node to correct to; the edge survives as a generalization with confidence dropped to medium, matching the window-1 precedent for scope-generalized objects. The scope word 'individual' should ride the reference note."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "reductive-method",
+   "relation": "dissolves",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 93,
+     "quote": "the reductive psychoanalytic method inaugurated by Freud, which breaks down all inappropriate symbol-formations and reduces them to their natural elements",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "reductive-method",
+   "relation": "dams-up",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 109,
+     "quote": "Reduction breaks down all inappropriate and useless symbols and leads back to the merely natural course, and this causes a damming up of libido.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "primitive-mentality",
+   "relation": "submits-to",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 95,
+     "quote": "that outstanding quality of the primitive mind, which is its subjection to supra-personal “powers,” be they instincts, affects, superstitions, fantasies",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "polarizes-with",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 96,
+     "quote": "Over against the polymorphism of the primitive’s instinctual nature there stands the regulating principle of individuation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "spirit",
+   "relation": "polarizes-with",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 96,
+     "quote": "Together they form a pair of opposites necessary for self-regulation, often spoken of as nature and spirit.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 98,
+     "quote": "Thus in the child-psyche the natural condition is already opposed by a “spiritual” one.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "produces",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 99,
+     "quote": "Everything that works from the unconscious appears projected on others.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "preserves",
+   "object": "pattern-of-behaviour",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 132,
+     "quote": "the unconscious contains not only all the forgotten material of the individual’s own past, but all the inherited behaviour traces",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 100,
+     "quote": "they are nevertheless pre-existent pathways which are merely “filled out” by individual experience",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "opposes",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 102,
+     "quote": "In the course of the centuries this conception came to formulate a spiritual principle which is opposed to mere instinctuality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "contains",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 103,
+     "quote": "it asserts the essential contradictoriness of one and the same being, a being whose innermost nature is a tension of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "subordinates",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 104,
+     "quote": "Freudian theory consists in a causal explanation of the psychology of instinct.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "overemphasizes",
+   "object": "sexuality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 105,
+     "quote": "The one-sidedness of Freud’s sexual theory is significant at least as a symptom.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 106,
+     "quote": "His concept of sexuality includes not only the physiological sexual processes but practically every stage, phase, and kind of feeling or desire.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "sexuality",
+   "relation": "polarizes-with",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 107,
+     "quote": "from the spiritual standpoint sex is the chief antagonist",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "spirit",
+   "relation": "manifests-as",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 108,
+     "quote": "The spiritual appears in the psyche also as an instinct, indeed as a real passion, a “consuming fire,”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "advances",
+   "object": "culture",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 111,
+     "quote": "Therefore an advance always begins with individuation, that is to say with the individual, conscious of his isolation, cutting a new path",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "wakonda",
+   "relation": "names",
+   "object": "life-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 116,
+     "quote": "Wakonda is the conception of a “diffused, all-pervasive, invisible, manipulable and transferable life-energy and universal force.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, FINDING-adjudicated, 2026-08-14)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-quotes-source' or 'jung-reports-parallel' as Jung is quoting an external definition of an indigenous concept, not asserting his own psychological theory."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "codrington",
+   "relation": "defines",
+   "object": "mana",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 123,
+     "quote": "The Melanesian mind is entirely possessed by the belief in a supernatural power or influence, called almost universally mana",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)",
+     "source": "R. H. Codrington"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "mana",
+   "relation": "exemplifies",
+   "object": "primitive-energetics",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 124,
+     "quote": "in the case of mana , as with the other concepts, we are dealing with a concept of energy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "lovejoy",
+   "relation": "proposes",
+   "object": "primitive-energetics",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 126,
+     "quote": "For these concepts Lovejoy suggests the term “primitive energetics.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)",
+     "source": "Arthur O. Lovejoy"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "mana",
+   "relation": "expresses",
+   "object": "participation-mystique",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 127,
+     "quote": "Thus mana is not a concept but a representation based on the perception of a “phenomenal” relationship.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "mana",
+   "relation": "prefigures",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 128,
+     "quote": "We cannot escape the impression that the primitive view of mana is a forerunner of our concept of psychic energy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "primitive-energetics",
+   "relation": "supports",
+   "object": "energic-standpoint",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 130,
+     "quote": "this is in accord with the psychic facts which have been graven on the mind of man since primordial times",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "weakens",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 134,
+     "quote": "These qualities are often impaired in the neurotic patient, who differs from the normal person in that his threshold of consciousness gets shifted",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "enables",
+   "object": "science",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 135,
+     "quote": "Without them science, technology, and civilization would be impossible, for they all presuppose the reliable continuity and directedness of the conscious process.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "breaks-into",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 138,
+     "quote": "if the tension increases as a result of too great one-sidedness, the counter-tendency breaks through into consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "dissociates-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 139,
+     "quote": "Civilized life today demands concentrated, directed conscious functioning, and this entails the risk of a considerable dissociation from the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)",
+     "correction_note": "gate correction: §139 frames it as 'the RISK of a considerable dissociation' entailed by civilized directed functioning — the second sentence presupposes real removal from the unconscious, but the dissociation claim itself is hedged and conditional on modern one-sidedness. High flattens the hedge; medium per the form rule."
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "analytic-process",
+   "relation": "readjusts",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 142,
+     "quote": "Analytical treatment could be described as a readjustment of psychological attitude achieved with the help of the doctor.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "analytic-process",
+   "relation": "cannot-exhaust",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 141,
+     "quote": "Freud’s hope that the unconscious could be “exhausted” has not been fulfilled. Dream-life and intrusions from the unconscious continue",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-14",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-14"
    }
   }
  ]
