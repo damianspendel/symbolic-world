@@ -85,6 +85,9 @@ const TOKENS = {
   // measure is what put disputes on a different left edge before the gutter
   // ruling made left edges independent of width.
   measure: '68ch',
+  // Item 26 (editorial ruling, 2026-08-14) — the hybrid. One outer container,
+  // capped and centred as a block; everything inside keeps the single left edge.
+  'page-max': '1400px',
   gold: '#d4af37', 'gold-dim': '#94782a',
   surface: 'rgba(23, 20, 16, 0.94)', hairline: '#2b261e',
   'm-concept': TYPE_COLOR.Concept, 'm-symbol': TYPE_COLOR.Symbol, 'm-figure': TYPE_COLOR.Figure,
@@ -505,7 +508,7 @@ const chromeBlock = () => `
 .page-bar {
   position: sticky; top: 0; z-index: 50;
   display: flex; align-items: center; gap: 0.9rem;
-  height: 3rem; padding: 0 var(--page-gutter);
+  height: 3rem; max-width: var(--page-max); margin-inline: auto; padding: 0 var(--page-gutter);
   background: rgba(11, 10, 8, 0.94); border-bottom: 1px solid var(--hairline);
 }
 .page-bar .back {
@@ -527,8 +530,13 @@ const chromeBlock = () => `
    moves it. The first attempt anchored both kinds to the header's left gutter;
    that made the releases page read as hard left against the rest of the site,
    and centred is the look this site has. */
+/* Item 26 — .page-main IS the container: capped at --page-max and centred as a
+   block, which is the only centring on the site outside the landing hero. Its
+   padding is the gutter, so the one left edge is measured from the container's
+   left rather than the viewport's, and below --page-max the container binds to
+   the viewport and every number is what it was before the cap existed. */
 .page-main {
-  width: 100%; margin: 0;
+  max-width: var(--page-max); margin-inline: auto;
   padding: 1.6rem var(--page-gutter) 5rem;
 }
 /* Item 22 — the scrollbar gutter is always reserved, on the document and on the
@@ -536,10 +544,10 @@ const chromeBlock = () => `
    width when a reader crosses from a page to an in-app view. */
 html { scrollbar-gutter: stable; }
 #mode-panel { scrollbar-gutter: stable; }
-.page-main.prose, .method-page { max-width: calc(46rem + 2 * var(--page-gutter)); }
-.page-main.records, #mode-panel .page { max-width: calc(64rem + 2 * var(--page-gutter)); }
-#mode-panel .page { width: 100%; margin: 0; padding: 1.6rem var(--page-gutter) 5rem; }
-#mode-panel .page.method-page { max-width: calc(46rem + 2 * var(--page-gutter)); }
+.page-main.prose > *, .method-page > * { max-width: 46rem; }
+.page-main.records > *, #mode-panel .page > * { max-width: 64rem; }
+#mode-panel .page { max-width: var(--page-max); margin-inline: auto; padding: 1.6rem var(--page-gutter) 5rem; }
+#mode-panel .page.method-page > * { max-width: 46rem; }
 
 /* Item 15 (editorial ruling, 2026-08-13) — the title band, defined once. A page
    announces itself the same way everywhere: a quiet eyebrow naming the KIND of
@@ -626,7 +634,10 @@ h4 {
   position: sticky; top: 0; z-index: 60;
   background: var(--ground); border-bottom: 1px solid var(--hairline);
 }
-.site-header .hrow { display: flex; align-items: center; gap: 1rem; padding: 0 var(--page-gutter); }
+.site-header .hrow {
+  display: flex; align-items: center; gap: 1rem;
+  max-width: var(--page-max); margin-inline: auto; padding: 0 var(--page-gutter);
+}
 .site-header .hrow-1 { height: 3rem; }
 /* Item 22 — the second row is RESERVED: a constant height whether it carries a
    breadcrumb, the tools cluster, both or neither. The header's bottom edge is

@@ -679,19 +679,50 @@ def test_the_reading_measure_is_one_number_from_the_chrome():
                         f"{os.path.basename(path)}: {sel} sets its own measure")
 
 
-def test_nothing_centres_except_the_landing_hero():
-    """Item 24 — the hero is the sole exception. A column or band that centres
-    anywhere else reintroduces the drift the interview settled."""
+# Item 26 — centring is permitted at exactly one level: the container. The ban
+# on centring anything inside it stands.
+CONTAINER_SELECTORS = (".page-main", "#mode-panel .page", ".site-header .hrow", "#prose")
+
+
+def test_centring_happens_only_at_the_container():
+    """Item 24's ban stands inside the container; item 26 allows the container
+    itself to centre as a block. A band, a column's contents or a kind that
+    centres reintroduces the drift the interview settled."""
     css = read(os.path.join(PUBLIC, "chrome.css")) + "\n" + read(os.path.join(ROOT, "web", "src", "style.css"))
     for selector, body in re.findall(r"([^{}\n]+){([^}]*)}", css):
-        if "margin" not in body:
-            continue
         if not re.search(r"margin[^;]*:\s*[^;]*\bauto\b", body):
             continue
         sel = selector.strip()
-        touches_column = re.search(r"\.page-main|\.titleband|#mode-panel \.page|\bmain\b", sel)
-        assert not touches_column or "#prose" in sel, (
-            f"a column or band centres itself: {sel} {{{body.strip()}}}")
+        if any(sel.startswith(c) or sel == c for c in CONTAINER_SELECTORS):
+            continue
+        assert not re.search(r"\.page-main|\.titleband|#mode-panel \.page|\bmain\b", sel), (
+            f"something inside the container centres itself: {sel} {{{body.strip()}}}")
+
+
+def test_the_container_is_one_token_and_shared_by_header_and_page():
+    """The header's content row and the page column take the same cap and the
+    same centring, which is what puts the brand exactly above the titles."""
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    assert css.count("--page-max:") == 1, "the container cap is not defined once"
+    for selector in (r"\.site-header \.hrow {", r"\n\.page-main {", r"#mode-panel \.page {"):
+        rule = re.search(selector + r"([^}]*)}", css).group(1)
+        assert "var(--page-max)" in rule, f"{selector} does not take the container cap"
+        assert "margin-inline: auto" in rule, f"{selector} does not centre as a block"
+        assert "var(--page-gutter)" in rule, f"{selector} lost the gutter"
+    # the bar itself stays full-bleed: no cap on .site-header, only on its rows
+    bar = re.search(r"\n\.site-header {([^}]*)}", css).group(1)
+    assert "max-width" not in bar, "the header bar is capped instead of full-bleed"
+    assert "background" in bar and "border-bottom" in bar
+
+
+def test_the_kind_caps_what_the_container_holds_not_the_container():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    prose = re.search(r"\.page-main\.prose > \*[^{]*{([^}]*)}", css).group(1)
+    records = re.search(r"\.page-main\.records > \*[^{]*{([^}]*)}", css).group(1)
+    assert "max-width" in prose and "max-width" in records and prose != records
+    for rule in (prose, records):
+        assert "margin" not in rule and "padding" not in rule, (
+            "a kind sets more than its right-hand cap")
 
 
 def test_one_left_edge_on_every_generated_page():
@@ -707,8 +738,8 @@ def test_one_left_edge_on_every_generated_page():
                 raise AssertionError(
                     f"{os.path.basename(path)} sets its own left edge: {selector.strip()}")
     # and the kinds differ only on the right
-    prose = re.search(r"\.page-main\.prose[^{]*{([^}]*)}", css).group(1)
-    records = re.search(r"\.page-main\.records[^{]*{([^}]*)}", css).group(1)
+    prose = re.search(r"\.page-main\.prose > \*[^{]*{([^}]*)}", css).group(1)
+    records = re.search(r"\.page-main\.records > \*[^{]*{([^}]*)}", css).group(1)
     for rule in (prose, records):
         assert "max-width" in rule
         assert "margin" not in rule and "padding" not in rule, (
@@ -821,11 +852,12 @@ def test_the_two_kinds_are_defined_once_in_the_chrome():
     assert prose != records, "the two kinds have the same geometry"
     base = re.search(r"\n\.page-main {([^}]*)}", css).group(1)
     # ruling by interview, 2026-08-14: one left edge, nothing centres
-    assert "margin: 0;" in base, "the column still centres"
-    assert "var(--page-gutter)" in base, "the column does not sit on the gutter token"
-    panel = [b for b in re.findall(r"#mode-panel \.page {([^}]*)}", css) if "margin" in b][0]
-    assert "margin: 0;" in panel and "var(--page-gutter)" in panel, (
-        "the app's panel column does not share the one left edge")
+    # item 26: the container centres as a block; the gutter inside it is the
+    # one left edge, and nothing within the container centres
+    assert "margin-inline: auto" in base and "var(--page-gutter)" in base
+    panel = [b for b in re.findall(r"#mode-panel \.page {([^}]*)}", css) if "padding" in b][0]
+    assert "margin-inline: auto" in panel and "var(--page-gutter)" in panel, (
+        "the app's panel container does not match the page container")
 
 
 def test_the_app_views_take_their_column_from_the_same_kinds():

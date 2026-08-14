@@ -1194,3 +1194,44 @@ alone.
 
 Its `.intro` now computes to 556.7px — 68ch from the chrome — and its style block
 contains no `max-width` at all.
+
+## Item 26 — the hybrid: one capped container, everything inside unchanged
+
+`--page-max: 1400px`, defined once. The page content and the header's content
+rows share one container: capped at that width and centred as a block. The
+header BAR stays full-bleed — background and hairline edge to edge, sticky as
+before — while its rows align inside the container, which is what puts the brand
+exactly above the titles at any viewport. The kind's cap moved off the container
+onto what the container holds, so prose and records still differ only on the
+right.
+
+Measured, in the harness at three widths:
+
+| viewport | container | left / right margin | brand | h1 | first paragraph | first table or facet |
+|---|---|---|---|---|---|---|
+| 1280 (prose) | 0 → 1276 | 0 / 0 | 72 | 72 | 72 | 72 |
+| 1280 (records) | 0 → 1276 | 0 / 0 | 72 | 72 | 72 | 72 |
+| 1500 (prose) | 48 → 1448 | 48 / 48 | 120 | 120 | 120 | 120 |
+| 1500 (records) | 48 → 1448 | 48 / 48 | 120 | 120 | 120 | 120 |
+| 1920 (prose) | 258 → 1658 | 258 / 258 | 330 | 330 | 330 | 330 |
+| 1920 (records) | 258 → 1658 | 258 / 258 | 330 | 330 | 330 | 330 |
+
+Margins are symmetric within the client box; the harness reports 4px more on the
+right at each width because the iframe's scrollbar takes it out of the viewport
+number, not out of the container. The header bar spans the full client width at
+every one, and the header's row starts at the container's left on every one.
+
+**At 1280 the numbers are identical to the item-24 table** — 72 for brand,
+title, first paragraph and first block, on both kinds. The container binds to the
+viewport below its cap, so the hybrid changes nothing until there is room to
+spare.
+
+The app measured the same way at 1500: brand, title, first paragraph and first
+block all at 122 on method and concordance, with the panel's container at
+50 → 1450. The atlas view is unchanged and still a full-viewport canvas.
+
+Tests: `--page-max` defined once; the header row, the page column and the panel
+column all take it with `margin-inline: auto` and the gutter; the bar itself
+carries no cap, so it stays full-bleed; the kinds cap the container's children
+rather than the container; and centring is permitted at the container level
+only — anything inside it that centres fails, which is item 24's ban intact.

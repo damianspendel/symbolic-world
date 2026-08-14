@@ -582,7 +582,14 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   two earlier reversals: the complaint was inconsistency, not leftness,
   and left-aligned is the design). One left edge for everything — the
   brand and menu, the breadcrumb, the title band, every paragraph, table,
-  facet block and card — set by `--page-gutter`, defined once as a token
+  facet block and card — measured from the left of ONE OUTER CONTAINER
+  (editorial ruling, 2026-08-14, the hybrid): the page content, the
+  header's content rows included, lives in a block capped at
+  `--page-max` and centred in the viewport. That container is the only
+  thing on the site that centres, apart from the landing hero; nothing
+  inside it does. Below the cap the container binds to the viewport and
+  every internal number is what it was without it. Inside, the left edge
+  is set by `--page-gutter`, defined once as a token
   and consumed by the header, the band and the content rules alike. The
   readable cap is measured from that gutter; a records surface extends
   further right and starts in exactly the same place. Nothing centres.
