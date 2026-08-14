@@ -1339,3 +1339,23 @@ became "the surfaces this entry carries", since those pages are built and in the
 branch rather than intended. The one genuinely forward-looking line is left
 alone: CW 8's remaining windows are a plan and say so, and v1.3.0 carries no
 such phrasing.
+
+## Item 31 — the works are cited properly
+
+The external-validity figures verified against the receipts row for row, but the
+list of works did not: titles had lost their articles and the dictionary had
+lost its three authors while every other work kept its editor. Corrected on
+/families to Jacobi's *The Psychology of C. G. Jung*, Samuels, Shorter and
+Plaut's *A Critical Dictionary of Jungian Analysis*, von Franz's *Alchemy: An
+Introduction to the Symbolism and the Psychology*, four volumes of Edinger, and
+Abraham's *A Dictionary of Alchemical Imagery*.
+
+The list renders in exactly one place — the families page's own exposition — so
+there was one edit to make. The other mentions on that page and on the
+amplification family's page are the definitions document's own citations, quoted
+verbatim above and below the rule; the atlas quotes that document and does not
+correct it, and the repo-side reports and receipts stay as records.
+
+Edinger's volume count stays bound to `results.json` rather than typed, so the
+word still comes from the receipts. A test holds the corrected titles, fails on
+any of the four old ones, and checks the bound count.

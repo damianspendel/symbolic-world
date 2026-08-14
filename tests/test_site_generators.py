@@ -248,6 +248,31 @@ def test_document_labels_render_with_the_colon_the_document_carries():
     assert '<b>Boundary:</b>' in js, "the boundary label lost its colon"
 
 
+def test_the_works_the_check_consulted_are_cited_correctly():
+    """Item 31 — the figures verified against the receipts but the titles did
+    not: articles dropped, and the dictionary lost its three authors while every
+    other work kept its editor. The list renders in one place, the families
+    page's own exposition, ABOVE the rendered document; the document's own
+    citations below it are quoted and are not ours to correct."""
+    html = read(os.path.join(PUBLIC, "families.html"))
+    exposition = html[:html.index("<hr>")]
+    for title in ("Jacobi's <em>The Psychology of C. G. Jung</em>",
+                  "Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>",
+                  "von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>",
+                  "Abraham's <em>A Dictionary of Alchemical Imagery</em>"):
+        assert title in exposition, title
+    for dropped in ("<em>Psychology of C.G. Jung</em>",
+                    "the <em>Critical Dictionary of Jungian Analysis</em>",
+                    "<em>Alchemy: An Introduction</em>,",
+                    "<em>Dictionary of Alchemical Imagery</em>"):
+        assert dropped not in exposition, f"an old citation survives: {dropped}"
+    # the volume count stays bound to the receipts rather than typed
+    ev = json.loads(read(os.path.join(
+        ROOT, "docs", "experiments", "external_validity_2026-08", "results.json")))
+    words = ["zero", "one", "two", "three", "four"]
+    assert f"{words[ev['edinger_volumes']]} volumes of Edinger" in exposition
+
+
 def test_no_family_page_calls_a_family_verified():
     """The standing vocabulary rule: a family is assigned; verification belongs
     to the quote and its paragraph."""
