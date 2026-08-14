@@ -622,7 +622,7 @@ def test_the_title_band_geometry_is_defined_once_and_locked():
     css = read(os.path.join(PUBLIC, "chrome.css"))
     assert css.count("\n.titleband {") == 1
     band = re.search(r"\n\.titleband {([^}]*)}", css).group(1)
-    assert "margin: 0 0" in band, "the band carries a top margin of its own"
+    assert re.search(r"margin: 0 (auto|0)", band), "the band carries a top margin of its own"
     for selector, expect in ((r"\.titleband > :first-child", "margin-top: 0"),
                              (r"\.titleband \.eyebrow", "margin: 0 0"),
                              (r"\.titleband h1", "margin: 0")):
@@ -630,6 +630,26 @@ def test_the_title_band_geometry_is_defined_once_and_locked():
         assert rule and expect in rule.group(1), selector
     tokens = read(os.path.join(ROOT, "web", "src", "tokens.css"))
     assert ".titleband h1" in tokens, "the app does not receive the locked band"
+
+
+def test_the_title_band_is_decoupled_from_the_column_kind():
+    """Item 23 — one band position on every surface. The band takes the prose
+    column's width and centres inside whatever column holds it; both kinds are
+    viewport-centred, so the band lands on the same pixel either way. A selector
+    that scopes the band to a kind reintroduces the jump."""
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    band = re.search(r"\n\.titleband {([^}]*)}", css).group(1)
+    assert "width:" in band and "auto" in band, f"the band does not set its own width: {band}"
+    sources = {"chrome.css": css,
+               "tokens.css": read(os.path.join(ROOT, "web", "src", "tokens.css")),
+               "style.css": read(os.path.join(ROOT, "web", "src", "style.css"))}
+    for path in generated_pages():
+        sources[os.path.basename(path)] = "\n".join(
+            re.findall(r"<style>(.*?)</style>", read(path), re.S))
+    for name, text in sources.items():
+        for selector in re.findall(r"([^{}\n]*\.titleband[^{}]*){", text):
+            assert not re.search(r"\.(prose|records)\b", selector), (
+                f"{name}: the band is scoped to a kind — {selector.strip()}")
 
 
 def test_no_surface_adds_space_above_the_title_band():

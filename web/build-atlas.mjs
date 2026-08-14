@@ -557,7 +557,14 @@ html { scrollbar-gutter: stable; }
    of its own, so a page that leaves a browser default on its h1 (the families
    document did, 21px of UA margin-top) cannot push the title down. The gap
    between eyebrow and title is one number, here. */
-.titleband { margin: 0 0 1rem; }
+/* Item 23 (editorial ruling, 2026-08-14) — the band is DECOUPLED from the
+   column kind. It takes the prose column's inner width and centres itself
+   inside whatever column it is in; since both kinds are themselves centred on
+   the viewport, a band centred in either lands on the same pixel. So the title
+   is in one place on every surface — no per-kind position, no footnote — and
+   the kind governs only the content below it, which is where a records page
+   needs its width. One rule, no kind-scoped selector anywhere near the band. */
+.titleband { width: min(46rem, 100%); margin: 0 auto 1rem; }
 .titleband > :first-child { margin-top: 0; }
 .titleband .eyebrow { margin: 0 0 0.35rem; }
 .titleband h1 { margin: 0; }

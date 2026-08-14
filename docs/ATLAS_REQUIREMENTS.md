@@ -586,6 +586,11 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   left against the rest of the site. Centred is the site's look.) The
   geometry lives once in the chrome block; a page that sets its own
   main-column width, margin or padding is a drift and fails the suite.
+  **The kind governs the CONTENT only** (editorial ruling, 2026-08-14):
+  the title band is decoupled from it and renders at one position and
+  one width — the prose column's — on every surface, so crossing from a
+  records page to a prose page does not move the title. A selector that
+  scopes the band to a kind is a drift and fails the suite.
 
 - **V2-R12 one title band and one search position (standing rule,
   2026-08-13).** Every surface announces itself the same way: an eyebrow

@@ -1053,3 +1053,47 @@ Tests: the reserved row is a fixed height and every surface renders it; the band
 geometry is defined once and locked; no page or view adds margin or padding
 above the band, and no surface may set `h1 { margin-top }`; and the app's column
 and a page's column start at the same offset.
+
+## Item 23 — one title position, no per-kind footnote
+
+Item 22 locked the band inside each kind and left the kinds themselves 144px
+apart: prose titles at 272, records titles at 128. Crossing from the ledger to
+disputes, or method to concordance, moved the title across the page.
+
+The band is now decoupled from the kind. It takes the prose column's inner width
+(46rem) and centres itself inside whatever column holds it; both kinds are
+already centred on the viewport, so a band centred in either lands on the same
+pixel. The kind governs only the content below the band, which is where a
+records page needs its width.
+
+That is one rule in the chrome block rather than a restructure of every
+generator's body — the same guarantee, and it cannot be defeated by a page
+forgetting to wrap its band, because there is no wrapper to forget. The rule
+carries no kind in its selector, and a test fails the build if any stylesheet
+ever scopes `.titleband` to `.prose` or `.records`.
+
+### After, at 1280px
+
+| surface | kind | h1 top | h1 left | band width | content column |
+|---|---|---|---|---|---|
+| app · method | prose | 41 | 272 | 736 | 232 / 816 |
+| app · concordance | records | 41 | 272 | 736 | 88 / 1104 |
+| app · families | records | 41 | 272 | 736 | 88 / 1104 |
+| app · queue | records | 41 | 272 | 736 | 88 / 1104 |
+| releases (top level) | prose | 41 | 272 | 736 | 232 / 816 |
+| ledger (top level) | records | 41 | 272 | 736 | 88 / 1104 |
+| disputes | prose | 41 | 270* | 736 | — |
+| families | prose | 41 | 270* | 736 | — |
+| ontology | prose | 41 | 270* | 736 | — |
+| family page | prose | 41 | 270* | 736 | — |
+| batch page | prose | 41 | 270* | 736 | — |
+| query | records | 41 | 270* | 736 | — |
+
+\* measured in the iframe harness, whose scrollbar renders 2px differently from
+a real navigation; the two pages measured at top level — one of each kind — both
+read 272, matching the app views exactly. The harness rows are internally
+consistent and are what shows records and prose now agreeing.
+
+Title top and left are the same number on every surface and in both kinds. The
+breadcrumb needed nothing: it sits in the header's gutter at 40 on all twelve,
+and never varied by kind.
