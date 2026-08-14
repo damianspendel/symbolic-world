@@ -1312,3 +1312,30 @@ and a host that serves the `.html` directly prints the warning.
 Tests assert the shape of both: the ceiling's value, that the budget prints, that
 the redirect probe does not follow redirects, and that nothing in the redirect
 block appends to `fails` or exits — a warning must stay a warning.
+
+## Item 30 — the releases intro stops explaining itself
+
+The page opened with four paragraphs about how the FILE is written: the
+four-section structure, the pointer convention, and the token binding. Those are
+instructions for whoever edits `docs/RELEASES.md`, rendered at whoever reads
+`/releases`. The intro is now two short paragraphs — what the page is, and what
+the pin's two version numbers mean, since every entry opens with one.
+
+Nothing was deleted. The conventions moved to an editorial note at the top of
+the source file, inside an HTML comment, and the generator now strips comments
+before it parses or renders anything — the simplest mechanism, and one that
+works wherever a note sits in the file. The note carries the structure, the
+pointers, the figures rule and the newest-first ordering, so the next person
+editing the file still meets them.
+
+A test holds both halves: the rendered intro is two paragraphs and carries none
+of the machinery vocabulary, and the source file still contains a note with the
+conventions in it that never reaches the page.
+
+**Addendum — a record, not a roadmap.** v1.5's UI section read "Nothing new is
+planned" and now reads "No changes": a section states what changed, even when
+the answer is none. Its sibling in v2.0 — "the surfaces this entry will ship" —
+became "the surfaces this entry carries", since those pages are built and in the
+branch rather than intended. The one genuinely forward-looking line is left
+alone: CW 8's remaining windows are a plan and say so, and v1.3.0 carries no
+such phrasing.

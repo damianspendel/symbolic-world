@@ -359,6 +359,28 @@ def test_the_pending_release_entry_has_substance():
     assert len(re.sub(r"<[^>]+>", "", body).split()) > 400, "the entry is thin"
 
 
+def test_the_releases_intro_is_two_paragraphs_and_no_machinery():
+    """Item 30 — the page opened with four paragraphs about how the file is
+    written. What a reader needs is what the page is and what a pin means; the
+    conventions live in an editorial note the renderer strips."""
+    html = read(os.path.join(PUBLIC, "releases.html"))
+    intro = html[html.index("<h1>Releases</h1>"):html.index('<section class="rel-entry')]
+    assert intro.count("<p>") == 2, f"the intro is {intro.count('<p>')} paragraphs"
+    text = re.sub(r"<[^>]+>", " ", intro)
+    for machinery in ("named tokens", "double braces", "repo-relative",
+                      "line for line", "build-atlas.mjs"):
+        assert machinery not in text, f"contributor machinery still rendered: {machinery}"
+    assert "the release-level story" in text and "pin" in text
+
+    # the conventions are kept, in a note the renderer never shows
+    source = read(os.path.join(ROOT, "docs", "RELEASES.md"))
+    note = re.search(r"<!--(.*?)-->", source, re.S)
+    assert note, "the editorial note is gone from the source file"
+    for convention in ("mining status", "repo-relative", "double braces", "newest-first"):
+        assert convention in note.group(1), f"the note lost a convention: {convention}"
+    assert "<!--" not in html and "EDITORIAL" not in html
+
+
 def test_releases_page_carries_no_unbound_token():
     assert "{{" not in read(os.path.join(PUBLIC, "releases.html"))
 

@@ -1,28 +1,35 @@
 # Releases
 
+<!-- EDITORIAL NOTE — for whoever edits this file. Not rendered: the releases
+     generator strips HTML comments before it parses or renders anything, so
+     these conventions stay with the file without being read at the reader.
+
+     STRUCTURE. Every entry carries the same four sections in the same order —
+     mining status, governance, core build, UI — so two releases can be read
+     against each other line for line. An entry opens with a `status:` line and
+     a `pin:` line, in that order.
+
+     POINTERS. Artifacts inside the repository are named as repo-relative paths
+     in `code formatting`: the repository is not public until the release
+     ceremony, so they are paths today and become links when it is. Pages on the
+     site are given as real links, extensionless by the site's own convention.
+
+     FIGURES. This file carries no typed figure. Counts are written as named
+     tokens in double braces and bound from the graph, the calibration records
+     and the committed experiment receipts by web/build-atlas.mjs; a token the
+     build cannot bind fails the build rather than shipping as literal braces.
+     Where a number is small and not count-like, write the word.
+
+     ORDER. Entries are sorted newest-first by the version in their heading, so
+     a new entry can be appended anywhere in the file. -->
+
 What changed between one release of the graph and the next, and why. The ledger
 records every individual claim and the gates it passed; this page records the
 release-level story.
 
-Every entry has the same four sections in the same order — **mining status**,
-**governance**, **core build**, **UI** — so two releases can be read against
-each other line for line.
-
-Every entry opens with a version pin. A graph release and a ruleset version are
-deliberately separate numbers — a release *pins* the ruleset it ships with
-rather than sharing its number — and the pin names the calibration record that
-was binding at tag time.
-
-**Pointers.** Artifacts inside the repository are named as repo-relative paths
-in `code formatting`: the repository is not public until the release ceremony,
-so they
-are paths today and become links when it is. Pages on the site are given as real
-links, extensionless by the site's own convention.
-
-This file carries no typed figure. Counts are written as named tokens in double
-braces and bound from the graph, the calibration records and the committed
-experiment receipts by `web/build-atlas.mjs`; a token the build cannot bind
-fails the build rather than shipping as literal braces.
+Each entry opens with a pin: the graph version, the ruleset version it shipped
+with — deliberately separate numbers — and the calibration record binding at tag
+time.
 
 ## v1.4 — the alchemical trilogy, the archetype volumes, and the relation-family layer
 
@@ -225,7 +232,7 @@ pin: graph v2.0 · ruleset pending · calibration record pending
 
 ### UI
 
-- The surfaces this entry will ship: the release notes you are reading, the
+- The surfaces this entry carries: the release notes you are reading, the
   ontology page, the query panel, one page per relation family and one per
   batch, the site menu with its four groups (explore, reference, provenance,
   about), and the single-gutter layout inside one capped container.
@@ -260,8 +267,8 @@ pin: graph v1.5 · ruleset pending · calibration record pending
 
 ### UI
 
-- Nothing new is planned. The study's result is a document, and it will be
-  linked from here when it exists.
+- No changes. The study's result is a document, and it will be linked from here
+  when it exists.
 
 ## v1.3.0 — the published baseline
 

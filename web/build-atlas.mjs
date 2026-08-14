@@ -1282,7 +1282,10 @@ if (existsSync(releasesPath)) {
     frozen_refs: meta.frozen.references
   }
   derived(...Object.values(relTokens))
-  let relMd = readFileSync(releasesPath, 'utf8')
+  // Item 30 — an HTML comment in this file is an editorial note for whoever
+  // edits it, not copy for whoever reads the page. Stripped before anything
+  // else looks at the text, so a note can sit anywhere in the file.
+  let relMd = readFileSync(releasesPath, 'utf8').replace(/<!--[\s\S]*?-->/g, '')
   for (const [k, v] of Object.entries(relTokens)) relMd = relMd.split(`{{${k}}}`).join(String(v))
   const relLeft = relMd.match(/\{\{(\w+)\}\}/)
   if (relLeft) { console.error(`RELEASES PAGE: unbound token {{${relLeft[1]}}} in docs/RELEASES.md`); process.exit(1) }

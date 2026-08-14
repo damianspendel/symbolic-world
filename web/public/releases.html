@@ -72,10 +72,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="titleband"><p class="eyebrow">release notes</p>
 <h1>Releases</h1></div>
 <p>What changed between one release of the graph and the next, and why. The ledger records every individual claim and the gates it passed; this page records the release-level story.</p>
-<p>Every entry has the same four sections in the same order — <strong>mining status</strong>, <strong>governance</strong>, <strong>core build</strong>, <strong>UI</strong> — so two releases can be read against each other line for line.</p>
-<p>Every entry opens with a version pin. A graph release and a ruleset version are deliberately separate numbers — a release <em>pins</em> the ruleset it ships with rather than sharing its number — and the pin names the calibration record that was binding at tag time.</p>
-<p><strong>Pointers.</strong> Artifacts inside the repository are named as repo-relative paths in <code>code formatting</code>: the repository is not public until the release ceremony, so they are paths today and become links when it is. Pages on the site are given as real links, extensionless by the site's own convention.</p>
-<p>This file carries no typed figure. Counts are written as named tokens in double braces and bound from the graph, the calibration records and the committed experiment receipts by <code>web/build-atlas.mjs</code>; a token the build cannot bind fails the build rather than shipping as literal braces.</p>
+<p>Each entry opens with a pin: the graph version, the ruleset version it shipped with — deliberately separate numbers — and the calibration record binding at tag time.</p>
 <section class="rel-entry">
 <h2>v2.0 — the graph as a queryable instrument</h2>
 <div class="meta">pending — populated finally at the ceremony. The sections below carry what is true today, as progress toward the release rather than as its record.</div>
@@ -101,7 +98,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 <h4>UI</h4>
 <ul>
-<li>The surfaces this entry will ship: the release notes you are reading, the ontology page, the query panel, one page per relation family and one per batch, the site menu with its four groups (explore, reference, provenance, about), and the single-gutter layout inside one capped container.</li>
+<li>The surfaces this entry carries: the release notes you are reading, the ontology page, the query panel, one page per relation family and one per batch, the site menu with its four groups (explore, reference, provenance, about), and the single-gutter layout inside one capped container.</li>
 <li>The depth-bounded identity walk is built and tested in <code>tools/query/kg_query.py</code> and is deliberately not exposed on the site. It reads identity chains one edge at a time, printing each hop's own citation; putting that on a page is a decision for a later release, not an oversight.</li>
 </ul>
 </section>
@@ -123,7 +120,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 <h4>UI</h4>
 <ul>
-<li>Nothing new is planned. The study's result is a document, and it will be linked from here when it exists.</li>
+<li>No changes. The study's result is a document, and it will be linked from here when it exists.</li>
 </ul>
 </section>
 <section class="rel-entry">
