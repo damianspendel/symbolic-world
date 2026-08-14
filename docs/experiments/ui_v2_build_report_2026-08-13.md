@@ -1593,3 +1593,59 @@ words italicised to match the sentences that follow.
 Two em-dashes in the panel copy went with the same pass ("N connections — click
 a link" and "No citation on this edge — structural only"), which the sweep had
 not reached because that copy lives in `main.js`.
+
+## Item 35: /families becomes pure reference
+
+The page now runs: title band, one header sentence, the states table, the
+provenance table, the string-to-family map, the emptied-family note, what fits
+nowhere, text-undecided strings, the two boundary rules, the document. Nothing
+else. The 25 family pages keep their external-check tables untouched.
+
+Word counts, exposition above the document's rule:
+
+| surface | before | after |
+|---|---|---|
+| /families (copy above the rule) | 3,010 | 2,305 |
+| /families (whole page) | 10,982 | 10,277 |
+| /ontology | 2,791 | 3,252 |
+| METHOD_COPY.md | 1,418 | 1,535 |
+
+The families page sheds 705 words of exposition; ontology takes 461 and the
+method page 117. The gap is what was already stated at the destination and did
+not need restating.
+
+### What was folded, and what was already there
+
+**Two tiers** already carried: a family is a classification over the verified
+relation; assigned when two models independently name the same family, ruled by
+a person when they do not; the second tier never reopens the first; and "Nothing
+on this site calls a family verified", which is the twin of the families page's
+"no such thing as a verified family on this site". That line was therefore not
+pasted in beside its twin. Folded: Damian's two-words sentence verbatim with its
+"Different evidence, different word" clincher, and the ownership paragraph.
+
+**Human oversight / Confidence levels** already carried: the disagreement queue,
+that no model breaks the tie, that a person rules signed and dated, the
+planted-error gate with its withdrawn figures and version-bound records, and
+that agreement measures followability rather than rightness. Folded: the arms'
+identities and the version-binding into Adjudication; a new Refusals bullet; the
+gate measuring the instrument and not the vocabulary; and why neither arm
+settles correctness.
+
+### Judgment calls
+
+The ruled "no such thing as a verified family" line was not folded, because its
+twin already stands in Two tiers and the dedup discipline outranks the
+belt-and-braces. Reported rather than silently done.
+
+The queue clause on the states table ("The queue is not a backlog to be cleared
+by machine; clearing it is what the human step is for") went with the method
+content: it is an argument about the human step, and the method page's
+Adjudication bullet already makes it.
+
+The header sentence uses a plain paragraph. The classes that look like lede
+components in the shared chrome are dead selectors, so a bare paragraph is the
+existing component here.
+
+The one-line external-check pointer sits in the header area rather than beside
+the map: it is a fact about the whole layer, not about the index.
