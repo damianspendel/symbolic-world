@@ -364,11 +364,23 @@ function familyIndexHTML() {
 }
 
 // ------------------------------------------------------- the evidence view ---
+// The RAG dots and their legend read from one table: a tooltip and its legend
+// entry are the same string by construction. The legend renders once per
+// evidence panel, below the list it explains, where the mix-legend sits under
+// its strip.
+const RAG_LEGEND = [
+  ['rag-green', 'Human-validated'],
+  ['rag-amber', 'Machine-verified default without human validation'],
+  ['rag-red', 'Disputed, on the record']
+]
+const ragLegend = () => `<div class="rag-legend">${RAG_LEGEND
+  .map(([cls, text]) => `<span><i class="rag ${cls}">●</i>${esc(text)}</span>`).join('')}</div>`
+
 function refBlock(e, r, key) {
   const dHist = DISPUTES[key] || [], cHist = CONFIRMS[key] || []
   const hv = HUMANVAL[key + '|' + r.volume + '|' + r.paragraph]
   const ragClass = (dHist.length || (hv && hv.support !== 'supported')) ? 'rag-red' : (hv ? 'rag-green' : 'rag-amber')
-  const ragTitle = ragClass === 'rag-green' ? 'Human-validated' : ragClass === 'rag-red' ? 'Disputed / contested' : 'Machine-checked (awaiting human validation)'
+  const ragTitle = RAG_LEGEND.find(([cls]) => cls === ragClass)[1]
   const pg = page(r.volume, r.paragraph)
   const cite = `<span class="cite-toggle" title="Show verification record">CW ${esc(r.volume)} §${esc(r.paragraph)}${r.verified ? ' <span class="vcheck">✓</span>' : ''}${dHist.length ? ' <span class="dmark" title="This edge has public dispute history">⚖</span>' : ''} <span class="rag ${ragClass}" title="${ragTitle}">●</span></span>`
   const report = (extra) => encodeURIComponent(JSON.stringify(Object.assign({
@@ -433,13 +445,13 @@ function nodePanel(node) {
       <div class="conn-h"><span>${dir}</span></div>
       ${normalizedBlock(e)}
       <div class="conn-f">${familyChip(e)}${e.refs.length > 1 ? `<span class="pageref">${e.refs.length} citations</span>` : ''}</div>
-      ${r ? refBlock(e, r, e.key) : '<div class="qual">No citation on this edge — structural only.</div>'}
+      ${r ? refBlock(e, r, e.key) : '<div class="qual">No citation on this edge: structural only.</div>'}
     </div>`
   }).join('')
   return `<div class="p-head"><div><div class="p-type">${esc(node.data('type'))}${node.data('tradition') ? ' · ' + esc(node.data('tradition')) : ''}</div></div>${copyLinkButton('#/n/' + id)}</div>
     <h2>${esc(node.data('label'))}</h2>
-    <div class="p-count">${conn.length} connection${conn.length !== 1 ? 's' : ''} — click a link to open it, click the far term to walk on</div>
-    ${mixStrip(id)}${rows}`
+    <div class="p-count">${conn.length} connection${conn.length !== 1 ? 's' : ''}: click a link to open it, click the far term to walk on</div>
+    ${mixStrip(id)}${rows}${rows ? ragLegend() : ''}`
 }
 
 function edgePanel(edge) {
@@ -452,7 +464,8 @@ function edgePanel(edge) {
     ${normalizedBlock(e)}
     <div class="conn-f" style="margin:0.6rem 0">${familyChip(e)}${e.confidence ? `<span class="conf conf-${esc(e.confidence)}">confidence: ${esc(e.confidence)}</span>` : ''}</div>
     <div class="p-count">${e.refs.length} citation${e.refs.length !== 1 ? 's' : ''}</div>
-    ${e.refs.map(r => `<div class="conn">${refBlock(e, r, e.key)}</div>`).join('')}`
+    ${e.refs.map(r => `<div class="conn">${refBlock(e, r, e.key)}</div>`).join('')}
+    ${e.refs.length ? ragLegend() : ''}`
 }
 
 function wirePanel(p) {

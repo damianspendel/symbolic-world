@@ -1558,3 +1558,38 @@ page records the release-level story." The first paragraph is now one line:
 paragraph is unchanged, so the intro is still two paragraphs and the shape test
 passes as written; its content assertion moved off the deleted phrase onto the
 sentence that remains.
+
+## The dot legend, and the families sentence
+
+**Legend.** One line, three entries, real coloured dots, once per evidence
+panel: green *Human-validated*, amber *Machine-verified default without human
+validation* (the ruled wording, unaltered), red *Disputed, on the record*.
+
+Placement follows the mix-legend precedent: the mix-legend sits directly under
+the strip it explains, so the dot legend sits under the list it explains — after
+the connections list on a node panel, after the citation list on an edge panel.
+Quiet, mono, `--ink-dim`, same size and gap as the mix-legend.
+
+The dots and the legend read from **one table**. `ragTitle` looks its tooltip up
+in the same array the legend renders, so a tooltip and its legend entry are the
+same string by construction rather than by discipline. The old tooltips
+("Disputed / contested", "Machine-checked (awaiting human validation)") are gone.
+
+Measured in the built app: one legend per panel on both panel kinds, entries and
+tooltips identical, dots rendering sage, amber and rubedo from the token
+palette. Each phrase appears exactly once in the bundle.
+
+**Method page** aligned to the same vocabulary: the status-dot sentence now
+reads "green, human-validated; amber, machine-verified default without human
+validation; red, disputed, on the record", and the gold-set line reads "The rest
+carry the amber dot: machine-verified without human validation." That supersedes
+the borderline "the honest default, not a defect" I flagged in the sweep, which
+is now gone from the copy.
+
+**Families exposition:** "So the two words are kept apart, deliberately." became
+"The two words *verified* and *assigned* are deliberately kept apart", with both
+words italicised to match the sentences that follow.
+
+Two em-dashes in the panel copy went with the same pass ("N connections — click
+a link" and "No citation on this edge — structural only"), which the sweep had
+not reached because that copy lives in `main.js`.

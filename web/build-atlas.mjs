@@ -829,7 +829,7 @@ function familiesPageCopy(map, version) {
 
 <h2>What a family is</h2>
 <p>A family is a classification <em>over</em> a relation that has already been checked. The claim underneath (subject, relation, object, the verbatim quote, the paragraph it came from) went through the verification chain before any of this began, and the family layer does not reopen it. It asks a second and much narrower question: what kind of relation is this one?</p>
-<p>So the two words are kept apart, deliberately. A citation is <em>verified</em>: a machine confirmed the quote is letter-exact in its paragraph, and a model from a different family judged that paragraph against the claim. A family is <em>assigned</em>: two models read the definitions document and independently arrived at the same name for the relation. Different evidence, different word. There is no such thing as a verified family on this site.</p>
+<p>The two words <em>verified</em> and <em>assigned</em> are deliberately kept apart. A citation is <em>verified</em>: a machine confirmed the quote is letter-exact in its paragraph, and a model from a different family judged that paragraph against the claim. A family is <em>assigned</em>: two models read the definitions document and independently arrived at the same name for the relation. Different evidence, different word. There is no such thing as a verified family on this site.</p>
 <p>These are our families. They record how this project sorted relations Jung wrote. Not a structure discovered in his thought, and not a position the field has agreed on. The graph is a map of assertions rather than a reading, and that holds harder here than anywhere else on the site.</p>
 
 ${EV ? `<h2 id="checked">Checked against readers of Jung</h2>

@@ -72,9 +72,7 @@ choice.
   voice, layer. Remove one with its ×.
 - **The bar along the bottom** selects volumes; each segment is sized by the
   verified evidence that volume carries.
-- Every citation shows a status dot: green, a person validated it; amber,
-  machine-verified only, the honest default; red, publicly disputed with the
-  dispute on the record.
+- Every citation shows a status dot: green, human-validated; amber, machine-verified default without human validation; red, disputed, on the record.
 
 ## How a claim gets in
 
@@ -111,8 +109,8 @@ Machine checks are not decisions. Responsible use of AI needs human oversight: a
 rules on disagreements, decides releases, and answers for what is published.
 
 - **Gold set.** {{human_chips}} claims carry a *human-validated* mark in the
-  [ledger](/ledger): a person read the cited paragraph. The rest are
-  machine-verified; the amber dot is the honest default, not a defect.
+  [ledger](/ledger): a person read the cited paragraph. The rest carry the
+  amber dot: machine-verified without human validation.
 - **Adjudication.** Two blind arms sort relations into {{families}} families.
   They disagree on {{queue}} claims today. No model breaks the tie. A person
   rules, in sittings, and every ruling lands signed and dated.

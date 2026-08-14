@@ -477,6 +477,12 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 .dhist-res { color: var(--ink); }
 .dhist-link { color: var(--gold); font-size: 0.62rem; }
 .chist { margin-top: 0.35rem; padding-top: 0.35rem; border-top: 1px dashed var(--hairline); color: var(--sage); }
+/* the dot legend, once per evidence panel, in the mix-legend's register */
+.rag-legend {
+  font: 0.55rem var(--mono); color: var(--ink-dim);
+  display: flex; flex-wrap: wrap; gap: 0.25rem 0.7rem; margin-top: 0.6rem;
+}
+.rag-legend i { font-style: normal; margin-right: 0.25rem; }
 .rag { font-size: 0.6rem; }
 .rag-green { color: var(--sage); }
 .rag-amber { color: var(--amber); }

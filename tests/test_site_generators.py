@@ -1126,6 +1126,45 @@ def test_the_band_outranks_a_view_that_styles_its_paragraphs():
     assert ".titleband .sub" in css
 
 
+def test_the_dot_legend_matches_its_tooltips_and_appears_once():
+    """The RAG dots and their legend read from one table, so a tooltip and its
+    legend entry are the same string. Each phrase appears exactly once in the
+    built bundle: once in the table, and nowhere hand-copied."""
+    js = app_js()
+    table = js[js.index("const RAG_LEGEND = ["):js.index("const ragLegend =")]
+    phrases = re.findall(r"'(rag-\w+)', '([^']+)'", table)
+    assert [p[0] for p in phrases] == ["rag-green", "rag-amber", "rag-red"], phrases
+    assert [p[1] for p in phrases] == [
+        "Human-validated",
+        "Machine-verified default without human validation",
+        "Disputed, on the record"], phrases
+    # the tooltip reads the same table rather than restating it
+    assert "RAG_LEGEND.find(([cls]) => cls === ragClass)[1]" in js
+    for _cls, text in phrases:
+        assert js.count(text) == 1, f"{text} is written {js.count(text)} times"
+
+    bundle = os.path.join(ROOT, "web", "dist", "index.html")
+    if os.path.exists(bundle):
+        built = read(bundle)
+        for _cls, text in phrases:
+            assert built.count(text) == 1, f"{text} appears {built.count(text)}x in the bundle"
+
+    # once per evidence panel, not per citation: both panels append it after
+    # the list they explain
+    assert "${rows}${rows ? ragLegend() : ''}" in js
+    assert "${e.refs.length ? ragLegend() : ''}" in js
+    assert "const ragLegend = () =>" in js
+    assert js.count("ragLegend()") == 2, "the legend renders somewhere other than the two panels"
+
+
+def test_the_method_page_uses_the_legend_vocabulary():
+    method = read(os.path.join(ROOT, "docs", "METHOD_COPY.md"))
+    assert ("green, human-validated; amber, machine-verified default without human "
+            "validation; red, disputed, on the record.") in method
+    assert "machine-verified without human validation." in method
+    assert "the honest default, not a defect" not in method
+
+
 def test_the_graph_search_renders_on_the_atlas_view_only():
     """Item 25 (editorial ruling, 2026-08-14) — the graph search acts on the
     atlas canvas, so it renders where that canvas is and nowhere else."""
