@@ -991,3 +991,65 @@ The query page needed nothing: its filter grid is page content and was already
 correct. Tests: a search input in a generated page's header slot now fails, the
 app's graph-wide search in the cluster is the asserted state, and the ledger's
 filter is asserted inside the facet block and first among its rows.
+
+## Item 22 — the title band, locked
+
+Measured first, at 1280px, as offsets from the header's bottom edge.
+
+### Before
+
+| surface | header h | band top | h1 top | eyebrow→h1 | band left |
+|---|---|---|---|---|---|
+| app · method | 93 | 19 | 34 | 6 | 272 |
+| app · concordance / families / queue | 93 | 19 | 34 | 6 | 128 |
+| releases · ontology · disputes · family · batch | 83 | 26 | 41 | 6 | 270 |
+| query · ledger | 83 | 26 | 41 | 6 | 126 |
+| **families (the definitions document)** | 83 | 26 | **57** | **21** | 270 |
+
+Three causes, none of them the band itself:
+
+1. **The header's own height moved.** The second row was `min-height`, so a
+   surface carrying the search input made it taller: 93 in the app against 83 on
+   a page. Everything below inherited the 10px.
+2. **The content column's top padding differed** — `1.2rem` in the panel,
+   `1.6rem` on a page — so the band sat 19 below the header in a view and 26 on
+   a page, in opposite compensation to the first.
+3. **The families document left a browser default on its h1**: 21px of UA
+   `margin-top` where every other surface had none, which is why "Relation
+   families" sat 16px lower than every other title. That is the one Damian
+   named, and it was a page-local default rather than a rule.
+
+### After
+
+| surface | header h | row 2 | band top | h1 top | eyebrow→h1 | band left |
+|---|---|---|---|---|---|---|
+| app · method (prose) | 95 | 46 | 26 | 41 | 6 | 272 |
+| app · concordance / families / queue (records) | 95 | 46 | 26 | 41 | 6 | 128 |
+| releases (prose, top level) | 95 | 46 | 26 | 41 | 6 | 272 |
+| ledger (records, top level) | 95 | 46 | 26 | 41 | 6 | 128 |
+| ontology · query · families · disputes · family · batch | 95 | 46 | 26 | 41 | 6 | by kind |
+
+Same header height, same row-2 height, same band offset, same eyebrow→title gap
+on every surface; the band's left edge is the content column's left edge, which
+is the kind's and nothing else's.
+
+The lock, all in the chrome block: the second row is a **reserved slot** at a
+fixed height whether it carries a breadcrumb, the tools cluster, both or neither,
+with the search input given a height so nothing in the row can stretch it; the
+band carries no margin of its own and neither do its children (`> :first-child`,
+`.eyebrow`, `h1`, `.sub` are all set here, so a page-local default cannot push
+the title down); and the panel's content column takes the page column's
+padding-top. `scrollbar-gutter: stable` is reserved on both the document and the
+panel layer, so a centred column does not shift by a scrollbar's width when a
+reader crosses from a page into a view.
+
+One measurement note: the before/after page rows were taken in an iframe harness
+and the app rows at top level, which differ by 2px on the centred column because
+of scrollbar rendering. The after table's page rows were re-measured at top
+level for that reason — `releases` and `ledger` above are real navigations, and
+they match their app counterparts exactly.
+
+Tests: the reserved row is a fixed height and every surface renders it; the band
+geometry is defined once and locked; no page or view adds margin or padding
+above the band, and no surface may set `h1 { margin-top }`; and the app's column
+and a page's column start at the same offset.

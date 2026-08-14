@@ -522,9 +522,14 @@ const chromeBlock = () => `
   width: 100%; margin: 0 auto;
   padding: 1.6rem clamp(1rem, 4vw, 2.5rem) 5rem;
 }
+/* Item 22 — the scrollbar gutter is always reserved, on the document and on the
+   panel layer alike, so a centred column does not shift by the scrollbar's
+   width when a reader crosses from a page to an in-app view. */
+html { scrollbar-gutter: stable; }
+#mode-panel { scrollbar-gutter: stable; }
 .page-main.prose, .method-page { max-width: calc(46rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
 .page-main.records, #mode-panel .page { max-width: calc(64rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
-#mode-panel .page { width: 100%; margin: 0 auto; padding: 1.2rem clamp(1rem, 4vw, 2.5rem) 5rem; }
+#mode-panel .page { width: 100%; margin: 0 auto; padding: 1.6rem clamp(1rem, 4vw, 2.5rem) 5rem; }
 #mode-panel .page.method-page { max-width: calc(46rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
 
 /* Item 15 (editorial ruling, 2026-08-13) — the title band, defined once. A page
@@ -547,7 +552,16 @@ const chromeBlock = () => `
   font-size: 0.95rem; line-height: 1.6; color: var(--ink-faint);
   margin-bottom: 1.2rem; max-width: 68ch;
 }
-.titleband { margin-bottom: 1rem; }
+/* Item 22 — the band's geometry, fixed and defined once. Its top is the content
+   column's padding-top and nothing else: no element inside it carries a margin
+   of its own, so a page that leaves a browser default on its h1 (the families
+   document did, 21px of UA margin-top) cannot push the title down. The gap
+   between eyebrow and title is one number, here. */
+.titleband { margin: 0 0 1rem; }
+.titleband > :first-child { margin-top: 0; }
+.titleband .eyebrow { margin: 0 0 0.35rem; }
+.titleband h1 { margin: 0; }
+.titleband .sub { margin: 0.5rem 0 0; }
 /* The band's two selectors carry a class more than a view's own paragraph rule,
    so a view that styles its paragraphs cannot repaint the band by accident —
    which is exactly what the method view was doing to its eyebrow. */
@@ -557,7 +571,9 @@ const chromeBlock = () => `
    it is pushed right together, so a page cannot half-do it. */
 .site-header .hdr-tools { margin-left: auto; display: flex; align-items: center; gap: 0.9rem; }
 .site-header .hrow-2 .spacer { margin-left: auto; }
-.site-header .std-search { width: min(320px, 34vw); }
+/* the tallest thing the reserved row can carry, sized so the row's height is a
+   constant rather than a function of what a surface happens to put in it */
+.site-header .std-search { width: min(320px, 34vw); height: 2rem; padding: 0 0.9rem; }
 /* Item 21 — a PAGE-LOCAL filter is not header furniture: it sits with the facets
    it belongs to and takes the same input styling, so the filtering system reads
    as one control family in one place. */
@@ -596,7 +612,13 @@ h4 {
 }
 .site-header .hrow { display: flex; align-items: center; gap: 1rem; padding: 0 clamp(1rem, 4vw, 2.5rem); }
 .site-header .hrow-1 { height: 3rem; }
-.site-header .hrow-2 { min-height: 2.15rem; padding-bottom: 0.4rem; gap: 0.9rem; flex-wrap: wrap; }
+/* Item 22 — the second row is RESERVED: a constant height whether it carries a
+   breadcrumb, the tools cluster, both or neither. The header's bottom edge is
+   therefore at the same y on every surface, which is what the title band's
+   offset is measured from. Nothing in the row is taller than this, so the row
+   is exactly this height on desktop; on narrow screens it wraps and grows, as
+   the rest of the header does. */
+.site-header .hrow-2 { height: 2.9rem; padding-bottom: 0; gap: 0.9rem; flex-wrap: wrap; }
 .site-header .brand {
   flex: 0 0 13rem; font-family: var(--display); font-size: 1.05rem; font-weight: 500;
   color: var(--ink); text-decoration: none; white-space: nowrap; letter-spacing: 0.005em;
@@ -609,6 +631,8 @@ h4 {
    is restated here. */
 #topbar.site-header { display: block; height: auto; padding: 0; }
 @media (max-width: 760px) {
+  /* the reserved row wraps and grows on a phone, like the rest of the header */
+  .site-header .hrow-2 { height: auto; min-height: 2.4rem; padding-bottom: 0.4rem; }
   .site-header .brand { flex: 0 0 auto; }
   .site-header .hrow { gap: 0.6rem; padding: 0 0.75rem; }
   .site-header .hrow-1 { height: auto; padding-top: 0.45rem; flex-wrap: wrap; }

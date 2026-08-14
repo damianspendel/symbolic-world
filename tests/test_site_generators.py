@@ -600,6 +600,62 @@ def test_menu_hash_destinations_are_routed_in_app_not_reloaded():
     assert "if (!route) return" in js
 
 
+# ------------------------------------- item 22 · the title band is locked ----
+
+def test_the_second_header_row_is_a_reserved_constant_height():
+    """The band's offset is measured from the header's bottom edge, so that edge
+    has to be at the same y everywhere. The row is a reserved slot: it holds a
+    breadcrumb, the tools cluster, both or neither, and keeps its height."""
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    row = re.search(r"\.site-header \.hrow-2 {([^}]*)}", css).group(1)
+    assert re.search(r"height:\s*[\d.]+rem", row), f"the row is not a fixed height: {row.strip()}"
+    search = re.search(r"\.site-header \.std-search {([^}]*)}", css).group(1)
+    assert "height" in search, "the tallest thing in the row is unconstrained"
+    for path in generated_pages():
+        header = re.search(HEADER_RE, read(path)).group(0)
+        assert 'class="hrow hrow-2"' in header, os.path.basename(path)
+    index = read(os.path.join(ROOT, "web", "index.html"))
+    assert 'class="hrow hrow-2"' in index
+
+
+def test_the_title_band_geometry_is_defined_once_and_locked():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    assert css.count("\n.titleband {") == 1
+    band = re.search(r"\n\.titleband {([^}]*)}", css).group(1)
+    assert "margin: 0 0" in band, "the band carries a top margin of its own"
+    for selector, expect in ((r"\.titleband > :first-child", "margin-top: 0"),
+                             (r"\.titleband \.eyebrow", "margin: 0 0"),
+                             (r"\.titleband h1", "margin: 0")):
+        rule = re.search(selector + r" {([^}]*)}", css)
+        assert rule and expect in rule.group(1), selector
+    tokens = read(os.path.join(ROOT, "web", "src", "tokens.css"))
+    assert ".titleband h1" in tokens, "the app does not receive the locked band"
+
+
+def test_no_surface_adds_space_above_the_title_band():
+    """Anything above the band that is not the shared rule set moves the title.
+    The families document did exactly this by leaving a browser default on its
+    h1, which pushed its title 16px below every other page's."""
+    sources = {os.path.basename(p): "\n".join(re.findall(r"<style>(.*?)</style>", read(p), re.S))
+               for p in generated_pages()}
+    sources["style.css"] = read(os.path.join(ROOT, "web", "src", "style.css"))
+    for name, css in sources.items():
+        for body in re.findall(r"\.titleband[^{]*{([^}]*)}", css):
+            for banned in ("margin", "padding"):
+                assert banned not in body, f"{name}: .titleband sets {banned}"
+        for body in re.findall(r"(?:^|\})\s*h1\s*{([^}]*)}", css):
+            assert "margin-top" not in body, f"{name}: h1 sets margin-top above the band"
+
+
+def test_the_app_column_and_the_page_column_start_at_the_same_offset():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    page = re.search(r"\n\.page-main {([^}]*)}", css).group(1)
+    panel = [b for b in re.findall(r"#mode-panel \.page {([^}]*)}", css) if "padding" in b][0]
+    top = lambda rule: re.search(r"padding:\s*([\d.]+rem)", rule).group(1)
+    assert top(page) == top(panel), (
+        f"the band sits {top(page)} below the header on a page and {top(panel)} in a view")
+
+
 # ------------------------------------ item 18 · the content column kinds ----
 
 def test_every_page_declares_a_content_kind():
