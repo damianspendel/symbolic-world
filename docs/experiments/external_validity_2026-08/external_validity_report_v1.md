@@ -3,7 +3,7 @@
 Charter: BACKLOG.md item 4. Question: would a reader of Jungian scholarship
 agree with how the graph's families classify Jung's assertions? Sample:
 27 items (seed 20260812; item 25 seed 20260812+1; items 26–27 purposive on
-Damian's instruction), drawn 2026-08-12 from seed.json at 407/1555,
+editorial instruction), drawn 2026-08-12 from seed.json at 407/1555,
 assigned=1292, queue=220. Chain: Opus 5 executed the literature search
 (worksheet: `external_validity_worksheet_opus.json`), Gemini reviewed every
 item (`gemini_review_c01–03.json`), Fable finalized. Ruleset under test:
@@ -216,5 +216,5 @@ edges for direction against the adduced-image-as-subject convention.
   weakest negative in the table.
 - Items 26/22's finalization rulings (pair-level evidence only) are mine
   (Fable). Reversing them changes: 26 DISAGREES→SPLIT, 22 DISAGREES→NT;
-  headline rate moves from 6/13 to 6/12 AGREES. Rulings are Damian's.
+  headline rate moves from 6/13 to 6/12 AGREES. Rulings are the author's.
 - Scoring rules were fixed before the search; no threshold moved.

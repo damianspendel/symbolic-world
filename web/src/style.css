@@ -49,7 +49,11 @@ body.atlas #overlay { pointer-events: none; opacity: 0; visibility: hidden; }
   #prose, #prose-more { max-width: none; }
 }
 
-.eyebrow {
+/* Item 15 — the landing HERO's eyebrow, which is a different kind of thing from
+   a page's title band: it sits over a 4rem hero, not over an h1, and it names
+   the site rather than the kind of page. Renamed so that `.eyebrow` means one
+   thing everywhere else. */
+.hero-eyebrow {
   font: 0.62rem var(--mono); letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--gold-dim); margin-bottom: 1.1rem;
 }
@@ -327,11 +331,21 @@ body.atlas #works { opacity: 1; pointer-events: auto; }
   overflow-y: auto; color: var(--ink);
 }
 #mode-panel.hidden { display: none; }
-.page {
-  max-width: 1100px; margin: 0 auto;
-  padding: 1.2rem clamp(1rem, 4vw, 2.5rem) 5rem;
-}
-#mode-panel h2 { font-family: var(--display); font-size: 1.7rem; font-weight: 500; margin-bottom: 0.3rem; }
+/* Item 20 (editorial ruling, 2026-08-14) — the panel is a PERSISTENT OPAQUE
+   LAYER, and the route raises it, not the render. The inline boot script in
+   index.html sets .route-panel on <html> from the hash before anything is
+   painted, and this rule outranks .hidden, so on a cold load of /#/method the
+   opaque surface is up in the first frame — before cytoscape exists, before any
+   content is built. Content then swaps INSIDE the layer, which is never lowered
+   between routes. The worst frame any transition can produce is therefore a
+   blank tokened surface; the graph cannot appear through it whatever the
+   scheduler does or how heavy the incoming view is to build. */
+html.route-panel #mode-panel { display: block; }
+/* Item 18 — the panel's content column is one of the two shared kinds; its
+   geometry is in the chrome block, beside the generated pages' own. */
+/* Item 14 — the view's headings come from the shared scale in tokens.css, the
+   same one the generated pages use. Only the rhythm stays here. */
+#mode-panel h2 { margin-bottom: 0.3rem; }
 #mode-panel .lede2 { font-size: 0.92rem; line-height: 1.6; color: var(--ink-faint); max-width: 46em; margin-bottom: 1.1rem; }
 #mode-panel .lede2 b { color: var(--ink); font-weight: 600; }
 /* R9.8 — two columns with drawn arcs. The arc layer is an SVG sized to the
@@ -463,6 +477,12 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 .dhist-res { color: var(--ink); }
 .dhist-link { color: var(--gold); font-size: 0.62rem; }
 .chist { margin-top: 0.35rem; padding-top: 0.35rem; border-top: 1px dashed var(--hairline); color: var(--sage); }
+/* the dot legend, once per evidence panel, in the mix-legend's register */
+.rag-legend {
+  font: 0.55rem var(--mono); color: var(--ink-dim);
+  display: flex; flex-wrap: wrap; gap: 0.25rem 0.7rem; margin-top: 0.6rem;
+}
+.rag-legend i { font-style: normal; margin-right: 0.25rem; }
 .rag { font-size: 0.6rem; }
 .rag-green { color: var(--sage); }
 .rag-amber { color: var(--amber); }
@@ -471,7 +491,9 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 @media (max-width: 760px) {
   #panel, #about, #family-panel { width: auto; left: 0.75rem; right: 0.75rem; top: auto; height: 52%; bottom: 3.9rem; }
   #about-open { top: auto; bottom: 3.9rem; }
-  #mode-panel { inset: 3.2rem 0.5rem 2.4rem; }
+  /* Item 20 — the panel layer covers the viewport at every width. It used to
+     inset here, which left the live graph visible around its edges. */
+  #mode-panel { inset: 0; }
   .conc-head, .crow { grid-template-columns: 1fr 120px 1fr; }
 }
 
@@ -598,11 +620,8 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 
 /* ------------------------------------------------------- #/method · the page ---
    Copy is wired verbatim from docs/METHOD_COPY.md; this is only its setting. */
-.method-page { max-width: 42rem; }
-.method-page h2 {
-  font-family: var(--display); font-size: 1.45rem; font-weight: 500;
-  color: var(--gold); margin: 2.4rem 0 0.6rem; letter-spacing: -0.005em;
-}
+/* .method-page takes the prose kind from the chrome block */
+.method-page h2 { margin: 2.4rem 0 0.6rem; }
 .method-page h2:first-child { margin-top: 0.4rem; }
 .method-page p { font-size: 1rem; line-height: 1.68; margin-bottom: 0.9rem; color: var(--ink); }
 .method-page li { font-size: 1rem; line-height: 1.62; margin-bottom: 0.55rem; color: var(--ink); }

@@ -4,7 +4,7 @@ Charter: BACKLOG.md item 4 (family layer section). Question under test: would a
 reader of Jungian scholarship agree with how the graph's relation families
 classify Jung's assertions? Not claim truth — family fit.
 
-Runs only after Damian confirms the sample
+Runs only after the author confirms the sample
 (`external_validity_sample_v1.json`, seed 20260812; item 25 under
 supplementary seed 20260812+1).
 
@@ -70,8 +70,8 @@ list is silent).
   or any tracked file. Single-corpus invariant holds.
 - Jung text: only the sample file's own ≤25-word quotes. Secondary
   literature: short attributed quotes within fair use, one per rendering.
-- Deliverable: report document to Damian (per-item table, citations,
+- Deliverable: report document to the author (per-item table, citations,
   per-family agreement rates, ranked v0.7 proposals as
   current wording → proposed wording → which items flip → predicted effect
-  on two-arm agreement). Proposals only; rulings are Damian's; adopted
+  on two-arm agreement). Proposals only; rulings are the author's; adopted
   changes go through the calibration loop before binding.

@@ -46,7 +46,7 @@ Its five entries:
 5. Version header, this change log, and the calibration-harness reference, which
    pointed at a superseded script.
 
-**v0.7.2 (2026-08-13) is a single ruling, Damian's, on instrumentality's
+**v0.7.2 (2026-08-13) is a single editorial ruling on instrumentality's
 slot geometry.** The definition's opening fixed the means to the object slot
 while the family's own seeds carry it in either; the sentence now says so
 ("the means term may sit in either slot"). No item flips; the risk closed
@@ -70,7 +70,7 @@ check** — the first revision driven by evidence from OUTSIDE the repository:
 literature in three pre-registered passes (record and receipts:
 `docs/experiments/external_validity_2026-08/`; headline 8/16 agreement among
 treated items, disagreements concentrated in amplification and identity).
-Rulings by Damian, 2026-08-12 evening, adopting the check's proposals P1–P7.
+Editorial rulings, 2026-08-12 evening, adopting the check's proposals P1–P7.
 Each transcribed below at its boundary; the seven in brief:
 
 1. **Amplification requires the adducing act in the quote** (P1). The
@@ -819,7 +819,7 @@ the refusal reasons say where. That outcome ships as a finding, not a failure.
 
 ## The first adjudication run (v0.5, 2026-08-06)
 
-Ten edges where the two model arms disagreed, ruled by Damian in the
+Ten edges where the two model arms disagreed, ruled by the author in the
 adjudication interface, every ruling with a reason
 (`pipeline/work/family_adjudication_rulings.json`, exported 18:42Z).
 

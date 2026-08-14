@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/family-generation">
+<title>generation — a relation family · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.countstrip { display: flex; flex-wrap: wrap; gap: .5rem .9rem; margin: .7rem 0 .2rem; font: .62rem var(--mono); color: var(--ink-faint); }
+.countstrip b { color: var(--ink); font-weight: 400; }
+.quotebox { border-left: 2px solid var(--hairline); padding: .2rem 0 .2rem .9rem; margin: .5rem 0 .7rem; font-size: .95rem; line-height: 1.6; max-width: var(--measure); }
+.stringmap { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
+.stringmap .chip code { background: none; padding: 0; font-size: .78rem; color: inherit; }
+.stringmap .chip .n { color: var(--ink-dim); }
+.stringmap .chip.lead { color: var(--gold); border-color: var(--b-amber); }
+.seeds { list-style: none; margin-top: .5rem; }
+.seeds li { padding: .22rem 0; font-size: .9rem; max-width: var(--measure); }
+.seeds .cite { font: .6rem var(--mono); color: var(--gold-dim); margin-left: .35rem; }
+.queue { margin-top: .5rem; }
+.qitem { border-left: 3px solid var(--b-amber); background: rgba(217,168,79,.05); border-radius: 0 6px 6px 0; padding: .45rem .7rem; margin: .4rem 0; }
+.qitem .triple { font-size: .92rem; }
+.qitem .rel { color: var(--gold); font-style: italic; }
+.qitem .cite { font: .6rem var(--mono); color: var(--gold-dim); }
+.qitem .why { font: .6rem/1.6 var(--mono); color: var(--ink-faint); margin-top: .2rem; }
+tr.this td { color: var(--ink); background: rgba(212,175,55,.05); }
+tr.total td { color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/#/method">method</a><a href="/ontology">ontology</a></nav></div>
+<div class="hrow hrow-2"><span class="where">families · generation</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">relation family</p>
+<h1><span class="ev">generation</span></h1>
+<p class="sub"><span class="chip f-ok">assigned, not verified</span> What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer: a quote checked letter-exact against its paragraph and judged by a model of a different family. That was already done before any of this began.</p></div>
+<div class="countstrip">
+  <span><b>62</b> assigned relations</span>
+  <span><b>34</b> effective relation strings</span>
+  <span><b>4</b> queued items carry a string this family covers</span>
+  <span><b>2</b> declared pairs</span>
+</div>
+<div class="countstrip dim">
+  <span>graph-wide: 1250 assigned · 262 awaiting a ruling · 41 no family · 2 text undecided · 1555 relations</span>
+</div>
+
+
+<h2>Definition</h2>
+<p class="meta">Quoted from <code>docs/FAMILY_DEFINITIONS.md</code> v0.7.1, family 13. The atlas quotes that document; it never paraphrases it.</p>
+<blockquote class="quotebox ev">The subject brings forth or begets the object — psychological or mythological parenthood, the parent persisting beside the offspring.</blockquote>
+<p class="dim ev"><b>Boundary:</b> not transformation; not derivation (historical/doctrinal descent is family 14, split out at v0.2 — the same verb "originates" serves both, so read the terms: traditions derive, beings beget); kinship ROLES (brother, consort) are family 20.</p>
+<p class="dim ev"><b>Inverse pair declared:</b> <code>produces</code> / <code>originates-in</code> (alongside produces/produced-by) — <code>projection originates-in the-unconscious</code> (9ii §17) and <code>god-image originates-in psychoid</code> (14 §787) are generation, inverse direction; only tradition-to-tradition <code>originates-in</code> (per §14's relation test) is derivation.</p>
+
+<h2>Relation strings that land here</h2>
+<div class="stringmap"><span class="chip ev lead"><code>produces</code> <span class="n">11</span></span><span class="chip ev lead"><code>arises-from</code> <span class="n">6</span></span><span class="chip ev lead"><code>originates-in</code> <span class="n">5</span></span><span class="chip ev"><code>derives-from</code> <span class="n">4</span></span><span class="chip ev"><code>begets</code> <span class="n">3</span></span><span class="chip ev"><code>arises-spontaneously-in</code> <span class="n">2</span></span><span class="chip ev"><code>child-of</code> <span class="n">2</span></span><span class="chip ev"><code>generates</code> <span class="n">2</span></span><span class="chip ev"><code>gives-birth-to</code> <span class="n">2</span></span><span class="chip ev"><code>begotten-from</code> <span class="n">1</span></span><span class="chip ev"><code>born-of</code> <span class="n">1</span></span><span class="chip ev"><code>could-produce</code> <span class="n">1</span></span><span class="chip f-none">and 22 more, 22 relations between them</span></div>
+<p class="meta">The number beside a string is how many relations carry it. 25 of these strings occur exactly once. The tail is the informative part: a string used once usually carried its own qualifier in the sentence it came from. A string can appear under more than one family, and does: assignment is made to an edge in its paragraph, never to a string in the abstract.</p>
+
+<h4>seeds: the examples the definition names</h4>
+<ul class="seeds"><li class="ev">four-elements give-rise-to will <span class="cite">9ii §100</span></li><li class="ev">fish is-son-of great-mother <span class="cite">9ii §173</span></li></ul>
+<h4>declared pairs</h4>
+<ul class="seeds"><li><span class="ev"><code>produces / produced-by</code></span>: inverse, transcribed from <span class="ev">Method and precedents — what is reused, what is rejected, and why (table row: OWL characteristics) (line 131)</span></li><li><span class="ev"><code>produces / originates-in</code></span>: inverse, restricted to the generation family, transcribed from <span class="ev">13. generation (line 559)</span></li></ul>
+<p class="meta">A declaration licenses a row in the other direction when the query panel's closure toggle is on, and nothing else. It is read at query time and never written into the graph.</p>
+<h4>pending a ruling: items carrying a string this family covers</h4>
+<div class="queue"><div class="qitem">
+<div class="triple ev">Luna <span class="rel">mother-of</span> Sol <span class="cite">CW 14 §219</span></div>
+<div class="why ev">arms-disagree</div>
+</div><div class="qitem">
+<div class="triple ev">Confrontation with the shadow <span class="rel">produces</span> Nigredo <span class="cite">CW 14 §708</span></div>
+<div class="why ev">arms-disagree</div>
+</div><div class="qitem">
+<div class="triple ev">Salt (Sal) <span class="rel">derives-from</span> The Sea (mare) <span class="cite">CW 14 §245</span></div>
+<div class="why ev">arms-disagree</div>
+</div><div class="qitem">
+<div class="triple ev">The mother-complex <span class="rel">produces</span> Homosexuality <span class="cite">CW 9i §162</span></div>
+<div class="why ev">arms-disagree</div>
+</div>
+<p class="meta">These are edges whose two model arms did not agree, or whose agreement the calibrated gate disputed. Carrying a string this family covers is not the same as belonging here; the ruling has not been made.</p>
+</div>
+<h2>Checked against readers of Jung</h2>
+<details class="disclose">
+<summary>Checked against 8 works of scholarship: across the sample, 8 of 16 treated items agreed with our family. The sample did not reach this family.<span class="more">the whole table</span></summary>
+<div class="tw"><table>
+<thead><tr><th>family</th><th>agrees</th><th>disagrees</th><th>split</th><th>not treated</th></tr></thead>
+<tbody><tr class=""><td>archetypal-identity (incl. 26)</td><td class="n">0/3</td><td class="n">1/3</td><td class="n">2/3</td><td class="n">2</td></tr>
+<tr class=""><td>correspondence (incl. 27)</td><td class="n">2/3</td><td class="n">1/3</td><td class="n">0/3</td><td class="n">2</td></tr>
+<tr class=""><td>symbolization</td><td class="n">3/3</td><td class="n">0/3</td><td class="n">0/3</td><td class="n">1</td></tr>
+<tr class=""><td>doctrinal-attribution</td><td class="n">1/2</td><td class="n">1/2</td><td class="n">0/2</td><td class="n">1</td></tr>
+<tr class=""><td>amplification</td><td class="n">0/3</td><td class="n">3/3</td><td class="n">0/3</td><td class="n">0</td></tr>
+<tr class=""><td>controls (personif., union)</td><td class="n">2/2</td><td class="n">0/2</td><td class="n">0/2</td><td class="n">0</td></tr>
+<tr class="total"><td>All</td><td class="n">8/16</td><td class="n">6/16</td><td class="n">2/16</td><td class="n">6</td></tr></tbody></table></div>
+<p class="meta">A row this small is the items themselves; no rate over a handful of items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts, not whether Jung's claim is true, which the verification chain had already asked of the paragraph. The disagreements stand beside the agreements because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>
+</details>
+<p class="meta">Agreement is not endorsement: no scholar reviewed this vocabulary, and the sample is small enough to name in a sentence.</p>
+
+<div class="receipts"><b>receipts</b>
+counts read from seed.json <span class="hash">sha256:281b3e328f12</span> via web/family-map.mjs;<br>
+definition and seeds quoted from docs/FAMILY_DEFINITIONS.md v0.7.1;<br>
+external-validity row from docs/experiments/external_validity_2026-08/results.json (report v3, closed 2026-08-12);<br>
+built 2026-08-14
+</div>
+<div class="callout"><p>These families are this project's classification. They are calibrated inside this repository, checked once against outside scholarship on a small sample, and endorsed by nobody. What the layer records is how we sorted relations Jung wrote: a map of assertions, not a reading of him.</p></div>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">ontology</a></nav>
+</main></body></html>

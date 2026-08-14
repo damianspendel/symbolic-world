@@ -49,6 +49,11 @@
       #boot h1{font-family:"Hoefler Text",Baskerville,"Iowan Old Style",Palatino,Georgia,serif;
         font-size:clamp(2.4rem,6vw,4.1rem);font-weight:500;letter-spacing:-.018em;line-height:1.04;margin:0}
       #boot h1 em{font-style:italic;opacity:.85}
+      /* Item 20 — the panel layer, in the first-paint block: on a cold load of
+         a panel route it must be opaque in frame one, before any stylesheet is
+         parsed. Same ground colour as the body above, the documented exception. */
+      #mode-panel{position:fixed;inset:0;z-index:13;background:#0b0a08;overflow-y:auto}
+      html.route-panel #mode-panel{display:block}
     </style>
   </head>
   <body>
@@ -66,7 +71,7 @@
          Everything else waits below. -->
     <div id="overlay" hidden>
       <div id="prose">
-        <div class="eyebrow">The Symbolic World</div>
+        <div class="hero-eyebrow">The Symbolic World</div>
         <h1>An atlas of<br />Jung's <em>Collected Works</em></h1>
 
         <div id="summary"></div>
@@ -90,20 +95,49 @@
       <div id="spacer"></div>
     </div>
 
-    <header id="topbar">
+    <!-- V2-R11 — the same header structure the generated pages carry: row one is
+         the brand block then the menu, at the same height and padding, so the
+         menu does not move when a reader crosses from the app to a page. Row two
+         holds everything whose width varies — the version chip, the controls,
+         the counts and the search field. -->
+    <!-- Item 20 — raise the opaque panel layer from the URL before anything is
+         painted. Classic inline script on purpose: it must run in document
+         order, ahead of the module bundle and ahead of the first paint, so a
+         cold load of a panel route never shows the atlas underneath. -->
+    <script>
+      (function () {
+        var h = location.hash || ''
+        if (/^#\/(method|concordance|families|queue)/.test(h)) document.documentElement.className += ' route-panel'
+      })()
+    </script>
+
+    <header id="topbar" class="site-header">
+      <div class="hrow hrow-1">
       <div class="brand" id="brand" title="Back to the summary">
         <h1>The Symbolic World</h1>
       </div>
-      <span id="version"></span>
-      <button class="navlink" id="open-concordance" title="Psychology against alchemy — the two-register view">⚯ concordance</button>
-      <button class="navlink" id="open-families" title="The relation-family vocabulary and the review queue">◈ families</button>
-      <a class="navlink" id="ledger-link" href="/ledger" title="Construction log — how every batch entered the graph, commit by commit">⛏ ledger</a>
-      <a class="navlink" id="disputes-link" href="/disputes" title="Public dispute log — every challenged edge and its outcome">⚖ disputes</a>
-      <button class="navlink" id="fit" title="Fit the graph to the screen">⤢ fit</button>
-      <button class="navlink" id="relayout" title="Clear the selection, the search and every filter">↺ reset</button>
-      <button class="navlink" id="open-method" title="About this atlas — the method, the corpus, and how to read it">✦ about</button>
-      <div id="stats"></div>
-      <input id="search" class="std-search" type="search" placeholder="A symbol, a relation, a quote, CW 14 §1…" autocomplete="off" spellcheck="false" />
+      <!-- V2-R10 — the site menu, identical on every page, grouped by the
+           taxonomy ruled on 2026-08-13. The list is held in web/build-atlas.mjs
+           for the pages node writes and in tools/build_ledger_page.py for the
+           pages python writes; a test compares all three renderings link for
+           link. Every destination appears here exactly once: the toolbar's own
+           navigation links were removed when this menu arrived, and what
+           remains beside it are app controls, not destinations. The in-app
+           queue keeps its entry inside the families view. -->
+      <nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas" aria-current="page">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/#/method">method</a><a href="/ontology">ontology</a></nav>
+      </div>
+      <div class="hrow hrow-2">
+        <span id="version"></span>
+        <!-- Item 15 — the controls and the search sit in the shared right-hand
+             cluster, which is what puts this search in the same place as the
+             search on every other surface. -->
+        <span class="hdr-tools">
+          <button class="navlink" id="fit" title="Fit the graph to the screen">⤢ fit</button>
+          <button class="navlink" id="relayout" title="Clear the selection, the search and every filter">↺ reset</button>
+          <div id="stats"></div>
+          <input id="search" class="std-search" type="search" placeholder="A symbol, a relation, a quote, CW 14 §1…" autocomplete="off" spellcheck="false" />
+        </span>
+      </div>
     </header>
     <div id="search-hint" class="hidden"></div>
 

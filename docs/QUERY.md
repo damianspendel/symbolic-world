@@ -132,6 +132,10 @@ cite.
 
 ## Walks
 
+**Status: not currently exposed in the site UI** (editorial ruling, 2026-08-13).
+The walk is built, tested and available on the command line; the query page
+does not carry it in this release.
+
 `--walk identity --subject X --depth N` follows `archetypal-identity` edges out
 from X, breadth-first, stopping at depth N, visiting each node once. Every hop
 prints the edge it crossed and that edge's citation, and hops that ran against
@@ -191,7 +195,7 @@ the declarations in force, which is the ACTIVE list minus the dormant entries.
 
 ## The carried-qualifier rule (ruling of 2026-08-13)
 
-Two doc-listed manifestation inverse strings were activated by Damian's
+Two doc-listed manifestation inverse strings were activated by an editorial
 ruling: `aspect-of` flips losslessly; `is-dark-aspect-of` flips WITH its
 qualifier carried — the derived row displays "dark aspect" beside its
 origin, so the reverse reading asserts exactly as much as the stored edge.

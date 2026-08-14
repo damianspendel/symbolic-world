@@ -1,6 +1,6 @@
 # Atlas UI requirements — v1.4
 
-Status: agreed scope, 2026-08-06. Four decisions taken by Damian via structured
+Status: agreed scope, 2026-08-06. Four decisions taken by the author via structured
 questions; recorded in "Decisions" below with the reasoning that produced them.
 This document is the build spec for a session that has not been part of the
 conversation, so it names existing code and states what is already true rather
@@ -53,7 +53,7 @@ invisible without UI work.
 
 ## R0 — Aesthetic direction: the spectacle is the evidence
 
-Added 2026-08-06 on Damian's brief: *"a sexy slick build that wows aesthetically,
+Added 2026-08-06 on the author's brief: *"a sexy slick build that wows aesthetically,
 grabs attention and then buries with the knowledge graph."* This supersedes R1's
 "thin gateway" framing, which was too modest. R1's *content* requirements all stand;
 R0 governs how they are presented.
@@ -84,7 +84,7 @@ atlas at a different zoom.
 That sequence is the whole brief in one gesture: it grabs attention, and what it grabs
 attention *with* is the verification chain.
 
-### R0.2 The palette: the Seven Metals (DECIDED, Damian, 2026-08-06)
+### R0.2 The palette: the Seven Metals (DECIDED, editorial ruling, 2026-08-06)
 
 Chosen from four candidates (`pipeline/work/atlas_palettes_v14.html`): warm
 near-black ground, gold accent, cream prose — and **node type coloured by metal**,
@@ -256,7 +256,7 @@ reference at this scale.
 visibly closes for a reader. It is the headline capability of v1.4 and should be
 discoverable without instruction.
 
-**R5.5 The works bar replaces the left-hand filter column (DECIDED, Damian,
+**R5.5 The works bar replaces the left-hand filter column (DECIDED, editorial ruling,
 2026-08-06).** The persistent checkbox stack is removed entirely. In its place:
 
 - A **thin coverage strip along the bottom edge**: one segment per volume,
@@ -311,7 +311,7 @@ needs identity, moderation and abuse handling that are out of scope here.
 
 ## R8 — The Concordance: psychology against alchemy
 
-Added 2026-08-06 on Damian's brief: *"consider how we want to play off the core
+Added 2026-08-06 on the author's brief: *"consider how we want to play off the core
 concepts against alchemy — perhaps there is a way to show the parallels in a
 clever way, make this a real didactic tool."* Mockup:
 `pipeline/work/atlas_mockup_v14.html`, section III.
@@ -353,7 +353,7 @@ a short walk, each step one verified edge with its quote. Curation selects
 node `type` plus a small explicit list for ambiguous Concept nodes, recorded in
 the build script — never inferred silently at runtime.
 
-## R9 — First user review, 2026-08-07 (Damian, on the served v1.4-dev build)
+## R9 — First user review, 2026-08-07 (the author, on the served v1.4-dev build)
 
 All decided; supersedes anything above where they conflict.
 
@@ -532,7 +532,7 @@ design choice.
 
 ## V2 — the v2.0 UI slice (added 2026-08-13, spec for the ui-v2-dev build)
 
-Damian's go of 2026-08-13. Conservative defaults chosen where the mockup
+Editorial go-ahead of 2026-08-13. Conservative defaults chosen where the mockup
 left questions open; each is flagged [DEFAULT] and reversible at review.
 
 - **V2-R1 releases page.** A `/releases` generator reading `docs/RELEASES.md`
@@ -561,7 +561,7 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   with the non-transitivity header; the receipts footer verbatim.
   [DEFAULT] the headline count is STORED EDGES, derived rows shown as
   "+M derived" — a copied number is always an edge count.
-- **V2-R5 ontology QA panel (Damian, 2026-08-13).** The method/about page
+- **V2-R5 ontology QA panel (editorial ruling, 2026-08-13).** The method/about page
   gains a section on the ontology and its practices: the two-tier design,
   the declarations with their rulings, what is deliberately absent
   (transitivity, domain/range as constraints), AND a build-time panel of
@@ -571,9 +571,121 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   anti-overclaim rules: several "pitfalls" are recorded design decisions,
   and the panel says which. Give `tools/ontology_qa/quality.py` a `--json`
   mode rather than scraping its prose output; the builder consumes that.
+- **V2-R13 two content-column kinds, and they do not wander (standing
+  rule, 2026-08-13).** Every reading surface declares a KIND and takes
+  its geometry from that kind alone: **prose** for pages that are read
+  (releases, ontology, families, disputes, a family page, a batch page,
+  the method view) and **records** for surfaces carrying rows and tables
+  (the ledger, the query panel, the concordance and queue views). **The
+  kinds differ ONLY in their right-hand cap. They never differ in their
+  left edge** (editorial ruling by interview, 2026-08-14, which settles
+  two earlier reversals: the complaint was inconsistency, not leftness,
+  and left-aligned is the design). One left edge for everything — the
+  brand and menu, the breadcrumb, the title band, every paragraph, table,
+  facet block and card — measured from the left of ONE OUTER CONTAINER
+  (editorial ruling, 2026-08-14, the hybrid): the page content, the
+  header's content rows included, lives in a block capped at
+  `--page-max` and centred in the viewport. That container is the only
+  thing on the site that centres, apart from the landing hero; nothing
+  inside it does. Below the cap the container binds to the viewport and
+  every internal number is what it was without it. Inside, the left edge
+  is set by `--page-gutter`, defined once as a token
+  and consumed by the header, the band and the content rules alike. The
+  readable cap is measured from that gutter; a records surface extends
+  further right and starts in exactly the same place. Nothing centres.
+  The **landing hero is the sole exception** and stays centred, because
+  it is the site's opening statement rather than a page. The
+  geometry lives once in the chrome block; a page that sets its own
+  main-column width, margin or padding is a drift and fails the suite.
+  **The kind governs the CONTENT only** (editorial ruling, 2026-08-14):
+  the title band is decoupled from it and renders at one position and
+  one width — the prose column's — on every surface, so crossing from a
+  records page to a prose page does not move the title. A selector that
+  scopes the band to a kind is a drift and fails the suite.
+
+- **V2-R12 one title band and one search position (standing rule,
+  2026-08-13).** Every surface announces itself the same way: an eyebrow
+  naming the KIND of surface, the title at h1, an optional one-line
+  subtitle, all inside `.titleband`. Face, size and colour come from the
+  shared chrome block; a page or view that styles `.eyebrow`, `.sub`,
+  `.titleband` or the `.where` breadcrumb itself is a drift and fails the
+  suite. **Two kinds of input, two homes** (refined by editorial ruling,
+  2026-08-14, and refined again the same day). The header's
+  `.hdr-tools` slot carries the graph search **on the atlas view only** —
+  the surface its results act on, since it dims and focuses the canvas.
+  No other surface carries a header input: on a panel view or a
+  generated page that search would be an instrument pointing at
+  something the reader cannot see.
+  A PAGE-LOCAL filter, which narrows only what that page lists, belongs
+  with its facets: it is the FIRST row of the facet block, above the chip
+  rows, because it is the broadest control in the family and everything
+  under it narrows further. Splitting the two across a header box and a
+  facet block put one filtering system in two places, which is the fault
+  this rule now names. Facet chips and form controls that ARE the page's
+  subject stay in content.
+  Three deliberate exceptions, each a different kind of thing rather
+  than a slightly different title: the **landing hero** (`.hero-eyebrow`
+  over a 4rem hero naming the site, not a page), the **batch
+  identifier** (`.idtok`, mono inside an otherwise standard h1, because
+  it is a machine id), and the **selection and family side panels**
+  (components docked beside the graph, not pages). The query panel's
+  filter grid is the fourth: it is the page's subject, not a filter over
+  it.
+
+- **V2-R9 progressive disclosure on heavy pages (standing rule,
+  2026-08-13).** A detail table on a page that already carries a lot sits
+  behind a one-line headline and a native `<details>`/`<summary>`: the
+  headline states the result in words, the table is one click away, and
+  no JavaScript is involved, so the page works with the fold closed and
+  in a reader that ignores scripts. The limit on what the table shows
+  stays OUTSIDE the fold — a reader who never expands must still read
+  what the figures do not support. Applied to the external-validity
+  table on every family page and to the ontology page's findings list.
+  Not applied where a table IS the page's subject (the declarations
+  register, the string map, the batch index): folding those away hides
+  the thing the reader came for.
+
+- **V2-R10 one site menu, everywhere (standing rule, 2026-08-13).** Every
+  page — the app and every generated page, including the ones the python
+  generator writes — carries the same top menu in the same position, with
+  the same items in the same order: atlas, query, families, ledger,
+  releases, ontology, disputes, method. The current page is marked with
+  `aria-current="page"`, and the breadcrumb keeps its fixed position
+  beside the menu (R10.6 stands). The list lives in one place per
+  generator language — `MENU` in `web/build-atlas.mjs`, `MENU` in
+  `tools/build_ledger_page.py` — and a test compares the rendered menus
+  link for link across all of them and `web/index.html`, so a route added
+  to one and forgotten in another fails the suite instead of stranding a
+  page. A new full-page route joins the menu in the commit that creates
+  it, the same way it joins the sitemap and the copy contract.
+
+- **V2-R7 the batch history moves off the ledger (2026-08-13).** With the
+  facets in, the ledger carries 1,555 record cards and a mining narrative
+  underneath them, and the narrative is the part nobody reaches. One page
+  per batch at `/batch-<id>`, generated by the ledger builder in the same
+  pass over the same data — the batch's declared window and status, what
+  it merged in its own words, the commits behind it, and a derived delta
+  (records citing that window, references inside it, the family mix those
+  records carry today, stated as derived and not as what the batch
+  decided). A batch that declared no paragraph window gets its record and
+  no derived count rather than a guess. The ledger keeps the batch facet
+  and a link per batch; release entries link the batches they shipped.
+  One generator, one set of numbers, three link surfaces.
+
+- **V2-R8 volumes sort in collection order (standing rule, 2026-08-13).**
+  Wherever CW volumes appear — a filter, a dropdown, a panel, a tile row,
+  the works bar, a facet strip, on any page now or later — they are
+  ordered as the edition orders them: 5, 8, 9i, 9ii, 11, 12, 13, 14, 16.
+  Never lexicographic (which puts 11 before 5 and Aion before the
+  Archetypes volume), and never by frequency, which makes the same list
+  reorder itself between builds. One comparator per generator language,
+  in one place: `volumeKey` / `byVolume` in `web/query-semantics.mjs` for
+  JavaScript, `volume_key` in `tools/build_ledger_page.py` for Python.
+  A new list of volumes imports the comparator rather than sorting.
+
 - **V2-R6 discipline.** Worktree-isolated build; tokens only; new pages
   join the copy-contract scan (numbers + banned vocabulary) on creation;
   extensionless links throughout; tests for every generator; NO deploy
   from the build — after merge, the next deploy carries UI and therefore
-  waits for Damian's review, and the standing data-only authorization does
+  waits for the maintainer's review, and the standing data-only authorization does
   not cover it.

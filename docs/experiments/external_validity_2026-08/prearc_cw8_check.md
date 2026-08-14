@@ -12,7 +12,7 @@ NOT-TREATED, per family, exact fractions).
 **Chain caveat, recorded up front.** The standing protocol's chain is Opus
 executes, Gemini reviews, Fable finalizes — because Fable authored
 FAMILY_DEFINITIONS. This mini-pass was executed end-to-end by a single
-Fable-family agent on Damian's instruction, with no Opus draft and no Gemini
+Fable-family agent on editorial instruction, with no Opus draft and no Gemini
 review. It is a screening check, not a full protocol run: its verdicts are
 advisory, and any DISAGREES it had produced would have needed the full chain
 before acting. It produced none.
@@ -94,7 +94,7 @@ and the Critical Dictionary carried 7 of the 10 treated items. Worth knowing
 for CW 8: its psychic-energy register is closer to Samuels' territory than
 CW 9i's mythography was, so coverage should be no worse.
 
-## One PROPOSAL (wording, not defect — Damian's ruling)
+## One PROPOSAL (wording, not defect — editorial ruling)
 
 The check found no external misfit, but item 12 sits on an internal wording
 gap worth closing before CW 8 mints edges on it. Instrumentality's opening

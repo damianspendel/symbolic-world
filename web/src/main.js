@@ -1,6 +1,7 @@
 import cytoscape from 'cytoscape'
 import atlas from './atlas.json'
 import families from './families.json'
+import chrome from './chrome.json'
 import summary from './summary.json'
 import pending from './pending.json'
 import method from './method.json'
@@ -192,6 +193,26 @@ if (MOBILE) {
 let routing = false
 function setHash(h) { routing = true; location.hash = h; setTimeout(() => { routing = false }, 0) }
 
+// Item 13 (editorial ruling, 2026-08-13) — the selection is reflected into the
+// URL, not pushed onto history: a reader clicking through twenty nodes should
+// not have to press Back twenty times to leave. replaceState does not fire
+// hashchange either, so reflecting a selection cannot re-enter the router.
+// #/atlas?node=<id> is the form the atlas emits; the older #/n/<id> and
+// #/e/<id> permalinks are still read on arrival, so links already copied out of
+// the site keep working.
+function routeOf(hash) {
+  const raw = (hash || '').replace(/^#/, '')
+  const [path, query] = raw.split('?')
+  return { path: '#' + path, params: new URLSearchParams(query || '') }
+}
+function reflect(hash) {
+  if (location.hash === hash) return
+  history.replaceState(null, '', hash || location.pathname + location.search)
+}
+function reflectSelection(kind, id) {
+  reflect(id ? `#/atlas?${kind}=${encodeURIComponent(id)}` : '#/atlas')
+}
+
 // R9.2 — land on the REGION, not on the edge. Fit the given elements with
 // generous padding and then cap the zoom, so a two-node selection does not fill
 // the screen at 12× and lose every landmark around it.
@@ -241,7 +262,7 @@ function selectNode(node, { hash = true } = {}) {
   hood.removeClass('faded'); hood.nodes().addClass('nbr')
   SELECTION = { kind: 'node', id: node.id(), label: node.data('label') }
   renderPanel(node); drawChips()
-  if (hash) setHash('#/n/' + node.id())
+  if (hash) reflectSelection('node', node.id())
 }
 function selectEdge(edge, { hash = true } = {}) {
   closeMode()
@@ -251,14 +272,17 @@ function selectEdge(edge, { hash = true } = {}) {
   const e = edgeData(edge.id())
   SELECTION = { kind: 'edge', id: edge.id(), label: e ? `${labelOf(e.source)} ${e.relation} ${labelOf(e.target)}` : edge.id() }
   renderPanel(edge); drawChips()
-  if (hash) setHash('#/e/' + edge.id())
+  if (hash) reflectSelection('edge', edge.id())
 }
 function clearSelection() {
   cy.$(':selected').unselect(); cy.elements().removeClass('faded nbr lit')
   $('panel').classList.add('hidden')
   SELECTION = null
   if (typeof drawChips === 'function') drawChips()
-  if (location.hash.startsWith('#/n/') || location.hash.startsWith('#/e/')) setHash('')
+  // clearing the selection clears the parameter, and leaves the route alone
+  const here = routeOf(location.hash)
+  if (here.params.has('node') || here.params.has('edge')) reflectSelection(null, null)
+  else if (here.path.startsWith('#/n/') || here.path.startsWith('#/e/')) setHash('')
 }
 cy.on('tap', 'node[kind != "region"]', e => selectNode(e.target))
 cy.on('tap', 'edge', e => selectEdge(e.target))
@@ -340,11 +364,23 @@ function familyIndexHTML() {
 }
 
 // ------------------------------------------------------- the evidence view ---
+// The RAG dots and their legend read from one table: a tooltip and its legend
+// entry are the same string by construction. The legend renders once per
+// evidence panel, below the list it explains, where the mix-legend sits under
+// its strip.
+const RAG_LEGEND = [
+  ['rag-green', 'Human-validated'],
+  ['rag-amber', 'Machine-verified default without human validation'],
+  ['rag-red', 'Disputed, on the record']
+]
+const ragLegend = () => `<div class="rag-legend">${RAG_LEGEND
+  .map(([cls, text]) => `<span><i class="rag ${cls}">●</i>${esc(text)}</span>`).join('')}</div>`
+
 function refBlock(e, r, key) {
   const dHist = DISPUTES[key] || [], cHist = CONFIRMS[key] || []
   const hv = HUMANVAL[key + '|' + r.volume + '|' + r.paragraph]
   const ragClass = (dHist.length || (hv && hv.support !== 'supported')) ? 'rag-red' : (hv ? 'rag-green' : 'rag-amber')
-  const ragTitle = ragClass === 'rag-green' ? 'Human-validated' : ragClass === 'rag-red' ? 'Disputed / contested' : 'Machine-checked (awaiting human validation)'
+  const ragTitle = RAG_LEGEND.find(([cls]) => cls === ragClass)[1]
   const pg = page(r.volume, r.paragraph)
   const cite = `<span class="cite-toggle" title="Show verification record">CW ${esc(r.volume)} §${esc(r.paragraph)}${r.verified ? ' <span class="vcheck">✓</span>' : ''}${dHist.length ? ' <span class="dmark" title="This edge has public dispute history">⚖</span>' : ''} <span class="rag ${ragClass}" title="${ragTitle}">●</span></span>`
   const report = (extra) => encodeURIComponent(JSON.stringify(Object.assign({
@@ -409,13 +445,13 @@ function nodePanel(node) {
       <div class="conn-h"><span>${dir}</span></div>
       ${normalizedBlock(e)}
       <div class="conn-f">${familyChip(e)}${e.refs.length > 1 ? `<span class="pageref">${e.refs.length} citations</span>` : ''}</div>
-      ${r ? refBlock(e, r, e.key) : '<div class="qual">No citation on this edge — structural only.</div>'}
+      ${r ? refBlock(e, r, e.key) : '<div class="qual">No citation on this edge: structural only.</div>'}
     </div>`
   }).join('')
   return `<div class="p-head"><div><div class="p-type">${esc(node.data('type'))}${node.data('tradition') ? ' · ' + esc(node.data('tradition')) : ''}</div></div>${copyLinkButton('#/n/' + id)}</div>
     <h2>${esc(node.data('label'))}</h2>
-    <div class="p-count">${conn.length} connection${conn.length !== 1 ? 's' : ''} — click a link to open it, click the far term to walk on</div>
-    ${mixStrip(id)}${rows}`
+    <div class="p-count">${conn.length} connection${conn.length !== 1 ? 's' : ''}: click a link to open it, click the far term to walk on</div>
+    ${mixStrip(id)}${rows}${rows ? ragLegend() : ''}`
 }
 
 function edgePanel(edge) {
@@ -428,7 +464,8 @@ function edgePanel(edge) {
     ${normalizedBlock(e)}
     <div class="conn-f" style="margin:0.6rem 0">${familyChip(e)}${e.confidence ? `<span class="conf conf-${esc(e.confidence)}">confidence: ${esc(e.confidence)}</span>` : ''}</div>
     <div class="p-count">${e.refs.length} citation${e.refs.length !== 1 ? 's' : ''}</div>
-    ${e.refs.map(r => `<div class="conn">${refBlock(e, r, e.key)}</div>`).join('')}`
+    ${e.refs.map(r => `<div class="conn">${refBlock(e, r, e.key)}</div>`).join('')}
+    ${e.refs.length ? ragLegend() : ''}`
 }
 
 function wirePanel(p) {
@@ -809,7 +846,12 @@ $('search').addEventListener('keydown', ev => {
 // sheet floating over the graph, and every page's "back" goes to #/atlas — the
 // atlas as it stands, never the landing sequence again.
 const modeEl = $('mode-panel')
-function closeMode() { modeEl.classList.add('hidden') }
+// Item 20 — the layer is raised by the route and lowered only when the route
+// leaves the panel class. Between two panel routes it is never lowered, so a
+// swap cannot expose the graph however long the incoming view takes to build.
+function raiseLayer() { document.documentElement.classList.add('route-panel') }
+function lowerLayer() { document.documentElement.classList.remove('route-panel') }
+function closeMode() { lowerLayer(); modeEl.classList.add('hidden') }
 function goAtlas() {
   enterAtlas(); closeMode()
   $('family-panel').classList.add('hidden')
@@ -818,31 +860,67 @@ function goAtlas() {
 // R10.0 / R10.6 — the breadcrumb is emitted from ONE place, so every route gets
 // the same control in the same position. R10.4 — and the same search field, in
 // the same slot, with the same behaviour.
-function pageBar({ where, search = false, extra = '' } = {}) {
-  return `<div class="page-bar">
-    <button class="back" data-back>← the atlas</button>
-    <span class="where">${esc(where || '')}</span>
-    <span class="spacer"></span>
-    ${extra}
-    ${search ? `<input class="std-search page-search" type="search" autocomplete="off" spellcheck="false"
-        placeholder="A symbol, a relation, a quote, CW 14 §1…">` : ''}
-  </div>`
+// Item 12 — every in-app route renders the SAME header the generated pages
+// carry, from the template build-atlas.mjs emits. #mode-panel is a fixed,
+// scrolling overlay that covers the topbar, so a route that drew its own bar
+// showed the reader a different set of links in a different place, and one that
+// scrolled away with the content. Rendered as the panel's first child, the
+// shared header sticks against the panel's own scroll.
+function pageBar({ where, extra = '' } = {}) {
+  // Item 25 (editorial ruling, 2026-08-14) — no search input on a panel view.
+  // The graph search acts on the atlas canvas: it dims and focuses the graph,
+  // so on method, concordance, families or the queue it was an instrument
+  // pointing at something the reader cannot see. It renders on the atlas view
+  // and nowhere else. The tools slot here carries only what a view genuinely
+  // owns, which today is the families view's link to the full document.
+  const tools = `${extra}`
+  const row2 = `<span class="where">${esc(where || '')}</span>` +
+    (tools.trim() ? `<span class="hdr-tools">${tools}</span>` : '')
+  return chrome.header.replace('{{BRAND_HREF}}', '#/atlas').replace('{{ROW2}}', row2)
 }
-// Every page-bar search is the same search: the same index, the same typeahead,
-// the same Enter-selects. Pages that carry a record list also filter it live.
-function wirePageSearch(rootEl, { localFilter } = {}) {
-  const input = rootEl.querySelector('.page-search')
+// Item 25 — a view's own list filter. It narrows that view's cards and touches
+// nothing else: no typeahead into the graph, no selection, no camera. The graph
+// search lives on the atlas, where its results are visible.
+function wireLocalFilter(rootEl, apply) {
+  const input = rootEl.querySelector('.local-filter')
   if (!input) return
-  attachTypeahead(input, { onPick: pickSuggestion })
-  input.addEventListener('input', () => {
-    if (localFilter) localFilter(norm(input.value))
-  })
+  input.addEventListener('input', () => apply(norm(input.value)))
 }
 
-function openPage(render) {
+// Item 14 — the menu marks where you are on an in-app route too. The generated
+// pages get their mark at build time; a route rendering the shared template got
+// none, so concordance, method, families and the queue never lit gold. Marked
+// here, at the one place every route passes through, rather than in each view.
+const MENU_HREF = {
+  '#/atlas': '/#/atlas',
+  '#/concordance': '/#/concordance',
+  '#/method': '/#/method',
+  '#/families': '/families',
+  '#/queue': '/families'        // R10.5 — the queue is a section of families
+}
+function markCurrent(root, href) {
+  root.querySelectorAll('.topmenu a[aria-current]').forEach(a => a.removeAttribute('aria-current'))
+  if (!href) return
+  const link = root.querySelector(`.topmenu a[href="${href}"]`)
+  if (link) link.setAttribute('aria-current', 'page')
+}
+// Item 16 — mount, then reveal. The panel is the one opaque surface over the
+// atlas, so the order matters: fill it while it is still display:none, mark the
+// menu, and only then show it. Revealing first and filling afterwards leaves a
+// frame's worth of empty panel available to paint, and any future render that
+// yields would put the live graph on screen under it.
+function openPage(render, route = '') {
+  // The layer goes up FIRST and stays up: opaque, viewport-covering, empty at
+  // worst. `html.route-panel #mode-panel` outranks `.hidden`, so raising it does
+  // not depend on the panel's own class — which is what lets the content still
+  // be mounted before that class is cleared (item 16's mount-then-reveal), with
+  // the layer already covering the graph either way.
+  raiseLayer()
   enterAtlas(); $('family-panel').classList.add('hidden')
-  modeEl.classList.remove('hidden'); modeEl.scrollTop = 0
+  modeEl.scrollTop = 0
   render()
+  markCurrent(modeEl, MENU_HREF[route] || '')
+  modeEl.classList.remove('hidden')
 }
 function openEdgeFromPage(id) {
   closeMode()
@@ -853,14 +931,16 @@ function openEdgeFromPage(id) {
 }
 function openMethod() {
   openPage(() => {
-    modeEl.innerHTML = `${pageBar({ where: 'about', search: true })}<div class="page method-page">${method.html}</div>`
+    modeEl.innerHTML = `${pageBar({ where: 'about' })}<div class="page method-page">` +
+      `<div class="titleband"><p class="eyebrow">about</p><h1>The method</h1>` +
+      `<p class="sub">How a claim gets into this graph, and what the checks do and do not cover.</p></div>` +
+      `${method.html}</div>`
     modeEl.querySelector('[data-back]').addEventListener('click', goAtlas)
-    wirePageSearch(modeEl)
-  })
+  }, '#/method')
   setHash('#/method')
 }
 function openConcordance() {
-  openPage(() => { renderConcordance(modeEl, atlas, { onOpenEdge: openEdgeFromPage, onBack: goAtlas, mixStrip, pageBar }); wirePageSearch(modeEl) })
+  openPage(() => { renderConcordance(modeEl, atlas, { onOpenEdge: openEdgeFromPage, onBack: goAtlas, mixStrip, pageBar }) }, '#/concordance')
   setHash('#/concordance')
 }
 
@@ -879,7 +959,7 @@ function openFamiliesPage({ scrollTo = '' } = {}) {
       const el = $(scrollTo)
       if (el) modeEl.scrollTop = el.offsetTop - 56
     }, 60)
-  })
+  }, scrollTo === 'queue-section' ? '#/queue' : '#/families')
   setHash(scrollTo === 'queue-section' ? '#/queue' : '#/families')
 }
 
@@ -891,14 +971,22 @@ function drawFamilies() {
   atlas.edges.forEach(e => { if (e.family) counts[e.family.value] = (counts[e.family.value] || 0) + 1 })
   const queued = (pending.items || []).length
   modeEl.innerHTML = `
-    ${pageBar({ where: 'families', search: true, extra: `<a class="back" href="${esc(families.doc_url)}">the full document →</a>` })}
+    ${pageBar({ where: 'families', extra: `<a class="back" href="${esc(families.doc_url)}">the full document →</a>` })}
     <div class="page">
-      <h2>The relation-family vocabulary</h2>
+      <div class="titleband"><p class="eyebrow">reference</p>
+      <h1>The relation-family vocabulary</h1></div>
       <p class="lede2">${families.families.length} families, ${esc(families.version)}, quoted from <code>docs/FAMILY_DEFINITIONS.md</code> — never paraphrased. A family classifies what KIND of relation an edge asserts, per edge and in its paragraph context, never per relation string. ${FAMILY_ON ? `<b>${META.familyLayer.states.family || 0}</b> edges carry a family, <b>${META.familyLayer.states.pending || 0}</b> await a human ruling, <b>${META.familyLayer.states.unclassified || 0}</b> carry none.` : 'The assignment pass has not merged, so no edge carries a family yet.'}</p>
 
       <div class="fam-jump">
         <button class="chip" data-jump="queue-section">awaiting review <span class="badge-count">${queued}</span></button>
       </div>
+
+      <!-- Item 25 — the view's own filter, beside the list it filters. It
+           narrows these cards and touches nothing else; the graph search is on
+           the atlas, where its results can be seen. -->
+      <div class="facetrow"><span class="lab">filter</span>
+        <input class="std-search facet-filter local-filter" type="search"
+               placeholder="a family, a boundary rule…" autocomplete="off" spellcheck="false"></div>
 
       <div id="family-list">
       ${families.families.map(f => `<div class="qitem fam-card" data-fam-search="${esc(norm(f.name + ' ' + f.definition_html.replace(/<[^>]+>/g, '')))}">
@@ -922,13 +1010,11 @@ function drawFamilies() {
     setHash('#/queue')
   }))
   wireQueueBody()
-  // R10.4 — the same search field, in the same slot, behaving the same way; it
-  // also filters this page's own records, which is what the page is a list of.
-  wirePageSearch(modeEl, {
-    localFilter: q => modeEl.querySelectorAll('.fam-card').forEach(c => {
-      c.classList.toggle('hidden', !!q && !c.dataset.famSearch.includes(q))
-    })
-  })
+  // Item 25 — the view keeps a filter over its own list, in the content beside
+  // what it filters (item 21's rule for a page-local control), not in the header.
+  wireLocalFilter(modeEl, q => modeEl.querySelectorAll('.fam-card').forEach(c => {
+    c.classList.toggle('hidden', !!q && !c.dataset.famSearch.includes(q))
+  }))
 }
 
 function openQueue() { openFamiliesPage({ scrollTo: 'queue-section' }) }
@@ -966,11 +1052,15 @@ function queueRow(it) {
   </div>`
 }
 
-$('open-concordance').addEventListener('click', openConcordance)
-$('open-families').addEventListener('click', openFamiliesPage)
-
-// R11 — the "?" is gone entirely; the topbar "about" link is the only entry.
-$('open-method').addEventListener('click', openMethod)
+// V2-R10 (editorial ruling, 2026-08-13) — the toolbar's navigation buttons were
+// removed when the site menu arrived: two navigation systems in one bar is one
+// too many. The routes they opened are unchanged and are reached from the menu
+// (#/concordance, /families, #/method) and from the router below, so these
+// bindings are optional now — they attach if the buttons exist and are silent
+// if they do not, which keeps a stale template from breaking the whole app.
+$('open-concordance')?.addEventListener('click', openConcordance)
+$('open-families')?.addEventListener('click', openFamiliesPage)
+$('open-method')?.addEventListener('click', openMethod)
 
 // ------------------------------------------------------- R1.4/R1.5 · counts ---
 // Every live number is read from atlas.json, which is regenerated from seed.json
@@ -1354,6 +1444,22 @@ function applyHash() {
   const h = location.hash
   if (!h || h === '#' || h === '#/') return
   enterAtlas()
+  const { path, params } = routeOf(h)
+  // #/atlas?node=<id> / ?edge=<id> — the form the atlas emits and the one an
+  // inbound deep link uses. Selecting focuses the neighbourhood, not the node
+  // alone, so the reader lands seeing where they are (R9.2's zoom cap).
+  if (path === '#/atlas' && (params.get('node') || params.get('edge'))) {
+    closeMode(); $('family-panel').classList.add('hidden')
+    const id = params.get('node') || params.get('edge')
+    const el = cy.getElementById(id)
+    if (el.nonempty()) {
+      if (el.isNode()) selectNode(el, { hash: false }); else selectEdge(el, { hash: false })
+      focusOn(around(el))
+    } else {
+      console.warn(`deep link: no ${params.get('node') ? 'node' : 'edge'} "${id}" in this graph`)
+    }
+    return
+  }
   let m
   if ((m = h.match(/^#\/n\/(.+)$/))) {
     const n = cy.getElementById(decodeURIComponent(m[1]))
@@ -1362,13 +1468,39 @@ function applyHash() {
     const e = cy.getElementById(decodeURIComponent(m[1]))
     if (e.nonempty() && e.isEdge()) { selectEdge(e, { hash: false }); focusOn(around(e)) }
   } else if ((m = h.match(/^#\/family\/(.*)$/))) openFamily(decodeURIComponent(m[1]))
-  else if (h === '#/concordance') openConcordance()
-  else if (h === '#/queue') openQueue()
-  else if (h === '#/families') openFamiliesPage()
-  else if (h === '#/method') openMethod()
-  else if (h === '#/atlas') { closeMode(); $('family-panel').classList.add('hidden') }
+  else if (path === '#/concordance') openConcordance()
+  else if (path === '#/queue') openQueue()
+  else if (path === '#/families') openFamiliesPage()
+  else if (path === '#/method') openMethod()
+  else if (path === '#/atlas') { closeMode(); $('family-panel').classList.add('hidden') }
 }
 window.addEventListener('hashchange', applyHash)
+
+// Item 14 — the menu's hash destinations are routes, not documents. Their hrefs
+// are absolute (`/#/atlas`) because a generated page must be able to load the
+// app; inside the app that same href is a different PATH whenever the app is not
+// served from exactly `/`, so the browser reloaded the document and the graph
+// came back re-laid-out with the selection gone. Delegated on the document, so
+// the topbar's menu and any route panel's menu are both covered, and so a route
+// added later needs nothing.
+document.addEventListener('click', ev => {
+  const link = ev.target.closest && ev.target.closest('.topmenu a, .brand[href]')
+  if (!link || ev.defaultPrevented || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button) return
+  const href = link.getAttribute('href') || ''
+  const route = href.match(/^\/?(#\/.*)$/)
+  if (!route) return                       // a real page: let the browser go
+  ev.preventDefault()
+  // Item 16 — route in THIS task. Assigning location.hash defers the route to
+  // the hashchange task and the browser paints in between, so the reader gets
+  // one frame of whatever they were looking at — the graph, when they clicked
+  // from the atlas — after they clicked. pushState changes the URL without
+  // firing hashchange, so the route runs inline and the first paint after the
+  // click already carries the new view. The history entry is kept, and popstate
+  // below routes the Back button that entry creates.
+  if (location.hash !== route[1]) history.pushState(null, '', route[1])
+  applyHash()
+})
+window.addEventListener('popstate', applyHash)
 
 // ----------------------------------------------------------------- buttons ---
 $('fit').addEventListener('click', () => cy.animate({ fit: { padding: 50 } }, { duration: 450 }))
@@ -1395,7 +1527,16 @@ cy.ready(() => {
       veil.style.opacity = deepLink ? '0' : '0.86'
       updateStats()
       // same batch-flush caveat as fitLanding: measure after the tick
-      if (deepLink) { enterAtlas(); setTimeout(applyHash, 0) } else fitLanding()
+      // Item 16 — a deep link to a PANEL route mounts its panel in this task,
+      // before the first paint. Deferring it by a tick let the assembled graph
+      // paint first, so arriving at /#/method from a page flashed the atlas.
+      // The node and edge deep links keep the tick: focusOn measures the
+      // viewport and needs the layout flushed.
+      if (deepLink) {
+        enterAtlas()
+        if (/^#\/(method|concordance|families|queue)/.test(location.hash)) applyHash()
+        else setTimeout(applyHash, 0)
+      } else fitLanding()
     })
     return
   }

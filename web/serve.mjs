@@ -18,6 +18,12 @@ createServer((req, res) => {
   try { path = decodeURIComponent((req.url || '/').split('?')[0]) }
   catch { res.writeHead(400); res.end('bad request'); return }
   let file = normalize(join(ROOT, path))
+  // Extensionless URLs are the site's convention (CLAUDE.md, 2026-08-10) and
+  // Cloudflare Pages serves /ontology from ontology.html. Do the same here, or a
+  // dev build answers every generated page with the atlas shell and the reader
+  // sees a landing view where a page should be — which is exactly how the
+  // "the header does not hold on ontology" report reproduced.
+  if (file.startsWith(ROOT) && !existsSync(file) && existsSync(file + '.html')) file += '.html'
   if (!file.startsWith(ROOT) || !existsSync(file) || statSync(file).isDirectory()) file = join(ROOT, 'index.html')
   try {
     const body = readFileSync(file)

@@ -8,6 +8,9 @@
   --ink-dim: #6f6a5d;
   --ink-bright: #ffffff;
   --ink-label: #c9c2b0;
+  --page-gutter: 4.5rem;
+  --measure: 68ch;
+  --page-max: 1400px;
   --gold: #d4af37;
   --gold-dim: #94782a;
   --surface: rgba(23, 20, 16, 0.94);
@@ -46,7 +49,7 @@
 .page-bar {
   position: sticky; top: 0; z-index: 50;
   display: flex; align-items: center; gap: 0.9rem;
-  height: 3rem; padding: 0 clamp(1rem, 4vw, 2.5rem);
+  height: 3rem; max-width: var(--page-max); margin-inline: auto; padding: 0 var(--page-gutter);
   background: rgba(11, 10, 8, 0.94); border-bottom: 1px solid var(--hairline);
 }
 .page-bar .back {
@@ -60,6 +63,164 @@
   color: var(--gold-dim); white-space: nowrap;
 }
 .page-bar .spacer { margin-left: auto; }
+/* Item 18 / V2-R13, reversed by editorial ruling 2026-08-14 — the content
+   column. Two kinds and no more: PROSE for pages that are read, RECORDS for
+   surfaces that carry rows and tables. Both CENTER in the viewport at their own
+   max-width, with identical centering math on every page, so the column's
+   centre is the viewport's centre on every surface and switching pages never
+   moves it. The first attempt anchored both kinds to the header's left gutter;
+   that made the releases page read as hard left against the rest of the site,
+   and centred is the look this site has. */
+/* Item 26 — .page-main IS the container: capped at --page-max and centred as a
+   block, which is the only centring on the site outside the landing hero. Its
+   padding is the gutter, so the one left edge is measured from the container's
+   left rather than the viewport's, and below --page-max the container binds to
+   the viewport and every number is what it was before the cap existed. */
+.page-main {
+  max-width: var(--page-max); margin-inline: auto;
+  padding: 1.6rem var(--page-gutter) 5rem;
+}
+/* Item 22 — the scrollbar gutter is always reserved, on the document and on the
+   panel layer alike, so a centred column does not shift by the scrollbar's
+   width when a reader crosses from a page to an in-app view. */
+html { scrollbar-gutter: stable; }
+#mode-panel { scrollbar-gutter: stable; }
+.page-main.prose > *, .method-page > * { max-width: 46rem; }
+.page-main.records > *, #mode-panel .page > * { max-width: 64rem; }
+#mode-panel .page { max-width: var(--page-max); margin-inline: auto; padding: 1.6rem var(--page-gutter) 5rem; }
+#mode-panel .page.method-page > * { max-width: 46rem; }
+
+/* Item 15 (editorial ruling, 2026-08-13) — the title band, defined once. A page
+   announces itself the same way everywhere: a quiet eyebrow naming the KIND of
+   surface, the title at h1, and an optional one-line subtitle under it. Before
+   this the breadcrumb was rendering at body size in ink — the .page-bar rule
+   that used to style it went away with the bar — so on a page with no eyebrow
+   it read as a second title. */
+.site-header .where {
+  font: 0.62rem var(--mono); letter-spacing: 0.05em; color: var(--gold-dim);
+  white-space: nowrap; text-transform: none;
+}
+.site-header .where a { color: var(--gold-dim); text-decoration: none; }
+.site-header .where a:hover { color: var(--gold); }
+.eyebrow, .titleband .eyebrow {
+  font: 0.6rem/1 var(--mono); letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--gold-dim); margin: 0 0 0.35rem;
+}
+.sub, .titleband .sub {
+  font-size: 0.95rem; line-height: 1.6; color: var(--ink-faint);
+  margin-bottom: 1.2rem;
+}
+/* every paragraph that is read, at one measure, from the chrome — a page may
+   not set its own */
+p, .intro, .sub, .lede2, .note { max-width: var(--measure); }
+/* Item 22 — the band's geometry, fixed and defined once. Its top is the content
+   column's padding-top and nothing else: no element inside it carries a margin
+   of its own, so a page that leaves a browser default on its h1 (the families
+   document did, 21px of UA margin-top) cannot push the title down. The gap
+   between eyebrow and title is one number, here. */
+/* Item 23, then item 24 — the band is decoupled from the column kind, and since
+   item 24 that needs no centring trick: every column starts at the same gutter,
+   so the band starts there too. It keeps the readable cap on its right. No
+   kind-scoped selector goes anywhere near it. */
+.titleband { width: min(46rem, 100%); margin: 0 0 1rem; }
+.titleband > :first-child { margin-top: 0; }
+.titleband .eyebrow { margin: 0 0 0.35rem; }
+.titleband h1 { margin: 0; }
+.titleband .sub { margin: 0.5rem 0 0; }
+/* The band's two selectors carry a class more than a view's own paragraph rule,
+   so a view that styles its paragraphs cannot repaint the band by accident —
+   which is exactly what the method view was doing to its eyebrow. */
+
+/* Item 15 — page-level search and filter inputs sit at the right of the second
+   row, on every surface that has one. The cluster is the mechanism: anything in
+   it is pushed right together, so a page cannot half-do it. */
+.site-header .hdr-tools { margin-left: auto; display: flex; align-items: center; gap: 0.9rem; }
+.site-header .hrow-2 .spacer { margin-left: auto; }
+/* the tallest thing the reserved row can carry, sized so the row's height is a
+   constant rather than a function of what a surface happens to put in it */
+.site-header .std-search { width: min(320px, 34vw); height: 2rem; padding: 0 0.9rem; }
+/* Item 21 — a PAGE-LOCAL filter is not header furniture: it sits with the facets
+   it belongs to and takes the same input styling, so the filtering system reads
+   as one control family in one place. */
+.facet-filter { width: min(28rem, 100%); }
+
+/* Item 14 (editorial ruling, 2026-08-13) — one heading scale for the whole
+   site. The face, the size step and the colour of a heading level are the same
+   on a generated page and in an in-app view; only margins stay with the page
+   that sets them. Before this the same level was 1.25rem gold on a batch page,
+   1.3rem ink on the ledger, 1.35rem gold on a family page and 1.7rem ink in the
+   method view, which read as four different sites. Bare element selectors, so
+   any component that genuinely needs its own treatment can still say so with a
+   class and win on specificity. */
+h1 {
+  font-family: var(--display); font-size: 2rem; font-weight: 500;
+  color: var(--ink); letter-spacing: -0.01em; line-height: 1.16;
+}
+h2 {
+  font-family: var(--display); font-size: 1.35rem; font-weight: 500;
+  color: var(--gold); letter-spacing: -0.005em;
+}
+h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 500; color: var(--ink); }
+h4 {
+  font: 0.6rem var(--mono); letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold-dim); font-weight: 400;
+}
+
+/* V2-R11 — the site header. One structure and one geometry everywhere: a
+   fixed-width brand block, then the menu. Nothing whose width varies with the
+   page may sit before the menu, so it lands on the same pixel whichever page
+   you arrive on; the breadcrumb, the version chip and the app's controls go on
+   the second row. Sticky, so it stays put while a long page scrolls. */
+.site-header {
+  position: sticky; top: 0; z-index: 60;
+  background: var(--ground); border-bottom: 1px solid var(--hairline);
+}
+.site-header .hrow {
+  display: flex; align-items: center; gap: 1rem;
+  max-width: var(--page-max); margin-inline: auto; padding: 0 var(--page-gutter);
+}
+.site-header .hrow-1 { height: 3rem; }
+/* Item 22 — the second row is RESERVED: a constant height whether it carries a
+   breadcrumb, the tools cluster, both or neither. The header's bottom edge is
+   therefore at the same y on every surface, which is what the title band's
+   offset is measured from. Nothing in the row is taller than this, so the row
+   is exactly this height on desktop; on narrow screens it wraps and grows, as
+   the rest of the header does. */
+.site-header .hrow-2 { height: 2.9rem; padding-bottom: 0; gap: 0.9rem; flex-wrap: wrap; }
+.site-header .brand {
+  flex: 0 0 13rem; font-family: var(--display); font-size: 1.05rem; font-weight: 500;
+  color: var(--ink); text-decoration: none; white-space: nowrap; letter-spacing: 0.005em;
+}
+.site-header .brand h1 { font: inherit; margin: 0; }
+.site-header .hdr-right { margin-left: auto; display: flex; align-items: center; gap: 0.9rem; }
+/* The app's header is the same structure. style.css keeps #topbar fixed rather
+   than sticky — the atlas body does not scroll, so fixed and sticky look the
+   same there — and its id outranks this class, which is why only the box model
+   is restated here. */
+#topbar.site-header { display: block; height: auto; padding: 0; }
+@media (max-width: 760px) {
+  /* one override of the one token, and the whole site's left edge follows */
+  :root { --page-gutter: 1rem; }
+  /* the reserved row wraps and grows on a phone, like the rest of the header */
+  .site-header .hrow-2 { height: auto; min-height: 2.4rem; padding-bottom: 0.4rem; }
+  .site-header .brand { flex: 0 0 auto; }
+  .site-header .hrow { gap: 0.6rem; }
+  .site-header .hrow-1 { height: auto; padding-top: 0.45rem; flex-wrap: wrap; }
+}
+/* V2-R10 — the site menu. One definition, used by the app's header, by every
+   generated page's header, and by the pages the python generator writes. */
+.topmenu { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.7rem; }
+.topmenu .mgroup {
+  font: 0.5rem var(--mono); letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-dim); margin-left: 0.45rem;
+}
+.topmenu .mgroup:first-child { margin-left: 0; }
+.topmenu a {
+  font: 0.62rem var(--mono); letter-spacing: 0.05em; color: var(--ink-faint);
+  text-decoration: none; white-space: nowrap; padding: 0.1rem 0;
+}
+.topmenu a:hover, .topmenu a:focus-visible { color: var(--gold); outline: none; }
+.topmenu a[aria-current="page"] { color: var(--gold); }
 .std-search {
   width: min(340px, 38vw);
   background: var(--surface); border: 1px solid var(--hairline); border-radius: 999px;

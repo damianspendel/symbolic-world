@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/releases">
+<title>Releases · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.rel-entry { border: 1px solid var(--hairline); border-radius: 10px; padding: 1rem 1.1rem; margin: 1rem 0; background: var(--surface); }
+.rel-entry.future { opacity: .6; border-style: dashed; }
+.rel-entry h2 { margin-top: 0; }
+.pin { font: .62rem/1.7 var(--mono); color: var(--ink-label); border-left: 3px solid var(--gold-dim);
+  padding: .4rem .7rem; background: rgba(212,175,55,.05); border-radius: 0 6px 6px 0; margin: .5rem 0 .8rem; overflow-x: auto; }
+.pin .v { color: var(--gold); }
+.rel-entry ul { list-style: none; margin: .3rem 0 .2rem; }
+.rel-entry li { font-size: .89rem; line-height: 1.6; padding: .16rem 0 .16rem .95rem; position: relative; max-width: var(--measure); }
+.rel-entry li::before { content: "\00b7"; position: absolute; left: .2rem; color: var(--edge-idle); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases" aria-current="page">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/#/method">method</a><a href="/ontology">ontology</a></nav></div>
+<div class="hrow hrow-2"><span class="where">releases</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">release notes</p>
+<h1>Releases</h1></div>
+<p>What changed between one release of the graph and the next, and why.</p>
+<p>Each entry opens with a pin: the graph version, the ruleset version it shipped with (deliberately separate numbers), and the calibration record binding at tag time.</p>
+<section class="rel-entry">
+<h2>v2.0: the graph as a queryable instrument</h2>
+<div class="meta">pending. Populated finally at the ceremony.</div>
+<div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
+<h4>mining status</h4>
+<ul>
+<li>Opened CW 8 under a freshly ruled ruleset.</li>
+<li>Merged window one (§1–71) of fourteen.</li>
+<li>Scheduled the remaining windows, one per firing, each gated on green CI.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li>Carried every ruleset version since v0.7 with its own calibration PASS record.</li>
+<li>Closed the external-validity check; figures in v1.4 below.</li>
+<li>Added gates: ledger freshness, batch manifest, size budget, inline-style geometry scan, copy contract on every page.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li>Shipped the query engine: 7 declarations, read-time closure, carried qualifiers.</li>
+<li>Shipped the Turtle export, which declares no transitivity.</li>
+<li>Built the ledger and its per-batch pages from one generator in one pass.</li>
+<li>Made the builds deterministic.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li>Carried <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per family, a page per batch.</li>
+<li>Adopted the menu taxonomy and the single-gutter layout.</li>
+<li>Held the identity walk out of the UI: built and tested in <code>tools/query/kg_query.py</code>, not exposed on the site.</li>
+</ul>
+</section>
+<section class="rel-entry">
+<h2>v1.5: the vocabulary-transfer study</h2>
+<div class="meta">pending. Runs after v1.4's ceremony.</div>
+<div class="pin">graph <span class="v">v1.5</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
+<h4>mining status</h4>
+<ul>
+<li>Mined the material already: CW 9i and Aion are in the graph.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li>Asks whether the vocabulary learned on the alchemical volumes transfers to archetype theory mined without alchemical carriers.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li>No new pipeline. Measures over the committed graph.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li>No changes.</li>
+</ul>
+</section>
+<section class="rel-entry">
+<h2>v1.4: the alchemical trilogy, the archetype volumes, and the relation-family layer</h2>
+<div class="meta">pending. The ceremony waits on the arXiv publication of the paper. Scope: the 2026-08-05 plan put Aion and CW 9i in v1.5; the arcs closed first, so they are here.</div>
+<div class="pin">graph <span class="v">v1.4</span> · ruleset <span class="v">v0.7.1</span> · calibration record pipeline/family_calibration/records/2026-08-13_v071_run6.json (PASS)</div>
+<h4>mining status</h4>
+<ul>
+<li>Mined CW 12, 13 and 14; the alchemical trilogy is complete.</li>
+<li>Mined Aion (§1–429), closed at <a href="/batch-b-cw9ii-7">b-cw9ii-7</a> on 2026-08-06.</li>
+<li>Mined CW 9i (§1–718) over ten windows, closed at <a href="/batch-b-cw9i-10">b-cw9i-10</a> on 2026-08-12.</li>
+<li>Graph: 407 nodes, 1555 relations, 1847 references over 51 merged batches, all on the <a href="/ledger">ledger</a>.</li>
+<li>Normalized 260 relation strings; the verbatim string stays frozen beside each.</li>
+<li>Assigned families: 1250 assigned, 262 queued, 41 no family, 2 text undecided (assigned, not verified; <a href="/families">families</a>).</li>
+<li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a>: 271 relations carrying a proposition in the predicate.</li>
+<li>Traced it to a briefing bullet; replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>. Fifteen blind batches at 0% since.</li>
+<li>Did not re-mine: each affected relation is verified true, so it carries a normalization layer instead.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li>Moved the ruleset to v0.7.1, 25 families; every version carries a calibration PASS record and CI refuses a version without one.</li>
+<li>Re-ran every <code>amplified-by</code> edge under ruling 1; <code>amplification</code> now holds none; <a href="/family-amplification">the page</a> carries the count.</li>
+<li>Declared 7 inverse and symmetric pairs, each citing a document line. No transitivity.</li>
+<li>Calibrated the family gate: 19/19 planted errors caught, 40/41 clean assignments left alone (measures the instrument, not Jung). Gate model gemini-3.1-pro-preview: within-vendor role separation, not cross-vendor.</li>
+<li>Checked 27 assignments against 8 works over 3 passes: 8/16 treated items agreed, 6 disagreed, 2 split, 6 untreated; 7 rules changed. Receipts in <code>docs/experiments/external_validity_2026-08/</code>.</li>
+<li>Withdrew four reviewer-supplied citations (one held) and the pre-August calibration figures.</li>
+<li>Flagged <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> against <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> as confounded: the blinding changed between them.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li>Launched the site on Cloudflare Pages, 2026-08-07.</li>
+<li>Adopted extensionless URLs, 2026-08-10.</li>
+<li>Made the generators deterministic.</li>
+<li>Emitted <a href="/graph.json">/graph.json</a>, the declarations, the batch manifest, the family map and the ontology scan.</li>
+<li>Shipped <code>tools/query/kg_query.py</code> and <code>tools/query/export_rdf.py</code>, read-only.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li>Added <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per relation family, a page per batch.</li>
+<li>Added facets, record permalinks and the assignment-history chip to the ledger; moved the batch narrative onto the batch pages.</li>
+<li>Adopted the design rules recorded as V2-R7 to V2-R13 in <code>docs/ATLAS_REQUIREMENTS.md</code>.</li>
+</ul>
+</section>
+<section class="rel-entry">
+<h2>v1.3.0: the published baseline</h2>
+<div class="meta">released and frozen. Retrospective.</div>
+<div class="pin">graph <span class="v">v1.3.0</span> · ruleset none (the family layer did not exist yet) ·</div>
+<h4>mining status</h4>
+<ul>
+<li>Mined CW 14 with seven incidental volumes: 248 nodes, 669 relations, 699 references.</li>
+<li>Ran at 0–0.5% clause predicates; this material predates the windowed pipeline.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li>Pinned these counts to the <code>v1.3.0</code> tag in <code>tools/check_paper_facts.py</code>.</li>
+<li>Published the method in <code>docs/PAPER.md</code>.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li>Released to Zenodo, concept DOI <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>.</li>
+<li>Froze the snapshot at <a href="/v1.3/">/v1.3/</a>; no generator writes it.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li>The atlas as published, with its own ledger and dispute log.</li>
+</ul>
+</section>
+<div class="receipts"><b>receipts</b>
+prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:281b3e328f12</span>;<br>
+ruleset v0.7.1 with calibration record <code>pipeline/family_calibration/records/2026-08-13_v071_run6.json</code> (PASS);<br>
+external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-08-14
+</div>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<span class="dim">releases</span>
+<a href="/query">query</a>
+<a href="/ontology">ontology</a></nav>
+</main></body></html>

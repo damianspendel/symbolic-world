@@ -103,9 +103,10 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     const pickedRows = picked ? allRows.filter(r => r.psyche === picked || r.lab === picked) : []
 
     root.innerHTML = `
-      ${pageBar({ where: 'concordance', search: true })}
+      ${pageBar({ where: 'concordance' })}
       <div class="page">
-      <h2>Psychology against alchemy</h2>
+      <div class="titleband"><p class="eyebrow">explore</p>
+      <h1>Psychology against alchemy</h1></div>
       <p class="lede2">Jung's thesis is that alchemy is the psyche describing itself in projected form. The site does not have to assert that: the graph already holds it as verified edges. ${modeNote}</p>
       <p class="lede2">${allRows.length} crossings in all · <b>${onlyTrilogy} of ${atlas.nodes.length}</b> nodes in the atlas rest only on alchemical evidence, which is also an honest map of where this picture of the psychology comes from.</p>
 

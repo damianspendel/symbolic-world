@@ -14,7 +14,7 @@
   "symmetric": "Given {relation: R}, an edge (s, R, o) licenses a derived row (o, R, s), labelled the same way.",
   "applies_to_family": "null means the declaration is on the relation strings themselves, as the precedents table states them. A family name means the document restricted the declaration to edges assigned that family, and the restriction is enforced at read time.",
   "dormant": "true when at least one string in the entry has no edge in the current graph. A dormant entry stays declared and derives nothing until the string appears.",
-  "carried_qualifier": "A declaration may carry a `carried_qualifier` string. Every row derived from it displays the qualifier beside the derived relation, so the flip asserts no more than the stored edge does. The governing principle (Damian's ruling, 2026-08-13): a derived row must carry everything the stored row asserted; if the flip cannot carry a qualifier, the declaration is not made."
+  "carried_qualifier": "A declaration may carry a `carried_qualifier` string. Every row derived from it displays the qualifier beside the derived relation, so the flip asserts no more than the stored edge does. The governing principle (editorial ruling, 2026-08-13): a derived row must carry everything the stored row asserted; if the flip cannot carry a qualifier, the declaration is not made."
  },
  "active": [
   {
@@ -216,7 +216,7 @@
  "rulings": [
   {
    "date": "2026-08-13",
-   "ruled_by": "Damian (validation chat)",
+   "ruled_by": "the maintainer (validation session)",
    "ruling": "The middle ruling on the doc-listed manifestation inverse strings: `aspect-of` activates as a plain inverse of manifests-as (lossless flip); `is-dark-aspect-of` activates WITH its qualifier carried — derived rows display 'dark aspect' so the reverse reading stays exactly as strong as Jung's stored assertion. General principle adopted as precedent for all future strings: a derived row must carry everything the stored row asserted; if the flip cannot carry a qualifier, the declaration is not made.",
    "moves": "doc_listed_not_adopted (line 405 strings) -> active"
   }

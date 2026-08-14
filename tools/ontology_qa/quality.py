@@ -3,11 +3,22 @@
 
 Each check maps to a numbered pitfall from the OOPS! catalogue where one applies.
 Read-only. Prints findings grouped by severity.
+
+    python3 tools/ontology_qa/quality.py [seed.json] [--json]
+
+`--json` prints the same findings as a machine record, plus a `headline` block of
+the four figures the site's ontology panel reports. It changes no check: every
+threshold, message and example below is what the prose mode prints. The panel
+consumes this rather than scraping the prose.
 """
-import json, re, sys
+import datetime, json, os, re, sys
 from collections import Counter, defaultdict
 
-G = json.load(open(sys.argv[1] if len(sys.argv) > 1 else 'seed.json', encoding='utf-8'))
+ARGV = [a for a in sys.argv[1:] if not a.startswith('--')]
+AS_JSON = '--json' in sys.argv[1:]
+SEED_PATH = ARGV[0] if ARGV else 'seed.json'
+
+G = json.load(open(SEED_PATH, encoding='utf-8'))
 NODES = {n['id']: n for n in G['nodes']}
 EDGES = G['edges']
 rel = Counter(e['relation'] for e in EDGES)
@@ -217,6 +228,67 @@ def show(title, items):
     for t, m, ex in items:
         print(f"\n[{t}]\n  {m}")
         for e in ex[:6]: print(f"    - {e}")
+
+
+# ---- the headline figures, measured from what the checks already computed ----
+# No check above is altered by anything below: these read the same variables the
+# checks read, so the panel on the site reports the scan rather than a summary of
+# it. Declared-inverse coverage additionally reads the declarations file, which
+# is the register of what the project has ruled on; where the file is absent the
+# figure is null rather than zero, because "not declared" and "not checked" are
+# different statements.
+def _declared_inverse_coverage():
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        '..', '..', 'pipeline', 'family', 'relation_declarations.json')
+    if not os.path.exists(path):
+        return None
+    decls = json.load(open(path, encoding='utf-8'))
+    active = [d for d in decls.get('active', []) if not d.get('dormant')]
+    pairs = {frozenset((d['forward'], d['inverse'])) for d in active if d['kind'] == 'inverse'}
+    observed = [(a, b) for a, b in INVERSES if a in rel and b in rel]
+    covered = [p for p in observed if frozenset(p) in pairs]
+    return {
+        'active_declarations': len(active),
+        'active_inverse_pairs': len(pairs),
+        'active_symmetric': len([d for d in active if d['kind'] == 'symmetric']),
+        'observed_inverse_pairs_in_vocabulary': len(observed),
+        'observed_pairs_declared': len(covered),
+        'undeclared_observed_pairs': ['/'.join(p) for p in observed if frozenset(p) not in pairs],
+        'edges_carrying_a_declared_string': sum(
+            1 for e in EDGES for p in pairs if e['relation'] in p),
+        'document_version': decls.get('transcribed_from', {}).get('document_version'),
+    }
+
+
+HEADLINE = {
+    'hapax_relations': len(hapax),
+    'distinct_relations': len(rel),
+    'hapax_pct': round(100 * len(hapax) / len(rel), 1),
+    'sentence_shaped_relations': len(sentence_rels),
+    'sentence_shaped_edges': sum(rel[r] for r in sentence_rels),
+    'declared_inverses': _declared_inverse_coverage(),
+    'components': len(parts),
+    'detached_components': len(parts) - 1,
+    'largest_component': len(parts[0]) if parts else 0,
+    'nodes': len(NODES),
+    'edges': len(EDGES),
+}
+
+if AS_JSON:
+    def block(items):
+        return [{'tag': t, 'message': m, 'examples': [str(e) for e in ex[:6]]} for t, m, ex in items]
+    print(json.dumps({
+        '_about': 'OOPS!-style ontology pitfall scan. Read-only; the graph is never written. '
+                  'Several findings are recorded design decisions rather than defects — the site '
+                  'panel says which, and the reasons are kept there, not here.',
+        'tool': 'tools/ontology_qa/quality.py',
+        'seed': os.path.basename(SEED_PATH),
+        'generated': datetime.date.today().isoformat(),
+        'headline': HEADLINE,
+        'critical': block(CRIT), 'important': block(IMP), 'minor': block(MINOR),
+        'totals': {'critical': len(CRIT), 'important': len(IMP), 'minor': len(MINOR)},
+    }, indent=1, ensure_ascii=False))
+    sys.exit(0)
 
 show("CRITICAL", CRIT); show("IMPORTANT", IMP); show("MINOR", MINOR)
 print(f"\nTOTAL: {len(CRIT)} critical, {len(IMP)} important, {len(MINOR)} minor")
