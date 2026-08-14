@@ -1,5 +1,9 @@
 # Query layer demo — 2026-08-13
 
+> Status note (2026-08-13): the identity-walk output shown below is produced by
+> `tools/query/kg_query.py --walk`, which stays on the command line. The walk is
+> not exposed in the site UI in this release.
+
 Eight queries against the live graph, each with the output the command actually
 produced. Nothing here is retyped or trimmed: the blocks are the tool's stdout.
 

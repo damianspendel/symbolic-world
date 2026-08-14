@@ -132,6 +132,10 @@ cite.
 
 ## Walks
 
+**Status: not currently exposed in the site UI** (editorial ruling, 2026-08-13).
+The walk is built, tested and available on the command line; the query page
+does not carry it in this release.
+
 `--walk identity --subject X --depth N` follows `archetypal-identity` edges out
 from X, breadth-first, stopping at depth N, visiting each node once. Every hop
 prints the edge it crossed and that edge's citation, and hops that ran against

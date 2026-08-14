@@ -86,7 +86,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .hop .against { font: .56rem var(--mono); color: var(--m-motif); }
 </style>
 <script type="module">
-import { select, walk, labelIndex, identityEdges, effectiveRelation, derivedRows, byVolume } from '/query.js'
+import { select, labelIndex, effectiveRelation, derivedRows, byVolume } from '/query.js'
 
 const ROW_CAP = 300
 const $ = (id) => document.getElementById(id)
@@ -166,40 +166,12 @@ function run () {
     'A copied number is an edge count: derived rows are readings of those edges in the other direction, not additions to them.</div>'
 }
 
-function runWalk () {
-  const needle = $('w-start').value.trim()
-  const depth = Number($('w-depth').value)
-  const out = $('walk')
-  if (!needle) { out.innerHTML = '<p class="dim">Name a start node.</p>'; return }
-  const ids = Object.keys(labels)
-  let start = ids.includes(needle) ? needle : ids.find(id => id.toLowerCase() === needle.toLowerCase())
-  if (!start) start = ids.filter(id => id.toLowerCase().includes(needle.toLowerCase()) || String(labels[id]).toLowerCase().includes(needle.toLowerCase())).sort()[0]
-  if (!start) { out.innerHTML = '<p class="dim">No node matches that.</p>'; return }
-  const levels = walk(graph, start, depth)
-  const family = identityEdges(graph).length
-  let html = '<p class="meta">start: ' + esc(labels[start] || start) + ' (' + esc(start) + ') \u00b7 depth ' + depth +
-    ' \u00b7 ' + family + ' edges carry the identity family</p>'
-  let hops = 0
-  for (const level of levels) {
-    if (!level.length) continue
-    html += '<div class="depth">depth ' + level[0].depth + '</div>'
-    for (const hop of level) {
-      hops++
-      html += '<div class="hop"><span>' + esc(labels[hop.from] || hop.from) + '</span><span class="arrow">\u2192</span>' +
-        '<span>' + esc(labels[hop.to] || hop.to) + '</span>' +
-        '<span class="via">via ' + esc(labels[hop.edge.subject] || hop.edge.subject) + ' <span class="rel">' + esc(hop.edge.relation) + '</span> ' + esc(labels[hop.edge.object] || hop.edge.object) + '</span>' +
-        '<span class="cite">' + esc(cite(hop.references)) + '</span>' +
-        (hop.direction === 'reverse' ? '<span class="against">traversed against the edge</span>' : '') + '</div>'
-    }
-  }
-  html += '<div class="rowcount">' + hops + ' hops. Each is one edge with its own citation. Reaching a term in two hops is not identity with the start, and the paragraph above the first hop says so rather than the line under the last.</div>'
-  out.innerHTML = html
-}
+
 
 $('run').addEventListener('click', run)
-$('runwalk').addEventListener('click', runWalk)
+
 for (const el of document.querySelectorAll('#filters input')) el.addEventListener('keydown', e => { if (e.key === 'Enter') run() })
-$('w-start').addEventListener('keydown', e => { if (e.key === 'Enter') runWalk() })
+
 
 Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarations.json').then(r => r.json())])
   .then(([g, d]) => { graph = g; decls = d; ready() })
@@ -236,14 +208,7 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 <div class="rows" id="rows"><p class="dim" id="status">Reading the dataset…</p></div>
 <div class="receipts"><b>receipts</b><span id="receipts">graph state: 407 nodes / 1555 edges; families 1250 assigned, 262 pending-adjudication, 41 no-family, 2 text-undecided; seed.json sha256:281b3e328f12; declarations relation_declarations.json from FAMILY_DEFINITIONS v0.7.1, 7 active</span></div>
 
-<h2>Identity walk</h2>
-<div class="callout"><p id="walkhead" class="ev">Walk over archetypal-identity edges. Each hop below is ONE edge, printed with its own citation. No transitive identity is asserted: a term reached in two hops is not thereby identical to the start. FAMILY_DEFINITIONS v0.7.1 rejects transitivity on every family (line 131, the uroboros argument); this walk is exploration of what the graph connects, not inference over it.</p></div>
-<div class="filters" style="margin-top:.8rem">
-  <div class="fld"><label for="w-start">start node</label><input id="w-start" placeholder="mercurius"><span class="hint">node id, else substring of an id or a label</span></div>
-  <div class="fld"><label for="w-depth">depth</label><select id="w-depth"><option>1</option><option selected>2</option><option>3</option></select><span class="hint">a budget, not a measure of closeness</span></div>
-  <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runwalk" style="margin:0">walk</button></div>
-</div>
-<div class="walk" id="walk"></div>
+
 
 <div class="callout" style="margin-top:1.4rem"><p>A derived row is not an edge. It carries its source edge's references and no citation of its own, it is not written to the graph, and it does not compound: closure is applied once to the stored edges and never to its own output. A count of rows is therefore not a count of edges, and the line under the results says which is which.</p></div>
 <nav class="sitenav"><a href="/">the atlas</a>

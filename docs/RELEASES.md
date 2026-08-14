@@ -163,6 +163,8 @@ pin: graph v2.0 · ruleset pending · calibration record pending
 
 - Placeholder. Planned: CW 8 mined; the query layer with its declared inverses
   and the Turtle export; the family layer under a stable ruleset with the queue
-  drained to ruled-or-recorded; the depth-bounded identity walk. No
+  drained to ruled-or-recorded. The depth-bounded identity walk is built and
+  tested in `tools/query/kg_query.py`, and is kept for later: it is not exposed
+  in the site UI, and exposing it is a decision for a later release. No
   natural-language interface — a query layer that cites edges comes before any
   interface that paraphrases them.

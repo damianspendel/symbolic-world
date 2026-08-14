@@ -136,7 +136,7 @@ table.findings .src { font: .58rem var(--mono); }
 
 <h2>Deliberately absent</h2>
 <ul class="absent">
-<li><b>Transitivity.</b> No family is transitive, and the identity walk says so above its first hop. Two terms joined through a third are joined through a third; the graph does not claim they are the same.</li>
+<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
 <li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
 <li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
 <li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
@@ -234,7 +234,7 @@ table.findings .src { font: .58rem var(--mono); }
 <tr class="st-design">
 <td class="sev">important</td>
 <td><div class="ev tag">P30 identity clusters not collapsed / no transitivity</div><div class="ev fmsg">3 clusters of 3+ nodes are chained by identity-type relations without a transitivity axiom or a canonical representative. These are candidate duplicate entities.</div></td>
-<td><span class="chip st-design">recorded design decision</span><div class="why">Transitivity is rejected on every family. Identity chains are traversed by a depth-bounded walk that prints each hop’s own citation and asserts nothing about the ends.</div></td>
+<td><span class="chip st-design">recorded design decision</span><div class="why">Transitivity is rejected on every family. Identity chains can be read one edge at a time by the walk in tools/query/kg_query.py, which prints each hop’s own citation and asserts nothing about the ends; it is not exposed on the site in this release.</div></td>
 </tr>
 <tr class="st-open">
 <td class="sev">important</td>
@@ -278,7 +278,7 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-13 at commit a83e427
+built 2026-08-14 at commit 405768d
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

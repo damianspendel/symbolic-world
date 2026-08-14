@@ -1456,6 +1456,12 @@ if (DECL) {
   writeFileSync(here('./src/relation_declarations.json'), declOut)
   writeFileSync(here('./public/relation_declarations.json'), declOut)
 
+  // Item 17 (editorial ruling, 2026-08-13): the identity walk is kept, not
+  // deleted, and is not exposed in this release's UI. The tool keeps it
+  // (tools/query/kg_query.py --walk), its tests keep it, and docs/QUERY.md
+  // records it as not currently exposed. Re-enable by setting this to true.
+  const WALK_IN_UI = false
+
   const semantics = readFileSync(here('./query-semantics.mjs'), 'utf8')
   writeFileSync(here('./public/query.js'), semantics)
 
@@ -1513,14 +1519,14 @@ if (DECL) {
 <div class="rows" id="rows"><p class="dim" id="status">Reading the dataset…</p></div>
 <div class="receipts"><b>receipts</b><span id="receipts">${esc(receiptsFooter)}</span></div>
 
-<h2>Identity walk</h2>
+${WALK_IN_UI ? `<h2>Identity walk</h2>
 <div class="callout"><p id="walkhead" class="ev">${esc(walkHeader)}</p></div>
 <div class="filters" style="margin-top:.8rem">
   <div class="fld"><label for="w-start">start node</label><input id="w-start" placeholder="mercurius"><span class="hint">node id, else substring of an id or a label</span></div>
   <div class="fld"><label for="w-depth">depth</label><select id="w-depth"><option>1</option><option selected>2</option><option>3</option></select><span class="hint">a budget, not a measure of closeness</span></div>
   <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runwalk" style="margin:0">walk</button></div>
 </div>
-<div class="walk" id="walk"></div>
+<div class="walk" id="walk"></div>` : ''}
 
 <div class="callout" style="margin-top:1.4rem"><p>A derived row is not an edge. It carries its source edge's references and no citation of its own, it is not written to the graph, and it does not compound: closure is applied once to the stored edges and never to its own output. A count of rows is therefore not a count of edges, and the line under the results says which is which.</p></div>`
 
@@ -1562,7 +1568,7 @@ if (DECL) {
   const ROW_CAP = 300
   derived(ROW_CAP)
   const queryHead = `<script type="module">
-import { select, walk, labelIndex, identityEdges, effectiveRelation, derivedRows, byVolume } from '/query.js'
+import { select, labelIndex, effectiveRelation, derivedRows, byVolume${WALK_IN_UI ? ', walk, identityEdges' : ''} } from '/query.js'
 
 const ROW_CAP = ${ROW_CAP}
 const $ = (id) => document.getElementById(id)
@@ -1642,7 +1648,7 @@ function run () {
     'A copied number is an edge count: derived rows are readings of those edges in the other direction, not additions to them.</div>'
 }
 
-function runWalk () {
+${WALK_IN_UI ? `function runWalk () {
   const needle = $('w-start').value.trim()
   const depth = Number($('w-depth').value)
   const out = $('walk')
@@ -1670,12 +1676,12 @@ function runWalk () {
   }
   html += '<div class="rowcount">' + hops + ' hops. Each is one edge with its own citation. Reaching a term in two hops is not identity with the start, and the paragraph above the first hop says so rather than the line under the last.</div>'
   out.innerHTML = html
-}
+}` : ''}
 
 $('run').addEventListener('click', run)
-$('runwalk').addEventListener('click', runWalk)
+${WALK_IN_UI ? `$('runwalk').addEventListener('click', runWalk)` : ''}
 for (const el of document.querySelectorAll('#filters input')) el.addEventListener('keydown', e => { if (e.key === 'Enter') run() })
-$('w-start').addEventListener('keydown', e => { if (e.key === 'Enter') runWalk() })
+${WALK_IN_UI ? `$('w-start').addEventListener('keydown', e => { if (e.key === 'Enter') runWalk() })` : ''}
 
 Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarations.json').then(r => r.json())])
   .then(([g, d]) => { graph = g; decls = d; ready() })
@@ -1687,7 +1693,8 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
     changefreq: 'daily', priority: '0.6', style: queryStyle, body: queryBody, head: queryHead
   })
   V2_COPY.push(['public/query.html (generated)', stripEvidence(queryBody)])
-  console.log(`query panel: declarations ${activeDecls.length} active, walk header lifted from kg_query.py (${walkHeader.length} chars)`)
+  console.log(`query panel: declarations ${activeDecls.length} active, ` +
+    `identity walk ${WALK_IN_UI ? 'exposed' : 'held back from the UI (kept in tools/query/kg_query.py)'}`)
 }
 
 // ------------------------------------------------ V2-R5 · /ontology -------
@@ -1706,7 +1713,7 @@ const QA_STANCE = [
   [/^P02\/P30 synonymous/, 'declared', 'Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.'],
   [/^P05\/P13/, 'declared', 'The declarations name the inverse pairs the document rules on. They are applied when a query asks for closure and are never written into the graph.'],
   [/^P25/, 'declared', 'Same answer: a symmetric declaration is read at query time. Asserting the second direction in the graph would put a claim in it that no paragraph was gated for.'],
-  [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains are traversed by a depth-bounded walk that prints each hop\u2019s own citation and asserts nothing about the ends.'],
+  [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains can be read one edge at a time by the walk in tools/query/kg_query.py, which prints each hop\u2019s own citation and asserts nothing about the ends; it is not exposed on the site in this release.'],
   [/^P04/, 'open', 'A detached component is a gap in what has been mined, not a decision.'],
   [/^P11\/P12/, 'design', 'No relation is given a domain or a range as a constraint. The observed signatures are a measurement of the corpus; a constraint would reject an edge because of what the schema expects rather than what the paragraph says.'],
   [/^P21/, 'open', 'The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.'],
@@ -1825,7 +1832,7 @@ ${rulingRows}
 
 <h2>Deliberately absent</h2>
 <ul class="absent">
-<li><b>Transitivity.</b> No family is transitive, and the identity walk says so above its first hop. Two terms joined through a third are joined through a third; the graph does not claim they are the same.</li>
+<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
 <li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
 <li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
 <li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>

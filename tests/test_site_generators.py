@@ -1062,13 +1062,34 @@ def test_query_page_receipts_footer_is_the_cli_footer():
     assert rendered.replace("&amp;", "&") == footer
 
 
-def test_query_page_states_the_walks_limits_in_the_tools_own_words():
-    import kg_query  # noqa: E402
+def test_the_identity_walk_is_not_exposed_on_the_site():
+    """Item 17 (editorial ruling, 2026-08-13) — the walk is kept, not deleted:
+    it stays in the CLI, in its tests and in docs/QUERY.md, and it is off the
+    site. The flag in build-atlas.mjs is the one place that changes to bring it
+    back, and the header it would print is still lifted from the tool, so
+    re-enabling cannot resurrect stale copy."""
     html = read(os.path.join(PUBLIC, "query.html"))
-    head = re.search(r'<p id="walkhead"[^>]*>(.*?)</p>', html, re.S).group(1)
-    expected = " ".join(kg_query.WALK_HEADER.format(
-        family=kg_query.IDENTITY_FAMILY).split())
-    assert " ".join(head.split()) == expected
+    body = html[html.index("<main>"):]
+    for marker in ("Identity walk", "walkhead", "runwalk", 'id="w-start"'):
+        assert marker not in body, f"the walk is still on the query page: {marker}"
+    js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
+    assert "const WALK_IN_UI = false" in js
+    assert "${WALK_IN_UI ? `<h2>Identity walk</h2>" in js, (
+        "the walk section is deleted rather than held behind the flag")
+    # the tool keeps it
+    cli = read(os.path.join(ROOT, "tools", "query", "kg_query.py"))
+    assert "WALK_HEADER" in cli and '--walk' in cli
+    doc = read(os.path.join(ROOT, "docs", "QUERY.md"))
+    assert "not currently exposed in the site UI" in doc
+
+
+def test_no_site_surface_offers_a_walk_it_does_not_have():
+    for path in generated_pages():
+        html = read(path)
+        for hit in re.finditer(r"identity walk", html, re.I):
+            window = html[max(0, hit.start() - 240):hit.start() + 240]
+            assert re.search(r"not exposed on the site|kept for later|command line|kg_query\.py", window), (
+                f"{os.path.basename(path)}: names the identity walk without saying it is not on the site")
 
 
 NODE = shutil.which("node")
