@@ -58,6 +58,39 @@ try:
 except urllib.error.HTTPError as e:
     print(f'  note: unknown path returns {e.code}')
 
+# Item 29 — the extensionless convention is Cloudflare's to honour, not ours:
+# Pages 308s every .html path to its extensionless twin, and GSC filed redirect
+# errors until sitemap, canonical tags and internal links agreed on that form.
+# This checks the behaviour is still in place. It is a WARNING rather than a
+# failure, because it tests the host and not the artifact we built — but it
+# prints either way, so a silent change of behaviour cannot pass unnoticed.
+print('== extensionless redirect ==')
+
+
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+probe = '/ledger.html'
+opener = urllib.request.build_opener(_NoRedirect)
+try:
+    req = urllib.request.Request(f'{BASE}{probe}', headers={'User-Agent': 'jungkg-verify'})
+    with opener.open(req, timeout=30) as r:
+        print(f'  WARNING {probe} returned {r.status} without redirecting — '
+              f'the extensionless convention is not being served')
+except urllib.error.HTTPError as e:
+    target = e.headers.get('location', '(no location header)')
+    expected = probe[: -len('.html')]
+    if e.code in (301, 302, 307, 308) and target.rstrip('/').endswith(expected):
+        print(f'  ok  {probe} -> {e.code} -> {target}')
+    elif e.code in (301, 302, 307, 308):
+        print(f'  WARNING {probe} -> {e.code} -> {target}, which is not {expected}')
+    else:
+        print(f'  WARNING {probe} returned {e.code}, not a redirect')
+except Exception as e:
+    print(f'  WARNING {probe} could not be checked: {e}')
+
 print()
 if fails:
     print(f'VERIFY FAILED: {len(fails)} file(s) differ or failed to fetch.')

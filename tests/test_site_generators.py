@@ -1375,6 +1375,37 @@ def test_the_deploy_gate_covers_the_batch_pages():
         assert gate in src, gate
 
 
+def test_the_deploy_carries_a_size_budget():
+    """Item 29 — viteSingleFile inlines script, styles and atlas.json into one
+    document, so the page a reader downloads grows quietly with the graph. The
+    gate is a ratchet: it fails the deploy above the ceiling and prints the
+    actual against it either way."""
+    src = read(os.path.join(ROOT, "tools", "pages", "preflight.py"))
+    assert "== size budget ==" in src
+    assert "INDEX_CEILING" in src
+    ceiling = re.search(r"INDEX_CEILING = ([\d.]+) \* 1024 \* 1024", src)
+    assert ceiling and float(ceiling.group(1)) == 3.0, "the ceiling moved without a ruling"
+    assert "within budget" in src and "ceiling" in src
+    dist_index = os.path.join(ROOT, "web", "dist", "index.html")
+    if os.path.exists(dist_index):
+        assert os.path.getsize(dist_index) <= 3.0 * 1024 * 1024, (
+            "the built bundle already exceeds the ceiling")
+
+
+def test_the_deploy_checks_the_extensionless_redirect():
+    """A warning, not a failure: it tests Cloudflare's behaviour rather than our
+    artifact. It must print either way."""
+    src = read(os.path.join(ROOT, "tools", "pages", "verify.py"))
+    assert "== extensionless redirect ==" in src
+    assert "/ledger.html" in src
+    assert "HTTPRedirectHandler" in src, "the probe would follow the redirect it is testing"
+    assert "308" in src and "WARNING" in src
+    # it may not fail the run: nothing in the block appends to fails or exits
+    block = src[src.index("== extensionless redirect =="):src.index("if fails:")]
+    assert "fails.append" not in block and "sys.exit" not in block, (
+        "the redirect check hard-fails the deploy")
+
+
 def test_the_deploy_allowlist_admits_every_page_this_slice_ships():
     """preflight's allowlist is exact. A page it does not know is an unexpected
     file, and an unexpected file stops the deploy — so a new page joins the

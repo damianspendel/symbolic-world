@@ -137,6 +137,21 @@ else:
     check('manifest count == manifest ids',
           batch_manifest.get('count') == len(batch_manifest.get('ids', [])))
 
+# Item 29 — a size budget on the single-file app. viteSingleFile inlines the
+# script, the styles and atlas.json into one document, so the page a reader
+# downloads grows quietly with the graph. This is a ratchet, not a limit anyone
+# is near: it fails the deploy if the bundle crosses the ceiling, and prints the
+# actual against it either way so the trend is visible in the log.
+print('== size budget ==')
+INDEX_CEILING = 3.0 * 1024 * 1024
+idx_path = DIST / 'index.html'
+if idx_path.exists():
+    actual = idx_path.stat().st_size
+    check(f'dist/index.html within budget', actual <= INDEX_CEILING,
+          f'{actual / 1024 / 1024:.2f} MB against a {INDEX_CEILING / 1024 / 1024:.1f} MB ceiling')
+else:
+    check('dist/index.html present', False, 'missing from dist')
+
 print('== frozen snapshot ==')
 h = hashlib.md5()
 for p in sorted((DIST / 'v1.3').rglob('*')):

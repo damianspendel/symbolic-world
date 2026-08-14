@@ -1283,3 +1283,32 @@ strips the document's colon when it keys a label, so the renderers restore it;
 "Boundary:" beside "Inverse pair declared." was the same inconsistency class in
 one page. Quoted document untouched. A test reads the labels off the rendered
 pages and fails on any that ends in something other than a colon.
+
+## Item 29 — two gates adopted from the pre-deploy checklist
+
+Provenance: a Gemini pass produced an 18-item pre-deploy checklist, blind to the
+existing gates. Eleven were already covered by preflight, the copy contract or
+the suite; two are adopted here as permanent gates; two are ceremony one-offs
+and belong in the runbook rather than in code; the rest were rejected or sent to
+the backlog.
+
+**Size budget**, in `tools/pages/preflight.py`. `viteSingleFile` inlines the
+script, the styles and `atlas.json` into one document, so the page a reader
+downloads grows quietly as the graph does. The gate fails a deploy whose
+`dist/index.html` exceeds 3.0 MB and prints the actual against the ceiling
+either way, so the trend is in the log rather than in someone's memory. Current
+build: 2.15 MB against 3.0 MB.
+
+**Extensionless redirect**, in `tools/pages/verify.py`. Pages 308s every `.html`
+path to its extensionless twin, and Search Console filed redirect errors until
+sitemap, canonical tags and internal links agreed on that form. After the byte
+comparison, verify now requests `/ledger.html` WITHOUT following redirects and
+reports the status and target. It is a warning rather than a failure, because it
+tests the host's behaviour and not the artifact we built — but it prints in
+every run, so a silent change cannot pass unnoticed. Exercised both ways against
+a local server: a redirecting host prints `ok /ledger.html -> 308 -> /ledger`,
+and a host that serves the `.html` directly prints the warning.
+
+Tests assert the shape of both: the ceiling's value, that the budget prints, that
+the redirect probe does not follow redirects, and that nothing in the redirect
+block appends to `fails` or exits — a warning must stay a warning.
