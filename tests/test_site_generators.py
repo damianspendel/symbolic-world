@@ -230,6 +230,24 @@ def test_the_ontology_findings_list_sits_behind_its_counts(qa_json):
     assert str(qa_json["headline"]["hapax_pct"]) in panel
 
 
+def test_document_labels_render_with_the_colon_the_document_carries():
+    """Item 27, extended by the finalizer: the extraction strips the colon from
+    a bold label when it keys it, so every label the family pages render from
+    the document gets it back — not just Boundary. A full stop beside a colon is
+    the inconsistency class this session exists to remove."""
+    offenders = []
+    for path in generated_pages():
+        if not os.path.basename(path).startswith("family-"):
+            continue
+        for label in re.findall(r'<p class="dim ev"><b>([^<]*)</b>', read(path)):
+            if not label.endswith(":"):
+                offenders.append(f"{os.path.basename(path)}: {label}")
+    assert not offenders, offenders
+    js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
+    assert '<b>${esc(n.label)}:</b>' in js, "the notes label lost its colon"
+    assert '<b>Boundary:</b>' in js, "the boundary label lost its colon"
+
+
 def test_no_family_page_calls_a_family_verified():
     """The standing vocabulary rule: a family is assigned; verification belongs
     to the quote and its paragraph."""

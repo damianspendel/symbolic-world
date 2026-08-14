@@ -442,6 +442,10 @@ if (existsSync(famPath)) {
       if (!/\s/.test(m[1])) continue        // bare relation strings are not examples
       seeds.push({ text: m[1], cite: (m[2] || '').split(',')[0].trim() })
     }
+    // The document writes its labels as **Boundary:**, **Inverse pair declared:**
+    // and so on; the extraction above strips the colon when it keys them, so the
+    // renderers put it back. Item 27 fixed Boundary; the finalizer extended it
+    // to every label the family pages render from the document.
     const notes = Object.entries(labelled)
       .filter(([k]) => k !== 'Boundary' && k !== 'Seeds')
       .map(([k, v]) => ({ label: k, html: inline(v) }))
@@ -1457,7 +1461,7 @@ ${zeroNote}
 <p class="meta">Quoted from <code>docs/FAMILY_DEFINITIONS.md</code> ${esc(famVersion)}, family ${fam.n}${fam.added ? `, ${esc(fam.added)}` : ''}. The atlas quotes that document; it never paraphrases it.</p>
 <blockquote class="quotebox ev">${fam.definition_html}</blockquote>
 ${fam.boundary_html ? `<p class="dim ev"><b>Boundary:</b> ${fam.boundary_html}</p>` : ''}
-${fam.notes.length ? fam.notes.map(n => `<p class="dim ev"><b>${esc(n.label)}.</b> ${n.html}</p>`).join('\n') : ''}
+${fam.notes.length ? fam.notes.map(n => `<p class="dim ev"><b>${esc(n.label)}:</b> ${n.html}</p>`).join('\n') : ''}
 
 <h2>Relation strings that land here</h2>
 ${strings.length ? `<div class="stringmap">${stringChips}</div>

@@ -1274,3 +1274,12 @@ One adjacent case left alone deliberately: the family pages' *other* bold labels
 (the document's "Notes", "Seeds" and so on) render with a full stop by the same
 renderer line that T12 fixed for Boundary. The ruling named Boundary; the
 sibling is flagged rather than swept.
+
+### Item 27, finalizer — the sibling labels
+
+T12 extended, as ruled: the colon now comes back on every bold label the family
+pages render from the definitions document, not only Boundary. The extraction
+strips the document's colon when it keys a label, so the renderers restore it;
+"Boundary:" beside "Inverse pair declared." was the same inconsistency class in
+one page. Quoted document untouched. A test reads the labels off the rendered
+pages and fails on any that ends in something other than a colon.
