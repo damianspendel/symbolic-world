@@ -510,21 +510,21 @@ const chromeBlock = () => `
   color: var(--gold-dim); white-space: nowrap;
 }
 .page-bar .spacer { margin-left: auto; }
-/* Item 18 / V2-R13 (editorial ruling, 2026-08-13) — the content column. Two
-   kinds and no more: PROSE for pages that are read, RECORDS for surfaces that
-   carry rows and tables. Within a kind the column is identical page to page,
-   and both kinds start at the same left gutter as the header's brand and menu —
-   the column is capped on the right, not centred, so the text does not slide
-   sideways as the width of the page's own content changes. Before this the
-   eight generated pages had five different widths and four different left
-   edges, and moving between the ledger and disputes visibly shifted the text. */
+/* Item 18 / V2-R13, reversed by editorial ruling 2026-08-14 — the content
+   column. Two kinds and no more: PROSE for pages that are read, RECORDS for
+   surfaces that carry rows and tables. Both CENTER in the viewport at their own
+   max-width, with identical centering math on every page, so the column's
+   centre is the viewport's centre on every surface and switching pages never
+   moves it. The first attempt anchored both kinds to the header's left gutter;
+   that made the releases page read as hard left against the rest of the site,
+   and centred is the look this site has. */
 .page-main {
-  width: 100%; margin: 0;
+  width: 100%; margin: 0 auto;
   padding: 1.6rem clamp(1rem, 4vw, 2.5rem) 5rem;
 }
 .page-main.prose, .method-page { max-width: calc(46rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
 .page-main.records, #mode-panel .page { max-width: calc(64rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
-#mode-panel .page { width: 100%; margin: 0; padding: 1.2rem clamp(1rem, 4vw, 2.5rem) 5rem; }
+#mode-panel .page { width: 100%; margin: 0 auto; padding: 1.2rem clamp(1rem, 4vw, 2.5rem) 5rem; }
 #mode-panel .page.method-page { max-width: calc(46rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
 
 /* Item 15 (editorial ruling, 2026-08-13) — the title band, defined once. A page

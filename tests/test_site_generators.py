@@ -628,9 +628,11 @@ def test_the_two_kinds_are_defined_once_in_the_chrome():
     assert "max-width" in prose and "max-width" in records
     assert prose != records, "the two kinds have the same geometry"
     base = re.search(r"\n\.page-main {([^}]*)}", css).group(1)
-    assert "margin: 0" in base, "the column is centred, so its left edge moves"
-    assert "clamp(1rem, 4vw, 2.5rem)" in base, (
-        "the column's gutter is not the header's, so text will not align with the brand")
+    # ruling of 2026-08-14: both kinds centre, by the same math on every page
+    assert "margin: 0 auto" in base, "the column is not centred"
+    assert "clamp(1rem, 4vw, 2.5rem)" in base, "the column lost its gutter"
+    panel = [b for b in re.findall(r"#mode-panel \.page {([^}]*)}", css) if "margin" in b][0]
+    assert "margin: 0 auto" in panel, "the app's panel column is not centred"
 
 
 def test_the_app_views_take_their_column_from_the_same_kinds():
@@ -683,6 +685,42 @@ def test_the_panel_is_opaque_whenever_it_is_visible():
     block = re.search(r"#mode-panel {([^}]*)}", css).group(1)
     assert "background: var(--ground)" in block
     assert "#mode-panel.hidden { display: none; }" in css
+
+
+def test_the_panel_layer_is_raised_by_the_route_not_by_the_render():
+    """Item 20 — the guarantee is structural: an opaque layer covering the
+    viewport is up for the whole time the route is a panel route, so the worst
+    frame any transition can produce is a blank tokened surface. Timing does not
+    enter into it."""
+    css = read(os.path.join(ROOT, "web", "src", "style.css"))
+    assert "html.route-panel #mode-panel { display: block; }" in css, (
+        "nothing raises the layer from the route")
+    # it must outrank .hidden, or a cold load shows the atlas under a hidden panel
+    assert css.index("#mode-panel.hidden") < css.index("html.route-panel #mode-panel")
+    # and it must cover the viewport at every width
+    for block in re.findall(r"#mode-panel {([^}]*)}", css):
+        if "inset" in block:
+            assert re.search(r"inset:\s*0", block), f"the layer insets somewhere: {block.strip()}"
+
+    index = read(os.path.join(ROOT, "web", "index.html"))
+    assert "route-panel" in index, "index.html does not raise the layer before paint"
+    boot = re.search(r"<script>(.*?)</script>", index, re.S).group(1)
+    assert "method|concordance|families|queue" in boot, boot[:200]
+    assert index.index("<script>") < index.index('id="topbar"'), (
+        "the boot script runs after the header, so a frame can precede it")
+    first_paint = re.search(r"<style>(.*?)</style>", index, re.S).group(1)
+    assert "#mode-panel" in first_paint, (
+        "the layer is not in the first-paint block, so it is transparent until the "
+        "stylesheet parses")
+
+    js = app_js()
+    assert "function raiseLayer()" in js and "function lowerLayer()" in js
+    open_page = js[js.index("function openPage("):]
+    open_page = open_page[:open_page.index("\n}")]
+    assert open_page.index("raiseLayer()") < open_page.index("render()"), (
+        "the layer goes up after the incoming view is built")
+    assert "function closeMode() { lowerLayer()" in js, (
+        "the layer is not lowered when the route leaves the panel class")
 
 
 # ------------------------------------- item 15 · the title band and search ---
@@ -872,7 +910,7 @@ def test_the_graph_is_built_once_and_never_destroyed():
     js = app_js()
     assert js.count("cytoscape({") == 1, "the atlas is constructed more than once"
     assert ".destroy()" not in js, "a route destroys the graph instead of hiding it"
-    assert "function closeMode() { modeEl.classList.add('hidden') }" in js, (
+    assert "function closeMode() { lowerLayer(); modeEl.classList.add('hidden') }" in js, (
         "leaving a route no longer hides the panel — check it does not tear down the atlas")
 
 

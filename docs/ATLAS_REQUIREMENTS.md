@@ -577,13 +577,15 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   (releases, ontology, families, disputes, a family page, a batch page,
   the method view) and **records** for surfaces carrying rows and tables
   (the ledger, the query panel, the concordance and queue views). Within
-  a kind the column is identical page to page. Both kinds are capped on
-  the right and NOT centred, and their left gutter is the header's, so
-  the first character of every page sits directly under the brand — a
-  centred column moves with the width of the page's own content, which
-  is what made the text appear to shift between the ledger and disputes.
-  The geometry lives once in the chrome block; a page that sets its own
-  main-column width or padding is a drift and fails the suite.
+  a kind the column is identical page to page. **Both kinds CENTER in the
+  viewport** at their own max-width, by the same centering math, so a
+  column's centre is the viewport's centre on every surface and moving
+  between pages — or between kinds — never shifts it. (Reversed by
+  editorial ruling, 2026-08-14: the first version anchored both kinds to
+  the header's left gutter, which made the releases page read as hard
+  left against the rest of the site. Centred is the site's look.) The
+  geometry lives once in the chrome block; a page that sets its own
+  main-column width, margin or padding is a drift and fails the suite.
 
 - **V2-R12 one title band and one search position (standing rule,
   2026-08-13).** Every surface announces itself the same way: an eyebrow
