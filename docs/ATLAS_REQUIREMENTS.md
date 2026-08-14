@@ -576,14 +576,18 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   its geometry from that kind alone: **prose** for pages that are read
   (releases, ontology, families, disputes, a family page, a batch page,
   the method view) and **records** for surfaces carrying rows and tables
-  (the ledger, the query panel, the concordance and queue views). Within
-  a kind the column is identical page to page. **Both kinds CENTER in the
-  viewport** at their own max-width, by the same centering math, so a
-  column's centre is the viewport's centre on every surface and moving
-  between pages — or between kinds — never shifts it. (Reversed by
-  editorial ruling, 2026-08-14: the first version anchored both kinds to
-  the header's left gutter, which made the releases page read as hard
-  left against the rest of the site. Centred is the site's look.) The
+  (the ledger, the query panel, the concordance and queue views). **The
+  kinds differ ONLY in their right-hand cap. They never differ in their
+  left edge** (editorial ruling by interview, 2026-08-14, which settles
+  two earlier reversals: the complaint was inconsistency, not leftness,
+  and left-aligned is the design). One left edge for everything — the
+  brand and menu, the breadcrumb, the title band, every paragraph, table,
+  facet block and card — set by `--page-gutter`, defined once as a token
+  and consumed by the header, the band and the content rules alike. The
+  readable cap is measured from that gutter; a records surface extends
+  further right and starts in exactly the same place. Nothing centres.
+  The **landing hero is the sole exception** and stays centred, because
+  it is the site's opening statement rather than a page. The
   geometry lives once in the chrome block; a page that sets its own
   main-column width, margin or padding is a drift and fails the suite.
   **The kind governs the CONTENT only** (editorial ruling, 2026-08-14):
@@ -599,9 +603,12 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
   shared chrome block; a page or view that styles `.eyebrow`, `.sub`,
   `.titleband` or the `.where` breadcrumb itself is a drift and fails the
   suite. **Two kinds of input, two homes** (refined by editorial ruling,
-  2026-08-14). The header's `.hdr-tools` slot is for SITE- or
-  GRAPH-WIDE search only — the atlas search and the in-app views'
-  searches, which reach the whole graph — and it is right-aligned there.
+  2026-08-14, and refined again the same day). The header's
+  `.hdr-tools` slot carries the graph search **on the atlas view only** —
+  the surface its results act on, since it dims and focuses the canvas.
+  No other surface carries a header input: on a panel view or a
+  generated page that search would be an instrument pointing at
+  something the reader cannot see.
   A PAGE-LOCAL filter, which narrows only what that page lists, belongs
   with its facets: it is the FIRST row of the facet block, above the chip
   rows, because it is the broadest control in the family and everything

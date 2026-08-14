@@ -1097,3 +1097,67 @@ consistent and are what shows records and prose now agreeing.
 Title top and left are the same number on every surface and in both kinds. The
 breadcrumb needed nothing: it sits in the header's gutter at 40 on all twelve,
 and never varied by kind.
+
+## Items 24 and 25 — the interview ruling: one left edge, and the search where its target is
+
+### What the interview settled, and why two rounds preceded it
+
+The original complaint — "releases page is thoroughly left aligned, other pages
+somewhat central, but not consistent" — was about INCONSISTENCY. It was read as a
+preference for centring, which produced item 20.2 (both kinds centred) and then
+item 23 (the band self-centring so it would land in one place across kinds).
+Both were solving the wrong problem correctly. The interview settles it:
+**left-aligned is the design**, and consistency comes from a single left edge
+rather than from shared centring math. Items 20.2 and 23 are superseded; item
+22's vertical lock stands untouched.
+
+### The rule now
+
+One gutter, `--page-gutter: 4.5rem`, defined once as a token and consumed by the
+header rows, the title band and every content column. The brand, the menu, the
+breadcrumb, the title, every paragraph, table, facet block and card start on it.
+The readable cap is measured from that gutter, so the two kinds differ **only in
+their right-hand cap** and never in their left edge. Nothing centres. The
+landing hero is the sole exception, because it is the site's opening statement
+rather than a page; a test fails the build if any other column or band centres
+itself, and the narrow-screen override changes the one token rather than any
+rule.
+
+### After — every surface, both viewports
+
+| surface | kind | brand | breadcrumb | h1 | first paragraph | first table/facet | right cap |
+|---|---|---|---|---|---|---|---|
+| app · atlas | — | 72 | — | — | — | — | — |
+| app · method | prose | 72 | 72 | 72 | 72 | 72 | — |
+| app · concordance | records | 72 | 72 | 72 | 72 | 72 | — |
+| app · families | records | 72 | 72 | 72 | 72 | 72 | — |
+| app · queue | records | 72 | 72 | 72 | 72 | 72 | — |
+| releases | prose | 72 | 72 | 72 | 72 | 72 | 880 |
+| disputes | prose | 72 | 72 | 72 | 72 | — | 880 |
+| families | prose | 72 | 72 | 72 | 72 | 72 | 880 |
+| ontology | prose | 72 | 72 | 72 | 72 | 72 | 880 |
+| family page | prose | 72 | 72 | 72 | 72 | 72 | 880 |
+| batch page | prose | 72 | 72 | 72 | 72 | 72 | 880 |
+| query | records | 72 | 72 | 72 | 72 | 72 | 1168 |
+| ledger | records | 72 | 72 | 72 | 72 | 72 | 1168 |
+
+At 1024px every left-edge number is the same 72; the right caps become 880 for
+prose and 1020 for records, which is the viewport binding rather than the cap
+changing. One number per viewport across every surface, both kinds, app and
+generated pages alike.
+
+### Item 25 — the graph search renders on the atlas only
+
+The search dims and focuses the atlas canvas, so on method, concordance,
+families or the queue it was an instrument pointing at a target the reader
+cannot see. `pageBar` no longer renders an input at all; the header's second row
+on a panel view carries the breadcrumb and, where a view genuinely owns one, a
+link. The atlas view keeps the search in the header's tools cluster.
+
+One consequence handled rather than dropped: the families view's field was doing
+two jobs — graph search and a filter over its own family cards. The filter
+survives as a plain local control in the view's content beside the list it
+filters, per item 21's rule for page-local filters, and it touches nothing but
+those cards: no typeahead into the graph, no selection, no camera. Measured:
+no header input on any of the four panel views or any of the eight generated
+pages, and the search present on the atlas view.

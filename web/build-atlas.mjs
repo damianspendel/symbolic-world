@@ -76,6 +76,10 @@ const TOKENS = {
   ground: '#0b0a08', 'ground-2': '#100e0b', panel: '#171410',
   ink: '#eae3d2', 'ink-faint': '#9a9382', 'ink-dim': '#6f6a5d', 'ink-bright': '#ffffff',
   'ink-label': '#c9c2b0',
+  // Item 24 (editorial ruling, 2026-08-14) — the page gutter. One number, one
+  // token, consumed by the header, the title band and every content column, so
+  // the site has a single left edge. Overridden once for narrow screens below.
+  'page-gutter': '4.5rem',
   gold: '#d4af37', 'gold-dim': '#94782a',
   surface: 'rgba(23, 20, 16, 0.94)', hairline: '#2b261e',
   'm-concept': TYPE_COLOR.Concept, 'm-symbol': TYPE_COLOR.Symbol, 'm-figure': TYPE_COLOR.Figure,
@@ -496,7 +500,7 @@ const chromeBlock = () => `
 .page-bar {
   position: sticky; top: 0; z-index: 50;
   display: flex; align-items: center; gap: 0.9rem;
-  height: 3rem; padding: 0 clamp(1rem, 4vw, 2.5rem);
+  height: 3rem; padding: 0 var(--page-gutter);
   background: rgba(11, 10, 8, 0.94); border-bottom: 1px solid var(--hairline);
 }
 .page-bar .back {
@@ -519,18 +523,18 @@ const chromeBlock = () => `
    that made the releases page read as hard left against the rest of the site,
    and centred is the look this site has. */
 .page-main {
-  width: 100%; margin: 0 auto;
-  padding: 1.6rem clamp(1rem, 4vw, 2.5rem) 5rem;
+  width: 100%; margin: 0;
+  padding: 1.6rem var(--page-gutter) 5rem;
 }
 /* Item 22 — the scrollbar gutter is always reserved, on the document and on the
    panel layer alike, so a centred column does not shift by the scrollbar's
    width when a reader crosses from a page to an in-app view. */
 html { scrollbar-gutter: stable; }
 #mode-panel { scrollbar-gutter: stable; }
-.page-main.prose, .method-page { max-width: calc(46rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
-.page-main.records, #mode-panel .page { max-width: calc(64rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
-#mode-panel .page { width: 100%; margin: 0 auto; padding: 1.6rem clamp(1rem, 4vw, 2.5rem) 5rem; }
-#mode-panel .page.method-page { max-width: calc(46rem + 2 * clamp(1rem, 4vw, 2.5rem)); }
+.page-main.prose, .method-page { max-width: calc(46rem + 2 * var(--page-gutter)); }
+.page-main.records, #mode-panel .page { max-width: calc(64rem + 2 * var(--page-gutter)); }
+#mode-panel .page { width: 100%; margin: 0; padding: 1.6rem var(--page-gutter) 5rem; }
+#mode-panel .page.method-page { max-width: calc(46rem + 2 * var(--page-gutter)); }
 
 /* Item 15 (editorial ruling, 2026-08-13) — the title band, defined once. A page
    announces itself the same way everywhere: a quiet eyebrow naming the KIND of
@@ -557,14 +561,11 @@ html { scrollbar-gutter: stable; }
    of its own, so a page that leaves a browser default on its h1 (the families
    document did, 21px of UA margin-top) cannot push the title down. The gap
    between eyebrow and title is one number, here. */
-/* Item 23 (editorial ruling, 2026-08-14) — the band is DECOUPLED from the
-   column kind. It takes the prose column's inner width and centres itself
-   inside whatever column it is in; since both kinds are themselves centred on
-   the viewport, a band centred in either lands on the same pixel. So the title
-   is in one place on every surface — no per-kind position, no footnote — and
-   the kind governs only the content below it, which is where a records page
-   needs its width. One rule, no kind-scoped selector anywhere near the band. */
-.titleband { width: min(46rem, 100%); margin: 0 auto 1rem; }
+/* Item 23, then item 24 — the band is decoupled from the column kind, and since
+   item 24 that needs no centring trick: every column starts at the same gutter,
+   so the band starts there too. It keeps the readable cap on its right. No
+   kind-scoped selector goes anywhere near it. */
+.titleband { width: min(46rem, 100%); margin: 0 0 1rem; }
 .titleband > :first-child { margin-top: 0; }
 .titleband .eyebrow { margin: 0 0 0.35rem; }
 .titleband h1 { margin: 0; }
@@ -617,7 +618,7 @@ h4 {
   position: sticky; top: 0; z-index: 60;
   background: var(--ground); border-bottom: 1px solid var(--hairline);
 }
-.site-header .hrow { display: flex; align-items: center; gap: 1rem; padding: 0 clamp(1rem, 4vw, 2.5rem); }
+.site-header .hrow { display: flex; align-items: center; gap: 1rem; padding: 0 var(--page-gutter); }
 .site-header .hrow-1 { height: 3rem; }
 /* Item 22 — the second row is RESERVED: a constant height whether it carries a
    breadcrumb, the tools cluster, both or neither. The header's bottom edge is
@@ -638,10 +639,12 @@ h4 {
    is restated here. */
 #topbar.site-header { display: block; height: auto; padding: 0; }
 @media (max-width: 760px) {
+  /* one override of the one token, and the whole site's left edge follows */
+  :root { --page-gutter: 1rem; }
   /* the reserved row wraps and grows on a phone, like the rest of the header */
   .site-header .hrow-2 { height: auto; min-height: 2.4rem; padding-bottom: 0.4rem; }
   .site-header .brand { flex: 0 0 auto; }
-  .site-header .hrow { gap: 0.6rem; padding: 0 0.75rem; }
+  .site-header .hrow { gap: 0.6rem; }
   .site-header .hrow-1 { height: auto; padding-top: 0.45rem; flex-wrap: wrap; }
 }
 /* V2-R10 — the site menu. One definition, used by the app's header, by every

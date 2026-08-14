@@ -600,6 +600,57 @@ def test_menu_hash_destinations_are_routed_in_app_not_reloaded():
     assert "if (!route) return" in js
 
 
+# ------------------------------------------ item 24 · one left edge, one gutter ---
+
+def test_the_gutter_is_one_token_defined_once():
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    assert css.count("--page-gutter:") == 2, (
+        "the gutter token is not defined once at :root plus its one narrow-screen "
+        "override")
+    tokens = read(os.path.join(ROOT, "web", "src", "tokens.css"))
+    assert "--page-gutter:" in tokens, "the app does not receive the gutter token"
+    # the header, the band's column and the content columns all consume it
+    for selector in (r"\.site-header \.hrow {", r"\n\.page-main {", r"#mode-panel \.page {"):
+        rule = re.search(selector + r"([^}]*)}", css).group(1)
+        assert "var(--page-gutter)" in rule, selector
+
+
+def test_nothing_centres_except_the_landing_hero():
+    """Item 24 — the hero is the sole exception. A column or band that centres
+    anywhere else reintroduces the drift the interview settled."""
+    css = read(os.path.join(PUBLIC, "chrome.css")) + "\n" + read(os.path.join(ROOT, "web", "src", "style.css"))
+    for selector, body in re.findall(r"([^{}\n]+){([^}]*)}", css):
+        if "margin" not in body:
+            continue
+        if not re.search(r"margin[^;]*:\s*[^;]*\bauto\b", body):
+            continue
+        sel = selector.strip()
+        touches_column = re.search(r"\.page-main|\.titleband|#mode-panel \.page|\bmain\b", sel)
+        assert not touches_column or "#prose" in sel, (
+            f"a column or band centres itself: {sel} {{{body.strip()}}}")
+
+
+def test_one_left_edge_on_every_generated_page():
+    """The brand, the breadcrumb, the title band and the first content element
+    all start at the same place — asserted structurally, since the geometry is
+    one shared rule and no page may scope its own."""
+    css = read(os.path.join(PUBLIC, "chrome.css"))
+    for path in generated_pages():
+        style = "\n".join(re.findall(r"<style>(.*?)</style>", read(path), re.S))
+        for selector, body in re.findall(r"([^{}\n]+){([^}]*)}", style):
+            if re.search(r"margin-left|padding-left", body) and re.search(
+                    r"\bmain\b|\.page-main|\.titleband", selector):
+                raise AssertionError(
+                    f"{os.path.basename(path)} sets its own left edge: {selector.strip()}")
+    # and the kinds differ only on the right
+    prose = re.search(r"\.page-main\.prose[^{]*{([^}]*)}", css).group(1)
+    records = re.search(r"\.page-main\.records[^{]*{([^}]*)}", css).group(1)
+    for rule in (prose, records):
+        assert "max-width" in rule
+        assert "margin" not in rule and "padding" not in rule, (
+            "a kind sets more than its right-hand cap")
+
+
 # ------------------------------------- item 22 · the title band is locked ----
 
 def test_the_second_header_row_is_a_reserved_constant_height():
@@ -639,7 +690,8 @@ def test_the_title_band_is_decoupled_from_the_column_kind():
     that scopes the band to a kind reintroduces the jump."""
     css = read(os.path.join(PUBLIC, "chrome.css"))
     band = re.search(r"\n\.titleband {([^}]*)}", css).group(1)
-    assert "width:" in band and "auto" in band, f"the band does not set its own width: {band}"
+    assert "width:" in band, f"the band does not set its own width: {band}"
+    assert "margin: 0 auto" not in band, "the band centres itself instead of taking the gutter"
     sources = {"chrome.css": css,
                "tokens.css": read(os.path.join(ROOT, "web", "src", "tokens.css")),
                "style.css": read(os.path.join(ROOT, "web", "src", "style.css"))}
@@ -704,11 +756,12 @@ def test_the_two_kinds_are_defined_once_in_the_chrome():
     assert "max-width" in prose and "max-width" in records
     assert prose != records, "the two kinds have the same geometry"
     base = re.search(r"\n\.page-main {([^}]*)}", css).group(1)
-    # ruling of 2026-08-14: both kinds centre, by the same math on every page
-    assert "margin: 0 auto" in base, "the column is not centred"
-    assert "clamp(1rem, 4vw, 2.5rem)" in base, "the column lost its gutter"
+    # ruling by interview, 2026-08-14: one left edge, nothing centres
+    assert "margin: 0;" in base, "the column still centres"
+    assert "var(--page-gutter)" in base, "the column does not sit on the gutter token"
     panel = [b for b in re.findall(r"#mode-panel \.page {([^}]*)}", css) if "margin" in b][0]
-    assert "margin: 0 auto" in panel, "the app's panel column is not centred"
+    assert "margin: 0;" in panel and "var(--page-gutter)" in panel, (
+        "the app's panel column does not share the one left edge")
 
 
 def test_the_app_views_take_their_column_from_the_same_kinds():
@@ -839,6 +892,31 @@ def test_the_band_outranks_a_view_that_styles_its_paragraphs():
     css = read(os.path.join(PUBLIC, "chrome.css"))
     assert ".titleband .eyebrow" in css
     assert ".titleband .sub" in css
+
+
+def test_the_graph_search_renders_on_the_atlas_view_only():
+    """Item 25 (editorial ruling, 2026-08-14) — the graph search acts on the
+    atlas canvas, so it renders where that canvas is and nowhere else."""
+    index = read(os.path.join(ROOT, "web", "index.html"))
+    tools = re.search(r'<span class="hdr-tools">(.*?)</span>\s*</div>', index, re.S).group(1)
+    assert 'id="search"' in tools, "the atlas view lost the graph search"
+
+    js = app_js() + read(os.path.join(ROOT, "web", "concordance.js")
+                         if os.path.exists(os.path.join(ROOT, "web", "concordance.js"))
+                         else os.path.join(ROOT, "web", "src", "concordance.js"))
+    assert "search: true" not in js, "a panel view still asks for a header search"
+    assert "page-search" not in js, "the panel search input survives in the app source"
+    bar = js[js.index("function pageBar("):]
+    bar = bar[:bar.index("\n}")]
+    assert "<input" not in bar, f"pageBar still renders an input: {bar}"
+
+    # a view may keep a filter over its OWN list, in its content, doing nothing
+    # to the graph
+    assert "function wireLocalFilter(" in js
+    assert "local-filter" in js
+    assert "attachTypeahead" not in js[js.index("function wireLocalFilter("):
+                                        js.index("function wireLocalFilter(") + 400], (
+        "the local filter reaches into the graph search")
 
 
 def test_the_header_slot_carries_only_site_wide_search():

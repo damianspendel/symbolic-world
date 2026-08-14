@@ -103,7 +103,7 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     const pickedRows = picked ? allRows.filter(r => r.psyche === picked || r.lab === picked) : []
 
     root.innerHTML = `
-      ${pageBar({ where: 'concordance', search: true })}
+      ${pageBar({ where: 'concordance' })}
       <div class="page">
       <div class="titleband"><p class="eyebrow">explore</p>
       <h1>Psychology against alchemy</h1></div>

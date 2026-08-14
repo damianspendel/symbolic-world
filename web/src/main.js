@@ -853,27 +853,25 @@ function goAtlas() {
 // showed the reader a different set of links in a different place, and one that
 // scrolled away with the content. Rendered as the panel's first child, the
 // shared header sticks against the panel's own scroll.
-function pageBar({ where, search = false, extra = '' } = {}) {
-  // Item 15 — the tools cluster is right-aligned by the shared rule, so an
-  // in-app view's search sits where the atlas's search sits. It used to inherit
-  // its position from a .page-bar spacer rule that went away with the bar, and
-  // came out on the left.
-  const tools = `${extra}
-    ${search ? `<input class="std-search page-search" type="search" autocomplete="off" spellcheck="false"
-        placeholder="A symbol, a relation, a quote, CW 14 §1…">` : ''}`
+function pageBar({ where, extra = '' } = {}) {
+  // Item 25 (editorial ruling, 2026-08-14) — no search input on a panel view.
+  // The graph search acts on the atlas canvas: it dims and focuses the graph,
+  // so on method, concordance, families or the queue it was an instrument
+  // pointing at something the reader cannot see. It renders on the atlas view
+  // and nowhere else. The tools slot here carries only what a view genuinely
+  // owns, which today is the families view's link to the full document.
+  const tools = `${extra}`
   const row2 = `<span class="where">${esc(where || '')}</span>` +
     (tools.trim() ? `<span class="hdr-tools">${tools}</span>` : '')
   return chrome.header.replace('{{BRAND_HREF}}', '#/atlas').replace('{{ROW2}}', row2)
 }
-// Every page-bar search is the same search: the same index, the same typeahead,
-// the same Enter-selects. Pages that carry a record list also filter it live.
-function wirePageSearch(rootEl, { localFilter } = {}) {
-  const input = rootEl.querySelector('.page-search')
+// Item 25 — a view's own list filter. It narrows that view's cards and touches
+// nothing else: no typeahead into the graph, no selection, no camera. The graph
+// search lives on the atlas, where its results are visible.
+function wireLocalFilter(rootEl, apply) {
+  const input = rootEl.querySelector('.local-filter')
   if (!input) return
-  attachTypeahead(input, { onPick: pickSuggestion })
-  input.addEventListener('input', () => {
-    if (localFilter) localFilter(norm(input.value))
-  })
+  input.addEventListener('input', () => apply(norm(input.value)))
 }
 
 // Item 14 — the menu marks where you are on an in-app route too. The generated
@@ -920,17 +918,16 @@ function openEdgeFromPage(id) {
 }
 function openMethod() {
   openPage(() => {
-    modeEl.innerHTML = `${pageBar({ where: 'about', search: true })}<div class="page method-page">` +
+    modeEl.innerHTML = `${pageBar({ where: 'about' })}<div class="page method-page">` +
       `<div class="titleband"><p class="eyebrow">about</p><h1>The method</h1>` +
       `<p class="sub">How a claim gets into this graph, and what the checks do and do not cover.</p></div>` +
       `${method.html}</div>`
     modeEl.querySelector('[data-back]').addEventListener('click', goAtlas)
-    wirePageSearch(modeEl)
   }, '#/method')
   setHash('#/method')
 }
 function openConcordance() {
-  openPage(() => { renderConcordance(modeEl, atlas, { onOpenEdge: openEdgeFromPage, onBack: goAtlas, mixStrip, pageBar }); wirePageSearch(modeEl) }, '#/concordance')
+  openPage(() => { renderConcordance(modeEl, atlas, { onOpenEdge: openEdgeFromPage, onBack: goAtlas, mixStrip, pageBar }) }, '#/concordance')
   setHash('#/concordance')
 }
 
@@ -961,7 +958,7 @@ function drawFamilies() {
   atlas.edges.forEach(e => { if (e.family) counts[e.family.value] = (counts[e.family.value] || 0) + 1 })
   const queued = (pending.items || []).length
   modeEl.innerHTML = `
-    ${pageBar({ where: 'families', search: true, extra: `<a class="back" href="${esc(families.doc_url)}">the full document →</a>` })}
+    ${pageBar({ where: 'families', extra: `<a class="back" href="${esc(families.doc_url)}">the full document →</a>` })}
     <div class="page">
       <div class="titleband"><p class="eyebrow">reference</p>
       <h1>The relation-family vocabulary</h1></div>
@@ -970,6 +967,13 @@ function drawFamilies() {
       <div class="fam-jump">
         <button class="chip" data-jump="queue-section">awaiting review <span class="badge-count">${queued}</span></button>
       </div>
+
+      <!-- Item 25 — the view's own filter, beside the list it filters. It
+           narrows these cards and touches nothing else; the graph search is on
+           the atlas, where its results can be seen. -->
+      <div class="facetrow"><span class="lab">filter</span>
+        <input class="std-search facet-filter local-filter" type="search"
+               placeholder="a family, a boundary rule…" autocomplete="off" spellcheck="false"></div>
 
       <div id="family-list">
       ${families.families.map(f => `<div class="qitem fam-card" data-fam-search="${esc(norm(f.name + ' ' + f.definition_html.replace(/<[^>]+>/g, '')))}">
@@ -993,13 +997,11 @@ function drawFamilies() {
     setHash('#/queue')
   }))
   wireQueueBody()
-  // R10.4 — the same search field, in the same slot, behaving the same way; it
-  // also filters this page's own records, which is what the page is a list of.
-  wirePageSearch(modeEl, {
-    localFilter: q => modeEl.querySelectorAll('.fam-card').forEach(c => {
-      c.classList.toggle('hidden', !!q && !c.dataset.famSearch.includes(q))
-    })
-  })
+  // Item 25 — the view keeps a filter over its own list, in the content beside
+  // what it filters (item 21's rule for a page-local control), not in the header.
+  wireLocalFilter(modeEl, q => modeEl.querySelectorAll('.fam-card').forEach(c => {
+    c.classList.toggle('hidden', !!q && !c.dataset.famSearch.includes(q))
+  }))
 }
 
 function openQueue() { openFamiliesPage({ scrollTo: 'queue-section' }) }
