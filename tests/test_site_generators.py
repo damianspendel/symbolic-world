@@ -556,10 +556,55 @@ def test_menu_hash_destinations_are_routed_in_app_not_reloaded():
     js = app_js()
     assert ".closest('.topmenu a, .brand[href]')" in js
     assert "ev.preventDefault()" in js
-    assert "location.hash = route[1]" in js
+    # item 16 replaced the deferred hash assignment with a same-task route
+    assert "history.pushState(null, '', route[1])" in js
+    assert "applyHash()" in js
     # modified clicks and real pages are left to the browser
     assert "ev.metaKey || ev.ctrlKey" in js
     assert "if (!route) return" in js
+
+
+# --------------------------------------- item 16 · flashless transitions ----
+
+def test_a_route_panel_is_filled_before_it_is_revealed():
+    """The panel is the one opaque surface over a live graph, so it is mounted
+    while still display:none and shown last. Reveal-then-fill leaves a frame of
+    empty panel, and any render that yields would put the graph on screen."""
+    js = app_js()
+    body = js[js.index("function openPage("):]
+    body = body[:body.index("\n}")]
+    assert body.index("render()") < body.index("classList.remove('hidden')"), (
+        "openPage reveals the panel before filling it")
+
+
+def test_a_menu_click_routes_in_its_own_task():
+    """Assigning location.hash defers the route to the hashchange task and the
+    browser paints in between — one frame of the origin surface after the
+    click, which is the reported flash. pushState + applyHash keeps it in the
+    click's task; popstate covers the Back button that entry creates."""
+    js = app_js()
+    handler = js[js.index(".closest('.topmenu a, .brand[href]')"):]
+    handler = handler[:handler.index("window.addEventListener('popstate'")]
+    assert "history.pushState(null, '', route[1])" in handler
+    assert "applyHash()" in handler
+    assert "location.hash = route[1]" not in handler, "the click still defers the route"
+    assert "window.addEventListener('popstate', applyHash)" in js
+
+
+def test_a_cold_deep_link_to_a_panel_route_mounts_before_the_first_paint():
+    js = app_js()
+    boot = js[js.index("if (deepLink) {"):]
+    boot = boot[:boot.index("else fitLanding()")]
+    assert "applyHash()" in boot and "setTimeout(applyHash, 0)" in boot, boot
+    assert boot.index("applyHash()") < boot.index("setTimeout(applyHash, 0)"), (
+        "a panel deep link still waits a tick, so the assembled graph paints first")
+
+
+def test_the_panel_is_opaque_whenever_it_is_visible():
+    css = read(os.path.join(ROOT, "web", "src", "style.css"))
+    block = re.search(r"#mode-panel {([^}]*)}", css).group(1)
+    assert "background: var(--ground)" in block
+    assert "#mode-panel.hidden { display: none; }" in css
 
 
 # ------------------------------------- item 15 · the title band and search ---

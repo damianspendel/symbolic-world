@@ -888,11 +888,17 @@ function markCurrent(root, href) {
   const link = root.querySelector(`.topmenu a[href="${href}"]`)
   if (link) link.setAttribute('aria-current', 'page')
 }
+// Item 16 — mount, then reveal. The panel is the one opaque surface over the
+// atlas, so the order matters: fill it while it is still display:none, mark the
+// menu, and only then show it. Revealing first and filling afterwards leaves a
+// frame's worth of empty panel available to paint, and any future render that
+// yields would put the live graph on screen under it.
 function openPage(render, route = '') {
   enterAtlas(); $('family-panel').classList.add('hidden')
-  modeEl.classList.remove('hidden'); modeEl.scrollTop = 0
+  modeEl.scrollTop = 0
   render()
   markCurrent(modeEl, MENU_HREF[route] || '')
+  modeEl.classList.remove('hidden')
 }
 function openEdgeFromPage(id) {
   closeMode()
@@ -1458,9 +1464,17 @@ document.addEventListener('click', ev => {
   const route = href.match(/^\/?(#\/.*)$/)
   if (!route) return                       // a real page: let the browser go
   ev.preventDefault()
-  if (location.hash === route[1]) applyHash()
-  else location.hash = route[1]
+  // Item 16 — route in THIS task. Assigning location.hash defers the route to
+  // the hashchange task and the browser paints in between, so the reader gets
+  // one frame of whatever they were looking at — the graph, when they clicked
+  // from the atlas — after they clicked. pushState changes the URL without
+  // firing hashchange, so the route runs inline and the first paint after the
+  // click already carries the new view. The history entry is kept, and popstate
+  // below routes the Back button that entry creates.
+  if (location.hash !== route[1]) history.pushState(null, '', route[1])
+  applyHash()
 })
+window.addEventListener('popstate', applyHash)
 
 // ----------------------------------------------------------------- buttons ---
 $('fit').addEventListener('click', () => cy.animate({ fit: { padding: 50 } }, { duration: 450 }))
@@ -1487,7 +1501,16 @@ cy.ready(() => {
       veil.style.opacity = deepLink ? '0' : '0.86'
       updateStats()
       // same batch-flush caveat as fitLanding: measure after the tick
-      if (deepLink) { enterAtlas(); setTimeout(applyHash, 0) } else fitLanding()
+      // Item 16 — a deep link to a PANEL route mounts its panel in this task,
+      // before the first paint. Deferring it by a tick let the assembled graph
+      // paint first, so arriving at /#/method from a page flashed the atlas.
+      // The node and edge deep links keep the tick: focusOn measures the
+      // viewport and needs the layout flushed.
+      if (deepLink) {
+        enterAtlas()
+        if (/^#\/(method|concordance|families|queue)/.test(location.hash)) applyHash()
+        else setTimeout(applyHash, 0)
+      } else fitLanding()
     })
     return
   }
