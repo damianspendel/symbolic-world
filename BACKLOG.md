@@ -516,3 +516,9 @@ here so the morning finds it; nothing below is committed scope.
    distribution and provenance mix, per-volume evidence mix, queue health,
    calibration status, external-validity status. Run at each release; its
    output is most of a release note.
+
+## v2.1 — bug fixes and minor enhancements (opened 2026-08-14)
+
+1. **Sort the query panel's dropdowns** — the family dropdown especially
+   (alphabetical; volumes already follow collection order per V2-R8). Ruled
+   by the maintainer at the v2.0 review.

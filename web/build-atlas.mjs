@@ -1603,8 +1603,7 @@ ${WALK_IN_UI ? `<h2>Identity walk</h2>
   <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runwalk" style="margin:0">walk</button></div>
 </div>
 <div class="walk" id="walk"></div>` : ''}
-
-<div class="callout" style="margin-top:1.4rem"><p>A derived row is not an edge. It carries its source edge's references and no citation of its own, it is not written to the graph, and it does not compound: closure is applied once to the stored edges and never to its own output. A count of rows is therefore not a count of edges, and the line under the results says which is which.</p></div>`
+`
 
   const queryStyle = `
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }

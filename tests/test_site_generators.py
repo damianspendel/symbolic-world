@@ -314,9 +314,13 @@ def test_the_families_page_is_reference_not_method():
     assert '<a href="/ontology">design</a>' in exposition
     assert '<a href="/#/method">checks</a>' in exposition
     # and the page is now a fraction of what it was: the copy above the
-    # document's rule ran to about 3,000 words before the redistribution
-    words = len(re.sub(r"<[^>]+>", " ", exposition).split())
-    assert words < 2600, f"the families exposition is back up to {words} words"
+    # document's rule ran to about 3,000 words before the redistribution.
+    # The string->family map grows with the graph and is data, not copy, so
+    # it is excluded from the bound — the guard is against method prose
+    # returning, not against mining progress (first tripped by b-cw8-1).
+    prose = re.sub(r'<section class="fam">[\s\S]*?</section>', " ", exposition)
+    words = len(re.sub(r"<[^>]+>", " ", prose).split())
+    assert words < 1500, f"the families exposition is back up to {words} words"
 
 
 def test_no_family_page_calls_a_family_verified():
