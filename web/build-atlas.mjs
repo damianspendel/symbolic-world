@@ -1983,7 +1983,7 @@ ${findingRows}
 <p class="meta">A stance is not a rebuttal of the finding. An open vocabulary is hard to query by predicate, which is why the family layer exists. That was a conscious design decision.</p>
 
 <h2>Deliberately absent</h2>
-<p>${counts.design} of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight. Each was taken for a reason, and the reason is here.</p>
+<p>${counts.design} of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight.</p>
 <ul class="absent">
 <li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
 <li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>

@@ -107,7 +107,8 @@ checks removed.
 
 ## Human oversight
 
-Machines verify; people decide.
+Machine checks are not decisions. Responsible use of AI needs human oversight: a person
+rules on disagreements, decides releases, and answers for what is published.
 
 - **Gold set.** {{human_chips}} claims carry a *human-validated* mark in the
   [ledger](/ledger): a person read the cited paragraph. The rest are

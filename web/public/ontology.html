@@ -296,7 +296,7 @@ table.findings .src { font: .58rem var(--mono); }
 <p class="meta">A stance is not a rebuttal of the finding. An open vocabulary is hard to query by predicate, which is why the family layer exists. That was a conscious design decision.</p>
 
 <h2>Deliberately absent</h2>
-<p>7 of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight. Each was taken for a reason, and the reason is here.</p>
+<p>7 of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight.</p>
 <ul class="absent">
 <li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
 <li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
@@ -308,7 +308,7 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-14 at commit 06a9e8d
+built 2026-08-14 at commit 5958293
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>
