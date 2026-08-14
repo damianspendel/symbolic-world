@@ -1473,3 +1473,79 @@ found it on seven family pages and seven times on the ontology page, not the two
 reported. No `**` or raw backticks leak anywhere. A test now sweeps every page
 for heading markers and unrendered emphasis outside code elements, and a second
 checks the label still names the document's section.
+
+## Item 3 (final round) — the editorial sweep
+
+One pass over every content page, applying the accumulated rules together.
+
+### Em-dashes
+
+Zero remain in our copy, on every page:
+
+| page | before | after | em-dashes before → after |
+|---|---|---|---|
+| ontology | 2,013 | 2,004 | 10 → 0 |
+| families exposition | 2,992 | 2,468 | 16 → 0 |
+| family page (symbolization) | 586 | 576 | 9 → 0 |
+| query | 292 | 290 | 2 → 0 |
+| releases | 823 | 809 | 19 → 0 |
+| disputes | 101 | 101 | 0 → 0 |
+| ledger intro | 279 | 276 | 3 → 0 |
+| batch page | 201 | 164 | 1 → 0 |
+| method (in-app) | 1,312 | 1,296 | 17 → 0 |
+
+The families and batch drops are larger than the sweep alone: the measurement
+now also excludes the boundary rules quoted from the definitions document and
+the git commit subjects on a batch page, which are records rather than our copy
+and keep their punctuation.
+
+Restructured with colons where a list or gloss followed ("the active filters:
+volume, family, voice, layer"), semicolons where two clauses were joined
+("carries the stamp; 1653 of 1847 citations do today"), full stops where the
+sentence was doing two jobs ("The family layer's own check is a gate tested by
+planting errors among real assignments. It reported catching everything
+planted"), and parentheses where the aside was genuinely parenthetical ("the
+ruleset version it shipped with (deliberately separate numbers)"). Page titles
+now use a middle dot rather than an em-dash.
+
+### Negative parallelisms
+
+Killed as rhetoric: "which is exactly why the family layer exists" (already gone
+with the item-34 stance rewrite), "not a structure discovered in his thought"
+reset to its own sentence, and the announce-then-explain shape in the ontology
+intro.
+
+Kept as vocabulary, and flagged here as borderline calls rather than decided
+silently:
+
+- **"assigned, not verified"** — the site's central distinction; it appears on
+  every family page and in the ledger. Kept everywhere.
+- **"a map of assertions, not a reading"** — the standing claim about what the
+  graph is. Kept.
+- **"a model's judgment, not a mechanical proof"** — states what the gate does
+  and does not prove. Kept.
+- **"measures whether the definitions can be followed consistently, not whether
+  they are right"** — the agreement/correctness distinction. Kept, em-dash
+  replaced with a comma.
+- **"the honest default, not a defect"** (the amber dot) — borderline: it is
+  half rhetoric. Kept because it tells a reader how to read the dot, which
+  nothing else on that page does.
+- **"classification only; the relation above was already gated"** (ledger family
+  row) — kept, punctuation changed.
+
+### Self-description and connective tissue
+
+Cut: "and then runs the standard pitfall scan over the graph and reports what it
+finds" became "It then runs...", "What the instruments do not cover, stated
+plainly:" lost "stated plainly", and the deliberate-absences section lost its
+announcement in the previous commit.
+
+### AI-tells
+
+Swept every page and the method copy against the banned list (delve, tapestry,
+pivotal, crucial, leverage, robust, seamless, holistic, "serves as", "stands
+as", "it is worth", "in other words", "which is exactly why") plus the
+self-description patterns: **0 hits**.
+
+No content added, no number changed, no design touched. Copy contract green,
+165 tests green.

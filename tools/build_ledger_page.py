@@ -295,7 +295,7 @@ def batch_page(batch, delta, commits):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/{batch_slug(batch["id"])}">
-<title>{esc(batch["id"])} — a batch delta — The Symbolic World</title>
+<title>{esc(batch["id"])} · a batch delta · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
 <style>
   * {{ box-sizing:border-box; margin:0; padding:0; }}
@@ -422,7 +422,7 @@ def build():
             rows.append(f'<div class="refrow"><span class="cite">CW {esc(r["volume"])} §{esc(r["paragraph"])}</span>'
                         f'<span class="ctype">{esc(r["claim_type"])}</span>{"".join(chips)}</div>')
         dchips = "".join(
-            f'<div class="drow" title="{esc(d["objection"])}">⚖ disputed ({esc(d["date"])}, {esc(d["outcome"])}) — <a href="/disputes">log</a></div>'
+            f'<div class="drow" title="{esc(d["objection"])}">⚖ disputed ({esc(d["date"])}, {esc(d["outcome"])}): <a href="/disputes">log</a></div>'
             for d in DISPUTES.get(key, []))
 
         # the family-assignment record, visually a different kind of row
@@ -442,7 +442,7 @@ def build():
                       f'<span class="flabel">family</span>'
                       f'<span class="chip {cls}">{esc(fval)}</span>'
                       f'{history_chip(fam)}'
-                      f'<span class="fmeta">{esc(by)}{" · " + esc(date) if date else ""} — classification only; '
+                      f'<span class="fmeta">{esc(by)}{" · " + esc(date) if date else ""}. Classification only; '
                       f'the relation above was already gated against its paragraph</span></div>')
             famsearch = f' family:{fval} {fstate}'
 
@@ -499,7 +499,7 @@ def build():
         facet_row("volume", "vol", sorted(facet_counts["vol"].items(),
                                           key=lambda kv: volume_key(kv[0]))),
         facet_row("batch", "batch", ordered("batch", key=lambda kv: kv[0]),
-                  "windowed batches only — earlier batches declare no paragraph range; "
+                  "windowed batches only; earlier batches declare no paragraph range. "
                   "↗ opens the batch's delta page",
                   link=lambda bid: "/" + batch_slug(bid)),
         facet_row("claim type", "ct", ordered("ct")),
@@ -542,7 +542,7 @@ def build():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/ledger">
-<title>Ledger — The Symbolic World</title>
+<title>Ledger · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
 <style>
   /* R10.0 — palette and chrome come from chrome.css, generated from the one
@@ -659,7 +659,7 @@ def build():
     </div>
     <div class="kind k-fam">
       <h3>Family assignment</h3>
-      <p>A classification of a relation that is <em>already</em> verified — which kind of relation it
+      <p>A classification of a relation that is <em>already</em> verified: which kind of relation it
       is, drawn from a fixed vocabulary. Two model arms classify blind, a calibrated gate checks them,
       and a human rules where they disagree. It says nothing new about the text and never re-opens the
       gate above it.</p>
@@ -667,7 +667,7 @@ def build():
   </div>
   <p class="intro">Each reference shows its full verification trail: the deterministic
   <b>quote</b> check, the independent <b>gate</b> (verifier and date), the narrow <b>voice</b> audit,
-  the <b>cross-vendor</b> check, and — where a person has checked the paragraph —
+  the <b>cross-vendor</b> check, and, where a person has checked the paragraph,
   <b>human</b> validation from the gold set. Disputed records link to the
   <a href="/disputes">dispute log</a>. Hover any chip for detail.</p>
   <p class="intro">Disclosure, mirrored from the paper: verification timestamps for batches gated

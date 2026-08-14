@@ -28,28 +28,28 @@ records every individual claim and the gates it passed; this page records the
 release-level story.
 
 Each entry opens with a pin: the graph version, the ruleset version it shipped
-with — deliberately separate numbers — and the calibration record binding at tag
+with (deliberately separate numbers), and the calibration record binding at tag
 time.
 
-## v1.4 — the alchemical trilogy, the archetype volumes, and the relation-family layer
+## v1.4: the alchemical trilogy, the archetype volumes, and the relation-family layer
 
-status: pending — the ceremony waits on the arXiv publication of the paper.
+status: pending. The ceremony waits on the arXiv publication of the paper.
 Scope: the 2026-08-05 plan put Aion and CW 9i in v1.5; the arcs closed first, so
 they are here.
 pin: graph v1.4 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
 
-- Mined CW 12, 13 and 14 — the alchemical trilogy complete.
+- Mined CW 12, 13 and 14; the alchemical trilogy is complete.
 - Mined Aion (§1–429), closed at b-cw9ii-7 on 2026-08-06.
 - Mined CW 9i (§1–718) over ten windows, closed at b-cw9i-10 on 2026-08-12.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
-  {{batches}} merged batches — all on the [ledger](/ledger).
+  {{batches}} merged batches, all on the [ledger](/ledger).
 - Normalized {{normalized}} relation strings; the verbatim string stays frozen
   beside each.
 - Assigned families: {{assigned}} assigned, {{pending}} queued,
   {{no_family}} no family, {{text_undecided}} text undecided (assigned, not
-  verified — [families](/families)).
+  verified; [families](/families)).
 - Found the clause-predicate defect at b-cw12-1: {{clause_edges}} relations
   carrying a proposition in the predicate.
 - Traced it to a briefing bullet; replaced the bullet with a form rule at
@@ -62,12 +62,12 @@ pin: graph v1.4 · ruleset {{ruleset}} · calibration record {{calibration_recor
 - Moved the ruleset to {{ruleset}}, {{families}} families; every version carries
   a calibration PASS record and CI refuses a version without one.
 - Re-ran every `amplified-by` edge under ruling 1; `amplification` now holds
-  none — [the page](/family-amplification) carries the count.
+  none; [the page](/family-amplification) carries the count.
 - Declared {{declarations_active}} inverse and symmetric pairs, each citing a
   document line. No transitivity.
 - Calibrated the family gate: {{cal_caught}}/{{cal_planted}} planted errors
   caught, {{cal_clean}}/{{cal_clean_of}} clean assignments left alone (measures
-  the instrument, not Jung). Gate model {{gate_model}} — within-vendor role
+  the instrument, not Jung). Gate model {{gate_model}}: within-vendor role
   separation, not cross-vendor.
 - Checked {{ev_items}} assignments against {{ev_works}} works over
   {{ev_passes}} passes: {{ev_agrees}}/{{ev_treated}} treated items agreed,
@@ -97,9 +97,9 @@ pin: graph v1.4 · ruleset {{ruleset}} · calibration record {{calibration_recor
 - Adopted the design rules recorded as V2-R7 to V2-R13 in
   `docs/ATLAS_REQUIREMENTS.md`.
 
-## v1.5 — the vocabulary-transfer study
+## v1.5: the vocabulary-transfer study
 
-status: pending — runs after v1.4's ceremony.
+status: pending. Runs after v1.4's ceremony.
 pin: graph v1.5 · ruleset pending · calibration record pending
 
 ### mining status
@@ -119,9 +119,9 @@ pin: graph v1.5 · ruleset pending · calibration record pending
 
 - No changes.
 
-## v2.0 — the graph as a queryable instrument
+## v2.0: the graph as a queryable instrument
 
-status: pending — populated finally at the ceremony.
+status: pending. Populated finally at the ceremony.
 pin: graph v2.0 · ruleset pending · calibration record pending
 
 ### mining status
@@ -133,7 +133,7 @@ pin: graph v2.0 · ruleset pending · calibration record pending
 ### governance
 
 - Carried every ruleset version since v0.7 with its own calibration PASS record.
-- Closed the external-validity check — figures in v1.4 below.
+- Closed the external-validity check; figures in v1.4 below.
 - Added gates: ledger freshness, batch manifest, size budget, inline-style
   geometry scan, copy contract on every page.
 
@@ -141,7 +141,7 @@ pin: graph v2.0 · ruleset pending · calibration record pending
 
 - Shipped the query engine: {{declarations_active}} declarations, read-time
   closure, carried qualifiers.
-- Shipped the Turtle export — no transitivity.
+- Shipped the Turtle export, which declares no transitivity.
 - Built the ledger and its per-batch pages from one generator in one pass.
 - Made the builds deterministic.
 
@@ -150,20 +150,20 @@ pin: graph v2.0 · ruleset pending · calibration record pending
 - Carried [releases](/releases), [ontology](/ontology), [query](/query), a page
   per family, a page per batch.
 - Adopted the menu taxonomy and the single-gutter layout.
-- Held the identity walk out of the UI — built and tested in
+- Held the identity walk out of the UI: built and tested in
   `tools/query/kg_query.py`, not exposed on the site.
 
-## v1.3.0 — the published baseline
+## v1.3.0: the published baseline
 
 status: released and frozen. Retrospective.
-pin: graph v1.3.0 · ruleset none — the family layer did not exist yet ·
+pin: graph v1.3.0 · ruleset none (the family layer did not exist yet) ·
 calibration record none
 
 ### mining status
 
 - Mined CW 14 with seven incidental volumes: {{frozen_nodes}} nodes,
   {{frozen_edges}} relations, {{frozen_refs}} references.
-- Ran at 0–0.5% clause predicates — predates the windowed pipeline.
+- Ran at 0–0.5% clause predicates; this material predates the windowed pipeline.
 
 ### governance
 

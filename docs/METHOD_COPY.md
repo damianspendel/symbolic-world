@@ -47,9 +47,9 @@ dictionaries. That choice costs breadth and buys depth.
 [figure: the works bar, as it appears at the bottom of the atlas]
 
 The bar along the bottom of the atlas is the corpus made visible: one segment
-per volume, sized by how much verified evidence it carries — the alchemical
-trilogy (CW 12, 13, 14) and *Aion* mined end to end, CW 9i in progress, five
-further volumes represented where the deep volumes reach into them. The
+per volume, sized by how much verified evidence it carries. The alchemical
+trilogy (CW 12, 13, 14) and *Aion* are mined end to end, CW 9i is in progress,
+and five further volumes appear where the deep volumes reach into them. The
 segments select: click one and the atlas shows only that volume's claims.
 
 ## Reading the atlas
@@ -57,7 +57,7 @@ segments select: click one and the atlas shows only that volume's claims.
 [figure: the metals legend — six node kinds, six metals]
 
 Node colour is the kind of thing a node is. The palette borrows alchemy's
-metals — gold for concepts, silver for symbols, copper for figures, iron for
+metals: gold for concepts, silver for symbols, copper for figures, iron for
 operations, verdigris for substances, lead for motifs. Alchemy assigned its
 metals to the planets; mapping node kinds onto them is this project's design
 choice.
@@ -66,14 +66,14 @@ choice.
   such as CW 14 §1. Typing offers completions, and choosing a symbol or a
   family opens it.
 - **Click** a node to read its connections; click a connection to open the
-  claim itself — relation, quote, paragraph, verdicts. **Copy link** on any
+  claim itself: relation, quote, paragraph, verdicts. **Copy link** on any
   selection gives a URL that reopens it.
-- **The chips** beside the search box are the active filters — volume, family,
+- **The chips** beside the search box are the active filters: volume, family,
   voice, layer. Remove one with its ×.
 - **The bar along the bottom** selects volumes; each segment is sized by the
   verified evidence that volume carries.
 - Every citation shows a status dot: green, a person validated it; amber,
-  machine-verified only — the honest default; red, publicly disputed with the
+  machine-verified only, the honest default; red, publicly disputed with the
   dispute on the record.
 
 ## How a claim gets in
@@ -91,7 +91,7 @@ Five stations.
 4. **Audit.** A Gemini model re-reads what survived, before any of it touches
    the graph. Universal for every batch since the *Aion* arc (mid-2026);
    earlier material was audited by sampling, and each claim's receipt shows
-   whether it carries the stamp — {{xv_stamped}} of {{refs}} citations do
+   whether it carries the stamp; {{xv_stamped}} of {{refs}} citations do
    today. When gate and auditor disagree, the auditor wins.
 5. **Merge.** The claim enters with its provenance stamped: dates, verdicts,
    corrections.
@@ -112,10 +112,10 @@ rules on disagreements, decides releases, and answers for what is published.
 
 - **Gold set.** {{human_chips}} claims carry a *human-validated* mark in the
   [ledger](/ledger): a person read the cited paragraph. The rest are
-  machine-verified — the amber dot is the honest default, not a defect.
+  machine-verified; the amber dot is the honest default, not a defect.
 - **Adjudication.** Two blind arms sort relations into {{families}} families.
-  Where they disagree — {{queue}} claims today — no model breaks the tie. A
-  person rules, in sittings, and every ruling lands signed and dated.
+  They disagree on {{queue}} claims today. No model breaks the tie. A person
+  rules, in sittings, and every ruling lands signed and dated.
 - **Disputes.** {{disputes}} challenges are on the record with their outcomes,
   in the [dispute log](/disputes).
 - **Publication.** Releases, deploys and rulings are human decisions. Nothing
@@ -128,17 +128,17 @@ The checks are themselves checked:
 - Every one of the {{refs}} quotes is mechanically verified, letter for
   letter, against the corpus (the harness also carries seven deliberately
   corrupted claims, and all seven are caught on every run). Whether a
-  paragraph supports its claim is a model's judgment, not a mechanical proof
-  — and the receipts show it as judgment.
-- The family layer's own check — a gate tested by planting errors among real
-  assignments — reported catching everything planted in its early runs. A code
+  paragraph supports its claim is a model's judgment, not a mechanical proof.
+  The receipts show it as judgment.
+- The family layer's own check is a gate tested by planting errors among real
+  assignments. It reported catching everything planted in its early runs. A code
   inspection we commissioned in August 2026 found that harness could not fully
   substantiate what "caught" means, so we withdrew those figures. The
   harness was rebuilt in tracked code; calibration re-runs per ruleset version,
   and its figures live in the version-bound records
   (`pipeline/family_calibration/records/`) rather than in this prose, because a
   number written here outlives the version it measured. A family label means
-  this: two models, judging independently, agreed — and where they disagreed, a
+  this: two models, judging independently, agreed. Where they disagreed, a
   person decides.
 - The classification vocabulary was checked outside this repository, against
   {{ev_works}} works of scholarship: {{ev_agrees}} of {{ev_treated}} treated
@@ -147,22 +147,22 @@ The checks are themselves checked:
   claim is true.
 - The two blind classification arms agreed on 86% of {{edges_classified}}
   relations. Agreement measures whether the definitions can be followed
-  consistently — not whether they are right. Twenty standing questions about
+  consistently, not whether they are right. Twenty standing questions about
   Jung's thought are asked of the graph after every change; it currently
   answers 14 in full.
 
-What the instruments do not cover, stated plainly:
+What the instruments do not cover:
 
 | Known limit | Options |
 |---|---|
 | One human reviewer; no second annotator yet | Independent second annotation with agreement statistics |
-| A class of identity drift (two names for one thing entering as two things) is invisible to the current audit | No instrument yet — known gap, on the record |
+| A class of identity drift (two names for one thing entering as two things) is invisible to the current audit | No instrument yet; known gap, on the record |
 | English translation only (Hull) | German cross-check against the *Gesammelte Werke* |
-| Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked | The graph is a map of assertions, not a reading — opposing claims are mined where Jung himself qualifies, and the books remain the reading |
+| Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked | The graph is a map of assertions, not a reading. Opposing claims are mined where Jung himself qualifies, and the books remain the reading |
 
 ## The paper
 
-The method was published with release v1.3.0 — 248 symbols, 669 relations,
+The method was published with release v1.3.0: 248 symbols, 669 relations,
 699 citations. That exact snapshot, atlas and ledger included, is preserved
 unchanged at [/v1.3/](/v1.3/), and the paper describes it. The live counts at
 the top of every page show how far the atlas has grown since, under the same

@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/releases">
-<title>Releases — The Symbolic World</title>
+<title>Releases · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -72,10 +72,10 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="titleband"><p class="eyebrow">release notes</p>
 <h1>Releases</h1></div>
 <p>What changed between one release of the graph and the next, and why. The ledger records every individual claim and the gates it passed; this page records the release-level story.</p>
-<p>Each entry opens with a pin: the graph version, the ruleset version it shipped with — deliberately separate numbers — and the calibration record binding at tag time.</p>
+<p>Each entry opens with a pin: the graph version, the ruleset version it shipped with (deliberately separate numbers), and the calibration record binding at tag time.</p>
 <section class="rel-entry">
-<h2>v2.0 — the graph as a queryable instrument</h2>
-<div class="meta">pending — populated finally at the ceremony.</div>
+<h2>v2.0: the graph as a queryable instrument</h2>
+<div class="meta">pending. Populated finally at the ceremony.</div>
 <div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
 <h4>mining status</h4>
 <ul>
@@ -86,13 +86,13 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h4>governance</h4>
 <ul>
 <li>Carried every ruleset version since v0.7 with its own calibration PASS record.</li>
-<li>Closed the external-validity check — figures in v1.4 below.</li>
+<li>Closed the external-validity check; figures in v1.4 below.</li>
 <li>Added gates: ledger freshness, batch manifest, size budget, inline-style geometry scan, copy contract on every page.</li>
 </ul>
 <h4>core build</h4>
 <ul>
 <li>Shipped the query engine: 7 declarations, read-time closure, carried qualifiers.</li>
-<li>Shipped the Turtle export — no transitivity.</li>
+<li>Shipped the Turtle export, which declares no transitivity.</li>
 <li>Built the ledger and its per-batch pages from one generator in one pass.</li>
 <li>Made the builds deterministic.</li>
 </ul>
@@ -100,12 +100,12 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <ul>
 <li>Carried <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per family, a page per batch.</li>
 <li>Adopted the menu taxonomy and the single-gutter layout.</li>
-<li>Held the identity walk out of the UI — built and tested in <code>tools/query/kg_query.py</code>, not exposed on the site.</li>
+<li>Held the identity walk out of the UI: built and tested in <code>tools/query/kg_query.py</code>, not exposed on the site.</li>
 </ul>
 </section>
 <section class="rel-entry">
-<h2>v1.5 — the vocabulary-transfer study</h2>
-<div class="meta">pending — runs after v1.4's ceremony.</div>
+<h2>v1.5: the vocabulary-transfer study</h2>
+<div class="meta">pending. Runs after v1.4's ceremony.</div>
 <div class="pin">graph <span class="v">v1.5</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
 <h4>mining status</h4>
 <ul>
@@ -125,17 +125,17 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 </section>
 <section class="rel-entry">
-<h2>v1.4 — the alchemical trilogy, the archetype volumes, and the relation-family layer</h2>
-<div class="meta">pending — the ceremony waits on the arXiv publication of the paper. Scope: the 2026-08-05 plan put Aion and CW 9i in v1.5; the arcs closed first, so they are here.</div>
+<h2>v1.4: the alchemical trilogy, the archetype volumes, and the relation-family layer</h2>
+<div class="meta">pending. The ceremony waits on the arXiv publication of the paper. Scope: the 2026-08-05 plan put Aion and CW 9i in v1.5; the arcs closed first, so they are here.</div>
 <div class="pin">graph <span class="v">v1.4</span> · ruleset <span class="v">v0.7.1</span> · calibration record pipeline/family_calibration/records/2026-08-13_v071_run6.json (PASS)</div>
 <h4>mining status</h4>
 <ul>
-<li>Mined CW 12, 13 and 14 — the alchemical trilogy complete.</li>
+<li>Mined CW 12, 13 and 14; the alchemical trilogy is complete.</li>
 <li>Mined Aion (§1–429), closed at <a href="/batch-b-cw9ii-7">b-cw9ii-7</a> on 2026-08-06.</li>
 <li>Mined CW 9i (§1–718) over ten windows, closed at <a href="/batch-b-cw9i-10">b-cw9i-10</a> on 2026-08-12.</li>
-<li>Graph: 407 nodes, 1555 relations, 1847 references over 51 merged batches — all on the <a href="/ledger">ledger</a>.</li>
+<li>Graph: 407 nodes, 1555 relations, 1847 references over 51 merged batches, all on the <a href="/ledger">ledger</a>.</li>
 <li>Normalized 260 relation strings; the verbatim string stays frozen beside each.</li>
-<li>Assigned families: 1250 assigned, 262 queued, 41 no family, 2 text undecided (assigned, not verified — <a href="/families">families</a>).</li>
+<li>Assigned families: 1250 assigned, 262 queued, 41 no family, 2 text undecided (assigned, not verified; <a href="/families">families</a>).</li>
 <li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a>: 271 relations carrying a proposition in the predicate.</li>
 <li>Traced it to a briefing bullet; replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>. Fifteen blind batches at 0% since.</li>
 <li>Did not re-mine: each affected relation is verified true, so it carries a normalization layer instead.</li>
@@ -143,9 +143,9 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h4>governance</h4>
 <ul>
 <li>Moved the ruleset to v0.7.1, 25 families; every version carries a calibration PASS record and CI refuses a version without one.</li>
-<li>Re-ran every <code>amplified-by</code> edge under ruling 1; <code>amplification</code> now holds none — <a href="/family-amplification">the page</a> carries the count.</li>
+<li>Re-ran every <code>amplified-by</code> edge under ruling 1; <code>amplification</code> now holds none; <a href="/family-amplification">the page</a> carries the count.</li>
 <li>Declared 7 inverse and symmetric pairs, each citing a document line. No transitivity.</li>
-<li>Calibrated the family gate: 19/19 planted errors caught, 40/41 clean assignments left alone (measures the instrument, not Jung). Gate model gemini-3.1-pro-preview — within-vendor role separation, not cross-vendor.</li>
+<li>Calibrated the family gate: 19/19 planted errors caught, 40/41 clean assignments left alone (measures the instrument, not Jung). Gate model gemini-3.1-pro-preview: within-vendor role separation, not cross-vendor.</li>
 <li>Checked 27 assignments against 8 works over 3 passes: 8/16 treated items agreed, 6 disagreed, 2 split, 6 untreated; 7 rules changed. Receipts in <code>docs/experiments/external_validity_2026-08/</code>.</li>
 <li>Withdrew four reviewer-supplied citations (one held) and the pre-August calibration figures.</li>
 <li>Flagged <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> against <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> as confounded: the blinding changed between them.</li>
@@ -166,13 +166,13 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 </section>
 <section class="rel-entry">
-<h2>v1.3.0 — the published baseline</h2>
+<h2>v1.3.0: the published baseline</h2>
 <div class="meta">released and frozen. Retrospective.</div>
-<div class="pin">graph <span class="v">v1.3.0</span> · ruleset none — the family layer did not exist yet ·</div>
+<div class="pin">graph <span class="v">v1.3.0</span> · ruleset none (the family layer did not exist yet) ·</div>
 <h4>mining status</h4>
 <ul>
 <li>Mined CW 14 with seven incidental volumes: 248 nodes, 669 relations, 699 references.</li>
-<li>Ran at 0–0.5% clause predicates — predates the windowed pipeline.</li>
+<li>Ran at 0–0.5% clause predicates; this material predates the windowed pipeline.</li>
 </ul>
 <h4>governance</h4>
 <ul>

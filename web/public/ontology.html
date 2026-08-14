@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/ontology">
-<title>The ontology and its practices — The Symbolic World</title>
+<title>The ontology and its practices · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -91,11 +91,11 @@ table.findings .src { font: .58rem var(--mono); }
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">the ontology</p>
 <h1>What this graph is, as an ontology</h1></div>
-<p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, and then runs the standard pitfall scan over the graph and reports what it finds — including the findings that are these decisions showing up as defects.</p>
+<p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, It then runs the standard pitfall scan over the graph and reports what it finds, including the findings that are these decisions showing up as defects.</p>
 
 <h2>Two tiers</h2>
 <p>The first tier is the relation as Jung's sentence phrased it. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
-<p>The second tier is the family — a classification <em>over</em> the verified relation, drawn from a fixed vocabulary in a versioned document, assigned when two models reading that document independently name the same family, and ruled by a person when they do not. The second tier never reopens the first. Nothing on this site calls a family verified, and no family assignment changes a relation string.</p>
+<p>The second tier is the family: a classification <em>over</em> the verified relation, drawn from a fixed vocabulary in a versioned document, assigned when two models reading that document independently name the same family, and ruled by a person when they do not. The second tier never reopens the first. Nothing on this site calls a family verified, and no family assignment changes a relation string.</p>
 <figure class="ofig">
 <div class="ofig-row">
   <span class="ofig-node ev">Lapis philosophorum</span>
@@ -117,7 +117,7 @@ table.findings .src { font: .58rem var(--mono); }
 <figcaption>Tier two, drawn. Different relation strings, each verified in its own paragraph, carry one family. The family classifies them; it does not re-verify them, and the strings are unchanged by the classification.</figcaption>
 </figure>
 <h2>The declarations</h2>
-<p>Two properties are declared, and only two: which relation strings are inverses of each other, and which are symmetric. Each declaration is transcribed from a line of the definitions document, cites that line, and is applied only when a reader asks for closure — the derived row is labelled, carries its source edge's references, and is never written into the graph.</p>
+<p>Two properties are declared, and only two: which relation strings are inverses of each other, and which are symmetric. Each declaration is transcribed from a line of the definitions document, cites that line, and is applied only when a reader asks for closure. The derived row is labelled, carries its source edge's references, and is never written into the graph.</p>
 <div class="tw"><table><thead><tr><th>strings</th><th>kind</th><th>transcribed from</th></tr></thead><tbody>
 <tr>
 <td class="ev"><code>symbolizes / symbolized-by</code></td>
@@ -164,7 +164,7 @@ table.findings .src { font: .58rem var(--mono); }
 </tbody></table></div>
 
 <h2>Where the checks come from</h2>
-<p>The scan follows the OOPS! catalogue — OntOlogy Pitfall Scanner — which numbers the modelling faults that recur across published ontologies and describes how each can be detected. A pitfall catalogue is not a standard to comply with; it is a list of the places ontologies are known to go wrong, so that an evaluation can be systematic instead of a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset of it locally against this graph, and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
+<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur across published ontologies and describes how each can be detected. A pitfall catalogue is not a standard to comply with; it is a list of the places ontologies are known to go wrong, so that an evaluation can be systematic instead of a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset of it locally against this graph, and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
 <p class="meta">Poveda-Villalón, Gómez-Pérez and Suárez-Figueroa, "OOPS! (OntOlogy Pitfall Scanner!): An On-line Tool for Ontology Evaluation", <i>International Journal on Semantic Web and Information Systems</i> 10(2), 2014.</p>
 <div class="tw"><table><thead><tr><th>pitfall</th><th>what the catalogue names</th><th>use here</th></tr></thead><tbody>
 <tr><td class="n">P02</td><td>synonymous elements not declared equivalent</td><td class="dim">as the catalogue has it</td></tr>
@@ -183,7 +183,7 @@ table.findings .src { font: .58rem var(--mono); }
 <tr><td class="n">P25</td><td>a relationship declared inverse to itself</td><td class="dim">read here as a symmetric relation asserted in one direction only</td></tr>
 <tr><td class="n">P30</td><td>equivalent elements not declared equivalent</td><td class="dim">read here over identity chains between nodes</td></tr>
 </tbody></table></div>
-<p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is built out of relations between named things. Where a number is borrowed for a fault of a different shape, the third column says so — a borrowed number presented as the catalogue's own finding would claim more agreement with the literature than there is. The standing frame holds over all of it: a finding maps to the catalogue where one applies, and several of the findings below are decisions recorded above rather than defects.</p>
+<p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is built out of relations between named things. Where a number is borrowed for a fault of a different shape, the third column says so. A borrowed number presented as the catalogue's own finding would claim more agreement with the literature than there is. The standing frame holds over all of it: a finding maps to the catalogue where one applies, and several of the findings below are decisions recorded above rather than defects.</p>
 
 <h2>The pitfall scan</h2>
 <p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. 7 of the 19 findings are decisions recorded above, 8 are answered by the declarations, and 4 are open defects carried in the record.</p>
@@ -204,7 +204,7 @@ table.findings .src { font: .58rem var(--mono); }
 <tr class="st-open">
 <td class="sev">critical</td>
 <td><div class="ev tag">P24 relation name encodes a proposition</div><div class="ev fmsg">270 relations are sentence-shaped — the predicate carries content that belongs in the object or a qualifier, so it can never be queried or reasoned over.</div></td>
-<td><span class="chip st-open">open — recorded as a defect</span><div class="why">A predicate carrying a whole proposition is the project’s named defect. New mining is constrained by a form rule, and the normalization layer repairs the old edges beside their frozen originals rather than over them.</div></td>
+<td><span class="chip st-open">open: recorded as a defect</span><div class="why">A predicate carrying a whole proposition is the project’s named defect. New mining is constrained by a form rule, and the normalization layer repairs the old edges beside their frozen originals rather than over them.</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
@@ -259,12 +259,12 @@ table.findings .src { font: .58rem var(--mono); }
 <tr class="st-open">
 <td class="sev">important</td>
 <td><div class="ev tag">P04 unconnected ontology element</div><div class="ev fmsg">1 component(s) detached from the main graph.</div></td>
-<td><span class="chip st-open">open — recorded as a defect</span><div class="why">A detached component is a gap in what has been mined, not a decision.</div></td>
+<td><span class="chip st-open">open: recorded as a defect</span><div class="why">A detached component is a gap in what has been mined, not a decision.</div></td>
 </tr>
 <tr class="st-open">
 <td class="sev">important</td>
 <td><div class="ev tag">P24 node label is a definition, not a term</div><div class="ev fmsg">19 nodes carry a full descriptive sentence as their label. These are assertions modelled as entities — they cannot be reused or matched across edges.</div></td>
-<td><span class="chip st-open">open — recorded as a defect</span><div class="why">A label that is a sentence cannot be matched across edges. Counted here, not yet repaired.</div></td>
+<td><span class="chip st-open">open: recorded as a defect</span><div class="why">A label that is a sentence cannot be matched across edges. Counted here, not yet repaired.</div></td>
 </tr>
 <tr class="st-design">
 <td class="sev">important</td>
@@ -284,7 +284,7 @@ table.findings .src { font: .58rem var(--mono); }
 <tr class="st-open">
 <td class="sev">minor</td>
 <td><div class="ev tag">P21 catch-all class</div><div class="ev fmsg">`Concept` holds 111/407 nodes (27%) with no subdivision. The type system carries little discriminating power.</div></td>
-<td><span class="chip st-open">open — recorded as a defect</span><div class="why">The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.</div></td>
+<td><span class="chip st-open">open: recorded as a defect</span><div class="why">The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.</div></td>
 </tr>
 <tr class="st-design">
 <td class="sev">minor</td>
@@ -308,7 +308,7 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="receipts"><b>receipts</b>
 scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-14 at commit 5958293
+built 2026-08-14 at commit 9cb889a
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>
