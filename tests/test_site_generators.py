@@ -397,7 +397,8 @@ def test_the_releases_intro_is_two_paragraphs_and_no_machinery():
     for machinery in ("named tokens", "double braces", "repo-relative",
                       "line for line", "build-atlas.mjs"):
         assert machinery not in text, f"contributor machinery still rendered: {machinery}"
-    assert "the release-level story" in text and "pin" in text
+    # the intro is two paragraphs: what the page is, and what a pin means
+    assert "What changed between one release" in text and "pin" in text
 
     # the conventions are kept, in a note the renderer never shows
     source = read(os.path.join(ROOT, "docs", "RELEASES.md"))

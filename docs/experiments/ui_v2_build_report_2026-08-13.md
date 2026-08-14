@@ -1549,3 +1549,12 @@ self-description patterns: **0 hits**.
 
 No content added, no number changed, no design touched. Copy contract green,
 165 tests green.
+
+## Releases intro, trimmed again
+
+Deleted "The ledger records every individual claim and the gates it passed; this
+page records the release-level story." The first paragraph is now one line:
+"What changed between one release of the graph and the next, and why." The pin
+paragraph is unchanged, so the intro is still two paragraphs and the shape test
+passes as written; its content assertion moved off the deleted phrase onto the
+sentence that remains.

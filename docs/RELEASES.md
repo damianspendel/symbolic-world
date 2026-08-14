@@ -23,9 +23,7 @@
      ORDER. Entries are sorted newest-first by the version in their heading, so
      a new entry can be appended anywhere in the file. -->
 
-What changed between one release of the graph and the next, and why. The ledger
-records every individual claim and the gates it passed; this page records the
-release-level story.
+What changed between one release of the graph and the next, and why.
 
 Each entry opens with a pin: the graph version, the ruleset version it shipped
 with (deliberately separate numbers), and the calibration record binding at tag
