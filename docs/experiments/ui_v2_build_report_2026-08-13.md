@@ -1392,3 +1392,18 @@ source file OUT of display order to stay meaningful — the file is now v1.4,
 v1.5, v2.0, v1.3.0, and the page renders v2.0, v1.5, v1.4, v1.3.0, so the sort
 is doing visible work. A stray copy of the old v1.4 entry, left behind by the
 item-28 splice, was found by the same check and removed.
+
+## Item 33 — the disputes intro
+
+Two clause-heavy paragraphs replaced with the three ruled ones: what the log is
+and what each outcome means; how to dispute, with the admissibility rule in one
+clause; how to confirm. 158 words down to 95. The bold on *upheld*,
+*both-defensible* and *not-upheld* dropped in cleanly, so it stayed. The GitHub
+issue anchor is on the same phrase it was; "atlas" was never a link on this page
+and is left as text.
+
+Dropped by the ruling and gone from the file: "the falsification offer working
+in public", "without adjudication", and "the machine gates are the floor;
+readers are the ceiling". Everything from the disputes-on-record line down is
+untouched, including both log sections and the fetch that fills them. No test
+asserted the old sentences.
