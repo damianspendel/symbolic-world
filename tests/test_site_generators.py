@@ -349,7 +349,7 @@ def test_release_entries_point_at_their_artifacts():
     html = read(os.path.join(PUBLIC, "releases.html"))
     body = html[html.index("<main"):]
     for path in ("tools/query/kg_query.py", "docs/ATLAS_REQUIREMENTS.md",
-                 "tools/pages/preflight.py", "web/build-atlas.mjs"):
+                 "tools/check_paper_facts.py", "docs/PAPER.md"):
         assert f"<code>{path}</code>" in body, path
     for link in ("/ledger", "/families", "/ontology", "/query", "/v1.3/"):
         assert f'href="{link}"' in body, link
@@ -381,7 +381,9 @@ def test_the_pending_release_entry_has_substance():
     assert "form rule" in body
     assert re.search(r"href=\"/batch-b-cw\w+-\d+\"", body), (
         "the entry names no batch that links to its delta page")
-    assert len(re.sub(r"<[^>]+>", "", body).split()) > 400, "the entry is thin"
+    words = len(re.sub(r"<[^>]+>", " ", body).split())
+    # item 32 — changelog register, with a ceiling as well as a floor
+    assert 150 < words <= 400, f"the entry is {words} words"
 
 
 def test_the_releases_intro_is_two_paragraphs_and_no_machinery():

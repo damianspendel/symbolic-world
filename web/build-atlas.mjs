@@ -1268,7 +1268,7 @@ if (existsSync(releasesPath)) {
     cal_caught: bindingCalib.sensitivity.caught, cal_planted: bindingCalib.sensitivity.of,
     cal_clean: bindingCalib.specificity.clean_left_alone, cal_clean_of: bindingCalib.specificity.of,
     gate_model: bindingCalib.gate_model,
-    ev_passes: EV ? EV.passes : '', ev_works: EV ? EV.works_consulted : '',
+    ev_items: EV ? EV.items : '', ev_passes: EV ? EV.passes : '', ev_works: EV ? EV.works_consulted : '',
     ev_treated: EV ? EV.treated : '', ev_agrees: EV ? EV.agrees : '',
     ev_disagrees: EV ? EV.disagrees : '', ev_split: EV ? EV.scholars_split : '',
     ev_not_treated: EV ? EV.not_treated : '', ev_rulings: EV ? EV.rulings_produced : '',

@@ -75,117 +75,118 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>Each entry opens with a pin: the graph version, the ruleset version it shipped with — deliberately separate numbers — and the calibration record binding at tag time.</p>
 <section class="rel-entry">
 <h2>v2.0 — the graph as a queryable instrument</h2>
-<div class="meta">pending — populated finally at the ceremony. The sections below carry what is true today, as progress toward the release rather than as its record.</div>
+<div class="meta">pending — populated finally at the ceremony.</div>
 <div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
 <h4>mining status</h4>
 <ul>
-<li>CW 8 is open, under a freshly ruled ruleset: window one (§1–71) is merged, of fourteen planned. The remaining windows run under the scheduled task, one window per firing, each gated on green CI before the next is built.</li>
-<li>Nothing already in the graph is re-mined. One mining pass per window, ever, so this release adds to the 1555 relations and 1847 references v1.4 describes rather than revisiting them.</li>
-<li>CW 8's register — psychic energy, dependence, instrumentality — lands on exactly the families the pre-arc external check probed, which is why that check ran before the arc opened rather than after it.</li>
+<li>Opened CW 8 under a freshly ruled ruleset.</li>
+<li>Merged window one (§1–71) of fourteen.</li>
+<li>Scheduled the remaining windows, one per firing, each gated on green CI.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li>Every version of the ruleset since v0.7 has shipped with a calibration PASS record of its own, and CI refuses a version that has none; v0.7.1 is the version binding as this entry is built.</li>
-<li>The external-validity check is closed. Its numbers are in the v1.4 entry above and are not restated here, because a figure repeated in two places drifts in one of them.</li>
-<li>Gates added since v1.4, all enforced rather than remembered: the ledger must be as fresh as <code>seed.json</code>; every batch page named in the manifest must be in the deploy, with no orphans; no page may set its own column, band or reading measure, including in an inline style block; and the copy contract now scans every new page for typed figures and banned phrasing.</li>
+<li>Carried every ruleset version since v0.7 with its own calibration PASS record.</li>
+<li>Closed the external-validity check — figures in v1.4 below.</li>
+<li>Added gates: ledger freshness, batch manifest, size budget, inline-style geometry scan, copy contract on every page.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>The query engine reads the graph and writes nothing: 7 declarations, each transcribed from a line of the definitions document with a rulings log behind it; closure applied at read time and labelled row by row; and a declaration's qualifier travelling with the flip, so a derived row never asserts more than the row it came from.</li>
-<li>The Turtle export ships beside it and declares no transitivity.</li>
-<li>The ledger and every per-batch delta page come from one generator in one pass, so their numbers cannot disagree.</li>
-<li>Builds are deterministic: the same graph in gives the same bytes out, which is what makes a real change visible in a diff.</li>
+<li>Shipped the query engine: 7 declarations, read-time closure, carried qualifiers.</li>
+<li>Shipped the Turtle export — no transitivity.</li>
+<li>Built the ledger and its per-batch pages from one generator in one pass.</li>
+<li>Made the builds deterministic.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li>The surfaces this entry carries: the release notes you are reading, the ontology page, the query panel, one page per relation family and one per batch, the site menu with its four groups (explore, reference, provenance, about), and the single-gutter layout inside one capped container.</li>
-<li>The depth-bounded identity walk is built and tested in <code>tools/query/kg_query.py</code> and is deliberately not exposed on the site. It reads identity chains one edge at a time, printing each hop's own citation; putting that on a page is a decision for a later release, not an oversight.</li>
+<li>Carried <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per family, a page per batch.</li>
+<li>Adopted the menu taxonomy and the single-gutter layout.</li>
+<li>Held the identity walk out of the UI — built and tested in <code>tools/query/kg_query.py</code>, not exposed on the site.</li>
 </ul>
 </section>
 <section class="rel-entry">
 <h2>v1.5 — the vocabulary-transfer study</h2>
-<div class="meta">pending — the study runs after v1.4's ceremony, under whichever ruleset is binding then.</div>
+<div class="meta">pending — runs after v1.4's ceremony.</div>
 <div class="pin">graph <span class="v">v1.5</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
 <h4>mining status</h4>
 <ul>
-<li>The material is already in the graph. CW 9i and Aion were mined under the form rule and closed before v1.4, which is what makes the study possible without further mining.</li>
+<li>Mined the material already: CW 9i and Aion are in the graph.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li>The question: whether the relation vocabulary learned on the alchemical volumes transfers to archetype theory written without alchemical carriers. CW 9i is the falsification volume — archetype theory with no alchemical carriers to lean on — and the answer is a finding about the vocabulary, not about Jung.</li>
+<li>Asks whether the vocabulary learned on the alchemical volumes transfers to archetype theory mined without alchemical carriers.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>No new pipeline. The study measures over the committed graph and its receipts, so it can be re-run by anyone holding the same <code>seed.json</code> digest.</li>
+<li>No new pipeline. Measures over the committed graph.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li>No changes. The study's result is a document, and it will be linked from here when it exists.</li>
+<li>No changes.</li>
 </ul>
 </section>
 <section class="rel-entry">
 <h2>v1.4 — the alchemical trilogy, the archetype volumes, and the relation-family layer</h2>
-<div class="meta">pending — the ceremony waits on the arXiv publication of the paper. The ruleset in the pin is whichever version is binding at tag time; v0.7.1 is binding today, and the v0.7.x line is still moving. Scope note: the plan of 2026-08-05 put Aion and the archetype volumes in v1.5 and kept v1.4 to the trilogy. The arcs closed faster than the ceremony did, so this entry describes the graph as it stands rather than the plan as it was written, and v1.5 is re-scoped to the study the arcs were mined for.</div>
+<div class="meta">pending — the ceremony waits on the arXiv publication of the paper. Scope: the 2026-08-05 plan put Aion and CW 9i in v1.5; the arcs closed first, so they are here.</div>
 <div class="pin">graph <span class="v">v1.4</span> · ruleset <span class="v">v0.7.1</span> · calibration record pipeline/family_calibration/records/2026-08-13_v071_run6.json (PASS)</div>
 <h4>mining status</h4>
 <ul>
-<li>Five arcs mined end to end since v1.3.0: <em>Psychology and Alchemy</em> (CW 12), <em>Alchemical Studies</em> (CW 13) and <em>Mysterium Coniunctionis</em> (CW 14) complete the alchemical trilogy; <em>Aion</em> (CW 9ii §1–429) closed on 2026-08-06 with <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>; <em>The Archetypes and the Collective Unconscious</em> (CW 9i §1–718) closed on 2026-08-12 with <a href="/batch-b-cw9i-10">b-cw9i-10</a>, ten windows, every reference proposed by an Opus-family model, gated by a Fable-family model and audited across vendors by Gemini.</li>
-<li>407 nodes, 1555 edges and 1847 references over 51 merged batch entries. Every reference carries a verbatim quote of at most 25 tokens and the paragraph it came from; each batch's own account of what it merged is on its delta page, and every claim is on the <a href="/ledger">ledger</a>.</li>
-<li>CW 9i was mined as the transfer study's falsification volume: archetype theory without alchemical carriers, against a graph in which a large share of nodes had rested on the trilogy alone. What that did to the evidence mix is on each node's panel in the atlas, not summarised into a claim here.</li>
-<li>Relation strings normalized on 260 edges. The verbatim string stays frozen beside the normalized one, and the family layer classifies the normalized form where it exists.</li>
-<li>The family layer covers the graph: 1250 assigned, 262 waiting on a human ruling, 41 that no family covers, 2 where the sentence itself hedges. An assignment classifies a relation that was already gated against its paragraph. It is not a second verification, and nothing on this site calls a family verified. Family by family: <a href="/families">relation families</a>.</li>
-<li><strong>Defect found in the pipeline: the clause-predicate shape.</strong> The windowed pipeline built after v1.3.0 shipped carried no rule about the <em>shape</em> of a relation. Every gate asked whether the paragraph supported the claim; none asked whether the predicate was a predicate. The result was 271 relations whose predicate carries a whole proposition — found, named and measured on 2026-08-05, starting exactly at <a href="/batch-b-cw12-1">b-cw12-1</a>.</li>
-<li>The mechanism was a line in the miner's own standing briefing instructing that qualifiers stay inside the relation string. A watched batch tidied its relations in spite of it; the blind <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> followed it literally and came back at 77% clause predicates. That is a defect that propagated through the instruction channel, not through the model.</li>
-<li><strong>Remediation.</strong> The bullet was replaced with a form rule — the relation is a verb phrase of at most three hyphen tokens; carrier, scope, condition and modality belong in qualifiers or the object. <a href="/batch-b-cw9ii-3">b-cw9ii-3</a> was the test, and every blind batch since has run at 0% clause predicates: fifteen consecutive by the close of CW 9i on 2026-08-12. The affected relations were not re-mined — each is individually verified and true, the shape is wrong and not the fact — so they carry a normalization layer beside the frozen original, proposed, gated and sampled through the same chain as any other claim.</li>
+<li>Mined CW 12, 13 and 14 — the alchemical trilogy complete.</li>
+<li>Mined Aion (§1–429), closed at <a href="/batch-b-cw9ii-7">b-cw9ii-7</a> on 2026-08-06.</li>
+<li>Mined CW 9i (§1–718) over ten windows, closed at <a href="/batch-b-cw9i-10">b-cw9i-10</a> on 2026-08-12.</li>
+<li>Graph: 407 nodes, 1555 relations, 1847 references over 51 merged batches — all on the <a href="/ledger">ledger</a>.</li>
+<li>Normalized 260 relation strings; the verbatim string stays frozen beside each.</li>
+<li>Assigned families: 1250 assigned, 262 queued, 41 no family, 2 text undecided (assigned, not verified — <a href="/families">families</a>).</li>
+<li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a>: 271 relations carrying a proposition in the predicate.</li>
+<li>Traced it to a briefing bullet; replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>. Fifteen blind batches at 0% since.</li>
+<li>Did not re-mine: each affected relation is verified true, so it carries a normalization layer instead.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li><code>docs/FAMILY_DEFINITIONS.md</code> reached v0.7.1, holding 25 families. The version is binding only while a calibration PASS record for it is committed under <code>pipeline/family_calibration/records/</code>; the version↔calibration handshake in <code>tools/check_paper_facts.py</code> refuses a version without one.</li>
-<li>The re-run of the <code>amplified-by</code> edges under ruling 1 classified those relations by the content of their quotes rather than by the layer tag they carried. Where the amplification family now stands is on <a href="/family-amplification">its own page</a>, count included, whatever that count has become.</li>
-<li>7 relation declarations are active — inverse and symmetric pairs, each transcribed from a line of the definitions document into <code>pipeline/family/relation_declarations.json</code> and applied at read time only. No declaration asserts transitivity. The rulings behind them, and what the ontology deliberately does not contain, are on <a href="/ontology">the ontology page</a>.</li>
-<li>The family gate was re-calibrated against planted errors under v0.7.1: 19 of 19 planted errors caught with the right family named, 40 of 41 untouched assignments left alone (<code>pipeline/family_calibration/records/2026-08-13_v071_run6.json</code>). A caught planted error is evidence about the instrument, not about Jung, and the record covers only the error classes we know how to plant. The gate model is gemini-3.1-pro-preview — the same model family as one of the two production classification arms, which is within-vendor role separation and not a cross-vendor check, and the record says so.</li>
-<li>The external-validity check closed on 2026-08-12 over 3 passes against 8 works of secondary scholarship. Of 16 sampled assignments the literature treats, scholars' renderings agreed with our family on 8, disagreed on 6 and split among themselves on 2; 6 pairs no consulted work treats at all. 16 treated pairs is a small sample, and agreement there is not endorsement: no scholar reviewed this vocabulary. The disagreements produced 7 rule changes and are published beside the agreements, family by family. Sample, per-item worksheets and both review passes: <code>docs/experiments/external_validity_2026-08/</code>.</li>
-<li>CI gates in force at this release, all in <code>tools/check_paper_facts.py</code> unless named otherwise: paper counts pinned to the <code>v1.3.0</code> tag and living-doc counts to head; the version↔calibration handshake above; five family checks; the ledger-freshness gate and the batch-manifest gate in <code>tools/pages/preflight.py</code>; and the copy contract in <code>web/build-atlas.mjs</code>, which fails the build on a count-like literal that the graph cannot account for. Rules are registered in <code>docs/RULES.md</code>.</li>
-<li><strong>Corrected or withdrawn.</strong> Four treatments supplied by a reviewing model in the external check's first pass were put to the actual texts: one held, one was retracted, and two named headwords the source does not contain. None entered the headline rates; they are named here because they appeared in a draft that was circulated. Calibration figures published before August 2026 were withdrawn when a code inspection found they could not be substantiated — the sections that carried them stand in the definitions document as a record of what was done, not as current evidence. And the <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> / <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> comparison is confounded: the blinding of the miner changed between them, so the pair is not clean evidence about the material, and the 77% above is what that batch did rather than a measurement of anything else.</li>
+<li>Moved the ruleset to v0.7.1, 25 families; every version carries a calibration PASS record and CI refuses a version without one.</li>
+<li>Re-ran every <code>amplified-by</code> edge under ruling 1; <code>amplification</code> now holds none — <a href="/family-amplification">the page</a> carries the count.</li>
+<li>Declared 7 inverse and symmetric pairs, each citing a document line. No transitivity.</li>
+<li>Calibrated the family gate: 19/19 planted errors caught, 40/41 clean assignments left alone (measures the instrument, not Jung). Gate model gemini-3.1-pro-preview — within-vendor role separation, not cross-vendor.</li>
+<li>Checked 27 assignments against 8 works over 3 passes: 8/16 treated items agreed, 6 disagreed, 2 split, 6 untreated; 7 rules changed. Receipts in <code>docs/experiments/external_validity_2026-08/</code>.</li>
+<li>Withdrew four reviewer-supplied citations (one held) and the pre-August calibration figures.</li>
+<li>Flagged <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> against <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> as confounded: the blinding changed between them.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>The site went live on Cloudflare Pages on 2026-08-07 at symbolicworld.observer, with the frozen v1.3.0 snapshot preserved at <a href="/v1.3/">/v1.3/</a> and linked from the landing page, since the paper describes that release and not this one. Runbook: <code>tools/pages/RUNBOOK.md</code>.</li>
-<li>Public URLs are extensionless by convention from 2026-08-10; the sitemap, the canonical tags and every internal link agree on that form.</li>
-<li>The generators are deterministic: the same graph in gives the same bytes out, so a real change is not buried in churn. <code>web/build-atlas.mjs</code> writes the atlas projection, the family map, the pages and the sitemap; <code>tools/build_ledger_page.py</code> writes the ledger and one delta page per batch in the same pass.</li>
-<li>Data artifacts emitted at build: the public dataset at <a href="/graph.json">/graph.json</a>, the declarations at <code>web/public/relation_declarations.json</code>, the batch-page manifest at <code>web/public/batch_pages.json</code> (which the deploy gate reads), the derived string-to-family map, and the ontology scan's JSON from <code>tools/ontology_qa/quality.py --json</code>.</li>
-<li>Tools, read-only and shipping with the release: <code>tools/query/kg_query.py</code> (the query engine — writes nothing, labels every derived row, prints the graph state and seed digest it ran against) and <code>tools/query/export_rdf.py</code> (the Turtle export, which declares no transitivity).</li>
+<li>Launched the site on Cloudflare Pages, 2026-08-07.</li>
+<li>Adopted extensionless URLs, 2026-08-10.</li>
+<li>Made the generators deterministic.</li>
+<li>Emitted <a href="/graph.json">/graph.json</a>, the declarations, the batch manifest, the family map and the ontology scan.</li>
+<li>Shipped <code>tools/query/kg_query.py</code> and <code>tools/query/export_rdf.py</code>, read-only.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li>Pages added in this release: <a href="/releases">release notes</a>, a page per relation family, a page per batch, the <a href="/query">query panel</a> and <a href="/ontology">the ontology page</a>. The <a href="/ledger">ledger</a> gained facets, record permalinks and an assignment-history chip; the batch narrative moved off it onto the per-batch pages.</li>
-<li>Design rules adopted, all in the V2 section of <code>docs/ATLAS_REQUIREMENTS.md</code>: one site menu with a fixed taxonomy (V2-R10), a pinned header with constant geometry (V2-R11), one title band and one search position (V2-R12), two content-column kinds that do not wander (V2-R13), progressive disclosure on heavy pages (V2-R9), volumes in collection order (V2-R8), and per-batch delta pages (V2-R7).</li>
-<li>Deliberately not exposed: the depth-bounded identity walk. It is built and tested in <code>tools/query/kg_query.py</code> and documented in <code>docs/QUERY.md</code>, and it is kept for later rather than shipped in this release's UI.</li>
-<li>Nothing in this set is deployed by the build that made it. A deploy carrying UI waits for review.</li>
+<li>Added <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per relation family, a page per batch.</li>
+<li>Added facets, record permalinks and the assignment-history chip to the ledger; moved the batch narrative onto the batch pages.</li>
+<li>Adopted the design rules recorded as V2-R7 to V2-R13 in <code>docs/ATLAS_REQUIREMENTS.md</code>.</li>
 </ul>
 </section>
 <section class="rel-entry">
 <h2>v1.3.0 — the published baseline</h2>
-<div class="meta">released, and frozen. This entry is a retrospective, written in the same shape as the entries above so the baseline can be read against them. The snapshot it describes is preserved byte-for-byte and is never rebuilt.</div>
-<div class="pin">graph <span class="v">v1.3.0</span> · ruleset none — the relation-family layer did not exist yet ·</div>
+<div class="meta">released and frozen. Retrospective.</div>
+<div class="pin">graph <span class="v">v1.3.0</span> · ruleset none — the family layer did not exist yet ·</div>
 <h4>mining status</h4>
 <ul>
-<li>248 nodes, 669 edges and 699 references: CW 14 mined with seven incidental volumes around it, every reference proposed by one model family and gated by another against its own paragraph.</li>
-<li>The clause-predicate defect had not yet appeared: this material predates the windowed pipeline that introduced it, and ran at 0–0.5% clause predicates.</li>
+<li>Mined CW 14 with seven incidental volumes: 248 nodes, 669 relations, 699 references.</li>
+<li>Ran at 0–0.5% clause predicates — predates the windowed pipeline.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li>The verification chain and its provenance disclosure are stated in <code>docs/PAPER.md</code>, which describes this release and no later one.</li>
-<li>Counts are pinned to the <code>v1.3.0</code> tag by <code>tools/check_paper_facts.py</code>, which is why they can be bound here as constants rather than derived: the paper's assertions and the live graph are checked against different baselines on purpose.</li>
+<li>Pinned these counts to the <code>v1.3.0</code> tag in <code>tools/check_paper_facts.py</code>.</li>
+<li>Published the method in <code>docs/PAPER.md</code>.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>Released to Zenodo under the concept DOI <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>, which resolves to the latest release; the record for this one is fixed.</li>
-<li>The snapshot — atlas, ledger, dispute log and dataset as they stood — is served at <a href="/v1.3/">/v1.3/</a> and is never written by any generator.</li>
+<li>Released to Zenodo, concept DOI <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>.</li>
+<li>Froze the snapshot at <a href="/v1.3/">/v1.3/</a>; no generator writes it.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li>The atlas as it was at publication, with its own ledger and dispute log. Every surface added since is described in the entries above; none of them touch this snapshot.</li>
+<li>The atlas as published, with its own ledger and dispute log.</li>
 </ul>
 </section>
 <div class="receipts"><b>receipts</b>

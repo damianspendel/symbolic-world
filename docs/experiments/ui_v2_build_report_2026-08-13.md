@@ -1359,3 +1359,36 @@ correct it, and the repo-side reports and receipts stay as records.
 Edinger's volume count stays bound to `results.json` rather than typed, so the
 word still comes from the receipts. A test holds the corrected titles, fails on
 any of the four old ones, and checks the bound count.
+
+## Item 32 — the entries in changelog register
+
+All four rewritten verb-first, one fact per line, no connective tissue. Where a
+line needed depth it links the artifact — a batch page, the experiment
+directory, the family page, the ledger — instead of explaining. Honesty riders
+survive as clauses: "calibration 19/19 (measures the instrument, not Jung)",
+"gate model gemini-3.1-pro — within-vendor role separation, not cross-vendor",
+"assigned, not verified".
+
+Word counts, against the targets:
+
+| entry | before | after | target |
+|---|---|---|---|
+| v1.4 | 1,426 | 398 | ≤ 400 |
+| v2.0 | 480 | 170 | ≤ 200 |
+| v1.5 | 156 | 65 | ≤ 80 |
+| v1.3.0 | 244 | 96 | ≤ 100 |
+
+Kept: the four sections, the pin, tokens for every count, newest-first, and the
+two-paragraph intro from item 30. The cut material is not re-homed on the page —
+it is in this file's git history and in the artifacts the lines now link.
+
+`{{ev_items}}` was added as a token so "checked 27 assignments" derives from the
+receipts rather than being typed.
+
+Three tests moved with the register: the substance check now has a ceiling as
+well as a floor (150 < words ≤ 400), the artifact-pointer check names the paths
+the compressed entries actually cite, and the newest-first check needed the
+source file OUT of display order to stay meaningful — the file is now v1.4,
+v1.5, v2.0, v1.3.0, and the page renders v2.0, v1.5, v1.4, v1.3.0, so the sort
+is doing visible work. A stray copy of the old v1.4 entry, left behind by the
+item-28 splice, was found by the same check and removed.
