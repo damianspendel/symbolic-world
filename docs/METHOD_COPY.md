@@ -150,7 +150,7 @@ The checks are themselves checked:
 - The classification vocabulary was checked outside this repository, against
   {{ev_works}} works of scholarship: {{ev_agrees}} of {{ev_treated}} treated
   items agreed with our family, and the disagreements are published beside them
-  ([the check](/families#checked)). It tests the classification, not whether a
+  ([the check](/ontology#checked)). It tests the classification, not whether a
   claim is true.
 - The two blind classification arms agreed on 86% of {{edges_classified}}
   relations. Agreement measures whether the definitions can be followed

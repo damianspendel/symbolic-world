@@ -829,12 +829,8 @@ function familiesPageCopy(map, version) {
 
 <p>A family is an assigned classification over a relation that was already verified: the <a href="/ontology">design</a> is on the ontology page, the <a href="/#/method">checks</a> on the method page.</p>
 
-${EV ? `<h2 id="checked">Checked against readers of Jung</h2>
-<p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The question was not whether Jung's claim is true; the verification chain had already asked that. It was whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
-<p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements were not absorbed: they produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}, the largest of which sends every <code>amplified-by</code> edge back for reclassification because two independent reference authors read those relations as content claims, not adduced parallels.</p>
-<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. And the check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. On the hardest boundary this layer draws, the field the check consulted does not hold a stable line either. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>` : ''}
-
-<h2>Where the layer stands</h2>
+${EV ? `<p>Checked once against outside scholarship: ${EV.agrees} of ${EV.treated} treated items agreed — <a href="/ontology#checked">the full result</a>.</p>
+` : ''}<h2>Where the layer stands</h2>
 <div class="tw"><table>
 <thead><tr><th>State</th><th>Relations</th><th>What it means</th></tr></thead>
 <tbody>
@@ -1971,6 +1967,18 @@ ${findingRows}
 </details>
 <p class="meta">A stance is not a rebuttal of the finding. An open vocabulary is hard to query by predicate, which is why the family layer exists. That was a conscious design decision.</p>
 
+${EVROWS.length ? `<h2 id="checked">Checked against readers of Jung</h2>
+<p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The question was not whether Jung's claim is true; the verification chain had already asked that. It was whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
+
+<p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements were not absorbed: they produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}, the largest of which sends every <code>amplified-by</code> edge back for reclassification because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<details class="disclose">
+<summary>${EV.agrees} of ${EV.treated} treated items agreed with our family, across ${EV.works_consulted} works of scholarship.<span class="more">the whole table</span></summary>
+${evTable()}
+</details>
+
+<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. And the check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. On the hardest boundary this layer draws, the field the check consulted does not hold a stable line either. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+` : ''}
+
 <h2>Deliberately absent</h2>
 <p>${counts.design} of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight.</p>
 <ul class="absent">
@@ -1982,7 +1990,7 @@ ${findingRows}
 </ul>
 
 <div class="receipts"><b>receipts</b>
-scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span>, run at build;<br>
+${EVROWS.length ? `external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>` : ''}scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS ${esc((DECL.transcribed_from || {}).document_version || '?')};<br>
 built ${buildDate}${gitCommit ? ` at commit ${gitCommit}` : ''}
 </div>`

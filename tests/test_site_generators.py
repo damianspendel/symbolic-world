@@ -252,10 +252,13 @@ def test_the_works_the_check_consulted_are_cited_correctly():
     """Item 31 — the figures verified against the receipts but the titles did
     not: articles dropped, and the dictionary lost its three authors while every
     other work kept its editor. The list renders in one place, the families
-    page's own exposition, ABOVE the rendered document; the document's own
-    citations below it are quoted and are not ours to correct."""
-    html = read(os.path.join(PUBLIC, "families.html"))
-    exposition = html[:html.index("<hr>")]
+    page's own exposition. Item 35 moved that exposition to the ontology page
+    with the check it belongs to; the families document's own citations, below
+    its rule, are quoted and are not ours to correct."""
+    exposition = read(os.path.join(PUBLIC, "ontology.html"))
+    families = read(os.path.join(PUBLIC, "families.html"))
+    assert "works of scholarship" not in families[:families.index("<hr>")], (
+        "the works list is stated twice")
     for title in ("Jacobi's <em>The Psychology of C. G. Jung</em>",
                   "Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>",
                   "von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>",
@@ -271,6 +274,49 @@ def test_the_works_the_check_consulted_are_cited_correctly():
         ROOT, "docs", "experiments", "external_validity_2026-08", "results.json")))
     words = ["zero", "one", "two", "three", "four"]
     assert f"{words[ev['edinger_volumes']]} volumes of Edinger" in exposition
+
+
+def test_the_external_check_lives_on_ontology_and_the_links_point_at_it():
+    """Item 35 — the check moved to the ontology page, where the page arc runs
+    internal checks, external check, deliberately absent. The anchor exists in
+    exactly one place, and everything that referred to it followed."""
+    ont = read(os.path.join(PUBLIC, "ontology.html"))
+    fam = read(os.path.join(PUBLIC, "families.html"))
+    assert ont.count('id="checked"') == 1
+    assert 'id="checked"' not in fam
+    # /families keeps one line, and it is a link to the record
+    exposition = fam[:fam.index("<hr>")]
+    assert exposition.count("/ontology#checked") == 1, "the families link is not once"
+    assert "Checked once against outside scholarship" in exposition
+    # and no page still points at the anchor's old home
+    for path in generated_pages():
+        assert "/families#checked" not in read(path), os.path.basename(path)
+    method = read(os.path.join(ROOT, "docs", "METHOD_COPY.md"))
+    assert "(/ontology#checked)" in method and "/families#checked" not in method
+
+
+def test_the_families_page_is_reference_not_method():
+    """Item 35 — /families is the reference surface: the states and provenance
+    tables, the string-to-family map, what fits nowhere, the boundary rules and
+    the document. The method exposition it used to carry lives on /ontology and
+    the method page now, stated once."""
+    fam = read(os.path.join(PUBLIC, "families.html"))
+    exposition = fam[:fam.index("<hr>")]
+    for gone in ("What a family is", "How an edge gets a family",
+                 "Agreement between the two arms", "planting classification errors"):
+        assert gone not in exposition, f"method content is still on /families: {gone}"
+    for kept in ("Where the layer stands", "How the settled records were arrived at",
+                 "The map: which relation strings land in which family",
+                 "What fits nowhere", "Where the boundaries are decided",
+                 "The definitions document, in full"):
+        assert kept in exposition, f"reference content went missing: {kept}"
+    # one header sentence, carrying both pointers
+    assert '<a href="/ontology">design</a>' in exposition
+    assert '<a href="/#/method">checks</a>' in exposition
+    # and the page is now a fraction of what it was: the copy above the
+    # document's rule ran to about 3,000 words before the redistribution
+    words = len(re.sub(r"<[^>]+>", " ", exposition).split())
+    assert words < 2600, f"the families exposition is back up to {words} words"
 
 
 def test_no_family_page_calls_a_family_verified():
@@ -514,7 +560,8 @@ def test_the_ontology_page_puts_the_evidence_before_the_conclusions():
     html = read(os.path.join(PUBLIC, "ontology.html"))
     order = [re.sub(r"<[^>]+>", "", h) for h in re.findall(r"<h2[^>]*>.*?</h2>", html)]
     assert order == ["Two tiers", "The declarations", "Where the checks come from",
-                     "The pitfall scan", "Deliberately absent"], order
+                     "The pitfall scan", "Checked against readers of Jung",
+                     "Deliberately absent"], order
 
 
 def test_the_ontology_figures_carry_real_data():

@@ -297,6 +297,26 @@ table.findings .src { font: .58rem var(--mono); }
 </details>
 <p class="meta">A stance is not a rebuttal of the finding. An open vocabulary is hard to query by predicate, which is why the family layer exists. That was a conscious design decision.</p>
 
+<h2 id="checked">Checked against readers of Jung</h2>
+<p>In August 2026 we put a sample of these assignments to the secondary literature: 27 items, drawn by seeded stratification and weighted toward the contested families, checked in three pre-registered passes against eight works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, four volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The question was not whether Jung's claim is true; the verification chain had already asked that. It was whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
+
+<p>The result, stated exactly: the literature treats 16 of the 22 sampled assignments (the other 5 of the 27 items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on 8 of those 16, disagreed on 6, and split among themselves on 2. The other 6 pairs no consulted work treats at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements were not absorbed: they produced seven rule changes, folded into the ruleset as v0.7, the largest of which sends every <code>amplified-by</code> edge back for reclassification because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<details class="disclose">
+<summary>8 of 16 treated items agreed with our family, across 8 works of scholarship.<span class="more">the whole table</span></summary>
+<div class="tw"><table>
+<thead><tr><th>family</th><th>agrees</th><th>disagrees</th><th>split</th><th>not treated</th></tr></thead>
+<tbody><tr class=""><td>archetypal-identity (incl. 26)</td><td class="n">0/3</td><td class="n">1/3</td><td class="n">2/3</td><td class="n">2</td></tr>
+<tr class=""><td>correspondence (incl. 27)</td><td class="n">2/3</td><td class="n">1/3</td><td class="n">0/3</td><td class="n">2</td></tr>
+<tr class=""><td>symbolization</td><td class="n">3/3</td><td class="n">0/3</td><td class="n">0/3</td><td class="n">1</td></tr>
+<tr class=""><td>doctrinal-attribution</td><td class="n">1/2</td><td class="n">1/2</td><td class="n">0/2</td><td class="n">1</td></tr>
+<tr class=""><td>amplification</td><td class="n">0/3</td><td class="n">3/3</td><td class="n">0/3</td><td class="n">0</td></tr>
+<tr class=""><td>controls (personif., union)</td><td class="n">2/2</td><td class="n">0/2</td><td class="n">0/2</td><td class="n">0</td></tr>
+<tr class="total"><td>All</td><td class="n">8/16</td><td class="n">6/16</td><td class="n">2/16</td><td class="n">6</td></tr></tbody></table></div>
+</details>
+
+<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. And the check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. On the hardest boundary this layer draws, the field the check consulted does not hold a stable line either. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+
+
 <h2>Deliberately absent</h2>
 <p>7 of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight.</p>
 <ul class="absent">
@@ -308,9 +328,9 @@ table.findings .src { font: .58rem var(--mono); }
 </ul>
 
 <div class="receipts"><b>receipts</b>
-scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
+external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:281b3e328f12</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-14 at commit b031c7b
+built 2026-08-14 at commit faa85e6
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>
