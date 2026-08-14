@@ -76,46 +76,54 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>Every entry opens with a version pin. A graph release and a ruleset version are deliberately separate numbers — a release <em>pins</em> the ruleset it ships with rather than sharing its number — and the pin names the calibration record that was binding at tag time.</p>
 <p><strong>Pointers.</strong> Artifacts inside the repository are named as repo-relative paths in <code>code formatting</code>: the repository is not public until the release ceremony, so they are paths today and become links when it is. Pages on the site are given as real links, extensionless by the site's own convention.</p>
 <p>This file carries no typed figure. Counts are written as named tokens in double braces and bound from the graph, the calibration records and the committed experiment receipts by <code>web/build-atlas.mjs</code>; a token the build cannot bind fails the build rather than shipping as literal braces.</p>
-<section class="rel-entry future">
+<section class="rel-entry">
 <h2>v2.0 — the graph as a queryable instrument</h2>
-<div class="meta">skeleton — populated at the ceremony</div>
+<div class="meta">pending — populated finally at the ceremony. The sections below carry what is true today, as progress toward the release rather than as its record.</div>
 <div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
 <h4>mining status</h4>
 <ul>
-<li>Planned: CW 8 mined.</li>
+<li>CW 8 is open, under a freshly ruled ruleset: window one (§1–71) is merged, of fourteen planned. The remaining windows run under the scheduled task, one window per firing, each gated on green CI before the next is built.</li>
+<li>Nothing already in the graph is re-mined. One mining pass per window, ever, so this release adds to the 1555 relations and 1847 references v1.4 describes rather than revisiting them.</li>
+<li>CW 8's register — psychic energy, dependence, instrumentality — lands on exactly the families the pre-arc external check probed, which is why that check ran before the arc opened rather than after it.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li>Planned: the family layer under a stable ruleset with the queue drained to ruled-or-recorded.</li>
+<li>Every version of the ruleset since v0.7 has shipped with a calibration PASS record of its own, and CI refuses a version that has none; v0.7.1 is the version binding as this entry is built.</li>
+<li>The external-validity check is closed. Its numbers are in the v1.4 entry above and are not restated here, because a figure repeated in two places drifts in one of them.</li>
+<li>Gates added since v1.4, all enforced rather than remembered: the ledger must be as fresh as <code>seed.json</code>; every batch page named in the manifest must be in the deploy, with no orphans; no page may set its own column, band or reading measure, including in an inline style block; and the copy contract now scans every new page for typed figures and banned phrasing.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>Planned: the query layer with its declared inverses and the Turtle export as published artifacts rather than tools alone.</li>
+<li>The query engine reads the graph and writes nothing: 7 declarations, each transcribed from a line of the definitions document with a rulings log behind it; closure applied at read time and labelled row by row; and a declaration's qualifier travelling with the flip, so a derived row never asserts more than the row it came from.</li>
+<li>The Turtle export ships beside it and declares no transitivity.</li>
+<li>The ledger and every per-batch delta page come from one generator in one pass, so their numbers cannot disagree.</li>
+<li>Builds are deterministic: the same graph in gives the same bytes out, which is what makes a real change visible in a diff.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li>Planned: the surfaces that the query layer earns. The depth-bounded identity walk is built and tested in <code>tools/query/kg_query.py</code> and is kept for later: it is not exposed in the site UI, and exposing it is a decision for a later release. No natural-language interface — a query layer that cites edges comes before any interface that paraphrases them.</li>
+<li>The surfaces this entry will ship: the release notes you are reading, the ontology page, the query panel, one page per relation family and one per batch, the site menu with its four groups (explore, reference, provenance, about), and the single-gutter layout inside one capped container.</li>
+<li>The depth-bounded identity walk is built and tested in <code>tools/query/kg_query.py</code> and is deliberately not exposed on the site. It reads identity chains one edge at a time, printing each hop's own citation; putting that on a page is a decision for a later release, not an oversight.</li>
 </ul>
 </section>
-<section class="rel-entry future">
+<section class="rel-entry">
 <h2>v1.5 — the vocabulary-transfer study</h2>
-<div class="meta">skeleton — populated at the ceremony from the batch deltas and whichever calibration record is binding then. Re-scoped: the arcs it was to carry closed into v1.4, and what remains is the question they were mined to answer — whether the relation vocabulary learned on the alchemical volumes transfers to archetype theory written without alchemical carriers.</div>
+<div class="meta">pending — the study runs after v1.4's ceremony, under whichever ruleset is binding then.</div>
 <div class="pin">graph <span class="v">v1.5</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
 <h4>mining status</h4>
 <ul>
-<li>Placeholder.</li>
+<li>The material is already in the graph. CW 9i and Aion were mined under the form rule and closed before v1.4, which is what makes the study possible without further mining.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li>Placeholder.</li>
+<li>The question: whether the relation vocabulary learned on the alchemical volumes transfers to archetype theory written without alchemical carriers. CW 9i is the falsification volume — archetype theory with no alchemical carriers to lean on — and the answer is a finding about the vocabulary, not about Jung.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>Placeholder.</li>
+<li>No new pipeline. The study measures over the committed graph and its receipts, so it can be re-run by anyone holding the same <code>seed.json</code> digest.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li>Placeholder.</li>
+<li>Nothing new is planned. The study's result is a document, and it will be linked from here when it exists.</li>
 </ul>
 </section>
 <section class="rel-entry">

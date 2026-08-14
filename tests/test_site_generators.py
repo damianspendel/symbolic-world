@@ -261,11 +261,14 @@ def test_no_family_page_calls_a_family_verified():
 # -------------------------------------------------------- the releases ---
 
 def live_entry(html):
-    """The pending entry — the one that is not a skeleton. Entries are ordered
-    newest first, and the newest is a skeleton, so position is not the test."""
-    entry = re.search(r'<section class="rel-entry">(.*?)</section>', html, re.S)
-    assert entry, "no pending (non-skeleton) entry on the page"
-    return entry.group(1)
+    """The entry for the release being prepared. Item 28 drafted the later
+    entries too, so "the first solid one" no longer identifies it — the version
+    does."""
+    for entry in re.findall(r'<section class="rel-entry[^"]*">(.*?)</section>', html, re.S):
+        heading = re.search(r"<h2>(.*?)</h2>", entry, re.S)
+        if heading and "v1.4" in heading.group(1):
+            return entry
+    raise AssertionError("no v1.4 entry on the releases page")
 
 
 def test_releases_page_renders_the_version_pin():
@@ -344,11 +347,9 @@ def test_releases_are_ordered_newest_first():
 
 
 def test_the_pending_release_entry_has_substance():
-    """A skeleton is allowed to be a skeleton; the pending entry is not."""
+    """The entry being prepared carries the release, not a sketch."""
     html = read(os.path.join(PUBLIC, "releases.html"))
-    entry = re.search(r'<section class="rel-entry">(.*?)</section>', html, re.S)
-    assert entry, "no pending (non-skeleton) entry on the page"
-    body = entry.group(1)
+    body = live_entry(html)
     for heading in RELEASE_SECTIONS:
         assert f">{heading}<" in body, heading
     assert "clause-predicate" in body, "the defect story is not in the entry"

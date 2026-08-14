@@ -178,57 +178,90 @@ pin: graph v1.4 · ruleset {{ruleset}} · calibration record {{calibration_recor
 - Nothing in this set is deployed by the build that made it. A deploy carrying
   UI waits for review.
 
-## v1.5 — the vocabulary-transfer study
-
-status: skeleton — populated at the ceremony from the batch deltas and whichever
-calibration record is binding then. Re-scoped: the arcs it was to carry closed
-into v1.4, and what remains is the question they were mined to answer — whether
-the relation vocabulary learned on the alchemical volumes transfers to archetype
-theory written without alchemical carriers.
-pin: graph v1.5 · ruleset pending · calibration record pending
-
-### mining status
-
-- Placeholder.
-
-### governance
-
-- Placeholder.
-
-### core build
-
-- Placeholder.
-
-### UI
-
-- Placeholder.
-
 ## v2.0 — the graph as a queryable instrument
 
-status: skeleton — populated at the ceremony
+status: pending — populated finally at the ceremony. The sections below carry
+what is true today, as progress toward the release rather than as its record.
 pin: graph v2.0 · ruleset pending · calibration record pending
 
 ### mining status
 
-- Planned: CW 8 mined.
+- CW 8 is open, under a freshly ruled ruleset: window one (§1–71) is merged, of
+  fourteen planned. The remaining windows run under the scheduled task, one
+  window per firing, each gated on green CI before the next is built.
+- Nothing already in the graph is re-mined. One mining pass per window, ever, so
+  this release adds to the {{edges}} relations and {{refs}} references v1.4
+  describes rather than revisiting them.
+- CW 8's register — psychic energy, dependence, instrumentality — lands on
+  exactly the families the pre-arc external check probed, which is why that
+  check ran before the arc opened rather than after it.
 
 ### governance
 
-- Planned: the family layer under a stable ruleset with the queue drained to
-  ruled-or-recorded.
+- Every version of the ruleset since v0.7 has shipped with a calibration PASS
+  record of its own, and CI refuses a version that has none; {{ruleset}} is the
+  version binding as this entry is built.
+- The external-validity check is closed. Its numbers are in the v1.4 entry above
+  and are not restated here, because a figure repeated in two places drifts in
+  one of them.
+- Gates added since v1.4, all enforced rather than remembered: the ledger must
+  be as fresh as `seed.json`; every batch page named in the manifest must be in
+  the deploy, with no orphans; no page may set its own column, band or reading
+  measure, including in an inline style block; and the copy contract now scans
+  every new page for typed figures and banned phrasing.
 
 ### core build
 
-- Planned: the query layer with its declared inverses and the Turtle export as
-  published artifacts rather than tools alone.
+- The query engine reads the graph and writes nothing: {{declarations_active}}
+  declarations, each transcribed from a line of the definitions document with a
+  rulings log behind it; closure applied at read time and labelled row by row;
+  and a declaration's qualifier travelling with the flip, so a derived row never
+  asserts more than the row it came from.
+- The Turtle export ships beside it and declares no transitivity.
+- The ledger and every per-batch delta page come from one generator in one pass,
+  so their numbers cannot disagree.
+- Builds are deterministic: the same graph in gives the same bytes out, which is
+  what makes a real change visible in a diff.
 
 ### UI
 
-- Planned: the surfaces that the query layer earns. The depth-bounded identity
-  walk is built and tested in `tools/query/kg_query.py` and is kept for later:
-  it is not exposed in the site UI, and exposing it is a decision for a later
-  release. No natural-language interface — a query layer that cites edges comes
-  before any interface that paraphrases them.
+- The surfaces this entry will ship: the release notes you are reading, the
+  ontology page, the query panel, one page per relation family and one per
+  batch, the site menu with its four groups (explore, reference, provenance,
+  about), and the single-gutter layout inside one capped container.
+- The depth-bounded identity walk is built and tested in
+  `tools/query/kg_query.py` and is deliberately not exposed on the site. It
+  reads identity chains one edge at a time, printing each hop's own citation;
+  putting that on a page is a decision for a later release, not an oversight.
+
+## v1.5 — the vocabulary-transfer study
+
+status: pending — the study runs after v1.4's ceremony, under whichever ruleset
+is binding then.
+pin: graph v1.5 · ruleset pending · calibration record pending
+
+### mining status
+
+- The material is already in the graph. CW 9i and Aion were mined under the form
+  rule and closed before v1.4, which is what makes the study possible without
+  further mining.
+
+### governance
+
+- The question: whether the relation vocabulary learned on the alchemical
+  volumes transfers to archetype theory written without alchemical carriers. CW
+  9i is the falsification volume — archetype theory with no alchemical carriers
+  to lean on — and the answer is a finding about the vocabulary, not about Jung.
+
+### core build
+
+- No new pipeline. The study measures over the committed graph and its receipts,
+  so it can be re-run by anyone holding the same `seed.json` digest.
+
+### UI
+
+- Nothing new is planned. The study's result is a document, and it will be
+  linked from here when it exists.
 
 ## v1.3.0 — the published baseline
 
