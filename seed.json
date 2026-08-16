@@ -2242,6 +2242,91 @@
    "id": "participation-mystique",
    "label": "Participation mystique",
    "type": "Concept"
+  },
+  {
+   "id": "the-analyst",
+   "label": "The analyst (physician)",
+   "type": "Figure"
+  },
+  {
+   "id": "constructive-method",
+   "label": "The constructive (synthetic) method",
+   "type": "Operation"
+  },
+  {
+   "id": "spontaneous-fantasy",
+   "label": "Spontaneous fantasy",
+   "type": "Concept"
+  },
+  {
+   "id": "self-regulating-system",
+   "label": "The self-regulating system",
+   "type": "Concept"
+  },
+  {
+   "id": "directedness",
+   "label": "Directedness of consciousness",
+   "type": "Concept"
+  },
+  {
+   "id": "compensation",
+   "label": "Compensation (the unconscious counteraction)",
+   "type": "Concept"
+  },
+  {
+   "id": "one-sidedness",
+   "label": "One-sidedness of consciousness",
+   "type": "Concept"
+  },
+  {
+   "id": "nebuchadnezzar",
+   "label": "Nebuchadnezzar",
+   "type": "Figure"
+  },
+  {
+   "id": "free-association",
+   "label": "Free association",
+   "type": "Operation"
+  },
+  {
+   "id": "aesthetic-formulation",
+   "label": "Aesthetic (creative) formulation",
+   "type": "Operation"
+  },
+  {
+   "id": "way-of-understanding",
+   "label": "The way of understanding",
+   "type": "Operation"
+  },
+  {
+   "id": "inner-dialogue",
+   "label": "Inner dialogue with the 'other' voice",
+   "type": "Operation"
+  },
+  {
+   "id": "association-test",
+   "label": "The association experiment",
+   "type": "Operation"
+  },
+  {
+   "id": "pierre-janet",
+   "label": "Pierre Janet",
+   "type": "Figure"
+  },
+  {
+   "id": "trauma",
+   "label": "Trauma (emotional shock)",
+   "type": "Concept"
+  },
+  {
+   "id": "belief-in-spirits",
+   "label": "The universal belief in spirits",
+   "type": "Motif"
+  },
+  {
+   "id": "repression",
+   "label": "Repression",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -49083,6 +49168,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-13",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 200,
+     "quote": "Every constellation of a complex postulates a disturbed state of consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
     }
    ],
    "relation_family": {
@@ -50107,6 +50203,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 148,
+     "quote": "the word “symbol” being taken to mean the best possible expression for a complex fact not yet clearly apprehended by consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
     }
    ],
    "relation_family": {
@@ -50311,6 +50418,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 148,
+     "quote": "Dissolution of the symbol at this stage of analysis is therefore a mistake.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
     }
    ],
    "relation_family": {
@@ -50979,6 +51097,1267 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-08-14"
+   }
+  },
+  {
+   "subject": "transcendent-function",
+   "relation": "arises-from",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 181,
+     "quote": "This is the second and more important stage of the procedure, the bringing together of opposites for the production of a third",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 189,
+     "quote": "The transcendent function manifests itself as a quality of conjoined opposites.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "transcendent-function",
+   "relation": "transforms",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 145,
+     "quote": "It is called “transcendent” because it makes the transition from one attitude to another organically possible, without loss of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 146,
+     "quote": "helps him to bring conscious and unconscious together and so arrive at a new attitude",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "mediates",
+   "object": "transcendent-function",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 146,
+     "quote": "the suitably trained analyst mediates the transcendent function for the patient",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 151,
+     "quote": "the transcendent function is. in a sense, an “artificial” product because it is largely supported by the analyst",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "collaborates-with",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 167,
+     "quote": "This is the beginning of the transcendent function, i.e., of the collaboration of conscious and unconscious data.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 184,
+     "quote": "giving the unconscious credit, so that it has a chance to co-operate with consciousness instead of automatically disturbing it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "reductive-method",
+   "relation": "misinterprets",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 146,
+     "quote": "there is a tendency to understand it in the reductive sense only, as an erotic infantile fantasy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "constructive-method",
+   "relation": "polarizes-with",
+   "object": "reductive-method",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 153,
+     "quote": "are very difficult to understand from a constructive point of view, but are usually easier to understand reductively",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 154,
+     "quote": "This material is generally more useful for the reductive method than for the constructive one",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "constructive-method",
+   "relation": "prepares",
+   "object": "transcendent-function",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 147,
+     "quote": "paves the way for the patient’s insight into that process which I call the transcendent function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "arises-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 152,
+     "quote": "The dream is, so to speak, a pure product of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "exhibits",
+   "object": "abaissement-du-niveau-mental",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 152,
+     "quote": "it bears all the characteristics of an “abaissement du niveau mental” (Janet), or of low energy-tension",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "spontaneous-fantasy",
+   "relation": "reveals",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 155,
+     "quote": "Another source is spontaneous fantasies. They usually have a more composed and coherent character and often contain much that is obviously significant.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "is-regarded-as",
+   "object": "self-regulating-system",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 159,
+     "quote": "Since the psyche is a self-regulating system, just as the body is, the regulating counteraction will always develop in the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "directedness",
+   "relation": "excludes",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 159,
+     "quote": "It is just this directedness that excludes them.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "directedness",
+   "relation": "entails",
+   "object": "one-sidedness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 159,
+     "quote": "Directedness is absolutely necessary for the conscious process, but as we have seen it entails an unavoidable one-sidedness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "produces",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 145,
+     "quote": "recognizing their significance in compensating the one-sidedness of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 159,
+     "quote": "the regulating counteraction will always develop in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "compensation",
+   "relation": "corrects",
+   "object": "one-sidedness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 190,
+     "quote": "compensating and correcting our one-sidedness, emerges from the darkness and shows us how and where we have deviated from the basic pattern",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "suppresses",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 160,
+     "quote": "when the unconscious counteraction is suppressed it loses its regulating influence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "nietzsche",
+   "relation": "identifies-with",
+   "object": "dionysos",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 162,
+     "quote": "Nietzsche’s psychosis first produced an identification with the “Crucified Christ” and then with the dismembered Dionysus.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "nebuchadnezzar",
+   "relation": "succumbs-to",
+   "object": "psychosis",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 163,
+     "quote": "after suppressing the unconscious regulating influence, fell victim to a psychosis that contained the very counteraction he had sought to escape",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "emotion",
+   "relation": "contains",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 166,
+     "quote": "In the intensity of the emotional disturbance itself lies the value, the energy which he should have at his disposal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "names",
+   "object": "free-association",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 167,
+     "quote": "This “free association,” as Freud called it, leads away from the object to all sorts of complexes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "aesthetic-formulation",
+   "relation": "gives-form-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 168,
+     "quote": "Here too a product is created which is influenced by both conscious and unconscious, embodying the striving of the unconscious for the light",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 180,
+     "quote": "Often it is necessary to clarify a vague content by giving it a visible form.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "aesthetic-formulation",
+   "relation": "diverts",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 176,
+     "quote": "the libido is diverted from the real goal of the transcendent function and sidetracked into purely aesthetic problems of artistic expression",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)",
+     "correction_note": "gate correction: §176: 'The danger of the aesthetic tendency is overvaluation of the formal or \"artistic\" worth of the fantasy-productions; the libido is diverted from the real goal of the transcendent function' — conditional on overvaluation, so a flat high-confidence 'diverts' overstates."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "aesthetic-formulation",
+   "relation": "complements",
+   "object": "way-of-understanding",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 177,
+     "quote": "aesthetic formulation needs understanding of the meaning, and understanding needs aesthetic formulation. The two supplement each other",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 179,
+     "quote": "if there were an alternation of creation and understanding",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "confronts",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 181,
+     "quote": "the question arises as to how the ego will relate to this position, and how the ego and the unconscious are to come to terms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 188,
+     "quote": "the ego must seize the initiative and ask",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "overwhelms",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 183,
+     "quote": "a liberated unconscious can thrust the ego aside and overwhelm it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "inner-dialogue",
+   "relation": "represents",
+   "object": "transcendent-function",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 189,
+     "quote": "The shuttling to and fro of arguments and affects represents the transcendent function of opposites.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "association-test",
+   "relation": "reveals",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 196,
+     "quote": "It was then that I discovered the feeling-toned complexes, which had always been registered before as failures to react",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 198,
+     "quote": "furnishing them with various symptoms of disturbance, the chief of these being delayed reaction time",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "defies",
+   "object": "will",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 200,
+     "quote": "The unity of consciousness is disrupted and the intentions of the will are impeded or made impossible.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 201,
+     "quote": "The complex can usually be suppressed with an effort of will, but not argued out of existence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "opposes",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 201,
+     "quote": "It is the image of a certain psychic situation which is strongly accentuated emotionally and is, moreover, incompatible with the habitual attitude of consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "pierre-janet",
+   "relation": "demonstrates",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 202,
+     "quote": "Janet and Morton Prince both succeeded in producing four to five splittings of the personality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)",
+     "note": "Jung adds that there is no difference in principle between a fragmentary personality and a complex."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "personifies",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 202,
+     "quote": "they are the elfin beings so aptly characterized in Danish folklore",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "manifests-in",
+   "object": "psychosis",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 203,
+     "quote": "We observe the same phenomenon in certain psychoses when the complexes get “loud” and appear as “voices” having a thoroughly personal character.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "arises-from",
+   "object": "trauma",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 204,
+     "quote": "a so-called trauma, an emotional shock or some such thing, that splits off a bit of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "assimilates",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 204,
+     "quote": "unconsciousness helps the complex to assimilate even the ego, the result being a momentary and unconscious alteration of personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 207,
+     "quote": "proceeds to assimilate the ego-consciousness step by step",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "manifests-as",
+   "object": "possession",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 204,
+     "quote": "known as identification with the complex. In the Middle Ages it went by another name: it was called possession.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "primitive-mentality",
+   "relation": "personifies",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 204,
+     "quote": "regarded them as beings in their own right, that is, as demons",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "assimilates",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 206,
+     "quote": "the modern mind conceives all inner disturbances as its own activity: it simply assimilates them",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 209,
+     "quote": "The tendency to make complexes unreal by assimilation does not prove their nugatoriness but, on the contrary, their importance.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "causes",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 207,
+     "quote": "This eventually leads to a neurotic dissociation of the personality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "fears",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 208,
+     "quote": "so great is their fear of the lurking spectre",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 211,
+     "quote": "The fear of complexes is a rooted prejudice",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "constitutes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 210,
+     "quote": "Complexes are in truth the living units of the unconscious psyche, and it is only through them that we are able to deduce its existence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "produces",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 202,
+     "quote": "They are the actors in our dreams, whom we confront so powerlessly",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)",
+     "correction_note": "gate correction: 'They are the actors in our dreams, whom we confront so powerlessly' establishes that complexes populate dreams, which is weaker than the produces relation as worded."
+    },
+    {
+     "volume": "8",
+     "paragraph": 210,
+     "quote": "the complex, which is the architect of dreams and of symptoms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "belief-in-spirits",
+   "relation": "expresses",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 210,
+     "quote": "The universal belief in spirits is a direct expression of the complex structure of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "discovers",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 210,
+     "quote": "That is why Freud became the real discoverer of the unconscious in psychology",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "proposes",
+   "object": "repression",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 212,
+     "quote": "the first medical theory about the unconscious was, logically, the theory of repression worked out by Freud",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "biases",
+   "object": "science",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 213,
+     "quote": "No investigator, however unprejudiced and objective he is, can afford to disregard his own complexes",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)",
+     "correction_note": "gate correction: §213 says no investigator can disregard his own complexes and that constitution decides 'what psychological view a given observer will have'; the demonstrated object is psychological investigation, so a high-confidence edge against 'science' overstates the paragraph's scope."
+    },
+    {
+     "volume": "8",
+     "paragraph": 214,
+     "quote": "the character of these complexes will necessarily become attached to the theory",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-16",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)",
+     "note": "Jung is speaking of psychological theory specifically."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-16"
    }
   }
  ]

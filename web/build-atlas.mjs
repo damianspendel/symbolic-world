@@ -1395,14 +1395,15 @@ for (const fam of families) {
     ? (stringSet.has(d.forward) || stringSet.has(d.inverse))
     : stringSet.has(d.relation))
   const evRow = EVROWS.find(r => r.family === fam.id)
-  derived(row.edges, strings.length, singles, pend.length, decls.length,
-    ...strings.map(s => s.edges))
-
   const lead = strings.slice(0, 12)
   const tail = strings.slice(12)
+  const tailSum = tail.reduce((a, s) => a + s.edges, 0)
+  derived(row.edges, strings.length, singles, pend.length, decls.length, tailSum,
+    ...strings.map(s => s.edges))
+
   const stringChips = lead.map(s =>
     `<span class="chip ev${s.edges >= 5 ? ' lead' : ''}"><code>${esc(s.string)}</code> <span class="n">${s.edges}</span></span>`).join('')
-    + (tail.length ? `<span class="chip f-none">and ${tail.length} more, ${tail.reduce((a, s) => a + s.edges, 0)} relations between them</span>` : '')
+    + (tail.length ? `<span class="chip f-none">and ${tail.length} more, ${tailSum} relations between them</span>` : '')
 
   const seedList = fam.seeds.length ? `<ul class="seeds">${fam.seeds.map(s =>
     `<li class="ev">${esc(s.text)}${s.cite ? ` <span class="cite">${esc(s.cite)}</span>` : ''}</li>`).join('')}</ul>`
