@@ -93,6 +93,13 @@ response to the inspection and binding from now on.
 19. **[STANDING] Frozen means frozen.** master, the v1.3.0 tag, docs/PAPER.md,
     the /v1.3/ snapshot (checksum-pinned) are never modified. Releases are
     one-shot; a released tag is never re-cut.
+    **[AMENDED 2026-08-16 by Damian]** The freeze on `docs/PAPER.md` and
+    `docs/PAPER.pdf` is lifted for the v2.0 revision, in the release chat
+    only. The lift covers rewriting the paper and moving its baseline in a
+    deliberate commit of its own. It covers nothing else: master, the v1.3.0
+    tag, the /v1.3/ snapshot and the frozen ledger snapshot stay absolutely
+    frozen, and the arXiv v1 submission is not touched. The lift closes when
+    v2.0.0 is tagged, at which point the revised paper is frozen in turn.
 20. **[STANDING] The corpus never leaves the machine.** data/, paragraphs.jsonl,
     the epub are local-only; no quoted corpus text in any outbound message;
     published quotes only through the verified ≤25-word channel.
