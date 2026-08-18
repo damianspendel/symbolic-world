@@ -53,6 +53,35 @@ gold = ROOT / 'pipeline' / 'gold_sample_50.json'
 if gold.exists():
     g = json.load(open(gold))
     facts['gold_set_references_human_reviewed'] = len(g) if isinstance(g, list) else len(g.get('items', g))
+# ---- receipts beyond seed.json: human gold set, family calibration, external validity ----
+import collections as _c, glob as _g
+hv = json.load(open(ROOT / 'pipeline' / 'human_validations.json'))
+facts['gold_set'] = {'n': len(hv),
+                     'support': dict(_c.Counter(x['support'] for x in hv)),
+                     'voice_agreement': sum(1 for x in hv if x['voice'] == 'voice-correct' or
+                                            {'should-be-asserts': 'jung-asserts', 'should-be-reports': 'jung-reports-parallel',
+                                             'should-be-quotes': 'jung-quotes-source'}.get(x['voice']) == x['pipeline_claim_type']),
+                     'validated_by': dict(_c.Counter(x['validated_by'] for x in hv)),
+                     'anchored': True}   # the tool showed the pipeline label; PAPER.md E10
+cal = []
+for f in sorted(_g.glob(str(ROOT / 'pipeline' / 'family_calibration' / 'records' / '*.json'))):
+    d = json.load(open(f))
+    cal.append({'file': f.split('/')[-1], 'version': d.get('definitions_version'), 'verdict': d.get('verdict'),
+                'gate_model': d.get('gate_model'), 'caught': d['sensitivity']['caught'], 'of': d['sensitivity']['of'],
+                'clean_left_alone': d['specificity']['clean_left_alone'], 'clean_of': d['specificity']['of']})
+facts['family_calibration_runs'] = cal
+v072 = [c for c in cal if c['version'] == 'v0.7.2']
+facts['family_calibration_v072_pooled'] = {'runs': len(v072),
+    'caught': sum(c['caught'] for c in v072), 'of': sum(c['of'] for c in v072),
+    'clean_left_alone': sum(c['clean_left_alone'] for c in v072), 'clean_of': sum(c['clean_of'] for c in v072),
+    'pass_on_run': next((i + 1 for i, c in enumerate(v072) if c['verdict'] == 'PASS'), None)}
+facts['family_calibration_gate_same_model_as_a_proposer_arm'] = True   # independence_note in every record
+facts['external_validity'] = json.load(open(ROOT / 'docs' / 'experiments' / 'external_validity_2026-08' / 'results.json'))
+facts['pinned_from_v13_paper'] = {   # facts CI-pinned in docs/PAPER.md at v1.3.0, not re-derived here
+    'E4_strict_pair_overlap_pct': 37.5,
+    'unanchored_crossreview_convention_rulings_rejected': '9 of 13',
+    'E1b_sensitivity_specificity': '86/100, 93/100'}
+
 import re, subprocess
 q = subprocess.run(['python3', str(ROOT / 'tools' / 'query' / 'kg_query.py'), '--closure', '--count'],
                    capture_output=True, text=True, cwd=ROOT).stdout
