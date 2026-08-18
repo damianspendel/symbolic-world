@@ -10,7 +10,7 @@ each against the fact sheet, (2) read for argument and clarity, (3) name any
 prose it would flag as machine-written. Verdicts come back as JSON and are
 written to docs/experiments/paper_v2_reviews/ as the receipt.
 
-    python3 tools/paper_review/gemini_review.py <section.md> <facts.json> <out.json> [claims|narrative]
+    python3 tools/paper_review/gemini_review.py <section.md> <facts.json> <out.json> [claims|narrative|prose]
 """
 import datetime
 import json
@@ -27,7 +27,7 @@ section = pathlib.Path(sys.argv[1]).read_text()
 section = _re.sub(r'^> .*\n', '', section, flags=_re.M)   # drafting notes are not the paper
 facts = pathlib.Path(sys.argv[2]).read_text()
 out = pathlib.Path(sys.argv[3])
-FOCUS = sys.argv[4] if len(sys.argv) > 4 else 'claims'   # 'claims' (per section) | 'narrative' (whole draft)
+FOCUS = sys.argv[4] if len(sys.argv) > 4 else 'claims'   # 'claims' (per section) | 'narrative' | 'prose' (whole draft)
 
 NARRATIVE_PROMPT = """You are an independent reviewer for a methods paper in the digital humanities. You have not seen any discussion of this paper. Below is the draft so far (several sections; others are not yet written and are referred to by number), followed by a fact sheet derived mechanically from the project's dataset. Sections referred to but absent are not a defect; do not report them.
 
@@ -49,6 +49,25 @@ Be strict and specific. Quote the text. Do not praise.
 === FACT SHEET (derived from the dataset, not typed) ===
 """ + facts
 
+PROSE_PROMPT = """You are an independent reviewer for a methods paper in the digital humanities. You have not seen any discussion of this paper. Below is the draft so far (sections not yet written are referred to by number; that is not a defect). Ignore the fact sheet except to know what the numbers refer to.
+
+Review the PROSE ONLY, for a reader who is a careful scholar but has not read the project's documentation. Return ONLY a JSON object with:
+
+1. "verdict": one of CLEAR, ACCEPTABLE, HEAVY.
+2. "verdict_reason": one paragraph naming the MECHANISM behind the verdict (for example: too many defined terms per sentence; tables doing the work prose should do; definitions packed into one paragraph; sentences that state a rule before the reader has seen an instance; abstract nouns where a concrete example would carry it). Name the mechanism, not the sentences.
+3. "density": {"terms_per_sentence": your estimate of how many project-defined terms an average sentence carries, "worst_paragraph": quote its first sentence, "tables_carrying_prose": true/false with one sentence why}.
+4. "exemplars": at most five sentences that best show the mechanism, each as {"quoted": the sentence, "why": one clause, "rewrite": your plainer version, same content}.
+5. "keep": at most three sentences that are doing their job well and should not be touched, quoted.
+6. "register": one sentence on whether the voice is consistent across sections, and where it changes if it does.
+
+Be strict and specific. Do not praise beyond item 5.
+
+=== DRAFT ===
+""" + section + """
+
+=== FACT SHEET (context only) ===
+""" + facts
+
 PROMPT = """You are an independent reviewer for a methods paper in the digital humanities. You have not seen any other part of this paper or any discussion of it. Below is a draft section, followed by a fact sheet of figures derived mechanically from the project's dataset.
 
 Do three things and return ONLY a JSON object.
@@ -68,7 +87,7 @@ Be strict and specific. Quote the text. Do not praise.
 """ + facts
 
 body = {
-    "contents": [{"parts": [{"text": NARRATIVE_PROMPT if FOCUS == 'narrative' else PROMPT}]}],
+    "contents": [{"parts": [{"text": {'narrative': NARRATIVE_PROMPT, 'prose': PROSE_PROMPT}.get(FOCUS, PROMPT)}]}],
     "generationConfig": {"responseMimeType": "application/json", "temperature": 0},
 }
 req = urllib.request.Request(
