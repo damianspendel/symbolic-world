@@ -14,7 +14,8 @@ on one exam.
 
 Project terminology only. Nothing from the Collected Works is quoted here.
 
-Written 2026-08-14.
+Written 2026-08-14. Extended 2026-08-18 with the questions asked while the
+v2.0 paper revision was being scoped.
 
 ---
 
@@ -28,6 +29,17 @@ are signed and dated, and most of them force a sentence into the rulebook rather
 just settling the one item. Precedent then applies only where the reasoning matches: a
 ruling once expected to clear nine queue items cleared exactly one, because the other
 eight rested on different grounds.
+
+### Alarm rate
+
+The share of items a checker flags, which is not the share that were actually wrong.
+Two different numbers. When a gate flagged a quarter of the ungated backlog, that
+quarter held real errors, phrasing the gate preferred, and its own false alarms; the
+same gate's specificity measured 93%, so some of the alarms are the instrument rather
+than the data. The paper therefore reports 25.2% as an alarm rate. Turning it into a
+statement about how often unverified extraction is wrong needs a human to grade the
+same items, and that has not been done. A smoke detector that sounds twenty times a
+year has not found twenty fires.
 
 ### Amplification
 
@@ -58,6 +70,29 @@ hand-edited: a build script regenerates the atlas file from `seed.json`, so mini
 window, merging it and rebuilding is the whole path from a paragraph of Jung to something
 a reader can click. Every link on the map carries the volume, the paragraph number and the
 exact words, which is the first thing a sceptical reader tests.
+
+### Attested, and adequate
+
+Two different things a quote can be, and the deterministic checker only settles the
+first. Attested means the words really are in the cited paragraph, matched mechanically
+under stated normalization and elision rules. Adequate means those words support the
+claim built on them: that the excerpt is representative, that what was cut does not
+reverse the sense, that this paragraph is the right anchor at all. The checker cannot
+reach adequacy; the model gate, the cross-vendor audit and human review are what address
+it. Keeping the two words apart is why the claim about fabricated quotes is always
+written with its operating assumptions attached.
+
+### Best of N
+
+A way of reporting a calibration that looks like evidence and is not. The pass bar is
+fixed before the run and never moves, but every run draws a fresh sample and plants
+fresh errors, so runs vary. Ruleset v0.7.1 failed five draws and passed the sixth;
+v0.7.2 failed three and passed the fourth. Citing only the run that passed is flipping
+a coin until it lands heads and reporting heads. The honest reading treats the runs as
+repeated measurements of one instrument rather than repeated attempts at one fact:
+pooled across its four draws, the v0.7.2 gate caught 73 of 76 planted errors and left
+159 of 164 clean assignments alone. The rule from here: fix the number of draws before
+running, report the pooled rate, never the best one.
 
 ### Blind arms (the two of them)
 
@@ -193,6 +228,16 @@ against its paragraph is a different claim, checked by a different chain, than a
 assignment laid over an already-verified relation. It is rebuilt from the data on every
 batch, so it cannot drift from what actually happened.
 
+### Nominal independence
+
+Role separation that looks like independence and is not. The chain's founding rule is
+that whatever proposes a claim never signs it off, and at the reference gate this holds
+across vendors. At the family gate it does not: the model grading the calibration is the
+same gemini-3.1-pro that serves as one of the two production arms. Different job, same
+model. Every calibration record carries the admission in its own `independence_note`
+field, so the figure is reported as within-vendor role separation rather than as a
+cross-vendor check.
+
 ### One pass per window
 
 Ground that has been mined is never mined again. It keeps the graph from silently
@@ -201,6 +246,17 @@ goes wrong is repaired by correction rather than by re-running it. Overriding it
 decision, named for a specific window. This is also why a schema omission in ten records
 was fixed by sending those records back for their missing fields rather than by re-mining
 the window.
+
+### Paper baseline
+
+The dataset a published paper's numbers are checked against. The graph keeps growing; a
+published paper does not. So the checker reads which release the paper says it describes,
+fetches `seed.json` as it stood at that tag, counts nodes, edges and references there,
+and then demands the paper contain those exact strings. Nothing typed in the paper is
+trusted; everything is recomputed. Moving the baseline means changing which release the
+paper cites, and that changes every figure at once, so it is done deliberately in a
+commit of its own rather than patched a number at a time. One declared exception exists
+while a paper is being revised for a version that has no tag yet.
 
 ### Proposer
 
@@ -218,6 +274,19 @@ refuse files whose stamps disagree. A scratchpad is for scratch: work that produ
 artifact or a published number gets committed the day it runs. The rule was adopted after
 two calibration figures had to be withdrawn for want of exactly this.
 
+### Reduced rubric (and why not "rubric-free")
+
+A rubric is the instruction sheet an auditor is handed: what counts as supported, which
+labels exist, how severe is severe. An audit run without one tests whether an outside
+reader reaches our conclusions on their own. An audit run with ours partly tests whether
+they can follow our instructions. E7 was first described as rubric-free. A later
+code-level review of the prompt that actually ran showed it still supplied a three-valued
+support scale, a four-valued severity scale, and a pointer at the project's own
+attribution and confidence fields. The strictness persona and the prose definitions were
+gone; the scaffolding was not. It was relabelled reduced-rubric, and a genuinely
+open-ended audit is still owed. The reason it matters: agreement measured under our own
+rubric partly measures our rubric.
+
 ### Reuse (also: transfer)
 
 The share of an incoming batch's relation labels that already existed in the graph, as
@@ -227,6 +296,15 @@ answer looked like sprawl, until it turned out that one defective batch's ninety
 strings were carrying the whole trend; take that process artifact out and vocabulary grows
 more slowly than the graph does. The measurement is why the miner is blinded, since a miner
 told to reuse labels would supply the answer instead of the evidence.
+
+### Rules register
+
+`docs/RULES.md`, whose first line is the load-bearing one: a rule not written there is
+not a rule. Rules used to live scattered across the working context, the runbooks, batch
+prompts and decision records, and the 2026-08-12 code inspection showed what scattering
+costs. The register is also where a rule gets suspended. When the freeze on the paper was
+lifted for the v2.0 revision, the lift was written into the rule it suspends, dated and
+scoped, instead of surviving as an instruction in one chat.
 
 ### Seeded corruption
 
@@ -289,6 +367,18 @@ whole point rather than a preference: a model that has already written its own
 justification cannot then be the one that judges it. It applies to the people running it
 too. Whoever writes the family definitions does not classify edges against them, and
 whoever plants a corruption does not grade the catch.
+
+### Warrant, layered
+
+The organizing idea of the v2.0 paper. A published claim is not one thing that is either
+verified or not. It is a stack of separately fallible parts: the subject, the relation,
+the object, the evidence, whose voice it is, how strongly it is committed, the cleaned-up
+relation string, and the family it was filed under. Each part earns its own kind of
+backing, and passing one layer says nothing about the next. A quote can be perfectly
+attested under a claim whose voice is wrong; a family assignment inherits nothing from
+the verification of the sentence beneath it. So the artifact publishes a profile across
+the layers rather than one percentage, and the layer with no human data behind it says
+so rather than borrowing credit from the layers that have some.
 
 ### Window
 
