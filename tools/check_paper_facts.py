@@ -21,6 +21,18 @@ paper = (ROOT / 'docs' / 'PAPER.md').read_text()
 # The paper is checked against the RELEASE it cites, not the working tree: the
 # artifact keeps growing under the same gates, while a published paper stays
 # true of its frozen release. Living docs (README, REVIEW) track the head.
+#
+# One exception, and it is declared rather than inferred. A paper being revised
+# for an unreleased version cites a tag that does not exist yet, and the tag
+# cannot be cut until this checker is green: circular. PENDING_RELEASE names
+# that one version. While it is set, a paper citing it is checked against the
+# working tree. The moment the tag exists, the tag wins and this constant goes
+# inert on its own — the tagged commit's seed.json IS the working tree's. An
+# undeclared missing tag still fails, as before. Set to None between releases.
+PENDING_RELEASE = 'v2.0.0'
+
+failures = []
+
 seed_live = json.load(open(ROOT / 'seed.json'))
 seed = seed_live
 _m = re.search(r'release `(v[^`]+)`', paper)
@@ -29,9 +41,11 @@ if _m:
                         capture_output=True, text=True, cwd=ROOT)
     if _r.returncode == 0:
         seed = json.loads(_r.stdout)
+    elif _m.group(1) != PENDING_RELEASE:
+        failures.append(f"BASELINE: paper cites release '{_m.group(1)}' "
+                        f"which has no tag and is not PENDING_RELEASE")
+    # else: PENDING_RELEASE, so seed stays as the working tree — declared above.
 james = json.load(open(ROOT / 'james' / 'james_seed.json'))
-
-failures = []
 
 
 def require(substring, why):
@@ -334,8 +348,11 @@ if FAM_DOC.exists():
 tags = subprocess.run(['git', 'tag', '--list'], capture_output=True, text=True,
                       cwd=ROOT).stdout.split()
 for m in re.finditer(r'release `(v[^`]+)`', paper):
-    if m.group(1) not in tags:
+    if m.group(1) not in tags and m.group(1) != PENDING_RELEASE:
         failures.append(f"RELEASE TAG: paper cites '{m.group(1)}' not in git tags {tags}")
+if PENDING_RELEASE and PENDING_RELEASE in tags:
+    failures.append(f"STALE PENDING: {PENDING_RELEASE} is tagged; set PENDING_RELEASE "
+                    f"to None so the paper is checked against the tag, not the tree")
 
 # ---- companion docs must carry current counts ----
 # .zenodo.json describes the archived release: pin to the paper's baseline
