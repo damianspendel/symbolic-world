@@ -97,7 +97,13 @@ One object on the edge, sibling to `relation`:
 }
 ```
 
-`relation` in the object is a verb phrase of at most 3 hyphen tokens. Qualifier keys are
+`relation` in the object is a verb phrase of at most 4 hyphen tokens. **[AMENDED
+2026-08-18, Damian's ruling]** The original text said 3. The 2026-08-05 normalization pass
+did not enforce it: 104 of the 260 applied normalizations have four tokens
+(`is-elder-brother-of`, `dies-and-rises-like`), all verbs, none propositions, and all under
+the P24 threshold in `tools/ontology_qa/quality.py`, which calls a relation
+sentence-shaped at five or more. The cap is set to match the instrument the project runs
+rather than re-normalizing 104 relations that already read as verbs. Qualifier keys are
 closed (`carrier`, `scope`, `condition`, `modality`, `note`); unused keys are null. The
 gate's question is entailment: subject + normalized relation + object + qualifiers must
 state the same claim the verbatim edge's quote was verified to support — nothing added,
