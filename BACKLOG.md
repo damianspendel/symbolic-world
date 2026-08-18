@@ -475,6 +475,21 @@ record and becomes a queryable instrument:
    no-transitivity ruling is a feature; v2.0 ships the depth-bounded
    identity-walk view instead of a collapse.
 5. **Release-notes page live** (item A), with v2.0 as its first full entry.
+6. **Ontology page re-aligned with the v2.0 paper's §4** (added 2026-08-18,
+   release chat). `/ontology` (3,250 words) predates the layered-warrant
+   vocabulary. It keeps the two-tier idea and the verified/assigned split,
+   which stay, but at release it must carry: the naming ("a provenance-bearing
+   assertion graph with a governed semantic overlay", the deliberate
+   non-goals as decisions), the four layers A–D with the `salt symbolizes
+   the-self` walk-through, the warrant ladder with populations bound from the
+   graph (Human-agreed at 0, stated), seven active declarations and the
+   derived-row count at closure, the normalization token-cap fact (104 of 260
+   over the proposal's cap, or the amended cap once Damian rules), and the
+   pitfall scan re-rendered with two severity axes (conventional pitfall vs
+   operational impact here; triage item F26). Copy change: needs Damian's
+   review before any deploy that carries it; the data-redeploy authorization
+   does not cover it. Same pass should re-read `/families` and the method
+   page for the same vocabulary drift.
 
 Not in v2.0: CW 11 (needs the exegesis clause and a minting-aware budget —
 the arc after), CW 5/16, any NL query interface (verification-first: a
