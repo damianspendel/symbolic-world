@@ -190,17 +190,17 @@ table.findings .src { font: .58rem var(--mono); }
 <h2>The pitfall scan</h2>
 <p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. 7 of the 19 findings are decisions recorded above, 8 are answered by the declarations, and 4 are open defects carried in the record.</p>
 <div class="qa">
-  <div class="fig"><span class="figv ev">80.6%</span><span class="figl">of relation strings are used exactly once <span class="ev">(670 of 831)</span></span></div>
+  <div class="fig"><span class="figv ev">81%</span><span class="figl">of relation strings are used exactly once <span class="ev">(689 of 851)</span></span></div>
   <div class="fig"><span class="figv ev">270</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">271</span> relations</span></div>
-  <div class="fig"><span class="figv ev">2/8</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(205</span> relations carry a declared string)</span></div>
-  <div class="fig"><span class="figv ev">2</span><span class="figl">component detached from the main graph <span class="ev">(471</span> of 475 nodes are in it)</span></div>
+  <div class="fig"><span class="figv ev">2/8</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(215</span> relations carry a declared string)</span></div>
+  <div class="fig"><span class="figv ev">2</span><span class="figl">component detached from the main graph <span class="ev">(480</span> of 485 nodes are in it)</span></div>
 </div>
 <details class="disclose">
 <summary>19 findings: 7 recorded design decisions, 8 answered by the declarations, 4 open defects.<span class="more">every finding, with its stance</span></summary>
 <div class="tw"><table class="findings"><thead><tr><th>severity</th><th>the scan's finding</th><th>stance</th></tr></thead><tbody>
 <tr class="st-design">
 <td class="sev">critical</td>
-<td><div class="ev tag">P22 no naming/vocabulary regularity</div><div class="ev fmsg">670/831 relations (81%) are used exactly once. The relation set is open-vocabulary, not an ontology property set.</div></td>
+<td><div class="ev tag">P22 no naming/vocabulary regularity</div><div class="ev fmsg">689/851 relations (81%) are used exactly once. The relation set is open-vocabulary, not an ontology property set.</div></td>
 <td><span class="chip st-design">recorded design decision</span><div class="why">The relation slot holds Jung’s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it.</div></td>
 </tr>
 <tr class="st-open">
@@ -230,7 +230,7 @@ table.findings .src { font: .58rem var(--mono); }
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
-<td><div class="ev tag">P02/P30 synonymous relations, generation/origin</div><div class="ev fmsg">15 distinct relation strings express the same semantics across 53 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
+<td><div class="ev tag">P02/P30 synonymous relations, generation/origin</div><div class="ev fmsg">15 distinct relation strings express the same semantics across 58 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
 <td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.</div></td>
 </tr>
 <tr class="st-declared">
@@ -240,7 +240,7 @@ table.findings .src { font: .58rem var(--mono); }
 </tr>
 <tr class="st-design">
 <td class="sev">critical</td>
-<td><div class="ev tag">P06/no backbone: taxonomy is vestigial</div><div class="ev fmsg">Only 29/1735 edges (1.7%) are taxonomic and only 25/475 nodes (5%) have any parent. There is no subsumption hierarchy to inherit or reason over — this is an associative network with a 6-way type tag, not a subsumption ontology.</div></td>
+<td><div class="ev tag">P06/no backbone: taxonomy is vestigial</div><div class="ev fmsg">Only 29/1776 edges (1.6%) are taxonomic and only 25/485 nodes (5%) have any parent. There is no subsumption hierarchy to inherit or reason over — this is an associative network with a 6-way type tag, not a subsumption ontology.</div></td>
 <td><span class="chip st-design">recorded design decision</span><div class="why">This is an associative network with a type tag, not a subsumption ontology, and the paper describes it as one. There is no hierarchy to inherit through because none was claimed.</div></td>
 </tr>
 <tr class="st-declared">
@@ -285,7 +285,7 @@ table.findings .src { font: .58rem var(--mono); }
 </tr>
 <tr class="st-open">
 <td class="sev">minor</td>
-<td><div class="ev tag">P21 catch-all class</div><div class="ev fmsg">`Concept` holds 158/475 nodes (33%) with no subdivision. The type system carries little discriminating power.</div></td>
+<td><div class="ev tag">P21 catch-all class</div><div class="ev fmsg">`Concept` holds 164/485 nodes (34%) with no subdivision. The type system carries little discriminating power.</div></td>
 <td><span class="chip st-open">open: recorded as a defect</span><div class="why">The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.</div></td>
 </tr>
 <tr class="st-design">
@@ -328,9 +328,9 @@ table.findings .src { font: .58rem var(--mono); }
 </ul>
 
 <div class="receipts"><b>receipts</b>
-external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:3bffda8a1443</span>, run at build;<br>
+external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:467d74efa048</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-18 at commit e1a2588
+built 2026-08-18 at commit 59a331c
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>
