@@ -2327,6 +2327,66 @@
    "id": "repression",
    "label": "Repression",
    "type": "Concept"
+  },
+  {
+   "id": "physiological-constitution",
+   "label": "Physiological constitution",
+   "type": "Concept"
+  },
+  {
+   "id": "psychization",
+   "label": "Psychization",
+   "type": "Concept"
+  },
+  {
+   "id": "hunger",
+   "label": "Hunger (the instinct of self-preservation)",
+   "type": "Concept"
+  },
+  {
+   "id": "drive-to-activity",
+   "label": "The drive to activity",
+   "type": "Concept"
+  },
+  {
+   "id": "reflective-instinct",
+   "label": "The reflective instinct (reflexio)",
+   "type": "Concept"
+  },
+  {
+   "id": "creative-instinct",
+   "label": "The creative instinct",
+   "type": "Concept"
+  },
+  {
+   "id": "thinking",
+   "label": "Thinking (the function)",
+   "type": "Concept"
+  },
+  {
+   "id": "feeling",
+   "label": "Feeling (the function)",
+   "type": "Concept"
+  },
+  {
+   "id": "sensation",
+   "label": "Sensation (the function)",
+   "type": "Concept"
+  },
+  {
+   "id": "all-or-none-reaction",
+   "label": "The all-or-none reaction",
+   "type": "Concept"
+  },
+  {
+   "id": "w-h-r-rivers",
+   "label": "W. H. R. Rivers",
+   "type": "Figure"
+  },
+  {
+   "id": "william-james",
+   "label": "William James",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -10196,6 +10256,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "8",
+     "paragraph": 277,
+     "quote": "The primordial image might suitably be described as the instinct’s perception of itself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
     }
    ],
    "relation_family": {
@@ -10220,6 +10291,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "8",
+     "paragraph": 229,
+     "quote": "the inherited disposition to react in the same way as people have always reacted",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
     }
    ],
    "relation_family": {
@@ -49737,6 +49819,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-13",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 258,
+     "quote": "Whatever we persistently exclude from conscious training and adaptation necessarily remains in an untrained, undeveloped, infantile, or archaic condition",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
     }
    ],
    "relation_family": {
@@ -50595,6 +50688,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 227,
+     "quote": "However infinitely varied individual consciousnesses may be, the basic substrate of the unconscious psyche remains uniform",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
     }
    ],
    "relation_family": {
@@ -52005,6 +52109,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-16",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 253,
+     "quote": "Complexes are psychic fragments which have split off owing to traumatic influences or certain incompatible tendencies",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
     }
    ],
    "relation_family": {
@@ -52206,6 +52321,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-16",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 218,
+     "quote": "autonomous complexes are among the normal phenomena of life and that they make up the structure of the unconscious psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
     }
    ],
    "relation_family": {
@@ -52358,6 +52484,1198 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-08-16"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "carries",
+   "object": "numinosity",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 216,
+     "quote": "playing with something that directly affects all that is uncontrolled in man—the numinosum",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "is-independent-of",
+   "object": "physiological-constitution",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 220,
+     "quote": "grant the psyche a relative independence of the physiological constitution",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "outlives",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 227,
+     "quote": "Psychic processes antedate, accompany, and outlive consciousness. Consciousness is an interval in a continuous psychic process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "exemplifies",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 229,
+     "quote": "The essential thing is the idea of an exceedingly precious treasure hard to attain, no matter what it is called locally",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "constitutes",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 229,
+     "quote": "Together they make up that psychic stratum which I have called the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 281,
+     "quote": "The collective unconscious consists of the sum of the instincts and their correlates, the archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "underlies",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 230,
+     "quote": "It is the matrix of all conscious psychic occurrences",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "unites-with",
+   "object": "the-body",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 232,
+     "quote": "the human psyche lives in indissoluble union with the body",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "instinct",
+   "relation": "motivates",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 233,
+     "quote": "the instincts are the chief motivating forces of psychic events",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 272,
+     "quote": "human behaviour is influenced by instinct to a far higher degree than is generally supposed",
+     "claim_type": "jung-asserts",
+     "confidence": "high -> medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)",
+     "correction_note": "gate correction: Quote verbatim but the full sentence is hedged — 'I am therefore inclined to believe that human behaviour is influenced by instinct to a far higher degree than is generally supposed' — and the object in the text is behaviour, not the psyche directly. Supports the edge at medium; the edge keeps high via §233."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "psychization",
+   "relation": "transforms",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 234,
+     "quote": "instinct as a psychic phenomenon would be an assimilation of this stimulus to a pre-existent psychic pattern",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 235,
+     "quote": "The psychized instinct forfeits its uniqueness to a certain extent, at times actually losing its most essential characteristic—compulsiveness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 239,
+     "quote": "like hunger, undergoes a radical psychization",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "psychization",
+   "relation": "produces",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 255,
+     "quote": "An instinct which has undergone too much psychization can take its revenge in the form of an autonomous complex",
+     "claim_type": "jung-asserts",
+     "confidence": "high -> medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)",
+     "correction_note": "gate correction: The text is doubly scoped: 'An instinct which has undergone TOO MUCH psychization CAN take its revenge in the form of an autonomous complex.' Excess psychization can produce a complex; psychization per se does not. The unqualified predicate at high overstates the conditional — medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "hunger",
+   "relation": "belongs-to",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 237,
+     "quote": "as a characteristic expression of the instinct of self-preservation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 246,
+     "quote": "five main groups of instinctive factors can be distinguished: hunger, sexuality, activity, reflection, and creativity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "sexuality",
+   "relation": "belongs-to",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 238,
+     "quote": "the urge for sexual satisfaction appears in man—no longer conditioned by a mating season—almost as a separate instinct",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 246,
+     "quote": "five main groups of instinctive factors can be distinguished: hunger, sexuality, activity, reflection, and creativity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "drive-to-activity",
+   "relation": "belongs-to",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 240,
+     "quote": "I should like, then, to differentiate as a third group of instincts the drive to activity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 246,
+     "quote": "five main groups of instinctive factors can be distinguished: hunger, sexuality, activity, reflection, and creativity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "reflective-instinct",
+   "relation": "belongs-to",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 241,
+     "quote": "another instinct, different from the drive to activity and so far as we know specifically human",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 246,
+     "quote": "five main groups of instinctive factors can be distinguished: hunger, sexuality, activity, reflection, and creativity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "reflective-instinct",
+   "relation": "produces",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 243,
+     "quote": "Through the reflective instinct, the stimulus is more or less wholly transformed into a psychic content",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 244,
+     "quote": "The reflective instinct is no exception to this rule, for the production of consciousness is not of itself a creative act",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "creative-instinct",
+   "relation": "resembles",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 245,
+     "quote": "I prefer to designate the creative impulse as a psychic factor similar in nature to instinct",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "will",
+   "relation": "domesticates",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 272,
+     "quote": "Instinct has been domesticated, but the basic motive still remains instinct",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "spirit",
+   "relation": "polarizes-with",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 251,
+     "quote": "The third modality points, to use a metaphor, upward and downward, because it has to do with spirit and matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "primitive-mentality",
+   "relation": "animates",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 251,
+     "quote": "on the primitive level the boundaries become so blurred that matter often seems endowed with “soul” while spirit appears to be material",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, FINDING-adjudicated, 2026-08-18)",
+     "correction_note": "cross-vendor correction: claim_type should be jung-asserts because Jung is directly describing primitive psychology, not reporting a parallel doctrine."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "splits-into",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 252,
+     "quote": "the psyche is not a homogeneous structure but apparently consists of hereditary units only loosely bound together",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 253,
+     "quote": "The tendency to split means that parts of the psyche detach themselves from consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "suppresses",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 254,
+     "quote": "possess to a high degree the capacity to influence, control, and even to suppress the ego-personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "one-sidedness",
+   "relation": "causes",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 255,
+     "quote": "consciously willed one-sidedness is one of the most important causes of an undesirable complex",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "thinking",
+   "relation": "polarizes-with",
+   "object": "feeling",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 259,
+     "quote": "The chief contrasts are those between thinking and feeling on the one hand, and sensation and intuition on the other",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "sensation",
+   "relation": "polarizes-with",
+   "object": "intuition",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 259,
+     "quote": "The chief contrasts are those between thinking and feeling on the one hand, and sensation and intuition on the other",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "intuition",
+   "relation": "arises-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 257,
+     "quote": "This is a function of perception which includes subliminal factors",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 269,
+     "quote": "Intuition is an unconscious process in that its result is the irruption into consciousness of an unconscious content",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "w-h-r-rivers",
+   "relation": "formulates",
+   "object": "all-or-none-reaction",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 264,
+     "quote": "the significance of the “all-or-none” reaction formulated by Rivers",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "all-or-none-reaction",
+   "relation": "indicates",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 272,
+     "quote": "if we apply the Rivers criterion of the disproportionate all-or-none reaction to human behaviour, we find innumerable cases where exaggerated reactions occur",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 278,
+     "quote": "The criterion of the all-or-none reaction proposed by Rivers has helped us to discover the operation of instinct everywhere in human psychology",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "instinct",
+   "relation": "belongs-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 266,
+     "quote": "instinctive activity would have to be included among the specifically unconscious processes, which are accessible to consciousness only through their results",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 270,
+     "quote": "we also find in the unconscious qualities that are not individually acquired but are inherited",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "william-james",
+   "relation": "defines",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 267,
+     "quote": "a mere excito-motor impulse, due to the pre-existence of a certain ‘reflex-arc’ in the nerve-centres",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)",
+     "source": "William James"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "intuition",
+   "relation": "reverses",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 269,
+     "quote": "In a sense, therefore, intuition is the reverse of instinct, neither more nor less wonderful than it",
+     "claim_type": "jung-asserts",
+     "confidence": "high -> medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)",
+     "correction_note": "gate correction: The sentence is explicitly scoped: 'IN A SENSE, therefore, intuition is the reverse of instinct' — the sense being the impulse-to-action vs apprehension-of-situation inversion built in the preceding sentence. A hedged, analogical formulation should not carry high; medium."
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "psychological-value",
+   "relation": "conditions",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 270,
+     "quote": "every psychic content must possess a certain energy value in order to become conscious at all",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "personal-unconscious",
+   "relation": "contains",
+   "object": "repression",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 270,
+     "quote": "we must include all more or less intentional repressions of painful thoughts and feelings",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "personal-unconscious",
+   "relation": "distinct-from",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 270,
+     "quote": "unlike the personal unconscious, it is not made up of individual and more or less unique contents but of those which are universal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "instinct",
+   "relation": "constitutes",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 270,
+     "quote": "The instincts and the archetypes together form the “collective unconscious.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 281,
+     "quote": "The collective unconscious consists of the sum of the instincts and their correlates, the archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "determines",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 271,
+     "quote": "the question of instinct cannot be dealt with psychologically without considering the archetypes, because at bottom they determine one another",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 277,
+     "quote": "unconscious apprehension through the archetype determines the form and direction of instinct",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "conceals",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 272,
+     "quote": "enveloping a large number of instincts in rational explanations to the point where we can no longer recognize the original motive",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 277,
+     "quote": "that same psychological process at work which disguises the instincts under the cloak of rational motivations",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "instinct",
+   "relation": "is",
+   "object": "pattern-of-behaviour",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 273,
+     "quote": "Instincts are typical modes of action",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "plato",
+   "relation": "conceives",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 275,
+     "quote": "In Plato, however, an extraordinarily high value is set on the archetypes as metaphysical ideas, as “paradigms” or models",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, FINDING-adjudicated, 2026-08-18)",
+     "correction_note": "cross-vendor correction: claim_type should be 'jung-reports-parallel' because Jung is reporting Plato's philosophical doctrine."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "augustine",
+   "relation": "names -> conceives",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 275,
+     "quote": "Medieval philosophy, from the time of St. Augustine—from whom I have borrowed the idea of the archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)",
+     "correction_note": "gate correction: The paragraph says 'St. Augustine—from whom I have borrowed the IDEA of the archetype' — idea-provenance, not naming. Nothing in the paragraph says Augustine coined or used the name (and Jung elsewhere credits the term to other sources), so 'names' overreaches; 'conceives' matches what the text supports, parallel to the Plato edge. Medium confidence stands."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "underlies",
+   "object": "science",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 278,
+     "quote": "They even appear in the exact sciences, as the foundation of certain indispensable auxiliary concepts such as energy, ether, and the atom",
+     "claim_type": "jung-asserts",
+     "confidence": "high -> medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)",
+     "correction_note": "gate correction: The text scopes the claim: primordial images 'even appear in the exact sciences, as the foundation of CERTAIN indispensable auxiliary concepts such as energy, ether, and the atom' — foundation of specific auxiliary concepts, not of science wholesale. The relation is fair but the generalized object warrants medium, not high."
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "disturbs",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 279,
+     "quote": "disturbances of conscious apprehension caused by the admixture of archetypal images",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
+   }
+  },
+  {
+   "subject": "psychosis",
+   "relation": "manifests",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 281,
+     "quote": "mental disturbances that are characterized by an irruption of the collective unconscious. Such is the case in schizophrenia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-18",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-18"
    }
   }
  ]
