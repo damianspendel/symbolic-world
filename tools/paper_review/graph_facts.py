@@ -10,11 +10,24 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-seed = json.load(open(ROOT / 'seed.json'))
-decl = json.load(open(ROOT / 'pipeline' / 'family' / 'relation_declarations.json'))
+
+# Read the graph from a COMMITTED ref by default, never the working tree: the
+# mining task merges into the tree before it commits, and a half-merged seed
+# (edges without their family sweep yet) must not bind a paper figure.
+#     --ref HEAD (default) | --ref <sha> | --ref worktree
+import subprocess as _sp, sys as _sys
+REF = 'HEAD'
+if '--ref' in _sys.argv:
+    REF = _sys.argv[_sys.argv.index('--ref') + 1]
+def _load(relpath):
+    if REF == 'worktree':
+        return json.load(open(ROOT / relpath))
+    return json.loads(_sp.run(['git', 'show', f'{REF}:{relpath}'], capture_output=True, text=True, cwd=ROOT, check=True).stdout)
+seed = _load('seed.json')
+decl = _load('pipeline/family/relation_declarations.json')
 E = seed['edges']
 R = [r for e in E for r in e['references']]
-fam = [e['relation_family'] for e in E]
+fam = [e.get('relation_family', {'state': 'unswept'}) for e in E]
 
 facts = {
     'nodes': len(seed['nodes']),
@@ -47,6 +60,14 @@ N = [e for e in E if 'relation_normalized' in e]
 facts['normalized_relation_token_counts'] = dict(collections.Counter(
     len(e['relation_normalized']['relation'].split('-')) for e in N))
 facts['normalized_records_carry_own_proposer'] = all('proposed_by' in e['relation_normalized'] for e in N)
+# Layer C's own cross-check (the normalization record), distinct from Layer B's (the references beneath)
+facts['normalization_records_crossvendor_checked'] = sum(1 for e in N if e['relation_normalized'].get('crossvendor_checked'))
+facts['normalization_records_crossvendor_supported'] = sum(
+    1 for e in N if 'SUPPORTED' in str(e['relation_normalized'].get('crossvendor_checked')))
+facts['normalization_records_crossvendor_partial'] = sum(
+    1 for e in N if 'PARTIAL' in str(e['relation_normalized'].get('crossvendor_checked')))
+facts['normalization_qualifier_slot_use'] = dict(collections.Counter(
+    k for e in N for k, v in e['relation_normalized'].get('qualifiers', {}).items() if v))
 facts['normalized_edges_all_refs_crossvendor_checked'] = sum(
     1 for e in N if all(r.get('crossvendor_checked') for r in e['references']))
 gold = ROOT / 'pipeline' / 'gold_sample_50.json'
@@ -77,18 +98,36 @@ facts['family_calibration_v072_pooled'] = {'runs': len(v072),
     'pass_on_run': next((i + 1 for i, c in enumerate(v072) if c['verdict'] == 'PASS'), None)}
 facts['family_calibration_gate_same_model_as_a_proposer_arm'] = True   # independence_note in every record
 facts['external_validity'] = json.load(open(ROOT / 'docs' / 'experiments' / 'external_validity_2026-08' / 'results.json'))
-facts['pinned_from_v13_paper'] = {   # facts CI-pinned in docs/PAPER.md at v1.3.0, not re-derived here
-    'E4_strict_pair_overlap_pct': 37.5,
-    'unanchored_crossreview_convention_rulings_rejected': '9 of 13',
-    'E1b_sensitivity_specificity': '86/100, 93/100'}
+facts['pinned_from_v13_paper'] = {   # experimental figures as CI-pinned in docs/PAPER.md Appendix A at v1.3.0 (transcribed, not re-derived)
+    'quote_fragments_exact_at_v13': '811 of 819',
+    'over_bound_splices_found_by_hostile_review': '16 in the Jung graph, 2 in the James pilot, all repaired',
+    'canaries_per_build': 7,
+    'E0_retro_verification': {'n': 238, 'confirmed': 178, 'corrected': 54, 'deleted': 6, 'flag_rate_pct': 25.2},
+    'E1b_calibration': {'n': 200, 'sensitivity': '86/100', 'specificity': '93/100', 'reversal': '23/25',
+                        'object_swap': '24/25', 'overreach': '21/25', 'voice_flip': '18/25'},
+    'E2_adversarial': '0 content/direction/fabrication errors in 30',
+    'E3_modality_sweep': {'n': 634, 'flagged': 65, 'pct': 10.3, 'claim_type_only_pct': 7.9},
+    'E4_stability_probe': {'windows': 2, 'overlap': '7/20 and 8/20', 'combined_pct': 37.5},
+    'E5b_specialist_vs_generalist_voice_flips': '20/25 vs 18/25',
+    'E6_crossvendor_sample': {'n': 100, 'supported': 89, 'partial': 11, 'wrong': 0, 'upheld': 4},
+    'E7_full_volume': {'n': 407, 'supported': 356, 'partly': 47, 'no': 4, 'upheld': 4, 'upheld_pct_range': '1.0 to 2.2'},
+    'E8_james_pilot': {'edges': 38, 'calibration_items': 60},
+    'E9_teaching_test': 'taught 3/20 flagged vs untaught 7/20, Fisher p about 0.27',
+    'E10_gold_set': {'n': 50, 'strata': '26 asserts / 15 reports / 9 quotes', 'supported': 44, 'partly': 5, 'not': 1,
+                     'voice_agree': 40, 'reports_class': '8/15', 'directional': '8 of 10 away from Jung voice',
+                     'reserved_floor': '35/50', 'anchored': True, 'annotators': 1, 'draw_seed_reproducible': False},
+    'unanchored_crossreview_of_referee': 'endorsed all upheld corrections, rejected 9 of 13 convention rulings'}
 
 import re, subprocess
-q = subprocess.run(['python3', str(ROOT / 'tools' / 'query' / 'kg_query.py'), '--closure', '--count'],
-                   capture_output=True, text=True, cwd=ROOT).stdout
+import tempfile as _tf
+_tmp = pathlib.Path(_tf.mkdtemp()) / 'seed.json'; _tmp.write_text(json.dumps(seed))
+_dec = _tmp.with_name('relation_declarations.json'); _dec.write_text(json.dumps(decl))
+_kq = ['python3', str(ROOT / 'tools' / 'query' / 'kg_query.py'), '--seed', str(_tmp), '--declarations', str(_dec)]
+q = subprocess.run(_kq + ['--closure', '--count'], capture_output=True, text=True, cwd=ROOT).stdout
 m = re.search(r'\((\d+) from the graph, (\d+) derived\)', q)
 facts['derived_rows_at_full_closure'] = int(m.group(2)) if m else None
-q = subprocess.run(['python3', str(ROOT / 'tools' / 'query' / 'kg_query.py'), '--subject', 'the-self',
-                    '--object', 'salt', '--closure'], capture_output=True, text=True, cwd=ROOT).stdout
+q = subprocess.run(_kq + ['--subject', 'the-self', '--object', 'salt', '--closure'],
+                   capture_output=True, text=True, cwd=ROOT).stdout
 facts['query_the_self_symbolized_by_salt'] = q.strip().splitlines()[0] if q.strip() else None
 salt = [e for e in E if (e['subject'], e['relation'], e['object']) == ('salt', 'symbolizes', 'the-self')]
 if salt:
@@ -99,4 +138,5 @@ if salt:
         'confidence': r['confidence'], 'verified_by': r['verified_by'], 'verified_date': r['verified_date'],
         'crossvendor_checked': r.get('crossvendor_checked'), 'has_relation_normalized': 'relation_normalized' in e,
         'relation_family': e['relation_family']}
+facts['_graph_ref'] = REF + (' (' + _sp.run(['git','rev-parse','--short',REF],capture_output=True,text=True,cwd=ROOT).stdout.strip() + ')' if REF != 'worktree' else '')
 print(json.dumps(facts, indent=2))
