@@ -1398,7 +1398,7 @@ for (const fam of families) {
   const lead = strings.slice(0, 12)
   const tail = strings.slice(12)
   const tailSum = tail.reduce((a, s) => a + s.edges, 0)
-  derived(row.edges, strings.length, singles, pend.length, decls.length, tailSum,
+  derived(row.edges, strings.length, singles, pend.length, decls.length, tailSum, tail.length,
     ...strings.map(s => s.edges))
 
   const stringChips = lead.map(s =>
