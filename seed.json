@@ -2537,6 +2537,56 @@
    "id": "sleep",
    "label": "Sleep",
    "type": "Concept"
+  },
+  {
+   "id": "reaction-dream",
+   "label": "The reaction-dream",
+   "type": "Concept"
+  },
+  {
+   "id": "telepathy",
+   "label": "Telepathy",
+   "type": "Concept"
+  },
+  {
+   "id": "wish-fulfilment",
+   "label": "Wish-fulfilment (Freud)",
+   "type": "Concept"
+  },
+  {
+   "id": "imago",
+   "label": "The imago (object-imago)",
+   "type": "Concept"
+  },
+  {
+   "id": "subjective-level-interpretation",
+   "label": "Interpretation on the subjective level",
+   "type": "Operation"
+  },
+  {
+   "id": "objective-level-interpretation",
+   "label": "Interpretation on the objective level",
+   "type": "Operation"
+  },
+  {
+   "id": "counter-transference",
+   "label": "The counter-transference",
+   "type": "Concept"
+  },
+  {
+   "id": "taking-up-the-context",
+   "label": "Taking up the context",
+   "type": "Operation"
+  },
+  {
+   "id": "big-dream",
+   "label": "The \"big\" (significant) dream",
+   "type": "Concept"
+  },
+  {
+   "id": "dramatic-structure",
+   "label": "The dramatic structure of the dream (exposition, development, culmination, lysis)",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -50880,6 +50930,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 507,
+     "quote": "All the contents of our unconscious are constantly being projected into our surroundings",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 522,
+     "quote": "The subject’s unconscious projections, which canalized unconscious contents into the imago",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -51690,6 +51762,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 531,
+     "quote": "by virtue of its source in the unconscious, it draws upon a wealth of subliminal perceptions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 544,
+     "quote": "Because dreams are the most common and most normal expression of the unconscious psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -51869,6 +51963,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-16",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 557,
+     "quote": "the inevitable one-sidedness of our conscious life is continually being corrected and compensated",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 566,
+     "quote": "a sort of finely attuned compensation of the one-sidedness, errors, deviations, or other shortcomings of the conscious attitude",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -52381,6 +52497,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 500,
+     "quote": "Apparently it brings back a split-off, autonomous part of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -52786,6 +52913,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 529,
+     "quote": "We have no more justification for understanding the psyche as a brain-process",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)",
+     "correction_note": "gate correction: Quote verbatim, but the paragraph's claim is epistemic irreducibility, not outright independence: 'no more justification for understanding the psyche as a brain-process', 'never can be furnished', and Jung himself concedes 'Even if it were true that all mental diseases are diseases of the brain' -- confidence high overstates what the paragraph asserts."
     }
    ],
    "relation_family": {
@@ -53756,6 +53895,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 555,
+     "quote": "we speak on the one hand of a personal and on the other of a collective unconscious, which lies at a deeper level",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -54163,6 +54313,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 545,
+     "quote": "The dream not only fails to obey our will but very often stands in flagrant opposition to our conscious intentions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -54286,6 +54447,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 553,
+     "quote": "impossible for anyone without knowledge of mythology and folklore",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 555,
+     "quote": "In such a case we have to go back to mythology",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -54589,6 +54772,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 516,
+     "quote": "Primitive man has a minimum of self-awareness combined with a maximum of attachment to the object",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -54913,6 +55107,17 @@
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)",
      "source": "Friedrich Nietzsche"
+    },
+    {
+     "volume": "8",
+     "paragraph": 525,
+     "quote": "the thinking that underlies philosophy is after all a psychic activity which, as such, is the proper study of psychology",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -56473,6 +56678,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 539,
+     "quote": "It is Freud’s great achievement to have put dream-interpretation on the right track",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -56592,6 +56808,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 545,
+     "quote": "the concept of compensation seemed to me the only adequate one",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 546,
+     "quote": "If the conscious attitude to the life situation is in large degree one-sided, then the dream takes the opposite side",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -56891,6 +57129,29 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 506,
+     "quote": "Our formula merely says that the dream is a symbolical representation of an unconscious content",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 542,
+     "quote": "there existed in him an unconscious tendency to show his bride in this ambiguous light",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)",
+     "note": "Jung's own interpretive account of an analysand's dream series."
     }
    ],
    "relation_family": {
@@ -56998,6 +57259,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 514,
+     "quote": "it gives me an opportunity to correct my attitude, which is always an advantage",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 549,
+     "quote": "They bring him memories, insights, experiences, awaken dormant qualities in the personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
     }
    ],
    "relation_family": {
@@ -57046,6 +57329,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 547,
+     "quote": "compensation aims at establishing a normal psychological balance and thus appears as a kind of self-regulation of the psychic system",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)",
+     "correction_note": "gate correction: Quote verbatim, but the paragraph hedges twice: compensation 'appears as a kind of self-regulation' only 'in the great majority of cases', and Jung immediately names the exception where compensation leads to a fatal outcome (latent psychoses, suicide) -- confidence high ignores the paragraph's own qualification."
     }
    ],
    "relation_family": {
@@ -57099,6 +57394,768 @@
    ],
    "relation_family": {
     "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "reaction-dream",
+   "relation": "reproduces",
+   "object": "trauma",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 499,
+     "quote": "here we may expect a large number of pure reaction-dreams in which the trauma is the determining factor",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 500,
+     "quote": "a dream of this kind, which is essentially only a reproduction of the trauma",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "telepathy",
+   "relation": "influences",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 503,
+     "quote": "I have found by experience that telepathy does in fact influence dreams",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)",
+     "note": "Jung reports the phenomenon while explicitly withholding assent from any theory of action at a distance."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "maeder",
+   "relation": "characterizes",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 505,
+     "quote": "the dream is a spontaneous self-portrayal, in symbolic form, of the actual situation in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)",
+     "note": "Jung states the formula as one he holds together with Maeder."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "proposes",
+   "object": "wish-fulfilment",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 505,
+     "quote": "As against Freud’s view that the dream is essentially a wish-fulfilment",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "wish-fulfilment",
+   "relation": "fails-to-explain",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 527,
+     "quote": "The interpretation of dreams as infantile wish-fulfilments or as finalistic “arrangements” subserving an infantile striving for power is much too narrow",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 541,
+     "quote": "this is far from proving that all dreams are wish-fulfilments",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "produces",
+   "object": "participation-mystique",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 507,
+     "quote": "this creates that characteristic relationship to the object which Lévy-Bruhl has fittingly called “mystic identity”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "canalizes",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 507,
+     "quote": "So long as the libido can use these projections as agreeable and convenient bridges to the world",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 517,
+     "quote": "Some of them are favourable, serving as bridges for easing off the libido",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "subjective-level-interpretation",
+   "relation": "interprets",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 509,
+     "quote": "a conception of the dream’s meaning which I have called interpretation on the subjective level",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "objective-level-interpretation",
+   "relation": "polarizes-with",
+   "object": "subjective-level-interpretation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 510,
+     "quote": "which is the more important, the “objective level” or the “subjective level”?",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 526,
+     "quote": "elementary distinctions, such as those between subjective level and objective level",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "subjective-level-interpretation",
+   "relation": "withdraws",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 515,
+     "quote": "all the projected contents can be restored to the patient with their original value",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 524,
+     "quote": "to dissolve the time-honoured and sacrosanct identity between imago and object",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "confuses",
+   "object": "imago",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 516,
+     "quote": "the naïve mind at once identifies the imago with the object",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 528,
+     "quote": "It is the fault of the everlasting contamination of object and imago",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "counter-transference",
+   "relation": "answers",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 519,
+     "quote": "a transference is answered by a counter-transference from the analyst when it projects a content of which he is unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "exaggerates",
+   "object": "psychological-value",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 520,
+     "quote": "it gives an exaggerated value to whatever trace of that quality was present in the object",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 521,
+     "quote": "This naturally endows the object with a compelling reality in relation to the subject and gives it an exaggerated value",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "imago",
+   "relation": "exists-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 522,
+     "quote": "striking proof of the autonomous existence of the object-imagos in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "thwarts",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 523,
+     "quote": "An over-accentuated, “magical” object orients the subject’s consciousness in the direction of the object and thwarts any attempt at individual differentiation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)",
+     "note": "Jung writes of individual differentiation; the projected imago is what over-accentuates the object."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "inheres-in",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 528,
+     "quote": "The ideas of the moral order and of God belong to the ineradicable substrate of the human soul",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "taking-up-the-context",
+   "relation": "interprets",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 542,
+     "quote": "I have developed a procedure which I call “taking up the context.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "reveals",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 550,
+     "quote": "this unconscious process spontaneously expressing itself in the symbolism of a long dream-series the individuation process",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)",
+     "correction_note": "gate correction: Quote verbatim, but §550 states that in an isolated dream the phenomenon 'would remain hidden behind the compensation of the moment' — only a long dream-series, often hundreds, reveals the individuation process. The edge holds at the series level, not for the single dream; confidence lowered to medium to carry that restriction."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "underlies",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 553,
+     "quote": "the individuation process, which, according to all we know, lies at the base of psychological compensation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "big-dream",
+   "relation": "arises-from",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 555,
+     "quote": "The “big” or “meaningful” dreams come from this deeper level",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "big-dream",
+   "relation": "contains",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 554,
+     "quote": "they contain symbolical images which we also come across in the mental history of mankind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 558,
+     "quote": "They employ numerous mythological motifs that characterize the life of the hero",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "appears-in",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 554,
+     "quote": "which occur not only at all times and in all places but also in individual dreams, fantasies, visions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 559,
+     "quote": "This contamination shows in the most vivid way how individual dreams make use of archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "realizes",
+   "object": "the-whole-man",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 557,
+     "quote": "This process is, in effect, the spontaneous realization of the whole man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "stag",
+   "relation": "symbolizes",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 559,
+     "quote": "this quincunx reappears lower down in the stag, another symbol of Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "exhibits",
+   "object": "dramatic-structure",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 561,
+     "quote": "there are a great many “average” dreams in which a definite structure can be perceived, not unlike that of a drama",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 565,
+     "quote": "an indication that dreams generally have a “dramatic” structure",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "repudiates",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 567,
+     "quote": "the dream may either repudiate the dreamer in a most painful way, or bolster him up morally",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-20"
+   }
+  },
+  {
+   "subject": "science",
+   "relation": "suppresses",
+   "object": "belief-in-spirits",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 570,
+     "quote": "belief in spirits has been counteracted by the rationalism and scientific enlightenment of the last one hundred and fifty years",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-08-20"
