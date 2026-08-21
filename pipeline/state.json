@@ -633,7 +633,7 @@
       "candidates": "pipeline/work/b-cw8-9_candidates.json"
     }
   ],
-  "next": "b-cw8-9 (§571-641) IN FLIGHT — merged into seed.json and tests/check_paper_facts green (family counts excepted), but NOT YET COMMITTED and family sweep assembly incomplete; session paused 2026-08-21 for a machine reboot. Resume: fix pipeline/family/assemble_sweep.py's NO_FAMILY matching (Gemini arm wrote bare 'unclassified' at n=1883,1894 instead of 'unclassified(no-family)'; Opus arm used the correct full string at n=1891 — normalize before assembling, do not re-run either arm), then continue from step 8 (family sweep) through step 9 (build+deploy) and step 10 (state.json next + iMessage) of the b-cw8-9 chain. Further scheduled firings must stand down on this marker (does not start with CW8-DUE:).",
+  "next": "CW8-DUE: window 10 (§642-712)",
   "nodes": 523,
   "edges": 1906,
   "refs": 2364,
