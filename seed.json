@@ -2672,6 +2672,56 @@
    "id": "mysticism",
    "label": "Mysticism",
    "type": "Concept"
+  },
+  {
+   "id": "tabula-rasa",
+   "label": "Tabula rasa",
+   "type": "Concept"
+  },
+  {
+   "id": "dominants",
+   "label": "Dominants (the autonomous contents of the unconscious)",
+   "type": "Concept"
+  },
+  {
+   "id": "puberty-rites",
+   "label": "Puberty-rites and initiation ceremonies",
+   "type": "Motif"
+  },
+  {
+   "id": "rationalism",
+   "label": "Rationalism",
+   "type": "Concept"
+  },
+  {
+   "id": "eastern-view",
+   "label": "The Eastern view of the world",
+   "type": "Concept"
+  },
+  {
+   "id": "problematical-state",
+   "label": "The problematical state (the division with oneself)",
+   "type": "Concept"
+  },
+  {
+   "id": "stages-of-life",
+   "label": "The stages of life",
+   "type": "Concept"
+  },
+  {
+   "id": "period-of-youth",
+   "label": "The period of youth",
+   "type": "Concept"
+  },
+  {
+   "id": "second-half-of-life",
+   "label": "The second half of life",
+   "type": "Concept"
+  },
+  {
+   "id": "course-of-the-sun",
+   "label": "The daily course of the sun (simile for the arc of life)",
+   "type": "Motif"
   }
  ],
  "edges": [
@@ -51629,6 +51679,17 @@
      "verified_date": "2026-08-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)",
      "correction_note": "gate correction: §139 frames it as 'the RISK of a considerable dissociation' entailed by civilized directed functioning — the second sentence presupposes real removal from the unconscious, but the dissociation claim itself is hedged and conditional on modern one-sidedness. High flattens the hedge; medium per the form rule."
+    },
+    {
+     "volume": "8",
+     "paragraph": 724,
+     "quote": "Once the deviation sets in a dissociation between conscious and unconscious ensues, and then the activity of the unconscious begins.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
     }
    ],
    "relation_family": {
@@ -59637,6 +59698,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-21",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 743,
+     "quote": "In our reality the psychic cannot be anything except an effect at third hand, produced originally by physical causes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
     }
    ],
    "relation_family": {
@@ -59910,6 +59982,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-21",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 747,
+     "quote": "The world-powers that rule over all mankind, for good or ill, are unconscious psychic factors, and it is they that bring consciousness into being",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
     }
    ],
    "relation_family": {
@@ -60306,6 +60389,1205 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-08-21"
+   }
+  },
+  {
+   "subject": "analytical-psychology",
+   "relation": "contributes-to",
+   "object": "weltanschauung",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 713,
+     "quote": "the most essential thing that analytical psychology can add to our Weltanschauung",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 741,
+     "quote": "analytical psychology, though not in itself a Weltanschauung , can still make an important contribution to the building of one.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "dominants",
+   "relation": "make-demands-on",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 713,
+     "quote": "there exist certain unconscious contents which make demands that cannot be denied, or send forth influences with which the conscious mind must come to terms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 720,
+     "quote": "the dominants of the unconscious make almost irresistible demands for fulfilment",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "mechanistic-standpoint",
+   "relation": "fails-to-satisfy",
+   "object": "psychology",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 716,
+     "quote": "A causal explanation may be relatively satisfactory from a scientific point of view, but psychologically there is still something unsatisfying about it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "is-not",
+   "object": "tabula-rasa",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 717,
+     "quote": "the human mind is not born a tabula rasa , nor is every man provided with a wholly new and unique brain",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 719,
+     "quote": "man is born with a complicated psychic disposition that is anything but a tabula rasa",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "dominants",
+   "relation": "reproduces",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 718,
+     "quote": "not inherited ideas but inherited possibilities, not to say compelling necessities, for reproducing the images and ideas",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "mother-imago",
+   "relation": "blends-with",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 720,
+     "quote": "its peculiar impressiveness is due to the fact that it is blended with an unconscious aptitude or inborn image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "great-mother",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 722,
+     "quote": "if we could get a clear idea of the nature and meaning of this collective image, which I have called the archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 728,
+     "quote": "The archetype of the mother is a single instance that could be supplemented by a number of other archetypes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "deviates-from",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 724,
+     "quote": "The development of consciousness and of free will naturally brings with it the possibility of deviating from the archetype and hence from instinct.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "puberty-rites",
+   "relation": "satisfies",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 725,
+     "quote": "it is necessary that the claims of the injured archetype should be met",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 726,
+     "quote": "This is the way the primitive, for reasons unknown to him, attempts to fulfil the claims of the archetype.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "compels",
+   "object": "primitive-mentality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 726,
+     "quote": "the power of the archetype: it forces the primitive to act against nature so that he shall not become her victim",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "culture",
+   "relation": "arises-from",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 726,
+     "quote": "This is indeed the beginning of all culture, the inevitable result of consciousness and of the possibility of deviating from unconscious law.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 750,
+     "quote": "Instinct is nature and seeks to perpetuate nature, whereas consciousness can only seek culture or its denial.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "the-gods",
+   "relation": "originate-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 728,
+     "quote": "the powers which men have always projected into space as gods, and worshipped with sacrifices, are still alive and active in our own unconscious psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "brain",
+   "relation": "carries",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 729,
+     "quote": "the collective unconscious is, in the last analysis, a deposit of world-processes embedded in the structure of the brain and the sympathetic nervous system",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "counterbalances",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 729,
+     "quote": "it constitutes in its totality a sort of timeless and eternal world-image which counterbalances our conscious, momentary picture of the world",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "carries",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 729,
+     "quote": "unlike a mirror-image, the unconscious image possesses an energy peculiar to itself, independent of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "science",
+   "relation": "supplies",
+   "object": "weltanschauung",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 730,
+     "quote": "it provides the building-material or the implements with which a Weltanschauung can be built up",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 731,
+     "quote": "A science can never be a Weltanschauung but merely the tool with which to make one.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "one-sidedness",
+   "relation": "fragments",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 731,
+     "quote": "our modern consciousness, in pursuing these mutually exclusive ends, has become hopelessly fragmented",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "science",
+   "relation": "is-superior-to",
+   "object": "weltanschauung",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 735,
+     "quote": "that is why science is superior, because it deals only in working hypotheses",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 736,
+     "quote": "That is why the spirit of science is ethically superior to a Weltanschauung of the old style.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)",
+     "correction_note": "gate correction: Quote verbatim, but the text qualifies: 'the spirit of science is ethically superior to a Weltanschauung of the old style', and the same paragraph adds 'It is only man who is impoverished by this change of status'; ¶737 then calls for a new Weltanschauung. The unqualified triple overstates this reference — downgrade to medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "weltanschauung",
+   "relation": "is-a",
+   "object": "psychic-image",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 737,
+     "quote": "abandon the superstition of its objective validity and admit that it is only a picture which we paint to please our minds",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "weltanschauung",
+   "relation": "perpetuates",
+   "object": "primitive-mentality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 736,
+     "quote": "This piece of unconscious primitivity is the bane of every Weltanschauung",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)",
+     "correction_note": "gate correction: Quote verbatim: 'This piece of unconscious primitivity is the bane of every Weltanschauung.' The text locates the primitive name-magic habit within Weltanschauungen; but 'perpetuates' adds active agency the paragraph does not state, and ¶737 holds that a new Weltanschauung can abandon it. Basically sound as a characterization of Weltanschauungen as they exist; confidence should be medium, not high."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "analytical-psychology",
+   "relation": "recovers",
+   "object": "spontaneous-fantasy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 738,
+     "quote": "It calls our attention to the existence of fantasy-images that spring from the dark background of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 739,
+     "quote": "Analytical psychology seeks to break through these walls by digging up again the fantasy-images of the unconscious which our rationalism has rejected.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "analytical-psychology",
+   "relation": "opposes",
+   "object": "rationalism",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 739,
+     "quote": "analytical psychology is a reaction against the exaggerated rationalization of consciousness which, seeking to control nature, isolates itself from her",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "psychic-reality",
+   "relation": "mediates",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 748,
+     "quote": "Between the unknown essences of spirit and matter stands the reality of the psychic-psychic reality, the only reality we can experience immediately.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "materialism",
+   "relation": "expresses",
+   "object": "one-sidedness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 743,
+     "quote": "This limited picture of the world is a reflection of the one-sidedness of Western man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "eastern-view",
+   "relation": "affirms",
+   "object": "psychic-reality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 743,
+     "quote": "This narrow perspective is alien to the Eastern view of the world, which therefore has no need of any philosophical conception of super-reality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 748,
+     "quote": "The East is wiser, for it finds the essence of all things grounded in the psyche.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "psychic-image",
+   "relation": "mediates",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 745,
+     "quote": "consciousness has no direct relation to any material objects. We perceive nothing but images, transmitted to us indirectly by a complicated nervous apparatus.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 746,
+     "quote": "what appears to us as immediate reality consists of carefully processed images, and that, furthermore, we live immediately only in a world of images",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "science",
+   "relation": "infers",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 746,
+     "quote": "In order to determine, even approximately, the real nature of material things we need the elaborate apparatus and complicated procedures of chemistry and physics.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "produces",
+   "object": "problematical-state",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 750,
+     "quote": "It is the growth of consciousness which we must thank for the existence of problems",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 754,
+     "quote": "There are no problems without consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "paradise",
+   "relation": "symbolizes",
+   "object": "unconsciousness",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 751,
+     "quote": "separates us even further from the paradise of unconscious childhood",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 754,
+     "quote": "That, no doubt, is also why in Paradise it was the tree of knowledge which bore such fateful fruit.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, FINDING-adjudicated, 2026-08-22)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts because Jung is directly interpreting the Paradise myth in his own voice, not merely reporting a parallel."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "connects",
+   "object": "psychic-image",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 755,
+     "quote": "the first stage of consciousness which we can observe consists in the mere connection between two or more psychic contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "acquires",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 755,
+     "quote": "Only later, when the ego-contents—the so-called ego-complex—have acquired an energy of their own",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "sexuality",
+   "relation": "precipitates",
+   "object": "psychic-development",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 756,
+     "quote": "Psychic birth, and with it the conscious differentiation from the parents, normally takes place only at puberty, with the eruption of sexuality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "produces",
+   "object": "problematical-state",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 757,
+     "quote": "we might call it another, second ego which can on occasion even wrest the leadership from the first. This produces the division with oneself",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "produces",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 767,
+     "quote": "Whoever protects himself against what is new and strange and regresses to the past falls into the same neurotic condition",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "adaptation",
+   "relation": "diminishes",
+   "object": "the-whole-man",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 770,
+     "quote": "We limit ourselves to the attainable, and this means renouncing all our other psychic potentialities.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 772,
+     "quote": "the social goal is attained only at the cost of a diminution of personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "prolongs",
+   "object": "period-of-youth",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 776,
+     "quote": "they want to carry the psychology of the youthful phase over the threshold of the so-called years of discretion",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 777,
+     "quote": "As formerly the neurotic could not escape from childhood, so now he cannot part with his youth.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "second-half-of-life",
+   "relation": "transforms",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 773,
+     "quote": "in this phase of life—between thirty-five and forty—an important change in the human psyche is in preparation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 778,
+     "quote": "the basic cause of all the difficulties of this transition is to be found in a deep-seated and peculiar change within the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "enantiodromia",
+   "relation": "reverses",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 775,
+     "quote": "Now at last I’ve got it! I’m just a plain rascal.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, FINDING-adjudicated, 2026-08-22)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts because the claim is Jung's own psychological observation illustrated by an anonymous anecdote, not a doctrine resting on a named quoted source."
+    },
+    {
+     "volume": "8",
+     "paragraph": 781,
+     "quote": "Man’s values, and even his body, do tend to change into their opposites.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "course-of-the-sun",
+   "relation": "parallels",
+   "object": "stages-of-life",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 778,
+     "quote": "In order to characterize it I must take for comparison the daily course of the sun—but a sun that is endowed with human feeling",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, FINDING-adjudicated, 2026-08-22)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts because the comparison to the sun is Jung's own analogy ('I must take for comparison'), not a reported parallel from another tradition."
+    },
+    {
+     "volume": "8",
+     "paragraph": 780,
+     "quote": "there is something sunlike within us, and to speak of the morning and spring, of the evening and autumn of life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, FINDING-adjudicated, 2026-08-22)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is stating this metaphor in his own interpretive voice, not reporting another tradition's doctrine."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "second-half-of-life",
+   "relation": "activates",
+   "object": "contrasexuality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 780,
+     "quote": "older women develop deep, rough voices, incipient moustaches, rather hard features and other masculine traits",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 783,
+     "quote": "what has broken down is the masculine style of life which held the field up to now",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "announces",
+   "object": "contrasexuality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 781,
+     "quote": "he must sit among the women and children, wear women’s clothes, and eat the food of women",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
    }
   }
  ]
