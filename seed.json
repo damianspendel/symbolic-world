@@ -2722,6 +2722,111 @@
    "id": "course-of-the-sun",
    "label": "The daily course of the sun (simile for the arc of life)",
    "type": "Motif"
+  },
+  {
+   "id": "death",
+   "label": "Death",
+   "type": "Concept"
+  },
+  {
+   "id": "immortality",
+   "label": "Immortality (life after death)",
+   "type": "Concept"
+  },
+  {
+   "id": "old-age",
+   "label": "Old age",
+   "type": "Concept"
+  },
+  {
+   "id": "religion",
+   "label": "Religion",
+   "type": "Concept"
+  },
+  {
+   "id": "religious-symbol",
+   "label": "The religious symbol",
+   "type": "Symbol"
+  },
+  {
+   "id": "consensus-gentium",
+   "label": "Consensus gentium",
+   "type": "Concept"
+  },
+  {
+   "id": "teleology",
+   "label": "Teleology (striving towards a goal)",
+   "type": "Concept"
+  },
+  {
+   "id": "causality",
+   "label": "Causality",
+   "type": "Concept"
+  },
+  {
+   "id": "natural-law",
+   "label": "Natural law",
+   "type": "Concept"
+  },
+  {
+   "id": "chance",
+   "label": "Chance / coincidence",
+   "type": "Concept"
+  },
+  {
+   "id": "meaningful-coincidence",
+   "label": "Meaningful coincidence",
+   "type": "Concept"
+  },
+  {
+   "id": "space-time",
+   "label": "Space and time",
+   "type": "Concept"
+  },
+  {
+   "id": "esp-experiment",
+   "label": "The ESP (Rhine card) experiment",
+   "type": "Operation"
+  },
+  {
+   "id": "scarab",
+   "label": "The scarab (golden scarab / rose-chafer)",
+   "type": "Symbol"
+  },
+  {
+   "id": "kammerer",
+   "label": "Kammerer",
+   "type": "Figure"
+  },
+  {
+   "id": "seriality",
+   "label": "Seriality (the law of series)",
+   "type": "Concept"
+  },
+  {
+   "id": "schopenhauer",
+   "label": "Arthur Schopenhauer",
+   "type": "Figure"
+  },
+  {
+   "id": "pre-established-harmony",
+   "label": "Pre-established harmony",
+   "type": "Concept"
+  },
+  {
+   "id": "flammarion",
+   "label": "Flammarion (the astronomer)",
+   "type": "Figure"
+  },
+  {
+   "id": "herbert-silberer",
+   "label": "Herbert Silberer",
+   "type": "Figure"
+  },
+  {
+   "id": "impossible-situation",
+   "label": "The \"impossible\" situation (the insoluble impasse)",
+   "type": "Motif"
   }
  ],
  "edges": [
@@ -10659,6 +10764,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 841,
+     "quote": "The archetypes are formal factors responsible for the organization of unconscious psychic processes: they are “patterns of behaviour.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
     }
    ],
    "relation_family": {
@@ -56934,6 +57050,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 841,
+     "quote": "certain phenomena of simultaneity or synchronicity seem to be bound up with the archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
     }
    ],
    "relation_family": {
@@ -57104,6 +57231,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 833,
+     "quote": "Decisive evidence for the existence of acausal combinations of events has been furnished ... through the experiments of J. B. Rhine",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 840,
+     "quote": "Rhine’s experiments confront us with the fact that there are events which are related to one another experimentally, and in this case meaningfully",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
     }
    ],
    "relation_family": {
@@ -61522,6 +61671,30 @@
      "verified_date": "2026-08-22",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, FINDING-adjudicated, 2026-08-22)",
      "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is stating this metaphor in his own interpretive voice, not reporting another tradition's doctrine."
+    },
+    {
+     "volume": "8",
+     "paragraph": 785,
+     "quote": "After having lavished its light upon the world, the sun withdraws its rays in order to illuminate itself.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, FINDING-adjudicated, 2026-08-22)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts because Jung is using the sun metaphor in his own interpretive voice, not reporting another tradition's doctrine."
+    },
+    {
+     "volume": "8",
+     "paragraph": 795,
+     "quote": "the comparison with the sun. The one hundred and eighty degrees of the arc of life are divisible into four parts.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, FINDING-adjudicated, 2026-08-22)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts because Jung is referencing his own comparison, not reporting a parallel from another tradition."
     }
    ],
    "relation_family": {
@@ -61585,6 +61758,1238 @@
    ],
    "relation_family": {
     "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "second-half-of-life",
+   "relation": "reverses",
+   "object": "period-of-youth",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 784,
+     "quote": "we cannot live the afternoon of life according to the programme of life’s morning",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "culture",
+   "relation": "lies-outside",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 787,
+     "quote": "Money-making, social achievement, family and posterity are nothing but plain nature, not culture. Culture lies outside the purpose of nature.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "old-age",
+   "relation": "guards",
+   "object": "culture",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 788,
+     "quote": "the old people are almost always the guardians of the mysteries and the laws ... the cultural heritage of the tribe is expressed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "promises",
+   "object": "immortality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 790,
+     "quote": "all great religions hold out the promise of a life beyond, of a supramundane goal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "immortality",
+   "relation": "eludes",
+   "object": "science",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 790,
+     "quote": "But educated people who can think know very well that proof of this kind is a philosophical impossibility.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 791,
+     "quote": "We simply have no definite scientific knowledge about it one way or the other",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "immortality",
+   "relation": "satisfies",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 793,
+     "quote": "because of an instinctive need. It is the same with the things of the psyche ... felt the need of believing in a continuance of life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)",
+     "correction_note": "gate correction: Quote fragments verbatim. But 'By far the greater portion of mankind have from time immemorial felt the need of believing in a continuance of life' is Jung's own direct assertion; the salt comparison is only an illustrative analogy for it. Coding the substantive claim jung-reports-parallel under-attributes Jung's own position; it should be jung-asserts."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "immortality",
+   "relation": "is-a",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 794,
+     "quote": "One of these primordial thoughts is the idea of life after death.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "science",
+   "relation": "is-incommensurable-with",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 794,
+     "quote": "Science and these primordial images are incommensurables.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "old-age",
+   "relation": "submerges-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 795,
+     "quote": "a very old person who is sinking again into the unconscious, and who progressively vanishes within it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "old-age",
+   "relation": "fears",
+   "object": "death",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 797,
+     "quote": "an even greater number of the ageing have the same fear of death",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "life",
+   "relation": "is-a",
+   "object": "teleology",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 798,
+     "quote": "Life is teleology par excellence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "life",
+   "relation": "ends-in",
+   "object": "death",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 803,
+     "quote": "Like a projectile flying to its goal, life ends in death.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "deviates-from",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 802,
+     "quote": "our consciousness had somehow slipped from its natural foundations and no longer knew how to get along on nature’s timing",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)",
+     "correction_note": "gate correction: Quote verbatim, but the paragraph frames it doubly hedged: 'It is as if our consciousness had somehow slipped...' and 'It seems as though we were suffering from a hybris of consciousness', closing with an open question in parentheses. Jung-asserts is right, but this is exploratory 'as if' language, not high-confidence assertion."
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "prepares-for",
+   "object": "death",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 804,
+     "quote": "the majority of these religions are complicated systems of preparation for death",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "expresses",
+   "object": "consensus-gentium",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 807,
+     "quote": "The consensus gentium that expresses itself through the religions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "religious-symbol",
+   "relation": "arises-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 805,
+     "quote": "they are usually spontaneous products of unconscious psychic activity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "rationalism",
+   "relation": "misconstrues",
+   "object": "religion",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 805,
+     "quote": "a typically rationalistic misconception ... all religions are something like philosophical systems, and like them are concocted out of the head",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "rationalism",
+   "relation": "resembles",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 808,
+     "quote": "Hence rationalistic opinions come unexpectedly close to neurotic symptoms.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "nature",
+   "relation": "prepares-for",
+   "object": "death",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 808,
+     "quote": "For, enlightenment or no enlightenment, consciousness or no consciousness, nature prepares itself for death.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "announces",
+   "object": "death",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 809,
+     "quote": "I have frequently been able to trace back for over a year, in a dream-series, the indications of approaching death",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 852,
+     "quote": "An acquaintance of mine saw and experienced in a dream the sudden death of a friend, with all the characteristic details.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, FINDING-adjudicated, 2026-08-22)",
+     "correction_note": "cross-vendor correction: Claim type 'jung-quotes-source' requires a named quoted source, but the quote refers to an unnamed acquaintance."
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "attends-to",
+   "object": "death",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 810,
+     "quote": "our psyche is at least not indifferent to the dying of the individual",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 809,
+     "quote": "it seems that the unconscious is all the more interested in how one dies",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "transcends",
+   "object": "space-time",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 813,
+     "quote": "Under certain conditions it could even break through the barriers of space and time",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 815,
+     "quote": "the psyche, in its deepest reaches, participates in a form of existence beyond space and time",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "science",
+   "relation": "ignores",
+   "object": "telepathy",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 813,
+     "quote": "In this regard science, with a few praiseworthy exceptions, has so far taken the easier path of ignoring them.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "physics",
+   "relation": "relativizes",
+   "object": "natural-law",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 818,
+     "quote": "they have shattered the absolute validity of natural law and made it relative",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "chance",
+   "relation": "counterbalances",
+   "object": "causality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 823,
+     "quote": "the counterbalance to the domain of causality ... This is the world of chance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "kammerer",
+   "relation": "proposes",
+   "object": "seriality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 824,
+     "quote": "Kammerer 3 can speak of a “law of series,”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)",
+     "source": "Paul Kammerer"
+    },
+    {
+     "volume": "8",
+     "paragraph": 825,
+     "quote": "a law of seriality which he would like to introduce as a principle coexistent with causality and finality",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)",
+     "source": "Paul Kammerer"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "fish",
+   "relation": "exemplifies",
+   "object": "chance",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 826,
+     "quote": "Today is Friday. We have fish for lunch. Somebody happens to mention the custom of making an “April fish” of someone.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 827,
+     "quote": "there is no possible justification for seeing in this anything but a chance grouping",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "synchronicity",
+   "relation": "complements",
+   "object": "causality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 840,
+     "quote": "I have picked on the term “synchronicity” to designate a hypothetical factor equal in rank to causality as a principle of explanation.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)",
+     "correction_note": "gate correction: Quote verbatim, but Jung's own wording flags the epistemic status: synchronicity is 'a hypothetical factor equal in rank to causality'. He asserts the designation confidently, but the substantive equal-rank-complement relation is explicitly offered as hypothesis, not established fact — high confidence overstates it in exactly the way this exploratory material warns against."
+    },
+    {
+     "volume": "8",
+     "paragraph": 827,
+     "quote": "on the one hand as causal chains, and on the other hand by a kind of meaningful cross-connection",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "schopenhauer",
+   "relation": "anticipates",
+   "object": "synchronicity",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 828,
+     "quote": "a treatise of Schopenhauer’s ... which originally stood godfather to the views I am now developing",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 829,
+     "quote": "Thus Schopenhauer, with true philosophical vision, opened up a field for reflection whose peculiar phenomenology he was not equipped to understand",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "schopenhauer",
+   "relation": "invokes",
+   "object": "pre-established-harmony",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 828,
+     "quote": "can only be conceived as possible by virtue of the most wonderful pre-established harmony",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)",
+     "source": "Arthur Schopenhauer"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "flammarion",
+   "relation": "intuits",
+   "object": "synchronicity",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 830,
+     "quote": "shows that Flammarion had a distinct intuition, albeit an unconscious one, of a far more comprehensive principle",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "herbert-silberer",
+   "relation": "overlooks",
+   "object": "synchronicity",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 832,
+     "quote": "He takes no account either of parapsychic phenomena or of synchronicity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "esp-experiment",
+   "relation": "exceeds",
+   "object": "chance",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 833,
+     "quote": "In the case of certain subjects, however, some results were distinctly above probability.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "relativizes",
+   "object": "space-time",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 836,
+     "quote": "They point, in other words, to a psychic relativity of time",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 840,
+     "quote": "Rhine’s experiments show that in relation to the psyche space and time are, so to speak, “elastic”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "emotion",
+   "relation": "conditions",
+   "object": "esp-experiment",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 838,
+     "quote": "Lack of interest and boredom are negative factors; enthusiasm, positive expectation, hope, and belief in the possibility of ESP make for good results",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 846,
+     "quote": "It follows from this that the emotional factor plays an important role.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "organizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 841,
+     "quote": "The archetypes are formal factors responsible for the organization of unconscious psychic processes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "emotion",
+   "relation": "produces",
+   "object": "abaissement-du-niveau-mental",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 841,
+     "quote": "The affect produces a partial abaissement du niveau mental",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "scarab",
+   "relation": "symbolizes",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 845,
+     "quote": "The scarab is a classic example of a rebirth symbol.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "scarab",
+   "relation": "exemplifies",
+   "object": "synchronicity",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 843,
+     "quote": "It was the nearest analogy to a golden scarab that one finds in our latitudes, a scarabaeid beetle, the common rose-chafer",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 850,
+     "quote": "In the case of the scarab the simultaneity is immediately obvious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "bird",
+   "relation": "portends",
+   "object": "death",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 850,
+     "quote": "The flock of birds has, as such, a traditional mantic significance.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)",
+     "correction_note": "gate correction: Quote verbatim: 'The flock of birds has, as such, a traditional mantic significance.' But what Jung flatly asserts is the TRADITION (with footnote); his own reading of the case is hedged ('it seems to me possible', 'it therefore looks as if the birds represented an unconscious premonition of death'). Coding 'bird portends death' as jung-asserts/high makes Jung the author of an omen claim he attributes to traditional symbolism; jung-reports-parallel is the honest coding."
+    },
+    {
+     "volume": "8",
+     "paragraph": 844,
+     "quote": "at the deaths of her mother and her grandmother, a number of birds gathered outside the windows of the death-chamber",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, FINDING-adjudicated, 2026-08-22)",
+     "correction_note": "cross-vendor correction: Claim type is incorrect: the patient's wife is an anonymous anecdotal source, not a 'named quoted source'."
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "meaningful-coincidence",
+   "relation": "rests-on",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 846,
+     "quote": "Meaningful coincidences—which are to be distinguished from meaningless chance groupings 41 —therefore seem to rest on an archetypal foundation.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "meaningful-coincidence",
+   "relation": "distinct-from",
+   "object": "chance",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 846,
+     "quote": "which are to be distinguished from meaningless chance groupings",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "8",
+     "paragraph": 827,
+     "quote": "Runs or series which are composed of quite ordinary occurrences must for the present be regarded as fortuitous.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "impossible-situation",
+   "relation": "constellates",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 847,
+     "quote": "It is this kind of situation that constellates the archetype with the greatest regularity.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "esp-experiment",
+   "relation": "activates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 848,
+     "quote": "it is the “impossibility” of the task that ultimately fixes the subject’s attention ... gives the unconscious a chance to manifest itself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-08-22"
+   }
+  },
+  {
+   "subject": "synchronicity",
+   "relation": "dispenses-with",
+   "object": "causality",
+   "references": [
+    {
+     "volume": "8",
+     "paragraph": 855,
+     "quote": "synchronistic phenomena cannot in principle be associated with any conceptions of causality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-08-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-08-22"
