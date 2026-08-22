@@ -37,7 +37,7 @@ Review the NARRATIVE and the TRACEABILITY OF KEY TERMS. Return ONLY a JSON objec
 
 2. "thread": an object with "thesis" (one sentence: what the paper is arguing across the sections), "carried" (true/false: does each section advance that thesis rather than restart it), "breaks" (list: places where a section changes vocabulary or frame without saying so, quoted), "redundant" (list: statements made in more than one section in nearly the same words, quoted with both section numbers), "missing_bridge" (list: places where a reader needs a sentence that is not there).
 
-3. "trace": can a reader follow one thing end to end? Take the tuple C=(s,r,o,e,a,m,n,f) from §1 and check whether §2, §4 and §5 each map onto it explicitly and in the same order and letters. Report "consistent" (true/false) and "mismatches" (list, quoted).
+3. "trace": can a reader follow one thing end to end? Take the tuple C=(e,s,r,o,a,m,n,f) from §1 and check whether §2, §4 and §5 each map onto it explicitly and in the same order and letters. Report "consistent" (true/false) and "mismatches" (list, quoted).
 
 4. "prose": {"machine_tells": [...], "verbose": [...], "unclear": [...], "verdict": CLEAR | ACCEPTABLE | HEAVY}.
 
