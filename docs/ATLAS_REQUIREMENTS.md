@@ -648,8 +648,13 @@ left questions open; each is flagged [DEFAULT] and reversible at review.
 - **V2-R10 one site menu, everywhere (standing rule, 2026-08-13).** Every
   page — the app and every generated page, including the ones the python
   generator writes — carries the same top menu in the same position, with
-  the same items in the same order: atlas, query, families, ledger,
-  releases, ontology, disputes, method. The current page is marked with
+  the same items in the same order — as of 2026-08-28: atlas, query,
+  concordance, families, ledger, releases, disputes, in a nutshell, method,
+  ontology (the taxonomy's groups: explore, reference, provenance, about;
+  "in a nutshell" added 2026-08-28 on Damian's instruction, the first
+  addition since the rule was written; the earlier list here had also
+  drifted from the ruled menu, which is why the contract test, not this
+  sentence, is the authority). The current page is marked with
   `aria-current="page"`, and the breadcrumb keeps its fixed position
   beside the menu (R10.6 stands). The list lives in one place per
   generator language — `MENU` in `web/build-atlas.mjs`, `MENU` in

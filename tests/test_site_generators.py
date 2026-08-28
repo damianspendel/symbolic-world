@@ -341,9 +341,9 @@ def live_entry(html):
     does."""
     for entry in re.findall(r'<section class="rel-entry[^"]*">(.*?)</section>', html, re.S):
         heading = re.search(r"<h2>(.*?)</h2>", entry, re.S)
-        if heading and "v1.4" in heading.group(1):
+        if heading and "v2.0" in heading.group(1):
             return entry
-    raise AssertionError("no v1.4 entry on the releases page")
+    raise AssertionError("no v2.0 entry on the releases page")
 
 
 def test_releases_page_renders_the_version_pin():
@@ -375,7 +375,7 @@ RELEASE_SECTIONS = ("mining status", "governance", "core build", "UI")
 def test_every_release_entry_has_the_same_four_sections_in_order():
     html = read(os.path.join(PUBLIC, "releases.html"))
     entries = re.findall(r'<section class="rel-entry[^"]*">(.*?)</section>', html, re.S)
-    assert len(entries) >= 3, "expected the pending entry, the skeletons and the baseline"
+    assert len(entries) >= 2, "expected the pending v2.0 entry and the frozen baseline"
     for entry in entries:
         headings = re.findall(r"<h4>(.*?)</h4>", entry)
         assert headings == list(RELEASE_SECTIONS), (

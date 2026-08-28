@@ -75,94 +75,34 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>Each entry opens with a pin: the graph version, the ruleset version it shipped with (deliberately separate numbers), and the calibration record binding at tag time.</p>
 <section class="rel-entry">
 <h2>v2.0: the graph as a queryable instrument</h2>
-<div class="meta">pending. Populated finally at the ceremony.</div>
-<div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
+<div class="meta">pending. Waits on the arXiv v1 decision and Damian's go; the v1.4 and v1.5 plans are folded in (Damian, 2026-08-19).</div>
+<div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
 <h4>mining status</h4>
 <ul>
-<li>Opened CW 8 under a freshly ruled ruleset.</li>
-<li>Merged window one (§1–71) of fourteen.</li>
-<li>Scheduled the remaining windows, one per firing, each gated on green CI.</li>
+<li>Mined the trilogy (CW 12, 13, 14), Aion to <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>, CW 9i to <a href="/batch-b-cw9i-10">b-cw9i-10</a>, and CW 8 to <a href="/batch-b-cw8-14">b-cw8-14</a> (2026-08-28): five volumes end to end.</li>
+<li>Graph: 589 nodes, 2091 relations, 2678 references over 65 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
+<li>Families: 1653 assigned, 371 queued, 65 no family, 2 text undecided (<a href="/families">families</a>).</li>
+<li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a> (271 relations with a proposition in the predicate), traced it to a briefing bullet, and replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>; every blind batch since ran at 0%. No re-mine: the relations are verified true and carry the normalization layer; reuse per window is in <code>pipeline/transfer_trend.jsonl</code>.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li>Carried every ruleset version since v0.7 with its own calibration PASS record.</li>
-<li>Closed the external-validity check; figures in v1.4 below.</li>
-<li>Added gates: ledger freshness, batch manifest, size budget, inline-style geometry scan, copy contract on every page.</li>
-</ul>
-<h4>core build</h4>
-<ul>
-<li>Shipped the query engine: 7 declarations, read-time closure, carried qualifiers.</li>
-<li>Shipped the Turtle export, which declares no transitivity.</li>
-<li>Built the ledger and its per-batch pages from one generator in one pass.</li>
-<li>Made the builds deterministic.</li>
-</ul>
-<h4>UI</h4>
-<ul>
-<li>Carried <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per family, a page per batch.</li>
-<li>Adopted the menu taxonomy and the single-gutter layout.</li>
-<li>Held the identity walk out of the UI: built and tested in <code>tools/query/kg_query.py</code>, not exposed on the site.</li>
-</ul>
-</section>
-<section class="rel-entry">
-<h2>v1.5: the vocabulary-transfer study</h2>
-<div class="meta">pending. Runs after v1.4's ceremony.</div>
-<div class="pin">graph <span class="v">v1.5</span> · ruleset <span class="v">pending</span> · calibration record pending</div>
-<h4>mining status</h4>
-<ul>
-<li>Mined the material already: CW 9i and Aion are in the graph.</li>
-</ul>
-<h4>governance</h4>
-<ul>
-<li>Asks whether the vocabulary learned on the alchemical volumes transfers to archetype theory mined without alchemical carriers.</li>
-</ul>
-<h4>core build</h4>
-<ul>
-<li>No new pipeline. Measures over the committed graph.</li>
-</ul>
-<h4>UI</h4>
-<ul>
-<li>No changes.</li>
-</ul>
-</section>
-<section class="rel-entry">
-<h2>v1.4: the alchemical trilogy, the archetype volumes, and the relation-family layer</h2>
-<div class="meta">pending. The ceremony waits on the arXiv publication of the paper. Scope: the 2026-08-05 plan put Aion and CW 9i in v1.5; the arcs closed first, so they are here.</div>
-<div class="pin">graph <span class="v">v1.4</span> · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
-<h4>mining status</h4>
-<ul>
-<li>Mined CW 12, 13 and 14; the alchemical trilogy is complete.</li>
-<li>Mined Aion (§1–429), closed at <a href="/batch-b-cw9ii-7">b-cw9ii-7</a> on 2026-08-06.</li>
-<li>Mined CW 9i (§1–718) over ten windows, closed at <a href="/batch-b-cw9i-10">b-cw9i-10</a> on 2026-08-12.</li>
-<li>Graph: 589 nodes, 2091 relations, 2678 references over 65 merged batches, all on the <a href="/ledger">ledger</a>.</li>
-<li>Normalized 260 relation strings; the verbatim string stays frozen beside each.</li>
-<li>Assigned families: 1653 assigned, 371 queued, 65 no family, 2 text undecided (assigned, not verified; <a href="/families">families</a>).</li>
-<li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a>: 271 relations carrying a proposition in the predicate.</li>
-<li>Traced it to a briefing bullet; replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>. Fifteen blind batches at 0% since.</li>
-<li>Did not re-mine: each affected relation is verified true, so it carries a normalization layer instead.</li>
-</ul>
-<h4>governance</h4>
-<ul>
-<li>Moved the ruleset to v0.7.2, 25 families; every version carries a calibration PASS record and CI refuses a version without one.</li>
+<li>Moved the ruleset to v0.7.2, 25 families; every version carries a PASS record and <code>tools/check_paper_facts.py</code> refuses one without it.</li>
 <li>Re-ran every <code>amplified-by</code> edge under ruling 1; <code>amplification</code> now holds none; <a href="/family-amplification">the page</a> carries the count.</li>
-<li>Declared 7 inverse and symmetric pairs, each citing a document line. No transitivity.</li>
-<li>Calibrated the family gate: 19/19 planted errors caught, 39/41 clean assignments left alone (measures the instrument, not Jung). Gate model gemini-3.1-pro-preview: within-vendor role separation, not cross-vendor.</li>
-<li>Checked 27 assignments against 8 works over 3 passes: 8/16 treated items agreed, 6 disagreed, 2 split, 6 untreated; 7 rules changed. Receipts in <code>docs/experiments/external_validity_2026-08/</code>.</li>
-<li>Withdrew four reviewer-supplied citations (one held) and the pre-August calibration figures.</li>
-<li>Flagged <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> against <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> as confounded: the blinding changed between them.</li>
+<li>Declared 7 inverse and symmetric pairs, each citing its ruleset line.</li>
+<li>Calibrated the family gate: 19/19 planted errors caught, 39/41 clean left alone. Gate model gemini-3.1-pro-preview: within-vendor role separation, not cross-vendor.</li>
+<li>Checked 27 assignments against 8 works: 8/16 treated agreed, 6 disagreed, 2 split; 7 rules changed. Receipts in <code>docs/experiments/external_validity_2026-08/</code>.</li>
+<li>Withdrew four reviewer citations (one held) and the pre-August calibration figures; flagged <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> vs <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> as confounded.</li>
+<li>Added release gates: ledger freshness, batch manifest, size budget, the copy contract, and the poster fact check, <code>tools/check_poster_facts.py</code> (the image's numbers are pixels; preflight compares its sidecar to seed.json).</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>Launched the site on Cloudflare Pages, 2026-08-07.</li>
-<li>Adopted extensionless URLs, 2026-08-10.</li>
-<li>Made the generators deterministic.</li>
-<li>Emitted <a href="/graph.json">/graph.json</a>, the declarations, the batch manifest, the family map and the ontology scan.</li>
-<li>Shipped <code>tools/query/kg_query.py</code> and <code>tools/query/export_rdf.py</code>, read-only.</li>
+<li>Launched on Cloudflare Pages 2026-08-07; extensionless URLs 2026-08-10; deterministic generators; emitted <a href="/graph.json">/graph.json</a>, the declarations, the batch manifest, the family map and the ontology scan.</li>
+<li>Shipped the query engine (<code>tools/query/kg_query.py</code>, read-only) with read-time closure and the Turtle export; no transitivity anywhere.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li>Added <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per relation family, a page per batch.</li>
-<li>Added facets, record permalinks and the assignment-history chip to the ledger; moved the batch narrative onto the batch pages.</li>
-<li>Adopted the design rules recorded as V2-R7 to V2-R13 in <code>docs/ATLAS_REQUIREMENTS.md</code>.</li>
+<li>Added <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per family and per batch; facets, permalinks and the assignment-history chip on the ledger; the taxonomy and rules V2-R7 to V2-R13 in <code>docs/ATLAS_REQUIREMENTS.md</code>.</li>
+<li>Added <a href="/nutshell">in a nutshell</a>, the method poster on its own page; the identity walk stays in <code>kg_query.py</code>, not exposed on the site.</li>
 </ul>
 </section>
 <section class="rel-entry">

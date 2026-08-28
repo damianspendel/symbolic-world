@@ -720,7 +720,7 @@ for (const e of atlasEdges) for (const r of e.refs) if (r.claim_type) voices[r.c
 // ------------------------------------------------------------- atlas.json ---
 const refCount = seed.edges.reduce((a, e) => a + (e.references || []).length, 0)
 const meta = {
-  version: 'v1.4-dev',
+  version: 'v2.0-dev',   // the working label until the tag; the ceremony flips it to v2.0.0
   built: new Date().toISOString().slice(0, 10),
   counts: { nodes: atlasNodes.length, edges: atlasEdges.length, references: refCount },
   // The frozen published release the paper describes. A constant because the tag
