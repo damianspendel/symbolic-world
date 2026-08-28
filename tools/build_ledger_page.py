@@ -48,7 +48,8 @@ MENU = [
     ("reference", [("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
-    ("about", [("/#/method", "method"), ("/ontology", "ontology")]),
+    ("about", [("/nutshell", "in a nutshell"), ("/#/method", "method"),
+               ("/ontology", "ontology")]),
 ]
 
 

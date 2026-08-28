@@ -664,7 +664,8 @@ EXPECTED_MENU = [
     ("reference", [("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
-    ("about", [("/#/method", "method"), ("/ontology", "ontology")]),
+    ("about", [("/nutshell", "in a nutshell"), ("/#/method", "method"),
+               ("/ontology", "ontology")]),
 ]
 
 
@@ -726,7 +727,7 @@ def test_both_generator_languages_hold_the_same_menu_list():
     js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
     block = js[js.index("const MENU = ["):js.index("const topMenu")]
     js_groups = re.findall(r"^\s*\['(\w+)', \[(.*)\]\],?$", block, re.M)
-    parsed = [(group, re.findall(r"\['(/[^']*)', '(\w+)'\]", items))
+    parsed = [(group, re.findall(r"\['(/[^']*)', '([\w ]+)'\]", items))
               for group, items in js_groups]
     assert parsed == [(g, list(i)) for g, i in ledger_gen.MENU]
     assert parsed == [(g, list(i)) for g, i in EXPECTED_MENU]

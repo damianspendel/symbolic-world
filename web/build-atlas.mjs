@@ -128,7 +128,7 @@ const MENU = [
   ['explore', [['/#/atlas', 'atlas'], ['/query', 'query'], ['/#/concordance', 'concordance']]],
   ['reference', [['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
-  ['about', [['/#/method', 'method'], ['/ontology', 'ontology']]]
+  ['about', [['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'ontology']]]
 ]
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
@@ -1035,20 +1035,11 @@ if (existsSync(methodPath)) {
     <div class="cite-doi">DOI <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a> · concept DOI, resolves to the latest release</div>
   </div>`
 
-  // figure (d) — the method poster. Same subject edge as figure (a), so the
-  // lapis guard above already protects it; the asset ships from public/.
-  const figPoster = `<figure class="fig fig-poster">
-    <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
-      alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
-    <figcaption>The method on one page. Counts as of v2.0, August 2026.</figcaption>
-  </figure>`
-
   let md = body
   for (const [k, v] of Object.entries(methodTokens)) md = md.split(`{{${k}}}`).join(String(v))
   md = md.replace(/\[figure: one claim, drawn[\s\S]*?\]\n/, '@@FIG_CLAIM@@\n')
          .replace(/\[figure: the works bar[\s\S]*?\]\n/, '@@FIG_WORKS@@\n')
          .replace(/\[figure: the metals legend[\s\S]*?\]\n/, '@@FIG_METALS@@\n')
-         .replace(/\[figure: the method, on one page\]\n/, '@@FIG_POSTER@@\n')
          .replace(/\[citation block[\s\S]*?\]\n?/, '@@FIG_CITE@@\n')
   const leftover = md.match(/\{\{(\w+)\}\}/)
   if (leftover) { console.error(`METHOD PAGE: unbound token {{${leftover[1]}}} in the copy`); process.exit(1) }
@@ -1056,7 +1047,6 @@ if (existsSync(methodPath)) {
     .replace('<p>@@FIG_CLAIM@@</p>', figClaim)
     .replace('<p>@@FIG_WORKS@@</p>', figWorks)
     .replace('<p>@@FIG_METALS@@</p>', figMetals)
-    .replace('<p>@@FIG_POSTER@@</p>', figPoster)
     .replace('<p>@@FIG_CITE@@</p>', figCite)
   // An unrendered [figure: …] bracket means the copy grew a figure the build does
   // not draw. It would ship as literal square-bracket prose, so fail instead.
@@ -2041,6 +2031,33 @@ table.findings .src { font: .58rem var(--mono); }
     nav: 'ontology', changefreq: 'daily', priority: '0.5', style: ontStyle, body: ontBody
   })
   V2_COPY.push(['public/ontology.html (generated)', stripEvidence(ontBody)])
+
+  // ------------------------------------------------ /nutshell --------------
+  // The method poster on its own page (Damian, 2026-08-28: an additional menu
+  // item, NOT a replacement for /#/method). The page is one figure; the poster
+  // follows the same lapis edge the method page's claim figure draws, so the
+  // guard above (which exits the build if that edge leaves the graph) protects
+  // this page too. The numbers in the image are pixels: they are re-verified
+  // against the tagged seed.json at release time by hand, per
+  // docs/figures/METHOD_POSTER_HANDOFF.md.
+  const nutshellBody = `<div class="titleband"><p class="eyebrow">about</p>
+<h1>In a nutshell</h1>
+<p class="sub">How the atlas is made, on one page: one real claim followed
+from the map, through the machine that decides what gets in, to its
+published receipt. The long form is on the <a href="/#/method">method</a>
+page.</p></div>
+<figure class="fig fig-poster">
+  <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
+    alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
+  <figcaption>The method on one page. Counts as of v2.0, August 2026.</figcaption>
+</figure>`
+  registerPage({
+    slug: 'nutshell', title: 'In a nutshell', where: 'in a nutshell',
+    nav: 'in a nutshell', changefreq: 'monthly', priority: '0.5',
+    style: '.fig-poster img { width: 100%; height: auto; display: block; border-radius: 6px; }\n.fig-poster { margin-top: 1.2rem; }',
+    body: nutshellBody
+  })
+  V2_COPY.push(['public/nutshell.html (generated)', stripEvidence(nutshellBody)])
   // The scan's findings, kept for whatever reads them next (the #/method route
   // is the obvious candidate). The example lists are dropped: they come out of
   // set iteration inside the tool and are not stable between two runs over the
