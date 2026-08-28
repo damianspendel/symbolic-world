@@ -1,0 +1,19 @@
+{
+  "_about": "The facts baked into method_poster_web.png as PIXELS. No token substitution or copy-contract scan can see them, so tools/check_poster_facts.py compares this sidecar to seed.json and fails the deploy gate when the poster has gone stale. If it fails: re-render per docs/figures/METHOD_POSTER_HANDOFF.md, update this file to what the new render shows, and re-run.",
+  "rendered_at_commit": "035fc38",
+  "counts": { "nodes": 589, "edges": 2091, "references": 2678, "volumes": 9 },
+  "claim": {
+    "subject": "lapis", "relation": "is-projection-of", "object": "the-self",
+    "volume": "9ii", "paragraph": 264,
+    "quote": "we would say that the stone is a projection of the unified self",
+    "crossvendor_contains": "b-cw9ii-4, SUPPORTED"
+  },
+  "map_edges": [
+    ["lapis", "is-projection-of", "the-self"],
+    ["lapis", "is-parallel-to", "christ"],
+    ["lapis", "is-identical-with", "mercurius"],
+    ["lapis", "composed-of", "four-elements"],
+    ["lapis", "is-goal-of", "the-opus"],
+    ["chaos", "gives-birth-to", "lapis"]
+  ]
+}
