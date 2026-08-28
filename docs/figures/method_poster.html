@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>How the atlas is made</title>
+<!-- Composition pattern: EDITORIAL SPREAD (thin rail of giant stage numerals +
+     red story-thread anchoring the left, content column right; one claim
+     travels the thread from the map, through the machine, to the receipt).
+     Design language: editorial. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,900&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img, svg { display: block; max-width: 100%; }
+
+:root {
+  --canvas-w: 1080px;
+  --bg:#FAF7F2; --surface:#F1ECE2; --surface-2:#E3DCCC;
+  --ink:#20242C; --ink-muted:#6B6F76;
+  --accent:#A32035;
+  --chart-1:#A32035; --chart-2:#0D7F63; --chart-3:#B07C1F; --chart-4:#20242C;
+  --de-emphasis:#C6BFB0;
+  --font-display:'Fraunces',serif; --font-body:'Libre Franklin',sans-serif;
+  --space-1:8px; --space-2:16px; --space-3:24px; --space-4:48px; --space-5:72px;
+  --rule-hair:1px solid var(--ink); --rule-heavy:3px solid var(--ink);
+}
+
+html, body { background: var(--bg); }
+body { width: var(--canvas-w); font-family: var(--font-body); color: var(--ink); }
+
+.canvas {
+  position: relative;
+  width: var(--canvas-w);
+  min-height: 2400px;
+  overflow: hidden;
+  padding: var(--space-4) var(--space-5) var(--space-3);
+  background:
+    radial-gradient(ellipse 120% 60% at 30% 6%, #FDFBF7 0%, var(--bg) 55%, #F3EEE4 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* film grain over everything */
+.grain { position:absolute; inset:0; pointer-events:none; z-index:50;
+  opacity:.4; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0.6 0.6 0 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E"); }
+
+/* giant ghost stone bleeding off the right edge behind the title */
+.ghost-stone { position:absolute; top:-60px; right:-190px; z-index:0; }
+
+.kicker { font:600 15px/1 var(--font-body); text-transform:uppercase;
+  letter-spacing:.12em; color:var(--ink-muted); }
+.body-text { font:400 17px/1.55 var(--font-body); color:var(--ink); }
+.caption { font:400 13px/1.5 var(--font-body); color:var(--ink-muted); }
+
+/* ---------- folio ---------- */
+.folio { position:relative; z-index:2; display:flex; justify-content:space-between;
+  border-top:var(--rule-hair); border-bottom:var(--rule-hair);
+  padding:7px 0; margin-bottom:var(--space-4); }
+.folio span { font:600 13px/1 var(--font-body); text-transform:uppercase;
+  letter-spacing:.14em; color:var(--ink); }
+.folio .mid { color:var(--ink-muted); }
+
+/* ---------- title block ---------- */
+.titleblock { position:relative; z-index:2; margin-bottom:var(--space-3); }
+.titleblock h1 { font-family:var(--font-display); font-weight:900;
+  font-size:84px; line-height:.95; letter-spacing:-0.015em; max-width:840px;
+  margin:var(--space-2) 0 var(--space-3); }
+.standfirst { font:italic 400 24px/1.45 var(--font-display);
+  max-width:700px; }
+.standfirst .dropcap { float:left; font:900 92px/0.72 var(--font-display);
+  color:var(--accent); padding:10px 10px 0 0; }
+.title-rule { border:none; border-top:var(--rule-heavy); margin-top:var(--space-3); }
+
+/* ---------- sections ---------- */
+section { position:relative; z-index:2; }
+.section-head { display:flex; align-items:baseline; gap:var(--space-2);
+  border-top:var(--rule-hair); padding-top:10px; margin-top:var(--space-4); }
+.section-head .no { font:900 20px/1 var(--font-display); color:var(--ink); }
+
+/* ---------- zone 1: the map ---------- */
+.map-zone { display:grid; grid-template-columns:288px 1fr; gap:var(--space-4);
+  margin-top:var(--space-3); }
+.map-zone .body-text { margin-bottom:var(--space-2); }
+.map-note { border-left:2px solid var(--accent); padding-left:14px;
+  font:italic 400 18px/1.45 var(--font-display); }
+.map-fig .caption { margin-top:var(--space-1); }
+
+/* ---------- zone 2: the machine (hero) ---------- */
+.machine { position:relative; margin-top:var(--space-3); }
+.thread { position:absolute; left:63px; top:-58px; bottom:-58px; width:2px;
+  background:var(--accent); z-index:1; }
+.station { position:relative; display:grid; grid-template-columns:150px 1fr;
+  column-gap:var(--space-3); padding:26px 0 26px 0; }
+.station + .station { border-top:1px solid var(--surface-2); }
+.station .numeral { position:relative; font:900 150px/0.8 var(--font-display);
+  color:var(--surface-2); z-index:0; }
+.station .content { position:relative; z-index:2; padding-top:6px; }
+.station .stage { font:600 15px/1 var(--font-body); text-transform:uppercase;
+  letter-spacing:.12em; color:var(--ink); margin-bottom:10px; }
+.station .stage em { font:italic 400 15px/1 var(--font-display);
+  text-transform:none; letter-spacing:0; color:var(--ink-muted); }
+.station .body-text { max-width:640px; }
+.agent { margin-top:10px; font:600 13px/1 var(--font-body);
+  text-transform:uppercase; letter-spacing:.14em; color:var(--ink-muted); }
+.station .dot { display:inline-block; width:9px; height:9px;
+  background:var(--accent); transform:rotate(45deg); position:absolute;
+  left:-91px; top:12px; }
+
+/* the claim, typeset between hairlines */
+.claim-entry { border-top:var(--rule-hair); border-bottom:var(--rule-hair);
+  padding:14px 0; margin-top:var(--space-2); max-width:640px; }
+.claim-triple { font:600 16px/1.3 var(--font-body); }
+.claim-triple .rel { color:var(--accent); font-style:italic; font-weight:500; }
+.claim-quote { font:italic 400 20px/1.4 var(--font-display); margin:8px 0 8px; }
+.claim-cite { font:600 13px/1 var(--font-body); text-transform:uppercase;
+  letter-spacing:.12em; color:var(--ink-muted); }
+
+.drop-note { margin-top:14px; }
+
+/* ---------- zone 3: the receipt ---------- */
+.receipt-intro { margin-top:var(--space-3); max-width:640px; }
+.pullquote { position:relative; border-top:var(--rule-hair);
+  border-bottom:var(--rule-hair); margin-top:var(--space-3);
+  padding:var(--space-3) 0 var(--space-3) 96px; }
+.pullquote .qmark { position:absolute; left:0; top:2px;
+  font:900 130px/1 var(--font-display); color:var(--accent); }
+.pullquote blockquote { font:italic 900 34px/1.25 var(--font-display);
+  max-width:760px; }
+.pullquote .attrib { margin-top:var(--space-2); font:600 14px/1 var(--font-body);
+  text-transform:uppercase; letter-spacing:.13em; color:var(--ink-muted); }
+.receipt-row { display:flex; align-items:center; gap:var(--space-3);
+  margin-top:var(--space-3); flex-wrap:wrap; }
+.receipt-row .claim-triple { font-size:18px; }
+.checks { display:flex; gap:var(--space-3); }
+.check { display:flex; align-items:center; gap:7px;
+  font:600 13px/1 var(--font-body); text-transform:uppercase;
+  letter-spacing:.12em; color:var(--ink-muted); }
+
+/* ---------- stat strip ---------- */
+.stats { display:grid; grid-template-columns:repeat(4,1fr);
+  border-top:var(--rule-hair); border-bottom:var(--rule-hair);
+  margin-top:var(--space-4); }
+.stat { padding:var(--space-3) var(--space-3); }
+.stat + .stat { border-left:1px solid var(--surface-2); }
+.stat .n { font:900 54px/1 var(--font-display); letter-spacing:-0.01em; }
+.stat .l { margin-top:8px; font:600 13px/1.3 var(--font-body);
+  text-transform:uppercase; letter-spacing:.11em; color:var(--ink-muted); }
+
+.honesty { margin-top:var(--space-3); font:italic 400 18px/1.5 var(--font-display);
+  color:var(--ink); max-width:820px; }
+
+/* ---------- footer folio ---------- */
+.footer { display:flex; justify-content:space-between;
+  border-top:var(--rule-hair); margin-top:var(--space-4); padding-top:8px; }
+.footer span { font:500 13px/1 var(--font-body); text-transform:uppercase;
+  letter-spacing:.13em; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="grain"></div>
+
+  <!-- ghost faceted stone, bleeding off the right edge -->
+  <svg class="ghost-stone" width="520" height="560" viewBox="0 0 520 560" aria-hidden="true">
+    <g fill="none" stroke="#20242C" stroke-opacity="0.05" stroke-width="2">
+      <polygon points="260,20 470,180 430,460 130,530 40,250"/>
+      <polyline points="260,20 250,270 130,530"/>
+      <polyline points="40,250 250,270 470,180"/>
+      <polyline points="250,270 430,460"/>
+    </g>
+  </svg>
+
+  <div class="folio">
+    <span>Symbolic World</span>
+    <span class="mid">Method</span>
+    <span>symbolicworld.observer</span>
+  </div>
+
+  <div class="titleblock">
+    <div class="kicker">How the atlas is made</div>
+    <h1>One claim,<br>checked three ways.</h1>
+    <p class="standfirst"><span class="dropcap">T</span>he Symbolic World is a map
+    of C.&thinsp;G. Jung&rsquo;s ideas. Every line on it is a claim &mdash; this concept
+    relates to that one &mdash; resting on an exact quote from his <em>Collected
+    Works</em>. This page follows one claim
+    through the machine that decides what gets in.</p>
+    <hr class="title-rule">
+  </div>
+
+  <!-- ================= ZONE 1: THE MAP ================= -->
+  <section>
+    <div class="section-head"><span class="no">I</span><span class="kicker">The map</span></div>
+    <div class="map-zone">
+      <div>
+        <p class="body-text">Each dot is a concept. Each line says how two
+        concepts are related, in words backed by a quoted sentence from the
+        books.</p>
+        <p class="body-text">The atlas opens on the <strong>lapis</strong> &mdash;
+        the philosophers&rsquo; stone &mdash; so we start there too.</p>
+        <p class="map-note">Follow the red line.</p>
+      </div>
+      <figure class="map-fig">
+        <svg width="588" height="368" viewBox="0 0 640 400">
+          <defs>
+            <marker id="ah" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+              <path d="M0 0 L9 4 L0 8 z" fill="#6B6F76"/>
+            </marker>
+            <marker id="ahr" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+              <path d="M0 0 L9 4 L0 8 z" fill="#A32035"/>
+            </marker>
+          </defs>
+
+          <!-- engraving rays around the stone -->
+          <g stroke="#C6BFB0" stroke-width="1">
+            <line x1="320" y1="180" x2="320" y2="168"/>
+            <line x1="352" y1="192" x2="361" y2="184"/>
+            <line x1="365" y1="220" x2="378" y2="220"/>
+            <line x1="352" y1="249" x2="361" y2="257"/>
+            <line x1="288" y1="249" x2="279" y2="257"/>
+            <line x1="275" y1="220" x2="262" y2="220"/>
+            <line x1="288" y1="192" x2="279" y2="184"/>
+          </g>
+
+          <!-- edges -->
+          <g stroke="#6B6F76" stroke-width="1.2" fill="none">
+            <line x1="308" y1="192" x2="315" y2="84"  marker-end="url(#ah)"/>  <!-- lapis -> christ -->
+            <line x1="352" y1="238" x2="524" y2="303" marker-end="url(#ah)"/>  <!-- lapis -> mercurius -->
+            <line x1="288" y1="238" x2="142" y2="318" marker-end="url(#ah)"/>  <!-- lapis -> four elements -->
+            <line x1="282" y1="210" x2="122" y2="162" marker-end="url(#ah)"/>  <!-- lapis -> the opus -->
+            <line x1="172" y1="72"  x2="288" y2="196" marker-end="url(#ah)"/>  <!-- chaos -> lapis -->
+          </g>
+          <line x1="352" y1="202" x2="508" y2="132" stroke="#A32035" stroke-width="2.2" marker-end="url(#ahr)"/> <!-- lapis -> the self -->
+
+          <!-- edge labels -->
+          <g font-family="'Libre Franklin',sans-serif" font-size="13" fill="#6B6F76"
+             font-style="italic" stroke="#FAF7F2" stroke-width="4" paint-order="stroke">
+            <text x="352" y="130" text-anchor="middle">is parallel to</text>
+            <text x="438" y="285" text-anchor="middle">is identical with</text>
+            <text x="200" y="292" text-anchor="middle">composed of</text>
+            <text x="188" y="176" text-anchor="middle">is goal of</text>
+            <text x="204" y="122" text-anchor="middle">gives birth to</text>
+          </g>
+          <text x="420" y="146" text-anchor="middle" font-family="'Libre Franklin',sans-serif"
+                font-size="13.5" font-weight="600" fill="#A32035" font-style="italic"
+                stroke="#FAF7F2" stroke-width="4" paint-order="stroke">is projection of</text>
+
+          <!-- the lapis: a small faceted stone -->
+          <g>
+            <polygon points="320,194 344,208 340,238 300,238 296,208"
+                     fill="#F1ECE2" stroke="#20242C" stroke-width="1.6"/>
+            <polyline points="320,194 318,222 300,238" fill="none" stroke="#20242C" stroke-width="0.9"/>
+            <polyline points="296,208 318,222 344,208" fill="none" stroke="#20242C" stroke-width="0.9"/>
+            <polyline points="318,222 340,238" fill="none" stroke="#20242C" stroke-width="0.9"/>
+          </g>
+
+          <!-- other nodes -->
+          <g fill="#20242C">
+            <circle cx="318" cy="66" r="6"/>
+            <circle cx="536" cy="126" r="6" fill="#A32035"/>
+            <circle cx="538" cy="308" r="6"/>
+            <circle cx="128" cy="326" r="6"/>
+            <circle cx="108" cy="158" r="6"/>
+            <circle cx="164" cy="64" r="6"/>
+          </g>
+
+          <!-- node labels -->
+          <g font-family="'Libre Franklin',sans-serif" font-size="14.5" font-weight="600" fill="#20242C">
+            <text x="320" y="266" text-anchor="middle">lapis</text>
+            <text x="330" y="60">Christ</text>
+            <text x="548" y="122">the self</text>
+            <text x="550" y="330">Mercurius</text>
+            <text x="122" y="352">the four elements</text>
+            <text x="100" y="140">the opus</text>
+            <text x="156" y="46">chaos</text>
+          </g>
+        </svg>
+        <figcaption class="caption">A real fragment of the map: six of the stone&rsquo;s
+        connections, drawn from the atlas. Arrows read subject to object.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= ZONE 2: THE MACHINE (hero) ================= -->
+  <section data-hero>
+    <div class="section-head"><span class="no">II</span><span class="kicker">The machine</span></div>
+    <div class="machine">
+      <div class="thread"></div>
+
+      <div class="station">
+        <div class="numeral">1</div>
+        <div class="content">
+          <span class="dot"></span>
+          <div class="stage">Proposed <em>&mdash; Claude, Opus family</em></div>
+          <p class="body-text">An AI reads one paragraph at a time and proposes
+          claims, each with the exact sentence it rests on.</p>
+          <div class="claim-entry">
+            <div class="claim-triple">lapis <span class="rel">is projection of</span> the self</div>
+            <div class="claim-quote">&ldquo;we would say that the stone is a
+            projection of the unified self&rdquo;</div>
+            <div class="claim-cite">Collected Works vol.&thinsp;9, part&thinsp;II &middot; &para;&thinsp;264</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="station">
+        <div class="numeral">2</div>
+        <div class="content">
+          <span class="dot"></span>
+          <div class="stage">Checked <em>&mdash; Claude, Fable family</em></div>
+          <p class="body-text">A second AI, from a different model family,
+          re-reads the paragraph and judges every claim against it. The model
+          that proposes is never the model that approves.</p>
+          <svg class="drop-note" width="360" height="46" viewBox="0 0 360 46">
+            <path d="M4 6 C 60 6, 90 34, 150 34" fill="none" stroke="#6B6F76"
+                  stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#ah2)"/>
+            <defs><marker id="ah2" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+              <path d="M0 0 L9 4 L0 8 z" fill="#6B6F76"/></marker></defs>
+            <text x="162" y="39" font-family="'Libre Franklin',sans-serif"
+                  font-size="13" font-style="italic" fill="#6B6F76">claims that fail are dropped</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="station">
+        <div class="numeral">3</div>
+        <div class="content">
+          <span class="dot"></span>
+          <div class="stage">Audited <em>&mdash; Google Gemini</em></div>
+          <p class="body-text">A third AI, from a different company, checks the
+          whole batch again, independently. Our claim came back
+          <strong>supported</strong>.</p>
+        </div>
+      </div>
+
+      <div class="station">
+        <div class="numeral">4</div>
+        <div class="content">
+          <span class="dot"></span>
+          <div class="stage">Refereed <em>&mdash; a human</em></div>
+          <p class="body-text">When the checkers disagree, a person reads the
+          paragraph and rules. Nothing on this line marks its own homework.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ZONE 3: THE RECEIPT ================= -->
+  <section>
+    <div class="section-head"><span class="no">III</span><span class="kicker">The receipt</span></div>
+    <p class="body-text receipt-intro">Every claim that survives is published
+    with everything needed to check it yourself: the book, the paragraph, the
+    quote.</p>
+
+    <div class="pullquote">
+      <div class="qmark">&ldquo;</div>
+      <blockquote>we would say that the stone is a projection of the
+      unified self&rdquo;</blockquote>
+      <div class="attrib">C.&thinsp;G. Jung &middot; Collected Works vol.&thinsp;9, part&thinsp;II &middot; &para;&thinsp;264</div>
+    </div>
+
+    <div class="receipt-row">
+      <div class="claim-triple">lapis <span class="rel">is projection of</span> the self</div>
+      <div class="checks">
+        <span class="check"><svg width="14" height="12" viewBox="0 0 14 12"><path d="M1 6.5 L5 10.5 L13 1.5" fill="none" stroke="#0D7F63" stroke-width="2.2"/></svg>proposed</span>
+        <span class="check"><svg width="14" height="12" viewBox="0 0 14 12"><path d="M1 6.5 L5 10.5 L13 1.5" fill="none" stroke="#0D7F63" stroke-width="2.2"/></svg>checked</span>
+        <span class="check"><svg width="14" height="12" viewBox="0 0 14 12"><path d="M1 6.5 L5 10.5 L13 1.5" fill="none" stroke="#0D7F63" stroke-width="2.2"/></svg>audited</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <div class="stats">
+    <div class="stat"><div class="n">589</div><div class="l">concepts</div></div>
+    <div class="stat"><div class="n">2,091</div><div class="l">claims between them</div></div>
+    <div class="stat"><div class="n">2,678</div><div class="l">verified quotes</div></div>
+    <div class="stat"><div class="n">9</div><div class="l">volumes of the<br>Collected Works</div></div>
+  </div>
+
+  <p class="honesty">&ldquo;Verified&rdquo; means the quote is really in the book
+  and really supports the line &mdash; not that Jung was right. Where a layer of
+  the map has not been checked, the atlas says so.</p>
+
+  <div class="footer">
+    <span>Source: C.&thinsp;G. Jung, Collected Works &middot; counts from the live graph</span>
+    <span>August 2026</span>
+  </div>
+</div>
+</body>
+</html>

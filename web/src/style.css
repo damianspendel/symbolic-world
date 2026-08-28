@@ -637,6 +637,7 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 
 .fig { margin: 1.4rem 0 1.6rem; padding: 1.1rem 1.2rem; border: 1px solid var(--hairline); border-radius: 10px; background: var(--panel); }
 .fig figcaption { font: 0.68rem var(--mono); color: var(--ink-dim); line-height: 1.5; margin-top: 0.8rem; }
+.fig-poster img { width: 100%; height: auto; display: block; border-radius: 6px; }
 
 /* figure (a) — one claim, in the atlas's own node/relation styling */
 .claim-fig { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }

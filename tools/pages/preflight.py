@@ -24,6 +24,9 @@ ALLOW = {
     # the ontology page, and the manifest of batch pages gated below
     'releases.html', 'query.html', 'query.js', 'ontology.html',
     'relation_declarations.json', 'batch_pages.json',
+    # the method-page poster (2026-08-28): a static page asset, not a page —
+    # extensionless convention does not apply, no sitemap entry
+    'method-poster.png',
 }
 ALLOW_DIRS = {'v1.3'}
 # Generated page families. A file matching one of these is allowed only if the

@@ -103,6 +103,8 @@ The stations bite. In the most recent window, {{last_proposed}} proposed
 citations became {{last_merged}} merged ones; the difference is what the
 checks removed.
 
+[figure: the method, on one page]
+
 ## Human oversight
 
 Machine checks are not decisions. Responsible use of AI needs human oversight: a person

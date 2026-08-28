@@ -1035,11 +1035,20 @@ if (existsSync(methodPath)) {
     <div class="cite-doi">DOI <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a> · concept DOI, resolves to the latest release</div>
   </div>`
 
+  // figure (d) — the method poster. Same subject edge as figure (a), so the
+  // lapis guard above already protects it; the asset ships from public/.
+  const figPoster = `<figure class="fig fig-poster">
+    <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
+      alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
+    <figcaption>The method on one page. Counts as of v2.0, August 2026.</figcaption>
+  </figure>`
+
   let md = body
   for (const [k, v] of Object.entries(methodTokens)) md = md.split(`{{${k}}}`).join(String(v))
   md = md.replace(/\[figure: one claim, drawn[\s\S]*?\]\n/, '@@FIG_CLAIM@@\n')
          .replace(/\[figure: the works bar[\s\S]*?\]\n/, '@@FIG_WORKS@@\n')
          .replace(/\[figure: the metals legend[\s\S]*?\]\n/, '@@FIG_METALS@@\n')
+         .replace(/\[figure: the method, on one page\]\n/, '@@FIG_POSTER@@\n')
          .replace(/\[citation block[\s\S]*?\]\n?/, '@@FIG_CITE@@\n')
   const leftover = md.match(/\{\{(\w+)\}\}/)
   if (leftover) { console.error(`METHOD PAGE: unbound token {{${leftover[1]}}} in the copy`); process.exit(1) }
@@ -1047,6 +1056,7 @@ if (existsSync(methodPath)) {
     .replace('<p>@@FIG_CLAIM@@</p>', figClaim)
     .replace('<p>@@FIG_WORKS@@</p>', figWorks)
     .replace('<p>@@FIG_METALS@@</p>', figMetals)
+    .replace('<p>@@FIG_POSTER@@</p>', figPoster)
     .replace('<p>@@FIG_CITE@@</p>', figCite)
   // An unrendered [figure: …] bracket means the copy grew a figure the build does
   // not draw. It would ship as literal square-bracket prose, so fail instead.
