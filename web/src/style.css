@@ -171,7 +171,11 @@ body.atlas #topbar { opacity: 1; pointer-events: auto; }
 /* R5.5 — the chip row. Filters are tokens the reader typed, sitting where they
    typed them, and each one says what it removes. */
 #chips {
-  position: fixed; top: 3.15rem; right: 1.2rem; z-index: 11;
+  /* Below the header's bottom edge, never inside it: the v2 chrome moved the
+     search into header row 2, and a fixed 3.15rem put long chips on top of
+     it. main.js keeps --chips-top equal to the measured header bottom, so the
+     row survives header wrapping on narrow screens. */
+  position: fixed; top: var(--chips-top, 6.2rem); right: 1.2rem; z-index: 11;
   display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.3rem;
   max-width: min(46rem, calc(100vw - 2.4rem));
   opacity: 0; pointer-events: none; transition: opacity 400ms ease;

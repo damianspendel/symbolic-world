@@ -585,6 +585,20 @@ function toggleFacet(facet, value) {
 }
 const VOICES = Object.keys(META.voices || {})
 const chipsEl = $('chips')
+// R5.5/R9.2 — the chip row hangs just under the header, whatever height the
+// header wraps to. Measured, not assumed: the menu wraps on narrow screens.
+const siteHeaderEl = document.querySelector('.site-header')
+function placeChips() {
+  if (!siteHeaderEl) return
+  // the wrapped search field can overflow the header's own box on narrow
+  // screens, so the row hangs under whichever is lower
+  const hb = siteHeaderEl.getBoundingClientRect().bottom
+  const se = document.getElementById('search')
+  const sb = se ? se.getBoundingClientRect().bottom : 0
+  chipsEl.style.setProperty('top', Math.round(Math.max(hb, sb) + 8) + 'px')
+}
+window.addEventListener('resize', placeChips)
+placeChips()
 function chipLabel(facet, value) {
   if (facet === 'volume') return 'CW ' + value
   if (facet === 'voice') return value
@@ -604,6 +618,7 @@ function drawChips() {
         ${esc(chipLabel(facet, value))}<span class="n">${facetCount(facet, value)}</span>
         <button data-drop-facet="${facet}" data-drop-value="${esc(value)}" title="Remove this filter">×</button></span>`)
   chipsEl.innerHTML = rows.join('')
+  placeChips()
   chipsEl.querySelectorAll('[data-drop-facet]').forEach(b => b.addEventListener('click', () => {
     SEL[b.dataset.dropFacet].delete(b.dataset.dropValue); applyFilters()
   }))
