@@ -330,6 +330,25 @@ one: the published labels never rested on that gate, they rest on two independen
 agreeing, which is its own evidence and is receipted per edge. What was withdrawn was a
 claim about the checker, not confidence in the checked.
 
+### Study B, and Study C
+
+Two of the six studies the v2.0 paper names as designs, the only two that
+need no human annotators, which is why they are the candidates for spare
+model capacity. Study B is the fire drill made realistic. The gate was
+calibrated by planting errors and counting catches, but the planted errors
+were crude: a random wrong object from across the graph, an "is-identical-to"
+stamped on. The errors that actually slip through production are subtle: a
+near neighbour swapped in (Adam for Anthropos), a hedge quietly dropped, an
+analogy hardened into an identity. Study B plants THOSE and measures the
+catch rate again; the current headline is a ceiling, and Study B finds the
+floor. Study C points the same method at the normalization layer, which today
+has no instrument at all: 260 cleaned-up relation verbs that nothing has ever
+tested. A second model re-normalizes the same relations independently and the
+two are compared; corruptions are planted in normalized forms (drop a
+qualifier, flip a direction) to see whether a gate catches them. Both studies
+end as committed receipts, and each closes a named open risk in the paper
+(near-referent drift for B, normalization drift for C).
+
 ### Three layers: assignment, gate, calibration
 
 These get conflated constantly, so keep them apart. *Assignment* is two blind arms deciding
