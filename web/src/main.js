@@ -590,12 +590,18 @@ const chipsEl = $('chips')
 const siteHeaderEl = document.querySelector('.site-header')
 function placeChips() {
   if (!siteHeaderEl) return
-  // the wrapped search field can overflow the header's own box on narrow
-  // screens, so the row hangs under whichever is lower
+  // One measured clearance for everything that hangs under the chrome. The
+  // wrapped menu makes the header taller and the search field can overflow
+  // the header's own box, so nothing may hard-code a top offset: the chip
+  // row clears the chrome, and the right-hand panels clear the chip row.
   const hb = siteHeaderEl.getBoundingClientRect().bottom
   const se = document.getElementById('search')
   const sb = se ? se.getBoundingClientRect().bottom : 0
-  chipsEl.style.setProperty('top', Math.round(Math.max(hb, sb) + 8) + 'px')
+  const chrome = Math.round(Math.max(hb, sb) + 8)
+  const rootStyle = document.documentElement.style
+  rootStyle.setProperty('--chrome-clear', chrome + 'px')
+  const cb = chipsEl.children.length ? chipsEl.getBoundingClientRect().bottom : chrome
+  rootStyle.setProperty('--panel-clear', Math.round(Math.max(chrome, cb) + 8) + 'px')
 }
 window.addEventListener('resize', placeChips)
 placeChips()

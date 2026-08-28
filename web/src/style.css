@@ -175,7 +175,7 @@ body.atlas #topbar { opacity: 1; pointer-events: auto; }
      search into header row 2, and a fixed 3.15rem put long chips on top of
      it. main.js keeps --chips-top equal to the measured header bottom, so the
      row survives header wrapping on narrow screens. */
-  position: fixed; top: var(--chips-top, 6.2rem); right: 1.2rem; z-index: 11;
+  position: fixed; top: var(--chrome-clear, 6.2rem); right: 1.2rem; z-index: 11;
   display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.3rem;
   max-width: min(46rem, calc(100vw - 2.4rem));
   opacity: 0; pointer-events: none; transition: opacity 400ms ease;
@@ -247,7 +247,7 @@ body.atlas #works { opacity: 1; pointer-events: auto; }
 
 /* --------------------------------------------------------- selection panel --- */
 #panel {
-  position: fixed; right: 1rem; top: 4.4rem; bottom: 4.3rem; width: 360px; z-index: 10;
+  position: fixed; right: 1rem; top: var(--panel-clear, 4.4rem); bottom: 4.3rem; width: 360px; z-index: 10;
   overflow-y: auto; background: var(--surface); border: 1px solid var(--hairline);
   border-radius: 12px; padding: 1rem 1.15rem; color: var(--ink);
 }
@@ -305,7 +305,7 @@ body.atlas #works { opacity: 1; pointer-events: auto; }
 .chip-not-a-relation { color: var(--rubedo); border-color: var(--b-rubedo); }
 
 #family-panel {
-  position: fixed; right: 1rem; top: 4.4rem; bottom: 4.3rem; width: 380px; z-index: 12;
+  position: fixed; right: 1rem; top: var(--panel-clear, 4.4rem); bottom: 4.3rem; width: 380px; z-index: 12;
   overflow-y: auto; background: var(--panel); border: 1px solid var(--gold-dim);
   border-radius: 12px; padding: 1.1rem 1.2rem; color: var(--ink);
 }
