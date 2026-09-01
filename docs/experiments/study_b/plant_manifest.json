@@ -1,0 +1,3533 @@
+{
+ "study": "B",
+ "study_seed": 20260901,
+ "planted_at": "2026-09-01T13:42:03Z",
+ "commit": "12635b01498155df898f28247a69f42e3118b53a",
+ "design": "docs/experiments/study_b/DESIGN.md (pre-registered 2026-08-28)",
+ "harness": [
+  "tools/studies/study_b_draw.py",
+  "tools/studies/study_b_plant.py",
+  "tools/studies/study_b_gate.py",
+  "tools/studies/study_b_score.py"
+ ],
+ "graph": {
+  "nodes": 589,
+  "edges": 2091,
+  "references": 2678
+ },
+ "pool_size": 2678,
+ "class_order": [
+  "analogy-to-identity",
+  "subject-expansion",
+  "hedge-deletion",
+  "near-referent-drift"
+ ],
+ "counts": {
+  "per_class": 25,
+  "clean": 100,
+  "total": 200
+ },
+ "note": "Corruption classes are taken scarcest-first from one shuffled pool, so controls are drawn from what the four classes left. Corrupted triples that already exist in seed.json are skipped, so no planted item states something the graph holds true.",
+ "items": [
+  {
+   "n": 1,
+   "class": "clean",
+   "field": null,
+   "citation": "CW11 §654",
+   "quote": "to become incarnate in his turn as the dark God ... the figure of the Antichrist",
+   "edge_index": 180,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-devil",
+    "relation": "manifests-as",
+    "object": "antichrist",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 2,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §336",
+   "quote": "These ordinary everyday facts, which are eternally repeated, create the mightiest archetypes of all",
+   "edge_index": 1761,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-family",
+    "relation": "exemplifies",
+    "object": "archetype",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 3,
+   "class": "clean",
+   "field": null,
+   "citation": "CW13 §422",
+   "quote": "Here the stone is itself the tree",
+   "edge_index": 864,
+   "ref_index": 0,
+   "presented": {
+    "subject": "tree",
+    "relation": "is-in-mylius-dictum-itself",
+    "object": "lapis",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 4,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "axiom-of-maria",
+   "planted_value": "alchemy",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW14 §269",
+   "quote": "axiom of Maria ... is concerned with the God-image",
+   "edge_index": 206,
+   "ref_index": 0,
+   "presented": {
+    "subject": "alchemy",
+    "relation": "concerns",
+    "object": "god-image",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 5,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §248",
+   "quote": "This “round” thing is the great treasure that lies hidden in the cave of the unconscious",
+   "edge_index": 1280,
+   "ref_index": 0,
+   "presented": {
+    "subject": "treasure-hard-to-attain",
+    "relation": "lies-in",
+    "object": "the-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 6,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §61",
+   "quote": "During the progression of libido the pairs of opposites are united in the co-ordinated flow of psychic processes.",
+   "edge_index": 1589,
+   "ref_index": 0,
+   "presented": {
+    "subject": "progression",
+    "relation": "unites",
+    "object": "the-opposites",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 7,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "their-equivalence-is-a-condition-of-cognition-and-not-a-property-of-the-object",
+   "planted_value": "is",
+   "citation": "CW9ii §112",
+   "quote": "It knows that equivalent opposites are necessary conditions inherent in the act of cognition",
+   "edge_index": 953,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-opposites",
+    "relation": "is",
+    "object": "consciousness",
+    "claim_type": "jung-asserts",
+    "confidence": "medium"
+   }
+  },
+  {
+   "n": 8,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 3,
+   "citation": "CW8 §251",
+   "quote": "on the primitive level the boundaries become so blurred that matter often seems endowed with “soul” while spirit appears to be material",
+   "edge_index": 1711,
+   "ref_index": 0,
+   "presented": {
+    "subject": "primitive-mentality",
+    "relation": "animates",
+    "object": "matter",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 9,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "christ",
+   "planted_value": "god-image",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW12 §456",
+   "quote": "Jesus Christ made himself one with Adam and bore him up to that place where the Men of Light dwelt before",
+   "edge_index": 588,
+   "ref_index": 0,
+   "presented": {
+    "subject": "god-image",
+    "relation": "made-himself-one-with",
+    "object": "adam",
+    "claim_type": "jung-quotes-source",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 10,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is",
+   "citation": "CW14 §443",
+   "quote": "The sublimation of Luna ... is an unmistakable paraphrase ... of the Assumption of the Virgin",
+   "edge_index": 473,
+   "ref_index": 0,
+   "presented": {
+    "subject": "luna",
+    "relation": "is",
+    "object": "the-assumption",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 11,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §105",
+   "quote": "For you will see hanging down from the disc of the sun something that looks like a tube.",
+   "edge_index": 1202,
+   "ref_index": 0,
+   "presented": {
+    "subject": "solar-phallus",
+    "relation": "recurs-in",
+    "object": "myth",
+    "claim_type": "jung-quotes-source",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 12,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "fish",
+   "planted_value": "serpent",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW9ii §145",
+   "quote": "the baptismal bath was described as a piscina (fish-pond) quite early. This presupposes that the believers were fishes",
+   "edge_index": 981,
+   "ref_index": 1,
+   "presented": {
+    "subject": "baptism",
+    "relation": "figures-the-baptized-as",
+    "object": "serpent",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 13,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "spirit",
+   "planted_value": "man",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW9i §585",
+   "quote": "She therefore stands for physis opposed to spirit, i.e., for the natural feminine being which the dreamer also is",
+   "edge_index": 1483,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-mother",
+    "relation": "opposes",
+    "object": "man",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 14,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §54",
+   "quote": "Since Freud confines himself almost exclusively to sexuality and its manifold ramifications in the psyche",
+   "edge_index": 1569,
+   "ref_index": 0,
+   "presented": {
+    "subject": "freud",
+    "relation": "restricts",
+    "object": "libido",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 15,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is-identical-with",
+   "citation": "CW14 §466",
+   "quote": "He who held them was “like unto the Son of man,” in agreement with the puellus regius",
+   "edge_index": 480,
+   "ref_index": 0,
+   "presented": {
+    "subject": "filius-regius",
+    "relation": "is-identical-with",
+    "object": "son-of-man",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 16,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §561",
+   "quote": "there are a great many “average” dreams in which a definite structure can be perceived, not unlike that of a drama",
+   "edge_index": 1876,
+   "ref_index": 0,
+   "presented": {
+    "subject": "dream",
+    "relation": "exhibits",
+    "object": "dramatic-structure",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 17,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "citation": "CW14 §492",
+   "quote": "his own self, which is the “true man.”",
+   "edge_index": 239,
+   "ref_index": 0,
+   "presented": {
+    "subject": "true-man",
+    "relation": "is",
+    "object": "the-self",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 18,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §240",
+   "quote": "The cave is the place of rebirth, that secret cavity in which one is shut up in order to be incubated and renewed.",
+   "edge_index": 1271,
+   "ref_index": 0,
+   "presented": {
+    "subject": "cave",
+    "relation": "is-place-of",
+    "object": "rebirth",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 19,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §181",
+   "quote": "the battle between Leviathan and Behemoth at the end of time, in which the two monsters wound each other to death",
+   "edge_index": 1018,
+   "ref_index": 0,
+   "presented": {
+    "subject": "leviathan",
+    "relation": "opposes",
+    "object": "behemoth",
+    "claim_type": "jung-quotes-source",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 20,
+   "class": "clean",
+   "field": null,
+   "citation": "CW13 §198",
+   "quote": "Not separation of the natures but union of the natures was the goal of alchemy.",
+   "edge_index": 798,
+   "ref_index": 0,
+   "presented": {
+    "subject": "alchemy",
+    "relation": "had-as-its-goal-not-separation-of-the-natures-but",
+    "object": "union-of-opposites",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 21,
+   "class": "clean",
+   "field": null,
+   "citation": "CW13 §315",
+   "quote": "Mercurius is symbolized by the tree as well as by the dragon",
+   "edge_index": 69,
+   "ref_index": 0,
+   "presented": {
+    "subject": "mercurius",
+    "relation": "symbolized-by",
+    "object": "dragon",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 22,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW8 §912",
+   "quote": "For the unconscious psyche space and time seem to be relative",
+   "edge_index": 2008,
+   "ref_index": 2,
+   "presented": {
+    "subject": "psyche",
+    "relation": "relativizes",
+    "object": "space-time",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 23,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "mandala",
+   "planted_value": "archetype",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §234",
+   "quote": "Mandalas are birth-places, vessels of birth in the most literal sense, lotus-flowers in which a Buddha comes to life.",
+   "edge_index": 1267,
+   "ref_index": 0,
+   "presented": {
+    "subject": "archetype",
+    "relation": "is-vessel-of",
+    "object": "rebirth",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 24,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §453",
+   "quote": "our fairytale describes the unconscious processes that compensate the conscious, Christian situation",
+   "edge_index": 1404,
+   "ref_index": 0,
+   "presented": {
+    "subject": "myth",
+    "relation": "compensates",
+    "object": "the-christian-standpoint",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 25,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §482",
+   "quote": "thereby improves the patient’s attitude",
+   "edge_index": 1847,
+   "ref_index": 0,
+   "presented": {
+    "subject": "dream",
+    "relation": "improves",
+    "object": "psychological-attitude",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 26,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW14 §75",
+   "quote": "as the trough it is the vessel, and as the protecting tree it is the mother",
+   "edge_index": 385,
+   "ref_index": 0,
+   "presented": {
+    "subject": "oak",
+    "relation": "symbolizes",
+    "object": "the-vessel",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 27,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "projection",
+   "planted_value": "libido",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW8 §498",
+   "quote": "This projection may hit the mark once, but mostly it remains a mere projection",
+   "edge_index": 1845,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-analyst",
+    "relation": "risks",
+    "object": "libido",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 28,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "is-analogue-of",
+   "planted_value": "is",
+   "citation": "CW14 §726",
+   "quote": "the dying and resurgent God-man and hence a parallel to Christ",
+   "edge_index": 350,
+   "ref_index": 0,
+   "presented": {
+    "subject": "osiris",
+    "relation": "is",
+    "object": "christ",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 29,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §403",
+   "quote": "The method of alchemy, psychologically speaking, is one of boundless amplification.",
+   "edge_index": 581,
+   "ref_index": 0,
+   "presented": {
+    "subject": "alchemy",
+    "relation": "employs-method-of",
+    "object": "amplification",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 30,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "witch",
+   "planted_value": "demeter",
+   "distance_basis": "neighbour-of-subject",
+   "type_matched": true,
+   "citation": "CW9i §349",
+   "quote": "This, together with her peculiar glance, gives her a witchlike look",
+   "edge_index": 1340,
+   "ref_index": 0,
+   "presented": {
+    "subject": "kore",
+    "relation": "appears-as",
+    "object": "demeter",
+    "claim_type": "jung-quotes-source",
+    "confidence": "medium"
+   }
+  },
+  {
+   "n": 31,
+   "class": "clean",
+   "field": null,
+   "citation": "CW13 §446",
+   "quote": "the tree possesses a quaternary quality by reason of the fact that it represents the process by which the four elements are united",
+   "edge_index": 869,
+   "ref_index": 0,
+   "presented": {
+    "subject": "tree",
+    "relation": "possesses-a-quaternary-quality-by-reason-of-representing-the-process-by-which-are-united",
+    "object": "four-elements",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 32,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §42",
+   "quote": "in a woman the Chthonic Mother",
+   "edge_index": 896,
+   "ref_index": 0,
+   "presented": {
+    "subject": "chthonic-mother",
+    "relation": "completes",
+    "object": "marriage-quaternio",
+    "claim_type": "jung-asserts",
+    "confidence": "medium"
+   }
+  },
+  {
+   "n": 33,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is-identical-with",
+   "citation": "CW14 §460",
+   "quote": "it is a splendid living likeness of our Saviour Jesus Christ",
+   "edge_index": 479,
+   "ref_index": 0,
+   "presented": {
+    "subject": "filius-macrocosmi",
+    "relation": "is-identical-with",
+    "object": "christ",
+    "claim_type": "jung-quotes-source",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 34,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §630",
+   "quote": "visualizations of a whole frame of mind or—to put it psychologically—an attitude",
+   "edge_index": 1902,
+   "ref_index": 0,
+   "presented": {
+    "subject": "spirit",
+    "relation": "expresses",
+    "object": "psychological-attitude",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 35,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "echeneis",
+   "planted_value": "alchemical-fish",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW9ii §239",
+   "quote": "in the alchemical view the attraction no longer proceeds from the fish but from a magnet which man possesses",
+   "edge_index": 1036,
+   "ref_index": 1,
+   "presented": {
+    "subject": "magnet-of-the-wise",
+    "relation": "attracts",
+    "object": "alchemical-fish",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 36,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §95",
+   "quote": "he was in all probability representing the mythological dual-mother motif and by no means his own personal prehistory",
+   "edge_index": 1196,
+   "ref_index": 0,
+   "presented": {
+    "subject": "leonardo",
+    "relation": "depicts",
+    "object": "dual-mother",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 37,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §189",
+   "quote": "The shuttling to and fro of arguments and affects represents the transcendent function of opposites.",
+   "edge_index": 1673,
+   "ref_index": 0,
+   "presented": {
+    "subject": "inner-dialogue",
+    "relation": "represents",
+    "object": "transcendent-function",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 38,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "christ",
+   "planted_value": "anthropos",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §93",
+   "quote": "It is an idea that underlies all rebirth mysteries ... Christ himself is ... twiceborn",
+   "edge_index": 132,
+   "ref_index": 0,
+   "presented": {
+    "subject": "anthropos",
+    "relation": "undergoes",
+    "object": "rebirth",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 39,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "mercurius",
+   "planted_value": "psychopomp",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §553",
+   "quote": "Mercurius is a serpent or dragon in alchemy (“serpens mercurialis",
+   "edge_index": 1465,
+   "ref_index": 0,
+   "presented": {
+    "subject": "psychopomp",
+    "relation": "appears-as",
+    "object": "serpent",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 40,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "citation": "CW9ii §171",
+   "quote": "since Christ, as a man, corresponds to the ego, and, as God, to the self, he is at once both ego and self",
+   "edge_index": 1022,
+   "ref_index": 0,
+   "presented": {
+    "subject": "christ",
+    "relation": "is",
+    "object": "the-ego",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 41,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "man",
+   "planted_value": "microcosm",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW12 §144",
+   "quote": "the Son who, according to classical (and Christian) tradition, dwells eternally in the Father … something that man could produce out of his own nature",
+   "edge_index": 734,
+   "ref_index": 0,
+   "presented": {
+    "subject": "microcosm",
+    "relation": "could-according-to-the-alchemists-deo-concedente-produce-out-of-his-own-nature",
+    "object": "christ",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "medium"
+   }
+  },
+  {
+   "n": 42,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "sol",
+   "planted_value": "lion",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW14 §517",
+   "quote": "if the son is the dominant, then Sol is his right eye and Luna his left",
+   "edge_index": 497,
+   "ref_index": 0,
+   "presented": {
+    "subject": "filius-regius",
+    "relation": "contains",
+    "object": "lion",
+    "claim_type": "jung-asserts",
+    "confidence": "medium"
+   }
+  },
+  {
+   "n": 43,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §50",
+   "quote": "we are concerned with a definite archetype—the mandala",
+   "edge_index": 634,
+   "ref_index": 0,
+   "presented": {
+    "subject": "mandala",
+    "relation": "is-a",
+    "object": "archetype",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 44,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §566",
+   "quote": "a sort of finely attuned compensation of the one-sidedness, errors, deviations, or other shortcomings of the conscious attitude",
+   "edge_index": 1662,
+   "ref_index": 2,
+   "presented": {
+    "subject": "compensation",
+    "relation": "corrects",
+    "object": "one-sidedness",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 45,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §351",
+   "quote": "the facts that led psychologists to conjecture an archetype of wholeness, i.e., the self",
+   "edge_index": 1056,
+   "ref_index": 1,
+   "presented": {
+    "subject": "the-self",
+    "relation": "is-a",
+    "object": "archetype",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 46,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §729",
+   "quote": "unlike a mirror-image, the unconscious image possesses an energy peculiar to itself, independent of consciousness",
+   "edge_index": 1948,
+   "ref_index": 0,
+   "presented": {
+    "subject": "archetypal-image",
+    "relation": "carries",
+    "object": "psychic-energy",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 47,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §485",
+   "quote": "the great tree is the dreaming king himself",
+   "edge_index": 1836,
+   "ref_index": 0,
+   "presented": {
+    "subject": "tree",
+    "relation": "personifies",
+    "object": "nebuchadnezzar",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 48,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 3,
+   "citation": "CW14 §609",
+   "quote": "Adam Kadmon appears here in the classic form of the son-lover",
+   "edge_index": 220,
+   "ref_index": 0,
+   "presented": {
+    "subject": "shulamite",
+    "relation": "consort-of",
+    "object": "anthropos",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 49,
+   "class": "clean",
+   "field": null,
+   "citation": "CW13 §39",
+   "quote": "It is nothing less than self-knowledge by means of self-brooding (Sanskrit tapas ).",
+   "edge_index": 750,
+   "ref_index": 0,
+   "presented": {
+    "subject": "circulation-of-light",
+    "relation": "amounts-to",
+    "object": "self-knowledge",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 50,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §868",
+   "quote": "put in its place an absolutely certain and indubitable fact. One such fact is the marriage connection between two persons.",
+   "edge_index": 2037,
+   "ref_index": 0,
+   "presented": {
+    "subject": "marriage",
+    "relation": "anchors",
+    "object": "marriage-horoscope-experiment",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 51,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "psyche",
+   "planted_value": "myth",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW8 §778",
+   "quote": "the basic cause of all the difficulties of this transition is to be found in a deep-seated and peculiar change within the psyche",
+   "edge_index": 1970,
+   "ref_index": 1,
+   "presented": {
+    "subject": "second-half-of-life",
+    "relation": "transforms",
+    "object": "myth",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 52,
+   "class": "clean",
+   "field": null,
+   "citation": "CW13 §390",
+   "quote": "He cannot be Christ, for Christ by his blood has already redeemed the world from the consequences of the Fall.",
+   "edge_index": 853,
+   "ref_index": 0,
+   "presented": {
+    "subject": "putissimus-homo",
+    "relation": "cannot-be-since-the-world-has-already-been-redeemed-by-his-blood-from-the-consequences-of-the-fall",
+    "object": "christ",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 53,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §171",
+   "quote": "since Christ, as a man, corresponds to the ego, and, as God, to the self, he is at once both ego and self",
+   "edge_index": 21,
+   "ref_index": 7,
+   "presented": {
+    "subject": "christ",
+    "relation": "symbolizes",
+    "object": "the-self",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 54,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "space-time",
+   "planted_value": "neurosis",
+   "distance_basis": "neighbour-of-subject",
+   "type_matched": true,
+   "citation": "CW8 §840",
+   "quote": "Rhine’s experiments show that in relation to the psyche space and time are, so to speak, “elastic”",
+   "edge_index": 2008,
+   "ref_index": 1,
+   "presented": {
+    "subject": "psyche",
+    "relation": "relativizes",
+    "object": "neurosis",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 55,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §220",
+   "quote": "Possession can be formulated as identity of the ego-personality with a complex.",
+   "edge_index": 1260,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-ego",
+    "relation": "identifies-with",
+    "object": "splinter-psyche",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 56,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §195",
+   "quote": "arsenic is defined as an “hermaphrodite, the means whereby Sulphur and Mercury are united.",
+   "edge_index": 269,
+   "ref_index": 0,
+   "presented": {
+    "subject": "arsenic",
+    "relation": "mediates",
+    "object": "coniunctio",
+    "claim_type": "jung-quotes-source",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 57,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 3,
+   "citation": "CW14 §607",
+   "quote": "Malchuth became a widow",
+   "edge_index": 196,
+   "ref_index": 0,
+   "presented": {
+    "subject": "malchuth",
+    "relation": "amplified-by",
+    "object": "widow",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 58,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "spirit",
+   "planted_value": "life",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW8 §686",
+   "quote": "It is much more a question of his quite irrational need for what we call a spiritual life",
+   "edge_index": 1923,
+   "ref_index": 1,
+   "presented": {
+    "subject": "psyche",
+    "relation": "requires",
+    "object": "life",
+    "claim_type": "jung-asserts",
+    "confidence": "medium"
+   }
+  },
+  {
+   "n": 59,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "the-self",
+   "planted_value": "archetype",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §574",
+   "quote": "the blackness of the snake and of the sombre surroundings has been assimilated by the nucleus",
+   "edge_index": 1475,
+   "ref_index": 0,
+   "presented": {
+    "subject": "archetype",
+    "relation": "assimilates",
+    "object": "the-shadow",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 60,
+   "class": "clean",
+   "field": null,
+   "citation": "CW13 §163",
+   "quote": "the filius philosophorum was extracted from matter by human art and, by means of the opus, made into a new light-bringer",
+   "edge_index": 786,
+   "ref_index": 0,
+   "presented": {
+    "subject": "filius-philosophorum",
+    "relation": "is-extracted-by-human-art-from-and-made-by-means-of-the-opus-into-a-new-light-bringer",
+    "object": "matter",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 61,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "all-or-none-reaction",
+   "planted_value": "instinct",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW8 §264",
+   "quote": "the significance of the “all-or-none” reaction formulated by Rivers",
+   "edge_index": 1718,
+   "ref_index": 0,
+   "presented": {
+    "subject": "w-h-r-rivers",
+    "relation": "formulates",
+    "object": "instinct",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 62,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "anima",
+   "planted_value": "archetype",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §358",
+   "quote": "The anima also has affinities with animals, which symbolize her characteristics. Thus she can appear as a snake or a tiger or a bird.",
+   "edge_index": 1347,
+   "ref_index": 0,
+   "presented": {
+    "subject": "archetype",
+    "relation": "appears-as",
+    "object": "serpent",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 63,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §720",
+   "quote": "in order to emphasize the unity of Mercurius, Albertus makes use of the expression \"monocolus\"",
+   "edge_index": 348,
+   "ref_index": 0,
+   "presented": {
+    "subject": "monocolus",
+    "relation": "symbolizes",
+    "object": "mercurius",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 64,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW14 §240",
+   "quote": "salt... correlated with the feminine, lunar side",
+   "edge_index": 40,
+   "ref_index": 0,
+   "presented": {
+    "subject": "salt",
+    "relation": "correlated-with",
+    "object": "luna",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 65,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW12 §476",
+   "quote": "he is also the everlasting inner man, identical or at least connected with the Anthropos",
+   "edge_index": 604,
+   "ref_index": 0,
+   "presented": {
+    "subject": "homo-philosophicus",
+    "relation": "identical-or-connected-with",
+    "object": "anthropos",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 66,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §306",
+   "quote": "In alchemy the egg stands for the chaos apprehended by the artifex, the prima materia containing the captive world-soul",
+   "edge_index": 682,
+   "ref_index": 0,
+   "presented": {
+    "subject": "philosophical-egg",
+    "relation": "stands-for",
+    "object": "prima-materia",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 67,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §321",
+   "quote": "one of its principal meanings is soul",
+   "edge_index": 438,
+   "ref_index": 0,
+   "presented": {
+    "subject": "salt",
+    "relation": "signifies",
+    "object": "anima",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 68,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §866",
+   "quote": "The method, like all divinatory or intuitive techniques, is based on an acausal or synchronistic connective principle.",
+   "edge_index": 2030,
+   "ref_index": 1,
+   "presented": {
+    "subject": "mantic-procedure",
+    "relation": "presupposes",
+    "object": "synchronicity",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 69,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §27",
+   "quote": "The conjunction of the moist (= moon) and the hot (= sun) thus produces the balsam",
+   "edge_index": 545,
+   "ref_index": 0,
+   "presented": {
+    "subject": "coniunctio",
+    "relation": "produces",
+    "object": "balsam",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 70,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §604",
+   "quote": "“Karkinos” was the name of the crab that bit Heracles in the foot in his fight with the Lernaean monster.",
+   "edge_index": 1498,
+   "ref_index": 0,
+   "presented": {
+    "subject": "crab",
+    "relation": "wounds",
+    "object": "heracles",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 71,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "mandala",
+   "planted_value": "paradise",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW9i §634",
+   "quote": "There are innumerable variants of the motif shown here, but they are all based on the squaring of a circle.",
+   "edge_index": 1510,
+   "ref_index": 0,
+   "presented": {
+    "subject": "squaring-of-the-circle",
+    "relation": "underlies",
+    "object": "paradise",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 72,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §642",
+   "quote": "the conscious mind is not in a position to create an autonomous complex at will",
+   "edge_index": 1675,
+   "ref_index": 3,
+   "presented": {
+    "subject": "splinter-psyche",
+    "relation": "defies",
+    "object": "will",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 73,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §162",
+   "quote": "Typical effects on the son are homosexuality and Don Juanism, and sometimes also impotence.",
+   "edge_index": 1229,
+   "ref_index": 0,
+   "presented": {
+    "subject": "mother-complex",
+    "relation": "produces",
+    "object": "homosexuality",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 74,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §76",
+   "quote": "In the empirical self, light and shadow form a paradoxical unity",
+   "edge_index": 23,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-self",
+    "relation": "includes",
+    "object": "the-shadow",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 75,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "mandala",
+   "planted_value": "archetype",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §714",
+   "quote": "This is evidently an attempt at self-healing on the part of Nature, which does not spring from conscious reflection",
+   "edge_index": 1526,
+   "ref_index": 1,
+   "presented": {
+    "subject": "archetype",
+    "relation": "acts-therapeutically-on",
+    "object": "psyche",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 76,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "christ",
+   "planted_value": "god-image",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW13 §455",
+   "quote": "Christ (the principle of masculine spirituality) perceives the sufferings of Sophia (i.e., the psyche) and thereby gives her form and existence.",
+   "edge_index": 873,
+   "ref_index": 0,
+   "presented": {
+    "subject": "god-image",
+    "relation": "in-the-language-of-myth-perceives-the-sufferings-of-and-gives-form-and-existence-to",
+    "object": "sophia-wisdom",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 77,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "psychic-image",
+   "planted_value": "relatively-closed-system",
+   "distance_basis": "neighbour-of-subject",
+   "type_matched": true,
+   "citation": "CW8 §700",
+   "quote": "we can grasp the world only as a psychic image in ourselves",
+   "edge_index": 1892,
+   "ref_index": 3,
+   "presented": {
+    "subject": "psyche",
+    "relation": "consists-of",
+    "object": "relatively-closed-system",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 78,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §539",
+   "quote": "The ass is a daemon triunus … portrayed in Latin alchemy as a three-headed monster and identified with Mercurius, salt, and sulphur",
+   "edge_index": 716,
+   "ref_index": 0,
+   "presented": {
+    "subject": "three-legged-ass",
+    "relation": "is-identified-in-latin-alchemy-with",
+    "object": "mercurius",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 79,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "is-equivalent-of",
+   "planted_value": "is-identical-with",
+   "citation": "CW14 §226",
+   "quote": "Logos and Eros are intellectually formulated intuitive equivalents of the archetypal images of Sol and Luna",
+   "edge_index": 261,
+   "ref_index": 0,
+   "presented": {
+    "subject": "eros",
+    "relation": "is-identical-with",
+    "object": "luna",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 80,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "serpent",
+   "planted_value": "god-image",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §667",
+   "quote": "it is the awakening of Kundalini, meaning that the patient’s chthonic nature is becoming active",
+   "edge_index": 1534,
+   "ref_index": 0,
+   "presented": {
+    "subject": "god-image",
+    "relation": "signifies",
+    "object": "instinct",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 81,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "archetype",
+   "planted_value": "psychoid",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW8 §404",
+   "quote": "the archetypes intervene in the shaping of conscious contents by regulating, modifying, and motivating them",
+   "edge_index": 1798,
+   "ref_index": 1,
+   "presented": {
+    "subject": "psychoid",
+    "relation": "regulates",
+    "object": "spontaneous-fantasy",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 82,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW12 §357",
+   "quote": "seems to point to active imagination as the thing that sets the process really going",
+   "edge_index": 572,
+   "ref_index": 0,
+   "presented": {
+    "subject": "active-imagination",
+    "relation": "seems-to-set-in-motion",
+    "object": "the-opus",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 83,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "equivalent-of",
+   "planted_value": "is-identical-with",
+   "citation": "CW14 §86",
+   "quote": "recognized as an equivalent of the homo totus",
+   "edge_index": 388,
+   "ref_index": 0,
+   "presented": {
+    "subject": "lapis",
+    "relation": "is-identical-with",
+    "object": "the-whole-man",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 84,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is-identical-with",
+   "citation": "CW14 §29",
+   "quote": "the changefulness of the moon is paralleled by the transformation of the pre-existent Christ from a divine into a human figure",
+   "edge_index": 546,
+   "ref_index": 0,
+   "presented": {
+    "subject": "luna",
+    "relation": "is-identical-with",
+    "object": "christ",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 85,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "citation": "CW9ii §348",
+   "quote": "One cannot help being reminded, in reading this text, of the Indian idea of the Self as brahman and atman",
+   "edge_index": 1040,
+   "ref_index": 1,
+   "presented": {
+    "subject": "the-self",
+    "relation": "is",
+    "object": "atman",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 86,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §216",
+   "quote": "the wheel appears here as a concept for wholeness which represents the essence of mandala symbolism",
+   "edge_index": 665,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-wheel",
+    "relation": "is-in-boehme-a-concept-for",
+    "object": "wholeness",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 87,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is",
+   "citation": "CW8 §476",
+   "quote": "dream psychology opens the way to a general comparative psychology",
+   "edge_index": 1838,
+   "ref_index": 1,
+   "presented": {
+    "subject": "dream",
+    "relation": "is",
+    "object": "myth",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 88,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "the-self",
+   "planted_value": "quaternity",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW13 §268",
+   "quote": "I would like to emphasize once again that the Anthropos idea coincides with the psychological concept of the self",
+   "edge_index": 815,
+   "ref_index": 0,
+   "presented": {
+    "subject": "anthropos",
+    "relation": "coincides-with-the-psychological-concept-of",
+    "object": "quaternity",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 89,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 3,
+   "citation": "CW9ii §128",
+   "quote": "lead one to conjecture a second source. This source is astrology",
+   "edge_index": 982,
+   "ref_index": 0,
+   "presented": {
+    "subject": "fish",
+    "relation": "its-sudden-activation-is-conjectured-to-stem-from-a-second-source-in",
+    "object": "astrology",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 90,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §507",
+   "quote": "It was never possible for me to discover in the unconscious anything like a personality comparable with the ego",
+   "edge_index": 1427,
+   "ref_index": 1,
+   "presented": {
+    "subject": "the-unconscious",
+    "relation": "lacks",
+    "object": "the-ego",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 91,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "sulphur",
+   "planted_value": "salt",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW14 §110",
+   "quote": "it contains an active sulphur of a red colour, hot and dry.",
+   "edge_index": 392,
+   "ref_index": 0,
+   "presented": {
+    "subject": "sol",
+    "relation": "contains",
+    "object": "salt",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 92,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §520",
+   "quote": "it gives an exaggerated value to whatever trace of that quality was present in the object",
+   "edge_index": 1864,
+   "ref_index": 0,
+   "presented": {
+    "subject": "projection",
+    "relation": "exaggerates",
+    "object": "psychological-value",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 93,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §797",
+   "quote": "an even greater number of the ageing have the same fear of death",
+   "edge_index": 1984,
+   "ref_index": 0,
+   "presented": {
+    "subject": "old-age",
+    "relation": "fears",
+    "object": "death",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 94,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 3,
+   "citation": "CW13 §390",
+   "quote": "in the form of the red tincture, it expressed the healing or whole-making effect of a certain kind of Eros",
+   "edge_index": 851,
+   "ref_index": 0,
+   "presented": {
+    "subject": "rose-coloured-blood",
+    "relation": "expressed-in-the-form-of-the-red-tincture-the-healing-or-whole-making-effect-of-a-certain-kind-of",
+    "object": "eros",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 95,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "is-analogue-of",
+   "planted_value": "is-identical-with",
+   "citation": "CW14 §622",
+   "quote": "a strange parallel in Parvati",
+   "edge_index": 312,
+   "ref_index": 0,
+   "presented": {
+    "subject": "shulamite",
+    "relation": "is-identical-with",
+    "object": "parvati",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "medium"
+   }
+  },
+  {
+   "n": 96,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is",
+   "citation": "CW9i §717",
+   "quote": "Indian philosophy, which developed the idea of the self, Atman or Purusha, to the highest degree",
+   "edge_index": 1546,
+   "ref_index": 0,
+   "presented": {
+    "subject": "atman",
+    "relation": "is",
+    "object": "the-self",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 97,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "mandala",
+   "planted_value": "archetype",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §645",
+   "quote": "Confronted with these pictures, many patients suddenly realize for the first time the reality of the collective unconscious as an autonomous entity.",
+   "edge_index": 1515,
+   "ref_index": 0,
+   "presented": {
+    "subject": "archetype",
+    "relation": "reveals",
+    "object": "collective-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 98,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "citation": "CW14 §137",
+   "quote": "is equated with the light of nature, the supreme source of knowledge",
+   "edge_index": 402,
+   "ref_index": 0,
+   "presented": {
+    "subject": "sulphur",
+    "relation": "is",
+    "object": "lumen-naturae",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 99,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §140",
+   "quote": "I beget the light, but the darkness too is of my nature",
+   "edge_index": 732,
+   "ref_index": 0,
+   "presented": {
+    "subject": "lapis",
+    "relation": "begets-the-light-and-harbours-the-darkness-uniting",
+    "object": "the-opposites",
+    "claim_type": "jung-quotes-source",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 100,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §37",
+   "quote": "the son is sent forth by his parents to seek the pearl that fell from the King’s crown",
+   "edge_index": 1167,
+   "ref_index": 0,
+   "presented": {
+    "subject": "treasure-hard-to-attain",
+    "relation": "lies-in",
+    "object": "water",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 101,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §759",
+   "quote": "The production of the lapis was the goal of alchemy in general.",
+   "edge_index": 356,
+   "ref_index": 0,
+   "presented": {
+    "subject": "lapis",
+    "relation": "is-goal-of",
+    "object": "the-opus",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 102,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §589",
+   "quote": "they do not belong to one individual alone but to a whole group of individuals, and generally to a whole nation",
+   "edge_index": 1752,
+   "ref_index": 2,
+   "presented": {
+    "subject": "collective-unconscious",
+    "relation": "is-common-to",
+    "object": "man",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 103,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW8 §904",
+   "quote": "It is just what I call a synchronistic phenomenon.",
+   "edge_index": 2049,
+   "ref_index": 0,
+   "presented": {
+    "subject": "marriage-horoscope-experiment",
+    "relation": "exemplifies",
+    "object": "synchronicity",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 104,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "coniunctio",
+   "planted_value": "union-of-opposites",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW16 §410",
+   "quote": "King and Queen, bridegroom and bride, approach one another...betrothal or marriage",
+   "edge_index": 13,
+   "ref_index": 1,
+   "presented": {
+    "subject": "union-of-opposites",
+    "relation": "amplified-by",
+    "object": "regina",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 105,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §147",
+   "quote": "The symbolism shows Christ and those who believe in him as fishes, fish as the food eaten at the Agape",
+   "edge_index": 1002,
+   "ref_index": 0,
+   "presented": {
+    "subject": "christ",
+    "relation": "symbolized-by",
+    "object": "fish",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 106,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §549",
+   "quote": "They bring him memories, insights, experiences, awaken dormant qualities in the personality",
+   "edge_index": 1847,
+   "ref_index": 2,
+   "presented": {
+    "subject": "dream",
+    "relation": "improves",
+    "object": "psychological-attitude",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 107,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §545",
+   "quote": "The dream not only fails to obey our will but very often stands in flagrant opposition to our conscious intentions",
+   "edge_index": 1740,
+   "ref_index": 1,
+   "presented": {
+    "subject": "the-unconscious",
+    "relation": "frustrates",
+    "object": "will",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 108,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §579",
+   "quote": "They constitute a sort of second quaternity, proceeding from the inner, pneumatic quaternity but of a physical nature.",
+   "edge_index": 1478,
+   "ref_index": 0,
+   "presented": {
+    "subject": "four-elements",
+    "relation": "constitute",
+    "object": "quaternity",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 109,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "golden-flower",
+   "planted_value": "mandala",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW12 §101",
+   "quote": "the “golden flower of alchemy” ... can sometimes be a blue flower",
+   "edge_index": 646,
+   "ref_index": 0,
+   "presented": {
+    "subject": "mandala",
+    "relation": "can-sometimes-be",
+    "object": "blue-flower",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 110,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §106",
+   "quote": "incest, into a symbol of the union of opposites",
+   "edge_index": 204,
+   "ref_index": 0,
+   "presented": {
+    "subject": "incest",
+    "relation": "symbolizes",
+    "object": "union-of-opposites",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 111,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §618",
+   "quote": "the psyche consists essentially of images. It is a series of images in the truest sense",
+   "edge_index": 1892,
+   "ref_index": 0,
+   "presented": {
+    "subject": "psyche",
+    "relation": "consists-of",
+    "object": "psychic-image",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 112,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §189",
+   "quote": "The arrangement of the snakes in the four corners is indicative of an order in the unconscious.",
+   "edge_index": 657,
+   "ref_index": 0,
+   "presented": {
+    "subject": "quaternity",
+    "relation": "is-indicative-of-an-order-in",
+    "object": "the-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 113,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §937",
+   "quote": "his idea of pre-established harmony , that is, an absolute synchronism of psychic and physical events",
+   "edge_index": 2067,
+   "ref_index": 0,
+   "presented": {
+    "subject": "leibniz",
+    "relation": "proposes",
+    "object": "pre-established-harmony",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 114,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "citation": "CW9ii §369",
+   "quote": "as the higher Adam corresponds to the lower, so the lower Adam corresponds to the serpent",
+   "edge_index": 1102,
+   "ref_index": 0,
+   "presented": {
+    "subject": "anthropos",
+    "relation": "is",
+    "object": "lower-adam",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 115,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "citation": "CW9ii §419",
+   "quote": "Independently of Western tradition, the same idea of the circular opus can be found in Chinese alchemy",
+   "edge_index": 1134,
+   "ref_index": 0,
+   "presented": {
+    "subject": "circulation-of-light",
+    "relation": "is",
+    "object": "circulatio",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 116,
+   "class": "clean",
+   "field": null,
+   "citation": "CW13 §51",
+   "quote": "fragmentary psychic systems would never have been split off; in other words, neither spirits nor gods would ever have come into existence",
+   "edge_index": 751,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-gods",
+    "relation": "originate-in",
+    "object": "splinter-psyche",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 117,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "is-psychologically-parallel-to-the-reduction-to-order-through-reflection-of-chaotic-fragments-of",
+   "planted_value": "is",
+   "citation": "CW13 §111",
+   "quote": "The psychological parallel to this is the reduction to order, through reflection, of apparently chaotic fragments of the unconscious",
+   "edge_index": 770,
+   "ref_index": 0,
+   "presented": {
+    "subject": "dismemberment",
+    "relation": "is",
+    "object": "the-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 118,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §80",
+   "quote": "the concept of the privatio boni ... can be found as early as Basil the Great",
+   "edge_index": 919,
+   "ref_index": 0,
+   "presented": {
+    "subject": "basil-the-great",
+    "relation": "teaches",
+    "object": "privatio-boni",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 119,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §188",
+   "quote": "The magic circle thus traced will also prevent the unconscious from breaking out again",
+   "edge_index": 655,
+   "ref_index": 0,
+   "presented": {
+    "subject": "magic-circle",
+    "relation": "prevents-eruption-of",
+    "object": "the-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 120,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "the-opus",
+   "planted_value": "rubedo",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW12 §165",
+   "quote": "It is a symbol of the opus alchymicum",
+   "edge_index": 90,
+   "ref_index": 0,
+   "presented": {
+    "subject": "squaring-of-the-circle",
+    "relation": "symbolizes",
+    "object": "rubedo",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 121,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §528",
+   "quote": "It is the fault of the everlasting contamination of object and imago",
+   "edge_index": 1862,
+   "ref_index": 1,
+   "presented": {
+    "subject": "consciousness",
+    "relation": "confuses",
+    "object": "imago",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 122,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §609",
+   "quote": "She is the sacred harlot ( meretrix )",
+   "edge_index": 219,
+   "ref_index": 0,
+   "presented": {
+    "subject": "shulamite",
+    "relation": "amplified-by",
+    "object": "meretrix",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 123,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "psychoanalysis",
+   "planted_value": "rationalism",
+   "distance_basis": "neighbour-of-subject",
+   "type_matched": true,
+   "citation": "CW8 §701",
+   "quote": "The term “analytical” derives from the fact that this branch of psychology developed out of the original Freudian psychoanalysis",
+   "edge_index": 1928,
+   "ref_index": 0,
+   "presented": {
+    "subject": "analytical-psychology",
+    "relation": "derives-from",
+    "object": "rationalism",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 124,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "mercurius",
+   "planted_value": "psychopomp",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §556",
+   "quote": "The alchemists accordingly represented their Mercurius duplex as the winged and wingless dragon, calling the former feminine and the latter masculine",
+   "edge_index": 1465,
+   "ref_index": 1,
+   "presented": {
+    "subject": "psychopomp",
+    "relation": "appears-as",
+    "object": "serpent",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 125,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW12 §361",
+   "quote": "the essential secret of the art lies hidden in the human mind—or, to put it in modern terms, in the unconscious",
+   "edge_index": 574,
+   "ref_index": 0,
+   "presented": {
+    "subject": "alchemy",
+    "relation": "secret-possibly-hidden-in",
+    "object": "the-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 126,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §135",
+   "quote": "the other centre of personality lies on a different plane from the ego since, unlike this, it has the quality of “eternity”",
+   "edge_index": 730,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-centre",
+    "relation": "lies-on-a-different-plane-from-and-unlike-it-has-the-quality-of-eternity",
+    "object": "the-ego",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 127,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "unconsciousness",
+   "planted_value": "spirit",
+   "distance_basis": "neighbour-of-subject",
+   "type_matched": true,
+   "citation": "CW13 §118",
+   "quote": "The dragon, or serpent, represents the initial state of unconsciousness",
+   "edge_index": 83,
+   "ref_index": 0,
+   "presented": {
+    "subject": "dragon",
+    "relation": "symbolizes",
+    "object": "spirit",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 128,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §90",
+   "quote": "Not for nothing is magic called the “mother of science.”",
+   "edge_index": 1615,
+   "ref_index": 0,
+   "presented": {
+    "subject": "magic",
+    "relation": "generates",
+    "object": "science",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 129,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §662",
+   "quote": "the soul was essentially the life of the body, the life-breath, or a kind of life force",
+   "edge_index": 1916,
+   "ref_index": 1,
+   "presented": {
+    "subject": "soul",
+    "relation": "names",
+    "object": "life-energy",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 130,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §63",
+   "quote": "he has succeeded in establishing a protected temenos ... a taboo area where he will be able to meet the unconscious",
+   "edge_index": 635,
+   "ref_index": 0,
+   "presented": {
+    "subject": "temenos",
+    "relation": "is-taboo-area-where-dreamer-can-meet",
+    "object": "the-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 131,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW8 §388",
+   "quote": "one could equate the scintillae with the archetypes",
+   "edge_index": 1789,
+   "ref_index": 0,
+   "presented": {
+    "subject": "scintilla",
+    "relation": "symbolizes",
+    "object": "archetype",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 132,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "christ",
+   "planted_value": "god-image",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §268",
+   "quote": "the still living “Christ-child,” who, in the legend of Saint Christopher, also has the typical feature",
+   "edge_index": 1304,
+   "ref_index": 0,
+   "presented": {
+    "subject": "god-image",
+    "relation": "appears-as",
+    "object": "divine-child",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 133,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §827",
+   "quote": "there is no possible justification for seeing in this anything but a chance grouping",
+   "edge_index": 2001,
+   "ref_index": 1,
+   "presented": {
+    "subject": "fish",
+    "relation": "exemplifies",
+    "object": "chance",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 134,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW9i §520",
+   "quote": "the fact remains that in their case the unconscious has swallowed up ego-consciousness",
+   "edge_index": 1442,
+   "ref_index": 0,
+   "presented": {
+    "subject": "yoga",
+    "relation": "dissolves",
+    "object": "the-ego",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 135,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is-identical-with",
+   "citation": "CW9i §439",
+   "quote": "In a real woman it would correspond to the animus who, like the magic horse, represents “spirit.”",
+   "edge_index": 1396,
+   "ref_index": 0,
+   "presented": {
+    "subject": "triad",
+    "relation": "is-identical-with",
+    "object": "animus",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 136,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "rebirth",
+   "planted_value": "night-sea-journey",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW9i §353",
+   "quote": "This piece describes the successive transformations of the illusionist (artistry in illusion being a specifically feminine talent) until she becomes a transfigured personality.",
+   "edge_index": 1342,
+   "ref_index": 0,
+   "presented": {
+    "subject": "dancer",
+    "relation": "undergoes",
+    "object": "night-sea-journey",
+    "claim_type": "jung-asserts",
+    "confidence": "medium"
+   }
+  },
+  {
+   "n": 137,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "the-self",
+   "planted_value": "projection",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW9i §541",
+   "quote": "It depends not on the ego but on the self",
+   "edge_index": 1459,
+   "ref_index": 0,
+   "presented": {
+    "subject": "inferior-function",
+    "relation": "depends-on",
+    "object": "projection",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 138,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "christ",
+   "planted_value": "god-image",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9ii §321",
+   "quote": "That the Son is closely akin to the self is evident from the emphasis laid on the quaternary nature of Christ",
+   "edge_index": 21,
+   "ref_index": 8,
+   "presented": {
+    "subject": "god-image",
+    "relation": "symbolizes",
+    "object": "the-self",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 139,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §272",
+   "quote": "the quaternity embodied in it is the vehicle or throne",
+   "edge_index": 424,
+   "ref_index": 0,
+   "presented": {
+    "subject": "chariot",
+    "relation": "embodies",
+    "object": "quaternity",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 140,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §362",
+   "quote": "a flimsy threshold that separates us from the unconscious contents of the psyche",
+   "edge_index": 1779,
+   "ref_index": 0,
+   "presented": {
+    "subject": "threshold-of-consciousness",
+    "relation": "separates",
+    "object": "the-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 141,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW8 §496",
+   "quote": "reductive dreams have an effect that is the very reverse of constructive",
+   "edge_index": 1830,
+   "ref_index": 0,
+   "presented": {
+    "subject": "reductive-function",
+    "relation": "opposes",
+    "object": "prospective-function",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 142,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW9i §593",
+   "quote": "The eye may well stand for consciousness (which is in fact an organ of perception), looking into its own background.",
+   "edge_index": 1488,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-eye",
+    "relation": "stands-for",
+    "object": "consciousness",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 143,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW14 §175",
+   "quote": "if Sol is the spirit and Luna the body",
+   "edge_index": 410,
+   "ref_index": 0,
+   "presented": {
+    "subject": "sol",
+    "relation": "symbolizes",
+    "object": "spirit",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 144,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §980",
+   "quote": "But it cannot be predicted in advance when the hit will come. Could we do so, we would be dealing with a law",
+   "edge_index": 2071,
+   "ref_index": 1,
+   "presented": {
+    "subject": "synchronicity",
+    "relation": "eludes",
+    "object": "natural-law",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 145,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §767",
+   "quote": "Whoever protects himself against what is new and strange and regresses to the past falls into the same neurotic condition",
+   "edge_index": 1967,
+   "ref_index": 0,
+   "presented": {
+    "subject": "regression",
+    "relation": "produces",
+    "object": "neurosis",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 146,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW13 §299",
+   "quote": "From this standpoint Christ appears as the archetype of consciousness and Mercurius as the archetype of the unconscious.",
+   "edge_index": 831,
+   "ref_index": 0,
+   "presented": {
+    "subject": "christ",
+    "relation": "appears-from-this-standpoint-as-the-archetype-of",
+    "object": "consciousness",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 147,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW9i §168",
+   "quote": "an overdeveloped Eros results, and this almost invariably leads to an unconscious incestuous relationship with the father.",
+   "edge_index": 1232,
+   "ref_index": 0,
+   "presented": {
+    "subject": "mother-complex",
+    "relation": "leads-to",
+    "object": "incest",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 148,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §127",
+   "quote": "Thus mana is not a concept but a representation based on the perception of a “phenomenal” relationship.",
+   "edge_index": 1639,
+   "ref_index": 0,
+   "presented": {
+    "subject": "mana",
+    "relation": "expresses",
+    "object": "participation-mystique",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 149,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "great-mother",
+   "planted_value": "archetype",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §158",
+   "quote": "The place of magic transformation and rebirth ... are presided over by the mother",
+   "edge_index": 119,
+   "ref_index": 0,
+   "presented": {
+    "subject": "archetype",
+    "relation": "presides-over",
+    "object": "rebirth",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 150,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is",
+   "citation": "CW8 §795",
+   "quote": "the comparison with the sun. The one hundred and eighty degrees of the arc of life are divisible into four parts.",
+   "edge_index": 1972,
+   "ref_index": 3,
+   "presented": {
+    "subject": "course-of-the-sun",
+    "relation": "is",
+    "object": "stages-of-life",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 151,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "sensation",
+   "planted_value": "will",
+   "distance_basis": "neighbour-of-subject",
+   "type_matched": true,
+   "citation": "CW8 §288",
+   "quote": "This is told us not by the process of perception but by the process of apperception",
+   "edge_index": 1735,
+   "ref_index": 0,
+   "presented": {
+    "subject": "apperception",
+    "relation": "distinct-from",
+    "object": "will",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 152,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "citation": "CW14 §681",
+   "quote": "it consists in the imago Dei imprinted in man. This imago is the true quintessence",
+   "edge_index": 333,
+   "ref_index": 0,
+   "presented": {
+    "subject": "quintessence",
+    "relation": "is",
+    "object": "god-image",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 153,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §644",
+   "quote": "I now reproduce the Tibetan “World Wheel,” which should be sharply distinguished from the former, since it represents the world.",
+   "edge_index": 1513,
+   "ref_index": 0,
+   "presented": {
+    "subject": "world-wheel",
+    "relation": "differs-from",
+    "object": "mandala",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 154,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "life",
+   "planted_value": "teleology",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW8 §803",
+   "quote": "Like a projectile flying to its goal, life ends in death.",
+   "edge_index": 1986,
+   "ref_index": 0,
+   "presented": {
+    "subject": "teleology",
+    "relation": "ends-in",
+    "object": "death",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 155,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §132",
+   "quote": "For a monk of the Cistercian Order, which as we know is distinguished for its severity, this vision is exceedingly heretical.",
+   "edge_index": 1210,
+   "ref_index": 1,
+   "presented": {
+    "subject": "syzygy",
+    "relation": "contradicts",
+    "object": "dogma",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 156,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is-identical-with",
+   "citation": "CW8 §19",
+   "quote": "the constellating power of the nuclear element corresponds to its value intensity, i.e., to its energy",
+   "edge_index": 1575,
+   "ref_index": 0,
+   "presented": {
+    "subject": "nuclear-element",
+    "relation": "is-identical-with",
+    "object": "psychological-value",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 157,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §127",
+   "quote": "the primary pair of opposites, consciousness and unconsciousness, whose symbols are Sol and Luna",
+   "edge_index": 10,
+   "ref_index": 0,
+   "presented": {
+    "subject": "sol",
+    "relation": "opposes",
+    "object": "luna",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 158,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §3",
+   "quote": "this personal unconscious rests upon a deeper layer, which does not derive from personal experience and is not a personal acquisition but is inborn",
+   "edge_index": 1148,
+   "ref_index": 0,
+   "presented": {
+    "subject": "collective-unconscious",
+    "relation": "underlies",
+    "object": "personal-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 159,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §563",
+   "quote": "Paradoxically enough, inflation is a regression of consciousness into unconsciousness.",
+   "edge_index": 720,
+   "ref_index": 0,
+   "presented": {
+    "subject": "ego-inflation",
+    "relation": "is-a-regression-of-consciousness-into",
+    "object": "unconsciousness",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 160,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §483",
+   "quote": "In any case the Virgin is identified with the arcanum of the art",
+   "edge_index": 595,
+   "ref_index": 0,
+   "presented": {
+    "subject": "mary",
+    "relation": "identified-with",
+    "object": "arcane-substance",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 161,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §293",
+   "quote": "The former are defined as directed impulses, based on apperception, which are at the disposal of so-called free will.",
+   "edge_index": 1738,
+   "ref_index": 0,
+   "presented": {
+    "subject": "will",
+    "relation": "depends-on",
+    "object": "apperception",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 162,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "mandala",
+   "planted_value": "archetype",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW12 §247",
+   "quote": "that obscure thing we call the mandala or \"self\"",
+   "edge_index": 92,
+   "ref_index": 0,
+   "presented": {
+    "subject": "archetype",
+    "relation": "symbolizes",
+    "object": "the-self",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 163,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW8 §316",
+   "quote": "everything that is translated into its picture-language would be depersonalized",
+   "edge_index": 1748,
+   "ref_index": 0,
+   "presented": {
+    "subject": "collective-unconscious",
+    "relation": "depersonalizes",
+    "object": "emotion",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 164,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §809",
+   "quote": "I have frequently been able to trace back for over a year, in a dream-series, the indications of approaching death",
+   "edge_index": 1994,
+   "ref_index": 0,
+   "presented": {
+    "subject": "dream",
+    "relation": "announces",
+    "object": "death",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 165,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 4,
+   "citation": "CW8 §550",
+   "quote": "this unconscious process spontaneously expressing itself in the symbolism of a long dream-series the individuation process",
+   "edge_index": 1869,
+   "ref_index": 0,
+   "presented": {
+    "subject": "dream",
+    "relation": "reveals",
+    "object": "individuation",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 166,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "reductive-method",
+   "planted_value": "transference",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": false,
+   "citation": "CW8 §154",
+   "quote": "This material is generally more useful for the reductive method than for the constructive one",
+   "edge_index": 1653,
+   "ref_index": 1,
+   "presented": {
+    "subject": "constructive-method",
+    "relation": "polarizes-with",
+    "object": "transference",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 167,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §532",
+   "quote": "she had rediscovered the historical synonym of the philosophical egg, namely the rotundum , the round, original form of the Anthropos",
+   "edge_index": 1451,
+   "ref_index": 0,
+   "presented": {
+    "subject": "rotundum",
+    "relation": "is-form-of",
+    "object": "anthropos",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 168,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §795",
+   "quote": "a very old person who is sinking again into the unconscious, and who progressively vanishes within it",
+   "edge_index": 1983,
+   "ref_index": 0,
+   "presented": {
+    "subject": "old-age",
+    "relation": "submerges-in",
+    "object": "the-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 169,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §476",
+   "quote": "the Light, the Logos (John 1:5), who is the Johannine Christ",
+   "edge_index": 472,
+   "ref_index": 0,
+   "presented": {
+    "subject": "logos",
+    "relation": "is",
+    "object": "christ",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 170,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is-identical-with",
+   "citation": "CW14 §116",
+   "quote": "the alchemical Sol ... is in many respects equal to the lumen naturae",
+   "edge_index": 395,
+   "ref_index": 0,
+   "presented": {
+    "subject": "sol",
+    "relation": "is-identical-with",
+    "object": "lumen-naturae",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 171,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §729",
+   "quote": "it constitutes in its totality a sort of timeless and eternal world-image which counterbalances our conscious, momentary picture of the world",
+   "edge_index": 1947,
+   "ref_index": 0,
+   "presented": {
+    "subject": "collective-unconscious",
+    "relation": "counterbalances",
+    "object": "consciousness",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 172,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "mercurius",
+   "planted_value": "psychopomp",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW12 §505",
+   "quote": "it is not without good reason that Mercurius is made equal [ non immerito … aequiparatur ] to the most glorious and worshipful Virgin Mary",
+   "edge_index": 589,
+   "ref_index": 0,
+   "presented": {
+    "subject": "psychopomp",
+    "relation": "made-equal-to",
+    "object": "mary",
+    "claim_type": "jung-quotes-source",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 173,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 2,
+   "citation": "CW14 §749",
+   "quote": "the alchemical operation seems to us the equivalent of the psychological process of active imagination",
+   "edge_index": 341,
+   "ref_index": 0,
+   "presented": {
+    "subject": "the-opus",
+    "relation": "is-equivalent-of",
+    "object": "active-imagination",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 174,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §528",
+   "quote": "This definition of the serpent agrees with the alchemical Mercurius, who is likewise a kind of water",
+   "edge_index": 714,
+   "ref_index": 0,
+   "presented": {
+    "subject": "serpent",
+    "relation": "is-in-its-naassene-definition-in-agreement-with",
+    "object": "mercurius",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 175,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "spirit",
+   "planted_value": "archetype",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §385",
+   "quote": "In contradiction to this view there stands the antithesis: spirit and nature",
+   "edge_index": 1354,
+   "ref_index": 0,
+   "presented": {
+    "subject": "archetype",
+    "relation": "opposes",
+    "object": "nature",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 176,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §284",
+   "quote": "Day and light are synonyms for consciousness, night and dark for the unconscious.",
+   "edge_index": 1300,
+   "ref_index": 0,
+   "presented": {
+    "subject": "light",
+    "relation": "symbolizes",
+    "object": "consciousness",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 177,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "psychological-value",
+   "planted_value": "primitive-energetics",
+   "distance_basis": "neighbour-of-subject",
+   "type_matched": true,
+   "citation": "CW8 §14",
+   "quote": "The applicability of the energic standpoint to psychology rests, then, exclusively on the question whether a quantitative estimate of psychic energy is possible",
+   "edge_index": 1557,
+   "ref_index": 0,
+   "presented": {
+    "subject": "energic-standpoint",
+    "relation": "depends-on",
+    "object": "primitive-energetics",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 178,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "citation": "CW14 §623",
+   "quote": "might be called the Soul of the World",
+   "edge_index": 313,
+   "ref_index": 0,
+   "presented": {
+    "subject": "benedicta-viriditas",
+    "relation": "is",
+    "object": "anima-mundi",
+    "claim_type": "jung-quotes-source",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 179,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §346",
+   "quote": "only with the passage of the centuries could the latter gradually develop into a natural science",
+   "edge_index": 1768,
+   "ref_index": 1,
+   "presented": {
+    "subject": "psychology",
+    "relation": "becomes",
+    "object": "science",
+    "claim_type": "jung-asserts",
+    "confidence": "high -> medium"
+   }
+  },
+  {
+   "n": 180,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW16 §468",
+   "quote": "The coniunctio was incestuous...The nigredo always appears in conjunction with tenebrositas",
+   "edge_index": 2,
+   "ref_index": 1,
+   "presented": {
+    "subject": "coniunctio",
+    "relation": "followed-by",
+    "object": "nigredo",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 181,
+   "class": "analogy-to-identity",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is",
+   "citation": "CW16 §471",
+   "quote": "it typifies the content of the transference neurosis",
+   "edge_index": 142,
+   "ref_index": 0,
+   "presented": {
+    "subject": "transference",
+    "relation": "is",
+    "object": "rebirth",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 182,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §312",
+   "quote": "Christ as the “Word” is indeed the “living water” and at the same time the symbol of the inner “complete” man, the self",
+   "edge_index": 1082,
+   "ref_index": 0,
+   "presented": {
+    "subject": "inner-man",
+    "relation": "is-identified-with",
+    "object": "the-self",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 183,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §611",
+   "quote": "The breaking down of the quaternity into 3 plus 1 is in accord with the archetype.",
+   "edge_index": 1384,
+   "ref_index": 2,
+   "presented": {
+    "subject": "triad",
+    "relation": "derives-from",
+    "object": "quaternity",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 184,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §435",
+   "quote": "they intervene at the critical moment when the hero—unlike his German counterpart—gets into the power of the evil spirit",
+   "edge_index": 1380,
+   "ref_index": 2,
+   "presented": {
+    "subject": "helpful-animal",
+    "relation": "assists",
+    "object": "the-hero",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 185,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §794",
+   "quote": "One of these primordial thoughts is the idea of life after death.",
+   "edge_index": 1981,
+   "ref_index": 0,
+   "presented": {
+    "subject": "immortality",
+    "relation": "is-a",
+    "object": "archetypal-image",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 186,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "trauma",
+   "planted_value": "splinter-psyche",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW8 §499",
+   "quote": "here we may expect a large number of pure reaction-dreams in which the trauma is the determining factor",
+   "edge_index": 1852,
+   "ref_index": 0,
+   "presented": {
+    "subject": "reaction-dream",
+    "relation": "reproduces",
+    "object": "splinter-psyche",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 187,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §713",
+   "quote": "As psychological phenomena they appear spontaneously in dreams, in certain states of conflict, and in cases of schizophrenia.",
+   "edge_index": 1522,
+   "ref_index": 0,
+   "presented": {
+    "subject": "mandala",
+    "relation": "appears-in",
+    "object": "dream",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 188,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9ii §70",
+   "quote": "The imago Dei imprinted on the soul, not on the body",
+   "edge_index": 905,
+   "ref_index": 0,
+   "presented": {
+    "subject": "origen",
+    "relation": "locates-the-imago-dei-in",
+    "object": "soul",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 189,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §974",
+   "quote": "The sentiment du déjà-vu is based, as I have found in a number of cases, on a foreknowledge in dreams",
+   "edge_index": 2086,
+   "ref_index": 1,
+   "presented": {
+    "subject": "dream",
+    "relation": "conveys",
+    "object": "precognition",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 190,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §912",
+   "quote": "This, in itself, is an irrepresentable, psychoid factor 14 of the collective unconscious.",
+   "edge_index": 286,
+   "ref_index": 2,
+   "presented": {
+    "subject": "archetype",
+    "relation": "is-a",
+    "object": "psychoid",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 191,
+   "class": "clean",
+   "field": null,
+   "citation": "CW9i §207",
+   "quote": "Rebirth is an affirmation that must be counted among the primordial affirmations of mankind. These primordial affirmations are based on what I call archetypes.",
+   "edge_index": 1251,
+   "ref_index": 0,
+   "presented": {
+    "subject": "rebirth",
+    "relation": "rests-on",
+    "object": "archetype",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 192,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "mercurius",
+   "planted_value": "psychopomp",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW12 §404",
+   "quote": "inwardly he means the world-creating spirit concealed or imprisoned in matter",
+   "edge_index": 584,
+   "ref_index": 0,
+   "presented": {
+    "subject": "psychopomp",
+    "relation": "inwardly-means-spirit-imprisoned-in",
+    "object": "matter",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 193,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 1,
+   "citation": "CW9i §273",
+   "quote": "The child motif represents the preconscious, childhood aspect of the collective psyche.",
+   "edge_index": 1293,
+   "ref_index": 0,
+   "presented": {
+    "subject": "divine-child",
+    "relation": "represents",
+    "object": "collective-unconscious",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 194,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "coniunctio",
+   "planted_value": "the-opus",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW13 §457",
+   "quote": "the cross as well as the tree is the medium of conjunction",
+   "edge_index": 871,
+   "ref_index": 0,
+   "presented": {
+    "subject": "cross",
+    "relation": "is-as-well-as-the-tree-the-medium-of",
+    "object": "the-opus",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 195,
+   "class": "near-referent-drift",
+   "field": "object",
+   "true_value": "arcane-substance",
+   "planted_value": "sapphire",
+   "distance_basis": "neighbour-of-object",
+   "type_matched": true,
+   "citation": "CW9ii §234",
+   "quote": "It shows two reversed fishes swimming in the sea … by which was meant the aqua permanens or arcane substance",
+   "edge_index": 1041,
+   "ref_index": 1,
+   "presented": {
+    "subject": "pisces",
+    "relation": "symbolizes",
+    "object": "sapphire",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 196,
+   "class": "subject-expansion",
+   "field": "subject",
+   "true_value": "the-shadow",
+   "planted_value": "personal-unconscious",
+   "superordinate_via": "is-a/belongs-to",
+   "citation": "CW9i §689",
+   "quote": "This shadow aspect of the mandala represented the disorderly, disruptive tendencies, the “chaos” that hides behind the self",
+   "edge_index": 1554,
+   "ref_index": 0,
+   "presented": {
+    "subject": "personal-unconscious",
+    "relation": "hides-behind",
+    "object": "the-self",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 197,
+   "class": "clean",
+   "field": null,
+   "citation": "CW12 §420",
+   "quote": "not directed to his own salvation through God’s grace, but to the liberation of God from the darkness of matter",
+   "edge_index": 626,
+   "ref_index": 0,
+   "presented": {
+    "subject": "artifex",
+    "relation": "seeks-liberation-of",
+    "object": "god-image",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 198,
+   "class": "clean",
+   "field": null,
+   "citation": "CW14 §1",
+   "quote": "factors which come together in the coniunctio are conceived as opposites",
+   "edge_index": 0,
+   "ref_index": 0,
+   "presented": {
+    "subject": "coniunctio",
+    "relation": "is-a",
+    "object": "union-of-opposites",
+    "claim_type": "jung-reports-parallel",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 199,
+   "class": "hedge-deletion",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "paragraph_hedge_markers": 4,
+   "citation": "CW8 §931",
+   "quote": "These postulated images are presumably the same as my archetypes, which can be shown to be formal factors in spontaneous fantasy products.",
+   "edge_index": 2064,
+   "ref_index": 0,
+   "presented": {
+    "subject": "absolute-knowledge",
+    "relation": "consists-of",
+    "object": "archetype",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  },
+  {
+   "n": 200,
+   "class": "clean",
+   "field": null,
+   "citation": "CW8 §407",
+   "quote": "The spirit / instinct antithesis is only one of the commonest formulations",
+   "edge_index": 1800,
+   "ref_index": 0,
+   "presented": {
+    "subject": "spirit",
+    "relation": "polarizes-with",
+    "object": "instinct",
+    "claim_type": "jung-asserts",
+    "confidence": "high"
+   }
+  }
+ ]
+}
