@@ -101,7 +101,8 @@ def main(partial):
 
     path = DOCS / "verdicts.jsonl"
     verdicts = {}
-    for line in path.read_text(encoding="utf-8").splitlines():
+    lines = path.read_text(encoding="utf-8").splitlines() if path.exists() else []
+    for line in lines:
         if not line.strip():
             continue
         v = json.loads(line)
