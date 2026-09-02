@@ -98,6 +98,11 @@ facts['family_calibration_v072_pooled'] = {'runs': len(v072),
     'pass_on_run': next((i + 1 for i, c in enumerate(v072) if c['verdict'] == 'PASS'), None)}
 facts['family_calibration_gate_same_model_as_a_proposer_arm'] = True   # independence_note in every record
 facts['external_validity'] = json.load(open(ROOT / 'docs' / 'experiments' / 'external_validity_2026-08' / 'results.json'))
+for study in ('study_b', 'study_c'):
+    rp = ROOT / 'docs' / 'experiments' / study / 'RESULT.json'
+    if rp.exists():
+        with open(rp) as fh:
+            facts[f'{study}_result'] = json.load(fh)
 facts['pinned_from_v13_paper'] = {   # experimental figures as CI-pinned in docs/PAPER.md Appendix A at v1.3.0 (transcribed, not re-derived)
     'quote_fragments_exact_at_v13': '811 of 819',
     'over_bound_splices_found_by_hostile_review': '16 in the Jung graph, 2 in the James pilot, all repaired',
