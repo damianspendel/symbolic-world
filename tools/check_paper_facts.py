@@ -50,9 +50,12 @@ if _m:
 james = json.load(open(ROOT / 'james' / 'james_seed.json'))
 
 
+paper_flat = re.sub(r'\s+', ' ', paper)   # markdown wraps lines; a fact may not straddle one
+
+
 def require(substring, why):
     """The paper must contain this exact substring (which encodes a computed fact)."""
-    if substring not in paper:
+    if substring not in paper and re.sub(r'\s+', ' ', substring) not in paper_flat:
         failures.append(f"MISSING/WRONG: paper lacks '{substring[:90]}' ({why})")
 
 
@@ -183,11 +186,11 @@ if paras_text:
         for r in e['references']:
             vc[str(r['volume'])].add(str(r['paragraph']))
     thin = [v for v in vt if v not in ('14', '12') and 1.5 <= round(100*len(vc[v])/vt[v], 1) <= 3.9]
-    if len(thin) == 7:
-        require("seven thinly-sampled volumes", "conclusion volume band")
+    WORDS = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine'}
+    band_word = WORDS.get(len(thin), str(len(thin)))
+    require(f"{band_word} thinly-sampled volumes", "volume band (count derived from the corpus)")
+    if len(thin) == 7:   # the v1.3 paper's second phrasing of the same fact
         require("the seven other sampled volumes", "limitations volume band")
-    else:
-        failures.append(f"VOLUME BAND: {len(thin)} volumes in 1.5-3.9% band, prose says seven")
     cw12_pct = round(100 * len(vc['12']) / vt['12'])
     require(f"CW 12, at {cw12_pct}%", "conclusion CW12 coverage")
     cw14_pct = round(100 * len(vc['14']) / vt['14'])
@@ -395,7 +398,8 @@ for sub, why in [
         failures.append(f"STALE DOC: docs/REVIEW.md lacks '{sub[:60]}' ({why})")
 
 # ---- references integrity: every [n] cited has an entry; every entry is cited ----
-cited = {int(x) for x in re.findall(r'(?<!\d)\[(\d{1,2})\](?!\()', paper)}
+cited = {int(n) for grp in re.findall(r'(?<!\d)\[(\d{1,2}(?:,\s*\d{1,2})*)\](?!\()', paper)
+         for n in grp.split(',')}   # [4, 8] cites two entries
 entries = {int(m.group(1)) for m in re.finditer(r'^(\d{1,2})\. .+<https?://', paper, re.M)}
 if entries:
     if cited - entries:

@@ -29,6 +29,7 @@ raw = path.read_text()
 
 # ---- strip what is not prose ----
 text = re.sub(r'```.*?```', '', raw, flags=re.S)
+text = re.split(r'^### References\s*$', text, maxsplit=1, flags=re.M)[0]   # citations are not prose
 lines = [l for l in text.splitlines()
          if not l.startswith('|') and not l.startswith('>') and not l.startswith('    ')]
 prose = '\n'.join(lines)
@@ -163,7 +164,8 @@ if sents:
 # undefined abbreviations: an ALLCAPS token 2-5 letters must appear expanded somewhere:
 # either "(ABC)" after words, or "ABC (" before an expansion, or be in the allow list
 ALLOW_ABBR = {'AI', 'CI', 'API', 'JSON', 'PDF', 'URL', 'DOI', 'CSS', 'HTML', 'ID', 'UI', 'RDF', 'KV',
-              'PASS', 'FAIL', 'TRUE', 'FALSE', 'CORRECTED', 'SUPPORTED', 'PARTIAL', 'WRONG', 'HOLD'}
+              'PASS', 'FAIL', 'TRUE', 'FALSE', 'CORRECTED', 'SUPPORTED', 'PARTIAL', 'WRONG', 'HOLD',
+              'GPT', 'ACL', 'ICLR', 'ICML', 'NAACL', 'EMNLP', 'IEEE', 'MDPI', 'LDC', 'PLOS', 'PMC', 'ARAS', 'DOI'}   # product and venue names
 abbrs = set(re.findall(r'\b[A-Z]{2,5}\b', prose)) - ALLOW_ABBR
 defined = set(re.findall(r'\(([A-Z]{2,5})\)', prose)) | set(re.findall(r'\b([A-Z]{2,5})\s*\(', prose))
 undefined = sorted(a for a in abbrs if a not in defined and not re.fullmatch(r'E\d+|RQ\d*|CW|R\d+', a))
