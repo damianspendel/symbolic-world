@@ -16,7 +16,9 @@ import sys
 from collections import Counter
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-paper = (ROOT / 'docs' / 'PAPER.md').read_text()
+# An optional path lets the drafting pass gate a draft before it becomes PAPER.md.
+PAPER_PATH = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / 'docs' / 'PAPER.md'
+paper = PAPER_PATH.read_text()
 
 # The paper is checked against the RELEASE it cites, not the working tree: the
 # artifact keeps growing under the same gates, while a published paper stays
@@ -343,6 +345,18 @@ if FAM_DOC.exists():
             failures.append(f"LEDGER TOOLTIP: state {st!r} is present in seed.json "
                             f"but has no entry in FAM_STATE_NOTE; its tooltip would "
                             f"render empty")
+
+# ---- every paragraph citation in the paper must exist in the graph ----
+# Added 2026-09-02 after a renumbering script mangled "CW 8 §827" into "§2#TMP#27"
+# in a draft: a paper about paragraph-anchored claims cannot cite a paragraph
+# the graph does not cite. Matches "CW 9ii §264" and "CW 14 §329" forms.
+cited_pairs = {(r['volume'], int(r['paragraph'])) for e in seed_live['edges'] for r in e['references']}
+for m in re.finditer(r'CW\s*(\d+i{0,2})\s*§\s*(\d+)(?![\d–-])', paper):   # ranges like §111–180 are windows, not citations
+    vol, para = m.group(1), int(m.group(2))
+    if (vol, para) not in cited_pairs:
+        failures.append(f"PARAGRAPH: paper cites CW {vol} §{para}, which no reference in the graph cites")
+if re.search(r'§\d*#TMP#', paper):
+    failures.append("PARAGRAPH: renumbering artifact '#TMP#' left in the paper")
 
 # ---- release tag ----
 tags = subprocess.run(['git', 'tag', '--list'], capture_output=True, text=True,
