@@ -16,8 +16,11 @@ out = pathlib.Path(sys.argv[2]) if len(sys.argv) > 2 else pathlib.Path(
     os.environ.get('SCRATCHPAD', '/tmp')) / (src.stem + '.pdf')
 md = src.read_text()
 md = re.sub(r'^> .*\n', '', md, flags=re.M)          # drafting notes stay off the page
-md = re.sub(r'!\[([^\]]*)\]\((figures/[^)]+)\)',   # inline SVG figures, as build_pdf does
-            lambda m: (src.parent / m.group(2)).read_text(), md)
+def _inline_svg(m):
+    # markdown splits a multi-line <svg> into paragraphs; hand it one line, as build_pdf's single-line SVGs are
+    svg = (src.parent / m.group(2)).read_text()
+    return '<figure>' + re.sub(r'\s*\n\s*', ' ', svg).strip() + f'<figcaption>{m.group(1)}</figcaption></figure>'
+md = re.sub(r'!\[([^\]]*)\]\((figures/[^)]+)\)', _inline_svg, md)   # inline SVG figures, as build_pdf does
 body = markdown.markdown(md, extensions=['tables', 'fenced_code'])
 css = """
 @page { size: 157mm 210mm; margin: 9mm 9mm 11mm 9mm;
@@ -35,6 +38,8 @@ table { border-collapse: collapse; width: 100%; font-size: 7.6pt; margin: 6pt 0;
 th, td { border: 0.5pt solid #888; padding: 2.5pt 3.5pt; vertical-align: top; text-align: left; }
 th { background: #eee; }
 svg { width: 100%; height: auto; margin: 6pt 0; }
+figure { margin: 8pt 0; page-break-inside: avoid; }
+figcaption { font-size: 8.5pt; color: #444; margin-top: 3pt; }
 tr { page-break-inside: avoid; } thead { display: table-header-group; }
 strong { font-weight: 600; }
 """
