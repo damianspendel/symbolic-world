@@ -1,0 +1,415 @@
+{
+ "study": "B",
+ "study_seed": 20260901,
+ "planted_at": "2026-09-01T13:42:03Z",
+ "commit": "12635b01498155df898f28247a69f42e3118b53a",
+ "design": "docs/experiments/study_b/DESIGN.md",
+ "scored_items": 200,
+ "partial": false,
+ "gate_model": "claude-fable-5",
+ "sensitivity": {
+  "caught": 76,
+  "n": 100,
+  "pct": 76.0,
+  "ci95": [
+   66.8,
+   83.3
+  ]
+ },
+ "specificity": {
+  "clean_true": 88,
+  "n": 100,
+  "pct": 88.0,
+  "ci95": [
+   80.2,
+   93.0
+  ]
+ },
+ "by_class": {
+  "near-referent-drift": {
+   "caught": 24,
+   "n": 25,
+   "pct": 96.0,
+   "ci95": [
+    80.5,
+    99.3
+   ],
+   "flagged": 24,
+   "flagged_not_diagnosed": 0
+  },
+  "subject-expansion": {
+   "caught": 24,
+   "n": 25,
+   "pct": 96.0,
+   "ci95": [
+    80.5,
+    99.3
+   ],
+   "flagged": 24,
+   "flagged_not_diagnosed": 0
+  },
+  "hedge-deletion": {
+   "caught": 10,
+   "n": 25,
+   "pct": 40.0,
+   "ci95": [
+    23.4,
+    59.3
+   ],
+   "flagged": 12,
+   "flagged_not_diagnosed": 2
+  },
+  "analogy-to-identity": {
+   "caught": 18,
+   "n": 25,
+   "pct": 72.0,
+   "ci95": [
+    52.4,
+    85.7
+   ],
+   "flagged": 20,
+   "flagged_not_diagnosed": 2
+  }
+ },
+ "flagged_not_diagnosed": 4,
+ "misses": [
+  {
+   "n": 8,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "primitive-mentality -animates-> matter",
+   "reason": "Quote verbatim; Jung asserts that on the primitive level matter seems endowed with soul — the 'seems' belongs to the primitive perception, not to Jung's own hedging.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 17,
+   "class": "analogy-to-identity",
+   "verdict": "TRUE",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "claim": "true-man -is-> the-self",
+   "reason": "Quote verbatim; Jung asserts the adept's own self is the 'true man', an explicit identity in his interpretive voice.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 26,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "oak -symbolizes-> the-vessel",
+   "reason": "Quote verbatim; the paragraph states the oak as trough is the vessel in Jung's own interpretive voice; referents, strength, type and confidence all hold.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 35,
+   "class": "near-referent-drift",
+   "verdict": "TRUE",
+   "field": "object",
+   "true_value": "echeneis",
+   "planted_value": "alchemical-fish",
+   "claim": "magnet-of-the-wise -attracts-> alchemical-fish",
+   "reason": "Quote verbatim; the paragraph reports the alchemical view that man's magnet exerts the attraction on the Echeneis itself; reports-parallel and high confidence fit.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 48,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "shulamite -consort-of-> anthropos",
+   "reason": "Quote verbatim; the paragraph makes the Shulamite the mother-beloved and bride in whom Adam Kadmon as son-lover and bridegroom reproduces himself; consort-of holds.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 57,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "malchuth -amplified-by-> widow",
+   "reason": "All six hold; Jung reports the kabbalistic-alchemical narrative in which Malchuth became a widow, correctly typed as parallel.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 64,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "salt -correlated-with-> luna",
+   "reason": "All six hold; in the alchemical quaternity salt is correlated with the feminine, lunar side, reported as alchemical doctrine.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 85,
+   "class": "analogy-to-identity",
+   "verdict": "TRUE",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "claim": "the-self -is-> atman",
+   "reason": "All six hold; the claim_type flags it as the reported Indian doctrine, in which the Self is brahman/atman, exactly as the paragraph presents it.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 89,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "fish -its-sudden-activation-is-conjectured-to-stem-from-a-second-source-in-> astrology",
+   "reason": "All six hold; the conjecture is encoded in the relation, and the follow-up sentence \"This source is astrology\" is declarative, supporting high confidence.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 94,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "rose-coloured-blood -expressed-in-the-form-of-the-red-tincture-the-healing-or-whole-making-effect-of-a-certain-kind-of-> eros",
+   "reason": "All six hold; the opening is hedged but the paragraph's closing sentence asserts unhedged that the rose-coloured blood is the manifestation of a certain kind of Eros that makes whole.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 96,
+   "class": "analogy-to-identity",
+   "verdict": "TRUE",
+   "field": "relation",
+   "true_value": "parallels",
+   "planted_value": "is",
+   "claim": "atman -is-> the-self",
+   "reason": "All six hold; the paragraph presents the Indian doctrine in which the self is Atman or Purusha, correctly typed as a reported parallel.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 98,
+   "class": "analogy-to-identity",
+   "verdict": "TRUE",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "claim": "sulphur -is-> lumen-naturae",
+   "reason": "All six hold; in Dorn's doctrine, correctly typed as a reported parallel, sulphur is equated with the light of nature.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 103,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "marriage-horoscope-experiment -exemplifies-> synchronicity",
+   "reason": "Quote verbatim; Jung names the experiment's meaningful chance result a synchronistic phenomenon in his own voice.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 104,
+   "class": "subject-expansion",
+   "verdict": "TRUE",
+   "field": "subject",
+   "true_value": "coniunctio",
+   "planted_value": "union-of-opposites",
+   "claim": "union-of-opposites -amplified-by-> regina",
+   "reason": "Elided quote matches; the Queen in the coniunctio pictures amplifies the supreme union of hostile opposites; reports-parallel fits the alchemical imagery.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 115,
+   "class": "analogy-to-identity",
+   "verdict": "TRUE",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "claim": "circulation-of-light -is-> circulatio",
+   "reason": "Quote verbatim; Jung asserts it is the same idea of the circular opus found independently in Chinese alchemy — sameness of idea, stated in his own voice.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 134,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "yoga -dissolves-> the-ego",
+   "reason": "Quote verbatim; Jung asserts as fact ('the fact remains') that in the yogis' samadhi the unconscious has swallowed up ego-consciousness, supporting 'dissolves'.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 141,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "reductive-function -opposes-> prospective-function",
+   "reason": "Quote verbatim; the paragraph states reductive dreams' effect is the very reverse of constructive and that they cannot properly be called prospective, supporting the opposition.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 146,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "christ -appears-from-this-standpoint-as-the-archetype-of-> consciousness",
+   "reason": "Quote verbatim; the relation carries the paragraph's own 'from this standpoint' qualifier, and the sentence is Jung's declarative interpretive assertion.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 147,
+   "class": "hedge-deletion",
+   "verdict": "CORRECTED",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "mother-complex -leads-to-> incest",
+   "reason": "The subject is wrong: the paragraph explicitly says the complex need not take this course; it is the substitute overdeveloped Eros that almost invariably leads to the unconscious incestuous relationship.",
+   "why_not_caught": "flagged, diagnosis did not name the component"
+  },
+  {
+   "n": 152,
+   "class": "analogy-to-identity",
+   "verdict": "CORRECTED",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "claim": "quintessence -is-> god-image",
+   "reason": "The claim_type is wrong: the paragraph expounds Dorn's doctrine ('Thus, he knew that...', footnoted to Dorn), not Jung's own interpretive voice.",
+   "why_not_caught": "flagged, diagnosis did not name the component"
+  },
+  {
+   "n": 165,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "dream -reveals-> individuation",
+   "reason": "All six hold: the long dream-series spontaneously expresses the process Jung names individuation, in his own voice.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 178,
+   "class": "analogy-to-identity",
+   "verdict": "CORRECTED",
+   "field": "relation",
+   "true_value": "corresponds-to",
+   "planted_value": "is",
+   "claim": "benedicta-viriditas -is-> anima-mundi",
+   "reason": "The confidence is wrong: Mylius's claim-carrying clause is 'might be called the Soul of the World' — a hedged, conditional naming, warranting medium.",
+   "why_not_caught": "flagged, diagnosis did not name the component"
+  },
+  {
+   "n": 180,
+   "class": "hedge-deletion",
+   "verdict": "TRUE",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "coniunctio -followed-by-> nigredo",
+   "reason": "Both quote fragments are verbatim; the paragraph's sequence runs coniunctio to death, blackness and nigredo, supporting followed-by in Jung's interpretive voice.",
+   "why_not_caught": "not flagged"
+  },
+  {
+   "n": 193,
+   "class": "hedge-deletion",
+   "verdict": "CORRECTED",
+   "field": "confidence",
+   "true_value": "medium",
+   "planted_value": "high",
+   "claim": "divine-child -represents-> collective-unconscious",
+   "reason": "The object is widened: the paragraph says the child motif represents the preconscious, childhood aspect of the collective psyche, not the collective unconscious wholesale.",
+   "why_not_caught": "flagged, diagnosis did not name the component"
+  }
+ ],
+ "control_flags": [
+  {
+   "n": 11,
+   "verdict": "CORRECTED",
+   "citation": "solar-phallus -recurs-in-> myth",
+   "reason": "The object is widened: this paragraph shows the solar tube recurring only in Dieterich's Mithraic liturgy text, not in myth and fairytale as a class."
+  },
+  {
+   "n": 24,
+   "verdict": "CORRECTED",
+   "citation": "myth -compensates-> the-christian-standpoint",
+   "reason": "The subject is widened: 'our fairytale' — the particular German tale — describes the compensating processes; the paragraph does not assert this of myth and fairytale as a class."
+  },
+  {
+   "n": 36,
+   "verdict": "CORRECTED",
+   "citation": "leonardo -depicts-> dual-mother",
+   "reason": "The confidence is too high: the claim-carrying sentence is hedged with 'in all probability', which warrants medium."
+  },
+  {
+   "n": 107,
+   "verdict": "CORRECTED",
+   "citation": "the-unconscious -frustrates-> will",
+   "reason": "The subject is at fault: the claim-carrying sentence says the dream fails to obey the will and opposes conscious intentions; the unconscious is credited only with autonomy, not the frustrating."
+  },
+  {
+   "n": 108,
+   "verdict": "CORRECTED",
+   "citation": "four-elements -constitute-> quaternity",
+   "reason": "The confidence is at fault: the sentence is hedged — 'a sort of second quaternity' in a passage opened by 'Cabalistic influences may be conjectured' — warranting medium, not high."
+  },
+  {
+   "n": 110,
+   "verdict": "CORRECTED",
+   "citation": "incest -symbolizes-> union-of-opposites",
+   "reason": "The claim_type is at fault: the paragraph presents the symbolization as alchemy's doing — 'Alchemy... exalted... incest, into a symbol' — a tradition's doctrine, not Jung's own assertion."
+  },
+  {
+   "n": 121,
+   "verdict": "CORRECTED",
+   "citation": "consciousness -confuses-> imago",
+   "reason": "The subject is at fault: the paragraph attributes the contamination of object and imago to people, who cannot distinguish God from God-image — not to consciousness as a psychic system."
+  },
+  {
+   "n": 133,
+   "verdict": "CORRECTED",
+   "citation": "fish -exemplifies-> chance",
+   "reason": "The subject referent is conflated: what the paragraph rules a chance grouping is the six-fold series of fish occurrences, not the Fish/Ichthys symbol itself."
+  },
+  {
+   "n": 153,
+   "verdict": "CORRECTED",
+   "citation": "world-wheel -differs-from-> mandala",
+   "reason": "The object widens a particular into its class: 'the former' the Wheel is distinguished from is the Lamaic mandala just presented, not the mandala in general."
+  },
+  {
+   "n": 155,
+   "verdict": "FALSE",
+   "citation": "syzygy -contradicts-> dogma",
+   "reason": "The subject is wrong: the paragraph never names the syzygy and supports only that one monk's particular vision was heretical, widened here into a general syzygy-contradicts-dogma claim."
+  },
+  {
+   "n": 179,
+   "verdict": "CORRECTED",
+   "citation": "psychology -becomes-> science",
+   "reason": "The confidence field is malformed ('high -> medium') and the paragraph itself qualifies the development as gradual and 'not complete even today', so medium."
+  },
+  {
+   "n": 197,
+   "verdict": "CORRECTED",
+   "citation": "artifex -seeks-liberation-of-> god-image",
+   "reason": "The object is off: the paragraph speaks of liberating God, the deity lost and sleeping in matter — 'imago Dei' is a psychologizing substitution the paragraph does not make."
+  }
+ ]
+}
