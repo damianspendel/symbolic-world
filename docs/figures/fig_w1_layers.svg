@@ -1,0 +1,59 @@
+<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica,Arial,sans-serif">
+<rect width="900" height="420" fill="#fbfaf7"/>
+<defs><marker id="w1a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8z" fill="#6a7480"/></marker></defs>
+<text x="24" y="26" font-size="13" font-weight="bold" fill="#2b2b2b">One claim, four layers, nine warrants</text>
+<text x="24" y="44" font-family="Menlo,monospace" font-size="12" fill="#3d6a8c">C = (e, s, r, o, a, m, n, f)</text>
+
+<!-- Layer A -->
+<rect x="24" y="62" width="380" height="72" rx="4" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="36" y="80" font-size="11" font-weight="bold" fill="#2b2b2b">A · provenance <tspan font-family="Menlo,monospace" fill="#3d6a8c">e</tspan></text>
+<text x="36" y="96" font-size="10" fill="#444">volume · paragraph · verbatim quote (≤25 letter-tokens)</text>
+<text x="36" y="110" font-size="10" fill="#444">the only corpus text the artifact carries;</text>
+<text x="36" y="124" font-size="10" fill="#444">checked mechanically on every build, 7 canaries</text>
+
+<!-- Layer B -->
+<rect x="24" y="146" width="380" height="86" rx="4" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="36" y="164" font-size="11" font-weight="bold" fill="#2b2b2b">B · assertion <tspan font-family="Menlo,monospace" fill="#3d6a8c">s r o a m</tspan> — FROZEN at the gate</text>
+<text x="36" y="180" font-size="10" fill="#444">subject · relation · object · voice (claim_type) ·</text>
+<text x="36" y="194" font-size="10" fill="#444">commitment (confidence) + gate verdict, date,</text>
+<text x="36" y="208" font-size="10" fill="#444">cross-vendor check; wording never edited after the</text>
+<text x="36" y="222" font-size="10" fill="#444">gate, because it is the wording the gate judged</text>
+
+<!-- Layer C -->
+<rect x="24" y="244" width="380" height="86" rx="4" fill="#f3eee4" stroke="#a9925b"/>
+<text x="36" y="262" font-size="11" font-weight="bold" fill="#2b2b2b">C · overlay <tspan font-family="Menlo,monospace" fill="#8c6d3d">n f</tspan> — versioned, ASSIGNED, never verified</text>
+<text x="36" y="278" font-size="10" fill="#444">relation_normalized: verb ≤4 tokens + qualifiers,</text>
+<text x="36" y="292" font-size="10" fill="#444">own proposer/gate/cross-check per record</text>
+<text x="36" y="306" font-size="10" fill="#444">relation_family: one of 25 (ruleset v0.7.2), with</text>
+<text x="36" y="320" font-size="10" fill="#444">state · by · date · last calibration audit</text>
+
+<!-- Layer D -->
+<rect x="24" y="342" width="380" height="58" rx="4" fill="#efefef" stroke="#8a8a8a"/>
+<text x="36" y="360" font-size="11" font-weight="bold" fill="#2b2b2b">D · derivation — holds nothing</text>
+<text x="36" y="376" font-size="10" fill="#444">7 declared inverse/symmetry rules, applied at read</text>
+<text x="36" y="390" font-size="10" fill="#444">time, rows labelled derived, never written back</text>
+
+<!-- arrows between layers -->
+<line x1="214" y1="134" x2="214" y2="146" stroke="#6a7480" marker-end="url(#w1a)"/>
+<line x1="214" y1="232" x2="214" y2="244" stroke="#6a7480" marker-end="url(#w1a)"/>
+<line x1="214" y1="330" x2="214" y2="342" stroke="#6a7480" marker-end="url(#w1a)"/>
+<text x="222" y="143" font-size="8.5" fill="#6a7480">nothing below is rewritten by anything above</text>
+
+<!-- Warrant ladder -->
+<text x="452" y="70" font-size="11" font-weight="bold" fill="#2b2b2b">The warrant ladder</text>
+<text x="452" y="84" font-size="9" fill="#6a7480">what each rung says · population today</text>
+<g font-size="10">
+<rect x="452" y="94"  width="424" height="24" fill="#e9f0f7" stroke="#5b87ab"/><text x="460" y="110" fill="#2b2b2b"><tspan font-weight="bold">attested</tspan> — quote is in the paragraph</text><text x="868" y="110" text-anchor="end" font-family="Menlo,monospace" fill="#3d6a8c">2678/2678</text>
+<rect x="452" y="122" width="424" height="24" fill="#e9f0f7" stroke="#5b87ab"/><text x="460" y="138" fill="#2b2b2b"><tspan font-weight="bold">model-supported</tspan> — other-family gate passed it</text><text x="868" y="138" text-anchor="end" font-family="Menlo,monospace" fill="#3d6a8c">2678/2678</text>
+<rect x="452" y="150" width="424" height="24" fill="#e9f0f7" stroke="#5b87ab"/><text x="460" y="166" fill="#2b2b2b"><tspan font-weight="bold">cross-checked</tspan> — other-vendor audit</text><text x="868" y="166" text-anchor="end" font-family="Menlo,monospace" fill="#3d6a8c">2484/2678 · 93%</text>
+<rect x="452" y="178" width="424" height="24" fill="#efe9dc" stroke="#a9925b"/><text x="460" y="194" fill="#2b2b2b"><tspan font-weight="bold">human-reviewed</tspan> — one person, full paragraph</text><text x="868" y="194" text-anchor="end" font-family="Menlo,monospace" fill="#8c6d3d">50 refs · 37 families</text>
+<rect x="452" y="206" width="424" height="24" fill="#f7e9e9" stroke="#ab5b5b"/><text x="460" y="222" fill="#2b2b2b"><tspan font-weight="bold">human-agreed</tspan> — two people, independent, unanchored</text><text x="868" y="222" text-anchor="end" font-family="Menlo,monospace" font-weight="bold" fill="#a03c3c">0</text>
+<rect x="452" y="234" width="424" height="24" fill="#f3eee4" stroke="#a9925b"/><text x="460" y="250" fill="#2b2b2b"><tspan font-weight="bold">normalized</tspan> — reviewed verb beside the frozen string</text><text x="868" y="250" text-anchor="end" font-family="Menlo,monospace" fill="#8c6d3d">260/2091</text>
+<rect x="452" y="262" width="424" height="24" fill="#f3eee4" stroke="#a9925b"/><text x="460" y="278" fill="#2b2b2b"><tspan font-weight="bold">family-assigned</tspan> — filed under the versioned ruleset</text><text x="868" y="278" text-anchor="end" font-family="Menlo,monospace" fill="#8c6d3d">1669/2091</text>
+<rect x="452" y="290" width="424" height="24" fill="#efefef" stroke="#8a8a8a"/><text x="460" y="306" fill="#2b2b2b"><tspan font-weight="bold">derived</tspan> — read-time inverse/symmetry, labelled</text><text x="868" y="306" text-anchor="end" font-family="Menlo,monospace" fill="#555">250 rows at closure</text>
+<rect x="452" y="318" width="424" height="24" fill="#efefef" stroke="#8a8a8a"/><text x="460" y="334" fill="#2b2b2b"><tspan font-weight="bold">contested</tspan> — admissible evaluation unresolved</text><text x="868" y="334" text-anchor="end" font-family="Menlo,monospace" fill="#555">354 queued · 340 arms</text>
+</g>
+<text x="452" y="362" font-size="9" fill="#6a7480">Passing one rung warrants nothing about the next: all 260 normalized relations are</text>
+<text x="452" y="374" font-size="9" fill="#6a7480">attested and gated; none carries a warrant for the normalization itself (Study C).</text>
+<text x="452" y="392" font-size="9" fill="#a03c3c">The empty rung is the point: no item has two independent human judgements.</text>
+</svg>

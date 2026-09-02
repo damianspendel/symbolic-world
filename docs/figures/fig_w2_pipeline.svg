@@ -1,0 +1,42 @@
+<svg viewBox="0 0 900 210" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica,Arial,sans-serif">
+<rect width="900" height="210" fill="#fbfaf7"/>
+<defs><marker id="w2a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8z" fill="#6a7480"/></marker></defs>
+<text x="24" y="24" font-size="13" font-weight="bold" fill="#2b2b2b">The pipeline, and who may not sign off whose work</text>
+
+<rect x="24" y="44" width="130" height="52" rx="4" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="89" y="64" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">proposer</text>
+<text x="89" y="79" text-anchor="middle" font-size="9" fill="#444">Opus family · drafts claim</text>
+<text x="89" y="90" text-anchor="middle" font-size="9" fill="#444">+ quote from a ~70¶ window</text>
+
+<rect x="186" y="44" width="120" height="52" rx="4" fill="#eef4ee" stroke="#5b8a5b"/>
+<text x="246" y="64" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">quote check</text>
+<text x="246" y="79" text-anchor="middle" font-size="9" fill="#444">deterministic · letters only</text>
+<text x="246" y="90" text-anchor="middle" font-size="9" fill="#444">7 canaries, fails closed</text>
+
+<rect x="338" y="44" width="130" height="52" rx="4" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="403" y="64" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">gate</text>
+<text x="403" y="79" text-anchor="middle" font-size="9" fill="#444">Fable family · judges the</text>
+<text x="403" y="90" text-anchor="middle" font-size="9" fill="#444">paragraph against the claim</text>
+
+<rect x="500" y="44" width="130" height="52" rx="4" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="565" y="64" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">cross-vendor</text>
+<text x="565" y="79" text-anchor="middle" font-size="9" fill="#444">Gemini · re-judges the</text>
+<text x="565" y="90" text-anchor="middle" font-size="9" fill="#444">batch blind, pre-merge</text>
+
+<rect x="662" y="44" width="214" height="52" rx="4" fill="#f3eee4" stroke="#a9925b"/>
+<text x="769" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">family arms · then a person</text>
+<text x="769" y="75" text-anchor="middle" font-size="9" fill="#444">two vendors file the family blind;</text>
+<text x="769" y="86" text-anchor="middle" font-size="9" fill="#444">agreement assigns, disagreement queues</text>
+
+<line x1="154" y1="70" x2="186" y2="70" stroke="#6a7480" marker-end="url(#w2a)"/>
+<line x1="306" y1="70" x2="338" y2="70" stroke="#6a7480" marker-end="url(#w2a)"/>
+<line x1="468" y1="70" x2="500" y2="70" stroke="#6a7480" marker-end="url(#w2a)"/>
+<line x1="630" y1="70" x2="662" y2="70" stroke="#6a7480" marker-end="url(#w2a)"/>
+
+<line x1="403" y1="96" x2="403" y2="122" stroke="#6a7480" stroke-dasharray="3,3"/>
+<text x="403" y="136" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#3d6a8c">what the gate passes is FROZEN: the wording is never edited again</text>
+
+<text x="24" y="168" font-size="10" fill="#2b2b2b"><tspan font-weight="bold">The rule:</tspan> whatever proposes never signs off. Proposer and gate are different families; the auditor is a different vendor;</text>
+<text x="24" y="182" font-size="10" fill="#2b2b2b">"verified" means attested + gate-passed, and is never said of a family. <tspan fill="#a03c3c">Disclosed exception: the family calibration gate</tspan></text>
+<text x="24" y="196" font-size="10" fill="#a03c3c">shares a vendor with one arm (§5.5).</text>
+</svg>

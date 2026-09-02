@@ -19,10 +19,10 @@ path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / 'docs' / 'PAPE
 text = path.read_text()
 
 BODY_CAP = 7000
-BUDGET = {            # section number -> words, from the 2026-08-18 ToC
-    'Abstract': 300,
-    '1': 600, '2': 900, '3': 500, '4': 800, '5': 700, '6': 1800,
-    '7': 600, '8': 500, '9': 700, '10': 400, '11': 300,
+BUDGET = {            # section number -> words, from the 2026-08-24 restructure
+    'Abstract': 300,  # (Damian: §2+§4 merged around figures; RQs to §8 as bullets)
+    '1': 600, '2': 900, '3': 500, '4': 700, '5': 1800,
+    '6': 600, '7': 500, '8': 500, '9': 400, '10': 300,
 }
 EM_DASH_CAP = 3       # rationed hard, per the writing rules
 
