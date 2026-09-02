@@ -1,0 +1,88 @@
+{
+ "study": "C — normalization validation",
+ "design": "docs/experiments/study_c/DESIGN.md (pre-registered 2026-08-28)",
+ "run_date": "2026-08-30",
+ "plant_seed": 20260830,
+ "C1": {
+  "items_compared": 260,
+  "verb_agreement_counts": {
+   "EXACT": 120,
+   "REMAINDER": 123,
+   "INFLECTION": 17
+  },
+  "mechanical_verb_agreement": 0.5269,
+  "remainder_judged_same": 80,
+  "remainder_judged_different": 43,
+  "remainder_unjudged": 0,
+  "same_relation_rate": 0.8346,
+  "qualifier_presence_counts": {
+   "arm1": {
+    "carrier": 79,
+    "scope": 190,
+    "condition": 48,
+    "modality": 196,
+    "note": 218
+   },
+   "arm2": {
+    "carrier": 68,
+    "scope": 67,
+    "condition": 53,
+    "modality": 76,
+    "note": 169
+   }
+  },
+  "dropped_material_coverage_mean": {
+   "arm1": [
+    0.8291,
+    247
+   ],
+   "arm2": [
+    0.8584,
+    254
+   ]
+  },
+  "arm2_verdicts": {
+   "rescued": 254,
+   "unrescuable": 6
+  }
+ },
+ "C2": {
+  "planted": 40,
+  "caught": 23,
+  "overall_catch_rate": 0.575,
+  "flagged_wrong_element": 2,
+  "per_class": {
+   "verb_strengthened": {
+    "planted": 10,
+    "caught": 10,
+    "flagged_wrong_element": 0,
+    "missed": 0,
+    "catch_rate": 1.0
+   },
+   "scope_dropped": {
+    "planted": 10,
+    "caught": 1,
+    "flagged_wrong_element": 0,
+    "missed": 9,
+    "catch_rate": 0.1
+   },
+   "direction_reversed": {
+    "planted": 10,
+    "caught": 10,
+    "flagged_wrong_element": 0,
+    "missed": 0,
+    "catch_rate": 1.0
+   },
+   "modality_dropped": {
+    "planted": 10,
+    "caught": 2,
+    "flagged_wrong_element": 2,
+    "missed": 6,
+    "catch_rate": 0.2
+   }
+  },
+  "clean_items": 40,
+  "clean_judged_entailed": 37,
+  "specificity_on_clean": 0.925
+ }
+}
