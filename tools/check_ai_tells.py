@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """AI-writing tells, swept mechanically before any prose reaches Damian.
 
-Sources, checked 2026-08-18: Wikipedia:Signs of AI writing (vocabulary,
+Sources, checked 2026-08-18 and extended 2026-09-02 (see docs/WRITING.md
+for the register and the reader block's rationale): Wikipedia:Signs of AI writing (vocabulary,
 copula avoidance, "not X but Y", rule of three, -ing tail clauses, false
 ranges, vague attributions, significance inflation, em dashes, bold, title
 case, curly quotes, "X rather than Y"); Damian's own writing rules in
@@ -16,6 +17,7 @@ Two severities. HARD tells fail the run. SOFT tells are printed with counts
 and never fail: they are legitimate English in small doses and the reader
 decides. Fenced code, tables and blockquotes are skipped.
 """
+import collections
 import pathlib
 import re
 import statistics
@@ -131,6 +133,42 @@ if len(sents) > 5:
                 f'(sd < 6 on a long text reads as uniform rhythm)')
 moral = count(r'\b(?:the (?:lesson|takeaway|point) (?:is|here)|in other words|what this means is|the upshot)\b')
 soft.append(f'moral-stated-aloud phrases: {len(moral)}')
+
+# ---- reader block (docs/WRITING.md): the curse of knowledge, zombie nouns, uniformity ----
+words_all = re.findall(r"[A-Za-z][A-Za-z'-]*", prose)
+nw = max(1, len(words_all))
+NOMINAL = re.compile(r"\b\w{4,}(?:tion|sion|ment|ance|ence|ity|ness|ization|isation)s?\b", re.I)
+nominal = len(NOMINAL.findall(prose))
+soft.append(f'nominalizations (zombie nouns): {nominal} per {nw} words = {100*nominal/nw:.1f} per 100')
+META = ['framework', 'approach', 'aspect', 'dimension', 'notion', 'perspective', 'level', 'process',
+        'context', 'factor', 'paradigm', 'construct']
+meta = sum(len(re.findall(r'\b' + m + r's?\b', prose, re.I)) for m in META)
+soft.append(f'metaconcepts (framework/approach/aspect/...): {meta} = {100*meta/nw:.2f} per 100 words')
+passive = len(re.findall(r"\b(?:is|are|was|were|be|been|being)\s+(?:\w+ly\s+)?\w+(?:ed|en)\b", prose))
+soft.append(f'passive constructions (heuristic): {passive} in {len(sents)} sentences')
+hedges = re.findall(r"\b(?:may|might|could|seems? to|appears? to|arguably|perhaps|possibly|likely|tends? to)\b", prose, re.I)
+soft.append(f'hedges: {len(hedges)} ({100*len(hedges)/nw:.2f} per 100 words)')
+if len(sents) > 5:
+    opener = collections.Counter(s.split()[0].strip('*_"').lower() for s in sents if s.split())
+    top = opener.most_common(1)[0]
+    soft.append(f'sentence openers: {len(opener)} distinct of {len(sents)}; commonest "{top[0]}" x{top[1]}')
+paras = [p for p in re.split(r'\n\s*\n', prose) if len(p.split()) > 15]
+if len(paras) > 3:
+    PL = [len(p.split()) for p in paras]
+    soft.append(f'paragraph length: mean {statistics.mean(PL):.0f}, sd {statistics.pstdev(PL):.0f} words over {len(paras)} paragraphs')
+syll = sum(max(1, len(re.findall(r'[aeiouy]+', w.lower()))) for w in words_all)
+if sents:
+    flesch = 206.835 - 1.015 * (nw / len(sents)) - 84.6 * (syll / nw)
+    soft.append(f'Flesch reading ease: {flesch:.0f} (60+ plain, 30-50 academic, <30 dense)')
+# undefined abbreviations: an ALLCAPS token 2-5 letters must appear expanded somewhere:
+# either "(ABC)" after words, or "ABC (" before an expansion, or be in the allow list
+ALLOW_ABBR = {'AI', 'CI', 'API', 'JSON', 'PDF', 'URL', 'DOI', 'CSS', 'HTML', 'ID', 'UI', 'RDF', 'KV',
+              'PASS', 'FAIL', 'TRUE', 'FALSE', 'CORRECTED', 'SUPPORTED', 'PARTIAL', 'WRONG', 'HOLD'}
+abbrs = set(re.findall(r'\b[A-Z]{2,5}\b', prose)) - ALLOW_ABBR
+defined = set(re.findall(r'\(([A-Z]{2,5})\)', prose)) | set(re.findall(r'\b([A-Z]{2,5})\s*\(', prose))
+undefined = sorted(a for a in abbrs if a not in defined and not re.fullmatch(r'E\d+|RQ\d*|CW|R\d+', a))
+if undefined:
+    hard.append(f'undefined abbreviations (define at first use): {", ".join(undefined[:8])}')
 
 for s in soft:
     print('  soft  ', s)
