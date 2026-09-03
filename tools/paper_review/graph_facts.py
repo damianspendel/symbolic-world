@@ -98,6 +98,16 @@ facts['family_calibration_v072_pooled'] = {'runs': len(v072),
     'pass_on_run': next((i + 1 for i, c in enumerate(v072) if c['verdict'] == 'PASS'), None)}
 facts['family_calibration_gate_same_model_as_a_proposer_arm'] = True   # independence_note in every record
 facts['external_validity'] = json.load(open(ROOT / 'docs' / 'experiments' / 'external_validity_2026-08' / 'results.json'))
+by = [f.get('by', '') for f in fam]
+agreed = sum(1 for b in by if b.startswith('opus+gemini-agreed'))
+human = sum(1 for b in by if b.startswith('human-adjudication'))
+pending_dis = sum(1 for b in by if b == 'arms-disagree')
+facts['arm_agreement'] = {
+    'arms_agreed_any_state': agreed,           # includes agreed no-family / text-undecided
+    'pending_arm_disagreements': pending_dis,
+    'human_ruled_former_disagreements': human,
+    'both_filed_denominator': agreed + pending_dis + human,
+    'rate': round(agreed / (agreed + pending_dis + human), 4)}
 for study in ('study_b', 'study_c'):
     rp = ROOT / 'docs' / 'experiments' / study / 'RESULT.json'
     if rp.exists():
