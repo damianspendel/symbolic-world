@@ -38,7 +38,9 @@ table { border-collapse: collapse; width: 100%; font-size: 7.6pt; margin: 6pt 0;
 th, td { border: 0.5pt solid #888; padding: 2.5pt 3.5pt; vertical-align: top; text-align: left; }
 th { background: #eee; }
 svg { width: 100%; height: auto; margin: 6pt 0; }
-figure { margin: 8pt 0; page-break-inside: avoid; }
+figure { margin: 0; page: fig; page-break-before: always; page-break-after: always; }
+@page fig { size: 210mm 157mm; margin: 6mm; @bottom-center { content: counter(page); font-size: 8pt; color: #666; } }
+figure svg { width: 198mm; height: auto; }
 figcaption { font-size: 8.5pt; color: #444; margin-top: 3pt; }
 tr { page-break-inside: avoid; } thead { display: table-header-group; }
 strong { font-weight: 600; }

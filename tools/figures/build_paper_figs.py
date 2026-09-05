@@ -42,8 +42,8 @@ STAGES = [
     ('query', 'read time', 'inverse and symmetric rows derived, labelled, never stored', 'r (derived)', GREY, GREYS, ['R12']),
 ]
 RISK_LABEL = {'R1': 'wrong claim', 'R2': 'fabricated quote', 'R3': 'wrong meaning', 'R4': 'wrong voice',
-              'R5': 'arbitrary selection', 'R6': 'shared vendor', 'R7': 'own referee', 'R8': 'normalization drift',
-              'R9': 'wrong family', 'R10': 'node role hidden', 'R11': 'coverage unstable', 'R12': 'derived read as source',
+              'R5': 'arbitrary pick', 'R6': 'shared vendor', 'R7': 'own referee', 'R8': 'norm. drift',
+              'R9': 'wrong family', 'R10': 'node role hidden', 'R11': 'coverage unstable', 'R12': 'derived as source',
               'R13': 'anchored human'}
 # Figure 5's rubric, applied to the §3 table's Control / Measured / Residual columns:
 #   green  a control exists, §4 measured it, and the residual is small or excluded by construction
@@ -95,7 +95,7 @@ def pipeline(with_risks: bool, status: dict | None = None, mid: str = 'ar') -> s
                 else:
                     cf, cs, label = '#f7e9e9', RED, f'{r} · {RISK_LABEL[r]}'
                 s.append(f'<rect x="{x + 4:.0f}" y="{ry}" width="{bw - 8:.0f}" height="15" rx="7" fill="{cf}" stroke="{cs}"/>')
-                s.append(f'<text x="{x + bw/2:.0f}" y="{ry + 11}" text-anchor="middle" font-size="{7.0 if status else 7.6}" fill="{cs}">{label}</text>')
+                s.append(f'<text x="{x + bw/2:.0f}" y="{ry + 11}" text-anchor="middle" font-size="{8 if status else 8}" fill="{cs}">{label}</text>')
     ly = (h - (58 if status else 40)) if with_risks else 172
     s.append(f'<text x="{x0}" y="{ly}" font-size="10.5" {MONO} fill="#3d6a8c">C = (e, s, r, o, a, m, n, f)</text>')
     s.append(f'<text x="{x0 + 230}" y="{ly}" font-size="9" fill="#6a7480">e evidence · s r o subject, relation, object · a voice · m commitment · n normalized relation · f family</text>')
@@ -200,16 +200,16 @@ RELATED = [
     ('Nanopublications [21]; provenance-enhanced statements [23]', {'the record': ('full', 'one claim, its provenance, its publication record')}),
     ('ARAS concordance [25]; digital edition [26]', {'proposer': ('part', 'search over the corpus, no relations')}),
 ]
-THIS = {'proposer': 'voice and commitment typed on every claim', 'quote check': 'dataset-level, model-independent, canaries',
+THIS = {'proposer': 'voice and commitment on every claim', 'quote check': 'dataset-level, model-independent, canaries',
         'gate': 'different family, catch rates published', 'cross-vendor': 'different vendor, every batch',
-        'normalize': 'frozen string kept beside it', 'families': 'inherits no warrant; assigned, never verified',
+        'normalize': 'frozen string kept beside it', 'families': 'no inherited warrant; assigned only',
         'query': 'derived rows labelled, never stored', 'the record': 'a warrant profile per part'}
 GAP = {'quote check', 'gate', 'cross-vendor', 'families', 'the record'}   # cells where no neighbour does what this work does
 
 
 def related() -> str:
     W = 900; x0 = 24; lab = 214; gap = 5; n = len(COLS); cw = (W - x0 - 12 - lab - gap * (n - 1)) / n
-    rh, top = 40, 62
+    rh, top = 44, 62
     H = top + (len(RELATED) + 1) * (rh + 4) + 52
     s = [f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" {F}>', f'<rect width="{W}" height="{H}" fill="{BG}"/>',
          f'<text x="{x0}" y="22" font-size="13" font-weight="bold" fill="#2b2b2b">Related work on the pipeline: what each neighbour covers, and where this work differs</text>']
@@ -232,8 +232,8 @@ def related() -> str:
             if last:
                 gapc = c in GAP
                 s.append(f'<rect x="{x:.0f}" y="{y}" width="{cw:.0f}" height="{rh}" rx="3" fill="{GREEN if gapc else "#eef3ee"}" stroke="{GOLD if gapc else GREENS}" stroke-width="{2 if gapc else 0.8}"/>')
-                for k, ln in enumerate(wrap(THIS[c], 18)[:3]):
-                    s.append(f'<text x="{x + cw/2:.0f}" y="{y + 13 + 10.5*k}" text-anchor="middle" font-size="7.2" fill="#1f4d1f">{ln}</text>')
+                for k, ln in enumerate(wrap(THIS[c], 15)[:3]):
+                    s.append(f'<text x="{x + cw/2:.0f}" y="{y + 13 + 11*k}" text-anchor="middle" font-size="8.2" fill="#1f4d1f">{ln}</text>')
                 continue
             s.append(f'<rect x="{x:.0f}" y="{y}" width="{cw:.0f}" height="{rh}" rx="3" fill="#fff" stroke="#ddd"/>')
             if c in cells:
@@ -241,8 +241,8 @@ def related() -> str:
                 full = kind == 'full'
                 cf, sw, dash = ('#e9f0f7', 1.4, '') if full else ('#fff', 0.9, ' stroke-dasharray="3,2"')
                 s.append(f'<rect x="{x + 3:.0f}" y="{y + 3}" width="{cw - 6:.0f}" height="{rh - 6}" rx="3" fill="{cf}" stroke="{BOXS}" stroke-width="{sw}"{dash}/>')
-                for k, ln in enumerate(wrap(note, 18)[:3]):
-                    s.append(f'<text x="{x + cw/2:.0f}" y="{y + 13 + 10.5*k}" text-anchor="middle" font-size="7.2" fill="#2b4f6e">{ln}</text>')
+                for k, ln in enumerate(wrap(note, 15)[:3]):
+                    s.append(f'<text x="{x + cw/2:.0f}" y="{y + 13 + 11*k}" text-anchor="middle" font-size="8.2" fill="#2b4f6e">{ln}</text>')
     ly = H - 34
     s.append(f'<rect x="{x0}" y="{ly - 9}" width="12" height="12" fill="#e9f0f7" stroke="{BOXS}" stroke-width="1.4"/><text x="{x0 + 17}" y="{ly + 1}" font-size="8.5" fill="#444">covers the stage</text>')
     s.append(f'<rect x="{x0 + 120}" y="{ly - 9}" width="12" height="12" fill="#fff" stroke="{BOXS}" stroke-dasharray="3,2"/><text x="{x0 + 137}" y="{ly + 1}" font-size="8.5" fill="#444">adjacent or partial</text>')
