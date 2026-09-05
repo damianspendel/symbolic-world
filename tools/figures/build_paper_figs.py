@@ -46,7 +46,7 @@ RISK_LABEL = {'R1': 'wrong claim', 'R2': 'fabricated quote', 'R3': 'wrong meanin
               'R9': 'wrong family', 'R10': 'node role hidden', 'R11': 'coverage unstable', 'R12': 'derived as source',
               'R13': 'anchored human'}
 # Figure 5's rubric, applied to the §3 table's Control / Measured / Residual columns:
-#   green  a control exists, §4 measured it, and the residual is small or excluded by construction
+#   green  a control exists, and the residual is either measured small (§4) or excluded by construction (§2: R12)
 #          (R3 is amber, not green: analogy-to-identity slipped 7 of 25 in Study B; Gemini hostile review 2026-09-05)
 #   amber  a control exists, and the residual is either measured and material, or not measurable in principle
 #   red    no control beyond a design choice, and no measurement
@@ -102,7 +102,7 @@ def pipeline(with_risks: bool, status: dict | None = None, mid: str = 'ar') -> s
     s.append(f'<text x="{x0 + 230}" y="{ly}" font-size="9" fill="#6a7480">e evidence · s r o subject, relation, object · a voice · m commitment · n normalized relation · f family</text>')
     if status:
         counts = {k: sum(1 for v in status.values() if v == k) for k in ('green', 'amber', 'red')}
-        s.append(f'<text x="{x0}" y="{h - 38}" font-size="9" fill="{GREENS}">● green ({counts["green"]}): a control exists, §4 measured it, the residual is small or excluded by construction.</text>')
+        s.append(f'<text x="{x0}" y="{h - 38}" font-size="9" fill="{GREENS}">● green ({counts["green"]}): a control exists and the residual is either measured small in §4 or excluded by construction in §2.</text>')
         s.append(f'<text x="{x0}" y="{h - 25}" font-size="9" fill="{AMBERS}">◐ amber ({counts["amber"]}): a control exists; the residual is measured and material, or cannot be measured in principle.</text>')
         s.append(f'<text x="{x0}" y="{h - 12}" font-size="9" fill="{RED}">○ red ({counts["red"]}): no control beyond a design choice, and no measurement. Each colour follows from the §3 table\'s columns, not from a judgement made here.</text>')
     elif with_risks:
