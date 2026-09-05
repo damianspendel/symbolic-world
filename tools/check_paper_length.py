@@ -20,7 +20,7 @@ text = path.read_text()
 
 BODY_CAP = 7000
 BUDGET = {            # section number -> words, from Damian's 2026-09-05 restructure
-    'Abstract': 160,  # "shorten by 50%"
+    'Abstract': 250,  # Damian, 2026-09-05: the abstract is the plain summary; 250
     '1': 500,         # claims are not triples
     '2': 1000,        # how would we build a warranted atlas (reserved words, figures 1-2, the salt edge, the profile)
     '3': 700,         # risks and controls (figure 3 + the table)
