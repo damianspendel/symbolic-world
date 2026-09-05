@@ -58,10 +58,11 @@ calibration record none
 
 ## v2.0: the graph as a queryable instrument
 
-status: ready to tag. Paper promoted to docs/PAPER.md on 2026-09-05 after
-four cross-vendor hostile passes; the tag, the GitHub Release and the Zenodo
-record are Damian's steps. The v1.4 and v1.5 plans are folded in (Damian,
-2026-08-19).
+status: released 2026-09-05. Tag `v2.0.0`, GitHub Release, Zenodo record
+[10.5281/zenodo.22339291](https://doi.org/10.5281/zenodo.22339291) under the
+concept DOI; the v1.3 record is marked superseded and retained. Paper:
+*Trust, Layered*, promoted to docs/PAPER.md after four cross-vendor hostile
+passes. The v1.4 and v1.5 plans are folded in (Damian, 2026-08-19).
 pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
