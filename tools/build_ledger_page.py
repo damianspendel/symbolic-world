@@ -49,7 +49,7 @@ MENU = [
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
     ("about", [("/nutshell", "in a nutshell"), ("/#/method", "method"),
-               ("/ontology", "ontology")]),
+               ("/ontology", "design")]),
 ]
 
 
@@ -352,7 +352,7 @@ def batch_page(batch, delta, commits):
     <a href="/releases">releases</a>
     <a href="/families">families</a>
     <a href="/query">query</a>
-    <a href="/ontology">ontology</a></nav>
+    <a href="/ontology">design</a></nav>
 </main>
 </body>
 </html>
@@ -712,7 +712,7 @@ def build():
     <a href="/families">families</a>
     <a href="/releases">releases</a>
     <a href="/query">query</a>
-    <a href="/ontology">ontology</a>
+    <a href="/ontology">design</a>
     <a href="/disputes">disputes</a></nav>
 </main>
 <script>

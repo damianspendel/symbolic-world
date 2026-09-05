@@ -665,7 +665,7 @@ EXPECTED_MENU = [
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
     ("about", [("/nutshell", "in a nutshell"), ("/#/method", "method"),
-               ("/ontology", "ontology")]),
+               ("/ontology", "design")]),
 ]
 
 

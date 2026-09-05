@@ -128,7 +128,7 @@ const MENU = [
   ['explore', [['/#/atlas', 'atlas'], ['/query', 'query'], ['/#/concordance', 'concordance']]],
   ['reference', [['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
-  ['about', [['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'ontology']]]
+  ['about', [['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'design']]]
 ]
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
@@ -827,7 +827,7 @@ function familiesPageCopy(map, version) {
 <h1>Relation families</h1>
 <p class="sub">The classification layer, ruleset ${esc(version)}: what it claims, what it does not, and every relation string in it.</p></div>
 
-<p>A family is an assigned classification over a relation that was already verified: the <a href="/ontology">design</a> is on the ontology page, the <a href="/#/method">checks</a> on the method page.</p>
+<p>A family is an assigned classification over a relation that was already verified: the <a href="/ontology">design</a> is on the design page, the <a href="/#/method">checks</a> on the method page.</p>
 
 ${EV ? `<p>Checked once against outside scholarship: ${EV.agrees} of ${EV.treated} treated items agreed — <a href="/ontology#checked">the full result</a>.</p>
 ` : ''}<h2>Where the layer stands</h2>
@@ -1919,9 +1919,10 @@ if (QA && DECL) {
 <figcaption>Tier two, drawn. Different relation strings, each verified in its own paragraph, carry one family. The family classifies them; it does not re-verify them, and the strings are unchanged by the classification.</figcaption>
 </figure>`
 
-  const ontBody = `<div class="titleband"><p class="eyebrow">the ontology</p>
-<h1>What this graph is, as an ontology</h1></div>
+  const ontBody = `<div class="titleband"><p class="eyebrow">the design</p>
+<h1>What this graph is, and what it is not</h1></div>
 <p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, It then runs the standard pitfall scan over the graph and reports what it finds, including the findings that are these decisions showing up as defects.</p>
+<p class="meta">The address keeps the word <em>ontology</em> because the page runs an ontology pitfall scan; the graph itself is not one, and the paper says so.</p>
 
 <h2>Two tiers</h2>
 <p>The first tier is the relation as Jung's sentence phrased it. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
@@ -2027,8 +2028,8 @@ table.findings .src { font: .58rem var(--mono); }
 .src { font: .58rem var(--mono); }
 `
   registerPage({
-    slug: 'ontology', title: 'The ontology and its practices', where: 'ontology',
-    nav: 'ontology', changefreq: 'daily', priority: '0.5', style: ontStyle, body: ontBody
+    slug: 'ontology', title: 'The design and its practices', where: 'design',
+    nav: 'design', changefreq: 'daily', priority: '0.5', style: ontStyle, body: ontBody
   })
   V2_COPY.push(['public/ontology.html (generated)', stripEvidence(ontBody)])
 

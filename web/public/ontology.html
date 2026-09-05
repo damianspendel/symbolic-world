@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/ontology">
-<title>The ontology and its practices · The Symbolic World</title>
+<title>The design and its practices · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -85,13 +85,14 @@ table.findings .src { font: .58rem var(--mono); }
 </head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology" aria-current="page">ontology</a></nav></div>
-<div class="hrow hrow-2"><span class="where">ontology</span></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology" aria-current="page">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">design</span></div>
 </header>
 <main class="page-main prose">
-<div class="titleband"><p class="eyebrow">the ontology</p>
-<h1>What this graph is, as an ontology</h1></div>
+<div class="titleband"><p class="eyebrow">the design</p>
+<h1>What this graph is, and what it is not</h1></div>
 <p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, It then runs the standard pitfall scan over the graph and reports what it finds, including the findings that are these decisions showing up as defects.</p>
+<p class="meta">The address keeps the word <em>ontology</em> because the page runs an ontology pitfall scan; the graph itself is not one, and the paper says so.</p>
 
 <h2>Two tiers</h2>
 <p>The first tier is the relation as Jung's sentence phrased it. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
@@ -112,9 +113,9 @@ table.findings .src { font: .58rem var(--mono); }
 
 <figure class="ofig">
 <div class="ofig-tier">
-  <div class="ofig-strings"><span class="chip ev"><code>symbolizes</code> <span class="n">98</span></span><span class="chip ev"><code>represents</code> <span class="n">20</span></span><span class="chip ev"><code>signifies</code> <span class="n">18</span></span><span class="chip ev"><code>expresses</code> <span class="n">13</span></span></div>
+  <div class="ofig-strings"><span class="chip ev"><code>symbolizes</code> <span class="n">99</span></span><span class="chip ev"><code>represents</code> <span class="n">20</span></span><span class="chip ev"><code>signifies</code> <span class="n">18</span></span><span class="chip ev"><code>expresses</code> <span class="n">13</span></span></div>
   <span class="ofig-arm">&rarr;</span>
-  <span class="chip f-ok ev">symbolization <span class="n">210</span></span>
+  <span class="chip f-ok ev">symbolization <span class="n">211</span></span>
 </div>
 <figcaption>Tier two, drawn. Different relation strings, each verified in its own paragraph, carry one family. The family classifies them; it does not re-verify them, and the strings are unchanged by the classification.</figcaption>
 </figure>
@@ -328,9 +329,9 @@ table.findings .src { font: .58rem var(--mono); }
 </ul>
 
 <div class="receipts"><b>receipts</b>
-external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:94ee68801a8b</span>, run at build;<br>
+external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:9dc668bfff36</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-08-28 at commit 6e3b906
+built 2026-09-05 at commit ec5179e
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>
@@ -338,6 +339,6 @@ built 2026-08-28 at commit 6e3b906
 <a href="/disputes">disputes</a>
 <a href="/releases">releases</a>
 <a href="/query">query</a>
-<span class="dim">ontology</span>
+<span class="dim">design</span>
 <a href="/nutshell">in a nutshell</a></nav>
 </main></body></html>
