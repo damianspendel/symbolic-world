@@ -18,6 +18,7 @@ import datetime
 import os
 import re
 import sys
+from urllib.parse import quote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -48,7 +49,9 @@ def term(prefix, base, local):
     """A prefixed name where the local part is safe for one, else a full IRI."""
     if SAFE_LOCAL.fullmatch(local):
         return f"{prefix}:{local}"
-    return f"<{base}{local}>"
+    # a full IRI may not contain spaces or the characters < > " { } | \ ^ `;
+    # percent-encode the local part (a verbatim relation string can carry any of them)
+    return f"<{base}{quote(local, safe='-_.~!$&*+,;=:@/')}>"
 
 
 def literal(text):
