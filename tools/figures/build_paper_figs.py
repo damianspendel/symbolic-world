@@ -172,7 +172,7 @@ def schema() -> str:
         for j, ln in enumerate(wrap(fails[i], 17)[:3]):
             s.append(f'<text x="{cx:.0f}" y="{112 + 11*j}" text-anchor="middle" font-size="7.8" fill="{RED}">{ln}</text>')
     s.append(f'<text x="{x0}" y="{H - 24}" font-size="10.5" {MONO} fill="#3d6a8c">C = (e, s, r, o, a, m, n, f)</text>')
-    s.append(f'<text x="{x0}" y="{H - 8}" font-size="9" fill="#6a7480">The order is the order in which the parts are written down. Blue parts are written by the proposer and judged by the gate; gold parts are an overlay, added later and inheriting nothing.</text>')
+    s.append(f'<text x="{x0}" y="{H - 8}" font-size="9" fill="#6a7480">The red row is the way each part fails while the others hold. Blue parts are written by the proposer and judged by the gate; gold parts are an overlay, added later and inheriting nothing.</text>')
     s.append('</svg>')
     return '\n'.join(s)
 
