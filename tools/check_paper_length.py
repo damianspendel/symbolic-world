@@ -21,15 +21,16 @@ text = path.read_text()
 BODY_CAP = 7000
 BUDGET = {            # section number -> words, from Damian's 2026-09-05 restructure
     'Abstract': 250,  # Damian, 2026-09-05: the abstract is the plain summary; 250
-    '1': 500,         # claims are not triples
-    '2': 1000,        # how would we build a warranted atlas (reserved words, figures 1-2, the salt edge, the profile)
-    '3': 700,         # risks and controls (figure 3 + the table)
-    '4': 1000,        # what we measured, ending in the profile table
-    '5': 500,         # six questions answered from the graph
-    '6': 600,         # disagreement as an output
-    '7': 500,         # limitations, with the open research questions
-    '8': 600,         # related work
-    '9': 300,         # conclusion
+    '1': 500,         # claims are not triples (figure 1)
+    '2': 900,         # warranting claims (reserved words, figure 2, the salt edge, the profile)
+    '3': 700,         # risks along the pipeline (figure 4 + the table)
+    '4': 850,         # what we measured
+    '5': 500,         # what the atlas can warrant (figure 5, the profile table, figure 6)
+    '6': 500,         # six questions answered from the graph
+    '7': 600,         # disagreement as an output
+    '8': 500,         # limitations, with the open research questions
+    '9': 600,         # related work
+    '10': 300,        # conclusion
 }
 EM_DASH_CAP = 3       # rationed hard, per the writing rules
 

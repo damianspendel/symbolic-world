@@ -1,6 +1,6 @@
-<svg viewBox="0 0 900 215" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica,Arial,sans-serif">
-<rect width="900" height="215" fill="#fbfaf7"/>
-<defs><marker id="ar1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8z" fill="#6a7480"/></marker></defs>
+<svg viewBox="0 0 900 241" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica,Arial,sans-serif">
+<rect width="900" height="241" fill="#fbfaf7"/>
+<defs><marker id="ar2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8z" fill="#6a7480"/></marker></defs>
 <text x="24" y="22" font-size="13" font-weight="bold" fill="#2b2b2b">The pipeline, and the elements of the claim each stage writes or checks</text>
 <rect x="24" y="40" width="113" height="78" rx="4" fill="#e9f0f7" stroke="#5b87ab"/>
 <text x="81" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">proposer</text>
@@ -8,53 +8,59 @@
 <text x="81" y="85" text-anchor="middle" font-size="7.8" fill="#444">drafts the claim and its</text>
 <text x="81" y="96" text-anchor="middle" font-size="7.8" fill="#444">quote from a</text>
 <text x="81" y="107" text-anchor="middle" font-size="7.8" fill="#444">~70-paragraph window</text>
-<line x1="137" y1="79" x2="147" y2="79" stroke="#6a7480" marker-end="url(#ar1)"/>
+<line x1="137" y1="79" x2="147" y2="79" stroke="#6a7480" marker-end="url(#ar2)"/>
 <rect x="24" y="128" width="113" height="26" rx="3" fill="#fff" stroke="#5b87ab" stroke-dasharray="3,2"/>
 <text x="81" y="145" text-anchor="middle" font-size="11" font-family="Menlo,monospace" fill="#3d6a8c">e s r o a m</text>
+<text x="81" y="172" text-anchor="middle" font-size="8.5" font-style="italic" fill="#6a7480">drafts, confers nothing</text>
 <rect x="147" y="40" width="113" height="78" rx="4" fill="#eef4ee" stroke="#5b8a5b"/>
 <text x="204" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">quote check</text>
 <text x="204" y="71" text-anchor="middle" font-size="8.5" fill="#555">a script</text>
 <text x="204" y="85" text-anchor="middle" font-size="7.8" fill="#444">the quote must be in the</text>
 <text x="204" y="96" text-anchor="middle" font-size="7.8" fill="#444">paragraph; any failure</text>
 <text x="204" y="107" text-anchor="middle" font-size="7.8" fill="#444">stops the build</text>
-<line x1="260" y1="79" x2="270" y2="79" stroke="#6a7480" marker-end="url(#ar1)"/>
+<line x1="260" y1="79" x2="270" y2="79" stroke="#6a7480" marker-end="url(#ar2)"/>
 <rect x="147" y="128" width="113" height="26" rx="3" fill="#fff" stroke="#5b8a5b" stroke-dasharray="3,2"/>
 <text x="204" y="145" text-anchor="middle" font-size="11" font-family="Menlo,monospace" fill="#3d6a8c">e</text>
+<text x="204" y="172" text-anchor="middle" font-size="8.5" font-style="italic" fill="#2b5f86">attested</text>
 <rect x="270" y="40" width="113" height="78" rx="4" fill="#e9f0f7" stroke="#5b87ab"/>
 <text x="327" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">gate</text>
 <text x="327" y="71" text-anchor="middle" font-size="8.5" fill="#555">Fable family</text>
 <text x="327" y="85" text-anchor="middle" font-size="7.8" fill="#444">judges the paragraph</text>
 <text x="327" y="96" text-anchor="middle" font-size="7.8" fill="#444">against the claim; what</text>
 <text x="327" y="107" text-anchor="middle" font-size="7.8" fill="#444">passes is frozen</text>
-<line x1="383" y1="79" x2="393" y2="79" stroke="#6a7480" marker-end="url(#ar1)"/>
+<line x1="383" y1="79" x2="393" y2="79" stroke="#6a7480" marker-end="url(#ar2)"/>
 <rect x="270" y="128" width="113" height="26" rx="3" fill="#fff" stroke="#5b87ab" stroke-dasharray="3,2"/>
 <text x="327" y="145" text-anchor="middle" font-size="11" font-family="Menlo,monospace" fill="#3d6a8c">s r o a m</text>
+<text x="327" y="172" text-anchor="middle" font-size="8.5" font-style="italic" fill="#2b5f86">model-supported</text>
 <rect x="393" y="40" width="113" height="78" rx="4" fill="#e9f0f7" stroke="#5b87ab"/>
 <text x="450" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">cross-vendor</text>
 <text x="450" y="71" text-anchor="middle" font-size="8.5" fill="#555">Gemini</text>
 <text x="450" y="85" text-anchor="middle" font-size="7.8" fill="#444">re-judges the batch</text>
 <text x="450" y="96" text-anchor="middle" font-size="7.8" fill="#444">blind before it merges</text>
-<line x1="507" y1="79" x2="517" y2="79" stroke="#6a7480" marker-end="url(#ar1)"/>
+<line x1="507" y1="79" x2="517" y2="79" stroke="#6a7480" marker-end="url(#ar2)"/>
 <rect x="393" y="128" width="113" height="26" rx="3" fill="#fff" stroke="#5b87ab" stroke-dasharray="3,2"/>
 <text x="450" y="145" text-anchor="middle" font-size="11" font-family="Menlo,monospace" fill="#3d6a8c">s r o a m</text>
+<text x="450" y="172" text-anchor="middle" font-size="8.5" font-style="italic" fill="#2b5f86">cross-checked</text>
 <rect x="517" y="40" width="113" height="78" rx="4" fill="#f3eee4" stroke="#a9925b"/>
 <text x="573" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">normalize</text>
 <text x="573" y="71" text-anchor="middle" font-size="8.5" fill="#555">Opus, Fable, Gemini</text>
 <text x="573" y="85" text-anchor="middle" font-size="7.8" fill="#444">a short verb beside the</text>
 <text x="573" y="96" text-anchor="middle" font-size="7.8" fill="#444">frozen string, with</text>
 <text x="573" y="107" text-anchor="middle" font-size="7.8" fill="#444">qualifiers</text>
-<line x1="630" y1="79" x2="640" y2="79" stroke="#6a7480" marker-end="url(#ar1)"/>
+<line x1="630" y1="79" x2="640" y2="79" stroke="#6a7480" marker-end="url(#ar2)"/>
 <rect x="517" y="128" width="113" height="26" rx="3" fill="#fff" stroke="#a9925b" stroke-dasharray="3,2"/>
 <text x="573" y="145" text-anchor="middle" font-size="11" font-family="Menlo,monospace" fill="#3d6a8c">n</text>
+<text x="573" y="172" text-anchor="middle" font-size="8.5" font-style="italic" fill="#7a6a3a">normalized</text>
 <rect x="640" y="40" width="113" height="78" rx="4" fill="#f3eee4" stroke="#a9925b"/>
 <text x="696" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">families</text>
 <text x="696" y="71" text-anchor="middle" font-size="8.5" fill="#555">two arms, then a person</text>
 <text x="696" y="85" text-anchor="middle" font-size="7.8" fill="#444">two vendors file blind;</text>
 <text x="696" y="96" text-anchor="middle" font-size="7.8" fill="#444">agreement assigns,</text>
 <text x="696" y="107" text-anchor="middle" font-size="7.8" fill="#444">disagreement waits</text>
-<line x1="753" y1="79" x2="763" y2="79" stroke="#6a7480" marker-end="url(#ar1)"/>
+<line x1="753" y1="79" x2="763" y2="79" stroke="#6a7480" marker-end="url(#ar2)"/>
 <rect x="640" y="128" width="113" height="26" rx="3" fill="#fff" stroke="#a9925b" stroke-dasharray="3,2"/>
 <text x="696" y="145" text-anchor="middle" font-size="11" font-family="Menlo,monospace" fill="#3d6a8c">f</text>
+<text x="696" y="172" text-anchor="middle" font-size="8.5" font-style="italic" fill="#7a6a3a">family-assigned</text>
 <rect x="763" y="40" width="113" height="78" rx="4" fill="#efefef" stroke="#8a8a8a"/>
 <text x="819" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#2b2b2b">query</text>
 <text x="819" y="71" text-anchor="middle" font-size="8.5" fill="#555">read time</text>
@@ -63,8 +69,10 @@
 <text x="819" y="107" text-anchor="middle" font-size="7.8" fill="#444">never stored</text>
 <rect x="763" y="128" width="113" height="26" rx="3" fill="#fff" stroke="#8a8a8a" stroke-dasharray="3,2"/>
 <text x="819" y="145" text-anchor="middle" font-size="11" font-family="Menlo,monospace" fill="#3d6a8c">r (derived)</text>
-<text x="24" y="172" font-size="10.5" font-family="Menlo,monospace" fill="#3d6a8c">C = (e, s, r, o, a, m, n, f)</text>
-<text x="254" y="172" font-size="9" fill="#6a7480">e evidence · s r o subject, relation, object · a voice · m commitment · n normalized relation · f family</text>
-<text x="24" y="192" font-size="9" fill="#2b2b2b">The rule: whatever proposes never signs off. Proposer and gate are different families; the auditor is a different vendor.</text>
-<text x="24" y="205" font-size="9" fill="#a03c3c">Disclosed exception: the family calibration gate shares a vendor with one arm.</text>
+<text x="819" y="172" text-anchor="middle" font-size="8.5" font-style="italic" fill="#5c5c5c">derived</text>
+<text x="24" y="186" font-size="8" fill="#6a7480" transform="rotate(-90 18 172)" text-anchor="middle" x="18">rung</text>
+<text x="24" y="198" font-size="10.5" font-family="Menlo,monospace" fill="#3d6a8c">C = (e, s, r, o, a, m, n, f)</text>
+<text x="254" y="198" font-size="9" fill="#6a7480">e evidence · s r o subject, relation, object · a voice · m commitment · n normalized relation · f family</text>
+<text x="24" y="218" font-size="9" fill="#2b2b2b">The rule: whatever proposes never signs off. Proposer and gate are different families; the auditor is a different vendor. The italic row is the rung a stage confers on what passes it.</text>
+<text x="24" y="231" font-size="9" fill="#a03c3c">Disclosed exception: the family calibration gate shares a vendor with one arm.</text>
 </svg>

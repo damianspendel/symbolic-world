@@ -6,17 +6,17 @@ typed (RULES #12, #17).
 
   python3 tools/figures/build_paper_figs.py   -> docs/figures/fig_v2_{1..6}_*.svg
 
-Figure 1: the pipeline, each stage over the elements of the claim it writes
-          or checks, with the tuple C = (e, s, r, o, a, m, n, f) beneath.
-Figure 2: the warrant ladder, bottom to top, attested at the foundation and
-          the empty human-agreed rung at the top, populations from seed.json.
+Figure 1: the claim as eight parts, the question each answers, the way each fails.
+Figure 2: the pipeline, each stage over the elements of the claim it writes
+          or checks and the rung it confers, with the tuple beneath.
 Figure 3: one claim (salt symbolizes the-self): its eight parts, the stored
           value of each, and the rung each part has reached.
-Figure 4: Figure 1 plus a third dimension: the risks, placed at the stage
+Figure 4: Figure 2 plus a third dimension: the risks, placed at the stage
           where each enters.
 Figure 5: Figure 4 after measurement: each risk coloured by what §4 could
           establish (the rubric is in STATUS and in the legend).
-Figure 6: related work mapped onto the pipeline: what each neighbour covers,
+Figure 6: the warrant ladder, bottom to top, populations from seed.json.
+Figure 7: related work mapped onto the pipeline: what each neighbour covers,
           and the cells where this work differs.
 """
 import json
@@ -41,6 +41,7 @@ STAGES = [
     ('families', 'two arms, then a person', 'two vendors file blind; agreement assigns, disagreement waits', 'f', OVL, OVLS, ['R9', 'R13']),
     ('query', 'read time', 'inverse and symmetric rows derived, labelled, never stored', 'r (derived)', GREY, GREYS, ['R12']),
 ]
+RUNG = ['drafts, confers nothing', 'attested', 'model-supported', 'cross-checked', 'normalized', 'family-assigned', 'derived']  # the rung each stage confers
 RISK_LABEL = {'R1': 'wrong claim', 'R2': 'fabricated quote', 'R3': 'wrong meaning', 'R4': 'wrong voice',
               'R5': 'arbitrary pick', 'R6': 'shared vendor', 'R7': 'own referee', 'R8': 'norm. drift',
               'R9': 'wrong family', 'R10': 'node role hidden', 'R11': 'coverage unstable', 'R12': 'derived as source',
@@ -68,9 +69,10 @@ def wrap(text, width):
 def pipeline(with_risks: bool, status: dict | None = None, mid: str = 'ar') -> str:
     n = len(STAGES); W = 900; gap = 10; x0 = 24; bw = (W - 2 * x0 - gap * (n - 1)) / n
     maxk = max(len(st[6]) for st in STAGES) if with_risks else 0
-    h = (178 + maxk * 18 + (92 if status else 74)) if with_risks else 215
+    OFF = 26   # the rung row
+    h = (178 + OFF + maxk * 18 + (92 if status else 74)) if with_risks else 215 + OFF
     if status: title = 'The risks of Figure 4, coloured by what §4 could establish'
-    elif with_risks: title = 'The pipeline, the elements of the claim it writes, and where each risk enters'
+    elif with_risks: title = 'The pipeline of Figure 2, and where each risk enters'
     else: title = 'The pipeline, and the elements of the claim each stage writes or checks'
     s = [f'<svg viewBox="0 0 {W} {h}" xmlns="http://www.w3.org/2000/svg" {F}>',
          f'<rect width="{W}" height="{h}" fill="{BG}"/>',
@@ -87,9 +89,11 @@ def pipeline(with_risks: bool, status: dict | None = None, mid: str = 'ar') -> s
             s.append(f'<line x1="{x + bw:.0f}" y1="79" x2="{x + bw + gap:.0f}" y2="79" stroke="#6a7480" marker-end="url(#{mid})"/>')
         s.append(f'<rect x="{x:.0f}" y="128" width="{bw:.0f}" height="26" rx="3" fill="#fff" stroke="{stroke}" stroke-dasharray="3,2"/>')
         s.append(f'<text x="{x + bw/2:.0f}" y="145" text-anchor="middle" font-size="11" {MONO} fill="#3d6a8c">{els}</text>')
+        rung = RUNG[i]; rcol = '#6a7480' if i == 0 else ('#7a6a3a' if i in (4, 5) else ('#5c5c5c' if i == 6 else '#2b5f86'))
+        s.append(f'<text x="{x + bw/2:.0f}" y="172" text-anchor="middle" font-size="8.5" font-style="italic" fill="{rcol}">{rung}</text>')
         if with_risks:
             for k, r in enumerate(risks):
-                ry = 178 + k * 18
+                ry = 178 + OFF + k * 18
                 if status:
                     cf, cs, glyph = STATUS_STYLE[status[r]]
                     label = f'{glyph} {r} · {RISK_LABEL[r]}'
@@ -97,7 +101,8 @@ def pipeline(with_risks: bool, status: dict | None = None, mid: str = 'ar') -> s
                     cf, cs, label = '#f7e9e9', RED, f'{r} · {RISK_LABEL[r]}'
                 s.append(f'<rect x="{x + 4:.0f}" y="{ry}" width="{bw - 8:.0f}" height="15" rx="7" fill="{cf}" stroke="{cs}"/>')
                 s.append(f'<text x="{x + bw/2:.0f}" y="{ry + 11}" text-anchor="middle" font-size="{8 if status else 8}" fill="{cs}">{label}</text>')
-    ly = (h - (58 if status else 40)) if with_risks else 172
+    s.append(f'<text x="{x0}" y="{40 + 78 + 8 + 26 + 26 + 8}" font-size="8" fill="#6a7480" transform="rotate(-90 {x0 - 6} 172)" text-anchor="middle" x="{x0 - 6}">rung</text>')
+    ly = (h - (58 if status else 40)) if with_risks else 172 + OFF
     s.append(f'<text x="{x0}" y="{ly}" font-size="10.5" {MONO} fill="#3d6a8c">C = (e, s, r, o, a, m, n, f)</text>')
     s.append(f'<text x="{x0 + 230}" y="{ly}" font-size="9" fill="#6a7480">e evidence · s r o subject, relation, object · a voice · m commitment · n normalized relation · f family</text>')
     if status:
@@ -108,8 +113,8 @@ def pipeline(with_risks: bool, status: dict | None = None, mid: str = 'ar') -> s
     elif with_risks:
         s.append(f'<text x="{x0}" y="{h - 22}" font-size="9" fill="{RED}">R1 to R7 are v1.3\'s risks; R8 to R13 belong to the overlay, the query layer and the human review. Controls, measurements and residuals: the table in §3.</text>')
     else:
-        s.append(f'<text x="{x0}" y="192" font-size="9" fill="#2b2b2b">The rule: whatever proposes never signs off. Proposer and gate are different families; the auditor is a different vendor.</text>')
-        s.append(f'<text x="{x0}" y="205" font-size="9" fill="{RED}">Disclosed exception: the family calibration gate shares a vendor with one arm.</text>')
+        s.append(f'<text x="{x0}" y="{192 + OFF}" font-size="9" fill="#2b2b2b">The rule: whatever proposes never signs off. Proposer and gate are different families; the auditor is a different vendor. The italic row is the rung a stage confers on what passes it.</text>')
+        s.append(f'<text x="{x0}" y="{205 + OFF}" font-size="9" fill="{RED}">Disclosed exception: the family calibration gate shares a vendor with one arm.</text>')
     s.append('</svg>')
     return '\n'.join(s)
 
@@ -140,6 +145,34 @@ def ladder(facts: dict) -> str:
         col = RED if name == 'human-agreed' else '#3d6a8c'
         s.append(f'<text x="864" y="{y + 19}" text-anchor="end" font-size="10.5" {MONO} fill="{col}">{pop}</text>')
     s.append(f'<text x="24" y="{H - 14}" font-size="9" fill="#6a7480">Passing one rung warrants nothing about the next. The top rung is empty on purpose: no item has two independent human judgements.</text>')
+    s.append('</svg>')
+    return '\n'.join(s)
+
+
+PARTS = [('e', 'evidence', 'which words, where?'), ('s', 'subject', 'about what?'), ('r', 'relation', 'says what of it?'),
+         ('o', 'object', 'to what?'), ('a', 'voice', 'who says so?'), ('m', 'commitment', 'how firmly?'),
+         ('n', 'normalized', 'the same, as a verb?'), ('f', 'family', 'what kind of relation?')]
+
+
+def schema() -> str:
+    """Figure 1: the claim as eight parts, each answering one question; the ways each can fail while the others hold."""
+    fails = ['the quote is not in the book', 'wrong thing', 'says more than the paragraph', 'wrong thing', "another's voice as Jung's",
+             'a hedge made certain', 'the verb drifts from the string', 'filed under the wrong kind']
+    n = len(PARTS); W = 900; gap = 8; x0 = 24; cw = (W - 2 * x0 - gap * (n - 1)) / n; H = 176
+    s = [f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" {F}>', f'<rect width="{W}" height="{H}" fill="{BG}"/>',
+         f'<text x="{x0}" y="22" font-size="13" font-weight="bold" fill="#2b2b2b">A claim has eight parts, each answering its own question, and each can fail while the others hold</text>']
+    for i, (L, name, q) in enumerate(PARTS):
+        x = x0 + i * (cw + gap); cx = x + cw / 2
+        stroke = OVLS if L in 'nf' else BOXS
+        s.append(f'<rect x="{x:.0f}" y="38" width="{cw:.0f}" height="52" rx="4" fill="#fff" stroke="{stroke}"/>')
+        s.append(f'<text x="{cx:.0f}" y="58" text-anchor="middle" font-size="15" {MONO} fill="#3d6a8c">{L}</text>')
+        s.append(f'<text x="{cx:.0f}" y="72" text-anchor="middle" font-size="9" font-weight="bold" fill="#2b2b2b">{name}</text>')
+        s.append(f'<text x="{cx:.0f}" y="84" text-anchor="middle" font-size="7.6" fill="#555">{q}</text>')
+        s.append(f'<rect x="{x:.0f}" y="98" width="{cw:.0f}" height="40" rx="4" fill="#f7e9e9" stroke="{RED}" stroke-dasharray="3,2"/>')
+        for j, ln in enumerate(wrap(fails[i], 17)[:3]):
+            s.append(f'<text x="{cx:.0f}" y="{112 + 11*j}" text-anchor="middle" font-size="7.8" fill="{RED}">{ln}</text>')
+    s.append(f'<text x="{x0}" y="{H - 24}" font-size="10.5" {MONO} fill="#3d6a8c">C = (e, s, r, o, a, m, n, f)</text>')
+    s.append(f'<text x="{x0}" y="{H - 8}" font-size="9" fill="#6a7480">The order is the order in which the parts are written down. Blue parts are written by the proposer and judged by the gate; gold parts are an overlay, added later and inheriting nothing.</text>')
     s.append('</svg>')
     return '\n'.join(s)
 
@@ -255,9 +288,10 @@ def related() -> str:
 
 if __name__ == '__main__':
     facts = json.load(open(FACTS))
-    files = {'fig_v2_1_pipeline.svg': pipeline(False, mid='ar1'), 'fig_v2_2_ladder.svg': ladder(facts),
-             'fig_v2_3_claim.svg': claim(facts), 'fig_v2_4_risks.svg': pipeline(True, mid='ar4'),
-             'fig_v2_5_status.svg': pipeline(True, STATUS, mid='ar5'), 'fig_v2_6_related.svg': related()}
+    files = {'fig_v2_1_claim.svg': schema(), 'fig_v2_2_pipeline.svg': pipeline(False, mid='ar2'),
+             'fig_v2_3_salt.svg': claim(facts), 'fig_v2_4_risks.svg': pipeline(True, mid='ar4'),
+             'fig_v2_5_status.svg': pipeline(True, STATUS, mid='ar5'), 'fig_v2_6_ladder.svg': ladder(facts),
+             'fig_v2_7_related.svg': related()}
     for name, svg in files.items():
         (OUT / name).write_text(svg)
     print('wrote', ', '.join(files), '(values from', FACTS.name + ')')
