@@ -153,5 +153,29 @@ if salt:
         'confidence': r['confidence'], 'verified_by': r['verified_by'], 'verified_date': r['verified_date'],
         'crossvendor_checked': r.get('crossvendor_checked'), 'has_relation_normalized': 'relation_normalized' in e,
         'relation_family': e['relation_family']}
+# per-volume references and cross-vendor coverage (the paper's "412 of CW 14's 413" is today's count; E7's n=407 was the volume at audit time)
+_byvol = collections.defaultdict(lambda: [0, 0])
+for r in R:
+    _byvol[str(r['volume'])][0] += 1
+    if r.get('crossvendor_checked'): _byvol[str(r['volume'])][1] += 1
+facts['references_by_volume'] = {v: {'references': n, 'crossvendor_checked': c} for v, (n, c) in sorted(_byvol.items(), key=lambda kv: (len(kv[0]), kv[0]))}
+# quote-fragment exactness today, same tokenizer as tools/check_paper_facts.py (v1.3's 811 of 819 is the pinned figure)
+_corpus = ROOT / 'data' / 'paragraphs.jsonl'
+if _corpus.exists():
+    import unicodedata as _ud
+    def _words(t):
+        t = _ud.normalize('NFKD', t).lower(); t = _re.sub(r'[‘’“”"\'`]', '', t); return _re.findall(r'[a-z0-9]+', t)
+    _pt = {}
+    for _line in open(_corpus):
+        _pp = json.loads(_line); _pt[(str(_pp['volume']), str(_pp['paragraph']))] = ' '.join(_words(_pp['text']))
+    _tot = _ex = 0
+    for r in R:
+        _t = _pt.get((str(r['volume']), str(r['paragraph'])))
+        if _t is None: continue
+        for _frag in _re.split(r'\.\.\.|…', r['quote']):
+            _fw = _words(_frag)
+            if not _fw: continue
+            _tot += 1; _ex += ' '.join(_fw) in _t
+    facts['quote_fragments_exact_today'] = f'{_ex} of {_tot}'
 facts['_graph_ref'] = REF + (' (' + _sp.run(['git','rev-parse','--short',REF],capture_output=True,text=True,cwd=ROOT).stdout.strip() + ')' if REF != 'worktree' else '')
 print(json.dumps(facts, indent=2))

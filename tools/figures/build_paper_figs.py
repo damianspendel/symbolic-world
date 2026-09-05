@@ -47,10 +47,11 @@ RISK_LABEL = {'R1': 'wrong claim', 'R2': 'fabricated quote', 'R3': 'wrong meanin
               'R13': 'anchored human'}
 # Figure 5's rubric, applied to the §3 table's Control / Measured / Residual columns:
 #   green  a control exists, §4 measured it, and the residual is small or excluded by construction
+#          (R3 is amber, not green: analogy-to-identity slipped 7 of 25 in Study B; Gemini hostile review 2026-09-05)
 #   amber  a control exists, and the residual is either measured and material, or not measurable in principle
 #   red    no control beyond a design choice, and no measurement
-STATUS = {'R1': 'green', 'R2': 'green', 'R3': 'green', 'R12': 'green',
-          'R4': 'amber', 'R5': 'amber', 'R6': 'amber', 'R7': 'amber', 'R8': 'amber', 'R9': 'amber', 'R11': 'amber', 'R13': 'amber',
+STATUS = {'R1': 'green', 'R2': 'green', 'R12': 'green',
+          'R3': 'amber', 'R4': 'amber', 'R5': 'amber', 'R6': 'amber', 'R7': 'amber', 'R8': 'amber', 'R9': 'amber', 'R11': 'amber', 'R13': 'amber',
           'R10': 'red'}
 STATUS_STYLE = {'green': (GREEN, GREENS, '●'), 'amber': (AMBER, AMBERS, '◐'), 'red': ('#f7e9e9', RED, '○')}
 
