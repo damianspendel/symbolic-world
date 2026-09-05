@@ -48,9 +48,10 @@ spread and sentence-opener variety because those are the harder layer.
 8. Cut the flourish that restates the thesis. Retire aphorisms rather than
    repeat them.
 9. No em-dashes to splice clauses; commas, colons, full stops.
-10. A plain-language summary sits under the abstract: four short paragraphs
-    (what the problem is, what was done, what was found, what it means),
-    written for a reader outside the field (Springer/Sage/T&F PLS practice).
+10. The plain-language register runs through the whole paper rather than
+    living in a separate summary (Damian, 2026-09-05: the section was
+    dropped, the rule kept). The abstract is the plain-language summary:
+    short, at most three numbers, no pipeline vocabulary.
 
 ## What the checker does with this
 

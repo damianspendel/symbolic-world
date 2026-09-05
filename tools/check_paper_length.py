@@ -19,10 +19,17 @@ path = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / 'docs' / 'PAPE
 text = path.read_text()
 
 BODY_CAP = 7000
-BUDGET = {            # section number -> words, from the 2026-08-24 restructure
-    'Abstract': 300,  # (Damian: §2+§4 merged around figures; RQs to §8 as bullets)
-    '1': 600, '2': 900, '3': 500, '4': 700, '5': 1950,   # §5 +150 on 2026-09-02: Studies B and C landed in it
-    '6': 600, '7': 500, '8': 500, '9': 400, '10': 300,
+BUDGET = {            # section number -> words, from Damian's 2026-09-05 restructure
+    'Abstract': 160,  # "shorten by 50%"
+    '1': 500,         # claims are not triples
+    '2': 1000,        # how would we build a warranted atlas (reserved words, figures 1-2, the salt edge, the profile)
+    '3': 700,         # risks and controls (figure 3 + the table)
+    '4': 1000,        # what we measured, ending in the profile table
+    '5': 500,         # six questions answered from the graph
+    '6': 600,         # disagreement as an output
+    '7': 500,         # limitations, with the open research questions
+    '8': 600,         # related work
+    '9': 300,         # conclusion
 }
 EM_DASH_CAP = 3       # rationed hard, per the writing rules
 
