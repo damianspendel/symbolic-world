@@ -71,6 +71,7 @@ quotation and fair-use exceptions — the full position, including licensing
 
 ## Authorship
 
-Damian Spendel, with AI collaborators: Claude Opus 4.8 (proposal), Claude Fable 5
-(verification), Gemini 3.1 Pro (cross-vendor audit), Claude Code (orchestration).
-See the authorship note in the paper.
+Damian Spendel, with AI collaborators: Claude Opus 4.8 and Opus 5 (proposal),
+Claude Fable 5 (verification, and the drafting of the paper), Gemini 3.1 Pro
+(cross-vendor audit, and the checking of the paper's claims), Claude Code
+(orchestration). See the AI-use disclosure on the paper's title page.

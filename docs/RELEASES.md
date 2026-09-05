@@ -58,8 +58,10 @@ calibration record none
 
 ## v2.0: the graph as a queryable instrument
 
-status: pending. Waits on the arXiv v1 decision and Damian's go; the v1.4
-and v1.5 plans are folded in (Damian, 2026-08-19).
+status: ready to tag. Paper promoted to docs/PAPER.md on 2026-09-05 after
+four cross-vendor hostile passes; the tag, the GitHub Release and the Zenodo
+record are Damian's steps. The v1.4 and v1.5 plans are folded in (Damian,
+2026-08-19).
 pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status

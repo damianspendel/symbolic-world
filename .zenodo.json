@@ -1,6 +1,6 @@
 {
-  "title": "The Symbolic World: Verification-First Knowledge Extraction from Interpretive Corpora (dataset, pipeline, and paper)",
-  "description": "A methodology for AI-assisted knowledge extraction in which trust is manufactured by construction and terminates in human judgement, demonstrated on a knowledge graph of C. G. Jung's Collected Works: 248 nodes, 669 edges, 699 references, each verbatim-anchored to a numbered paragraph, independently gated by a second model family, calibrated with seeded corruptions (n=200, published confidence intervals), cross-vendor audited (full-rubric and reduced-rubric), human-validated on a 50-item author gold set (E10), and replicated at pilot scale on a public-domain corpus (James's Varieties, complete package included), with live public dispute and confirmation channels. Includes the full transaction ledger, all experiment inputs/verdicts/adjudications (E0-E10), and the paper. Copyrighted source texts are not included; quotations are <=25 words under quotation exceptions (see docs/LEGAL.md). Live atlas: https://symbolicworld.observer",
+  "title": "Trust, Layered: Warranted AI Knowledge Extraction for Interpretive Corpora, Demonstrated on Jung's Collected Works (dataset, pipeline, and paper)",
+  "description": "A warranted atlas of C. G. Jung's Collected Works: 589 nodes, 2091 edges, 2678 references over nine volumes, each reference anchored to a numbered paragraph with a verbatim quote of at most 25 words, gated by a model of a different family from the proposer, cross-vendor audited (93% of references, every batch since the pre-merge mandate), with a normalization layer (260 relations) and a relation-family layer (ruleset v0.7.2, calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json, PASS) that inherit no warrant from the claim beneath. Every claim carries a warrant profile: the checks it survived, who made them, and which nobody has made. Includes the paper (Trust, Layered), the full transaction ledger, all experiment inputs, verdicts and adjudications (E0-E10, Studies B and C), the family calibration records, and the James pilot. Graph v2.0 · ruleset v0.7.2 · calibration record 2026-08-13_v072_run4 (PASS). Supersedes v1.3, which is retained as the artifact the July 2026 paper and arXiv v1 describe. Copyrighted source texts are not included; quotations are <=25 words under quotation exceptions (see docs/LEGAL.md). Live atlas: https://symbolicworld.observer",
   "creators": [
     {
       "name": "Spendel, Damian"
@@ -8,19 +8,19 @@
   ],
   "contributors": [
     {
-      "name": "Claude Opus 4.8 (Anthropic) — edge proposal",
+      "name": "Claude Opus 4.8 and Opus 5 (Anthropic) — edge proposal",
       "type": "Other"
     },
     {
-      "name": "Claude Fable 5 (Anthropic) — independent verification and calibration",
+      "name": "Claude Fable 5 (Anthropic) — independent verification, calibration, and the drafting of the paper",
       "type": "Other"
     },
     {
-      "name": "Gemini 3.1 Pro (Google) — cross-vendor audits",
+      "name": "Gemini 3.1 Pro (Google) — cross-vendor audits and the checking of the paper's claims",
       "type": "Other"
     },
     {
-      "name": "Claude Code (Anthropic) — orchestration, tooling, drafting",
+      "name": "Claude Code (Anthropic) — orchestration and tooling",
       "type": "Other"
     }
   ],
@@ -36,7 +36,10 @@
     "epistemic stance",
     "hallucination",
     "cross-vendor audit",
-    "falsifiability"
+    "falsifiability",
+    "warrant profile",
+    "relation families",
+    "normalization"
   ],
   "related_identifiers": [
     {
@@ -49,5 +52,6 @@
       "relation": "isDerivedFrom",
       "scheme": "url"
     }
-  ]
+  ],
+  "version": "2.0.0"
 }
