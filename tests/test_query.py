@@ -471,7 +471,9 @@ def test_turtle_statements_are_terminated_and_prefixes_declared(turtle):
     assert not buffer, "a statement was left open at the end of the file"
     assert all(s.endswith(" .") for s in statements)
     assert all(s.count('"') % 2 == 0 for s in statements)
-    assert all(s.count("<") == s.count(">") for s in statements)
+    # angle brackets must balance in IRIs; a literal may legitimately contain one ("names -> conceives")
+    assert all(re.sub(r'"(?:[^"\\]|\\.)*"', "", s).count("<") == re.sub(r'"(?:[^"\\]|\\.)*"', "", s).count(">")
+               for s in statements)
     declared = {name for name, _ in export_rdf.PREFIXES}
     for statement in statements:
         if statement.startswith("@prefix"):
