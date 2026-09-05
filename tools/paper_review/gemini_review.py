@@ -10,7 +10,12 @@ each against the fact sheet, (2) read for argument and clarity, (3) name any
 prose it would flag as machine-written. Verdicts come back as JSON and are
 written to docs/experiments/paper_v2_reviews/ as the receipt.
 
-    python3 tools/paper_review/gemini_review.py <section.md> <facts.json> <out.json> [claims|narrative|prose]
+    python3 tools/paper_review/gemini_review.py <section.md> <facts.json> <out.json> [claims|narrative|prose|hostile]
+
+'hostile' takes the whole draft, appends the text content of every figure it
+embeds (so figure and prose can be checked against each other), and asks for a
+referee report written to reject, plus a 100-word plain-language account of
+what the reviewer understood the paper to say.
 """
 import datetime
 import json
@@ -27,7 +32,18 @@ section = pathlib.Path(sys.argv[1]).read_text()
 section = _re.sub(r'^> .*\n', '', section, flags=_re.M)   # drafting notes are not the paper
 facts = pathlib.Path(sys.argv[2]).read_text()
 out = pathlib.Path(sys.argv[3])
-FOCUS = sys.argv[4] if len(sys.argv) > 4 else 'claims'   # 'claims' (per section) | 'narrative' | 'prose' (whole draft)
+FOCUS = sys.argv[4] if len(sys.argv) > 4 else 'claims'   # 'claims' (per section) | 'narrative' | 'prose' | 'hostile' (whole draft)
+
+def figure_text(md_path: pathlib.Path, md: str) -> str:
+    """The <text> content of each SVG the draft embeds, in figure order, so the reviewer sees what the figures say."""
+    out = []
+    for cap, rel in _re.findall(r'!\[([^\]]*)\]\((figures/[^)]+)\)', md):
+        svg = (md_path.parent / rel).read_text()
+        texts = [_re.sub(r'<[^>]+>', '', m) for m in _re.findall(r'<text[^>]*>(.*?)</text>', svg, flags=_re.S)]
+        out.append(f'[{cap}]\n' + '\n'.join(x.strip() for x in texts if x.strip()))
+    return '\n\n'.join(out)
+
+FIGTEXT = figure_text(pathlib.Path(sys.argv[1]), section) if FOCUS == 'hostile' else ''
 
 NARRATIVE_PROMPT = """You are an independent reviewer for a methods paper in the digital humanities. You have not seen any discussion of this paper. Below is the draft so far (several sections; others are not yet written and are referred to by number), followed by a fact sheet derived mechanically from the project's dataset. Sections referred to but absent are not a defect; do not report them.
 
@@ -86,8 +102,33 @@ Be strict and specific. Quote the text. Do not praise.
 === FACT SHEET (derived from the dataset, not typed) ===
 """ + facts
 
+HOSTILE_PROMPT = """You are the referee whose job is to find the reason to reject this paper. You are a senior reviewer for a methods venue at the border of digital humanities and NLP; you have not seen any discussion of the paper. Below is the complete draft, then the text content of each figure it embeds (as extracted from the figure files; the symbols ●, ◐ and ○ in Figure 5 mark green, amber and red), then a fact sheet derived mechanically from the project's dataset.
+
+Attack the paper. Return ONLY a JSON object with:
+
+1. "recommendation": one of REJECT, MAJOR_REVISION, MINOR_REVISION, ACCEPT, and "one_line": the sentence you would put first in the report.
+2. "fatal": list of objections that would on their own justify rejection, each {"where" (section or figure), "quoted", "objection", "what_would_answer_it"}. Empty list if none, and say so honestly.
+3. "overclaims": list of {"quoted", "why", "fact_sheet_value" (or "n/a")}: sentences that say more than the fact sheet or the paper's own limitations allow.
+4. "figure_text_conflicts": list of {"figure", "quoted_figure", "quoted_prose", "conflict"}: places where a figure and the prose, or a figure and the §3 table, disagree (a colour or status that the table's columns do not support counts).
+5. "circularity": list of places where the paper's evidence for a claim was produced by the thing being evaluated, quoted.
+6. "novelty": {"claimed": what the paper says is new, "already_done_by": prior work you know that does it, or "none I can name", "verdict": one sentence}.
+7. "weakest_section": section number and one sentence why.
+8. "would_a_humanist_care": one sentence, honest.
+9. "eli5": in about 100 words and no jargon, explain what you understood this paper to be saying, as if to a bright twelve-year-old. This is not a critique; it is what you took away.
+
+Be as hard as the evidence allows and no harder: an objection the paper already concedes in §3 or §7 is not an objection unless the concession is inadequate, and you should say which. Quote the text.
+
+=== DRAFT ===
+""" + section + """
+
+=== FIGURE TEXT (extracted from the figure files) ===
+""" + FIGTEXT + """
+
+=== FACT SHEET (derived from the dataset, not typed) ===
+""" + facts
+
 body = {
-    "contents": [{"parts": [{"text": {'narrative': NARRATIVE_PROMPT, 'prose': PROSE_PROMPT}.get(FOCUS, PROMPT)}]}],
+    "contents": [{"parts": [{"text": {'narrative': NARRATIVE_PROMPT, 'prose': PROSE_PROMPT, 'hostile': HOSTILE_PROMPT}.get(FOCUS, PROMPT)}]}],
     "generationConfig": {"responseMimeType": "application/json", "temperature": 0},
 }
 req = urllib.request.Request(
@@ -98,7 +139,7 @@ resp = json.load(urllib.request.urlopen(req, timeout=600))
 txt = resp["candidates"][0]["content"]["parts"][0]["text"]
 verdict = json.loads(txt)
 record = {
-    "run": "blind cross-vendor paper review",
+    "run": "blind cross-vendor paper review" if FOCUS != 'hostile' else "hostile cross-vendor referee report, whole draft with figure text",
     "focus": FOCUS,
     "model": MODEL,
     "date": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds'),

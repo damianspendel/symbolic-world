@@ -1,0 +1,185 @@
+<svg viewBox="0 0 900 554" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica,Arial,sans-serif">
+<rect width="900" height="554" fill="#fbfaf7"/>
+<text x="24" y="22" font-size="13" font-weight="bold" fill="#2b2b2b">Related work on the pipeline: what each neighbour covers, and where this work differs</text>
+<rect x="238" y="36" width="77" height="20" rx="3" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="276" y="50" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2b2b2b">proposer</text>
+<rect x="320" y="36" width="77" height="20" rx="3" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="358" y="50" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2b2b2b">quote check</text>
+<rect x="402" y="36" width="77" height="20" rx="3" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="440" y="50" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2b2b2b">gate</text>
+<rect x="484" y="36" width="77" height="20" rx="3" fill="#e9f0f7" stroke="#5b87ab"/>
+<text x="522" y="50" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2b2b2b">cross-vendor</text>
+<rect x="566" y="36" width="77" height="20" rx="3" fill="#f3eee4" stroke="#a9925b"/>
+<text x="604" y="50" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2b2b2b">normalize</text>
+<rect x="647" y="36" width="77" height="20" rx="3" fill="#f3eee4" stroke="#a9925b"/>
+<text x="686" y="50" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2b2b2b">families</text>
+<rect x="729" y="36" width="77" height="20" rx="3" fill="#efefef" stroke="#8a8a8a"/>
+<text x="768" y="50" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2b2b2b">query</text>
+<rect x="811" y="36" width="77" height="20" rx="3" fill="#efefef" stroke="#8a8a8a"/>
+<text x="850" y="50" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2b2b2b">the record</text>
+<text x="24" y="76" font-size="8.2" fill="#2b2b2b">LLM knowledge-graph extractors [5]; research</text>
+<text x="24" y="87" font-size="8.2" fill="#2b2b2b">agents [6]; aggregate accuracy as the report</text>
+<text x="24" y="98" font-size="8.2" fill="#2b2b2b">[7]</text>
+<rect x="238" y="62" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="241" y="65" width="71" height="34" rx="3" fill="#e9f0f7" stroke="#5b87ab" stroke-width="1.4"/>
+<text x="276" y="75.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">extract; 30 to 66%</text>
+<text x="276" y="85.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">accuracy</text>
+<rect x="320" y="62" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="402" y="62" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="484" y="62" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="566" y="62" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="647" y="62" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="729" y="62" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="62" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="814" y="65" width="71" height="34" rx="3" fill="#fff" stroke="#5b87ab" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="850" y="75.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">one aggregate</text>
+<text x="850" y="85.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">figure</text>
+<text x="24" y="120" font-size="8.2" fill="#2b2b2b">Attributed generation [8, 9]</text>
+<rect x="238" y="106" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="241" y="109" width="71" height="34" rx="3" fill="#e9f0f7" stroke="#5b87ab" stroke-width="1.4"/>
+<text x="276" y="119.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">quotes at</text>
+<text x="276" y="129.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">generation time</text>
+<rect x="320" y="106" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="323" y="109" width="71" height="34" rx="3" fill="#fff" stroke="#5b87ab" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="358" y="119.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">model-side, not a</text>
+<text x="358" y="129.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">dataset check</text>
+<rect x="402" y="106" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="484" y="106" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="566" y="106" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="647" y="106" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="729" y="106" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="106" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="24" y="164" font-size="8.2" fill="#2b2b2b">Per-triplet verification [10]</text>
+<rect x="238" y="150" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="320" y="150" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="402" y="150" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="405" y="153" width="71" height="34" rx="3" fill="#fff" stroke="#5b87ab" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="440" y="163.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">single family,</text>
+<text x="440" y="173.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">uncalibrated</text>
+<rect x="484" y="150" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="566" y="150" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="647" y="150" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="729" y="150" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="150" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="24" y="208" font-size="8.2" fill="#2b2b2b">Self-preference and judge reliability [11,</text>
+<text x="24" y="219" font-size="8.2" fill="#2b2b2b">12, 13, 14]</text>
+<rect x="238" y="194" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="320" y="194" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="402" y="194" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="405" y="197" width="71" height="34" rx="3" fill="#fff" stroke="#5b87ab" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="440" y="207.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">judges favour</text>
+<text x="440" y="217.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">their own outputs</text>
+<rect x="484" y="194" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="487" y="197" width="71" height="34" rx="3" fill="#fff" stroke="#5b87ab" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="522" y="207.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">asks for published</text>
+<text x="522" y="217.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">catch rates</text>
+<rect x="566" y="194" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="647" y="194" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="729" y="194" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="194" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="24" y="252" font-size="8.2" fill="#2b2b2b">Voice annotation: FactBank, PDTB, private</text>
+<text x="24" y="263" font-size="8.2" fill="#2b2b2b">states [15, 16, 17]</text>
+<rect x="238" y="238" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="241" y="241" width="71" height="34" rx="3" fill="#fff" stroke="#5b87ab" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="276" y="251.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">voice on text, not</text>
+<text x="276" y="261.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">on graph claims</text>
+<rect x="320" y="238" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="402" y="238" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="484" y="238" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="566" y="238" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="647" y="238" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="729" y="238" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="238" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="24" y="296" font-size="8.2" fill="#2b2b2b">PhilKG [18]; Darshana Graph [19]</text>
+<rect x="238" y="282" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="241" y="285" width="71" height="34" rx="3" fill="#e9f0f7" stroke="#5b87ab" stroke-width="1.4"/>
+<text x="276" y="295.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">LLM extraction</text>
+<rect x="320" y="282" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="402" y="282" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="405" y="285" width="71" height="34" rx="3" fill="#fff" stroke="#5b87ab" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="440" y="295.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">same-ecosystem</text>
+<text x="440" y="305.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">review of a</text>
+<text x="440" y="316.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">selection</text>
+<rect x="484" y="282" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="566" y="282" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="647" y="282" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="729" y="282" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="282" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="24" y="340" font-size="8.2" fill="#2b2b2b">Ontology engineering for scholarly corpora</text>
+<text x="24" y="351" font-size="8.2" fill="#2b2b2b">[20]</text>
+<rect x="238" y="326" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="320" y="326" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="402" y="326" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="484" y="326" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="566" y="326" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="568" y="329" width="71" height="34" rx="3" fill="#e9f0f7" stroke="#5b87ab" stroke-width="1.4"/>
+<text x="604" y="339.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">standard</text>
+<rect x="647" y="326" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="650" y="329" width="71" height="34" rx="3" fill="#e9f0f7" stroke="#5b87ab" stroke-width="1.4"/>
+<text x="686" y="339.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">standard; inherits</text>
+<text x="686" y="349.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">the status beneath</text>
+<rect x="729" y="326" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="326" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="24" y="384" font-size="8.2" fill="#2b2b2b">Nanopublications [21]; provenance-enhanced</text>
+<text x="24" y="395" font-size="8.2" fill="#2b2b2b">statements [23]</text>
+<rect x="238" y="370" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="320" y="370" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="402" y="370" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="484" y="370" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="566" y="370" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="647" y="370" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="729" y="370" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="370" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="814" y="373" width="71" height="34" rx="3" fill="#e9f0f7" stroke="#5b87ab" stroke-width="1.4"/>
+<text x="850" y="383.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">one claim, its</text>
+<text x="850" y="393.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">provenance, its</text>
+<text x="850" y="404.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">publication record</text>
+<text x="24" y="428" font-size="8.2" fill="#2b2b2b">ARAS concordance [25]; digital edition [26]</text>
+<rect x="238" y="414" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="241" y="417" width="71" height="34" rx="3" fill="#fff" stroke="#5b87ab" stroke-width="0.9" stroke-dasharray="3,2"/>
+<text x="276" y="427.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">search over the</text>
+<text x="276" y="437.5" text-anchor="middle" font-size="7.2" fill="#2b4f6e">corpus, no</text>
+<text x="276" y="448.0" text-anchor="middle" font-size="7.2" fill="#2b4f6e">relations</text>
+<rect x="320" y="414" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="402" y="414" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="484" y="414" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="566" y="414" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="647" y="414" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="729" y="414" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="811" y="414" width="77" height="40" rx="3" fill="#fff" stroke="#ddd"/>
+<rect x="18" y="455" width="864" height="46" rx="5" fill="#fffdf5" stroke="#c9a227" stroke-width="1.2"/>
+<text x="24" y="472" font-size="8.2" font-weight="bold" fill="#2b2b2b">this work</text>
+<rect x="238" y="458" width="77" height="40" rx="3" fill="#eef3ee" stroke="#3f7d3f" stroke-width="0.8"/>
+<text x="276" y="471.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">voice and</text>
+<text x="276" y="481.5" text-anchor="middle" font-size="7.2" fill="#1f4d1f">commitment typed</text>
+<text x="276" y="492.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">on every claim</text>
+<rect x="320" y="458" width="77" height="40" rx="3" fill="#e3f1e3" stroke="#c9a227" stroke-width="2"/>
+<text x="358" y="471.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">dataset-level,</text>
+<text x="358" y="481.5" text-anchor="middle" font-size="7.2" fill="#1f4d1f">model-independent,</text>
+<text x="358" y="492.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">canaries</text>
+<rect x="402" y="458" width="77" height="40" rx="3" fill="#e3f1e3" stroke="#c9a227" stroke-width="2"/>
+<text x="440" y="471.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">different family,</text>
+<text x="440" y="481.5" text-anchor="middle" font-size="7.2" fill="#1f4d1f">catch rates</text>
+<text x="440" y="492.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">published</text>
+<rect x="484" y="458" width="77" height="40" rx="3" fill="#e3f1e3" stroke="#c9a227" stroke-width="2"/>
+<text x="522" y="471.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">different vendor,</text>
+<text x="522" y="481.5" text-anchor="middle" font-size="7.2" fill="#1f4d1f">every batch</text>
+<rect x="566" y="458" width="77" height="40" rx="3" fill="#eef3ee" stroke="#3f7d3f" stroke-width="0.8"/>
+<text x="604" y="471.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">frozen string kept</text>
+<text x="604" y="481.5" text-anchor="middle" font-size="7.2" fill="#1f4d1f">beside it</text>
+<rect x="647" y="458" width="77" height="40" rx="3" fill="#e3f1e3" stroke="#c9a227" stroke-width="2"/>
+<text x="686" y="471.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">inherits no</text>
+<text x="686" y="481.5" text-anchor="middle" font-size="7.2" fill="#1f4d1f">warrant; assigned,</text>
+<text x="686" y="492.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">never verified</text>
+<rect x="729" y="458" width="77" height="40" rx="3" fill="#eef3ee" stroke="#3f7d3f" stroke-width="0.8"/>
+<text x="768" y="471.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">derived rows</text>
+<text x="768" y="481.5" text-anchor="middle" font-size="7.2" fill="#1f4d1f">labelled, never</text>
+<text x="768" y="492.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">stored</text>
+<rect x="811" y="458" width="77" height="40" rx="3" fill="#e3f1e3" stroke="#c9a227" stroke-width="2"/>
+<text x="850" y="471.0" text-anchor="middle" font-size="7.2" fill="#1f4d1f">a warrant profile</text>
+<text x="850" y="481.5" text-anchor="middle" font-size="7.2" fill="#1f4d1f">per part</text>
+<rect x="24" y="511" width="12" height="12" fill="#e9f0f7" stroke="#5b87ab" stroke-width="1.4"/><text x="41" y="521" font-size="8.5" fill="#444">covers the stage</text>
+<rect x="144" y="511" width="12" height="12" fill="#fff" stroke="#5b87ab" stroke-dasharray="3,2"/><text x="161" y="521" font-size="8.5" fill="#444">adjacent or partial</text>
+<rect x="284" y="511" width="12" height="12" fill="#e3f1e3" stroke="#c9a227" stroke-width="2"/><text x="301" y="521" font-size="8.5" fill="#444">the gap: no neighbour does this at this stage</text>
+<text x="24" y="542" font-size="9" fill="#6a7480">Numbers are reference-list entries. The baseline row is the report this pipeline exists to beat; the last row states what differs, not that it is better.</text>
+</svg>
