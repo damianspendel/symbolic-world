@@ -11,8 +11,11 @@ import urllib.request
 
 # Cloudflare Bot Fight Mode appends its challenge script to HTML on the wire
 # (zone feature, active since the tunnel era). Strip it before comparing so the
-# check measures OUR content, not Cloudflare's armour.
-CF_INJECT = re.compile(rb'<script>\(function\(\)\{.{0,4000}?__CF\$cv\$params.*?</script>', re.S)
+# check measures OUR content, not Cloudflare's armour. Two observed variants
+# (2026-10-08): the original iframe-wrapping `(function(){...})` form, and a
+# bare `window.__CF$cv$params={...}` assignment — responses carry either, at
+# Cloudflare's whim, so both must normalize away.
+CF_INJECT = re.compile(rb'<script>(?:\(function\(\)\{.{0,4000}?|window\.)__CF\$cv\$params.*?</script>', re.S)
 
 
 def normalize(body: bytes) -> bytes:
