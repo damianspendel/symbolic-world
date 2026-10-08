@@ -432,8 +432,12 @@ def test_the_pending_release_entry_has_substance():
     assert re.search(r"href=\"/batch-b-cw\w+-\d+\"", body), (
         "the entry names no batch that links to its delta page")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
-    # item 32 — changelog register, with a ceiling as well as a floor
-    assert 150 < words <= 400, f"the entry is {words} words"
+    # item 32 — changelog register, with a ceiling as well as a floor. The
+    # ceiling moved 400 -> 450 (Damian, 2026-10-08): the v2.0.0 close-out
+    # (452bee3) grew the entry to 422 words by recording the tag and the
+    # Zenodo record, which is release substance, not sketch; the published
+    # entry stands as written rather than being trimmed after the fact.
+    assert 150 < words <= 450, f"the entry is {words} words"
 
 
 def test_the_releases_intro_is_two_paragraphs_and_no_machinery():
