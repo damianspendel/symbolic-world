@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-individuation">
+<meta name="description" content="Individuation in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Individuation — Concept in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Individuation</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Individuation</span></h1>
+<p class="sub"><span class="p-type">Concept · psyche</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>51 relations, 62 verified citations across CW 8, 9i, 9ii, 11, 12, 13, 14, 16.</p>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mercurius">Mercurius</a> <span class="rel ev">symbolizes</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §284 — “he represents on the one hand the self and on the other the individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a> <span class="rel ev">symbolizes</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §288 — “the individuation process ... the commonest alchemical symbol for this is the tree”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 13 §288 — “For what it signifies is the individuation process … The commonest alchemical symbol for this is the tree, the arbor philosophica”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <span class="rel ev">symbolizes</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §40 — “the symbolism of alchemy expresses ... the so-called individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 14 §543 — “in his art and its allegories the drama of his own soul, his individuation process, is played out”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mandala">Mandala</a> <span class="rel ev">symbolizes</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §73 — “the mandala is a symbol of individuation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-mass">The Mass</a> <span class="rel ev">symbolizes</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 11 §414 — “we can speak of the Mass as the rite of the individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-active-imagination">Active imagination</a> <span class="rel ev">represents</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §705 — “a representation of the individuation process ... or what we today call active imagination”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-alchemy">Alchemy</a> <span class="rel ev">expresses</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §40 — “What the symbolism of alchemy expresses is the whole problem of the evolution of personality described above, the so-called individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-ouroboros">Uroboros</a> <span class="rel ev">symbolizes</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §297 — “The alchemists … expressed this paradox through the symbol of the uroboros, the snake that bites its own tail”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dream">Dream</a> <span class="rel ev">reveals</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §550 — “this unconscious process spontaneously expressing itself in the symbolism of a long dream-series the individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-imitatio-christi">Imitatio Christi</a> <span class="rel ev">makes-us-forget</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §80 — “out of sheer imitation, we forget to make real our own deepest meaning”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, PARTIAL, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="rel ev">is-motivating-force-of</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §307 — “the perfect symmetry of the crown points to a union of opposites. This is the motivating force and the goal of the individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-kore">The Kore (the maiden)</a> <span class="rel ev">hinders</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §355 — “their exclusive domination of the feminine psyche hinders the individuation process, that is, the maturation of personality.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">sets-aside</span> <a class="ev" href="/concept-the-ego">The ego</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §562 — “the clearly felt, ruthless setting aside of the so beloved and so important ego is no light matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-heracles">Heracles</a> <span class="rel ev">undergoes</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §571 — “Now the Heracles myth has in fact all the characteristic features of an individuation process”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-progression">Progression of libido</a> <span class="rel ev">suppresses</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §74 — “Necessity enforces complete orientation to these conditions and the suppression of all those tendencies and possibilities which subserve individuation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">advances</span> <a class="ev" href="/concept-culture">Culture</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §111 — “Therefore an advance always begins with individuation, that is to say with the individual, conscious of his isolation, cutting a new path”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-projection">Projection</a> <span class="rel ev">thwarts</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §523 — “An over-accentuated, “magical” object orients the subject’s consciousness in the direction of the object and thwarts any attempt at individual differentiation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">goal-of</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §278 — “The goal of the individuation process is the synthesis of the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+<li class="ev">CW 9i §550 — “it is the birth of the self , the latter appearing as a microcosm”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">leads-to</span> <a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 11 §233 — “he is on the way towards realizing his wholeness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">is-the-realization-of</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §330 — “every life is the realization of a whole, that is, of a self, for which reason this realization can also be called “individuation.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)</span></li>
+<li class="ev">CW 12 §163 — “Individuation, becoming a self, is not only a spiritual problem, it is the problem of all life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">produces</span> <a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §490 — “the term “individuation” to denote the process by which a person becomes a psychological “in-dividual,” that is, a separate, indivisible unity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">requires-the-integration-of</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §72 — “The psychological equivalent of this is the integration of the collective unconscious which forms an essential part of the individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">subordinates</span> <a class="ev" href="/concept-emotion">Emotion / affect</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §626 — “Here the many animals are affective states to which man is prone.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §625 — “See how he who thinks himself one is not one, but seems to have as many personalities as he has moods”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-paracelsus">Paracelsus</a> <span class="rel ev">places-the-regio-nymphididica-at-the-initial-stage-of</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §116 — “the Paracelsan regio nymphididica, mentioned in the treatise De vita longa as the initial stage of the individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a> <span class="rel ev">designates</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §482 — “The whole process, which today we understand as psychological development, was designated the “philosophical tree,””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, PARTIAL, 2026-08-01)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-transference">The transference</a> <span class="rel ev">aspect-of</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 16 §539 — “transference phenomenon is...one of the most important syndromes in the process of individuation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">is-presented-through</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §253 — “the process of individuation … has constantly been held up to Western man in the dogmatic and religious model of the life of Christ”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-artifex">The artifex (alchemist-operator)</a> <span class="rel ev">projected</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §564 — “the alchemist projected what I have called the process of individuation into the phenomena of chemical change”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-alchemy">Alchemy</a> <span class="rel ev">is-concretization-of</span> <span class="ev">Individuation</span> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §140 — “To all appearances, it is a concretization, in projected and symbolic form, of the process of individuation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-sequence">sequence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-shadow">The shadow</a> <span class="rel ev">first-stage-of</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §61 — “the encounter with the shadow is the ... apprentice-piece in the individual's development”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+<li class="ev">CW 9i §45 — “The shadow is a tight passage, a narrow door, whose painful constriction no one is spared who goes down to the deep well”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §486 — “he stands at the very beginning of the way of individuation, posing the deceptively easy riddle of the Sphinx”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima">Anima</a> <span class="rel ev">second-stage-of</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §61 — “If the encounter with the shadow is the “apprentice-piece” in the individual’s development, then that with the anima is the “master-piece.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-amplification">amplification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-zen-buddhism">Zen Buddhism</a> <span class="rel ev">illustrates</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §431 — “positive illustrations of our process. Above all I would mention the koans of Zen Buddhism”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">is-a</span> <a class="ev" href="/concept-coniunctio">Coniunctio</a> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §117 — “individuation is a 'mysterium coniunctionis'”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9ii §117 — “individuation is a “mysterium coniunctionis,” the self being experienced as a nuptial union of opposite halves”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">parallels</span> <a class="ev" href="/concept-alchemy">Alchemy</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §523 — “the symbol formation has the closest affinities with alchemical ideas”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §616 — “The individuation process has many stages and is subject to many vicissitudes, as the fictive course of the opus alchymicum amply shows.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §708 — “the great problem and concern of philosophical alchemy was the same as underlies the psychology of the unconscious, namely individuation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">arises-from</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §523 — “it is a process or course of development arising out of the conflict between the two fundamental psychic facts”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §522 — “It is the old game of hammer and anvil: between them the patient iron is forged into an indestructible whole”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-evil">Evil (malum)</a> <span class="rel ev">is-instrument-of</span> <span class="ev">Individuation</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §453 — “it is possible for a man to attain totality, to become whole, only with the co-operation of the spirit of darkness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">polarizes-with</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §96 — “Over against the polymorphism of the primitive’s instinctual nature there stands the regulating principle of individuation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">loosens-attachment-to</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §530 — “namely individuation, for this is the transformation process that loosens the attachment to the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">underlies</span> <a class="ev" href="/concept-compensation">Compensation (the unconscious counteraction)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §553 — “the individuation process, which, according to all we know, lies at the base of psychological compensation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">integrates</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §83 — “it is therefore necessary to integrate the unconscious into consciousness. This is a synthetic process which I have termed the “individuation process.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <span class="rel ev">illustrates</span> <span class="ev">Individuation</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §418 — “the opus with its countless symbols illustrates the process of individuation, the step-by-step development of the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">announces-itself-in</span> <a class="ev" href="/concept-dream">Dream</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §235 — “Natural transformation processes announce themselves mainly in dreams.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-divine-child">The Divine Child</a> <span class="rel ev">emerges-in</span> <span class="ev">Individuation</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §270 — “manifestation of the child motif in the therapy of neuroses is in the maturation process of personality induced by the analysis of the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">is-experience-of</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §705 — “individuation, or becoming whole, is neither a summum bonum nor a summum desideratum , but the painful experience of the union of opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">integrates</span> <a class="ev" href="/concept-projection">Projection</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §682 — “in the individuation process what were originally projections stream back “inside” and are integrated into the personality again”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-regression">Regression of libido</a> <span class="rel ev">serves</span> <span class="ev">Individuation</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §75 — “as an adaptation to the conditions of the inner world, springs from the vital need to satisfy the demands of individuation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-john-of-the-cross">St. John of the Cross</a> <span class="rel ev">parallels</span> <span class="ev">Individuation</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §431 — “St. John of the Cross has made the same problem more readily accessible”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Individuation</span> <span class="rel ev">realizes</span> <a class="ev" href="/concept-the-whole-man">The whole man (totus homo)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §557 — “This process is, in effect, the spontaneous realization of the whole man”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<h2 class="cfam">unclassified</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-iliaster">Iliaster</a> <span class="rel ev">is-principle-of</span> <span class="ev">Individuation</span> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §171 — “It therefore seems to be a kind of universal formative principle and principle of individuation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-ares">Ares</a> <span class="rel ev">is-principle-of</span> <span class="ev">Individuation</span> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §177 — “It is thus a more specific principle of individuation than the Iliaster”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">is-the-principle-of</span> <span class="ev">Individuation</span> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §118 — “It was known, and stated, very early that the man Jesus, the son of Mary, was the principium individuationis”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, PARTIAL, 2026-08-05)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/individuation">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

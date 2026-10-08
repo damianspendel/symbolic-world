@@ -1622,9 +1622,11 @@ def test_the_deploy_allowlist_admits_every_page_this_slice_ships():
     allow = set(re.findall(r"'([\w.-]+\.(?:html|json|js|css|txt|xml))'", src))
     family_re = re.compile(re.search(r"FAMILY_PAGE = re\.compile\(r'([^']+)'\)", src).group(1))
     batch_re = re.compile(re.search(r"BATCH_PAGE = re\.compile\(r'([^']+)'\)", src).group(1))
+    concept_re = re.compile(re.search(r"CONCEPT_PAGE = re\.compile\(r'([^']+)'\)", src).group(1))
     for path in generated_pages():
         name = os.path.basename(path)
-        assert name in allow or family_re.match(name) or batch_re.match(name), name
+        assert (name in allow or family_re.match(name) or batch_re.match(name)
+                or concept_re.match(name)), name
     for extra in ("query.js", "relation_declarations.json", "batch_pages.json"):
         assert extra in allow, extra
 

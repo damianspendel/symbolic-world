@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-archetype">
+<meta name="description" content="Archetype (archetype-as-such) in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Archetype (archetype-as-such) — Concept in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Archetype (archetype-as-such)</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Archetype (archetype-as-such)</span></h1>
+<p class="sub"><span class="p-type">Concept · psyche</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>89 relations, 139 verified citations across CW 8, 9i, 9ii, 12, 13, 14.</p>
+<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima">Anima</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §58 — “she is yet only one archetype among many”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9i §57 — “The anima is not the soul in the dogmatic sense, not an anima rationalis , which is a philosophical conception, but a natural archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §118 — “One of these archetypes, which is of paramount practical importance for the psychotherapist, I have named the anima.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is</span> <a class="ev" href="/concept-pattern-of-behaviour">Pattern of behaviour</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §435 — “Archetypes are typical forms of behaviour”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 8 §229 — “the inherited disposition to react in the same way as people have always reacted”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §841 — “The archetypes are formal factors responsible for the organization of unconscious psychic processes: they are “patterns of behaviour.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is-a</span> <a class="ev" href="/concept-psychoid">The psychoid</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §417 — “The archetype as such is a psychoid factor”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 8 §419 — “The psychoid nature of the archetype, as put forward here”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §912 — “This, in itself, is an irrepresentable, psychoid factor 14 of the collective unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rex">Rex (the King)</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §356 — “the king, like every archetype, is not just a static image; he signifies a dynamic process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §15 — “when I say as a psychologist that God is an archetype, I mean by that the “type” in the psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mandala">Mandala</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §50 — “we are concerned with a definite archetype—the mandala”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="rel ev">is-an-ever-present</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §73 — “there is an ever-present archetype of wholeness 22 which may easily disappear from the purview of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §257 — “The self, moreover, is an archetype that invariably expresses a situation within which the ego is contained”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §351 — “the facts that led psychologists to conjecture an archetype of wholeness, i.e., the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-space-time-quaternio">The space-time quaternio</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §398 — “The space-time quaternio is the archetypal sine qua non for any apprehension of the physical world”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+<li class="ev">CW 9ii §405 — “Space and time form a psychological a priori , an aspect of the archetypal quaternity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-wise-old-man">The Wise Old Man</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §80 — “the shadow, the anima, and the wise old man—are of a kind that can be directly experienced in personified form”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dual-mother">The Dual Mother</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §93 — “This is the motif of the dual mother , an archetype to be found in many variants in the field of mythology and comparative religion”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-syzygy">Syzygy (the divine pair)</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §131 — “It was the archetype of the divine pair, the syzygy.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-spirit">Spirit</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §396 — “The psychic manifestations of the spirit indicate at once that they are of an archetypal nature”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-trickster">Trickster</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §465 — “He is obviously a “psychologem,” an archetypal psychic structure of extreme antiquity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mandala">Mandala</a> <span class="rel ev">exemplifies</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §623 — “this motif is one of the best examples of the universal operation of an archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-treasure-hard-to-attain">The treasure hard to attain</a> <span class="rel ev">exemplifies</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §229 — “The essential thing is the idea of an exceedingly precious treasure hard to attain, no matter what it is called locally”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-family">The family (father, mother, child)</a> <span class="rel ev">exemplifies</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §336 — “These ordinary everyday facts, which are eternally repeated, create the mightiest archetypes of all”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-great-mother">Mother Archetype / Great Mother</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §722 — “if we could get a clear idea of the nature and meaning of this collective image, which I have called the archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §728 — “The archetype of the mother is a single instance that could be supplemented by a number of other archetypes.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-number">Number (the natural numbers)</a> <span class="rel ev">is-a</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §870 — “we define number psychologically as an archetype of order which has become conscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §871 — “Accordingly it would seem that natural numbers have an archetypal character.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">defends-against</span> <a class="ev" href="/concept-mass-psyche">Mass psyche / mass man</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §426 — “an effective defence against the brute force of collective consciousness and the mass psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is-altered-by</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §6 — “The archetype is essentially an unconscious content that is altered by becoming conscious and by being perceived”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">overpowers</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §82 — “the archetypal figures, which are endowed with a certain autonomy anyway on account of their natural numinosity, will escape from conscious control altogether”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">causes</span> <a class="ev" href="/concept-ego-inflation">Ego-inflation (hypertrophy)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §138 — “if the subject identifies with it, it often causes a devastating change of personality, generally in the form of megalomania or its opposite”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">suppresses</span> <a class="ev" href="/concept-the-ego">The ego</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §254 — “possess to a high degree the capacity to influence, control, and even to suppress the ego-personality”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">compels</span> <a class="ev" href="/concept-primitive-mentality">The primitive mentality</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §726 — “the power of the archetype: it forces the primitive to act against nature so that he shall not become her victim”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-impossible-situation">The "impossible" situation (the insoluble impasse)</a> <span class="rel ev">constellates</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §847 — “It is this kind of situation that constellates the archetype with the greatest regularity.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §900 — “This relative defeat of the powers of the conscious mind constellates the moderating archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="rel ev">contains</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §4 — “The contents of the collective unconscious, on the other hand, are known as archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+<li class="ev">CW 9i §90 — “collective unconscious does not develop individually but is inherited ... pre-existent forms, the archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+<li class="ev">CW 9i §88 — “the content of the collective unconscious is made up essentially of archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is-authentic-element-of</span> <a class="ev" href="/concept-spirit">Spirit</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §406 — “the archetype represents the authentic element of spirit”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is-organ-of</span> <a class="ev" href="/concept-psyche">The psyche</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §271 — “The archetype—let us never forget this—is a psychic organ present in all of us.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">constitutes</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §229 — “Together they make up that psychic stratum which I have called the collective unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §281 — “The collective unconscious consists of the sum of the instincts and their correlates, the archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §403 — “I based upon it my hypothesis of an impersonal collective unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §423 — “the archetypes, or dominants, of the collective unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-big-dream">The "big" (significant) dream</a> <span class="rel ev">contains</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §554 — “they contain symbolical images which we also come across in the mental history of mankind”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+<li class="ev">CW 8 §558 — “They employ numerous mythological motifs that characterize the life of the hero”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-hermetic-philosophy">Hermetic philosophy</a> <span class="rel ev">regarded</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §378 — “The Hermetic philosopher regarded these psychic premises, the archetypes, as inalienable components of the empirical world-picture.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-6, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-plato">Plato</a> <span class="rel ev">conceives</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §275 — “In Plato, however, an extraordinarily high value is set on the archetypes as metaphysical ideas, as “paradigms” or models”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, FINDING-adjudicated, 2026-08-18)</span></li>
+<li class="ev">CW 8 §942 — “the philosophy of Plato, which takes for granted the existence of transcendental images or models of empirical things”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-augustine">St. Augustine</a> <span class="rel ev">names -&gt; conceives</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §275 — “Medieval philosophy, from the time of St. Augustine—from whom I have borrowed the idea of the archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">names</span> <a class="ev" href="/concept-myth">Myth and fairytale</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §334 — “they give rise to archetypes , as I have termed myth-motifs in general”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-scintilla">Scintilla (soul-spark)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §700 — “In the unconscious are hidden those ... sparks of light ... the archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">empirically-equivalent-to</span> <a class="ev" href="/concept-dogma">Dogma (religious)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §20 — “The archetypes of the unconscious can be shown empirically to be the equivalents of religious dogmas”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-scintilla">Scintilla (soul-spark)</a> <span class="rel ev">symbolizes</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §388 — “one could equate the scintillae with the archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">correlate-of</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §89 — “the archetype ... an indispensable correlate of the idea of the collective unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9i §265 — “Contents of an archetypal character are manifestations of processes in the collective unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-christianity">Christianity</a> <span class="rel ev">conforms-to</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §25 — “But Christianity had come to stay, because it fits in with the existing archetypal pattern.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §155 — “they correspond in every way to the instincts, which are also determined in form only”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §271 — “It represents or personifies certain instinctive data of the dark, primitive psyche, the real but invisible roots of consciousness.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §714 — “What psychology designates as archetype is really a particular, frequently occurring, formal aspect of instinct”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">requires</span> <a class="ev" href="/concept-meditatio">Meditatio (inner dialogue)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §85 — “he puts into effect the alchemical definition of the meditatio: “an inner colloquy with one’s good angel.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">determines</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §271 — “the question of instinct cannot be dealt with psychologically without considering the archetypes, because at bottom they determine one another”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §277 — “unconscious apprehension through the archetype determines the form and direction of instinct”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">regulates</span> <a class="ev" href="/concept-culture">Culture</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §337 — “has exalted this group of archetypes into the supreme regulating principles of religious and even of political life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">manifests-through</span> <a class="ev" href="/concept-synchronicity">Synchronicity</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §148 — “an archetype that manifests itself on the one hand in a personality , and on the other hand synchronistically, in a moment of time”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is-expressed-in</span> <a class="ev" href="/concept-myth">Myth and fairytale</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §6 — “Another well-known expression of the archetypes is myth and fairytale”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §258 — “the legend expresses the obscure archetype of transformation so admirably that the passionate religious eros of the Arab finds it completely satisfying”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">manifests-as</span> <a class="ev" href="/concept-synchronicity">Synchronicity</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §440 — “Grounds for such a conclusion are supplied by the phenomena of synchronicity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §841 — “certain phenomena of simultaneity or synchronicity seem to be bound up with the archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §900 — “correspond, it would seem, to the nature of the archetype in the background and could therefore represent a synchronistic phenomenon”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §912 — “spontaneous synchronistic phenomena that I have had occasion to observe and analyse can easily be shown to have a direct connection with an archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">transcends</span> <a class="ev" href="/concept-psyche">The psyche</a> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §420 — “the position of the archetype would be located beyond the psychic sphere”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 8 §417 — “the real nature of the archetype is not capable of being made conscious, that it is transcendent”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §440 — “archetypes must have a nonpsychic aspect”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">occupies</span> <a class="ev" href="/concept-psychic-spectrum">The psychic spectrum (infra-red to ultra-violet)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §414 — “the instinctual image lies in the ultra-violet part”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §420 — “the “psychic ultra-violet,” the archetype, describes a field”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-meaningful-coincidence">Meaningful coincidence</a> <span class="rel ev">rests-on</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §846 — “Meaningful coincidences—which are to be distinguished from meaningless chance groupings 41 —therefore seem to rest on an archetypal foundation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §964 — “Their tertium comparationis rests on the psychoid factors I call archetypes.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">develops</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §423 — “all archetypes spontaneously develop favourable and unfavourable, light and dark, good and bad effects”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">arises-spontaneously-in</span> <a class="ev" href="/concept-psyche">The psyche</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §153 — “archetypes are not disseminated only by tradition, language, and migration, but that they can rearise spontaneously, at any time, at any place”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetypal-image">Archetypal image</a> <span class="rel ev">distinct-from</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §417 — “should not be confused with the archetype as such”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">escapes</span> <a class="ev" href="/concept-causality">Causality</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §964 — “Archetypal equivalences are contingent to causal determination, that is to say there exist between them and the causal processes no relations that conform to law”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is-image-of</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §415 — “the archetype as an image of instinct is a spiritual goal”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 8 §277 — “The primordial image might suitably be described as the instinct’s perception of itself”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §339 — “the archetypes are simply the forms which the instincts assume”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-quaternity">The quaternity</a> <span class="rel ev">represents</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §588 — “the undifferentiated inner one, which really represents the archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="rel ev">develops-on-basis-of</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §12 — “All conscious ideation and action have developed on the basis of these unconscious archetypal patterns and always remain dependent on them.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-active-imagination">Active imagination</a> <span class="rel ev">discovers</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §414 — “we can then make the discovery of the archetype without sinking back into the instinctual sphere”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">polarizes-with</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §406 — “Archetype and instinct are the most polar opposites imaginable”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima">Anima</a> <span class="rel ev">personifies-plurality-of</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §218 — “This role of Luna devolves upon the anima, as she personifies the plurality of archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">prefigures</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §295 — “the symbols represent the prototypes of the Christ-figure that were slumbering in man’s unconscious and were then called awake”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">recedes-from</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §188 — “For the further the archetype recedes from consciousness and the clearer the latter becomes, the more distinctly does the archetype assume mythological features.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §293 — “the archetype, because of its power to unite opposites, mediates between the unconscious substratum and the conscious mind.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">forms</span> <a class="ev" href="/concept-dominant-of-consciousness">Dominant of consciousness (ruling idea)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §41 — “possessed by archetypes of a numinous nature that force their way to the surface in order to form new dominants”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-augustine">St. Augustine</a> <span class="rel ev">anticipates</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §5 — “The term “archetype” is not found in St. Augustine, but the idea of it is.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-gods">The Gods</a> <span class="rel ev">reappear-as</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §50 — “Only an unparalleled impoverishment of symbolism could enable us to rediscover the gods as psychic factors, that is, as archetypes of the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">eludes</span> <a class="ev" href="/concept-the-intellect">The intellect</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §80 — “The discriminating intellect naturally keeps on trying to establish their singleness of meaning and thus misses the essential point”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">underlies</span> <a class="ev" href="/concept-neurosis">Neurosis</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §83 — “When, therefore, the analysis penetrates the background of conscious phenomena, it discovers the same archetypal figures that activate the deliriums of psychotics”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §99 — “a compulsiveness appears, which, like an instinctual drive, gains its way against all reason and will, or else produces a conflict of pathological dimensions”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §266 — “they are the unfailing causes of neurotic and even psychotic disorders, behaving exactly like neglected or maltreated physical organs”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §267 — “we can never legitimately cut loose from our archetypal foundations unless we are prepared to pay the price of a neurosis”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">dominates</span> <a class="ev" href="/concept-mass-psyche">Mass psyche / mass man</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §97 — “Can we not see how a whole nation is reviving an archaic symbol, yes, even archaic religious forms”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §98 — “There is no lunacy people under the domination of an archetype will not fall a prey to.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">acquires-form-through</span> <a class="ev" href="/concept-projection">Projection</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §142 — “has no exactly determinable form but is in itself an indefinite structure which can assume definite forms only in projection”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-plato">Plato</a> <span class="rel ev">anticipates</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §149 — “it was not too difficult to understand Plato’s conception of the Idea as supraordinate and pre-existent to all phenomena”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §153 — “I do not claim to have been the first to point out this fact. The honour belongs to Plato.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rebirth">Rebirth / Renovatio</a> <span class="rel ev">rests-on</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §207 — “Rebirth is an affirmation that must be counted among the primordial affirmations of mankind. These primordial affirmations are based on what I call archetypes.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetypal-image">Archetypal image</a> <span class="rel ev">rests-on</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §708 — “similar psychological situations make use of the same symbols, which on their side rest on archetypal foundations”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §711 — “as the bases of its symbolical products, I postulate the existence of primordial images, the archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-elementary-ideas">Elementary ideas (Elementargedanken)</a> <span class="rel ev">prefigures</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §353 — “the fundamentally analogous forms of perception that are to be found everywhere, therefore more or less what we know today”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">regulates</span> <a class="ev" href="/concept-spontaneous-fantasy">Spontaneous fantasy</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §403 — “certain collective unconscious conditions which act as regulators and stimulators of creative fantasy-activity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §404 — “the archetypes intervene in the shaping of conscious contents by regulating, modifying, and motivating them”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">underlies</span> <a class="ev" href="/concept-dogma">Dogma (religious)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §406 — “The essential content of all mythologies and all religions and all isms is archetypal.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §427 — “rest solely upon tradition and faith, but originate with the archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is</span> <a class="ev" href="/concept-nature">Nature</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §412 — “The archetype is pure, unvitiated nature”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-elgonyi-sunrise-rite">The Elgonyi sunrise rite</a> <span class="rel ev">enacts</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §411 — “They do it, motivated by the same preconscious archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">appears-in</span> <a class="ev" href="/concept-dream">Dream</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §554 — “which occur not only at all times and in all places but also in individual dreams, fantasies, visions”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+<li class="ev">CW 8 §559 — “This contamination shows in the most vivid way how individual dreams make use of archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="rel ev">deviates-from</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §724 — “The development of consciousness and of free will naturally brings with it the possibility of deviating from the archetype and hence from instinct.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-puberty-rites">Puberty-rites and initiation ceremonies</a> <span class="rel ev">satisfies</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §725 — “it is necessary that the claims of the injured archetype should be met”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §726 — “This is the way the primitive, for reasons unknown to him, attempts to fulfil the claims of the archetype.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-absolute-knowledge">Absolute knowledge (a priori knowledge of the unconscious)</a> <span class="rel ev">consists-of</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §931 — “These postulated images are presumably the same as my archetypes, which can be shown to be formal factors in spontaneous fantasy products.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam">unclassified</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">carries</span> <a class="ev" href="/concept-numinosity">Numinosity</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §405 — “the archetypes have, when they appear, a distinctly numinous character”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 8 §388 — “the archetypes have about them a certain effulgence or quasi-consciousness, and that numinosity entails luminosity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is-evidenced-by</span> <a class="ev" href="/concept-myth">Myth and fairytale</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §92 — “there remain enough individual instances showing the autochthonous revival of mythological motifs to put the matter beyond any reasonable doubt”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §103 — “Such material is available in profusion, but it is valueless unless one can adduce convincing mythological parallels.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §118 — “the almost universal parallelism between mythological motifs, which, on account of their quality as primordial images, I have called archetypes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">is-evidenced-by</span> <a class="ev" href="/concept-dream">Dream</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §100 — “The main source, then, is dreams , which have the advantage of being involuntary, spontaneous products of the unconscious psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §103 — “sources of archetypal material are to be found in the delusions of paranoiacs, the fantasies observed in trance-states”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §260 — “the archetypes appear in myths and fairytales just as they do in dreams and in the products of psychotic fantasy”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">possesses</span> <a class="ev" href="/concept-psychic-energy">Psychic energy</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §129 — “The archetype behind a religious idea has, like every instinct, its specific energy, which it does not lose”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-man">Man (homo)</a> <span class="rel ev">inherits</span> <span class="ev">Archetype (archetype-as-such)</span> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §152 — “This specific form is hereditary and is already present in the germ-plasm.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §155 — “The representations themselves are not inherited, only the forms”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §262 — “structural elements of the human psyche in general, and, like the morphological elements of the human body, are inherited”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §499 — “he contains unconsciously, as an a priori datum, the entire psychic structure developed both upwards and downwards by his ancestors”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">organizes</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §841 — “The archetypes are formal factors responsible for the organization of unconscious psychic processes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Archetype (archetype-as-such)</span> <span class="rel ev">exhibits</span> <a class="ev" href="/concept-transgressivity">Transgressivity of the archetype</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §964 — “an infringement to which I would give the name “transgressivity,” because the archetypes are not found exclusively in the psychic sphere”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/archetype">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

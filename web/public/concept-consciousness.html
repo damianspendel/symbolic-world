@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-consciousness">
+<meta name="description" content="Consciousness (ego, diurnal psyche) in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Consciousness (ego, diurnal psyche) — Concept in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Consciousness (ego, diurnal psyche)</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Consciousness (ego, diurnal psyche)</span></h1>
+<p class="sub"><span class="p-type">Concept · psyche</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>106 relations, 145 verified citations across CW 8, 9i, 9ii, 12, 13, 14.</p>
+<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">checks</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §412 — “consciousness enables him to adapt in an orderly way and to check the instincts”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-lumen-naturae">Lumen Naturae (light of nature)</a> <span class="rel ev">illuminates</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §389 — “the lumen naturae which illuminates consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">confronts</span> <a class="ev" href="/concept-the-shadow">The shadow</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §514 — “for consciousness to confront its shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">compensates</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §184 — “In itself the unconscious is neutral, and its normal function is to compensate the conscious position”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima">Anima</a> <span class="rel ev">sends-contents-into</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §424 — “the anima has become activated and sends her contents into consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">is-overpowered-by</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §438 — “the conscious mind, advancing into the unknown regions of the psyche, is overpowered by the archaic forces of the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">harbours-the-danger-of</span> <a class="ev" href="/concept-ego-inflation">Ego-inflation (hypertrophy)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §559 — “every increase in consciousness harbours the danger of inflation, as is shown very clearly in Faust’s superhuman powers”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">compensates-biases-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §229 — “the unconscious is not just a “subconscious” appendage … is a largely autonomous psychic system for compensating the biases and aberrations of the conscious attitude”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">threatens-to-overpower</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §433 — “the self struggles to make itself manifest and threatens to overpower consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">leads-to-crucifixion-of</span> <a class="ev" href="/concept-the-ego">The ego</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §79 — “the progressive development and differentiation of consciousness ... involves nothing less than a crucifixion of the ego”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">is-altered-by</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §6 — “The archetype is essentially an unconscious content that is altered by becoming conscious and by being perceived”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mandala">Mandala</a> <span class="rel ev">protects</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §16 — “We know from experience that the protective circle, the mandala, is the traditional antidote for chaotic states of mind”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">overwhelms</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §47 — “A wave of the unconscious may easily roll over it, and then he forgets who he was”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">overpowers</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §82 — “the archetypal figures, which are endowed with a certain autonomy anyway on account of their natural numinosity, will escape from conscious control altogether”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-abaissement-du-niveau-mental">Abaissement du niveau mental</a> <span class="rel ev">weakens</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §213 — “It is a slackening of the tensity of consciousness, which might be compared to a low barometric reading, presaging bad weather.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mass-psyche">Mass psyche / mass man</a> <span class="rel ev">lowers</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §225 — “A group experience takes place on a lower level of consciousness than the experience of an individual.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">nourishes</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §248 — “the “nourishing” influence of unconscious contents, which maintain the vitality of consciousness by a continual influx of energy”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-ego-inflation">Ego-inflation (hypertrophy)</a> <span class="rel ev">threatens</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §254 — “This produces an inflation which threatens consciousness with dissolution.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-divine-child">The Divine Child</a> <span class="rel ev">compensates</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §276 — “whose purpose is to compensate or correct, in a meaningful manner, the inevitable one-sidednesses and extravagances of the conscious mind”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <span class="rel ev">threatens</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §282 — “the threat to one’s inmost self from dragons and serpents points to the danger of the newly acquired consciousness being swallowed up again”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-divine-child">The Divine Child</a> <span class="rel ev">enlarges</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §288 — “As bringers of light, that is, enlargers of consciousness, they overcome darkness, which is to say that they overcome the earlier unconscious state.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-chthonic-mother">The Chthonic Mother</a> <span class="rel ev">compensates</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §312 — “This shows that in such cases the Earth Mother element in the conscious mind is abnormally weak and requires strengthening.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-kore">The Kore (the maiden)</a> <span class="rel ev">widens</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §316 — “and widen out the narrowly limited conscious mind bound in space and time”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §351 — “Here it signifies a widening of the conscious personality”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-active-imagination">Active imagination</a> <span class="rel ev">weakens</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §320 — “It is based on a deliberate weakening of the conscious mind and its inhibiting effect, which either limits or suppresses the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-wise-old-man">The Wise Old Man</a> <span class="rel ev">compensates</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §398 — “The archetype compensates this state of spiritual deficiency by contents designed to fill the gap”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+<li class="ev">CW 9i §401 — “the knowledge needed to compensate the deficiency comes in the form of a personified thought”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">assimilates</span> <a class="ev" href="/concept-spirit">Spirit</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §454 — “an expansion of consciousness which has gradually begun to occupy that originally unconscious territory and to transform those daimonia”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetypal-image">Archetypal image</a> <span class="rel ev">irrupts-into</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §516 — “All these figures irrupt autonomously into consciousness as soon as it gets into a pathological state”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">suppresses</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §521 — “Our European ego-consciousness is therefore inclined to swallow up the unconscious, and if this should not prove feasible we try to suppress it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-splinter-psyche">Splinter psyche / autonomous complex</a> <span class="rel ev">disturbs</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §62 — “The indirect manifestation of the unconscious takes the form of disturbances of conscious behaviour. In the association experiment they appear as complex-indicators”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+<li class="ev">CW 8 §22 — “Freud has described the greater part of them under the head of lapses of speech, mistakes in writing, slips of memory”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+<li class="ev">CW 8 §200 — “Every constellation of a complex postulates a disturbed state of consciousness.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+<li class="ev">CW 8 §593 — “It creates a disturbance in the readiness to react, either inhibiting the answer or causing an undue delay”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">inhibits</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §62 — “On account of the inhibiting influence which the conscious exercises over the unconscious, the unconscious values assert themselves at first only indirectly”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-neurosis">Neurosis</a> <span class="rel ev">weakens</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §134 — “These qualities are often impaired in the neurotic patient, who differs from the normal person in that his threshold of consciousness gets shifted”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">breaks-into</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §138 — “if the tension increases as a result of too great one-sidedness, the counter-tendency breaks through into consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+<li class="ev">CW 8 §581 — “They enter consciousness along with conscious perceptions and are nothing other than the momentary irruption of an unconscious content.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §590 — “The irruption of these alien contents is a characteristic symptom marking the onset of many mental illnesses.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">suppresses</span> <a class="ev" href="/concept-compensation">Compensation (the unconscious counteraction)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §160 — “when the unconscious counteraction is suppressed it loses its regulating influence”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">assimilates</span> <a class="ev" href="/concept-splinter-psyche">Splinter psyche / autonomous complex</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §206 — “the modern mind conceives all inner disturbances as its own activity: it simply assimilates them”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+<li class="ev">CW 8 §209 — “The tendency to make complexes unreal by assimilation does not prove their nugatoriness but, on the contrary, their importance.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">fears</span> <a class="ev" href="/concept-splinter-psyche">Splinter psyche / autonomous complex</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §208 — “so great is their fear of the lurking spectre”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+<li class="ev">CW 8 §211 — “The fear of complexes is a rooted prejudice”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetypal-image">Archetypal image</a> <span class="rel ev">disturbs</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §279 — “disturbances of conscious apprehension caused by the admixture of archetypal images”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dream">Dream</a> <span class="rel ev">compensates</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §466 — “we can discern a compensating function of the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §483 — “all dreams are compensatory to the content of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §487 — “Dreams, I maintain, are compensatory to the conscious situation of the moment”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §545 — “the concept of compensation seemed to me the only adequate one”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+<li class="ev">CW 8 §546 — “If the conscious attitude to the life situation is in large degree one-sided, then the dream takes the opposite side”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="rel ev">disturbs</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §595 — “Whenever contents of the collective unconscious become activated, they have a disturbing effect on the conscious mind”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §590 — “The association of a collective content with the ego always produces a state of alienation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dominants">Dominants (the autonomous contents of the unconscious)</a> <span class="rel ev">make-demands-on</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §713 — “there exist certain unconscious contents which make demands that cannot be denied, or send forth influences with which the conscious mind must come to terms”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §720 — “the dominants of the unconscious make almost irresistible demands for fulfilment”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-will">Will (freedom of choice)</a> <span class="rel ev">presupposes</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §380 — “we can hardly conceive of will and freedom of choice without consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 8 §344 — “the empirical freedom of the will grows in proportion to the extension of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-opposites">The opposites</a> <span class="rel ev">are-necessary-conditions-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §112 — “It knows that equivalent opposites are necessary conditions inherent in the act of cognition”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-shadow">The shadow</a> <span class="rel ev">is-prerequisite-for</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §402 — “the shadow is on one side regrettable and reprehensible weakness, on the other side healthy instinctivity and the prerequisite for higher consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">requires</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §178 — “There is no consciousness without discrimination of opposites.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">enables</span> <a class="ev" href="/concept-science">Science</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §135 — “Without them science, technology, and civilization would be impossible, for they all presuppose the reliable continuity and directedness of the conscious process.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-psychological-value">Psychological value (value intensity)</a> <span class="rel ev">conditions</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §270 — “every psychic content must possess a certain energy value in order to become conscious at all”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">depends-on</span> <a class="ev" href="/concept-psychic-energy">Psychic energy</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §363 — “consciousness of psychic contents is essentially dependent upon their intensity, that is, their energy”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §366 — “unconscious processes become conscious through accretion of energy”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">requires</span> <a class="ev" href="/concept-psychic-image">The psychic image (conscious content as representation)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §608 — “A psychic entity can be a conscious content, that is, it can be represented, only if it has the quality of an image”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">presupposes</span> <a class="ev" href="/concept-the-ego">The ego</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §611 — “Consciousness therefore seems to be the necessary precondition for the ego. Yet without the ego, consciousness is unthinkable.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §610 — “anything psychic will take on the quality of consciousness if it comes into association with the ego”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">gives-birth-to</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §219 — “the unconscious is pregnant with consciousness and gives birth to it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-evil">Evil (malum)</a> <span class="rel ev">originates-in</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §423 — “It must therefore be supposed that they spring from a need of human consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-emotion">Emotion / affect</a> <span class="rel ev">generates</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §179 — “emotion is the moment when steel meets flint and a spark is struck forth, for emotion is the chief source of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">grows-out-of</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §501 — “The unconscious is the mother of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+<li class="ev">CW 9i §502 — “Consciousness grows out of an unconscious psyche which is older than it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-reflective-instinct">The reflective instinct (reflexio)</a> <span class="rel ev">produces</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §243 — “Through the reflective instinct, the stimulus is more or less wholly transformed into a psychic content”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §244 — “The reflective instinct is no exception to this rule, for the production of consciousness is not of itself a creative act”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">arises-from</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §668 — “the sense of the “I”—the ego-consciousness—grows out of unconscious life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §676 — “Consciousness is a late-born descendant of the unconscious psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §747 — “The world-powers that rule over all mankind, for good or ill, are unconscious psychic factors, and it is they that bring consciousness into being”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-culture">Culture</a> <span class="rel ev">arises-from</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §726 — “This is indeed the beginning of all culture, the inevitable result of consciousness and of the possibility of deviating from unconscious law.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §750 — “Instinct is nature and seeks to perpetuate nature, whereas consciousness can only seek culture or its denial.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sol">Sol</a> <span class="rel ev">is-psychic-analogue-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §121 — “Sol corresponds psychologically to consciousness, the diurnal side of the psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-quaternity">The quaternity</a> <span class="rel ev">corresponds-to</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §557 — “the four are the four orienting functions of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rubedo">Rubedo</a> <span class="rel ev">corresponds-to</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §307 — “redness ( rubedo ) which now follows denotes an increase of warmth and light coming from the sun, consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-light">Light</a> <span class="rel ev">is-symbolical-equivalent-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §28 — ““Light” is the symbolical equivalent of consciousness, and the nature of consciousness is expressed by analogies with light.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="rel ev">runs-parallel-to</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §303 — “These utterances on the nature of the Deity express transformations of the God-image which run parallel with changes in human consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">resembles</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §439 — “behaves at the same time like a subjective one”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §673 — “The unconscious perceives, has purposes and intuitions, feels and thinks as does the conscious mind”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rex">Rex (the King)</a> <span class="rel ev">symbolizes</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §424 — “the king stands first of all for Sol, whom we have interpreted as consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-luna">Luna</a> <span class="rel ev">can-represent</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §223 — “the moon is not only dark but is also a giver of light and can therefore represent consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-diamond-body">Diamond Body</a> <span class="rel ev">symbolizes-the-detachment-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §68 — “these expressions symbolize an attitude that is beyond the reach of emotional entanglements and violent shocks—a consciousness detached from the world”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-pisces">Pisces (the zodiacal sign of the Fishes)</a> <span class="rel ev">signifies</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §230 — “the two fishes which the devil found on the primeval waters would signify the newly arisen world of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §231 — “the fishes represent the driving forces of the coming world of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-eye">The eye (pupil and iris)</a> <span class="rel ev">stands-for</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §593 — “The eye may well stand for consciousness (which is in fact an organ of perception), looking into its own background.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §682 — “derived originally from an eye motif and therefore stand for the observing and discriminating consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §690 — “The eyes in the mandala no doubt signify the observing consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sol">Sol</a> <span class="rel ev">signifies</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §697 — “The sun itself (looking rather like the yolk of an incubated egg) usually denotes consciousness, illumination, understanding.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">separates</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §30 — “The essence of the conscious mind is discrimination; it must, if it is to be aware of things, separate the opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">recedes-from</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §188 — “For the further the archetype recedes from consciousness and the clearer the latter becomes, the more distinctly does the archetype assume mythological features.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">dissociates-from</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §139 — “Civilized life today demands concentrated, directed conscious functioning, and this entails the risk of a considerable dissociation from the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+<li class="ev">CW 8 §724 — “Once the deviation sets in a dissociation between conscious and unconscious ensues, and then the activity of the unconscious begins.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-one-sidedness">One-sidedness of consciousness</a> <span class="rel ev">fragments</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §731 — “our modern consciousness, in pursuing these mutually exclusive ends, has become hopelessly fragmented”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">deviates-from</span> <a class="ev" href="/concept-nature">Nature</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §802 — “our consciousness had somehow slipped from its natural foundations and no longer knew how to get along on nature’s timing”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-ego">The ego</a> <span class="rel ev">centre-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §11 — “the point of reference for the field of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9ii §1 — “It forms, as it were, the centre of the field of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-ego">The ego</a> <span class="rel ev">is-centre-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §491 — “the ego can be no more than the centre of the field of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+<li class="ev">CW 9i §506 — “Consciousness needs a centre, an ego to which something is conscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-psychological-value">Psychological value (value intensity)</a> <span class="rel ev">transcends</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §16 — “we are concerned with valuations that go beyond the boundaries of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="rel ev">underlies</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §230 — “It is the matrix of all conscious psychic occurrences”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dream">Dream</a> <span class="rel ev">continuous-with</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §444 — “dreams are not entirely cut off from the continuity of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="rel ev">lacks</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §298 — “So the “Father” is not only unconscious and without the quality of being, but also nirdvandva , without opposites”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-psychological-attitude">Psychological attitude</a> <span class="rel ev">escapes</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §697 — “we naturally remain unconscious of our attitude, and in that case we have no Weltanschauung”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">integrates</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §779 — “the integration of the unconscious with consciousness, whereby both are altered”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">reconnects-with</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §620 — “How can consciousness, our most recent acquisition, which has bounded ahead, be linked up again with the oldest, the unconscious, which has lagged behind?”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §617 — “their very first goal is to bring a consciousness that has hurried too far ahead into contact again with the unconscious background”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">appears-as-archetype-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §299 — “From this standpoint Christ appears as the archetype of consciousness and Mercurius as the archetype of the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dream">Dream</a> <span class="rel ev">is-content-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §294 — “I accord them the dignity of coming into the category of conscious contents”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §300 — “The dream as such is undoubtedly a content of consciousness, otherwise it could not be an object of immediate experience.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">develops-on-basis-of</span> <a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §12 — “All conscious ideation and action have developed on the basis of these unconscious archetypal patterns and always remain dependent on them.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-prospective-function">The prospective function of dreams</a> <span class="rel ev">anticipates</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §493 — “an anticipation in the unconscious of future conscious achievements”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">develops-through-withdrawal-of</span> <a class="ev" href="/concept-projection">Projection</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §122 — “Consciousness develops in civilized man by the acquisition of knowledge and by the withdrawal of projections.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-sequence">sequence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-psyche">The psyche</a> <span class="rel ev">outlives</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §227 — “Psychic processes antedate, accompany, and outlive consciousness. Consciousness is an interval in a continuous psychic process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §671 — “when this “I” disappears, as in sleep or unconsciousness, life and psyche still go on”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">continuous-with</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §397 — “conscious and unconscious have no clear demarcations”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-tao">Tao</a> <span class="rel ev">is-the-unity-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §37 — “The unity of the two, life and consciousness, is the Tao”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">comes-from</span> <a class="ev" href="/concept-anima">Anima</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §62 — “The text says that consciousness (that is, the personal consciousness) comes from the anima.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima">Anima</a> <span class="rel ev">is-separated-from</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §453 — “it describes, in the form of a cosmic projection, the separation of the feminine anima from a masculine and spiritually oriented consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">descends-into</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §40 — “The descent into the depths always seems to precede the ascent.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-light">Light</a> <span class="rel ev">symbolizes</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §284 — “Day and light are synonyms for consciousness, night and dark for the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">eludes</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §520 — “But unfortunately the unconscious really is unconscious; in other words, it is unknown. And how can you assimilate something unknown”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">excludes</span> <a class="ev" href="/concept-inferior-function">The fourth or 'inferior' function, taboo and contaminated with the unconscious, personified by the anima</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §64 — “the other unsuitable functions, so far as they are incompatible with the prevailing attitude, are relatively unconscious, and hence unused, untrained, and undifferentiated”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+<li class="ev">CW 8 §258 — “Whatever we persistently exclude from conscious training and adaptation necessarily remains in an untrained, undeveloped, infantile, or archaic condition”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §588 — “one function, for instance thinking, is especially developed and dominates consciousness, then feeling is thrust into the background”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">fears</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §415 — “consciousness struggles in a regular panic against being swallowed up”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">rivals</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §491 — “the significance of the unconscious in the total performance of the psyche is probably just as great”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">confuses</span> <a class="ev" href="/concept-imago">The imago (object-imago)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §516 — “the naïve mind at once identifies the imago with the object”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+<li class="ev">CW 8 §528 — “It is the fault of the everlasting contamination of object and imago”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">determines</span> <a class="ev" href="/concept-weltanschauung">Weltanschauung</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §696 — “Consciousness determines Weltanschauung...every increase in experience and knowledge is a step in the development of a Weltanschauung”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">deviates-from</span> <a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §724 — “The development of consciousness and of free will naturally brings with it the possibility of deviating from the archetype and hence from instinct.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="rel ev">counterbalances</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §729 — “it constitutes in its totality a sort of timeless and eternal world-image which counterbalances our conscious, momentary picture of the world”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">produces</span> <a class="ev" href="/concept-problematical-state">The problematical state (the division with oneself)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §750 — “It is the growth of consciousness which we must thank for the existence of problems”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §754 — “There are no problems without consciousness.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">connects</span> <a class="ev" href="/concept-psychic-image">The psychic image (conscious content as representation)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §755 — “the first stage of consciousness which we can observe consists in the mere connection between two or more psychic contents”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam">unclassified</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-arcane-substance">Arcane substance (arcanum)</a> <span class="rel ev">is-indicated-to-be-psychic-in-nature-by-the-head-as-the-seat-of</span> <span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §107 — “an indication of the psychic nature of the arcanum, for the head of a man signifies above all the seat of consciousness.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">collaborates-with</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §167 — “This is the beginning of the transcendent function, i.e., of the collaboration of conscious and unconscious data.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+<li class="ev">CW 8 §184 — “giving the unconscious credit, so that it has a chance to co-operate with consciousness instead of automatically disturbing it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Consciousness (ego, diurnal psyche)</span> <span class="rel ev">persists-in</span> <a class="ev" href="/concept-coma">Coma / deep syncope</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §955 — “consciousness, reproducible ideas, acts of judgment, and perceptions can still continue to exist”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §951 — “the nurse obliged to admit that the patient had perceived the events exactly as they happened in reality”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/consciousness">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

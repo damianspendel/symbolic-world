@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-the-shadow">
+<meta name="description" content="The shadow in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>The shadow — Concept in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · The shadow</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">The shadow</span></h1>
+<p class="sub"><span class="p-type">Concept · psyche</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>37 relations, 49 verified citations across CW 9i, 9ii, 11, 12, 14.</p>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">includes</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §76 — “In the empirical self, light and shadow form a paradoxical unity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9ii §76 — “In the empirical self, light and shadow form a paradoxical unity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §116 — “the self is not deemed exclusively “good” and “spiritual”; consequently its shadow turns out to be much less black”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §117 — “Being a totality, it must by definition include the light and dark aspects”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">contains</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §423 — “his shadow, does not consist only of morally reprehensible tendencies, but also displays a number of good qualities, such as normal instincts”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-triad">The triad (threeness)</a> <span class="rel ev">constitutes</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §439 — “threeness does not coincide with any Christian idea of the Trinity but with the “lower triangle,” the inferior function triad that constitutes the “shadow.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">belongs-to</span> <a class="ev" href="/concept-personal-unconscious">The personal unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §439 — “It does not denote the whole of the unconscious, but only the personal segment of it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+<li class="ev">CW 9i §513 — “The shadow coincides with the “personal” unconscious (which corresponds to Freud’s conception of the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">contains</span> <a class="ev" href="/concept-enantiodromia">Enantiodromia</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §488 — “the individual shadow contains within it the seed of an enantiodromia, of a conversion into its opposite”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mandala">Mandala</a> <span class="rel ev">contains</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §597 — “that of a Western person with a Christian background, whose light throws a dark shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">challenges</span> <a class="ev" href="/concept-the-ego">The ego</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §14 — “The shadow is a moral problem that challenges the whole ego-personality”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="rel ev">confronts</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §514 — “for consciousness to confront its shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">possesses</span> <a class="ev" href="/concept-man">Man (homo)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §222 — “A man who is possessed by his shadow is always standing in his own light and falling into his own traps.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-myth">Myth and fairytale</a> <span class="rel ev">keeps-conscious</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §474 — “that is the best and most successful method of keeping the shadow figure conscious and subjecting it to conscious criticism”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mass-psyche">Mass psyche / mass man</a> <span class="rel ev">mobilizes</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §478 — “As soon as people get together in masses and submerge the individual, the shadow is mobilized”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-lion">Lion (leo)</a> <span class="rel ev">signifies</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §513 — “Lion and peacock, emblems of concupiscence and pride, signify the overweening pretensions of the human shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-ouroboros">Uroboros</a> <span class="rel ev">symbolizes-assimilation-of</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §513 — “The uroboros is a dramatic symbol for the integration and assimilation of the opposite, i.e., of the shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">represents</span> <a class="ev" href="/concept-personal-unconscious">The personal unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §19 — “it represents first and foremost the personal unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <span class="rel ev">represents</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §567 — “The snake, like the devil in Christian theology, represents the shadow, and one which goes far beyond anything personal”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">precedes</span> <a class="ev" href="/concept-anima">Anima</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §42 — “the integration of the shadow... without it a recognition of anima and animus is impossible”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">precedes</span> <a class="ev" href="/concept-animus">Animus</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §42 — “the integration of the shadow... without it a recognition of anima and animus is impossible”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">is-prerequisite-for</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §402 — “the shadow is on one side regrettable and reprehensible weakness, on the other side healthy instinctivity and the prerequisite for higher consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-sequence">sequence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">first-stage-of</span> <a class="ev" href="/concept-individuation">Individuation</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §61 — “the encounter with the shadow is the ... apprentice-piece in the individual's development”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+<li class="ev">CW 9i §45 — “The shadow is a tight passage, a narrow door, whose painful constriction no one is spared who goes down to the deep well”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §486 — “he stands at the very beginning of the way of individuation, posing the deceptively easy riddle of the Sphinx”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-self-knowledge">Self-knowledge (cognitio sui)</a> <span class="rel ev">begins-with</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §45 — “The meeting with oneself is, at first, the meeting with one's own shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9i §44 — “if we are able to see our own shadow and can bear knowing about it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">conceals</span> <a class="ev" href="/concept-anima">Anima</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §485 — “The one standing closest behind the shadow is the anima”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">hides-behind</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §689 — “This shadow aspect of the mandala represented the disorderly, disruptive tendencies, the “chaos” that hides behind the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-old-adam">The Old Adam (vetus Adam)</a> <span class="rel ev">corresponds-to</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §602 — “corresponds to the primitive man, the”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-gnosticism">Gnosticism</a> <span class="rel ev">taught-christ-cast-off</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §75 — “one of the things they taught was that Christ “cast off his shadow from himself.””<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-kinship">kinship</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-moses">Moses</a> <span class="rel ev">is-accompanied-by</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §244 — “On this pilgrimage he is accompanied by his “shadow,” the “servant” or “lower” man”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-trickster">Trickster</a> <span class="rel ev">personifies</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §484 — “The trickster is a collective shadow figure”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9i §469 — “found a suitable designation for this character-component when I called it the shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-gnosticism">Gnosticism</a> <span class="rel ev">anticipates</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §552 — “Edem gives birth besides these to twelve “motherly” angels, who—in psychological parlance—represent the shadows of the twelve “fatherly” ones”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">lacks</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §79 — “the Christian image of the self—Christ—lacks the shadow that properly belongs to it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 11 §283 — “the Christ figure wholly lacks a dark side”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9ii §74 — “the Christ-symbol lacks wholeness in the modern psychological sense, since it does not include the dark side of things”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §79 — “the Christian image of the self—Christ—lacks the shadow that properly belongs to it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §171 — “Christ was born “not without a kind of shadow” and that he afterwards “cast off the shadow from himself.””<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">assimilates</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §574 — “the blackness of the snake and of the sombre surroundings has been assimilated by the nucleus”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-sol-niger">Sol niger (black sun)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §172 — “he either possesses a shadow or is even a Sol niger”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-ethiopian-moor">Ethiopian / Moor</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §731 — “The Moor or Ethiopian is the black, sinful man”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">disposed-of-through</span> <a class="ev" href="/concept-projection">Projection</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §36 — “his shadow, that dark half of the psyche which we invariably get rid of by means of projection”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">indistinguishably-merged-with</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §38 — “the contents of the personal unconscious (i.e., the shadow) are indistinguishably merged with the archetypal contents of the collective unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-whole-man">The whole man (totus homo)</a> <span class="rel ev">casts</span> <span class="ev">The shadow</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §297 — “there is every reason here for some anxiety, since man as a whole being casts a shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-persona">The persona</a> <span class="rel ev">conceals</span> <span class="ev">The shadow</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §43 — “the face we never show to the world because we cover it with the persona , the mask of the actor”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The shadow</span> <span class="rel ev">reappears-as</span> <a class="ev" href="/concept-projection">Projection</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §477 — “the shadow has not dissolved into nothing but is only waiting for a favourable opportunity to reappear as a projection upon one’s neighbour”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-faust">Faust (Goethe)</a> <span class="rel ev">illustrates</span> <span class="ev">The shadow</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §513 — “I would mention the Faust-Mephistopheles relationship and E. T. A. Hoffmann’s tale The Devil’s Elixir as two especially typical descriptions”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/the-shadow">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

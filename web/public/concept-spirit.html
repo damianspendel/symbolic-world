@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-spirit">
+<meta name="description" content="Spirit in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Spirit — Concept in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Spirit</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Spirit</span></h1>
+<p class="sub"><span class="p-type">Concept · psyche</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>52 relations, 67 verified citations across CW 8, 9i, 9ii, 12, 13, 14.</p>
+<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">opposes</span> <a class="ev" href="/concept-soul">Soul</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §3 — “The opposition between spirit and soul is due to the latter having a very fine substance.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">opposes</span> <a class="ev" href="/concept-matter">Matter</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §385 — “Spirit, we say, is the principle that stands in opposition to matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+<li class="ev">CW 9i §389 — “spirit is the dynamic principle, forming for that very reason the classical antithesis of matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">opposes</span> <a class="ev" href="/concept-nature">Nature</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §385 — “In contradiction to this view there stands the antithesis: spirit and nature”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+<li class="ev">CW 9i §389 — “The subsequent differentiation of this contrast leads to the actually very remarkable opposition of spirit and nature”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-mother">The Mother (figure/imago)</a> <span class="rel ev">opposes</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §585 — “She therefore stands for physis opposed to spirit, i.e., for the natural feminine being which the dreamer also is”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">polarizes-with</span> <a class="ev" href="/concept-nature">Nature</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §96 — “Together they form a pair of opposites necessary for self-regulation, often spoken of as nature and spirit.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+<li class="ev">CW 8 §98 — “Thus in the child-psyche the natural condition is already opposed by a “spiritual” one.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+<li class="ev">CW 8 §680 — “The conflict between nature and spirit is itself a reflection of the paradox of psychic life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sexuality">Sexuality</a> <span class="rel ev">polarizes-with</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §107 — “from the spiritual standpoint sex is the chief antagonist”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">polarizes-with</span> <a class="ev" href="/concept-matter">Matter</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §251 — “The third modality points, to use a metaphor, upward and downward, because it has to do with spirit and matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">polarizes-with</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §407 — “The spirit / instinct antithesis is only one of the commonest formulations”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sol">Sol</a> <span class="rel ev">symbolizes</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §175 — “if Sol is the spirit and Luna the body”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-ash">Ash (cinis / avis Hermetis)</a> <span class="rel ev">symbolizes</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §247 — “the ash is the spirit that dwells in the glorified body”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-unicorn">Unicorn</a> <span class="rel ev">signifies</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §3 — “The stag signifies the soul, the unicorn spirit, and the forest the body.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anthropos-quaternio">The Anthropos Quaternio</a> <span class="rel ev">represents</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §369 — “the Anthropos Quaternio , represents the world of the spirit, or metaphysics”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, PARTIAL, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-horse">The horse (three-legged and four-legged)</a> <span class="rel ev">represents</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §425 — “The two horses are miraculous animals that talk and know and thus represent the unconscious spirit”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-bird">Bird (theriomorphic form of the anima and messenger of the old man)</a> <span class="rel ev">symbolizes</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §586 — “Birds, as aerial beings, are well-known spirit symbols.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">expresses</span> <a class="ev" href="/concept-psychological-attitude">Psychological attitude</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §630 — “visualizations of a whole frame of mind or—to put it psychologically—an attitude”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §629 — “Other idioms are “doing something in a new spirit” or “a new spirit is growing up,” meaning a renewal of mental attitude.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-joachim-of-flora">Joachim of Flora</a> <span class="rel ev">is-seized-by</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §141 — “unconsciously—and this is psychologically what probably happened—Joachim could have been seized by the archetype of the spirit”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-3, PARTIAL, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">possesses</span> <a class="ev" href="/concept-man">Man (homo)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §393 — “the primordial phenomenon of the spirit takes possession of him”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+<li class="ev">CW 9i §388 — “then it is somebody else’s spirit, and it may be causing a possession”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="rel ev">assimilates</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §454 — “an expansion of consciousness which has gradually begun to occupy that originally unconscious territory and to transform those daimonia”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-ancestor-worship">Ancestor-worship</a> <span class="rel ev">propitiates</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §575 — “the wide incidence of ancestor-worship, which is primarily a protection against the malice of the dead”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">gives-meaning-to</span> <a class="ev" href="/concept-life">Life</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §648 — “Spirit gives meaning to his life, and the possibility of its greatest development”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-salt">Salt (Sal)</a> <span class="rel ev">regarded-as</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §246 — “parallel of salt because salt is a spirit”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-wise-old-man">The Wise Old Man</a> <span class="rel ev">is-archetype-of</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §74 — “The two magicians are, indeed, two aspects of the wise old man , the superior master and teacher, the archetype of the spirit”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §396 — “it is the figure of a “wise old man” who symbolizes the spiritual factor”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">is-a</span> <a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §396 — “The psychic manifestations of the spirit indicate at once that they are of an archetypal nature”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">is</span> <a class="ev" href="/concept-splinter-psyche">Splinter psyche / autonomous complex</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §585 — “Spirits, therefore, viewed from the psychological angle, are unconscious autonomous complexes which appear as projections”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §643 — “the phenomenon of spirit, like every autonomous complex, appears as an intention of the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">is-authentic-element-of</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §406 — “the archetype represents the authentic element of spirit”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">contains</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §433 — “Our fairytale reveals with unusual clarity the essentially antithetical nature of the spirit archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+<li class="ev">CW 9i §455 — “the archetype of the spirit is capable of working for good as well as for evil”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dominant-of-consciousness">Dominant of consciousness (ruling idea)</a> <span class="rel ev">constitutes</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §633 — “ideals that store up the richest experience of life and the deepest reflection constitute what we call “spirit””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">limits</span> <a class="ev" href="/concept-will">Will (freedom of choice)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §379 — “both limit in equal measure the applied field of the will”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">demands</span> <a class="ev" href="/concept-symbol">The symbol</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §644 — “spirit that demands a symbol for its expression is a psychic complex that contains the seeds of incalculable possibilities”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-psyche">The psyche</a> <span class="rel ev">requires</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §687 — “General conceptions of a spiritual nature are indispensable constituents of psychic life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §686 — “It is much more a question of his quite irrational need for what we call a spiritual life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">appears-as</span> <a class="ev" href="/concept-helpful-animal">The motif of the helpful animal</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §421 — “In these circumstances we can say with some justification that the archetype of the spirit is being expressed through an animal form”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">manifests-as</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §108 — “The spiritual appears in the psyche also as an instinct, indeed as a real passion, a “consuming fire,””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">appears-as</span> <a class="ev" href="/concept-wider-consciousness">The wider (higher) consciousness</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §643 — “then the spirit is necessarily felt as an independent being, as a kind of higher consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §645 — “One should, strictly speaking, describe this hypothetical consciousness simply as a “wider” one”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-father">The father (traditional spirit)</a> <span class="rel ev">personifies</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §396 — “In dreams, it is always the father-figure from whom the decisive convictions, prohibitions, and wise counsels emanate”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-wise-old-man">The Wise Old Man</a> <span class="rel ev">personifies</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §682 — “The old man corresponds to the archetype of meaning, or of the spirit”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">personifies</span> <a class="ev" href="/concept-emotion">Emotion / affect</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §628 — “Spirit in this case is the reflection of an autonomous affect”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §627 — “emotions and affects are often personified as daemons”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-intellect">The intellect</a> <span class="rel ev">is-equated-with</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §178 — “the modern formula “intellect = spirit,” but it completely forgets the fact that “spirit” was never a human “activity,” much less a “function.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-freud">Sigmund Freud</a> <span class="rel ev">subordinates</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §104 — “Freudian theory consists in a causal explanation of the psychology of instinct.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">turns-to</span> <a class="ev" href="/concept-water">Water</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §32 — “But when spirit becomes heavy it turns to water”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §40 — “Psychologically, therefore, water means spirit that has become unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dragon">Dragon</a> <span class="rel ev">transforms-into</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §624 — “Then comes the enantiodromia: the dragon changes into pneuma, which stands for a divine quaternity.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §390 — “The transcendent spirit became the supranatural and transmundane cosmic principle of order and as such was given the name of “God,””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rex">Rex (the King)</a> <span class="rel ev">corresponds-to</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §536 — “the queen corresponds to the soul (anima) and the king to spirit, the dominant of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">derives-from</span> <a class="ev" href="/concept-wind">Wind (pneuma, anemos)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §389 — “In keeping with its original wind-nature, spirit is always an active, winged, swift-moving being”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+<li class="ev">CW 9i §388 — “a functional complex which originally, on the primitive level, was felt as an invisible, breathlike “presence.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">produces</span> <a class="ev" href="/concept-archetypal-image">Archetypal image</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §393 — “the spontaneous capacity to produce images independently of sense perception”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mary">Mary (Mother of God)</a> <span class="rel ev">conceives-through</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §95 — “This fact, in my opinion, points without doubt to Mary, who, a virgin by nature, conceived through the pneuma, like a vulture.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §108 — “medieval paintings that depict the fructification of Mary with a tube or hose-pipe coming down from the throne of God”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">eludes</span> <a class="ev" href="/concept-the-intellect">The intellect</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §626 — “cannot be proved to exist in the external world and cannot be understood rationally”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima">Anima</a> <span class="rel ev">functions-as-link-to</span> <span class="ev">Spirit</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §126 — “She played the part, therefore, of the anima, who functions as the link between body and spirit”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §141 — “the original, living spirit which, because of its ambivalence, is also a mediator and uniter of opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <span class="rel ev">concretizes</span> <span class="ev">Spirit</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §764 — “By sublimating matter he concretized spirit.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-prima-materia">Prima materia</a> <span class="rel ev">is-inhabited-by</span> <span class="ev">Spirit</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §444 — “the earth (as prima materia ) is not a dead body, but is inhabited by a spirit that is its life and soul”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-7, PARTIAL, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Spirit</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §388 — “to the original, not yet human, anthropoid disposition which we also call the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-life">Life</a> <span class="rel ev">limits</span> <span class="ev">Spirit</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §645 — “a spirit which accords with our highest ideals will find its limits set by life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/spirit">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

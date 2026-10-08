@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-arcane-substance">
+<meta name="description" content="Arcane substance (arcanum) in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Arcane substance (arcanum) — Substance in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Arcane substance (arcanum)</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Arcane substance (arcanum)</span></h1>
+<p class="sub"><span class="p-type">Substance · laboratory</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>25 relations, 28 verified citations across CW 9ii, 12, 13, 14.</p>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Arcane substance (arcanum)</span> <span class="rel ev">synonym-of</span> <a class="ev" href="/concept-rebis">Rebis / Hermaphrodite</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §472 — “as a designation for the “Hermaphrodite of nature,” i.e., the arcane substance”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-brain">Brain (cerebrum)</a> <span class="rel ev">synonym-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §626 — “the brain is a synonym for the arcane substance”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sapphire">Sapphire (lapis sapphireus)</a> <span class="rel ev">synonym-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §641 — “as a synonym for the arcane substance”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sulphur">Sulphur</a> <span class="rel ev">synonym-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §143 — “sulphur was one of the many synonyms for the mysterious transformative substance”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-salt">Salt (Sal)</a> <span class="rel ev">synonym-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §318 — “salt is a synonym for the arcane substance”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-psyche">The psyche</a> <span class="rel ev">unconsciously-identical-with</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §376 — “there is an unconscious identity between the psyche of the alchemist and the arcane substance”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mary">Mary (Mother of God)</a> <span class="rel ev">identified-with</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §483 — “In any case the Virgin is identified with the arcanum of the art”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-26</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Arcane substance (arcanum)</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §374 — “the identification of the transformative substance with God”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-artifex">The artifex (alchemist-operator)</a> <span class="rel ev">is-unconsciously-identical-with</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §376 — “there is an unconscious identity between the psyche of the alchemist and the arcane substance”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Arcane substance (arcanum)</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-prima-materia">Prima materia</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §245 — “Sometimes the arcane substance is magnesia, sometimes the water, sometimes the magnet, sometimes the fish; and yet they all mean the prima materia”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-theoria">Theoria (the alchemical doctrine, aqua doctrinae)</a> <span class="rel ev">is-identical-with</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §264 — “That is why the theoria and the arcanum in matter are both called veritas”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rex">Rex (the King)</a> <span class="rel ev">symbolizes</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §466 — “The king sinking in the sea is the arcane substance”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-head">The Head</a> <span class="rel ev">signifies-obtaining-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §95 — “The decapitation in section III, v bis therefore signifies the obtaining of the arcane substance.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-meridian-of-the-sun">The Meridian of the Sun</a> <span class="rel ev">is-a-representation-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §109 — “Just as the angel Amnael brings the arcane substance with him, so the “Meridian of the Sun” is himself a representation of it.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+<li class="ev">CW 13 §95 — “the initiate named the “Meridian of the Sun” himself represents the arcane substance.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-pisces">Pisces (the zodiacal sign of the Fishes)</a> <span class="rel ev">symbolizes</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §224 — “the zodiacal fishes that move in opposite directions symbolize the arcane substance”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §234 — “It shows two reversed fishes swimming in the sea … by which was meant the aqua permanens or arcane substance”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Arcane substance (arcanum)</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §224 — “The arcane substance, as its attributes show, refers to the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-aelia-laelia-inscription">Aelia-Laelia-Crispis Inscription (Enigma of Bologna)</a> <span class="rel ev">symbolizes</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §57 — “Maier obviously has in mind the tincture, the arcane substance”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-tree">The Tree (mythological)</a> <span class="rel ev">is-metaphorical-form-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §382 — “This remarkable text explains the tree as a metaphorical form of the arcane substance”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-6, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-salt">Salt (Sal)</a> <span class="rel ev">is</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §240 — “It is clear from this that salt is an arcane substance.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Arcane substance (arcanum)</span> <span class="rel ev">concealed-within</span> <a class="ev" href="/concept-the-body">The body (corpus)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §377 — “Within the human body is concealed a certain metaphysical substance, known to very few”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 12 §421 — “The substance that harbours the divine secret is everywhere, including the human body.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-7, PARTIAL, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-isis">Isis</a> <span class="rel ev">personifies</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §14 — “Isis, however, is also the healer ... As such she personifies that arcane substance”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Arcane substance (arcanum)</span> <span class="rel ev">is-projection-of</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §242 — “one of the innumerable expressions used for the unconscious … in the guise of a hundred “arcane substances.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-balsam">Balsam (elixir vitae)</a> <span class="rel ev">synonym-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §663 — “Mercurius usually stands for the arcane substance, whose synonyms are ... Dorn identifies the latter with the “balsam””<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-meretrix">Meretrix (the whore)</a> <span class="rel ev">characterizes-initial-state-of</span> <span class="ev">Arcane substance (arcanum)</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §415 — “She characterizes the arcane substance in its initial, “chaotic,” maternal state.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam">unclassified</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Arcane substance (arcanum)</span> <span class="rel ev">is-indicated-to-be-psychic-in-nature-by-the-head-as-the-seat-of</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §107 — “an indication of the psychic nature of the arcanum, for the head of a man signifies above all the seat of consciousness.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/arcane-substance">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

@@ -543,6 +543,7 @@ def build():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/ledger">
+<meta name="description" content="The build ledger of The Symbolic World, a verified knowledge graph of Jung&#39;s Collected Works: every verified reference in the graph, with the batch that added it and its verification record.">
 <title>Ledger · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
 <style>

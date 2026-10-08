@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-psyche">
+<meta name="description" content="The psyche in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>The psyche — Concept in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · The psyche</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">The psyche</span></h1>
+<p class="sub"><span class="p-type">Concept · psyche</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>54 relations, 84 verified citations across CW 8, 9i, 9ii, 12, 13, 14.</p>
+<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mandala">Mandala</a> <span class="rel ev">acts-therapeutically-on</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §718 — “images of this kind have under certain circumstances a considerable therapeutic effect on their authors”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §714 — “This is evidently an attempt at self-healing on the part of Nature, which does not spring from conscious reflection”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-magic-circle">The traced magic circle that holds the tension and prevents an eruption of the unconscious; psychological equivalent of the vas bene clausum</a> <span class="rel ev">protects</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §688 — “magic circles intended to stop the difficulties and adversities of the outside world from entering into the inner psychic space”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §687 — “the “magical” pictures still functioned for him in their original sense, as a protective magic circle”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-instinct">Instinct</a> <span class="rel ev">motivates</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §233 — “the instincts are the chief motivating forces of psychic events”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §272 — “human behaviour is influenced by instinct to a far higher degree than is generally supposed”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-neurosis">Neurosis</a> <span class="rel ev">attempts-to-heal</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §312 — “the symptomatology of an illness is at the same time a natural attempt at healing”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sol">Sol</a> <span class="rel ev">imprints</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §326 — “the daily course of the sun and the regular alternation of day and night must have imprinted themselves on the psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">disturbs</span> <a class="ev" href="/concept-nature">Nature</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §428 — “the psyche not only disturbs the natural order”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">relativizes</span> <a class="ev" href="/concept-space-time">Space and time</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §836 — “They point, in other words, to a psychic relativity of time”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §840 — “Rhine’s experiments show that in relation to the psyche space and time are, so to speak, “elastic””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §912 — “For the unconscious psyche space and time seem to be relative”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §978 — “The result of the spatial experiment proves with tolerable certainty that the psyche can, to some extent, eliminate the space factor.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §996 — “either that the psyche cannot be localized in space, or that space is relative to the psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">is-totality-of</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §44 — “I call this centre the “self,” which should be understood as the totality of the psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 12 §247 — “I may define “self” as the totality of the conscious and unconscious psyche, but this totality transcends our vision”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="rel ev">is-part-of</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §88 — “The collective unconscious is a part of the psyche which can be negatively distinguished from a personal unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">is-organ-of</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §271 — “The archetype—let us never forget this—is a psychic organ present in all of us.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-intuition">Intuition</a> <span class="rel ev">is-function-of</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §292 — “intuition, as I conceive it, is one of the basic functions of the psyche, namely, perception of the possibilities inherent in a situation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">consists-of</span> <a class="ev" href="/concept-psychic-image">The psychic image (conscious content as representation)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §618 — “the psyche consists essentially of images. It is a series of images in the truest sense”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §610 — “It consists of reflected images of simple processes in the brain”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §680 — “All that I experience is psychic. Even physical pain is a psychic image which I experience”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §700 — “we can grasp the world only as a psychic image in ourselves”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">is-independent-of</span> <a class="ev" href="/concept-physiological-constitution">Physiological constitution</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §220 — “grant the psyche a relative independence of the physiological constitution”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §529 — “We have no more justification for understanding the psyche as a brain-process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-psychoid">The psychoid</a> <span class="rel ev">distinct-from</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §368 — “no psychic quality in the proper sense of the word is implied”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">eludes</span> <a class="ev" href="/concept-will">Will (freedom of choice)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §667 — “psychic happenings have an objective side. In large measure they are withdrawn from our conscious control”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">is-not</span> <a class="ev" href="/concept-tabula-rasa">Tabula rasa</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §717 — “the human mind is not born a tabula rasa , nor is every man provided with a wholly new and unique brain”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §719 — “man is born with a complicated psychic disposition that is anything but a tabula rasa”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">is-independent-of</span> <a class="ev" href="/concept-brain">Brain (cerebrum)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §947 — “We must completely give up the idea of the psyche’s being somehow connected with the brain”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-14, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">transcends</span> <span class="ev">The psyche</span> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §420 — “the position of the archetype would be located beyond the psychic sphere”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 8 §417 — “the real nature of the archetype is not capable of being made conscious, that it is transcendent”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+<li class="ev">CW 8 §440 — “archetypes must have a nonpsychic aspect”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">touches</span> <a class="ev" href="/concept-matter">Matter</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §441 — “requires a psyche that touches matter at some point”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="rel ev">inheres-in</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §528 — “The ideas of the moral order and of God belong to the ineradicable substrate of the human soul”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-20 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)</span></li>
+<li class="ev">CW 8 §625 — “God is a psychic fact of immediate experience, otherwise there would never have been any talk of God.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">transcends</span> <a class="ev" href="/concept-space-time">Space and time</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §813 — “Under certain conditions it could even break through the barriers of space and time”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §815 — “the psyche, in its deepest reaches, participates in a form of existence beyond space and time”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-meaning">Meaning (as a connecting principle)</a> <span class="rel ev">transcends</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §915 — “one and the same (transcendental) meaning might manifest itself simultaneously in the human psyche and in the arrangement of an external and independent event”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mysterium-magnum">Mysterium magnum</a> <span class="rel ev">rooted-in</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §13 — “the mysterium magnum is not only an actuality but is first and foremost rooted in the human psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">arises-spontaneously-in</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §153 — “archetypes are not disseminated only by tradition, language, and migration, but that they can rearise spontaneously, at any time, at any place”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mandala">Mandala</a> <span class="rel ev">arises-spontaneously-in</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §649 — “The symbolic picture came to her spontaneously, when she had reached a certain point in her development.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, FINDING-adjudicated, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-myth">Myth and fairytale</a> <span class="rel ev">expresses</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §7 — “The fact that myths are first and foremost psychic phenomena that reveal the nature of the soul”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §8 — “we should really have guessed long ago that myths refer to something psychic”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §261 — “Myths are original revelations of the preconscious psyche, involuntary statements about unconscious psychic happenings”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+<li class="ev">CW 9i §400 — “In myths and fairytales, as in dreams, the psyche tells its own story”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+<li class="ev">CW 9i §432 — “the fairytale cannot very well express anything except what the psyche actually is”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-lightning">Lightning (the flash, fulmen)</a> <span class="rel ev">signifies-change-of</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §533 — “Lightning signifies a sudden, unexpected, and overpowering change of psychic condition”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-myth">Myth and fairytale</a> <span class="rel ev">represents</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §71 — “myths actually represent typical psychic phenomena”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">is-regarded-as</span> <a class="ev" href="/concept-relatively-closed-system">The relatively closed system</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §10 — “the psychologist need not be held up by this difficulty, but can regard the psyche as a relatively closed system”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+<li class="ev">CW 8 §49 — “The psyche, too, can be regarded as such a relatively closed system, in which transformations of energy lead to an equalization of differences”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">is-regarded-as</span> <a class="ev" href="/concept-self-regulating-system">The self-regulating system</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §159 — “Since the psyche is a self-regulating system, just as the body is, the regulating counteraction will always develop in the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">splits-into</span> <a class="ev" href="/concept-splinter-psyche">Splinter psyche / autonomous complex</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §252 — “the psyche is not a homogeneous structure but apparently consists of hereditary units only loosely bound together”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §253 — “The tendency to split means that parts of the psyche detach themselves from consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">emancipates-from</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §377 — “the psychic is an emancipation of function from its instinctual form”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dionysos">Dionysus</a> <span class="rel ev">dissolves-distinctions-into</span> <span class="ev">The psyche</span> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §118 — “Dionysus is the abyss of impassioned dissolution, where all human distinctions are merged in the animal divinity of the primordial psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">unites-with</span> <a class="ev" href="/concept-the-body">The body (corpus)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §232 — “the human psyche lives in indissoluble union with the body”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §618 — “the psyche presupposes the living body in order that its images may live”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">unconsciously-identical-with</span> <a class="ev" href="/concept-arcane-substance">Arcane substance (arcanum)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §376 — “there is an unconscious identity between the psyche of the alchemist and the arcane substance”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <span class="rel ev">deals-with-processes-resembling</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §342 — “not just with chemical experiments as such, but with something resembling psychic processes expressed in pseudochemical language”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">requires</span> <a class="ev" href="/concept-spirit">Spirit</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §687 — “General conceptions of a spiritual nature are indispensable constituents of psychic life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §686 — “It is much more a question of his quite irrational need for what we call a spiritual life”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-materialism">Materialism (the materialistic view of the world)</a> <span class="rel ev">reduces</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §653 — “Mind must be thought of as an epiphenomenon of matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §658 — “thoughts are regarded as secretions of the brain, and thus we achieve a psychology without the psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+<li class="ev">CW 8 §743 — “In our reality the psychic cannot be anything except an effect at third hand, produced originally by physical causes”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-adam">Adam</a> <span class="rel ev">personifies</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §557 — “he is the psyche par excellence”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-sequence">sequence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">outlives</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §227 — “Psychic processes antedate, accompany, and outlive consciousness. Consciousness is an interval in a continuous psychic process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)</span></li>
+<li class="ev">CW 8 §671 — “when this “I” disappears, as in sleep or unconsciousness, life and psyche still go on”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-hermetic-philosophy">Hermetic philosophy</a> <span class="rel ev">aimed-to-include</span> <span class="ev">The psyche</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §378 — “Hermetic philosophy had for its goal an explanation that included the psyche in a total description of nature”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-6, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-alchemy">Alchemy</a> <span class="rel ev">misattributes-contents-of</span> <span class="ev">The psyche</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §332 — “figures and laws were dimly perceived and attributed to matter although they really belonged to the psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">is-original-form-of</span> <span class="ev">The psyche</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §249 — “the autonomous nature of the unconscious as such, which is not only the original form of everything psychic”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">has-common-substratum-in</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §11 — “the human psyche possesses a common substratum transcending all differences in culture and consciousness. I have called this substratum the collective unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">is-suspected-birthplace-of</span> <a class="ev" href="/concept-evil">Evil (malum)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §114 — “it causes the psyche to be suspected of being the birthplace of all evil”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">is-integrated-into</span> <span class="ev">The psyche</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §346 — “it represents at the same time an assimilation and integration of Christ into the human psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">partakes-of</span> <a class="ev" href="/concept-matter">Matter</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §413 — “Psyche and matter exist in one and the same world, and each partakes of the other”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rebirth">Rebirth / Renovatio</a> <span class="rel ev">belongs-to</span> <span class="ev">The psyche</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §206 — “We have to do here with a purely psychic reality, which is transmitted to us only indirectly through personal statements.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">adapts-to</span> <a class="ev" href="/concept-nature">Nature</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §324 — “Its peculiar organization must be intimately connected with environmental conditions.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-science">Science</a> <span class="rel ev">is-function-of</span> <span class="ev">The psyche</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §357 — “every science is a function of the psyche, and all knowledge is rooted in it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-second-half-of-life">The second half of life</a> <span class="rel ev">transforms</span> <span class="ev">The psyche</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §773 — “in this phase of life—between thirty-five and forty—an important change in the human psyche is in preparation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §778 — “the basic cause of all the difficulties of this transition is to be found in a deep-seated and peculiar change within the psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam">unclassified</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">operates-by-autonomy-of</span> <span class="ev">The psyche</span> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §186 — “the principle of the unconscious is the autonomy of the psyche itself”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SPLIT-ADJUDICATED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-energic-standpoint">The energic (final) standpoint</a> <span class="rel ev">applies-to</span> <span class="ev">The psyche</span> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §28 — “the energic view of psychic phenomena is a valuable one because it enables us to recognize just those quantitative relations”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">The psyche</span> <span class="rel ev">attends-to</span> <a class="ev" href="/concept-death">Death</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §810 — “our psyche is at least not indifferent to the dying of the individual”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+<li class="ev">CW 8 §809 — “it seems that the unconscious is all the more interested in how one dies”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-12, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/psyche">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

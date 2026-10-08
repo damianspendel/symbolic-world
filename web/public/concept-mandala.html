@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-mandala">
+<meta name="description" content="Mandala in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Mandala — Symbol in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Mandala</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Mandala</span></h1>
+<p class="sub"><span class="p-type">Symbol · laboratory</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>58 relations, 75 verified citations across CW 8, 9i, 9ii, 12, 13, 14.</p>
+<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-golden-flower">The Golden Flower</a> <span class="rel ev">is-a</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §33 — “The golden flower is a mandala symbol I have often met with”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+<li class="ev">CW 13 §33 — “The golden flower is a mandala symbol I have often met with in the material brought me by my patients.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">is-a</span> <a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §50 — “we are concerned with a definite archetype—the mandala”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-world-clock">The three-dimensional mandala of the “Great Vision”: intersecting vertical and horizontal circles with three rhythms</a> <span class="rel ev">is-a-three-dimensional</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §308 — “It is a three-dimensional mandala—a mandala in bodily form signifying realization”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-vessel">The Hermetic Vessel (vas Hermetis)</a> <span class="rel ev">is-a</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §378 — “the vessel is nothing else but a mandala, symbolizing the self or the higher Adam with his four emanations”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">exemplifies</span> <a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §623 — “this motif is one of the best examples of the universal operation of an archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-navaho-sandpainting">The Navaho sand-painting</a> <span class="rel ev">is-instance-of</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §700 — “Mandala from the Navaho Indians, who with great toil prepare such mandalas from coloured sand for curative purposes.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">exhibits</span> <a class="ev" href="/concept-quaternity">The quaternity</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 8 §870 — “the symbols of the self in mandala form, also have a mathematical structure. They are as a rule quaternities”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-divine-child">The Divine Child</a> <span class="rel ev">appears-as-centre-of</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §270 — “Sometimes the child appears ... as the centre of a mandala”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-quaternity">The quaternity</a> <span class="rel ev">multiplies-toward-periphery-of</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §313 — “the quaternity found at the centre of a mandala often becomes 8, 16, 32, or more when extended to the periphery”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">is-vessel-of</span> <a class="ev" href="/concept-rebirth">Rebirth / Renovatio</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §234 — “Mandalas are birth-places, vessels of birth in the most literal sense, lotus-flowers in which a Buddha comes to life.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">appears-in</span> <a class="ev" href="/concept-dream">Dream</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §713 — “As psychological phenomena they appear spontaneously in dreams, in certain states of conflict, and in cases of schizophrenia.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §654 — “The mandala was a spontaneous product from the analysis of a male patient. It was based on a dream”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, FINDING-adjudicated, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">appears-in</span> <a class="ev" href="/concept-psychosis">Psychosis</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §714 — “in schizophrenics whose view of the world has become confused, owing to the invasion of incomprehensible contents from the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-devil">The Devil / Satan</a> <span class="rel ev">hides-behind</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §689 — “This amounts to saying: Behind the mandala lurks the devil.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima">Anima</a> <span class="rel ev">appears-in</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §682 — “The two female figures can be recognized without difficulty as the two aspects of the anima.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-unus-mundus">Unus mundus</a> <span class="rel ev">symbolized-by</span> <span class="ev">Mandala</span> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §662 — “mandala symbolism is the psychological equivalent of the unus mundus”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-the-vessel">The Hermetic Vessel (vas Hermetis)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §12 — “the mandala, which we find so often in the drawings of our patients, corresponds to the vessel of transformation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">indistinguishable-from</span> <a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §60 — “their symbols can no longer be distinguished from the imago Dei”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §237 — “The circles naturally produce a mandala, the outermost circle paradoxically coinciding with the centre, and recalling the old image for God.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, PARTIAL, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-wheel-of-birth">The wheel of birth (rota nativitatis / horoscope)</a> <span class="rel ev">resembles</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §606 — “Since she obviously guessed the horoscope’s affinity with the mandala, she introduced her individual sign into the painting”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="rel ev">symbolized-by</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §59 — “wholeness... anticipated by the psyche in the form of... mandala symbols”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §31 — “symbols appear that are chiefly of the mandala type”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-28 · cross-checked: gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-individuation">Individuation</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §73 — “the mandala is a symbol of individuation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">symbolized-by</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §208 — “The round pool with the jelly-fish in it represents a three-dimensional mandala, the self: wholeness as the goal”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §379 — “The mandala signifies the human or divine self, the totality or vision of God, as in this case is quite clear”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+<li class="ev">CW 9ii §426 — “its totality is discernible above all in the mandala and its countless variants”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §570 — “In this mandala an attempt is made to unite the opposites red and blue, outside and inside”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §603 — “Miss X’s mandala, on the other hand, comprises and contains the opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-four-elements">The four elements</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §714 — “it represents the synthesis of the four elements which are forever tending to fall apart”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">integrates</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §660 — “Animals generally signify the instinctive forces of the unconscious, which are brought into unity within the mandala.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">attempts-to-unite</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §718 — “they often represent very bold attempts to see and put together apparently irreconcilable opposites and bridge over apparently hopeless splits”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">originated-in</span> <a class="ev" href="/concept-visionary-experience">Visionary experience during the opus</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §124 — “It seems to me beyond question that these Eastern symbols originated in dreams and visions”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, PARTIAL, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">derives-from</span> <a class="ev" href="/concept-active-imagination">Active imagination</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §627 — “I repeated the attempt in the preceding paper of the present volume, but there the mandalas did not derive from dreams but from active imagination.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §698 — “was struggling for spiritual development and used for this purpose the method of active imagination”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, FINDING-adjudicated, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">arises-spontaneously-in</span> <a class="ev" href="/concept-psyche">The psyche</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §649 — “The symbolic picture came to her spontaneously, when she had reached a certain point in her development.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, FINDING-adjudicated, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">protects</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §16 — “We know from experience that the protective circle, the mandala, is the traditional antidote for chaotic states of mind”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">protects</span> <a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §576 — “In our mandala the cortices are boundary lines marking off the inner unity and protecting it against the outer blackness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">acts-therapeutically-on</span> <a class="ev" href="/concept-psyche">The psyche</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §718 — “images of this kind have under certain circumstances a considerable therapeutic effect on their authors”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §714 — “This is evidently an attempt at self-healing on the part of Nature, which does not spring from conscious reflection”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">contains</span> <a class="ev" href="/concept-the-shadow">The shadow</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §597 — “that of a Western person with a Christian background, whose light throws a dark shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">contains</span> <a class="ev" href="/concept-quaternity">The quaternity</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §713 — “Very frequently they contain a quaternity or a multiple of four, in the form of a cross, a star, a square, an octagon”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §716 — “The overwhelming majority are characterized by the circle and the quaternity.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">is</span> <a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §572 — “at the same time a God-image”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-28 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27) — NOTE: audit predates the 2026-07-28 quote repair; not re-audited cross-vendor</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">is-derived-from</span> <a class="ev" href="/concept-magic-circle">The traced magic circle that holds the tension and prevents an eruption of the unconscious; psychological equivalent of the vas bene clausum</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §36 — “it is derived from the “protective circle” or “charmed circle,” whose magic has been preserved in countless folk customs.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">is-built-up-through</span> <a class="ev" href="/concept-active-imagination">Active imagination</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §123 — “The true mandala is always an inner image, which is gradually built up through (active) imagination”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="rel ev">expresses-itself-in</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §626 — “But the God-image, as we saw from Jakob Böhme, expresses itself in the mandala.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-world-wheel">The Tibetan World Wheel</a> <span class="rel ev">differs-from</span> <span class="ev">Mandala</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §644 — “I now reproduce the Tibetan “World Wheel,” which should be sharply distinguished from the former, since it represents the world.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">tends-towards</span> <a class="ev" href="/concept-quaternity">The quaternity</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §31 — “Most mandalas take the form of a flower, cross, or wheel, and show a distinct tendency towards a quaternary structure”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">transforms</span> <a class="ev" href="/concept-chaos">The massa confusa or chaos confusum out of which the stone arises; one of the recurring names of the prima materia</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §60 — “depict or create an order that transforms the chaos into a cosmos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §247 — “that obscure thing we call the mandala or "self"”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9i §572 — “The mandala, though only a symbol of the self as the psychic totality”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9i §542 — “the psychological expression of the totality of the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §717 — “Their object is the self in contradistinction to the ego , which is only the point of reference for consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">is-archetype-inherent-in</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §329 — “an a priori “type,” an archetype which is inherent in the collective unconscious and thus beyond individual birth and death”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">signifies-centre-distinct-from</span> <a class="ev" href="/concept-the-ego">The ego</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §126 — “they signify nothing less than a psychic centre of the personality not to be identified with the ego”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rose">Rose</a> <span class="rel ev">has-significance-of</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §389 — “so the rose has the significance of a mandala, as is clear from the heavenly rose in Dante’s Paradiso”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-6, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-nicholas-of-flue">Brother Klaus (Nicholas of Flüe)</a> <span class="rel ev">depicts</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §12 — “It is a mandala divided into six parts, and in the centre is the crowned countenance of God”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-jakob-boehme">Jakob Boehme</a> <span class="rel ev">depicts</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §20 — “the opposition has left obvious traces in the mandala appended to his XL Questions concerning the Soule”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-paradise">Paradise (Garden of Eden)</a> <span class="rel ev">is-conceived-as</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §73 — “In the Christian version it is also the heavenly city of the Apocalypse, which, like the Garden of Eden, is conceived as a mandala.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
+<li class="ev">CW 9i §665 — “As the snake-and-tree motif shows, we have here a conception of Paradise.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">displays</span> <a class="ev" href="/concept-cauda-pavonis">Cauda pavonis (peacock's tail)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §596 — “The light is composed of the rainbow hues of the rising sun; it is a real cauda pavonis”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §580 — “In our mandala, too, the rainbow colours spring from the red layer that means affectivity.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-eye">The eye (pupil and iris)</a> <span class="rel ev">is-prototype-of</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §592 — “The eye is the prototype of the mandala”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §593 — “Our mandala is indeed an “eye,” the structure of which symbolizes the centre of order in the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-marriage-quaternio">Marriage quaternio</a> <span class="rel ev">appears-in</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §612 — “It is a typical marriage quaternio, and for an understanding of its psychology I must refer the reader to my account”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">is-used-in</span> <a class="ev" href="/concept-yoga">Yoga (samadhi, the Eastern method of self-control)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §633 — “The goal of contemplating the processes depicted in the mandala is that the yogi shall become inwardly aware of the deity.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-squaring-of-the-circle">Squaring of the Circle</a> <span class="rel ev">underlies</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §634 — “There are innumerable variants of the motif shown here, but they are all based on the squaring of a circle.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">reveals</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §645 — “Confronted with these pictures, many patients suddenly realize for the first time the reality of the collective unconscious as an autonomous entity.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §711 — “Since this disposition is usually not a conscious possession of the individual I have called it the collective unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-temenos">Temenos (protected taboo precinct)</a> <span class="rel ev">appears-in</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §646 — “Castle, city , and courtyard (temenos ) motifs, quadratic or circular.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §655 — “The mandala thus combines the classic motifs of flower, star, circle, precinct ( temenos ), and plan of city divided into quarters with citadel.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-eye">The eye (pupil and iris)</a> <span class="rel ev">appears-in</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §614 — “In Picture 17 a kind of eye motif appears, which I have also observed in the mandalas of other persons.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-city">The city (the quadratic city with citadel)</a> <span class="rel ev">is-conceived-as</span> <span class="ev">Mandala</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §691 — “Painting of a medieval city with walls and moats, streets and churches, arranged quadratically.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, FINDING-adjudicated, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam">unclassified</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mandala</span> <span class="rel ev">is-characterized-by</span> <a class="ev" href="/concept-quaternity">The quaternity</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §201 — “What is coming up is the unconscious content, namely the mandala characterized by the number four”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/mandala">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

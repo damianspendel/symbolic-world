@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-lapis">
+<meta name="description" content="Lapis philosophorum in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Lapis philosophorum — Symbol in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Lapis philosophorum</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Lapis philosophorum</span></h1>
+<p class="sub"><span class="p-type">Symbol · laboratory</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>67 relations, 81 verified citations across CW 9i, 9ii, 12, 13, 14.</p>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is</span> <a class="ev" href="/concept-homunculus">Homunculus</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §134 — “the lapis consists of body, soul, and spirit, is a living being, a homunculus”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mercurius">Mercurius</a> <span class="rel ev">is</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §714 — “Mercurius is not only the lapis as prima materia but the lapis as ultima materia”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-phoenix">Phoenix</a> <span class="rel ev">synonym-of</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §396 — “more especially as a synonym for the lapis”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-true-man">True Man (chen-yen)</a> <span class="rel ev">is</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §490 — “This true man is Dorn’s “vir unus” and at the same time the lapis Philosophorum”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-man">Man (homo)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §378 — “But again, the stone is man.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-diamond">The diamond of the dreamer’s ring, whose prism contains all the hues of the rainbow; identified with the lapis</a> <span class="rel ev">is-identified-with</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §263 — “lead to the lapis … the diamond whose prism contains all the hues of the rainbow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mercurius">Mercurius</a> <span class="rel ev">is</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §283 — “Besides being the prima materia of the lowly beginning as well as the lapis as the highest goal, Mercurius is also the process”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">revealed-identity-with</span> <a class="ev" href="/concept-man">Man (homo)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §394 — “the stone revealed to them its identity with man himself, with a supraordinate factor that could actually be found within him”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-6, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-tree">The Tree (mythological)</a> <span class="rel ev">is-identical-with</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §423 — “Hence the tree is identical with the stone and, like it, a symbol of wholeness.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, WRONG, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-vessel">The Hermetic Vessel (vas Hermetis)</a> <span class="rel ev">is-identical-with</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §377 — “The vas is often synonymous with the lapis , so that there is no difference between the vessel and its content”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-identical-with</span> <a class="ev" href="/concept-mercurius">Mercurius</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §238 — “The Philosopher is Hermes, and the Stone is identical with Mercurius, the Latin Hermes.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-caelum">Caelum (Dorn's heaven / quintessence)</a> <span class="rel ev">corresponds-to</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §765 — “Dorn's caelum, which corresponded to the stone”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-shulamite">The Shulamite</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §185 — “the lapis in its dark, feminine form appears instead of the dog and is compared to the Shulamite”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-salt">Salt (Sal)</a> <span class="rel ev">corresponds-to</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §235 — “Salt by contrast is a “light” substance, similar to the lapis”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-philosophic-gold">Philosophic gold (aurum non vulgi)</a> <span class="rel ev">corresponds-to</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §354 — “a living gold, so to speak, which corresponds in every respect to the lapis”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-anthropos">Anthropos / Adam Kadmon</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §397 — “the lapis was brought into more or less clear connection with the ancient idea of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-squaring-of-the-circle">Squaring of the Circle</a> <span class="rel ev">comes-nearest-to</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §220 — “according to the alchemists, comes nearest to the lapis on account of its roundness or perfect simplicity”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-temple">The Temple built of a single stone</a> <span class="rel ev">is-paraphrase-of</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §112 — “The temple built of a “single stone” is an obvious paraphrase of the lapis.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-counterpart-of</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §289 — “The lapis is at most a counterpart or analogy of Christ in the physical world.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-parallel-to</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §143 — “the lapis philosophorum , which is used as a parallel to Christ, the “rock,” the “stone,” the “cornerstone.””<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §216 — “The same that is said of the lapis is said of Christ by Ephrem the Syrian”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §284 — “It is not Christ; it is his parallel in the subjective realm, which dogma calls Christ.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+<li class="ev">CW 9ii §326 — “the alchemists took the well-known allegory of Christ, the lapis angularis or cornerstone, for their lapis philosophorum”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+<li class="ev">CW 9ii §375 — “the lapis is not just an allegory but is a direct parallel of Christ”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-divine-child">The Divine Child</a> <span class="rel ev">parallels</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §289 — “Oddly enough, we have a similar modulation of themes in alchemy—in the synonyms for the lapis”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §247 — “that obscure thing we call the mandala or 'self'”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9ii §426 — “the Rebis or Lapis Philosophorum... a symbol of the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9ii §257 — “This description fits the paradoxical situation of the self, as its symbolism shows.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §387 — “is an homunculus and, as the texts show, a symbol of the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+<li class="ev">CW 9ii §418 — “the central idea of the lapis Philosophorum plainly signifies the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-statue">The Statue (statua)</a> <span class="rel ev">symbolizes</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §559 — “the statue evidently denotes the end-product of the process, the lapis Philosophorum”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-matter">Matter</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §643 — “It represents feminine matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-adam">Adam</a> <span class="rel ev">signifies</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §569 — “Since Adam signifies not only the beginning of the work, the prima materia, but also the end, the lapis”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (b-union-2 post-merge check, 2026-07-27: 4 SUPPORTED / 3 both-defensible adjudicated)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">signifies</span> <a class="ev" href="/concept-inner-man">The inner man</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §126 — “The lapis signifies the inner man, the ἄνθρωπος πνενματικός , the natura abscondita which the alchemists sought to set free.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+<li class="ev">CW 13 §134 — “It symbolizes man, or rather, the inner man, and the paradoxical statements about it are really descriptions and definitions of this inner man.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">represents</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §134 — “the lapis represents the idea of a transcendent totality which coincides with what analytical psychology calls the self.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-alchemical-fish">The alchemical fish (the round fish in the sea)</a> <span class="rel ev">symbolizes</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §194 — “through the transformation of the arcane substance which it had at first represented—a symbol of the lapis”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §286 — “the alchemical fish symbolism leads direct to the lapis , the salvator, servator , and deus terrenus”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rubedo">Rubedo</a> <span class="rel ev">produces</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §434 — “the work is completed, and the lapis ... has taken shape”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">child-of</span> <a class="ev" href="/concept-sol">Sol</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §524 — “the latter is understood as the child of Sol and Luna”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">child-of</span> <a class="ev" href="/concept-luna">Luna</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §524 — “the latter is understood as the child of Sol and Luna”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-prima-materia">Prima materia</a> <span class="rel ev">mother-of</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §14 — “Above all, the prima materia is the mother of the lapis”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-chaos">The massa confusa or chaos confusum out of which the stone arises; one of the recurring names of the prima materia</a> <span class="rel ev">gives-birth-to</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §433 — “The chaos is a massa confusa that gives birth to the stone”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-produced-from</span> <a class="ev" href="/concept-rotundum">The rotundum (the round element)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §388 — “The lapis is produced, as we have already seen, from the splitting and putting together of the four elements, from the rotundum”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">composed-of</span> <a class="ev" href="/concept-four-elements">The four elements</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §457 — “symbolized by the four elements, just like the lapis”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 12 §220 — “Our stone is from the four elements.”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-spiritus-mundi">Spiritus mundi (world spirit)</a> <span class="rel ev">chief-constituent-of</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §512 — “became corporeal, and is the chief constituent of the Saviour [ salvatoris ] or Philosophical Stone”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-28 · cross-checked: gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">consists-of</span> <a class="ev" href="/concept-four-elements">The four elements</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §375 — “the lapis consists of the four elements or has to be put together from them”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">contains</span> <a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §417 — “the lapis is the arcanum that contains God or that part of God which is hidden in matter”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-7, PARTIAL, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">is-hidden-in</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §541 — “It is, in fact, the secret of the stone, of the lapis philosophorum , in so far as this is the prima materia”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-orphan">The Orphan (orphanus)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §13 — “Hermes Trismegistus called the stone 'orphan'”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-aelia-laelia-inscription">Aelia-Laelia-Crispis Inscription (Enigma of Bologna)</a> <span class="rel ev">symbolizes</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §59 — “explained by Maier as a reference to the lapis, which “is found everywhere.””<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is</span> <a class="ev" href="/concept-filius-macrocosmi">Filius Macrocosmi (Son of the Great World)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §127 — “In the sixteenth century Khunrath formulated for the first time the “theological” position of the lapis: it was the filius macrocosmi”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §140 — “I beget the light, but the darkness too is of my nature”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, PARTIAL, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §131 — “This “midmost” is the stone, the mediator which unites the opposites.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §390 — “In the lapis , the counterpart of man, the opposites are so to speak united, but with a visible seam or suture”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+<li class="ev">CW 9ii §401 — “the figure of Mercurius duplex and of the lapis , which unites the opposites indivisibly in itself”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-sequence">sequence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-human-blood">Human blood (sanguis)</a> <span class="rel ev">prefigures</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §690 — “a synonym for the red tincture, a preliminary stage of the lapis”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-initial-material-of</span> <a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §374 — “Here the lapis is not to be understood as the end product of the opus but rather as its initial material”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rex">Rex (the King)</a> <span class="rel ev">renewed-as</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §355 — “our King and Lord of Lords, come forth... regenerated and more than perfect”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-artifex">The artifex (alchemist-operator)</a> <span class="rel ev">must-transform-himself-into</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §187 — “Gerhard Dorn exclaims. “Transmutemini in vivos lapides philosophicos!” (Transform yourselves into living philosophical stones!)”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-artifex">The artifex (alchemist-operator)</a> <span class="rel ev">is-minister-of</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §142 — “And thus the philosopher is not the master of the stone but rather its minister”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, PARTIAL, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-inner-man">The inner man</a> <span class="rel ev">is-figured-as</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §326 — “the Naassenes took it as symbolizing their Protanthropos Adam, or more precisely, the “inner man,” who is a rock or stone”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-dog">Dog (canis)</a> <span class="rel ev">counterbalances-light-nature-of</span> <span class="ev">Lapis philosophorum</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §179 — “The motif of the dog is a necessary counterbalance to the excessively praised “light-nature” of the stone”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">prototype-of</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §509 — “the terrestrial Philosophical Stone is a veritable Harmonia, Contrafactur, and Prototype of the true spiritual and heavenly Stone Jesu Christ”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-26</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-projection-of</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §264 — “we would say that the stone is a projection of the unified self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-extracted-from</span> <a class="ev" href="/concept-man">Man (homo)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §256 — “This thing is extracted from thee, for thou art its ore; in thee they find it”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-goal-of</span> <a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §759 — “The production of the lapis was the goal of alchemy in general.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+<li class="ev">CW 12 §335 — “the philosophers' stone, which, as hermaphrodite, contains both”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §451 — “the coveted substance, the lapis , that he likens to Christ”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 12 §480 — “the lapis -Christ identity”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-anthropos">Anthropos / Adam Kadmon</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §335 — “filius macrocosmi , a figure we can only compare with the Gnostic Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">equivalent-of</span> <a class="ev" href="/concept-the-whole-man">The whole man (totus homo)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §86 — “recognized as an equivalent of the homo totus”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="rel ev">hides-in</span> <span class="ev">Lapis philosophorum</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §413 — “the Godhead conceals itself in the man of low degree, so in the “philosophy” it hides in the uncomely stone”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-vessel">The Hermetic Vessel (vas Hermetis)</a> <span class="rel ev">contains-source-of</span> <span class="ev">Lapis philosophorum</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §243 — “its contents to the living, semi-organic mixture from which the body of the lapis , endowed with spirit and life, will emerge”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-tree">The Tree (mythological)</a> <span class="rel ev">is</span> <span class="ev">Lapis philosophorum</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §422 — “Here the stone is itself the tree”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-given-priority-over</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §123 — “there is among certain of the alchemists, too, a tendency to give the lapis priority over Christ”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">may-take-precedence-over</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §122 — “whether, in the end, it was Christ who was taken as a symbol of the stone rather than the other way round”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <span class="rel ev">is-hidden-in</span> <span class="ev">Lapis philosophorum</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §386 — “this serpent actually dwells in the interior of the earth and is the pneuma that lies hidden in the stone”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">complements</span> <a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §387 — “Just as the serpent forms the lower opposite of man, so the lapis complements the serpent”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Lapis philosophorum</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-homo-maximus">Homo maximus</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §555 — “its conception of the lapis or its minera (raw material) together with the idea of the homo altus or maximus”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/lapis">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

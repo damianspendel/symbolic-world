@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-anthropos">
+<meta name="description" content="Anthropos / Adam Kadmon in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Anthropos / Adam Kadmon — Motif in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Anthropos / Adam Kadmon</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Anthropos / Adam Kadmon</span></h1>
+<p class="sub"><span class="p-type">Motif</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>44 relations, 50 verified citations across CW 9i, 9ii, 12, 13, 14.</p>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">amplified-by</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §310 — “every king carries the symbol of the self... show him as the cosmic Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 9ii §296 — “This objective whole … is what I have called the self, and this corresponds exactly to the idea of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">is-psychic-analogue-of</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §619 — “Adam Kadmon is not merely the universal soul or, psychologically, the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+<li class="ev">CW 14 §548 — “the more comprehensive, supra-ordinate totality which we know as the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-true-man">True Man (chen-yen)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §490 — “He corresponds to the chên-yên (true man) of Chinese alchemy.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-geryon">Geryon</a> <span class="rel ev">is-analogue-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §653 — “Geryon corresponds to the cosmogonic Adam Kadmon”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-lapis">Lapis philosophorum</a> <span class="rel ev">corresponds-to</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §397 — “the lapis was brought into more or less clear connection with the ancient idea of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-mercurius">Mercurius</a> <span class="rel ev">corresponds-to</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §12 — “Mercurius corresponds to the Holy Ghost as well as to the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">coincides-with</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §268 — “I would like to emphasize once again that the Anthropos idea coincides with the psychological concept of the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-lower-adam">The lower Adam (somatic, mortal man)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §369 — “as the higher Adam corresponds to the lower, so the lower Adam corresponds to the serpent”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <span class="rel ev">is-counterpart-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §369 — “That the snake, contrary to expectation, should be a counterpart of the Anthropos is corroborated by the fact”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rotundum">The rotundum (the round element)</a> <span class="rel ev">coincides-with</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §406 — “the rotundum coincides with the archetype of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">is-a</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §565 — “The second Adam is Christ”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+<li class="ev">CW 14 §484 — “The worm therefore signifies the second Adam, Christ”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-adam">Adam</a> <span class="rel ev">is-analogue-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §590 — “Adam is the homo maximus , the Anthropos, from whom the macrocosm arose”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">is</span> <a class="ev" href="/concept-tetrameria">Tetrameria (quartering of the process)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §619 — “Adam Kadmon is not merely the universal soul ... but is himself the process of transformation, its division into three or four parts (trimeria or tetrameria)”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (b-union-2 post-merge check, 2026-07-27: 4 SUPPORTED / 3 both-defensible adjudicated)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-eagle">Eagle (aquila)</a> <span class="rel ev">is-ultimately-identical-with</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §306 — “will rise the eagle or phoenix, the liberated soul, which is ultimately identical with the Anthropos”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, PARTIAL, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-archeus">Archeus (invisible sun in man)</a> <span class="rel ev">is</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §168 — “Elsewhere he is called Archeus ... Undoubtedly this is the Primordial Man”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-indivisible-point">The indivisible point</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §310 — “he is the “undivided point,” the “grain of mustard seed” that grows into the kingdom of God”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-logos">Logos</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §327 — “The Archanthropos is the Logos, whom the souls follow “twittering,” as the bats follow Hermes in the nekyia”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-homunculus">Homunculus</a> <span class="rel ev">is-identified-with</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §529 — “that is, the Anthropos, the spiritual, inner and complete man, who in Chinese alchemy is called the chen-yen”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a> <span class="rel ev">symbolizes</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §458 — “the tree can be interpreted as the Anthropos or self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 13 §458 — “The results of our investigation of the historical material have shown that the tree can be interpreted as the Anthropos or self.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-ogdoad">Ogdoad (double quaternity)</a> <span class="rel ev">symbolizes</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §8 — “The double quaternio or ogdoad stands for a totality...the mystical Adam and bisexual Original Man”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-statue">The Statue (statua)</a> <span class="rel ev">symbolizes</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §567 — “the statue or pillar is either the perfect Primordial Man”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">image-of</span> <a class="ev" href="/concept-nous">Nous</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §490 — “the Anthropos, the man created in the image of the Nous”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">stands-for</span> <a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §210 — “the Anthropos idea that stands for man’s wholeness, that is, the conception of a unitary being who existed before man”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-stork">Stork</a> <span class="rel ev">is-symbol-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §417 — “so the stork is its spiritual principle and thus a symbol of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">manifests-as</span> <a class="ev" href="/concept-homunculus">Homunculus</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §748 — “the archetype of the Anthropos ... down to the figure of the homunculus in Faust”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">embodies</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §69 — “He is our culture hero, who, regardless of his historical existence, embodies the myth of the divine Primordial Man, the mystic Adam.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rotundum">The rotundum (the round element)</a> <span class="rel ev">is-form-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §532 — “she had rediscovered the historical synonym of the philosophical egg, namely the rotundum , the round, original form of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-filius-philosophorum">Filius Philosophorum</a> <span class="rel ev">based-on</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §487 — “the central idea of the filius philosophorum is based on a conception of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">takes-the-place-of</span> <a class="ev" href="/concept-tifereth">Tifereth (sefira)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §592 — “Accordingly, Adam Kadmon here takes the place of Tifereth.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (b-union-2 post-merge check, 2026-07-27: 4 SUPPORTED / 3 both-defensible adjudicated)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-coniunctio">Coniunctio</a> <span class="rel ev">produces</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §44 — “the product of the conjunction of sun and moon”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-28 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27) — NOTE: audit predates the 2026-07-28 quote repair; not re-audited cross-vendor</span></li>
+<li class="ev">CW 14 §631 — “the coniunctio symbolizes the production of the hermaphroditic second Adam”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">proceeded-from</span> <a class="ev" href="/concept-en-soph">En Soph</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §594 — “From En Soph, from the most general One, was produced the universe, which is Adam Kadmon, who is One and Many”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (b-union-2 post-merge check, 2026-07-27: 4 SUPPORTED / 3 both-defensible adjudicated)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-kinship">kinship</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-shulamite">The Shulamite</a> <span class="rel ev">consort-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §609 — “Adam Kadmon appears here in the classic form of the son-lover”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">embodies</span> <a class="ev" href="/concept-axiom-of-maria">Axiom of Maria Prophetissa</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §619 — “Adam Kadmon...is himself the process of transformation...The alchemical formula for this is the Axiom of Maria”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-circulatio">Circulatio</a> <span class="rel ev">aims-to-reproduce</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §5 — “the aim of the circulatio is the production (or rather, reproduction) of the Original Man, who was a sphere.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-filius-regius">Filius Regius (King's Son)</a> <span class="rel ev">transforms-into</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §443 — “make the filius regius into the rearisen Primordial Man, who is the cosmos.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">embodies</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §605 — “In the idea of the homo maximus the Above and Below of creation are reunited”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-rebis">Rebis / Hermaphrodite</a> <span class="rel ev">amplified-by</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §652 — “Adam Kadmon, as a personification of the whole 'inverted tree,' is androgynous”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-lapis">Lapis philosophorum</a> <span class="rel ev">symbolizes</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §335 — “filius macrocosmi , a figure we can only compare with the Gnostic Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-pan-ku">P'an Ku</a> <span class="rel ev">is-analogue-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §573 — “thus proved to be a real homo maximus and Anthropos”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-scintilla">Scintilla (soul-spark)</a> <span class="rel ev">associated-with</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §50 — “The scintilla is associated with the doctrine of the Anthropos”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-alchemy">Alchemy</a> <span class="rel ev">contains-doctrine-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §252 — “alchemy contains as its core the Gnostic doctrine of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">splits-into</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §320 — “The splitting of the Original Man into husband and wife expresses an act of nascent consciousness; it gives birth to a pair of opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam">unclassified</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-old-adam">The Old Adam (vetus Adam)</a> <span class="rel ev">contaminated-with</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">text undecided</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §600 — “= Adam Kadmon the author has contaminated two opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-homo-philosophicus">Homo philosophicus (second Adam)</a> <span class="rel ev">identical-or-connected-with</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">text undecided</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §476 — “he is also the everlasting inner man, identical or at least connected with the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-26</span></li>
+<li class="ev">CW 12 §209 — “he is the androgynous original man or Anthropos of Gnosticism”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/anthropos">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

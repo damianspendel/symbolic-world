@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/method">
+<meta name="description" content="How a claim gets into The Symbolic World’s graph of Jung’s Collected Works, and what the checks do and do not cover.">
+<title>The method · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.method-page h2 { margin: 2.4rem 0 .6rem; }
+.method-page h2:first-child { margin-top: .4rem; }
+.method-page p { font-size: 1rem; line-height: 1.68; margin-bottom: .9rem; color: var(--ink); }
+.method-page li { font-size: 1rem; line-height: 1.62; margin-bottom: .55rem; color: var(--ink); }
+.method-page ol, .method-page ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+.method-page strong { color: var(--ink); font-weight: 600; }
+.method-page em { font-style: italic; }
+.method-page a { color: var(--gold); }
+.method-page table { border-collapse: collapse; width: 100%; font-size: .9rem; margin: .6rem 0 1.4rem; }
+.method-page th, .method-page td { border: 1px solid var(--hairline); padding: .55rem .75rem; text-align: left; vertical-align: top; }
+.method-page th { color: var(--gold); font-weight: 500; background: var(--panel); }
+.method-page td { color: var(--ink-faint); }
+.method-page .tw { overflow-x: auto; }
+.fig { margin: 1.4rem 0 1.6rem; padding: 1.1rem 1.2rem; border: 1px solid var(--hairline); border-radius: 10px; background: var(--panel); }
+.fig figcaption { font: .68rem var(--mono); color: var(--ink-dim); line-height: 1.5; margin-top: .8rem; }
+.claim-fig { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.fig-node { display: inline-block; padding: .3rem .8rem; border-radius: 999px; font-family: var(--display); font-size: 1.02rem; }
+.fig-node[data-type="Symbol"] { color: var(--m-symbol); border: 1px solid var(--m-symbol); background: rgba(194, 205, 214, 0.09); }
+.fig-node[data-type="Concept"] { color: var(--m-concept); border: 1px solid var(--m-concept); background: rgba(212, 175, 55, 0.09); }
+.fig-rel { color: var(--gold); font-style: italic; font-size: .95rem; }
+.fig-rel i { font-style: normal; color: var(--ink-dim); }
+.fig-cite { font: .62rem var(--mono); color: var(--gold-dim); border: 1px solid var(--hairline); border-radius: 999px; padding: .2rem .55rem; }
+.works-fig { display: flex; align-items: flex-end; gap: 2px; height: 3rem; }
+.work-fig { position: relative; height: 1.4rem; background: var(--gold); border-radius: 2px 2px 0 0; min-width: 3px; }
+.work-fig span { position: absolute; bottom: calc(100% + 3px); left: 50%; transform: translateX(-50%);
+  font: .56rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.metals-fig { display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: .6rem 1rem; list-style: none; }
+.method-page .metals-fig { padding-left: 0; margin: 0; }
+.method-page .metals-fig li { display: flex; align-items: baseline; gap: .5rem; margin: 0; font-size: .95rem; min-width: 0; }
+.metal-dot { width: .7rem; height: .7rem; border-radius: 999px; flex: none; align-self: center; }
+.metal-kind { color: var(--ink); }
+.metal-name { font: .68rem var(--mono); color: var(--ink-dim); }
+.cite-block { border-left: 3px solid var(--gold-dim); padding: .7rem 0 .7rem 1rem; margin: 1.4rem 0; }
+.cite-title { font-family: var(--display); font-size: 1rem; color: var(--ink); line-height: 1.45; }
+.cite-meta { font: .7rem var(--mono); color: var(--ink-faint); margin-top: .35rem; }
+.cite-doi { font: .7rem var(--mono); color: var(--ink-dim); margin-top: .25rem; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">about · method</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">about</p>
+<h1>The method</h1>
+<p class="sub">How a claim gets into this graph, and what the checks do and do not cover.</p></div>
+<div class="method-page">
+<h2>What this is</h2>
+<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 589 symbols, figures and concepts, joined by 2091 relations, resting on 2678 citations to his <em>Collected Works</em>. Nothing is here because a model said so. Every claim was proposed by one AI model and judged against its source paragraph by a second, from a different model family; an auditor from a different vendor re-reads each new batch in full, and 93% of all 2678 citations currently carry its stamp. Every claim keeps the receipt: the exact paragraph, a verbatim quote, and the record of who checked what. A graph flattens: a claim can be true to its paragraph and still lose the movement of thought around it. This is a map of assertions, not a reading.</p>
+<figure class="fig fig-claim">
+    <div class="claim-fig">
+      <span class="fig-node" data-type="Symbol">Lapis philosophorum</span>
+      <span class="fig-rel">is-projection-of <i>→</i></span>
+      <span class="fig-node" data-type="Concept">The Self</span>
+      <span class="fig-cite">CW 9ii §264</span>
+    </div>
+    <figcaption>One claim, drawn. The first clause of the narrative on the landing page rests on exactly this edge.</figcaption>
+  </figure>
+<p>Reading it: the stone (lapis) is claimed to be a projection of the self, Jung says so at paragraph 264 of <em>Aion</em>, and clicking the claim anywhere on this site shows the verbatim sentence.</p>
+<h2>One corpus</h2>
+<p>Everything comes from a single source: the Bollingen edition of the <em>Collected Works</em>, in English. No secondary literature, no commentary, no symbol dictionaries. That choice costs breadth and buys depth.</p>
+<figure class="fig">
+    <div class="works-fig"><span class="work-fig" style="flex:23 1 0;opacity:0.32"><span>CW 5</span></span><span class="work-fig" style="flex:850 1 0;opacity:1.00"><span>CW 8</span></span><span class="work-fig" style="flex:567 1 0;opacity:0.77"><span>CW 9i</span></span><span class="work-fig" style="flex:386 1 0;opacity:0.62"><span>CW 9ii</span></span><span class="work-fig" style="flex:21 1 0;opacity:0.32"><span>CW 11</span></span><span class="work-fig" style="flex:223 1 0;opacity:0.48"><span>CW 12</span></span><span class="work-fig" style="flex:176 1 0;opacity:0.44"><span>CW 13</span></span><span class="work-fig" style="flex:413 1 0;opacity:0.64"><span>CW 14</span></span><span class="work-fig" style="flex:19 1 0;opacity:0.32"><span>CW 16</span></span></div>
+    <figcaption>The works bar, as it appears at the bottom of the atlas: one segment per volume, sized by the verified evidence resting on it.</figcaption>
+  </figure>
+<p>The bar along the bottom of the atlas is the corpus made visible: one segment per volume, sized by how much verified evidence it carries. The alchemical trilogy (CW 12, 13, 14) and <em>Aion</em> are mined end to end, CW 9i is in progress, and five further volumes appear where the deep volumes reach into them. The segments select: click one and the atlas shows only that volume's claims.</p>
+<h2>Reading the atlas</h2>
+<figure class="fig">
+    <ul class="metals-fig"><li><i class="metal-dot" style="background:var(--m-concept)"></i><span class="metal-kind">Concept</span><span class="metal-name">gold</span></li><li><i class="metal-dot" style="background:var(--m-symbol)"></i><span class="metal-kind">Symbol</span><span class="metal-name">silver</span></li><li><i class="metal-dot" style="background:var(--m-figure)"></i><span class="metal-kind">Figure</span><span class="metal-name">copper</span></li><li><i class="metal-dot" style="background:var(--m-operation)"></i><span class="metal-kind">Operation</span><span class="metal-name">iron</span></li><li><i class="metal-dot" style="background:var(--m-substance)"></i><span class="metal-kind">Substance</span><span class="metal-name">verdigris</span></li><li><i class="metal-dot" style="background:var(--m-motif)"></i><span class="metal-kind">Motif</span><span class="metal-name">lead</span></li></ul>
+    <figcaption>The metals legend: six node kinds, six metals.</figcaption>
+  </figure>
+<p>Node colour is the kind of thing a node is. The palette borrows alchemy's metals: gold for concepts, silver for symbols, copper for figures, iron for operations, verdigris for substances, lead for motifs. Alchemy assigned its metals to the planets; mapping node kinds onto them is this project's design choice.</p>
+<ul>
+<li><strong>Search</strong> finds a symbol, a relation, a family, quote text, or a citation such as CW 14 §1. Typing offers completions, and choosing a symbol or a family opens it.</li>
+<li><strong>Click</strong> a node to read its connections; click a connection to open the claim itself: relation, quote, paragraph, verdicts. <strong>Copy link</strong> on any selection gives a URL that reopens it.</li>
+<li><strong>The chips</strong> beside the search box are the active filters: volume, family, voice, layer. Remove one with its ×.</li>
+<li><strong>The bar along the bottom</strong> selects volumes; each segment is sized by the verified evidence that volume carries.</li>
+<li>Every citation shows a status dot: green, human-validated; amber, machine-verified default without human validation; red, disputed, on the record.</li>
+</ul>
+<h2>How a claim gets in</h2>
+<p>Five stations.</p>
+<ol>
+<li><strong>Propose.</strong> An Opus-family model reads a window of paragraphs and proposes claims, each with a verbatim quote.</li>
+<li><strong>Check.</strong> A machine confirms the quote is letter-exact in its paragraph and at most 25 words, and that the relation is well formed. Failures are dropped, not argued with.</li>
+<li><strong>Gate.</strong> A Fable-family model judges every claim against its full source paragraph. It is hostile by default: the claim survives only if, in the model's judgment, the paragraph supports it.</li>
+<li><strong>Audit.</strong> A Gemini model re-reads what survived, before any of it touches the graph. Universal for every batch since the <em>Aion</em> arc (mid-2026); earlier material was audited by sampling, and each claim's receipt shows whether it carries the stamp; 2484 of 2678 citations do today. When gate and auditor disagree, the auditor wins.</li>
+<li><strong>Merge.</strong> The claim enters with its provenance stamped: dates, verdicts, corrections.</li>
+</ol>
+<p>The rule underneath all five: <strong>the model that proposes a claim is never the model that signs it off.</strong> Proposer and gate are different model families (Anthropic's Opus and Fable lines); the auditor is a different vendor altogether (Google's Gemini); and the roles never swap.</p>
+<p>The stations bite. In the most recent window, 66 proposed citations became 56 merged ones; the difference is what the checks removed.</p>
+<h2>Human oversight</h2>
+<p>Machine checks are not decisions. Responsible use of AI needs human oversight: a person rules on disagreements, decides releases, and answers for what is published.</p>
+<ul>
+<li><strong>Gold set.</strong> 50 claims carry a <em>human-validated</em> mark in the <a href="/ledger">ledger</a>: a person read the cited paragraph. The rest carry the amber dot: machine-verified without human validation.</li>
+<li><strong>Adjudication.</strong> Two blind arms sort relations into 25 families: one Opus-family model, one Gemini, each reading the definitions document and the edge, neither able to see the other's answer. They disagree on 354 claims today. No model breaks the tie. A person rules, in sittings, and every ruling lands signed and dated. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
+<li><strong>Refusals are kept apart.</strong> <em>No family</em> means our vocabulary is short. <em>Text undecided</em> means Jung's own sentence hedges between two readings. Pooling them would let a thin vocabulary hide inside a hedge.</li>
+<li><strong>Disputes.</strong> 18 challenges are on the record with their outcomes, in the <a href="/disputes">dispute log</a>.</li>
+<li><strong>Publication.</strong> Releases, deploys and rulings are human decisions. Nothing here publishes itself.</li>
+</ul>
+<h2>Confidence levels</h2>
+<p>The checks are themselves checked:</p>
+<ul>
+<li>Every one of the 2678 quotes is mechanically verified, letter for letter, against the corpus (the harness also carries seven deliberately corrupted claims, and all seven are caught on every run). Whether a paragraph supports its claim is a model's judgment, not a mechanical proof. The receipts show it as judgment.</li>
+<li>The family layer's own check is a gate tested by planting errors among real assignments. It reported catching everything planted in its early runs. A code inspection we commissioned in August 2026 found that harness could not fully substantiate what "caught" means, so we withdrew those figures. The harness was rebuilt in tracked code; calibration re-runs per ruleset version, and its figures live in the version-bound records (<code>pipeline/family_calibration/records/</code>) rather than in this prose, because a number written here outlives the version it measured. It measures the instrument, not the vocabulary: it says nothing about whether the families cut Jung's thought at the right joints. A family label means this: two models, judging independently, agreed. Where they disagreed, a person decides.</li>
+<li>The classification vocabulary was checked outside this repository, against 8 works of scholarship: 8 of 16 treated items agreed with our family, and the disagreements are published beside them (<a href="/ontology#checked">the check</a>). It tests the classification, not whether a claim is true.</li>
+<li>The two blind classification arms agreed on 86% of 2091 relations. Agreement measures whether the definitions can be followed consistently, not whether they are right: neither arm is ground truth, and the definitions were drafted by one of the model families working in this pipeline. Twenty standing questions about Jung's thought are asked of the graph after every change; it currently answers 14 in full.</li>
+</ul>
+<p>What the instruments do not cover:</p>
+<div class="tw"><table><thead><tr><th>Known limit</th><th>Options</th></tr></thead><tbody>
+<tr><td>One human reviewer; no second annotator yet</td><td>Independent second annotation with agreement statistics</td></tr>
+<tr><td>A class of identity drift (two names for one thing entering as two things) is invisible to the current audit</td><td>No instrument yet; known gap, on the record</td></tr>
+<tr><td>English translation only (Hull)</td><td>German cross-check against the <em>Gesammelte Werke</em></td></tr>
+<tr><td>Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked</td><td>The graph is a map of assertions, not a reading. Opposing claims are mined where Jung himself qualifies, and the books remain the reading</td></tr>
+</tbody></table></div>
+<h2>The paper</h2>
+<p>The method was published with release v1.3.0: 248 symbols, 669 relations, 699 citations. That exact snapshot, atlas and ledger included, is preserved unchanged at <a href="/v1.3/">/v1.3/</a>, and the paper describes it. The live counts at the top of every page show how far the atlas has grown since, under the same gates.</p>
+<div class="cite-block">
+    <div class="cite-title">Trust, Layered: Warranted AI Knowledge Extraction for Interpretive Corpora, Demonstrated on Jung's Collected Works (dataset, pipeline, and paper)</div>
+    <div class="cite-meta">Spendel, Damian</div>
+    <div class="cite-doi">DOI <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a> · concept DOI, resolves to the latest release</div>
+  </div>
+</div>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

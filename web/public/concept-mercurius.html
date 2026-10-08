@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-mercurius">
+<meta name="description" content="Mercurius in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Mercurius — Figure in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Mercurius</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Mercurius</span></h1>
+<p class="sub"><span class="p-type">Figure</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>88 relations, 97 verified citations across CW 9i, 9ii, 12, 13, 14, 16.</p>
+<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-lion">Lion (leo)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §404 — “the lion... is a synonym for Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-prima-materia">Prima materia</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §282 — “Mercurius, it is generally affirmed, is the arcanum, the prima materia”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-vessel">The Hermetic Vessel (vas Hermetis)</a> <span class="rel ev">symbolizes</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §338 — “the vas is the water ... none other than the Mercurius of the philosophers”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-hermes">Hermes</a> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §172 — “Mercurius also takes on the significance of Hermes, god of revelation”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-unus-mundus">Unus mundus</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §660 — “universal Mercurius...is none other than the...unus mundus”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-green-lion">Green Lion (leo viridis)</a> <span class="rel ev">synonym-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §405 — “green lion there was also...Both were Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-filius-regius">Filius Regius (King's Son)</a> <span class="rel ev">identical-to</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §473 — “the filius regius is identical with Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">symbolized-by</span> <a class="ev" href="/concept-ouroboros">Uroboros</a> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §480 — “This Mercurius duplex, who ascends and descends, is the uroboros”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-adam">Adam</a> <span class="rel ev">synonym-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §565 — “readily lent itself as a biblical synonym for the alchemical Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-lily">Lily (lilium)</a> <span class="rel ev">synonym-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §689 — “the lily was conceived to be Mercurius and the quintessence itself”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-lapis">Lapis philosophorum</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §714 — “Mercurius is not only the lapis as prima materia but the lapis as ultima materia”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-nous">Nous</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §311 — “Mercurius is the light-bringing Nous, who knows the secret of transformation and of immortality”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-filius-unius-diei">Filius unius diei (Son of one day)</a> <span class="rel ev">synonym-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §476 — “the son of one day immediately becomes related to the “Hermaphrodite of nature,” ... All these figures are synonyms for Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-devil">The Devil / Satan</a> <span class="rel ev">is-equivalent-to</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §238 — “His equivalent in alchemy is the dark side of Mercurius duplex and, as we saw, the active sulphur”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-luna">Luna</a> <span class="rel ev">identified-with</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §19 — “she is duplex and mutable like Mercurius, and is like him a mediator; hence their identification in alchemy.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">made-equal-to</span> <a class="ev" href="/concept-mary">Mary (Mother of God)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §505 — “it is not without good reason that Mercurius is made equal [ non immerito … aequiparatur ] to the most glorious and worshipful Virgin Mary”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-26</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-anima-mundi">Anima Mundi</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §265 — “Mercurius is the world-soul, and the Pole is its heart”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-ignis-gehennalis">Ignis gehennalis (central fire)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §257 — “Mercurius, the revelatory light of nature, is also hell-fire”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, PARTIAL, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-identical-with</span> <a class="ev" href="/concept-saturn">Saturn</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §274 — “Mercurius senex is identical with Saturn”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-lapis">Lapis philosophorum</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §283 — “Besides being the prima materia of the lowly beginning as well as the lapis as the highest goal, Mercurius is also the process”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-identical-with</span> <a class="ev" href="/concept-holy-ghost">Holy Ghost (Paraclete)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §288 — “he not only partakes of the Holy Spirit but, according to alchemy, is actually identical with it”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-lapis">Lapis philosophorum</a> <span class="rel ev">is-identical-with</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §238 — “The Philosopher is Hermes, and the Stone is identical with Mercurius, the Latin Hermes.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-animus">Animus</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §545 — “Mercury, that is Hermes, is the Nous, the mind or reason, and that is the animus, who is here outside instead of inside”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §296 — “Mercurius as the lapis is a symbolic expression ... the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-individuation">Individuation</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §284 — “he represents on the one hand the self and on the other the individuation process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §284 — “because of the limitless number of his names, also the collective unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">symbolized-by</span> <a class="ev" href="/concept-dragon">Dragon</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §315 — “Mercurius is symbolized by the tree as well as by the dragon”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a> <span class="rel ev">symbolizes</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §315 — “Mercurius is symbolized by the tree as well as by the dragon”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 13 §315 — “In alchemy, Mercurius is symbolized by the tree as well as by the dragon.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">inwardly-signifies</span> <a class="ev" href="/concept-spiritus-mundi">Spiritus mundi (world spirit)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §404 — “inwardly he means the world-creating spirit concealed or imprisoned in matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-unicorn">Unicorn</a> <span class="rel ev">is-a-symbol-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §518 — “Lion and unicorn are both symbols of Mercurius.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
+<li class="ev">CW 12 §547 — “both are symbols of Mercurius in alchemy, just as they are allegories of Christ in the Church”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-lion">Lion (leo)</a> <span class="rel ev">is-a-symbol-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §519 — “that did not present any difficulty to the alchemist since the lion is likewise a symbol of Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-unicorn">Unicorn</a> <span class="rel ev">stands-for-tension-in</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §547 — “Lion and unicorn stand for the inner tension of opposites in Mercurius.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">represents</span> <a class="ev" href="/concept-nigredo">Nigredo</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §279 — “This dark Mercurius must once again be understood as representing the initial nigredo state, the lowest being a symbol of the highest”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">symbolizes-sex's-opposition-to</span> <a class="ev" href="/concept-nous">Nous</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §344 — “The concept of the alchemical Mercurius … symbolizes the typical opposition in a man between Nous and sex, owing to the absence of the feminine Eros”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <span class="rel ev">symbolizes</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §371 — “In alchemy the snake is the symbol of Mercurius non vulgi , who was bracketed with the god of revelation, Hermes”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-wise-old-man">The Wise Old Man</a> <span class="rel ev">symbolizes</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §396 — “The pair of them play a considerable role in alchemy as symbols of Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">manifests-as</span> <a class="ev" href="/concept-lumen-naturae">Lumen Naturae (light of nature)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §303 — “Mercurius, that two-faced god, comes as the lumen naturae”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+<li class="ev">CW 13 §256 — “it relates Mercurius to the lumen naturae”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">manifests-as</span> <a class="ev" href="/concept-proteus">Proteus (sea god)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §50 — “our Catholick Mercury ... is beyond doubt Proteus, the sea god”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">manifests-as</span> <a class="ev" href="/concept-regina">Regina (the Queen)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §534 — “Here Mercurius in feminine form is the queen”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-holy-ghost">Holy Ghost (Paraclete)</a> <span class="rel ev">is-often-represented-as</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §446 — “He is often represented as a winged old man, … i.e., Mercurius in the form of the god of revelation”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-embodiment-of</span> <a class="ev" href="/concept-spiritus-mundi">Spiritus mundi (world spirit)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §261 — “nothing other than the spirit of the world become body within the earth”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-aqua-permanens">Aqua permanens (permanent water)</a> <span class="rel ev">is-aspect-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §370 — “This, according to the unanimous testimony of both the ancient and the later alchemists, is an aspect of Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-6, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-divine-child">The Divine Child</a> <span class="rel ev">appears-as</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §268 — “above all Mercurius reborn in perfect form (as the hermaphrodite, filius sapientiae , or in-fans noster )”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">appears-as</span> <a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §553 — “Mercurius is a serpent or dragon in alchemy (“serpens mercurialis”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+<li class="ev">CW 9i §556 — “The alchemists accordingly represented their Mercurius duplex as the winged and wingless dragon, calling the former feminine and the latter masculine”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-hermes">Hermes</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §267 — “Mercurius, following the tradition of Hermes, is many-sided, changeable, and deceitful”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-yesod">Yesod (Foundation)</a> <span class="rel ev">corresponds-to</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §634 — “Alchemically he corresponds to the spiritus vegetativus , Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-cadmus">Cadmus</a> <span class="rel ev">corresponds-to</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §87 — “Cadmus is interpreted alchemically as Mercurius in his masculine form (Sol)”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-holy-ghost">Holy Ghost (Paraclete)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §12 — “Mercurius corresponds to the Holy Ghost as well as to the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-anthropos">Anthropos / Adam Kadmon</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §12 — “Mercurius corresponds to the Holy Ghost as well as to the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <span class="rel ev">agrees-with</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §528 — “This definition of the serpent agrees with the alchemical Mercurius, who is likewise a kind of water”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, PARTIAL, 2026-07-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-monocolus">Monocolus / Uniped</a> <span class="rel ev">symbolizes</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §720 — “in order to emphasize the unity of Mercurius, Albertus makes use of the expression "monocolus"”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-osiris">Osiris</a> <span class="rel ev">is-analogue-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §726 — “The alchemical interpretation of him as Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-identified-with</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §519 — “Ripley had in his mind, when he used this symbol, the affinity, indeed the identity, of Mercurius with Christ”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-prima-materia">Prima materia</a> <span class="rel ev">was-designated-as</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §517 — “The prima materia was thought of as an ever-changing substance … It was designated with the name “Mercurius,””<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-the-name-for</span> <a class="ev" href="/concept-will">Will (freedom of choice)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §481 — “the objective presence of another will. The alchemists, with astonishing accuracy, called this barely understandable thing Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-psychopomp">Psychopomp</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §284 — “He is the devil, a redeeming psychopomp, an evasive trickster”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is</span> <a class="ev" href="/concept-trickster">Trickster</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §251 — “the elusive Mercurius who evades every grasp—a real trickster”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 13 §251 — “The same was said of the elusive Mercurius who evades every grasp—a real trickster who drove the alchemists to despair.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-a</span> <a class="ev" href="/concept-psychopomp">Psychopomp</a> <span class="prov">human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §409 — “as Mercurius, possesses the Hermetic dual significance of redeeming psychopomp”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">appears-as-archetype-of</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §299 — “From this standpoint Christ appears as the archetype of consciousness and Mercurius as the archetype of the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sulphur">Sulphur</a> <span class="rel ev">begets</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §135 — “sulphur, together with Sal (salt), is the begetter of Mercurius”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-salt">Salt (Sal)</a> <span class="rel ev">begets</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §135 — “sulphur, together with Sal (salt), is the begetter of Mercurius”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-salt">Salt (Sal)</a> <span class="rel ev">derives-from</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §322 — “the notion that salt comes from Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sol">Sol</a> <span class="rel ev">father-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §121 — “Sol is the father of Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">embodies</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §284 — “Mercurius consists of all conceivable opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+<li class="ev">CW 13 §266 — “The psychologem “Mercurius” must therefore possess an essentially antinomian dual nature.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+<li class="ev">CW 13 §269 — “Mercurius truly consists of the most extreme opposites; on the one hand he is undoubtedly akin to the godhead”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sulphur">Sulphur</a> <span class="rel ev">inner-fire-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §140 — “Being the inner fire of Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">contains</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §553 — “According to the old view, Mercurius is duplex, i.e., he is himself an antithesis”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">mediates</span> <a class="ev" href="/concept-coniunctio">Coniunctio</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §659 — “not just the medium of conjunction but also that which is to be united”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">mediates-between</span> <a class="ev" href="/concept-four-elements">The four elements</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §10 — “The idea of Mercurius as a peacemaker, the mediator between the warring elements and producer of unity”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-morally-disqualified-by</span> <a class="ev" href="/concept-christianity">Christianity</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §246 — “Our fairytale thus interprets the evil spirit as a pagan god, forced under the influence of Christianity to descend into the dark underworld”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-kinship">kinship</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima-mundi">Anima Mundi</a> <span class="rel ev">is-feminine-half-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §450 — “The anima mundi is the feminine half of Mercurius.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-sol">Sol</a> <span class="rel ev">masculine-half-of</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §117 — “Sol is regarded as the masculine and active half of Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-found-in</span> <a class="ev" href="/concept-tree">The Tree (mythological)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §287 — “the mercurial spirit, though imprisoned in the bottle, is yet found in the roots of the tree, as its quintessence and living numen”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">dwells-in</span> <a class="ev" href="/concept-celestial-pole">The celestial Pole</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 9ii §206 — “In the Pole is found the heart of Mercurius, “which is the true fire wherein its Lord has his rest.”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §209 — “His other synonym is Mercurius, whose heart is to be found at the Pole, and who guides men on their perilous voyage”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)</span></li>
+<li class="ev">CW 9ii §338 — “the parallel ideas of the alchemists, previously mentioned, about Mercurius, who is found at the North Pole”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-union">union</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §404 — “poison and yet healing draught—a symbol uniting all opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-anima">Anima</a> <span class="rel ev">flows-together-in</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §218 — “two empirically very common archetypes, namely the anima and the Wise Old Man … flow together in the symbolic phenomenology of Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">compensates</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §295 — “put together the figure of Mercurius and created a symbol which … stands in a compensatory relation to Christ”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-transference">The transference</a> <span class="rel ev">amplified-by</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 16 §384 — “The alchemists aptly personified it as the wily god of revelation, Hermes or Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">is-projection-of</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §259 — “the philosophic Mercurius, so dear to the alchemist as the transformative substance, is obviously a projection of the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <span class="rel ev">frees</span> <span class="ev">Mercurius</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §480 — “it is through his work that Mercurius is freed from his chains”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<h2 class="cfam">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-ignis-gehennalis">Ignis gehennalis (central fire)</a> <span class="rel ev">contains</span> <span class="ev">Mercurius</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §632 — “in it dwells the Mercurial serpent”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-son-of-man">Son of Man (filius hominis)</a> <span class="rel ev">is-analogue-of</span> <span class="ev">Mercurius</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 14 §634 — “illustration of the “fils de l’homme ” (= Mercurius)”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">stands-at-beginning-of</span> <a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §404 — “Mercurius stands at the beginning and end of the work: he is the prima materia”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">signifies-spirit-imprisoned-in</span> <a class="ev" href="/concept-matter">Matter</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §404 — “inwardly he means the world-creating spirit concealed or imprisoned in matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-three-legged-ass">Three-legged ass (Bundahish)</a> <span class="rel ev">is-identified-with</span> <span class="ev">Mercurius</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §539 — “The ass is a daemon triunus … portrayed in Latin alchemy as a three-headed monster and identified with Mercurius, salt, and sulphur”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, PARTIAL, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-the-ape">The Ape (anthropoid)</a> <span class="rel ev">crops-up-near</span> <span class="ev">Mercurius</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 12 §173 — “the ape once more crops up in the vicinity of Mercurius as the simia Dei”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">refers-to</span> <a class="ev" href="/concept-the-trinity">The Trinity</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §270 — “The unity of Mercurius is at the same time a trinity, with clear reference to the Holy Trinity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-artifex">The artifex (alchemist-operator)</a> <span class="rel ev">imagines-himself-tormentor-of</span> <span class="ev">Mercurius</span> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 13 §439 — “The reversal of roles shows that the artifex imagines he is the tormentor whereas in fact he is the tormented.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Mercurius</span> <span class="rel ev">exemplifies</span> <a class="ev" href="/concept-trickster">Trickster</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 9i §456 — “A curious combination of typical trickster motifs can be found in the alchemical figure of Mercurius”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/mercurius">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

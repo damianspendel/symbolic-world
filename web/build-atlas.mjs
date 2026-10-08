@@ -12,8 +12,15 @@
 //   edge → { id, key, source, target, relation, relation_normalized, family,
 //            layer, kind, volumes, confidence, refs }
 import { readFileSync, writeFileSync, existsSync } from 'fs'
-import { familyMap } from './family-map.mjs'
+import { familyMap, byKind } from './family-map.mjs'
 import { byVolume } from './query-semantics.mjs'
+
+// The off switch for the per-concept static pages (spec-concept-pages-v1).
+// When false: no concept page is registered, no sitemap entry is written, and
+// the preflight concept checks skip — a disabled build is green and emits what
+// a build without the concept loop would. tools/pages/preflight.py reads this
+// constant from the source, so the flag and the gate cannot disagree.
+const EMIT_CONCEPT_PAGES = true
 
 const here = (p) => new URL(p, import.meta.url)
 const seed = JSON.parse(readFileSync(here('../seed.json')))
@@ -871,6 +878,7 @@ function renderDoc(md, frontCopy) {
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/families">
+<meta name="description" content="The relation families of The Symbolic World, a verified knowledge graph of Jung&#39;s Collected Works: the definitions document in full, the map of relation strings to families, and how each settled record was arrived at.">
 <title>Relation families ${esc(version)} · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
 <style>
@@ -1095,9 +1103,10 @@ const SITE_PAGES = [
   { slug: '', title: 'The atlas', nav: 'the atlas', changefreq: 'daily', priority: '1.0' },
   { slug: 'ledger', title: 'Ledger', nav: 'ledger', changefreq: 'daily', priority: '0.8' },
   { slug: 'families', title: 'Relation families', nav: 'families', changefreq: 'weekly', priority: '0.6' },
-  { slug: 'disputes', title: 'Dispute log', nav: 'disputes', changefreq: 'weekly', priority: '0.5' },
-  { slug: 'graph.json', title: 'The dataset', nav: null, changefreq: 'daily', priority: '0.7' },
-  { slug: 'v1.3/', title: 'The frozen v1.3.0 snapshot', nav: null, changefreq: 'yearly', priority: '0.3' }
+  { slug: 'disputes', title: 'Dispute log', nav: 'disputes', changefreq: 'weekly', priority: '0.5' }
+  // graph.json and the /v1.3/ snapshot left the sitemap (spec-concept-pages-v1,
+  // Stage A3): a sitemap entry is for pages, and both are still linked from
+  // pages — graph.json keeps its Dataset JSON-LD discovery channel.
 ]
 const NEW_PAGES = []          // { slug, title, where, style, body, nav, changefreq, priority }
 const V2_COPY = []            // [name, prose] pairs for the copy contract
@@ -1198,7 +1207,7 @@ function renderPage(p) {
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/${p.slug}">
-<title>${esc(p.title)} · The Symbolic World</title>
+${p.description ? `<meta name="description" content="${esc(p.description)}">\n` : ''}<title>${esc(p.title)} · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
 <style>${V2_STYLE}${p.style || ''}</style>
 ${p.head || ''}</head>
@@ -1348,7 +1357,9 @@ external-validity figures from <code>docs/experiments/external_validity_2026-08/
 `
   registerPage({
     slug: 'releases', title: 'Releases', where: 'releases', nav: 'releases',
-    changefreq: 'monthly', priority: '0.5', style: relStyle, body: relBody
+    changefreq: 'monthly', priority: '0.5',
+    description: 'Release notes for The Symbolic World, a verified knowledge graph of Jung’s Collected Works: what each release added, with its version pin and receipts.',
+    style: relStyle, body: relBody
   })
   V2_COPY.push(['public/releases.html (generated from docs/RELEASES.md)', stripEvidence(relBody)])
   console.log(`releases: ${entries.length} entries — pin ruleset ${famVersion}, record ${bindingCalib.file} (${bindingCalib.verdict})`)
@@ -1481,6 +1492,7 @@ built ${buildDate}
   const p = registerPage({
     slug: `family-${fam.id}`, title: `${fam.name} — a relation family`,
     where: `families · ${fam.name}`, nav: null, changefreq: 'weekly', priority: '0.4',
+    description: `${fam.name}: a relation family in The Symbolic World’s graph of Jung’s Collected Works — definition, boundary rulings, and the edges assigned to it.`,
     style: '', body
   })
   famPages.push({ page: p, fam, edges: row.edges })
@@ -1518,6 +1530,126 @@ tr.total td { color: var(--ink-faint); }
 for (const f of famPages) f.page.style = styleFamily
 console.log(`family pages: ${famPages.length} written, ${famPageTotal} assigned relations accounted for ` +
   `(${famPages.filter(f => !f.edges).length} family with no assigned edge)`)
+
+// ------------------------------- concept pages (spec-concept-pages-v1) ------
+// One small static page per atlas node, emitted the way the family pages are:
+// everything on a page is read off the node and its edges, the evidence —
+// quotes, relation strings, node labels, citation lines — is wrapped in
+// class="ev" for the copy scan, and every count the page states is computed
+// here and registered through derived(). The pages carry nav: null; they are
+// reachable by URL and by search, never from the site chrome. The off switch
+// is EMIT_CONCEPT_PAGES at the top of this file.
+const styleConcept = `
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+`
+if (EMIT_CONCEPT_PAGES) {
+  const conceptFamIds = new Set(families.map(f => f.id))
+  const conceptFamName = new Map(families.map(f => [f.id, f.name]))
+  const conceptLabel = new Map(atlasNodes.map(n => [n.id, n.label]))
+  const edgesByNode = new Map(atlasNodes.map(n => [n.id, []]))
+  for (const e of atlasEdges) {
+    if (edgesByNode.has(e.source)) edgesByNode.get(e.source).push(e)
+    if (e.target !== e.source && edgesByNode.has(e.target)) edgesByNode.get(e.target).push(e)
+  }
+
+  // RULES #10 — the label beside each relation derives from that edge's own
+  // record: byKind over the `by` field for a settled assignment, the state's
+  // own name otherwise. No sentence on the page speaks for the rows.
+  const provLabel = (f) => {
+    if (!f) return 'no family record'
+    if (f.state === 'family') return byKind(f.assigned_by)
+    if (f.state === 'pending') return 'queued for a human ruling'
+    if (f.state === 'not-a-relation') return 'ruled not a relation'
+    return f.reason === 'text-undecided' ? 'text undecided' : 'no family carried'
+  }
+
+  // the fixed register note every concept page opens with — one claim about
+  // what the page is, no stronger claim anywhere below it
+  const registerNote = 'Quotations are machine-verified against the source paragraph; ' +
+    'relation families are assigned by a documented procedure. The ' +
+    '<a href="/#/method">method page</a> describes exactly what is and is not checked.'
+
+  const PENDING = '·pending', UNCLASSIFIED = '·unclassified'
+  let conceptCount = 0
+  for (const node of atlasNodes) {
+    const edges = edgesByNode.get(node.id)
+    const refTotal = edges.reduce((a, e) => a + e.refs.length, 0)
+    const vols = [...new Set(edges.flatMap(e => e.volumes))].sort(byVolume)
+    derived(edges.length, refTotal)
+
+    const groups = new Map()
+    for (const e of edges) {
+      const key = e.family && e.family.state === 'family' ? e.family.value
+        : e.family && e.family.state === 'pending' ? PENDING
+        : UNCLASSIFIED
+      if (!groups.has(key)) groups.set(key, [])
+      groups.get(key).push(e)
+    }
+    const rank = (k) => k === PENDING ? 1 : k === UNCLASSIFIED ? 2 : 0
+    const order = [...groups.keys()].sort((a, b) =>
+      rank(a) - rank(b) || groups.get(b).length - groups.get(a).length || String(a).localeCompare(String(b)))
+
+    const row = (e) => {
+      const out = e.source === node.id
+      const otherId = out ? e.target : e.source
+      const rel = (e.relation_normalized && e.relation_normalized.relation) || e.relation
+      const other = `<a class="ev" href="/concept-${otherId}">${esc(conceptLabel.get(otherId) || otherId)}</a>`
+      const self = `<span class="ev">${esc(node.label)}</span>`
+      const cites = e.refs.map(r =>
+        `<li class="ev">CW ${esc(r.volume)} §${esc(r.paragraph)} — “${esc(r.quote)}”` +
+        `<span class="cmeta">${esc(r.claim_type)} · verified by ${esc(r.verified_by)}, ${esc(r.verified_date)}` +
+        `${r.crossvendor_checked ? ` · cross-checked: ${esc(r.crossvendor_checked)}` : ''}</span></li>`).join('\n')
+      return `<div class="crow">
+<div class="triple">${out ? self : other} <span class="rel ev">${esc(rel)}</span> ${out ? other : self} <span class="prov">${esc(provLabel(e.family))}</span></div>
+${e.refs.length ? `<ul class="cites">\n${cites}\n</ul>` : ''}
+</div>`
+    }
+
+    const groupBlocks = order.map(key => {
+      const heading = key === PENDING ? 'pending adjudication'
+        : key === UNCLASSIFIED ? 'unclassified'
+        : conceptFamIds.has(key)
+          ? `<a href="/family-${key}">${esc(conceptFamName.get(key) || key)}</a>`
+          : esc(key)
+      return `<h2 class="cfam">${heading}</h2>\n${groups.get(key).map(row).join('\n')}`
+    }).join('\n')
+
+    const provLine = `${edges.length} relation${edges.length === 1 ? '' : 's'}, ` +
+      `${refTotal} verified citation${refTotal === 1 ? '' : 's'}` +
+      `${vols.length ? ` across CW ${vols.join(', ')}` : ''}.`
+
+    const body = `<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">${esc(node.label)}</span>${node.latin ? ` <em class="latin ev">${esc(node.latin)}</em>` : ''}</h1>
+<p class="sub"><span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span></p></div>
+<p class="meta">${registerNote}</p>
+<p>${provLine}</p>
+${groupBlocks}
+<p class="meta"><a href="/#/n/${node.id}">open in the atlas</a> · <a href="/ledger">the ledger</a></p>`
+
+    registerPage({
+      slug: 'concept-' + node.id,
+      title: `${node.label} — ${node.type} in Jung’s Collected Works`,
+      where: `concepts · ${node.label}`,
+      nav: null, changefreq: 'weekly', priority: '0.3',
+      description: `${node.label} in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.`,
+      style: styleConcept, body
+    })
+    V2_COPY.push([`public/concept-${node.id}.html (generated)`, stripEvidence(body)])
+    conceptCount++
+  }
+  console.log(`concept pages: ${conceptCount} written, one per atlas node`)
+} else {
+  console.log('concept pages: EMIT_CONCEPT_PAGES is false — none registered')
+}
 
 // ------------------------------------------------- V2-R4 · /query ---------
 // The query panel runs the kg_query semantics in the browser: web/query-semantics.mjs
@@ -1766,7 +1898,9 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 
   registerPage({
     slug: 'query', title: 'Query the graph', where: 'query', nav: 'query', kind: 'records',
-    changefreq: 'daily', priority: '0.6', style: queryStyle, body: queryBody, head: queryHead
+    changefreq: 'daily', priority: '0.6',
+    description: 'Query The Symbolic World’s graph of Jung’s Collected Works in the browser: the command-line tool’s filters, run over the published dataset.',
+    style: queryStyle, body: queryBody, head: queryHead
   })
   V2_COPY.push(['public/query.html (generated)', stripEvidence(queryBody)])
   console.log(`query panel: declarations ${activeDecls.length} active, ` +
@@ -2029,7 +2163,9 @@ table.findings .src { font: .58rem var(--mono); }
 `
   registerPage({
     slug: 'ontology', title: 'The design and its practices', where: 'design',
-    nav: 'design', changefreq: 'daily', priority: '0.5', style: ontStyle, body: ontBody
+    nav: 'design', changefreq: 'daily', priority: '0.5',
+    description: 'The design of The Symbolic World’s graph of Jung’s Collected Works: its quality scan, the check against outside scholarship, and what is deliberately absent.',
+    style: ontStyle, body: ontBody
   })
   V2_COPY.push(['public/ontology.html (generated)', stripEvidence(ontBody)])
 
@@ -2055,6 +2191,7 @@ page.</p></div>
   registerPage({
     slug: 'nutshell', title: 'In a nutshell', where: 'in a nutshell',
     nav: 'in a nutshell', changefreq: 'monthly', priority: '0.5',
+    description: 'How The Symbolic World is made, on one page: a real claim from Jung’s Collected Works followed through proposal, verification, cross-vendor audit and human refereeing to its published receipt.',
     style: '.fig-poster img { width: 100%; height: auto; display: block; border-radius: 6px; }\n.fig-poster { margin-top: 1.2rem; }',
     body: nutshellBody
   })
@@ -2072,6 +2209,82 @@ page.</p></div>
   }))
   console.log(`ontology page: scan ${QA.totals.critical}/${QA.totals.important}/${QA.totals.minor} findings — ` +
     `${counts.design} design, ${counts.declared} declared, ${counts.open} open, ${counts.unclassified} unclassified`)
+}
+
+// ------------------------------ /method (spec-concept-pages-v1, Stage B) ----
+// The indexable twin of the SPA's #/method view: the same methodHTML the view
+// reads from web/src/method.json, under the shared page shell, with a
+// description and an extensionless canonical. The SPA route stays; the menu is
+// unchanged (nav: null — the about group already points at /#/method). The
+// figure styling is the view's own, carried from web/src/style.css so the two
+// surfaces draw the same figures.
+// Frozen measured results quoted in the method copy, with the sources the copy
+// document itself records. They are constants, not counts that move.
+// Item 34(d3) — audited 2026-08-14. The scan only reads 3- and 4-digit
+// literals, so every sub-100 entry this list used to carry (19, 20, 38, 40, 2,
+// 86, 14, 7, 25, 5) was inert and is gone. What remains is enforced and is
+// legitimately frozen: the paper-pinned v1.3.0 counts, which CI holds against
+// the tag, and the DOI's two parts. The dispute count left this list entirely —
+// it derives from disputes.json now. (Declared here since the static /method
+// page's copy entry carries it too; the scan itself runs at the foot of the
+// file.)
+const METHOD_CONSTANTS = new Set([
+  248, 669, 699,        // the release the paper describes, pinned to v1.3.0
+  5281, 21631523        // the concept DOI
+])
+if (methodHTML) {
+  const methodStyle = `
+.method-page h2 { margin: 2.4rem 0 .6rem; }
+.method-page h2:first-child { margin-top: .4rem; }
+.method-page p { font-size: 1rem; line-height: 1.68; margin-bottom: .9rem; color: var(--ink); }
+.method-page li { font-size: 1rem; line-height: 1.62; margin-bottom: .55rem; color: var(--ink); }
+.method-page ol, .method-page ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+.method-page strong { color: var(--ink); font-weight: 600; }
+.method-page em { font-style: italic; }
+.method-page a { color: var(--gold); }
+.method-page table { border-collapse: collapse; width: 100%; font-size: .9rem; margin: .6rem 0 1.4rem; }
+.method-page th, .method-page td { border: 1px solid var(--hairline); padding: .55rem .75rem; text-align: left; vertical-align: top; }
+.method-page th { color: var(--gold); font-weight: 500; background: var(--panel); }
+.method-page td { color: var(--ink-faint); }
+.method-page .tw { overflow-x: auto; }
+.fig { margin: 1.4rem 0 1.6rem; padding: 1.1rem 1.2rem; border: 1px solid var(--hairline); border-radius: 10px; background: var(--panel); }
+.fig figcaption { font: .68rem var(--mono); color: var(--ink-dim); line-height: 1.5; margin-top: .8rem; }
+.claim-fig { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.fig-node { display: inline-block; padding: .3rem .8rem; border-radius: 999px; font-family: var(--display); font-size: 1.02rem; }
+.fig-node[data-type="Symbol"] { color: var(--m-symbol); border: 1px solid var(--m-symbol); background: rgba(194, 205, 214, 0.09); }
+.fig-node[data-type="Concept"] { color: var(--m-concept); border: 1px solid var(--m-concept); background: rgba(212, 175, 55, 0.09); }
+.fig-rel { color: var(--gold); font-style: italic; font-size: .95rem; }
+.fig-rel i { font-style: normal; color: var(--ink-dim); }
+.fig-cite { font: .62rem var(--mono); color: var(--gold-dim); border: 1px solid var(--hairline); border-radius: 999px; padding: .2rem .55rem; }
+.works-fig { display: flex; align-items: flex-end; gap: 2px; height: 3rem; }
+.work-fig { position: relative; height: 1.4rem; background: var(--gold); border-radius: 2px 2px 0 0; min-width: 3px; }
+.work-fig span { position: absolute; bottom: calc(100% + 3px); left: 50%; transform: translateX(-50%);
+  font: .56rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.metals-fig { display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: .6rem 1rem; list-style: none; }
+.method-page .metals-fig { padding-left: 0; margin: 0; }
+.method-page .metals-fig li { display: flex; align-items: baseline; gap: .5rem; margin: 0; font-size: .95rem; min-width: 0; }
+.metal-dot { width: .7rem; height: .7rem; border-radius: 999px; flex: none; align-self: center; }
+.metal-kind { color: var(--ink); }
+.metal-name { font: .68rem var(--mono); color: var(--ink-dim); }
+.cite-block { border-left: 3px solid var(--gold-dim); padding: .7rem 0 .7rem 1rem; margin: 1.4rem 0; }
+.cite-title { font-family: var(--display); font-size: 1rem; color: var(--ink); line-height: 1.45; }
+.cite-meta { font: .7rem var(--mono); color: var(--ink-faint); margin-top: .35rem; }
+.cite-doi { font: .7rem var(--mono); color: var(--ink-dim); margin-top: .25rem; }
+`
+  const methodBody = `<div class="titleband"><p class="eyebrow">about</p>
+<h1>The method</h1>
+<p class="sub">How a claim gets into this graph, and what the checks do and do not cover.</p></div>
+<div class="method-page">
+${methodHTML}
+</div>`
+  registerPage({
+    slug: 'method', title: 'The method', where: 'about · method',
+    nav: null, changefreq: 'weekly', priority: '0.5',
+    description: 'How a claim gets into The Symbolic World’s graph of Jung’s Collected Works, and what the checks do and do not cover.',
+    style: methodStyle, body: methodBody
+  })
+  V2_COPY.push(['public/method.html (generated from docs/METHOD_COPY.md)', stripEvidence(methodBody), METHOD_CONSTANTS])
+  console.log('method page: static twin of /#/method written to /method')
 }
 
 // ------------------------------------------------ the pages are written ----
@@ -2128,18 +2341,6 @@ const allowedNumbers = new Set([
   ...V2_NUMBERS
 ].filter(n => Number.isFinite(n)))
 
-// Frozen measured results quoted in the method copy, with the sources the copy
-// document itself records. They are constants, not counts that move.
-// Item 34(d3) — audited 2026-08-14. The scan only reads 3- and 4-digit
-// literals, so every sub-100 entry this list used to carry (19, 20, 38, 40, 2,
-// 86, 14, 7, 25, 5) was inert and is gone. What remains is enforced and is
-// legitimately frozen: the paper-pinned v1.3.0 counts, which CI holds against
-// the tag, and the DOI's two parts. The dispute count left this list entirely —
-// it derives from disputes.json now.
-const METHOD_CONSTANTS = new Set([
-  248, 669, 699,        // the release the paper describes, pinned to v1.3.0
-  5281, 21631523        // the concept DOI
-])
 const copySources = [
   ['docs/METHOD_COPY.md (wired verbatim)', methodHTML, METHOD_CONSTANTS],
   // The families page's own exposition (NOT the definitions document it renders

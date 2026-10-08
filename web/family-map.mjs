@@ -23,7 +23,7 @@ const bump = (m, k) => m.set(k, (m.get(k) || 0) + 1)
 // The four ways a settled record is arrived at. An unrecognised `by` string is
 // reported as itself rather than folded into the commonest case, so a new
 // provenance cannot hide inside the arms-agreed count.
-function byKind (by) {
+export function byKind (by) {
   const b = String(by || '').toLowerCase()
   // precedent BEFORE human: the precedent records name the human sitting they
   // came from ("precedent (human-adjudication 2026-08-10: ...)"), so a
