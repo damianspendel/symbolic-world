@@ -42,15 +42,15 @@ site shows the verbatim sentence.
 
 Everything comes from a single source: the Bollingen edition of the *Collected
 Works*, in English. No secondary literature, no commentary, no symbol
-dictionaries. That choice costs breadth and buys depth.
+dictionaries. That keeps the map close to Jung's own text, at the cost of
+breadth.
 
 [figure: the works bar, as it appears at the bottom of the atlas]
 
-The bar along the bottom of the atlas is the corpus made visible: one segment
-per volume, sized by how much verified evidence it carries. The alchemical
-trilogy (CW 12, 13, 14) and *Aion* are mined end to end, CW 9i is in progress,
-and five further volumes appear where the deep volumes reach into them. The
-segments select: click one and the atlas shows only that volume's claims.
+The bar along the bottom of the atlas shows the corpus: one segment per
+volume, sized by how much verified evidence it carries, so where mining has
+gone deep is visible at a glance. The segments select: click one and the
+atlas shows only that volume's claims.
 
 ## Reading the atlas
 
@@ -99,14 +99,13 @@ model that signs it off.** Proposer and gate are different model families
 (Anthropic's Opus and Fable lines); the auditor is a different vendor
 altogether (Google's Gemini); and the roles never swap.
 
-The stations bite. In the most recent window, {{last_proposed}} proposed
-citations became {{last_merged}} merged ones; the difference is what the
-checks removed.
+The checks remove real material: in the most recent window, {{last_proposed}}
+proposed citations became {{last_merged}} merged ones.
 
 ## Human oversight
 
-Machine checks are not decisions. Responsible use of AI needs human oversight: a person
-rules on disagreements, decides releases, and answers for what is published.
+Machine checks are not decisions. A person rules on disagreements, decides
+releases, and answers for what is published.
 
 - **Gold set.** {{human_chips}} claims carry a *human-validated* mark in the
   [ledger](/ledger): a person read the cited paragraph. The rest carry the
@@ -137,8 +136,8 @@ The checks are themselves checked:
   The receipts show it as judgment.
 - The family layer's own check is a gate tested by planting errors among real
   assignments. It reported catching everything planted in its early runs. A code
-  inspection we commissioned in August 2026 found that harness could not fully
-  substantiate what "caught" means, so we withdrew those figures. The
+  inspection we commissioned in August 2026 found that the harness could not
+  fully substantiate what "caught" means, so we withdrew those figures. The
   harness was rebuilt in tracked code; calibration re-runs per ruleset version,
   and its figures live in the version-bound records
   (`pipeline/family_calibration/records/`) rather than in this prose, because a
