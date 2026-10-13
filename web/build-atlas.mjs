@@ -22,6 +22,12 @@ import { byVolume } from './query-semantics.mjs'
 // constant from the source, so the flag and the gate cannot disagree.
 const EMIT_CONCEPT_PAGES = true
 
+// The off switch for the /concepts ranked index (spec-instrument-v1, stage I1).
+// When false: the page is not registered, no sitemap entry is written, and
+// tools/pages/preflight.py (which reads this constant from the source) fails a
+// lingering concepts.html as an unexpected file rather than letting it ride.
+const EMIT_CONCEPTS_INDEX = true
+
 const here = (p) => new URL(p, import.meta.url)
 const seed = JSON.parse(readFileSync(here('../seed.json')))
 
@@ -133,7 +139,7 @@ const rootBlock = () => ':root {\n' + Object.entries(TOKENS).map(([k, v]) => `  
 // a menu item is what made the ledger unwieldy in the first place.
 const MENU = [
   ['explore', [['/#/atlas', 'atlas'], ['/query', 'query'], ['/#/concordance', 'concordance']]],
-  ['reference', [['/families', 'families']]],
+  ['reference', [['/concepts', 'concepts'], ['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
   ['about', [['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'design']]]
 ]
@@ -1651,6 +1657,107 @@ ${groupBlocks}
   console.log('concept pages: EMIT_CONCEPT_PAGES is false — none registered')
 }
 
+// --------------------------- /concepts index (spec-instrument-v1, stage I1) --
+// One ranked table over every atlas node: the internal-linking hub for the
+// concept pages (which carry nav: null and are otherwise reached only by URL).
+// The two figures per row are computed here, from the same definition the
+// concept pages print, and the definition itself is stated on the page. Sorting
+// and the type filter are a small inline script over data attributes the build
+// writes — the script computes nothing the build has not already computed.
+const styleConceptsIndex = `
+.cidx td.n { font-variant-numeric: tabular-nums; }
+.cidx td.bar { width: 24%; min-width: 7rem; }
+.cidx .bar i { display: block; height: .5rem; background: var(--gold-dim); border-radius: 2px; }
+.cidx td, .cidx th { padding: .3rem .5rem; }
+.ctrl button { font: .62rem var(--mono); letter-spacing: .05em; color: var(--ink-faint);
+  background: none; border: 1px solid var(--hairline); border-radius: 99px;
+  padding: .14rem .55rem; cursor: pointer; }
+.ctrl button[aria-pressed="true"] { color: var(--gold); border-color: var(--gold-dim); }
+.ctrl select { font: .66rem var(--mono); color: var(--ink-label); background: var(--surface);
+  border: 1px solid var(--hairline); border-radius: 4px; padding: .14rem .3rem; }
+`
+if (EMIT_CONCEPTS_INDEX) {
+  const perNode = new Map(atlasNodes.map(n => [n.id, { edges: 0, refs: 0 }]))
+  for (const e of atlasEdges)
+    for (const id of (e.source === e.target ? [e.source] : [e.source, e.target])) {
+      const t = perNode.get(id)
+      if (t) { t.edges++; t.refs += e.refs.length }
+    }
+  const ranked = [...atlasNodes].sort((a, b) => {
+    const pa = perNode.get(a.id), pb = perNode.get(b.id)
+    return pb.edges - pa.edges || pb.refs - pa.refs || a.label.localeCompare(b.label)
+  })
+  const maxEdges = Math.max(...ranked.map(n => perNode.get(n.id).edges))
+  const maxRefs = Math.max(...ranked.map(n => perNode.get(n.id).refs))
+  const types = [...new Set(ranked.map(n => n.type))].sort()
+
+  const rows = ranked.map((n, i) => {
+    const t = perNode.get(n.id)
+    const rb = derived(Math.round(t.edges / maxEdges * 100))
+    const cb = derived(Math.round(t.refs / maxRefs * 100))
+    derived(i + 1, t.edges, t.refs)
+    return `<tr data-type="${esc(n.type)}" data-r="${t.edges}" data-c="${t.refs}" data-rb="${rb}" data-cb="${cb}">
+<td class="n">${i + 1}</td>
+<td><a class="ev" href="/concept-${n.id}">${esc(n.label)}</a></td>
+<td class="meta">${esc(n.type)}</td>
+<td class="n">${t.edges}</td>
+<td class="n">${t.refs}</td>
+<td class="bar"><i style="width:${rb}%"></i></td>
+</tr>`
+  }).join('\n')
+
+  const conceptsBody = `<div class="titleband"><p class="eyebrow">index</p>
+<h1>Concepts</h1>
+<p class="sub">every concept in the graph, ranked by its verified evidence</p></div>
+<p>${derived(atlasNodes.length)} concepts, ${derived(atlasEdges.length)} verified relations, ${derived(meta.counts.references)} citations.
+Each row links to that concept's own page: its relations grouped by family, with
+the verbatim, paragraph-referenced quotations behind each one.</p>
+<p class="meta ctrl">rank by
+<button data-k="r" aria-pressed="true">relations</button>
+<button data-k="c" aria-pressed="false">citations</button>
+&nbsp;·&nbsp; type <select id="tyf"><option value="">all</option>${types.map(t => `<option>${esc(t)}</option>`).join('')}</select></p>
+<div class="tw"><table class="cidx"><thead>
+<tr><th>#</th><th>concept</th><th>type</th><th>relations</th><th>citations</th><th></th></tr>
+</thead><tbody>
+${rows}
+</tbody></table></div>
+<p class="meta">Counting rule: a concept's <em>relations</em> figure is the number of verified
+edges it appears in, at either end — the figure its own page states — not its count of
+distinct neighbours, so two edges between the same pair count twice. <em>Citations</em>
+is the number of verified quotations those edges carry. Both are computed from the
+graph at build time; the bar is proportional to whichever column the ranking uses.</p>
+<script>
+(() => {
+  const tb = document.querySelector('.cidx tbody')
+  const rows = [...tb.rows]
+  const renumber = () => { let i = 0; for (const r of rows) if (!r.style.display) r.cells[0].textContent = ++i }
+  const buttons = [...document.querySelectorAll('.ctrl button')]
+  for (const btn of buttons) btn.addEventListener('click', () => {
+    const k = btn.dataset.k
+    for (const b of buttons) b.setAttribute('aria-pressed', String(b === btn))
+    rows.sort((a, b) => Number(b.dataset[k]) - Number(a.dataset[k]))
+    for (const r of rows) { tb.appendChild(r); r.querySelector('.bar i').style.width = r.dataset[k + 'b'] + '%' }
+    renumber()
+  })
+  document.getElementById('tyf').addEventListener('change', (e) => {
+    for (const r of rows) r.style.display = (!e.target.value || r.dataset.type === e.target.value) ? '' : 'none'
+    renumber()
+  })
+})()
+</script>`
+
+  registerPage({
+    slug: 'concepts', title: 'Concepts', where: 'concepts', nav: 'concepts', kind: 'records',
+    changefreq: 'weekly', priority: '0.7',
+    description: 'Every concept in The Symbolic World’s verified graph of Jung’s Collected Works, ranked by verified relations and citations, with a link to each concept’s page.',
+    style: styleConceptsIndex, body: conceptsBody
+  })
+  V2_COPY.push(['public/concepts.html (generated)', stripEvidence(conceptsBody)])
+  console.log(`concepts index: ${ranked.length} rows, ranked by relations (max ${maxEdges})`)
+} else {
+  console.log('concepts index: EMIT_CONCEPTS_INDEX is false — not registered')
+}
+
 // ------------------------------------------------- V2-R4 · /query ---------
 // The query panel runs the kg_query semantics in the browser: web/query-semantics.mjs
 // is copied verbatim to public/query.js, the declarations travel with it, and the
@@ -2089,7 +2196,7 @@ ${pitfallRows}
 <h2>The pitfall scan</h2>
 <p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects carried in the record.</p>
 <div class="qa">
-  <div class="fig"><span class="figv ev">${h.hapax_pct}%</span><span class="figl">of relation strings are used exactly once <span class="ev">(${h.hapax_relations} of ${h.distinct_relations})</span></span></div>
+  <div class="fig"><span class="figv ev">${h.hapax_pct.toFixed(1)}%</span><span class="figl">of relation strings are used exactly once <span class="ev">(${h.hapax_relations} of ${h.distinct_relations})</span></span></div>
   <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
   <div class="fig"><span class="figv ev">${di.observed_pairs_declared}/${di.observed_inverse_pairs_in_vocabulary}</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(${di.edges_carrying_a_declared_string}</span> relations carry a declared string)</span></div>
   <div class="fig"><span class="figv ev">${h.detached_components}</span><span class="figl">component detached from the main graph <span class="ev">(${h.largest_component}</span> of ${h.nodes} nodes are in it)</span></div>

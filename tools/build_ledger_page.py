@@ -45,7 +45,7 @@ def esc(s):
 MENU = [
     ("explore", [("/#/atlas", "atlas"), ("/query", "query"),
                  ("/#/concordance", "concordance")]),
-    ("reference", [("/families", "families")]),
+    ("reference", [("/concepts", "concepts"), ("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
     ("about", [("/nutshell", "in a nutshell"), ("/#/method", "method"),
@@ -350,6 +350,7 @@ def batch_page(batch, delta, commits):
   <nav class="sitenav"><a href="/">the atlas</a>
     <a href="/ledger">ledger</a>
     <a href="/releases">releases</a>
+    <a href="/concepts">concepts</a>
     <a href="/families">families</a>
     <a href="/query">query</a>
     <a href="/ontology">design</a></nav>
@@ -710,6 +711,7 @@ def build():
 {chr(10).join(batch_rows)}
   </div>
   <nav class="sitenav"><a href="/">the atlas</a>
+    <a href="/concepts">concepts</a>
     <a href="/families">families</a>
     <a href="/releases">releases</a>
     <a href="/query">query</a>

@@ -82,13 +82,23 @@ atlas_node_ids = set()
 atlas_path = ROOT / 'web' / 'src' / 'atlas.json'
 if atlas_path.exists():
     atlas_node_ids = {n['id'] for n in json.loads(atlas_path.read_text()).get('nodes', [])}
-flag_match = re.search(r'^const EMIT_CONCEPT_PAGES = (true|false)$',
-                       (ROOT / 'web' / 'build-atlas.mjs').read_text(), re.M)
+build_src = (ROOT / 'web' / 'build-atlas.mjs').read_text()
+flag_match = re.search(r'^const EMIT_CONCEPT_PAGES = (true|false)$', build_src, re.M)
 if not flag_match:
     check('EMIT_CONCEPT_PAGES readable from web/build-atlas.mjs', False,
           'the constant is missing or no longer a literal — the gate cannot tell '
           'whether concept pages should be in dist')
 emit_concept_pages = bool(flag_match) and flag_match.group(1) == 'true'
+# spec-instrument-v1, stage I1: the /concepts ranked index, gated the same way.
+# While the gate is on the page is REQUIRED (it joins ALLOW, so the missing-file
+# check bites); while it is off a lingering concepts.html fails as unexpected.
+ci_match = re.search(r'^const EMIT_CONCEPTS_INDEX = (true|false)$', build_src, re.M)
+if not ci_match:
+    check('EMIT_CONCEPTS_INDEX readable from web/build-atlas.mjs', False,
+          'the constant is missing or no longer a literal — the gate cannot tell '
+          'whether the concepts index should be in dist')
+if ci_match and ci_match.group(1) == 'true':
+    ALLOW.add('concepts.html')
 
 print('== manifest ==')
 seen = set()
