@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,21 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">The symbol</span></h1>
 <p class="sub"><span class="p-type">Concept · psyche</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>10 relations, 16 verified citations across CW 8.</p>
-<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<p>88th most connected of 594 concepts · 10 relations, 16 verified citations across CW 8.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">16</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-dependence">dependence 2</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 2</a>
+<a class="chip f-ok" href="#g-generation">generation 1</a>
+<a class="chip f-ok" href="#g-privation">privation 1</a>
+<a class="chip f-ok" href="#g-separation">separation 1</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 1</a>
+<a class="chip f-ok" href="#g-transformation">transformation 1</a>
+<a class="chip f-pend" href="#g-pending">pending 1</a>
+</p>
+<h2 class="cfam" id="g-dependence"><a href="/family-dependence">dependence</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-psychic-development">Psychic development</a> <span class="rel ev">requires</span> <span class="ev">The symbol</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -89,7 +110,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §644 — “spirit that demands a symbol for its expression is a psychic complex that contains the seeds of incalculable possibilities”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The symbol</span> <span class="rel ev">attracts</span> <a class="ev" href="/concept-libido">Libido (psychic energy)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -104,14 +125,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §92 — “We know the extraordinary part played by Christianity in the suppression of individual symbol-formation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<h2 class="cfam" id="g-generation"><a href="/family-generation">generation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">produces</span> <span class="ev">The symbol</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §92 — “Symbols were never devised consciously, but were always produced out of the unconscious by way of revelation or intuition.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<h2 class="cfam" id="g-privation"><a href="/family-privation">privation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The symbol</span> <span class="rel ev">distinct-from</span> <a class="ev" href="/concept-sign">The sign (semiotic expression)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -120,7 +141,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §644 — “By a symbol I do not mean an allegory or a sign, but an image”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<h2 class="cfam" id="g-separation"><a href="/family-separation">separation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-reductive-method">The reductive method</a> <span class="rel ev">dissolves</span> <span class="ev">The symbol</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -128,14 +149,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §148 — “Dissolution of the symbol at this stage of analysis is therefore a mistake.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The symbol</span> <span class="rel ev">expresses</span> <a class="ev" href="/concept-excess-libido">Excess libido</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §91 — “symbols are religious ideas; in the form of action, they are rites or ceremonies. They are the manifestation and expression of excess libido”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The symbol</span> <span class="rel ev">transforms</span> <a class="ev" href="/concept-psychic-energy">Psychic energy</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -143,7 +164,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §113 — “This transformation process is an individual one and cannot be enforced by general rules and maxims. It is achieved by means of the symbol.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">The symbol</span> <span class="rel ev">is</span> <a class="ev" href="/concept-libido-analogue">The libido analogue</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

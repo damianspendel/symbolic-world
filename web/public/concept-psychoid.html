@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,21 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">The psychoid</span></h1>
 <p class="sub"><span class="p-type">Concept · psyche</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>7 relations, 9 verified citations across CW 8, 13, 14.</p>
-<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<p>137th most connected of 594 concepts · 7 relations, 9 verified citations across CW 8, 13, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">7</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:14%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:14%"></i></span><span class="vmc">1</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-doctrinal-attribution">doctrinal-attribution 2</a>
+<a class="chip f-ok" href="#g-classification">classification 1</a>
+<a class="chip f-ok" href="#g-composition">composition 1</a>
+<a class="chip f-ok" href="#g-generation">generation 1</a>
+<a class="chip f-ok" href="#g-privation">privation 1</a>
+<a class="chip f-ok" href="#g-structural-position">structural-position 1</a>
+</p>
+<h2 class="cfam" id="g-doctrinal-attribution"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-hans-driesch">Hans Driesch</a> <span class="rel ev">proposes</span> <span class="ev">The psychoid</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -89,7 +110,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §368 — “the sum of all the purposive, mnemonic, and life-preserving functions of the body”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<h2 class="cfam" id="g-classification"><a href="/family-classification">classification</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">is-a</span> <span class="ev">The psychoid</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -98,28 +119,28 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §912 — “This, in itself, is an irrepresentable, psychoid factor 14 of the collective unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="rel ev">includes</span> <span class="ev">The psychoid</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §382 — “we must also include in the unconscious the psychoid functions that are not capable of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<h2 class="cfam" id="g-generation"><a href="/family-generation">generation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="rel ev">originates-in</span> <span class="ev">The psychoid</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §787 — “when we talk of God or gods we are speaking of debatable images from the psychoid realm”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<h2 class="cfam" id="g-privation"><a href="/family-privation">privation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The psychoid</span> <span class="rel ev">distinct-from</span> <a class="ev" href="/concept-psyche">The psyche</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §368 — “no psychic quality in the proper sense of the word is implied”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<h2 class="cfam" id="g-structural-position"><a href="/family-structural-position">structural-position</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The psychoid</span> <span class="rel ev">underlies</span> <a class="ev" href="/concept-archetypal-image">Archetypal image</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">

@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,24 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Dragon</span></h1>
 <p class="sub"><span class="p-type">Symbol · laboratory</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>15 relations, 15 verified citations across CW 5, 9i, 12, 13, 14.</p>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<p>64th most connected of 594 concepts · 15 relations, 15 verified citations across CW 5, 9i, 12, 13, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 5</span><span class="vtrack"><i style="width:29%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:29%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:14%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:43%"></i></span><span class="vmc">3</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">7</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-symbolization">symbolization 6</a>
+<a class="chip f-ok" href="#g-transformation">transformation 3</a>
+<a class="chip f-ok" href="#g-archetypal-identity">archetypal-identity 2</a>
+<a class="chip f-ok" href="#g-correspondence">correspondence 1</a>
+<a class="chip f-ok" href="#g-opposition">opposition 1</a>
+<a class="chip f-ok" href="#g-personification">personification 1</a>
+<a class="chip f-ok" href="#g-prefiguration">prefiguration 1</a>
+</p>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-mercurius">Mercurius</a> <span class="rel ev">symbolized-by</span> <span class="ev">Dragon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -113,7 +137,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 13 §118 — “The dragon, or serpent, represents the initial state of unconsciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Dragon</span> <span class="rel ev">transforms-into</span> <a class="ev" href="/concept-lion">Lion (leo)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -132,7 +156,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §624 — “Then comes the enantiodromia: the dragon changes into pneuma, which stands for a divine quaternity.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<h2 class="cfam" id="g-archetypal-identity"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-green-lion">Green Lion (leo viridis)</a> <span class="rel ev">synonym-of</span> <span class="ev">Dragon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -145,28 +169,28 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §351 — “there was a relationship of identity between the sky-woman and the bear, so here between the young girl and the dragon”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Dragon</span> <span class="rel ev">parallels</span> <a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §141 — “the dragon is clearly the filius macrocosmi and, as such, a parallel figure to Christ”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<h2 class="cfam" id="g-opposition"><a href="/family-opposition">opposition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-hero">The Hero</a> <span class="rel ev">battles</span> <span class="ev">Dragon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 5 §380 — “the hero sets free those who had previously been devoured by the whale-dragon”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<h2 class="cfam" id="g-personification"><a href="/family-personification">personification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Dragon</span> <span class="rel ev">personifies</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §548 — “The “old dragon” who prepared the bath ... is, psychologically, a personification of the instinctual psyche”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<h2 class="cfam" id="g-prefiguration"><a href="/family-prefiguration">prefiguration</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Dragon</span> <span class="rel ev">prefigures</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">

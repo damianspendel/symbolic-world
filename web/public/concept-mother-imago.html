@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,22 +83,35 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Mother-imago</span></h1>
 <p class="sub"><span class="p-type">Concept · psyche</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>6 relations, 8 verified citations across CW 8, 9i, 9ii.</p>
-<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<p>154th most connected of 594 concepts · 6 relations, 8 verified citations across CW 8, 9i, 9ii.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:40%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">5</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:20%"></i></span><span class="vmc">1</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-archetypal-identity">archetypal-identity 1</a>
+<a class="chip f-ok" href="#g-projection">projection 1</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 1</a>
+<a class="chip f-ok" href="#g-telos">telos 1</a>
+<a class="chip f-ok" href="#g-union">union 1</a>
+<a class="chip f-pend" href="#g-pending">pending 1</a>
+</p>
+<h2 class="cfam" id="g-archetypal-identity"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Mother-imago</span> <span class="rel ev">identified-with</span> <a class="ev" href="/concept-projection-making-factor">The projection-making factor</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §24 — “In the case of the son, the projection-making factor is identical with the mother-imago”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<h2 class="cfam" id="g-projection"><a href="/family-projection">projection</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Mother-imago</span> <span class="rel ev">is-projected-in</span> <a class="ev" href="/concept-transference">The transference</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §122 — “the father-imago (or even the mother-imago) is projected on to the analyst”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-syzygy">Syzygy (the divine pair)</a> <span class="rel ev">assimilates</span> <span class="ev">Mother-imago</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -98,21 +119,21 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §138 — “from the son’s earliest childhood, the mother was assimilated to the archetypal idea of the syzygy, or conjunction of male and female”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<h2 class="cfam" id="g-telos"><a href="/family-telos">telos</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-libido">Libido (psychic energy)</a> <span class="rel ev">regresses-to</span> <span class="ev">Mother-imago</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §43 — “from the final standpoint the libido regresses to the imago of the mother in order to find there the memory associations”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-union">union</a></h2>
+<h2 class="cfam" id="g-union"><a href="/family-union">union</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Mother-imago</span> <span class="rel ev">blends-with</span> <a class="ev" href="/concept-great-mother">Mother Archetype / Great Mother</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §720 — “its peculiar impressiveness is due to the fact that it is blended with an unconscious aptitude or inborn image”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-god-image">God-image (imago Dei)</a> <span class="rel ev">is-associated-with</span> <span class="ev">Mother-imago</span> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

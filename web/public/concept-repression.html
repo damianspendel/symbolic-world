@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,20 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Repression</span></h1>
 <p class="sub"><span class="p-type">Concept · psyche</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>7 relations, 10 verified citations across CW 8, 11.</p>
-<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<p>132nd most connected of 594 concepts · 7 relations, 10 verified citations across CW 8, 11.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">9</span></span>
+<span class="vm"><span class="vml">CW 11</span><span class="vtrack"><i style="width:11%"></i></span><span class="vmc">1</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-generation">generation 2</a>
+<a class="chip f-ok" href="#g-composition">composition 1</a>
+<a class="chip f-ok" href="#g-doctrinal-attribution">doctrinal-attribution 1</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 1</a>
+<a class="chip f-ok" href="#g-separation">separation 1</a>
+<a class="chip f-none" href="#g-unclassified">unclassified 1</a>
+</p>
+<h2 class="cfam" id="g-generation"><a href="/family-generation">generation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Repression</span> <span class="rel ev">produces</span> <a class="ev" href="/concept-neurosis">Neurosis</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -90,7 +110,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §425 — “the nearer it comes to conversion into its opposite, i.e., an enantiodromia”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-personal-unconscious">The personal unconscious</a> <span class="rel ev">contains</span> <span class="ev">Repression</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -99,28 +119,28 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §588 — “the personal unconscious contains all psychic contents that are incompatible with the conscious attitude”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<h2 class="cfam" id="g-doctrinal-attribution"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-freud">Sigmund Freud</a> <span class="rel ev">proposes</span> <span class="ev">Repression</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §212 — “the first medical theory about the unconscious was, logically, the theory of repression worked out by Freud”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-psychoanalysis">Psychoanalysis (Freudian)</a> <span class="rel ev">reverses</span> <span class="ev">Repression</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §702 — “Freudian psychoanalysis consists essentially in a technique for bringing back to consciousness so-called repressed contents that have become unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<h2 class="cfam" id="g-separation"><a href="/family-separation">separation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Repression</span> <span class="rel ev">splits-off</span> <a class="ev" href="/concept-splinter-psyche">Splinter psyche / autonomous complex</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 11 §22 — “Many complexes are split off from consciousness because the latter preferred to get rid of them by repression.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam">unclassified</h2>
+<h2 class="cfam" id="g-unclassified">unclassified</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-sublimation">Sublimation (Freud)</a> <span class="rel ev">conceals</span> <span class="ev">Repression</span> <span class="prov">no family carried</span></div>
 <ul class="cites">

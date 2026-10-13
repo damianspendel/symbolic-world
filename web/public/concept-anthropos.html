@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,30 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Anthropos / Adam Kadmon</span></h1>
 <p class="sub"><span class="p-type">Motif</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>44 relations, 50 verified citations across CW 9i, 9ii, 12, 13, 14.</p>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<p>17th most connected of 594 concepts · 44 relations, 50 verified citations across CW 9i, 9ii, 12, 13, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:7%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:32%"></i></span><span class="vmc">9</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:18%"></i></span><span class="vmc">5</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:21%"></i></span><span class="vmc">6</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">28</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-correspondence">correspondence 10</a>
+<a class="chip f-ok" href="#g-archetypal-identity">archetypal-identity 8</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 6</a>
+<a class="chip f-ok" href="#g-manifestation">manifestation 3</a>
+<a class="chip f-ok" href="#g-derivation">derivation 2</a>
+<a class="chip f-ok" href="#g-generation">generation 2</a>
+<a class="chip f-ok" href="#g-kinship">kinship 1</a>
+<a class="chip f-ok" href="#g-personification">personification 1</a>
+<a class="chip f-ok" href="#g-telos">telos 1</a>
+<a class="chip f-ok" href="#g-transformation">transformation 1</a>
+<a class="chip f-ok" href="#g-union">union 1</a>
+<a class="chip f-pend" href="#g-pending">pending 6</a>
+<a class="chip f-none" href="#g-unclassified">unclassified 2</a>
+</p>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">amplified-by</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -139,7 +169,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9ii §406 — “the rotundum coincides with the archetype of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<h2 class="cfam" id="g-archetypal-identity"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">is-a</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">human ruling</span></div>
 <ul class="cites">
@@ -189,7 +219,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §529 — “that is, the Anthropos, the spiritual, inner and complete man, who in Chinese alchemy is called the chen-yen”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a> <span class="rel ev">symbolizes</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -227,7 +257,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 13 §417 — “so the stork is its spiritual principle and thus a symbol of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-7, SUPPORTED, 2026-08-01)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<h2 class="cfam" id="g-manifestation"><a href="/family-manifestation">manifestation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">manifests-as</span> <a class="ev" href="/concept-homunculus">Homunculus</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -246,7 +276,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §532 — “she had rediscovered the historical synonym of the philosophical egg, namely the rotundum , the round, original form of the Anthropos”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<h2 class="cfam" id="g-derivation"><a href="/family-derivation">derivation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-filius-philosophorum">Filius Philosophorum</a> <span class="rel ev">based-on</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -259,7 +289,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §592 — “Accordingly, Adam Kadmon here takes the place of Tifereth.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (b-union-2 post-merge check, 2026-07-27: 4 SUPPORTED / 3 both-defensible adjudicated)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<h2 class="cfam" id="g-generation"><a href="/family-generation">generation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-coniunctio">Coniunctio</a> <span class="rel ev">produces</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -273,42 +303,42 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §594 — “From En Soph, from the most general One, was produced the universe, which is Adam Kadmon, who is One and Many”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (b-union-2 post-merge check, 2026-07-27: 4 SUPPORTED / 3 both-defensible adjudicated)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-kinship">kinship</a></h2>
+<h2 class="cfam" id="g-kinship"><a href="/family-kinship">kinship</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-shulamite">The Shulamite</a> <span class="rel ev">consort-of</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §609 — “Adam Kadmon appears here in the classic form of the son-lover”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<h2 class="cfam" id="g-personification"><a href="/family-personification">personification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">embodies</span> <a class="ev" href="/concept-axiom-of-maria">Axiom of Maria Prophetissa</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §619 — “Adam Kadmon...is himself the process of transformation...The alchemical formula for this is the Axiom of Maria”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<h2 class="cfam" id="g-telos"><a href="/family-telos">telos</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-circulatio">Circulatio</a> <span class="rel ev">aims-to-reproduce</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §5 — “the aim of the circulatio is the production (or rather, reproduction) of the Original Man, who was a sphere.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-filius-regius">Filius Regius (King's Son)</a> <span class="rel ev">transforms-into</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §443 — “make the filius regius into the rearisen Primordial Man, who is the cosmos.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-union">union</a></h2>
+<h2 class="cfam" id="g-union"><a href="/family-union">union</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anthropos / Adam Kadmon</span> <span class="rel ev">embodies</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §605 — “In the idea of the homo maximus the Above and Below of creation are reunited”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-rebis">Rebis / Hermaphrodite</a> <span class="rel ev">amplified-by</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">
@@ -345,7 +375,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9ii §320 — “The splitting of the Original Man into husband and wife expresses an act of nascent consciousness; it gives birth to a pair of opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)</span></li>
 </ul>
 </div>
-<h2 class="cfam">unclassified</h2>
+<h2 class="cfam" id="g-unclassified">unclassified</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-old-adam">The Old Adam (vetus Adam)</a> <span class="rel ev">contaminated-with</span> <span class="ev">Anthropos / Adam Kadmon</span> <span class="prov">text undecided</span></div>
 <ul class="cites">

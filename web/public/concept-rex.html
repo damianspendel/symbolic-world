@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,31 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Rex (the King)</span></h1>
 <p class="sub"><span class="p-type">Figure</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>34 relations, 35 verified citations across CW 9i, 9ii, 12, 14, 16.</p>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<p>28th most connected of 594 concepts · 34 relations, 35 verified citations across CW 9i, 9ii, 12, 14, 16.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:3%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:3%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:3%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">31</span></span>
+<span class="vm"><span class="vml">CW 16</span><span class="vtrack"><i style="width:3%"></i></span><span class="vmc">1</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 6</a>
+<a class="chip f-ok" href="#g-archetypal-identity">archetypal-identity 4</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 4</a>
+<a class="chip f-ok" href="#g-personification">personification 3</a>
+<a class="chip f-ok" href="#g-transformation">transformation 3</a>
+<a class="chip f-ok" href="#g-kinship">kinship 2</a>
+<a class="chip f-ok" href="#g-telos">telos 2</a>
+<a class="chip f-ok" href="#g-classification">classification 1</a>
+<a class="chip f-ok" href="#g-correspondence">correspondence 1</a>
+<a class="chip f-ok" href="#g-dependence">dependence 1</a>
+<a class="chip f-ok" href="#g-instrumentality">instrumentality 1</a>
+<a class="chip f-ok" href="#g-separation">separation 1</a>
+<a class="chip f-ok" href="#g-union">union 1</a>
+<a class="chip f-pend" href="#g-pending">pending 4</a>
+</p>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-aqua-permanens">Aqua permanens (permanent water)</a> <span class="rel ev">renews</span> <span class="ev">Rex (the King)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -113,7 +144,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §425 — “there grew up in their unconscious the compensating image of the king’s renewal”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<h2 class="cfam" id="g-archetypal-identity"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">synonym-of</span> <a class="ev" href="/concept-sol">Sol</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -138,7 +169,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §546 — “As the transformative substance, therefore, Adam is also the king”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -163,7 +194,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §72 — “the old king is the ruling symbol that wants to go to its eternal rest”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<h2 class="cfam" id="g-personification"><a href="/family-personification">personification</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-coniunctio">Coniunctio</a> <span class="rel ev">amplified-by</span> <span class="ev">Rex (the King)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -183,7 +214,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §424 — “he represents a dominant of consciousness, such as a generally accepted principle”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">renewed-as</span> <a class="ev" href="/concept-lapis">Lapis philosophorum</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -202,7 +233,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §472 — “So, too, the king rises from his “infernal fire” as a crowned dragon”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-kinship">kinship</a></h2>
+<h2 class="cfam" id="g-kinship"><a href="/family-kinship">kinship</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-regina">Regina (the Queen)</a> <span class="rel ev">adopts</span> <span class="ev">Rex (the King)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -215,7 +246,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §416 — “Venus appears as the feminine aspect of the king, or as we should say, his anima”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<h2 class="cfam" id="g-telos"><a href="/family-telos">telos</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">destined-for</span> <a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -228,49 +259,49 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §436 — “This gives the king immortality in a divine and incorruptible body”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<h2 class="cfam" id="g-classification"><a href="/family-classification">classification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">is-a</span> <a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §356 — “the king, like every archetype, is not just a static image; he signifies a dynamic process”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-spirit">Spirit</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §536 — “the queen corresponds to the soul (anima) and the king to spirit, the dominant of consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<h2 class="cfam" id="g-dependence"><a href="/family-dependence">dependence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">renewed-through</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">human ruling</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §471 — “the king constantly needs the renewal that begins with a descent into his own darkness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<h2 class="cfam" id="g-instrumentality"><a href="/family-instrumentality">instrumentality</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">transformed-through</span> <a class="ev" href="/concept-hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §356 — “his procreation and birth, in the form of a hierosgamos”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<h2 class="cfam" id="g-separation"><a href="/family-separation">separation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-luna">Luna</a> <span class="rel ev">dissolves</span> <span class="ev">Rex (the King)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §506 — “the feminine Luna, who dissolves the king in her moistness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-union">union</a></h2>
+<h2 class="cfam" id="g-union"><a href="/family-union">union</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-the-opposites">The opposites</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §471 — “his ability to unite the polarity of all existence in a symbol”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">Rex (the King)</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-lion">Lion (leo)</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

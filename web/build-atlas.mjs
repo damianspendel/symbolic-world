@@ -1537,6 +1537,23 @@ for (const f of famPages) f.page.style = styleFamily
 console.log(`family pages: ${famPages.length} written, ${famPageTotal} assigned relations accounted for ` +
   `(${famPages.filter(f => !f.edges).length} family with no assigned edge)`)
 
+// Shared by the concept pages' identity line (spec-instrument-v1, I2) and the
+// /concepts index (I1): one definition of a concept's standing — incident
+// edges, citations on them, rank — computed once so the two surfaces cannot
+// disagree. The counting rule is stated on /concepts.
+const conceptStats = new Map(atlasNodes.map(n => [n.id, { edges: 0, refs: 0 }]))
+for (const e of atlasEdges)
+  for (const id of (e.source === e.target ? [e.source] : [e.source, e.target])) {
+    const t = conceptStats.get(id)
+    if (t) { t.edges++; t.refs += e.refs.length }
+  }
+const conceptRanked = [...atlasNodes].sort((a, b) => {
+  const pa = conceptStats.get(a.id), pb = conceptStats.get(b.id)
+  return pb.edges - pa.edges || pb.refs - pa.refs || a.label.localeCompare(b.label)
+})
+const conceptRankOf = new Map(conceptRanked.map((n, i) => [n.id, i + 1]))
+const ordinal = (n) => { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]) }
+
 // ------------------------------- concept pages (spec-concept-pages-v1) ------
 // One small static page per atlas node, emitted the way the family pages are:
 // everything on a page is read off the node and its edges, the evidence —
@@ -1556,6 +1573,14 @@ const styleConcept = `
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 `
 if (EMIT_CONCEPT_PAGES) {
   const conceptFamIds = new Set(families.map(f => f.id))
@@ -1620,24 +1645,49 @@ ${e.refs.length ? `<ul class="cites">\n${cites}\n</ul>` : ''}
 </div>`
     }
 
+    const anchorOf = (key) => 'g-' + (key === PENDING ? 'pending' : key === UNCLASSIFIED ? 'unclassified' : key)
     const groupBlocks = order.map(key => {
       const heading = key === PENDING ? 'pending adjudication'
         : key === UNCLASSIFIED ? 'unclassified'
         : conceptFamIds.has(key)
           ? `<a href="/family-${key}">${esc(conceptFamName.get(key) || key)}</a>`
           : esc(key)
-      return `<h2 class="cfam">${heading}</h2>\n${groups.get(key).map(row).join('\n')}`
+      return `<h2 class="cfam" id="${anchorOf(key)}">${heading}</h2>\n${groups.get(key).map(row).join('\n')}`
     }).join('\n')
 
-    const provLine = `${edges.length} relation${edges.length === 1 ? '' : 's'}, ` +
+    // I2 — the identity line: the node's standing by the /concepts counting
+    // rule, the same rank the index prints.
+    const provLine = `${ordinal(derived(conceptRankOf.get(node.id)))} most connected of ` +
+      `${derived(atlasNodes.length)} concepts · ${edges.length} relation${edges.length === 1 ? '' : 's'}, ` +
       `${refTotal} verified citation${refTotal === 1 ? '' : 's'}` +
       `${vols.length ? ` across CW ${vols.join(', ')}` : ''}.`
+
+    // I2 — the evidence-mix strip: this node's citations by volume, bars
+    // proportional to its own deepest volume. Counts computed here; the strip
+    // is interface, not evidence, so it stays outside class="ev".
+    const volCounts = {}
+    for (const e of edges) for (const r of e.refs) volCounts[r.volume] = (volCounts[r.volume] || 0) + 1
+    const volMax = Math.max(1, ...Object.values(volCounts))
+    const volStrip = Object.keys(volCounts).sort(byVolume).map(v =>
+      `<span class="vm"><span class="vml">CW ${esc(v)}</span><span class="vtrack"><i style="width:${derived(Math.round(volCounts[v] / volMax * 100))}%"></i></span><span class="vmc">${derived(volCounts[v])}</span></span>`
+    ).join('\n')
+
+    // I2 — the family-mix chips: one per group below, in the groups' own
+    // order, each anchoring to its heading.
+    const chips = order.map(key => {
+      const n = groups.get(key).length
+      const label = key === PENDING ? 'pending' : key === UNCLASSIFIED ? 'unclassified' : (conceptFamName.get(key) || key)
+      const cls = key === PENDING ? 'f-pend' : key === UNCLASSIFIED ? 'f-none' : 'f-ok'
+      return `<a class="chip ${cls}" href="#${anchorOf(key)}">${esc(label)} ${derived(n)}</a>`
+    }).join('\n')
 
     const body = `<div class="titleband"><p class="eyebrow">concept</p>
 <h1><span class="ev">${esc(node.label)}</span>${node.latin ? ` <em class="latin ev">${esc(node.latin)}</em>` : ''}</h1>
 <p class="sub"><span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span></p></div>
 <p class="meta">${registerNote}</p>
 <p>${provLine}</p>
+${refTotal ? `<div class="vmix">\n${volStrip}\n</div>` : ''}
+${order.length > 1 ? `<p class="chips">\n${chips}\n</p>` : ''}
 ${groupBlocks}
 <p class="meta"><a href="/#/n/${node.id}">open in the atlas</a> · <a href="/ledger">the ledger</a></p>`
 
@@ -1677,16 +1727,8 @@ const styleConceptsIndex = `
   border: 1px solid var(--hairline); border-radius: 4px; padding: .14rem .3rem; }
 `
 if (EMIT_CONCEPTS_INDEX) {
-  const perNode = new Map(atlasNodes.map(n => [n.id, { edges: 0, refs: 0 }]))
-  for (const e of atlasEdges)
-    for (const id of (e.source === e.target ? [e.source] : [e.source, e.target])) {
-      const t = perNode.get(id)
-      if (t) { t.edges++; t.refs += e.refs.length }
-    }
-  const ranked = [...atlasNodes].sort((a, b) => {
-    const pa = perNode.get(a.id), pb = perNode.get(b.id)
-    return pb.edges - pa.edges || pb.refs - pa.refs || a.label.localeCompare(b.label)
-  })
+  const perNode = conceptStats
+  const ranked = conceptRanked
   const maxEdges = Math.max(...ranked.map(n => perNode.get(n.id).edges))
   const maxRefs = Math.max(...ranked.map(n => perNode.get(n.id).refs))
   const types = [...new Set(ranked.map(n => n.type))].sort()

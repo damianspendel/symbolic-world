@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,25 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">The Wise Old Man</span></h1>
 <p class="sub"><span class="p-type">Figure</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>21 relations, 27 verified citations across CW 9i, 9ii.</p>
-<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<p>44th most connected of 594 concepts · 21 relations, 27 verified citations across CW 9i, 9ii.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">26</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:4%"></i></span><span class="vmc">1</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-classification">classification 3</a>
+<a class="chip f-ok" href="#g-manifestation">manifestation 3</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 3</a>
+<a class="chip f-ok" href="#g-composition">composition 1</a>
+<a class="chip f-ok" href="#g-generation">generation 1</a>
+<a class="chip f-ok" href="#g-instrumentality">instrumentality 1</a>
+<a class="chip f-ok" href="#g-opposition">opposition 1</a>
+<a class="chip f-ok" href="#g-personification">personification 1</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 1</a>
+<a class="chip f-pend" href="#g-pending">pending 5</a>
+<a class="chip f-none" href="#g-unclassified">unclassified 1</a>
+</p>
+<h2 class="cfam" id="g-classification"><a href="/family-classification">classification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">is-archetype-of</span> <a class="ev" href="/concept-spirit">Spirit</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -96,7 +121,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §80 — “the shadow, the anima, and the wise old man—are of a kind that can be directly experienced in personified form”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<h2 class="cfam" id="g-manifestation"><a href="/family-manifestation">manifestation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">appears-as</span> <a class="ev" href="/concept-dwarf">The dwarf (gnome, manikin)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -118,7 +143,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §418 — “we see the archetype of the old man in the guise of an evil-doer”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">compensates</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -138,49 +163,49 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §404 — “for the purpose of inducing self-reflection and mobilizing the moral forces”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">completes</span> <a class="ev" href="/concept-marriage-quaternio">Marriage quaternio</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §42 — “The missing fourth element that would make the triad a quaternity is, in a man, the archetype of the Wise Old Man”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<h2 class="cfam" id="g-generation"><a href="/family-generation">generation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">arises-from</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §402 — “this purposeful reflection and concentration of moral and physical forces that comes about spontaneously in the psychic space outside consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<h2 class="cfam" id="g-instrumentality"><a href="/family-instrumentality">instrumentality</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">employs</span> <a class="ev" href="/concept-bird">Bird (theriomorphic form of the anima and messenger of the old man)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §405 — “To this end he makes ready use of animals, particularly birds”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<h2 class="cfam" id="g-opposition"><a href="/family-opposition">opposition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-trickster">Trickster</a> <span class="rel ev">opposes</span> <span class="ev">The Wise Old Man</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §682 — “the dark chthonic figure to the opposite of the Wise Old Man, namely the magical (and sometimes destructive) Luciferian element”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<h2 class="cfam" id="g-personification"><a href="/family-personification">personification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">personifies</span> <a class="ev" href="/concept-spirit">Spirit</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §682 — “The old man corresponds to the archetype of meaning, or of the spirit”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-mercurius">Mercurius</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §396 — “The pair of them play a considerable role in alchemy as symbols of Mercurius”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">represents</span> <a class="ev" href="/concept-sapientia">Sapientia / Wisdom</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">
@@ -212,7 +237,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §485 — “hides in her turn the powerful archetype of the wise old man (sage, magician, king, etc.)”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
 </ul>
 </div>
-<h2 class="cfam">unclassified</h2>
+<h2 class="cfam" id="g-unclassified">unclassified</h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Wise Old Man</span> <span class="rel ev">appears-in</span> <a class="ev" href="/concept-myth">Myth and fairytale</a> <span class="prov">no family carried</span></div>
 <ul class="cites">

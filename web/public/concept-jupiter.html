@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,22 +83,30 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Jupiter (the planet)</span></h1>
 <p class="sub"><span class="p-type">Figure</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>3 relations, 3 verified citations across CW 9ii.</p>
-<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<p>278th most connected of 594 concepts · 3 relations, 3 verified citations across CW 9ii.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">3</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-opposition">opposition 1</a>
+<a class="chip f-ok" href="#g-prefiguration">prefiguration 1</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 1</a>
+</p>
+<h2 class="cfam" id="g-opposition"><a href="/family-opposition">opposition</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Jupiter (the planet)</span> <span class="rel ev">signifies-life-unlike</span> <a class="ev" href="/concept-saturn">Saturn</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §130 — “In the Iranian view Jupiter signifies life, Saturn death”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<h2 class="cfam" id="g-prefiguration"><a href="/family-prefiguration">prefiguration</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Jupiter (the planet)</span> <span class="rel ev">heralds</span> <a class="ev" href="/concept-messiah">The Messiah</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §128 — “Abarbanel expects the coming of the Messiah when there is a conjunction of Jupiter and Saturn in Pisces”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Jupiter (the planet)</span> <span class="rel ev">signifies</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">

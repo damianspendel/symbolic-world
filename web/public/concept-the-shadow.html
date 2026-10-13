@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,31 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">The shadow</span></h1>
 <p class="sub"><span class="p-type">Concept · psyche</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>37 relations, 49 verified citations across CW 9i, 9ii, 11, 12, 14.</p>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<p>24th most connected of 594 concepts · 37 relations, 49 verified citations across CW 9i, 9ii, 11, 12, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">24</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:63%"></i></span><span class="vmc">15</span></span>
+<span class="vm"><span class="vml">CW 11</span><span class="vtrack"><i style="width:4%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:13%"></i></span><span class="vmc">3</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:25%"></i></span><span class="vmc">6</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-composition">composition 6</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 5</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 4</a>
+<a class="chip f-ok" href="#g-dependence">dependence 3</a>
+<a class="chip f-ok" href="#g-sequence">sequence 2</a>
+<a class="chip f-ok" href="#g-structural-position">structural-position 2</a>
+<a class="chip f-ok" href="#g-correspondence">correspondence 1</a>
+<a class="chip f-ok" href="#g-doctrinal-attribution">doctrinal-attribution 1</a>
+<a class="chip f-ok" href="#g-kinship">kinship 1</a>
+<a class="chip f-ok" href="#g-personification">personification 1</a>
+<a class="chip f-ok" href="#g-prefiguration">prefiguration 1</a>
+<a class="chip f-ok" href="#g-privation">privation 1</a>
+<a class="chip f-ok" href="#g-union">union 1</a>
+<a class="chip f-pend" href="#g-pending">pending 8</a>
+</p>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">includes</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -117,7 +148,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §597 — “that of a Western person with a Christian background, whose light throws a dark shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The shadow</span> <span class="rel ev">challenges</span> <a class="ev" href="/concept-the-ego">The ego</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -148,7 +179,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §478 — “As soon as people get together in masses and submerge the individual, the shadow is mobilized”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-lion">Lion (leo)</a> <span class="rel ev">signifies</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -173,7 +204,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §567 — “The snake, like the devil in Christian theology, represents the shadow, and one which goes far beyond anything personal”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<h2 class="cfam" id="g-dependence"><a href="/family-dependence">dependence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The shadow</span> <span class="rel ev">precedes</span> <a class="ev" href="/concept-anima">Anima</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -192,7 +223,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9ii §402 — “the shadow is on one side regrettable and reprehensible weakness, on the other side healthy instinctivity and the prerequisite for higher consciousness”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-sequence">sequence</a></h2>
+<h2 class="cfam" id="g-sequence"><a href="/family-sequence">sequence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The shadow</span> <span class="rel ev">first-stage-of</span> <a class="ev" href="/concept-individuation">Individuation</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -208,7 +239,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §44 — “if we are able to see our own shadow and can bear knowing about it”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<h2 class="cfam" id="g-structural-position"><a href="/family-structural-position">structural-position</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The shadow</span> <span class="rel ev">conceals</span> <a class="ev" href="/concept-anima">Anima</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -221,28 +252,28 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §689 — “This shadow aspect of the mandala represented the disorderly, disruptive tendencies, the “chaos” that hides behind the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-old-adam">The Old Adam (vetus Adam)</a> <span class="rel ev">corresponds-to</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §602 — “corresponds to the primitive man, the”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<h2 class="cfam" id="g-doctrinal-attribution"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-gnosticism">Gnosticism</a> <span class="rel ev">taught-christ-cast-off</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §75 — “one of the things they taught was that Christ “cast off his shadow from himself.””<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-kinship">kinship</a></h2>
+<h2 class="cfam" id="g-kinship"><a href="/family-kinship">kinship</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-moses">Moses</a> <span class="rel ev">is-accompanied-by</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §244 — “On this pilgrimage he is accompanied by his “shadow,” the “servant” or “lower” man”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<h2 class="cfam" id="g-personification"><a href="/family-personification">personification</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-trickster">Trickster</a> <span class="rel ev">personifies</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -250,14 +281,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §469 — “found a suitable designation for this character-component when I called it the shadow”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<h2 class="cfam" id="g-prefiguration"><a href="/family-prefiguration">prefiguration</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-gnosticism">Gnosticism</a> <span class="rel ev">anticipates</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §552 — “Edem gives birth besides these to twelve “motherly” angels, who—in psychological parlance—represent the shadows of the twelve “fatherly” ones”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<h2 class="cfam" id="g-privation"><a href="/family-privation">privation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">lacks</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -268,14 +299,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9ii §171 — “Christ was born “not without a kind of shadow” and that he afterwards “cast off the shadow from himself.””<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-union">union</a></h2>
+<h2 class="cfam" id="g-union"><a href="/family-union">union</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">assimilates</span> <span class="ev">The shadow</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §574 — “the blackness of the snake and of the sombre surroundings has been assimilated by the nucleus”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">The shadow</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-sol-niger">Sol niger (black sun)</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

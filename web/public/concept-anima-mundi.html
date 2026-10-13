@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,23 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Anima Mundi</span></h1>
 <p class="sub"><span class="p-type">Figure</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>13 relations, 14 verified citations across CW 8, 12, 13, 14.</p>
-<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<p>68th most connected of 594 concepts · 13 relations, 14 verified citations across CW 8, 12, 13, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:29%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:57%"></i></span><span class="vmc">4</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:14%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">7</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-archetypal-identity">archetypal-identity 2</a>
+<a class="chip f-ok" href="#g-composition">composition 2</a>
+<a class="chip f-ok" href="#g-correspondence">correspondence 2</a>
+<a class="chip f-ok" href="#g-doctrinal-attribution">doctrinal-attribution 1</a>
+<a class="chip f-ok" href="#g-kinship">kinship 1</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 1</a>
+<a class="chip f-pend" href="#g-pending">pending 4</a>
+</p>
+<h2 class="cfam" id="g-archetypal-identity"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima Mundi</span> <span class="rel ev">identified-with</span> <a class="ev" href="/concept-filius-macrocosmi">Filius Macrocosmi (Son of the Great World)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -89,7 +112,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 12 §265 — “Mercurius is the world-soul, and the Pole is its heart”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-salt">Salt (Sal)</a> <span class="rel ev">spark-of</span> <span class="ev">Anima Mundi</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -102,7 +125,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §388 — “of the “anima catholica,” the world-soul, which is identical with the spirit of God”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-quintessence">Quintessence (quinta essentia)</a> <span class="rel ev">corresponds-to</span> <span class="ev">Anima Mundi</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -115,28 +138,28 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 12 §265 — “The idea of the anima mundi … coincides with that of the collective unconscious whose centre is the self”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<h2 class="cfam" id="g-doctrinal-attribution"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima Mundi</span> <span class="rel ev">identifies-with</span> <a class="ev" href="/concept-holy-ghost">Holy Ghost (Paraclete)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §393 — “He identified the anima mundi , this same sensus naturae , with the Holy Ghost”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-kinship">kinship</a></h2>
+<h2 class="cfam" id="g-kinship"><a href="/family-kinship">kinship</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima Mundi</span> <span class="rel ev">is-feminine-half-of</span> <a class="ev" href="/concept-mercurius">Mercurius</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §450 — “The anima mundi is the feminine half of Mercurius.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-aqua-permanens">Aqua permanens (permanent water)</a> <span class="rel ev">stands-for</span> <span class="ev">Anima Mundi</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 13 §89 — “The water was the humidum radicale (radical moisture), which stood for the anima media natura or anima mundi imprisoned in matter”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-2, SUPPORTED, 2026-07-31)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-benedicta-viriditas">Benedicta viriditas (blessed greenness)</a> <span class="rel ev">corresponds-to</span> <span class="ev">Anima Mundi</span> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

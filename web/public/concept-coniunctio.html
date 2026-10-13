@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,35 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Coniunctio</span></h1>
 <p class="sub"><span class="p-type">Operation · laboratory</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>33 relations, 40 verified citations across CW 8, 9i, 9ii, 12, 13, 14, 16.</p>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<p>29th most connected of 594 concepts · 33 relations, 40 verified citations across CW 8, 9i, 9ii, 12, 13, 14, 16.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:17%"></i></span><span class="vmc">3</span></span>
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:6%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:33%"></i></span><span class="vmc">6</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:11%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:6%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">18</span></span>
+<span class="vm"><span class="vml">CW 16</span><span class="vtrack"><i style="width:50%"></i></span><span class="vmc">9</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-correspondence">correspondence 4</a>
+<a class="chip f-ok" href="#g-generation">generation 3</a>
+<a class="chip f-ok" href="#g-sequence">sequence 3</a>
+<a class="chip f-ok" href="#g-classification">classification 2</a>
+<a class="chip f-ok" href="#g-personification">personification 2</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 2</a>
+<a class="chip f-ok" href="#g-archetypal-identity">archetypal-identity 1</a>
+<a class="chip f-ok" href="#g-composition">composition 1</a>
+<a class="chip f-ok" href="#g-dependence">dependence 1</a>
+<a class="chip f-ok" href="#g-instrumentality">instrumentality 1</a>
+<a class="chip f-ok" href="#g-manifestation">manifestation 1</a>
+<a class="chip f-ok" href="#g-projection">projection 1</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 1</a>
+<a class="chip f-ok" href="#g-telos">telos 1</a>
+<a class="chip f-ok" href="#g-transformation">transformation 1</a>
+<a class="chip f-pend" href="#g-pending">pending 8</a>
+</p>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-transference">The transference</a> <span class="rel ev">corresponds-to</span> <span class="ev">Coniunctio</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -102,7 +137,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §886 — “An interesting point is the confirmation of the traditional astrological and alchemical correspondence between marriage and the moon-sun aspects”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<h2 class="cfam" id="g-generation"><a href="/family-generation">generation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">produces</span> <a class="ev" href="/concept-anthropos">Anthropos / Adam Kadmon</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -122,7 +157,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §27 — “The conjunction of the moist (= moon) and the hot (= sun) thus produces the balsam”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-sequence">sequence</a></h2>
+<h2 class="cfam" id="g-sequence"><a href="/family-sequence">sequence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">followed-by</span> <a class="ev" href="/concept-nigredo">Nigredo</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -142,7 +177,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §246 — “The darkness has its parallel in the alchemical nigredo , which occurs after the coniunctio , when the female takes the male into herself.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<h2 class="cfam" id="g-classification"><a href="/family-classification">classification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">is-a</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -155,7 +190,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 16 §500 — “the coniunctio is a hierosgamos of the gods and not a mere love-affair between mortals”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<h2 class="cfam" id="g-personification"><a href="/family-personification">personification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-rex">Rex (the King)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -170,7 +205,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 16 §410 — “King and Queen, bridegroom and bride, approach one another...betrothal or marriage”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-mercurius">Mercurius</a> <span class="rel ev">mediates</span> <span class="ev">Coniunctio</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -183,7 +218,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 14 §658 — “aqua permanens or spiritual water ... which are likewise media of conjunction”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<h2 class="cfam" id="g-archetypal-identity"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-individuation">Individuation</a> <span class="rel ev">is-a</span> <span class="ev">Coniunctio</span> <span class="prov">human ruling</span></div>
 <ul class="cites">
@@ -191,63 +226,63 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9ii §117 — “individuation is a “mysterium coniunctionis,” the self being experienced as a nuptial union of opposite halves”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-bitch">Bitch (canicula / moon-dog)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §174 — “an Armenian bitch, join them together, and they will beget”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<h2 class="cfam" id="g-dependence"><a href="/family-dependence">dependence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">is-prerequisite-for</span> <a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §58 — “in order to open the way for a higher union, a coniunctio oppositorum . This is an indispensable prerequisite for wholeness.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<h2 class="cfam" id="g-instrumentality"><a href="/family-instrumentality">instrumentality</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-green-lion">Green Lion (leo viridis)</a> <span class="rel ev">mediates</span> <span class="ev">Coniunctio</span> <span class="prov">human ruling</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §404 — “the green lion is a...means of conjoining the tinctures between sun and moon”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<h2 class="cfam" id="g-manifestation"><a href="/family-manifestation">manifestation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">is-figured-as</span> <a class="ev" href="/concept-tifereth-malchuth">Tifereth &amp; Malchuth</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §425 — “The coniunctio oppositorum engaged... those of the cabalists in the form of Tifereth and Malchuth or God and the Shekhinah”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-06 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<h2 class="cfam" id="g-projection"><a href="/family-projection">projection</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-faust">Faust (Goethe)</a> <span class="rel ev">brings-back</span> <span class="ev">Coniunctio</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §559 — “By identifying with Paris, Faust brings the coniunctio back from its projected state into the sphere of personal psychological experience”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw12-8, SUPPORTED, 2026-07-30)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">symbolizes</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §899 — “The classical coniunctio Solis et Lunae as the symbol of the union of opposites is clearly emphasized.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, PASS, 2026-08-22)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<h2 class="cfam" id="g-telos"><a href="/family-telos">telos</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">culminates-in</span> <a class="ev" href="/concept-unus-mundus">Unus mundus</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §760 — “the union of the whole man with the unus mundus”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a> <span class="rel ev">developed-into</span> <span class="ev">Coniunctio</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §72 — “the symbolism developed in the course of the Middle Ages into the alchemical conjunction of opposites, or “chymical wedding,””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9ii-2, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">Coniunctio</span> <span class="rel ev">amplified-by</span> <a class="ev" href="/concept-tifereth-malchuth">Tifereth &amp; Malchuth</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

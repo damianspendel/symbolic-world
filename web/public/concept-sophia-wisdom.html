@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,43 +83,57 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Sophia (Wisdom)</span></h1>
 <p class="sub"><span class="p-type">Figure</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>6 relations, 6 verified citations across CW 8, 11, 13, 14.</p>
-<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<p>171st most connected of 594 concepts · 6 relations, 6 verified citations across CW 8, 11, 13, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:50%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 11</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:50%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">2</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-classification">classification 1</a>
+<a class="chip f-ok" href="#g-derivation">derivation 1</a>
+<a class="chip f-ok" href="#g-doctrinal-attribution">doctrinal-attribution 1</a>
+<a class="chip f-ok" href="#g-prefiguration">prefiguration 1</a>
+<a class="chip f-ok" href="#g-transformation">transformation 1</a>
+<a class="chip f-none" href="#g-unclassified">unclassified 1</a>
+</p>
+<h2 class="cfam" id="g-classification"><a href="/family-classification">classification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Sophia (Wisdom)</span> <span class="rel ev">is</span> <a class="ev" href="/concept-psychopomp">Psychopomp</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 11 §613 — “As a psychopomp she leads the way to God”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<h2 class="cfam" id="g-derivation"><a href="/family-derivation">derivation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-yahweh">Yahweh</a> <span class="rel ev">draws-knowledge-from</span> <span class="ev">Sophia (Wisdom)</span> <span class="prov">human ruling</span></div>
 <ul class="cites">
 <li class="ev">CW 11 §617 — “Self-reflection becomes an imperative necessity, and for this Wisdom is needed”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<h2 class="cfam" id="g-doctrinal-attribution"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-holy-ghost">Holy Ghost (Paraclete)</a> <span class="rel ev">identifies-with</span> <span class="ev">Sophia (Wisdom)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §336 — “who in early Christian times was called Sophia and thought of as feminine”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<h2 class="cfam" id="g-prefiguration"><a href="/family-prefiguration">prefiguration</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Sophia (Wisdom)</span> <span class="rel ev">prefigures</span> <a class="ev" href="/concept-mary">Mary (Mother of God)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §744 — “she was very distinctly prefigured in the Sophia of the Old Testament”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-shulamite">The Shulamite</a> <span class="rel ev">transforms-into</span> <span class="ev">Sophia (Wisdom)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 14 §648 — “the Shulamite will become Sophia”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam">unclassified</h2>
+<h2 class="cfam" id="g-unclassified">unclassified</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-christ">Christ (as symbol)</a> <span class="rel ev">perceives-the-sufferings-of</span> <span class="ev">Sophia (Wisdom)</span> <span class="prov">no family carried</span></div>
 <ul class="cites">

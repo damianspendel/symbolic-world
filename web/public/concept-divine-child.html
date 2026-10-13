@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,30 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">The Divine Child</span></h1>
 <p class="sub"><span class="p-type">Motif</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>26 relations, 32 verified citations across CW 9i, 12, 14.</p>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<p>35th most connected of 594 concepts · 26 relations, 32 verified citations across CW 9i, 12, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">30</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:3%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:3%"></i></span><span class="vmc">1</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-correspondence">correspondence 3</a>
+<a class="chip f-ok" href="#g-generation">generation 3</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 3</a>
+<a class="chip f-ok" href="#g-classification">classification 2</a>
+<a class="chip f-ok" href="#g-manifestation">manifestation 2</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 2</a>
+<a class="chip f-ok" href="#g-archetypal-identity">archetypal-identity 1</a>
+<a class="chip f-ok" href="#g-prefiguration">prefiguration 1</a>
+<a class="chip f-ok" href="#g-separation">separation 1</a>
+<a class="chip f-ok" href="#g-structural-position">structural-position 1</a>
+<a class="chip f-ok" href="#g-telos">telos 1</a>
+<a class="chip f-ok" href="#g-transformation">transformation 1</a>
+<a class="chip f-ok" href="#g-union">union 1</a>
+<a class="chip f-pend" href="#g-pending">pending 3</a>
+<a class="chip f-none" href="#g-unclassified">unclassified 1</a>
+</p>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">corresponds-to</span> <a class="ev" href="/concept-atman">Atman / Purusha</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -95,7 +125,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §692 — “The child corresponds to Hiranyagarbha and to the homunculus of the alchemists.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<h2 class="cfam" id="g-generation"><a href="/family-generation">generation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-holy-ghost">Holy Ghost (Paraclete)</a> <span class="rel ev">begets</span> <span class="ev">The Divine Child</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -114,7 +144,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §289 — “is born out of the womb of the unconscious, begotten out of the depths of human nature, or rather out of living Nature herself.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">compensates</span> <a class="ev" href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -133,7 +163,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §324 — “The game of ball with the child is the motif of some secret rite which always has to do with “child-sacrifice.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<h2 class="cfam" id="g-classification"><a href="/family-classification">classification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">instantiates</span> <a class="ev" href="/concept-treasure-hard-to-attain">The treasure hard to attain</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -146,7 +176,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §278 — “It is therefore a symbol which unites the opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<h2 class="cfam" id="g-manifestation"><a href="/family-manifestation">manifestation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">appears-as</span> <a class="ev" href="/concept-mercurius">Mercurius</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -160,7 +190,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §287 — “The Christ Child, for instance, is a religious necessity”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">is-symbolic</span> <a class="ev" href="/concept-wholeness">Wholeness / totality</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -176,14 +206,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §273 — “The child motif represents the preconscious, childhood aspect of the collective psyche.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<h2 class="cfam" id="g-archetypal-identity"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-filius-philosophorum">Filius Philosophorum</a> <span class="rel ev">symbolizes</span> <span class="ev">The Divine Child</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §215 — “filius philosophorum = archetype of the divine child”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-prefiguration">prefiguration</a></h2>
+<h2 class="cfam" id="g-prefiguration"><a href="/family-prefiguration">prefiguration</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">prefigures</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -191,7 +221,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §278 — “In the individuation process, it anticipates the figure that comes from the synthesis of conscious and unconscious elements in the personality.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<h2 class="cfam" id="g-separation"><a href="/family-separation">separation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">separates-from</span> <a class="ev" href="/concept-the-mother">The Mother (figure/imago)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -199,35 +229,35 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §287 — ““Child” means something evolving towards independence. This it cannot do without detaching itself from its origins”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<h2 class="cfam" id="g-structural-position"><a href="/family-structural-position">structural-position</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">appears-as-centre-of</span> <a class="ev" href="/concept-mandala">Mandala</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §270 — “Sometimes the child appears ... as the centre of a mandala”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<h2 class="cfam" id="g-telos"><a href="/family-telos">telos</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">aims-at</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §286 — “the most pregnant with the future, signifying a higher stage of self-realization”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">develops-into</span> <a class="ev" href="/concept-the-hero">The Hero</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §289 — “although the hero has outgrown the impotence of the “child,” he is still in a menial position.”<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-union">union</a></h2>
+<h2 class="cfam" id="g-union"><a href="/family-union">union</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">unites</span> <a class="ev" href="/concept-union-of-opposites">Union of opposites</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §278 — “It is therefore a symbol which unites the opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-meister-eckhart">Meister Eckhart</a> <span class="rel ev">envisions</span> <span class="ev">The Divine Child</span> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">
@@ -246,7 +276,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §298 — “Faust, after his death, is received as a boy into the “choir of blessed youths.””<span class="cmeta">jung-reports-parallel · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam">unclassified</h2>
+<h2 class="cfam" id="g-unclassified">unclassified</h2>
 <div class="crow">
 <div class="triple"><span class="ev">The Divine Child</span> <span class="rel ev">possesses</span> <a class="ev" href="/concept-numinosity">Numinosity</a> <span class="prov">no family carried</span></div>
 <ul class="cites">

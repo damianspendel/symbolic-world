@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,17 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">The reductive method</span></h1>
 <p class="sub"><span class="p-type">Operation · laboratory</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>4 relations, 6 verified citations across CW 8.</p>
-<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<p>213th most connected of 594 concepts · 4 relations, 6 verified citations across CW 8.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">6</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-opposition">opposition 1</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 1</a>
+<a class="chip f-ok" href="#g-separation">separation 1</a>
+<a class="chip f-pend" href="#g-pending">pending 1</a>
+</p>
+<h2 class="cfam" id="g-opposition"><a href="/family-opposition">opposition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-constructive-method">The constructive (synthetic) method</a> <span class="rel ev">polarizes-with</span> <span class="ev">The reductive method</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -84,14 +101,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §154 — “This material is generally more useful for the reductive method than for the constructive one”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The reductive method</span> <span class="rel ev">dams-up</span> <a class="ev" href="/concept-libido">Libido (psychic energy)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §109 — “Reduction breaks down all inappropriate and useless symbols and leads back to the merely natural course, and this causes a damming up of libido.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<h2 class="cfam" id="g-separation"><a href="/family-separation">separation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The reductive method</span> <span class="rel ev">dissolves</span> <a class="ev" href="/concept-symbol">The symbol</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -99,7 +116,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §148 — “Dissolution of the symbol at this stage of analysis is therefore a mistake.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-16 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-3, PASS, 2026-08-16)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">The reductive method</span> <span class="rel ev">misinterprets</span> <a class="ev" href="/concept-transference">The transference</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

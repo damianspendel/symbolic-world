@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,36 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Anima</span></h1>
 <p class="sub"><span class="p-type">Figure</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>68 relations, 93 verified citations across CW 9i, 9ii, 11, 12, 13, 14.</p>
-<h2 class="cfam"><a href="/family-personification">personification</a></h2>
+<p>7th most connected of 594 concepts · 68 relations, 93 verified citations across CW 9i, 9ii, 11, 12, 13, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">47</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:11%"></i></span><span class="vmc">5</span></span>
+<span class="vm"><span class="vml">CW 11</span><span class="vtrack"><i style="width:19%"></i></span><span class="vmc">9</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:23%"></i></span><span class="vmc">11</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:19%"></i></span><span class="vmc">9</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:26%"></i></span><span class="vmc">12</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-personification">personification 9</a>
+<a class="chip f-ok" href="#g-manifestation">manifestation 6</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 5</a>
+<a class="chip f-ok" href="#g-correspondence">correspondence 4</a>
+<a class="chip f-ok" href="#g-structural-position">structural-position 4</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 4</a>
+<a class="chip f-ok" href="#g-dependence">dependence 3</a>
+<a class="chip f-ok" href="#g-privation">privation 3</a>
+<a class="chip f-ok" href="#g-union">union 3</a>
+<a class="chip f-ok" href="#g-opposition">opposition 2</a>
+<a class="chip f-ok" href="#g-projection">projection 2</a>
+<a class="chip f-ok" href="#g-transformation">transformation 2</a>
+<a class="chip f-ok" href="#g-classification">classification 1</a>
+<a class="chip f-ok" href="#g-composition">composition 1</a>
+<a class="chip f-ok" href="#g-sequence">sequence 1</a>
+<a class="chip f-ok" href="#g-telos">telos 1</a>
+<a class="chip f-pend" href="#g-pending">pending 15</a>
+<a class="chip f-none" href="#g-unclassified">unclassified 2</a>
+</p>
+<h2 class="cfam" id="g-personification"><a href="/family-personification">personification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">personifies</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -135,7 +171,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 11 §73 — “To take the “woman’s image”—in other words, the unconscious—seriously into account”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-manifestation">manifestation</a></h2>
+<h2 class="cfam" id="g-manifestation"><a href="/family-manifestation">manifestation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">appears-as</span> <a class="ev" href="/concept-nixie">The nixie (water-sprite)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -175,7 +211,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §516 — “in the anima figure of the regina or femina alba in alchemy”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-hecate">Hecate</a> <span class="rel ev">haunts</span> <span class="ev">Anima</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -207,7 +243,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §357 — “Much of the fear which the female sex arouses in men is due to the projection of the anima-image.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-regina">Regina (the Queen)</a> <span class="rel ev">corresponds-to</span> <span class="ev">Anima</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -232,7 +268,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 11 §48 — “There is a corresponding figure, however, that plays an equivalent role, yet it is not a woman’s image but a man’s.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<h2 class="cfam" id="g-structural-position"><a href="/family-structural-position">structural-position</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">functions-as-link-to</span> <a class="ev" href="/concept-spirit">Spirit</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -257,7 +293,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §682 — “The two female figures can be recognized without difficulty as the two aspects of the anima.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-salt">Salt (Sal)</a> <span class="rel ev">signifies</span> <span class="ev">Anima</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -286,7 +322,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 11 §73 — “The “mystery” of the anima is the mysterious allusion to religion.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<h2 class="cfam" id="g-dependence"><a href="/family-dependence">dependence</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-shadow">The shadow</a> <span class="rel ev">precedes</span> <span class="ev">Anima</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -306,7 +342,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §144 — “She intensifies, exaggerates, falsifies, and mythologizes all emotional relations with his work and with other people of both sexes.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<h2 class="cfam" id="g-privation"><a href="/family-privation">privation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">differs-from</span> <a class="ev" href="/concept-the-self">The Self</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -325,7 +361,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §434 — “the anima is and remains the representative of that part of the unconscious which can never be assimilated into a humanly attainable whole”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-10 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-union">union</a></h2>
+<h2 class="cfam" id="g-union"><a href="/family-union">union</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-self">The Self</a> <span class="rel ev">unites-with</span> <span class="ev">Anima</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -344,7 +380,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §175 — “in a man, the mother-complex is never “pure,” it is always mixed with the anima archetype”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-08 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-3, PASS, 2026-08-08)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<h2 class="cfam" id="g-opposition"><a href="/family-opposition">opposition</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">conflicts-with-world-of</span> <a class="ev" href="/concept-the-father">The father (traditional spirit)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -357,7 +393,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 11 §49 — “the dreamer’s feminine side, his unconscious, disagrees with his conscious attitude”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<h2 class="cfam" id="g-projection"><a href="/family-projection">projection</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-tree-nymph">Tree nymph</a> <span class="rel ev">is-a-projection-of</span> <span class="ev">Anima</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -370,7 +406,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §382 — “It seems clear enough that the man’s anima found occasion for projection in the Demeter cult”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-09 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">transforms-into</span> <a class="ev" href="/concept-psychopomp">Psychopomp</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -383,7 +419,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 13 §399 — “In medieval Christianity the shamanistic anima was transformed into Lilith”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-01 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-6, SUPPORTED, 2026-08-01)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-classification">classification</a></h2>
+<h2 class="cfam" id="g-classification"><a href="/family-classification">classification</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">is-a</span> <a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -392,28 +428,28 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §118 — “One of these archetypes, which is of paramount practical importance for the psychotherapist, I have named the anima.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-man">Man (homo)</a> <span class="rel ev">contains</span> <span class="ev">Anima</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §512 — “But the minority of genes belonging to the other sex does not simply disappear”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-sequence">sequence</a></h2>
+<h2 class="cfam" id="g-sequence"><a href="/family-sequence">sequence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">second-stage-of</span> <a class="ev" href="/concept-individuation">Individuation</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §61 — “If the encounter with the shadow is the “apprentice-piece” in the individual’s development, then that with the anima is the “master-piece.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<h2 class="cfam" id="g-telos"><a href="/family-telos">telos</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-solificatio">Solificatio</a> <span class="rel ev">is-consummated-on</span> <span class="ev">Anima</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §68 — “The solificatio is consummated on the person of the anima.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-venus">Venus</a> <span class="rel ev">personifies</span> <span class="ev">Anima</span> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">
@@ -514,7 +550,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 11 §71 — “In the present dream the voice seems to have taken the place of the anima”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam">unclassified</h2>
+<h2 class="cfam" id="g-unclassified">unclassified</h2>
 <div class="crow">
 <div class="triple"><span class="ev">Anima</span> <span class="rel ev">appears-alongside</span> <a class="ev" href="/concept-great-mother">Mother Archetype / Great Mother</a> <span class="prov">no family carried</span></div>
 <ul class="cites">

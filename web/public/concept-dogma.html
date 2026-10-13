@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,25 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Dogma (religious)</span></h1>
 <p class="sub"><span class="p-type">Concept · psyche</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>10 relations, 14 verified citations across CW 8, 9i, 9ii, 11, 12, 14.</p>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<p>89th most connected of 594 concepts · 10 relations, 14 verified citations across CW 8, 9i, 9ii, 11, 12, 14.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:60%"></i></span><span class="vmc">3</span></span>
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">5</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:20%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 11</span><span class="vtrack"><i style="width:60%"></i></span><span class="vmc">3</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:20%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 14</span><span class="vtrack"><i style="width:20%"></i></span><span class="vmc">1</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 2</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 2</a>
+<a class="chip f-ok" href="#g-archetypal-identity">archetypal-identity 1</a>
+<a class="chip f-ok" href="#g-instrumentality">instrumentality 1</a>
+<a class="chip f-ok" href="#g-opposition">opposition 1</a>
+<a class="chip f-ok" href="#g-separation">separation 1</a>
+<a class="chip f-pend" href="#g-pending">pending 2</a>
+</p>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-rex">Rex (the King)</a> <span class="rel ev">renewal-compensates-fading-of</span> <span class="ev">Dogma (religious)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -90,7 +115,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §17 — “the dogma proved its powers of assimilation by turning something horribly alive into the beautiful abstraction of the Trinity idea”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Dogma (religious)</span> <span class="rel ev">expresses</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -103,21 +128,21 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §21 — “Dogma takes the place of the collective unconscious by formulating its contents on a grand scale”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
+<h2 class="cfam" id="g-archetypal-identity"><a href="/family-archetypal-identity">archetypal-identity</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">empirically-equivalent-to</span> <span class="ev">Dogma (religious)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §20 — “The archetypes of the unconscious can be shown empirically to be the equivalents of religious dogmas”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<h2 class="cfam" id="g-instrumentality"><a href="/family-instrumentality">instrumentality</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Dogma (religious)</span> <span class="rel ev">mediates</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §338 — “These mighty projections enable the Catholic to experience large tracts of his collective unconscious in tangible reality.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-18 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<h2 class="cfam" id="g-opposition"><a href="/family-opposition">opposition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-syzygy">Syzygy (the divine pair)</a> <span class="rel ev">contradicts</span> <span class="ev">Dogma (religious)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -125,7 +150,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §132 — “For a monk of the Cistercian Order, which as we know is distinguished for its severity, this vision is exceedingly heretical.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<h2 class="cfam" id="g-separation"><a href="/family-separation">separation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-protestantism">Protestantism</a> <span class="rel ev">abandons</span> <span class="ev">Dogma (religious)</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -133,7 +158,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 11 §10 — “Protestantism, which has abandoned itself apparently to an almost unlimited emancipation from dogmatic tradition and codified ritual”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-archetype">Archetype (archetype-as-such)</a> <span class="rel ev">underlies</span> <span class="ev">Dogma (religious)</span> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

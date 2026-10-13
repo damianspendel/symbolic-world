@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,23 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">The personal unconscious</span></h1>
 <p class="sub"><span class="p-type">Concept · psyche</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>10 relations, 17 verified citations across CW 8, 9i, 9ii, 12.</p>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<p>87th most connected of 594 concepts · 10 relations, 17 verified citations across CW 8, 9i, 9ii, 12.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">8</span></span>
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:88%"></i></span><span class="vmc">7</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:13%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:13%"></i></span><span class="vmc">1</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-composition">composition 3</a>
+<a class="chip f-ok" href="#g-doctrinal-attribution">doctrinal-attribution 2</a>
+<a class="chip f-ok" href="#g-dependence">dependence 1</a>
+<a class="chip f-ok" href="#g-privation">privation 1</a>
+<a class="chip f-ok" href="#g-structural-position">structural-position 1</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 1</a>
+<a class="chip f-pend" href="#g-pending">pending 1</a>
+</p>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The personal unconscious</span> <span class="rel ev">consists-of</span> <a class="ev" href="/concept-splinter-psyche">Splinter psyche / autonomous complex</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -98,7 +121,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §588 — “the personal unconscious contains all psychic contents that are incompatible with the conscious attitude”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
+<h2 class="cfam" id="g-doctrinal-attribution"><a href="/family-doctrinal-attribution">doctrinal-attribution</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-freud">Sigmund Freud</a> <span class="rel ev">reduces-to</span> <span class="ev">The personal unconscious</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -112,14 +135,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §497 — “limits itself in essentials to the repressed personal background of the individual”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-7, PASS, 2026-08-19)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-dependence">dependence</a></h2>
+<h2 class="cfam" id="g-dependence"><a href="/family-dependence">dependence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The personal unconscious</span> <span class="rel ev">bars-gateway-to</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §81 — “This “personal unconscious” must always be dealt with first, that is, made conscious, otherwise the gateway to the collective unconscious cannot be opened.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-privation">privation</a></h2>
+<h2 class="cfam" id="g-privation"><a href="/family-privation">privation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">The personal unconscious</span> <span class="rel ev">distinct-from</span> <a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -129,21 +152,21 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §591 — “While the contents of the personal unconscious are felt as belonging to one’s own psyche, the contents of the collective unconscious seem alien”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-9, PASS, 2026-08-21)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-structural-position">structural-position</a></h2>
+<h2 class="cfam" id="g-structural-position"><a href="/family-structural-position">structural-position</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-collective-unconscious">The collective unconscious</a> <span class="rel ev">underlies</span> <span class="ev">The personal unconscious</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9i §3 — “this personal unconscious rests upon a deeper layer, which does not derive from personal experience and is not a personal acquisition but is inborn”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-shadow">The shadow</a> <span class="rel ev">represents</span> <span class="ev">The personal unconscious</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 9ii §19 — “it represents first and foremost the personal unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-05 · cross-checked: gemini-3.1-pro (post-merge repair, b-cw9ii-1, SUPPORTED, 2026-08-05)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">The personal unconscious</span> <span class="rel ev">is-layer-of</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

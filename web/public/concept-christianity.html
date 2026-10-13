@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,23 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Christianity</span></h1>
 <p class="sub"><span class="p-type">Concept · psyche</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>11 relations, 11 verified citations across CW 8, 9i, 9ii, 11, 12, 13.</p>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<p>85th most connected of 594 concepts · 11 relations, 11 verified citations across CW 8, 9i, 9ii, 11, 12, 13.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:67%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:33%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:67%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 11</span><span class="vtrack"><i style="width:33%"></i></span><span class="vmc">1</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">3</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:67%"></i></span><span class="vmc">2</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 4</a>
+<a class="chip f-ok" href="#g-correspondence">correspondence 2</a>
+<a class="chip f-ok" href="#g-derivation">derivation 2</a>
+<a class="chip f-ok" href="#g-transformation">transformation 1</a>
+<a class="chip f-pend" href="#g-pending">pending 2</a>
+</p>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-alchemy">Alchemy</a> <span class="rel ev">endeavours-to-compensate</span> <span class="ev">Christianity</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -101,7 +124,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §92 — “We know the extraordinary part played by Christianity in the suppression of individual symbol-formation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-14 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Christianity</span> <span class="rel ev">coincides-with</span> <a class="ev" href="/concept-aeon-of-the-fishes">The aeon of the Fishes</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -114,7 +137,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §25 — “But Christianity had come to stay, because it fits in with the existing archetypal pattern.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-07 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<h2 class="cfam" id="g-derivation"><a href="/family-derivation">derivation</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-dionysos">Dionysus</a> <span class="rel ev">left-relics-in</span> <span class="ev">Christianity</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -127,14 +150,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 13 §232 — “the sacraments of the Church. These are here replaced by the “sacrament” of the opus alchymicum , less by word than by deed”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-4, SUPPORTED, 2026-07-31)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-transformation">transformation</a></h2>
+<h2 class="cfam" id="g-transformation"><a href="/family-transformation">transformation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Christianity</span> <span class="rel ev">transforms</span> <a class="ev" href="/concept-instinct">Instinct</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 8 §36 — “the psychology of Christianity, where the repression of instincts (i.e., of primitive instinctuality) leads to religious substitute formations”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-13 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-1, PASS, 2026-08-13)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">Christianity</span> <span class="rel ev">has-left-untouched</span> <a class="ev" href="/concept-inner-man">The inner man</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">

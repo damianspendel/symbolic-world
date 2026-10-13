@@ -63,6 +63,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .cites { list-style: none; margin-top: .35rem; }
 .cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
 .cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
 </style>
 </head>
 <body>
@@ -75,8 +83,30 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h1><span class="ev">Alchemy</span></h1>
 <p class="sub"><span class="p-type">Concept · laboratory</span></p></div>
 <p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
-<p>27 relations, 35 verified citations across CW 8, 9i, 9ii, 12, 13.</p>
-<h2 class="cfam"><a href="/family-derivation">derivation</a></h2>
+<p>33rd most connected of 594 concepts · 27 relations, 35 verified citations across CW 8, 9i, 9ii, 12, 13.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 8</span><span class="vtrack"><i style="width:18%"></i></span><span class="vmc">3</span></span>
+<span class="vm"><span class="vml">CW 9i</span><span class="vtrack"><i style="width:41%"></i></span><span class="vmc">7</span></span>
+<span class="vm"><span class="vml">CW 9ii</span><span class="vtrack"><i style="width:12%"></i></span><span class="vmc">2</span></span>
+<span class="vm"><span class="vml">CW 12</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">17</span></span>
+<span class="vm"><span class="vml">CW 13</span><span class="vtrack"><i style="width:35%"></i></span><span class="vmc">6</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-derivation">derivation 4</a>
+<a class="chip f-ok" href="#g-telos">telos 3</a>
+<a class="chip f-ok" href="#g-correspondence">correspondence 2</a>
+<a class="chip f-ok" href="#g-projection">projection 2</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 2</a>
+<a class="chip f-ok" href="#g-composition">composition 1</a>
+<a class="chip f-ok" href="#g-generation">generation 1</a>
+<a class="chip f-ok" href="#g-instrumentality">instrumentality 1</a>
+<a class="chip f-ok" href="#g-opposition">opposition 1</a>
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 1</a>
+<a class="chip f-ok" href="#g-separation">separation 1</a>
+<a class="chip f-pend" href="#g-pending">pending 7</a>
+<a class="chip f-none" href="#g-unclassified">unclassified 1</a>
+</p>
+<h2 class="cfam" id="g-derivation"><a href="/family-derivation">derivation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">derives-basic-ideas-from</span> <a class="ev" href="/concept-gnosticism">Gnosticism</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -102,7 +132,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §581 — “Although Böhme took the idea of the cauda pavonis and the tetrameria from alchemy,”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-telos">telos</a></h2>
+<h2 class="cfam" id="g-telos"><a href="/family-telos">telos</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">aims-to-produce</span> <a class="ev" href="/concept-corpus-glorificationis">Corpus glorificationis (resurrected body)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -122,7 +152,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 13 §198 — “Not separation of the natures but union of the natures was the goal of alchemy.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-3, PARTIAL, 2026-07-31)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-correspondence">correspondence</a></h2>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-individuation">Individuation</a> <span class="rel ev">parallels</span> <span class="ev">Alchemy</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -137,7 +167,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §916 — “That is why alchemy developed along parallel lines in East and West and why in both spheres it strove towards the same goal”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-22 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-13, FINDING-adjudicated, 2026-08-22)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-projection">projection</a></h2>
+<h2 class="cfam" id="g-projection"><a href="/family-projection">projection</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">is-the-tradition-whose-practitioners-projected-god-into</span> <a class="ev" href="/concept-matter">Matter</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -150,7 +180,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 13 §140 — “To all appearances, it is a concretization, in projected and symbolic form, of the process of individuation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-symbolization">symbolization</a></h2>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">expresses</span> <a class="ev" href="/concept-individuation">Individuation</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -164,7 +194,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 8 §388 — “one of the most important sources for symbolical ideas in the past is alchemy”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-19 · cross-checked: gemini-3.1-pro (pre-merge, b-cw8-6, PASS, 2026-08-19)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-composition">composition</a></h2>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-axiom-of-maria">Axiom of Maria Prophetissa</a> <span class="rel ev">belongs-to</span> <span class="ev">Alchemy</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
@@ -173,42 +203,42 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 9i §695 — “the dilemma with which Plato’s Timaeus begins, and which as I said plays a considerable role in alchemy, as the axiom of Maria”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-08-12 · cross-checked: gemini-3.1-pro (pre-merge, b-cw9i-10, PASS, 2026-08-12)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-generation">generation</a></h2>
+<h2 class="cfam" id="g-generation"><a href="/family-generation">generation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">is-rooted-in</span> <a class="ev" href="/concept-projection">Projection</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §346 — “the real root of alchemy is to be sought less in philosophical doctrines than in the projections of individual investigators”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-27 · cross-checked: gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-instrumentality">instrumentality</a></h2>
+<h2 class="cfam" id="g-instrumentality"><a href="/family-instrumentality">instrumentality</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">employs-method-of</span> <a class="ev" href="/concept-amplification">Amplification (amplificatio)</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §403 — “The method of alchemy, psychologically speaking, is one of boundless amplification.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-opposition">opposition</a></h2>
+<h2 class="cfam" id="g-opposition"><a href="/family-opposition">opposition</a></h2>
 <div class="crow">
 <div class="triple"><a class="ev" href="/concept-the-christian-standpoint">The Christian standpoint</a> <span class="rel ev">cannot-get-along-with</span> <span class="ev">Alchemy</span> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 13 §155 — “the truth of the Church and the Christian standpoint could never get along with the thought implicit in all alchemy, “God under me.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-3, SUPPORTED, 2026-07-31)</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">endeavours-to-compensate</span> <a class="ev" href="/concept-christianity">Christianity</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §26 — “so alchemy endeavours to fill in the gaps left open by the Christian tension of opposites”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25</span></li>
 </ul>
 </div>
-<h2 class="cfam"><a href="/family-separation">separation</a></h2>
+<h2 class="cfam" id="g-separation"><a href="/family-separation">separation</a></h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">frees-god-from</span> <a class="ev" href="/concept-matter">Matter</a> <span class="prov">two blind arms agreed</span></div>
 <ul class="cites">
 <li class="ev">CW 12 §420 — “but to the liberation of God from the darkness of matter”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-25 · cross-checked: gemini-3.1-pro (E6 stratified audit, 2026-07-27)</span></li>
 </ul>
 </div>
-<h2 class="cfam">pending adjudication</h2>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">misattributes-contents-of</span> <a class="ev" href="/concept-psyche">The psyche</a> <span class="prov">queued for a human ruling</span></div>
 <ul class="cites">
@@ -252,7 +282,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="ev">CW 13 §285 — “But a still greater, more impassioned concern appears to have been—one cannot very well say the “investigation”—but rather the experience of the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-07-31 · cross-checked: gemini-3.1-pro (pre-merge, b-cw13-5, SUPPORTED, 2026-07-31)</span></li>
 </ul>
 </div>
-<h2 class="cfam">unclassified</h2>
+<h2 class="cfam" id="g-unclassified">unclassified</h2>
 <div class="crow">
 <div class="triple"><span class="ev">Alchemy</span> <span class="rel ev">preserves-bridge-to</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">no family carried</span></div>
 <ul class="cites">
