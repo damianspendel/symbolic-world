@@ -1820,6 +1820,11 @@ if (DECL) {
   // records it as not currently exposed. Re-enable by setting this to true.
   const WALK_IN_UI = false
 
+  // spec-instrument-v1, I3 — route finding in the panel. The off switch: false
+  // removes the routes section, its script and its import, and the page is
+  // what a build without the stage emits.
+  const ROUTES_IN_UI = true
+
   const semantics = readFileSync(here('./query-semantics.mjs'), 'utf8')
   writeFileSync(here('./public/query.js'), semantics)
 
@@ -1876,7 +1881,16 @@ if (DECL) {
 
 <div class="rows" id="rows"><p class="dim" id="status">Reading the dataset…</p></div>
 <div class="receipts"><b>receipts</b><span id="receipts">${esc(receiptsFooter)}</span></div>
-
+${ROUTES_IN_UI ? `
+<h2 id="routes-h">Routes</h2>
+<p>Pick two concepts; the panel lists the chains of verified claims that connect them, shortest first, each leg carrying its own citation. A route shows that a chain of cited claims exists — it asserts nothing further about the two ends. Extraction is per sentence, so an empty result means no verified claim was surveyed within the hop budget, and absence is not evidence.</p>
+<div class="filters" style="margin-top:.8rem">
+  <div class="fld"><label for="r-from">from</label><select id="r-from"></select><span class="hint">any concept in the graph</span></div>
+  <div class="fld"><label for="r-to">to</label><select id="r-to"></select><span class="hint">routes run both ways; arrows show each claim's own direction</span></div>
+  <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runroutes" style="margin:0">find routes</button></div>
+</div>
+<div class="routes" id="routes"></div>
+` : ''}
 ${WALK_IN_UI ? `<h2>Identity walk</h2>
 <div class="callout"><p id="walkhead" class="ev">${esc(walkHeader)}</p></div>
 <div class="filters" style="margin-top:.8rem">
@@ -1918,14 +1932,25 @@ ${WALK_IN_UI ? `<h2>Identity walk</h2>
 .hop .via { font: .6rem var(--mono); color: var(--ink-dim); }
 .hop .rel { color: var(--gold); font-style: italic; }
 .hop .cite { font: .6rem var(--mono); color: var(--gold-dim); }
-.hop .against { font: .56rem var(--mono); color: var(--m-motif); }
+.hop .against { font: .56rem var(--mono); color: var(--m-motif); }${ROUTES_IN_UI ? `
+.route { border: 1px solid var(--hairline); border-radius: 8px; padding: .6rem .8rem; margin: .6rem 0; background: var(--surface); }
+.rleg { padding: .3rem 0; }
+.rleg + .rleg { border-top: 1px dashed var(--hairline); }
+.rchain { font-size: .95rem; }
+.rchain i { color: var(--gold); font-style: italic; }
+.rchain .rarr { color: var(--edge-idle); }
+.rcite { font-size: .82rem; color: var(--ink-faint); margin: .15rem 0 0 1rem; }
+.rcite .rc { font: .58rem var(--mono); color: var(--gold-dim); }
+.rcopy { background: none; border: 1px solid var(--hairline); border-radius: 99px; color: var(--ink-faint);
+  font: .58rem var(--mono); letter-spacing: .05em; padding: .14rem .6rem; cursor: pointer; margin-top: .45rem; }
+.rcopy:hover { color: var(--gold); border-color: var(--gold-dim); }` : ''}
 `
 
   // The page's own script. It renders; the semantics live in query.js.
   const ROW_CAP = 300
   derived(ROW_CAP)
   const queryHead = `<script type="module">
-import { select, labelIndex, effectiveRelation, derivedRows, byVolume${WALK_IN_UI ? ', walk, identityEdges' : ''} } from '/query.js'
+import { select, labelIndex, effectiveRelation, derivedRows, byVolume${ROUTES_IN_UI ? ', routesBetween' : ''}${WALK_IN_UI ? ', walk, identityEdges' : ''} } from '/query.js'
 
 const ROW_CAP = ${ROW_CAP}
 const $ = (id) => document.getElementById(id)
@@ -1964,7 +1989,15 @@ function ready () {
   const normalized = graph.edges.filter(e => e.relation_normalized && e.relation_normalized.relation).length
   $('h-normalized').textContent = normalized + ' relations carry a normalized string beside the verbatim one'
   $('status').textContent = 'Ready. Run with no filter to read the whole graph.'
-  run()
+  run()${ROUTES_IN_UI ? `
+  const ropts = graph.nodes.map(n => [n.id, n.label || n.id]).sort((a, b) => String(a[1]).localeCompare(String(b[1])))
+  for (const id of ['r-from', 'r-to'])
+    $(id).innerHTML = '<option value="">pick\\u2026</option>' + ropts.map(([v, l]) => '<option value="' + esc(v) + '">' + esc(l) + '</option>').join('')
+  const qp = new URLSearchParams(location.search)
+  if (qp.get('from') && qp.get('to')) {
+    $('r-from').value = qp.get('from'); $('r-to').value = qp.get('to')
+    runRoutes(); $('routes-h').scrollIntoView()
+  }` : ''}
 }
 
 function filters () {
@@ -2004,7 +2037,62 @@ function run () {
     (closureAll !== null ? 'Closure over the whole graph reads ' + closureAll + ' derived rows from ' + graph.edges.length + ' stored edges. ' : '') +
     'A copied number is an edge count: derived rows are readings of those edges in the other direction, not additions to them.</div>'
 }
-
+${ROUTES_IN_UI ? `
+const HOPS = 3, ROUTE_CAP = 50, ALT_DRAWN = 24
+function routeLeg (hop, cur) {
+  const e = hop.edge
+  const a = esc(labels[cur] || cur), b = esc(labels[hop.next] || hop.next)
+  const chain = hop.reversed
+    ? a + ' <span class="rarr">\\u25c0\\u2500\\u2500</span> <i>' + esc(e.relation) + '</i> <span class="rarr">\\u2500\\u2500</span> ' + b
+    : a + ' <span class="rarr">\\u2500\\u2500</span> <i>' + esc(e.relation) + '</i> <span class="rarr">\\u2500\\u2500\\u25b6</span> ' + b
+  const cites = (e.references || []).map(r => '<div class="rcite"><span class="rc">CW ' + esc(r.volume) + ' \\u00a7' + esc(r.paragraph) + '</span> \\u2014 \\u201c' + esc(r.quote) + '\\u201d</div>').join('')
+  return '<div class="rleg"><span class="rchain">' + chain + '</span>' + cites + '</div>'
+}
+function routeText (legs, from) {
+  let cur = from
+  const lines = []
+  for (const hop of legs) {
+    const e = hop.edge
+    lines.push((labels[cur] || cur) + (hop.reversed ? ' <-[' : ' -[') + e.relation + (hop.reversed ? ']- ' : ']-> ') + (labels[hop.next] || hop.next))
+    for (const r of e.references || []) lines.push('  CW ' + r.volume + ' \\u00a7' + r.paragraph + ' \\u2014 \\u201c' + r.quote + '\\u201d')
+    cur = hop.next
+  }
+  return lines.join('\\n')
+}
+function drawRoute (legs, from, idx) {
+  let cur = from, h = ''
+  for (const hop of legs) { h += routeLeg(hop, cur); cur = hop.next }
+  return '<div class="route">' + h + '<button class="rcopy" type="button" data-ri="' + idx + '">copy as citation list</button></div>'
+}
+let foundRoutes = [], routeFrom = ''
+function runRoutes () {
+  const from = $('r-from').value, to = $('r-to').value
+  const out = $('routes')
+  if (!from || !to) { out.innerHTML = '<p class="dim">Pick both ends.</p>'; return }
+  if (from === to) { out.innerHTML = '<p class="dim">Pick two different concepts.</p>'; return }
+  foundRoutes = routesBetween(graph, from, to, HOPS, ROUTE_CAP); routeFrom = from
+  if (!foundRoutes.length) {
+    out.innerHTML = '<p class="dim">No verified claim surveyed between these within ' + HOPS + ' hops. Extraction is per sentence; absence is not evidence.</p>'
+    return
+  }
+  let html = drawRoute(foundRoutes[0], from, 0)
+  if (foundRoutes.length > 1) {
+    const alts = foundRoutes.slice(1, 1 + ALT_DRAWN).map((legs, i) => drawRoute(legs, from, i + 1)).join('')
+    html += '<details class="disclose"><summary>' + (foundRoutes.length - 1) + ' other route' + (foundRoutes.length === 2 ? '' : 's') + ' within ' + HOPS + ' hops' + (foundRoutes.length >= ROUTE_CAP ? ' (search capped at ' + ROUTE_CAP + ')' : '') + '<span class="more">show them</span></summary>' + alts + (foundRoutes.length - 1 > ALT_DRAWN ? '<p class="dim">first ' + ALT_DRAWN + ' alternates drawn</p>' : '') + '</details>'
+  }
+  out.innerHTML = html
+}
+$('routes').addEventListener('click', (ev) => {
+  const btn = ev.target.closest('button[data-ri]')
+  if (!btn) return
+  const text = routeText(foundRoutes[Number(btn.dataset.ri)], routeFrom)
+  const done = () => { btn.textContent = 'copied'; setTimeout(() => { btn.textContent = 'copy as citation list' }, 1500) }
+  const fallback = () => { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done() }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback)
+  else fallback()
+})
+$('runroutes').addEventListener('click', runRoutes)
+` : ''}
 ${WALK_IN_UI ? `function runWalk () {
   const needle = $('w-start').value.trim()
   const depth = Number($('w-depth').value)
@@ -2048,7 +2136,9 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
   registerPage({
     slug: 'query', title: 'Query the graph', where: 'query', nav: 'query', kind: 'records',
     changefreq: 'daily', priority: '0.6',
-    description: 'Query The Symbolic World’s graph of Jung’s Collected Works in the browser: the command-line tool’s filters, run over the published dataset.',
+    description: ROUTES_IN_UI
+      ? 'Query The Symbolic World’s graph of Jung’s Collected Works in the browser: the command-line tool’s filters over the published dataset, and route finding — the chains of verified, cited claims connecting any two concepts.'
+      : 'Query The Symbolic World’s graph of Jung’s Collected Works in the browser: the command-line tool’s filters, run over the published dataset.',
     style: queryStyle, body: queryBody, head: queryHead
   })
   V2_COPY.push(['public/query.html (generated)', stripEvidence(queryBody)])
