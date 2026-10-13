@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/routes">
+<meta name="description" content="Trace the chains of verified, cited claims connecting any two concepts in Jung’s Collected Works — shortest first, every leg quoted — in The Symbolic World’s verified graph.">
+<title>Routes · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }
+.fld { display: flex; flex-direction: column; gap: .25rem; }
+.fld label { font: .55rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
+.fld select { background: var(--panel); color: var(--ink); border: 1px solid var(--hairline);
+  border-radius: 7px; padding: .42rem .6rem; font-family: var(--mono); font-size: .74rem; appearance: none; width: 100%; }
+.fld .hint { font: .55rem var(--mono); color: var(--ink-dim); }
+.runbtn { background: transparent; color: var(--gold); border: 1px solid var(--gold-dim);
+  border-radius: 999px; padding: .34rem 1.1rem; font: .62rem var(--mono); letter-spacing: .1em; cursor: pointer; }
+.route { border: 1px solid var(--hairline); border-radius: 8px; padding: .6rem .8rem; margin: .6rem 0; background: var(--surface); }
+.rleg { padding: .3rem 0; }
+.rleg + .rleg { border-top: 1px dashed var(--hairline); }
+.rchain { font-size: .95rem; }
+.rchain i { color: var(--gold); font-style: italic; }
+.rchain .rarr { color: var(--edge-idle); }
+.rcite { font-size: .82rem; color: var(--ink-faint); margin: .15rem 0 0 1rem; }
+.rcite .rc { font: .58rem var(--mono); color: var(--gold-dim); }
+.rcopy { background: none; border: 1px solid var(--hairline); border-radius: 99px; color: var(--ink-faint);
+  font: .58rem var(--mono); letter-spacing: .05em; padding: .14rem .6rem; cursor: pointer; margin-top: .45rem; }
+.rcopy:hover { color: var(--gold); border-color: var(--gold-dim); }
+</style>
+<script type="module">
+import { routesBetween, labelIndex } from '/query.js'
+const $ = (id) => document.getElementById(id)
+const esc = (s) => String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' })[c])
+let graph = null, labels = {}
+const HOPS = 3, ROUTE_CAP = 50, ALT_DRAWN = 24
+function routeLeg (hop, cur) {
+  const e = hop.edge
+  const a = esc(labels[cur] || cur), b = esc(labels[hop.next] || hop.next)
+  const chain = hop.reversed
+    ? a + ' <span class="rarr">\u25c0\u2500\u2500</span> <i>' + esc(e.relation) + '</i> <span class="rarr">\u2500\u2500</span> ' + b
+    : a + ' <span class="rarr">\u2500\u2500</span> <i>' + esc(e.relation) + '</i> <span class="rarr">\u2500\u2500\u25b6</span> ' + b
+  const cites = (e.references || []).map(r => '<div class="rcite"><span class="rc">CW ' + esc(r.volume) + ' \u00a7' + esc(r.paragraph) + '</span> \u2014 \u201c' + esc(r.quote) + '\u201d</div>').join('')
+  return '<div class="rleg"><span class="rchain">' + chain + '</span>' + cites + '</div>'
+}
+function routeText (legs, from) {
+  let cur = from
+  const lines = []
+  for (const hop of legs) {
+    const e = hop.edge
+    lines.push((labels[cur] || cur) + (hop.reversed ? ' <-[' : ' -[') + e.relation + (hop.reversed ? ']- ' : ']-> ') + (labels[hop.next] || hop.next))
+    for (const r of e.references || []) lines.push('  CW ' + r.volume + ' \u00a7' + r.paragraph + ' \u2014 \u201c' + r.quote + '\u201d')
+    cur = hop.next
+  }
+  return lines.join('\n')
+}
+function drawRoute (legs, from, idx) {
+  let cur = from, h = ''
+  for (const hop of legs) { h += routeLeg(hop, cur); cur = hop.next }
+  return '<div class="route">' + h + '<button class="rcopy" type="button" data-ri="' + idx + '">copy as citation list</button></div>'
+}
+let foundRoutes = [], routeFrom = ''
+function runRoutes () {
+  const from = $('r-from').value, to = $('r-to').value
+  const out = $('routes')
+  if (!from || !to) { out.innerHTML = '<p class="dim">Pick both ends.</p>'; return }
+  if (from === to) { out.innerHTML = '<p class="dim">Pick two different concepts.</p>'; return }
+  foundRoutes = routesBetween(graph, from, to, HOPS, ROUTE_CAP); routeFrom = from
+  if (!foundRoutes.length) {
+    out.innerHTML = '<p class="dim">No verified claim surveyed between these within ' + HOPS + ' hops. Extraction is per sentence; absence is not evidence.</p>'
+    return
+  }
+  let html = drawRoute(foundRoutes[0], from, 0)
+  if (foundRoutes.length > 1) {
+    const alts = foundRoutes.slice(1, 1 + ALT_DRAWN).map((legs, i) => drawRoute(legs, from, i + 1)).join('')
+    html += '<details class="disclose"><summary>' + (foundRoutes.length - 1) + ' other route' + (foundRoutes.length === 2 ? '' : 's') + ' within ' + HOPS + ' hops' + (foundRoutes.length >= ROUTE_CAP ? ' (search capped at ' + ROUTE_CAP + ')' : '') + '<span class="more">show them</span></summary>' + alts + (foundRoutes.length - 1 > ALT_DRAWN ? '<p class="dim">first ' + ALT_DRAWN + ' alternates drawn</p>' : '') + '</details>'
+  }
+  out.innerHTML = html
+}
+$('routes').addEventListener('click', (ev) => {
+  const btn = ev.target.closest('button[data-ri]')
+  if (!btn) return
+  const text = routeText(foundRoutes[Number(btn.dataset.ri)], routeFrom)
+  const done = () => { btn.textContent = 'copied'; setTimeout(() => { btn.textContent = 'copy as citation list' }, 1500) }
+  const fallback = () => { const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done() }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback)
+  else fallback()
+})
+$('runroutes').addEventListener('click', runRoutes)
+fetch('/graph.json').then(r => r.json()).then(g => {
+  graph = g
+  labels = labelIndex(graph)
+  const ropts = graph.nodes.map(n => [n.id, n.label || n.id]).sort((a, b) => String(a[1]).localeCompare(String(b[1])))
+  for (const id of ['r-from', 'r-to'])
+    $(id).innerHTML = '<option value="">pick\u2026</option>' + ropts.map(([v, l]) => '<option value="' + esc(v) + '">' + esc(l) + '</option>').join('')
+  $('status').textContent = 'Pick two concepts and find routes.'
+  const qp = new URLSearchParams(location.search)
+  if (qp.get('from') && qp.get('to')) { $('r-from').value = qp.get('from'); $('r-to').value = qp.get('to'); runRoutes() }
+}).catch(err => { $('status').textContent = 'The dataset did not load: ' + err })
+</script></head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/routes" aria-current="page">routes</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">routes</span></div>
+</header>
+<main class="page-main records">
+<div class="titleband"><p class="eyebrow">explore</p>
+<h1>Routes</h1>
+<p class="sub">the chains of verified claims between any two concepts</p></div>
+<p>Pick two concepts; the page lists the chains of verified claims that connect them, shortest first, each leg carrying its own citation. A route shows that a chain of cited claims exists — it asserts nothing further about the two ends. Extraction is per sentence, so an empty result means no verified claim was surveyed within the hop budget, and absence is not evidence.</p>
+<div class="filters">
+  <div class="fld"><label for="r-from">from</label><select id="r-from"></select><span class="hint">any concept in the graph</span></div>
+  <div class="fld"><label for="r-to">to</label><select id="r-to"></select><span class="hint">routes run both ways; arrows show each claim's own direction</span></div>
+  <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runroutes" style="margin:0">find routes</button></div>
+</div>
+<div class="routes" id="routes"><p class="dim" id="status">Reading the dataset…</p></div>
+<p class="meta">Every leg is one verified claim with its paragraph and quote. The <a href="/query">query panel</a> carries the full filter set.</p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/concepts">concepts</a>
+<span class="dim">routes</span>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>

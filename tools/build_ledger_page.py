@@ -43,8 +43,8 @@ def esc(s):
 # deliberately not a menu item — they are reached from the ledger's facet links
 # and from the release entries that shipped them.
 MENU = [
-    ("explore", [("/#/atlas", "atlas"), ("/query", "query"),
-                 ("/#/concordance", "concordance")]),
+    ("explore", [("/#/atlas", "atlas"), ("/routes", "routes"),
+                 ("/query", "query"), ("/#/concordance", "concordance")]),
     ("reference", [("/concepts", "concepts"), ("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
@@ -352,6 +352,7 @@ def batch_page(batch, delta, commits):
     <a href="/releases">releases</a>
     <a href="/concepts">concepts</a>
     <a href="/families">families</a>
+    <a href="/routes">routes</a>
     <a href="/query">query</a>
     <a href="/ontology">design</a></nav>
 </main>
@@ -714,6 +715,7 @@ def build():
     <a href="/concepts">concepts</a>
     <a href="/families">families</a>
     <a href="/releases">releases</a>
+    <a href="/routes">routes</a>
     <a href="/query">query</a>
     <a href="/ontology">design</a>
     <a href="/disputes">disputes</a></nav>

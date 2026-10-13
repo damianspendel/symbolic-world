@@ -99,6 +99,14 @@ if not ci_match:
           'whether the concepts index should be in dist')
 if ci_match and ci_match.group(1) == 'true':
     ALLOW.add('concepts.html')
+# spec-instrument-v1, stage I3: the /routes page, gated the same way.
+ri_match = re.search(r'^const ROUTES_IN_UI = (true|false)$', build_src, re.M)
+if not ri_match:
+    check('ROUTES_IN_UI readable from web/build-atlas.mjs', False,
+          'the constant is missing or no longer a literal — the gate cannot tell '
+          'whether the routes page should be in dist')
+if ri_match and ri_match.group(1) == 'true':
+    ALLOW.add('routes.html')
 
 print('== manifest ==')
 seen = set()
