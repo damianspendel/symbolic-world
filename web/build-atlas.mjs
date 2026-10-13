@@ -2147,7 +2147,7 @@ if (QA && DECL) {
   <span class="chip ev">CW ${esc(anatomyRef.volume)} §${esc(anatomyRef.paragraph)}</span>
 </div>
 <div class="ofig-quote ev">&ldquo;${esc(anatomyRef.quote)}&rdquo;</div>
-<figcaption>One relation, drawn. Subject, the relation as Jung's sentence phrased it, object, the quote it was gated against, and the paragraph it came from.</figcaption>
+<figcaption>One relation as the graph stores it: subject, the relation in Jung's own phrasing, object, the quote it was gated against, and the paragraph it came from.</figcaption>
 </figure>`
 
   const figTiers = `<figure class="ofig">
@@ -2157,44 +2157,43 @@ if (QA && DECL) {
   <span class="ofig-arm">&rarr;</span>
   <span class="chip f-ok ev">${esc(tierFamily.family)} <span class="n">${tierFamily.edges}</span></span>
 </div>
-<figcaption>Tier two, drawn. Different relation strings, each verified in its own paragraph, carry one family. The family classifies them; it does not re-verify them, and the strings are unchanged by the classification.</figcaption>
+<figcaption>The second tier: different relation strings, each verified in its own paragraph, carrying one family. The family classifies them; it does not re-verify them, and the strings stay as written.</figcaption>
 </figure>`
 
   const ontBody = `<div class="titleband"><p class="eyebrow">the design</p>
-<h1>What this graph is, and what it is not</h1></div>
-<p>It is a network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is missing on purpose. This page says what the design is, what it leaves out and why, It then runs the standard pitfall scan over the graph and reports what it finds, including the findings that are these decisions showing up as defects.</p>
+<h1>What the graph is</h1></div>
+<p>A network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is left out on purpose. This page records those decisions, then runs a standard pitfall scan over the graph and reports every finding, including the ones where a decision shows up as a defect.</p>
 <p class="meta">The address keeps the word <em>ontology</em> because the page runs an ontology pitfall scan; the graph itself is not one, and the paper says so.</p>
 
 <h2>Two tiers</h2>
-<p>The first tier is the relation as Jung's sentence phrased it. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
-<p>The second tier is the family: a classification <em>over</em> the verified relation, drawn from a fixed vocabulary in a versioned document, assigned when two models reading that document independently name the same family, and ruled by a person when they do not. The second tier never reopens the first. Nothing on this site calls a family verified, and no family assignment changes a relation string.</p>
-<p>The two words <em>verified</em> and <em>assigned</em> are deliberately kept apart. Different evidence, different word.</p>
-<p>These are our families. They record how this project sorted relations Jung wrote. Not a structure discovered in his thought, and not a position the field has agreed on. The graph is a map of assertions rather than a reading, and that holds harder in the second tier than anywhere else on the site.</p>
+<p>The first tier is the relation in Jung's own wording. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
+<p>The second tier is the family: a classification <em>over</em> the verified relation, drawn from a fixed vocabulary in a versioned document. An assignment stands when two models reading that document independently name the same family; a person rules when they do not. The second tier never reopens the first. Nothing on this site calls a family verified, and no family assignment changes a relation string.</p>
+<p>The families are this project's own sorting of the relations Jung wrote, not a structure discovered in his thought and not a position the field has agreed on. The whole graph maps what Jung asserted rather than interpreting it, and the second tier is where that limit matters most.</p>
 ${figAnatomy}
 <p>Where a relation carried a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original, with the qualifiers pulled out into their own fields. ${meta.normalized} relations carry that layer. The family layer classifies the normalized form where it exists, which is why the map counts effective strings rather than surface ones.</p>
 
 ${figTiers}
 <h2>The declarations</h2>
-<p>Two properties are declared, and only two: which relation strings are inverses of each other, and which are symmetric. Each declaration is transcribed from a line of the definitions document, cites that line, and is applied only when a reader asks for closure. The derived row is labelled, carries its source edge's references, and is never written into the graph.</p>
+<p>Only two properties are declared: which relation strings are inverses of each other, and which are symmetric. Each declaration is transcribed from a line of the definitions document, cites that line, and is applied only when a reader asks for closure. The derived row is labelled, carries its source edge's references, and is never written into the graph.</p>
 <div class="tw"><table><thead><tr><th>strings</th><th>kind</th><th>transcribed from</th></tr></thead><tbody>
 ${declRows}
 </tbody></table></div>
-<p class="meta">${activeDecls.length} active. ${DECL.candidates_awaiting_ruling.length} further pairs are recorded as candidates and are inert: the document has not ruled on them, and a declaration without a document line to cite would be this build's opinion rather than the ruleset's.</p>
+<p class="meta">${activeDecls.length} active. ${DECL.candidates_awaiting_ruling.length} further pairs are recorded as candidates and are inert: the document has not ruled on them, and a declaration needs a document line to cite.</p>
 ${rulingRows ? `<h4>rulings behind them</h4>
 <div class="tw"><table><thead><tr><th>date</th><th>ruled by</th><th>ruling</th></tr></thead><tbody>
 ${rulingRows}
 </tbody></table></div>` : ''}
 
 <h2>Where the checks come from</h2>
-<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur across published ontologies and describes how each can be detected. A pitfall catalogue is not a standard to comply with; it is a list of the places ontologies are known to go wrong, so that an evaluation can be systematic instead of a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset of it locally against this graph, and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
+<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur in published ontologies and describes how to detect each one. The catalogue is a list of known failure points rather than a standard to comply with; checking against it keeps an evaluation from being a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset locally against this graph and keeps the catalogue's numbering, so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
 <p class="meta">Poveda-Villal\u00f3n, G\u00f3mez-P\u00e9rez and Su\u00e1rez-Figueroa, "OOPS! (OntOlogy Pitfall Scanner!): An On-line Tool for Ontology Evaluation", <i>International Journal on Semantic Web and Information Systems</i> 10(2), 2014.</p>
 <div class="tw"><table><thead><tr><th>pitfall</th><th>what the catalogue names</th><th>use here</th></tr></thead><tbody>
 ${pitfallRows}
 </tbody></table></div>
-<p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is built out of relations between named things. Where a number is borrowed for a fault of a different shape, the third column says so. A borrowed number presented as the catalogue's own finding would claim more agreement with the literature than there is. The standing frame holds over all of it: a finding maps to the catalogue where one applies, and several of the findings below are decisions recorded above rather than defects.</p>
+<p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is relations between named things. Where a number is borrowed for a fault of a different shape, the third column says so.</p>
 
 <h2>The pitfall scan</h2>
-<p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects carried in the record.</p>
+<p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects.</p>
 <div class="qa">
   <div class="fig"><span class="figv ev">${h.hapax_pct.toFixed(1)}%</span><span class="figl">of relation strings are used exactly once <span class="ev">(${h.hapax_relations} of ${h.distinct_relations})</span></span></div>
   <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
@@ -2207,24 +2206,24 @@ ${pitfallRows}
 ${findingRows}
 </tbody></table></div>
 </details>
-<p class="meta">A stance is not a rebuttal of the finding. An open vocabulary is hard to query by predicate, which is why the family layer exists. That was a conscious design decision.</p>
+<p class="meta">A stance is not a rebuttal, and the costs are real: an open vocabulary is hard to query by predicate, and the family layer exists because of it.</p>
 
 ${EVROWS.length ? `<h2 id="checked">Checked against readers of Jung</h2>
-<p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The question was not whether Jung's claim is true; the verification chain had already asked that. It was whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
+<p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The check asked whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts; whether the claim itself holds, the verification chain had already asked.</p>
 
-<p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements were not absorbed: they produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}, the largest of which sends every <code>amplified-by</code> edge back for reclassification because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <details class="disclose">
 <summary>${EV.agrees} of ${EV.treated} treated items agreed with our family, across ${EV.works_consulted} works of scholarship.<span class="more">the whole table</span></summary>
 ${evTable()}
 </details>
 
-<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. And the check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. On the hardest boundary this layer draws, the field the check consulted does not hold a stable line either. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The field does not hold a stable line on the hardest boundary this layer draws. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 ` : ''}
 
 <h2>Deliberately absent</h2>
 <p>${counts.design} of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight.</p>
 <ul class="absent">
-<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third are joined through a third; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
+<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third stay two hops apart; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
 <li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
 <li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
 <li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
@@ -2269,7 +2268,7 @@ table.findings .src { font: .58rem var(--mono); }
 .src { font: .58rem var(--mono); }
 `
   registerPage({
-    slug: 'ontology', title: 'The design and its practices', where: 'design',
+    slug: 'ontology', title: 'The design', where: 'design',
     nav: 'design', changefreq: 'daily', priority: '0.5',
     description: 'The design of The Symbolic World’s graph of Jung’s Collected Works: its quality scan, the check against outside scholarship, and what is deliberately absent.',
     style: ontStyle, body: ontBody
