@@ -22,6 +22,17 @@ verbatim quotes ≤25 letter-tokens on the test tokenizer, aggressive dedup
 with existing_edge flags, no nominalized pseudo-entities, natural density
 35-50 candidates / 50-70 refs, read only the input file. THE MINER IS
 BLINDED: no metrics, no trend files, no transfer question, ever (RULES #5).
+For CW 11 the hard rules block carries one addition, the EXEGESIS CLAUSE
+(added 2026-10-13 per the Gemini review in docs/PROPOSAL_NEXT_ARC.md;
+authorial-endorsement hallucination is the reviewer's reported dominant
+failure mode in religious text): Jung expounding a dogma, scripture,
+liturgy, rite, tradition or named author is REPORTING, not asserting —
+extended, sympathetic, undistanced exposition included; jung-asserts is
+reserved for Jung's own interpretive voice; each reference takes the
+claim_type of the sentence its quote rests on; in doubt, reports. The
+clause lives verbatim in pipeline/mining/build_input_cw11.py's note, so
+every CW 11 input file carries it. It is a form constraint: it names no
+tracked metric, so the blinding holds.
 The CW 8 window-1 instance is preserved verbatim in the scheduled task file
 and the session transcript of 2026-08-13.
 
