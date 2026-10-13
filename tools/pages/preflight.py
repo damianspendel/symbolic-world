@@ -229,7 +229,7 @@ check('repo /v1.3 == frozen baseline', proc.stdout.strip() == V13_BASELINE,
 
 print('== gates ==')
 for name, cmd in [('paper facts', 'python3 tools/check_paper_facts.py'),
-                  ('poster facts (pixels vs seed.json)', 'python3 tools/check_poster_facts.py'),
+                  ('poster facts (v2.0 pin; claim vs live graph)', 'python3 tools/check_poster_facts.py'),
                   ('test harness', 'python3 tests/test_graph.py')]:
     p = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=ROOT)
     check(name, p.returncode == 0, (p.stdout + p.stderr).strip().splitlines()[-1] if (p.stdout or p.stderr) else '')
