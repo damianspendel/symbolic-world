@@ -649,8 +649,7 @@ def build():
 <main class="page-main records">
   <div class="titleband"><p class="eyebrow">provenance</p>
   <h1>Ledger</h1>
-  <p class="sub">Every published record and the gates it passed. Nothing entered this graph by an
-  unrecorded path.</p></div>
+  <p class="sub">Every published record and the gates it passed.</p></div>
   <p class="intro">Two different kinds of record appear on every card below, and they are not the
   same kind of evidence:</p>
   <div class="kinds">
@@ -673,11 +672,7 @@ def build():
   <b>quote</b> check, the independent <b>gate</b> (verifier and date), the narrow <b>voice</b> audit,
   the <b>cross-vendor</b> check, and, where a person has checked the paragraph,
   <b>human</b> validation from the gold set. Disputed records link to the
-  <a href="/disputes">dispute log</a>. Hover any chip for detail.</p>
-  <p class="intro">Disclosure, mirrored from the paper: verification timestamps for batches gated
-  before 2026-07-26 were batch-backfilled rather than recorded per-operation (the verification is
-  real; those timestamps are reconstructions). Since then, stamps are written by the operations
-  they describe, and any post-verification edit triggers re-gating.</p>
+  <a href="/disputes">dispute log</a>.</p>
   <div class="meta">{len(seed["nodes"])} nodes · {len(seed["edges"])} edges · {refs_total} references ·
     100% gate-verified · {xv_n} cross-vendor checked · {human_n} human-validated ·
     {len(disp.get("disputes", []))} disputes on record ·

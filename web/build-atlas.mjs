@@ -845,13 +845,12 @@ function familiesPageCopy(map, version) {
     .map(r => `<li>${r.html}</li>`).join('\n')
 
   return `<div class="titleband"><p class="eyebrow">reference</p>
-<h1>Relation families</h1>
-<p class="sub">The classification layer, ruleset ${esc(version)}: what it claims, what it does not, and every relation string in it.</p></div>
+<h1>Families</h1>
+<p class="sub">The classification layer at ruleset ${esc(version)}: the states, the string-to-family map, and the document that defines them.</p></div>
 
 <p>A family is an assigned classification over a relation that was already verified: the <a href="/ontology">design</a> is on the design page, the <a href="/#/method">checks</a> on the method page.</p>
 
-${EV ? `<p>Checked once against outside scholarship: ${EV.agrees} of ${EV.treated} treated items agreed — <a href="/ontology#checked">the full result</a>.</p>
-` : ''}<h2>Where the layer stands</h2>
+<h2>Where the layer stands</h2>
 <div class="tw"><table>
 <thead><tr><th>State</th><th>Relations</th><th>What it means</th></tr></thead>
 <tbody>
@@ -860,19 +859,19 @@ ${EV ? `<p>Checked once against outside scholarship: ${EV.agrees} of ${EV.treate
 <tr><td>no family</td><td>${t.no_family}</td><td>well-formed relation, our vocabulary does not cover it</td></tr>
 <tr><td>text undecided</td><td>${t.text_undecided}</td><td>the source sentence hedges between two families</td></tr>
 </tbody></table></div>
-<p>That is ${num(t.assigned)} of ${num(t.edges)} relations classified, with ${num(t.pending)} still waiting on a person and ${num(t.no_family + t.text_undecided)} that no family was forced onto. The queue is not a backlog to be cleared by machine; clearing it is what the human step is for.</p>
+<p>That is ${num(t.assigned)} of ${num(t.edges)} relations classified, with ${num(t.pending)} still waiting on a person and ${num(t.no_family + t.text_undecided)} that no family was forced onto. Decisions on ties are made by a human.</p>
 <p>How the settled records were arrived at:</p>
 <div class="tw"><table><thead><tr><th>Arrived at by</th><th>Relations</th></tr></thead><tbody>${provRows}</tbody></table></div>
 
 <h2>The map: which relation strings land in which family</h2>
-<p>The reverse index, derived from the graph on every build. ${num(t.families)} families over ${num(t.assigned_strings)} distinct relation strings; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family, which is the layer's central commitment made visible: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
+<p>The reverse index, derived from the graph on every build. ${num(t.families)} families over ${num(t.assigned_strings)} distinct relation strings; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
 ${famBlocks}
 ${empty.length ? `<p>${empty.map(id => `<a href="/family-${esc(id)}">${esc(id)}</a>`).join(', ')} ${empty.length === 1 ? 'is a family in the ruleset that currently holds no assigned relation' : 'are families in the ruleset that currently hold no assigned relation'}, so ${empty.length === 1 ? 'it has' : 'they have'} no block above. ${empty.length === 1 ? 'The page is' : 'The pages are'} kept, and ${empty.length === 1 ? 'reports' : 'report'} the count as zero: a family emptied by a reclassification is a finding, and dropping the page would hide the finding.</p>` : ''}
 
 <h2>What fits nowhere</h2>
-<p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted rather than absorbed, because a vocabulary that covers everything has stopped discriminating:</p>
+<p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted rather than forced into the nearest fit:</p>
 <div class="strs homeless">${stringList(map.homeless)}</div>
-${map.text_undecided.length ? `<p>And the strings where the sentence itself refuses to settle, a property of the text rather than of the vocabulary:</p>
+${map.text_undecided.length ? `<p>And the strings whose source sentence hedges between two families; that is a property of the text, not of the vocabulary:</p>
 <div class="strs homeless">${stringList(map.text_undecided)}</div>` : ''}
 
 <h2>Where the boundaries are decided</h2>
@@ -881,7 +880,8 @@ ${map.text_undecided.length ? `<p>And the strings where the sentence itself refu
 ${worked}
 </ul>
 
-<h2>The definitions document, in full</h2>
+${EV ? `<p class="meta">Checked once against outside scholarship: ${EV.agrees} of ${EV.treated} treated items agreed — <a href="/ontology#checked">the full result</a>.</p>
+` : ''}<h2>The definitions document, in full</h2>
 <p class="docnote">What follows is the working document itself, rendered as written. It carries its own history, including measurement sections describing earlier runs of the calibration harness whose figures were withdrawn in August 2026, when a code inspection found they could not be substantiated. Those sections are the record of what was done, not current evidence; the current figures are the version-bound records named above.</p>`
 }
 
