@@ -32,7 +32,14 @@ reserved for Jung's own interpretive voice; each reference takes the
 claim_type of the sentence its quote rests on; in doubt, reports. The
 clause lives verbatim in pipeline/mining/build_input_cw11.py's note, so
 every CW 11 input file carries it. It is a form constraint: it names no
-tracked metric, so the blinding holds.
+tracked metric, so the blinding holds. CW 5 and CW 16 carry
+register-equivalent REPORTING DISCIPLINE clauses in their builders
+(build_input_cw5.py, build_input_cw16.py, added 2026-10-16 for the
+full-corpus continuation): myth/saga/scripture and quoted-source content is
+reports/quotes however sympathetic the retelling, Miller and patient
+material follows the analysand convention, jung-asserts stays Jung's own
+interpretive voice, doubt defaults to reports. Same form-constraint status:
+no tracked metric named, blinding holds.
 The CW 8 window-1 instance is preserved verbatim in the scheduled task file
 and the session transcript of 2026-08-13.
 
