@@ -3077,6 +3077,66 @@
    "id": "binarius",
    "label": "Binarius (the number two, made on the second day of Creation)",
    "type": "Symbol"
+  },
+  {
+   "id": "thysia",
+   "label": "Thysia (sacrificial burning)",
+   "type": "Motif"
+  },
+  {
+   "id": "deipnon",
+   "label": "Deipnon (sacrificial meal)",
+   "type": "Motif"
+  },
+  {
+   "id": "spiritualization",
+   "label": "Spiritualization (transformation of substance into pneuma)",
+   "type": "Operation"
+  },
+  {
+   "id": "melchisedec",
+   "label": "Melchisedec (priest-king of Salem)",
+   "type": "Figure"
+  },
+  {
+   "id": "commixtio",
+   "label": "Commixtio (mingling of bread and wine in the Mass)",
+   "type": "Motif"
+  },
+  {
+   "id": "human-sacrifice",
+   "label": "Human sacrifice (ritual slaying and anthropophagy)",
+   "type": "Motif"
+  },
+  {
+   "id": "teoqualo",
+   "label": "Teoqualo (Aztec god-eating rite)",
+   "type": "Motif"
+  },
+  {
+   "id": "mithras",
+   "label": "Mithras (god of the Mithraic mysteries)",
+   "type": "Figure"
+  },
+  {
+   "id": "zosimos",
+   "label": "Zosimos of Panopolis (Gnostic alchemist, 3rd century)",
+   "type": "Figure"
+  },
+  {
+   "id": "paredros",
+   "label": "Paredros (familiar spirit of ancient alchemy)",
+   "type": "Figure"
+  },
+  {
+   "id": "flaying",
+   "label": "Flaying (ritual skinning)",
+   "type": "Motif"
+  },
+  {
+   "id": "the-sword",
+   "label": "The sword (sacrificial and alchemical instrument)",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -68996,6 +69056,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 331,
+     "quote": "The peculiar arrangement of the letters obviously represents a quaternity, which as we know always has the character of wholeness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 332,
+     "quote": "Four, on the other hand, signifies eternity and totality",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -70644,6 +70726,1210 @@
    ],
    "relation_family": {
     "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "is-expressed-in",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 293,
+     "quote": "Its ideas are products of a pre-conscious knowledge which, always and everywhere, expresses itself in symbols.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "acknowledges",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 293,
+     "quote": "Even if our intellect does not grasp them, they still work, because our unconscious acknowledges them as exponents of universal psychic facts.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "dogma",
+   "relation": "accords-with",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 294,
+     "quote": "I felt it was too much in line with the consensus omnium , with the archetype, for that.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "blends",
+   "object": "thysia",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 302,
+     "quote": "In the sacrifice of the Mass two distinct ideas are blended together: the ideas of deipnon and thysia.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts as Jung is directly stating his own historical analysis of the Mass blending Greek concepts."
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "blends",
+   "object": "deipnon",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 302,
+     "quote": "In the sacrifice of the Mass two distinct ideas are blended together: the ideas of deipnon and thysia.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts as Jung is directly stating his own historical analysis of the Mass blending Greek concepts."
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "thysia",
+   "relation": "alludes-to",
+   "object": "spiritualization",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 307,
+     "quote": "there is a primitive allusion to a transformation of substance in the sense of its spiritualization",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts as Jung is interpreting the symbolic meaning of the burnt offering in his own voice."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "melchisedec",
+   "relation": "incarnates",
+   "object": "logos",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 306,
+     "quote": "was believed to be a pre-Christian incarnation of the Logos",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "is",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 307,
+     "quote": "In other words, the rite is necessarily and in every one of its parts a symbol .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 308,
+     "quote": "In so far, then, as the Mass is an anthropomorphic symbol standing for something otherworldly and beyond our power to conceive",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "differs-from",
+   "object": "sign",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 307,
+     "quote": "Now a symbol is not an arbitrary or intentional sign standing for a known and conceivable fact",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "comprises",
+   "object": "transubstantiation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 307,
+     "quote": "the true mysterium fidei , the transformation of the substances, which is the third aspect of the Mass",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts as Jung is outlining his own structural breakdown of the Mass into aspects."
+    },
+    {
+     "volume": "11",
+     "paragraph": 322,
+     "quote": "This, in the Roman Mass, is the climax, the transubstantiation of the bread and wine into the body and blood of Christ.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts as Jung is directly stating the climax of the Roman Mass in his own analytical voice."
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "water",
+   "relation": "signifies",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 313,
+     "quote": "Here the water signifies the pneuma , i.e., the spirit of prophecy",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 354,
+     "quote": "In the language of the alchemists, however, spirit and water are synonymous",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "invokes",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 317,
+     "quote": "The invocation serves to infuse the wine with holy spirit, for it is the Holy Ghost who begets, fulfils, and transforms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts as Jung is directly analyzing the function of the invocation in his own voice."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "effects",
+   "object": "spiritualization",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 319,
+     "quote": "it signifies a transformation of the sacrificial gifts and of the altar, a spiritualization of all the physical substances subserving the rite",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts as Jung is interpreting the symbolic meaning of the censing in his own voice."
+    },
+    {
+     "volume": "11",
+     "paragraph": 338,
+     "quote": "a substantial alteration of them, a spiritualization, in accordance with the ancient conception of pneuma as a subtle material entity",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "causes",
+   "object": "transubstantiation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 323,
+     "quote": "The real cause is the living presence of Christ which operates spontaneously, as an act of divine grace.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "performs",
+   "object": "the-sacrifice",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 324,
+     "quote": "This tells us plainly enough that the sacrificial act is not performed by the priest, but by Christ himself.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 337,
+     "quote": "in so far as Christ is both sacrificer and sacrificed, there is a mystical unity of all parts of the sacrificial act",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-sword",
+   "relation": "symbolizes",
+   "object": "logos",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 324,
+     "quote": "they can be described metaphorically as the sacrificial knife or sword which, guided by his will, consummates the thysia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 357,
+     "quote": "the sword which comes out of the mouth of the Son of Man in the Book of Revelation is ... the Logos",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "refers-to",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 331,
+     "quote": "This quaternity, as the letters show, refers to Christ glorified, king of glory and Pantokrator.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "represents",
+   "object": "the-passion",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 336,
+     "quote": "the sequence of ritual actions in the Mass contains ... a representation in condensed form of the life and sufferings of Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "commixtio",
+   "relation": "symbolizes",
+   "object": "resurrection",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 335,
+     "quote": "Hence the justification for regarding the commixtio as a symbol of the resurrection.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "commixtio",
+   "relation": "reverses",
+   "object": "baptism",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 335,
+     "quote": "There is a significant reversal here of the original rite of baptism.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "is-rooted-in",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 339,
+     "quote": "its symbolic content would be profoundly alien to man were it not rooted in the human psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "recalls",
+   "object": "human-sacrifice",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 339,
+     "quote": "in Christ’s sacrifice and the Communion one of the deepest chords in the human psyche is struck: human sacrifice and ritual anthropophagy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "teoqualo",
+   "relation": "parallels",
+   "object": "the-mass",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 340,
+     "quote": "So it is not surprising that we find religious rites which come very close to Christian practices in a field untouched by classical culture.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 341,
+     "quote": "are all parallels which cannot be overlooked and which caused much consternation among the worthy Spanish Fathers at the time",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "mithras",
+   "relation": "performs",
+   "object": "the-sacrifice",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 342,
+     "quote": "The Mithraic sacrifice is essentially a self-sacrifice, since the bull is a world bull and was originally identical with Mithras himself.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "mithras",
+   "relation": "corresponds-to",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 342,
+     "quote": "The Mithraic transitus is a motif that corresponds to Christ carrying the cross",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "zosimos",
+   "relation": "follows",
+   "object": "hermes",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 344,
+     "quote": "an adherent of the Poimandres sect, and therefore a follower of Hermes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "is-rooted-in",
+   "object": "visionary-experience",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 344,
+     "quote": "It can hardly be doubted that real visionary experiences originally lay at the root of these practices",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "correction_note": "gate correction: Verbatim and Jung's own voice; but 'these practices' is the alchemists' meditation and paredros-conjuring, not alchemy as such. The next sentence widens it to the alchemist's imaginative work generally, which keeps the triple, at medium."
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "meditatio",
+   "relation": "is-defined-as",
+   "object": "inner-dialogue",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 344,
+     "quote": "internal colloquy with someone else, who is nevertheless not seen, it may be with God, with oneself, or with one’s good angel",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "source": "Martin Ruland, Lexicon alchemiae"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "paredros",
+   "relation": "is-conjured-by",
+   "object": "magic",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 344,
+     "quote": "the paredros , the familiar spirit of ancient alchemy, who was generally a planetary demon conjured up by magic",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 347,
+     "quote": "In all probability they are paredroi who were conjured up by magic",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "ion",
+   "relation": "undergoes",
+   "object": "dismemberment",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 345,
+     "quote": "pierced me through with the sword and cut me in pieces, yet in such a way that the order of my limbs was preserved",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "source": "Zosimos"
+    },
+    {
+     "volume": "11",
+     "paragraph": 346,
+     "quote": "he is pierced through with the sword and ritually dismembered",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "ion",
+   "relation": "undergoes",
+   "object": "spiritualization",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 345,
+     "quote": "until I perceived that I was transformed and had become spirit",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "source": "Zosimos"
+    },
+    {
+     "volume": "11",
+     "paragraph": 352,
+     "quote": "the main purpose of the transformation process is the spiritualization of the sacrificing priest: he is to be changed into pneuma",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "ion",
+   "relation": "parallels",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 353,
+     "quote": "In our vision it is the priest as sacrificer who devours himself as the sacrifice. This recalls the saying of St. John Chrysostom",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "flaying",
+   "relation": "signifies",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 348,
+     "quote": "In general, flaying signifies transformation from a worse state to a better, and hence renewal and rebirth.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "homunculus",
+   "relation": "is-identified-with",
+   "object": "saturn",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 350,
+     "quote": "the leaden homunculus, and this is none other than the leaden spirit or planetary demon Saturn",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "correction_note": "gate correction: Verbatim and Jung's own equation; but the paragraph identifies the LEADEN homunculus of the Zosimos vision with Saturn, not the homunculus as such. The graph's homunculus node is the general figure; confidence lowered to medium for the referent narrowing."
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "saturn",
+   "relation": "is-captive-in",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 350,
+     "quote": "he was also the spiritus niger who lies captive in the darkness of matter",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-sacrifice",
+   "relation": "produces",
+   "object": "aqua-permanens",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 355,
+     "quote": "Just as a spiritual water of grace and truth flows from Christ’s sacrifice, so the “divine water” is produced by a sacrificial act",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "nous",
+   "relation": "is-identical-with",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 355,
+     "quote": "But nous is identical with the alchemical Mercurius.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "correction_note": "gate correction: Verbatim; but 'nous is identical with the alchemical Mercurius' is Jung's own equivalence ('This is quite clear from the Ostanes quotation'), not a doctrine he reports — same correction as ka-mutef|corresponds-to|holy-ghost in b-cw11-4. reports -> asserts."
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "transforms",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 356,
+     "quote": "He is a spirit that penetrates into the depths of the material world and transforms it.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-sword",
+   "relation": "effects",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 357,
+     "quote": "For the alchemical sword brings about the solutio or separatio of the elements, thereby restoring the original condition of chaos",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-sword",
+   "relation": "is-changed-into",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 357,
+     "quote": "Gerhard Dorn, an alchemist of the sixteenth century, says that in our world the sword was changed into Christ our Saviour.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 360,
+     "quote": "Simon’s ideas also throw a significant light on the above-quoted passage from Dorn, where the sword of wrath is transformed into Christ.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "philosophical-egg",
+   "relation": "is-divided-by",
+   "object": "the-sword",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 357,
+     "quote": "The “philosophical egg” is divided with the sword",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 361,
+     "quote": "Take an egg, pierce it with the fiery sword, and separate its soul from its body.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "source": "Ostanes, quoted in the Tractatus Micreris"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "spirit",
+   "relation": "corresponds-to",
+   "object": "ouroboros",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 359,
+     "quote": "Simon’s description of the creative pneuma , the true arcane substance, corresponds in every detail to the uroboros or serpens mercurialis of the Latinists.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "correction_note": "gate correction: Verbatim and Jung's own voice; but the subject is Simon Magus's creative pneuma, 'the true arcane substance', not spirit in general. The paragraph's closing sentences generalize ('the transformation of the vital spirit in man into the Divine'), which keeps the triple, at medium."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-sacrifice",
+   "relation": "summons",
+   "object": "paredros",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 363,
+     "quote": "Such sacrifices really were made for the purpose of summoning up the paredros , the familiar spirit.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "undergoes",
+   "object": "dismemberment",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 361,
+     "quote": "“Kill the mother [the prima materia] , tearing off her hands and feet.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
+     "source": "Allegoriae super librum Turbae"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-19"
