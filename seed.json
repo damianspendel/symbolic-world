@@ -3062,6 +3062,21 @@
    "id": "adonis",
    "label": "Adonis (dying and resurgent god, tree-born)",
    "type": "Figure"
+  },
+  {
+   "id": "incarnation",
+   "label": "Incarnation (God becoming man)",
+   "type": "Concept"
+  },
+  {
+   "id": "reflection",
+   "label": "Reflection (the human act of reflection, reflexio)",
+   "type": "Operation"
+  },
+  {
+   "id": "binarius",
+   "label": "Binarius (the number two, made on the second day of Creation)",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -3839,6 +3854,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 289,
+     "quote": "psychologically, Christ must be understood as a symbol of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -4316,6 +4342,28 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-3, SUPPORTED, 2026-08-05)",
      "source": "Valentinus",
      "note": "Jung suggests Valentinus understood the shadow as the Yahwistic law"
+    },
+    {
+     "volume": "11",
+     "paragraph": 232,
+     "quote": "Even the Christ-figure is not a totality, for it lacks the nocturnal side of the psyche’s nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 263,
+     "quote": "Christ, according to the Gnostic view, cast off the shadow he was born with and remained without sin",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -8364,6 +8412,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "11",
+     "paragraph": 252,
+     "quote": "Hence the devil remained outside the Trinity as the “ape of God” and in opposition to it",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -8423,6 +8482,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-2, PASS, 2026-10-14)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 280,
+     "quote": "the “recalcitrant fourth” ingredient, which we meet again as the “adversary” of the Christian Trinity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 290,
+     "quote": "the devil must be added to the trias ... in order to make it a totality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -8471,6 +8552,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "11",
+     "paragraph": 282,
+     "quote": "explain the self as an imago Dei in man. Both propositions are psychologically true",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -8522,6 +8614,29 @@
      "source": "Christian tradition (John 12:31)",
      "quote_repaired": "2026-07-28: elision exceeded 30-word bound; trimmed to strongest contiguous fragment; re-gated 2026-07-28 (SUPPORTED)",
      "crossvendor_checked": "gemini-3.1-pro (retro-stamp sweep after final-gate review, SUPPORTED, 2026-07-30)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 248,
+     "quote": "he is the adversary of Christ: by infecting our first parents with original sin he corrupted creation",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 254,
+     "quote": "But the real devil first appears as the adversary of Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts because Jung is stating his own historical/psychological analysis of the devil concept's emergence, not reporting a parallel doctrine."
     }
    ],
    "relation_family": {
@@ -21202,6 +21317,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-9, SUPPORTED, 2026-07-30)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 245,
+     "quote": "His inferior function will be feeling (valuation), which remains in a retarded state and is contaminated with the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -42060,6 +42186,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-2, PASS, 2026-10-14)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 267,
+     "quote": "an inflation of self-importance of which we had a foretaste in the case of Nietzsche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -43310,6 +43447,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-5, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 281,
+     "quote": "hence the quaternity is a symbol of the self, which is of central importance in Indian philosophy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -47317,6 +47465,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 231,
+     "quote": "one can never distinguish empirically between a symbol of the self and a God-image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 281,
+     "quote": "it is impossible to distinguish the self from a God-image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -67529,6 +67699,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-2, PASS, 2026-10-14)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 262,
+     "quote": "He took great exception to the traditional quaternity of the basic principles of his art",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -67817,6 +67998,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-2, PASS, 2026-10-14)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 240,
+     "quote": "Holy Ghost and Logos merge in the Gnostic idea of Sophia, and again in the Sapientia of the medieval natural philosophers",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -68793,6 +68985,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 246,
+     "quote": "The ideal of completeness is the circle or sphere, but its natural minimal division is a quaternity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -68876,6 +69079,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 235,
+     "quote": "Ka-mutef is exactly the same hypostatization of an attribute as the breath or “spiration” of the Godhead",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: Claim type should be jung-asserts because Jung himself is asserting the psychological equivalence between Ka-mutef and the Holy Ghost."
     }
    ],
    "relation_family": {
@@ -69131,6 +69346,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 222,
+     "quote": "the development of the Christian idea of the Trinity unconsciously reproduced the archetype of the homoousia of Father, Son, and Ka-mutef",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 237,
+     "quote": "the Trinity, too, is an anthropomorphic configuration ... even though already preformed by the timeless archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -69239,6 +69476,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 272,
+     "quote": "the state of unreflecting awareness known as “Father” changes into the reflective and rational state of consciousness known as “Son.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -69324,6 +69572,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 268,
+     "quote": "the development of the idea of the Trinity is a collective process, representing a differentiation of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 288,
+     "quote": "Second, the Trinity denotes a process of conscious realization continuing over the centuries",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
     }
    ],
    "relation_family": {
@@ -69483,6 +69753,18 @@
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)",
      "source": "Creed of the Lateran Council (1215)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 289,
+     "quote": "the Son begotten by the Father and the Holy Ghost proceeding from both",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, FINDING-adjudicated, 2026-10-19)",
+     "audit_note": "cross-vendor read the object node christ (labelled \"Christ (as symbol)\") as conflating the reported procession dogma with a psychological reading; the graph carries one christ node for the figure in every register, and the standing edge's own references (CW 11 §204, §219) passed the same auditor with the same object in b-cw11-4's predecessor window; vocabulary convention wins over the finding"
     }
    ],
    "relation_family": {
@@ -69550,6 +69832,821 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-18"
+   }
+  },
+  {
+   "subject": "dogma",
+   "relation": "is-inspired-by",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 222,
+     "quote": "the statement that dogmas are inspired by the Holy Ghost indicates that they are not the product of conscious cogitation",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "is-moulded-by",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 228,
+     "quote": "He became the collective figure whom the unconscious of his contemporaries expected to appear",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "appears-as",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 229,
+     "quote": "The most important of the symbolical statements about Christ are those which reveal the attributes of the hero’s life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "atman",
+   "relation": "appears-as",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 231,
+     "quote": "the atman appears as the individualized self and at the same time as the animating principle of the cosmos",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "corresponds-to",
+   "object": "incarnation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 233,
+     "quote": "self-realization—to put it in religious or metaphysical terms—amounts to God’s incarnation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "is-product-of",
+   "object": "reflection",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 236,
+     "quote": "he is essentially a product of reflection, an hypostatized noumenon tacked on to the natural family-picture of father and son",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 241,
+     "quote": "Since the Holy Ghost is an hypostasis of “life,” posited by an act of reflection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "is-interpreted-as",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 236,
+     "quote": "early Christian Gnosticism tried to get round this difficulty by interpreting the Holy Ghost as the Mother",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 240,
+     "quote": "The Gnostic interpretation of the Holy Ghost as the Mother contains a core of truth",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-trinity",
+   "relation": "encompasses",
+   "object": "man",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 239,
+     "quote": "The Trinity, therefore, discloses itself as a symbol that comprehends the essence of the divine and the human",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "compensates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 242,
+     "quote": "His ideas of God behave as do all images arising out of the unconscious: they compensate or complete the general mood",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "underlies",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 292,
+     "quote": "It is this fourth, “inferior” function which acts autonomously towards consciousness ... It lurks behind every neurotic dissociation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "tetraktys",
+   "relation": "contains-roots-of",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 246,
+     "quote": "the Pythagorean oath, for instance, says that the tetraktys “contains the roots of eternal nature.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)",
+     "source": "the Pythagorean oath",
+     "correction_note": "gate correction: Verbatim and correctly a named quote of the Pythagorean oath, but the oath says the tetraktys 'contains the roots of eternal nature' — 'contains nature' drops the operative noun; relation corrected to contains-roots-of."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "privatio-boni",
+   "relation": "defines",
+   "object": "evil",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 247,
+     "quote": "The Christian answer is that evil is a privatio boni . This classic formula robs evil of absolute existence",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "privatio-boni",
+   "relation": "denies",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 247,
+     "quote": "If, therefore, evil is said to be a mere privation of good, the opposition of good and evil is denied outright",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "personifies",
+   "object": "evil",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 248,
+     "quote": "by asserting that evil has substance and personality as the devil, or Lucifer",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "replaces",
+   "object": "the-trinity",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 249,
+     "quote": "A further logical inference would be the abolition of the Trinity formula and its replacement by a quaternity",
+     "claim_type": "jung-asserts",
+     "confidence": "low",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, FINDING-adjudicated, 2026-10-19)",
+     "correction_note": "cross-vendor correction: The text presents this as a hypothetical logical inference of Gnostic views, not a direct categorical assertion."
+    },
+    {
+     "volume": "11",
+     "paragraph": 251,
+     "quote": "evolved a quaternity symbol in its representations of the coronation of the Virgin ... and surreptitiously put it in place of the Trinity",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "cross",
+   "relation": "corresponds-to",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 250,
+     "quote": "the Cross, set up midway between heaven and hell as a symbol of Christ’s struggle with the devil, corresponds to the quaternity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "cross",
+   "relation": "symbolizes",
+   "object": "the-passion",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 250,
+     "quote": "The Cross, however, symbolizes God’s suffering in his immediate encounter with the world",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)",
+     "correction_note": "gate correction: Verbatim and supported ('The Cross, however, symbolizes God's suffering in his immediate encounter with the world'), but the sentence is Jung's own interpretive gloss with no doctrine, author or tradition attributed — the same claim is coded jung-asserts at §264 in this batch; reports -> asserts."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "dwells-in",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 251,
+     "quote": "for matter is the diametrical opposite of spirit. It is the true abode of the devil",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "matter",
+   "relation": "enables",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 252,
+     "quote": "matter represents the concreteness of God’s thoughts and is, therefore, the very thing that makes individuation possible",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "binarius",
+   "relation": "is-identified-with",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 262,
+     "quote": "The binarius is the devil of discord and, what is worse, of feminine nature",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "god-the-father",
+   "relation": "contains",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 259,
+     "quote": "the opposites latent in the Deity flew apart when the Son was begotten",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 279,
+     "quote": "The “Father,” in fact, contains the opposite qualities which appear in his son and his son’s adversary",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "is",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 277,
+     "quote": "proof that the Holy Ghost is a complexio oppositorum (union of opposites)",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 279,
+     "quote": "Thus the spirit as a complexio oppositorum has the same formula as the “Father,”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)",
+     "correction_note": "gate correction: Verbatim and Jung's voice, but the sentence presupposes the identity ('the spirit as a complexio oppositorum') rather than asserting it; its footing is the §277 conjecture ('we shall hardly be wrong ... if we conjecture'), which the batch itself carries at medium — medium here too."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "is-projection-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 272,
+     "quote": "in projected form, is known as the “Holy Ghost.” Psychologically speaking, “inspiration” comes from an unconscious function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "anthropos",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 276,
+     "quote": "The Anthropos is a symbol that argues in favour of the personal nature of the “totality,” i.e., the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "actualizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 289,
+     "quote": "the descent of the Holy Ghost as the self’s actualization in man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "appears-as",
+   "object": "fire",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 276,
+     "quote": "at Pentecost, the spirit descended on the disciples in tongues of fire",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "triad",
+   "relation": "compensates",
+   "object": "unconsciousness",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 284,
+     "quote": "so much unconsciousness ... that a spiritualization appears necessary as a compensation. The saving symbol is then a triad",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-trinity",
+   "relation": "symbolizes",
+   "object": "psychic-development",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 287,
+     "quote": "As a psychological symbol the Trinity denotes ... a process of unconscious maturation taking place within the individual",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 289,
+     "quote": "regarded as a psychological symbol, the Trinity represents the progressive transformation of one and the same substance, namely the psyche as a whole",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "heals",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 292,
+     "quote": "Here the therapeutic myth has a helpful and loosening effect, even when the patient shows not a trace of conscious understanding",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "unconsciousness",
+   "relation": "is-root-of",
+   "object": "evil",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 291,
+     "quote": "One of the toughest roots of all evil is unconsciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "begins-with",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 292,
+     "quote": "The individuation process is invariably started off by the patient’s becoming conscious of the shadow",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-19",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-19"
    }
   }
  ]
