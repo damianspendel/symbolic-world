@@ -97,7 +97,7 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     const psyIds = [...new Set(rows.map(r => r.psyche))].sort((a, b) => (degree[b] || 0) - (degree[a] || 0) || label(a).localeCompare(label(b)))
     const labIds = [...new Set(rows.map(r => r.lab))].sort((a, b) => (degree[b] || 0) - (degree[a] || 0) || label(a).localeCompare(label(b)))
     const modeNote = atlas.meta.bridgeMode === 'family'
-      ? 'Here, the symbolization, correspondence and projection families crossing from the alchemical register to the depth psychology register.'
+      ? 'Here, we see the symbolization, correspondence and projection families crossing from the alchemical register to the depth psychology register.'
       : 'Selected by register — every cited edge that crosses between the two sides.'
     const pickedRows = picked ? allRows.filter(r => r.psyche === picked || r.lab === picked) : []
 
