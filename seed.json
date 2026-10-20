@@ -3137,6 +3137,41 @@
    "id": "the-sword",
    "label": "The sword (sacrificial and alchemical instrument)",
    "type": "Symbol"
+  },
+  {
+   "id": "bread-and-wine",
+   "label": "Bread and wine (the sacrificial gifts)",
+   "type": "Substance"
+  },
+  {
+   "id": "superego",
+   "label": "Superego (Freud)",
+   "type": "Concept"
+  },
+  {
+   "id": "round-dance",
+   "label": "The round dance (Acts of John)",
+   "type": "Motif"
+  },
+  {
+   "id": "cross-of-light",
+   "label": "The cross of light (Acts of John)",
+   "type": "Symbol"
+  },
+  {
+   "id": "sacrificed-king",
+   "label": "The sacrificed king (ritual slaying of the king)",
+   "type": "Figure"
+  },
+  {
+   "id": "self-recollection",
+   "label": "Self-recollection",
+   "type": "Operation"
+  },
+  {
+   "id": "zosimos-vision",
+   "label": "The visions of Zosimos",
+   "type": "Motif"
   }
  ],
  "edges": [
@@ -3925,6 +3960,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 414,
+     "quote": "Looked at from the psychological standpoint, Christ, as the Original Man ... represents a totality which surpasses and includes the ordinary man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 427,
+     "quote": "Christ, or the self, is a “mirror”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -8648,6 +8705,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E6 stratified audit, 2026-07-27)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 396,
+     "quote": "The self then functions as a union of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -8841,6 +8909,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "11",
+     "paragraph": 427,
+     "quote": "you initiate a process of conscious development which leads to oneness and wholeness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -67245,6 +67324,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-2, PASS, 2026-10-14)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 389,
+     "quote": "our psyche spreads far beyond the confines of the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -67628,6 +67718,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-2, PASS, 2026-10-14)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 375,
+     "quote": "all unconscious contents were projected into the object, or rather were found in nature as apparent objects or properties of matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -67795,6 +67896,17 @@
      "verified_date": "2026-10-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-2, PASS, 2026-10-14)",
      "correction_note": "gate correction: Verbatim and Jung's voice, but the text says 'the symbolic statements of the old alchemists issue from the same unconscious' — the symbolism, not alchemy as a whole; no narrower node exists, so the subject stands at medium."
+    },
+    {
+     "volume": "11",
+     "paragraph": 375,
+     "quote": "symbols characteristic not only of these visions but of alchemical literature in general show ... a psychic process that takes place mainly in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -69725,6 +69837,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 384,
+     "quote": "The wine miracle at Cana was the same as the miracle in the temple of Dionysus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -71144,6 +71267,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 388,
+     "quote": "The Church says no, since she maintains that the sacrificing priest is Christ himself.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 378,
+     "quote": "it is God himself who offers himself as a sacrifice in the substances, in the priest, and in the congregation",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -71227,6 +71372,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 378,
+     "quote": "It commemorates and represents the Last Supper which our Lord took with his disciples, the whole Incarnation, Passion, death, and resurrection of Christ.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -71299,6 +71455,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 404,
+     "quote": "the most important mystery of the Catholic Church rests, among other things, on psychic conditions which are deeply rooted in the human soul",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
     }
    ],
    "relation_family": {
@@ -71323,6 +71490,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 406,
+     "quote": "the sacrifice has the character not only of a human sacrifice, but the sacrifice of a son",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)",
+     "correction_note": "gate correction: Verbatim, but the sentence is Jung's own inference from the Unde et memores reference ('the sacrifice has the character ... of a human sacrifice'); the Church does not state that. Asserts, matching the edge's §339 coding."
     }
    ],
    "relation_family": {
@@ -71933,6 +72112,1021 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-19"
+   }
+  },
+  {
+   "subject": "the-head",
+   "relation": "derives-from",
+   "object": "osiris",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 366,
+     "quote": "Probably all these ideas go back to the severed head of Osiris",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "human-sacrifice",
+   "relation": "represents",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 371,
+     "quote": "The rite is a transformation process, a sort of rebirth after nine months of incubation in the water.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but the sentence is about this one magical rite ('The rite is ... a sort of rebirth'), not human sacrifice as such; subject generalized and 'a sort of' hedged — demoted to medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "represents",
+   "object": "microcosm",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 373,
+     "quote": "the collective unconscious not only imparts “oracles” but forever represents the microcosm",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "withdrawal-of-projections",
+   "relation": "activates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 375,
+     "quote": "the projections falling back into the human soul caused such a terrific activation of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "dogma",
+   "relation": "expresses",
+   "object": "psychic-reality",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 376,
+     "quote": "expression has been given to the psychic reality underlying the statement of the belief or rite as its empirical basis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 377,
+     "quote": "The very existence of a belief has in itself the reality of a psychic fact.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "bread-and-wine",
+   "relation": "symbolizes",
+   "object": "life",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 381,
+     "quote": "they are best fitted to serve as a symbol of human life and human personality",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)",
+     "source": "Kramp"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "bread-and-wine",
+   "relation": "represents",
+   "object": "culture",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 382,
+     "quote": "in so far as bread and wine are important products of culture, they do express a vital human striving",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 384,
+     "quote": "The offering up of bread and wine is the offering of both the physical and the spiritual fruits of civilization.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "effects",
+   "object": "participation-mystique",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 413,
+     "quote": "The Mass tries to effect a participation mystique— or identity—of priest and congregation with Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but the text says the Mass 'tries to effect' the participation mystique — 'effects' slightly exceeds it; demoted to medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "the-sacrifice",
+   "relation": "presupposes",
+   "object": "self-knowledge",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 390,
+     "quote": "So anyone who can sacrifice himself and forgo his claim must have had it ... This presupposes an act of considerable self-knowledge",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "superego",
+   "relation": "substitutes-for",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 394,
+     "quote": "The superego is a necessary and unavoidable substitute for the experience of the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "corresponds-to",
+   "object": "superego",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 396,
+     "quote": "So long as the self is unconscious, it corresponds to Freud’s superego and is a source of perpetual moral conflict.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 393,
+     "quote": "In this case the “self” coincides with public opinion and the moral code. It is then identical with Freud’s superego",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-supraordinate-to",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 391,
+     "quote": "the determining factors which radiate out from the self surround the ego on all sides and are therefore supraordinate to it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 419,
+     "quote": "The self is not an ego but a supraordinate totality embracing the conscious and the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "evolves-from",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 391,
+     "quote": "The self, like the unconscious, is an a priori existent out of which the ego evolves.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 400,
+     "quote": "the revelation of something which existed before the ego and is in fact its father or creator and also its totality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "performs",
+   "object": "the-sacrifice",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 397,
+     "quote": "The self is the sacrificer, and I am the sacrificed gift, the human sacrifice.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 398,
+     "quote": "when the self calls on us to sacrifice ourselves, it is really carrying out the sacrificial act on itself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 400,
+     "quote": "What nevertheless drives us to it is the self, which demands sacrifice by sacrificing itself to us.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 400,
+     "quote": "This is why the alchemists called their incorruptible substance—which means precisely the self—the filius philosophorum",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "self-recollection",
+   "relation": "integrates",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 400,
+     "quote": "Self-recollection is a gathering together of the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "logos",
+   "relation": "is-principle-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 400,
+     "quote": "The Logos is the real principium individuationis , because everything proceeds from it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "self-knowledge",
+   "relation": "reveals",
+   "object": "god-within",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 400,
+     "quote": "And if thou shouldst closely investigate these things, thou wilt find Him in thyself, the One and the Many",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)",
+     "source": "Monoimos"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "underlies",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 402,
+     "quote": "the archetype that lies at the root of almost all known conceptions of God",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "parallels",
+   "object": "zosimos-vision",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 403,
+     "quote": "Comparing the basic ideas of the Mass with the imagery of the Zosimos visions, we find ... a remarkable degree of similarity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 406,
+     "quote": "we should probably obtain a picture which would be rather more commensurable with the vision of Zosimos",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "zosimos-vision",
+   "relation": "originates-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 405,
+     "quote": "must be regarded as a spontaneous psychic product that was never consciously intended",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 403,
+     "quote": "a fragment of the unconscious depicting itself in dream consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "appears-as",
+   "object": "sacrificed-king",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 406,
+     "quote": "the scourging, the crowning with thorns, and the clothing in a purple robe, which show Jesus as the archaic sacrificed king",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "the-passion",
+   "relation": "is-modelled-on",
+   "object": "sacrificed-king",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 407,
+     "quote": "The punishment is carried out on God himself, and the model for this execution is the ritual slaying of the king.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 409,
+     "quote": "as creator of the world and king of his creatures, he was inadequate and therefore had to submit to the ritual slaying",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)",
+     "correction_note": "gate correction: Verbatim, but 'In these explanations we find the natural logic we missed in the answer of the Church' — this is Jung's own explanation set against the Church's, not reported doctrine. Asserts; medium stays for the interpretive construct."
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "dismemberment",
+   "relation": "effects",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 410,
+     "quote": "dismemberment originally served the purpose of reconstituting the neophyte as a new and more effective human being",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "homunculus",
+   "relation": "undergoes",
+   "object": "dismemberment",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 411,
+     "quote": "a product of the unconscious, an homunculus, is cut up and transformed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "round-dance",
+   "relation": "amplifies",
+   "object": "the-mass",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 425,
+     "quote": "a sort of paraphrase of the Eucharist, an amplifying symbol that renders the mystery more assimilable to consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "round-dance",
+   "relation": "is-equivalent-to",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 419,
+     "quote": "Psychologically this arrangement is equivalent to a mandala and is thus a symbol of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "round-dance",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 425,
+     "quote": "a symbol for the inward turning towards the centre in each of the disciples, towards the archetype of man, towards the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 419,
+     "quote": "The unconscious is the universal mediator among men. ... The alchemists knew it as their Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "parallels",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 419,
+     "quote": "they called him the mediator in analogy to Christ",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "cross-of-light",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 430,
+     "quote": "since it is a quaternity, a whole divided into four parts, it is the classic symbol of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "cross-of-light",
+   "relation": "is-identified-with",
+   "object": "logos",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 429,
+     "quote": "For your sakes this cross of light was named by me now Logos, now Nous, now Jesus, now Christ",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)",
+     "source": "Acts of John"
+    },
+    {
+     "volume": "11",
+     "paragraph": 432,
+     "quote": "It is identical with the Kyrios (Lord) and the Logos, with Jesus and with Christ.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "cross",
+   "relation": "signifies",
+   "object": "order",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 433,
+     "quote": "The cross signifies order as opposed to the disorderly chaos of the formless multitude.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "cross",
+   "relation": "corresponds-to",
+   "object": "atman",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 433,
+     "quote": "For the Gnostics the cross had exactly the same function that the atman or Self has always had for the East.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "cross",
+   "relation": "corresponds-to",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 435,
+     "quote": "The Gnostic Christ-figure and the cross are counterparts of the typical mandalas spontaneously produced by the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "gnosticism",
+   "relation": "risks",
+   "object": "ego-inflation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 438,
+     "quote": "an inflation caused by the fact that the enlightened John has identified with his own light and confused his ego with the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "union-of-opposites",
+   "relation": "gives-rise-to",
+   "object": "uniting-symbol",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 438,
+     "quote": "Opposites unite in a new energy potential: the “third” that arises out of their union is a figure “free from the opposites,”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-20",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-20"
    }
   }
  ]
