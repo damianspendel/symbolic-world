@@ -72,8 +72,13 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">release notes</p>
 <h1>Releases</h1></div>
-<p>What changed between one release of the graph and the next, and why.</p>
-<p>Each entry opens with a pin: the graph version, the ruleset version it shipped with (deliberately separate numbers), and the calibration record binding at tag time.</p>
+<p>A list of changes and key updates.</p>
+<p>Each entry opens with:</p>
+<ul>
+<li>The graph version,</li>
+<li>the ruleset version it shipped with (deliberately separate numbers),</li>
+<li>and the calibration record binding when the citation was labelled.</li>
+</ul>
 <section class="rel-entry">
 <h2>v2.0: the graph as a queryable instrument</h2>
 <div class="meta">released 2026-09-05. Tag <code>v2.0.0</code>, GitHub Release, Zenodo record <a href="https://doi.org/10.5281/zenodo.22339291">10.5281/zenodo.22339291</a> under the concept DOI; the v1.3 record is marked superseded and retained. Paper: <em>Trust, Layered</em>, promoted to docs/PAPER.md after four cross-vendor hostile passes. The v1.4 and v1.5 plans are folded in (Damian, 2026-08-19).</div>
@@ -81,8 +86,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h4>mining status</h4>
 <ul>
 <li>Mined the trilogy (CW 12, 13, 14), Aion to <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>, CW 9i to <a href="/batch-b-cw9i-10">b-cw9i-10</a>, and CW 8 to <a href="/batch-b-cw8-14">b-cw8-14</a> (2026-08-28): five volumes end to end.</li>
-<li>Graph: 594 nodes, 2135 relations, 2750 references over 66 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
-<li>Families: 1694 assigned, 369 queued, 69 no family, 3 text undecided (<a href="/families">families</a>).</li>
+<li>Graph: 632 nodes, 2339 relations, 3060 references over 71 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
+<li>Families: 1854 assigned, 405 queued, 77 no family, 3 text undecided (<a href="/families">families</a>).</li>
 <li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a> (271 relations with a proposition in the predicate), traced it to a briefing bullet, and replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>; every blind batch since ran at 0%. No re-mine: the relations are verified true and carry the normalization layer; reuse per window is in <code>pipeline/transfer_trend.jsonl</code>.</li>
 </ul>
 <h4>governance</h4>
@@ -93,7 +98,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li>Calibrated the family gate: 19/19 planted errors caught, 39/41 clean left alone. Gate model gemini-3.1-pro-preview: within-vendor role separation, not cross-vendor.</li>
 <li>Checked 27 assignments against 8 works: 8/16 treated agreed, 6 disagreed, 2 split; 7 rules changed. Receipts in <code>docs/experiments/external_validity_2026-08/</code>.</li>
 <li>Withdrew four reviewer citations (one held) and the pre-August calibration figures; flagged <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> vs <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> as confounded.</li>
-<li>Added release gates: ledger freshness, batch manifest, size budget, the copy contract, and the poster fact check, <code>tools/check_poster_facts.py</code> (the image's numbers are pixels; preflight compares its sidecar to seed.json).</li>
+<li>Added release checkpoints: ledger freshness, batch manifest, size budget, the copy contract, and the poster fact check, <code>tools/check_poster_facts.py</code> (the image's numbers are pixels; preflight compares its sidecar to seed.json).</li>
 </ul>
 <h4>core build</h4>
 <ul>
@@ -131,9 +136,9 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 </section>
 <div class="receipts"><b>receipts</b>
-prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:7f538e232a02</span>;<br>
+prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:c71478ec0bf3</span>;<br>
 ruleset v0.7.2 with calibration record <code>pipeline/family_calibration/records/2026-08-13_v072_run4.json</code> (PASS);<br>
-external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-10-13
+external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-10-20
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

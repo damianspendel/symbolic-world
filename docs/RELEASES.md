@@ -23,11 +23,13 @@
      ORDER. Entries are sorted newest-first by the version in their heading, so
      a new entry can be appended anywhere in the file. -->
 
-What changed between one release of the graph and the next, and why.
+A list of changes and key updates.
 
-Each entry opens with a pin: the graph version, the ruleset version it shipped
-with (deliberately separate numbers), and the calibration record binding at tag
-time.
+Each entry opens with:
+
+- The graph version,
+- the ruleset version it shipped with (deliberately separate numbers),
+- and the calibration record binding when the citation was labelled.
 
 ## v1.3.0: the published baseline
 
@@ -98,7 +100,7 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
   `docs/experiments/external_validity_2026-08/`.
 - Withdrew four reviewer citations (one held) and the pre-August
   calibration figures; flagged b-cw9ii-1 vs b-cw9ii-2 as confounded.
-- Added release gates: ledger freshness, batch manifest, size budget, the
+- Added release checkpoints: ledger freshness, batch manifest, size budget, the
   copy contract, and the poster fact check, `tools/check_poster_facts.py`
   (the image's numbers are pixels; preflight compares its sidecar to
   seed.json).

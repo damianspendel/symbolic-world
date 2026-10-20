@@ -99,10 +99,10 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">about</p>
 <h1>The method</h1>
-<p class="sub">How a claim gets into this graph, and what the checks do and do not cover.</p></div>
+<p class="sub">An explanation of how a citation enters the map.</p></div>
 <div class="method-page">
 <h2>What this is</h2>
-<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 594 symbols, figures and concepts, joined by 2135 relations, resting on 2750 citations to his <em>Collected Works</em>. Nothing is here because a model said so. Every claim was proposed by one AI model and judged against its source paragraph by a second, from a different model family; an auditor from a different vendor re-reads each new batch in full, and 93% of all 2750 citations currently carry its stamp. Every claim keeps the receipt: the exact paragraph, a verbatim quote, and the record of who checked what. A graph flattens: a claim can be true to its paragraph and still lose the movement of thought around it. This is a map of assertions, not a reading.</p>
+<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 632 symbols, figures and concepts, joined by 2339 relations, resting on 3060 citations to his <em>Collected Works</em> (CW). Every claim was proposed by one AI model (Opus 5 class) after reading the CW and judged against its source paragraph by a different model (Fable 5 class); an auditor (Gemini) from a different vendor re-reads each new batch in full — 94% of all 3060 citations have been certified this way. Every claim can be considered a transaction in a ledger: the exact paragraph, a verbatim quote, and the record of which model (or expert) checked what. This is a map of assertions, not a Jungian reading.</p>
 <figure class="fig fig-claim">
     <div class="claim-fig">
       <span class="fig-node" data-type="Symbol">Lapis philosophorum</span>
@@ -110,45 +110,45 @@ td.n { font-family: var(--mono); font-size: .78rem; }
       <span class="fig-node" data-type="Concept">The Self</span>
       <span class="fig-cite">CW 9ii §264</span>
     </div>
-    <figcaption>One claim, drawn. The first clause of the narrative on the landing page rests on exactly this edge.</figcaption>
+    <figcaption>One claim visualized.</figcaption>
   </figure>
-<p>Reading it: the stone (lapis) is claimed to be a projection of the self, Jung says so at paragraph 264 of <em>Aion</em>, and clicking the claim anywhere on this site shows the verbatim sentence.</p>
+<p>Reading it: the stone (lapis) is claimed to be a projection of the self, Jung says so at paragraph 264 of <em>Aion</em>, and clicking the claim on this site shows the verbatim citation.</p>
 <h2>One corpus</h2>
 <p>Everything comes from a single source: the Bollingen edition of the <em>Collected Works</em>, in English. No secondary literature, no commentary, no symbol dictionaries. That keeps the map close to Jung's own text, at the cost of breadth.</p>
 <figure class="fig">
-    <div class="works-fig"><span class="work-fig" style="flex:23 1 0;opacity:0.32"><span>CW 5</span></span><span class="work-fig" style="flex:850 1 0;opacity:1.00"><span>CW 8</span></span><span class="work-fig" style="flex:567 1 0;opacity:0.77"><span>CW 9i</span></span><span class="work-fig" style="flex:386 1 0;opacity:0.62"><span>CW 9ii</span></span><span class="work-fig" style="flex:93 1 0;opacity:0.38"><span>CW 11</span></span><span class="work-fig" style="flex:223 1 0;opacity:0.48"><span>CW 12</span></span><span class="work-fig" style="flex:176 1 0;opacity:0.44"><span>CW 13</span></span><span class="work-fig" style="flex:413 1 0;opacity:0.64"><span>CW 14</span></span><span class="work-fig" style="flex:19 1 0;opacity:0.32"><span>CW 16</span></span></div>
-    <figcaption>The works bar, as it appears at the bottom of the atlas: one segment per volume, sized by the verified evidence resting on it.</figcaption>
+    <div class="works-fig"><span class="work-fig" style="flex:23 1 0;opacity:0.32"><span>CW 5</span></span><span class="work-fig" style="flex:850 1 0;opacity:1.00"><span>CW 8</span></span><span class="work-fig" style="flex:567 1 0;opacity:0.77"><span>CW 9i</span></span><span class="work-fig" style="flex:386 1 0;opacity:0.62"><span>CW 9ii</span></span><span class="work-fig" style="flex:403 1 0;opacity:0.63"><span>CW 11</span></span><span class="work-fig" style="flex:223 1 0;opacity:0.48"><span>CW 12</span></span><span class="work-fig" style="flex:176 1 0;opacity:0.44"><span>CW 13</span></span><span class="work-fig" style="flex:413 1 0;opacity:0.64"><span>CW 14</span></span><span class="work-fig" style="flex:19 1 0;opacity:0.32"><span>CW 16</span></span></div>
+    <figcaption>This bar appears at the bottom of the atlas and shows one segment per volume included in the atlas. The size of the bar indicates the number of citations.</figcaption>
   </figure>
-<p>The bar along the bottom of the atlas shows the corpus: one segment per volume, sized by how much verified evidence it carries, so where mining has gone deep is visible at a glance. The segments select: click one and the atlas shows only that volume's claims.</p>
+<p>The bar along the bottom of the atlas shows the corpus: one segment per volume, sized by how much verified evidence it carries, so where mining has gone deep is visible immediately. The segments enable scope selection: click one and the atlas shows only that volume's claims.</p>
 <h2>Reading the atlas</h2>
 <figure class="fig">
     <ul class="metals-fig"><li><i class="metal-dot" style="background:var(--m-concept)"></i><span class="metal-kind">Concept</span><span class="metal-name">gold</span></li><li><i class="metal-dot" style="background:var(--m-symbol)"></i><span class="metal-kind">Symbol</span><span class="metal-name">silver</span></li><li><i class="metal-dot" style="background:var(--m-figure)"></i><span class="metal-kind">Figure</span><span class="metal-name">copper</span></li><li><i class="metal-dot" style="background:var(--m-operation)"></i><span class="metal-kind">Operation</span><span class="metal-name">iron</span></li><li><i class="metal-dot" style="background:var(--m-substance)"></i><span class="metal-kind">Substance</span><span class="metal-name">verdigris</span></li><li><i class="metal-dot" style="background:var(--m-motif)"></i><span class="metal-kind">Motif</span><span class="metal-name">lead</span></li></ul>
     <figcaption>The metals legend: six node kinds, six metals.</figcaption>
   </figure>
-<p>Node colour is the kind of thing a node is. The palette borrows alchemy's metals: gold for concepts, silver for symbols, copper for figures, iron for operations, verdigris for substances, lead for motifs. Alchemy assigned its metals to the planets; mapping node kinds onto them is this project's design choice.</p>
+<p>The type of node is indicated by node colour. The palette borrows alchemy's metals: gold for concepts, silver for symbols, copper for figures, iron for operations, verdigris for substances, lead for motifs. Alchemy assigned its metals to the planets; mapping node kinds is a design choice for the atlas, and not authoritative.</p>
 <ul>
 <li><strong>Search</strong> finds a symbol, a relation, a family, quote text, or a citation such as CW 14 §1. Typing offers completions, and choosing a symbol or a family opens it.</li>
-<li><strong>Click</strong> a node to read its connections; click a connection to open the claim itself: relation, quote, paragraph, verdicts. <strong>Copy link</strong> on any selection gives a URL that reopens it.</li>
+<li><strong>Click</strong> a node to read its connections; click a connection to open the citation itself: relation, quote, paragraph, verdicts. <strong>Copy link</strong> on any selection gives a URL that reopens it.</li>
 <li><strong>The chips</strong> beside the search box are the active filters: volume, family, voice, layer. Remove one with its ×.</li>
 <li><strong>The bar along the bottom</strong> selects volumes; each segment is sized by the verified evidence that volume carries.</li>
-<li>Every citation shows a status dot: green, human-validated; amber, machine-verified default without human validation; red, disputed, on the record.</li>
+<li>Every citation shows a status dot: green, human-validated; amber, machine-verified default without human validation; red, disputed, on the record. These can be viewed in the ledger.</li>
 </ul>
 <h2>How a claim gets in</h2>
 <p>Five stations.</p>
 <ol>
-<li><strong>Propose.</strong> An Opus-family model reads a window of paragraphs and proposes claims, each with a verbatim quote.</li>
-<li><strong>Check.</strong> A machine confirms the quote is letter-exact in its paragraph and at most 25 words, and that the relation is well formed. Failures are dropped, not argued with.</li>
-<li><strong>Gate.</strong> A Fable-family model judges every claim against its full source paragraph. It is hostile by default: the claim survives only if, in the model's judgment, the paragraph supports it.</li>
-<li><strong>Audit.</strong> A Gemini model re-reads what survived, before any of it touches the graph. Universal for every batch since the <em>Aion</em> arc (mid-2026); earlier material was audited by sampling, and each claim's receipt shows whether it carries the stamp; 2556 of 2750 citations do today. When gate and auditor disagree, the auditor wins.</li>
+<li><strong>Propose.</strong> An Opus-family model reads a collection of paragraphs and proposes claims, each with a verbatim citation.</li>
+<li><strong>Check.</strong> A machine confirms the quote is letter-exact in its paragraph and at most 25 words, and that the relation is well formed, i.e. structured as a relationship between two nodes. Failures are then excluded.</li>
+<li><strong>Gate.</strong> A Fable-family model judges every claim against its full source paragraph. It is hostile — i.e. it seeks to challenge aggressively — by default: the claim survives only if, in the model's judgment, the paragraph supports it.</li>
+<li><strong>Audit.</strong> A Gemini model re-reads what survived, before any of it touches the graph. Universal for every batch since the <em>Aion</em> arc (mid-2026). (Earlier material was audited by sampling, and evidenced in the ledger; 2866 of 3060 citations have been audited this way as at time of publication.) When gate and auditor disagree, the auditor wins.</li>
 <li><strong>Merge.</strong> The claim enters with its provenance stamped: dates, verdicts, corrections.</li>
 </ol>
-<p>The rule underneath all five: <strong>the model that proposes a claim is never the model that signs it off.</strong> Proposer and gate are different model families (Anthropic's Opus and Fable lines); the auditor is a different vendor altogether (Google's Gemini); and the roles never swap.</p>
-<p>The checks remove real material: in the most recent window, 75 proposed citations became 72 merged ones.</p>
+<p>The rule underneath all five: <strong>the model that proposes a claim is never the model that signs it off.</strong> Proposer and gate are different model families (Anthropic's Opus and Fable lines); the auditor is a different vendor altogether (Google's Gemini). This is a standing arrangement.</p>
+<p>The checks remove real material: in the most recent window, 66 proposed citations became 61 merged ones.</p>
 <h2>Human oversight</h2>
-<p>Machine checks are not decisions. A person rules on disagreements, decides releases, and answers for what is published.</p>
+<p>A person rules on disagreements, decides releases, and answers for what is published.</p>
 <ul>
 <li><strong>Gold set.</strong> 50 claims carry a <em>human-validated</em> mark in the <a href="/ledger">ledger</a>: a person read the cited paragraph. The rest carry the amber dot: machine-verified without human validation.</li>
-<li><strong>Adjudication.</strong> Two blind arms sort relations into 25 families: one Opus-family model, one Gemini, each reading the definitions document and the edge, neither able to see the other's answer. They disagree on 369 claims today. No model breaks the tie. A person rules, in sittings, and every ruling lands signed and dated. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
+<li><strong>Adjudication.</strong> Two blind arms sort relations into 25 families: one Opus-family model, one Gemini, each reading the definitions document and the edge, neither able to see the other's answer. These arms disagree on 405 claims today. No model is allowed to break a tie; this is performed by a human in the loop: a person rules, in sittings. The rulings land in the ledger. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
 <li><strong>Refusals are kept apart.</strong> <em>No family</em> means our vocabulary is short. <em>Text undecided</em> means Jung's own sentence hedges between two readings. Pooling them would let a thin vocabulary hide inside a hedge.</li>
 <li><strong>Disputes.</strong> 18 challenges are on the record with their outcomes, in the <a href="/disputes">dispute log</a>.</li>
 <li><strong>Publication.</strong> Releases, deploys and rulings are human decisions. Nothing here publishes itself.</li>
@@ -156,20 +156,20 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h2>Confidence levels</h2>
 <p>The checks are themselves checked:</p>
 <ul>
-<li>Every one of the 2750 quotes is mechanically verified, letter for letter, against the corpus (the harness also carries seven deliberately corrupted claims, and all seven are caught on every run). Whether a paragraph supports its claim is a model's judgment, not a mechanical proof. The receipts show it as judgment.</li>
-<li>The family layer's own check is a gate tested by planting errors among real assignments. It reported catching everything planted in its early runs. A code inspection we commissioned in August 2026 found that the harness could not fully substantiate what "caught" means, so we withdrew those figures. The harness was rebuilt in tracked code; calibration re-runs per ruleset version, and its figures live in the version-bound records (<code>pipeline/family_calibration/records/</code>) rather than in this prose, because a number written here outlives the version it measured. It measures the instrument, not the vocabulary: it says nothing about whether the families cut Jung's thought at the right joints. A family label means this: two models, judging independently, agreed. Where they disagreed, a person decides.</li>
-<li>The classification vocabulary was checked outside this repository, against 8 works of scholarship: 8 of 16 treated items agreed with our family, and the disagreements are published beside them (<a href="/ontology#checked">the check</a>). It tests the classification, not whether a claim is true.</li>
-<li>The two blind classification arms agreed on 86% of 2135 relations. Agreement measures whether the definitions can be followed consistently, not whether they are right: neither arm is ground truth, and the definitions were drafted by one of the model families working in this pipeline. Twenty standing questions about Jung's thought are asked of the graph after every change; it currently answers 14 in full.</li>
+<li>Every one of the 3060 quotes is mechanically verified against the corpus. The verification set seeds seven deliberately corrupted claims — so far, all seven have been caught on every run. Whether a paragraph supports its claim is a judgment call made by a model. It is not a mechanical proof.</li>
+<li>The family layer is checked by seeding corruptions among real assignments. It reported catching everything planted in its early runs. A family label means: two models, judging independently, agreed on the assignment of the relation to the family. Also here, in the case of disagreement, a human decides.</li>
+<li>The classification vocabulary was checked outside this repository, against 8 works of scholarship: 8 of 16 treated items agreed with our families. We have also published the disagreements (<a href="/ontology#checked">the check</a>). It tests the classification of relations into families, not whether a claim is true.</li>
+<li>The two blind classification arms agreed on 86% of 2339 relations. Agreement measures whether the definitions can be followed consistently, not whether they are right: neither arm is authoritative. Definitions were drafted by one of the model families working in this pipeline.</li>
 </ul>
 <p>What the instruments do not cover:</p>
 <div class="tw"><table><thead><tr><th>Known limit</th><th>Options</th></tr></thead><tbody>
 <tr><td>One human reviewer; no second annotator yet</td><td>Independent second annotation with agreement statistics</td></tr>
-<tr><td>A class of identity drift (two names for one thing entering as two things) is invisible to the current audit</td><td>No instrument yet; known gap, on the record</td></tr>
+<tr><td>A class of identity drift (two names for one thing entering as two things) is invisible to the current audit</td><td>No instrument yet</td></tr>
 <tr><td>English translation only (Hull)</td><td>German cross-check against the <em>Gesammelte Werke</em></td></tr>
 <tr><td>Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked</td><td>The graph is a map of assertions, not a reading. Opposing claims are mined where Jung himself qualifies, and the books remain the reading</td></tr>
 </tbody></table></div>
 <h2>The paper</h2>
-<p>The method was published with release v1.3.0: 248 symbols, 669 relations, 699 citations. That exact snapshot, atlas and ledger included, is preserved unchanged at <a href="/v1.3/">/v1.3/</a>, and the paper describes it. The live counts at the top of every page show how far the atlas has grown since, under the same gates.</p>
+<p>The method was published with release v1.3.0: 248 symbols, 669 relations, 699 citations. That exact snapshot, atlas and ledger included, is preserved unchanged at <a href="/v1.3/">/v1.3/</a>. The live counts at the top of every page show how far the atlas has grown since, using the same methodology.</p>
 <div class="cite-block">
     <div class="cite-title">Trust, Layered: Warranted AI Knowledge Extraction for Interpretive Corpora, Demonstrated on Jung's Collected Works (dataset, pipeline, and paper)</div>
     <div class="cite-meta">Spendel, Damian</div>

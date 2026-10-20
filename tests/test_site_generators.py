@@ -305,7 +305,7 @@ def test_the_families_page_is_reference_not_method():
     for gone in ("What a family is", "How an edge gets a family",
                  "Agreement between the two arms", "planting classification errors"):
         assert gone not in exposition, f"method content is still on /families: {gone}"
-    for kept in ("Where the layer stands", "How the settled records were arrived at",
+    for kept in ("Where the layer stands", "How the records were arrived at",
                  "The map: which relation strings land in which family",
                  "What fits nowhere", "Where the boundaries are decided",
                  "The definitions document, in full"):
@@ -451,8 +451,10 @@ def test_the_releases_intro_is_two_paragraphs_and_no_machinery():
     for machinery in ("named tokens", "double braces", "repo-relative",
                       "line for line", "build-atlas.mjs"):
         assert machinery not in text, f"contributor machinery still rendered: {machinery}"
-    # the intro is two paragraphs: what the page is, and what a pin means
-    assert "What changed between one release" in text and "pin" in text
+    # the intro: what the page is, and what an entry opens with (Damian's
+    # 2026-10-18 rewrite replaced the pin sentence with a three-item list)
+    assert "A list of changes and key updates" in text
+    assert "Each entry opens with" in text
 
     # the conventions are kept, in a note the renderer never shows
     source = read(os.path.join(ROOT, "docs", "RELEASES.md"))
@@ -567,7 +569,7 @@ def test_the_ontology_page_puts_the_evidence_before_the_conclusions():
     than assertions made ahead of it."""
     html = read(os.path.join(PUBLIC, "ontology.html"))
     order = [re.sub(r"<[^>]+>", "", h) for h in re.findall(r"<h2[^>]*>.*?</h2>", html)]
-    assert order == ["Two tiers", "The declarations", "Where the checks come from",
+    assert order == ["Two tiers", "The declarations", "Atlas, Graph, Ontology",
                      "The pitfall scan", "Checked against readers of Jung",
                      "Deliberately absent"], order
 
@@ -599,7 +601,7 @@ def test_the_ontology_page_states_where_its_checks_come_from(qa_json):
     """The scan borrows the OOPS! catalogue's numbering; the page says so, cites
     it, and lists every pitfall code the tool actually uses."""
     html = read(os.path.join(PUBLIC, "ontology.html"))
-    section = html[html.index("Where the checks come from"):html.index("<h2>The pitfall scan")]
+    section = html[html.index("Atlas, Graph, Ontology"):html.index("<h2>The pitfall scan")]
     assert "OntOlogy Pitfall Scanner" in section
     assert "Poveda-Villal" in section
     assert "not the OOPS! service" in section

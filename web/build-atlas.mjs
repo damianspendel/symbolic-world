@@ -845,8 +845,7 @@ function familiesPageCopy(map, version) {
     .map(r => `<li>${r.html}</li>`).join('\n')
 
   return `<div class="titleband"><p class="eyebrow">reference</p>
-<h1>Families</h1>
-<p class="sub">The classification layer at ruleset ${esc(version)}: the states, the string-to-family map, and the document that defines them.</p></div>
+<h1>Families</h1></div>
 
 <p>A family is an assigned classification over a relation that was already verified: the <a href="/ontology">design</a> is on the design page, the <a href="/#/method">checks</a> on the method page.</p>
 
@@ -855,12 +854,12 @@ function familiesPageCopy(map, version) {
 <thead><tr><th>State</th><th>Relations</th><th>What it means</th></tr></thead>
 <tbody>
 <tr><td>assigned</td><td>${t.assigned}</td><td>both arms named the same family, or a person ruled</td></tr>
-<tr><td>pending a ruling</td><td>${t.pending}</td><td>the arms disagreed; queued, not guessed</td></tr>
+<tr><td>pending a ruling</td><td>${t.pending}</td><td>the arms disagreed; queued for ruling</td></tr>
 <tr><td>no family</td><td>${t.no_family}</td><td>well-formed relation, our vocabulary does not cover it</td></tr>
 <tr><td>text undecided</td><td>${t.text_undecided}</td><td>the source sentence hedges between two families</td></tr>
 </tbody></table></div>
-<p>That is ${num(t.assigned)} of ${num(t.edges)} relations classified, with ${num(t.pending)} still waiting on a person and ${num(t.no_family + t.text_undecided)} that no family was forced onto. Decisions on ties are made by a human.</p>
-<p>How the settled records were arrived at:</p>
+<p>That is ${num(t.assigned)} of ${num(t.edges)} relations classified, with ${num(t.pending)} still waiting on a person.</p>
+<p>How the records were arrived at:</p>
 <div class="tw"><table><thead><tr><th>Arrived at by</th><th>Relations</th></tr></thead><tbody>${provRows}</tbody></table></div>
 
 <h2>The map: which relation strings land in which family</h2>
@@ -1017,7 +1016,7 @@ if (existsSync(methodPath)) {
       <span class="fig-node" data-type="Concept">${esc(nodeLabel(claimEdge.target))}</span>
       <span class="fig-cite">CW ${esc(claimRef.volume)} §${esc(claimRef.paragraph)}</span>
     </div>
-    <figcaption>One claim, drawn. The first clause of the narrative on the landing page rests on exactly this edge.</figcaption>
+    <figcaption>One claim visualized.</figcaption>
   </figure>`
   // figure (c) — the metals legend. The six live node kinds in the copy's own
   // order, each swatch painted from the palette token that the DOMAIN table
@@ -1047,7 +1046,7 @@ if (existsSync(methodPath)) {
   const maxV = Math.max(...volumes.map(v => v.references))
   const figWorks = `<figure class="fig">
     <div class="works-fig">${volumes.map(v => `<span class="work-fig" style="flex:${v.references} 1 0;opacity:${(0.3 + 0.7 * v.references / maxV).toFixed(2)}"><span>CW ${esc(v.volume)}</span></span>`).join('')}</div>
-    <figcaption>The works bar, as it appears at the bottom of the atlas: one segment per volume, sized by the verified evidence resting on it.</figcaption>
+    <figcaption>This bar appears at the bottom of the atlas and shows one segment per volume included in the atlas. The size of the bar indicates the number of citations.</figcaption>
   </figure>`
 
   const cit = JSON.parse(readFileSync(here('../.zenodo.json'), 'utf8'))
@@ -2319,7 +2318,7 @@ if (QA && DECL) {
   <span class="chip ev">CW ${esc(anatomyRef.volume)} §${esc(anatomyRef.paragraph)}</span>
 </div>
 <div class="ofig-quote ev">&ldquo;${esc(anatomyRef.quote)}&rdquo;</div>
-<figcaption>One relation as the graph stores it: subject, the relation in Jung's own phrasing, object, the quote it was gated against, and the paragraph it came from.</figcaption>
+<figcaption>One relation as the graph stores it: subject, the relation in Jung's own phrasing, object, the source quote, and the paragraph it came from.</figcaption>
 </figure>`
 
   const figTiers = `<figure class="ofig">
@@ -2329,24 +2328,24 @@ if (QA && DECL) {
   <span class="ofig-arm">&rarr;</span>
   <span class="chip f-ok ev">${esc(tierFamily.family)} <span class="n">${tierFamily.edges}</span></span>
 </div>
-<figcaption>The second tier: different relation strings, each verified in its own paragraph, carrying one family. The family classifies them; it does not re-verify them, and the strings stay as written.</figcaption>
+<figcaption>The second tier: different relation strings, each verified in its own paragraph, assigned to one family. The family only classifies relations.</figcaption>
 </figure>`
 
   const ontBody = `<div class="titleband"><p class="eyebrow">the design</p>
-<h1>What the graph is</h1></div>
-<p>A network of asserted relations between named things, each relation carrying the paragraph it came from and a quote from it. It is not a subsumption ontology, and most of what an ontology engineer would look for is left out on purpose. This page records those decisions, then runs a standard pitfall scan over the graph and reports every finding, including the ones where a decision shows up as a defect.</p>
-<p class="meta">The address keeps the word <em>ontology</em> because the page runs an ontology pitfall scan; the graph itself is not one, and the paper says so.</p>
+<h1>The atlas</h1></div>
+<p>The atlas is a network of asserted relations between named things. Each relation is evidenced by a paragraph and a quote from the Collected Works. This page records key design decisions and shows the results of a standard pitfall scan over the graph.</p>
 
 <h2>Two tiers</h2>
-<p>The first tier is the relation in Jung's own wording. It is frozen: the string is part of the claim that was gated, and a model of a different family judged the paragraph against exactly that wording. Rewriting it into a controlled predicate would change what was verified.</p>
-<p>The second tier is the family: a classification <em>over</em> the verified relation, drawn from a fixed vocabulary in a versioned document. An assignment stands when two models reading that document independently name the same family; a person rules when they do not. The second tier never reopens the first. Nothing on this site calls a family verified, and no family assignment changes a relation string.</p>
-<p>The families are this project's own sorting of the relations Jung wrote, not a structure discovered in his thought and not a position the field has agreed on. The whole graph maps what Jung asserted rather than interpreting it, and the second tier is where that limit matters most.</p>
+<p>A challenge identified is that we have many different relations. To better enable grouping of relations, we have designed two tiers.</p>
+<p>The first tier is the relation in Jung's own wording.</p>
+<p>The second tier is the family: a classification <em>over</em> the verified relation. We use a similar pipeline for assignment of relations to families: an assignment stands when two models reading that document independently name the same family; a person rules when they do not.</p>
+<p>The families are this project's sorting of the relations Jung wrote, not a structure discovered in his thought and not a position the field has agreed on — again, it is not a reading. The whole graph maps what Jung asserted rather than interpreting it, and the second tier is where that limit matters most.</p>
 ${figAnatomy}
-<p>Where a relation carried a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original, with the qualifiers pulled out into their own fields. ${meta.normalized} relations carry that layer. The family layer classifies the normalized form where it exists, which is why the map counts effective strings rather than surface ones.</p>
+<p>Where a relation was a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original. ${meta.normalized} relations carry that layer. The family layer classifies the normalized form where it exists.</p>
 
 ${figTiers}
 <h2>The declarations</h2>
-<p>Only two properties are declared: which relation strings are inverses of each other, and which are symmetric. Each declaration is transcribed from a line of the definitions document, cites that line, and is applied only when a reader asks for closure. The derived row is labelled, carries its source edge's references, and is never written into the graph.</p>
+<p>Only two properties of relations are declared: inverses and symmetries.</p>
 <div class="tw"><table><thead><tr><th>strings</th><th>kind</th><th>transcribed from</th></tr></thead><tbody>
 ${declRows}
 </tbody></table></div>
@@ -2356,16 +2355,16 @@ ${rulingRows ? `<h4>rulings behind them</h4>
 ${rulingRows}
 </tbody></table></div>` : ''}
 
-<h2>Where the checks come from</h2>
-<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur in published ontologies and describes how to detect each one. The catalogue is a list of known failure points rather than a standard to comply with; checking against it keeps an evaluation from being a matter of taste. <code>tools/ontology_qa/quality.py</code> implements a subset locally against this graph and keeps the catalogue's numbering, so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
+<h2>Atlas, Graph, Ontology</h2>
+<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur in published ontologies and describes how to detect each one. The catalogue is a list of known issues rather than a standard to comply with and so can provide design guidance. <code>tools/ontology_qa/quality.py</code> implements a subset against this graph and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
 <p class="meta">Poveda-Villal\u00f3n, G\u00f3mez-P\u00e9rez and Su\u00e1rez-Figueroa, "OOPS! (OntOlogy Pitfall Scanner!): An On-line Tool for Ontology Evaluation", <i>International Journal on Semantic Web and Information Systems</i> 10(2), 2014.</p>
 <div class="tw"><table><thead><tr><th>pitfall</th><th>what the catalogue names</th><th>use here</th></tr></thead><tbody>
 ${pitfallRows}
 </tbody></table></div>
-<p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is relations between named things. Where a number is borrowed for a fault of a different shape, the third column says so.</p>
+<p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is relations between named things.</p>
 
 <h2>The pitfall scan</h2>
-<p>Run at every build by <code>tools/ontology_qa/quality.py</code>, which reads the graph and writes nothing. The four figures below are its own; the table under them is every finding it reported, with this project's stance beside each one. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects.</p>
+<p>Run at every build by <code>tools/ontology_qa/quality.py</code>. The below table articulates our view of the findings of the pitfall scanner. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects.</p>
 <div class="qa">
   <div class="fig"><span class="figv ev">${h.hapax_pct.toFixed(1)}%</span><span class="figl">of relation strings are used exactly once <span class="ev">(${h.hapax_relations} of ${h.distinct_relations})</span></span></div>
   <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
@@ -2378,18 +2377,18 @@ ${pitfallRows}
 ${findingRows}
 </tbody></table></div>
 </details>
-<p class="meta">A stance is not a rebuttal, and the costs are real: an open vocabulary is hard to query by predicate, and the family layer exists because of it.</p>
+<p class="meta">An open vocabulary is hard to query by predicate, which is the rationale for the family layer and the “routes”.</p>
 
 ${EVROWS.length ? `<h2 id="checked">Checked against readers of Jung</h2>
-<p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The check asked whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts; whether the claim itself holds, the verification chain had already asked.</p>
+<p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The check asked whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
 
-<p>The result, stated exactly: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs no consulted work treats at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<p>The result: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs were not treated at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <details class="disclose">
 <summary>${EV.agrees} of ${EV.treated} treated items agreed with our family, across ${EV.works_consulted} works of scholarship.<span class="more">the whole table</span></summary>
 ${evTable()}
 </details>
 
-<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary, and where the sample agreed it mostly agreed on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The field does not hold a stable line on the hardest boundary this layer draws. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 ` : ''}
 
 <h2>Deliberately absent</h2>
@@ -2457,9 +2456,9 @@ table.findings .src { font: .58rem var(--mono); }
   // docs/figures/METHOD_POSTER_HANDOFF.md.
   const nutshellBody = `<div class="titleband"><p class="eyebrow">about</p>
 <h1>In a nutshell</h1>
-<p class="sub">How the atlas is made, on one page: one real claim followed
-from the map, through the machine that decides what gets in, to its
-published receipt. The long form is on the <a href="/#/method">method</a>
+<p class="sub">A one-pager on how the atlas was constructed: one citation
+traced from the map through the steps that identify, validate and evidence
+the citation. The full explanation is on the <a href="/#/method">method</a>
 page.</p></div>
 <figure class="fig fig-poster">
   <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
@@ -2551,7 +2550,7 @@ if (methodHTML) {
 `
   const methodBody = `<div class="titleband"><p class="eyebrow">about</p>
 <h1>The method</h1>
-<p class="sub">How a claim gets into this graph, and what the checks do and do not cover.</p></div>
+<p class="sub">An explanation of how a citation enters the map.</p></div>
 <div class="method-page">
 ${methodHTML}
 </div>`

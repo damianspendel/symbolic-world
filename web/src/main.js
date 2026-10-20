@@ -954,7 +954,7 @@ function openMethod() {
   openPage(() => {
     modeEl.innerHTML = `${pageBar({ where: 'about' })}<div class="page method-page">` +
       `<div class="titleband"><p class="eyebrow">about</p><h1>The method</h1>` +
-      `<p class="sub">How a claim gets into this graph, and what the checks do and do not cover.</p></div>` +
+      `<p class="sub">An explanation of how a citation enters the map.</p></div>` +
       `${method.html}</div>`
     modeEl.querySelector('[data-back]').addEventListener('click', goAtlas)
   }, '#/method')
