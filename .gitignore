@@ -29,3 +29,11 @@ app/
 # private working docs — not part of the published artifact
 docs/PUBLISHING.md
 docs/STATS_GUIDE.md
+
+# session-local tooling — wrangler dev caches and Claude session config/worktrees
+.wrangler/
+web/.wrangler/
+.claude/
+
+# regenerable from docs/figures/method_poster.html via the handoff's render script
+docs/figures/method_poster_print.png
