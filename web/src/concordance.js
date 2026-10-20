@@ -97,9 +97,8 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     const psyIds = [...new Set(rows.map(r => r.psyche))].sort((a, b) => (degree[b] || 0) - (degree[a] || 0) || label(a).localeCompare(label(b)))
     const labIds = [...new Set(rows.map(r => r.lab))].sort((a, b) => (degree[b] || 0) - (degree[a] || 0) || label(a).localeCompare(label(b)))
     const modeNote = atlas.meta.bridgeMode === 'family'
-      ? 'Selected by family — the symbolization, correspondence and projection families crossing from one register to the other. New crossings appear here as they are mined and classified.'
+      ? 'Here, the symbolization, correspondence and projection families crossing from the alchemical register to the depth psychology register.'
       : 'Selected by register — every cited edge that crosses between the two sides.'
-    const onlyTrilogy = Object.values(conc.mix || {}).filter(m => m.total && !m.other).length
     const pickedRows = picked ? allRows.filter(r => r.psyche === picked || r.lab === picked) : []
 
     root.innerHTML = `
@@ -107,8 +106,7 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
       <div class="page">
       <div class="titleband"><p class="eyebrow">explore</p>
       <h1>Psychology against alchemy</h1></div>
-      <p class="lede2">Jung's thesis is that alchemy is the psyche describing itself in projected form. The site does not have to assert that: the graph already holds it as verified edges. ${modeNote}</p>
-      <p class="lede2">${allRows.length} crossings in all · <b>${onlyTrilogy} of ${atlas.nodes.length}</b> nodes in the atlas rest only on alchemical evidence, which is also an honest map of where this picture of the psychology comes from.</p>
+      <p class="lede2">Jung's thesis is that alchemy is the psyche describing itself in projected form. ${modeNote}</p>
 
       ${journeyTiles()}
       ${walkHTML()}

@@ -847,7 +847,7 @@ function familiesPageCopy(map, version) {
   return `<div class="titleband"><p class="eyebrow">reference</p>
 <h1>Families</h1></div>
 
-<p>A family is an assigned classification over a relation that was already verified: the <a href="/ontology">design</a> is on the design page, the <a href="/#/method">checks</a> on the method page.</p>
+<p>A family is an assigned classification over a verified relation: the <a href="/ontology">design</a> is on the design page, the <a href="/#/method">checks</a> on the method page.</p>
 
 <h2>Where the layer stands</h2>
 <div class="tw"><table>
