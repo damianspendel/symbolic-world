@@ -1,10 +1,10 @@
 {
-  "_about": "The facts baked into method_poster_web.png as PIXELS. Ruling (Damian, 2026-10-13): the poster is the frozen v2.0 release artifact its caption claims, so tools/check_poster_facts.py pins these counts to the v2.0.0 release rather than live seed.json, and still verifies the claim and map edges against the live graph. Re-render at the next release ceremony, then update this file.",
-  "rendered_at_commit": "035fc38",
+  "_about": "The facts baked into method_poster_web.png as PIXELS. Ruling (Damian, 2026-10-20, superseding the 2026-10-13 freeze): the poster REGENERATES at each release/deploy with the live counts and a dated caption, so tools/check_poster_facts.py compares this sidecar to live seed.json again and a stale poster blocks the deploy until re-rendered per docs/figures/METHOD_POSTER_HANDOFF.md.",
+  "rendered_at_commit": "04793cf",
   "counts": {
-    "nodes": 589,
-    "edges": 2091,
-    "references": 2678,
+    "nodes": 632,
+    "edges": 2339,
+    "references": 3060,
     "volumes": 9
   },
   "claim": {
@@ -47,5 +47,7 @@
       "gives-birth-to",
       "lapis"
     ]
-  ]
+  ],
+  "rendered_date": "2026-10-20",
+  "date_label": "20 October 2026"
 }

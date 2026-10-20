@@ -209,7 +209,7 @@ else:
 # is near: it fails the deploy if the bundle crosses the ceiling, and prints the
 # actual against it either way so the trend is visible in the log.
 print('== size budget ==')
-INDEX_CEILING = 3.0 * 1024 * 1024
+INDEX_CEILING = 3.5 * 1024 * 1024   # raised from 3.0 by Damian's ruling, 2026-10-20 (CW 11 growth)
 idx_path = DIST / 'index.html'
 if idx_path.exists():
     actual = idx_path.stat().st_size
@@ -237,7 +237,7 @@ check('repo /v1.3 == frozen baseline', proc.stdout.strip() == V13_BASELINE,
 
 print('== gates ==')
 for name, cmd in [('paper facts', 'python3 tools/check_paper_facts.py'),
-                  ('poster facts (v2.0 pin; claim vs live graph)', 'python3 tools/check_poster_facts.py'),
+                  ('poster facts (pixels vs live seed.json)', 'python3 tools/check_poster_facts.py'),
                   ('test harness', 'python3 tests/test_graph.py')]:
     p = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=ROOT)
     check(name, p.returncode == 0, (p.stdout + p.stderr).strip().splitlines()[-1] if (p.stdout or p.stderr) else '')
