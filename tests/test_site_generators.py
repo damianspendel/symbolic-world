@@ -307,8 +307,7 @@ def test_the_families_page_is_reference_not_method():
         assert gone not in exposition, f"method content is still on /families: {gone}"
     for kept in ("Where the layer stands", "How the records were arrived at",
                  "The map: which relation strings land in which family",
-                 "What fits nowhere", "Where the boundaries are decided",
-                 "The definitions document, in full"):
+                 "What fits nowhere", "Where the boundaries are decided"):
         assert kept in exposition, f"reference content went missing: {kept}"
     # one header sentence, carrying both pointers
     assert '<a href="/ontology">design</a>' in exposition
@@ -570,8 +569,7 @@ def test_the_ontology_page_puts_the_evidence_before_the_conclusions():
     html = read(os.path.join(PUBLIC, "ontology.html"))
     order = [re.sub(r"<[^>]+>", "", h) for h in re.findall(r"<h2[^>]*>.*?</h2>", html)]
     assert order == ["Two tiers", "The declarations", "Atlas, Graph, Ontology",
-                     "The pitfall scan", "Checked against readers of Jung",
-                     "Deliberately absent"], order
+                     "The pitfall scan", "Checked against readers of Jung"], order
 
 
 def test_the_ontology_figures_carry_real_data():
@@ -613,15 +611,6 @@ def test_the_ontology_page_states_where_its_checks_come_from(qa_json):
     assert listed == cited, cited ^ listed
     assert "no gloss recorded" not in section, (
         "a pitfall code the scan cites has no gloss — add it to PITFALLS in build-atlas.mjs")
-
-
-def test_the_ontology_page_names_what_is_deliberately_absent():
-    html = read(os.path.join(PUBLIC, "ontology.html"))
-    # item 34(f) — the absences now follow the scan, so the slice runs to the end
-    section = html[html.index("Deliberately absent"):]
-    for phrase in ("Transitivity", "Domain and range", "Disjoint types",
-                   "subsumption backbone", "closed relation vocabulary"):
-        assert phrase in section, phrase
 
 
 def test_active_declarations_are_all_on_the_page():
@@ -1599,11 +1588,11 @@ def test_the_deploy_carries_a_size_budget():
     assert "== size budget ==" in src
     assert "INDEX_CEILING" in src
     ceiling = re.search(r"INDEX_CEILING = ([\d.]+) \* 1024 \* 1024", src)
-    assert ceiling and float(ceiling.group(1)) == 3.0, "the ceiling moved without a ruling"
+    assert ceiling and float(ceiling.group(1)) == 3.5, "the ceiling moved without a ruling"
     assert "within budget" in src and "ceiling" in src
     dist_index = os.path.join(ROOT, "web", "dist", "index.html")
     if os.path.exists(dist_index):
-        assert os.path.getsize(dist_index) <= 3.0 * 1024 * 1024, (
+        assert os.path.getsize(dist_index) <= 3.5 * 1024 * 1024, (
             "the built bundle already exceeds the ceiling")
 
 

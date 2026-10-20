@@ -185,8 +185,6 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 <main class="page-main records">
 <div class="titleband"><p class="eyebrow">read-only</p>
 <h1>Query the graph</h1></div>
-<p>The filters <code>tools/query/kg_query.py</code> takes, as a web page. They combine with AND, exactly as the tool combines them, and each one reads a field the graph already stores rather than computing a judgement of its own. The closure toggle adds the rows the active declarations license and marks every one of them as derived.</p>
-<p>Nothing on this page writes anything. The panel reads the published dataset at <a href="/graph.json">/graph.json</a> and the declarations beside it; the same query on the command line prints the same rows with a footer naming the graph it ran against. Two results carrying different seed digests are not comparable, which is why the digest sits under the results rather than in a help page.</p>
 
 <div class="filters" id="filters">
   <div class="fld"><label for="f-family">family</label><select id="f-family"></select><span class="hint" id="h-family"></span></div>

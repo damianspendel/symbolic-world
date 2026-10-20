@@ -318,20 +318,10 @@ table.findings .src { font: .58rem var(--mono); }
 <p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 
 
-<h2>Deliberately absent</h2>
-<p>7 of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight.</p>
-<ul class="absent">
-<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third stay two hops apart; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
-<li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
-<li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
-<li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
-<li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
-</ul>
-
 <div class="receipts"><b>receipts</b>
 external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:c71478ec0bf3</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-10-20 at commit 8c8b12e
+built 2026-10-20 at commit 04793cf
 </div>
 <nav class="sitenav"><a href="/">the atlas</a>
 <a href="/ledger">ledger</a>

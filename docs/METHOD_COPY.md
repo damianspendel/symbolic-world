@@ -20,8 +20,8 @@ rewrite.
 The Symbolic World is a map of C. G. Jung's symbolic thought: {{nodes}}
 symbols, figures and concepts, joined by {{edges}} relations, resting on
 {{refs}} citations to his *Collected Works* (CW). Every claim was proposed by
-one AI model (Opus 5 class) after reading the CW and judged against its source
-paragraph by a different model (Fable 5 class); an auditor (Gemini) from a
+one AI model (Opus family) after reading the CW and judged against its source
+paragraph by a different model (Fable family); an auditor (Gemini) from a
 different vendor re-reads each new batch in full — {{xv_pct}}% of all {{refs}}
 citations have been certified this way. Every claim can be considered a
 transaction in a ledger: the exact paragraph, a verbatim quote, and the record
@@ -134,7 +134,7 @@ The checks are themselves checked:
   far, all seven have been caught on every run. Whether a paragraph supports
   its claim is a judgment call made by a model. It is not a mechanical proof.
 - The family layer is checked by seeding corruptions among real assignments.
-  It reported catching everything planted in its early runs. A family label
+  A family label
   means: two models, judging independently, agreed on the assignment of the
   relation to the family. Also here, in the case of disagreement, a human
   decides.

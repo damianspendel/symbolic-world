@@ -880,8 +880,7 @@ ${worked}
 </ul>
 
 ${EV ? `<p class="meta">Checked once against outside scholarship: ${EV.agrees} of ${EV.treated} treated items agreed — <a href="/ontology#checked">the full result</a>.</p>
-` : ''}<h2>The definitions document, in full</h2>
-<p class="docnote">What follows is the working document itself, rendered as written. It carries its own history, including measurement sections describing earlier runs of the calibration harness whose figures were withdrawn in August 2026, when a code inspection found they could not be substantiated. Those sections are the record of what was done, not current evidence; the current figures are the version-bound records named above.</p>`
+` : ''}`
 }
 
 function renderDoc(md, frontCopy) {
@@ -1770,11 +1769,6 @@ the verbatim, paragraph-referenced quotations behind each one.</p>
 </thead><tbody>
 ${rows}
 </tbody></table></div>
-<p class="meta">Counting rule: a concept's <em>relations</em> figure is the number of verified
-edges it appears in, at either end — the figure its own page states — not its count of
-distinct neighbours, so two edges between the same pair count twice. <em>Citations</em>
-is the number of verified quotations those edges carry. Both are computed from the
-graph at build time; the bar is proportional to whichever column the ranking uses.</p>
 <script>
 (() => {
   const tb = document.querySelector('.cidx tbody')
@@ -1838,7 +1832,7 @@ if (ROUTES_IN_UI) {
   const routesBody = `<div class="titleband"><p class="eyebrow">explore</p>
 <h1>Routes</h1>
 <p class="sub">the chains of verified claims between any two concepts</p></div>
-<p>Pick two concepts; the page lists the chains of verified claims that connect them, shortest first, each leg carrying its own citation. A route shows that a chain of cited claims exists — it asserts nothing further about the two ends. Extraction is per sentence, so an empty result means no verified claim was surveyed within the hop budget, and absence is not evidence.</p>
+<p>Pick two concepts and see the chains of claims that connect them.</p>
 <div class="filters">
   <div class="fld"><label for="r-from">from</label><select id="r-from"></select><span class="hint">any concept in the graph</span></div>
   <div class="fld"><label for="r-to">to</label><select id="r-to"></select><span class="hint">routes run both ways; arrows show each claim's own direction</span></div>
@@ -1984,8 +1978,6 @@ if (DECL) {
 
   const queryBody = `<div class="titleband"><p class="eyebrow">read-only</p>
 <h1>Query the graph</h1></div>
-<p>The filters <code>tools/query/kg_query.py</code> takes, as a web page. They combine with AND, exactly as the tool combines them, and each one reads a field the graph already stores rather than computing a judgement of its own. The closure toggle adds the rows the active declarations license and marks every one of them as derived.</p>
-<p>Nothing on this page writes anything. The panel reads the published dataset at <a href="/graph.json">/graph.json</a> and the declarations beside it; the same query on the command line prints the same rows with a footer naming the graph it ran against. Two results carrying different seed digests are not comparable, which is why the digest sits under the results rather than in a help page.</p>
 
 <div class="filters" id="filters">
   <div class="fld"><label for="f-family">family</label><select id="f-family"></select><span class="hint" id="h-family"></span></div>
@@ -2391,16 +2383,6 @@ ${evTable()}
 <p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 ` : ''}
 
-<h2>Deliberately absent</h2>
-<p>${counts.design} of the findings above are these decisions, showing up as defects because the catalogue has no way to tell a choice from an oversight.</p>
-<ul class="absent">
-<li><b>Transitivity.</b> No family is transitive. Two terms joined through a third stay two hops apart; the graph does not claim they are the same. The depth-bounded identity walk that reads such chains one edge at a time is a command-line tool in this release (<code>tools/query/kg_query.py --walk</code>) and is not exposed on the site.</li>
-<li><b>Domain and range as constraints.</b> The signatures a relation is observed with are a measurement of the corpus. As a constraint they would reject an edge for disagreeing with the schema rather than with the paragraph.</li>
-<li><b>Disjoint types.</b> A node can work in two registers at once, and a disjointness axiom would force a choice the material does not make.</li>
-<li><b>A subsumption backbone.</b> There is no hierarchy to inherit through, because none was claimed. The type tag is a coarse label, not a class system.</li>
-<li><b>A closed relation vocabulary.</b> The predicate is Jung's phrasing. Closing the set would mean editing claims, so the set stays open and the family layer carries the classification.</li>
-</ul>
-
 <div class="receipts"><b>receipts</b>
 ${EVROWS.length ? `external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>` : ''}scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:${seedDigest.slice(0, 12)}</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS ${esc((DECL.transcribed_from || {}).document_version || '?')};<br>
@@ -2463,7 +2445,7 @@ page.</p></div>
 <figure class="fig fig-poster">
   <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
     alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
-  <figcaption>The method on one page. Counts as of August 2026.</figcaption>
+  <figcaption>The method on one page. Counts as of ${esc(JSON.parse(readFileSync(here('../docs/figures/method_poster_facts.json'), 'utf8')).date_label)}.</figcaption>
 </figure>`
   registerPage({
     slug: 'nutshell', title: 'In a nutshell', where: 'in a nutshell',

@@ -152,7 +152,7 @@ fetch('/graph.json').then(r => r.json()).then(g => {
 <div class="titleband"><p class="eyebrow">explore</p>
 <h1>Routes</h1>
 <p class="sub">the chains of verified claims between any two concepts</p></div>
-<p>Pick two concepts; the page lists the chains of verified claims that connect them, shortest first, each leg carrying its own citation. A route shows that a chain of cited claims exists — it asserts nothing further about the two ends. Extraction is per sentence, so an empty result means no verified claim was surveyed within the hop budget, and absence is not evidence.</p>
+<p>Pick two concepts and see the chains of claims that connect them.</p>
 <div class="filters">
   <div class="fld"><label for="r-from">from</label><select id="r-from"></select><span class="hint">any concept in the graph</span></div>
   <div class="fld"><label for="r-to">to</label><select id="r-to"></select><span class="hint">routes run both ways; arrows show each claim's own direction</span></div>

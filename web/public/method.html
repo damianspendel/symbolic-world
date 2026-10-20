@@ -102,7 +102,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p class="sub">An explanation of how a citation enters the map.</p></div>
 <div class="method-page">
 <h2>What this is</h2>
-<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 632 symbols, figures and concepts, joined by 2339 relations, resting on 3060 citations to his <em>Collected Works</em> (CW). Every claim was proposed by one AI model (Opus 5 class) after reading the CW and judged against its source paragraph by a different model (Fable 5 class); an auditor (Gemini) from a different vendor re-reads each new batch in full — 94% of all 3060 citations have been certified this way. Every claim can be considered a transaction in a ledger: the exact paragraph, a verbatim quote, and the record of which model (or expert) checked what. This is a map of assertions, not a Jungian reading.</p>
+<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 632 symbols, figures and concepts, joined by 2339 relations, resting on 3060 citations to his <em>Collected Works</em> (CW). Every claim was proposed by one AI model (Opus family) after reading the CW and judged against its source paragraph by a different model (Fable family); an auditor (Gemini) from a different vendor re-reads each new batch in full — 94% of all 3060 citations have been certified this way. Every claim can be considered a transaction in a ledger: the exact paragraph, a verbatim quote, and the record of which model (or expert) checked what. This is a map of assertions, not a Jungian reading.</p>
 <figure class="fig fig-claim">
     <div class="claim-fig">
       <span class="fig-node" data-type="Symbol">Lapis philosophorum</span>
@@ -157,7 +157,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The checks are themselves checked:</p>
 <ul>
 <li>Every one of the 3060 quotes is mechanically verified against the corpus. The verification set seeds seven deliberately corrupted claims — so far, all seven have been caught on every run. Whether a paragraph supports its claim is a judgment call made by a model. It is not a mechanical proof.</li>
-<li>The family layer is checked by seeding corruptions among real assignments. It reported catching everything planted in its early runs. A family label means: two models, judging independently, agreed on the assignment of the relation to the family. Also here, in the case of disagreement, a human decides.</li>
+<li>The family layer is checked by seeding corruptions among real assignments. A family label means: two models, judging independently, agreed on the assignment of the relation to the family. Also here, in the case of disagreement, a human decides.</li>
 <li>The classification vocabulary was checked outside this repository, against 8 works of scholarship: 8 of 16 treated items agreed with our families. We have also published the disagreements (<a href="/ontology#checked">the check</a>). It tests the classification of relations into families, not whether a claim is true.</li>
 <li>The two blind classification arms agreed on 86% of 2339 relations. Agreement measures whether the definitions can be followed consistently, not whether they are right: neither arm is authoritative. Definitions were drafted by one of the model families working in this pipeline.</li>
 </ul>
