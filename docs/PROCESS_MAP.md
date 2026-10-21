@@ -82,12 +82,14 @@ Owner: Damian; sessions record.
 
 ## The gap list, ranked
 
-1. **Site refresh cadence** (process 3): decide scheduled vs manual. A
-   scheduled nightly build+deploy from the build track would need the
-   standing authorization refreshed to cover the poster re-render as part of
-   the data refresh.
-2. **Adjudication sittings** (process 2): restart cadence or set a queue
-   cap; otherwise the queue compounds nightly.
+1. **Site refresh cadence** — RULED (Damian, 2026-10-21): manual,
+   weekly-ish. The build track deploys on his word, aiming for roughly a
+   weekly rhythm; the site may lag the graph by up to a week and that is
+   accepted. No scheduled deploy.
+2. **Adjudication sittings** — RULED (Damian, 2026-10-21): batch at arc
+   end. The queue grows until the CW 11 arc completes, then concentrated
+   sittings rule it with the whole arc in view; pending stays labelled as
+   such on the site meanwhile.
 3. **Vocabulary strain watch** (process 2/1): CW 11/5/16 are new registers;
    no-family and homeless-string counts exist on /families but nobody
    watches a threshold. Cheap fix: the mining report states them per merge;
