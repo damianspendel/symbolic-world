@@ -660,7 +660,7 @@ EXPECTED_MENU = [
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
     ("about", [("/nutshell", "in a nutshell"), ("/#/method", "method"),
-               ("/ontology", "design")]),
+               ("/ontology", "design"), ("/support", "support")]),
 ]
 
 
@@ -731,7 +731,7 @@ def test_both_generator_languages_hold_the_same_menu_list():
 def test_the_menu_marks_the_page_it_is_on():
     """Every static destination marks itself, and only itself."""
     for slug in ("releases", "query", "ontology", "families", "ledger", "disputes",
-                 "concepts", "routes"):
+                 "concepts", "routes", "support"):
         html = read(os.path.join(PUBLIC, slug + ".html"))
         current = re.findall(r'<a href="([^"]+)" aria-current="page">', MENU_RE.search(html).group(1))
         assert current == [f"/{slug}"], (slug, current)

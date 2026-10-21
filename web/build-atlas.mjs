@@ -155,7 +155,7 @@ const MENU = [
   ['explore', [['/#/atlas', 'atlas'], ['/routes', 'routes'], ['/query', 'query'], ['/#/concordance', 'concordance']]],
   ['reference', [['/concepts', 'concepts'], ['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
-  ['about', [['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'design']]]
+  ['about', [['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
@@ -1218,7 +1218,7 @@ function siteNav(current) {
     .map(p => p.slug === current
       ? `<span class="dim">${esc(p.nav)}</span>`
       : `<a href="/${p.slug}">${esc(p.nav)}</a>`).join('\n') +
-    (SUPPORT_URL ? `\n<a href="${SUPPORT_URL}" rel="noopener" title="Fund the next mining window on Ko-fi">support</a>` : '') + `</nav>`
+    `</nav>`
 }
 
 function renderPage(p) {
@@ -2435,6 +2435,35 @@ table.findings .src { font: .58rem var(--mono); }
   })
   V2_COPY.push(['public/ontology.html (generated)', stripEvidence(ontBody)])
 
+  // ------------------------------------------------ /support ----------------
+  // One page, about group, exists only while SUPPORT_URL is set (2026-10-21):
+  // the funding copy, the Ko-fi panel embedded as an iframe so a reader can
+  // tip without leaving the site, and a plain link for anyone whose browser
+  // blocks the frame. Nothing else monetized; no sitewide widget script.
+  if (SUPPORT_URL) {
+    const supportBody = `<div class="titleband"><p class="eyebrow">about</p>
+<h1>Support</h1>
+<p class="sub">tips fund the next mining window</p></div>
+<p>The atlas, the dataset and the verification ledger are free, and stay free. Mining the remaining volumes is metered work: at measured rates a fully verified citation costs ${'$'}0.09 to ${'$'}0.16 in model spend, and one mining window — about seventy paragraphs taken end to end through all the checks — costs about ${'$'}10. A tip of any size goes toward the next window.</p>
+<div class="kofi-panel">
+<iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="712" title="Support The Symbolic World on Ko-fi"></iframe>
+</div>
+<p class="meta">If the panel does not load: <a href="${SUPPORT_URL}" rel="noopener">${SUPPORT_URL.replace('https://', '')}</a>.</p>`
+    const supportStyle = `
+.kofi-panel { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; margin: 1.2rem 0 .6rem; background: var(--panel); max-width: 420px; }
+`
+    registerPage({
+      slug: 'support', title: 'Support', where: 'support', nav: 'support',
+      changefreq: 'monthly', priority: '0.4',
+      description: 'Support The Symbolic World: tips fund the next mining window of the verified Jung atlas — the atlas, dataset and ledger stay free.',
+      style: supportStyle, body: supportBody
+    })
+    V2_COPY.push(['public/support.html (generated)', stripEvidence(supportBody)])
+    console.log('support page: written (Ko-fi panel embedded)')
+  } else {
+    console.log('support page: SUPPORT_URL is empty — not registered')
+  }
+
   // ------------------------------------------------ /nutshell --------------
   // The method poster on its own page (Damian, 2026-08-28: an additional menu
   // item, NOT a replacement for /#/method). The page is one figure; the poster
@@ -2454,7 +2483,7 @@ page.</p></div>
     alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
   <figcaption>The method on one page. Counts as of ${esc(JSON.parse(readFileSync(here('../docs/figures/method_poster_facts.json'), 'utf8')).date_label)}.</figcaption>
 </figure>
-${SUPPORT_URL ? `<p class="meta">The atlas, the dataset and the ledger are free. Tips fund the next mining window: <a href="${SUPPORT_URL}" rel="noopener">support the project on Ko-fi</a>.</p>` : ''}`
+${SUPPORT_URL ? `<p class="meta">The atlas, the dataset and the ledger are free. Tips fund the next mining window: <a href="/support">support the project</a>.</p>` : ''}`
   registerPage({
     slug: 'nutshell', title: 'In a nutshell', where: 'in a nutshell',
     nav: 'in a nutshell', changefreq: 'monthly', priority: '0.5',

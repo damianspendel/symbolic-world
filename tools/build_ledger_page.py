@@ -32,9 +32,7 @@ REPO_URL = "https://github.com/damianspendel/symbolic-world"
 # read from the source so the two generators cannot disagree; empty = absent.
 SUPPORT_URL = re.search(r"^const SUPPORT_URL = '([^']*)'$",
                         (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1)
-SUPPORT_LINK = (f'\n    <a href="{SUPPORT_URL}" rel="noopener" '
-                'title="Fund the next mining window on Ko-fi">support</a>'
-                if SUPPORT_URL else "")
+SUPPORT_LINK = ('\n    <a href="/support">support</a>' if SUPPORT_URL else "")
 
 
 def esc(s):
@@ -56,7 +54,8 @@ MENU = [
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
     ("about", [("/nutshell", "in a nutshell"), ("/#/method", "method"),
-               ("/ontology", "design")]),
+               ("/ontology", "design")]
+              + ([("/support", "support")] if SUPPORT_URL else [])),
 ]
 
 
