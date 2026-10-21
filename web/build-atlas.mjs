@@ -36,6 +36,12 @@ const EMIT_CONCEPTS_INDEX = true
 // either way; it is inert without this page.
 const ROUTES_IN_UI = true
 
+// The support link (Ko-fi, decision of 2026-10-21): one footer link on every
+// generated page plus one sentence on /nutshell, nothing else monetized.
+// Empty renders nothing anywhere. tools/build_ledger_page.py reads this
+// constant from the source, so the python pages follow the same knob.
+const SUPPORT_URL = ''
+
 const here = (p) => new URL(p, import.meta.url)
 const seed = JSON.parse(readFileSync(here('../seed.json')))
 
@@ -1211,7 +1217,8 @@ function siteNav(current) {
   return `<nav class="sitenav">` + SITE_PAGES.filter(p => p.nav)
     .map(p => p.slug === current
       ? `<span class="dim">${esc(p.nav)}</span>`
-      : `<a href="/${p.slug}">${esc(p.nav)}</a>`).join('\n') + `</nav>`
+      : `<a href="/${p.slug}">${esc(p.nav)}</a>`).join('\n') +
+    (SUPPORT_URL ? `\n<a href="${SUPPORT_URL}" rel="noopener" title="Fund the next mining window on Ko-fi">support</a>` : '') + `</nav>`
 }
 
 function renderPage(p) {
@@ -2446,7 +2453,8 @@ page.</p></div>
   <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
     alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
   <figcaption>The method on one page. Counts as of ${esc(JSON.parse(readFileSync(here('../docs/figures/method_poster_facts.json'), 'utf8')).date_label)}.</figcaption>
-</figure>`
+</figure>
+${SUPPORT_URL ? `<p class="meta">The atlas, the dataset and the ledger are free. Tips fund the next mining window: <a href="${SUPPORT_URL}" rel="noopener">support the project on Ko-fi</a>.</p>` : ''}`
   registerPage({
     slug: 'nutshell', title: 'In a nutshell', where: 'in a nutshell',
     nav: 'in a nutshell', changefreq: 'monthly', priority: '0.5',

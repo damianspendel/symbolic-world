@@ -28,6 +28,13 @@ import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 REPO_URL = "https://github.com/damianspendel/symbolic-world"
+# The support link follows web/build-atlas.mjs's single knob (2026-10-21):
+# read from the source so the two generators cannot disagree; empty = absent.
+SUPPORT_URL = re.search(r"^const SUPPORT_URL = '([^']*)'$",
+                        (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1)
+SUPPORT_LINK = (f'\n    <a href="{SUPPORT_URL}" rel="noopener" '
+                'title="Fund the next mining window on Ko-fi">support</a>'
+                if SUPPORT_URL else "")
 
 
 def esc(s):
@@ -354,7 +361,7 @@ def batch_page(batch, delta, commits):
     <a href="/families">families</a>
     <a href="/routes">routes</a>
     <a href="/query">query</a>
-    <a href="/ontology">design</a></nav>
+    <a href="/ontology">design</a>{SUPPORT_LINK}</nav>
 </main>
 </body>
 </html>
@@ -712,7 +719,7 @@ def build():
     <a href="/routes">routes</a>
     <a href="/query">query</a>
     <a href="/ontology">design</a>
-    <a href="/disputes">disputes</a></nav>
+    <a href="/disputes">disputes</a>{SUPPORT_LINK}</nav>
 </main>
 <script>
 const q = document.getElementById('q');

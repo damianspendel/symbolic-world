@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-self-acceptance">
+<meta name="description" content="Acceptance of oneself in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Acceptance of oneself — Concept in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
+  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
+.sitenav a { color: var(--ink-faint); text-decoration: none; }
+.sitenav a:hover { color: var(--gold); }
+
+.latin { font-style: italic; font-weight: 400; }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/#/concordance">concordance</a><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Acceptance of oneself</span></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Acceptance of oneself</span></h1>
+<p class="sub"><span class="p-type">Concept · psyche</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>343rd most connected of 653 concepts · 2 relations, 4 verified citations across CW 11.</p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 11</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">4</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-composition">composition 1</a>
+<a class="chip f-ok" href="#g-dependence">dependence 1</a>
+</p>
+<h2 class="cfam" id="g-composition"><a href="/family-composition">composition</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Acceptance of oneself</span> <span class="rel ev">encompasses</span> <a class="ev" href="/concept-the-shadow">The shadow</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 11 §528 — “the acceptance of the shadow-side of human nature verges on the impossible”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)</span></li>
+<li class="ev">CW 11 §520 — “that I myself am the enemy who must be loved”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)</span></li>
+</ul>
+</div>
+<h2 class="cfam" id="g-dependence"><a href="/family-dependence">dependence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Acceptance of oneself</span> <span class="rel ev">is-precondition-of</span> <a class="ev" href="/concept-unprejudiced-objectivity">Unprejudiced objectivity</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 11 §521 — “Only he who has fully accepted himself has “unprejudiced objectivity.””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)</span></li>
+<li class="ev">CW 11 §518 — “he can do this in reality only when he has already seen and accepted himself as he is”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-21 · cross-checked: gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/#/n/self-acceptance">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+<nav class="sitenav"><a href="/">the atlas</a>
+<a href="/ledger">ledger</a>
+<a href="/families">families</a>
+<a href="/disputes">disputes</a>
+<a href="/releases">releases</a>
+<a href="/concepts">concepts</a>
+<a href="/routes">routes</a>
+<a href="/query">query</a>
+<a href="/ontology">design</a>
+<a href="/nutshell">in a nutshell</a></nav>
+</main></body></html>
