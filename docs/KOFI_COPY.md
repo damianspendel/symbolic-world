@@ -63,6 +63,17 @@ symbolicworld.observer.
 (The cents line restates the committed $0.09–0.16 rate; "roughly twenty" is
 the conservative end of a $3 tip at that rate.)
 
+## About you (the creator section)
+
+I build The Symbolic World: an atlas of C. G. Jung's *Collected Works* in
+which every claim carries its citation, its quote and the record of who
+checked it. Models do the reading at scale; I rule on their disagreements,
+decide what gets published, and answer for it. The method is published, the
+dataset is open, and the ledger records the corrections as plainly as the
+claims. Tips pay for model time, nothing else.
+
+(Deliberately nothing biographical; add a personal line if you want one.)
+
 ## Notes for the account setup (Damian's steps, not the build track's)
 
 - Ko-fi account + PayPal link (personal PayPal suffices per Ko-fi's FAQ;
