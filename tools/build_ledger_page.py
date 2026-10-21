@@ -75,10 +75,11 @@ def site_header(current="", where="", tools=""):
 def top_menu(current=""):
     out = ['<nav class="topmenu">']
     for group, items in MENU:
-        out.append(f'<span class="mgroup">{group}</span>')
+        out.append(f'<span class="mgrp"><span class="mgroup">{group}</span>')
         for href, label in items:
             current_mark = ' aria-current="page"' if href == current else ""
             out.append(f'<a href="{href}"{current_mark}>{label}</a>')
+        out.append("</span>")
     out.append("</nav>")
     return "".join(out)
 

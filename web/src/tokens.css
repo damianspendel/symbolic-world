@@ -188,7 +188,7 @@ h4 {
    the rest of the header does. */
 .site-header .hrow-2 { height: 2.9rem; padding-bottom: 0; gap: 0.9rem; flex-wrap: wrap; }
 .site-header .brand {
-  flex: 0 0 13rem; font-family: var(--display); font-size: 1.05rem; font-weight: 500;
+  flex: 0 0 11.5rem; font-family: var(--display); font-size: 1.05rem; font-weight: 500;
   color: var(--ink); text-decoration: none; white-space: nowrap; letter-spacing: 0.005em;
 }
 .site-header .brand h1 { font: inherit; margin: 0; }
@@ -209,12 +209,13 @@ h4 {
 }
 /* V2-R10 — the site menu. One definition, used by the app's header, by every
    generated page's header, and by the pages the python generator writes. */
-.topmenu { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.7rem; }
+.topmenu { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.8rem; }
+/* a group wraps as a unit, so its label can never be orphaned from its items */
+.topmenu .mgrp { display: inline-flex; align-items: baseline; gap: 0.55rem; }
 .topmenu .mgroup {
   font: 0.5rem var(--mono); letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--ink-dim); margin-left: 0.45rem;
+  color: var(--ink-dim);
 }
-.topmenu .mgroup:first-child { margin-left: 0; }
 .topmenu a {
   font: 0.62rem var(--mono); letter-spacing: 0.05em; color: var(--ink-faint);
   text-decoration: none; white-space: nowrap; padding: 0.1rem 0;

@@ -164,8 +164,8 @@ const siteHeader = (current, where, tools = '') => `<header class="site-header">
 <div class="hrow hrow-2"><span class="where">${esc(where || '')}</span>${tools ? `<span class="hdr-tools">${tools}</span>` : ''}</div>
 </header>`
 const topMenu = (current) => '<nav class="topmenu">' + MENU.map(([group, items]) =>
-  `<span class="mgroup">${group}</span>` + items.map(([href, label]) =>
-    `<a href="${href}"${href === current ? ' aria-current="page"' : ''}>${label}</a>`).join('')
+  `<span class="mgrp"><span class="mgroup">${group}</span>` + items.map(([href, label]) =>
+    `<a href="${href}"${href === current ? ' aria-current="page"' : ''}>${label}</a>`).join('') + '</span>'
 ).join('') + '</nav>'
 
 const nbr = new Map(seed.nodes.map(n => [n.id, new Set()]))
@@ -678,7 +678,7 @@ h4 {
    the rest of the header does. */
 .site-header .hrow-2 { height: 2.9rem; padding-bottom: 0; gap: 0.9rem; flex-wrap: wrap; }
 .site-header .brand {
-  flex: 0 0 13rem; font-family: var(--display); font-size: 1.05rem; font-weight: 500;
+  flex: 0 0 11.5rem; font-family: var(--display); font-size: 1.05rem; font-weight: 500;
   color: var(--ink); text-decoration: none; white-space: nowrap; letter-spacing: 0.005em;
 }
 .site-header .brand h1 { font: inherit; margin: 0; }
@@ -699,12 +699,13 @@ h4 {
 }
 /* V2-R10 — the site menu. One definition, used by the app's header, by every
    generated page's header, and by the pages the python generator writes. */
-.topmenu { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.7rem; }
+.topmenu { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.8rem; }
+/* a group wraps as a unit, so its label can never be orphaned from its items */
+.topmenu .mgrp { display: inline-flex; align-items: baseline; gap: 0.55rem; }
 .topmenu .mgroup {
   font: 0.5rem var(--mono); letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--ink-dim); margin-left: 0.45rem;
+  color: var(--ink-dim);
 }
-.topmenu .mgroup:first-child { margin-left: 0; }
 .topmenu a {
   font: 0.62rem var(--mono); letter-spacing: 0.05em; color: var(--ink-faint);
   text-decoration: none; white-space: nowrap; padding: 0.1rem 0;
@@ -2444,13 +2445,13 @@ table.findings .src { font: .58rem var(--mono); }
     const supportBody = `<div class="titleband"><p class="eyebrow">about</p>
 <h1>Support</h1>
 <p class="sub">tips fund the next mining window</p></div>
-<p>The atlas, the dataset and the verification ledger are free, and stay free. Mining the remaining volumes is metered work: at measured rates a fully verified citation costs ${'$'}0.09 to ${'$'}0.16 in model spend, and one mining window — about seventy paragraphs taken end to end through all the checks — costs about ${'$'}10. A tip of any size goes toward the next window.</p>
+<p>The atlas, the dataset and the verification ledger are free to use. Mining the remaining volumes is metered work, at measured rates a fully verified citation costs ${'$'}0.09 to ${'$'}0.16 in model spend. A mining window — about seventy paragraphs taken end to end through all the checks — costs about ${'$'}10. A tip of any size goes toward the next window. Thank you!</p>
 <div class="kofi-panel">
-<iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="712" title="Support The Symbolic World on Ko-fi"></iframe>
+<iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
 </div>
 <p class="meta">If the panel does not load: <a href="${SUPPORT_URL}" rel="noopener">${SUPPORT_URL.replace('https://', '')}</a>.</p>`
     const supportStyle = `
-.kofi-panel { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; margin: 1.2rem 0 .6rem; background: var(--panel); max-width: 420px; }
+.page-main > .kofi-panel { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; margin: 1.2rem 0 .6rem; background: var(--panel); max-width: 420px; }
 `
     registerPage({
       slug: 'support', title: 'Support', where: 'support', nav: 'support',
