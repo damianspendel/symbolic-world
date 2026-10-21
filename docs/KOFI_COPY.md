@@ -51,6 +51,18 @@ hundreds of concepts joined by thousands of claims, each one resting on a
 quoted citation that was checked against the source paragraph before it was
 allowed in.
 
+## Thank-you message (shown to a supporter after a tip)
+
+Thank you — this goes straight into the mining. Tips fund the next window of
+the *Collected Works*: about seventy paragraphs read, claimed, checked
+against the text word for word, audited, and published with every receipt. A
+verified citation costs 9 to 16 cents in model spend, so one coffee pays for
+roughly twenty of them. Everything you help mine stays free for everyone at
+symbolicworld.observer.
+
+(The cents line restates the committed $0.09–0.16 rate; "roughly twenty" is
+the conservative end of a $3 tip at that rate.)
+
 ## Notes for the account setup (Damian's steps, not the build track's)
 
 - Ko-fi account + PayPal link (personal PayPal suffices per Ko-fi's FAQ;
