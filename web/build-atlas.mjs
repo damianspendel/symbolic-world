@@ -40,7 +40,7 @@ const ROUTES_IN_UI = true
 // generated page plus one sentence on /nutshell, nothing else monetized.
 // Empty renders nothing anywhere. tools/build_ledger_page.py reads this
 // constant from the source, so the python pages follow the same knob.
-const SUPPORT_URL = ''
+const SUPPORT_URL = 'https://ko-fi.com/symbolicworld'
 
 const here = (p) => new URL(p, import.meta.url)
 const seed = JSON.parse(readFileSync(here('../seed.json')))
