@@ -48,10 +48,6 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose[open] > summary::before { transform: rotate(90deg); }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
-.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
-  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
-.sitenav a { color: var(--ink-faint); text-decoration: none; }
-.sitenav a:hover { color: var(--gold); }
 
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }
 .fld { display: flex; flex-direction: column; gap: .25rem; }
@@ -207,15 +203,4 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 <div class="receipts"><b>receipts</b><span id="receipts">graph state: 653 nodes / 2420 edges; families 1906 assigned, 428 pending-adjudication, 83 no-family, 3 text-undecided; seed.json sha256:e9be4742942e; declarations relation_declarations.json from FAMILY_DEFINITIONS v0.7.1, 7 active</span></div>
 
 
-<nav class="sitenav"><a href="/">the atlas</a>
-<a href="/ledger">ledger</a>
-<a href="/families">families</a>
-<a href="/disputes">disputes</a>
-<a href="/releases">releases</a>
-<a href="/concepts">concepts</a>
-<a href="/routes">routes</a>
-<span class="dim">query</span>
-<a href="/ontology">design</a>
-<a href="/support">support</a>
-<a href="/nutshell">in a nutshell</a></nav>
 </main></body></html>

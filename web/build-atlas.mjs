@@ -1208,19 +1208,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose[open] > summary::before { transform: rotate(90deg); }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
-.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
-  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
-.sitenav a { color: var(--ink-faint); text-decoration: none; }
-.sitenav a:hover { color: var(--gold); }
 `
 
-function siteNav(current) {
-  return `<nav class="sitenav">` + SITE_PAGES.filter(p => p.nav)
-    .map(p => p.slug === current
-      ? `<span class="dim">${esc(p.nav)}</span>`
-      : `<a href="/${p.slug}">${esc(p.nav)}</a>`).join('\n') +
-    `</nav>`
-}
 
 function renderPage(p) {
   return `<!doctype html>
@@ -1235,7 +1224,6 @@ ${p.head || ''}</head>
 ${siteHeader('/' + p.slug, p.where)}
 <main class="page-main ${p.kind || 'prose'}">
 ${p.body}
-${siteNav(p.slug)}
 </main></body></html>`
 }
 

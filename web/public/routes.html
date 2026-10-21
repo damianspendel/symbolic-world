@@ -48,10 +48,6 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose[open] > summary::before { transform: rotate(90deg); }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
-.sitenav { margin-top: 3.2rem; border-top: 1px solid var(--hairline); padding-top: 1rem;
-  display: flex; flex-wrap: wrap; gap: .3rem .9rem; font: .62rem var(--mono); }
-.sitenav a { color: var(--ink-faint); text-decoration: none; }
-.sitenav a:hover { color: var(--gold); }
 
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }
 .fld { display: flex; flex-direction: column; gap: .25rem; }
@@ -160,15 +156,4 @@ fetch('/graph.json').then(r => r.json()).then(g => {
 </div>
 <div class="routes" id="routes"><p class="dim" id="status">Reading the dataset…</p></div>
 <p class="meta">Every leg is one verified claim with its paragraph and quote. The <a href="/query">query panel</a> carries the full filter set.</p>
-<nav class="sitenav"><a href="/">the atlas</a>
-<a href="/ledger">ledger</a>
-<a href="/families">families</a>
-<a href="/disputes">disputes</a>
-<a href="/releases">releases</a>
-<a href="/concepts">concepts</a>
-<span class="dim">routes</span>
-<a href="/query">query</a>
-<a href="/ontology">design</a>
-<a href="/support">support</a>
-<a href="/nutshell">in a nutshell</a></nav>
 </main></body></html>

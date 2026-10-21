@@ -32,7 +32,7 @@ REPO_URL = "https://github.com/damianspendel/symbolic-world"
 # read from the source so the two generators cannot disagree; empty = absent.
 SUPPORT_URL = re.search(r"^const SUPPORT_URL = '([^']*)'$",
                         (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1)
-SUPPORT_LINK = ('\n    <a href="/support">support</a>' if SUPPORT_URL else "")
+
 
 
 def esc(s):
@@ -334,10 +334,6 @@ def batch_page(batch, delta, commits):
   th, td {{ border-bottom:1px solid var(--hairline); padding:.35rem .5rem; text-align:left; }}
   th {{ font:.55rem var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--ink-dim); }}
   td.n {{ font-family:var(--mono); font-size:.76rem; }}
-  .sitenav {{ margin-top:3rem; border-top:1px solid var(--hairline); padding-top:1rem;
-             display:flex; flex-wrap:wrap; gap:.3rem .9rem; font:.62rem var(--mono); }}
-  .sitenav a {{ color:var(--ink-faint); text-decoration:none; }}
-  .sitenav a:hover {{ color:var(--gold); }}
 </style>
 </head>
 <body>
@@ -354,14 +350,6 @@ def batch_page(batch, delta, commits):
   <p class="note">Every claim this batch merged is on the <a href="/ledger">ledger</a> with the
   gates it passed; this page is the batch-level record around them. Releases that shipped it link
   here from <a href="/releases">the release notes</a>.</p>
-  <nav class="sitenav"><a href="/">the atlas</a>
-    <a href="/ledger">ledger</a>
-    <a href="/releases">releases</a>
-    <a href="/concepts">concepts</a>
-    <a href="/families">families</a>
-    <a href="/routes">routes</a>
-    <a href="/query">query</a>
-    <a href="/ontology">design</a>{SUPPORT_LINK}</nav>
 </main>
 </body>
 </html>
@@ -645,10 +633,6 @@ def build():
   .brow .bid:hover {{ text-decoration:underline; }}
   .bnums {{ font:.6rem var(--mono); color:var(--ink-faint); margin-left:auto; }}
   .bnums.dimmer {{ color:var(--ink-dim); }}
-  .sitenav {{ margin-top:3rem; border-top:1px solid var(--hairline); padding-top:1rem;
-             display:flex; flex-wrap:wrap; gap:.3rem .9rem; font:.62rem var(--mono); }}
-  .sitenav a {{ color:var(--ink-faint); text-decoration:none; }}
-  .sitenav a:hover {{ color:var(--gold); }}
 </style>
 </head>
 <body>
@@ -712,14 +696,6 @@ def build():
   <div class="brows">
 {chr(10).join(batch_rows)}
   </div>
-  <nav class="sitenav"><a href="/">the atlas</a>
-    <a href="/concepts">concepts</a>
-    <a href="/families">families</a>
-    <a href="/releases">releases</a>
-    <a href="/routes">routes</a>
-    <a href="/query">query</a>
-    <a href="/ontology">design</a>
-    <a href="/disputes">disputes</a>{SUPPORT_LINK}</nav>
 </main>
 <script>
 const q = document.getElementById('q');
