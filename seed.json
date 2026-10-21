@@ -3192,6 +3192,91 @@
    "id": "meaning-of-life",
    "label": "Meaning (the meaning of life that liberates)",
    "type": "Concept"
+  },
+  {
+   "id": "job",
+   "label": "Job",
+   "type": "Figure"
+  },
+  {
+   "id": "book-of-job",
+   "label": "Book of Job",
+   "type": "Motif"
+  },
+  {
+   "id": "unprejudiced-objectivity",
+   "label": "Unprejudiced objectivity",
+   "type": "Concept"
+  },
+  {
+   "id": "self-acceptance",
+   "label": "Acceptance of oneself",
+   "type": "Concept"
+  },
+  {
+   "id": "egoism",
+   "label": "Egoism",
+   "type": "Concept"
+  },
+  {
+   "id": "cure-of-souls",
+   "label": "Cure of souls",
+   "type": "Operation"
+  },
+  {
+   "id": "alfred-adler",
+   "label": "Alfred Adler",
+   "type": "Figure"
+  },
+  {
+   "id": "catholicism",
+   "label": "Catholicism",
+   "type": "Concept"
+  },
+  {
+   "id": "ritual",
+   "label": "Ritual",
+   "type": "Concept"
+  },
+  {
+   "id": "confession",
+   "label": "Confession",
+   "type": "Operation"
+  },
+  {
+   "id": "tertullian",
+   "label": "Tertullian",
+   "type": "Figure"
+  },
+  {
+   "id": "religious-statement",
+   "label": "Religious statement",
+   "type": "Concept"
+  },
+  {
+   "id": "bible",
+   "label": "Holy Scriptures",
+   "type": "Concept"
+  },
+  {
+   "id": "covenant",
+   "label": "Covenant",
+   "type": "Motif"
+  },
+  {
+   "id": "rainbow",
+   "label": "Rainbow",
+   "type": "Symbol"
+  },
+  {
+   "id": "zeus",
+   "label": "Zeus",
+   "type": "Figure"
+  },
+  {
+   "id": "morality",
+   "label": "Morality",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -73715,6 +73800,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-7, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 558,
+     "quote": "experience, which demonstrates beyond any shadow of doubt the extraordinary numinosity of these images",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
     }
    ],
    "relation_family": {
@@ -74300,6 +74396,28 @@
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-7, PASS, 2026-10-20)",
      "correction_note": "gate correction: Verbatim and Jung's own; the healing half sits in the next clause ('none of them has been really healed who did not regain his religious outlook'), and Jung adds that this has 'nothing whatever to do with a particular creed or membership of a church' — the subject is the religious outlook, broader than the node's everyday sense; demoted to medium."
+    },
+    {
+     "volume": "11",
+     "paragraph": 531,
+     "quote": "religions are systems of healing for psychic illness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 523,
+     "quote": "Healing may be called a religious problem.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
     }
    ],
    "relation_family": {
@@ -74307,6 +74425,1200 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-20"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "is",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 522,
+     "quote": "Neurosis is an inner cleavage—the state of being at war with oneself.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "accompanies-decline-of",
+   "object": "religion",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 514,
+     "quote": "side by side with the decline of religious life, the neuroses grow noticeably more frequent",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "interprets-through",
+   "object": "sexuality",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 517,
+     "quote": "in its view, it is basically a question of repressed sexuality, which the philosophical or religious doubts only serve to mask",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 541,
+     "quote": "Freud employs his famous sexual theory",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "requires",
+   "object": "unprejudiced-objectivity",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 518,
+     "quote": "Feeling comes only through unprejudiced objectivity.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "self-acceptance",
+   "relation": "is-precondition-of",
+   "object": "unprejudiced-objectivity",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 521,
+     "quote": "Only he who has fully accepted himself has “unprejudiced objectivity.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 518,
+     "quote": "he can do this in reality only when he has already seen and accepted himself as he is",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "self-acceptance",
+   "relation": "encompasses",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 528,
+     "quote": "the acceptance of the shadow-side of human nature verges on the impossible",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 520,
+     "quote": "that I myself am the enemy who must be loved",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "submits-to",
+   "object": "god-within",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 521,
+     "quote": "We can point to Christ, who sacrificed his historical bias to the god within him",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "imitatio-christi",
+   "relation": "contrasts-with",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 524,
+     "quote": "does not want to know in what way he can imitate Christ, but in what way he can live his own individual life",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 522,
+     "quote": "it is unspeakably harder to live one’s own life as truly as Christ lived his",
+     "claim_type": "jung-asserts",
+     "confidence": "low",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but §522 frames living one's own life as the DEEPER sense of the imitation of Christ, contrasting it only with copying ('ape his stigmata'); the contrast the triple states holds for the conventional imitatio, not the deeper one — demoted to low."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "conflicts-with",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 522,
+     "quote": "The conflict may be between the sensual and the spiritual man, or between the ego and the shadow.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "enantiodromia",
+   "relation": "resolves",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 526,
+     "quote": "it is this that makes possible the reunion of the warring halves of the personality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)",
+     "correction_note": "gate correction: Verbatim and Jung's doctrine (§526 opens a quotation, but of Jung's own earlier text; the term is his); the sentence says enantiodromia 'makes possible the reunion' — enabling, not effecting — so 'resolves' is a notch strong; demoted to medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "enantiodromia",
+   "relation": "governs",
+   "object": "life",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 526,
+     "quote": "What we observe here is a fundamental law of life— enantiodromia or conversion into the opposite",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "manifests-as",
+   "object": "egoism",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 524,
+     "quote": "This is the source of his egoism, which is one of the most tangible evils of the neurotic state.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 527,
+     "quote": "I have taken the neurotic’s egoism as an example because it is one of his most common symptoms.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "psychoanalysis",
+   "relation": "makes-conscious",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 531,
+     "quote": "Freudian psychoanalysis limits itself to the task of making conscious the shadow-side and the evil within us",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)",
+     "correction_note": "gate correction: Verbatim, but this is not Freud's doctrine expounded: 'limits itself to the task of making conscious the shadow-side' is Jung's own evaluative characterization in his own vocabulary (the shadow) — the b-cw11-7 §471 precedent; corrected to asserts."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "defends-against",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 531,
+     "quote": "It was to arm himself against this threat and to heal the damage done that he developed religious and magical practices.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "supplants",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 534,
+     "quote": "the archetypes awaking to independent life and taking over the guidance of the psychic personality, thus supplanting the ego",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "cure-of-souls",
+   "relation": "is-based-on",
+   "object": "christianity",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 539,
+     "quote": "The cure of souls as practised by the clergyman or priest is a religious influence based on a Christian confession of faith.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "psychoanalysis",
+   "relation": "integrates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 539,
+     "quote": "a psychological technique whose purpose it is to lay bare the contents of the unconscious and integrate them into the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 540,
+     "quote": "seeks to lead the contents of the unconscious over into the conscious mind",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "alfred-adler",
+   "relation": "aims-at",
+   "object": "adaptation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 539,
+     "quote": "The normalization of the individual at which Adlerian pedagogics aim, and his adaptation to the collective psyche",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "sublimation",
+   "relation": "desexualizes",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 541,
+     "quote": "Freud speaks of “sublimation,” which he understands as an application of libido in desexualized form.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "is-rooted-in",
+   "object": "materialism",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 541,
+     "quote": "Freud’s standpoint here is based on the rationalistic materialism of the scientific views current in the late nineteenth century",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "catholicism",
+   "relation": "channels",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 547,
+     "quote": "ways and means which have served since olden times to gather the lower, instinctual forces of the psyche into symbols",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "protestantism",
+   "relation": "lacks",
+   "object": "ritual",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 543,
+     "quote": "Puritan simplification has deprived Protestantism of just this means of acting on the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 548,
+     "quote": "The Protestants need a psychological technique to an even greater degree since they lack all essential forms of ritual.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "ritual",
+   "relation": "receives",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 543,
+     "quote": "Any sacral action, in whatever form, works like a vessel for receiving the contents of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "catholicism",
+   "relation": "practises",
+   "object": "confession",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 548,
+     "quote": "a ready-made pastoral technique in the historically sanctioned form of confession, penance, and absolution",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "gives-rise-to",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 549,
+     "quote": "Any contact with the unconscious that goes at all deep leads to transference phenomena.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "cure-of-souls",
+   "relation": "provokes",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 549,
+     "quote": "Whenever, therefore, the clergyman penetrates any distance into the psychic background, he will provoke a transference",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "tertullian",
+   "relation": "appeals-to",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 556,
+     "quote": "Tertullian has already appealed, quite rightly, to the testimony of the soul",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "religious-statement",
+   "relation": "is-grounded-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 555,
+     "quote": "religious statements are psychic confessions which in the last resort are based on unconscious, i.e., on transcendental, processes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "religious-statement",
+   "relation": "expresses",
+   "object": "psychic-reality",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 553,
+     "quote": "there are also psychic truths which can neither be explained nor proved nor contested in any physical way",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but the quote names psychic truths without naming religious statements; the link to the subject is the paragraph's frame (the virgin birth, 'beliefs of this kind'), stated outright only in §554 — demoted to medium."
+    },
+    {
+     "volume": "11",
+     "paragraph": 554,
+     "quote": "Religious statements are of this type. They refer without exception to things that cannot be established as physical facts.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "bible",
+   "relation": "expresses",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 557,
+     "quote": "the statements made in the Holy Scriptures are also utterances of the soul",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "underlies",
+   "object": "religious-statement",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 555,
+     "quote": "the statements do not vary limitlessly and chaotically, but clearly all relate to a few basic principles or archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 556,
+     "quote": "they are based on numinous archetypes, i.e., on an emotional foundation which is unassailable by reason",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "precipitates",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 557,
+     "quote": "they precipitate complexes of ideas in the form of mythological motifs",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "book-of-job",
+   "relation": "exemplifies",
+   "object": "religious-experience",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 562,
+     "quote": "The Book of Job serves as a paradigm for a certain experience of God",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "lacks",
+   "object": "reflection",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 579,
+     "quote": "nowhere does he come up against an insuperable obstacle that would force him to hesitate and hence make him reflect on himself",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 574,
+     "quote": "the subject is totally lacking in self-reflection and therefore has no insight into himself",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "exhibits",
+   "object": "unconsciousness",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 574,
+     "quote": "But he is too unconscious to be moral.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 575,
+     "quote": "his slight moral superiority over the more unconscious God",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "morality",
+   "relation": "presupposes",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 574,
+     "quote": "Morality presupposes consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "needs",
+   "object": "man",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 575,
+     "quote": "That is why the Creator needs conscious man",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 568,
+     "quote": "He needed them as they needed him, urgently and personally.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "job",
+   "relation": "attains-knowledge-of",
+   "object": "yahweh",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 583,
+     "quote": "Job had secretly been lifted up to a superior knowledge of God which God himself did not possess",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 584,
+     "quote": "Job realizes God’s inner antinomy",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "tests",
+   "object": "job",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 579,
+     "quote": "his faithful servant Job is now to be exposed to a rigorous moral test",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "breaks",
+   "object": "covenant",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 570,
+     "quote": "he, who watched so jealously over the fulfilment of laws and contracts, broke his own oath",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, FINDING-adjudicated, 2026-10-21)",
+     "correction_note": "cross-vendor correction: claim_type should be jung-asserts because Jung is stating this conclusion in his own interpretive voice, not merely reporting a biblical parallel."
+    },
+    {
+     "volume": "11",
+     "paragraph": 578,
+     "quote": "the contract had gone to pieces with David",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, FINDING-adjudicated, 2026-10-21)",
+     "correction_note": "cross-vendor correction: claim_type should be jung-asserts because Jung is stating this conclusion in his own interpretive voice."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "rainbow",
+   "relation": "signifies",
+   "object": "covenant",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 577,
+     "quote": "he instituted the rainbow as a token of the covenant",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "contrasts-with",
+   "object": "zeus",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 568,
+     "quote": "That was the essential difference between Yahweh and the all-ruling Father Zeus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)",
+     "correction_note": "gate correction: Verbatim, but 'That was the essential difference between Yahweh and … Zeus' (personality versus figure) is Jung's own comparative thesis, not a doctrine any tradition or author holds; corrected to asserts."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "adam",
+   "relation": "is-fashioned-as",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 576,
+     "quote": "whose forefather Adam he had fashioned in his own image as the Anthropos, the original man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-21",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, FINDING-adjudicated, 2026-10-21)",
+     "correction_note": "cross-vendor correction: claim_type should be jung-asserts because Jung is interpreting the biblical creation using the concept of the Anthropos in his own voice."
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-21"
    }
   }
  ]
