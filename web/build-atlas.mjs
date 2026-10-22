@@ -1884,6 +1884,7 @@ if (ROUTES_IN_UI) {
 .fld .hint { font: .55rem var(--mono); color: var(--ink-dim); }
 .runbtn { background: transparent; color: var(--gold); border: 1px solid var(--gold-dim);
   border-radius: 999px; padding: .34rem 1.1rem; font: .62rem var(--mono); letter-spacing: .1em; cursor: pointer; }
+.fld > .runbtn { padding: .5rem 1.1rem; }
 .route { border: 1px solid var(--hairline); border-radius: 8px; padding: .6rem .8rem; margin: .6rem 0; background: var(--surface); }
 .rleg { padding: .3rem 0; }
 .rleg + .rleg { border-top: 1px dashed var(--hairline); }
@@ -1904,7 +1905,7 @@ if (ROUTES_IN_UI) {
 <div class="filters">
   <div class="fld"><label for="r-from">from</label><select id="r-from"></select><span class="hint">any concept in the graph</span></div>
   <div class="fld"><label for="r-to">to</label><select id="r-to"></select><span class="hint">routes run both ways; arrows show each claim's own direction</span></div>
-  <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runroutes" style="margin:0">find routes</button></div>
+  <div class="fld"><label aria-hidden="true">&nbsp;</label><button class="runbtn" type="button" id="runroutes" style="margin:0">find routes</button></div>
 </div>
 <div class="routes" id="routes"><p class="dim" id="status">Reading the dataset…</p></div>
 <p class="meta">Every leg is one verified claim with its paragraph and quote. The <a href="/query">query panel</a> carries the full filter set.</p>`
@@ -2072,7 +2073,7 @@ ${WALK_IN_UI ? `<h2>Identity walk</h2>
 <div class="filters" style="margin-top:.8rem">
   <div class="fld"><label for="w-start">start node</label><input id="w-start" placeholder="mercurius"><span class="hint">node id, else substring of an id or a label</span></div>
   <div class="fld"><label for="w-depth">depth</label><select id="w-depth"><option>1</option><option selected>2</option><option>3</option></select><span class="hint">a budget, not a measure of closeness</span></div>
-  <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runwalk" style="margin:0">walk</button></div>
+  <div class="fld"><label aria-hidden="true">&nbsp;</label><button class="runbtn" type="button" id="runwalk" style="margin:0">walk</button></div>
 </div>
 <div class="walk" id="walk"></div>` : ''}
 `
@@ -2091,6 +2092,7 @@ ${WALK_IN_UI ? `<h2>Identity walk</h2>
 .tog input { accent-color: var(--gold-dim); width: .85rem; height: .85rem; }
 .runbtn { margin-left: auto; background: transparent; color: var(--gold); border: 1px solid var(--gold-dim);
   border-radius: 999px; padding: .34rem 1.1rem; font: .62rem var(--mono); letter-spacing: .1em; cursor: pointer; }
+.fld > .runbtn { padding: .5rem 1.1rem; }
 .rows { margin-top: 1rem; border-top: 1px solid var(--hairline); }
 .row { padding: .55rem .2rem .55rem .55rem; border-bottom: 1px solid var(--hairline); }
 .row .triple { display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem; font-size: .96rem; }

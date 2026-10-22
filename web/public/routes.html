@@ -58,6 +58,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .fld .hint { font: .55rem var(--mono); color: var(--ink-dim); }
 .runbtn { background: transparent; color: var(--gold); border: 1px solid var(--gold-dim);
   border-radius: 999px; padding: .34rem 1.1rem; font: .62rem var(--mono); letter-spacing: .1em; cursor: pointer; }
+.fld > .runbtn { padding: .5rem 1.1rem; }
 .route { border: 1px solid var(--hairline); border-radius: 8px; padding: .6rem .8rem; margin: .6rem 0; background: var(--surface); }
 .rleg { padding: .3rem 0; }
 .rleg + .rleg { border-top: 1px dashed var(--hairline); }
@@ -153,7 +154,7 @@ fetch('/graph.json').then(r => r.json()).then(g => {
 <div class="filters">
   <div class="fld"><label for="r-from">from</label><select id="r-from"></select><span class="hint">any concept in the graph</span></div>
   <div class="fld"><label for="r-to">to</label><select id="r-to"></select><span class="hint">routes run both ways; arrows show each claim's own direction</span></div>
-  <div class="fld" style="justify-content:end"><button class="runbtn" type="button" id="runroutes" style="margin:0">find routes</button></div>
+  <div class="fld"><label aria-hidden="true">&nbsp;</label><button class="runbtn" type="button" id="runroutes" style="margin:0">find routes</button></div>
 </div>
 <div class="routes" id="routes"><p class="dim" id="status">Reading the dataset…</p></div>
 <p class="meta">Every leg is one verified claim with its paragraph and quote. The <a href="/query">query panel</a> carries the full filter set.</p>

@@ -1150,7 +1150,7 @@ function buildSummary() {
     <div class="sum-body">${html}</div>
     ${summary.placeholder
       ? `<div class="sum-placeholder">PLACEHOLDER SUMMARY — wired to real edges so the mechanism can be tested. The generated hundred words are produced through the verification chain and replace this file wholesale.</div>`
-      : `<div class="sum-verified">Written from the graph and checked${summary.generated_date ? ` · ${esc(summary.generated_date)}` : ''}</div>`}
+      : `<div class="sum-verified">Summary written and checked${summary.generated_date ? ` ${esc(summary.generated_date)}` : ''}${broken.length ? '' : ` · its ${summary.clauses.length} clauses still resolve in the current graph`}</div>`}
     ${broken.length ? `<div class="clause-error">BROKEN: ${broken.length} clause${broken.length > 1 ? 's' : ''} cite${broken.length > 1 ? '' : 's'} edges that are not in this graph (${esc(broken.map(b => clauseRefs(b.c).join(', ')).join(' | '))}). The summary is stale and must be regenerated before publication.</div>` : ''}`
   box.querySelectorAll('.clause[data-clause]').forEach(el => el.addEventListener('click', () => {
     const i = Number(el.dataset.clause)
