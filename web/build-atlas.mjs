@@ -101,7 +101,7 @@ function emitPublicDataset(seed, meta) {
 
 const TOKENS = {
   ground: '#191511', 'ground-2': '#1e1a15', panel: '#241e17',
-  ink: '#f0e9da', 'ink-faint': '#a89f8d', 'ink-dim': '#7d766a', 'ink-bright': '#ffffff',
+  ink: '#f0e9da', 'ink-faint': '#a89f8d', 'ink-dim': '#867f72', 'ink-bright': '#ffffff',
   'ink-label': '#cfc7b4',
   // Item 24 (editorial ruling, 2026-08-14) — the page gutter. One number, one
   // token, consumed by the header, the title band and every content column, so
@@ -146,11 +146,16 @@ const TOKENS = {
 // so PLATE re-pins the themed keys to their night values on those subtrees.
 const DAY = {
   ground: '#f6f5f1', 'ground-2': '#efeeea', panel: '#ffffff',
-  ink: '#21242a', 'ink-faint': '#5c6370', 'ink-dim': '#878e9a', 'ink-bright': '#000000',
+  ink: '#21242a', 'ink-faint': '#5c6370', 'ink-dim': '#646b78', 'ink-bright': '#000000',
   'ink-label': '#3a3f49',
-  gold: '#8a6a1b', 'gold-dim': '#a5842c',
+  gold: '#8a6a1b', 'gold-dim': '#7f6315',
   surface: 'rgba(255, 255, 255, 0.94)', well: 'rgba(33, 36, 42, 0.05)', hairline: '#dcdde0',
-  sage: '#3f7a60', rubedo: '#a8443a', amber: '#9c731e', teal: '#42756e', muted: '#7a7f87',
+  sage: '#3f7a60', rubedo: '#a8443a', amber: '#8a6410', teal: '#42756e', muted: '#7a7f87',
+  // the metals, darkened for light ground: these feed page chips and the
+  // legend only — the atlas canvas reads baked data colours, and the plate
+  // pin below restores the true metals on the canvas subtrees
+  'm-concept': '#8a6a1b', 'm-symbol': '#53606f', 'm-figure': '#8f5327',
+  'm-operation': '#a8482a', 'm-substance': '#2f6b52', 'm-motif': '#575f6d',
   hi: '#7a5e10', sel: '#8a6a1b',
   'edge-idle': '#b9bcc2', 'layer-structural': '#c4c7cc',
   'b-sage': '#9cc4ae', 'b-teal': '#a8c6c2', 'b-amber': '#d3b26a', 'b-rubedo': '#d6a099',
