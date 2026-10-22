@@ -122,7 +122,7 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
 
 ## v2.1: the atlas as an instrument
 
-status: in preparation. Deploy-only: no tag, no version bump, no Zenodo
+status: deployed 2026-10-22. Deploy-only: no tag, no version bump, no Zenodo
 record until the CW 11 arc completes.
 pin: graph v2.1 (working) · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
