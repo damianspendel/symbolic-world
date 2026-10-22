@@ -538,6 +538,30 @@ here so the morning finds it; nothing below is committed scope.
    (alphabetical; volumes already follow collection order per V2-R8). Ruled
    by the maintainer at the v2.0 review.
 
+2. **Site copy pass from the humanizer review** (scheduled for the next
+   release, Damian 2026-10-22; build track). Source:
+   docs/SITE_COPY_REVIEW_2026-10-22.md, a page-by-page review of every text
+   source on symbolicworld.observer with a suggested rewrite per hit. Four
+   patterns carry most of it: the same closing sentence repeated across pages
+   ("a map of assertions, not a reading" on the method page, the design page
+   and all 25 family pages; "per edge in its paragraph, never per string" on
+   the families index, every family page, the SPA lede and seven pitfall-table
+   rows; the proposer-never-signs-off mantra in four wordings; "agreement is
+   not endorsement" twice), "X, not Y" as the default way of stating a limit,
+   em dashes splicing clauses on nine pages, and colon-led reveals. Files
+   the pass touches: docs/METHOD_COPY.md, web/build-atlas.mjs (design,
+   families, family-page, releases and support copy), web/src/main.js (the
+   families lede), web/index.html (meta description), docs/RELEASES.md (the
+   "(Damian, 2026-08-19)" attribution leaks to the public page), and the
+   poster source in docs/figures (two dash pairs, the "marks its own homework"
+   line, and a count re-render: the image says 653/2,420/3,180, the site
+   661/2463/3248). Constraints: the method copy is Damian's own rewrite of
+   2026-10-18, so each edit there is proposed to him, not applied; the family
+   definitions stay untouched (the site quotes them verbatim and a ruleset
+   change voids its numbers by rule); the batch-page mining logs are a
+   register decision for Damian, not a rewrite. The copy contract and the
+   poster-facts gate run as usual after the pass.
+
 ## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
 
 Source for both items: GitHub issue 2 on damianspendel/symbolic-world, raised
