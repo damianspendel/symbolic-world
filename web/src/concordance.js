@@ -15,6 +15,11 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;'
 const cssEsc = s => String(s).replace(/["\\]/g, '\\$&')
 const WALK_SEEN = 'sw-concordance-walk-seen'
 const LENSES = ['symbolization', 'correspondence', 'projection']
+// spec-orientation-v1, item 2: the page says what a pair is and how many there
+// are, lists every pair by default, and offers the guided walk instead of
+// opening it on a first visit. Off, the page behaves as before: the walk
+// opens itself once, the pairs live only on the board.
+const CONCORDANCE_ORIENTATION = true
 
 export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, pageBar }) {
   const nodeById = Object.fromEntries(atlas.nodes.map(n => [n.id, n]))
@@ -47,7 +52,7 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
   let showAll = false
   let picked = ''                 // a chosen concept, whose crossings get listed
   let lens = new Set()            // R10.10 family lenses
-  let walkId = localStorage.getItem(WALK_SEEN) ? '' : (journeys[0] || {}).dir || ''
+  let walkId = CONCORDANCE_ORIENTATION ? '' : (localStorage.getItem(WALK_SEEN) ? '' : (journeys[0] || {}).dir || '')
   let walkAt = 0
   const markWalkSeen = () => { try { localStorage.setItem(WALK_SEEN, '1') } catch {} }
   const currentWalk = () => walks[walkId] || []
@@ -64,7 +69,7 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     const second = walkId === 'laboratory-first' ? g.psyche : g.laboratory
     return `<div class="gwalk">
       <div class="walk-body">
-        <div class="walk-step">${esc(j.title || 'A guided crossing')} · stop ${walkAt + 1} of ${w.length}</div>
+        <div class="walk-step">${esc(j.title || 'A guided crossing')} · ${CONCORDANCE_ORIENTATION ? 'pair' : 'stop'} ${walkAt + 1} of ${w.length}</div>
         <h3>${esc(label(first))}<i>·</i>${esc(label(second))}</h3>
         <p class="gloss">${esc(g.gloss)}</p>
         ${e ? `<div class="walk-rel">${esc(e.source === g.psyche ? '' : '← ')}${esc(e.relation)}${e.source === g.psyche ? ' →' : ''}</div>` : ''}
@@ -107,6 +112,7 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
       <div class="titleband"><p class="eyebrow">explore</p>
       <h1>Psychology against alchemy</h1></div>
       <p class="lede2">Jung's thesis is that alchemy is the psyche describing itself in projected form. ${modeNote}</p>
+      ${CONCORDANCE_ORIENTATION ? `<p class="lede2 orient">A pair is a psychological concept and the alchemical figure or operation Jung reads it through. This page holds <b>${allRows.length}</b> pairs, each with its citation. Three ways in: take a guided crossing, pick any concept, or filter by lens.</p>` : ''}
 
       ${journeyTiles()}
       ${walkHTML()}
@@ -138,12 +144,29 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
           <div class="conc-colhead">The Laboratory</div>
           ${labIds.map(id => `<button class="cnode" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>`).join('')}
         </div>
-      </div>`}
+      </div>${CONCORDANCE_ORIENTATION ? pairsList() : ''}`}
     </div>`
 
     wire(rows)
     if (picked) setTimeout(() => drawWheel(), 0)
     else setTimeout(() => drawArcs(rows), 0)
+  }
+
+  // item 2 — every pair, scannable, in one list under the board: psyche
+  // concept, the relation as the edge states it, laboratory partner, the
+  // citation. Rows carry the crossrow hooks, so hovering one lights its arc
+  // and clicking opens the edge, exactly as the picked-concept list does.
+  function pairsList() {
+    const rows = [...allRows].sort((a, b) => label(a.psyche).localeCompare(label(b.psyche)) || label(a.lab).localeCompare(label(b.lab)))
+    return `<div class="pairs">
+      <div class="conc-colhead">All ${rows.length} pairs</div>
+      ${rows.map(r => `<button class="crossrow pair" data-cross="${esc(r.id)}">
+        <span class="pp">${esc(label(r.psyche))}</span>
+        <span class="prel">${r.inverted ? '← ' : ''}${esc(spokeRel(r.e))}${r.inverted ? '' : ' →'}</span>
+        <span class="pl">${esc(label(r.lab))}</span>
+        <span class="pc">${esc(r.cite)}${r.family ? ' · ' + esc(r.family) : ''}</span>
+      </button>`).join('')}
+    </div>`
   }
 
   // ---- the wheel: the picked term at centre, every relation a labelled spoke.
@@ -190,6 +213,7 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     // curved spokes: one quadratic per claim, fanned by curvature; labels ride
     // the curve and are collision-nudged so they cover neither nodes nor each other
     const spokes = []
+    const spokeLabels = []
     const labelBoxes = []
     const qp = (t, ax, ay, cxp, cyp, bx, by) => ({
       x: (1 - t) * (1 - t) * ax + 2 * (1 - t) * t * cxp + t * t * bx,
@@ -220,11 +244,12 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
         if (!L) { const pt = qp(0.55, cx, cy, mx2, my2, p.x, p.y); L = { x: pt.x, y: pt.y - 14 } }
         labelBoxes.push(L)
         spokes.push(`<path d="${d}" class="spoke ${lensCls}" data-arc="${esc(r.id)}"></path>
-          <path d="${d}" fill="none" stroke="transparent" stroke-width="14" style="pointer-events:stroke;cursor:pointer" data-hit="${esc(r.id)}"></path>
-          <text x="${L.x.toFixed(1)}" y="${(L.y - 5).toFixed(1)}" text-anchor="middle" class="spoke-label" data-spoke-label="${esc(r.id)}">${esc(r.inverted ? '← ' + spokeRel(r.e) : spokeRel(r.e) + ' →')}</text>`)
+          <path d="${d}" fill="none" stroke="transparent" stroke-width="14" style="pointer-events:stroke;cursor:pointer" data-hit="${esc(r.id)}"></path>`)
+        spokeLabels.push(`<text x="${L.x.toFixed(1)}" y="${(L.y - 5).toFixed(1)}" text-anchor="middle" class="spoke-label" data-spoke-label="${esc(r.id)}">${esc(r.inverted ? '← ' + spokeRel(r.e) : spokeRel(r.e) + ' →')}</text>`)
       })
     })
-    svg.innerHTML = spokes.join('')
+    // every spoke under every label (item 2: the arrows go to the background)
+    svg.innerHTML = spokes.join('') + spokeLabels.join('')
     // nodes as absolutely-positioned buttons over the svg
     const nodeBtns = pos.map(p =>
       `<button class="wnode ${regOf(p.id) === 'psyche' ? 'wp' : 'wl'}" data-node="${esc(p.id)}" style="left:${p.x}px;top:${p.y}px">${esc(label(p.id))}</button>`)

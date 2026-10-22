@@ -530,6 +530,24 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 .jtile:hover, .jtile:focus-visible { border-color: var(--gold); color: var(--ink); outline: none; }
 .jtile.on { border-color: var(--gold); border-left-color: var(--gold); background: rgba(212, 175, 55, 0.07); color: var(--ink); }
 .jtile.reverse { border-left-color: var(--m-substance); }
+/* item 2 (orientation) — the pairs list and the orientation line */
+#mode-panel .lede2.orient { color: var(--ink); }
+.pairs { margin: 1.6rem 0 1rem; display: flex; flex-direction: column; gap: 0.15rem; }
+.pairs .conc-colhead { margin-bottom: 0.4rem; }
+.pairs .pair {
+  display: grid; grid-template-columns: minmax(9rem, 1fr) auto minmax(9rem, 1fr) auto; gap: 0.6rem;
+  align-items: baseline; text-align: left; width: 100%; padding: 0.3rem 0.5rem;
+  background: none; border: 0; border-bottom: 1px solid var(--hairline); color: var(--ink); cursor: pointer;
+  font-family: var(--serif); font-size: 0.9rem;
+}
+.pairs .pair:hover, .pairs .pair.hot { background: rgba(212, 175, 55, 0.07); }
+.pairs .pp { color: var(--m-concept); }
+.pairs .pl { color: var(--m-substance); }
+.pairs .prel { color: var(--gold-dim); font-style: italic; font-size: 0.85rem; }
+.pairs .pc { font: 0.58rem var(--mono); color: var(--ink-dim); white-space: nowrap; }
+@media (max-width: 760px) {
+  .pairs .pair { grid-template-columns: 1fr; gap: 0.1rem; }
+}
 .jtile.reverse.on { border-color: var(--m-substance); border-left-color: var(--m-substance); background: rgba(99, 153, 127, 0.07); }
 .jtile .jt { font-family: var(--display); font-size: 1.02rem; color: inherit; }
 .jtile .jd { font: 0.68rem var(--mono); color: var(--ink-dim); margin-top: 0.2rem; line-height: 1.4; }
@@ -779,3 +797,13 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
   background: none; border: 0; cursor: pointer; padding: 0.3rem; }
 .wheel-back:hover { color: var(--gold); }
 @media (max-width: 700px) { .wnode { font-size: 0.68rem; padding: 0.25rem 0.5rem; } }
+
+/* item 2 (orientation) — the arrows go behind the concepts: spokes and arcs
+   fainter, labels haloed in the ground, chips opaque over the lines */
+.wheel-svg .spoke { opacity: 0.38; }
+.wheel-svg .spoke-label { paint-order: stroke fill; stroke: var(--ground); stroke-width: 5px; stroke-linejoin: round; }
+.wheel .wnode { background: linear-gradient(rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.08)), var(--panel); }
+.wheel .wnode.wl { background: linear-gradient(rgba(99, 153, 127, 0.08), rgba(99, 153, 127, 0.08)), var(--panel); }
+.conc-arcs path { opacity: 0.22; }
+.conc-col.left .cnode { background: linear-gradient(rgba(212, 175, 55, 0.09), rgba(212, 175, 55, 0.09)), var(--panel); }
+.conc-col.right .cnode { background: linear-gradient(rgba(99, 153, 127, 0.09), rgba(99, 153, 127, 0.09)), var(--panel); }
