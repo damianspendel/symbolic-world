@@ -69,6 +69,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .row .rel { color: var(--gold); font-style: italic; }
 .row .cite { font: .6rem var(--mono); color: var(--gold-dim); }
 .row .quote { font-size: .85rem; color: var(--ink-faint); margin-top: .22rem; }
+.row .quote mark { background: none; color: var(--gold); font-weight: 600; }
 .row.derived { border-left: 3px dashed var(--m-motif); background: rgba(139,150,165,.05);
   border-radius: 0 6px 6px 0; padding-left: .7rem; }
 .row .prov { font: .58rem var(--mono); color: var(--m-motif); margin-top: .24rem; }
@@ -83,7 +84,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .hop .against { font: .56rem var(--mono); color: var(--m-motif); }
 </style>
 <script type="module">
-import { select, labelIndex, effectiveRelation, derivedRows, byVolume } from '/query.js'
+import { select, labelIndex, effectiveRelation, derivedRows, byVolume, quoteTerms, quoteMatches } from '/query.js'
 
 const ROW_CAP = 300
 const $ = (id) => document.getElementById(id)
@@ -129,12 +130,42 @@ function filters () {
   const f = { closure: $('t-closure').checked }
   for (const k of ['family', 'state', 'subject', 'object', 'volume', 'claim_type', 'provenance']) f[k] = $('f-' + k).value.trim()
   f.relation = $('f-relation').value.trim()
+  f.quote = $('f-quote').value.trim()
+  // the quotes are what the search read, so they come on with the field
+  if (quoteTerms(f.quote).length) $('t-quotes').checked = true
   return f
 }
 
+// The quote shown is the one that matched, with every term marked. Matching
+// is accent-insensitive, so the marks are placed through a map from the
+// normalised text back to the original characters.
+function matchedQuote (refs, terms) {
+  for (const r of refs) if (r.quote && quoteMatches([r], terms)) return r.quote
+  return firstQuote(refs)
+}
+function markTerms (quote, terms) {
+  const chars = [...quote], norm = [], back = []
+  chars.forEach((ch, i) => {
+    for (const n of ch.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()) { norm.push(n); back.push(i) }
+  })
+  const text = norm.join(''), hits = chars.map(() => false)
+  for (const term of terms) {
+    let at = text.indexOf(term)
+    while (at >= 0) { for (let k = at; k < at + term.length; k++) hits[back[k]] = true; at = text.indexOf(term, at + 1) }
+  }
+  let out = '', open = false
+  chars.forEach((ch, i) => {
+    if (hits[i] && !open) { out += '<mark>'; open = true }
+    if (!hits[i] && open) { out += '</mark>'; open = false }
+    out += esc(ch)
+  })
+  return out + (open ? '</mark>' : '')
+}
 function rowHtml (row) {
   const derivedRow = row.origin !== 'graph'
-  const q = $('t-quotes').checked ? firstQuote(row.references) : ''
+  const terms = quoteTerms($('f-quote').value.trim())
+  const q = $('t-quotes').checked ? (terms.length ? matchedQuote(row.references, terms) : firstQuote(row.references)) : ''
+  const qHtml = terms.length && q ? markTerms(q, terms) : esc(q)
   return '<div class="row' + (derivedRow ? ' derived' : '') + '">' +
     '<div class="triple"><span>' + esc(labels[row.subject] || row.subject) + '</span> ' +
     '<span class="rel">' + esc(row.relation) + '</span> ' +
@@ -143,7 +174,7 @@ function rowHtml (row) {
     '<span class="chip ' + (row.family ? 'f-ok' : 'f-none') + '">' + esc(row.family || ('unclassified(' + (row.state || 'unrecorded') + ')')) + '</span>' +
     (derivedRow ? '<span class="chip c-derived">derived row \u00b7 not an edge</span>' : '') +
     '</div>' +
-    (q ? '<div class="quote">\u201c' + esc(q) + '\u201d</div>' : '') +
+    (q ? '<div class="quote">\u201c' + qHtml + '\u201d</div>' : '') +
     (derivedRow ? '<div class="prov">' + esc(row.origin) + ' of ' + esc(row.derived_from.subject + ' ' + row.derived_from.relation + ' ' + row.derived_from.object) + '</div>' : '') +
     '</div>'
 }
@@ -192,6 +223,7 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
   <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">read off the reference, not the edge</span></div>
   <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">substring of relation_family.by</span></div>
   <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>
+  <div class="fld"><label for="f-quote">quote contains</label><input id="f-quote" placeholder="words, or a &quot;phrase&quot;"><span class="hint">words inside the graph's own verbatim quotes, 25 words at most. This does not search the corpus.</span></div>
 </div>
 
 <div class="toggles">

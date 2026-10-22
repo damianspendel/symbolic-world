@@ -28,6 +28,12 @@ const EMIT_CONCEPT_PAGES = true
 // lingering concepts.html as an unexpected file rather than letting it ride.
 const EMIT_CONCEPTS_INDEX = true
 
+// The quote search on /query (spec-orientation-v1, item 1). The matching
+// rule lives in query-semantics.mjs beside the CLI's; this gate governs only
+// the page's field, its import and its highlighting. Off, query.html is the
+// pre-stage page byte for byte.
+const EMIT_QUOTE_SEARCH = true
+
 // The off switch for the /routes page (spec-instrument-v1, stage I3; own page
 // and menu entry by Damian's ruling 2026-10-13 — routes are the beginner
 // surface, the query panel stays the advanced one). When false: the page is
@@ -2044,7 +2050,8 @@ if (DECL) {
   <div class="fld"><label for="f-volume">volume</label><select id="f-volume"></select><span class="hint">a reference cites this CW volume</span></div>
   <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">read off the reference, not the edge</span></div>
   <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">substring of relation_family.by</span></div>
-  <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>
+  <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>${EMIT_QUOTE_SEARCH ? `
+  <div class="fld"><label for="f-quote">quote contains</label><input id="f-quote" placeholder="words, or a &quot;phrase&quot;"><span class="hint">words inside the graph's own verbatim quotes, 25 words at most. This does not search the corpus.</span></div>` : ''}
 </div>
 
 <div class="toggles">
@@ -2084,7 +2091,8 @@ ${WALK_IN_UI ? `<h2>Identity walk</h2>
 .row .triple { display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem; font-size: .96rem; }
 .row .rel { color: var(--gold); font-style: italic; }
 .row .cite { font: .6rem var(--mono); color: var(--gold-dim); }
-.row .quote { font-size: .85rem; color: var(--ink-faint); margin-top: .22rem; }
+.row .quote { font-size: .85rem; color: var(--ink-faint); margin-top: .22rem; }${EMIT_QUOTE_SEARCH ? `
+.row .quote mark { background: none; color: var(--gold); font-weight: 600; }` : ''}
 .row.derived { border-left: 3px dashed var(--m-motif); background: rgba(139,150,165,.05);
   border-radius: 0 6px 6px 0; padding-left: .7rem; }
 .row .prov { font: .58rem var(--mono); color: var(--m-motif); margin-top: .24rem; }
@@ -2103,7 +2111,7 @@ ${WALK_IN_UI ? `<h2>Identity walk</h2>
   const ROW_CAP = 300
   derived(ROW_CAP)
   const queryHead = `<script type="module">
-import { select, labelIndex, effectiveRelation, derivedRows, byVolume${WALK_IN_UI ? ', walk, identityEdges' : ''} } from '/query.js'
+import { select, labelIndex, effectiveRelation, derivedRows, byVolume${EMIT_QUOTE_SEARCH ? ', quoteTerms, quoteMatches' : ''}${WALK_IN_UI ? ', walk, identityEdges' : ''} } from '/query.js'
 
 const ROW_CAP = ${ROW_CAP}
 const $ = (id) => document.getElementById(id)
@@ -2148,13 +2156,44 @@ function ready () {
 function filters () {
   const f = { closure: $('t-closure').checked }
   for (const k of ['family', 'state', 'subject', 'object', 'volume', 'claim_type', 'provenance']) f[k] = $('f-' + k).value.trim()
-  f.relation = $('f-relation').value.trim()
+  f.relation = $('f-relation').value.trim()${EMIT_QUOTE_SEARCH ? `
+  f.quote = $('f-quote').value.trim()
+  // the quotes are what the search read, so they come on with the field
+  if (quoteTerms(f.quote).length) $('t-quotes').checked = true` : ''}
   return f
 }
 
-function rowHtml (row) {
-  const derivedRow = row.origin !== 'graph'
-  const q = $('t-quotes').checked ? firstQuote(row.references) : ''
+${EMIT_QUOTE_SEARCH ? `// The quote shown is the one that matched, with every term marked. Matching
+// is accent-insensitive, so the marks are placed through a map from the
+// normalised text back to the original characters.
+function matchedQuote (refs, terms) {
+  for (const r of refs) if (r.quote && quoteMatches([r], terms)) return r.quote
+  return firstQuote(refs)
+}
+function markTerms (quote, terms) {
+  const chars = [...quote], norm = [], back = []
+  chars.forEach((ch, i) => {
+    for (const n of ch.normalize('NFD').replace(/[\\u0300-\\u036f]/g, '').toLowerCase()) { norm.push(n); back.push(i) }
+  })
+  const text = norm.join(''), hits = chars.map(() => false)
+  for (const term of terms) {
+    let at = text.indexOf(term)
+    while (at >= 0) { for (let k = at; k < at + term.length; k++) hits[back[k]] = true; at = text.indexOf(term, at + 1) }
+  }
+  let out = '', open = false
+  chars.forEach((ch, i) => {
+    if (hits[i] && !open) { out += '<mark>'; open = true }
+    if (!hits[i] && open) { out += '</mark>'; open = false }
+    out += esc(ch)
+  })
+  return out + (open ? '</mark>' : '')
+}
+` : ''}function rowHtml (row) {
+  const derivedRow = row.origin !== 'graph'${EMIT_QUOTE_SEARCH ? `
+  const terms = quoteTerms($('f-quote').value.trim())
+  const q = $('t-quotes').checked ? (terms.length ? matchedQuote(row.references, terms) : firstQuote(row.references)) : ''
+  const qHtml = terms.length && q ? markTerms(q, terms) : esc(q)` : `
+  const q = $('t-quotes').checked ? firstQuote(row.references) : ''`}
   return '<div class="row' + (derivedRow ? ' derived' : '') + '">' +
     '<div class="triple"><span>' + esc(labels[row.subject] || row.subject) + '</span> ' +
     '<span class="rel">' + esc(row.relation) + '</span> ' +
@@ -2163,7 +2202,7 @@ function rowHtml (row) {
     '<span class="chip ' + (row.family ? 'f-ok' : 'f-none') + '">' + esc(row.family || ('unclassified(' + (row.state || 'unrecorded') + ')')) + '</span>' +
     (derivedRow ? '<span class="chip c-derived">derived row \\u00b7 not an edge</span>' : '') +
     '</div>' +
-    (q ? '<div class="quote">\\u201c' + esc(q) + '\\u201d</div>' : '') +
+    (q ? '<div class="quote">\\u201c' + ${EMIT_QUOTE_SEARCH ? 'qHtml' : 'esc(q)'} + '\\u201d</div>' : '') +
     (derivedRow ? '<div class="prov">' + esc(row.origin) + ' of ' + esc(row.derived_from.subject + ' ' + row.derived_from.relation + ' ' + row.derived_from.object) + '</div>' : '') +
     '</div>'
 }

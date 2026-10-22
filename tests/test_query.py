@@ -23,6 +23,7 @@ Run: python3 -m pytest tests/test_query.py
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 
@@ -398,6 +399,58 @@ def test_cli_leaves_the_seed_file_untouched():
     run("--closure", "--count")
     run("--walk", "identity", "--subject", "mercurius", "--depth", "3")
     assert kg_query.file_digest(SEED) == before
+
+
+# ----------------------------------------- the quote search (orientation v1) ---
+
+NODE = shutil.which("node")
+JS_PORT = os.path.join(ROOT, "web", "query-semantics.mjs")
+
+
+def js_select(tmp_path, filters):
+    harness = tmp_path / "harness.mjs"
+    harness.write_text(
+        "import { readFileSync } from 'fs'\n"
+        f"import {{ select }} from '{JS_PORT}'\n"
+        f"const graph = JSON.parse(readFileSync({json.dumps(SEED)}))\n"
+        f"const decls = JSON.parse(readFileSync({json.dumps(DECLARATIONS)}))\n"
+        f"const rows = select(graph, decls, {json.dumps(filters)})\n"
+        "console.log(JSON.stringify(rows.map(r => [r.subject, r.relation, r.object, r.origin])))\n")
+    out = subprocess.run([NODE, str(harness)], capture_output=True, text=True)
+    assert out.returncode == 0, out.stderr
+    return [tuple(r) for r in json.loads(out.stdout)]
+
+
+@pytest.mark.skipif(NODE is None, reason="node is not on PATH")
+@pytest.mark.parametrize("query,expect_rows", [
+    ("projection", True),                       # one word
+    ("stone projection", True),                 # two words, same quote
+    ('"projection of the unified self"', True), # a quoted phrase
+    ("PROJECTION", True),                       # mixed case
+    ("bohme", True),                            # accent-insensitive: matches Böhme
+    ("zzzzqq", False),                          # matches nothing
+])
+def test_quote_search_cli_and_port_agree(tmp_path, query, expect_rows):
+    """--quote reads the graph's own verbatim quotes and nothing else; the CLI
+    and the JS port must return the same rows for the same query."""
+    payload = json.loads(run("--quote", query, "--json"))
+    reference = [(r["subject"], r["relation"], r["object"], r["origin"]) for r in payload["rows"]]
+    ported = js_select(tmp_path, {"quote": query})
+    assert ported == reference
+    assert bool(reference) is expect_rows, (query, len(reference))
+
+
+def test_quote_search_matches_within_one_quote_only():
+    """Two words must appear in the SAME quote: the conjunction is per quote,
+    not per row."""
+    terms = kg_query.quote_terms("stone projection")
+    assert terms == ["stone", "projection"]
+    refs = [{"quote": "the stone of the wise"}, {"quote": "a projection of the self"}]
+    assert kg_query.quote_matches(refs, terms) is False
+    assert kg_query.quote_matches([{"quote": "the stone is a projection"}], terms) is True
+    assert kg_query.quote_terms("x") == []          # under two characters: no filter
+    assert kg_query.quote_terms('"a b" c') == ["a b", "c"]
+    assert kg_query.normalize_text("  Böhme\tSAYS ") == "bohme says"
 
 
 # ------------------------------------------------------- the RDF export (D7) ---

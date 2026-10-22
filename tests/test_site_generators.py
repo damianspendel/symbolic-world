@@ -1768,7 +1768,8 @@ def test_the_browser_port_agrees_with_the_cli(tmp_path, filters):
     class Args:
         def __init__(self, **kwargs):
             for name in ("family", "state", "provenance", "claim_type", "volume",
-                         "subject", "object", "relation", "string", "effective"):
+                         "subject", "object", "relation", "string", "effective",
+                         "quote"):
                 setattr(self, name, None)
             self.closure = False
             for key, value in kwargs.items():

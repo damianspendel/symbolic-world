@@ -16,7 +16,9 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
+import unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
@@ -185,6 +187,44 @@ def node_matches(graph, node_id, needle):
     return low in node_id.lower() or low in graph.label(node_id).lower()
 
 
+# The quote search (spec-orientation-v1, item 1). It reads only the graph's
+# own verbatim quotes, never the corpus: case-insensitive, accent-insensitive
+# (NFD, combining marks dropped), whitespace-normalised. Every term must occur
+# in the SAME quote; a double-quoted phrase is one term; a query shorter than
+# two characters is no filter at all. web/query-semantics.mjs ports these
+# three functions name for name.
+
+def normalize_text(text):
+    decomposed = unicodedata.normalize("NFD", str(text))
+    stripped = "".join(c for c in decomposed if not unicodedata.combining(c))
+    return " ".join(stripped.lower().split())
+
+
+def quote_terms(query):
+    """The search terms of a query: quoted phrases first, then single words."""
+    text = normalize_text(query)
+    if len(text) < 2:
+        return []
+    terms = []
+    for phrase in re.findall(r'"([^"]+)"', text):
+        if phrase.strip():
+            terms.append(phrase.strip())
+    rest = re.sub(r'"[^"]*"', " ", text)
+    terms.extend(w for w in rest.split() if w)
+    return terms
+
+
+def quote_matches(references, terms):
+    """True when some reference's quote contains every term."""
+    if not terms:
+        return True
+    for ref in references:
+        q = normalize_text(ref.get("quote") or "")
+        if q and all(term in q for term in terms):
+            return True
+    return False
+
+
 def row_matches(graph, row, args):
     if args.family is not None and row["family"] != args.family:
         return False
@@ -211,6 +251,11 @@ def row_matches(graph, row, args):
         return False
     if args.effective is not None and row["effective_relation"] != args.effective:
         return False
+    quote = getattr(args, "quote", None)
+    if quote is not None:
+        terms = quote_terms(quote)
+        if terms and not quote_matches(row["references"], terms):
+            return False
     return True
 
 
@@ -423,6 +468,9 @@ def build_parser():
     f.add_argument("--object", help="node id, or a substring of an id or label")
     f.add_argument("--relation", help="matches the verbatim OR the effective relation")
     f.add_argument("--string", help="the verbatim relation only")
+    f.add_argument("--quote", help="words that must all appear in one of the row's own "
+                   "verbatim quotes (case- and accent-insensitive; \"a phrase\" matches "
+                   "as a phrase; never reads the corpus)")
     f.add_argument("--effective", help="the effective relation only "
                                        "(normalized where that layer exists, else verbatim)")
 
