@@ -25,11 +25,9 @@
 
 What each release changed.
 
-Each entry opens with:
-
-- The graph version,
-- the ruleset version it shipped with (deliberately separate numbers),
-- and the calibration record in force when the release was cut.
+Each entry opens with the graph version, the ruleset version it shipped with
+(the two are deliberately separate numbers) and the calibration record in force
+when the release was cut.
 
 ## v1.3.0: the published baseline
 
