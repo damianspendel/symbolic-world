@@ -809,3 +809,8 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 .conc-col.right .cnode { background: linear-gradient(rgba(99, 153, 127, 0.09), rgba(99, 153, 127, 0.09)), var(--panel); }
 .cnode.lens-dim { opacity: 0.3; }
 .conc-arcs path.lens-dim { opacity: 0; }
+.wheel-svg .spoke.lens-symbolization { stroke: var(--lens-symbolization); }
+.wheel-svg .spoke.lens-correspondence { stroke: var(--lens-correspondence); }
+.wheel-svg .spoke.lens-projection { stroke: var(--lens-projection); }
+.wheel-empty { position: absolute; left: 50%; transform: translateX(-50%); margin: 0; z-index: 2;
+  font: 0.7rem var(--mono); color: var(--ink-faint); white-space: nowrap; }

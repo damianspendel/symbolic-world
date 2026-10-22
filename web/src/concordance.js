@@ -104,7 +104,7 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     const modeNote = atlas.meta.bridgeMode === 'family'
       ? 'Here, we see the symbolization, correspondence and projection families crossing from the alchemical register to the depth psychology register.'
       : 'Selected by register — every cited edge that crosses between the two sides.'
-    const pickedRows = picked ? allRows.filter(r => r.psyche === picked || r.lab === picked) : []
+    const pickedRows = picked ? allRows.filter(r => (r.psyche === picked || r.lab === picked) && (!lens.size || lens.has(r.family))) : []
     const lensed = lens.size ? new Set(rows.filter(r => lens.has(r.family)).flatMap(r => [r.psyche, r.lab])) : null
     const chipCls = id => (lensed && !lensed.has(id)) ? 'cnode lens-dim' : 'cnode'
 
@@ -185,7 +185,8 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     const host = root.querySelector('#wheel')
     const svg = root.querySelector('#wheel-svg')
     if (!host || !svg || !picked) return
-    const rows = allRows.filter(r => r.psyche === picked || r.lab === picked)
+    // the lens filters the wheel as it filters the board and the list
+    const rows = allRows.filter(r => (r.psyche === picked || r.lab === picked) && (!lens.size || lens.has(r.family)))
     // group by partner: one node per partner, one spoke per claim
     const partners = new Map()
     for (const r of rows) {
@@ -257,9 +258,12 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
     // nodes as absolutely-positioned buttons over the svg
     const nodeBtns = pos.map(p =>
       `<button class="wnode ${regOf(p.id) === 'psyche' ? 'wp' : 'wl'}" data-node="${esc(p.id)}" style="left:${p.x}px;top:${p.y}px">${esc(label(p.id))}</button>`)
+    const empty = lens.size && !rows.length
+      ? `<p class="wheel-empty" style="top:${(cy + 40).toFixed(0)}px">no ${[...lens].join(' or ')} pairs for ${esc(label(picked))}. Clear the lens or pick another concept.</p>`
+      : ''
     host.insertAdjacentHTML('beforeend',
       `<button class="wnode wcenter ${regOf(picked) === 'psyche' ? 'wp' : 'wl'}" data-unpick style="left:${cx}px;top:${cy}px">${esc(label(picked))} <span class="deg">${rows.length}</span></button>` +
-      nodeBtns.join(''))
+      nodeBtns.join('') + empty)
     // entrance: everything starts at the centre and flies out
     const els = [...host.querySelectorAll('.wnode:not(.wcenter)')]
     els.forEach(el => { el.style.transform = `translate(-50%,-50%) translate(${cx - parseFloat(el.style.left)}px, ${cy - parseFloat(el.style.top)}px)`; el.style.opacity = '0' })
