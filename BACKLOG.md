@@ -537,3 +537,33 @@ here so the morning finds it; nothing below is committed scope.
 1. **Sort the query panel's dropdowns** — the family dropdown especially
    (alphabetical; volumes already follow collection order per V2-R8). Ruled
    by the maintainer at the v2.0 review.
+
+## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
+
+Source for both items: GitHub issue 2 on damianspendel/symbolic-world, raised
+2026-08-28 by an outside reader. Backlog only. Nothing here is scheduled and
+nothing is to be built. Figures are as of 2026-10-22.
+
+1. **Attribution-aware mining around quotations** (future major release).
+   Mine around the places where Jung quotes or reports another author,
+   reading the neighbouring sentences to settle who is speaking and what Jung
+   does with the claim. Trigger case: CW 14 §136, "Paracelsus likewise calls
+   sulphur the soul", is not in the graph; Paracelsus carries 4 relations and
+   5 references. Constraints: this re-mines covered ground, and the standing
+   rule is one mining pass per window, ever, so each window needs the
+   author's explicit override, named per window. It belongs after the first
+   pass on the key volumes is complete (CW 11 is mid-arc; CW 5 and CW 16 are
+   unmined). The miner-blinding rules apply to any new prompt.
+
+2. **A human editorial layer for connections no sentence of Jung's makes,
+   with a governed process.** Trigger case: "Mary (Mother of God)" (17
+   relations) and "The Assumption of Mary" (3 relations) have no direct
+   relation; the identity-drift gap is already listed among the known limits
+   on the method page. The design question is a layer in the atlas's own
+   voice, a fourth voice beside Jung asserts, Jung reports doctrine and Jung
+   quotes a named source: each connection made by a person, labelled
+   editorial and never attributed to Jung, with the reasoning recorded, kept
+   apart from the sourced graph and switchable off by the reader. It also
+   covers canonical figures with several representations. Constraints: every
+   existing rule on sourced claims stays untouched, and a design document
+   comes before any build.
