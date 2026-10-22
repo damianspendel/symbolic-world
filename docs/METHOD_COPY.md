@@ -83,9 +83,8 @@ Five stations.
    at most 25 words, and that the relation is well formed, i.e. structured as a
    relationship between two nodes. Failures are then excluded.
 3. **Gate.** A Fable-family model judges every claim against its full source
-   paragraph. It is hostile — i.e. it seeks to challenge aggressively — by
-   default: the claim survives only if, in the model's judgment, the paragraph
-   supports it.
+   paragraph. By default it is hostile: the claim survives only if the model
+   judges that the paragraph supports it.
 4. **Audit.** A Gemini model re-reads what survived, before any of it touches
    the graph. Universal for every batch since the *Aion* arc (mid-2026).
    (Earlier material was audited by sampling, and evidenced in the ledger;
@@ -94,10 +93,9 @@ Five stations.
 5. **Merge.** The claim enters with its provenance stamped: dates, verdicts,
    corrections.
 
-The rule underneath all five: **the model that proposes a claim is never the
-model that signs it off.** Proposer and gate are different model families
-(Anthropic's Opus and Fable lines); the auditor is a different vendor
-altogether (Google's Gemini). This is a standing arrangement.
+Under all five stations, the model that proposes a claim never signs it off.
+Proposer and gate are different model families (Anthropic's Opus and Fable
+lines) and the auditor is a different vendor (Google's Gemini).
 
 The checks remove real material: in the most recent window, {{last_proposed}}
 proposed citations became {{last_merged}} merged ones.
@@ -113,24 +111,22 @@ published.
 - **Adjudication.** Two blind arms sort relations into {{families}} families:
   one Opus-family model, one Gemini, each reading the definitions document and
   the edge, neither able to see the other's answer. These arms disagree on
-  {{queue}} claims today. No model is allowed to break a tie; this is
-  performed by a human in the loop: a person rules, in sittings. The rulings
-  land in the ledger. An assignment is recorded with the ruleset version it
+  {{queue}} claims today. No model breaks a tie. A person rules, in
+  sittings, and the rulings land in the ledger. An assignment is recorded with the ruleset version it
   was agreed under, because a later version can retire the rule it rested on.
 - **Refusals are kept apart.** *No family* means our vocabulary is short. *Text
   undecided* means Jung's own sentence hedges between two readings. Pooling them
   would let a thin vocabulary hide inside a hedge.
 - **Disputes.** {{disputes}} challenges are on the record with their outcomes,
   in the [dispute log](/disputes).
-- **Publication.** Releases, deploys and rulings are human decisions. Nothing
-  here publishes itself.
+- **Publication.** Releases, deploys and rulings are human decisions.
 
 ## Confidence levels
 
 The checks are themselves checked:
 
 - Every one of the {{refs}} quotes is mechanically verified against the
-  corpus. The verification set seeds seven deliberately corrupted claims — so
+  corpus. The verification set seeds seven deliberately corrupted claims. So
   far, all seven have been caught on every run. Whether a paragraph supports
   its claim is a judgment call made by a model. It is not a mechanical proof.
 - The family layer is checked by seeding corruptions among real assignments.
@@ -156,7 +152,7 @@ What the instruments do not cover:
 | One human reviewer; no second annotator yet | Independent second annotation with agreement statistics |
 | A class of identity drift (two names for one thing entering as two things) is invisible to the current audit | No instrument yet |
 | English translation only (Hull) | German cross-check against the *Gesammelte Werke* |
-| Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked | The graph is a map of assertions, not a reading. Opposing claims are mined where Jung himself qualifies, and the books remain the reading |
+| Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked | Opposing claims are mined where Jung himself qualifies, and the books remain the reading |
 
 ## The paper
 
