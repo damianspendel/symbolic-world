@@ -452,7 +452,7 @@ def test_the_releases_intro_is_two_paragraphs_and_no_machinery():
         assert machinery not in text, f"contributor machinery still rendered: {machinery}"
     # the intro: what the page is, and what an entry opens with (Damian's
     # 2026-10-18 rewrite replaced the pin sentence with a three-item list)
-    assert "A list of changes and key updates" in text
+    assert "What each release changed." in text
     assert "Each entry opens with" in text
 
     # the conventions are kept, in a note the renderer never shows

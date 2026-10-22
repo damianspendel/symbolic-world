@@ -1524,7 +1524,7 @@ ${pend.length > 6 ? `<p class="meta">${pend.length - 6} more. These are edges wh
 <details class="disclose">
 <summary>${evHeadline}<span class="more">the whole table</span></summary>
 ${evTable(fam.id)}
-<p class="meta">A row this small is the items themselves; no rate over a handful of items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts, not whether Jung's claim is true, which the verification chain had already asked of the paragraph. The disagreements stand beside the agreements because hiding them would make the table an argument rather than a record. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>
+<p class="meta">A row this small is the items themselves; no rate over a handful of items carries precision worth reporting. The check asked which kind of relation a reader of the literature would say Jung asserts, not whether Jung's claim is true, which the verification chain had already asked of the paragraph. The table lists disagreements beside agreements. Full worksheets: <code>docs/experiments/external_validity_2026-08/</code>.</p>
 </details>
 <p class="meta">Agreement is not endorsement: no scholar reviewed this vocabulary, and the sample is small enough to name in a sentence.</p>` : ''
 
@@ -1552,7 +1552,7 @@ ${fam.notes.length ? fam.notes.map(n => `<p class="dim ev"><b>${esc(n.label)}:</
 
 <h2>Relation strings that land here</h2>
 ${strings.length ? `<div class="stringmap">${stringChips}</div>
-<p class="meta">The number beside a string is how many relations carry it. ${singles ? `${singles} of these strings ${singles === 1 ? 'occurs' : 'occur'} exactly once` : 'No string here occurs only once'}. The tail is the informative part: a string used once usually carried its own qualifier in the sentence it came from. A string can appear under more than one family, and does: assignment is made to an edge in its paragraph, never to a string in the abstract.</p>`
+<p class="meta">The number beside a string is how many relations carry it. ${singles ? `${singles} of these strings ${singles === 1 ? 'occurs' : 'occur'} exactly once` : 'No string here occurs only once'}. The tail is the informative part: a string used once usually carried its own qualifier in the sentence it came from. A string can appear under more than one family, and does.</p>`
     : `<p class="dim">No relation string lands here.</p>`}
 
 <h4>seeds: the examples the definition names</h4>
@@ -1567,12 +1567,12 @@ definition and seeds quoted from docs/FAMILY_DEFINITIONS.md ${esc(famVersion)};<
 ${EVROWS.length ? `external-validity row from docs/experiments/external_validity_2026-08/results.json (report v3, closed 2026-08-12);<br>` : ''}
 built ${buildDate}
 </div>
-<div class="callout"><p>These families are this project's classification. They are calibrated inside this repository, checked once against outside scholarship on a small sample, and endorsed by nobody. What the layer records is how we sorted relations Jung wrote: a map of assertions, not a reading of him.</p></div>`
+<div class="callout"><p>Checked once against outside scholarship on a small sample. No scholar has reviewed the vocabulary.</p></div>`
 
   const p = registerPage({
     slug: `family-${fam.id}`, title: `${fam.name} — a relation family`,
     where: `families · ${fam.name}`, nav: null, changefreq: 'weekly', priority: '0.4',
-    description: `${fam.name}: a relation family in The Symbolic World’s graph of Jung’s Collected Works — definition, boundary rulings, and the edges assigned to it.`,
+    description: `${fam.name}: a relation family in The Symbolic World’s graph of Jung’s Collected Works: definition, boundary rulings, and the edges assigned to it.`,
     style: '', body
   })
   famPages.push({ page: p, fam, edges: row.edges })
@@ -1984,7 +1984,7 @@ fetch('/graph.json').then(r => r.json()).then(g => {
   registerPage({
     slug: 'routes', title: 'Routes', where: 'routes', nav: 'routes', kind: 'records',
     changefreq: 'weekly', priority: '0.6',
-    description: 'Trace the chains of verified, cited claims connecting any two concepts in Jung’s Collected Works — shortest first, every leg quoted — in The Symbolic World’s verified graph.',
+    description: 'Trace the chains of verified, cited claims connecting any two concepts in Jung’s Collected Works, shortest first, every leg quoted, in The Symbolic World’s verified graph.',
     style: routesStyle, body: routesBody, head: routesHead
   })
   V2_COPY.push(['public/routes.html (generated)', stripEvidence(routesBody)])
@@ -2293,7 +2293,7 @@ const QA_STANCE = [
   [/^P22/, 'design', 'The relation slot holds Jung\u2019s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it.'],
   [/^P24 relation name/, 'open', 'A predicate carrying a whole proposition is the project\u2019s named defect. New mining is constrained by a form rule, and the normalization layer repairs the old edges beside their frozen originals rather than over them.'],
   [/^P24 node label/, 'open', 'A label that is a sentence cannot be matched across edges. Counted here, not yet repaired.'],
-  [/^P02\/P30 synonymous/, 'declared', 'Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.'],
+  [/^P02\/P30 synonymous/, 'declared', 'Answered by the declarations layer (see the note above the table).'],
   [/^P05\/P13/, 'declared', 'The declarations name the inverse pairs the document rules on. They are applied when a query asks for closure and are never written into the graph.'],
   [/^P25/, 'declared', 'Same answer: a symmetric declaration is read at query time. Asserting the second direction in the graph would put a claim in it that no paragraph was gated for.'],
   [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains can be read one edge at a time by the walk in tools/query/kg_query.py, which prints each hop\u2019s own citation and asserts nothing about the ends; it is not exposed on the site in this release.'],
@@ -2301,7 +2301,7 @@ const QA_STANCE = [
   [/^P11\/P12/, 'design', 'No relation is given a domain or a range as a constraint. The observed signatures are a measurement of the corpus; a constraint would reject an edge because of what the schema expects rather than what the paragraph says.'],
   [/^P21/, 'open', 'The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.'],
   [/^P10/, 'design', 'Types are not declared disjoint. A node can function in two registers at once, and the graph would have to choose one to satisfy a disjointness axiom.'],
-  [/^P06/, 'design', 'This is an associative network with a type tag, not a subsumption ontology, and the paper describes it as one. There is no hierarchy to inherit through because none was claimed.'],
+  [/^P06/, 'design', 'By design. The paper describes the graph as an associative network with a type tag.'],
   [/^P02 ambiguous/, 'design', '`is` is the word Jung used. The family assignment disambiguates it per edge, in the paragraph it came from, and the verbatim string stays as written.'],
   [/^P02 duplicate/, 'open', 'Two ids carrying the same label is a defect in the node set.'],
   [/^evidence gap/, 'design', 'The structural relations (sequence between stages) carry no citation by design and are excluded from the verified count. Any other relation without a reference is a defect and the structural check refuses it.']
@@ -2428,13 +2428,13 @@ if (QA && DECL) {
 
   const ontBody = `<div class="titleband"><p class="eyebrow">the design</p>
 <h1>The atlas</h1></div>
-<p>The atlas is a network of asserted relations between named things. Each relation is evidenced by a paragraph and a quote from the Collected Works. This page records key design decisions and shows the results of a standard pitfall scan over the graph.</p>
+<p>The atlas is a network of asserted relations between named things. Each relation is evidenced by a paragraph and a quote from the Collected Works. This page records the design decisions and the results of a standard pitfall scan over the graph.</p>
 
 <h2>Two tiers</h2>
-<p>A challenge identified is that we have many different relations. To better enable grouping of relations, we have designed two tiers.</p>
+<p>Jung's relations come in many wordings, so the graph has two tiers.</p>
 <p>The first tier is the relation in Jung's own wording.</p>
 <p>The second tier is the family: a classification <em>over</em> the verified relation. We use a similar pipeline for assignment of relations to families: an assignment stands when two models reading that document independently name the same family; a person rules when they do not.</p>
-<p>The families are this project's sorting of the relations Jung wrote, not a structure discovered in his thought and not a position the field has agreed on — again, it is not a reading. The whole graph maps what Jung asserted rather than interpreting it, and the second tier is where that limit matters most.</p>
+<p>The families are this project's sorting of the relations Jung wrote. The field has not agreed on them and the graph does not claim they are his structure. The second tier is where the map's limit shows: it sorts what Jung asserted and does not interpret it.</p>
 ${figAnatomy}
 <p>Where a relation was a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original. ${meta.normalized} relations carry that layer. The family layer classifies the normalized form where it exists.</p>
 
@@ -2459,7 +2459,7 @@ ${pitfallRows}
 <p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is relations between named things.</p>
 
 <h2>The pitfall scan</h2>
-<p>Run at every build by <code>tools/ontology_qa/quality.py</code>. The below table articulates our view of the findings of the pitfall scanner. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects.</p>
+<p>Run at every build by <code>tools/ontology_qa/quality.py</code>. Our stance on each finding follows. Where a finding is answered by the declarations layer, equivalence is stated per edge in its paragraph, and where the definitions document rules on a specific pair a declaration records it and the query layer applies it at read time. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects.</p>
 <div class="qa">
   <div class="fig"><span class="figv ev">${h.hapax_pct.toFixed(1)}%</span><span class="figl">of relation strings are used exactly once <span class="ev">(${h.hapax_relations} of ${h.distinct_relations})</span></span></div>
   <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
@@ -2477,13 +2477,13 @@ ${findingRows}
 ${EVROWS.length ? `<h2 id="checked">Checked against readers of Jung</h2>
 <p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The check asked whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
 
-<p>The result: the literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs were not treated at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<p>The literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs were not treated at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <details class="disclose">
 <summary>${EV.agrees} of ${EV.treated} treated items agreed with our family, across ${EV.works_consulted} works of scholarship.<span class="more">the whole table</span></summary>
 ${evTable()}
 </details>
 
-<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+<p>Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 ` : ''}
 
 <div class="receipts"><b>receipts</b>
@@ -2566,7 +2566,7 @@ table.findings .src { font: .58rem var(--mono); }
     const supportBody = `<div class="titleband"><p class="eyebrow">about</p>
 <h1>Support</h1>
 <p class="sub">tips fund the next mining window</p></div>
-<p>The atlas, the dataset and the verification ledger are free to use. Mining the remaining volumes is metered work, at measured rates a fully verified citation costs ${'$'}0.09 to ${'$'}0.16 in model spend. A mining window — about seventy paragraphs taken end to end through all the checks — costs about ${'$'}10. A tip of any size goes toward the next window. Thank you!</p>
+<p>The atlas, the dataset and the verification ledger are free to use. Mining the remaining volumes is metered work. At measured rates a fully verified citation costs ${'$'}0.09 to ${'$'}0.16 in model spend. A mining window (about seventy paragraphs taken end to end through all the checks) costs about ${'$'}10. A tip of any size goes toward the next window. Thank you!</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
 </div>
@@ -2577,7 +2577,7 @@ table.findings .src { font: .58rem var(--mono); }
     registerPage({
       slug: 'support', title: 'Support', where: 'support', nav: 'support',
       changefreq: 'monthly', priority: '0.4',
-      description: 'Support The Symbolic World: tips fund the next mining window of the verified Jung atlas — the atlas, dataset and ledger stay free.',
+      description: 'Support The Symbolic World: tips fund the next mining window of the verified Jung atlas. The atlas, dataset and ledger stay free.',
       style: supportStyle, body: supportBody
     })
     V2_COPY.push(['public/support.html (generated)', stripEvidence(supportBody)])
@@ -2597,8 +2597,7 @@ table.findings .src { font: .58rem var(--mono); }
   const nutshellBody = `<div class="titleband"><p class="eyebrow">about</p>
 <h1>In a nutshell</h1>
 <p class="sub">A one-pager on how the atlas was constructed: one citation
-traced from the map through the steps that identify, validate and evidence
-the citation. The full explanation is on the <a href="/#/method">method</a>
+followed from the map through the checks it passed. The full explanation is on the <a href="/#/method">method</a>
 page.</p></div>
 <figure class="fig fig-poster">
   <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"

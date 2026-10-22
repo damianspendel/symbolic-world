@@ -1021,7 +1021,7 @@ function drawFamilies() {
     <div class="page">
       <div class="titleband"><p class="eyebrow">reference</p>
       <h1>The relation-family vocabulary</h1></div>
-      <p class="lede2">${families.families.length} families, ${esc(families.version)}, quoted from <code>docs/FAMILY_DEFINITIONS.md</code> — never paraphrased. A family classifies what KIND of relation an edge asserts, per edge and in its paragraph context, never per relation string. ${FAMILY_ON ? `<b>${META.familyLayer.states.family || 0}</b> edges carry a family, <b>${META.familyLayer.states.pending || 0}</b> await a human ruling, <b>${META.familyLayer.states.unclassified || 0}</b> carry none.` : 'The assignment pass has not merged, so no edge carries a family yet.'}</p>
+      <p class="lede2">${families.families.length} families, ${esc(families.version)}, quoted from <code>docs/FAMILY_DEFINITIONS.md</code> without paraphrase. A family names the kind of relation an edge asserts. ${FAMILY_ON ? `<b>${META.familyLayer.states.family || 0}</b> edges carry a family, <b>${META.familyLayer.states.pending || 0}</b> await a human ruling, <b>${META.familyLayer.states.unclassified || 0}</b> carry none.` : 'The assignment pass has not merged, so no edge carries a family yet.'}</p>
 
       <div class="fam-jump">
         <button class="chip" data-jump="queue-section">awaiting review <span class="badge-count">${queued}</span></button>

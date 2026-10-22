@@ -89,13 +89,13 @@ table.findings .src { font: .58rem var(--mono); }
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">the design</p>
 <h1>The atlas</h1></div>
-<p>The atlas is a network of asserted relations between named things. Each relation is evidenced by a paragraph and a quote from the Collected Works. This page records key design decisions and shows the results of a standard pitfall scan over the graph.</p>
+<p>The atlas is a network of asserted relations between named things. Each relation is evidenced by a paragraph and a quote from the Collected Works. This page records the design decisions and the results of a standard pitfall scan over the graph.</p>
 
 <h2>Two tiers</h2>
-<p>A challenge identified is that we have many different relations. To better enable grouping of relations, we have designed two tiers.</p>
+<p>Jung's relations come in many wordings, so the graph has two tiers.</p>
 <p>The first tier is the relation in Jung's own wording.</p>
 <p>The second tier is the family: a classification <em>over</em> the verified relation. We use a similar pipeline for assignment of relations to families: an assignment stands when two models reading that document independently name the same family; a person rules when they do not.</p>
-<p>The families are this project's sorting of the relations Jung wrote, not a structure discovered in his thought and not a position the field has agreed on — again, it is not a reading. The whole graph maps what Jung asserted rather than interpreting it, and the second tier is where that limit matters most.</p>
+<p>The families are this project's sorting of the relations Jung wrote. The field has not agreed on them and the graph does not claim they are his structure. The second tier is where the map's limit shows: it sorts what Jung asserted and does not interpret it.</p>
 <figure class="ofig">
 <div class="ofig-row">
   <span class="ofig-node ev">Lapis philosophorum</span>
@@ -186,7 +186,7 @@ table.findings .src { font: .58rem var(--mono); }
 <p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is relations between named things.</p>
 
 <h2>The pitfall scan</h2>
-<p>Run at every build by <code>tools/ontology_qa/quality.py</code>. The below table articulates our view of the findings of the pitfall scanner. 7 of the 19 findings are decisions recorded above, 8 are answered by the declarations, and 4 are open defects.</p>
+<p>Run at every build by <code>tools/ontology_qa/quality.py</code>. Our stance on each finding follows. Where a finding is answered by the declarations layer, equivalence is stated per edge in its paragraph, and where the definitions document rules on a specific pair a declaration records it and the query layer applies it at read time. 7 of the 19 findings are decisions recorded above, 8 are answered by the declarations, and 4 are open defects.</p>
 <div class="qa">
   <div class="fig"><span class="figv ev">75.9%</span><span class="figl">of relation strings are used exactly once <span class="ev">(803 of 1058)</span></span></div>
   <div class="fig"><span class="figv ev">270</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">271</span> relations</span></div>
@@ -209,37 +209,37 @@ table.findings .src { font: .58rem var(--mono); }
 <tr class="st-declared">
 <td class="sev">critical</td>
 <td><div class="ev tag">P02/P30 synonymous relations, identity/equivalence</div><div class="ev fmsg">12 distinct relation strings express the same semantics across 84 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
-<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.</div></td>
+<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
 <td><div class="ev tag">P02/P30 synonymous relations, symbolisation</div><div class="ev fmsg">12 distinct relation strings express the same semantics across 225 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
-<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.</div></td>
+<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
 <td><div class="ev tag">P02/P30 synonymous relations, analogy/correspondence</div><div class="ev fmsg">10 distinct relation strings express the same semantics across 151 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
-<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.</div></td>
+<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
 <td><div class="ev tag">P02/P30 synonymous relations, part/containment</div><div class="ev fmsg">10 distinct relation strings express the same semantics across 58 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
-<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.</div></td>
+<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
 <td><div class="ev tag">P02/P30 synonymous relations, generation/origin</div><div class="ev fmsg">15 distinct relation strings express the same semantics across 85 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
-<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.</div></td>
+<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
 <td><div class="ev tag">P02/P30 synonymous relations, transformation</div><div class="ev fmsg">8 distinct relation strings express the same semantics across 27 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
-<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Equivalence is stated by the family layer, per edge in its paragraph rather than per string in the abstract; where the definitions document rules on a specific pair, a declaration records it and the query layer applies it at read time.</div></td>
+<td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-design">
 <td class="sev">critical</td>
 <td><div class="ev tag">P06/no backbone: taxonomy is vestigial</div><div class="ev fmsg">Only 37/2463 edges (1.5%) are taxonomic and only 33/661 nodes (5%) have any parent. There is no subsumption hierarchy to inherit or reason over — this is an associative network with a 6-way type tag, not a subsumption ontology.</div></td>
-<td><span class="chip st-design">recorded design decision</span><div class="why">This is an associative network with a type tag, not a subsumption ontology, and the paper describes it as one. There is no hierarchy to inherit through because none was claimed.</div></td>
+<td><span class="chip st-design">recorded design decision</span><div class="why">By design. The paper describes the graph as an associative network with a type tag.</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">important</td>
@@ -298,7 +298,7 @@ table.findings .src { font: .58rem var(--mono); }
 <h2 id="checked">Checked against readers of Jung</h2>
 <p>In August 2026 we put a sample of these assignments to the secondary literature: 27 items, drawn by seeded stratification and weighted toward the contested families, checked in three pre-registered passes against eight works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, four volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The check asked whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
 
-<p>The result: the literature treats 16 of the 22 sampled assignments (the other 5 of the 27 items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on 8 of those 16, disagreed on 6, and split among themselves on 2. The other 6 pairs were not treated at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced seven rule changes, folded into the ruleset as v0.7; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<p>The literature treats 16 of the 22 sampled assignments (the other 5 of the 27 items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on 8 of those 16, disagreed on 6, and split among themselves on 2. The other 6 pairs were not treated at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced seven rule changes, folded into the ruleset as v0.7; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <details class="disclose">
 <summary>8 of 16 treated items agreed with our family, across 8 works of scholarship.<span class="more">the whole table</span></summary>
 <div class="tw"><table>
@@ -312,12 +312,12 @@ table.findings .src { font: .58rem var(--mono); }
 <tr class="total"><td>All</td><td class="n">8/16</td><td class="n">6/16</td><td class="n">2/16</td><td class="n">6</td></tr></tbody></table></div>
 </details>
 
-<p>Two limits. Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+<p>Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 
 
 <div class="receipts"><b>receipts</b>
 external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:f73cafe514ec</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-10-22 at commit 66c30b0
+built 2026-10-22 at commit d3d632c
 </div>
 </main></body></html>
