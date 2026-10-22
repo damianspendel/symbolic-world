@@ -62,11 +62,11 @@
     </style>
   </head>
   <body>
-    <div id="cy" class="theme-night"></div>
-    <div id="veil" class="theme-night"></div>
+    <div id="cy"></div>
+    <div id="veil"></div>
 
     <!-- Painted from static HTML, replaced by #overlay as soon as the app boots. -->
-    <div id="boot" class="theme-night">
+    <div id="boot">
       <div class="k">The Symbolic World</div>
       <h1>An atlas of<br />Jung's <em>Collected Works</em></h1>
     </div>
@@ -74,7 +74,7 @@
     <!-- R0.1 — the landing is the atlas at a different zoom. No enter button.
          R9.1 — above the fold: title, the summary, the v1.3 routing, the counts.
          Everything else waits below. -->
-    <div id="overlay" class="theme-night" hidden>
+    <div id="overlay" hidden>
       <div id="prose">
         <div class="hero-eyebrow">The Symbolic World</div>
         <h1>An atlas of<br />Jung's <em>Collected Works</em></h1>
@@ -145,16 +145,16 @@
         </span>
       </div>
     </header>
-    <div id="search-hint" class="hidden theme-night"></div>
+    <div id="search-hint" class="hidden"></div>
 
     <!-- R5.5 — filters live as removable chips beside the search field. There is
          no persistent filter column; the graph owns the stage. -->
-    <div id="chips" class="theme-night"></div>
+    <div id="chips"></div>
 
     <!-- R5.5 — the works bar: one segment per volume, width and brightness set
          by that volume's reference count. A data statement before it is a
          control — it shows where the evidence is deep and where it is thin. -->
-    <div id="works" class="theme-night" aria-label="Coverage by volume"></div>
+    <div id="works" aria-label="Coverage by volume"></div>
 
     <section id="panel" class="hidden"></section>
     <section id="family-panel" class="hidden"></section>

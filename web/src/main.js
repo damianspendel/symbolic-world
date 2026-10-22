@@ -12,10 +12,19 @@ import './style.css'
 // ---------------------------------------------------------------- constants ---
 // R10.0 — colour resolves from :root, never from a literal in a component.
 // Cytoscape's stylesheet cannot take CSS variables, so the values are read out
-// of the document once at boot and handed to it; tokens.css remains the source.
-const CSS = getComputedStyle(document.documentElement)
-const T = name => CSS.getPropertyValue('--' + name).trim()
-const LAYER = { spine: T('gold'), amplification: T('m-symbol'), bridge: T('m-substance'), structural: T('layer-structural') }
+// of the document and handed to it; tokens.css remains the source. Read live
+// (theme toggle, 2026-10-22): the stylesheet is rebuilt from the current
+// theme's tokens at boot and on every 'sw-theme' event from theme.js.
+const T = name => getComputedStyle(document.documentElement).getPropertyValue('--' + name).trim()
+const layerColors = () => ({ spine: T('gold'), amplification: T('m-symbol'), bridge: T('m-substance'), structural: T('layer-structural') })
+// A node's colour is a token lookup by kind, so the metals take the theme's
+// variants (the day metals are darkened for a light canvas). The baked
+// `color` in atlas.json stays as the fallback for a kind with no token.
+const nodeColor = d => {
+  const key = d.kind === 'region' ? d.metal : d.type
+  const themed = d.phase ? T('phase-' + d.phase) : (key ? T('m-' + String(key).toLowerCase()) : '')
+  return themed || d.color
+}
 const LAYER_NOTE = {
   spine: 'A cited claim: one edge, one paragraph, one quote.',
   amplification: 'A parallel adduced to widen an image, not a relation asserted between the terms.',
@@ -81,12 +90,18 @@ const cy = cytoscape({
   // high-density phone screen, and the cheap edge style below.
   ...(MOBILE ? { pixelRatio: 1 } : {}),
   elements: [
-    ...atlas.clusters.map(c => ({ data: { id: c.id, label: c.label, kind: 'region', color: c.color }, classes: 'pre' })),
-    ...atlas.nodes.map(n => ({ data: { id: n.id, label: n.label, type: n.type, tradition: n.tradition, register: n.register, color: n.color, parent: n.cluster }, position: { x: n.x, y: n.y }, classes: 'pre' })),
+    ...atlas.clusters.map(c => ({ data: { id: c.id, label: c.label, kind: 'region', metal: c.metal, color: c.color }, classes: 'pre' })),
+    ...atlas.nodes.map(n => ({ data: { id: n.id, label: n.label, type: n.type, phase: n.phase, tradition: n.tradition, register: n.register, color: n.color, parent: n.cluster }, position: { x: n.x, y: n.y }, classes: 'pre' })),
     ...atlas.edges.map(e => ({ data: { id: e.id, source: e.source, target: e.target, relation: e.relation, layer: e.layer, volumes: e.volumes, fam: e.family ? e.family.value : '', famState: e.family ? e.family.state : '' }, classes: e.layer + ' pre' }))
   ],
   layout: { name: 'preset' },
-  style: [
+  style: graphStyle()
+})
+
+// The stylesheet, as a function of the current theme's tokens.
+function graphStyle () {
+  const LAYER = layerColors()
+  return [
     { selector: 'node[kind = "region"]', style: {
       'background-color': 'data(color)', 'background-opacity': 0.05,
       'border-color': 'data(color)', 'border-opacity': 0.3, 'border-width': 1.5,
@@ -137,7 +152,17 @@ const cy = cytoscape({
       'background-opacity': 0, 'border-opacity': 0, 'text-opacity': 0, 'events': 'no'
     }}
   ]
-})
+}
+
+// Re-resolve every colour the canvas carries from the current theme: node
+// and region fills by kind, then the stylesheet itself. Runs once at boot
+// (the data's baked colours are the night metals) and on every toggle.
+function applyTheme () {
+  cy.batch(() => cy.nodes().forEach(n => n.data('color', nodeColor(n.data()))))
+  cy.style().fromJson(graphStyle()).update()
+}
+applyTheme()
+document.addEventListener('sw-theme', applyTheme)
 
 // Dev-only handle for inspecting the viewport from the console. Vite strips this
 // from production builds, so nothing is exposed on the published artifact.
@@ -620,7 +645,7 @@ function drawChips() {
   for (const facet of ['volume', 'family', 'voice', 'layer'])
     for (const value of SEL[facet])
       rows.push(`<span class="tok tok-${facet}" title="${esc(facetNote(facet, value))}">
-        ${facet === 'layer' ? `<span class="sw" style="background:${LAYER[value] || T('muted')}"></span>` : ''}
+        ${facet === 'layer' ? `<span class="sw" style="background:${layerColors()[value] || T('muted')}"></span>` : ''}
         ${esc(chipLabel(facet, value))}<span class="n">${facetCount(facet, value)}</span>
         <button data-drop-facet="${facet}" data-drop-value="${esc(value)}" title="Remove this filter">×</button></span>`)
   chipsEl.innerHTML = rows.join('')

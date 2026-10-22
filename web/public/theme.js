@@ -13,5 +13,6 @@
     var d = document.documentElement
     d.dataset.theme = d.dataset.theme === 'day' ? 'night' : 'day'
     try { localStorage.setItem('sw-theme', d.dataset.theme) } catch (err) {}
+    document.dispatchEvent(new CustomEvent('sw-theme', { detail: d.dataset.theme }))
   })
 })()
