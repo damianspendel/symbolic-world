@@ -160,5 +160,6 @@ pin: graph v2.1 (working) · ruleset {{ruleset}} · calibration record {{calibra
   an [about](/about) page.
 - A day theme with a reader toggle; night is warmer and softer.
 - Orientation for first visits: quote search on the query page, a pairs
-  count, full list and lens filter on the concordance.
+  count, full list and lens filter on the concordance, zoom buttons and keys
+  and a core view on the atlas, larger node targets when zoomed out.
 - The footer navigation is gone; `routes` and `support` joined the menu.

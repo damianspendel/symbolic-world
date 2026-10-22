@@ -42,6 +42,9 @@ const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 // alone misses a phone in landscape. Either signal turns the profile on, and
 // nothing below changes on a desktop pointer at desktop width.
 const MOBILE = window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 760
+// spec-orientation-v1, item 3: zoom buttons and keys, the "core" view and
+// zoom-dependent hit targets. Off, the header and the graph behave as before.
+const ZOOM_CONTROLS = true
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
 const $ = id => document.getElementById(id)
@@ -117,6 +120,12 @@ function graphStyle () {
       'text-valign': 'bottom', 'text-margin-y': 3, 'text-wrap': 'wrap', 'text-max-width': 120,
       'text-outline-color': T('ground'), 'text-outline-width': 2, 'min-zoomed-font-size': 10
     }},
+    // item 3 — a larger body at low zoom so central nodes can be hit without
+    // zooming first; the core view forces its members' labels on
+    { selector: 'node[kind != "region"].mid', style: { 'width': 32, 'height': 32 }},
+    { selector: 'node[kind != "region"].far', style: { 'width': 48, 'height': 48 }},
+    { selector: 'node.core', style: { 'min-zoomed-font-size': 0, 'text-opacity': 1, 'font-size': 16, 'text-max-width': 200,
+      'text-outline-width': 3, 'width': 30, 'height': 30, 'border-width': 3, 'z-index': 50 }},
     { selector: 'node:selected', style: { 'border-color': T('sel'), 'border-width': 4, 'color': T('ink-bright'), 'width': 26, 'height': 26, 'min-zoomed-font-size': 0 }},
     { selector: 'edge', style: Object.assign({
       'width': 1.5, 'curve-style': 'straight', 'line-color': T('edge-idle'),
@@ -254,6 +263,39 @@ function focusOn(eles, { padding = 150, cap = 0.95, duration = 560 } = {}) {
   cy.animate(target, { duration, easing: 'ease-out', queue: false })
   // rAF-driven animations do not run in a background tab; land there anyway
   setTimeout(() => { if (Math.abs(cy.zoom() - z) > 0.01) cy.viewport(target) }, duration + 400)
+}
+// item 3 — zoom about the centre of the screen, by a factor, within the limits
+function zoomBy(f) {
+  const z = Math.max(cy.minZoom(), Math.min(cy.zoom() * f, cy.maxZoom()))
+  const target = { zoom: { level: z, renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 } } }
+  cy.stop()
+  if (REDUCED) { cy.zoom(target.zoom); return }
+  cy.animate(target, { duration: 220, easing: 'ease-out', queue: false })
+}
+// item 3 — the core: the build's most connected concepts, labels forced on,
+// framed close enough to click one at a time. Reset clears it.
+const CORE = new Set((atlas.meta && atlas.meta.core) || [])
+function showCore() {
+  const core = cy.nodes().filter(n => CORE.has(n.id()))
+  if (!core.length) return
+  cy.nodes().removeClass('core'); core.addClass('core')
+  // the forty sit all over the map, so framing them all is just "fit"; frame
+  // the inner half around their centre of mass instead, which is the dense
+  // middle the colleague could not click into. The rest stay labelled for
+  // whoever pans out to them.
+  const pts = core.map(n => n.position())
+  const cx = pts.reduce((a, p) => a + p.x, 0) / pts.length, cy0 = pts.reduce((a, p) => a + p.y, 0) / pts.length
+  const dist = core.map(n => Math.hypot(n.position('x') - cx, n.position('y') - cy0)).sort((a, b) => a - b)
+  const median = dist[Math.floor(dist.length / 2)]
+  const inner = core.filter(n => Math.hypot(n.position('x') - cx, n.position('y') - cy0) <= median)
+  const target = inner.length >= 4 ? inner : core
+  // label and body sized to the zoom the frame lands at, so the names read
+  // at whatever scale the layout forces; reset removes these element styles
+  const bb = target.boundingBox(), w = cy.width(), h = cy.height()
+  const z = Math.max(cy.minZoom(), Math.min((w - 140) / (bb.w || 1), (h - 140) / (bb.h || 1), 1.2))
+  const fs = Math.round(Math.min(44, Math.max(14, 14 / z)))
+  core.style({ 'font-size': fs, 'width': Math.round(fs * 1.6), 'height': Math.round(fs * 1.6) })
+  focusOn(target, { padding: 70, cap: 1.2 })
 }
 // The neighbourhood of a selection: the elements plus their first-degree context.
 const around = eles => eles.reduce((acc, el) => acc.union(el.isNode() ? el.closedNeighborhood() : el.connectedNodes().union(el)), cy.collection())
@@ -1474,6 +1516,11 @@ $('scroll-cue').addEventListener('click', () => {
 window.addEventListener('keydown', ev => {
   if (inAtlas) {
     if (ev.key === 'Escape') { closeMode(); $('family-panel').classList.add('hidden'); clearSelection() }
+    if (ZOOM_CONTROLS && !(ev.target && /^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName))) {
+      if (ev.key === '+' || ev.key === '=') { ev.preventDefault(); zoomBy(1.5) }
+      else if (ev.key === '-' || ev.key === '_') { ev.preventDefault(); zoomBy(1 / 1.5) }
+      else if (ev.key === '0') { ev.preventDefault(); $('fit').click() }
+    }
     return
   }
   if (['ArrowDown', 'PageDown', 'Enter', ' ', 'Spacebar'].includes(ev.key)) {
@@ -1551,11 +1598,32 @@ window.addEventListener('popstate', applyHash)
 // ----------------------------------------------------------------- buttons ---
 $('fit').addEventListener('click', () => cy.animate({ fit: { padding: 50 } }, { duration: 450 }))
 $('relayout').addEventListener('click', () => {
-  clearSelection(); $('search').value = ''; runSearch('')
+  clearSelection(); $('search').value = ''; runSearch(''); cy.nodes().removeClass('core').removeStyle('font-size width height')
   Object.values(SEL).forEach(s => s.clear())
   applyFilters()
   cy.animate({ fit: { padding: 50 } }, { duration: 450 })
 })
+if (ZOOM_CONTROLS) {
+  // the three controls join fit and reset in the header's tool cluster; the
+  // static markup stays as the header test pins it
+  const stats = $('stats')
+  const mk = (id, title, text) => {
+    const b = document.createElement('button'); b.className = 'navlink'; b.id = id; b.title = title; b.textContent = text
+    stats.parentNode.insertBefore(b, stats); return b
+  }
+  mk('zin', 'Zoom in (+)', '+').addEventListener('click', () => zoomBy(1.5))
+  mk('zout', 'Zoom out (−)', '−').addEventListener('click', () => zoomBy(1 / 1.5))
+  mk('core', 'Zoom to the most connected concepts and show their names', '◎ core').addEventListener('click', showCore)
+  // hit targets: node bodies grow as the camera pulls back, settled 120ms
+  // after the last zoom event so a wheel gesture restyles once
+  let hitT
+  const hitTargets = () => {
+    const z = cy.zoom(), far = z < 0.22, mid = !far && z < 0.5
+    cy.nodes('[kind != "region"]').toggleClass('far', far).toggleClass('mid', mid)
+  }
+  cy.on('zoom', () => { clearTimeout(hitT); hitT = setTimeout(hitTargets, 120) })
+  hitTargets()
+}
 
 // -------------------------------------------------------------------- boot ---
 cy.ready(() => {
