@@ -3277,6 +3277,46 @@
    "id": "morality",
    "label": "Morality",
    "type": "Concept"
+  },
+  {
+   "id": "abel",
+   "label": "Abel",
+   "type": "Figure"
+  },
+  {
+   "id": "cain",
+   "label": "Cain",
+   "type": "Figure"
+  },
+  {
+   "id": "ishtar",
+   "label": "Ishtar",
+   "type": "Figure"
+  },
+  {
+   "id": "young-dying-god",
+   "label": "The young dying god",
+   "type": "Motif"
+  },
+  {
+   "id": "israel",
+   "label": "Israel (the chosen people as Yahweh's bride)",
+   "type": "Figure"
+  },
+  {
+   "id": "perfection",
+   "label": "Perfection (the masculine ideal)",
+   "type": "Concept"
+  },
+  {
+   "id": "original-sin",
+   "label": "Original sin",
+   "type": "Concept"
+  },
+  {
+   "id": "immaculate-conception",
+   "label": "Immaculate conception",
+   "type": "Motif"
   }
  ],
  "edges": [
@@ -8870,6 +8910,17 @@
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, FINDING-adjudicated, 2026-10-19)",
      "correction_note": "cross-vendor correction: Claim type should be jung-asserts because Jung is stating his own historical/psychological analysis of the devil concept's emergence, not reporting a parallel doctrine."
+    },
+    {
+     "volume": "11",
+     "paragraph": 654,
+     "quote": "Christ’s victory over his brother Satan—Abel’s counterstroke against Cain—is not really and truly won",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
     }
    ],
    "relation_family": {
@@ -67342,6 +67393,17 @@
      "verified_date": "2026-10-13",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)",
      "correction_note": "gate correction: Quote verbatim and the admission is emphatic ('I am forced to admit'), but the claim is explicitly episodic — 'capable AT TIMES of manifesting an intelligence and purposiveness superior'. The bare relation reads as standing superiority; medium is the honest coding of the scoped claim."
+    },
+    {
+     "volume": "11",
+     "paragraph": 608,
+     "quote": "The unconscious mind of man sees correctly even when conscious reason is blind and impotent.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
     }
    ],
    "relation_family": {
@@ -68794,6 +68856,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 648,
+     "quote": "the archetype fulfils itself not only psychically in the individual, but objectively outside the individual. My own conjecture is that Christ was such a personality.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
     }
    ],
    "relation_family": {
@@ -70273,6 +70346,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 644,
+     "quote": "The birth of Christ is therefore characterized by all the usual phenomena attendant upon the birth of a hero",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
     }
    ],
    "relation_family": {
@@ -75348,6 +75432,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-21",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 638,
+     "quote": "Time and again we miss reflection and regard for absolute knowledge.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
     }
    ],
    "relation_family": {
@@ -75383,6 +75478,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-21",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 600,
+     "quote": "it is the behaviour of an unconscious being who cannot be judged morally",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
     }
    ],
    "relation_family": {
@@ -75442,6 +75548,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-21",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 604,
+     "quote": "on the other hand must have man for a partner",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
     }
    ],
    "relation_family": {
@@ -75477,6 +75594,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-21",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 623,
+     "quote": "He has seen God’s face and the unconscious split in his nature.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 599,
+     "quote": "Before, he had known Yahweh “by the hearing of the ear,” but now he has got a taste of his reality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
     }
    ],
    "relation_family": {
@@ -75501,6 +75640,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-21",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-8, PASS, 2026-10-21)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 616,
+     "quote": "A particular instance of this is Job, whose faithfulness is subjected to a savage test.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, FINDING-adjudicated, 2026-10-22)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is directly analyzing the biblical narrative of Job in his own interpretive voice, not reporting a parallel tradition."
     }
    ],
    "relation_family": {
@@ -75619,6 +75770,1210 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-21"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "projects-onto",
+   "object": "job",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 591,
+     "quote": "Yahweh projects on to Job a sceptic’s face which is hateful to him because it is his own",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 616,
+     "quote": "he doubts Job precisely because he projects his own tendency to unfaithfulness upon a scapegoat",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "projects",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 597,
+     "quote": "With brazen countenance he can project his shadow side and remain unconscious at man’s expense.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "job",
+   "relation": "surpasses",
+   "object": "yahweh",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 640,
+     "quote": "Job stands morally higher than Yahweh. In this respect the creature has surpassed the creator.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "job",
+   "relation": "transforms",
+   "object": "yahweh",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 617,
+     "quote": "Whoever knows God has an effect on him. The failure of the attempt to corrupt Job has changed Yahweh’s nature.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "sophia-wisdom",
+   "relation": "reinforces",
+   "object": "reflection",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 640,
+     "quote": "That is why Sophia steps in. She reinforces the much needed self-reflection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "neglects",
+   "object": "absolute-knowledge",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 634,
+     "quote": "Yahweh evidently has a disinclination to take his absolute knowledge into account",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 619,
+     "quote": "Yahweh did not consult his total knowledge and was accordingly surprised by the result.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "lacks",
+   "object": "eros",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 621,
+     "quote": "Yahweh has no Eros, no relationship to man, but only to a purpose man must help him fulfil.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "is-married-to",
+   "object": "israel",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 619,
+     "quote": "Yahweh is legitimately united with his wife Israel",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 616,
+     "quote": "the divine drama was enacted between God and his people, who were betrothed to him",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "kinship",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "man",
+   "relation": "judges",
+   "object": "yahweh",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 606,
+     "quote": "man, in spite of his impotence, is set up as a judge over God himself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "absolute-knowledge",
+   "relation": "reaches",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 640,
+     "quote": "As always when an external event touches on some unconscious knowledge, this knowledge can reach consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but the sentence says this knowledge 'can reach consciousness' — a possibility, not a standing law; modality goes to confidence: medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "sophia-wisdom",
+   "relation": "is",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 609,
+     "quote": "a coeternal and more or less hypostatized pneuma of feminine nature that existed before the Creation",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 613,
+     "quote": "“For wisdom is a loving spirit,”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)",
+     "source": "Wisdom of Solomon"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "sophia-wisdom",
+   "relation": "corresponds-to",
+   "object": "logos",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 611,
+     "quote": "She corresponds in almost every feature to the Logos of St. John.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 610,
+     "quote": "This Sophia, who already shares certain essential qualities with the Johannine Logos",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but §610 says only 'shares certain essential qualities with the Johannine Logos'; the full correspondence is §611's claim. Confidence to medium on this reference."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "sophia-wisdom",
+   "relation": "reflects",
+   "object": "ishtar",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 612,
+     "quote": "She is the mother-beloved, a reflection of Ishtar, the pagan city-goddess.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "tree",
+   "relation": "represents",
+   "object": "young-dying-god",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 612,
+     "quote": "The tree in Babylon represented Tammuz, the son-lover, just as it represented Osiris, Adonis, Attis, and Dionysus",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "sophia-wisdom",
+   "relation": "prefigures",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 646,
+     "quote": "the Holy Ghost, whose feminine nature is personified by Sophia, since she is the preliminary historical form of the",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 612,
+     "quote": "Wisdom is given as a gift to the elect, an idea that is taken up again in the doctrine of the Paraclete",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, FINDING-adjudicated, 2026-10-22)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is stating the historical/symbolic connection between Wisdom and the Paraclete in his own interpretive voice, not merely reporting a parallel made by another author."
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "sophia-wisdom",
+   "relation": "influences",
+   "object": "yahweh",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 625,
+     "quote": "Yahweh has allowed himself to be extensively influenced by Sophia",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 637,
+     "quote": "In all this, as we have said, we discern the helpful hand of Sophia.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "sophia-wisdom",
+   "relation": "makes-possible",
+   "object": "incarnation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 640,
+     "quote": "She reinforces the much needed self-reflection and thus makes possible Yahweh’s decision to become man.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "sophia-wisdom",
+   "relation": "heralds",
+   "object": "incarnation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 625,
+     "quote": "The approach of Sophia betokens a new creation.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but 'The approach of Sophia betokens a new creation' is a sign, not an enabling cause; the paragraph gives Sophia influence on the form of the new creation, nothing more. The enabling claim is §640's. Relation corrected to what the sentence states: heralds."
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "egyptian-kingship-theology",
+   "relation": "prefigures",
+   "object": "incarnation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 624,
+     "quote": "he uses the Egyptian model of the god’s incarnation in Pharaoh",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 631,
+     "quote": "long before Genesis was written, we find corresponding testimonies in the ancient Egyptian records",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "job",
+   "relation": "occasions",
+   "object": "incarnation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 642,
+     "quote": "the immediate cause of the Incarnation lies in Job’s elevation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 624,
+     "quote": "The real reason for God’s becoming man is to be sought in his encounter with Job.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "incarnation",
+   "relation": "aims-at",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 642,
+     "quote": "its purpose is the differentiation of Yahweh’s consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "incarnation",
+   "relation": "transforms",
+   "object": "yahweh",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 631,
+     "quote": "It means nothing less than a world-shaking transformation of God.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "cain",
+   "relation": "is-copy-of",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 619,
+     "quote": "his son Cain is certainly a copy of God’s son Satan",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 628,
+     "quote": "He was an eidolon of Satan, and only the younger son, Abel, was pleasing to God.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "cain",
+   "relation": "exemplifies",
+   "object": "hostile-brothers",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 619,
+     "quote": "their first two sons are a typical pair of hostile brothers",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "abel",
+   "relation": "prefigures",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 628,
+     "quote": "One can therefore regard Abel as the imperfect prototype of God’s son who is about to be begotten in Mary.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 641,
+     "quote": "The short, dramatic course of Abel’s fate serves as an excellent paradigm for the life and death of a God become man.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "young-dying-god",
+   "relation": "prefigures",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 650,
+     "quote": "through its prefiguration in Abel and in the young dying gods",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "lilith",
+   "relation": "corresponds-to",
+   "object": "sophia-wisdom",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 619,
+     "quote": "so Adam first has Lilith (the daughter or emanation of Satan) to wife, as a Satanic correspondence to Sophia",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "is",
+   "object": "trickster",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 619,
+     "quote": "He is a trickster and spoilsport who loves nothing better than to cause annoying accidents.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 620,
+     "quote": "never in his son, the father of all tricksters",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "mary",
+   "relation": "incarnates",
+   "object": "sophia-wisdom",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 625,
+     "quote": "as the bride of God, is also the incarnation of her prototype, namely Sophia",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 628,
+     "quote": "the son of Mary, who is plainly a copy of Sophia",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "mary",
+   "relation": "is-free-from",
+   "object": "original-sin",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 625,
+     "quote": "distinguished at the outset by the privilege of an immaculate conception and is thus free from the taint of original sin",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 626,
+     "quote": "her freedom from original sin sets Mary apart from mankind in general",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)",
+     "correction_note": "gate correction: Verbatim, but the triple itself is the dogma's content (Mary free from original sin); what Jung asserts in his own voice in this sentence is the consequence — that it sets her apart from mankind. Coding the doctrinal premise as jung-asserts is the laundering this volume's clause guards against. Claim type to reports."
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "immaculate-conception",
+   "relation": "undermines",
+   "object": "incarnation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 626,
+     "quote": "no one has ever perceived that this queers the pitch for a genuine Incarnation of God",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "wholeness",
+   "relation": "counterbalances",
+   "object": "perfection",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 620,
+     "quote": "completeness, which, though imperfect by itself, forms the necessary counterpart to perfection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "perfection",
+   "relation": "risks",
+   "object": "enantiodromia",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 627,
+     "quote": "a typically masculine, ideal state arises which, as we shall see, is threatened with an enantiodromia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "strives-for",
+   "object": "perfection",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 627,
+     "quote": "Yahweh’s perfectionism is carried over from the Old Testament into the New",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 621,
+     "quote": "At the bottom of Yahweh’s marriage with Israel is a perfectionist intention",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "lacks",
+   "object": "reflection",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 647,
+     "quote": "a manifest lack of self-reflection. There is no evidence that Christ ever wondered about himself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "answers",
+   "object": "job",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 647,
+     "quote": "Here is given the answer to Job",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "determines-fate-of",
+   "object": "man",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 648,
+     "quote": "for the unconscious or an archetype to take complete possession of a man and to determine his fate",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but 'It is perfectly possible, psychologically, for ... an archetype to take complete possession of a man and to determine his fate' is a possibility claim; high overstates it. Confidence to medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "links-back-to",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 647,
+     "quote": "religion means, if anything at all, precisely that function which links us back to the eternal myth",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "tempts",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 649,
+     "quote": "What is certain is his attempt to lure Christ into the role of a worldly ruler.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "banishes",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 650,
+     "quote": "Satan is banished from heaven and no longer has any opportunity to inveigle his father",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "yahweh",
+   "relation": "becomes",
+   "object": "summum-bonum",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 651,
+     "quote": "Yahweh identifies with his light aspect and becomes the good God and loving father.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "continues",
+   "object": "incarnation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 655,
+     "quote": "Christ’s own teachings about the Holy Ghost and hence with the further continuance of the Incarnation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "indwells",
+   "object": "man",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 656,
+     "quote": "God, in the shape of the Holy Ghost, puts up his tent in man",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-22",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-9, PASS, 2026-10-22)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-22"
    }
   }
  ]
