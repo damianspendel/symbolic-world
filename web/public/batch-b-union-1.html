@@ -22,6 +22,8 @@
   .badge { font:.58rem var(--mono); letter-spacing:.06em; padding:.12rem .45rem; border-radius:99px;
            border:1px solid var(--hairline); white-space:nowrap; }
   .cite { font:.62rem var(--mono); color:var(--gold-dim); }
+  .story-fold summary { cursor:pointer; font:.62rem var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin:.4rem 0 .6rem; }
+  .story-fold summary:hover { color:var(--gold); }
   .story { border-left:2px solid var(--hairline); padding:.2rem 0 .2rem .9rem; margin:.6rem 0 1rem;
            font-size:.9rem; line-height:1.6; color:var(--ink); }
   .nums { display:flex; flex-wrap:wrap; gap:.5rem 1.1rem; margin:.6rem 0; font:.62rem var(--mono); color:var(--ink-faint); }
@@ -44,7 +46,7 @@
   <div class="titleband"><p class="eyebrow">batch delta</p>
   <h1><span class="idtok">b-union-1</span></h1></div>
   <div class="meta"><span class="badge">merged</span></div>
-  <h2>What it merged</h2><div class="story">16/5/0 stage1; 4 corrected, 1 dropped (n16 one-off node); stage2: 2 hedge demotions; merged 20 edges, 3 new nodes</div>
+  <h2>What it merged</h2><p class="note">The log the window wrote at merge time, kept as it was.</p><details class="story-fold"><summary>mining log</summary><div class="story">16/5/0 stage1; 4 corrected, 1 dropped (n16 one-off node); stage2: 2 hedge demotions; merged 20 edges, 3 new nodes</div></details>
   <h2>What the graph carries from it</h2><p class="dim">This batch declares no paragraph window. The windowed pipeline came later, so the records it merged cannot be identified from the graph without guessing, and nothing is derived here. Its commits are below.</p>
   <h2>Commits</h2>
   <div class="tw"><table><thead><tr><th>commit</th><th>date</th><th>subject</th></tr></thead><tbody><tr><td class="n"><a href="https://github.com/damianspendel/symbolic-world/commit/4ea8678">4ea8678</a></td><td class="n">2026-07-27</td><td>pipeline: b-union-1 stage-1 gated (16/5/0), stage 2 held for credit window</td></tr><tr><td class="n"><a href="https://github.com/damianspendel/symbolic-world/commit/bb5d4d2">bb5d4d2</a></td><td class="n">2026-07-27</td><td>b-union-1 merged (20 edges, 3 nodes, v2 two-stage gate); About panel claim-coverage framing + dispute note; ledger sync</td></tr></tbody></table></div>

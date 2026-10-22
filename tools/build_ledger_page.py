@@ -331,6 +331,8 @@ def batch_page(batch, delta, commits):
   .badge {{ font:.58rem var(--mono); letter-spacing:.06em; padding:.12rem .45rem; border-radius:99px;
            border:1px solid var(--hairline); white-space:nowrap; }}
   .cite {{ font:.62rem var(--mono); color:var(--gold-dim); }}
+  .story-fold summary {{ cursor:pointer; font:.62rem var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin:.4rem 0 .6rem; }}
+  .story-fold summary:hover {{ color:var(--gold); }}
   .story {{ border-left:2px solid var(--hairline); padding:.2rem 0 .2rem .9rem; margin:.6rem 0 1rem;
            font-size:.9rem; line-height:1.6; color:var(--ink); }}
   .nums {{ display:flex; flex-wrap:wrap; gap:.5rem 1.1rem; margin:.6rem 0; font:.62rem var(--mono); color:var(--ink-faint); }}
@@ -353,7 +355,7 @@ def batch_page(batch, delta, commits):
   <div class="titleband"><p class="eyebrow">batch delta</p>
   <h1><span class="idtok">{esc(batch["id"])}</span></h1></div>
   <div class="meta">{f'<span class="cite">{esc(window)}</span> · ' if window else ''}<span class="badge">{esc(batch["status"])}</span></div>
-  {f'<h2>What it merged</h2><div class="story">{esc(story)}</div>' if story else ''}
+  {f'<h2>What it merged</h2><p class="note">The log the window wrote at merge time, kept as it was.</p><details class="story-fold"><summary>mining log</summary><div class="story">{esc(story)}</div></details>' if story else ''}
   {derived_block}
   <h2>Commits</h2>
   {f'<div class="tw"><table><thead><tr><th>commit</th><th>date</th><th>subject</th></tr></thead><tbody>{commit_rows}</tbody></table></div>'
@@ -451,8 +453,7 @@ def build():
                       f'<span class="flabel">family</span>'
                       f'<span class="chip {cls}">{esc(fval)}</span>'
                       f'{history_chip(fam)}'
-                      f'<span class="fmeta">{esc(by)}{" · " + esc(date) if date else ""}. Classification only; '
-                      f'the relation above was already gated against its paragraph</span></div>')
+                      f'<span class="fmeta">{esc(by)}{" · " + esc(date) if date else ""}</span></div>')
             famsearch = f' family:{fval} {fstate}'
 
         # facet values, all read off fields the card already displays
