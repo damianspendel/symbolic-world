@@ -59,13 +59,7 @@ MENU = [
 ]
 
 
-THEME_SNIPPET = (
-    '<script>(function(){try{var t=localStorage.getItem(\'sw-theme\')'
-    '||(matchMedia(\'(prefers-color-scheme: light)\').matches?\'day\':\'night\');'
-    'document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme=\'night\'}'
-    'document.addEventListener(\'click\',function(e){var b=e.target&&e.target.closest&&e.target.closest(\'.themetoggle\');'
-    'if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme===\'day\'?\'night\':\'day\';'
-    'try{localStorage.setItem(\'sw-theme\',d.dataset.theme)}catch(err){}})})()</script>')
+THEME_SNIPPET = '<script src="/theme.js"></script>'
 THEME_BUTTON = ('<button class="themetoggle" type="button" '
                 'title="switch between day and night" aria-label="switch between day and night"></button>')
 

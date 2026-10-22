@@ -22,7 +22,7 @@ ALLOW = {
     'validations.json', 'robots.txt', 'sitemap.xml',
     # the v2.0 slice: release notes, the query panel and its two data files,
     # the ontology page, and the manifest of batch pages gated below
-    'releases.html', 'query.html', 'query.js', 'ontology.html',
+    'releases.html', 'query.html', 'query.js', 'ontology.html', 'theme.js',
     'relation_declarations.json', 'batch_pages.json',
     # the method-page poster (2026-08-28): a static page asset, not a page —
     # extensionless convention does not apply, no sitemap entry

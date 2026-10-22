@@ -5,8 +5,7 @@
 <meta name="description" content="The design of The Symbolic World’s graph of Jung’s Collected Works: its quality scan, the check against outside scholarship, and what is deliberately absent.">
 <title>The design · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
-<script>(function(){try{var t=localStorage.getItem('sw-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'day':'night');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='night'}
-document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('.themetoggle');if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme==='day'?'night':'day';try{localStorage.setItem('sw-theme',d.dataset.theme)}catch(err){}})})()</script>
+<script src="/theme.js"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { min-height: 100vh; }
@@ -319,6 +318,6 @@ table.findings .src { font: .58rem var(--mono); }
 <div class="receipts"><b>receipts</b>
 external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:f73cafe514ec</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-10-22 at commit a1dd646
+built 2026-10-22 at commit 514a649
 </div>
 </main></body></html>

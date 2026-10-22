@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="/chrome.css">
+    <script src="/theme.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Symbolic World — an atlas of Jung</title>
@@ -52,18 +54,19 @@
       /* Item 20 — the panel layer, in the first-paint block: on a cold load of
          a panel route it must be opaque in frame one, before any stylesheet is
          parsed. Same ground colour as the body above, the documented exception. */
-      #mode-panel{position:fixed;inset:0;z-index:13;background:#0b0a08;overflow-y:auto}
-      /* the day pair of the same exception (theme toggle, 2026-10-22) */
-      [data-theme="day"] #mode-panel{background:#f6f5f1}
+      /* chrome.css is linked above this block, so the panel layer can take
+         the themed token even at first paint; the literal stays as the
+         no-CSS fallback only */
+      #mode-panel{position:fixed;inset:0;z-index:13;background:#0b0a08;background:var(--ground);overflow-y:auto}
       html.route-panel #mode-panel{display:block}
     </style>
   </head>
   <body>
-    <div id="cy"></div>
+    <div id="cy" class="theme-night"></div>
     <div id="veil"></div>
 
     <!-- Painted from static HTML, replaced by #overlay as soon as the app boots. -->
-    <div id="boot">
+    <div id="boot" class="theme-night">
       <div class="k">The Symbolic World</div>
       <h1>An atlas of<br />Jung's <em>Collected Works</em></h1>
     </div>
@@ -71,7 +74,7 @@
     <!-- R0.1 — the landing is the atlas at a different zoom. No enter button.
          R9.1 — above the fold: title, the summary, the v1.3 routing, the counts.
          Everything else waits below. -->
-    <div id="overlay" hidden>
+    <div id="overlay" class="theme-night" hidden>
       <div id="prose">
         <div class="hero-eyebrow">The Symbolic World</div>
         <h1>An atlas of<br />Jung's <em>Collected Works</em></h1>
@@ -110,10 +113,6 @@
       (function () {
         var h = location.hash || ''
         if (/^#\/(method|concordance|families|queue)/.test(h)) document.documentElement.className += ' route-panel'
-        // theme boot (2026-10-22): stored choice, else the OS preference; one
-        // delegated handler serves every .themetoggle, static or rendered later
-        try{var t=localStorage.getItem('sw-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'day':'night');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='night'}
-        document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('.themetoggle');if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme==='day'?'night':'day';try{localStorage.setItem('sw-theme',d.dataset.theme)}catch(err){}})
       })()
     </script>
 
@@ -146,16 +145,16 @@
         </span>
       </div>
     </header>
-    <div id="search-hint" class="hidden"></div>
+    <div id="search-hint" class="hidden theme-night"></div>
 
     <!-- R5.5 — filters live as removable chips beside the search field. There is
          no persistent filter column; the graph owns the stage. -->
-    <div id="chips"></div>
+    <div id="chips" class="theme-night"></div>
 
     <!-- R5.5 — the works bar: one segment per volume, width and brightness set
          by that volume's reference count. A data statement before it is a
          control — it shows where the evidence is deep and where it is thin. -->
-    <div id="works" aria-label="Coverage by volume"></div>
+    <div id="works" class="theme-night" aria-label="Coverage by volume"></div>
 
     <section id="panel" class="hidden"></section>
     <section id="family-panel" class="hidden"></section>
