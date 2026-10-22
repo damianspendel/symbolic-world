@@ -107,6 +107,13 @@ if not ri_match:
           'whether the routes page should be in dist')
 if ri_match and ri_match.group(1) == 'true':
     ALLOW.add('routes.html')
+# spec-orientation-v1, item 4: the /about page, gated the same way.
+ab_match = re.search(r'^const EMIT_ABOUT_PAGE = (true|false)$', build_src, re.M)
+if not ab_match:
+    check('EMIT_ABOUT_PAGE readable from web/build-atlas.mjs', False,
+          'the constant is missing or no longer a literal')
+if ab_match and ab_match.group(1) == 'true':
+    ALLOW.add('about.html')
 # the /support page exists only while SUPPORT_URL is set (2026-10-21)
 su_match = re.search(r"^const SUPPORT_URL = '([^']*)'$", build_src, re.M)
 if not su_match:

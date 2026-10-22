@@ -63,7 +63,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases" aria-current="page">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases" aria-current="page">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
 <div class="hrow hrow-2"><span class="where">releases</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose">
@@ -76,6 +76,37 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li>the ruleset version it shipped with (deliberately separate numbers),</li>
 <li>and the calibration record in force when the release was cut.</li>
 </ul>
+<section class="rel-entry">
+<h2>v2.1: the atlas as an instrument</h2>
+<div class="meta">in preparation. Deploy-only: no tag, no version bump, no Zenodo record until the CW 11 arc completes.</div>
+<div class="pin">graph <span class="v">v2.1</span> (working) · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
+<h4>mining status</h4>
+<ul>
+<li>Reopened mining for the remaining corpus: CW 11, then CW 5 and CW 16, one window nightly.</li>
+<li>Graph: 661 nodes, 2463 relations, 3248 references over 74 batches; 434 relations await adjudication at arc end.</li>
+<li>Split mining from the build: mining commits data, the build track deploys about weekly, preflight's count checks keep the two in step.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li>The poster re-renders at each deploy with live counts and a dated caption.</li>
+<li>The index.html size ceiling moved from 3.0 to 3.5 MB.</li>
+<li>The public repository's integrity check is green again; contributing and security files added.</li>
+<li>Two reader-raised items from issue 2 are on the backlog: mining around quotations, and an editorial layer for connections Jung never states.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li>A <code>quote contains</code> search in the query CLI and its browser port, over the graph's own quotes only, with parity tests.</li>
+<li>The maintainer's rewrite of every page carried into the generators, with a humanizer pass.</li>
+<li>The colour token table gained a day block; the atlas reads its canvas colours from it live.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li>New: the ranked <a href="/concepts">concepts</a> index, concept dossiers, <a href="/routes">routes</a> between any two concepts, a <a href="/support">support</a> page, an <a href="/about">about</a> page.</li>
+<li>A day theme with a reader toggle; night is warmer and softer.</li>
+<li>Orientation for first visits: quote search on the query page, a pairs count, full list and lens filter on the concordance.</li>
+<li>The footer navigation is gone; <code>routes</code> and <code>support</code> joined the menu.</li>
+</ul>
+</section>
 <section class="rel-entry">
 <h2>v2.0: the graph as a queryable instrument</h2>
 <div class="meta">released 2026-09-05. Tag <code>v2.0.0</code>, GitHub Release, Zenodo record <a href="https://doi.org/10.5281/zenodo.22339291">10.5281/zenodo.22339291</a> under the concept DOI; the v1.3 record is marked superseded and retained. Paper: <em>Trust, Layered</em>, promoted to docs/PAPER.md after four cross-vendor hostile passes. The v1.4 and v1.5 plans are folded in (Damian, 2026-08-19).</div>

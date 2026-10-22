@@ -121,3 +121,46 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
   `docs/ATLAS_REQUIREMENTS.md`.
 - Added [in a nutshell](/nutshell), the method poster on its own page; the
   identity walk stays in `kg_query.py`, not exposed on the site.
+
+## v2.1: the atlas as an instrument
+
+status: in preparation. Deploy-only: no tag, no version bump, no Zenodo
+record until the CW 11 arc completes.
+pin: graph v2.1 (working) · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
+
+### mining status
+
+- Reopened mining for the remaining corpus: CW 11, then CW 5 and CW 16,
+  one window nightly.
+- Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
+  {{batches}} batches; {{pending}} relations await adjudication at arc end.
+- Split mining from the build: mining commits data, the build track
+  deploys about weekly, preflight's count checks keep the two in step.
+
+### governance
+
+- The poster re-renders at each deploy with live counts and a dated caption.
+- The index.html size ceiling moved from 3.0 to 3.5 MB.
+- The public repository's integrity check is green again; contributing
+  and security files added.
+- Two reader-raised items from issue 2 are on the backlog: mining around
+  quotations, and an editorial layer for connections Jung never states.
+
+### core build
+
+- A `quote contains` search in the query CLI and its browser port, over the
+  graph's own quotes only, with parity tests.
+- The maintainer's rewrite of every page carried into the generators, with
+  a humanizer pass.
+- The colour token table gained a day block; the atlas reads its canvas
+  colours from it live.
+
+### UI
+
+- New: the ranked [concepts](/concepts) index, concept dossiers,
+  [routes](/routes) between any two concepts, a [support](/support) page,
+  an [about](/about) page.
+- A day theme with a reader toggle; night is warmer and softer.
+- Orientation for first visits: quote search on the query page, a pairs
+  count, full list and lens filter on the concordance.
+- The footer navigation is gone; `routes` and `support` joined the menu.

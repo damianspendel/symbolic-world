@@ -32,6 +32,9 @@ REPO_URL = "https://github.com/damianspendel/symbolic-world"
 # read from the source so the two generators cannot disagree; empty = absent.
 SUPPORT_URL = re.search(r"^const SUPPORT_URL = '([^']*)'$",
                         (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1)
+# The /about page follows web/build-atlas.mjs's gate the same way (item 4).
+EMIT_ABOUT_PAGE = re.search(r"^const EMIT_ABOUT_PAGE = (true|false)$",
+                            (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1) == "true"
 
 
 
@@ -53,8 +56,9 @@ MENU = [
     ("reference", [("/concepts", "concepts"), ("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
-    ("about", [("/nutshell", "in a nutshell"), ("/#/method", "method"),
-               ("/ontology", "design")]
+    ("about", ([("/about", "about")] if EMIT_ABOUT_PAGE else [])
+              + [("/nutshell", "in a nutshell"), ("/#/method", "method"),
+                 ("/ontology", "design")]
               + ([("/support", "support")] if SUPPORT_URL else [])),
 ]
 

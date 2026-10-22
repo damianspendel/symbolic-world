@@ -34,6 +34,11 @@ const EMIT_CONCEPTS_INDEX = true
 // pre-stage page byte for byte.
 const EMIT_QUOTE_SEARCH = true
 
+// The /about page (spec-orientation-v1, item 4): audience-led copy, first in
+// the about group. Off, the page is not registered and tools/pages/preflight.py
+// fails a lingering about.html as unexpected.
+const EMIT_ABOUT_PAGE = true
+
 // The off switch for the /routes page (spec-instrument-v1, stage I3; own page
 // and menu entry by Damian's ruling 2026-10-13 — routes are the beginner
 // surface, the query panel stays the advanced one). When false: the page is
@@ -184,7 +189,7 @@ const MENU = [
   ['explore', [['/#/atlas', 'atlas'], ['/routes', 'routes'], ['/query', 'query'], ['/#/concordance', 'concordance']]],
   ['reference', [['/concepts', 'concepts'], ['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
-  ['about', [['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
+  ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
@@ -2523,6 +2528,32 @@ table.findings .src { font: .58rem var(--mono); }
     style: ontStyle, body: ontBody
   })
   V2_COPY.push(['public/ontology.html (generated)', stripEvidence(ontBody)])
+
+  // ------------------------------------------------ /about ------------------
+  // Who the atlas is for and what each can do with it (spec-orientation-v1,
+  // item 4). The text is final wording from the outreach review, 2026-10-22,
+  // with Damian's closing paragraph; it is carried, not rewritten here.
+  if (EMIT_ABOUT_PAGE) {
+    const aboutBody = `<div class="titleband"><p class="eyebrow">about</p>
+<h1>About</h1>
+<p class="sub">who the atlas is for, and what each reader can do with it</p></div>
+<p>The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
+<p>Analysts and trainees can look up where Jung treats a concept and follow it across volumes, with a citation ready to carry into their own work. The <a href="/query">query page</a> filters by volume, family and claim type, and it searches the words inside the quotes.</p>
+<p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
+<p>Readers of alchemy can use the <a href="/#/concordance">concordance</a>, which sets Jung's psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
+<p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>, and the data is open for reuse under a CC BY licence.</p>
+<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/#/method">method page</a> sets out what the checks cover and what they leave out.</p>`
+    registerPage({
+      slug: 'about', title: 'About', where: 'about', nav: 'about',
+      changefreq: 'monthly', priority: '0.5',
+      description: 'Who The Symbolic World is for: analysts, students, readers of alchemy and scholars of Jung, and what each can check against the Collected Works.',
+      body: aboutBody
+    })
+    V2_COPY.push(['public/about.html (generated)', stripEvidence(aboutBody)])
+    console.log('about page: written')
+  } else {
+    console.log('about page: EMIT_ABOUT_PAGE is false — not registered')
+  }
 
   // ------------------------------------------------ /support ----------------
   // One page, about group, exists only while SUPPORT_URL is set (2026-10-21):
