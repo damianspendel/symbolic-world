@@ -807,3 +807,5 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
 .conc-arcs path { opacity: 0.22; }
 .conc-col.left .cnode { background: linear-gradient(rgba(212, 175, 55, 0.09), rgba(212, 175, 55, 0.09)), var(--panel); }
 .conc-col.right .cnode { background: linear-gradient(rgba(99, 153, 127, 0.09), rgba(99, 153, 127, 0.09)), var(--panel); }
+.cnode.lens-dim { opacity: 0.3; }
+.conc-arcs path.lens-dim { opacity: 0; }

@@ -105,6 +105,8 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
       ? 'Here, we see the symbolization, correspondence and projection families crossing from the alchemical register to the depth psychology register.'
       : 'Selected by register — every cited edge that crosses between the two sides.'
     const pickedRows = picked ? allRows.filter(r => r.psyche === picked || r.lab === picked) : []
+    const lensed = lens.size ? new Set(rows.filter(r => lens.has(r.family)).flatMap(r => [r.psyche, r.lab])) : null
+    const chipCls = id => (lensed && !lensed.has(id)) ? 'cnode lens-dim' : 'cnode'
 
     root.innerHTML = `
       ${pageBar({ where: 'concordance' })}
@@ -137,12 +139,12 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
         <svg class="conc-arcs" id="conc-arcs" preserveAspectRatio="none"></svg>
         <div class="conc-col left">
           <div class="conc-colhead">The Psyche</div>
-          ${psyIds.map(id => `<button class="cnode" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>
+          ${psyIds.map(id => `<button class="${chipCls(id)}" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>
             ${mixStrip ? mixStrip(id, { compact: true }) : ''}`).join('')}
         </div>
         <div class="conc-col right">
           <div class="conc-colhead">The Laboratory</div>
-          ${labIds.map(id => `<button class="cnode" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>`).join('')}
+          ${labIds.map(id => `<button class="${chipCls(id)}" data-node="${esc(id)}">${esc(label(id))} <span class="deg">${degree[id] || 0}</span></button>`).join('')}
         </div>
       </div>${CONCORDANCE_ORIENTATION ? pairsList() : ''}`}
     </div>`
@@ -157,9 +159,11 @@ export function renderConcordance(root, atlas, { onOpenEdge, onBack, mixStrip, p
   // citation. Rows carry the crossrow hooks, so hovering one lights its arc
   // and clicking opens the edge, exactly as the picked-concept list does.
   function pairsList() {
-    const rows = [...allRows].sort((a, b) => label(a.psyche).localeCompare(label(b.psyche)) || label(a.lab).localeCompare(label(b.lab)))
+    const rows = allRows.filter(r => !lens.size || lens.has(r.family))
+      .sort((a, b) => label(a.psyche).localeCompare(label(b.psyche)) || label(a.lab).localeCompare(label(b.lab)))
+    const head = lens.size ? `${rows.length} of ${allRows.length} pairs · ${[...lens].join(', ')}` : `All ${rows.length} pairs`
     return `<div class="pairs">
-      <div class="conc-colhead">All ${rows.length} pairs</div>
+      <div class="conc-colhead">${head}</div>
       ${rows.map(r => `<button class="crossrow pair" data-cross="${esc(r.id)}">
         <span class="pp">${esc(label(r.psyche))}</span>
         <span class="prel">${r.inverted ? '← ' : ''}${esc(spokeRel(r.e))}${r.inverted ? '' : ' →'}</span>
