@@ -561,6 +561,34 @@ here so the morning finds it; nothing below is committed scope.
    change voids its numbers by rule); the batch-page mining logs are a
    register decision for Damian, not a rewrite. The copy contract and the
    poster-facts gate run as usual after the pass.
+   APPLIED 2026-10-22 and deployed with v2.1 (commits 893be5b and 5934863;
+   the six method edits on Damian's go). Still open from it: the two register
+   rulings (batch-page mining logs, the per-card ledger line).
+
+3. **Family pages: a second humanizer pass** (Damian, 2026-10-22, after
+   reading the live correspondence page: "look like they need humanization").
+   The first pass only cut the closer and the repeated catchphrases. What the
+   page still carries, in two layers with two owners:
+   - The page template (build track, the family-page block in the atlas
+     builder): "That was already done before any of this began", "The tail is
+     the informative part:", "which is not the same as belonging here", "the
+     queue is not a backlog", "A row this small is the items themselves", the
+     "Agreement is not endorsement" line. Contrast forms and colon reveals
+     throughout. Note the anti-overclaim test requires the agreement limit
+     stated outside the fold on every family page, so reword that sentence
+     and keep it.
+   - The quoted definition and boundary text (Track B, the family definitions
+     document): the site states it quotes the document and never paraphrases
+     it, so "The workhorse of the comparative method", the em dash in
+     "structural likeness asserted without identity", the caps emphasis and
+     the "not X; not Y; not Z" boundary triads can only change in the
+     document itself. A wording-only bump (v0.7.3, changelog entry saying
+     wording only, no boundary moved) still needs a fresh calibration PASS
+     record, because the paper-facts check refuses any ruleset version
+     without one. Decide first whether that cost is worth it or whether a
+     ruleset may read like a ruleset.
+   Do the template layer first; it ships as a data-free UI change under the
+   usual review.
 
 ## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
 
