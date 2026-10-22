@@ -5,6 +5,8 @@
 <meta name="description" content="Release notes for The Symbolic World, a verified knowledge graph of Jung’s Collected Works: what each release added, with its version pin and receipts.">
 <title>Releases · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
+<script>(function(){try{var t=localStorage.getItem('sw-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'day':'night');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='night'}
+document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('.themetoggle');if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme==='day'?'night':'day';try{localStorage.setItem('sw-theme',d.dataset.theme)}catch(err){}})})()</script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { min-height: 100vh; }
@@ -26,7 +28,7 @@ code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,
 .f-pend { color: var(--amber); border-color: var(--b-amber); }
 .f-none { color: var(--ink-dim); border-style: dashed; }
 .receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
-  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
   font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
 .receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
   text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
@@ -63,7 +65,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <body>
 <header class="site-header">
 <div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases" aria-current="page">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
-<div class="hrow hrow-2"><span class="where">releases</span></div>
+<div class="hrow hrow-2"><span class="where">releases</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">release notes</p>
@@ -82,8 +84,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h4>mining status</h4>
 <ul>
 <li>Mined the trilogy (CW 12, 13, 14), Aion to <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>, CW 9i to <a href="/batch-b-cw9i-10">b-cw9i-10</a>, and CW 8 to <a href="/batch-b-cw8-14">b-cw8-14</a> (2026-08-28): five volumes end to end.</li>
-<li>Graph: 653 nodes, 2420 relations, 3180 references over 73 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
-<li>Families: 1906 assigned, 428 queued, 83 no family, 3 text undecided (<a href="/families">families</a>).</li>
+<li>Graph: 661 nodes, 2463 relations, 3248 references over 74 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
+<li>Families: 1941 assigned, 434 queued, 85 no family, 3 text undecided (<a href="/families">families</a>).</li>
 <li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a> (271 relations with a proposition in the predicate), traced it to a briefing bullet, and replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>; every blind batch since ran at 0%. No re-mine: the relations are verified true and carry the normalization layer; reuse per window is in <code>pipeline/transfer_trend.jsonl</code>.</li>
 </ul>
 <h4>governance</h4>
@@ -132,8 +134,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 </section>
 <div class="receipts"><b>receipts</b>
-prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:e9be4742942e</span>;<br>
+prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:f73cafe514ec</span>;<br>
 ruleset v0.7.2 with calibration record <code>pipeline/family_calibration/records/2026-08-13_v072_run4.json</code> (PASS);<br>
-external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-10-21
+external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-10-22
 </div>
 </main></body></html>

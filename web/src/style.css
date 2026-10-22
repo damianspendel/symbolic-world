@@ -12,7 +12,7 @@ body {
   color: var(--ink);
   overflow: hidden;
 }
-#cy { position: fixed; inset: 0; }
+#cy { position: fixed; inset: 0; background: var(--ground); }
 
 /* The veil dims the graph back to ground while the prose is over it.
    R0.4: this is not decoration — it is the graph receding to make room. */

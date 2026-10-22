@@ -53,6 +53,8 @@
          a panel route it must be opaque in frame one, before any stylesheet is
          parsed. Same ground colour as the body above, the documented exception. */
       #mode-panel{position:fixed;inset:0;z-index:13;background:#0b0a08;overflow-y:auto}
+      /* the day pair of the same exception (theme toggle, 2026-10-22) */
+      [data-theme="day"] #mode-panel{background:#f6f5f1}
       html.route-panel #mode-panel{display:block}
     </style>
   </head>
@@ -108,6 +110,10 @@
       (function () {
         var h = location.hash || ''
         if (/^#\/(method|concordance|families|queue)/.test(h)) document.documentElement.className += ' route-panel'
+        // theme boot (2026-10-22): stored choice, else the OS preference; one
+        // delegated handler serves every .themetoggle, static or rendered later
+        try{var t=localStorage.getItem('sw-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'day':'night');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='night'}
+        document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('.themetoggle');if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme==='day'?'night':'day';try{localStorage.setItem('sw-theme',d.dataset.theme)}catch(err){}})
       })()
     </script>
 
@@ -136,6 +142,7 @@
           <button class="navlink" id="relayout" title="Clear the selection, the search and every filter">↺ reset</button>
           <div id="stats"></div>
           <input id="search" class="std-search" type="search" placeholder="A symbol, a relation, a quote, CW 14 §1…" autocomplete="off" spellcheck="false" />
+          <button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button>
         </span>
       </div>
     </header>

@@ -100,9 +100,9 @@ function emitPublicDataset(seed, meta) {
 }
 
 const TOKENS = {
-  ground: '#0b0a08', 'ground-2': '#100e0b', panel: '#171410',
-  ink: '#eae3d2', 'ink-faint': '#9a9382', 'ink-dim': '#6f6a5d', 'ink-bright': '#ffffff',
-  'ink-label': '#c9c2b0',
+  ground: '#191511', 'ground-2': '#1e1a15', panel: '#241e17',
+  ink: '#f0e9da', 'ink-faint': '#a89f8d', 'ink-dim': '#7d766a', 'ink-bright': '#ffffff',
+  'ink-label': '#cfc7b4',
   // Item 24 (editorial ruling, 2026-08-14) — the page gutter. One number, one
   // token, consumed by the header, the title band and every content column, so
   // the site has a single left edge. Overridden once for narrow screens below.
@@ -115,19 +115,19 @@ const TOKENS = {
   // Item 26 (editorial ruling, 2026-08-14) — the hybrid. One outer container,
   // capped and centred as a block; everything inside keeps the single left edge.
   'page-max': '1400px',
-  gold: '#d4af37', 'gold-dim': '#94782a',
-  surface: 'rgba(23, 20, 16, 0.94)', hairline: '#2b261e',
+  gold: '#d9b44a', 'gold-dim': '#a3853a',
+  surface: 'rgba(36, 30, 23, 0.94)', well: 'rgba(20, 17, 13, 0.6)', hairline: '#3a3226',
   'm-concept': TYPE_COLOR.Concept, 'm-symbol': TYPE_COLOR.Symbol, 'm-figure': TYPE_COLOR.Figure,
   'm-operation': TYPE_COLOR.Operation, 'm-substance': TYPE_COLOR.Substance, 'm-motif': TYPE_COLOR.Motif,
   sage: '#7fc9a0', rubedo: '#d0685a', amber: '#d9a84f', teal: '#9ec9c3', muted: '#888888',
   // interaction accents
   hi: '#f5d76e',            // the lit / highlighted state
   sel: '#f0cf82',           // the selected state
-  'edge-idle': '#5a5245',   // an edge with no layer colour
-  'layer-structural': '#4a443a',
+  'edge-idle': '#6a6251',   // an edge with no layer colour
+  'layer-structural': '#55503f',
   // chip and badge borders, keyed to the state they carry
-  'b-sage': '#2f5c46', 'b-teal': '#39575c', 'b-amber': '#6b5527', 'b-rubedo': '#5c2f28',
-  'b-ok': '#2f4a3c',
+  'b-sage': '#3a6b52', 'b-teal': '#44646a', 'b-amber': '#7a6330', 'b-rubedo': '#6a3a32',
+  'b-ok': '#3a564a',
   // R10.10 family lenses — one hue per bridge kind, kept inside the metals range
   // (gold, silver, verdigris) so the lens never introduces a foreign palette
   'lens-symbolization': '#d4af37',   // gold, as Concept
@@ -139,7 +139,28 @@ const TOKENS = {
   serif: '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif',
   mono: 'ui-monospace, "SF Mono", Menlo, monospace'
 }
-const rootBlock = () => ':root {\n' + Object.entries(TOKENS).map(([k, v]) => `  --${k}: ${v};`).join('\n') + '\n}\n'
+// Day theme (Damian, 2026-10-22: softer night + day cool + a toggle). DAY
+// holds only the keys that change; everything else (metals, lenses, phases,
+// layout numbers, fonts) is identical in both themes. The atlas canvas and
+// the landing overlay keep the night palette in both themes — a dark plate —
+// so PLATE re-pins the themed keys to their night values on those subtrees.
+const DAY = {
+  ground: '#f6f5f1', 'ground-2': '#efeeea', panel: '#ffffff',
+  ink: '#21242a', 'ink-faint': '#5c6370', 'ink-dim': '#878e9a', 'ink-bright': '#000000',
+  'ink-label': '#3a3f49',
+  gold: '#8a6a1b', 'gold-dim': '#a5842c',
+  surface: 'rgba(255, 255, 255, 0.94)', well: 'rgba(33, 36, 42, 0.05)', hairline: '#dcdde0',
+  sage: '#3f7a60', rubedo: '#a8443a', amber: '#9c731e', teal: '#42756e', muted: '#7a7f87',
+  hi: '#7a5e10', sel: '#8a6a1b',
+  'edge-idle': '#b9bcc2', 'layer-structural': '#c4c7cc',
+  'b-sage': '#9cc4ae', 'b-teal': '#a8c6c2', 'b-amber': '#d3b26a', 'b-rubedo': '#d6a099',
+  'b-ok': '#a9c7b6'
+}
+const PLATE_IDS = '#cy, #overlay, #boot, #works, #chips, #search-hint'
+const cssVars = (obj, keys) => (keys || Object.keys(obj)).map(k => `  --${k}: ${obj[k]};`).join('\n')
+const rootBlock = () => ':root {\n' + cssVars(TOKENS) + '\n}\n' +
+  '[data-theme="day"] {\n' + cssVars(DAY) + '\n}\n' +
+  `[data-theme="day"] :is(${PLATE_IDS}) {\n` + cssVars(TOKENS, Object.keys(DAY)) + '\n}\n'
 
 // V2-R10 — the site menu, in one place for JavaScript. tools/build_ledger_page.py
 // holds the same list for the pages python writes, and a test compares the two
@@ -159,9 +180,17 @@ const MENU = [
 ]
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
+// The theme boot (before paint: stored choice, else the OS preference) and
+// one delegated click handler for every .themetoggle, static or rendered
+// later. The glyph is drawn by CSS from data-theme, so dynamic headers need
+// no JS of their own.
+const THEME_SNIPPET = `<script>(function(){try{var t=localStorage.getItem('sw-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'day':'night');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='night'}
+document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('.themetoggle');if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme==='day'?'night':'day';try{localStorage.setItem('sw-theme',d.dataset.theme)}catch(err){}})})()</script>`
+const THEME_BUTTON = '<button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button>'
+
 const siteHeader = (current, where, tools = '') => `<header class="site-header">
 <div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a>${topMenu(current)}</div>
-<div class="hrow hrow-2"><span class="where">${esc(where || '')}</span>${tools ? `<span class="hdr-tools">${tools}</span>` : ''}</div>
+<div class="hrow hrow-2"><span class="where">${esc(where || '')}</span>${tools ? `<span class="hdr-tools">${tools}</span>` : ''}${THEME_BUTTON}</div>
 </header>`
 const topMenu = (current) => '<nav class="topmenu">' + MENU.map(([group, items]) =>
   `<span class="mgrp"><span class="mgroup">${group}</span>` + items.map(([href, label]) =>
@@ -540,7 +569,7 @@ const chromeBlock = () => `
   position: sticky; top: 0; z-index: 50;
   display: flex; align-items: center; gap: 0.9rem;
   height: 3rem; max-width: var(--page-max); margin-inline: auto; padding: 0 var(--page-gutter);
-  background: rgba(11, 10, 8, 0.94); border-bottom: 1px solid var(--hairline);
+  background: var(--surface); border-bottom: 1px solid var(--hairline);
 }
 .page-bar .back {
   font: 0.62rem var(--mono); letter-spacing: 0.05em; text-transform: none;
@@ -718,6 +747,14 @@ h4 {
   padding: 0.5rem 0.9rem; color: var(--ink); font-family: var(--serif); font-size: 0.9rem; outline: none;
 }
 .std-search:focus { border-color: var(--gold-dim); }
+.themetoggle {
+  margin-left: auto; background: none; border: 1px solid var(--hairline); border-radius: 999px;
+  color: var(--ink-faint); font-size: .72rem; line-height: 1; padding: .22rem .6rem; cursor: pointer;
+}
+.themetoggle:hover, .themetoggle:focus-visible { color: var(--gold); border-color: var(--gold-dim); outline: none; }
+.themetoggle::before { content: "\\2600\\FE0E day"; font-family: var(--mono); letter-spacing: .05em; }
+[data-theme="day"] .themetoggle::before { content: "\\263E\\FE0E night"; }
+.hdr-tools + .themetoggle { margin-left: 0.4rem; }
 `
 
 // ------------------------------------------------- R5.5 · the works bar -----
@@ -900,6 +937,7 @@ function renderDoc(md, frontCopy) {
 <meta name="description" content="The relation families of The Symbolic World, a verified knowledge graph of Jung&#39;s Collected Works: the definitions document in full, the map of relation strings to families, and how each settled record was arrived at.">
 <title>Relation families ${esc(version)} · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
+${THEME_SNIPPET}
 <style>
 /* Page-specific only. Palette and chrome come from chrome.css (R10.0). */
 * { box-sizing: border-box; }
@@ -958,7 +996,7 @@ writeFileSync(here('./src/chrome.json'), JSON.stringify({
   _about: 'GENERATED by build-atlas.mjs. The site header, as a template. Consumed by web/src/main.js; the same structure the generated pages carry.',
   header: `<header class="site-header">
 <div class="hrow hrow-1"><a class="brand" href="{{BRAND_HREF}}" data-back>The Symbolic World</a>${topMenu('')}</div>
-<div class="hrow hrow-2">{{ROW2}}</div>
+<div class="hrow hrow-2">{{ROW2}}${THEME_BUTTON}</div>
 </header>`,
   menu: MENU
 }))
@@ -1186,7 +1224,7 @@ code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,
 .f-pend { color: var(--amber); border-color: var(--b-amber); }
 .f-none { color: var(--ink-dim); border-style: dashed; }
 .receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
-  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
   font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
 .receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
   text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
@@ -1218,6 +1256,7 @@ function renderPage(p) {
 <link rel="canonical" href="https://symbolicworld.observer/${p.slug}">
 ${p.description ? `<meta name="description" content="${esc(p.description)}">\n` : ''}<title>${esc(p.title)} · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
+${THEME_SNIPPET}
 <style>${V2_STYLE}${p.style || ''}</style>
 ${p.head || ''}</head>
 <body>

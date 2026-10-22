@@ -5,6 +5,8 @@
 <meta name="description" content="Query The Symbolic World’s graph of Jung’s Collected Works in the browser: the command-line tool’s filters, run over the published dataset.">
 <title>Query the graph · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
+<script>(function(){try{var t=localStorage.getItem('sw-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'day':'night');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='night'}
+document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('.themetoggle');if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme==='day'?'night':'day';try{localStorage.setItem('sw-theme',d.dataset.theme)}catch(err){}})})()</script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { min-height: 100vh; }
@@ -26,7 +28,7 @@ code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,
 .f-pend { color: var(--amber); border-color: var(--b-amber); }
 .f-none { color: var(--ink-dim); border-style: dashed; }
 .receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
-  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
   font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
 .receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
   text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
@@ -176,7 +178,7 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 <body>
 <header class="site-header">
 <div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/routes">routes</a><a href="/query" aria-current="page">query</a><a href="/#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
-<div class="hrow hrow-2"><span class="where">query</span></div>
+<div class="hrow hrow-2"><span class="where">query</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main records">
 <div class="titleband"><p class="eyebrow">read-only</p>
@@ -200,7 +202,7 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 </div>
 
 <div class="rows" id="rows"><p class="dim" id="status">Reading the dataset…</p></div>
-<div class="receipts"><b>receipts</b><span id="receipts">graph state: 653 nodes / 2420 edges; families 1906 assigned, 428 pending-adjudication, 83 no-family, 3 text-undecided; seed.json sha256:e9be4742942e; declarations relation_declarations.json from FAMILY_DEFINITIONS v0.7.1, 7 active</span></div>
+<div class="receipts"><b>receipts</b><span id="receipts">graph state: 661 nodes / 2463 edges; families 1941 assigned, 434 pending-adjudication, 85 no-family, 3 text-undecided; seed.json sha256:f73cafe514ec; declarations relation_declarations.json from FAMILY_DEFINITIONS v0.7.1, 7 active</span></div>
 
 
 </main></body></html>

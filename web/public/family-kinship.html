@@ -5,6 +5,8 @@
 <meta name="description" content="kinship: a relation family in The Symbolic World’s graph of Jung’s Collected Works — definition, boundary rulings, and the edges assigned to it.">
 <title>kinship — a relation family · The Symbolic World</title>
 <link rel="stylesheet" href="/chrome.css">
+<script>(function(){try{var t=localStorage.getItem('sw-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'day':'night');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='night'}
+document.addEventListener('click',function(e){var b=e.target&&e.target.closest&&e.target.closest('.themetoggle');if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme==='day'?'night':'day';try{localStorage.setItem('sw-theme',d.dataset.theme)}catch(err){}})})()</script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { min-height: 100vh; }
@@ -26,7 +28,7 @@ code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,
 .f-pend { color: var(--amber); border-color: var(--b-amber); }
 .f-none { color: var(--ink-dim); border-style: dashed; }
 .receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
-  border-radius: 0 8px 8px 0; background: rgba(11,10,8,.6); padding: .7rem .85rem;
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
   font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
 .receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
   text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
@@ -72,20 +74,20 @@ tr.total td { color: var(--ink-faint); }
 <body>
 <header class="site-header">
 <div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
-<div class="hrow hrow-2"><span class="where">families · kinship</span></div>
+<div class="hrow hrow-2"><span class="where">families · kinship</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">relation family</p>
 <h1><span class="ev">kinship</span></h1>
 <p class="sub"><span class="chip f-ok">assigned, not verified</span> What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer: a quote checked letter-exact against its paragraph and judged by a model of a different family. That was already done before any of this began.</p></div>
 <div class="countstrip">
-  <span><b>16</b> assigned relations</span>
-  <span><b>14</b> effective relation strings</span>
+  <span><b>17</b> assigned relations</span>
+  <span><b>15</b> effective relation strings</span>
   <span><b>2</b> queued items carry a string this family covers</span>
   <span><b>0</b> declared pairs</span>
 </div>
 <div class="countstrip dim">
-  <span>graph-wide: 1906 assigned · 428 awaiting a ruling · 83 no family · 3 text undecided · 2420 relations</span>
+  <span>graph-wide: 1941 assigned · 434 awaiting a ruling · 85 no family · 3 text undecided · 2463 relations</span>
 </div>
 
 
@@ -96,8 +98,8 @@ tr.total td { color: var(--ink-faint); }
 
 
 <h2>Relation strings that land here</h2>
-<div class="stringmap"><span class="chip ev"><code>is-elder-brother-of</code> <span class="n">2</span></span><span class="chip ev"><code>pairs-with</code> <span class="n">2</span></span><span class="chip ev"><code>adopts</code> <span class="n">1</span></span><span class="chip ev"><code>companion-of</code> <span class="n">1</span></span><span class="chip ev"><code>consort-of</code> <span class="n">1</span></span><span class="chip ev"><code>has</code> <span class="n">1</span></span><span class="chip ev"><code>is-accompanied-by</code> <span class="n">1</span></span><span class="chip ev"><code>is-anima-of</code> <span class="n">1</span></span><span class="chip ev"><code>is-brother-of</code> <span class="n">1</span></span><span class="chip ev"><code>is-double-of</code> <span class="n">1</span></span><span class="chip ev"><code>is-feminine-half-of</code> <span class="n">1</span></span><span class="chip ev"><code>is-shadow-of</code> <span class="n">1</span></span><span class="chip f-none">and 2 more, 2 relations between them</span></div>
-<p class="meta">The number beside a string is how many relations carry it. 12 of these strings occur exactly once. The tail is the informative part: a string used once usually carried its own qualifier in the sentence it came from. A string can appear under more than one family, and does: assignment is made to an edge in its paragraph, never to a string in the abstract.</p>
+<div class="stringmap"><span class="chip ev"><code>is-elder-brother-of</code> <span class="n">2</span></span><span class="chip ev"><code>pairs-with</code> <span class="n">2</span></span><span class="chip ev"><code>adopts</code> <span class="n">1</span></span><span class="chip ev"><code>companion-of</code> <span class="n">1</span></span><span class="chip ev"><code>consort-of</code> <span class="n">1</span></span><span class="chip ev"><code>has</code> <span class="n">1</span></span><span class="chip ev"><code>is-accompanied-by</code> <span class="n">1</span></span><span class="chip ev"><code>is-anima-of</code> <span class="n">1</span></span><span class="chip ev"><code>is-brother-of</code> <span class="n">1</span></span><span class="chip ev"><code>is-double-of</code> <span class="n">1</span></span><span class="chip ev"><code>is-feminine-half-of</code> <span class="n">1</span></span><span class="chip ev"><code>is-married-to</code> <span class="n">1</span></span><span class="chip f-none">and 3 more, 3 relations between them</span></div>
+<p class="meta">The number beside a string is how many relations carry it. 13 of these strings occur exactly once. The tail is the informative part: a string used once usually carried its own qualifier in the sentence it came from. A string can appear under more than one family, and does: assignment is made to an edge in its paragraph, never to a string in the abstract.</p>
 
 <h4>seeds: the examples the definition names</h4>
 <ul class="seeds"><li class="ev">the-devil is-elder-brother-of christ <span class="cite">9ii §77</span></li><li class="ev">shulamite consort-of anthropos <span class="cite">14 §609</span></li><li class="ev">soul is-the-bride-of christ <span class="cite">9ii §72</span></li></ul>
@@ -129,10 +131,10 @@ tr.total td { color: var(--ink-faint); }
 <p class="meta">Agreement is not endorsement: no scholar reviewed this vocabulary, and the sample is small enough to name in a sentence.</p>
 
 <div class="receipts"><b>receipts</b>
-counts read from seed.json <span class="hash">sha256:e9be4742942e</span> via web/family-map.mjs;<br>
+counts read from seed.json <span class="hash">sha256:f73cafe514ec</span> via web/family-map.mjs;<br>
 definition and seeds quoted from docs/FAMILY_DEFINITIONS.md v0.7.2;<br>
 external-validity row from docs/experiments/external_validity_2026-08/results.json (report v3, closed 2026-08-12);<br>
-built 2026-10-21
+built 2026-10-22
 </div>
 <div class="callout"><p>These families are this project's classification. They are calibrated inside this repository, checked once against outside scholarship on a small sample, and endorsed by nobody. What the layer records is how we sorted relations Jung wrote: a map of assertions, not a reading of him.</p></div>
 </main></body></html>

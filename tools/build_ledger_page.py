@@ -59,6 +59,17 @@ MENU = [
 ]
 
 
+THEME_SNIPPET = (
+    '<script>(function(){try{var t=localStorage.getItem(\'sw-theme\')'
+    '||(matchMedia(\'(prefers-color-scheme: light)\').matches?\'day\':\'night\');'
+    'document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme=\'night\'}'
+    'document.addEventListener(\'click\',function(e){var b=e.target&&e.target.closest&&e.target.closest(\'.themetoggle\');'
+    'if(!b)return;var d=document.documentElement;d.dataset.theme=d.dataset.theme===\'day\'?\'night\':\'day\';'
+    'try{localStorage.setItem(\'sw-theme\',d.dataset.theme)}catch(err){}})})()</script>')
+THEME_BUTTON = ('<button class="themetoggle" type="button" '
+                'title="switch between day and night" aria-label="switch between day and night"></button>')
+
+
 def site_header(current="", where="", tools=""):
     """V2-R11 — the header fragment, the same structure web/build-atlas.mjs
     emits: row one is brand then menu and is identical on every surface; row two
@@ -69,6 +80,7 @@ def site_header(current="", where="", tools=""):
         f'{top_menu(current)}</div>'
         f'<div class="hrow hrow-2"><span class="where">{where}</span>'
         + (f'<span class="hdr-tools">{tools}</span>' if tools else "")
+        + THEME_BUTTON
         + "</div></header>")
 
 
@@ -305,6 +317,7 @@ def batch_page(batch, delta, commits):
 <link rel="canonical" href="https://symbolicworld.observer/{batch_slug(batch["id"])}">
 <title>{esc(batch["id"])} · a batch delta · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
+{THEME_SNIPPET}
 <style>
   * {{ box-sizing:border-box; margin:0; padding:0; }}
   body {{ min-height:100vh; }}
@@ -543,6 +556,7 @@ def build():
 <meta name="description" content="The build ledger of The Symbolic World, a verified knowledge graph of Jung&#39;s Collected Works: every verified reference in the graph, with the batch that added it and its verification record.">
 <title>Ledger · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
+{THEME_SNIPPET}
 <style>
   /* R10.0 — palette and chrome come from chrome.css, generated from the one
      token table in web/build-atlas.mjs. No colour is restated here. */
