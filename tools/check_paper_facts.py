@@ -31,7 +31,7 @@ paper = PAPER_PATH.read_text()
 # working tree. The moment the tag exists, the tag wins and this constant goes
 # inert on its own — the tagged commit's seed.json IS the working tree's. An
 # undeclared missing tag still fails, as before. Set to None between releases.
-PENDING_RELEASE = 'v2.0.0'
+PENDING_RELEASE = None   # v2.0.0 tagged 2026-09-05; the tag now pins the paper
 
 failures = []
 
