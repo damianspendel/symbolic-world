@@ -29,6 +29,21 @@ app/
 # private working docs — not part of the published artifact
 docs/PUBLISHING.md
 docs/STATS_GUIDE.md
+docs/KOFI_COPY.md
+docs/SITE_COPY_REVIEW_2026-10-22.md
+docs/PROCESS_MAP.md
+docs/EXECUTION_PLAN_STEPS_2_3.md
+docs/PLAN_QUERY_LAYER_BUILD.md
+docs/ROADMAP.md
+docs/MINING_ROADMAP.md
+docs/STATUS_AND_ROADMAP.md
+docs/archive/PLAN.md
+docs/archive/STRATEGY.md
+docs/figures/fig1_naive.svg
+docs/figures/fig2_risks.svg
+docs/figures/fig3_experiments.svg
+docs/figures/fig_w1_layers.svg
+docs/figures/fig_w2_pipeline.svg
 
 # session-local tooling — wrangler dev caches and Claude session config/worktrees
 .wrangler/
@@ -37,3 +52,4 @@ web/.wrangler/
 
 # regenerable from docs/figures/method_poster.html via the handoff's render script
 docs/figures/method_poster_print.png
+docs/figures/method_poster_web.png
