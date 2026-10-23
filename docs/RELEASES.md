@@ -133,7 +133,7 @@ pin: graph v2.1.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   fourteen windows, paragraphs 1 to 1018.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
   {{batches}} batches; {{pending}} relations await adjudication at arc end.
-- Mining runs one window nightly, CW 5 and CW 16 next. The mining track
+- Mining stops at CW 11, with CW 5 and CW 16 on hold. The mining track
   commits data and the build track deploys; preflight's count checks keep
   the two in step.
 

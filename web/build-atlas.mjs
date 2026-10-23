@@ -2703,7 +2703,7 @@ table.findings .src { font: .58rem var(--mono); }
     const supportBody = `<div class="titleband"><p class="eyebrow">about</p>
 <h1>Support</h1>
 <p class="sub">tips fund the next mining window</p></div>
-<p>The atlas, the dataset and the verification ledger are free to use. Mining the remaining volumes is metered work. At measured rates a fully verified citation costs ${'$'}0.09 to ${'$'}0.16 in model spend. A mining window (about seventy paragraphs taken end to end through all the checks) costs about ${'$'}10. A tip of any size goes toward the next window. Thank you!</p>
+<p>Tips cover the running costs. The atlas, the dataset and the verification ledger are free to use, and nothing on the site is for sale. Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
 </div>
