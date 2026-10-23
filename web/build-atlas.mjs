@@ -1684,6 +1684,10 @@ const ordinal = (n) => { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return
 // is EMIT_CONCEPT_PAGES at the top of this file.
 const styleConcept = `
 .latin { font-style: italic; font-weight: 400; }
+.atlas-cta { margin: .2rem 0 1rem; }
+.atlas-cta a { display: inline-block; border: 1px solid var(--gold-dim); border-radius: 999px; padding: .4rem 1.1rem;
+  font: .66rem var(--mono); letter-spacing: .08em; color: var(--gold); text-decoration: none; }
+.atlas-cta a:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.08); }
 .p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
 .cfam { font-size: 1.05rem; }
 .crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
@@ -1806,6 +1810,7 @@ ${e.refs.length ? `<ul class="cites">\n${cites}\n</ul>` : ''}
 <p class="sub"><span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span></p></div>
 <p class="meta">${registerNote}</p>
 <p>${provLine}</p>
+<p class="atlas-cta"><a href="/atlas#/n/${node.id}">see its relations on the atlas →</a></p>
 ${refTotal ? `<div class="vmix">\n${volStrip}\n</div>` : ''}
 ${order.length > 1 ? `<p class="chips">\n${chips}\n</p>` : ''}
 ${groupBlocks}
