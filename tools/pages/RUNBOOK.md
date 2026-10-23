@@ -101,7 +101,7 @@ must agree on it or Google Search Console files redirect errors (it did, on
 - Each generated or static page carries a canonical tag pointing at its
   extensionless address (ledger's lives in `tools/build_ledger_page.py`,
   families' in `web/build-atlas.mjs` renderDoc, disputes' in the static file).
-- Internal links across the site (`web/index.html` nav, `web/src/main.js`,
+- Internal links across the site (`web/atlas.html` nav, `web/src/main.js`,
   `docs/METHOD_COPY.md`) use extensionless hrefs.
 
 Do not reintroduce `.html` links in new pages or copy. The `/v1.3/` frozen
