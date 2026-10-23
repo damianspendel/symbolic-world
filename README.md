@@ -1,40 +1,27 @@
 # The Symbolic World
 
+An atlas of C. G. Jung's Collected Works. Each connection between two concepts carries a verbatim quote of at most 25 words, with its volume and paragraph, so a reader can check it against the book.
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21631523.svg)](https://doi.org/10.5281/zenodo.21631523)
+[![integrity](https://github.com/damianspendel/symbolic-world/actions/workflows/tests.yml/badge.svg)](https://github.com/damianspendel/symbolic-world/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/damianspendel/symbolic-world)](https://github.com/damianspendel/symbolic-world/releases/latest)
 
-**A verified knowledge graph of C. G. Jung's *Collected Works* — every connection
-anchored to a specific paragraph (§), mechanically checked, independently reviewed,
-and cross-vendor audited.**
+Live atlas: [symbolicworld.observer](https://symbolicworld.observer). Paper: [docs/PAPER.md](docs/PAPER.md). How to cite: see [CITATION.cff](CITATION.cff).
 
-Live atlas: **[symbolicworld.observer](https://symbolicworld.observer)**
-Paper: [docs/PAPER.md](docs/PAPER.md) · One-page summary: [docs/ABSTRACT.md](docs/ABSTRACT.md)
+![The atlas, showing the graph and a selected concept](docs/img/atlas.png)
 
-## What this is
+The graph holds 695 concepts, 2668 relations and 3562 citations as of release v2.1.0. The live atlas grows as mining continues.
 
-653 symbols, figures, and concepts joined by 2420 relations, each backed by one or
-more of 3562 references. Every reference names its exact CW paragraph and Bollingen
-page, carries a verbatim quote of ≤25 words, and is typed by **whose claim it is**:
-Jung's own assertion, doctrine he reports, or a named source he quotes. 100% of
-references passed an independent verification gate; the whole of CW 14 was
-additionally re-audited by a second vendor's model, and the author hand-validated
-a 50-item gold sample against the source paragraphs (E10).
+### Three ways in
 
-## Why it's different
+- Explore the atlas at symbolicworld.observer, or start from the ranked concepts index.
+- Query the graph from the command line with `tools/query/kg_query.py`.
+- Dispute an edge: every citation in the atlas expands to a record and a button that copies a prefilled report. Open it as a [GitHub issue](https://github.com/damianspendel/symbolic-world/issues).
 
-Nothing enters this graph without passing, in order:
+### Project status
 
-1. **Mechanical verbatim check** — the quote must exist, letter-for-letter, in the
-   cited paragraph (excludes fabricated citations, within stated and canary-guarded bounds);
-2. **Independent structure gate** — a model from a different family than the
-   proposer reviews the full paragraph (support, direction, referent, conflation);
-3. **Voice specialist** — a narrow second review of attribution and hedging;
-4. **Standing cross-vendor audit** — a different vendor's model re-audits published
-   samples, blind, including a reduced-rubric mode closer to its own terms.
-
-Error rates are measured and published, not hidden: see the experiments in
-[docs/experiments/](docs/experiments/) (seeded-corruption calibration, adversarial
-audits, stability probes, cross-vendor audits E6–E7, the human gold set E10) and the standing review in
-[docs/REVIEW.md](docs/REVIEW.md).
+Mining of the Collected Works has finished CW 8, 9i, 9ii, 11, 12, 13 and 14. CW 5 and CW 16 are on hold. Issues get a reply within seven days.
 
 ## Dispute an edge
 
@@ -62,12 +49,12 @@ its edge, that finding falsifies the edge, publicly.
 
 ## Copyright posture
 
-The Collected Works texts are **not** in this repository and never were: the epub
-and extracted corpus (`data/`) are gitignored and local-only. Only ≤25-word
+The Collected Works texts are **not** in this repository and never were. Only ≤25-word
 attributed quotations, § numbers, and page numbers are published, in reliance on
-quotation and fair-use exceptions — the full position, including licensing
-(MIT code / CC BY 4.0 data, quotes excluded) and takedown commitment, is in
-[docs/LEGAL.md](docs/LEGAL.md).
+quotation and fair-use exceptions. The licence terms (MIT for the code, CC BY 4.0
+for the dataset's original structure and metadata, the quotations excluded from
+both) are in [NOTICE](NOTICE), and the full position, including the takedown
+commitment, is in [docs/LEGAL.md](docs/LEGAL.md).
 
 ## Authorship
 
