@@ -111,15 +111,15 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h4>mining status</h4>
 <ul>
 <li>Mined the trilogy (CW 12, 13, 14), Aion to <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>, CW 9i to <a href="/batch-b-cw9i-10">b-cw9i-10</a>, and CW 8 to <a href="/batch-b-cw8-14">b-cw8-14</a> (2026-08-28): five volumes end to end.</li>
-<li>Graph: 695 nodes, 2668 relations, 3562 references over 79 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
-<li>Families: 2091 assigned, 465 queued, 109 no family, 3 text undecided (<a href="/families">families</a>).</li>
+<li>Graph: 589 nodes, 2091 relations, 2678 references over 65 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
+<li>Families: 1669 assigned, 354 queued, 65 no family, 3 text undecided (<a href="/families">families</a>).</li>
 <li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a> (271 relations with a proposition in the predicate), traced it to a briefing bullet, and replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>; every blind batch since ran at 0%. No re-mine: the relations are verified true and carry the normalization layer; reuse per window is in <code>pipeline/transfer_trend.jsonl</code>.</li>
 </ul>
 <h4>governance</h4>
 <ul>
 <li>Moved the ruleset to v0.7.2, 25 families; every version carries a PASS record and <code>tools/check_paper_facts.py</code> refuses one without it.</li>
 <li>Re-ran every <code>amplified-by</code> edge under ruling 1; <code>amplification</code> now holds none; <a href="/family-amplification">the page</a> carries the count.</li>
-<li>Declared 8 inverse and symmetric pairs, each citing its ruleset line.</li>
+<li>Declared 7 inverse and symmetric pairs, each citing its ruleset line.</li>
 <li>Calibrated the family gate: 19/19 planted errors caught, 39/41 clean left alone. Gate model gemini-3.1-pro-preview: within-vendor role separation, not cross-vendor.</li>
 <li>Checked 27 assignments against 8 works: 8/16 treated agreed, 6 disagreed, 2 split; 7 rules changed. Receipts in <code>docs/experiments/external_validity_2026-08/</code>.</li>
 <li>Withdrew four reviewer citations (one held) and the pre-August calibration figures; flagged <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> vs <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> as confounded.</li>

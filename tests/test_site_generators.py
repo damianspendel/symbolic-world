@@ -28,6 +28,7 @@ skipping: a page that is not on disk is not on the site either.
 
 Run: python3 -m pytest tests/test_site_generators.py
 """
+import glob
 import json
 import os
 import re
@@ -406,6 +407,29 @@ def test_release_entries_point_at_their_artifacts():
         assert f"<code>{path}</code>" in body, path
     for link in ("/ledger", "/families", "/ontology", "/query", "/v1.3/"):
         assert f'href="{link}"' in body, link
+
+
+def test_released_entries_state_their_own_figures():
+    """A released entry carries the figures its release shipped with, from
+    docs/releases/<tag>.json, not the live graph's: v2.0 once read as if it had
+    shipped with that day's counts."""
+    html = read(os.path.join(PUBLIC, "releases.html"))
+    entries = re.findall(r'<section class="rel-entry[^"]*">\s*<h2>(.*?)</h2>(.*?)</section>', html, re.S)
+    records = sorted(glob.glob(os.path.join(ROOT, "docs", "releases", "v*.json")))
+    assert records, "no release records"
+    for path in records:
+        with open(path, encoding="utf-8") as fh:
+            rec = json.load(fh)
+        major, minor, patch = re.match(r"v(\d+)\.(\d+)\.(\d+)$", rec["tag"]).groups()
+        short = f"v{major}.{minor}" + ("" if patch == "0" else f".{patch}")
+        body = next((b for h, b in entries if re.search(rf"\b({re.escape(rec['tag'])}|{re.escape(short)})\b", h)), None)
+        assert body is not None, f"no entry for {rec['tag']}"
+        text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", body))
+        t = rec["tokens"]
+        if "nodes" in t:
+            assert f"{t['nodes']} nodes, {t['edges']} relations, {t['refs']} references" in text, rec["tag"]
+        if "frozen_nodes" in t and "nodes" not in t:
+            assert str(t["frozen_nodes"]) in text, rec["tag"]
 
 
 def test_releases_are_ordered_newest_first():

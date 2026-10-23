@@ -11,7 +11,7 @@
 //   node → { id, label, type, tradition, latin, color, cluster, register, x, y }
 //   edge → { id, key, source, target, relation, relation_normalized, family,
 //            layer, kind, volumes, confidence, refs }
-import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
 import { familyMap, byKind } from './family-map.mjs'
 import { byVolume } from './query-semantics.mjs'
 
@@ -1372,17 +1372,54 @@ if (existsSync(releasesPath)) {
     frozen_refs: meta.frozen.references
   }
   derived(...Object.values(relTokens))
+  // A released entry states what that release shipped with, so its figures come
+  // from its own record in docs/releases/<tag>.json, never from the live graph:
+  // bound live, v2.0 had read as if it shipped with today's counts. The record
+  // is written once, at the freeze, with --write-release-record=<tag>. Only an
+  // entry still in preparation binds live, and an entry whose status says
+  // released without a record stops the build.
+  const recordArg = process.argv.find(a => a.startsWith('--write-release-record='))
+  if (recordArg) {
+    const tag = recordArg.split('=')[1]
+    if (!/^v\d+\.\d+\.\d+$/.test(tag)) { console.error(`RELEASE RECORD: '${tag}' is not a vX.Y.Z tag`); process.exit(1) }
+    const out = here(`../docs/releases/${tag}.json`)
+    if (existsSync(out)) { console.error(`RELEASE RECORD: ${tag} already has a record; a record is written once`); process.exit(1) }
+    mkdirSync(here('../docs/releases'), { recursive: true })
+    writeFileSync(out, JSON.stringify({ tag, written: new Date().toISOString().slice(0, 10),
+      computed_from: 'the working tree at the freeze, by web/build-atlas.mjs --write-release-record', tokens: relTokens }, null, 1) + '\n')
+    console.log(`release record: wrote docs/releases/${tag}.json`)
+  }
+  const tagOfHeading = (h) => {
+    const m = h.match(/^##\s+v(\d+)\.(\d+)(?:\.(\d+))?/)
+    return m ? `v${m[1]}.${m[2]}.${m[3] || 0}` : null
+  }
   // Item 30 — an HTML comment in this file is an editorial note for whoever
   // edits it, not copy for whoever reads the page. Stripped before anything
   // else looks at the text, so a note can sit anywhere in the file.
-  let relMd = readFileSync(releasesPath, 'utf8').replace(/<!--[\s\S]*?-->/g, '')
-  for (const [k, v] of Object.entries(relTokens)) relMd = relMd.split(`{{${k}}}`).join(String(v))
-  const relLeft = relMd.match(/\{\{(\w+)\}\}/)
-  if (relLeft) { console.error(`RELEASES PAGE: unbound token {{${relLeft[1]}}} in docs/RELEASES.md`); process.exit(1) }
+  const relSrc = readFileSync(releasesPath, 'utf8').replace(/<!--[\s\S]*?-->/g, '')
+  const [preamble, ...rawEntries] = relSrc.split(/\n(?=## )/).map((chunk, i) => {
+    if (i === 0) return chunk
+    const tag = tagOfHeading(chunk)
+    const recPath = tag && here(`../docs/releases/${tag}.json`)
+    let tokens = relTokens, source = 'live'
+    if (recPath && existsSync(recPath)) {
+      tokens = JSON.parse(readFileSync(recPath, 'utf8')).tokens; source = `docs/releases/${tag}.json`
+      derived(...Object.values(tokens))
+    } else if (/^status:\s*released/im.test(chunk)) {
+      console.error(`RELEASES PAGE: '${chunk.split('\n')[0]}' says released but has no docs/releases/${tag}.json. ` +
+        `A released entry binds from its own record; write it at the freeze with --write-release-record=${tag}.`)
+      process.exit(1)
+    }
+    let bound = chunk
+    for (const [k, v] of Object.entries(tokens)) bound = bound.split(`{{${k}}}`).join(String(v))
+    const left = bound.match(/\{\{(\w+)\}\}/)
+    if (left) { console.error(`RELEASES PAGE: unbound token {{${left[1]}}} in '${chunk.split('\n')[0]}' (bound from ${source})`); process.exit(1) }
+    console.log(`releases: ${tag || chunk.split('\n')[0]} bound from ${source}`)
+    return bound
+  })
 
   // one entry per "## " heading; `status:` and `pin:` are the two labelled
   // lines an entry opens with, and everything after a "### " is a section
-  const [preamble, ...rawEntries] = relMd.split(/\n(?=## )/)
   const entries = rawEntries.map(chunk => {
     const lines = chunk.split('\n')
     const heading = lines[0].replace(/^##\s+/, '')
