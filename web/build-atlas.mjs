@@ -2590,7 +2590,8 @@ table.findings .src { font: .58rem var(--mono); }
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
 <p>Readers of alchemy can use the <a href="/atlas#/concordance">concordance</a>, which sets Jung's psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
 <p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>. The original structure and metadata are open for reuse under CC BY 4.0, and the quotations stay with their rights holders.</p>
-<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.</p>`
+<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.</p>
+<p>In case of concerns, please contact <a href="mailto:damian.spendel@gmail.com">the author</a>.</p>`
     registerPage({
       slug: 'about', title: 'About', where: 'about', nav: 'about',
       changefreq: 'monthly', priority: '0.5',
