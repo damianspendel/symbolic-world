@@ -97,7 +97,7 @@ function emitPublicDataset(seed, meta) {
     _about: 'The Symbolic World — a verified knowledge graph of C. G. Jung\'s Collected Works. ' +
       'Every edge cites its CW volume and paragraph with a verbatim quote (max 25 words) and the ' +
       'verification provenance of a three-model chain (proposer, gate, cross-vendor auditor). ' +
-      'Method: https://symbolicworld.observer/#/method',
+      'Method: https://symbolicworld.observer/atlas#/method',
     _license: 'Data: CC BY 4.0. Quotes are brief excerpts from the Collected Works cited under fair use.',
     _version: meta.version,
     _generated: meta.built,
@@ -186,10 +186,10 @@ const rootBlock = () => ':root {\n' + cssVars(TOKENS) + '\n}\n' +
 // through the release entries that shipped them, and putting 57 of them behind
 // a menu item is what made the ledger unwieldy in the first place.
 const MENU = [
-  ['explore', [['/#/atlas', 'atlas'], ['/routes', 'routes'], ['/query', 'query'], ['/#/concordance', 'concordance']]],
+  ['explore', [['/atlas#/atlas', 'atlas'], ['/routes', 'routes'], ['/query', 'query'], ['/atlas#/concordance', 'concordance']]],
   ['reference', [['/concepts', 'concepts'], ['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
-  ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/nutshell', 'in a nutshell'], ['/#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
+  ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/nutshell', 'in a nutshell'], ['/atlas#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
@@ -931,7 +931,7 @@ function familiesPageCopy(map, version) {
   return `<div class="titleband"><p class="eyebrow">reference</p>
 <h1>Families</h1></div>
 
-<p>A family is an assigned classification over a verified relation: the <a href="/ontology">design</a> is on the design page, the <a href="/#/method">checks</a> on the method page.</p>
+<p>A family is an assigned classification over a verified relation: the <a href="/ontology">design</a> is on the design page, the <a href="/atlas#/method">checks</a> on the method page.</p>
 
 <h2>Where the layer stands</h2>
 <div class="tw"><table>
@@ -1197,7 +1197,9 @@ const gitCommit = (() => {
 // Pages already on the site, described here so the sitemap and the footer nav
 // can be generated whole rather than maintained in two places.
 const SITE_PAGES = [
-  { slug: '', title: 'The atlas', nav: 'the atlas', changefreq: 'daily', priority: '1.0' },
+  { slug: '', title: 'The Symbolic World', nav: 'home', changefreq: 'weekly', priority: '1.0' },
+  // the app itself, at /atlas since 2026-10-23 (web/atlas.html is the vite entry)
+  { slug: 'atlas', title: 'The atlas', nav: 'the atlas', changefreq: 'daily', priority: '0.9' },
   { slug: 'ledger', title: 'Ledger', nav: 'ledger', changefreq: 'daily', priority: '0.8' },
   { slug: 'families', title: 'Relation families', nav: 'families', changefreq: 'weekly', priority: '0.6' },
   { slug: 'disputes', title: 'Dispute log', nav: 'disputes', changefreq: 'weekly', priority: '0.5' }
@@ -1688,7 +1690,7 @@ if (EMIT_CONCEPT_PAGES) {
   // what the page is, no stronger claim anywhere below it
   const registerNote = 'Quotations are machine-verified against the source paragraph; ' +
     'relation families are assigned by a documented procedure. The ' +
-    '<a href="/#/method">method page</a> describes exactly what is and is not checked.'
+    '<a href="/atlas#/method">method page</a> describes exactly what is and is not checked.'
 
   const PENDING = '·pending', UNCLASSIFIED = '·unclassified'
   let conceptCount = 0
@@ -1770,7 +1772,7 @@ ${e.refs.length ? `<ul class="cites">\n${cites}\n</ul>` : ''}
 ${refTotal ? `<div class="vmix">\n${volStrip}\n</div>` : ''}
 ${order.length > 1 ? `<p class="chips">\n${chips}\n</p>` : ''}
 ${groupBlocks}
-<p class="meta"><a href="/#/n/${node.id}">open in the atlas</a> · <a href="/ledger">the ledger</a></p>`
+<p class="meta"><a href="/atlas#/n/${node.id}">open in the atlas</a> · <a href="/ledger">the ledger</a></p>`
 
     registerPage({
       slug: 'concept-' + node.id,
@@ -2549,9 +2551,9 @@ table.findings .src { font: .58rem var(--mono); }
 <p>The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
 <p>Analysts and trainees can look up where Jung treats a concept and follow it across volumes, with a citation ready to carry into their own work. The <a href="/query">query page</a> filters by volume, family and claim type, and it searches the words inside the quotes.</p>
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
-<p>Readers of alchemy can use the <a href="/#/concordance">concordance</a>, which sets Jung's psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
+<p>Readers of alchemy can use the <a href="/atlas#/concordance">concordance</a>, which sets Jung's psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
 <p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>, and the data is open for reuse under a CC BY licence.</p>
-<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/#/method">method page</a> sets out what the checks cover and what they leave out.</p>`
+<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.</p>`
     registerPage({
       slug: 'about', title: 'About', where: 'about', nav: 'about',
       changefreq: 'monthly', priority: '0.5',
@@ -2562,6 +2564,134 @@ table.findings .src { font: .58rem var(--mono); }
     console.log('about page: written')
   } else {
     console.log('about page: EMIT_ABOUT_PAGE is false — not registered')
+  }
+
+  // ------------------------------------------------ / (the landing) ---------
+  // The two pictures are screenshots of /atlas in each theme, taken by hand
+  // (2026-10-23); retake them when the atlas's look changes.
+  // The root is a page for a reader who has never seen the site (Damian,
+  // 2026-10-23): what the atlas is and for whom, four things to do, one real
+  // link with its citation, and the atlas as a destination. The app moved to
+  // /atlas with its intro untouched. A hash deep link that still arrives at
+  // the root is forwarded to /atlas by the first script in the head, so every
+  // /#/... link in circulation keeps working. The copy is the about page's
+  // first paragraph (final wording from the outreach review, 2026-10-22) and
+  // the four reader journeys that page describes, one card each.
+  {
+    const landingEdge = atlasEdges.find(e => e.key === 'lapis|is-projection-of|the-self' && e.refs.length)
+    if (!landingEdge) { console.error('LANDING PAGE: the figure edge lapis|is-projection-of|the-self is not in the graph — refusing to show a link that is not there.'); process.exit(1) }
+    const landingRef = landingEdge.refs.find(r => r.quote) || landingEdge.refs[0]
+    const lc = { nodes: derived(atlasNodes.length), edges: derived(atlasEdges.length), refs: derived(refCount) }
+    const voice = String(landingRef.claim_type || '').replace(/-/g, ' ')
+    const landingBody = `<section class="land-hero">
+<div class="titleband"><p class="eyebrow">The Symbolic World</p>
+<h1>An atlas of Jung's <em>Collected Works</em></h1></div>
+<p class="land-lead">The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
+</section>
+<section class="land-tasks">
+<p class="eyebrow">Start with a question</p>
+<div class="land-grid">
+<a class="land-card" href="/concepts"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span><span class="land-card-k">concepts</span></a>
+<a class="land-card" href="/query"><span class="land-card-t">Check a claim against the book</span><span class="land-card-d">Filter by volume, family and claim type, and search the words inside the quotes.</span><span class="land-card-k">query</span></a>
+<a class="land-card" href="/atlas#/concordance"><span class="land-card-t">Set Jung beside the alchemists</span><span class="land-card-d">See his psychological concepts next to the alchemical figures and operations he reads them through, with a citation for each pairing.</span><span class="land-card-k">concordance</span></a>
+<a class="land-card" href="/routes"><span class="land-card-t">Trace one idea to another</span><span class="land-card-d">See how one concept reaches another.</span><span class="land-card-k">routes</span></a>
+</div>
+</section>
+<section class="land-link">
+<div class="land-link-text">
+<p class="eyebrow">One example</p>
+<p class="land-claim ev"><span>${esc(nodeLabel(landingEdge.source))}</span> <em>${esc(landingEdge.relation)}</em> <span>${esc(nodeLabel(landingEdge.target))}</span></p>
+<p class="land-note">The atlas holds ${lc.refs} such links. Every one names its source paragraph, says whether Jung asserts the claim or reports it, and records who checked it.</p>
+</div>
+<blockquote class="land-quote ev"><p>&ldquo;${esc(landingRef.quote)}&rdquo;</p><p class="meta">CW ${esc(landingRef.volume)} &sect;${esc(landingRef.paragraph)}${voice ? ' &middot; ' + esc(voice) : ''}${landingRef.verified_by ? ' &middot; verified by ' + esc(landingRef.verified_by) : ''}</p></blockquote>
+</section>
+<section class="land-atlas">
+<a class="land-atlas-fig" href="/atlas"><img class="land-img-night" src="/atlas-preview-night.jpg" alt="The atlas: every concept drawn as a point on one map, coloured by its kind, with the links between them" width="747" height="720"><img class="land-img-day" src="/atlas-preview-day.jpg" alt="" width="747" height="720"></a>
+<div class="land-atlas-text">
+<p class="eyebrow">Or see the whole</p>
+<h2>The atlas</h2>
+<p>Every concept, figure, operation and substance on one map, with the links between them referenced by the paragraphs that justify them. It opens with a summary written from the graph itself.</p>
+<a class="land-cta" href="/atlas">Open the atlas &darr;</a>
+</div>
+</section>
+<footer class="land-foot">
+<span>${lc.nodes} symbols &middot; ${lc.edges} relations &middot; ${lc.refs} cited claims</span>
+<span>updated ${esc(meta.built)}</span>
+<span>open data, CC BY</span>
+<a href="/method">the method</a><a href="/disputes">disputes log</a>${SUPPORT_URL ? '<a href="/support">support the project</a>' : ''}
+</footer>`
+    const landingStyle = `
+.page-main.landing { padding-top: 2.4rem; }
+.page-main.landing > * { max-width: none; }
+.land-hero { margin-bottom: 3rem; }
+.land-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin: .4rem 0 0; }
+.land-lead { margin-top: 1.2rem; }
+.land-hero h1 em { font-style: italic; color: var(--gold); }
+.land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
+.land-tasks { margin-bottom: 3.5rem; }
+.land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+.land-card { display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
+.land-card:hover, .land-card:focus-visible { border-color: var(--gold-dim); }
+.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
+.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
+.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.land-link { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: flex-start; padding: 2.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin-bottom: 3.5rem; }
+.land-link-text { flex: 1 1 22rem; min-width: 0; }
+.land-claim { font-family: var(--display); font-size: 1.7rem; line-height: 1.25; margin: .5rem 0 .8rem; max-width: none; }
+.land-claim em { font-style: normal; color: var(--gold); }
+.land-note { font-size: .95rem; line-height: 1.55; color: var(--ink-faint); }
+.land-quote { flex: 1 1 22rem; min-width: 0; margin: 0; padding: 1.3rem 1.5rem; border-left: 2px solid var(--gold); background: var(--well); }
+.land-quote p { font-family: var(--display); font-size: 1.2rem; line-height: 1.5; max-width: none; }
+.land-quote .meta { margin-top: .8rem; font: .62rem/1.7 var(--mono); }
+.land-atlas { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: center; margin-bottom: 3rem; }
+.land-atlas-fig { flex: 1 1 24rem; min-width: 0; display: block; border: 1px solid var(--hairline); border-radius: 8px; overflow: hidden; background: var(--ground); }
+.land-atlas-fig img { display: block; width: 100%; height: auto; }
+/* the picture follows the theme: night by default, day under data-theme=day */
+.land-atlas-fig .land-img-day { display: none; }
+[data-theme="day"] .land-atlas-fig .land-img-day { display: block; }
+[data-theme="day"] .land-atlas-fig .land-img-night { display: none; }
+.land-atlas-text { flex: 1 1 18rem; min-width: 0; }
+.land-atlas-text h2 { font-size: 1.9rem; margin: .4rem 0 .8rem; }
+.land-atlas-text p { color: var(--ink-faint); font-size: .95rem; line-height: 1.55; }
+.land-cta { display: inline-flex; align-items: center; min-height: 44px; margin-top: 1rem; padding: 0 1.4rem; border: 1px solid var(--gold); border-radius: 999px; font: .7rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+.land-cta:hover, .land-cta:focus-visible { background: var(--gold); color: var(--ground); }
+.land-foot { display: flex; flex-wrap: wrap; gap: .5rem 1.8rem; padding-top: 1.2rem; border-top: 1px solid var(--hairline); font: .64rem/1.7 var(--mono); color: var(--ink-dim); }
+.land-foot a { color: var(--ink-faint); text-decoration: none; }
+.land-foot a:hover { color: var(--gold); }
+`
+    // Forward a hash route to the app: on load, and on a hash change too, since a
+    // click on an old /#/... link from this page changes the hash without a load.
+    const landingHead = `<script>(function(){var f=function(){if(/^#\\//.test(location.hash))location.replace('/atlas'+location.hash)};f();addEventListener('hashchange',f)})()</script>
+<meta property="og:title" content="The Symbolic World — a verified atlas of Jung's Collected Works">
+<meta property="og:description" content="Every claim cites its exact CW volume and paragraph, with Jung's verbatim words. Explore the graph, the Concordance, and the public dispute log.">
+<meta property="og:url" content="https://symbolicworld.observer/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Symbolic World">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Symbolic World — a verified atlas of Jung's Collected Works">
+<meta name="twitter:description" content="Every claim cites its exact CW volume and paragraph, with Jung's verbatim words.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "The Symbolic World — a verified knowledge graph of C. G. Jung's Collected Works",
+  "description": "A knowledge graph of symbolic relations in Jung's Collected Works. Each relation carries a citation with CW volume, paragraph number, and a brief verbatim quotation, plus the verification provenance of a multi-model gating pipeline with a public dispute log. The graph grows as further volumes are mined.",
+  "url": "https://symbolicworld.observer/",
+  "sameAs": "https://doi.org/10.5281/zenodo.21631523",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": { "@type": "Person", "name": "Damian Spendel" },
+  "keywords": ["Carl Jung", "Collected Works", "knowledge graph", "alchemy", "archetypes", "depth psychology", "verified citations", "digital humanities"],
+  "distribution": { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://symbolicworld.observer/graph.json" }
+}
+</script>`
+    writeFileSync(here('./public/index.html'), renderPage({
+      slug: '', title: "An atlas of Jung's Collected Works", where: 'home', kind: 'prose landing',
+      description: "A verified knowledge graph of C. G. Jung's Collected Works. Every symbolic relation, from the stone to the anima, cites its exact volume and paragraph with Jung's verbatim words. Method, dispute log and dataset all public.",
+      head: landingHead, style: landingStyle, body: landingBody
+    }))
+    V2_COPY.push(['public/index.html (generated)', stripEvidence(landingBody)])
+    console.log('landing page: written to / (the app is at /atlas)')
   }
 
   // ------------------------------------------------ /support ----------------
@@ -2595,7 +2725,7 @@ table.findings .src { font: .58rem var(--mono); }
 
   // ------------------------------------------------ /nutshell --------------
   // The method poster on its own page (Damian, 2026-08-28: an additional menu
-  // item, NOT a replacement for /#/method). The page is one figure; the poster
+  // item, NOT a replacement for /atlas#/method). The page is one figure; the poster
   // follows the same lapis edge the method page's claim figure draws, so the
   // guard above (which exits the build if that edge leaves the graph) protects
   // this page too. The numbers in the image are pixels: they are re-verified
@@ -2604,7 +2734,7 @@ table.findings .src { font: .58rem var(--mono); }
   const nutshellBody = `<div class="titleband"><p class="eyebrow">about</p>
 <h1>In a nutshell</h1>
 <p class="sub">A one-pager on how the atlas was constructed: one citation
-followed from the map through the checks it passed. The full explanation is on the <a href="/#/method">method</a>
+followed from the map through the checks it passed. The full explanation is on the <a href="/atlas#/method">method</a>
 page.</p></div>
 <figure class="fig fig-poster">
   <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
@@ -2639,7 +2769,7 @@ ${SUPPORT_URL ? `<p class="meta">The atlas, the dataset and the ledger are free.
 // The indexable twin of the SPA's #/method view: the same methodHTML the view
 // reads from web/src/method.json, under the shared page shell, with a
 // description and an extensionless canonical. The SPA route stays; the menu is
-// unchanged (nav: null — the about group already points at /#/method). The
+// unchanged (nav: null — the about group already points at /atlas#/method). The
 // figure styling is the view's own, carried from web/src/style.css so the two
 // surfaces draw the same figures.
 // Frozen measured results quoted in the method copy, with the sources the copy
@@ -2708,7 +2838,7 @@ ${methodHTML}
     style: methodStyle, body: methodBody
   })
   V2_COPY.push(['public/method.html (generated from docs/METHOD_COPY.md)', stripEvidence(methodBody), METHOD_CONSTANTS])
-  console.log('method page: static twin of /#/method written to /method')
+  console.log('method page: static twin of /atlas#/method written to /method')
 }
 
 // ------------------------------------------------ the pages are written ----
@@ -2772,7 +2902,7 @@ const copySources = [
   // prohibition). BACKLOG item 3's checklist binds this copy, so it is scanned
   // like any other page we write.
   ['public/families.html (generated exposition)', famPageCopy],
-  ['index.html', readFileSync(here('./index.html'), 'utf8')
+  ['atlas.html', readFileSync(here('./atlas.html'), 'utf8')
     .replace(/<style[\s\S]*?<\/style>/g, '').replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<[^>]+>/g, ' ')],
   ['src/main.js', readFileSync(here('./src/main.js'), 'utf8')],

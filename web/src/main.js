@@ -980,9 +980,9 @@ function wireLocalFilter(rootEl, apply) {
 // none, so concordance, method, families and the queue never lit gold. Marked
 // here, at the one place every route passes through, rather than in each view.
 const MENU_HREF = {
-  '#/atlas': '/#/atlas',
-  '#/concordance': '/#/concordance',
-  '#/method': '/#/method',
+  '#/atlas': '/atlas#/atlas',
+  '#/concordance': '/atlas#/concordance',
+  '#/method': '/atlas#/method',
   '#/families': '/families',
   '#/queue': '/families'        // R10.5 — the queue is a section of families
 }
@@ -1156,7 +1156,7 @@ $('open-method')?.addEventListener('click', openMethod)
 const C = META.counts, F = META.frozen
 $('version').textContent = `${META.version} · ${C.nodes}/${C.edges}/${C.references} · updated ${META.built}`
 $('version').title = `${META.version}, built ${META.built} — ${C.nodes} nodes, ${C.edges} relations, ${C.references} references. The paper describes ${F.version} (${F.nodes}/${F.edges}/${F.references}), preserved at ${F.url}`
-$('landing-counts').textContent = `${C.nodes} symbols · ${C.edges} relations · ${C.references} cited claims · ${META.version}`
+$('landing-counts').textContent = `${C.nodes} symbols · ${C.edges} relations · ${C.references} cited claims · ${VOLS.length} volumes · updated ${META.built}`
 // (about panel removed)
 
 function updateStats() {
@@ -1188,11 +1188,12 @@ function buildSummary() {
     if (!live.length) { broken.push({ i, c }); return `<span class="clause broken" title="This clause cites no live edge — the graph has moved under the summary.">${esc(c.text)}</span> ` }
     return `<span class="clause" data-clause="${i}" title="Click to light the evidence behind this clause">${esc(c.text)}</span> `
   }).join('')
-  box.innerHTML = `<div class="sum-label">Written from the graph${summary.method ? ` — <a href="${esc(summary.method_url || '#')}">${esc(summary.method.split('—')[0].trim())}</a>` : ''}. Every clause is a citation: click one.</div>
-    <div class="sum-body">${html}</div>
+  // 2026-10-23: the summary leads the page, so its provenance sits under it in
+  // one line and the label above it is gone.
+  box.innerHTML = `<div class="sum-body">${html}</div>
     ${summary.placeholder
       ? `<div class="sum-placeholder">PLACEHOLDER SUMMARY — wired to real edges so the mechanism can be tested. The generated hundred words are produced through the verification chain and replace this file wholesale.</div>`
-      : `<div class="sum-verified">Summary written and checked${summary.generated_date ? ` ${esc(summary.generated_date)}` : ''}${broken.length ? '' : ` · its ${summary.clauses.length} clauses still resolve in the current graph`}</div>`}
+      : `<div class="sum-verified">${summary.method_url ? `<a href="${esc(summary.method_url)}">Written from the graph</a>` : 'Written from the graph'}${summary.generated_date ? `, checked ${esc(summary.generated_date)}` : ''}${broken.length ? '' : `, its ${summary.clauses.length} clauses still resolve`}. Click a clause to light its evidence.</div>`}
     ${broken.length ? `<div class="clause-error">BROKEN: ${broken.length} clause${broken.length > 1 ? 's' : ''} cite${broken.length > 1 ? '' : 's'} edges that are not in this graph (${esc(broken.map(b => clauseRefs(b.c).join(', ')).join(' | '))}). The summary is stale and must be regenerated before publication.</div>` : ''}`
   box.querySelectorAll('.clause[data-clause]').forEach(el => el.addEventListener('click', () => {
     const i = Number(el.dataset.clause)
@@ -1570,7 +1571,7 @@ function applyHash() {
 window.addEventListener('hashchange', applyHash)
 
 // Item 14 — the menu's hash destinations are routes, not documents. Their hrefs
-// are absolute (`/#/atlas`) because a generated page must be able to load the
+// are absolute (`/atlas#/atlas`) because a generated page must be able to load the
 // app; inside the app that same href is a different PATH whenever the app is not
 // served from exactly `/`, so the browser reloaded the document and the graph
 // came back re-laid-out with the selection gone. Delegated on the document, so
@@ -1580,7 +1581,8 @@ document.addEventListener('click', ev => {
   const link = ev.target.closest && ev.target.closest('.topmenu a, .brand[href]')
   if (!link || ev.defaultPrevented || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button) return
   const href = link.getAttribute('href') || ''
-  const route = href.match(/^\/?(#\/.*)$/)
+  // the app is served at /atlas (2026-10-23): a menu href carries that path
+  const route = href.match(/^(?:\/atlas)?\/?(#\/.*)$/)
   if (!route) return                       // a real page: let the browser go
   ev.preventDefault()
   // Item 16 — route in THIS task. Assigning location.hash defers the route to

@@ -7,34 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Symbolic World — an atlas of Jung</title>
     <meta name="description" content="A verified knowledge graph of C. G. Jung's Collected Works. Every symbolic relation, from the stone to the anima, cites its exact volume and paragraph with Jung's verbatim words. Method, dispute log and dataset all public." />
-    <link rel="canonical" href="https://symbolicworld.observer/" />
+    <link rel="canonical" href="https://symbolicworld.observer/atlas" />
     <meta property="og:title" content="The Symbolic World — a verified atlas of Jung's Collected Works" />
     <meta property="og:description" content="Every claim cites its exact CW volume and paragraph, with Jung's verbatim words. Explore the graph, the Concordance, and the public dispute log." />
-    <meta property="og:url" content="https://symbolicworld.observer/" />
+    <meta property="og:url" content="https://symbolicworld.observer/atlas" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="The Symbolic World" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="The Symbolic World — a verified atlas of Jung's Collected Works" />
     <meta name="twitter:description" content="Every claim cites its exact CW volume and paragraph, with Jung's verbatim words." />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dataset",
-      "name": "The Symbolic World — a verified knowledge graph of C. G. Jung's Collected Works",
-      "description": "A knowledge graph of symbolic relations in Jung's Collected Works. Each relation carries a citation with CW volume, paragraph number, and a brief verbatim quotation, plus the verification provenance of a multi-model gating pipeline with a public dispute log. The graph grows as further volumes are mined.",
-      "url": "https://symbolicworld.observer/",
-      "sameAs": "https://doi.org/10.5281/zenodo.21631523",
-      "isAccessibleForFree": true,
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "creator": { "@type": "Person", "name": "Damian Spendel" },
-      "keywords": ["Carl Jung", "Collected Works", "knowledge graph", "alchemy", "archetypes", "depth psychology", "verified citations", "digital humanities"],
-      "distribution": {
-        "@type": "DataDownload",
-        "encodingFormat": "application/json",
-        "contentUrl": "https://symbolicworld.observer/graph.json"
-      }
-    }
-    </script>
     <!-- Critical landing styles, inlined so the first frame paints before the
          module script runs. R0.6: something must be on screen inside 500 ms. -->
     <style>
@@ -68,16 +49,18 @@
     <!-- Painted from static HTML, replaced by #overlay as soon as the app boots. -->
     <div id="boot">
       <div class="k">The Symbolic World</div>
-      <h1>An atlas of<br />Jung's <em>Collected Works</em></h1>
+      <div class="k">the atlas</div>
     </div>
 
-    <!-- R0.1 — the landing is the atlas at a different zoom. No enter button.
-         R9.1 — above the fold: title, the summary, the v1.3 routing, the counts.
-         Everything else waits below. -->
+    <!-- The app lives at /atlas since 2026-10-23; the root is a static landing
+         page written by build-atlas.mjs. Nothing below changed in that move.
+         R0.1 — the landing is the atlas at a different zoom. No enter button.
+         R9.1 — above the fold: the summary, then the counts. The title lives on
+         the root page since 2026-10-23 (Damian): here the summary leads. -->
     <div id="overlay" hidden>
       <div id="prose">
         <div class="hero-eyebrow">The Symbolic World</div>
-        <h1>An atlas of<br />Jung's <em>Collected Works</em></h1>
+        <div class="hero-where">the atlas</div>
 
         <div id="summary"></div>
 
@@ -86,17 +69,8 @@
                 title="Open the atlas (↵, ↓ or scroll)">scroll into the atlas</button>
       </div>
 
-      <!-- R9.1 — below the fold. -->
-      <div id="prose-more">
-        <p class="method-claim">
-          The model that proposes a claim is never the model that signs it off.
-        </p>
-        <p class="lede">
-          Every link on this map is anchored to one paragraph of the <em>Collected
-          Works</em>, checked against the source before inclusion, and then cited
-          verbatim.
-        </p>
-      </div>
+      <!-- R9.1 — below the fold there is nothing now: the method claim and the
+           citation lede moved to the root page (2026-10-23). -->
       <div id="spacer"></div>
     </div>
 
@@ -129,7 +103,7 @@
            navigation links were removed when this menu arrived, and what
            remains beside it are app controls, not destinations. The in-app
            queue keeps its entry inside the families view. -->
-      <nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/#/atlas" aria-current="page">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav>
+      <nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/atlas#/atlas" aria-current="page">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/atlas#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/atlas#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav>
       </div>
       <div class="hrow hrow-2">
         <span id="version"></span>

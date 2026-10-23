@@ -103,7 +103,9 @@ def test_every_generated_page_carries_its_extensionless_canonical():
         assert url.startswith("https://symbolicworld.observer/"), url
         slug = url[len("https://symbolicworld.observer/"):]
         assert not slug.endswith(".html"), f"{name}: canonical points at a .html path"
-        assert slug == name, f"{name}: canonical is /{slug}"
+        # the landing page is index.html and its canonical is the root
+        expected = "" if name == "index" else name
+        assert slug == expected, f"{name}: canonical is /{slug}"
 
 
 def test_no_generated_page_links_to_an_internal_html_path():
@@ -123,9 +125,11 @@ def test_sitemap_lists_every_generated_page_and_nothing_missing(sitemap):
     listed = set(re.findall(r"<loc>https://symbolicworld\.observer/([^<]*)</loc>", sitemap))
     for path in generated_pages():
         name = os.path.basename(path)[: -len(".html")]
-        assert name in listed, f"/{name} is generated but not in the sitemap"
+        expected = "" if name == "index" else name
+        assert expected in listed, f"/{name} is generated but not in the sitemap"
     for slug in listed:
-        if slug in ("", "v1.3/", "graph.json"):
+        # /atlas is the vite entry (web/atlas.html), built into dist, not public
+        if slug in ("", "atlas", "v1.3/", "graph.json"):
             continue
         assert os.path.exists(os.path.join(PUBLIC, slug + ".html")), \
             f"/{slug} is in the sitemap with no page behind it"
@@ -311,7 +315,7 @@ def test_the_families_page_is_reference_not_method():
         assert kept in exposition, f"reference content went missing: {kept}"
     # one header sentence, carrying both pointers
     assert '<a href="/ontology">design</a>' in exposition
-    assert '<a href="/#/method">checks</a>' in exposition
+    assert '<a href="/atlas#/method">checks</a>' in exposition
     # and the page is now a fraction of what it was: the copy above the
     # document's rule ran to about 3,000 words before the redistribution.
     # The string->family map grows with the graph and is data, not copy, so
@@ -654,12 +658,12 @@ def menu_shape(html):
 
 
 EXPECTED_MENU = [
-    ("explore", [("/#/atlas", "atlas"), ("/routes", "routes"),
-                 ("/query", "query"), ("/#/concordance", "concordance")]),
+    ("explore", [("/atlas#/atlas", "atlas"), ("/routes", "routes"),
+                 ("/query", "query"), ("/atlas#/concordance", "concordance")]),
     ("reference", [("/concepts", "concepts"), ("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
-    ("about", [("/about", "about"), ("/nutshell", "in a nutshell"), ("/#/method", "method"),
+    ("about", [("/about", "about"), ("/nutshell", "in a nutshell"), ("/atlas#/method", "method"),
                ("/ontology", "design"), ("/support", "support")]),
 ]
 
@@ -677,7 +681,7 @@ def test_every_generated_page_carries_the_same_menu():
 
 
 def test_the_app_carries_the_same_menu_as_the_generated_pages():
-    app = menu_items(read(os.path.join(ROOT, "web", "index.html")))
+    app = menu_items(read(os.path.join(ROOT, "web", "atlas.html")))
     page = menu_items(read(os.path.join(PUBLIC, "releases.html")))
     assert app == page
 
@@ -685,7 +689,7 @@ def test_the_app_carries_the_same_menu_as_the_generated_pages():
 def test_the_menu_carries_the_ruled_taxonomy_everywhere():
     """Same groups, same items, same order — on every generated page and in the
     app. The group labels are signposts, so they are part of the contract."""
-    pages = [p for p in generated_pages()] + [os.path.join(ROOT, "web", "index.html")]
+    pages = [p for p in generated_pages()] + [os.path.join(ROOT, "web", "atlas.html")]
     for path in pages:
         shape = [(group, list(items)) for group, items in menu_shape(read(path))]
         assert shape == [(g, list(i)) for g, i in EXPECTED_MENU], os.path.basename(path)
@@ -694,7 +698,7 @@ def test_the_menu_carries_the_ruled_taxonomy_everywhere():
 def test_the_app_toolbar_holds_no_second_navigation():
     """Item 10: one menu, once. Every destination appears in index.html exactly
     once, and the toolbar keeps controls only — search, fit, reset, counts."""
-    html = read(os.path.join(ROOT, "web", "index.html"))
+    html = read(os.path.join(ROOT, "web", "atlas.html"))
     for _group, items in EXPECTED_MENU:
         for href, _label in items:
             assert html.count(f'href="{href}"') == 1, href
@@ -944,7 +948,7 @@ def test_the_second_header_row_is_a_reserved_constant_height():
     for path in generated_pages():
         header = re.search(HEADER_RE, read(path)).group(0)
         assert 'class="hrow hrow-2"' in header, os.path.basename(path)
-    index = read(os.path.join(ROOT, "web", "index.html"))
+    index = read(os.path.join(ROOT, "web", "atlas.html"))
     assert 'class="hrow hrow-2"' in index
 
 
@@ -1111,7 +1115,7 @@ def test_the_panel_layer_is_raised_by_the_route_not_by_the_render():
         if "inset" in block:
             assert re.search(r"inset:\s*0", block), f"the layer insets somewhere: {block.strip()}"
 
-    index = read(os.path.join(ROOT, "web", "index.html"))
+    index = read(os.path.join(ROOT, "web", "atlas.html"))
     assert "route-panel" in index, "index.html does not raise the layer before paint"
     boot = re.search(r"<script>(.*?)</script>", index, re.S).group(1)
     assert "method|concordance|families|queue" in boot, boot[:200]
@@ -1191,7 +1195,7 @@ def test_the_dot_legend_matches_its_tooltips_and_appears_once():
     for _cls, text in phrases:
         assert js.count(text) == 1, f"{text} is written {js.count(text)} times"
 
-    bundle = os.path.join(ROOT, "web", "dist", "index.html")
+    bundle = os.path.join(ROOT, "web", "dist", "atlas.html")
     if os.path.exists(bundle):
         built = read(bundle)
         for _cls, text in phrases:
@@ -1216,7 +1220,7 @@ def test_the_method_page_uses_the_legend_vocabulary():
 def test_the_graph_search_renders_on_the_atlas_view_only():
     """Item 25 (editorial ruling, 2026-08-14) — the graph search acts on the
     atlas canvas, so it renders where that canvas is and nowhere else."""
-    index = read(os.path.join(ROOT, "web", "index.html"))
+    index = read(os.path.join(ROOT, "web", "atlas.html"))
     tools = re.search(r'<span class="hdr-tools">(.*?)</span>\s*</div>', index, re.S).group(1)
     assert 'id="search"' in tools, "the atlas view lost the graph search"
 
@@ -1254,7 +1258,7 @@ def test_the_header_slot_carries_only_site_wide_search():
     # the app's graph-wide search stays in the cluster, in both surfaces
     js = app_js()
     assert '<span class="hdr-tools">${tools}</span>' in js
-    index = read(os.path.join(ROOT, "web", "index.html"))
+    index = read(os.path.join(ROOT, "web", "atlas.html"))
     tools_block = re.search(r'<span class="hdr-tools">(.*?)</span>\s*</div>', index, re.S).group(1)
     assert 'id="search"' in tools_block, "the app's search left the shared cluster"
 
@@ -1347,7 +1351,7 @@ def test_the_header_has_the_same_structural_order_everywhere():
 
 
 def test_the_app_header_matches_that_structure():
-    html = read(os.path.join(ROOT, "web", "index.html"))
+    html = read(os.path.join(ROOT, "web", "atlas.html"))
     body, _ = header_shape(html)
     assert body.index('id="brand"') < body.index('class="topmenu"')
     # nothing but the brand block sits between the row and the menu: anything
@@ -1590,7 +1594,7 @@ def test_the_deploy_carries_a_size_budget():
     ceiling = re.search(r"INDEX_CEILING = ([\d.]+) \* 1024 \* 1024", src)
     assert ceiling and float(ceiling.group(1)) == 3.5, "the ceiling moved without a ruling"
     assert "within budget" in src and "ceiling" in src
-    dist_index = os.path.join(ROOT, "web", "dist", "index.html")
+    dist_index = os.path.join(ROOT, "web", "dist", "atlas.html")
     if os.path.exists(dist_index):
         assert os.path.getsize(dist_index) <= 3.5 * 1024 * 1024, (
             "the built bundle already exceeds the ceiling")

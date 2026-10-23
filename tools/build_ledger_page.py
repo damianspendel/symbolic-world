@@ -51,13 +51,13 @@ def esc(s):
 # deliberately not a menu item — they are reached from the ledger's facet links
 # and from the release entries that shipped them.
 MENU = [
-    ("explore", [("/#/atlas", "atlas"), ("/routes", "routes"),
-                 ("/query", "query"), ("/#/concordance", "concordance")]),
+    ("explore", [("/atlas#/atlas", "atlas"), ("/routes", "routes"),
+                 ("/query", "query"), ("/atlas#/concordance", "concordance")]),
     ("reference", [("/concepts", "concepts"), ("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
     ("about", ([("/about", "about")] if EMIT_ABOUT_PAGE else [])
-              + [("/nutshell", "in a nutshell"), ("/#/method", "method"),
+              + [("/nutshell", "in a nutshell"), ("/atlas#/method", "method"),
                  ("/ontology", "design")]
               + ([("/support", "support")] if SUPPORT_URL else [])),
 ]

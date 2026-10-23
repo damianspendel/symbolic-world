@@ -17,6 +17,8 @@ V13_BASELINE = '7b48c26b350cf3956fce568de3a948a4'
 # Exact allowlist of what may ship. Directories mean "this subtree".
 ALLOW = {
     'index.html', 'ledger.html', 'disputes.html', 'families.html',
+    # the app at /atlas (2026-10-23) and the landing page's picture of it
+    'atlas.html', 'atlas-preview-day.jpg', 'atlas-preview-night.jpg',
     'james.html', 'chrome.css',
     'graph.json', 'pages.json', 'confirmations.json', 'disputes.json',
     'validations.json', 'robots.txt', 'sitemap.xml',
@@ -224,13 +226,14 @@ else:
 # actual against it either way so the trend is visible in the log.
 print('== size budget ==')
 INDEX_CEILING = 3.5 * 1024 * 1024   # raised from 3.0 by Damian's ruling, 2026-10-20 (CW 11 growth)
-idx_path = DIST / 'index.html'
+# the single-file app is dist/atlas.html since 2026-10-23; dist/index.html is the landing page
+idx_path = DIST / 'atlas.html'
 if idx_path.exists():
     actual = idx_path.stat().st_size
-    check(f'dist/index.html within budget', actual <= INDEX_CEILING,
+    check(f'dist/atlas.html within budget', actual <= INDEX_CEILING,
           f'{actual / 1024 / 1024:.2f} MB against a {INDEX_CEILING / 1024 / 1024:.1f} MB ceiling')
 else:
-    check('dist/index.html present', False, 'missing from dist')
+    check('dist/atlas.html present', False, 'missing from dist')
 
 print('== frozen snapshot ==')
 h = hashlib.md5()

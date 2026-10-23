@@ -40,13 +40,9 @@ body.atlas #overlay { pointer-events: none; opacity: 0; visibility: hidden; }
   padding: 6vh clamp(1.5rem, 5vw, 4rem) 6vh;
   max-width: min(46rem, 58vw);
 }
-#prose-more {
-  padding: 0 clamp(1.5rem, 5vw, 4rem) 8vh;
-  max-width: min(46rem, 58vw);
-}
 #spacer { height: 70vh; }
 @media (max-width: 900px) {
-  #prose, #prose-more { max-width: none; }
+  #prose { max-width: none; }
 }
 
 /* Item 15 — the landing HERO's eyebrow, which is a different kind of thing from
@@ -55,37 +51,21 @@ body.atlas #overlay { pointer-events: none; opacity: 0; visibility: hidden; }
    thing everywhere else. */
 .hero-eyebrow {
   font: 0.62rem var(--mono); letter-spacing: 0.32em; text-transform: uppercase;
-  color: var(--gold-dim); margin-bottom: 1.1rem;
+  color: var(--gold-dim); margin-bottom: 0.4rem;
 }
-#prose h1 {
-  font-family: var(--display);
-  font-size: clamp(2.4rem, 6vw, 4.1rem); font-weight: 500;
-  letter-spacing: -0.018em; line-height: 1.04; color: var(--ink);
-  text-shadow: 0 1px 0 var(--ground);
-  margin-bottom: 1.1rem;
-}
-#prose h1 em { font-style: italic; color: var(--gold); }
-.lede {
-  font-size: clamp(1.02rem, 1.7vw, 1.22rem); line-height: 1.62;
-  color: var(--ink); max-width: 34em; margin-bottom: 1.6rem;
-}
-.method-claim {
-  font-family: var(--display); font-size: clamp(1.05rem, 2vw, 1.35rem);
-  font-style: italic; line-height: 1.5; color: var(--gold);
-  border-left: 2px solid var(--gold-dim); padding-left: 1.1rem;
-  max-width: 30em; margin: 0 0 1.8rem;
+/* 2026-10-23 — the page's name, under the eyebrow, where the title used to be.
+   The title itself lives on the root page now. */
+.hero-where {
+  font: 0.62rem var(--mono); letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ink-dim); margin-bottom: 1.6rem;
 }
 
-/* the hundred-word summary (R2) */
+/* the hundred-word summary (R2) — it leads the page since 2026-10-23, one size up */
 #summary { max-width: 36em; margin-bottom: 1.5rem; }
-.sum-label {
-  font: 0.58rem var(--mono); letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--ink-dim); margin-bottom: 0.6rem;
-}
-.sum-label a { color: var(--ink-faint); }
 .sum-body {
   font-family: var(--display);
-  font-size: clamp(1.12rem, 2.1vw, 1.5rem); line-height: 1.66; color: var(--ink);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem); line-height: 1.6; color: var(--ink);
+  text-shadow: 0 1px 0 var(--ground);
 }
 .clause {
   cursor: pointer; border-bottom: 1px solid transparent;
@@ -737,11 +717,9 @@ body.atlas #about-open { opacity: 1; pointer-events: auto; }
   .work.narrow .wl { display: none; }
 
   /* the landing: keep the narration the widest thing on the page */
-  #prose h1 { font-size: clamp(1.9rem, 9vw, 2.6rem); }
-  .sum-body { font-size: 1.06rem; line-height: 1.6; }
-  .sum-label, .sum-verified { letter-spacing: 0.06em; font-size: 0.55rem; line-height: 1.5; }
+  .sum-body { font-size: 1.2rem; line-height: 1.55; }
+  .sum-verified { letter-spacing: 0.06em; font-size: 0.55rem; line-height: 1.5; }
   .landing-counts { font-size: 0.58rem; letter-spacing: 0.04em; line-height: 1.6; }
-  .method-claim { font-size: 1.05rem; }
 
   /* panels sit above the works bar and never exceed the viewport */
   #panel, #family-panel { height: 58%; bottom: 3.6rem; max-height: calc(100vh - 7.5rem); }
