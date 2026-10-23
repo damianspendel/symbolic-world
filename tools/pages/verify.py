@@ -16,9 +16,23 @@ import urllib.request
 # bare `window.__CF$cv$params={...}` assignment — responses carry either, at
 # Cloudflare's whim, so both must normalize away.
 CF_INJECT = re.compile(rb'<script>(?:\(function\(\)\{.{0,4000}?|window\.)__CF\$cv\$params.*?</script>', re.S)
+# Cloudflare Email Address Obfuscation (zone feature; first seen 2026-10-23, on
+# the /about contact link) rewrites each mailto href to an encoded
+# /cdn-cgi/l/email-protection#<hex> link and injects its decoder script. The
+# hex is the address XORed with its first byte, with a fresh key per response,
+# so it is decoded back to the mailto rather than stripped: the check still
+# proves the right address is live.
+CF_EMAIL_HREF = re.compile(rb'href="/cdn-cgi/l/email-protection#([0-9a-f]+)"')
+CF_EMAIL_DECODER = re.compile(rb'<script data-cfasync="false" src="/cdn-cgi/scripts/[^"]+/cloudflare-static/email-decode\.min\.js"></script>')
+
+
+def _cf_email(m):
+    h = bytes.fromhex(m.group(1).decode())
+    return b'href="mailto:' + bytes(c ^ h[0] for c in h[1:]) + b'"'
 
 
 def normalize(body: bytes) -> bytes:
+    body = CF_EMAIL_DECODER.sub(b'', CF_EMAIL_HREF.sub(_cf_email, body))
     return CF_INJECT.sub(b'', body)
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
