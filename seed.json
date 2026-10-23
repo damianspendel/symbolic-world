@@ -3452,6 +3452,41 @@
    "id": "psychotherapy",
    "label": "Psychotherapy",
    "type": "Operation"
+  },
+  {
+   "id": "shri-ramana",
+   "label": "Shri Ramana Maharshi",
+   "type": "Figure"
+  },
+  {
+   "id": "holy-man",
+   "label": "The holy man (Indian rishi type)",
+   "type": "Figure"
+  },
+  {
+   "id": "richard-wilhelm",
+   "label": "Richard Wilhelm",
+   "type": "Figure"
+  },
+  {
+   "id": "hexagram",
+   "label": "Hexagram (I Ching)",
+   "type": "Symbol"
+  },
+  {
+   "id": "ting-the-cauldron",
+   "label": "Ting, The Cauldron (hexagram 50)",
+   "type": "Symbol"
+  },
+  {
+   "id": "kan-the-abysmal",
+   "label": "K'an, The Abysmal (hexagram 29)",
+   "type": "Symbol"
+  },
+  {
+   "id": "ching-the-well",
+   "label": "Ching, The Well (hexagram 48)",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -39275,6 +39310,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-23",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-13, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 1005,
+     "quote": "patients who were too much under the sway of the unconscious (water)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
     }
    ],
    "relation_family": {
@@ -66597,6 +66643,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-13",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-1, PASS, 2026-10-13)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 982,
+     "quote": "this is the original meaning of the word religio —a careful observation and taking account of (from relegere 10 ) the numinous",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
     }
    ],
    "relation_family": {
@@ -69023,6 +69080,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-2, PASS, 2026-10-14)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 959,
+     "quote": "If we conceive of the self as the essence of psychic wholeness, i.e., as the totality of conscious and unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
     }
    ],
    "relation_family": {
@@ -69270,6 +69338,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-3, PASS, 2026-10-18)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 947,
+     "quote": "At a certain stage in the psychological treatment patients sometimes paint or draw such mandalas spontaneously, either because they dream them",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
     }
    ],
    "relation_family": {
@@ -74196,6 +74275,28 @@
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-7, PASS, 2026-10-20)",
      "correction_note": "gate correction: Verbatim and Jung's own, but the sentence describes the danger case — what happens when the ego identifies with the self — not a general mechanism; the triple reads as general, so demoted to medium."
+    },
+    {
+     "volume": "11",
+     "paragraph": 958,
+     "quote": "the shifting of the centre of gravity from the ego to the self...the ego disappears in the self",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 959,
+     "quote": "This formula shows the dissolution of the ego in the atman to be the unequivocal goal of religion and ethics",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
     }
    ],
    "relation_family": {
@@ -81975,6 +82076,1221 @@
    ],
    "relation_family": {
     "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "represents",
+   "object": "order",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 947,
+     "quote": "they suddenly feel the need to compensate the confusion in their psyches through representations of an ordered unity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "lacks",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 948,
+     "quote": "But our modern mandalas, spontaneously produced by numerous individuals without any preconceived ideas or suggestions from outside, contain no Christ-figure",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but the sentence is about 'our modern mandalas, spontaneously produced'; the paragraph says the medieval ones did have Christ at the centre. The generic node absorbs a scope the sentence restricts; confidence to medium."
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "shri-ramana",
+   "relation": "exemplifies",
+   "object": "holy-man",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 951,
+     "quote": "Zimmer was passionately interested in the latest and best incarnation of this type in the phenomenal personage of Shri Ramana",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 952,
+     "quote": "For the fact is, I doubt his uniqueness; he is of a type which always was and will be.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "is-bound-to",
+   "object": "atman",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 955,
+     "quote": "the drama of ahamk ā ra , the “I-maker” or ego-consciousness, in opposition and indissoluble bondage to the atman",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "controls",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 955,
+     "quote": "the self is indeed experienced as the subject of the subject, as the true source and controller of the ego",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-identified-with",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 956,
+     "quote": "“self” or “atman” being essentially synonymous with “God.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 957,
+     "quote": "To the Indian it is clear that the self as the originating ground of the psyche is not different from God",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "eastern-view",
+   "relation": "parallels",
+   "object": "mysticism",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 958,
+     "quote": "The goal of Eastern religious practice is the same as that of Western mysticism",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 959,
+     "quote": "The same is obviously true of Christian mysticism, which differs from Oriental philosophy only through having a different terminology.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "shri-ramana",
+   "relation": "strives-to-extinguish",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 958,
+     "quote": "has at least struggled earnestly all his life to extinguish his ego in it",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "exercitia-spiritualia",
+   "relation": "subordinates",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 958,
+     "quote": "they subordinate “self-possession” (possession of an ego) as much as possible to possession by Christ",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "obstructs",
+   "object": "self-liberation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 958,
+     "quote": "So long as ego-seeking exists, neither knowledge ( jñ ā na ) nor liberation ( mukti ) is possible",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)",
+     "source": "Ramakrishna"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-goal-of",
+   "object": "psychic-development",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 959,
+     "quote": "it does in fact represent something like a goal of psychic development, and this irrespective of all conscious opinions and expectations",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "depends-on",
+   "object": "man",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 959,
+     "quote": "Without this admittedly very troublesome physical and psychic man, the self would be entirely without substance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "depends-on",
+   "object": "man",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 959,
+     "quote": "I know that without me God can no moment live; Were I to die, then he No longer could survive.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)",
+     "source": "Angelus Silesius"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "needs",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 960,
+     "quote": "ego and self laboriously keeping the scales balanced if all is to go well",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 961,
+     "quote": "The ego needs the self and vice versa.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "shri-ramana",
+   "relation": "exemplifies",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 962,
+     "quote": "one could regard Ramakrishna and Shri Ramana as modern prophets, who play the same compensatory role in relation to their people",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "eastern-view",
+   "relation": "points-to",
+   "object": "inner-man",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 963,
+     "quote": "to direct our attention to the fate of the inner man, which we set aside as trifling",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "shri-ramana",
+   "relation": "exemplifies",
+   "object": "psychic-development",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 963,
+     "quote": "a modern Indian prophet who exemplifies so impressively the problem of psychic transformation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "richard-wilhelm",
+   "relation": "elucidates",
+   "object": "i-ching",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 965,
+     "quote": "Wilhelm, however, has made every effort to open the way to an understanding of the symbolism of the text.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 966,
+     "quote": "I am greatly indebted to Wilhelm for the light he has thrown upon the complicated problem of the I Ching",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "explores",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 966,
+     "quote": "it seemed to me of uncommon significance as a method of exploring the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 983,
+     "quote": "The method of the I Ching does indeed take into account...one’s own unconscious self as well.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "physics",
+   "relation": "undermines",
+   "object": "causality",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 967,
+     "quote": "What Kant’s Critique of Pure Reason failed to do is being accomplished by modern physics. The axioms of causality are being shaken",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "eastern-view",
+   "relation": "disregards",
+   "object": "causality",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 968,
+     "quote": "What we call coincidence seems to be the chief concern of this peculiar mind, and what we worship as causality passes almost unnoticed.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 1017,
+     "quote": "It is only we who are puzzled, because we trip time and again over our prejudice, viz., the notion of causality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "attends-to",
+   "object": "chance",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 968,
+     "quote": "The Chinese mind, as I see it at work in the I Ching , seems to be exclusively preoccupied with the chance aspect of events.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 969,
+     "quote": "The matter of interest seems to be the configuration formed by chance events at the moment of observation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "presupposes",
+   "object": "synchronicity",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 972,
+     "quote": "This assumption involves a certain curious principle which I have termed synchronicity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "synchronicity",
+   "relation": "is-opposed-to",
+   "object": "causality",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 972,
+     "quote": "a concept that formulates a point of view diametrically opposed to that of causality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "synchronicity",
+   "relation": "transcends",
+   "object": "chance",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 972,
+     "quote": "synchronicity takes the coincidence of events in space and time as meaning something more than mere chance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "resembles",
+   "object": "physics",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 973,
+     "quote": "The ancient Chinese mind contemplates the cosmos in a way comparable to that of the modern physicist",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "comprises",
+   "object": "hexagram",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 974,
+     "quote": "the sixty-four hexagrams of the I Ching are the instrument by which the meaning of sixty-four different yet typical situations can be determined",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "hexagram",
+   "relation": "renders",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 974,
+     "quote": "the observer’s opinion that the text of the hexagram amounts to a true rendering of his psychic condition",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)",
+     "correction_note": "gate correction: Verbatim and Jung's own, but the sentence makes 'the observer's opinion that the text of the hexagram amounts to a true rendering of his psychic condition' the only validity criterion; Jung does not assert that it renders it. Confidence to medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "describes-itself-as",
+   "object": "ting-the-cauldron",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 977,
+     "quote": "Thus it describes itself as a cauldron, that is, as a ritual vessel containing cooked food.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 987,
+     "quote": "Hence the I Ching is like an unused cauldron.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 989,
+     "quote": "The I Ching is evidently insisting here on its dignity as a ritual vessel and protesting against being profanely used.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 1015,
+     "quote": "To the first question the I Ching replied by comparing itself to a cauldron, a ritual vessel in need of renovation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "ting-the-cauldron",
+   "relation": "serves",
+   "object": "the-sacrifice",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 977,
+     "quote": "The ting serves in offering sacrifice to God.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)",
+     "source": "Wilhelm"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "nourishes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 982,
+     "quote": "It conceives of itself as a cult utensil serving to provide spiritual nourishment for the unconscious elements",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-gods",
+   "relation": "is-projection-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 982,
+     "quote": "the unconscious elements or forces (“spiritual agencies”) that have been projected as gods",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "produces",
+   "object": "meaningful-coincidence",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 984,
+     "quote": "the answer received apparently coincided with the questioner’s psychological blind spot remarkably well",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "is-consulted-in",
+   "object": "impossible-situation",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 987,
+     "quote": "so the I Ching is called upon when one sees no other way out",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "contains",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 997,
+     "quote": "the grandmother, or ancestress, often represents the unconscious, because the latter in a man contains the feminine component of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "is-connected-with",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 997,
+     "quote": "the I Ching is more closely connected with the unconscious than with the rational attitude of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "aims-at",
+   "object": "self-knowledge",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 1000,
+     "quote": "Clearly the method aims at self-knowledge, though at all times it has also been put to superstitious use.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 1001,
+     "quote": "this book represents one long admonition to careful scrutiny of one’s own character, attitude, and motives",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 1018,
+     "quote": "for lovers of self-knowledge, of wisdom—if there be such—it seems to be the right book",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "kan-the-abysmal",
+   "relation": "stands-for",
+   "object": "water",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 1004,
+     "quote": "(K’an also stands for water)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "parallels",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 1005,
+     "quote": "in interpreting a dream, one must follow the dream-text...so in consulting the oracle one must keep in mind the form of the question",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "kan-the-abysmal",
+   "relation": "is-associated-with",
+   "object": "psychosis",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 1005,
+     "quote": "K’an often turned up with patients...threatened with the possible occurrence of psychotic phenomena",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "kan-the-abysmal",
+   "relation": "changes-into",
+   "object": "ching-the-well",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 1011,
+     "quote": "This yin line of mounting tension changes into a yang line and thus produces a new hexagram",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "kan-the-abysmal",
+   "relation": "represents",
+   "object": "i-ching",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 1013,
+     "quote": "The dangerous water-hole or abyss pointed to the I Ching , and so does the well",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "11",
+     "paragraph": 1015,
+     "quote": "the I Ching represented a deep and dangerous water-hole in which one might easily be bogged down",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "describes-itself-as",
+   "object": "ching-the-well",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 1014,
+     "quote": "the speaking subject is once more the I Ching , representing itself as a spring of living water",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "subject": "i-ching",
+   "relation": "elicits",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 1016,
+     "quote": "Don’t you see how useful the I Ching is in making you project your hitherto unrealized thoughts into its abstruse symbolism?",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-23"
