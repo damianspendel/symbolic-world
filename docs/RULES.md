@@ -125,3 +125,19 @@ response to the inspection and binding from now on.
     total of quoted words in a field, as quote fields do, rather than the
     longest unbroken run. Under the total reading 21 notes fail today.
     Not yet enforced by the tests; proposed.
+25. **[STANDING, adopted 2026-10-23] Know what goes public before it goes.**
+    Everything tracked on mining-away reaches the public repository and the
+    Zenodo archive at the next release, and nobody can take history back.
+    Track a file only if it belongs to the published artifact: the
+    graph and its evidence, the code that builds and checks it, the paper
+    and its figures, the site's sources, and the documents those link to.
+    Drafts, reviews, plans, process notes, copy written for other platforms,
+    and anything carrying personal details go in the private block of
+    .gitignore or outside the repository from the start. Before a release
+    push the build session runs the history audit (private paths, keys and
+    tokens, the secrets kept in gitignored files, phone numbers and email
+    addresses, corpus runs over 25 words) and shows Damian the list of
+    files added since the last public tag. He approves that list before he
+    pushes. Reason: on 2026-10-23 a review of docs/ found sixteen working
+    notes and unused figures already public through v2.1.0, and ignoring
+    them could only stop further versions (70d2467).
