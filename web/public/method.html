@@ -99,7 +99,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p class="sub">An explanation of how a citation enters the map.</p></div>
 <div class="method-page">
 <h2>What this is</h2>
-<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 661 symbols, figures and concepts, joined by 2463 relations, resting on 3248 citations to his <em>Collected Works</em> (CW). Every claim was proposed by one AI model (Opus family) after reading the CW and judged against its source paragraph by a different model (Fable family); an auditor (Gemini) from a different vendor re-reads each new batch in full — 94% of all 3248 citations have been certified this way. Every claim can be considered a transaction in a ledger: the exact paragraph, a verbatim quote, and the record of which model (or expert) checked what. This is a map of assertions, not a Jungian reading.</p>
+<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 695 symbols, figures and concepts, joined by 2668 relations, resting on 3562 citations to his <em>Collected Works</em> (CW). Every claim was proposed by one AI model (Opus family) after reading the CW and judged against its source paragraph by a different model (Fable family); an auditor (Gemini) from a different vendor re-reads each new batch in full — 95% of all 3562 citations have been certified this way. Every claim can be considered a transaction in a ledger: the exact paragraph, a verbatim quote, and the record of which model (or expert) checked what. This is a map of assertions, not a Jungian reading.</p>
 <figure class="fig fig-claim">
     <div class="claim-fig">
       <span class="fig-node" data-type="Symbol">Lapis philosophorum</span>
@@ -113,7 +113,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h2>One corpus</h2>
 <p>Everything comes from a single source: the Bollingen edition of the <em>Collected Works</em>, in English. No secondary literature, no commentary, no symbol dictionaries. That keeps the map close to Jung's own text, at the cost of breadth.</p>
 <figure class="fig">
-    <div class="works-fig"><span class="work-fig" style="flex:23 1 0;opacity:0.32"><span>CW 5</span></span><span class="work-fig" style="flex:850 1 0;opacity:1.00"><span>CW 8</span></span><span class="work-fig" style="flex:567 1 0;opacity:0.77"><span>CW 9i</span></span><span class="work-fig" style="flex:386 1 0;opacity:0.62"><span>CW 9ii</span></span><span class="work-fig" style="flex:591 1 0;opacity:0.79"><span>CW 11</span></span><span class="work-fig" style="flex:223 1 0;opacity:0.48"><span>CW 12</span></span><span class="work-fig" style="flex:176 1 0;opacity:0.44"><span>CW 13</span></span><span class="work-fig" style="flex:413 1 0;opacity:0.64"><span>CW 14</span></span><span class="work-fig" style="flex:19 1 0;opacity:0.32"><span>CW 16</span></span></div>
+    <div class="works-fig"><span class="work-fig" style="flex:23 1 0;opacity:0.32"><span>CW 5</span></span><span class="work-fig" style="flex:850 1 0;opacity:0.96"><span>CW 8</span></span><span class="work-fig" style="flex:567 1 0;opacity:0.74"><span>CW 9i</span></span><span class="work-fig" style="flex:386 1 0;opacity:0.60"><span>CW 9ii</span></span><span class="work-fig" style="flex:905 1 0;opacity:1.00"><span>CW 11</span></span><span class="work-fig" style="flex:223 1 0;opacity:0.47"><span>CW 12</span></span><span class="work-fig" style="flex:176 1 0;opacity:0.44"><span>CW 13</span></span><span class="work-fig" style="flex:413 1 0;opacity:0.62"><span>CW 14</span></span><span class="work-fig" style="flex:19 1 0;opacity:0.31"><span>CW 16</span></span></div>
     <figcaption>This bar appears at the bottom of the atlas and shows one segment per volume included in the atlas. The size of the bar indicates the number of citations.</figcaption>
   </figure>
 <p>The bar along the bottom of the atlas shows the corpus: one segment per volume, sized by how much verified evidence it carries, so where mining has gone deep is visible immediately. The segments enable scope selection: click one and the atlas shows only that volume's claims.</p>
@@ -136,16 +136,16 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li><strong>Propose.</strong> An Opus-family model reads a collection of paragraphs and proposes claims, each with a verbatim citation.</li>
 <li><strong>Check.</strong> A machine confirms the quote is letter-exact in its paragraph and at most 25 words, and that the relation is well formed, i.e. structured as a relationship between two nodes. Failures are then excluded.</li>
 <li><strong>Gate.</strong> A Fable-family model judges every claim against its full source paragraph. By default it is hostile: the claim survives only if the model judges that the paragraph supports it.</li>
-<li><strong>Audit.</strong> A Gemini model re-reads what survived, before any of it touches the graph. Universal for every batch since the <em>Aion</em> arc (mid-2026). (Earlier material was audited by sampling, and evidenced in the ledger; 3054 of 3248 citations have been audited this way as at time of publication.) When gate and auditor disagree, the auditor wins.</li>
+<li><strong>Audit.</strong> A Gemini model re-reads what survived, before any of it touches the graph. Universal for every batch since the <em>Aion</em> arc (mid-2026). (Earlier material was audited by sampling, and evidenced in the ledger; 3368 of 3562 citations have been audited this way as at time of publication.) When gate and auditor disagree, the auditor wins.</li>
 <li><strong>Merge.</strong> The claim enters with its provenance stamped: dates, verdicts, corrections.</li>
 </ol>
 <p>Under all five stations, the model that proposes a claim never signs it off. Proposer and gate are different model families (Anthropic's Opus and Fable lines) and the auditor is a different vendor (Google's Gemini).</p>
-<p>The checks remove real material: in the most recent window, 70 proposed citations became 68 merged ones.</p>
+<p>The checks remove real material: in the most recent window, 69 proposed citations became 64 merged ones.</p>
 <h2>Human oversight</h2>
 <p>A person rules on disagreements, decides releases, and answers for what is published.</p>
 <ul>
 <li><strong>Gold set.</strong> 50 claims carry a <em>human-validated</em> mark in the <a href="/ledger">ledger</a>: a person read the cited paragraph. The rest carry the amber dot: machine-verified without human validation.</li>
-<li><strong>Adjudication.</strong> Two blind arms sort relations into 25 families: one Opus-family model, one Gemini, each reading the definitions document and the edge, neither able to see the other's answer. These arms disagree on 434 claims today. No model breaks a tie. A person rules, in sittings, and the rulings land in the ledger. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
+<li><strong>Adjudication.</strong> Two blind arms sort relations into 25 families: one Opus-family model, one Gemini, each reading the definitions document and the edge, neither able to see the other's answer. These arms disagree on 465 claims today. No model breaks a tie. A person rules, in sittings, and the rulings land in the ledger. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
 <li><strong>Refusals are kept apart.</strong> <em>No family</em> means our vocabulary is short. <em>Text undecided</em> means Jung's own sentence hedges between two readings. Pooling them would let a thin vocabulary hide inside a hedge.</li>
 <li><strong>Disputes.</strong> 18 challenges are on the record with their outcomes, in the <a href="/disputes">dispute log</a>.</li>
 <li><strong>Publication.</strong> Releases, deploys and rulings are human decisions.</li>
@@ -153,10 +153,10 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h2>Confidence levels</h2>
 <p>The checks are themselves checked:</p>
 <ul>
-<li>Every one of the 3248 quotes is mechanically verified against the corpus. The verification set seeds seven deliberately corrupted claims. So far, all seven have been caught on every run. Whether a paragraph supports its claim is a judgment call made by a model. It is not a mechanical proof.</li>
+<li>Every one of the 3562 quotes is mechanically verified against the corpus. The verification set seeds seven deliberately corrupted claims. So far, all seven have been caught on every run. Whether a paragraph supports its claim is a judgment call made by a model. It is not a mechanical proof.</li>
 <li>The family layer is checked by seeding corruptions among real assignments. A family label means: two models, judging independently, agreed on the assignment of the relation to the family. Also here, in the case of disagreement, a human decides.</li>
 <li>The classification vocabulary was checked outside this repository, against 8 works of scholarship: 8 of 16 treated items agreed with our families. We have also published the disagreements (<a href="/ontology#checked">the check</a>). It tests the classification of relations into families, not whether a claim is true.</li>
-<li>The two blind classification arms agreed on 86% of 2463 relations. Agreement measures whether the definitions can be followed consistently, not whether they are right: neither arm is authoritative. Definitions were drafted by one of the model families working in this pipeline.</li>
+<li>The two blind classification arms agreed on 86% of 2668 relations. Agreement measures whether the definitions can be followed consistently, not whether they are right: neither arm is authoritative. Definitions were drafted by one of the model families working in this pipeline.</li>
 </ul>
 <p>What the instruments do not cover:</p>
 <div class="tw"><table><thead><tr><th>Known limit</th><th>Options</th></tr></thead><tbody>

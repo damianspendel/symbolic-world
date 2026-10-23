@@ -376,6 +376,19 @@ if PENDING_RELEASE and PENDING_RELEASE in tags:
 zd = (ROOT / '.zenodo.json').read_text()
 if f"{nodes} nodes, {edges} edges, {refs} references" not in zd:
     failures.append(f"STALE DOC: .zenodo.json lacks baseline counts {nodes}/{edges}/{refs}")
+# ...and it states the release it archives, pinned to that release's own tag.
+# Before the tag exists the record is being prepared from the working tree, so
+# the live seed is the pin: a merge that moves the counts before the tag is cut
+# turns this red, which is the freeze. After the tag, the tag wins and the pin
+# stays green while mining moves the head on.
+_zv = json.loads(zd).get('version', '')
+_zr = subprocess.run(['git', 'show', f'v{_zv}:seed.json'], capture_output=True, text=True, cwd=ROOT)
+_zseed = json.loads(_zr.stdout) if _zr.returncode == 0 else seed_live
+_zn, _ze = len(_zseed['nodes']), len(_zseed['edges'])
+_zf = sum(len(e['references']) for e in _zseed['edges'])
+if f"{_zn} nodes, {_ze} edges, {_zf} references" not in zd:
+    failures.append(f"STALE DOC: .zenodo.json version {_zv} lacks its release counts {_zn}/{_ze}/{_zf} "
+                    f"({'tag v' + _zv if _zr.returncode == 0 else 'working tree, untagged'})")
 
 refs_live = sum(len(e['references']) for e in seed_live['edges'])
 for doc in ['README.md', 'docs/ABSTRACT.md', 'docs/REVIEW.md']:

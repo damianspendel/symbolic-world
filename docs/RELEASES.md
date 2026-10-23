@@ -120,27 +120,31 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
 - Added [in a nutshell](/nutshell), the method poster on its own page; the
   identity walk stays in `kg_query.py`, not exposed on the site.
 
-## v2.1: the atlas as an instrument
+## v2.1.0: CW 11 and the atlas as an instrument
 
-status: deployed 2026-10-22. Deploy-only: no tag, no version bump, no Zenodo
-record until the CW 11 arc completes.
-pin: graph v2.1 (working) · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
+status: released 2026-10-23. Tag `v2.1.0`, GitHub Release, Zenodo record
+under the concept DOI. *Trust, Layered* still describes v2.0.0 and stays
+pinned to that tag.
+pin: graph v2.1.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
 
-- Reopened mining for the remaining corpus: CW 11, then CW 5 and CW 16,
-  one window nightly.
+- Mined CW 11, *Psychology and Religion: West and East*, end to end:
+  fourteen windows, paragraphs 1 to 1018.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
   {{batches}} batches; {{pending}} relations await adjudication at arc end.
-- Split mining from the build: mining commits data, the build track
-  deploys about weekly, preflight's count checks keep the two in step.
+- Mining runs one window nightly, CW 5 and CW 16 next. The mining track
+  commits data and the build track deploys; preflight's count checks keep
+  the two in step.
 
 ### governance
 
 - The poster re-renders at each deploy with live counts and a dated caption.
-- The index.html size ceiling moved from 3.0 to 3.5 MB.
-- The public repository's integrity check is green again; contributing
-  and security files added.
+- The legal statement's figures come from the graph at the tag.
+- A citation file joins the repository, and the integrity check is green
+  again; contributing and security files added.
+- Batch pages fold the mining log; the ledger states the classification
+  note once instead of on every card.
 - Two reader-raised items from issue 2 are on the backlog: mining around
   quotations, and an editorial layer for connections Jung never states.
 
@@ -150,6 +154,8 @@ pin: graph v2.1 (working) · ruleset {{ruleset}} · calibration record {{calibra
   graph's own quotes only, with parity tests.
 - The maintainer's rewrite of every page carried into the generators, with
   a humanizer pass.
+- The root is a landing page for the reader; the atlas moved to
+  [/atlas](/atlas), and old links forward to it.
 - The colour token table gained a day block; the atlas reads its canvas
   colours from it live.
 

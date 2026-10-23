@@ -818,7 +818,7 @@ for (const e of atlasEdges) for (const r of e.refs) if (r.claim_type) voices[r.c
 // ------------------------------------------------------------- atlas.json ---
 const refCount = seed.edges.reduce((a, e) => a + (e.references || []).length, 0)
 const meta = {
-  version: 'v2.0-dev',   // the working label until the tag; the ceremony flips it to v2.0.0
+  version: 'v2.1.0',   // the release label; between releases the ceremony leaves it on the last tag
   built: new Date().toISOString().slice(0, 10),
   // spec-orientation-v1, item 3: the forty most connected concepts by relation
   // count, named here so the atlas's "core" control is a build-time set
