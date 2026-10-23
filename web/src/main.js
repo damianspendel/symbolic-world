@@ -517,6 +517,7 @@ function nodePanel(node) {
   }).join('')
   return `<div class="p-head"><div><div class="p-type">${esc(node.data('type'))}${node.data('tradition') ? ' · ' + esc(node.data('tradition')) : ''}</div></div>${copyLinkButton('#/n/' + id)}</div>
     <h2>${esc(node.data('label'))}</h2>
+    <a class="p-concept" href="/concept-${esc(id)}">open the concept page →</a>
     <div class="p-count">${conn.length} connection${conn.length !== 1 ? 's' : ''}: click a link to open it, click the far term to walk on</div>
     ${mixStrip(id)}${rows}${rows ? ragLegend() : ''}`
 }
