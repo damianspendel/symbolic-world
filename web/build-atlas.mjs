@@ -2702,7 +2702,7 @@ table.findings .src { font: .58rem var(--mono); }
   if (SUPPORT_URL) {
     const supportBody = `<div class="titleband"><p class="eyebrow">about</p>
 <h1>Support</h1>
-<p class="sub">tips fund the next mining window</p></div>
+<p class="sub">tips cover the running costs</p></div>
 <p>Tips cover the running costs. The atlas, the dataset and the verification ledger are free to use, and nothing on the site is for sale. Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
@@ -2714,7 +2714,7 @@ table.findings .src { font: .58rem var(--mono); }
     registerPage({
       slug: 'support', title: 'Support', where: 'support', nav: 'support',
       changefreq: 'monthly', priority: '0.4',
-      description: 'Support The Symbolic World: tips fund the next mining window of the verified Jung atlas. The atlas, dataset and ledger stay free.',
+      description: 'Support The Symbolic World: tips cover the running costs of the verified Jung atlas. The atlas, dataset and ledger stay free.',
       style: supportStyle, body: supportBody
     })
     V2_COPY.push(['public/support.html (generated)', stripEvidence(supportBody)])
@@ -2741,7 +2741,7 @@ page.</p></div>
     alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
   <figcaption>The method on one page. Counts as of ${esc(JSON.parse(readFileSync(here('../docs/figures/method_poster_facts.json'), 'utf8')).date_label)}.</figcaption>
 </figure>
-${SUPPORT_URL ? `<p class="meta">The atlas, the dataset and the ledger are free. Tips fund the next mining window: <a href="/support">support the project</a>.</p>` : ''}`
+${SUPPORT_URL ? `<p class="meta">The atlas, the dataset and the ledger are free. Tips cover the running costs: <a href="/support">support the project</a>.</p>` : ''}`
   registerPage({
     slug: 'nutshell', title: 'In a nutshell', where: 'in a nutshell',
     nav: 'in a nutshell', changefreq: 'monthly', priority: '0.5',
