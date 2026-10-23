@@ -1,7 +1,7 @@
 # Legal Statement
 
 **The Symbolic World — a knowledge graph of C. G. Jung's Collected Works**
-Date: 2026-07-27
+Date: 2026-07-27. Figures as of the v2.1.0 freeze, 2026-10-23.
 
 This document sets out, in plain language, what this project contains, what it does not contain, and the legal basis on which it operates.
 
@@ -9,7 +9,7 @@ This document sets out, in plain language, what this project contains, what it d
 
 The Symbolic World is a scholarly knowledge graph of C. G. Jung's *Collected Works* (CW), built by Damian Spendel with AI collaborators. It is published as a public web application (symbolicworld.observer), a dataset (`seed.json`), and a research paper (`docs/PAPER.md`).
 
-The dataset contains 673 references (count as of this statement's date; the dataset grows under the same rules). Each reference includes:
+The dataset contains 3,562 references (count at release v2.1.0; the dataset grows under the same rules). Each reference includes:
 
 - a verbatim quotation of **at most 25 words** from a single CW paragraph;
 - the CW volume and paragraph number (§);
@@ -41,9 +41,9 @@ The project relies on the long-established quotation and fair-use/fair-dealing e
 
 ## 4. Aggregate use, stated honestly
 
-Any single 25-word quotation is plainly within quotation norms. A dataset of 653 such quotations is an aggregation, and we address that directly rather than pretend each quote exists in isolation.
+Any single 25-word quotation is plainly within quotation norms. A dataset of 3,562 such quotations is an aggregation, and we address that directly rather than pretend each quote exists in isolation.
 
-- **Scale.** 653 quotations of at most 25 words is under 17,000 words in total, drawn from a corpus of roughly twenty volumes running to several million words. The aggregate is a tiny fraction of the whole, spread thinly across it.
+- **Scale.** 3,562 quotations of at most 25 words come to 56,205 words, a mean of 15.8 words each. They are drawn from the nine volumes mined so far, which hold about 1.24 million words, so the quotations are 4.5% of those volumes. The highest share in any one volume is 7.4% (CW 8). The *Collected Works* run to roughly twenty volumes, so the share of the whole is lower. The aggregate is a small fraction, spread across the volumes it draws on.
 - **Non-substitutive.** The quotations are discontinuous fragments selected because they anchor citations, not because they represent the work's expressive interest. Read together they do not form readable text and could not serve anyone as a substitute for reading Jung.
 - **Function.** The dataset operates as a concordance: a finding aid that tells a reader *where* in the CW a claim is grounded, and gives just enough verbatim text to verify the match. Paragraph (§) numbers and page numbers are facts, not protectable expression.
 
@@ -56,6 +56,8 @@ We are committed to acting in good faith toward the rights holders. If any right
 - **Code:** MIT License.
 - **Dataset (original content):** the graph structure, relations, claim typing, and scholarly metadata are licensed under **CC BY 4.0**.
 - **Quotations:** the verbatim CW quotations are **excluded from both license grants**. They remain under the copyright of their respective rights holders and are included here in reliance on the quotation and fair-use exceptions described above. Reusers of the dataset must make their own assessment of the quotations for their own use.
+
+The repository's NOTICE file states these terms, and the LICENSE file carries the MIT text alone.
 
 ## 7. AI disclosure
 

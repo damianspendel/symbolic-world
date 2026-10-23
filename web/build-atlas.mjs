@@ -98,7 +98,7 @@ function emitPublicDataset(seed, meta) {
       'Every edge cites its CW volume and paragraph with a verbatim quote (max 25 words) and the ' +
       'verification provenance of a three-model chain (proposer, gate, cross-vendor auditor). ' +
       'Method: https://symbolicworld.observer/atlas#/method',
-    _license: 'Data: CC BY 4.0. Quotes are brief excerpts from the Collected Works cited under fair use.',
+    _license: 'The original structure, relations, claim typing and metadata are CC BY 4.0, while the verbatim quotations from the Collected Works are excluded from that licence, remain with their rights holders and appear under quotation and fair-use exceptions (see NOTICE in the repository).',
     _version: meta.version,
     _generated: meta.built,
     _counts: meta.counts,
