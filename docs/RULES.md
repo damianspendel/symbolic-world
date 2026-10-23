@@ -3,7 +3,7 @@
 Every operating rule the project runs on, in one place, each with its reason.
 Rules were previously scattered across CLAUDE.md, the runbooks, batch prompts
 and decision records; the 2026-08-12 code inspection showed what scattering
-costs. A rule that is not written here is not a rule. Last updated 2026-08-12.
+costs. A rule that is not written here is not a rule. Last updated 2026-10-23.
 
 Marked **[STANDING]** if in force today, **[ADOPTED 2026-08-12]** if added in
 response to the inspection and binding from now on.
@@ -113,3 +113,15 @@ response to the inspection and binding from now on.
     scratchpad is for scratch. Anything that produced a merged artifact or a
     published number is committed the day it runs (corpus-reading scripts
     included — they contain no corpus text).
+24. **[ADOPTED 2026-10-23] Notes quote Jung within the same 25-word bound.**
+    Provenance and qualifier text in seed.json (correction_note,
+    audit_note, note, vocabulary_note, and the normalization layer's
+    carrier, scope, condition and modality) may quote the corpus, but no
+    unbroken run of corpus words in one field exceeds 25 letter tokens,
+    counted with tests/test_graph.py's tokenizer. Elisions are written
+    "...", as in quote fields. Reason: seed.json publishes every field,
+    and the 2026-10-23 pre-push audit found seven notes over the bound
+    (trimmed in 619d854). Open, for Damian: whether the bound counts the
+    total of quoted words in a field, as quote fields do, rather than the
+    longest unbroken run. Under the total reading 21 notes fail today.
+    Not yet enforced by the tests; proposed.
