@@ -95,18 +95,15 @@
    "forward": "manifests-as",
    "inverse": "is-manifestation-of",
    "applies_to_family": null,
-   "dormant": true,
-   "dormant_strings": [
-    "is-manifestation-of"
-   ],
-   "dormant_reason": "is-manifestation-of has no edge in seed.json at the base commit (checked 2026-08-13 over effective relations). The declaration stands; it derives nothing until the string appears.",
+   "dormant": false,
    "source": [
     {
      "section": "### 3. manifestation",
      "line": 393,
      "quote": "**Inverse pair declared:** `manifests-as` / `is-aspect-of` (with `is-manifestation-of`)"
     }
-   ]
+   ],
+   "note": "Active since b-cw11-12 (commit d1ea15e, 2026-10-23): the first is-manifestation-of edge (consciousness is-manifestation-of soul, CW 11 §838) ended the dormancy recorded at the 2026-08-13 transcription. The declaration itself is unchanged."
   },
   {
    "id": "symmetric:synonym-of",
