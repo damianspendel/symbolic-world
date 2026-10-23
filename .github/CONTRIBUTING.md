@@ -6,6 +6,9 @@ different family, a cross-vendor audit, a human decision), so data changes
 do not arrive by pull request. What the project wants from readers is
 challenges and confirmations.
 
+Issues get a reply within seven days. A reader who disputes an edge gets the
+outcome on the public log, whether the edge stands, changes or goes.
+
 ## Dispute a claim
 
 Expand the citation in the atlas, press dispute to copy a prefilled
