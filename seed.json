@@ -1226,7 +1226,8 @@
   {
    "id": "serpent",
    "type": "Symbol",
-   "label": "The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)"
+   "label": "The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)",
+   "vocabulary_note": "the label names the transformation/renewal aspect; the node carries the serpent symbol in all its aspects, including the tempter and the devil (CW 9ii, CW 5 §69) — recorded 2026-10-28 at the b-cw5-1 merge after a cross-vendor label-scope finding"
   },
   {
    "id": "circumambulatio",
@@ -3487,6 +3488,61 @@
    "id": "ching-the-well",
    "label": "Ching, The Well (hexagram 48)",
    "type": "Symbol"
+  },
+  {
+   "id": "oedipus",
+   "label": "Oedipus",
+   "type": "Figure"
+  },
+  {
+   "id": "directed-thinking",
+   "label": "Directed thinking",
+   "type": "Concept"
+  },
+  {
+   "id": "fantasy-thinking",
+   "label": "Fantasy-thinking (non-directed thinking)",
+   "type": "Concept"
+  },
+  {
+   "id": "language",
+   "label": "Language",
+   "type": "Concept"
+  },
+  {
+   "id": "scholasticism",
+   "label": "Scholasticism",
+   "type": "Concept"
+  },
+  {
+   "id": "father-imago",
+   "label": "Father-imago",
+   "type": "Concept"
+  },
+  {
+   "id": "complex",
+   "label": "Complex",
+   "type": "Concept"
+  },
+  {
+   "id": "judas",
+   "label": "Judas",
+   "type": "Figure"
+  },
+  {
+   "id": "abbe-oegger",
+   "label": "Abbé Oegger",
+   "type": "Figure"
+  },
+  {
+   "id": "miss-miller",
+   "label": "Miss Frank Miller",
+   "type": "Figure"
+  },
+  {
+   "id": "cyrano-de-bergerac",
+   "label": "Cyrano de Bergerac",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -17853,6 +17909,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-23",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-13, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 62,
+     "quote": "erotic comments which the unconscious had to make in order to counterbalance the patient’s underestimation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
     }
    ],
    "relation_family": {
@@ -83317,6 +83384,1416 @@
    ],
    "relation_family": {
     "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "incest",
+   "relation": "underlies",
+   "object": "oedipus",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 1,
+     "quote": "the incest fantasy, lies at the root of that monumental drama of the ancient world, the Oedipus legend",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
+     "note": "Freud's view, reported"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "speaks-in",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 4,
+     "quote": "one of the basic principles of analytical psychology is that dream-images are to be understood symbolically",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 10,
+     "quote": "We must accept dream symbolism as an accomplished fact",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 6,
+     "quote": "a god or demon spoke to the sleeper in symbolic language",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "originates-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 5,
+     "quote": "The dream, we would say, originates in an unknown part of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "uses-language-of",
+   "object": "sexuality",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 9,
+     "quote": "the sexual symbolism is as good a façon de parler as any other and is being used as a dream-language",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
+     "correction_note": "gate correction: Quote verbatim, but the sentence is 'In these cases we may justly suspect' — a case-bound suspicion about monotonous interpretations, not a standing claim about dreams; medium is the honest coding."
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "emotion",
+   "relation": "distinct-from",
+   "object": "sexuality",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 7,
+     "quote": "affects cannot be identified with sexuality inasmuch as they may easily spring from conflict situations",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "sexuality",
+   "relation": "causes",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 7,
+     "quote": "Sex, as one of the most important instincts, is the prime cause of numerous affects",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "expresses",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 9,
+     "quote": "recognizing the compensation which the motif or dream expresses",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "directed-thinking",
+   "relation": "serves",
+   "object": "adaptation",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 11,
+     "quote": "The whole laborious achievement of our lives is adaptation to reality, part of which consists in directed thinking.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 20,
+     "quote": "The one produces innovations and adaptation, copies reality, and tries to act upon it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "directed-thinking",
+   "relation": "operates-through",
+   "object": "language",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 14,
+     "quote": "directed thinking is really thinking in words",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 20,
+     "quote": "The former operates with speech elements for the purpose of communication",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "language",
+   "relation": "originates-in",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 12,
+     "quote": "Language was originally a system of emotive and imitative sounds",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "language",
+   "relation": "consists-of",
+   "object": "sign",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 13,
+     "quote": "language, in its origin and essence, is simply a system of signs or symbols that denote real occurrences",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "directed-thinking",
+   "relation": "is-instrument-of",
+   "object": "culture",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 17,
+     "quote": "Directed thinking or, as we might also call it, thinking in words , is manifestly an instrument of culture",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "culture",
+   "relation": "depends-on",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 17,
+     "quote": "The secret of cultural development is the mobility and disposability of psychic energy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "science",
+   "relation": "derives-from",
+   "object": "directed-thinking",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 21,
+     "quote": "Both owe their existence simply and solely to energetic training in directed thinking",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "scholasticism",
+   "relation": "trains",
+   "object": "directed-thinking",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 21,
+     "quote": "it gave the mind a dialectical training in directed thinking",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "scholasticism",
+   "relation": "gave-rise-to",
+   "object": "science",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 22,
+     "quote": "the scholastic spirit ... is the mother of our modern scientific method",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, FINDING-adjudicated, 2026-10-28)",
+     "audit_note": "cross-vendor read the single-ellipsis quote as non-verbatim; both spans are verbatim per tests/test_graph.py's own matcher and one ellipsis joining two verbatim spans is the house rule, so the finding is recorded and the reference upheld (b-cw9i-8 precedent)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "fantasy-thinking",
+   "relation": "guided-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 20,
+     "quote": "the latter is effortless, working as it were spontaneously, with the contents ready to hand, and guided by unconscious motives",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 37,
+     "quote": "Non-directed thinking is in the main subjectively motivated, and not so much by conscious motives as—far more—by unconscious ones.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "fantasy-thinking",
+   "relation": "manifests-in",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 19,
+     "quote": "Common speech calls this kind of thinking “dreaming.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 25,
+     "quote": "We also know that the same kind of thinking is exhibited in dreams.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "fantasy-thinking",
+   "relation": "contrasts-with",
+   "object": "directed-thinking",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 20,
+     "quote": "We have, therefore, two kinds of thinking: directed thinking, and dreaming or fantasy-thinking.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "fantasy-thinking",
+   "relation": "corresponds-to",
+   "object": "primitive-mentality",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 36,
+     "quote": "a fantasy-thinking which corresponds to the antique state of mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 32,
+     "quote": "archaic thinking is a peculiarity of children and primitives",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "recapitulates",
+   "object": "primitive-mentality",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 27,
+     "quote": "In sleep and in dreams we pass through the whole thought of earlier humanity.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
+     "source": "Nietzsche"
+    },
+    {
+     "volume": "5",
+     "paragraph": 26,
+     "quote": "dream-thinking are simply a recapitulation of earlier evolutionary stages",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
+     "note": "Jung frames it conditionally (if this is so)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 28,
+     "quote": "Freud, as we have seen, reached similar conclusions regarding the archaic nature of dream-thinking",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "parallels",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 28,
+     "quote": "It is therefore not such a great step to the view that myths are dreamlike structures.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 29,
+     "quote": "dreams are the myths of the individual",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
+     "source": "Karl Abraham"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "based-on",
+   "object": "fantasy-thinking",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 38,
+     "quote": "the myth, which is likewise based on unconscious fantasy-processes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "springs-from",
+   "object": "creative-instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 24,
+     "quote": "All the creative power that modern man pours into science and technics the man of antiquity devoted to his myths.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 30,
+     "quote": "it merely destroys a transitory manifestation, but not the creative impulse",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "arises-from",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 30,
+     "quote": "it needed the strongest inner compulsion, which can only be explained by the irrational force of instinct, for man to invent those religious beliefs",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "parallels",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 40,
+     "quote": "All this shows how much the products of the unconscious have in common with mythology.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "introversion",
+   "relation": "leads-to",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 40,
+     "quote": "any introversion occurring in later life regresses back to infantile reminiscences",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "reactivates",
+   "object": "father-imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 62,
+     "quote": "disturbances brought about by regressive reactivation of the father-imago",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 64,
+     "quote": "the religiously and poetically formulated product of an introversion that has regressed back to the father-imago",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "derives-from",
+   "object": "father-imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 63,
+     "quote": "the idea of a masculine Creator-God is apparently derived from the father-imago",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "associated-with",
+   "object": "sol",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 65,
+     "quote": "the singer—the singing morning star—the God of Sound—the Creator—the God of Light—of the sun—of fire—and of Love",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
+     "note": "Jung's conjectured association chain"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "appears-as",
+   "object": "orphan",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 34,
+     "quote": "The heroes—Romulus and Remus (pl. II), Moses, Semiramis, and many others—were foundlings whose real parents had lost them.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
+     "note": "foundling"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "descends-from",
+   "object": "the-gods",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 34,
+     "quote": "Others were directly descended from the gods",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "fantasy-thinking",
+   "relation": "draws-on",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 34,
+     "quote": "the fantasy of our adolescent is simply a re-echo of an ancient folk-belief",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 44,
+     "quote": "The conscious fantasy may be woven of mythological or any other material",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 45,
+     "quote": "Conscious fantasies therefore illustrate, through the use of mythological material, certain tendencies in the personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "fantasy-thinking",
+   "relation": "provides",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 33,
+     "quote": "All seek compensation through fantasy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "works-out",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 45,
+     "quote": "There must, then, be typical myths which serve to work out our racial and national complexes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "complex",
+   "relation": "forms",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 39,
+     "quote": "in split-off complexes there are completely unconscious fantasy-systems that have a marked tendency to constitute themselves as separate personalities",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "condenses",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 42,
+     "quote": "the lives and deeds of the culture-heroes and founders of religions are the purest condensations of typical mythological motifs",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "judas",
+   "relation": "betrays",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 42,
+     "quote": "The Judas legend is itself a typical motif, namely that of the mischievous betrayal of the hero.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "judas",
+   "relation": "serves",
+   "object": "redemption",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 41,
+     "quote": "God, in his supreme wisdom, had chosen Judas as an instrument for the completion of Christ’s work of redemption",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
+     "note": "Oegger's belief"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "abbe-oegger",
+   "relation": "identifies-with",
+   "object": "judas",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 43,
+     "quote": "he was the Judas who betrayed his Lord",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 45,
+     "quote": "For him Judas was the symbol of his own unconscious tendency",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "rests-on",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 37,
+     "quote": "Freud himself has pointed out on more than one occasion how much unconscious motives are grounded on instinct",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "fantasy-thinking",
+   "relation": "rests-on",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 38,
+     "quote": "In reality we are concerned with primitive or archaic thought-forms, based on instinct",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "parallels",
+   "object": "the-body",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 38,
+     "quote": "Just as the body has its evolutionary history and shows clear traces of the various evolutionary stages, so too does the psyche.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 36,
+     "quote": "so our minds, which have apparently outgrown those archaic impulses, still bear the marks of the evolutionary stages we have traversed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "sol",
+   "relation": "appears-as",
+   "object": "the-father",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 24,
+     "quote": "The naïve man of antiquity saw the sun as the great Father of heaven and earth",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "luna",
+   "relation": "appears-as",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 24,
+     "quote": "and the moon as the fruitful Mother",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "miss-miller",
+   "relation": "identifies-with",
+   "object": "the-statue",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 52,
+     "quote": "So Miss Miller is now identifying herself with an Egyptian statue",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "miss-miller",
+   "relation": "undergoes",
+   "object": "introversion",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 58,
+     "quote": "Miss Miller is here describing a “state of introversion”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "paradise",
+   "relation": "lost-through",
+   "object": "serpent",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 69,
+     "quote": "paradise was lost through the temptation of the serpent",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, FINDING-adjudicated, 2026-10-28)",
+     "audit_note": "cross-vendor read the serpent node's label (agent of transformation and renewal) as excluding the tempter of Genesis; the node already carries serpent|is-allegory-of|the-devil and serpent|signifies|evil from CW 9ii, so it is the serpent symbol in every aspect and the finding is a label-scope matter, recorded here and in a vocabulary_note on the node (RULES #7), not a wrong referent"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "miss-miller",
+   "relation": "likened-to",
+   "object": "job",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 69,
+     "quote": "Like Job, she is an innocent victim because she did not succumb to the temptation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "free-association",
+   "relation": "obeys",
+   "object": "causality",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 69,
+     "quote": "the law of psychic causality is never taken seriously enough: there are no accidents",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "cyrano-de-bergerac",
+   "relation": "appears-as",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 48,
+     "quote": "the hero who sacrifices himself for others",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-28",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-28"

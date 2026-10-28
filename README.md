@@ -11,7 +11,7 @@ Live atlas: [symbolicworld.observer](https://symbolicworld.observer). Paper: [do
 
 ![The atlas, showing the graph and a selected concept](docs/img/atlas.png)
 
-The graph holds 695 concepts, 2669 relations and 3563 citations as of release v2.1.0. The live atlas grows as mining continues.
+The graph holds 706 concepts, 2720 relations and 3631 citations as of release v2.1.0. The live atlas grows as mining continues.
 
 ### Three ways in
 
