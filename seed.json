@@ -83295,6 +83295,32 @@
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-23"
    }
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-independent-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "11",
+     "paragraph": 960,
+     "quote": "The intrinsically goal-like quality of the self...not dependent on the participation of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-23",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, FINDING-adjudicated, 2026-10-28)",
+     "correction_note": "Fable-family ruling 2026-10-28 (deferred from the 2026-10-23 merge): confidence high -> medium. The independence Jung asserts is of the self's goal-like quality and its urge; the same paragraph binds the self's realization to a compromise between ego and self ('ego and self laboriously keeping the scales balanced'), so the bare relation at high overreads the scope.",
+     "audit_note": "cross-vendor read the single-ellipsis quote as non-verbatim; both spans are verbatim and within the elision cap per tests/test_graph.py's own matcher, and one ellipsis joining two verbatim spans is the house rule, so the finding is recorded and the reference upheld (Fable-family ruling 2026-10-28, b-cw9i-8 precedent)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-28"
+   }
   }
  ]
 }
