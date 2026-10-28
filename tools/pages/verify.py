@@ -26,12 +26,19 @@ CF_EMAIL_HREF = re.compile(rb'href="/cdn-cgi/l/email-protection#([0-9a-f]+)"')
 CF_EMAIL_DECODER = re.compile(rb'<script data-cfasync="false" src="/cdn-cgi/scripts/[^"]+/cloudflare-static/email-decode\.min\.js"></script>')
 
 
+# Cloudflare Web Analytics (zone setting, first seen on the wire 2026-10-28)
+# injects its beacon script, with a per-response integrity hash and token,
+# before </body> on every HTML page.
+CF_BEACON = re.compile(rb'<script[^>]*src="https://static\.cloudflareinsights\.com/beacon\.min\.js[^"]*"[^>]*data-cf-beacon=[^>]*></script>\n?')
+
+
 def _cf_email(m):
     h = bytes.fromhex(m.group(1).decode())
     return b'href="mailto:' + bytes(c ^ h[0] for c in h[1:]) + b'"'
 
 
 def normalize(body: bytes) -> bytes:
+    body = CF_BEACON.sub(b'', body)
     body = CF_EMAIL_DECODER.sub(b'', CF_EMAIL_HREF.sub(_cf_email, body))
     return CF_INJECT.sub(b'', body)
 
