@@ -3543,6 +3543,21 @@
    "id": "cyrano-de-bergerac",
    "label": "Cyrano de Bergerac",
    "type": "Figure"
+  },
+  {
+   "id": "moth",
+   "label": "Moth",
+   "type": "Symbol"
+  },
+  {
+   "id": "mithraism",
+   "label": "Mithraism",
+   "type": "Concept"
+  },
+  {
+   "id": "deification",
+   "label": "Deification",
+   "type": "Operation"
   }
  ],
  "edges": [
@@ -8433,6 +8448,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "5",
+     "paragraph": 128,
+     "quote": "If one worships God, sun, or fire (cf. fig. 4), one is worshipping intensity and power",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
     }
    ],
    "relation_family": {
@@ -8750,6 +8776,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "5",
+     "paragraph": 95,
+     "quote": "This God is characterized as being himself innocent and a self-sacrificer.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
     }
    ],
    "layer": "amplification",
@@ -17920,6 +17957,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-28",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 98,
+     "quote": "the relation of the unconscious to the conscious mind is not merely mechanical or complementary, but rather compensatory",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
     }
    ],
    "relation_family": {
@@ -52185,6 +52233,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-21",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-10, PASS, 2026-08-21)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 114,
+     "quote": "Symbols are not allegories and not signs",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
     }
    ],
    "relation_family": {
@@ -84155,6 +84214,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-28",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 134,
+     "quote": "the libido which is turned inwards, into the subject, reverts to the individual past",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
     }
    ],
    "relation_family": {
@@ -84190,6 +84260,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-28",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 92,
+     "quote": "in this case the reactivation of the father-imago",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 134,
+     "quote": "The regressive reactivation of the father- and mother-imagos plays an important role in religion.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
     }
    ],
    "relation_family": {
@@ -84214,6 +84306,30 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-28",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 89,
+     "quote": "In most of the existing religions it seems that the formative factor which creates the attributes of divinity is the father-imago",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "correction_note": "gate correction: Quote verbatim, but the sentence is 'In most of the existing religions it seems that...' — the hedge belongs in the confidence; medium, matching the §94 attach on the same edge."
+    },
+    {
+     "volume": "5",
+     "paragraph": 94,
+     "quote": "the creator-god who emerges from the father-imago is no longer a product of repression or a substitute",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "note": "Jung adds that the direction of derivation cannot be told"
     }
    ],
    "relation_family": {
@@ -84621,6 +84737,29 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-28",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 135,
+     "quote": "The visible father of the world is the sun, the heavenly fire",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 138,
+     "quote": "“The path of the visible gods will appear through the disc of the sun, who is God my father.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "source": "Mithraic liturgy (Dieterich papyrus)"
     }
    ],
    "relation_family": {
@@ -84742,6 +84881,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-28",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 72,
+     "quote": "She too has suffered like Job, has lost paradise, and dreams of “creation”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 87,
+     "quote": "Miss Miller acts like Job: she admits nothing, and pretends that good and evil come from outside.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
     }
    ],
    "relation_family": {
@@ -84797,6 +84958,1439 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-28"
+   }
+  },
+  {
+   "subject": "miss-miller",
+   "relation": "identifies-with",
+   "object": "cyrano-de-bergerac",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 84,
+     "quote": "The initial hints of identification with Christian, which really points to Cyrano, prove that the long way round is a way of suffering",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "note": "identification is with Christian, a figure in Rostand's Cyrano"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "expresses",
+   "object": "prospective-function",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 78,
+     "quote": "a dream, often of visionary clarity, occurs ... reveals to the patient a hidden meaning that anticipates the subsequent events of his life",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "note": "Jung hedges the observation explicitly"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "displaced-onto",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 83,
+     "quote": "What is evidently in question here is the displacement of libido on to a symbolical object",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "derives-from",
+   "object": "mother-imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 89,
+     "quote": "while in the older religions it was the mother-imago",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "faust",
+   "relation": "parallels",
+   "object": "job",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 84,
+     "quote": "Faust offers the same spectacle of a wager with God",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "afflicts",
+   "object": "job",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 87,
+     "quote": "Satan is the destroyer of Job’s fruitfulness, but God is the All-Fruitful",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "behemoth",
+   "relation": "expresses",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 87,
+     "quote": "Behemoth and Leviathan, both expressive of the crudest force conceivable in nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "dwells-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 89,
+     "quote": "This God dwells in the heart, in the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "is",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 89,
+     "quote": "the God-image is a complex of ideas of an archetypal nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 95,
+     "quote": "the divine figure is in the first place a psychic image, a complex of archetypal ideas",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "represents",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 89,
+     "quote": "it must necessarily be regarded as representing a certain sum of energy (libido) which appears in projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "exhibits",
+   "object": "teleology",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 90,
+     "quote": "it is a hypothesis of the greatest heuristic value that the psyche is essentially purposive and directed",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "note": "stated as a heuristic hypothesis"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "repression",
+   "relation": "leads-to",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 92,
+     "quote": "the repression leads to regressive reactivation of an earlier relationship or type of relatedness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "externalizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 92,
+     "quote": "“Constellated” (i.e., activated) unconscious contents are, so far as we know, always projected",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "repression",
+   "relation": "causes",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 92,
+     "quote": "The projection caused by repression is not something that the individual consciously does or makes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "complex",
+   "relation": "transferred-to",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 95,
+     "quote": "complexes weighing on the soul are consciously transferred to the God-image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "confession",
+   "relation": "prevents",
+   "object": "unconsciousness",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 95,
+     "quote": "the mutual confession of sin (James 5: 16), which effectively prevents one from becoming unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "is",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 95,
+     "quote": "But the unconscious is nature, which never deceives",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "religious-experience",
+   "relation": "originates-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 95,
+     "quote": "In reality all inner experience springs from the unconscious, over which we have no control.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "eros",
+   "relation": "coincides-with",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 97,
+     "quote": "a feeling-toned psychic condition on the other, which, as we have seen, practically coincides with the God-image",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "note": "the subject of the sentence is love"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "eros",
+   "relation": "rooted-in",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 97,
+     "quote": "There can be no doubt that love has an instinctual determinant",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 127,
+     "quote": "she really means her love, the instinct most deeply rooted in human nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, FINDING-adjudicated, 2026-10-29)",
+     "audit_note": "cross-vendor objected that the text makes love an instinct outright rather than rooted in instinct; that reading entails the weaker relation stored here, so the finding is recorded and the reference upheld by the Fable-family gate"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "interwoven-with",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 97,
+     "quote": "the archetype is inextricably interwoven with the individual psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "confronts",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 98,
+     "quote": "in part confronts the ego autonomously",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "seizes",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 101,
+     "quote": "It is a psychological fact that an archetype can seize hold of the ego and even compel it to act as it—the archetype—wills.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "mithraism",
+   "relation": "rivals",
+   "object": "christianity",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 102,
+     "quote": "the two mutually antagonistic religions, Christianity and Mithraism",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 118,
+     "quote": "just as Mithraism was once the threatening rival of Christianity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "christianity",
+   "relation": "subjugates",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 104,
+     "quote": "The meaning of these cults—Christianity and Mithraism—is clear: moral subjugation of the animal instincts.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 107,
+     "quote": "Through centuries of educational training, Christianity subdued the animal instincts of antiquity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "mithraism",
+   "relation": "subjugates",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 104,
+     "quote": "The meaning of these cults—Christianity and Mithraism—is clear: moral subjugation of the animal instincts.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "christianity",
+   "relation": "depreciates",
+   "object": "the-body",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 104,
+     "quote": "the Christian emphasis on spirit inevitably leads to an unbearable depreciation of man’s physical side",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "mass-psyche",
+   "relation": "intensifies",
+   "object": "egoism",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 104,
+     "quote": "Mass psychology is egoism raised to an inconceivable power, for its goal is immanent and not transcendent.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "original-sin",
+   "relation": "vanished-into",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 106,
+     "quote": "religion and its prime object—original sin—have mostly vanished into the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "morality",
+   "relation": "requires",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 106,
+     "quote": "Ethical decision is possible only when one is conscious of the conflict in all its aspects.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "christianity",
+   "relation": "releases-energy-for",
+   "object": "culture",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 107,
+     "quote": "a large amount of instinctual energy could be set free for the building of civilization",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "mithraism",
+   "relation": "venerates",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 109,
+     "quote": "The stars that shone in the sky, ... even the earth which he trod under his feet, were in his eyes divine",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "source": "Franz Cumont"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "christianity",
+   "relation": "turns-away-from",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 111,
+     "quote": "Sharply contrasting with this ancient nature worship is the Christian aversion from the world",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "rationalism",
+   "relation": "denies",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 113,
+     "quote": "Therefore, for this enlightened stupidity, there is no non-conscious psyche.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "note": "the enlightened stupidity refers back to modern rationalism"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "points-beyond",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 114,
+     "quote": "they are images of contents which for the most part transcend consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "moth",
+   "relation": "longs-for",
+   "object": "sol",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 116,
+     "quote": "I longed for thee when first I crawled to consciousness.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "source": "Miss Miller"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "moth",
+   "relation": "longs-for",
+   "object": "star",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 123,
+     "quote": "The same passionate longing of the moth for the star, of man for God",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "source": "Miss Miller"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "appears-as",
+   "object": "dog",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 118,
+     "quote": "the poodle who is the devil himself",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "faust",
+   "relation": "parallels",
+   "object": "oedipus",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 121,
+     "quote": "it formulates a problem that had been brewing for centuries, just as Oedipus did for the Greek sphere of culture",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "complex",
+   "relation": "retains",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 122,
+     "quote": "all complexes that are simply left to work themselves out in the unconscious is that they lose nothing of their original affectivity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "miss-miller",
+   "relation": "turns-to",
+   "object": "religion",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 122,
+     "quote": "take the first poem as an unconscious attempt to solve the conflict by adopting a religious attitude",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "moth",
+   "relation": "stands-for",
+   "object": "miss-miller",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 124,
+     "quote": "the moth is Miss Miller herself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "psychological-value",
+   "relation": "created-by",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 126,
+     "quote": "Values are chiefly created by the quality of one’s subjective reactions.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "sol",
+   "relation": "stands-for",
+   "object": "eros",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 127,
+     "quote": "So when Miss Miller praises God or the sun, she really means her love",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "light",
+   "relation": "expresses",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 128,
+     "quote": "The light and fire attributes depict the intensity of the feeling-tone and are therefore expressions for the psychic energy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "fire",
+   "relation": "expresses",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 128,
+     "quote": "The light and fire attributes depict the intensity of the feeling-tone and are therefore expressions for the psychic energy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "feeling-tone",
+   "relation": "empowers",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 128,
+     "quote": "the feeling-tone is what really gives the complex its characteristic efficacy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "psychic-energy",
+   "relation": "makes-use-of",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 129,
+     "quote": "psychic energy or libido creates the God-image by making use of archetypal patterns",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "man",
+   "relation": "worships",
+   "object": "psychic-force",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 129,
+     "quote": "man in consequence worships the psychic force active within him as something divine",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "belongs-to",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 130,
+     "quote": "it is rather a question of the energy which belongs to the archetype, to the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "god-within",
+   "relation": "amounts-to",
+   "object": "deification",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 130,
+     "quote": "To carry a god within oneself is practically the same as being God oneself.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "initiation",
+   "relation": "confers",
+   "object": "deification",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 130,
+     "quote": "the neophyte, after initiation, is himself lifted up to divine status",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 133,
+     "quote": "The old belief relegates it to the time after death, but the mystery cults bring it about in this world.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "deification",
+   "relation": "equated-with",
+   "object": "self-knowledge",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 132,
+     "quote": "He says of the deification: “That is the ‘Know thyself.’ ”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
+     "source": "Hippolytus"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "reactivates",
+   "object": "mother-imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 134,
+     "quote": "The regressive reactivation of the father- and mother-imagos plays an important role in religion.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "fire",
+   "relation": "equated-with",
+   "object": "sol",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 135,
+     "quote": "father, God, sun, and fire are mythologically synonymous",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "clothed-in",
+   "object": "imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 138,
+     "quote": "it clothes the archetype in the image of the parents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "appears-as",
+   "object": "light",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 138,
+     "quote": "In mysticism the inwardly perceived vision of the Divine is often nothing but sun or light",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-29",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-29"
    }
   }
  ]
