@@ -7,9 +7,9 @@
 
 | | |
 |---|---|
-| Graph | **709 nodes · 2777 edges · 3706 references**, 2417 distinct CW paragraphs, 9 volumes |
+| Graph | **717 nodes · 2822 edges · 3777 references**, 2457 distinct CW paragraphs, 9 volumes |
 | Verification | **1083/1083 (100%)** gate-verified with model+date provenance; 889 (82%) also cross-vendor checked (412 of CW 14's 413, everything since the pre-merge mandate) |
-| Claim provenance | 2955 jung-asserts · 560 jung-reports-parallel · 191 jung-quotes-source (98 named-source strings) · 223 hedged |
+| Claim provenance | 3004 jung-asserts · 573 jung-reports-parallel · 200 jung-quotes-source (98 named-source strings) · 223 hedged |
 | Coverage | Alchemical trilogy end-to-end: CW 14 (413 refs), CW 12 (223 refs), CW 13 (176 refs). CW 9ii (Aion) in progress (165 refs, §1-138 mined); five further volumes sampled |
 | Human validation | **E10 gold set complete**: support 44/50 · voice agreement 40/50 (single-annotator, anchored — see caveats) |
 | Replication | James's *Varieties* pilot: 38 edges, full public package (`james/`) |
