@@ -3959,6 +3959,41 @@
    "id": "fasting",
    "label": "Fasting",
    "type": "Operation"
+  },
+  {
+   "id": "siegfried",
+   "label": "Siegfried",
+   "type": "Figure"
+  },
+  {
+   "id": "brunhilde",
+   "label": "Brünhilde",
+   "type": "Figure"
+  },
+  {
+   "id": "mime",
+   "label": "Mime",
+   "type": "Figure"
+  },
+  {
+   "id": "chasm",
+   "label": "Chasm (crevice in the earth)",
+   "type": "Symbol"
+  },
+  {
+   "id": "crossroads",
+   "label": "Crossroads",
+   "type": "Symbol"
+  },
+  {
+   "id": "prajapati",
+   "label": "Prajapati",
+   "type": "Figure"
+  },
+  {
+   "id": "mana-personality",
+   "label": "Mana personality",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -4780,6 +4815,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 576,
+     "quote": "Christ, as a hero and god-man, signifies psychologically the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 612,
+     "quote": "But Christ, from the point of view of psychology and comparative religion, is a typical manifestation of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -18468,6 +18525,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 575,
+     "quote": "The unconscious, it appears, does not obey the same laws as the conscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 616,
+     "quote": "This solution of the problem represents an attempt on the part of the unconscious to compensate and help the dangerous situation of the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -38325,6 +38404,28 @@
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)",
      "note": "the text's term is 'the treasure'; the treasure here is the supernatural-seeming knowledge of the unconscious"
+    },
+    {
+     "volume": "5",
+     "paragraph": 577,
+     "quote": "Snakes and dogs are guardians of the treasure",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 578,
+     "quote": "Here the serpent lies on the treasury as protector of the hoard",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -89896,6 +89997,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 615,
+     "quote": "the awakening of this hero-figure—the animus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -90342,6 +90454,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-5, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 553,
+     "quote": "the young person should sacrifice his childhood ... lest he remain caught body and soul in the bonds of unconscious incest",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -90367,6 +90490,17 @@
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-5, PASS, 2026-10-29)",
      "correction_note": "gate correction: Verbatim one-ellipsis join; the hero is 'a self-representation of the longing of the unconscious' — the object is the unconscious's longing, the node is the unconscious — medium for scope."
+    },
+    {
+     "volume": "5",
+     "paragraph": 580,
+     "quote": "Taken purely as a psychologem the hero represents the positive, favourable action of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -91566,6 +91700,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-6, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 575,
+     "quote": "he must die on the mother-tree, his gaze fixed on the past",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -93251,6 +93396,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 588,
+     "quote": "Through introversion, as numerous historical witnesses testify, one is fertilized, inspired, regenerated, and reborn",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 590,
+     "quote": "for the mystic the regeneration and spiritual rebirth of the individual, who is born into a new world of the spirit",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -94313,6 +94480,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 580,
+     "quote": "it is himself, new-born from the dark maternal cave of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -94575,6 +94753,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 569,
+     "quote": "the “treasure hard to attain” lies hidden in the mother-imago, i.e., in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -94623,6 +94812,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 612,
+     "quote": "Since he is psychologically an archetype of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -95178,6 +95378,1324 @@
    ],
    "relation_family": {
     "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "points-to",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 550,
+     "quote": "The hieroglyph is at the same time a quaternity-symbol, which psychologically always points to the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "opposes",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 553,
+     "quote": "This regressive tendency has been consistently opposed from the most primitive times by the great psychotherapeutic systems which we know as the religions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-sacrifice",
+   "relation": "leads-to",
+   "object": "transformation",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 553,
+     "quote": "Things go very differently when the sacrifice is a voluntary one. ... but transformation and conservation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "chiwantopel",
+   "relation": "parallels",
+   "object": "siegfried",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 555,
+     "quote": "Chiwantopel puts Miss Miller in mind of another hero, who makes his entry in the form of Wagner’s Siegfried",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)",
+     "source": "Miss Miller"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "brunhilde",
+   "relation": "represents",
+   "object": "mother-imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 555,
+     "quote": "Brünhilde acts the part of the symbolic mother, the “spirit-mother” (mother-imago), not as a persecutor",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 605,
+     "quote": "is clearly revealed here as the symbolical or spiritual mother of Siegfried",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "logos",
+   "relation": "transforms-into",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 558,
+     "quote": "The Logos becomes a cow, i.e., a mother who bears the gods in her womb",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "conceived-as",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 558,
+     "quote": "in the Acts of Thomas the Holy Ghost is addressed as the mother",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 561,
+     "quote": "the Holy Ghost is worshipped in feminine form in one of the Eucharistic prayers",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 563,
+     "quote": "the Ophite view that the Holy Ghost is the “first word,” the “Mother of All Living,”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mother-imago",
+   "relation": "endangers",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 558,
+     "quote": "it is always the mother-imago which proves to be the hero’s greatest danger",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "reborn-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 558,
+     "quote": "a rebirth of consciousness from the darkness, i.e., from regression to the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "brunhilde",
+   "relation": "split-off-from",
+   "object": "wotan",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 560,
+     "quote": "Brünhilde is a sort of “split-off” from Wotan, part of his personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "brunhilde",
+   "relation": "personifies",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 563,
+     "quote": "Wagner’s Brünhilde is one of the numerous anima-figures who are attributed to masculine deities",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 605,
+     "quote": "Brünhilde, standing to Wotan in a daughter-anima relationship",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 607,
+     "quote": "As the anima she is the mother-sister-wife",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "represents",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 563,
+     "quote": "who without exception represent a dissociation in the masculine psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mime",
+   "relation": "represents",
+   "object": "terrible-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 567,
+     "quote": "he is a masculine representative of the Terrible Mother who lays the poisonous worm in her son’s path",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "siegfried",
+   "relation": "longs-for",
+   "object": "mother-imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 567,
+     "quote": "Siegfried’s longing for the motherimago drives him away from Mime",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 569,
+     "quote": "Siegfried’s longing for the mother-imago has unwittingly exposed him to the danger of looking back to his childhood",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "transforms-into",
+   "object": "dragon",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 569,
+     "quote": "the human mother, who immediately changes into the death-dealing dragon",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "hidden-in",
+   "object": "mother-imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 569,
+     "quote": "the “treasure hard to attain” lies hidden in the mother-imago, i.e., in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "points-to",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 569,
+     "quote": "pointing to something like a centre of the total personality, of the psychic totality which consists of both conscious and unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "chasm",
+   "relation": "signifies",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 577,
+     "quote": "there we find the “division,” the cleft ... the symbol of the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, FINDING-adjudicated, 2026-10-30)",
+     "audit_note": "cross-vendor read the single-ellipsis quote as non-verbatim; both spans are verbatim per tests/test_graph.py's own matcher and one ellipsis joining two verbatim spans is the house rule, so the finding is recorded and the reference upheld (b-cw9i-8 precedent)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 579,
+     "quote": "the crevice in the earth, interpreted on the primitive level as the “mother,” came to signify the place of the treasure",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "rules",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 576,
+     "quote": "The archetype of the self has, functionally, the significance of a ruler of the inner world, i.e., of the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "contains",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 576,
+     "quote": "The self, as a symbol of wholeness, is a coincidentia oppositorum , and therefore contains light and darkness simultaneously",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "paired-with",
+   "object": "antichrist",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 576,
+     "quote": "Nowhere in the latter-day myths are the paired opposites so palpably close together as in the figures of Christ and Anti-Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hecate",
+   "relation": "personifies",
+   "object": "terrible-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 577,
+     "quote": "the patron goddess of Medea, because the power of the Terrible Mother is irresistible, coming as it does from the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "psychosis",
+   "relation": "results-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 577,
+     "quote": "most forms of lunacy consist of affections which amount to an invasion by the unconscious and an inundation of the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "crossroads",
+   "relation": "symbolizes",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 577,
+     "quote": "Where the roads cross and enter into one another, thereby symbolizing the union of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "represents",
+   "object": "terrible-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 577,
+     "quote": "the dragon in the cave who represented the devouring mother had to be propitiated with human sacrifices",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "symbolizes",
+   "object": "death",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 578,
+     "quote": "That the snake really is a death-symbol is evident",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "signifies",
+   "object": "life",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 580,
+     "quote": "The treasure which the hero fetches from the dark cavern is life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "identified-with",
+   "object": "dragon",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 580,
+     "quote": "The hero who clings to the mother is the dragon",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim; 'The hero who clings to the mother is the dragon' — the identity holds under a condition the triple drops (and is undone by rebirth in the next clause); high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 580,
+     "quote": "It is an excellent symbol for the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 586,
+     "quote": "the snake represents the unconscious psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 580,
+     "quote": "Taken purely as a psychologem the hero represents the positive, favourable action of the unconscious, while the dragon is its negative and unfavourable action",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "appears-as",
+   "object": "serpent",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 587,
+     "quote": "The unconscious insinuates itself in the form of a snake if the conscious mind is afraid of the compensating tendency of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "introversion",
+   "relation": "meets",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 587,
+     "quote": "the unconscious can be met half-way through introversion",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "prajapati",
+   "relation": "transformed-by",
+   "object": "introversion",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 589,
+     "quote": "Thus Prajapati transforms himself by introversion into something new, into the multiplicity of the world",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "identified-with",
+   "object": "serpent",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 593,
+     "quote": "The hero is himself the snake, himself the sacrificer and the sacrificed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 594,
+     "quote": "Clear traces of the original identity of hero and snake are to be found in the myth of Cecrops",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mother-imago",
+   "relation": "identified-with",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 606,
+     "quote": "The mother-imago, at first identical with the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim; 'The mother-imago, at first identical with the anima' — the identity is staged ('at first'), which the triple drops; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "water",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 609,
+     "quote": "The water represents the maternal depths and the place of rebirth; in short, the unconscious in its positive and negative aspects",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "longs-for",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 611,
+     "quote": "leaving the mother, the source of life, behind him, he is driven by an unconscious desire to find her again, to return to her womb",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "terrible-mother",
+   "relation": "obstructs",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 611,
+     "quote": "Every obstacle that rises in his path and hampers his ascent wears the shadowy features of the Terrible Mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "is-matrix-of",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 611,
+     "quote": "psychic phenomena which are themselves the matrix of all mythology—I mean dreams, visions, fantasies, and delusional ideas",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "expresses",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 611,
+     "quote": "dreams generally compensate the conscious situation ... This very important principle of dream-interpretation also applies to myths",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "coincides-with",
+   "object": "myth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 611,
+     "quote": "recognizable traces of archetypal structures which coincide with the myth-motifs",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "dramatizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 612,
+     "quote": "the hero myth is an unconscious drama seen only in projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "possesses",
+   "object": "numinosity",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 612,
+     "quote": "his divinity only confirms that the self is numinous, a sort of god",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "indistinguishable-from",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 612,
+     "quote": "For psychology the self is an imago Dei and cannot be distinguished from it empirically",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "corresponds-to",
+   "object": "mana-personality",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 612,
+     "quote": "he corresponds to what I call the “mana personality.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "identifies-with",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 612,
+     "quote": "the ego all too easily succumbs to the temptation to identify with the hero, thus bringing on a psychic inflation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim; 'the ego all too easily succumbs to the temptation to identify with the hero' — a temptation and danger, not a rule; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "chiwantopel",
+   "relation": "bitten-by",
+   "object": "serpent",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 613,
+     "quote": "A green viper darts out of the bushes, glides towards him, and stings him in the arm",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)",
+     "source": "Miss Miller"
+    },
+    {
+     "volume": "5",
+     "paragraph": 616,
+     "quote": "first he is fatally bitten by the snake",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)",
+     "source": "Miss Miller",
+     "note": "Jung's summary of the Miller fantasy, typed by the analysand convention"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "miss-miller",
+   "relation": "separated-from",
+   "object": "chiwantopel",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 614,
+     "quote": "Miss Miller’s ego is separated by a gulf from the figure of Chiwantopel",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "represents",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 615,
+     "quote": "the snake is the representative of the world of instinct",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "miss-miller",
+   "relation": "threatened-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 616,
+     "quote": "the human personality of the author is threatened in the highest degree by an invasion from the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-30"
