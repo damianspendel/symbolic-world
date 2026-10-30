@@ -1277,7 +1277,8 @@
   {
    "id": "bear",
    "type": "Symbol",
-   "label": "The chthonic four-eyed animal of the abyss; alchemical emblem of the dangerous aspect of the prima materia"
+   "label": "The chthonic four-eyed animal of the abyss; alchemical emblem of the dangerous aspect of the prima materia",
+   "vocabulary_note": "the label names the CW 14 emblem (the four-eyed animal of the abyss); the node carries the bear symbol in all its aspects, including the maternal bear of CW 5 (the bear Mudjekeewis overcomes, §482, §496, §503, §511) — recorded 2026-10-30 at the b-cw5-8 merge, the serpent precedent of b-cw5-1"
   },
   {
    "id": "blue",
@@ -3888,6 +3889,76 @@
    "id": "foot",
    "label": "The foot and treading",
    "type": "Symbol"
+  },
+  {
+   "id": "hiawatha",
+   "label": "Hiawatha",
+   "type": "Figure"
+  },
+  {
+   "id": "nokomis",
+   "label": "Nokomis (Hiawatha's grandmother)",
+   "type": "Figure"
+  },
+  {
+   "id": "mudjekeewis",
+   "label": "Mudjekeewis (the West Wind, Hiawatha's father)",
+   "type": "Figure"
+  },
+  {
+   "id": "wenonah",
+   "label": "Wenonah (Hiawatha's mother)",
+   "type": "Figure"
+  },
+  {
+   "id": "mondamin",
+   "label": "Mondamin (the corn-god)",
+   "type": "Figure"
+  },
+  {
+   "id": "minnehaha",
+   "label": "Minnehaha (Laughing Water)",
+   "type": "Figure"
+  },
+  {
+   "id": "megissogwon",
+   "label": "Megissogwon (the magician, Pearl-Feather)",
+   "type": "Figure"
+  },
+  {
+   "id": "mishe-nahma",
+   "label": "Mishe-Nahma (the fish-king)",
+   "type": "Figure"
+  },
+  {
+   "id": "anthropoid-psyche",
+   "label": "The anthropoid psyche",
+   "type": "Concept"
+  },
+  {
+   "id": "eleusinian-mysteries",
+   "label": "The Eleusinian mysteries",
+   "type": "Motif"
+  },
+  {
+   "id": "woodpecker",
+   "label": "The woodpecker (Picus)",
+   "type": "Symbol"
+  },
+  {
+   "id": "roebuck",
+   "label": "The roebuck (magic animal)",
+   "type": "Symbol"
+  },
+  {
+   "id": "daemon",
+   "label": "The daemon",
+   "type": "Concept"
+  },
+  {
+   "id": "fasting",
+   "label": "Fasting",
+   "type": "Operation"
   }
  ],
  "edges": [
@@ -4530,6 +4601,17 @@
      "verified_date": "2026-07-28",
      "quote_repaired": "2026-07-28: elision exceeded 30-word bound; trimmed to strongest contiguous fragment; re-gated 2026-07-28 (SUPPORTED)",
      "crossvendor_checked": "gemini-3.1-pro (E6 stratified audit, 2026-07-27) — NOTE: audit predates the 2026-07-28 quote repair; not re-audited cross-vendor"
+    },
+    {
+     "volume": "5",
+     "paragraph": 500,
+     "quote": "This is the anima, the personification of the collective unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -8955,6 +9037,17 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "5",
+     "paragraph": 496,
+     "quote": "He who stems from two mothers is the hero: the first birth makes him a mortal man, the second an immortal half-god.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -87712,6 +87805,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-6, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 501,
+     "quote": "Once when I was explaining to a patient the maternal significance of water",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 541,
+     "quote": "Snake and water are mother attributes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -89522,6 +89637,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-4, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 505,
+     "quote": "All the lions, bulls, dogs, and snakes that populate our dreams represent an undifferentiated and as yet untamed libido",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -91335,6 +91461,29 @@
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-6, FINDING-adjudicated, 2026-10-30)",
      "audit_note": "cross-vendor asked for the composite subject, the tree entwined by the snake; Jung decomposes the symbol himself in §395-396 (the snake is the fear that protects the mother, the tree is the mother), and a composite node is forbidden by the vocabulary rules, so the finding is recorded and the reference upheld at medium"
+    },
+    {
+     "volume": "5",
+     "paragraph": 494,
+     "quote": "rebirth through the second mother, symbolized by the tree of death",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim; the 'that is to say ... symbolized by the tree of death' gloss is Jung's reading of the Christian understanding, not the understanding itself — reports -> asserts, matching the standing edge."
+    },
+    {
+     "volume": "5",
+     "paragraph": 546,
+     "quote": "This well-known “village linden-tree” is clearly characterized as a mother-symbol: it contains the three gods.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -91857,6 +92006,28 @@
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-6, PASS, 2026-10-30)",
      "correction_note": "gate correction: Verbatim; the text says the hero seeks immortality through the sacrifice of the incest tendency, not that he attains it — high -> medium."
+    },
+    {
+     "volume": "5",
+     "paragraph": 496,
+     "quote": "He who stems from two mothers is the hero: the first birth makes him a mortal man, the second an immortal half-god.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 514,
+     "quote": "For the hero ... finds his mother in the woman he loves, so that he can become a child again and win to immortality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -92144,6 +92315,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-6, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 524,
+     "quote": "It is not man who is transformed into a god, but the god who undergoes transformation in and through man.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -93686,6 +93868,1316 @@
    ],
    "relation_family": {
     "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mudjekeewis",
+   "relation": "overcomes",
+   "object": "bear",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 482,
+     "quote": "His father, the great warrior Mudjekeewis, has overcome by stealth the great bear",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 511,
+     "quote": "Mudjekeewis, who had acquired his godlike nature by overcoming the maternal bear",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "wins",
+   "object": "treasure-hard-to-attain",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 482,
+     "quote": "Here we meet the motif of the “treasure hard to attain,” which the hero wrests from the monster.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim; 'Here we meet the motif of the treasure hard to attain, which the hero wrests from the monster' is Jung naming the motif in his own voice — reports -> asserts."
+    },
+    {
+     "volume": "5",
+     "paragraph": 512,
+     "quote": "During this struggle in the West the hero wins the treasure hard to attain.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim; 'During this struggle in the West the hero wins the treasure hard to attain' is Jung's interpretive pattern statement — reports -> asserts, as at §482."
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mudjekeewis",
+   "relation": "slays",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 484,
+     "quote": "What Mudjekeewis slays is his feminine component, the anima-image, whose first carrier is the mother.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "appears-in",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 484,
+     "quote": "the anima-image, whose first carrier is the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 508,
+     "quote": "The “mother,” as the first incarnation of the anima archetype, personifies in fact the whole unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 514,
+     "quote": "The archetype of the Feminine, the anima, first appears in the mother and then transfers itself to the beloved.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mudjekeewis",
+   "relation": "becomes",
+   "object": "wind",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 484,
+     "quote": "Mudjekeewis becomes the West Wind, the fertilizing breath, the father of the winds.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "wenonah",
+   "relation": "gives-birth-to",
+   "object": "hiawatha",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 487,
+     "quote": "a daughter, Wenonah, who afterwards became the mother of Hiawatha",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 488,
+     "quote": "Wenonah allows herself to become infatuated and conceives from the breath of the West Wind a son, our hero",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mudjekeewis",
+   "relation": "impregnates",
+   "object": "wenonah",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 488,
+     "quote": "Wenonah is later wooed by the caressing West Wind and is made pregnant by him.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 511,
+     "quote": "Hiawatha’s father is Mudjekeewis, the West Wind: the battle therefore is fought in the West. From that quarter came life (fertilization of Wenonah)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "undergoes",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 494,
+     "quote": "the hero is not born like an ordinary mortal because his birth is a rebirth from the mother-wife",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "reared-by",
+   "object": "nokomis",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 494,
+     "quote": "In the Hiawatha epic, Wenonah dies after giving birth, and her place is taken by Nokomis.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 499,
+     "quote": "In these surroundings he was reared by Nokomis.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "dual-mother",
+   "relation": "corresponds-to",
+   "object": "dual-birth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 494,
+     "quote": "The dual mother may be replaced by the motif of dual birth, which has attained a lofty significance in various religions.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim; 'The dual mother may be replaced by the motif of dual birth' is Jung's own statement about the motifs, not a tradition's doctrine — reports -> asserts."
+    },
+    {
+     "volume": "5",
+     "paragraph": 495,
+     "quote": "The dual-mother motif suggests the idea of a dual birth.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "bear",
+   "relation": "symbolizes",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 496,
+     "quote": "Hiawatha’s father first conquers the mother under the terrifying symbol of the bear",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 503,
+     "quote": "which explains why the mother was also represented by the bear",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "undergoes",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 497,
+     "quote": "a central archetype, the God-image, has renewed itself (“been reborn”) and become “incarnate” in a way perceptible to consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "corresponds-to",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 497,
+     "quote": "The “mother” corresponds to the “virgin anima,” who is not turned towards the outer world",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "born-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 498,
+     "quote": "As is consistent with the birth of the hero and renewed god from the ocean of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 536,
+     "quote": "the saviour-hero appears as a fruit of the entry of libido into the maternal depths of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "kills",
+   "object": "roebuck",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 502,
+     "quote": "Hiawatha’s first deed was to kill a roebuck with his arrow",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "roebuck",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 503,
+     "quote": "Therefore the roebuck killed at the ford ... a symbol, that is to say, which points to the “animal” and other such powers of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 504,
+     "quote": "In killing his first roebuck, therefore, Hiawatha was killing the symbolic representative of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "battles",
+   "object": "mudjekeewis",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 504,
+     "quote": "He now sallies forth to do battle with Mudjekeewis, the father, in order to avenge his mother Wenonah.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 511,
+     "quote": "Mudjekeewis, who had acquired his godlike nature by overcoming the maternal bear, is himself overcome by his son",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "terrible-mother",
+   "relation": "symbolizes",
+   "object": "death",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 504,
+     "quote": "they can be interpreted as the Terrible Mother who devours and destroys, and thus symbolizes death itself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "anthropoid-psyche",
+   "relation": "resists",
+   "object": "culture",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 506,
+     "quote": "It is this anthropoid psyche which will not fit into the rational pattern of culture",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "aims-at",
+   "object": "anthropoid-psyche",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 506,
+     "quote": "the anthropoid psyche is also the aim and end of every regression",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "supports",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 508,
+     "quote": "As against this, therapy must support the regression, and continue to do so until the “prenatal” stage is reached.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "is",
+   "object": "imago",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 508,
+     "quote": "It must be remembered that the “mother” is really an imago, a psychic image merely",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "personifies",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 508,
+     "quote": "The “mother,” as the first incarnation of the anima archetype, personifies in fact the whole unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "hidden-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 510,
+     "quote": "In the darkness of the unconscious a treasure lies hidden, the same “treasure hard to attain”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "absorbs",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 511,
+     "quote": "from the mother, because she absorbs the regressing libido and keeps it to herself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 516,
+     "quote": "The hero symbolizes a man’s unconscious self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "undergoes",
+   "object": "introversion",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 517,
+     "quote": "Hiawatha introverts his libido, puts up the most dogged resistance to the natural course of events",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 528,
+     "quote": "so Hiawatha only finds the one he is looking for—Mondamin ... —through profound introversion, by a descent into the darkness of night, to the Mothers",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim single-ellipsis quote; 'through profound introversion, by a descent into the darkness of night, to the Mothers' is Jung's reading in his own terms, not the poem's content — reports -> asserts."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "regresses-to",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 518,
+     "quote": "When, therefore, Hiawatha hides himself again in the lap of nature, what he is doing is to reawaken the relationship to the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "fasting",
+   "relation": "opens-door-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 519,
+     "quote": "Solitude and fasting have from time immemorial been the best-known means ... to open the door to the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, FINDING-adjudicated, 2026-10-30)",
+     "audit_note": "cross-vendor read the single-ellipsis quote as non-verbatim; both spans are verbatim per tests/test_graph.py's own matcher and one ellipsis joining two verbatim spans is the house rule, so the finding is recorded and the reference upheld (b-cw9i-8 precedent)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "introversion",
+   "relation": "gives-birth-to",
+   "object": "mondamin",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 522,
+     "quote": "Hiawatha’s introversion gives birth to a god who is eaten.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "appears-as",
+   "object": "mondamin",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 522,
+     "quote": "The mystery of the “mother” is divine creative power, which appears here in the form of the corn-god Mondamin.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "conquers",
+   "object": "mondamin",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 523,
+     "quote": "on the fourth day, as Mondamin prophesied, Hiawatha conquers him, and Mondamin, yielding up his soul, sinks to the ground",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "eleusinian-mysteries",
+   "relation": "enacts",
+   "object": "hierosgamos",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 528,
+     "quote": "This clearly points to a hieros gamos which was celebrated underground.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "inhabited-by",
+   "object": "daemon",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 536,
+     "quote": "The hero is an extraordinary being who is inhabited by a daemon, and it is this that makes him a hero.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "church",
+   "relation": "signifies",
+   "object": "womb",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 536,
+     "quote": "It can scarcely be doubted that the underlying meaning of the Church is the mother’s womb.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "swallowed-by",
+   "object": "mishe-nahma",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 537,
+     "quote": "Challenged to battle by Hiawatha, he swallows the hero together with his boat",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "sea-monster",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 539,
+     "quote": "the battle with the sea monster means: it is the attempt to free the ego-consciousness from the deadly grip of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "challenges",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 540,
+     "quote": "The mother is thus the daemon who challenges the hero to his deeds",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "nokomis",
+   "relation": "impels",
+   "object": "hiawatha",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 540,
+     "quote": "so Nokomis allows Hiawatha no rest, but piles up new difficulties in his path",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 543,
+     "quote": "the secret spiritus rector who impels Hiawatha to his task is represented by Nokomis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "undergoes",
+   "object": "night-sea-journey",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 541,
+     "quote": "Thus Hiawatha makes the “night sea journey” over the Stygian waters",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "magician",
+   "relation": "represents",
+   "object": "terrible-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 543,
+     "quote": "the realm of the Terrible Mother, represented in this case by the magician, a negative father-figure",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 548,
+     "quote": "for the magician is the personification of the water of death, which in its turn stands for the devouring mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "nokomis",
+   "relation": "represents",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 543,
+     "quote": "Nokomis, the mother, who is a feminine principle in the breast of the hero. The latter is Hiawatha’s anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "helpful-animal",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 546,
+     "quote": "one of those helpful animals who represent the stirrings or intuitions of the unconscious, the helpful mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "woodpecker",
+   "relation": "aids",
+   "object": "hiawatha",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 546,
+     "quote": "Sang the Mama, the woodpecker: Aim your arrows, Hiawatha",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)",
+     "source": "Longfellow, The Song of Hiawatha"
+    },
+    {
+     "volume": "5",
+     "paragraph": 547,
+     "quote": "This helpful little bird now counsels our hero to aim under the magician’s topknot, the only vulnerable spot.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "kills",
+   "object": "megissogwon",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 547,
+     "quote": "There Hiawatha shoots in three arrows ... and so makes an end of Megissogwon.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "conquers",
+   "object": "terrible-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 548,
+     "quote": "This great deed of Hiawatha’s, when he conquers the Terrible Mother and death-bringing daemon in the guise of the negative father",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "hiawatha",
+   "relation": "marries",
+   "object": "minnehaha",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 548,
+     "quote": "is followed by his marriage with Minnehaha",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-8, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-30"
