@@ -3838,6 +3838,56 @@
    "id": "bull",
    "label": "Bull (Mithraic)",
    "type": "Symbol"
+  },
+  {
+   "id": "forest",
+   "label": "Forest (the wood, maternal symbol)",
+   "type": "Symbol"
+  },
+  {
+   "id": "aion",
+   "label": "Aion (Mithraic lion-headed time-god, Chronos)",
+   "type": "Figure"
+  },
+  {
+   "id": "time",
+   "label": "Time",
+   "type": "Concept"
+  },
+  {
+   "id": "arrow",
+   "label": "Arrow (the wounding shaft)",
+   "type": "Symbol"
+  },
+  {
+   "id": "heavenly-cow",
+   "label": "The heavenly cow (Egyptian mother-symbol)",
+   "type": "Symbol"
+  },
+  {
+   "id": "lamia",
+   "label": "Lamia",
+   "type": "Figure"
+  },
+  {
+   "id": "cassius",
+   "label": "Cassius (Shakespeare's Julius Caesar)",
+   "type": "Figure"
+  },
+  {
+   "id": "infantilism",
+   "label": "Infantilism",
+   "type": "Concept"
+  },
+  {
+   "id": "gitche-manito",
+   "label": "Gitche Manito (master of life, Hiawatha)",
+   "type": "Figure"
+  },
+  {
+   "id": "foot",
+   "label": "The foot and treading",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -40543,6 +40593,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-2, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 459,
+     "quote": "The task consists in integrating the unconscious...I have called this the individuation process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -56793,6 +56854,31 @@
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-5, PASS, 2026-08-18)",
      "source": "ancient Egyptian hymn recited for the cure of snake-bite"
+    },
+    {
+     "volume": "5",
+     "paragraph": 451,
+     "quote": "She fashioned from it a noble worm",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, FINDING-adjudicated, 2026-10-30)",
+     "source": "Egyptian hymn",
+     "audit_note": "cross-vendor read the standing serpent node's label (the healing, transforming serpent) against the poisonous serpent of this passage; the node carries the serpent symbol in all its aspects per its vocabulary_note recorded at the b-cw5-1 merge on the same finding, so the finding is recorded and the reference upheld"
+    },
+    {
+     "volume": "5",
+     "paragraph": 458,
+     "quote": "Isis, the sister-wife of the sun-god, creates the poisonous serpent from his spittle",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, FINDING-adjudicated, 2026-10-30)",
+     "audit_note": "cross-vendor read the standing serpent node's label (the healing, transforming serpent) against the poisonous serpent of this passage; the node carries the serpent symbol in all its aspects per its vocabulary_note recorded at the b-cw5-1 merge on the same finding, so the finding is recorded and the reference upheld"
     }
    ],
    "relation_family": {
@@ -84473,6 +84559,17 @@
      "verified_date": "2026-10-28",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)",
      "source": "Karl Abraham"
+    },
+    {
+     "volume": "5",
+     "paragraph": 474,
+     "quote": "it is possible to compare what look like individual dream-motifs with mythologems of whatever origin",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -84875,6 +84972,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-28",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 469,
+     "quote": "What happens in fantasy is therefore compensatory to the situation or attitude of the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -86983,6 +87091,30 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-3, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 455,
+     "quote": "The poisonous worm is a deadly instead of an animating form of libido",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, FINDING-adjudicated, 2026-10-30)",
+     "audit_note": "cross-vendor read the standing serpent node's label (the healing, transforming serpent) against the poisonous serpent of this passage; the node carries the serpent symbol in all its aspects per its vocabulary_note recorded at the b-cw5-1 merge on the same finding, so the finding is recorded and the reference upheld"
+    },
+    {
+     "volume": "5",
+     "paragraph": 473,
+     "quote": "The libido that is withdrawn so unwillingly from the “mother” turns into a threatening serpent",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, FINDING-adjudicated, 2026-10-30)",
+     "audit_note": "cross-vendor read the standing serpent node's label (the healing, transforming serpent) against the poisonous serpent of this passage; the node carries the serpent symbol in all its aspects per its vocabulary_note recorded at the b-cw5-1 merge on the same finding, so the finding is recorded and the reference upheld"
     }
    ],
    "relation_family": {
@@ -88571,6 +88703,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-4, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 467,
+     "quote": "The primordial image is itself a “pattern of behaviour”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 474,
+     "quote": "general and typical modes of functioning which correspond to the biological “pattern of behaviour.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -88606,6 +88760,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-5, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 450,
+     "quote": "Since this archetype is numinous, i.e., possesses a specific energy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 467,
+     "quote": "the archetype has a numinous character",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -89429,6 +89605,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-4, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 450,
+     "quote": "through its introversion and regression, contents are constellated which till now were latent",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 466,
+     "quote": "regresses to the mythical world of the archetypes, where it activates images",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -89561,6 +89759,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-4, PASS, 2026-10-29)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 462,
+     "quote": "Chiwantopel is a typical animus-figure, that is to say, a personification of the masculine side of the woman’s psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -91376,6 +91585,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-6, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 415,
+     "quote": "The separation of the son from the mother signifies man’s leavetaking from animal unconsciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -91472,6 +91692,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-6, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 425,
+     "quote": "To be “entwined” or embraced is the same as to be “devoured,” which as we saw means entering into the mother’s womb",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -91661,6 +91892,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-6, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 459,
+     "quote": "The hero’s victory over the “mother,” or over her daemonic representative (dragon, etc.), is never anything but temporary",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
     }
    ],
    "relation_family": {
@@ -92389,6 +92631,1061 @@
    ],
    "relation_family": {
     "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "incest-taboo",
+   "relation": "gives-rise-to",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 415,
+     "quote": "It was only the power of the “incest prohibition”...that created the self-conscious individual",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "organizes",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 415,
+     "quote": "regard the religious systems as institutions which take up the instinctual forces of man’s animal nature, organize them",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "faust",
+   "relation": "yearns-for",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 417,
+     "quote": "Faust’s desire, like that of every hero, is a yearning for the mystery of rebirth, for immortality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "forest",
+   "relation": "symbolizes",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 420,
+     "quote": "The forest, like the tree, has a maternal significance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "horse",
+   "relation": "symbolizes",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 421,
+     "quote": "The mother-imago is a libido-symbol and so is the horse",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 422,
+     "quote": "here again the tertium comparationis is the libido-symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "horse",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 421,
+     "quote": "Legend attributes properties to the horse which psychologically belong to the unconscious of man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "horse",
+   "relation": "symbolizes",
+   "object": "time",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 424,
+     "quote": "The year is the body of the sacrificial horse",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)",
+     "source": "Brihadaranyaka Upanishad"
+    },
+    {
+     "volume": "5",
+     "paragraph": 425,
+     "quote": "Here the horse is undoubtedly conceived as a time-symbol, besides being the whole world",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "aion",
+   "relation": "symbolizes",
+   "object": "time",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 425,
+     "quote": "As the name indicates, he is a time-symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "aion",
+   "relation": "represents",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 425,
+     "quote": "he is a time-symbol, and is composed entirely of libido-images",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 426,
+     "quote": "Just as Aion represents the libido in the “embrace” or state of death and rebirth",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "horse",
+   "relation": "acts-as",
+   "object": "psychopomp",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 427,
+     "quote": "The horse also plays the part of a psychopomp who leads the way to the other world",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "cassius",
+   "relation": "identifies-with",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 431,
+     "quote": "Cassius is infantile and identified with the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "miss-miller",
+   "relation": "projects-ideal-onto",
+   "object": "chiwantopel",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 432,
+     "quote": "The hero Chiwantopel represents her ideal, who is here projected as a masculine figure",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "arrow",
+   "relation": "comes-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 438,
+     "quote": "The wounding and painful shafts do not come from outside, through gossip...but from the ambush of our own unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "job",
+   "relation": "tormented-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 443,
+     "quote": "Here Job is voicing the torment of soul caused by the onslaught of unconscious desires",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "symbolizes",
+   "object": "man",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 445,
+     "quote": "It is a true symbol of the man of the Christian era, tormented by his desires and crucified in Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "arrow",
+   "relation": "symbolizes",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 447,
+     "quote": "As we know that the arrow is a libido-symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "introversion",
+   "relation": "leads-to",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 449,
+     "quote": "the journey to the underworld was a plunge into the fountain of youth, and the libido, apparently dead, wakes to renewed fruitfulness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "enters",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 450,
+     "quote": "This is a primitive way of describing the libido’s entry into the interior world of the psyche, the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "ritual",
+   "relation": "induces",
+   "object": "introversion",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 450,
+     "quote": "the mechanism of introversion is made to function artificially by means of ritual actions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 450,
+     "quote": "the unconscious is infinitely greater than the mother and is only symbolized by her",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 459,
+     "quote": "the mother-symbol no longer connects back to the beginnings, but points towards the unconscious as the creative matrix of the future",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "incest",
+   "relation": "expresses",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 450,
+     "quote": "the incest tendency...is really only the desire of the unconscious to be taken notice of",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "symbolizes",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 452,
+     "quote": "The serpent symbolizes the mysterious numen of the “mother”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)",
+     "correction_note": "gate correction: Verbatim; the serpent symbolizes 'the mysterious numen of the mother' — her killing and life-giving power, not the mother as such — high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "heavenly-cow",
+   "relation": "symbolizes",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 455,
+     "quote": "the heavenly cow, the symbol of the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "fear",
+   "relation": "leads-to",
+   "object": "infantilism",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 456,
+     "quote": "fear of life and people causes more shrinking back, and this in turn leads to infantilism",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mother-imago",
+   "relation": "turns-into",
+   "object": "lamia",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 457,
+     "quote": "It is rather the mother-imago that has turned into a lamia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "mother-imago",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 457,
+     "quote": "The mother-imago, however, represents the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "5",
+     "paragraph": 468,
+     "quote": "the mother-imago, which in women personifies a special aspect of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "checks",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 458,
+     "quote": "it is his own unconscious whose alien tendencies are beginning to check the forward striving of the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "contrasexuality",
+   "relation": "assimilated-in",
+   "object": "second-half-of-life",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 459,
+     "quote": "The assimilation of contrasexual tendencies then becomes a task that must be fulfilled",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "cross",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 460,
+     "quote": "or rather the self, his wholeness, which is both God and animal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "cross",
+   "relation": "symbolizes",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 460,
+     "quote": "a tremendous tension of opposites paradoxically at one with themselves, as in the cross, their most perfect symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-sacrifice",
+   "relation": "separates-from",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 461,
+     "quote": "this sacrifice means giving up the connection with the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "appears-as",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 462,
+     "quote": "he is a slightly hysterical, infantile hero whose longing to be loved shows through the gaps in his armour",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "regresses-to",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 465,
+     "quote": "the libido of the child regresses to the sheltering ease of the mother’s arms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "seeks",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 466,
+     "quote": "true to his ancient prototype, he is seeking the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "young-dying-god",
+   "relation": "bound-to",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 466,
+     "quote": "This youthful hero is always the son-lover of the mother-goddess and is doomed to an early death",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)",
+     "note": "son-lover of the mother-goddess read as the young dying god"
+    },
+    {
+     "volume": "5",
+     "paragraph": 468,
+     "quote": "Their meaning and their vitality begin and end in the mother-goddess",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "myth",
+   "relation": "explains",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 466,
+     "quote": "Herein lay the vital importance of myths: they explained to the bewildered human being what was going on in his unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "acts-vicariously-for",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 469,
+     "quote": "The hero as an animus-figure acts vicariously for the conscious individual",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "chiwantopel",
+   "relation": "parallels",
+   "object": "gautama-buddha",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 470,
+     "quote": "the hero’s departure from his father’s house reminded her of the fate of the young Buddha",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, FINDING-adjudicated, 2026-10-30)",
+     "source": "Miss Miller",
+     "audit_note": "cross-vendor asked for reports or asserts because Jung paraphrases Miss Miller's remark; the analysand convention types the analysand's own material as jung-quotes-source with the analysand named (b-cw9i-8 precedent), so the finding is recorded and the reference upheld"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "attracts",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 477,
+     "quote": "the hero as a symbolic figure who attracts libido to himself in the form of wonder and adoration",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "gitche-manito",
+   "relation": "symbolizes",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 481,
+     "quote": "Hence this god too is a libido-symbol, since he produces not only water but fire",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "subject": "foot",
+   "relation": "signifies",
+   "object": "phallus",
+   "references": [
+    {
+     "volume": "5",
+     "paragraph": 481,
+     "quote": "The foot and the treading movement are invested with a phallic significance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-10-30",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-30"
