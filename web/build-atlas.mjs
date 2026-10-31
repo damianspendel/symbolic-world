@@ -46,6 +46,10 @@ const CONCEPT_SEARCH_HEAD = true
 // page carries noindex. Off, the sitemap lists them again.
 const NOINDEX_PROVENANCE = true
 
+// spec-seo-minor-v1, item 4: the Dataset JSON-LD on the landing page names the
+// concept DOI as its identifier and the release as its version.
+const DATASET_LD_IDENTIFIER = true
+
 // The /about page (spec-orientation-v1, item 4): audience-led copy, first in
 // the about group. Off, the page is not registered and tools/pages/preflight.py
 // fails a lingering about.html as unexpected.
@@ -2811,7 +2815,9 @@ table.findings .src { font: .58rem var(--mono); }
   "name": "The Symbolic World — a verified knowledge graph of C. G. Jung's Collected Works",
   "description": "A knowledge graph of symbolic relations in Jung's Collected Works. Each relation carries a citation with CW volume, paragraph number, and a brief verbatim quotation, plus the verification provenance of a multi-model gating pipeline with a public dispute log. The graph grows as further volumes are mined.",
   "url": "https://symbolicworld.observer/",
-  "sameAs": "https://doi.org/10.5281/zenodo.21631523",
+  "sameAs": "https://doi.org/10.5281/zenodo.21631523",${DATASET_LD_IDENTIFIER ? `
+  "identifier": "https://doi.org/10.5281/zenodo.21631523",
+  "version": "${String(meta.version).replace(/^v/, '')}",` : ''}
   "isAccessibleForFree": true,
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "creator": { "@type": "Person", "name": "Damian Spendel" },
