@@ -128,6 +128,10 @@ def test_sitemap_lists_every_generated_page_and_nothing_missing(sitemap):
     for path in generated_pages():
         name = os.path.basename(path)[: -len(".html")]
         expected = "" if name == "index" else name
+        if 'name="robots" content="noindex' in read(path):
+            # spec-seo-minor-v1, item 2: a noindex page is kept out of the sitemap
+            assert expected not in listed, f"/{name} carries noindex but is in the sitemap"
+            continue
         assert expected in listed, f"/{name} is generated but not in the sitemap"
     for slug in listed:
         # /atlas is the vite entry (web/atlas.html), built into dist, not public

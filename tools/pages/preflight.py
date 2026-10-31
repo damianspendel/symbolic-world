@@ -124,6 +124,17 @@ if not su_match:
 if su_match and su_match.group(1):
     ALLOW.add('support.html')
 
+print('== sitemap and noindex ==')
+# spec-seo-minor-v1, item 2: a page that asks search engines not to index it
+# must not be offered to them in the sitemap
+_sm = (DIST / 'sitemap.xml').read_text() if (DIST / 'sitemap.xml').exists() else ''
+_listed = re.findall(r'<loc>https://symbolicworld\.observer/([^<]*)</loc>', _sm)
+_noindexed = [s for s in _listed if (DIST / ((s or 'index') + '.html')).exists()
+              and 'name="robots" content="noindex' in (DIST / ((s or 'index') + '.html')).read_text(errors='replace')]
+check('no sitemap URL carries noindex', not _noindexed, ', '.join(_noindexed[:5]))
+_ni_total = sum(1 for f in DIST.glob('*.html') if 'name="robots" content="noindex' in f.read_text(errors='replace'))
+print(f'  {len(_listed)} sitemap URLs; {_ni_total} pages carry noindex')
+
 print('== manifest ==')
 seen = set()
 dist_batch_pages = set()

@@ -33,6 +33,9 @@ REPO_URL = "https://github.com/damianspendel/symbolic-world"
 SUPPORT_URL = re.search(r"^const SUPPORT_URL = '([^']*)'$",
                         (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1)
 # The /about page follows web/build-atlas.mjs's gate the same way (item 4).
+NOINDEX_PROVENANCE = re.search(r"^const NOINDEX_PROVENANCE = (true|false)$",
+                               (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1) == "true"
+ROBOTS_NOINDEX = '<meta name="robots" content="noindex, follow">\n' if NOINDEX_PROVENANCE else ""
 EMIT_ABOUT_PAGE = re.search(r"^const EMIT_ABOUT_PAGE = (true|false)$",
                             (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1) == "true"
 
@@ -313,7 +316,7 @@ def batch_page(batch, delta, commits):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/{batch_slug(batch["id"])}">
-<title>{esc(batch["id"])} · a batch delta · The Symbolic World</title>
+{ROBOTS_NOINDEX}<title>{esc(batch["id"])} · a batch delta · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
 {THEME_SNIPPET}
 <style>
@@ -552,7 +555,7 @@ def build():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/ledger">
-<meta name="description" content="The build ledger of The Symbolic World, a verified knowledge graph of Jung&#39;s Collected Works: every verified reference in the graph, with the batch that added it and its verification record.">
+{ROBOTS_NOINDEX}<meta name="description" content="The build ledger of The Symbolic World, a verified knowledge graph of Jung&#39;s Collected Works: every verified reference in the graph, with the batch that added it and its verification record.">
 <title>Ledger · The Symbolic World</title>
 <link rel="stylesheet" href="./chrome.css">
 {THEME_SNIPPET}

@@ -39,6 +39,13 @@ const EMIT_QUOTE_SEARCH = true
 // their interface labels data-nosnippet. Off, today's markup returns.
 const CONCEPT_SEARCH_HEAD = true
 
+// spec-seo-minor-v1, item 2: the batch pages and /ledger are provenance
+// records, kept for readers who follow a link but not offered to search:
+// they carry noindex, follow and leave the sitemap. tools/build_ledger_page.py,
+// which writes them, reads this literal; preflight fails a sitemap URL whose
+// page carries noindex. Off, the sitemap lists them again.
+const NOINDEX_PROVENANCE = true
+
 // The /about page (spec-orientation-v1, item 4): audience-led copy, first in
 // the about group. Off, the page is not registered and tools/pages/preflight.py
 // fails a lingering about.html as unexpected.
@@ -1208,7 +1215,7 @@ const SITE_PAGES = [
   { slug: '', title: 'The Symbolic World', nav: 'home', changefreq: 'weekly', priority: '1.0' },
   // the app itself, at /atlas since 2026-10-23 (web/atlas.html is the vite entry)
   { slug: 'atlas', title: 'The atlas', nav: 'the atlas', changefreq: 'daily', priority: '0.9' },
-  { slug: 'ledger', title: 'Ledger', nav: 'ledger', changefreq: 'daily', priority: '0.8' },
+  { slug: 'ledger', title: 'Ledger', nav: 'ledger', changefreq: 'daily', priority: '0.8', noindex: NOINDEX_PROVENANCE },
   { slug: 'families', title: 'Relation families', nav: 'families', changefreq: 'weekly', priority: '0.6' },
   { slug: 'disputes', title: 'Dispute log', nav: 'disputes', changefreq: 'weekly', priority: '0.5' }
   // graph.json and the /v1.3/ snapshot left the sitemap (spec-concept-pages-v1,
@@ -1242,7 +1249,7 @@ const batchSlug = (id) => 'batch-' + String(id).toLowerCase()
   .replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
 
 function registerExternalPage(p) {
-  SITE_PAGES.push({ slug: p.slug, title: p.title, nav: null, changefreq: p.changefreq || 'monthly', priority: p.priority || '0.3' })
+  SITE_PAGES.push({ slug: p.slug, title: p.title, nav: null, changefreq: p.changefreq || 'monthly', priority: p.priority || '0.3', noindex: !!p.noindex })
 }
 
 function registerPage(p) {
@@ -2972,17 +2979,18 @@ ${methodHTML}
 // The batch delta pages, listed from pipeline/state.json.
 {
   const st = JSON.parse(readFileSync(here('../pipeline/state.json'), 'utf8'))
-  for (const b of st.batches) registerExternalPage({ slug: batchSlug(b.id), title: `${b.id} — a batch delta` })
-  console.log(`batch deltas: ${st.batches.length} pages listed in the sitemap (written by tools/build_ledger_page.py)`)
+  for (const b of st.batches) registerExternalPage({ slug: batchSlug(b.id), title: `${b.id} — a batch delta`, noindex: NOINDEX_PROVENANCE })
+  console.log(`batch deltas: ${st.batches.length} pages ${NOINDEX_PROVENANCE ? 'kept out of' : 'listed in'} the sitemap (written by tools/build_ledger_page.py)`)
 }
 
 function emitPages() {
   for (const p of NEW_PAGES) writeFileSync(here(`./public/${p.slug}.html`), renderPage(p))
-  const urls = SITE_PAGES.map(p =>
+  const listed = SITE_PAGES.filter(p => !p.noindex)
+  const urls = listed.map(p =>
     `  <url><loc>https://symbolicworld.observer/${p.slug}</loc><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>`)
   writeFileSync(here('./public/sitemap.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`)
-  console.log(`pages: ${NEW_PAGES.length} generated (${NEW_PAGES.map(p => '/' + p.slug).join(' ')}) · sitemap ${SITE_PAGES.length} urls`)
+  console.log(`pages: ${NEW_PAGES.length} generated (${NEW_PAGES.map(p => '/' + p.slug).join(' ')}) · sitemap ${listed.length} urls (${SITE_PAGES.length - listed.length} noindex pages left out)`)
 }
 emitPages()
 
