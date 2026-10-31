@@ -1616,11 +1616,11 @@ def test_the_deploy_carries_a_size_budget():
     assert "== size budget ==" in src
     assert "INDEX_CEILING" in src
     ceiling = re.search(r"INDEX_CEILING = ([\d.]+) \* 1024 \* 1024", src)
-    assert ceiling and float(ceiling.group(1)) == 3.5, "the ceiling moved without a ruling"
+    assert ceiling and float(ceiling.group(1)) == 4.5, "the ceiling moved without a ruling"
     assert "within budget" in src and "ceiling" in src
     dist_index = os.path.join(ROOT, "web", "dist", "atlas.html")
     if os.path.exists(dist_index):
-        assert os.path.getsize(dist_index) <= 3.5 * 1024 * 1024, (
+        assert os.path.getsize(dist_index) <= 4.5 * 1024 * 1024, (
             "the built bundle already exceeds the ceiling")
 
 

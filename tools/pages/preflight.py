@@ -225,7 +225,7 @@ else:
 # is near: it fails the deploy if the bundle crosses the ceiling, and prints the
 # actual against it either way so the trend is visible in the log.
 print('== size budget ==')
-INDEX_CEILING = 3.5 * 1024 * 1024   # raised from 3.0 by Damian's ruling, 2026-10-20 (CW 11 growth)
+INDEX_CEILING = 4.5 * 1024 * 1024   # raised from 3.5 by Damian's ruling, 2026-10-31 (CW 5 growth, room for CW 16); 3.0 -> 3.5 on 2026-10-20
 # the single-file app is dist/atlas.html since 2026-10-23; dist/index.html is the landing page
 idx_path = DIST / 'atlas.html'
 if idx_path.exists():
