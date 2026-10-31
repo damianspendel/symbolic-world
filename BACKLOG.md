@@ -603,6 +603,17 @@ here so the morning finds it; nothing below is committed scope.
    DONE 2026-10-31: "symbols" became "concepts" in three places, and
    "cited claims" became "citations" in two.
 
+5. **The atlas volume bar looks blurry in the day theme** (Damian,
+   2026-10-31, for the next release, with a screenshot). Cause: the bar's
+   background band in web/src/style.css (`#works`) is hard-coded to the night
+   ground, `rgba(11, 10, 8, 0.92)`, so in day it paints a near-black band
+   across a light page, and the labels' halo (`text-shadow` in
+   `var(--ground)`, light cream in day) glows around dark letters on that
+   band. Fix: draw the band from the theme's own ground (for example
+   `color-mix(in srgb, var(--ground) 92%, transparent)`) and check the label
+   and count colours against it in both themes. A UI change under the usual
+   review.
+
 ## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
 
 Source for both items: GitHub issue 2 on damianspendel/symbolic-world, raised
