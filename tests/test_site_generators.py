@@ -29,6 +29,7 @@ skipping: a page that is not on disk is not on the site either.
 Run: python3 -m pytest tests/test_site_generators.py
 """
 import glob
+import html as html_lib
 import json
 import os
 import re
@@ -1905,3 +1906,55 @@ def test_ledger_and_the_atlas_agree_on_the_family_totals(families_map):
     meta = re.search(r'<div class="meta">(.*?)</div>', html, re.S).group(1)
     assert f'{families_map["totals"]["assigned"]} family-assigned' in meta
     assert f'{families_map["totals"]["pending"]} awaiting a ruling' in meta
+
+
+# ----------------------------------- spec-seo-minor-v1, item 1 · concept heads ---
+
+def _concept_search_head_on():
+    src = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
+    m = re.search(r"^const CONCEPT_SEARCH_HEAD = (true|false)$", src, re.M)
+    assert m, "CONCEPT_SEARCH_HEAD is not a readable literal"
+    return m.group(1) == "true"
+
+
+def test_concept_pages_lead_with_a_plain_lede_and_counted_heads():
+    """The first paragraph after the title band says what the page is about;
+    the title and description carry counts computed from the atlas; whatever
+    still overflows after shortening is exactly what the build recorded."""
+    if not _concept_search_head_on():
+        pytest.skip("CONCEPT_SEARCH_HEAD is off")
+    atlas = json.loads(read(os.path.join(SRC, "atlas.json")))
+    passages, relations = {}, {}
+    for e in atlas["edges"]:
+        for nid in {e["source"], e["target"]}:
+            relations[nid] = relations.get(nid, 0) + 1
+            passages.setdefault(nid, set()).update(
+                (str(r["volume"]), str(r["paragraph"])) for r in (e.get("refs") or []))
+    overflow = json.loads(read(os.path.join(SRC, "concept-head-overflow.json")))
+    pages = sorted(glob.glob(os.path.join(PUBLIC, "concept-*.html")))
+    assert pages
+    long_titles, long_descs = set(), set()
+    for path in pages:
+        cid = os.path.basename(path)[len("concept-"):-len(".html")]
+        page = read(path)
+        main = page[page.index("<main"):]
+        after_band = main[main.index("</div>", main.index('class="titleband"')):]
+        first_p = re.search(r"<p[^>]*>(.*?)</p>", after_band, re.S)
+        assert first_p and 'class="lede"' in first_p.group(0), f"{cid}: the lede is not the first paragraph"
+        title = html_lib.unescape(re.search(r"<title>(.*?)</title>", page).group(1))
+        desc = html_lib.unescape(re.search(r'<meta name="description" content="([^"]*)"', page).group(1))
+        n_pass = len(passages.get(cid, ()))
+        if relations.get(cid):
+            assert f"{relations[cid]} relation" in first_p.group(1), f"{cid}: lede relation count"
+        if n_pass:
+            assert f"{n_pass} passage" in first_p.group(1), f"{cid}: lede passage count"
+            assert f"{n_pass} passage" in desc, f"{cid}: description passage count"
+        if len(title) > 60:
+            long_titles.add(cid)
+        if len(desc) > 155:
+            long_descs.add(cid)
+        for cls in ("prov", "cmeta"):
+            for tag in re.findall(rf'<span class="{cls}"[^>]*>', page):
+                assert "data-nosnippet" in tag, f"{cid}: a .{cls} label without data-nosnippet"
+    assert long_titles == set(overflow["titles"]), "title overflow differs from the build's record"
+    assert long_descs == set(overflow["descriptions"]), "description overflow differs from the build's record"

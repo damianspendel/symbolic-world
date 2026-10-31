@@ -34,6 +34,11 @@ const EMIT_CONCEPTS_INDEX = true
 // pre-stage page byte for byte.
 const EMIT_QUOTE_SEARCH = true
 
+// spec-seo-minor-v1, item 1: concept pages open with a plain lede, carry a
+// title that fits 60 characters and a description that fits 155, and mark
+// their interface labels data-nosnippet. Off, today's markup returns.
+const CONCEPT_SEARCH_HEAD = true
+
 // The /about page (spec-orientation-v1, item 4): audience-led copy, first in
 // the about group. Off, the page is not registered and tools/pages/preflight.py
 // fails a lingering about.html as unexpected.
@@ -480,6 +485,9 @@ const core = [...bridges].sort((x, y) => {
 // panel shows the document's own words; a mismatch here is a build failure, not
 // a cosmetic one.
 const esc = s => String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]))
+// esc is for text; an attribute value also needs its quote mark escaped, or a
+// description holding a straight quote ends early (spec-seo-minor-v1, item 4)
+const escAttr = s => esc(s).replace(/"/g, '&quot;')
 const inline = s => esc(s)
   .replace(/`([^`]+)`/g, '<code>$1</code>')
   .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
@@ -1296,7 +1304,7 @@ function renderPage(p) {
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/${p.slug}">
-${p.description ? `<meta name="description" content="${esc(p.description)}">\n` : ''}<title>${esc(p.title)} · The Symbolic World</title>
+${p.description ? `<meta name="description" content="${escAttr(p.description)}">\n` : ''}<title>${esc(p.titleFull || (p.title + ' · The Symbolic World'))}</title>
 <link rel="stylesheet" href="/chrome.css">
 ${THEME_SNIPPET}
 <style>${V2_STYLE}${p.style || ''}</style>
@@ -1704,6 +1712,9 @@ const styleConcept = `
 .vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
 .vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
 .chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+/* a data-nosnippet wrapper must not change layout (it sits inside a flex row) */
+.ns { display: contents; }
+.lede { font-size: 1.02rem; }
 .chips .chip { text-decoration: none; }
 `
 if (EMIT_CONCEPT_PAGES) {
@@ -1733,13 +1744,20 @@ if (EMIT_CONCEPT_PAGES) {
     'relation families are assigned by a documented procedure. The ' +
     '<a href="/atlas#/method">method page</a> describes exactly what is and is not checked.'
 
+  const NS = CONCEPT_SEARCH_HEAD ? ' data-nosnippet' : ''
+  // Google honours data-nosnippet on span, div and section only, so a
+  // paragraph's interface text is wrapped in a span rather than marked itself
+  const ns = (html) => CONCEPT_SEARCH_HEAD ? `<span class="ns" data-nosnippet>${html}</span>` : html
   const PENDING = '·pending', UNCLASSIFIED = '·unclassified'
   let conceptCount = 0
+  const headOverflow = { titles: [], descriptions: [] }
   for (const node of atlasNodes) {
     const edges = edgesByNode.get(node.id)
     const refTotal = edges.reduce((a, e) => a + e.refs.length, 0)
     const vols = [...new Set(edges.flatMap(e => e.volumes))].sort(byVolume)
     derived(edges.length, refTotal)
+    const passages = new Set(edges.flatMap(e => e.refs.map(r => `${r.volume}\u00a7${r.paragraph}`))).size
+    derived(passages)
 
     const groups = new Map()
     for (const e of edges) {
@@ -1761,10 +1779,10 @@ if (EMIT_CONCEPT_PAGES) {
       const self = `<span class="ev">${esc(node.label)}</span>`
       const cites = e.refs.map(r =>
         `<li class="ev">CW ${esc(r.volume)} §${esc(r.paragraph)} — “${esc(r.quote)}”` +
-        `<span class="cmeta">${esc(r.claim_type)} · verified by ${esc(r.verified_by)}, ${esc(r.verified_date)}` +
+        `${NS ? ' ' : ''}<span class="cmeta"${NS}>${esc(r.claim_type)} · verified by ${esc(r.verified_by)}, ${esc(r.verified_date)}` +
         `${r.crossvendor_checked ? ` · cross-checked: ${esc(r.crossvendor_checked)}` : ''}</span></li>`).join('\n')
       return `<div class="crow">
-<div class="triple">${out ? self : other} <span class="rel ev">${esc(rel)}</span> ${out ? other : self} <span class="prov">${esc(provLabel(e.family))}</span></div>
+<div class="triple">${out ? self : other} <span class="rel ev">${esc(rel)}</span> ${out ? other : self} <span class="prov"${NS}>${esc(provLabel(e.family))}</span></div>
 ${e.refs.length ? `<ul class="cites">\n${cites}\n</ul>` : ''}
 </div>`
     }
@@ -1805,29 +1823,77 @@ ${e.refs.length ? `<ul class="cites">\n${cites}\n</ul>` : ''}
       return `<a class="chip ${cls}" href="#${anchorOf(key)}">${esc(label)} ${derived(n)}</a>`
     }).join('\n')
 
-    const body = `<div class="titleband"><p class="eyebrow">concept</p>
+    // spec-seo-minor-v1, item 1: the lede says what the page is about, in
+    // words a search result can show. Every count is computed (RULE 17);
+    // "passages" are distinct (volume, paragraph) pairs, not references.
+    const typeWord = String(node.type || 'concept').toLowerCase()
+    const article = /^[aeiou]/.test(typeWord) ? 'an' : 'a'
+    const count = (n, w) => `${derived(n)} ${w}${n === 1 ? '' : 's'}`
+    const volList = vols.length ? ` (CW ${vols.join(', ')})` : ''
+    const lede = `<p class="lede"><span class="ev">${esc(node.label)}</span> is ${article} ${esc(typeWord)} in C. G. Jung’s Collected Works.` +
+      (edges.length ? ` The atlas holds ${count(edges.length, 'relation')} for it` +
+        (passages ? `, drawn from ${count(passages, 'passage')} quoted with volume and paragraph${volList}` : '') + '.' : '') + '</p>'
+
+    const body = `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
 <h1><span class="ev">${esc(node.label)}</span>${node.latin ? ` <em class="latin ev">${esc(node.latin)}</em>` : ''}</h1>
-<p class="sub"><span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span></p></div>
-<p class="meta">${registerNote}</p>
-<p>${provLine}</p>
-<p class="atlas-cta"><a href="/atlas#/n/${node.id}">see its relations on the atlas →</a></p>
-${refTotal ? `<div class="vmix">\n${volStrip}\n</div>` : ''}
-${order.length > 1 ? `<p class="chips">\n${chips}\n</p>` : ''}
+<p class="sub">${ns(`<span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span>`)}</p></div>
+${CONCEPT_SEARCH_HEAD ? lede + '\n' : ''}<p class="meta">${ns(registerNote)}</p>
+<p>${ns(provLine)}</p>
+<p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
+${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${order.length > 1 ? `<p class="chips">${ns(`\n${chips}\n`)}</p>` : ''}
 ${groupBlocks}
-<p class="meta"><a href="/atlas#/n/${node.id}">open in the atlas</a> · <a href="/ledger">the ledger</a></p>`
+<p class="meta">${ns(`<a href="/atlas#/n/${node.id}">open in the atlas</a> · <a href="/ledger">the ledger</a>`)}</p>`
+
+    // spec-seo-minor-v1, item 1: a title that fits 60 and a description that
+    // fits 155. A label shortens by dropping a trailing parenthetical, then by
+    // cutting at the first ; , : or " / "; the brand is added only when it fits.
+    const labelSteps = [node.label]
+    const noParen = node.label.replace(/\s*\([^()]*\)\s*$/, '')
+    if (noParen && noParen !== node.label) labelSteps.push(noParen)
+    const cut = noParen.search(/;|,|:| \/ /)
+    if (cut > 0) labelSteps.push(noParen.slice(0, cut).trim())
+    let titleFull = null, titleLabel = node.label
+    for (const v of labelSteps) {
+      const base = `${v} in Jung’s Collected Works`
+      if ((base + ' · The Symbolic World').length <= 60) { titleFull = base + ' · The Symbolic World'; titleLabel = v; break }
+      if (base.length <= 60) { titleFull = base; titleLabel = v; break }
+    }
+    if (!titleFull) { titleLabel = labelSteps[labelSteps.length - 1]; titleFull = `${titleLabel} in Jung’s Collected Works`; headOverflow.titles.push(node.id) }
+    const descOf = (v, withVols) => passages
+      ? `${v} in C. G. Jung’s Collected Works: ${count(passages, 'passage')} quoted with volume and paragraph${withVols ? volList : ''}, each machine-checked against the source text.`
+      : `${v} in C. G. Jung’s Collected Works: ${count(edges.length, 'relation')} in a verified knowledge graph of the Collected Works.`
+    const descSteps = [[node.label, true], [node.label, false], ...labelSteps.slice(1).map(v => [v, false])]
+    let description = null, descLabel = node.label
+    for (const [v, withVols] of descSteps) {
+      const d = descOf(v, withVols)
+      if (d.length <= 155) { description = d; descLabel = v; break }
+    }
+    if (!description) { descLabel = labelSteps[labelSteps.length - 1]; description = descOf(descLabel, false); headOverflow.descriptions.push(node.id) }
 
     registerPage({
       slug: 'concept-' + node.id,
       title: `${node.label} — ${node.type} in Jung’s Collected Works`,
+      ...(CONCEPT_SEARCH_HEAD ? { titleFull } : {}),
       where: `concepts · ${node.label}`,
       nav: null, changefreq: 'weekly', priority: '0.3',
-      description: `${node.label} in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.`,
+      description: CONCEPT_SEARCH_HEAD ? description
+        : `${node.label} in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.`,
       style: styleConcept, body
     })
-    V2_COPY.push([`public/concept-${node.id}.html (generated)`, stripEvidence(body)])
+    // the label is evidence (one is the number 1330), so the copy contract reads
+    // the title and description with it removed, as stripEvidence does in the body
+    V2_COPY.push([`public/concept-${node.id}.html (generated)`, stripEvidence(body) +
+      (CONCEPT_SEARCH_HEAD ? '\n' + titleFull.split(titleLabel).join('') + '\n' + description.split(descLabel).join('') : '')])
     conceptCount++
   }
   console.log(`concept pages: ${conceptCount} written, one per atlas node`)
+  if (CONCEPT_SEARCH_HEAD) {
+    writeFileSync(here('./src/concept-head-overflow.json'), JSON.stringify(headOverflow, null, 1) + '\n')
+    console.log(`concept heads: ${headOverflow.titles.length} titles over 60 after shortening` +
+      `${headOverflow.titles.length ? ` (${headOverflow.titles.join(', ')})` : ''}; ${headOverflow.descriptions.length} descriptions over 155` +
+      `${headOverflow.descriptions.length ? ` (${headOverflow.descriptions.join(', ')})` : ''}`)
+  }
 } else {
   console.log('concept pages: EMIT_CONCEPT_PAGES is false — none registered')
 }
