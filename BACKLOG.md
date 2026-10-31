@@ -590,6 +590,16 @@ here so the morning finds it; nothing below is committed scope.
    Do the template layer first; it ships as a data-free UI change under the
    usual review.
 
+4. **"807 symbols" should say "807 concepts"** (Damian, 2026-10-31, for the
+   next release). The count is every node in the graph, of six kinds
+   (concept, figure, symbol, motif, operation, substance), and "symbol" names
+   only one of them. The README and the concepts index already say
+   "concepts". Two places in web/src/main.js: the counts line in the atlas
+   header, which the landing page also shows, and `KIND_LABEL.node` in the
+   search results. While there, check that the same line's "cited claims"
+   matches the site's word for a reference ("citations" on the concepts
+   index). A data-free UI change under the usual review.
+
 ## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
 
 Source for both items: GitHub issue 2 on damianspendel/symbolic-world, raised
