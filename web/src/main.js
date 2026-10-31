@@ -1157,7 +1157,7 @@ $('open-method')?.addEventListener('click', openMethod)
 const C = META.counts, F = META.frozen
 $('version').textContent = `${META.version} · ${C.nodes}/${C.edges}/${C.references} · updated ${META.built}`
 $('version').title = `${META.version}, built ${META.built} — ${C.nodes} nodes, ${C.edges} relations, ${C.references} references. The paper describes ${F.version} (${F.nodes}/${F.edges}/${F.references}), preserved at ${F.url}`
-$('landing-counts').textContent = `${C.nodes} concepts · ${C.edges} relations · ${C.references} cited claims · ${VOLS.length} volumes · updated ${META.built}`
+$('landing-counts').textContent = `${C.nodes} concepts · ${C.edges} relations · ${C.references} citations · ${VOLS.length} volumes · updated ${META.built}`
 // (about panel removed)
 
 function updateStats() {

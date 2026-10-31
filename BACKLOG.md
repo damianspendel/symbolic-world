@@ -536,7 +536,8 @@ here so the morning finds it; nothing below is committed scope.
 
 1. **Sort the query panel's dropdowns** — the family dropdown especially
    (alphabetical; volumes already follow collection order per V2-R8). Ruled
-   by the maintainer at the v2.0 review.
+   by the maintainer at the v2.0 review. DONE 2026-10-31 for the family list;
+   the state and claim-type lists stay in count order.
 
 2. **Site copy pass from the humanizer review** (scheduled for the next
    release, Damian 2026-10-22; build track). Source:
@@ -599,8 +600,8 @@ here so the morning finds it; nothing below is committed scope.
    search results. While there, check that the same line's "cited claims"
    matches the site's word for a reference ("citations" on the concepts
    index). A data-free UI change under the usual review.
-   DONE 2026-10-31 for "symbols": the three places now say "concepts".
-   Still open: "cited claims" on the same line.
+   DONE 2026-10-31: "symbols" became "concepts" in three places, and
+   "cited claims" became "citations" in two.
 
 ## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
 

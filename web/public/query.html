@@ -109,7 +109,8 @@ function tallyBy (fn) {
 
 function ready () {
   labels = labelIndex(graph)
-  const fams = tallyBy(e => (e.relation_family || {}).value)
+  // families alphabetically (ruled at the v2.0 review); the other lists stay by count
+  const fams = tallyBy(e => (e.relation_family || {}).value).sort((a, b) => String(a[0]).localeCompare(String(b[0])))
   fill('f-family', fams, 'any family')
   $('h-family').textContent = fams.length + ' families hold at least one assigned relation'
   fill('f-state', tallyBy(e => (e.relation_family || {}).state), 'any state')

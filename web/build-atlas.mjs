@@ -2210,7 +2210,8 @@ function tallyBy (fn) {
 
 function ready () {
   labels = labelIndex(graph)
-  const fams = tallyBy(e => (e.relation_family || {}).value)
+  // families alphabetically (ruled at the v2.0 review); the other lists stay by count
+  const fams = tallyBy(e => (e.relation_family || {}).value).sort((a, b) => String(a[0]).localeCompare(String(b[0])))
   fill('f-family', fams, 'any family')
   $('h-family').textContent = fams.length + ' families hold at least one assigned relation'
   fill('f-state', tallyBy(e => (e.relation_family || {}).state), 'any state')
@@ -2675,7 +2676,7 @@ table.findings .src { font: .58rem var(--mono); }
 </div>
 </section>
 <footer class="land-foot">
-<span>${lc.nodes} concepts &middot; ${lc.edges} relations &middot; ${lc.refs} cited claims</span>
+<span>${lc.nodes} concepts &middot; ${lc.edges} relations &middot; ${lc.refs} citations</span>
 <span>updated ${esc(meta.built)}</span>
 <span>open data, CC BY</span>
 <a href="/method">the method</a><a href="/disputes">disputes log</a>${SUPPORT_URL ? '<a href="/support">support the project</a>' : ''}
