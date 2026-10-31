@@ -169,3 +169,40 @@ pin: graph v2.1.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   count, full list and lens filter on the concordance, zoom buttons and keys
   and a core view on the atlas, larger node targets when zoomed out.
 - The footer navigation is gone; `routes` and `support` joined the menu.
+
+## v2.2.0: CW 5, *Symbols of Transformation*
+
+status: released 2026-10-31. Tag `v2.2.0`, GitHub Release, Zenodo record
+under the concept DOI. *Trust, Layered* still describes v2.0.0 and stays
+pinned to that tag.
+pin: graph v2.2.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
+
+### mining status
+
+- Mined CW 5, *Symbols of Transformation*, end to end: ten windows,
+  paragraphs 1 to 685.
+- Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
+  {{batches}} batches; {{pending}} relations await adjudication.
+- A Fable-family ruling upheld the deferred CW 11 reference to paragraph 960.
+- Mining resumes with CW 16, one window nightly.
+
+### governance
+
+- A standing rule on what goes public: the repository tracks only the
+  published artifact, and a release push needs the history audit and
+  approval of the files added since the last tag.
+- Sixteen working notes, superseded plans and unused figures left the
+  tracked tree.
+- NOTICE names a contact for removal requests.
+- The atlas size ceiling moved from 3.5 to 4.5 MB.
+
+### core build
+
+- The deploy check sets aside Cloudflare's analytics beacon and email
+  encoding before it compares the live site with the build.
+
+### UI
+
+- Concept pages link to the atlas, and a concept selected on the atlas links
+  back to its page.
+- The about page ends with a contact line for concerns.
