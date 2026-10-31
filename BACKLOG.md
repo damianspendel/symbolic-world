@@ -616,6 +616,27 @@ here so the morning finds it; nothing below is committed scope.
    DONE 2026-10-31: the band draws from `var(--ground)`; checked in both
    themes.
 
+6. **robots.txt: opt out of the two training tokens Cloudflare cannot block
+   at the edge** (Damian, 2026-10-31, via the outreach session, for the next
+   release; it ships with that release). Google and Apple train on
+   what their search crawlers fetch, so the opt-out has to be a robots group.
+   Add to web/public/robots.txt:
+
+       User-agent: Google-Extended
+       Disallow: /
+
+       User-agent: Applebot-Extended
+       Disallow: /
+
+   Keep the `User-agent: *` / `Allow: /` group and the Sitemap line as they
+   are. Background, checked on the live site 2026-10-31: Cloudflare AI Crawl
+   Control already returns 403 to training crawlers (GPTBot, ClaudeBot) and
+   200 to search and agent crawlers (OAI-SearchBot, PerplexityBot,
+   Claude-User). Google documents that Google-Extended has no effect on Search
+   inclusion or ranking. Bot Preference Sync stays off, so the repo's
+   robots.txt remains the only source. Acceptance: the built robots.txt
+   carries both groups and the `*` group, and preflight and pytest pass.
+
 ## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
 
 Source for both items: GitHub issue 2 on damianspendel/symbolic-world, raised
