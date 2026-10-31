@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concept-miss-miller">
+<meta name="description" content="Miss Frank Miller in Jung’s Collected Works: relations and verbatim, paragraph-referenced citations, machine-checked against the source text. Part of The Symbolic World, a verified knowledge graph of the Collected Works.">
+<title>Miss Frank Miller — Figure in Jung’s Collected Works · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<script src="/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+
+.latin { font-style: italic; font-weight: 400; }
+.atlas-cta { margin: .2rem 0 1rem; }
+.atlas-cta a { display: inline-block; border: 1px solid var(--gold-dim); border-radius: 999px; padding: .4rem 1.1rem;
+  font: .66rem var(--mono); letter-spacing: .08em; color: var(--gold); text-decoration: none; }
+.atlas-cta a:hover { border-color: var(--gold); background: rgba(212, 175, 55, 0.08); }
+.p-type { font: .58rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-dim); }
+.cfam { font-size: 1.05rem; }
+.crow { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .5rem 0; background: var(--surface); }
+.crow .triple { font-size: .95rem; }
+.crow .rel { color: var(--gold); font-style: italic; }
+.crow .prov { font: .58rem var(--mono); color: var(--ink-faint); margin-left: .5rem; white-space: nowrap; }
+.cites { list-style: none; margin-top: .35rem; }
+.cites li { font-size: .85rem; line-height: 1.55; color: var(--ink-label); padding: .15rem 0; }
+.cites .cmeta { display: block; font: .58rem/1.6 var(--mono); color: var(--ink-faint); }
+.vmix { display: flex; flex-wrap: wrap; gap: .35rem 1rem; margin: .6rem 0 .2rem; }
+.vm { display: inline-flex; align-items: center; gap: .35rem; }
+.vml { font: .58rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.vmc { font: .58rem var(--mono); color: var(--ink-label); font-variant-numeric: tabular-nums; }
+.vtrack { width: 5.5rem; height: .45rem; border: 1px solid var(--hairline); border-radius: 2px; background: var(--ground-2); }
+.vtrack i { display: block; height: 100%; background: var(--gold-dim); border-radius: 1px; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0 .2rem; }
+.chips .chip { text-decoration: none; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/atlas#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/atlas#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/atlas#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
+<div class="hrow hrow-2"><span class="where">concepts · Miss Frank Miller</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">concept</p>
+<h1><span class="ev">Miss Frank Miller</span></h1>
+<p class="sub"><span class="p-type">Figure</span></p></div>
+<p class="meta">Quotations are machine-verified against the source paragraph; relation families are assigned by a documented procedure. The <a href="/atlas#/method">method page</a> describes exactly what is and is not checked.</p>
+<p>88th most connected of 807 concepts · 15 relations, 21 verified citations across CW 5.</p>
+<p class="atlas-cta"><a href="/atlas#/n/miss-miller">see its relations on the atlas →</a></p>
+<div class="vmix">
+<span class="vm"><span class="vml">CW 5</span><span class="vtrack"><i style="width:100%"></i></span><span class="vmc">21</span></span>
+</div>
+<p class="chips">
+<a class="chip f-ok" href="#g-psychic-effect">psychic-effect 4</a>
+<a class="chip f-ok" href="#g-correspondence">correspondence 1</a>
+<a class="chip f-ok" href="#g-projection">projection 1</a>
+<a class="chip f-ok" href="#g-separation">separation 1</a>
+<a class="chip f-ok" href="#g-symbolization">symbolization 1</a>
+<a class="chip f-ok" href="#g-telos">telos 1</a>
+<a class="chip f-pend" href="#g-pending">pending 3</a>
+<a class="chip f-none" href="#g-unclassified">unclassified 3</a>
+</p>
+<h2 class="cfam" id="g-psychic-effect"><a href="/family-psychic-effect">psychic-effect</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">undergoes</span> <a class="ev" href="/concept-introversion">Introversion</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §58 — “Miss Miller is here describing a “state of introversion””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-28 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)</span></li>
+<li class="ev">CW 5 §253 — “We can discern in this listening attitude an inward-flowing current of libido”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-4, PASS, 2026-10-29)</span></li>
+<li class="ev">CW 5 §257 — “The dreamer uses these words in the opposite sense, in order to direct her wishes, her libido, into the depths of the unconscious.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-4, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">threatened-by</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §616 — “the human personality of the author is threatened in the highest degree by an invasion from the unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">succumbs-to</span> <a class="ev" href="/concept-psychosis">Psychosis</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §675 — “that it would be a psychosis which would form the companion piece to Chiwantopel’s sacrifice”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-10, PASS, 2026-10-30)</span></li>
+<li class="ev">CW 5 §684 — “The Miller case is a classic example of the unconscious manifestations which precede a serious psychic disorder”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-10, PASS, 2026-10-30)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">overpowered-by</span> <a class="ev" href="/concept-the-unconscious">The unconscious</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §679 — “will suffer the same fate as Chiwantopel, that is, she will be overpowered by her unconscious”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-10, PASS, 2026-10-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam" id="g-correspondence"><a href="/family-correspondence">correspondence</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">likened-to</span> <a class="ev" href="/concept-job">Job</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §69 — “Like Job, she is an innocent victim because she did not succumb to the temptation.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-28 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)</span></li>
+<li class="ev">CW 5 §72 — “She too has suffered like Job, has lost paradise, and dreams of “creation””<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)</span></li>
+<li class="ev">CW 5 §87 — “Miss Miller acts like Job: she admits nothing, and pretends that good and evil come from outside.”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<h2 class="cfam" id="g-projection"><a href="/family-projection">projection</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">projects-ideal-onto</span> <a class="ev" href="/concept-chiwantopel">Chiwantopel (the Aztec of the Miller fantasies)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §432 — “The hero Chiwantopel represents her ideal, who is here projected as a masculine figure”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam" id="g-separation"><a href="/family-separation">separation</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">separated-from</span> <a class="ev" href="/concept-chiwantopel">Chiwantopel (the Aztec of the Miller fantasies)</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §614 — “Miss Miller’s ego is separated by a gulf from the figure of Chiwantopel”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-30 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)</span></li>
+</ul>
+</div>
+<h2 class="cfam" id="g-symbolization"><a href="/family-symbolization">symbolization</a></h2>
+<div class="crow">
+<div class="triple"><a class="ev" href="/concept-moth">Moth</a> <span class="rel ev">stands-for</span> <span class="ev">Miss Frank Miller</span> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §124 — “the moth is Miss Miller herself”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<h2 class="cfam" id="g-telos"><a href="/family-telos">telos</a></h2>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">longs-for</span> <a class="ev" href="/concept-the-hero">The Hero</a> <span class="prov">two blind arms agreed</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §167 — “She thus allows us to peer into the dark abyss of her longing for the sun-hero”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-3, PASS, 2026-10-29)</span></li>
+<li class="ev">CW 5 §168 — “her whole longing is directed towards the Divine, the “well-beloved,” who is worshipped in the sun’s image”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-3, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<h2 class="cfam" id="g-pending">pending adjudication</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">identifies-with</span> <a class="ev" href="/concept-the-statue">The Statue (statua)</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §52 — “So Miss Miller is now identifying herself with an Egyptian statue”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-28 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-1, PASS, 2026-10-28)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">identifies-with</span> <a class="ev" href="/concept-cyrano-de-bergerac">Cyrano de Bergerac</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §84 — “The initial hints of identification with Christian, which really points to Cyrano, prove that the long way round is a way of suffering”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">turns-to</span> <a class="ev" href="/concept-religion">Religion</a> <span class="prov">queued for a human ruling</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §122 — “take the first poem as an unconscious attempt to solve the conflict by adopting a religious attitude”<span class="cmeta">jung-asserts · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<h2 class="cfam" id="g-unclassified">unclassified</h2>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">has-vision-of</span> <a class="ev" href="/concept-chiwantopel">Chiwantopel (the Aztec of the Miller fantasies)</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §266 — “Suddenly, the apparition of an Aztec, complete in every detail”<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-4, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">has-vision-of</span> <a class="ev" href="/concept-crowd">The crowd (swarm of people)</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §300 — “The vision that follows the birth of the hero is described by Miss Miller as a “swarm of people.””<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-5, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<div class="crow">
+<div class="triple"><span class="ev">Miss Frank Miller</span> <span class="rel ev">has-vision-of</span> <a class="ev" href="/concept-city">The city (as woman and mother)</a> <span class="prov">no family carried</span></div>
+<ul class="cites">
+<li class="ev">CW 5 §302 — “Miss Miller sees a “dream-city.””<span class="cmeta">jung-quotes-source · verified by claude-fable-5, 2026-10-29 · cross-checked: gemini-3.1-pro (pre-merge, b-cw5-5, PASS, 2026-10-29)</span></li>
+</ul>
+</div>
+<p class="meta"><a href="/atlas#/n/miss-miller">open in the atlas</a> · <a href="/ledger">the ledger</a></p>
+</main></body></html>
