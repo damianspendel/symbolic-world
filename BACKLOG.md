@@ -613,6 +613,8 @@ here so the morning finds it; nothing below is committed scope.
    `color-mix(in srgb, var(--ground) 92%, transparent)`) and check the label
    and count colours against it in both themes. A UI change under the usual
    review.
+   DONE 2026-10-31: the band draws from `var(--ground)`; checked in both
+   themes.
 
 ## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
 

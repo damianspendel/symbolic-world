@@ -184,7 +184,10 @@ body.atlas #chips { opacity: 1; pointer-events: auto; }
 #works {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
   display: flex; align-items: flex-end; height: 62px; gap: 2px;
-  background: linear-gradient(transparent, rgba(11, 10, 8, 0.92) 45%);
+  /* the band follows the theme: a night colour here made a dark band, and
+     blurred-looking labels, across the day theme */
+  background: linear-gradient(transparent, var(--ground) 45%);
+  background: linear-gradient(transparent, color-mix(in srgb, var(--ground) 92%, transparent) 45%);
   opacity: 0; pointer-events: none; transition: opacity 600ms ease;
 }
 body.atlas #works { opacity: 1; pointer-events: auto; }
