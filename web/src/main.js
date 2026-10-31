@@ -781,7 +781,7 @@ const SUGGESTIONS = [
   ...(META.volumes || []).map(v => ({ kind: 'volume', id: v.volume, label: `CW ${v.volume}`, sub: v.label, s: norm(`cw ${v.volume} ${v.label}`) }))
 ]
 const KIND_ORDER = ['node', 'family', 'relation', 'volume']
-const KIND_LABEL = { node: 'symbols', family: 'families', relation: 'relations', volume: 'volumes' }
+const KIND_LABEL = { node: 'concepts', family: 'families', relation: 'relations', volume: 'volumes' }
 
 function suggestFor(q) {
   if (!q || q.length < 2) return []
@@ -1157,7 +1157,7 @@ $('open-method')?.addEventListener('click', openMethod)
 const C = META.counts, F = META.frozen
 $('version').textContent = `${META.version} · ${C.nodes}/${C.edges}/${C.references} · updated ${META.built}`
 $('version').title = `${META.version}, built ${META.built} — ${C.nodes} nodes, ${C.edges} relations, ${C.references} references. The paper describes ${F.version} (${F.nodes}/${F.edges}/${F.references}), preserved at ${F.url}`
-$('landing-counts').textContent = `${C.nodes} symbols · ${C.edges} relations · ${C.references} cited claims · ${VOLS.length} volumes · updated ${META.built}`
+$('landing-counts').textContent = `${C.nodes} concepts · ${C.edges} relations · ${C.references} cited claims · ${VOLS.length} volumes · updated ${META.built}`
 // (about panel removed)
 
 function updateStats() {

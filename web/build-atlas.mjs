@@ -1840,6 +1840,7 @@ ${groupBlocks}
 // and the type filter are a small inline script over data attributes the build
 // writes — the script computes nothing the build has not already computed.
 const styleConceptsIndex = `
+.csearch { margin: .8rem 0 .2rem; }
 .cidx td.n { font-variant-numeric: tabular-nums; }
 .cidx td.bar { width: 24%; min-width: 7rem; }
 .cidx .bar i { display: block; height: .5rem; background: var(--gold-dim); border-radius: 2px; }
@@ -1863,7 +1864,7 @@ if (EMIT_CONCEPTS_INDEX) {
     const rb = derived(Math.round(t.edges / maxEdges * 100))
     const cb = derived(Math.round(t.refs / maxRefs * 100))
     derived(i + 1, t.edges, t.refs)
-    return `<tr data-type="${esc(n.type)}" data-r="${t.edges}" data-c="${t.refs}" data-rb="${rb}" data-cb="${cb}">
+    return `<tr data-type="${esc(n.type)}"${n.latin ? ` data-l="${esc(n.latin)}"` : ''} data-r="${t.edges}" data-c="${t.refs}" data-rb="${rb}" data-cb="${cb}">
 <td class="n">${i + 1}</td>
 <td><a class="ev" href="/concept-${n.id}">${esc(n.label)}</a></td>
 <td class="meta">${esc(n.type)}</td>
@@ -1879,6 +1880,7 @@ if (EMIT_CONCEPTS_INDEX) {
 <p>${derived(atlasNodes.length)} concepts, ${derived(atlasEdges.length)} verified relations, ${derived(meta.counts.references)} citations.
 Each row links to that concept's own page: its relations grouped by family, with
 the verbatim, paragraph-referenced quotations behind each one.</p>
+<p class="csearch"><input id="cq" class="std-search facet-filter" type="search" placeholder="find a concept: anima, lapis, mandala…" aria-label="find a concept by name" autocomplete="off" spellcheck="false"></p>
 <p class="meta ctrl">rank by
 <button data-k="r" aria-pressed="true">relations</button>
 <button data-k="c" aria-pressed="false">citations</button>
@@ -1888,6 +1890,7 @@ the verbatim, paragraph-referenced quotations behind each one.</p>
 </thead><tbody>
 ${rows}
 </tbody></table></div>
+<p class="meta" id="cnone" hidden>No concept matches. The graph names each concept as Jung's translators do; try a shorter word.</p>
 <script>
 (() => {
   const tb = document.querySelector('.cidx tbody')
@@ -1901,10 +1904,24 @@ ${rows}
     for (const r of rows) { tb.appendChild(r); r.querySelector('.bar i').style.width = r.dataset[k + 'b'] + '%' }
     renumber()
   })
-  document.getElementById('tyf').addEventListener('change', (e) => {
-    for (const r of rows) r.style.display = (!e.target.value || r.dataset.type === e.target.value) ? '' : 'none'
+  const tyf = document.getElementById('tyf'), cq = document.getElementById('cq'), none = document.getElementById('cnone')
+  // umlauts match both ways: "Böhme" finds Boehme, "Brunhilde" finds Brünhilde
+  const strip = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim()
+  const expand = (s) => strip(s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue'))
+  for (const r of rows) { const s = r.cells[1].textContent + ' ' + (r.dataset.l || ''); r.dataset.k = strip(s) + ' | ' + expand(s) }
+  const filter = () => {
+    const ty = tyf.value, q1 = strip(cq.value), q2 = expand(cq.value)
+    let shown = 0
+    for (const r of rows) {
+      const ok = (!ty || r.dataset.type === ty) && (!q1 || r.dataset.k.includes(q1) || r.dataset.k.includes(q2))
+      r.style.display = ok ? '' : 'none'
+      if (ok) shown++
+    }
+    none.hidden = shown > 0
     renumber()
-  })
+  }
+  tyf.addEventListener('change', filter)
+  cq.addEventListener('input', filter)
 })()
 </script>`
 
@@ -2658,7 +2675,7 @@ table.findings .src { font: .58rem var(--mono); }
 </div>
 </section>
 <footer class="land-foot">
-<span>${lc.nodes} symbols &middot; ${lc.edges} relations &middot; ${lc.refs} cited claims</span>
+<span>${lc.nodes} concepts &middot; ${lc.edges} relations &middot; ${lc.refs} cited claims</span>
 <span>updated ${esc(meta.built)}</span>
 <span>open data, CC BY</span>
 <a href="/method">the method</a><a href="/disputes">disputes log</a>${SUPPORT_URL ? '<a href="/support">support the project</a>' : ''}

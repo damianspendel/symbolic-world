@@ -50,6 +50,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
 
+.csearch { margin: .8rem 0 .2rem; }
 .cidx td.n { font-variant-numeric: tabular-nums; }
 .cidx td.bar { width: 24%; min-width: 7rem; }
 .cidx .bar i { display: block; height: .5rem; background: var(--gold-dim); border-radius: 2px; }
@@ -74,6 +75,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>807 concepts, 3169 verified relations, 4280 citations.
 Each row links to that concept's own page: its relations grouped by family, with
 the verbatim, paragraph-referenced quotations behind each one.</p>
+<p class="csearch"><input id="cq" class="std-search facet-filter" type="search" placeholder="find a concept: anima, lapis, mandala…" aria-label="find a concept by name" autocomplete="off" spellcheck="false"></p>
 <p class="meta ctrl">rank by
 <button data-k="r" aria-pressed="true">relations</button>
 <button data-k="c" aria-pressed="false">citations</button>
@@ -801,7 +803,7 @@ the verbatim, paragraph-referenced quotations behind each one.</p>
 <td class="n">17</td>
 <td class="bar"><i style="width:6%"></i></td>
 </tr>
-<tr data-type="Operation" data-r="15" data-c="16" data-rb="6" data-cb="4">
+<tr data-type="Operation" data-l="nigredo" data-r="15" data-c="16" data-rb="6" data-cb="4">
 <td class="n">91</td>
 <td><a class="ev" href="/concept-nigredo">Nigredo</a></td>
 <td class="meta">Operation</td>
@@ -1345,7 +1347,7 @@ the verbatim, paragraph-referenced quotations behind each one.</p>
 <td class="n">9</td>
 <td class="bar"><i style="width:3%"></i></td>
 </tr>
-<tr data-type="Operation" data-r="9" data-c="8" data-rb="3" data-cb="2">
+<tr data-type="Operation" data-l="albedo" data-r="9" data-c="8" data-rb="3" data-cb="2">
 <td class="n">159</td>
 <td><a class="ev" href="/concept-albedo">Albedo</a></td>
 <td class="meta">Operation</td>
@@ -2257,7 +2259,7 @@ the verbatim, paragraph-referenced quotations behind each one.</p>
 <td class="n">5</td>
 <td class="bar"><i style="width:2%"></i></td>
 </tr>
-<tr data-type="Operation" data-r="5" data-c="4" data-rb="2" data-cb="1">
+<tr data-type="Operation" data-l="rubedo" data-r="5" data-c="4" data-rb="2" data-cb="1">
 <td class="n">273</td>
 <td><a class="ev" href="/concept-rubedo">Rubedo</a></td>
 <td class="meta">Operation</td>
@@ -6538,6 +6540,7 @@ the verbatim, paragraph-referenced quotations behind each one.</p>
 <td class="bar"><i style="width:0%"></i></td>
 </tr>
 </tbody></table></div>
+<p class="meta" id="cnone" hidden>No concept matches. The graph names each concept as Jung's translators do; try a shorter word.</p>
 <script>
 (() => {
   const tb = document.querySelector('.cidx tbody')
@@ -6551,10 +6554,24 @@ the verbatim, paragraph-referenced quotations behind each one.</p>
     for (const r of rows) { tb.appendChild(r); r.querySelector('.bar i').style.width = r.dataset[k + 'b'] + '%' }
     renumber()
   })
-  document.getElementById('tyf').addEventListener('change', (e) => {
-    for (const r of rows) r.style.display = (!e.target.value || r.dataset.type === e.target.value) ? '' : 'none'
+  const tyf = document.getElementById('tyf'), cq = document.getElementById('cq'), none = document.getElementById('cnone')
+  // umlauts match both ways: "Böhme" finds Boehme, "Brunhilde" finds Brünhilde
+  const strip = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim()
+  const expand = (s) => strip(s.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue'))
+  for (const r of rows) { const s = r.cells[1].textContent + ' ' + (r.dataset.l || ''); r.dataset.k = strip(s) + ' | ' + expand(s) }
+  const filter = () => {
+    const ty = tyf.value, q1 = strip(cq.value), q2 = expand(cq.value)
+    let shown = 0
+    for (const r of rows) {
+      const ok = (!ty || r.dataset.type === ty) && (!q1 || r.dataset.k.includes(q1) || r.dataset.k.includes(q2))
+      r.style.display = ok ? '' : 'none'
+      if (ok) shown++
+    }
+    none.hidden = shown > 0
     renumber()
-  })
+  }
+  tyf.addEventListener('change', filter)
+  cq.addEventListener('input', filter)
 })()
 </script>
 </main></body></html>

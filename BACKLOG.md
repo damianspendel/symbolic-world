@@ -599,6 +599,8 @@ here so the morning finds it; nothing below is committed scope.
    search results. While there, check that the same line's "cited claims"
    matches the site's word for a reference ("citations" on the concepts
    index). A data-free UI change under the usual review.
+   DONE 2026-10-31 for "symbols": the three places now say "concepts".
+   Still open: "cited claims" on the same line.
 
 ## From reader feedback: issue 2 (added 2026-10-22, on the author's direction)
 
