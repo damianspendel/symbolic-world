@@ -50,6 +50,17 @@ const NOINDEX_PROVENANCE = true
 // concept DOI as its identifier and the release as its version.
 const DATASET_LD_IDENTIFIER = true
 
+// spec-seo-minor-v1, item 4: every generated page names the social preview
+// (web/public/social-preview.png, 1280x640, the image set on GitHub) as its
+// og:image, and the landing page's card becomes summary_large_image.
+// tools/pages/preflight.py reads this literal to expect the image in dist.
+const EMIT_OG_IMAGE = true
+const OG_IMAGE_META = EMIT_OG_IMAGE ? `<meta property="og:image" content="https://symbolicworld.observer/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="The Symbolic World: an atlas of C. G. Jung's Collected Works, with the graph of concepts">
+` : ''
+
 // The /about page (spec-orientation-v1, item 4): audience-led copy, first in
 // the about group. Off, the page is not registered and tools/pages/preflight.py
 // fails a lingering about.html as unexpected.
@@ -1315,7 +1326,7 @@ function renderPage(p) {
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/${p.slug}">
-${p.description ? `<meta name="description" content="${escAttr(p.description)}">\n` : ''}<title>${esc(p.titleFull || (p.title + ' · The Symbolic World'))}</title>
+${p.description ? `<meta name="description" content="${escAttr(p.description)}">\n` : ''}${OG_IMAGE_META}<title>${esc(p.titleFull || (p.title + ' · The Symbolic World'))}</title>
 <link rel="stylesheet" href="/chrome.css">
 ${THEME_SNIPPET}
 <style>${V2_STYLE}${p.style || ''}</style>
@@ -2805,8 +2816,8 @@ table.findings .src { font: .58rem var(--mono); }
 <meta property="og:url" content="https://symbolicworld.observer/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Symbolic World">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Symbolic World — a verified atlas of Jung's Collected Works">
+<meta name="twitter:card" content="${EMIT_OG_IMAGE ? 'summary_large_image' : 'summary'}">
+${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.observer/social-preview.png">\n' : ''}<meta name="twitter:title" content="The Symbolic World — a verified atlas of Jung's Collected Works">
 <meta name="twitter:description" content="Every claim cites its exact CW volume and paragraph, with Jung's verbatim words.">
 <script type="application/ld+json">
 {

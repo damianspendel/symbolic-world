@@ -116,6 +116,12 @@ if not ab_match:
           'the constant is missing or no longer a literal')
 if ab_match and ab_match.group(1) == 'true':
     ALLOW.add('about.html')
+# spec-seo-minor-v1, item 4: the social preview is expected while EMIT_OG_IMAGE is on
+og_match = re.search(r'^const EMIT_OG_IMAGE = (true|false)$', build_src, re.M)
+if not og_match:
+    check('EMIT_OG_IMAGE readable from web/build-atlas.mjs', False, 'the constant is missing or no longer a literal')
+if og_match and og_match.group(1) == 'true':
+    ALLOW.add('social-preview.png')
 # the /support page exists only while SUPPORT_URL is set (2026-10-21)
 su_match = re.search(r"^const SUPPORT_URL = '([^']*)'$", build_src, re.M)
 if not su_match:
