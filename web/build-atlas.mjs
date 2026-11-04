@@ -2754,7 +2754,7 @@ table.findings .src { font: .58rem var(--mono); }
 <section class="land-link">
 <div class="land-link-text">
 <p class="eyebrow">One example</p>
-<p class="land-claim ev"><span>${esc(nodeLabel(landingEdge.source))}</span> <em>${esc(landingEdge.relation)}</em> <span>${esc(nodeLabel(landingEdge.target))}</span></p>
+<p class="land-claim ev"><a href="/concept-${esc(landingEdge.source)}">${esc(nodeLabel(landingEdge.source))}</a> <em>${esc(landingEdge.relation)}</em> <a href="/concept-${esc(landingEdge.target)}">${esc(nodeLabel(landingEdge.target))}</a></p>
 <p class="land-note">The atlas holds ${lc.refs} such links. Every one names its source paragraph, says whether Jung asserts the claim or reports it, and records who checked it.</p>
 </div>
 <blockquote class="land-quote ev"><p>&ldquo;${esc(landingRef.quote)}&rdquo;</p><p class="meta">CW ${esc(landingRef.volume)} &sect;${esc(landingRef.paragraph)}${voice ? ' &middot; ' + esc(voice) : ''}${landingRef.verified_by ? ' &middot; verified by ' + esc(landingRef.verified_by) : ''}</p></blockquote>
@@ -2798,6 +2798,7 @@ table.findings .src { font: .58rem var(--mono); }
 .land-link-text { flex: 1 1 22rem; min-width: 0; }
 .land-claim { font-family: var(--display); font-size: 1.7rem; line-height: 1.25; margin: .5rem 0 .8rem; max-width: none; }
 .land-claim em { font-style: normal; color: var(--gold); }
+.land-claim a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--gold-dim); text-underline-offset: .15em; }
 .land-note { font-size: .95rem; line-height: 1.55; color: var(--ink-faint); }
 .land-quote { flex: 1 1 22rem; min-width: 0; margin: 0; padding: 1.3rem 1.5rem; border-left: 2px solid var(--gold); background: var(--well); }
 .land-quote p { font-family: var(--display); font-size: 1.2rem; line-height: 1.5; max-width: none; }
