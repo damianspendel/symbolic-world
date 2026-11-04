@@ -63,7 +63,9 @@ def read(path):
 # for a different artifact. It predates the URL convention, carries no canonical
 # tag and is not in the sitemap. It is excluded here rather than silently passed,
 # and the exception list is pinned by a test below so a new page cannot join it.
-UNMANAGED = {"james.html"}
+# 404.html has no URL of its own: Pages serves it for an unknown path, so it has
+# no canonical and no sitemap entry either. Its own test is below.
+UNMANAGED = {"james.html", "404.html"}
 
 
 def generated_pages():
@@ -74,9 +76,9 @@ def generated_pages():
 
 
 def test_the_unmanaged_page_list_has_not_grown():
-    """One page on the site is outside the URL convention. If a second appears,
+    """Two pages on the site are outside the URL convention. If a third appears,
     this fails: pages joining the site join the convention with it."""
-    assert UNMANAGED == {"james.html"}
+    assert UNMANAGED == {"james.html", "404.html"}
     for name in UNMANAGED:
         assert os.path.exists(os.path.join(PUBLIC, name)), (
             f"{name} is exempted but no longer exists — drop it from the list")
@@ -143,6 +145,15 @@ def test_sitemap_lists_every_generated_page_and_nothing_missing(sitemap):
 
 def test_sitemap_lists_no_html_url(sitemap):
     assert ".html" not in sitemap
+
+
+def test_the_not_found_page_has_no_url_of_its_own(sitemap):
+    html = read(os.path.join(PUBLIC, "404.html"))
+    assert "<h1>Page not found</h1>" in html
+    assert 'href="/"' in html and 'href="/concepts"' in html
+    assert 'rel="canonical"' not in html
+    assert 'name="robots" content="noindex"' in html
+    assert "observer/404<" not in sitemap
 
 
 # ------------------------------------------------- the per-family pages ---

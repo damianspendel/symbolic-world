@@ -1325,7 +1325,7 @@ function renderPage(p) {
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://symbolicworld.observer/${p.slug}">
+${p.notFound ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="https://symbolicworld.observer/${p.slug}">`}
 ${p.description ? `<meta name="description" content="${escAttr(p.description)}">\n` : ''}${OG_IMAGE_META}<title>${esc(p.titleFull || (p.title + ' · The Symbolic World'))}</title>
 <link rel="stylesheet" href="/chrome.css">
 ${THEME_SNIPPET}
@@ -3010,6 +3010,18 @@ function emitPages() {
   console.log(`pages: ${NEW_PAGES.length} generated (${NEW_PAGES.map(p => '/' + p.slug).join(' ')}) · sitemap ${listed.length} urls (${SITE_PAGES.length - listed.length} noindex pages left out)`)
 }
 emitPages()
+
+// ------------------------------------------------ the not-found page -------
+// A top-level 404.html is what makes Cloudflare Pages answer an unknown path
+// with a 404 status instead of the homepage (a soft 404, found 2026-10-22). It
+// has no URL of its own, so it stays out of SITE_PAGES and the sitemap, and it
+// carries no canonical.
+{
+  const notFoundBody = `<div class="titleband"><h1>Page not found</h1></div>
+<p>This address does not match a page on the site. Try <a href="/">the home page</a> or <a href="/concepts">look up a concept</a>.</p>`
+  writeFileSync(here('./public/404.html'), renderPage({ slug: '404', title: 'Page not found', where: 'not found', notFound: true, body: notFoundBody }))
+  V2_COPY.push(['public/404.html (generated)', notFoundBody])
+}
 
 // ------------------------------------ R10.0 / R10.9 · the copy assertions ---
 // Two rules the build enforces rather than trusts:

@@ -31,6 +31,9 @@ ALLOW = {
     'method-poster.png', 'nutshell.html',
     # the static twin of the SPA's #/method view (spec-concept-pages-v1)
     'method.html',
+    # what Pages serves, with a 404 status, for an unknown path. Its presence
+    # also ends the single-page fallback to the homepage (2026-11-04)
+    '404.html',
 }
 ALLOW_DIRS = {'v1.3'}
 # Generated page families. A file matching one of these is allowed only if the

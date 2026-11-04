@@ -7,6 +7,7 @@ import hashlib
 import pathlib
 import re
 import sys
+import urllib.error
 import urllib.request
 
 # Cloudflare Bot Fight Mode appends its challenge script to HTML on the wire
@@ -55,6 +56,9 @@ print(f'comparing {len(files)} files against {BASE}')
 edge_cached = False
 for p in files:
     rel = p.relative_to(DIST)
+    # 404.html has no URL of its own: it is checked below, through a missing path
+    if str(rel) == '404.html':
+        continue
     url = f'{BASE}/{rel}' if rel.name != 'index.html' or len(rel.parts) > 1 \
         else f'{BASE}/'
     try:
@@ -72,15 +76,22 @@ for p in files:
         print(f'  FAIL {rel} — content differs from local dist')
 print(f'  edge caching headers observed: {edge_cached}')
 
-# 404 behaviour (informational): hash routing never hits the server,
-# but a real missing path should not silently 200 with the wrong file.
-try:
-    req = urllib.request.Request(f'{BASE}/definitely-not-a-real-path-xyz',
-                                 headers={'User-Agent': 'jungkg-verify'})
-    urllib.request.urlopen(req, timeout=30)
-    print('  note: unknown path returned 200 (SPA fallback present)')
-except urllib.error.HTTPError as e:
-    print(f'  note: unknown path returns {e.code}')
+# 404 behaviour: an unknown path, and an unknown concept page, must answer 404
+# with our not-found page. A 200 here is the soft 404 fixed on 2026-11-04.
+print('== not found ==')
+for probe in ('/definitely-not-a-real-path-xyz', '/concept-definitely-not-a-node'):
+    req = urllib.request.Request(f'{BASE}{probe}', headers={'User-Agent': 'jungkg-verify'})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            fails.append(probe)
+            print(f'  FAIL {probe} returned {r.status}, not 404')
+    except urllib.error.HTTPError as e:
+        same = hashlib.md5(normalize(e.read())).hexdigest() == hashlib.md5((DIST / '404.html').read_bytes()).hexdigest()
+        if e.code == 404 and same:
+            print(f'  ok  {probe} -> 404, the not-found page')
+        else:
+            fails.append(probe)
+            print(f'  FAIL {probe} -> {e.code}, not-found page served: {same}')
 
 # Item 29 — the extensionless convention is Cloudflare's to honour, not ours:
 # Pages 308s every .html path to its extensionless twin, and GSC filed redirect
