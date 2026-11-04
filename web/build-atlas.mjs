@@ -2732,6 +2732,11 @@ table.findings .src { font: .58rem var(--mono); }
     const landingRef = landingEdge.refs.find(r => r.quote) || landingEdge.refs[0]
     const lc = { nodes: derived(atlasNodes.length), edges: derived(atlasEdges.length), refs: derived(refCount) }
     const voice = String(landingRef.claim_type || '').replace(/-/g, ' ')
+    // Plain links, so a crawler reaches concept pages from the root (Search
+    // Console, 2026-11-04: about 8 of 785 pages indexed, /concept-anima unknown
+    // to Google). Link text is written here, not taken from the node labels.
+    // preflight fails if any of these pages is missing.
+    const LANDING_STARTS = [['The Self', 'the-self'], ['Archetype', 'archetype'], ['The collective unconscious', 'collective-unconscious'], ['The shadow', 'the-shadow'], ['Anima', 'anima'], ['Animus', 'animus'], ['Individuation', 'individuation'], ['Synchronicity', 'synchronicity'], ['Dream', 'dream'], ['Mandala', 'mandala'], ['Mercurius', 'mercurius'], ['Coniunctio', 'coniunctio']]
     const landingBody = `<section class="land-hero">
 <div class="titleband"><p class="eyebrow">The Symbolic World</p>
 <h1>An atlas of Jung's <em>Collected Works</em></h1></div>
@@ -2740,7 +2745,7 @@ table.findings .src { font: .58rem var(--mono); }
 <section class="land-tasks">
 <p class="eyebrow">Start with a question</p>
 <div class="land-grid">
-<a class="land-card" href="/concepts"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span><span class="land-card-k">concepts</span></a>
+<div class="land-card"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span><span class="land-starts">Common starting points: ${LANDING_STARTS.map(([text, id]) => `<a href="/concept-${id}">${esc(text)}</a>`).join('&nbsp;&middot; ')}</span><a class="land-card-k land-card-all" href="/concepts">concepts</a></div>
 <a class="land-card" href="/query"><span class="land-card-t">Check a claim against the book</span><span class="land-card-d">Filter by volume, family and claim type, and search the words inside the quotes.</span><span class="land-card-k">query</span></a>
 <a class="land-card" href="/atlas#/concordance"><span class="land-card-t">Set Jung beside the alchemists</span><span class="land-card-d">See his psychological concepts next to the alchemical figures and operations he reads them through, with a citation for each pairing.</span><span class="land-card-k">concordance</span></a>
 <a class="land-card" href="/routes"><span class="land-card-t">Trace one idea to another</span><span class="land-card-d">See how one concept reaches another.</span><span class="land-card-k">routes</span></a>
@@ -2779,8 +2784,13 @@ table.findings .src { font: .58rem var(--mono); }
 .land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
 .land-tasks { margin-bottom: 3.5rem; }
 .land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
-.land-card { display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
-.land-card:hover, .land-card:focus-visible { border-color: var(--gold-dim); }
+.land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
+.land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
+.land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
+.land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
+.land-card-all { text-decoration: none; }
+.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
 .land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
 .land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
 .land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }

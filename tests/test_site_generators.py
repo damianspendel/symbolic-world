@@ -147,6 +147,20 @@ def test_sitemap_lists_no_html_url(sitemap):
     assert ".html" not in sitemap
 
 
+def test_the_landing_page_links_twelve_concepts_with_no_nested_anchor():
+    html = read(os.path.join(PUBLIC, "index.html"))
+    block = re.search(r'<span class="land-starts">(.*?)</span>', html, re.S).group(1)
+    assert re.findall(r'<a href="/([^"]+)">([^<]+)</a>', block) == [
+        ("concept-the-self", "The Self"), ("concept-archetype", "Archetype"),
+        ("concept-collective-unconscious", "The collective unconscious"),
+        ("concept-the-shadow", "The shadow"), ("concept-anima", "Anima"),
+        ("concept-animus", "Animus"), ("concept-individuation", "Individuation"),
+        ("concept-synchronicity", "Synchronicity"), ("concept-dream", "Dream"),
+        ("concept-mandala", "Mandala"), ("concept-mercurius", "Mercurius"),
+        ("concept-coniunctio", "Coniunctio")]
+    assert not re.search(r"<a\b(?:(?!</a>).)*<a\b", html, re.S), "an anchor inside an anchor"
+
+
 def test_the_not_found_page_has_no_url_of_its_own(sitemap):
     html = read(os.path.join(PUBLIC, "404.html"))
     assert "<h1>Page not found</h1>" in html

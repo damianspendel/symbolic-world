@@ -63,8 +63,13 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
 .land-tasks { margin-bottom: 3.5rem; }
 .land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
-.land-card { display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
-.land-card:hover, .land-card:focus-visible { border-color: var(--gold-dim); }
+.land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
+.land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
+.land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
+.land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
+.land-card-all { text-decoration: none; }
+.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
 .land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
 .land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
 .land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
@@ -133,7 +138,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <section class="land-tasks">
 <p class="eyebrow">Start with a question</p>
 <div class="land-grid">
-<a class="land-card" href="/concepts"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span><span class="land-card-k">concepts</span></a>
+<div class="land-card"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span><span class="land-starts">Common starting points: <a href="/concept-the-self">The Self</a>&nbsp;&middot; <a href="/concept-archetype">Archetype</a>&nbsp;&middot; <a href="/concept-collective-unconscious">The collective unconscious</a>&nbsp;&middot; <a href="/concept-the-shadow">The shadow</a>&nbsp;&middot; <a href="/concept-anima">Anima</a>&nbsp;&middot; <a href="/concept-animus">Animus</a>&nbsp;&middot; <a href="/concept-individuation">Individuation</a>&nbsp;&middot; <a href="/concept-synchronicity">Synchronicity</a>&nbsp;&middot; <a href="/concept-dream">Dream</a>&nbsp;&middot; <a href="/concept-mandala">Mandala</a>&nbsp;&middot; <a href="/concept-mercurius">Mercurius</a>&nbsp;&middot; <a href="/concept-coniunctio">Coniunctio</a></span><a class="land-card-k land-card-all" href="/concepts">concepts</a></div>
 <a class="land-card" href="/query"><span class="land-card-t">Check a claim against the book</span><span class="land-card-d">Filter by volume, family and claim type, and search the words inside the quotes.</span><span class="land-card-k">query</span></a>
 <a class="land-card" href="/atlas#/concordance"><span class="land-card-t">Set Jung beside the alchemists</span><span class="land-card-d">See his psychological concepts next to the alchemical figures and operations he reads them through, with a citation for each pairing.</span><span class="land-card-k">concordance</span></a>
 <a class="land-card" href="/routes"><span class="land-card-t">Trace one idea to another</span><span class="land-card-d">See how one concept reaches another.</span><span class="land-card-k">routes</span></a>
