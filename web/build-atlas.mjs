@@ -1738,6 +1738,11 @@ const styleConcept = `
 .ns { display: contents; }
 .lede { font-size: 1.02rem; }
 .chips .chip { text-decoration: none; }
+.nbrs { margin: .7rem 0 .3rem; }
+.nbrs-t { font: .58rem var(--mono); letter-spacing: .08em; color: var(--ink-faint); margin: 0 0 .25rem; max-width: none; }
+.nbrs ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .15rem 1rem; }
+.nbrs li { font-size: .9rem; line-height: 1.6; margin: 0; }
+.nbrs .vmc { margin-left: .25rem; }
 `
 if (EMIT_CONCEPT_PAGES) {
   const conceptFamIds = new Set(families.map(f => f.id))
@@ -1845,6 +1850,29 @@ ${e.refs.length ? `<ul class="cites">\n${cites}\n</ul>` : ''}
       return `<a class="chip ${cls}" href="#${anchorOf(key)}">${esc(label)} ${derived(n)}</a>`
     }).join('\n')
 
+    // The way onward (Damian, 2026-11-04): the eight concepts this one shares
+    // the most citations with. Every name repeats a row below, so the block
+    // adds no claim; the counts are computed here and stay interface.
+    const neighbourById = new Map()
+    for (const e of edges) {
+      const otherId = e.source === node.id ? e.target : e.source
+      if (otherId === node.id) continue
+      if (!neighbourById.has(otherId)) neighbourById.set(otherId, { id: otherId, cites: 0, rels: 0 })
+      const nb = neighbourById.get(otherId)
+      nb.cites += e.refs.length
+      nb.rels += 1
+    }
+    const labelOf = (id) => conceptLabel.get(id) || id
+    const neighbours = [...neighbourById.values()]
+      .sort((a, b) => b.cites - a.cites || b.rels - a.rels || labelOf(a.id).localeCompare(labelOf(b.id)))
+      .slice(0, 8)
+    const neighbourBlock = neighbours.length ? `<div class="nbrs"${NS}>
+<p class="nbrs-t">most connected neighbours, by citations shared with this concept</p>
+<ul>
+${neighbours.map(nb => `<li><a class="ev" href="/concept-${nb.id}">${esc(labelOf(nb.id))}</a><span class="vmc">${derived(nb.cites)}</span></li>`).join('\n')}
+</ul>
+</div>` : ''
+
     // spec-seo-minor-v1, item 1: the lede says what the page is about, in
     // words a search result can show. Every count is computed (RULE 17);
     // "passages" are distinct (volume, paragraph) pairs, not references.
@@ -1863,6 +1891,7 @@ ${CONCEPT_SEARCH_HEAD ? lede + '\n' : ''}<p class="meta">${ns(registerNote)}</p>
 <p>${ns(provLine)}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
 ${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${neighbourBlock}
 ${order.length > 1 ? `<p class="chips">${ns(`\n${chips}\n`)}</p>` : ''}
 ${groupBlocks}
 <p class="meta">${ns(`<a href="/atlas#/n/${node.id}">open in the atlas</a> · <a href="/ledger">the ledger</a>`)}</p>`

@@ -1987,3 +1987,33 @@ def test_concept_pages_lead_with_a_plain_lede_and_counted_heads():
                 assert "data-nosnippet" in tag, f"{cid}: a .{cls} label without data-nosnippet"
     assert long_titles == set(overflow["titles"]), "title overflow differs from the build's record"
     assert long_descs == set(overflow["descriptions"]), "description overflow differs from the build's record"
+
+
+def test_concept_pages_list_their_most_connected_neighbours():
+    """Up to eight links, ranked by citations shared with the concept, each count
+    recomputed from the atlas. Every page with a neighbour carries the block."""
+    atlas = json.loads(read(os.path.join(SRC, "atlas.json")))
+    cites = {}
+    for e in atlas["edges"]:
+        if e["source"] == e["target"]:
+            continue
+        n = len(e.get("refs") or [])
+        for a, b in ((e["source"], e["target"]), (e["target"], e["source"])):
+            cites.setdefault(a, {}).setdefault(b, 0)
+            cites[a][b] += n
+    item = re.compile(r'<li><a class="ev" href="/concept-([^"]+)">[^<]*</a><span class="vmc">(\d+)</span></li>')
+    for path in sorted(glob.glob(os.path.join(PUBLIC, "concept-*.html"))):
+        cid = os.path.basename(path)[len("concept-"):-len(".html")]
+        block = re.search(r'<div class="nbrs"[^>]*>(.*?)</div>', read(path), re.S)
+        if cid not in cites:
+            assert not block, cid
+            continue
+        assert block, cid
+        listed = [(i, int(n)) for i, n in item.findall(block.group(1))]
+        assert 1 <= len(listed) <= 8, cid
+        assert len(listed) == min(8, len(cites[cid])), cid
+        for other, n in listed:
+            assert cites[cid][other] == n, (cid, other)
+        counts = [n for _, n in listed]
+        assert counts == sorted(counts, reverse=True), cid
+        assert counts[0] == max(cites[cid].values()), cid
