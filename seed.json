@@ -4224,6 +4224,31 @@
    "id": "parental-imagos",
    "label": "Parental imagos",
    "type": "Concept"
+  },
+  {
+   "id": "patriarchal-order",
+   "label": "Patriarchal order",
+   "type": "Concept"
+  },
+  {
+   "id": "the-state",
+   "label": "The State (political collective)",
+   "type": "Concept"
+  },
+  {
+   "id": "self-criticism",
+   "label": "Self-criticism (of the psychotherapist)",
+   "type": "Concept"
+  },
+  {
+   "id": "collective-representations",
+   "label": "Collective representations (Lévy-Bruhl)",
+   "type": "Concept"
+  },
+  {
+   "id": "william-mcdougall",
+   "label": "William McDougall",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -18811,6 +18836,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 252,
+     "quote": "between conscious and unconscious there exists a compensatory relationship, and that the unconscious always tries to make whole the conscious part of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
     }
    ],
    "relation_family": {
@@ -53386,6 +53422,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-14",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-2, PASS, 2026-08-14)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 252,
+     "quote": "the unconscious produces compensating symbols which are meant to replace the broken bridges",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 253,
+     "quote": "the symbols produced by the unconscious derive from archaic modes of psychic functioning",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
     }
    ],
    "relation_family": {
@@ -99454,6 +99512,18 @@
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
      "source": "Alfred Adler"
+    },
+    {
+     "volume": "16",
+     "paragraph": 234,
+     "quote": "his pupil Alfred Adler developed a view ... that dominates the picture, but the urge to power",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "source": "Alfred Adler"
     }
    ],
    "relation_family": {
@@ -102014,6 +102084,1089 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "church",
+   "relation": "accommodates",
+   "object": "parental-imagos",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 215,
+     "quote": "a place is found for the ever-active parental imagos ... in the bosom of the Church",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "preserves",
+   "object": "parental-imagos",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 216,
+     "quote": "religion deals with the parental imagos! ... Religion lets them live on in changed and exalted form",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "seeks",
+   "object": "patriarchal-order",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 217,
+     "quote": "a patriarchal or hierarchical orientation of the psyche which causes it instinctively to seek and cling to this order",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "parental-imagos",
+   "relation": "is-transferred-to",
+   "object": "the-analyst",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 218,
+     "quote": "the problem becomes more difficult when there is a transference of the imagos to the doctor",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "parental-imagos",
+   "relation": "passes-into",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 218,
+     "quote": "they and their imagos have passed over into the “other” world of the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "leads-to",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 219,
+     "quote": "the experience of the self ... I have called the process that leads to this experience the “process of individuation.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "illuminates",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 219,
+     "quote": "The help which alchemy affords us in understanding the symbols of the individuation process is, in my opinion, of the utmost importance.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "filius-macrocosmi",
+   "relation": "is-alchemical-name-for",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 220,
+     "quote": "Alchemy describes what I call the “self” as incorruptibile ... to which a sixteenth-century alchemist even gave the name of filius macrocosmi",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "source": "a sixteenth-century alchemist",
+     "correction_note": "gate correction: Verbatim; the naming is the alchemist's and stays a report. The source field carried the miner's gloss on top of the text's own phrase; trimmed to the phrase."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psychology",
+   "relation": "continues-work-of",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 221,
+     "quote": "Our modern psychology grew out of the spirit of natural science and, without realizing it, is carrying on the work begun by the alchemists.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "parental-imagos",
+   "relation": "is-projected-onto",
+   "object": "the-state",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 222,
+     "quote": "the parental imagos can now be projected upon the State as the universal provider",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the text says the imagos 'can now be projected' on the State, a possibility offered by totalitarianism; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "withdrawal-of-projections",
+   "relation": "widens",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 225,
+     "quote": "Consciousness, instead of being widened by the withdrawal of projections, is narrowed",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "note": "stated contrastively: under the political aim consciousness is narrowed instead"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "makes-aware-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 227,
+     "quote": "the natural process of individuation brings to birth a consciousness of human community precisely because it makes us aware of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "aims-at",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 229,
+     "quote": "I therefore consider it the prime task of psychotherapy today to pursue with singleness of purpose the goal of individual development.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "note": "the text says individual development"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "paracelsus",
+   "relation": "explored",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 231,
+     "quote": "the new continent named “psyche.” One of the first explorers to whom we are indebted for more or less intelligible reports is Paracelsus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, FINDING-adjudicated, 2026-11-05)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is stating a historical assessment in his own voice, not reporting a parallel doctrine."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "complements",
+   "object": "alfred-adler",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 244,
+     "quote": "The Freud-Adler dilemma found its solution in the acceptance of divergent principles, each of which laid stress on one particular aspect",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "requires",
+   "object": "self-criticism",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 237,
+     "quote": "one ought to insist with especial emphasis that the psychotherapist be prepared at all times to exercise adequate self-criticism",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "corresponds-to",
+   "object": "wounded-healer",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 239,
+     "quote": "his own hurt that gives the measure of his power to heal ... the Greek myth of the wounded physician",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "requires",
+   "object": "dialectical-procedure",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 240,
+     "quote": "neuroses or psychotic borderline states in complicated and intelligent people frequently require what is called “major” psychotherapy, that is, the dialectical procedure",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "note": "frequently, in complicated and intelligent people"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "introversion",
+   "relation": "is-based-on",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 241,
+     "quote": "The man with the extraverted attitude bases himself primarily on social relationships; the other, the introvert, primarily on the subjective factor.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "attacks",
+   "object": "religion",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 245,
+     "quote": "Freud himself laid great emphasis ... and he even felt obliged to hold up religion as one of the neuroticizing factors",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "source": "Freud"
+    },
+    {
+     "volume": "16",
+     "paragraph": 249,
+     "quote": "Freud, too, seems to have come across similar experiences, otherwise he would hardly have felt impelled to attack religion",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "produces",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 251,
+     "quote": "the unconscious, which continues to send out or “ecphorate” ... the primordial images just as it did in the remote past",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, FINDING-adjudicated, 2026-11-05)",
+     "audit_note": "cross-vendor objected that the text says primordial images, not archetypal images; primordial image is Jung's own earlier name for the archetypal image and the node already carries references resting on that wording from CW 5, CW 8 and CW 9i, so the finding is recorded and the reference upheld"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "superego",
+   "relation": "corresponds-to",
+   "object": "collective-representations",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 247,
+     "quote": "the factors composing the “super-ego” correspond to the “collective representations” which Lévy-Bruhl posited as basic to the psychology of primitive man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the correspondence between Freud's term and Lévy-Bruhl's is Jung's own comparison, held by neither author; reports -> asserts, source dropped."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "dissociation",
+   "relation": "leads-to",
+   "object": "schizophrenia",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 248,
+     "quote": "a dissociation of the personality supervenes ... may lead to its complete fragmentation, that is, to the schizoid personality and to schizophrenia",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "note": "given the necessary psychopathic foundation"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "extends-beyond",
+   "object": "medicine",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 250,
+     "quote": "psychotherapy has to spread far beyond the confines of somatic medicine and psychiatry into regions that were formerly the province of priests and philosophers",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "is-based-on",
+   "object": "mythologem",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 251,
+     "quote": "The old mythologems upon which all religion is ultimately based",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "is-built-into",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 254,
+     "quote": "may therefore legitimately be described as “archetypes.” ... They seem to me to be built into the very structure of man’s unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim spans around a footnote mark, but the text hedges with 'They seem to me'; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-shadow",
+   "relation": "is-uppermost-layer-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 254,
+     "quote": "his shadow, by which I mean the uppermost layer of his unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "trauma",
+   "relation": "causes",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 255,
+     "quote": "The neuroses resulting from the Great War have, with their essentially traumatic aetiology, revived the whole question of the trauma theory of neurosis.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "note": "war neuroses"
+    },
+    {
+     "volume": "16",
+     "paragraph": 261,
+     "quote": "Here the trauma is more than an agent of release: it is causative in the sense of a causa efficiens",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the causative trauma holds for 'not a few cases' of war neurosis without a neurotic disposition; a partial scope takes medium; high -> medium.",
+     "note": "war-neurosis cases without an established neurotic disposition"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "william-mcdougall",
+   "relation": "criticizes",
+   "object": "abreaction",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 263,
+     "quote": "McDougall is also right to point out that in quite a large number of cases abreaction is not only useless but actually harmful.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "source": "William McDougall"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "complex",
+   "relation": "brings-about",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 266,
+     "quote": "a traumatic complex brings about dissociation of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "william-mcdougall",
+   "relation": "emphasizes",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 266,
+     "quote": "McDougall, therefore, has laid his finger on the right spot when he argues that the essential factor is the dissociation of the psyche",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "source": "William McDougall"
+    },
+    {
+     "volume": "16",
+     "paragraph": 272,
+     "quote": "it depends, as McDougall shows, far more on whether or not the dissociation is successfully resolved",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "source": "William McDougall"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "abreaction",
+   "relation": "attempts-to-reintegrate",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 268,
+     "quote": "abreaction appears in an essentially different light: as an attempt to reintegrate the autonomous complex",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "abreaction",
+   "relation": "requires",
+   "object": "the-analyst",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 269,
+     "quote": "mere rehearsal of the experience does not itself possess a curative effect: the experience must be rehearsed in the presence of the doctor",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 270,
+     "quote": "abreaction could be performed by the patient alone ... But the intervention of the doctor is absolutely necessary.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 271,
+     "quote": "The rehearsal of the traumatic moment is able to reintegrate the neurotic dissociation only when ... reinforced by his relationship to the doctor",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "strengthens",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 270,
+     "quote": "His conscious mind finds in the doctor a moral support against the unmanageable affect of his traumatic complex.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 273,
+     "quote": "the relationship to the doctor can so raise the level of the patient’s consciousness as to enable him to overcome the complex",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "cathartic-method",
+   "relation": "fails-to-cure",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 274,
+     "quote": "when dealing with neuroses which are traumatically determined only to a minor degree, the cathartic method of abreaction will meet with poor success",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "note": "neuroses only slightly traumatic in origin"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "is-central-to",
+   "object": "psychoanalysis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 276,
+     "quote": "Freud himself has long recognized that the transference is the alpha and omega of psychoanalysis.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "seeks-rapport-with",
+   "object": "the-analyst",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 276,
+     "quote": "The transference is the patient’s attempt to get into psychological rapport with the doctor.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "sexuality",
+   "relation": "acts-as",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 277,
+     "quote": "To attain the goal of adaptation is of such vital importance to the patient that sexuality intervenes as a function of compensation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "consists-of",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 279,
+     "quote": "the transference is made up of projections",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 284,
+     "quote": "The transference therefore consists in a number of projections which act as a substitute for a real psychological relationship",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "is-a",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 282,
+     "quote": "The intensified tie to the doctor is a compensation for the patient’s faulty attitude to reality. This tie is what we mean by “transference.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "is-assimilated-into",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 283,
+     "quote": "the doctor assimilates the intimate psychic contents of the patient ... he is in turn assimilated as a figure into the patient’s psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim spans in order, but the sentence opens 'One could say' and the assimilation is 'as a figure'; a hedged statement takes medium; high -> medium."
     }
    ],
    "relation_family": {
