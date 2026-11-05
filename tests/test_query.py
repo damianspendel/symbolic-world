@@ -668,15 +668,16 @@ def test_relation_records_carry_the_edges_family_and_state(graph, parsed):
     terms = export_rdf.RECORD_TO_TERM
     for edge in graph.edges:
         subject = rdflib.URIRef(export_rdf.NS["swe"] + export_rdf.edge_id(edge))
-        record = edge["relation_family"]
-        assert g.value(subject, SW.familyState) == SW[terms[record["state"]]]
+        record = edge.get("relation_family") or {}
+        state = g.value(subject, SW.familyState)
+        assert state == (SW[terms[record["state"]]] if record.get("state") else None)
         family = g.value(subject, SW.family)
         if record.get("value"):
             assert family == rdflib.URIRef(export_rdf.NS["swf"] + record["value"])
         else:
             assert family is None
         rungs = set(g.objects(subject, SW.reachedRung))
-        assert (SW.FamilyAssigned in rungs) == (record["state"] == "assigned")
+        assert (SW.FamilyAssigned in rungs) == (record.get("state") == "assigned")
         assert (SW.Normalized in rungs) == bool(edge.get("relation_normalized"))
 
 
