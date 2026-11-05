@@ -8,7 +8,7 @@
     {"id": "Node", "label": "Node", "comment": "A named thing in the graph. Its type is a coarse label, and nothing is inferred from it."},
     {"id": "Relation", "label": "Relation", "parents": ["rdf:Statement", "prov:Entity"], "comment": "One stored edge: a subject, a relation and an object. The family is filed here. The rdf:predicate is the effective relation, which is the normalized form where one exists."},
     {"id": "Claim", "label": "Claim", "parents": ["prov:Entity"], "comment": "One statement backed by one passage. A relation has one claim per citation, and the gate rules on each claim separately."},
-    {"id": "Reference", "label": "Reference", "parents": ["prov:Entity"], "comment": "The place a claim rests on: a volume and a paragraph of the Collected Works. The quoted words are published in a separate file under a separate licence statement."},
+    {"id": "Reference", "label": "Reference", "parents": ["prov:Entity"], "comment": "The place a claim rests on: a volume and a paragraph of the Collected Works. The export does not carry the quoted words, which are on the concept page for the claim."},
     {"id": "Stage", "label": "Stage", "parents": ["prov:Activity"], "comment": "One recorded step of the pipeline, dated where the record gives a date. Passing one stage warrants nothing about the next."},
     {"id": "Proposal", "label": "Proposal", "parents": ["Stage"], "comment": "A model drafted something. The graph records a proposer for normalized forms only, so this class has no instances for the claims themselves."},
     {"id": "GateCheck", "label": "Gate check", "parents": ["Stage"], "comment": "A model of a different family from the proposer judged the paragraph against the claim, or a normalized form against its claim."},
@@ -51,13 +51,13 @@
     {"id": "checkedBy", "label": "checked by", "parents": ["prov:wasInfluencedBy"], "range": "Stage", "comment": "A recorded stage that acted on this claim or relation."},
     {"id": "family", "label": "family", "domain": "Relation", "comment": "The family this relation is filed under, named by its super-property. The assignment belongs to the edge, not to the relation string."},
     {"id": "familyState", "label": "family state", "domain": "Relation", "range": "FamilyState", "comment": "Where the relation stands in the family layer."},
-    {"id": "verbatimRelation", "label": "verbatim relation", "domain": "Relation", "comment": "The frozen wording the gate judged, where a normalized form replaced it as the effective relation. This appears only in the quotations file, because a long predicate can repeat the source's words."}
+    {"id": "verbatimRelation", "label": "verbatim relation", "domain": "Relation", "comment": "The frozen wording the gate judged, where a normalized form replaced it as the effective relation. The export does not carry it, because a long predicate can repeat the source's words."}
   ],
   "datatype_properties": [
     {"id": "nodeType", "label": "node type", "domain": "Node", "xsd": "string", "comment": "The node's coarse type label, as recorded."},
     {"id": "volume", "label": "volume", "domain": "Reference", "xsd": "string", "comment": "The volume of the Collected Works, as recorded: 9i, 14."},
     {"id": "paragraph", "label": "paragraph", "domain": "Reference", "xsd": "integer", "comment": "The numbered paragraph."},
-    {"id": "quote", "label": "quote", "domain": "Reference", "xsd": "string", "comment": "The quoted words. This appears only in the quotations file, which the CC BY grant excludes."},
+    {"id": "quote", "label": "quote", "domain": "Reference", "xsd": "string", "comment": "The quoted words. The export does not carry them, and a switch in the exporter can write them to a separate file outside the CC BY grant."},
     {"id": "voiceSource", "label": "voice source", "domain": "Claim", "xsd": "string", "comment": "The source named for the claim's voice, as recorded."},
     {"id": "confidenceAsRecorded", "label": "confidence as recorded", "domain": "Claim", "xsd": "string", "comment": "The original confidence string, given where it is a downgrade rather than a single level."},
     {"id": "verdict", "label": "verdict", "domain": "CrossVendorAudit", "xsd": "string", "comment": "The audit's verdict as recorded. Older audits use different words, and they are not merged here."},

@@ -565,7 +565,15 @@ KNOWN_NAMES_REPEATING_THE_SOURCE = {
 
 @pytest.fixture(scope="module")
 def export(graph, declarations):
-    return export_rdf.build_all(graph, declarations)
+    # the separate-file mode, so its checks still run; the default omits the quotes
+    return export_rdf.build_all(graph, declarations, quotes_mode="separate")
+
+
+def test_the_default_export_carries_no_quotes(graph, declarations):
+    """Damian's ruling, 2026-11-05: quotes are found elsewhere."""
+    assert export_rdf.QUOTES_MODE == "omit"
+    files = export_rdf.build_all(graph, declarations)
+    assert set(files) == {export_rdf.GRAPH_FILE, export_rdf.ONTOLOGY_FILE, export_rdf.VOID_FILE}
 
 
 @pytest.fixture(scope="module")

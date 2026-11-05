@@ -37,10 +37,11 @@ VOCABULARY = load_json(os.path.join(HERE, "vocabulary.json"))
 # until a human registers it. Each file says so wherever it appears.
 BASE = VOCABULARY["namespace"]
 
-# The two quotation defaults are Damian's to confirm. "separate" writes the
-# quotes to their own file, outside the CC BY grant; "omit" writes no quotes file.
-# No mode puts a quote in the CC BY file.
-QUOTES_MODE = "separate"
+# Damian ruled (2026-11-05) that quotes are found elsewhere: "omit" writes no
+# quotes file, and a reader finds each quote on its concept page. "separate"
+# would write them to their own file, outside the CC BY grant. No mode puts a
+# quote in the CC BY file.
+QUOTES_MODE = "omit"
 
 DOI = "10.5281/zenodo.21631523"
 LICENSE = "https://creativecommons.org/licenses/by/4.0/"
@@ -130,8 +131,8 @@ def header(graph, declarations, split_strings, unresolved_declarations):
         "# not that inference, says whether the edge has a family.",
         "#",
         "# Leaf properties and edge triples use the effective relation only. A verbatim",
-        "# string that was normalized away is in the quotations file: a long predicate",
-        "# can repeat the source's words, and this file is under CC BY. The frozen layer",
+        "# string that was normalized away is not in this file: a long predicate can",
+        "# repeat the source's words, and this file is under CC BY. The frozen layer",
         "# stays frozen in seed.json.",
         "#",
         "# owl:inverseOf and owl:SymmetricProperty come only from the ACTIVE",
@@ -148,7 +149,8 @@ def header(graph, declarations, split_strings, unresolved_declarations):
                          f"(declared for family {decl['applies_to_family']} only)")
     lines += [
         "#",
-        "# The quoted words are NOT in this file. See the claims block below.",
+        "# The quoted words are NOT in this file. Each reference gives the volume and",
+        "# paragraph, and the quote is on the concept page at symbolicworld.observer.",
         "",
     ]
     return lines
