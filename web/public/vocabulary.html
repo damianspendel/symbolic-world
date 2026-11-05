@@ -78,7 +78,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>One statement backed by one passage. A relation has one claim per citation, and the gate rules on each claim separately.</p>
 <p class="meta">subclass of <code>prov:Entity</code></p></div>
 <div class="vterm" id="Reference"><p class="vname"><code>sw:Reference</code></p>
-<p>The place a claim rests on: a volume and a paragraph of the Collected Works. The quoted words are published in a separate file under a separate licence statement.</p>
+<p>The place a claim rests on: a volume and a paragraph of the Collected Works. The export does not carry the quoted words, which are on the concept page for the claim.</p>
 <p class="meta">subclass of <code>prov:Entity</code></p></div>
 <div class="vterm" id="Stage"><p class="vname"><code>sw:Stage</code></p>
 <p>One recorded step of the pipeline, dated where the record gives a date. Passing one stage warrants nothing about the next.</p>
@@ -169,7 +169,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>Where the relation stands in the family layer.</p>
 <p class="meta">on <a href="#Relation"><code>sw:Relation</code></a> · takes <a href="#FamilyState"><code>sw:FamilyState</code></a></p></div>
 <div class="vterm" id="verbatimRelation"><p class="vname"><code>sw:verbatimRelation</code></p>
-<p>The frozen wording the gate judged, where a normalized form replaced it as the effective relation. This appears only in the quotations file, because a long predicate can repeat the source's words.</p>
+<p>The frozen wording the gate judged, where a normalized form replaced it as the effective relation. The export does not carry it, because a long predicate can repeat the source's words.</p>
 <p class="meta">on <a href="#Relation"><code>sw:Relation</code></a></p></div>
 <div class="vterm" id="nodeType"><p class="vname"><code>sw:nodeType</code></p>
 <p>The node's coarse type label, as recorded.</p>
@@ -181,7 +181,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The numbered paragraph.</p>
 <p class="meta">on <a href="#Reference"><code>sw:Reference</code></a> · takes <code>xsd:integer</code></p></div>
 <div class="vterm" id="quote"><p class="vname"><code>sw:quote</code></p>
-<p>The quoted words. This appears only in the quotations file, which the CC BY grant excludes.</p>
+<p>The quoted words. The export does not carry them, and a switch in the exporter can write them to a separate file outside the CC BY grant.</p>
 <p class="meta">on <a href="#Reference"><code>sw:Reference</code></a> · takes <code>xsd:string</code></p></div>
 <div class="vterm" id="voiceSource"><p class="vname"><code>sw:voiceSource</code></p>
 <p>The source named for the claim's voice, as recorded.</p>
