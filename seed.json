@@ -4164,6 +4164,66 @@
    "id": "identification",
    "label": "Identification (unconscious identity with the parents)",
    "type": "Concept"
+  },
+  {
+   "id": "josef-breuer",
+   "label": "Josef Breuer",
+   "type": "Figure"
+  },
+  {
+   "id": "education",
+   "label": "Education (third stage of treatment)",
+   "type": "Operation"
+  },
+  {
+   "id": "transformation-stage",
+   "label": "Transformation (fourth stage of treatment)",
+   "type": "Operation"
+  },
+  {
+   "id": "self-education",
+   "label": "Self-education (of the doctor)",
+   "type": "Operation"
+  },
+  {
+   "id": "highest-dominant",
+   "label": "The highest psychic dominant",
+   "type": "Concept"
+  },
+  {
+   "id": "suffering",
+   "label": "Suffering",
+   "type": "Concept"
+  },
+  {
+   "id": "medieval-physicians",
+   "label": "Medieval physicians (medical philosophers)",
+   "type": "Figure"
+  },
+  {
+   "id": "clinical-diagnosis",
+   "label": "Clinical diagnosis",
+   "type": "Operation"
+  },
+  {
+   "id": "psychological-diagnosis",
+   "label": "Psychological diagnosis (of complexes)",
+   "type": "Operation"
+  },
+  {
+   "id": "mythologem",
+   "label": "Mythologem",
+   "type": "Concept"
+  },
+  {
+   "id": "medicine",
+   "label": "Medicine",
+   "type": "Concept"
+  },
+  {
+   "id": "parental-imagos",
+   "label": "Parental imagos",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -47925,6 +47985,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-7, PASS, 2026-08-10)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 205,
+     "quote": "in every child consciousness grows out of the unconscious in the course of a few years",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
     }
    ],
    "relation_family": {
@@ -99371,6 +99442,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-04",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-1, PASS, 2026-11-04)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 151,
+     "quote": "that even his transference and his other fixations subserve the will to power and thus represent a “masculine protest”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "Alfred Adler"
     }
    ],
    "relation_family": {
@@ -100608,6 +100691,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-2, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 148,
+     "quote": "The fixation having been traced back to its dark origins, the patient’s position becomes untenable",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
     }
    ],
    "relation_family": {
@@ -100735,6 +100829,1197 @@
     "value": "instrumentality",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "confession",
+   "relation": "is-ineffective-against",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 143,
+     "quote": "Faced with the phenomenon of transference, mere confession is of no avail",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "josef-breuer",
+   "relation": "originated",
+   "object": "cathartic-method",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 143,
+     "quote": "Freud was driven to substantial modifications of Breuer’s original cathartic method",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "Josef Breuer"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "elucidation",
+   "relation": "addresses",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 144,
+     "quote": "the transference relationship is in especial need of elucidation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "elucidation",
+   "relation": "elaborates",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 145,
+     "quote": "The result of the Freudian method of elucidation is a minute elaboration of man’s shadow-side unexampled in any previous age.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "note": "said of the Freudian form of elucidation"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "practises",
+   "object": "reductive-method",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 146,
+     "quote": "Freud’s interpretative method rests on “reductive” explanations which unfailingly lead backwards and downwards",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "Sigmund Freud"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "elucidation",
+   "relation": "goes-beyond",
+   "object": "confession",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 150,
+     "quote": "It is true that elucidation goes further than uninterpreted confession alone",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "elucidation",
+   "relation": "fails-to-overcome",
+   "object": "infantilism",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 150,
+     "quote": "in many cases the most thorough elucidation leaves the patient an intelligent but still incapable child",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the failure is said of 'many cases', where the patient stays 'an intelligent but still incapable child'; a partial scope takes medium; high -> medium.",
+     "note": "in many cases, not all"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "power-drive",
+   "relation": "explains",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 151,
+     "quote": "numerous cases of neurosis can be far more satisfactorily explained by the power instinct than by the pleasure principle",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "Alfred Adler",
+     "correction_note": "gate correction: Verbatim and rightly a report of Adler, but the claim covers 'numerous cases of neurosis', not neurosis as such; a partial scope takes medium; high -> medium.",
+     "note": "numerous cases, not all"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "alfred-adler",
+   "relation": "practises",
+   "object": "education",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 152,
+     "quote": "Whereas Freud is the investigator and interpreter, Adler is primarily the educator.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "Alfred Adler"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "education",
+   "relation": "follows",
+   "object": "elucidation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 152,
+     "quote": "The educational aims of the Adlerian school begin precisely where Freud leaves off",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim; the school's educational aims 'begin precisely where Freud leaves off'. The ordering of the stages is Jung's own scheme, stated in his voice; no doctrine of Adler's is reported in the sentence. reports -> asserts."
+    },
+    {
+     "volume": "16",
+     "paragraph": 153,
+     "quote": "Finally comes education, pointing out that no amount of confession and no amount of explaining can make the crooked plant grow straight",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "analytical-psychology",
+   "relation": "comprises",
+   "object": "transformation-stage",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 168,
+     "quote": "Thus the fourth stage of analytical psychology",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "adaptation",
+   "relation": "causes",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 161,
+     "quote": "Consequently there are just as many people who become neurotic because they are merely normal",
+     "claim_type": "jung-asserts",
+     "confidence": "low",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the cause named is being 'merely normal', which the paragraph sets beside adaptation without equating the two, and it holds for people of more than average ability only; the same sentence gives the reverse case. medium -> low.",
+     "note": "for people of more than average ability held to mere normality"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "evokes",
+   "object": "counter-transference",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 163,
+     "quote": "One of the best known symptoms of this kind is the counter-transference evoked by the transference.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "personality",
+   "relation": "shapes-outcome-of",
+   "object": "psychotherapy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 163,
+     "quote": "the personalities of doctor and patient are often infinitely more important for the outcome of the treatment than what the doctor says and thinks",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the personalities are 'often' more important for the outcome, not always; a partial scope takes medium; high -> medium.",
+     "note": "often, not always"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "is-transformed-in",
+   "object": "analytic-process",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 163,
+     "quote": "For two personalities to meet is like mixing two different chemical substances: if there is any combination at all, both are transformed.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "note": "stated through a chemical analogy"
+    },
+    {
+     "volume": "16",
+     "paragraph": 164,
+     "quote": "Between doctor and patient, therefore, there are imponderable factors which bring about a mutual transformation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 166,
+     "quote": "He is equally a part of the psychic process of treatment and therefore equally exposed to the transforming influences.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but this paragraph says the doctor is 'equally exposed to the transforming influences'; exposure is less than transformation; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "endorses",
+   "object": "training-analysis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 165,
+     "quote": "Freud himself has admitted their importance and has therefore seconded my demand for the analysis of the analyst.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "Sigmund Freud"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "transformation-stage",
+   "relation": "requires",
+   "object": "self-education",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 168,
+     "quote": "requires the counter-application to the doctor himself of whatever system is believed in",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 170,
+     "quote": "The demand made by the stage of transformation, namely that the doctor must change himself if he is to become capable of changing his patient",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 172,
+     "quote": "what is now demanded is his own transformation—the self-education of the educator",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "conditions",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 173,
+     "quote": "the human psyche is far more than a mere object of scientific interest ... not only a cerebral function but the absolute condition of consciousness itself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "analytical-psychology",
+   "relation": "becomes-method-of",
+   "object": "self-education",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 174,
+     "quote": "What was formerly a method of medical treatment now becomes a method of self-education",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "is-characterized-by",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 177,
+     "quote": "the problem of opposites—a problem that is profoundly characteristic of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "requires-discussion-of",
+   "object": "weltanschauung",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 178,
+     "quote": "Each will be driven to a discussion of his philosophy of life, both with himself and with his partner.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "note": "unless therapist or patient abandons the attempt"
+    },
+    {
+     "volume": "16",
+     "paragraph": 179,
+     "quote": "This philosophical discussion is a task which psychotherapy necessarily sets itself, though not every patient will come down to basic principles.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "complex",
+   "relation": "does-not-signify",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 179,
+     "quote": "the possession of complexes does not in itself signify neurosis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "weltanschauung",
+   "relation": "shapes",
+   "object": "psychotherapy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 180,
+     "quote": "It guides the life of the therapist and shapes the spirit of his therapy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "note": "the therapist's philosophy of life"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "weltanschauung",
+   "relation": "is-a",
+   "object": "highest-dominant",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 180,
+     "quote": "a man’s philosophy of life forms the counterpole to the physiologically conditioned psyche, and, as the highest psychic dominant",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "emotion",
+   "relation": "calls-forth",
+   "object": "highest-dominant",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 183,
+     "quote": "Any difficulty, danger, or critical phase of life immediately calls forth this dominant. It is the most natural reaction to all highly charged emotional situations.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but what calls the dominant forth is the difficulty, danger or 'highly charged emotional situation', a step away from emotion as such; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "is-threatened-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 182,
+     "quote": "if we attempt to penetrate with understanding into that realm of unconscious forces, we have to defend ourselves against the same influences",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "instinct",
+   "relation": "is-coupled-with",
+   "object": "weltanschauung",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 185,
+     "quote": "an instinct is always and inevitably coupled with something like a philosophy of life",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the instinct is coupled with 'something like a philosophy of life', however hazy; the hedge on the object takes medium; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "conceals",
+   "object": "suffering",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 185,
+     "quote": "Behind a neurosis there is so often concealed all the natural and necessary suffering the patient has been unwilling to bear.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the concealment is said to hold 'so often', not always; a partial scope takes medium; high -> medium.",
+     "note": "often, not always"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "immortality",
+   "relation": "counteracts",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 186,
+     "quote": "the belief in immortality gives life that untroubled flow into the future so necessary if stoppages and regressions are to be avoided",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but the agent is the belief in immortality, and it gives the flow that is 'necessary if stoppages and regressions are to be avoided'; a condition for avoiding, weaker than counteracting; high -> medium.",
+     "note": "the belief in immortality"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "medieval-physicians",
+   "relation": "recognized",
+   "object": "lumen-naturae",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 189,
+     "quote": "These physicians recognized, besides the light of divine revelation, a lumen naturae as a second, independent source of illumination",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "medieval physicians"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "affects",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 190,
+     "quote": "It was Freud’s momentous discovery that the neurosis is not a mere agglomeration of symptoms, but a wrong functioning which affects the whole psyche.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "Sigmund Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "requires",
+   "object": "the-whole-man",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 198,
+     "quote": "Ars requirit totum hominem , says an old master.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "an old master (unnamed in the text)",
+     "correction_note": "gate correction: Verbatim and rightly a quoted source, but the paragraph gives only 'an old master' and does not call the dictum alchemical, so the source is trimmed to what the text says; the dictum speaks of the art and the application to psychotherapy is Jung's; high -> medium.",
+     "note": "Jung applies the dictum about the art to the psychotherapist"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "clinical-diagnosis",
+   "relation": "is-irrelevant-to",
+   "object": "psychotherapy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 195,
+     "quote": "Psychotherapy forms a startling exception to this rule: the diagnosis is a highly irrelevant affair",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 198,
+     "quote": "clinical diagnosis is, for his purposes, well-nigh meaningless",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psychological-diagnosis",
+   "relation": "aims-at",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 196,
+     "quote": "Psychological diagnosis aims at the diagnosis of complexes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "is-rooted-in",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 196,
+     "quote": "The real toxin is to be sought in the complex, and this is a more or less autonomous psychic quantity.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "is-healing-factor-in",
+   "object": "psychotherapy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 172,
+     "quote": "we have learned to place in the foreground the personality of the doctor himself as a curative or harmful factor",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Verbatim, but this paragraph calls the doctor's personality 'a curative or harmful factor'; the relation keeps only the curative half; high -> medium.",
+     "note": "curative or harmful"
+    },
+    {
+     "volume": "16",
+     "paragraph": 198,
+     "quote": "The great healing factor in psychotherapy is the doctor’s personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "the-whole-man",
+   "relation": "is-a",
+   "object": "microcosm",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 203,
+     "quote": "The “whole psychic human being” we were asking about thus proves to be nothing less than a world, that is, a microcosm",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "carl-gustav-carus",
+   "relation": "formulated-philosophy-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 204,
+     "quote": "The medical philosopher C. G. Carus had a clear inkling of this and was the first to set forth an explicit philosophy of the unconscious.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "source": "C. G. Carus"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "comprises",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 204,
+     "quote": "the concept of the psyche could be expanded to the formula “psyche = ego-consciousness + unconscious.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "mythologem",
+   "relation": "belongs-to",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 207,
+     "quote": "Mythologems are the aforementioned “portions of the world” which belong to the structural elements of the psyche.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "mythologem",
+   "relation": "is-connected-with",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 208,
+     "quote": "The collective contents expressed in mythologems represent such situational patterns. which are so intimately connected with the release of instinct.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "note": "via the situational patterns that release instinct"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "differs-from",
+   "object": "medicine",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 192,
+     "quote": "the differences that exist between medicine on the one hand and psychotherapy on the other in their conception of pathology",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 198,
+     "quote": "the therapy itself shows the greatest imaginable departures from the views commonly accepted in medicine",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "enables",
+   "object": "withdrawal-of-projections",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 212,
+     "quote": "the transference which occurs during the treatment of neurosis is at best only an intermediate stage ... to withdraw the projection of the parental imagos",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
+     "correction_note": "gate correction: Both spans verbatim, the elision within bounds; but the transference is 'at best only an intermediate stage' that gives the patient 'a chance' to withdraw the projection; a chance is not an assured effect; high -> medium.",
+     "note": "at best an intermediate stage"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "parental-imagos",
+   "relation": "fall-back-into",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 212,
+     "quote": "With the withdrawal of the projection they fall back into the individual psyche, from which indeed they mainly originated.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-05",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
     "date": "2026-11-05"
    }
   }
