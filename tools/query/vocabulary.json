@@ -1,0 +1,69 @@
+{
+  "_about": "The claim and warrant vocabulary. tools/query/export_rdf.py writes the OWL file from this, and web/build-atlas.mjs writes the /vocabulary page from it. The namespace below is the one place to change it. It is provisional until Damian registers it.",
+  "namespace": "https://w3id.org/symbolicworld/",
+  "namespace_provisional": true,
+  "title": "The Symbolic World: claims and warrants",
+  "definition_note": "These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how strongly it is committed, and which checks it passed. They are built on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type.",
+  "classes": [
+    {"id": "Node", "label": "Node", "comment": "A named thing in the graph. Its type is a coarse label, and nothing is inferred from it."},
+    {"id": "Relation", "label": "Relation", "parents": ["rdf:Statement", "prov:Entity"], "comment": "One stored edge: a subject, a relation and an object. The family is filed here. The rdf:predicate is the effective relation, which is the normalized form where one exists."},
+    {"id": "Claim", "label": "Claim", "parents": ["prov:Entity"], "comment": "One statement backed by one passage. A relation has one claim per citation, and the gate rules on each claim separately."},
+    {"id": "Reference", "label": "Reference", "parents": ["prov:Entity"], "comment": "The place a claim rests on: a volume and a paragraph of the Collected Works. The quoted words are published in a separate file under a separate licence statement."},
+    {"id": "Stage", "label": "Stage", "parents": ["prov:Activity"], "comment": "One recorded step of the pipeline, dated where the record gives a date. Passing one stage warrants nothing about the next."},
+    {"id": "Proposal", "label": "Proposal", "parents": ["Stage"], "comment": "A model drafted something. The graph records a proposer for normalized forms only, so this class has no instances for the claims themselves."},
+    {"id": "GateCheck", "label": "Gate check", "parents": ["Stage"], "comment": "A model of a different family from the proposer judged the paragraph against the claim, or a normalized form against its claim."},
+    {"id": "CrossVendorAudit", "label": "Cross-vendor audit", "parents": ["Stage"], "comment": "A model from another company judged the work again. The verdict is given as recorded, and an audit that records none has none here."},
+    {"id": "FamilyAssignment", "label": "Family assignment", "parents": ["Stage"], "comment": "An assignment of a relation to a family, or a record that none was settled. A family is assigned, never verified."},
+    {"id": "Voice", "label": "Voice", "closed": true, "comment": "Whose voice the claim is in. This is a separate question from whether the claim is true."},
+    {"id": "Commitment", "label": "Commitment", "closed": true, "comment": "How strongly the claim is committed, from the confidence field of the reference."},
+    {"id": "Rung", "label": "Rung", "closed": true, "comment": "A warrant: the specific backing a part of a claim has. The rungs have no order in this vocabulary, because passing one warrants nothing about another."},
+    {"id": "FamilyState", "label": "Family state", "closed": true, "comment": "Where a relation stands in the family layer."}
+  ],
+  "individuals": [
+    {"id": "JungAsserts", "class": "Voice", "label": "Jung asserts", "record": "jung-asserts", "comment": "Jung says it himself."},
+    {"id": "JungReportsParallel", "class": "Voice", "label": "Jung reports a parallel", "record": "jung-reports-parallel", "comment": "Jung reports someone else's material as a parallel."},
+    {"id": "JungQuotesSource", "class": "Voice", "label": "Jung quotes a source", "record": "jung-quotes-source", "comment": "Jung quotes a source, which is then named."},
+    {"id": "CommitmentHigh", "class": "Commitment", "label": "High commitment", "record": "high", "comment": "The reference records its confidence as high."},
+    {"id": "CommitmentMedium", "class": "Commitment", "label": "Medium commitment", "record": "medium", "comment": "The reference records its confidence as medium. A record of high -> medium also lands here, with the original string kept beside it."},
+    {"id": "CommitmentLow", "class": "Commitment", "label": "Low commitment", "record": "low", "comment": "The reference records its confidence as low."},
+    {"id": "Attested", "class": "Rung", "label": "Attested", "comment": "The quote is in the paragraph. It settles only that the words are in the book."},
+    {"id": "ModelSupported", "class": "Rung", "label": "Model-supported", "comment": "A gate of a different family from the proposer passed the claim."},
+    {"id": "CrossChecked", "class": "Rung", "label": "Cross-checked", "comment": "A model from another company judged the claim again. Read the audit's verdict beside this rung."},
+    {"id": "Normalized", "class": "Rung", "label": "Normalized", "comment": "The relation has a short normalized form beside the frozen wording."},
+    {"id": "FamilyAssigned", "class": "Rung", "label": "Family-assigned", "comment": "The relation is filed under a family. It inherits nothing from the verification of the claim beneath it."},
+    {"id": "Derived", "class": "Rung", "label": "Derived", "comment": "A row produced at query time by a declared inverse or symmetry rule. Derived rows are never stored, so this rung has no instances in the export."},
+    {"id": "HumanReviewed", "class": "Rung", "label": "Human-reviewed", "comment": "One person judged it. The review records sit outside seed.json, so this export reports no instances."},
+    {"id": "HumanAgreed", "class": "Rung", "label": "Human-agreed", "comment": "Two people judged it independently. No item in the graph has reached this rung."},
+    {"id": "StateAssigned", "class": "FamilyState", "label": "Assigned", "record": "assigned", "comment": "A family is on record."},
+    {"id": "StatePendingAdjudication", "class": "FamilyState", "label": "Pending adjudication", "record": "pending-adjudication", "comment": "The arms disagreed, and the relation waits for a person to rule."},
+    {"id": "StateNoFamily", "class": "FamilyState", "label": "No family", "record": "no-family", "comment": "The relation is carried by no family."},
+    {"id": "StateTextUndecided", "class": "FamilyState", "label": "Text undecided", "record": "text-undecided", "comment": "The text does not decide between families."}
+  ],
+  "annotation_properties": [
+    {"id": "recordedAs", "label": "recorded as", "comment": "The string seed.json stores for this individual."}
+  ],
+  "object_properties": [
+    {"id": "ofRelation", "label": "of relation", "domain": "Claim", "range": "Relation", "comment": "The relation a claim backs."},
+    {"id": "hasEvidence", "label": "has evidence", "domain": "Claim", "range": "Reference", "comment": "The place the claim rests on."},
+    {"id": "voice", "label": "voice", "domain": "Claim", "range": "Voice", "comment": "Whose voice the claim is in."},
+    {"id": "commitment", "label": "commitment", "domain": "Claim", "range": "Commitment", "comment": "How strongly the claim is committed."},
+    {"id": "reachedRung", "label": "reached rung", "range": "Rung", "comment": "A rung the record shows this claim or relation has reached. Absence means the record does not show it."},
+    {"id": "checkedBy", "label": "checked by", "parents": ["prov:wasInfluencedBy"], "range": "Stage", "comment": "A recorded stage that acted on this claim or relation."},
+    {"id": "family", "label": "family", "domain": "Relation", "comment": "The family this relation is filed under, named by its super-property. The assignment belongs to the edge, not to the relation string."},
+    {"id": "familyState", "label": "family state", "domain": "Relation", "range": "FamilyState", "comment": "Where the relation stands in the family layer."},
+    {"id": "verbatimRelation", "label": "verbatim relation", "domain": "Relation", "comment": "The frozen wording the gate judged, where a normalized form replaced it as the effective relation. This appears only in the quotations file, because a long predicate can repeat the source's words."}
+  ],
+  "datatype_properties": [
+    {"id": "nodeType", "label": "node type", "domain": "Node", "xsd": "string", "comment": "The node's coarse type label, as recorded."},
+    {"id": "volume", "label": "volume", "domain": "Reference", "xsd": "string", "comment": "The volume of the Collected Works, as recorded: 9i, 14."},
+    {"id": "paragraph", "label": "paragraph", "domain": "Reference", "xsd": "integer", "comment": "The numbered paragraph."},
+    {"id": "quote", "label": "quote", "domain": "Reference", "xsd": "string", "comment": "The quoted words. This appears only in the quotations file, which the CC BY grant excludes."},
+    {"id": "voiceSource", "label": "voice source", "domain": "Claim", "xsd": "string", "comment": "The source named for the claim's voice, as recorded."},
+    {"id": "confidenceAsRecorded", "label": "confidence as recorded", "domain": "Claim", "xsd": "string", "comment": "The original confidence string, given where it is a downgrade rather than a single level."},
+    {"id": "verdict", "label": "verdict", "domain": "CrossVendorAudit", "xsd": "string", "comment": "The audit's verdict as recorded. Older audits use different words, and they are not merged here."},
+    {"id": "batch", "label": "batch", "domain": "CrossVendorAudit", "xsd": "string", "comment": "The mining batch named in the audit record."},
+    {"id": "auditRecord", "label": "audit record", "domain": "CrossVendorAudit", "xsd": "string", "comment": "The audit record as stored. The agent, date, verdict and batch here are read from this string."},
+    {"id": "assignedBy", "label": "assigned by", "domain": "FamilyAssignment", "xsd": "string", "comment": "How the family was assigned, as recorded: the two arms agreeing, or a person ruling."},
+    {"id": "familyAudit", "label": "family audit", "domain": "FamilyAssignment", "xsd": "string", "comment": "The calibrated gate's audit of the assignment, as recorded."}
+  ]
+}

@@ -666,3 +666,9 @@ nothing is to be built. Figures are as of 2026-10-22.
    covers canonical figures with several representations. Constraints: every
    existing rule on sourced claims stays untouched, and a design document
    comes before any build.
+
+## v2.3.0: the RDF export (added 2026-11-05)
+
+`exports/` is gitignored, because the export moves with every merged window. At the freeze, run `python3 tools/query/export_rdf.py --out-dir exports/rdf`, remove `exports/` from `.gitignore` and commit the four files, so the tag pins them. The Turtle files come to about 7.5 MB. The quotations file goes in the release file list that Damian approves under RULES #25.
+
+Damian decides three things first: the namespace (`namespace` in `tools/query/vocabulary.json`, registered at w3id.org by him), the quotations file (`QUOTES_MODE` in `tools/query/export_rdf.py`), and how to handle the four names in the CC BY file that still share eight or more words with a quote (`KNOWN_NAMES_REPEATING_THE_SOURCE` in `tests/test_query.py`).

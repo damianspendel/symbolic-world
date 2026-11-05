@@ -456,6 +456,7 @@ def test_quote_search_matches_within_one_quote_only():
 # ------------------------------------------------------- the RDF export (D7) ---
 
 import export_rdf  # noqa: E402
+from urllib.parse import unquote  # noqa: E402
 
 
 @pytest.fixture(scope="module")
@@ -472,8 +473,8 @@ def test_turtle_declares_no_transitivity(turtle):
 
 def test_turtle_emits_one_triple_per_edge(graph, turtle):
     triples = [line for line in turtle.split("\n")
-               if line.startswith("jkgn:") and line.endswith(" .")
-               and " a jkg:Node" not in line]
+               if line.startswith("swn:") and line.endswith(" .")
+               and " a sw:Node" not in line]
     assert len(triples) == len(graph.edges)
 
 
@@ -496,7 +497,7 @@ def test_turtle_withholds_family_restricted_declarations(declarations, turtle):
     for decl in kg_query.active_declarations(declarations):
         if not decl.get("applies_to_family"):
             continue
-        pair = f"jkgp:{decl['forward']} owl:inverseOf jkgp:{decl['inverse']} ."
+        pair = f"swr:{decl['forward']} owl:inverseOf swr:{decl['inverse']} ."
         assert pair not in turtle
         assert f"withheld: {decl['id']}" in turtle
 
@@ -506,9 +507,9 @@ def test_turtle_emits_the_unrestricted_declarations(declarations, turtle):
         if decl.get("applies_to_family"):
             continue
         if decl["kind"] == "inverse":
-            assert f"jkgp:{decl['forward']} owl:inverseOf jkgp:{decl['inverse']} ." in turtle
+            assert f"swr:{decl['forward']} owl:inverseOf swr:{decl['inverse']} ." in turtle
         else:
-            assert f"jkgp:{decl['relation']} a owl:SymmetricProperty ." in turtle
+            assert f"swr:{decl['relation']} a owl:SymmetricProperty ." in turtle
 
 
 def test_turtle_statements_are_terminated_and_prefixes_declared(turtle):
@@ -539,6 +540,207 @@ def test_turtle_export_leaves_the_seed_file_untouched(graph, declarations):
     before = kg_query.file_digest(SEED)
     export_rdf.build(graph, declarations)
     assert kg_query.file_digest(SEED) == before
+
+
+# ---- the publishable export: claims, provenance, ontology, VoID --------------
+
+import rdflib  # noqa: E402
+from rdflib.namespace import OWL, RDF, RDFS  # noqa: E402
+
+SW = rdflib.Namespace(export_rdf.NS["sw"])
+DCTERMS = rdflib.Namespace(export_rdf.NS["dcterms"])
+PROV = rdflib.Namespace(export_rdf.NS["prov"])
+VOID = rdflib.Namespace("http://rdfs.org/ns/void#")
+
+# Names in the CC BY file that still share a run of eight words with a quote: two
+# relations never normalized, a node label drawn from the text, and a book's title.
+# They stay until someone rules on them; any new one fails the test.
+KNOWN_NAMES_REPEATING_THE_SOURCE = {
+    "understands-good-and-evil-as-the-right-and-left-hand-of-god",
+    "are-united-in-the-pre-manichaean-god-image-just-as-yang-and-yin-are-united-in",
+    "The diamond of the dreamer\u2019s ring, whose prism contains all the hues of the rainbow; identified with the lapis",
+    "Bardo Th\u00f6dol (The Tibetan Book of the Dead)",
+}
+
+
+@pytest.fixture(scope="module")
+def export(graph, declarations):
+    return export_rdf.build_all(graph, declarations)
+
+
+@pytest.fixture(scope="module")
+def parsed(export):
+    return {name: rdflib.Graph().parse(data=text, format="turtle")
+            for name, text in export.items()}
+
+
+def seed_refs(graph):
+    return [r for e in graph.edges for r in e["references"]]
+
+
+def test_export_writes_four_files_that_all_parse(parsed):
+    assert set(parsed) == {export_rdf.GRAPH_FILE, export_rdf.QUOTES_FILE,
+                           export_rdf.ONTOLOGY_FILE, export_rdf.VOID_FILE}
+    assert all(len(g) > 0 for g in parsed.values())
+
+
+def test_export_counts_match_the_seed(graph, parsed):
+    g = parsed[export_rdf.GRAPH_FILE]
+    count = lambda cls: len(set(g.subjects(RDF.type, cls)))  # noqa: E731
+    refs = seed_refs(graph)
+    assert count(SW.Node) == len(graph.nodes)
+    assert count(SW.Relation) == len(graph.edges)
+    assert count(SW.Claim) == len(refs)
+    assert count(SW.Reference) == len(refs)
+    assert count(SW.GateCheck) == len(refs) + sum(
+        1 for e in graph.edges if e.get("relation_normalized"))
+    assert len(set(parsed[export_rdf.QUOTES_FILE].subjects(SW.quote))) == len(refs)
+
+
+def test_void_states_the_licence_doi_and_counts(graph, parsed):
+    v = parsed[export_rdf.VOID_FILE]
+    dataset = rdflib.URIRef(export_rdf.BASE + "data/graph")
+    assert (dataset, DCTERMS.license, rdflib.URIRef(export_rdf.LICENSE)) in v
+    assert str(v.value(dataset, DCTERMS.identifier)) == export_rdf.DOI
+    assert int(v.value(dataset, VOID.triples)) == len(parsed[export_rdf.GRAPH_FILE])
+    partitions = {v.value(p, VOID["class"]): int(v.value(p, VOID.entities))
+                  for p in v.objects(dataset, VOID.classPartition)}
+    assert partitions[SW.Relation] == len(graph.edges)
+    assert partitions[SW.Claim] == len(seed_refs(graph))
+    quotations = rdflib.URIRef(export_rdf.BASE + "data/quotations")
+    assert int(v.value(quotations, VOID.triples)) == len(parsed[export_rdf.QUOTES_FILE])
+    assert (quotations, DCTERMS.license, None) not in v
+    assert (dataset, VOID.subset, quotations) not in v
+
+
+def test_cc_by_files_carry_no_quotes(graph, export, parsed):
+    words = lambda text: re.findall(r"[a-z]+", text.lower())  # noqa: E731
+    runs = set()
+    for ref in seed_refs(graph):
+        w = words(ref["quote"])
+        runs |= {" ".join(w[i:i + 8]) for i in range(len(w) - 7)}
+    assert runs
+    for name in (export_rdf.GRAPH_FILE, export_rdf.ONTOLOGY_FILE, export_rdf.VOID_FILE):
+        g = parsed[name]
+        assert not list(g.subjects(SW.quote)), name
+        assert not list(g.subjects(SW.verbatimRelation)), name
+        for ref in seed_refs(graph):
+            assert export_rdf.literal(ref["quote"]) not in export[name]
+        texts = {str(t) for triple in g for t in triple if isinstance(t, rdflib.Literal)}
+        texts |= {unquote(str(t).rsplit("/", 1)[-1]) for triple in g for t in triple
+                  if isinstance(t, rdflib.URIRef) and export_rdf.NS["swr"] in str(t)}
+        for text in texts - KNOWN_NAMES_REPEATING_THE_SOURCE:
+            w = words(text)
+            assert not any(" ".join(w[i:i + 8]) in runs for i in range(len(w) - 7)), text
+
+
+def test_quotes_file_states_the_exclusion_and_names_each_source(graph, export, parsed):
+    text = export[export_rdf.QUOTES_FILE]
+    assert "THE CC BY 4.0 GRANT DOES NOT COVER THIS FILE" in text
+    g = parsed[export_rdf.QUOTES_FILE]
+    assert not list(g.subjects(DCTERMS.license))
+    assert "excluded from" in str(next(g.objects(None, DCTERMS.rights)))
+    edge = next(e for e in graph.edges if e["references"])
+    ref, local = export_rdf.claim_ids(edge)[0]
+    subject = rdflib.URIRef(export_rdf.NS["swt"] + local)
+    assert str(g.value(subject, SW.quote)) == ref["quote"]
+    assert str(g.value(subject, SW.volume)) == str(ref["volume"])
+    assert int(g.value(subject, SW.paragraph)) == ref["paragraph"]
+
+
+def test_quotes_mode_omit_writes_no_quotes_file(graph, declarations):
+    files = export_rdf.build_all(graph, declarations, quotes_mode="omit")
+    assert export_rdf.QUOTES_FILE not in files
+    assert "quotations" not in files[export_rdf.VOID_FILE]
+    rdflib.Graph().parse(data=files[export_rdf.VOID_FILE], format="turtle")
+
+
+def test_relation_records_carry_the_edges_family_and_state(graph, parsed):
+    g = parsed[export_rdf.GRAPH_FILE]
+    terms = export_rdf.RECORD_TO_TERM
+    for edge in graph.edges:
+        subject = rdflib.URIRef(export_rdf.NS["swe"] + export_rdf.edge_id(edge))
+        record = edge["relation_family"]
+        assert g.value(subject, SW.familyState) == SW[terms[record["state"]]]
+        family = g.value(subject, SW.family)
+        if record.get("value"):
+            assert family == rdflib.URIRef(export_rdf.NS["swf"] + record["value"])
+        else:
+            assert family is None
+        rungs = set(g.objects(subject, SW.reachedRung))
+        assert (SW.FamilyAssigned in rungs) == (record["state"] == "assigned")
+        assert (SW.Normalized in rungs) == bool(edge.get("relation_normalized"))
+
+
+def test_stages_state_only_what_the_seed_records(graph, parsed):
+    g = parsed[export_rdf.GRAPH_FILE]
+    audits = 0
+    for edge in graph.edges:
+        for ref, local in export_rdf.claim_ids(edge):
+            stage = export_rdf.NS["swk"] + local
+            gate = rdflib.URIRef(stage + "-gate")
+            assert (gate, RDF.type, SW.GateCheck) in g
+            agent = g.value(gate, PROV.wasAssociatedWith)
+            assert str(g.value(agent, RDFS.label)) == ref["verified_by"]
+            assert str(g.value(gate, DCTERMS.date)) == ref["verified_date"]
+            audit = rdflib.URIRef(stage + "-audit")
+            if ref.get("crossvendor_checked"):
+                audits += 1
+                assert str(g.value(audit, SW.auditRecord)) == ref["crossvendor_checked"]
+            else:
+                assert (audit, None, None) not in g
+    assert audits
+    # the seed names no proposer for a claim, so only normalized forms have a Proposal
+    proposals = set(g.subjects(RDF.type, SW.Proposal))
+    assert len(proposals) == sum(1 for e in graph.edges if e.get("relation_normalized"))
+    assert not {u for p in proposals for u in g.objects(p, PROV.used)} & set(g.subjects(RDF.type, SW.Claim))
+
+
+@pytest.mark.parametrize("record, expected", [
+    ("gemini-3.1-pro", dict(agent="gemini-3.1-pro", date=None, verdict=None, batch=None)),
+    ("gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)",
+     dict(agent="gemini-3.1-pro", date="2026-07-27", verdict=None, batch=None)),
+    ("gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)",
+     dict(agent="gemini-3.1-pro", date="2026-10-30", verdict="PASS", batch="b-cw5-9")),
+    ("gemini-3.1-pro (pre-merge, b-cw9ii-2, FINDING-adjudicated, 2026-08-05)",
+     dict(agent="gemini-3.1-pro", date="2026-08-05", verdict="FINDING-adjudicated", batch="b-cw9ii-2")),
+])
+def test_parse_audit_reads_only_what_the_string_states(record, expected):
+    assert export_rdf.parse_audit(record) == expected
+
+
+def test_ontology_is_claims_and_warrants_only(graph, export, parsed):
+    assert all("TransitiveProperty" not in text for text in export.values())
+    o = parsed[export_rdf.ONTOLOGY_FILE]
+    assert (rdflib.URIRef(export_rdf.BASE + "ns"), OWL.imports,
+            rdflib.URIRef("http://www.w3.org/ns/prov-o#")) in o
+    assert (SW.Claim, RDFS.subClassOf, PROV.Entity) in o
+    assert (SW.Stage, RDFS.subClassOf, PROV.Activity) in o
+    for cls in ("Claim", "Reference", "Relation", "GateCheck", "CrossVendorAudit", "Voice", "Commitment", "Rung"):
+        assert (SW[cls], RDF.type, OWL.Class) in o
+    families = {f for f in o.subjects(RDF.type, OWL.ObjectProperty) if export_rdf.NS["swf"] in str(f)}
+    assert len(families) == len(graph.family_of_string())
+    g = parsed[export_rdf.GRAPH_FILE]
+    for store in (o, g):
+        for predicate in (RDFS.domain, RDFS.range):
+            for subject in store.subjects(predicate):
+                assert str(subject).startswith(export_rdf.NS["sw"]), subject
+    assert not list(g.subjects(RDFS.subClassOf))
+
+
+def test_namespace_lives_in_one_place():
+    with open(os.path.join(os.path.dirname(export_rdf.__file__), "export_rdf.py"), encoding="utf-8") as fh:
+        assert export_rdf.BASE not in fh.read()
+    assert export_rdf.VOCABULARY["namespace"] == export_rdf.BASE
+
+
+def test_vocabulary_terms_are_all_used_or_declared_empty(parsed):
+    """Every term the graph file uses in the sw: namespace is defined in the ontology."""
+    o, g = parsed[export_rdf.ONTOLOGY_FILE], parsed[export_rdf.GRAPH_FILE]
+    defined = set(o.subjects(RDFS.isDefinedBy))
+    used = {t for triple in g for t in triple
+            if isinstance(t, rdflib.URIRef) and str(t).startswith(export_rdf.NS["sw"])}
+    assert used <= defined, used - defined
 
 
 # ---- the 2026-08-13 middle ruling: aspect flips, qualifier carried ----------
