@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/vocabulary">
+<meta name="description" content="The terms of The Symbolic World’s RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.">
+<meta property="og:image" content="https://symbolicworld.observer/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="The Symbolic World: an atlas of C. G. Jung's Collected Works, with the graph of concepts">
+<title>Vocabulary · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<script src="/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.vterm { margin: .9rem 0; scroll-margin-top: 7rem; }
+.vterm p { margin: .1rem 0; }
+.vname code { color: var(--gold); }</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/atlas#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/atlas#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/atlas#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
+<div class="hrow hrow-2"><span class="where">vocabulary</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">reference</p>
+<h1>Vocabulary</h1>
+<p class="sub">the terms of the RDF export</p></div>
+<p>These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how strongly it is committed, and which checks it passed. They are built on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type.</p>
+<p class="meta">The namespace <code>https://w3id.org/symbolicworld/</code> is provisional and not yet registered, so these terms do not resolve yet. The prefix <code>sw:</code> stands for <code>https://w3id.org/symbolicworld/ns#</code>.</p>
+<h2>Classes</h2>
+<div class="vterm" id="Node"><p class="vname"><code>sw:Node</code></p>
+<p>A named thing in the graph. Its type is a coarse label, and nothing is inferred from it.</p></div>
+<div class="vterm" id="Relation"><p class="vname"><code>sw:Relation</code></p>
+<p>One stored edge: a subject, a relation and an object. The family is filed here. The rdf:predicate is the effective relation, which is the normalized form where one exists.</p>
+<p class="meta">subclass of <code>rdf:Statement</code> · subclass of <code>prov:Entity</code></p></div>
+<div class="vterm" id="Claim"><p class="vname"><code>sw:Claim</code></p>
+<p>One statement backed by one passage. A relation has one claim per citation, and the gate rules on each claim separately.</p>
+<p class="meta">subclass of <code>prov:Entity</code></p></div>
+<div class="vterm" id="Reference"><p class="vname"><code>sw:Reference</code></p>
+<p>The place a claim rests on: a volume and a paragraph of the Collected Works. The quoted words are published in a separate file under a separate licence statement.</p>
+<p class="meta">subclass of <code>prov:Entity</code></p></div>
+<div class="vterm" id="Stage"><p class="vname"><code>sw:Stage</code></p>
+<p>One recorded step of the pipeline, dated where the record gives a date. Passing one stage warrants nothing about the next.</p>
+<p class="meta">subclass of <code>prov:Activity</code></p></div>
+<div class="vterm" id="Proposal"><p class="vname"><code>sw:Proposal</code></p>
+<p>A model drafted something. The graph records a proposer for normalized forms only, so this class has no instances for the claims themselves.</p>
+<p class="meta">subclass of <a href="#Stage"><code>sw:Stage</code></a></p></div>
+<div class="vterm" id="GateCheck"><p class="vname"><code>sw:GateCheck</code></p>
+<p>A model of a different family from the proposer judged the paragraph against the claim, or a normalized form against its claim.</p>
+<p class="meta">subclass of <a href="#Stage"><code>sw:Stage</code></a></p></div>
+<div class="vterm" id="CrossVendorAudit"><p class="vname"><code>sw:CrossVendorAudit</code></p>
+<p>A model from another company judged the work again. The verdict is given as recorded, and an audit that records none has none here.</p>
+<p class="meta">subclass of <a href="#Stage"><code>sw:Stage</code></a></p></div>
+<div class="vterm" id="FamilyAssignment"><p class="vname"><code>sw:FamilyAssignment</code></p>
+<p>An assignment of a relation to a family, or a record that none was settled. A family is assigned, never verified.</p>
+<p class="meta">subclass of <a href="#Stage"><code>sw:Stage</code></a></p></div>
+<div class="vterm" id="Voice"><p class="vname"><code>sw:Voice</code></p>
+<p>Whose voice the claim is in. This is a separate question from whether the claim is true.</p></div>
+<div class="vterm" id="Commitment"><p class="vname"><code>sw:Commitment</code></p>
+<p>How strongly the claim is committed, from the confidence field of the reference.</p></div>
+<div class="vterm" id="Rung"><p class="vname"><code>sw:Rung</code></p>
+<p>A warrant: the specific backing a part of a claim has. The rungs have no order in this vocabulary, because passing one warrants nothing about another.</p></div>
+<div class="vterm" id="FamilyState"><p class="vname"><code>sw:FamilyState</code></p>
+<p>Where a relation stands in the family layer.</p></div>
+<h2>Voice</h2>
+<div class="vterm" id="JungAsserts"><p class="vname"><code>sw:JungAsserts</code></p>
+<p>Jung says it himself.</p></div>
+<div class="vterm" id="JungReportsParallel"><p class="vname"><code>sw:JungReportsParallel</code></p>
+<p>Jung reports someone else's material as a parallel.</p></div>
+<div class="vterm" id="JungQuotesSource"><p class="vname"><code>sw:JungQuotesSource</code></p>
+<p>Jung quotes a source, which is then named.</p></div>
+<h2>Commitment</h2>
+<div class="vterm" id="CommitmentHigh"><p class="vname"><code>sw:CommitmentHigh</code></p>
+<p>The reference records its confidence as high.</p></div>
+<div class="vterm" id="CommitmentMedium"><p class="vname"><code>sw:CommitmentMedium</code></p>
+<p>The reference records its confidence as medium. A record of high -&gt; medium also lands here, with the original string kept beside it.</p></div>
+<div class="vterm" id="CommitmentLow"><p class="vname"><code>sw:CommitmentLow</code></p>
+<p>The reference records its confidence as low.</p></div>
+<h2>Rung</h2>
+<div class="vterm" id="Attested"><p class="vname"><code>sw:Attested</code></p>
+<p>The quote is in the paragraph. It settles only that the words are in the book.</p></div>
+<div class="vterm" id="ModelSupported"><p class="vname"><code>sw:ModelSupported</code></p>
+<p>A gate of a different family from the proposer passed the claim.</p></div>
+<div class="vterm" id="CrossChecked"><p class="vname"><code>sw:CrossChecked</code></p>
+<p>A model from another company judged the claim again. Read the audit's verdict beside this rung.</p></div>
+<div class="vterm" id="Normalized"><p class="vname"><code>sw:Normalized</code></p>
+<p>The relation has a short normalized form beside the frozen wording.</p></div>
+<div class="vterm" id="FamilyAssigned"><p class="vname"><code>sw:FamilyAssigned</code></p>
+<p>The relation is filed under a family. It inherits nothing from the verification of the claim beneath it.</p></div>
+<div class="vterm" id="Derived"><p class="vname"><code>sw:Derived</code></p>
+<p>A row produced at query time by a declared inverse or symmetry rule. Derived rows are never stored, so this rung has no instances in the export.</p></div>
+<div class="vterm" id="HumanReviewed"><p class="vname"><code>sw:HumanReviewed</code></p>
+<p>One person judged it. The review records sit outside seed.json, so this export reports no instances.</p></div>
+<div class="vterm" id="HumanAgreed"><p class="vname"><code>sw:HumanAgreed</code></p>
+<p>Two people judged it independently. No item in the graph has reached this rung.</p></div>
+<h2>Family state</h2>
+<div class="vterm" id="StateAssigned"><p class="vname"><code>sw:StateAssigned</code></p>
+<p>A family is on record.</p></div>
+<div class="vterm" id="StatePendingAdjudication"><p class="vname"><code>sw:StatePendingAdjudication</code></p>
+<p>The arms disagreed, and the relation waits for a person to rule.</p></div>
+<div class="vterm" id="StateNoFamily"><p class="vname"><code>sw:StateNoFamily</code></p>
+<p>The relation is carried by no family.</p></div>
+<div class="vterm" id="StateTextUndecided"><p class="vname"><code>sw:StateTextUndecided</code></p>
+<p>The text does not decide between families.</p></div>
+<h2>Properties</h2>
+<div class="vterm" id="ofRelation"><p class="vname"><code>sw:ofRelation</code></p>
+<p>The relation a claim backs.</p>
+<p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <a href="#Relation"><code>sw:Relation</code></a></p></div>
+<div class="vterm" id="hasEvidence"><p class="vname"><code>sw:hasEvidence</code></p>
+<p>The place the claim rests on.</p>
+<p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <a href="#Reference"><code>sw:Reference</code></a></p></div>
+<div class="vterm" id="voice"><p class="vname"><code>sw:voice</code></p>
+<p>Whose voice the claim is in.</p>
+<p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <a href="#Voice"><code>sw:Voice</code></a></p></div>
+<div class="vterm" id="commitment"><p class="vname"><code>sw:commitment</code></p>
+<p>How strongly the claim is committed.</p>
+<p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <a href="#Commitment"><code>sw:Commitment</code></a></p></div>
+<div class="vterm" id="reachedRung"><p class="vname"><code>sw:reachedRung</code></p>
+<p>A rung the record shows this claim or relation has reached. Absence means the record does not show it.</p>
+<p class="meta">takes <a href="#Rung"><code>sw:Rung</code></a></p></div>
+<div class="vterm" id="checkedBy"><p class="vname"><code>sw:checkedBy</code></p>
+<p>A recorded stage that acted on this claim or relation.</p>
+<p class="meta">subproperty of <code>prov:wasInfluencedBy</code> · takes <a href="#Stage"><code>sw:Stage</code></a></p></div>
+<div class="vterm" id="family"><p class="vname"><code>sw:family</code></p>
+<p>The family this relation is filed under, named by its super-property. The assignment belongs to the edge, not to the relation string.</p>
+<p class="meta">on <a href="#Relation"><code>sw:Relation</code></a></p></div>
+<div class="vterm" id="familyState"><p class="vname"><code>sw:familyState</code></p>
+<p>Where the relation stands in the family layer.</p>
+<p class="meta">on <a href="#Relation"><code>sw:Relation</code></a> · takes <a href="#FamilyState"><code>sw:FamilyState</code></a></p></div>
+<div class="vterm" id="verbatimRelation"><p class="vname"><code>sw:verbatimRelation</code></p>
+<p>The frozen wording the gate judged, where a normalized form replaced it as the effective relation. This appears only in the quotations file, because a long predicate can repeat the source's words.</p>
+<p class="meta">on <a href="#Relation"><code>sw:Relation</code></a></p></div>
+<div class="vterm" id="nodeType"><p class="vname"><code>sw:nodeType</code></p>
+<p>The node's coarse type label, as recorded.</p>
+<p class="meta">on <a href="#Node"><code>sw:Node</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="volume"><p class="vname"><code>sw:volume</code></p>
+<p>The volume of the Collected Works, as recorded: 9i, 14.</p>
+<p class="meta">on <a href="#Reference"><code>sw:Reference</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="paragraph"><p class="vname"><code>sw:paragraph</code></p>
+<p>The numbered paragraph.</p>
+<p class="meta">on <a href="#Reference"><code>sw:Reference</code></a> · takes <code>xsd:integer</code></p></div>
+<div class="vterm" id="quote"><p class="vname"><code>sw:quote</code></p>
+<p>The quoted words. This appears only in the quotations file, which the CC BY grant excludes.</p>
+<p class="meta">on <a href="#Reference"><code>sw:Reference</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="voiceSource"><p class="vname"><code>sw:voiceSource</code></p>
+<p>The source named for the claim's voice, as recorded.</p>
+<p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="confidenceAsRecorded"><p class="vname"><code>sw:confidenceAsRecorded</code></p>
+<p>The original confidence string, given where it is a downgrade rather than a single level.</p>
+<p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="verdict"><p class="vname"><code>sw:verdict</code></p>
+<p>The audit's verdict as recorded. Older audits use different words, and they are not merged here.</p>
+<p class="meta">on <a href="#CrossVendorAudit"><code>sw:CrossVendorAudit</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="batch"><p class="vname"><code>sw:batch</code></p>
+<p>The mining batch named in the audit record.</p>
+<p class="meta">on <a href="#CrossVendorAudit"><code>sw:CrossVendorAudit</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="auditRecord"><p class="vname"><code>sw:auditRecord</code></p>
+<p>The audit record as stored. The agent, date, verdict and batch here are read from this string.</p>
+<p class="meta">on <a href="#CrossVendorAudit"><code>sw:CrossVendorAudit</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="assignedBy"><p class="vname"><code>sw:assignedBy</code></p>
+<p>How the family was assigned, as recorded: the two arms agreeing, or a person ruling.</p>
+<p class="meta">on <a href="#FamilyAssignment"><code>sw:FamilyAssignment</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="familyAudit"><p class="vname"><code>sw:familyAudit</code></p>
+<p>The calibrated gate's audit of the assignment, as recorded.</p>
+<p class="meta">on <a href="#FamilyAssignment"><code>sw:FamilyAssignment</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="recordedAs"><p class="vname"><code>sw:recordedAs</code></p>
+<p>The string seed.json stores for this individual.</p></div>
+<h2>Relation families</h2>
+<p>The families are object properties under <code>https://w3id.org/symbolicworld/family/</code>. A verbatim relation sits under a family only if its string is in exactly one family. Each family has <a href="/families">its own page</a>, with its definition.</p>
+</main></body></html>

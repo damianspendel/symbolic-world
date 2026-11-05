@@ -2017,3 +2017,16 @@ def test_concept_pages_list_their_most_connected_neighbours():
         counts = [n for _, n in listed]
         assert counts == sorted(counts, reverse=True), cid
         assert counts[0] == max(cites[cid].values()), cid
+
+
+def test_the_vocabulary_page_has_an_anchor_for_every_term():
+    """A term IRI ends in its local name, so the page needs that name as an id."""
+    vocab = json.loads(read(os.path.join(ROOT, "tools", "query", "vocabulary.json")))
+    html = read(os.path.join(PUBLIC, "vocabulary.html"))
+    ids = re.findall(r'<div class="vterm" id="([^"]+)">', html)
+    assert len(ids) == len(set(ids))
+    terms = [t["id"] for key in ("classes", "individuals", "object_properties",
+                                 "datatype_properties", "annotation_properties") for t in vocab[key]]
+    assert sorted(ids) == sorted(terms)
+    assert vocab["namespace"] in html
+    assert ("provisional" in html) == vocab["namespace_provisional"]

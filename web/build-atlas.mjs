@@ -2717,6 +2717,44 @@ table.findings .src { font: .58rem var(--mono); }
   })
   V2_COPY.push(['public/ontology.html (generated)', stripEvidence(ontBody)])
 
+  // ------------------------------------------------- /vocabulary (2026-11-05) --
+  // The terms of the RDF export, so a term IRI has a page to resolve to. Each
+  // term's anchor is its local name. tools/query/vocabulary.json is the source,
+  // and tools/query/export_rdf.py writes the OWL file from the same list.
+  const vocab = JSON.parse(readFileSync(here('../tools/query/vocabulary.json'), 'utf8'))
+  const vocabRef = (t) => t.includes(':') ? `<code>${esc(t)}</code>` : `<a href="#${esc(t)}"><code>sw:${esc(t)}</code></a>`
+  const vocabRow = (t, extra = []) => `<div class="vterm" id="${esc(t.id)}"><p class="vname"><code>sw:${esc(t.id)}</code></p>
+<p>${esc(t.comment)}</p>${extra.length ? `\n<p class="meta">${extra.join(' · ')}</p>` : ''}</div>`
+  const vocabPropRow = (t) => vocabRow(t, [
+    ...(t.parents || []).map(p => `subproperty of ${vocabRef(p)}`),
+    ...(t.domain ? [`on ${vocabRef(t.domain)}`] : []),
+    ...(t.range ? [`takes ${vocabRef(t.range)}`] : []),
+    ...(t.xsd ? [`takes <code>xsd:${esc(t.xsd)}</code>`] : [])])
+  const vocabClassRow = (t) => vocabRow(t, (t.parents || []).map(p => `subclass of ${vocabRef(p)}`))
+  const vocabClosed = vocab.classes.filter(c => c.closed)
+  const vocabBody = `<div class="titleband"><p class="eyebrow">reference</p>
+<h1>Vocabulary</h1>
+<p class="sub">the terms of the RDF export</p></div>
+<p>${esc(vocab.definition_note)}</p>
+${vocab.namespace_provisional ? `<p class="meta">The namespace <code>${esc(vocab.namespace)}</code> is provisional and not yet registered, so these terms do not resolve yet. The prefix <code>sw:</code> stands for <code>${esc(vocab.namespace)}ns#</code>.</p>` : `<p class="meta">The prefix <code>sw:</code> stands for <code>${esc(vocab.namespace)}ns#</code>.</p>`}
+<h2>Classes</h2>
+${vocab.classes.map(vocabClassRow).join('\n')}
+${vocabClosed.map(c => `<h2>${esc(c.label)}</h2>\n${vocab.individuals.filter(i => i.class === c.id).map(i => vocabRow(i)).join('\n')}`).join('\n')}
+<h2>Properties</h2>
+${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation_properties].map(vocabPropRow).join('\n')}
+<h2>Relation families</h2>
+<p>The families are object properties under <code>${esc(vocab.namespace)}family/</code>. A verbatim relation sits under a family only if its string is in exactly one family. Each family has <a href="/families">its own page</a>, with its definition.</p>`
+  registerPage({
+    slug: 'vocabulary', title: 'Vocabulary', where: 'vocabulary',
+    nav: null, changefreq: 'monthly', priority: '0.3',
+    description: 'The terms of The Symbolic World’s RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.',
+    style: `.vterm { margin: .9rem 0; scroll-margin-top: 7rem; }
+.vterm p { margin: .1rem 0; }
+.vname code { color: var(--gold); }`,
+    body: vocabBody
+  })
+  V2_COPY.push(['public/vocabulary.html (generated)', stripEvidence(vocabBody)])
+
   // ------------------------------------------------ /about ------------------
   // Who the atlas is for and what each can do with it (spec-orientation-v1,
   // item 4). The text is final wording from the outreach review, 2026-10-22,
