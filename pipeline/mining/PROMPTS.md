@@ -39,7 +39,16 @@ full-corpus continuation): myth/saga/scripture and quoted-source content is
 reports/quotes however sympathetic the retelling, Miller and patient
 material follows the analysand convention, jung-asserts stays Jung's own
 interpretive voice, doubt defaults to reports. Same form-constraint status:
-no tracked metric named, blinding holds.
+no tracked metric named, blinding holds. CW 7 and CW 6 (chapters X and XI)
+carry their own clauses in build_input_cw7.py and build_input_cw6.py (added
+2026-11-05 for the definitional arc). Both keep the reports default and the
+analysand convention and add a DEFINITIONS clause: the miner may propose a relation of identity or
+definition only where the quoted sentence states it, and a sentence that
+describes, compares or distinguishes takes its own verb. CW 7
+names Freud's and Adler's standpoints, argued by Jung in order to test them,
+as reports. CW 6 adds a TYPE DESCRIPTIONS clause: a statement about a type
+holds of that type and a general tendency takes medium or low confidence.
+Same form-constraint status: no tracked metric named, blinding holds.
 The CW 8 window-1 instance is preserved verbatim in the scheduled task file
 and the session transcript of 2026-08-13.
 

@@ -33,6 +33,8 @@ VOLUME_RANGES = {
     16: (825, 859),      # The Practice of Psychotherapy (incl. Psychology of the Transference)
     5: (202, 218),       # Symbols of Transformation; biblio/index excluded
     11: (602, 619),      # Psychology and Religion: West and East (Trinity, Mass, Answer to Job)
+    7: (306, 327),       # Two Essays on Analytical Psychology (§1-406); the appendices (earlier drafts, §407-521) excluded
+    6: (260, 261),       # Psychological Types, chapters X and XI only (§556-844): the type descriptions and the Definitions
 }
 
 # A numbered paragraph opens with a bracketed superscript marker, e.g.
