@@ -672,3 +672,14 @@ nothing is to be built. Figures are as of 2026-10-22.
 `exports/` is gitignored, because the export moves with every merged window. At the freeze, run `python3 tools/query/export_rdf.py --out-dir exports/rdf`, remove `exports/` from `.gitignore` and commit the three files, so the tag pins them. The Turtle files come to about 6.7 MB.
 
 Quotes: Damian ruled on 2026-11-05 that readers find them elsewhere, so the export carries none (`QUOTES_MODE = "omit"` in `tools/query/export_rdf.py`). Still open: the namespace, which waits on his w3id.org registration and goes live only after `/vocabulary` is deployed, and how to handle the four names in the CC BY file that still share eight or more words with a quote (`KNOWN_NAMES_REPEATING_THE_SOURCE` in `tests/test_query.py`).
+
+## v2.3.0: book links to Bookshop.org (added 2026-11-06)
+
+Damian's decision: "add the book links (Bookshop.org) to the build backlog for 2.3.0." Backlog entry only, nothing built yet. It is the site's first revenue feature.
+
+- One "get this volume" link per Collected Works volume, placed where a citation names its volume: the concept pages, and the works bar in the atlas, which is the only volume list today. A page links each volume once, however many of its citations come from it.
+- The links carry Damian's Bookshop.org affiliate ID. He signs up for the programme himself, and the build waits for his ID.
+- Bookshop.org runs separate US and UK sites and does not cover Switzerland. For each volume Damian picks the site and the edition (Princeton/Bollingen or Routledge), and the map records both beside the link.
+- A one-line affiliate disclosure on the site, in Damian's wording.
+- The map covers the same volumes as the volume title map, `VOL_LABEL` in `web/build-atlas.mjs`. That map has CW 5, 8, 9i, 9ii, 11, 12, 13, 14 and 16 today. The mining chat needs CW 6 and CW 7 added to it before the first deploy that carries citations from them, and the book-link map gets the same two entries at the same time.
+- Plain links only. No tracking script, and nothing beyond the affiliate parameter in the URL.
