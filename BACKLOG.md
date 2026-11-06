@@ -703,3 +703,13 @@ Damian's decision: "add the book links (Bookshop.org) to the build backlog for 2
 - A one-line affiliate disclosure on the site, in Damian's wording.
 - The map covers the same volumes as the volume title map, `VOL_LABEL` in `web/build-atlas.mjs`. That map has CW 5, 8, 9i, 9ii, 11, 12, 13, 14 and 16 today. The mining chat needs CW 6 and CW 7 added to it before the first deploy that carries citations from them, and the book-link map gets the same two entries at the same time.
 - Plain links only. No tracking script, and nothing beyond the affiliate parameter in the URL.
+
+## v2.3.0: list the dataset in the SSH Open Marketplace (added 2026-11-06)
+
+Damian's decision: "add to 2.3". The entry goes on marketplace.sshopencloud.eu as entry type Datasets.
+
+- Damian signs in with MyAccessID and submits the entry himself. Nothing in the build submits it.
+- It waits until the v2.3.0 tag and GitHub Release have minted the Zenodo version DOI, so the entry can cite that DOI beside the concept DOI, 10.5281/zenodo.21631523.
+- The fields: licence (CC BY 4.0 for the data, with the quotation exclusion as NOTICE states it), maintainer, both DOIs, and https://symbolicworld.observer.
+- The build's part is the text Damian pastes in: title, short description, keywords, licence line and DOIs. The description goes through Vale before he gets it.
+- Before preparing that text, re-read the live contribute page on the marketplace. The earlier research read it from a mirror, so the field list may differ.
