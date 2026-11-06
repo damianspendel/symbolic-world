@@ -4249,6 +4249,51 @@
    "id": "william-mcdougall",
    "label": "William McDougall",
    "type": "Figure"
+  },
+  {
+   "id": "personal-relationship",
+   "label": "Personal relationship",
+   "type": "Concept"
+  },
+  {
+   "id": "dream-analysis",
+   "label": "Dream-analysis",
+   "type": "Operation"
+  },
+  {
+   "id": "initial-dream",
+   "label": "Initial dream",
+   "type": "Concept"
+  },
+  {
+   "id": "dream-facade",
+   "label": "Dream-façade (Freud)",
+   "type": "Concept"
+  },
+  {
+   "id": "assimilation",
+   "label": "Assimilation",
+   "type": "Operation"
+  },
+  {
+   "id": "relatively-fixed-symbol",
+   "label": "Relatively fixed symbol",
+   "type": "Concept"
+  },
+  {
+   "id": "chemical-combination",
+   "label": "Chemical combination",
+   "type": "Concept"
+  },
+  {
+   "id": "kekule",
+   "label": "Kekulé",
+   "type": "Figure"
+  },
+  {
+   "id": "unio-mystica",
+   "label": "Unio mystica",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -18847,6 +18892,29 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 330,
+     "quote": "the relation between conscious and unconscious is compensatory",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 338,
+     "quote": "unconscious compensation is only effective when it co-operates with an integral consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "a condition on the compensation's effectiveness"
     }
    ],
    "relation_family": {
@@ -60152,6 +60220,41 @@
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-2, PASS, 2026-11-05)",
      "note": "Jung denies they are necessarily prophetic"
+    },
+    {
+     "volume": "16",
+     "paragraph": 305,
+     "quote": "my little dream example ... gives us not only the aetiology of the neurosis but a prognosis as well",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 307,
+     "quote": "Our example indeed shows the aetiology clearly enough, but it also offers a prognosis or anticipation of the future",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the sentence is about the one example; a single case takes medium; high -> medium."
+    },
+    {
+     "volume": "16",
+     "paragraph": 312,
+     "quote": "These examples, like many others of the kind, may suffice to show that dreams are often anticipatory",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "often"
     }
    ],
    "relation_family": {
@@ -63415,6 +63518,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-22",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-11, PASS, 2026-08-22)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 344,
+     "quote": "“Mother” is an archetype and refers to the place of origin",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim and stated by the sentence itself. The node the-mother is the figure and imago; the standing vocabulary note routes the mother archetype through great-mother, and §345 itself separates the individual mother from the mother-symbol. Subject the-mother -> great-mother, which attaches to the standing edge."
     }
    ],
    "relation_family": {
@@ -73140,6 +73255,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 339,
+     "quote": "not to regard dream-symbols semiotically, i.e., as signs or symptoms of a fixed character, but as true symbols",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 340,
+     "quote": "if their content were not indefinite, they would not be symbols at all, but signs or symptoms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
     }
    ],
    "relation_family": {
@@ -99692,6 +99829,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-04",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-1, PASS, 2026-11-04)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 293,
+     "quote": "The treatment must do more than destroy the old morbid attitude; it must build up a new attitude that is sound and healthy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
     }
    ],
    "relation_family": {
@@ -100578,6 +100726,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-2, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 325,
+     "quote": "consciousness acts upon our nightly life just as much as the unconscious overshadows our daily life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
     }
    ],
    "relation_family": {
@@ -103174,6 +103333,1200 @@
     "state": "pending-adjudication",
     "by": "arms-disagree",
     "date": "2026-11-05"
+   }
+  },
+  {
+   "subject": "withdrawal-of-projections",
+   "relation": "ends",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 287,
+     "quote": "Once the projections are recognized as such, the particular form of rapport known as the transference is at an end",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "the text says the projections are recognized as such"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "requires",
+   "object": "training-analysis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 287,
+     "quote": "beyond it no one has the right to go except the doctor who has himself undergone a thorough analysis",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the sentence goes on to allow a second route, the doctor who analyses himself through his patient; a requirement with a stated alternative takes medium; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "personal-relationship",
+   "relation": "is-touchstone-of",
+   "object": "analytic-process",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 289,
+     "quote": "The touchstone of every analysis that has not stopped short at partial success ... is always this person-to-person relationship",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "personal-relationship",
+   "relation": "contrasts-with",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 290,
+     "quote": "This kind of personal relationship is a freely negotiated bond or contract as opposed to the slavish and humanly degrading bondage of the transference",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream-analysis",
+   "relation": "aims-to-uncover",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 294,
+     "quote": "the avowed aim of dream-analysis is not only to exercise our wits, but to uncover and realize those hitherto unconscious contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "expresses",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 295,
+     "quote": "dreams are the direct expression of unconscious psychic activity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 317,
+     "quote": "The dream is specifically the utterance of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "initial-dream",
+   "relation": "reveals-aetiology-of",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 296,
+     "quote": "dreams, particularly the initial dreams which appear at the very outset of the treatment, often bring to light the essential aetiological factor",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "often, not always (see §306)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "aids",
+   "object": "clinical-diagnosis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 304,
+     "quote": "I take dreams as diagnostically valuable facts.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 350,
+     "quote": "Both dreams point to a grave organic disease with a fatal outcome.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim and in Jung's own interpretive voice, but the sentence is about the two dreams of one case; a single case takes medium; high -> medium.",
+     "note": "the case of the seventeen-year-old girl"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "causality",
+   "relation": "fails-to-grasp",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 307,
+     "quote": "The purely causalistic approach is too narrow and fails to do justice to the true significance either of the dream or of the neurosis.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "the purely causalistic approach"
+    },
+    {
+     "volume": "16",
+     "paragraph": 312,
+     "quote": "dreams are often anticipatory and would lose their specific meaning completely on a purely causalistic view",
+     "claim_type": "jung-asserts",
+     "confidence": "low",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the subject is again a step away ('a purely causalistic view') and the sentence is hedged with 'often'; medium -> low.",
+     "note": "the purely causalistic view"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "initial-dream",
+   "relation": "concerns",
+   "object": "the-analyst",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 307,
+     "quote": "initial dreams which do not touch the aetiology at all, but deal with quite other matters, such as the patient’s attitude to the doctor",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the text speaks of 'large numbers' of initial dreams, not of initial dreams as such; a partial scope takes medium; high -> medium."
+    },
+    {
+     "volume": "16",
+     "paragraph": 311,
+     "quote": "They are without exception anticipations of the difficulties she is to have with the doctors concerned.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim and Jung's own reading, but of three dreams from one patient; a single case takes medium; high -> medium.",
+     "note": "the three frontier dreams"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "retards",
+   "object": "psychotherapy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 313,
+     "quote": "By taking refuge in the doctor’s self-confidence ... falls into a stubborn transference, and retards the cure",
+     "claim_type": "jung-asserts",
+     "confidence": "low",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim spans in order, but the grammatical subject of 'retards the cure' is the patient, who falls into a stubborn transference; subject and object are each a step away; medium -> low.",
+     "note": "the text says the cure"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "suggestion-therapy",
+   "relation": "is-incompatible-with",
+   "object": "analytical-psychology",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 315,
+     "quote": "Methods of treatment based on suggestion are deceptive makeshifts; they are incompatible with the principles of analytical therapy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "avoids",
+   "object": "suggestion-therapy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 315,
+     "quote": "Naturally suggestion can only be avoided if the doctor is conscious of its possibility.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "conditional on the doctor's awareness"
+    },
+    {
+     "volume": "16",
+     "paragraph": 316,
+     "quote": "The analyst who wishes to rule out conscious suggestion must therefore consider every dream interpretation invalid",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the sentence is about the analyst 'who wishes to rule out conscious suggestion', the influence and not the method; the object is a step away; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "is-not-reducible-to",
+   "object": "wish-fulfilment",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 317,
+     "quote": "The view that dreams are merely the imaginary fulfilments of repressed wishes is hopelessly out of date.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream-analysis",
+   "relation": "requires",
+   "object": "taking-up-the-context",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 319,
+     "quote": "When we take up an obscure dream, our first task is not to understand and interpret, but to establish the context with minute care.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 321,
+     "quote": "establish almost the whole context of the dream-image ... we are ready for the venture of interpretation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream-facade",
+   "relation": "is-a",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 319,
+     "quote": "What Freud calls the “dream-façade” is the dream’s obscurity, and this is really only a projection of our own lack of understanding.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "Freud's term, Jung's reading of it"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream-analysis",
+   "relation": "relies-on",
+   "object": "dream-series",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 322,
+     "quote": "A relative degree of certainty is reached only in the interpretation of a series of dreams",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "invented",
+   "object": "sublimation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 328,
+     "quote": "Freud invented the idea of sublimation to save us from the imaginary claws of the unconscious.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "requires",
+   "object": "assimilation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 326,
+     "quote": "we cannot effectively treat him from the side of consciousness alone ... this can be achieved only by the thorough and conscious assimilation of unconscious contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "assimilation",
+   "relation": "overcomes",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 329,
+     "quote": "The dissociation of personality, the anxious division of the day-time and the nighttime sides of the psyche, cease with progressive assimilation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "psychological-attitude",
+   "relation": "makes-dangerous",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 329,
+     "quote": "The unconscious is not a demoniacal monster ... It only becomes dangerous when our conscious attitude to it is hopelessly wrong.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 333,
+     "quote": "The unconscious does not harbour in itself any explosive materials unless an overweening or cowardly conscious attitude has secretly laid up stores of explosives there.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "is-a",
+   "object": "self-regulating-system",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 330,
+     "quote": "The psyche is a self-regulating system that maintains its equilibrium just as the body does.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "compensates",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 330,
+     "quote": "When we set out to interpret a dream, it is always helpful to ask: What conscious attitude does it compensate?",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 334,
+     "quote": "I make it an heuristic rule, in interpreting a dream, to ask myself: What conscious attitude does it compensate?",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "repression",
+   "relation": "intensifies",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 331,
+     "quote": "Compensation is not as a rule merely an illusory wishfulfilment, but an actual façt that becomes still more actual the more we repress it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "builds-up",
+   "object": "personality",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 332,
+     "quote": "every dream is an organ of information and control, and why dreams are our most effective aid in building up the personality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the text calls dreams 'our most effective aid' in building up the personality; an aid is weaker than the verb; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream-analysis",
+   "relation": "requires-knowledge-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 334,
+     "quote": "without knowledge of the conscious situation the dream can never be interpreted with any degree of certainty",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 337,
+     "quote": "Without a knowledge of the conscious situation the real meaning of the dream would have remained in doubt.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the sentence is about the one dream of the father-son case; a single case takes medium; high -> medium."
+    },
+    {
+     "volume": "16",
+     "paragraph": 339,
+     "quote": "Just as the interpretation of dreams requires exact knowledge of the conscious status quo",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "relatively-fixed-symbol",
+   "relation": "reveals-structure-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 339,
+     "quote": "If there were no such relatively fixed symbols it would be impossible to determine the structure of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "phallus",
+   "relation": "means",
+   "object": "mana",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 340,
+     "quote": "The phallus always means the creative mana, the power of healing and fertility",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "underlies",
+   "object": "sexuality",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 340,
+     "quote": "That which underlies all the analogies, and sexuality itself, is an archetypal image whose character is hard to define",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "relatively-fixed-symbol",
+   "relation": "aids",
+   "object": "clinical-diagnosis",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 343,
+     "quote": "the doctor’s knowledge of relatively fixed symbols ... of the greatest value in diagnosis as well as in prognosis",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "can be of value"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "great-mother",
+   "relation": "means",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 344,
+     "quote": "It also means the unconscious ... for the “mother” is also the matrix, the hollow form, the vessel",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim spans in order; 'It' is the mother as archetype. The node the-mother is the figure and imago; the standing vocabulary note routes the mother archetype through great-mother, and §345 itself separates the individual mother from the mother-symbol. Subject the-mother -> great-mother."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "horse",
+   "relation": "is-equivalent-to",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 344,
+     "quote": "We must therefore look more closely into the meaning of the two main symbols, “mother” and “horse.” They must be equivalents",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but 'They must be equivalents' is an inference about the two symbols in one patient's dreams; high -> medium. The node the-mother is the figure and imago; the standing vocabulary note routes the mother archetype through great-mother, and §345 itself separates the individual mother from the mother-symbol. Object the-mother -> great-mother."
+    },
+    {
+     "volume": "16",
+     "paragraph": 348,
+     "quote": "It is evident, then, that “horse” is an equivalent of “mother” with a slight shift of meaning.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim; the text's own word is 'equivalent', with a slight shift of meaning. The node the-mother is the figure and imago; the standing vocabulary note routes the mother archetype through great-mother, and §345 itself separates the individual mother from the mother-symbol. Object the-mother -> great-mother."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "psychic-reality",
+   "relation": "needs",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 345,
+     "quote": "The underlying, primary psychic reality is so inconceivably complex ... That is why it needs symbols.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim spans in order, but the text speaks of the particular psychic reality underlying the mother-symbol; the general node is a step away; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "horse",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 347,
+     "quote": "“Horse” is an archetype that is widely current in mythology and folklore.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "horse",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 347,
+     "quote": "“Horse” is an archetype ... As an animal it represents the non-human psyche, the subhuman, animal side, the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "horse",
+   "relation": "represents",
+   "object": "the-body",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 347,
+     "quote": "As an animal lower than man it represents the lower part of the body and the animal impulses",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the object in the text is 'the lower part of the body and the animal impulses', narrower than the node; high -> medium."
+    },
+    {
+     "volume": "16",
+     "paragraph": 348,
+     "quote": "The mother stands for life at its origin, the horse for the merely animal life of the body.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the horse stands for 'the merely animal life of the body', narrower than the node; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "expresses",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 351,
+     "quote": "In the dream, the psyche speaks in images, and gives expression to instincts, which derive from the most primitive levels of nature.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the grammatical subject is the psyche, which gives expression to instincts in the dream; the subject is a step away; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "assimilation",
+   "relation": "leads-to",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 352,
+     "quote": "It leads in the end to that distant goal ... the complete actualization of the whole human being, that is, individuation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "note": "'It' is the way of successive assimilations, named in the preceding sentence"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "originally-denoted",
+   "object": "chemical-combination",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 353,
+     "quote": "the term most frequently employed for it, coniunctio , referred in the first place to what we now call chemical combination",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "kekule",
+   "relation": "had-vision-of",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 353,
+     "quote": "Kekulé’s vision of the dancing couples ... was surely a vision of the coniunctio",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim spans in order, but 'was surely' marks Jung's reading of the vision as an inference; high -> medium.",
+     "note": "Jung's reading of Kekulé's vision"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "became-symbol-of",
+   "object": "unio-mystica",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 354,
+     "quote": "The idea of the coniunctio ... it became the symbol of the unio mystica",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "expresses",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 354,
+     "quote": "as a mythologem, it expresses the archetype of the union of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "is-a",
+   "object": "mythologem",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 354,
+     "quote": "since, as a mythologem, it expresses the archetype of the union of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-06",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
+     "correction_note": "gate correction: Verbatim, but the class membership sits in an appositive phrase ('as a mythologem') and is not the statement the sentence makes; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-06"
    }
   }
  ]
