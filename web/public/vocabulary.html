@@ -131,7 +131,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="vterm" id="Derived"><p class="vname"><code>sw:Derived</code></p>
 <p>A row produced at query time by a declared inverse or symmetry rule. Derived rows are never stored, so this rung has no instances in the export.</p></div>
 <div class="vterm" id="HumanReviewed"><p class="vname"><code>sw:HumanReviewed</code></p>
-<p>One person judged it. The review records sit outside seed.json, so this export reports no instances.</p></div>
+<p>One person judged it. The review records sit outside the graph's source data, so this export reports no instances.</p></div>
 <div class="vterm" id="HumanAgreed"><p class="vname"><code>sw:HumanAgreed</code></p>
 <p>Two people judged it independently. No item in the graph has reached this rung.</p></div>
 <h2>Family state</h2>
@@ -211,7 +211,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The calibrated gate's audit of the assignment, as recorded.</p>
 <p class="meta">on <a href="#FamilyAssignment"><code>sw:FamilyAssignment</code></a> · takes <code>xsd:string</code></p></div>
 <div class="vterm" id="recordedAs"><p class="vname"><code>sw:recordedAs</code></p>
-<p>The string seed.json stores for this individual.</p></div>
+<p>The string the graph's source data stores for this individual.</p></div>
 <h2>Relation families</h2>
 <p>The families are object properties under <code>https://w3id.org/symbolicworld/family/</code>. A verbatim relation sits under a family only if its string is in exactly one family. Each family has <a href="/families">its own page</a>, with its definition.</p>
 </main></body></html>
