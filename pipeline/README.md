@@ -24,6 +24,15 @@ without the cross-vendor pass — `crossvendor_run.py` (`run_chunked`,
 `GATE_PROMPT`, chunk=20, resumable) is a required stage, not an optional
 audit. b-cw9ii-1 merged without one because this file did not say so.
 
+From b-cw16-6 on, each batch record carries a `models` field with the exact
+model ids that ran it: `proposer`, `gate`, `auditor`, and a `source` entry
+saying where each id was read. `pipeline/mining/record_models.py <batch>
+--proposer-agent <agentId>` writes it once the window's record script has
+appended the batch record.
+The proposer and gate ids come from the session transcripts and the auditor
+id from the request model in `crossvendor_run.py`. A stage that ran on more
+than one model records the list. Earlier records are left as they are.
+
 Deployment is out of scope for this runbook. Work on `mining-away` is
 local-only: no push, no `./manage.sh deploy`, no tags, no releases.
 Publication is a separate, explicit decision.
