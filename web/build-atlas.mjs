@@ -1767,9 +1767,9 @@ if (EMIT_CONCEPT_PAGES) {
 
   // the fixed register note every concept page opens with — one claim about
   // what the page is, no stronger claim anywhere below it
-  const registerNote = 'Quotations are machine-verified against the source paragraph; ' +
-    'relation families are assigned by a documented procedure. The ' +
-    '<a href="/atlas#/method">method page</a> describes exactly what is and is not checked.'
+  const registerNote = 'A machine checks each quotation against the source paragraph. ' +
+    'A documented procedure assigns the relation families. The ' +
+    '<a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.'
 
   const NS = CONCEPT_SEARCH_HEAD ? ' data-nosnippet' : ''
   // Google honours data-nosnippet on span, div and section only, so a
