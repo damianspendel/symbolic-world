@@ -713,3 +713,13 @@ Damian's decision: "add to 2.3". The entry goes on marketplace.sshopencloud.eu a
 - The fields: licence (CC BY 4.0 for the data, with the quotation exclusion as NOTICE states it), maintainer, both DOIs, and https://symbolicworld.observer.
 - The build's part is the text Damian pastes in: title, short description, keywords, licence line and DOIs. The description goes through Vale before he gets it.
 - Before preparing that text, re-read the live contribute page on the marketplace. The earlier research read it from a mirror, so the field list may differ.
+
+## v2.3.0: run Vale over the glossary (added 2026-11-06)
+
+Damian's decision: "add to backlog for 2.3.0 to run vale over the glossary entries". Backlog entry only, nothing edited yet.
+
+- The file is `docs/GLOSSARY.md`, 39 entries. Vale reported 78 hits on 2026-11-06, all in the entries written in August and September. The mining trends entry added that day has none.
+- By rule: 55 passives, 18 filler adverbs, 3 antithesis tags and 2 contrast lines.
+- The glossary's opening says the entries keep the words Damian got at the time. So the pass proposes each rewrite to him, old wording beside new, and changes an entry only on his yes.
+- A passive stays where the entry does not care who acts. Those hits get a note saying why, and no edit.
+- No definition changes meaning. The pass is wording only, and it ends with the hook run again and the remaining hits listed.
