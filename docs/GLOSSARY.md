@@ -15,7 +15,7 @@ on one exam.
 Project terminology only. Nothing from the Collected Works is quoted here.
 
 Written 2026-08-14. Extended 2026-08-18 with the questions asked while the
-v2.0 paper revision was being scoped.
+v2.0 paper revision was being scoped. Extended 2026-11-06 with the mining trends snapshot.
 
 ---
 
@@ -227,6 +227,48 @@ conflating them would misrepresent the gating: a relation drawn from the text an
 against its paragraph is a different claim, checked by a different chain, than a family
 assignment laid over an already-verified relation. It is rebuilt from the data on every
 batch, so it cannot drift from what actually happened.
+
+### Mining trends (snapshot of 2026-11-06)
+
+A dated answer to "what changed as the mining went through the books", taken when the
+graph stood at 856 nodes, 3376 edges and 4559 references, five windows into CW 16. The
+numbers below describe that day and go stale with every window.
+
+Think of it as sorting a big box of Jung's sentences into labelled drawers. One model
+picks sentences, a second checks each one, a third spot-checks the second.
+
+| Book | References kept of those mined | Gemini objections | Relation words reused | Gate corrections |
+|---|---|---|---|---|
+| CW 9i | 82% | 11.1% | 41.8% | no tally |
+| CW 8 | 88% | 9.4% | 24.1% | no tally |
+| CW 11 | 93% | 6.1% | 33.6% | 6% |
+| CW 5 | 95% | 6.3% | 44.5% | 5% |
+| CW 16 (5 of 8 windows) | 90% | 6.9% | 16.9% | 17% |
+
+- Less waste. The picker's proposals survive more often. About 8 in 10 made it through
+  in August, and about 9 in 10 do now.
+- Fewer objections from the outside checker. Gemini objected to about 1 in 9 references
+  in CW 9i. Since CW 11 it has been about 1 in 16, and flat.
+- The shape problem stayed fixed. One early window had 77 relations written as whole
+  clauses. Every window since the form rule has had zero.
+- Word reuse follows the book. Myth and archetype books (CW 5, CW 9i) reuse the relation
+  words the graph already has. The therapy book (CW 16) talks differently and reuses the
+  fewest. This tracks the material and shows no drift over time.
+- The vocabulary grows slower than the graph. Since August the edges grew 2.4 times (1434
+  to 3376) and the distinct relation words 1.8 times (739 to 1313). Words used only once
+  fell from 84% of the vocabulary to 73%.
+- CW 16 needs more correcting. The gate corrected 17% of its references, against 5 to 6%
+  in the two books before. Most are confidence demotions, because the text speaks about
+  single patients and hedges more. High-confidence references are 71% in CW 16 and 83 to
+  92% everywhere else.
+- The family queue only grows. Each window adds 4 to 6 edges where the two sorting models
+  disagree. The queue went 465, 549, 596 at the ends of CW 11, CW 5 and the fifth CW 16
+  window. Nothing shrinks it until a ruling sitting happens. A further 154 edges have no
+  family that fits.
+
+Two limits on these numbers. The gate tallies come from the batch notes, and only 7 of
+the 14 CW 11 notes carry them in a countable form. The older arcs (CW 12, 13, 9ii) kept
+no such tallies.
 
 ### Nominal independence
 
