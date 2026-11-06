@@ -66,13 +66,13 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="titleband"><p class="eyebrow">reference</p>
 <h1>Vocabulary</h1>
 <p class="sub">the terms of the RDF export</p></div>
-<p>These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how strongly it is committed, and which checks it passed. They are built on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type.</p>
+<p>These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how strongly it is committed, and which checks it passed. They build on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type.</p>
 <p class="meta">The namespace <code>https://w3id.org/symbolicworld/</code> is provisional and not yet registered, so these terms do not resolve yet. The prefix <code>sw:</code> stands for <code>https://w3id.org/symbolicworld/ns#</code>.</p>
 <h2>Classes</h2>
 <div class="vterm" id="Node"><p class="vname"><code>sw:Node</code></p>
 <p>A named thing in the graph. Its type is a coarse label, and nothing is inferred from it.</p></div>
 <div class="vterm" id="Relation"><p class="vname"><code>sw:Relation</code></p>
-<p>One stored edge: a subject, a relation and an object. The family is filed here. The rdf:predicate is the effective relation, which is the normalized form where one exists.</p>
+<p>One stored edge: a subject, a relation and an object. It carries the family. The rdf:predicate is the effective relation, which is the normalized form where one exists.</p>
 <p class="meta">subclass of <code>rdf:Statement</code> · subclass of <code>prov:Entity</code></p></div>
 <div class="vterm" id="Claim"><p class="vname"><code>sw:Claim</code></p>
 <p>One statement backed by one passage. A relation has one claim per citation, and the gate rules on each claim separately.</p>
@@ -81,7 +81,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The place a claim rests on: a volume and a paragraph of the Collected Works. The export does not carry the quoted words, which are on the concept page for the claim.</p>
 <p class="meta">subclass of <code>prov:Entity</code></p></div>
 <div class="vterm" id="Stage"><p class="vname"><code>sw:Stage</code></p>
-<p>One recorded step of the pipeline, dated where the record gives a date. Passing one stage warrants nothing about the next.</p>
+<p>One recorded step of the pipeline, dated where the record gives a date.</p>
 <p class="meta">subclass of <code>prov:Activity</code></p></div>
 <div class="vterm" id="Proposal"><p class="vname"><code>sw:Proposal</code></p>
 <p>A model drafted something. For a claim it is the mining batch, linked by prov:wasGeneratedBy, and sw:attributionSource says whether a batch record or the documented procedure names the proposer. Claims whose audit names no batch have none.</p>
@@ -90,7 +90,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>A model of a different family from the proposer judged the paragraph against the claim, or a normalized form against its claim.</p>
 <p class="meta">subclass of <a href="#Stage"><code>sw:Stage</code></a></p></div>
 <div class="vterm" id="CrossVendorAudit"><p class="vname"><code>sw:CrossVendorAudit</code></p>
-<p>A model from another company judged the work again. The verdict is given as recorded, and an audit that records none has none here.</p>
+<p>A model from another company judged the work again. The verdict is the one the record gives. Where the record gives none, the export gives none.</p>
 <p class="meta">subclass of <a href="#Stage"><code>sw:Stage</code></a></p></div>
 <div class="vterm" id="FamilyAssignment"><p class="vname"><code>sw:FamilyAssignment</code></p>
 <p>An assignment of a relation to a family, or a record that none was settled. A family is assigned when the two arms agree or a person rules. Some assignments also carry an audit by the calibrated family gate, given in sw:familyAudit.</p>
@@ -100,7 +100,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="vterm" id="Commitment"><p class="vname"><code>sw:Commitment</code></p>
 <p>How strongly the claim is committed, from the confidence field of the reference.</p></div>
 <div class="vterm" id="Rung"><p class="vname"><code>sw:Rung</code></p>
-<p>A warrant: the specific backing a part of a claim has. The rungs have no order in this vocabulary, because passing one warrants nothing about another.</p></div>
+<p>A warrant: the backing a part of a claim has. The rungs have no order in this vocabulary, because passing one warrants nothing about another.</p></div>
 <div class="vterm" id="FamilyState"><p class="vname"><code>sw:FamilyState</code></p>
 <p>Where a relation stands in the family layer.</p></div>
 <h2>Voice</h2>
@@ -109,7 +109,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="vterm" id="JungReportsParallel"><p class="vname"><code>sw:JungReportsParallel</code></p>
 <p>Jung reports someone else's material as a parallel.</p></div>
 <div class="vterm" id="JungQuotesSource"><p class="vname"><code>sw:JungQuotesSource</code></p>
-<p>Jung quotes a source, which is then named.</p></div>
+<p>Jung quotes a source, and the claim names it.</p></div>
 <h2>Commitment</h2>
 <div class="vterm" id="CommitmentHigh"><p class="vname"><code>sw:CommitmentHigh</code></p>
 <p>The reference records its confidence as high.</p></div>
@@ -140,7 +140,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="vterm" id="StatePendingAdjudication"><p class="vname"><code>sw:StatePendingAdjudication</code></p>
 <p>The arms disagreed, and the relation waits for a person to rule.</p></div>
 <div class="vterm" id="StateNoFamily"><p class="vname"><code>sw:StateNoFamily</code></p>
-<p>The relation is carried by no family.</p></div>
+<p>No family carries the relation.</p></div>
 <div class="vterm" id="StateTextUndecided"><p class="vname"><code>sw:StateTextUndecided</code></p>
 <p>The text does not decide between families.</p></div>
 <h2>Properties</h2>
@@ -190,7 +190,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The original confidence string, given where it is a downgrade rather than a single level.</p>
 <p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <code>xsd:string</code></p></div>
 <div class="vterm" id="verdict"><p class="vname"><code>sw:verdict</code></p>
-<p>The audit's verdict as recorded. Older audits use different words, and they are not merged here.</p>
+<p>The audit's verdict as recorded. Older audits use different words, and the export keeps them as they are.</p>
 <p class="meta">on <a href="#CrossVendorAudit"><code>sw:CrossVendorAudit</code></a> · takes <code>xsd:string</code></p></div>
 <div class="vterm" id="batch"><p class="vname"><code>sw:batch</code></p>
 <p>The mining batch named in a stage: the batch an audit names, or the batch a proposal is.</p>
