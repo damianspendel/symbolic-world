@@ -673,6 +673,24 @@ nothing is to be built. Figures are as of 2026-10-22.
 
 Quotes: Damian ruled on 2026-11-05 that readers find them elsewhere, so the export carries none (`QUOTES_MODE = "omit"` in `tools/query/export_rdf.py`). Still open: the namespace, which waits on his w3id.org registration and goes live only after `/vocabulary` is deployed, and how to handle the four names in the CC BY file that still share eight or more words with a quote (`KNOWN_NAMES_REPEATING_THE_SOURCE` in `tests/test_query.py`).
 
+The proposer gap (added 2026-11-06, Damian: "send the proposer gap to the build chat"). Each `sw:Claim` records its gate and its audit but not the miner run that proposed it, so a reader of the PROV-O cannot trace the rule that the proposer never signs off. The TGDK paper will point reviewers to the export. Not built: the export stays as it is until Damian decides.
+
+What the records hold, counted over the 4,559 references at b-cw16-5:
+
+- 221 references (b-cw9ii-3 to -7): the candidates file names the model, `claude-opus-5`.
+- 1,741 references: `state.json` names the proposer as Opus, by family only, either in the batch's own note (b-cw9ii-1, b-cw11-10, b-cw16-1 to -5) or in an arc-close note that covers every window (CW 9i, CW 8).
+- 1,931 references in 37 batches (CW 5, CW 11 except window 10, CW 12 windows 5 to 9, CW 13, b-cw9ii-2, b-union-2): the batch id is known from the audit string, but no record names the proposer. Only the procedure does: the mining task's brief says "Opus subagent". For b-cw11-8 the note says the firing ran steps 1 to 3, mining included, in a Haiku 5.5 session, and does not say which model the miner subagent ran on.
+- 666 references from the July pipeline (CW 14, the incidental volumes, the retro gates, the E6 and E7 audits, and the 194 with no audit): no batch id in `seed.json`, and neither the candidates files nor the July commit messages name a miner.
+
+Proposed shape:
+
+- One `sw:Proposal` per batch, `swk:proposal-<batch>`, which already exists as a class and is used today for normalized forms. Each claim links to it with `prov:wasGeneratedBy`, which is in PROV-O and needs no new term.
+- `prov:wasAssociatedWith` the model agent only where a model id is recorded (the 221). Everywhere else in the first two groups, a literal giving the record's words, such as "Opus-family miner subagent", and a second literal naming where the attribution comes from (candidates file, batch note, arc-close note).
+- No date. The records give the gate and audit dates, never the mining date.
+- The last two groups get no Proposal stage, as the ontology reads a missing rung: the record does not show it. Whether the mining procedure counts as a record for the 1,931 is Damian's call. Recorded today, the export could name a proposer for 1,962 of 4,559 references (43%).
+
+New terms: two datatype properties on `sw:Proposal`, a proposer-as-recorded literal and an attribution-source literal, in `tools/query/vocabulary.json` (which writes both the OWL file and `/vocabulary`). The comment on `sw:Proposal` and the export header both say claims have no Proposal stage, and both change. The notes for the TGDK paper say the same and need the new count. For the forward fix, the mining task can write the miner's model id into each candidates file, as the five Aion files did, so new batches land in the first group.
+
 ## v2.3.0: book links to Bookshop.org (added 2026-11-06)
 
 Damian's decision: "add the book links (Bookshop.org) to the build backlog for 2.3.0." Backlog entry only, nothing built yet. It is the site's first revenue feature.
