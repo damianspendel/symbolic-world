@@ -10,7 +10,7 @@
     {"id": "Claim", "label": "Claim", "parents": ["prov:Entity"], "comment": "One statement backed by one passage. A relation has one claim per citation, and the gate rules on each claim separately."},
     {"id": "Reference", "label": "Reference", "parents": ["prov:Entity"], "comment": "The place a claim rests on: a volume and a paragraph of the Collected Works. The export does not carry the quoted words, which are on the concept page for the claim."},
     {"id": "Stage", "label": "Stage", "parents": ["prov:Activity"], "comment": "One recorded step of the pipeline, dated where the record gives a date. Passing one stage warrants nothing about the next."},
-    {"id": "Proposal", "label": "Proposal", "parents": ["Stage"], "comment": "A model drafted something. The graph records a proposer for normalized forms only, so this class has no instances for the claims themselves."},
+    {"id": "Proposal", "label": "Proposal", "parents": ["Stage"], "comment": "A model drafted something. For a claim it is the mining batch, linked by prov:wasGeneratedBy, and sw:attributionSource says whether a batch record or the documented procedure names the proposer. Claims whose audit names no batch have none."},
     {"id": "GateCheck", "label": "Gate check", "parents": ["Stage"], "comment": "A model of a different family from the proposer judged the paragraph against the claim, or a normalized form against its claim."},
     {"id": "CrossVendorAudit", "label": "Cross-vendor audit", "parents": ["Stage"], "comment": "A model from another company judged the work again. The verdict is given as recorded, and an audit that records none has none here."},
     {"id": "FamilyAssignment", "label": "Family assignment", "parents": ["Stage"], "comment": "An assignment of a relation to a family, or a record that none was settled. A family is assigned, never verified."},
@@ -61,8 +61,10 @@
     {"id": "voiceSource", "label": "voice source", "domain": "Claim", "xsd": "string", "comment": "The source named for the claim's voice, as recorded."},
     {"id": "confidenceAsRecorded", "label": "confidence as recorded", "domain": "Claim", "xsd": "string", "comment": "The original confidence string, given where it is a downgrade rather than a single level."},
     {"id": "verdict", "label": "verdict", "domain": "CrossVendorAudit", "xsd": "string", "comment": "The audit's verdict as recorded. Older audits use different words, and they are not merged here."},
-    {"id": "batch", "label": "batch", "domain": "CrossVendorAudit", "xsd": "string", "comment": "The mining batch named in the audit record."},
+    {"id": "batch", "label": "batch", "domain": "Stage", "xsd": "string", "comment": "The mining batch named in a stage: the batch an audit names, or the batch a proposal is."},
     {"id": "auditRecord", "label": "audit record", "domain": "CrossVendorAudit", "xsd": "string", "comment": "The audit record as stored. The agent, date, verdict and batch here are read from this string."},
+    {"id": "proposerAsRecorded", "label": "proposer as recorded", "domain": "Proposal", "xsd": "string", "comment": "The words that name the proposer, as the source gives them: a model id, or a family such as Opus-family miner subagent."},
+    {"id": "attributionSource", "label": "attribution source", "domain": "Proposal", "xsd": "string", "comment": "Where the proposer comes from: record, when a batch record names it, or procedure, when only the documented mining procedure does."},
     {"id": "assignedBy", "label": "assigned by", "domain": "FamilyAssignment", "xsd": "string", "comment": "How the family was assigned, as recorded: the two arms agreeing, or a person ruling."},
     {"id": "familyAudit", "label": "family audit", "domain": "FamilyAssignment", "xsd": "string", "comment": "The calibrated gate's audit of the assignment, as recorded."}
   ]

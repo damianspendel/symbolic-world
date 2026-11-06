@@ -1,0 +1,30 @@
+{
+  "_about": "Who proposed each mining batch, as far as a record or the documented procedure shows. tools/query/export_rdf.py reads this to write one sw:Proposal per batch. A reference's batch is the one its crossvendor_checked string names. Damian ruled on 2026-11-06 that the documented procedure counts as a source, labelled as such; a batch the procedure attribution would misdescribe is excluded, and a reference whose audit names no batch gets no Proposal stage. Nothing here is inferred.",
+  "decided": "Damian, 2026-11-06: \"yes to both proposer decisions\"",
+  "procedure": {
+    "as_recorded": "miner (Opus family)",
+    "document": "pipeline/README.md, the invariant line, in the file since commit c6409d4d (2026-07-26)",
+    "covers": "every b- batch not listed under records or excluded"
+  },
+  "excluded": {
+    "b-cw11-8": "The batch note says the firing ran steps 1 to 3, mining included, in a claude-haiku-5-5 session, and does not say which model the miner subagent ran on. The procedure attribution could be false here, so the batch has no Proposal stage."
+  },
+  "records": {
+    "b-cw9ii-1": {"as_recorded": "Mined and adjudicated by Opus 5", "evidence": "pipeline/state.json, batch b-cw9ii-1"},
+    "b-cw9ii-3": {"agent": "claude-opus-5", "as_recorded": "claude-opus-5", "evidence": "pipeline/work/b-cw9ii-3_candidates.json, model field (local, gitignored)"},
+    "b-cw9ii-4": {"agent": "claude-opus-5", "as_recorded": "claude-opus-5", "evidence": "pipeline/work/b-cw9ii-4_candidates.json, model field (local, gitignored)"},
+    "b-cw9ii-5": {"agent": "claude-opus-5", "as_recorded": "claude-opus-5", "evidence": "pipeline/work/b-cw9ii-5_candidates.json, model field (local, gitignored)"},
+    "b-cw9ii-6": {"agent": "claude-opus-5", "as_recorded": "claude-opus-5", "evidence": "pipeline/work/b-cw9ii-6_candidates.json, model field (local, gitignored)"},
+    "b-cw9ii-7": {"agent": "claude-opus-5", "as_recorded": "claude-opus-5", "evidence": "pipeline/work/b-cw9ii-7_candidates.json, model field (local, gitignored)"},
+    "b-cw11-10": {"as_recorded": "first Opus firing", "evidence": "pipeline/state.json, batch b-cw11-10"},
+    "b-cw16-1": {"as_recorded": "the Opus miner of 2026-11-01", "evidence": "pipeline/state.json, batch b-cw16-1"},
+    "b-cw16-2": {"as_recorded": "Opus-family miner subagent", "evidence": "pipeline/state.json, batch b-cw16-2"},
+    "b-cw16-3": {"as_recorded": "Opus-family miner subagent", "evidence": "pipeline/state.json, batch b-cw16-3"},
+    "b-cw16-4": {"as_recorded": "Opus-family miner subagent", "evidence": "pipeline/state.json, batch b-cw16-4"},
+    "b-cw16-5": {"as_recorded": "Opus-family miner subagent", "evidence": "pipeline/state.json, batch b-cw16-5"}
+  },
+  "arc_records": {
+    "b-cw9i": {"windows": 10, "as_recorded": "every reference proposed by Opus", "evidence": "pipeline/state.json, batch b-cw9i-10 (the arc-close note)"},
+    "b-cw8": {"windows": 14, "as_recorded": "every reference through Opus -> Fable -> Gemini", "evidence": "pipeline/state.json, batch b-cw8-14 (the arc-close note)"}
+  }
+}

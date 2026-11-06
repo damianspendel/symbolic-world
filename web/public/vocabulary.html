@@ -84,7 +84,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>One recorded step of the pipeline, dated where the record gives a date. Passing one stage warrants nothing about the next.</p>
 <p class="meta">subclass of <code>prov:Activity</code></p></div>
 <div class="vterm" id="Proposal"><p class="vname"><code>sw:Proposal</code></p>
-<p>A model drafted something. The graph records a proposer for normalized forms only, so this class has no instances for the claims themselves.</p>
+<p>A model drafted something. For a claim it is the mining batch, linked by prov:wasGeneratedBy, and sw:attributionSource says whether a batch record or the documented procedure names the proposer. Claims whose audit names no batch have none.</p>
 <p class="meta">subclass of <a href="#Stage"><code>sw:Stage</code></a></p></div>
 <div class="vterm" id="GateCheck"><p class="vname"><code>sw:GateCheck</code></p>
 <p>A model of a different family from the proposer judged the paragraph against the claim, or a normalized form against its claim.</p>
@@ -193,11 +193,17 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The audit's verdict as recorded. Older audits use different words, and they are not merged here.</p>
 <p class="meta">on <a href="#CrossVendorAudit"><code>sw:CrossVendorAudit</code></a> · takes <code>xsd:string</code></p></div>
 <div class="vterm" id="batch"><p class="vname"><code>sw:batch</code></p>
-<p>The mining batch named in the audit record.</p>
-<p class="meta">on <a href="#CrossVendorAudit"><code>sw:CrossVendorAudit</code></a> · takes <code>xsd:string</code></p></div>
+<p>The mining batch named in a stage: the batch an audit names, or the batch a proposal is.</p>
+<p class="meta">on <a href="#Stage"><code>sw:Stage</code></a> · takes <code>xsd:string</code></p></div>
 <div class="vterm" id="auditRecord"><p class="vname"><code>sw:auditRecord</code></p>
 <p>The audit record as stored. The agent, date, verdict and batch here are read from this string.</p>
 <p class="meta">on <a href="#CrossVendorAudit"><code>sw:CrossVendorAudit</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="proposerAsRecorded"><p class="vname"><code>sw:proposerAsRecorded</code></p>
+<p>The words that name the proposer, as the source gives them: a model id, or a family such as Opus-family miner subagent.</p>
+<p class="meta">on <a href="#Proposal"><code>sw:Proposal</code></a> · takes <code>xsd:string</code></p></div>
+<div class="vterm" id="attributionSource"><p class="vname"><code>sw:attributionSource</code></p>
+<p>Where the proposer comes from: record, when a batch record names it, or procedure, when only the documented mining procedure does.</p>
+<p class="meta">on <a href="#Proposal"><code>sw:Proposal</code></a> · takes <code>xsd:string</code></p></div>
 <div class="vterm" id="assignedBy"><p class="vname"><code>sw:assignedBy</code></p>
 <p>How the family was assigned, as recorded: the two arms agreeing, or a person ruling.</p>
 <p class="meta">on <a href="#FamilyAssignment"><code>sw:FamilyAssignment</code></a> · takes <code>xsd:string</code></p></div>

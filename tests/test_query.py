@@ -699,10 +699,80 @@ def test_stages_state_only_what_the_seed_records(graph, parsed):
             else:
                 assert (audit, None, None) not in g
     assert audits
-    # the seed names no proposer for a claim, so only normalized forms have a Proposal
+    # a normalized form's Proposal uses its relation; a batch Proposal uses nothing
     proposals = set(g.subjects(RDF.type, SW.Proposal))
-    assert len(proposals) == sum(1 for e in graph.edges if e.get("relation_normalized"))
+    batches = {p for p in proposals if (p, SW.attributionSource, None) in g}
+    assert len(proposals - batches) == sum(1 for e in graph.edges if e.get("relation_normalized"))
     assert not {u for p in proposals for u in g.objects(p, PROV.used)} & set(g.subjects(RDF.type, SW.Claim))
+    assert not any((b, PROV.used, None) in g for b in batches)
+
+
+@pytest.mark.parametrize("batch, expected", [
+    ("b-cw9ii-3", ("claude-opus-5", "claude-opus-5", "record")),
+    ("b-cw16-2", (None, "Opus-family miner subagent", "record")),
+    ("b-cw9i-3", (None, "every reference proposed by Opus", "record")),
+    ("b-cw8-14", (None, "every reference through Opus -> Fable -> Gemini", "record")),
+    ("b-cw9ii-2", (None, "miner (Opus family)", "procedure")),
+    ("b-cw5-4", (None, "miner (Opus family)", "procedure")),
+    ("b-cw11-8", None),
+    (None, None),
+])
+def test_proposer_for_a_batch(batch, expected):
+    assert export_rdf.proposer_for(batch) == expected
+
+
+def test_claims_link_to_their_batch_proposal(graph, parsed):
+    """Damian's ruling, 2026-11-06: a record or the documented procedure names the
+    proposer, labelled by which; b-cw11-8 and claims whose audit names no batch get none."""
+    g = parsed[export_rdf.GRAPH_FILE]
+    sources = {}
+    for edge in graph.edges:
+        for ref, local in export_rdf.claim_ids(edge):
+            claim = rdflib.URIRef(export_rdf.NS["swc"] + local)
+            batch = export_rdf.parse_audit(ref.get("crossvendor_checked") or "")["batch"]
+            expected = export_rdf.proposer_for(batch)
+            generated = list(g.objects(claim, PROV.wasGeneratedBy))
+            if expected is None:
+                assert not generated, local
+                continue
+            agent, as_recorded, source = expected
+            assert generated == [rdflib.URIRef(export_rdf.NS["swk"] + "proposal-" + batch)]
+            proposal = generated[0]
+            assert (proposal, RDF.type, SW.Proposal) in g
+            assert str(g.value(proposal, SW.batch)) == batch
+            assert str(g.value(proposal, SW.proposerAsRecorded)) == as_recorded
+            assert str(g.value(proposal, SW.attributionSource)) == source
+            named_agent = g.value(proposal, PROV.wasAssociatedWith)
+            assert (str(g.value(named_agent, RDFS.label)) if named_agent else None) == agent
+            assert (proposal, DCTERMS.date, None) not in g
+            sources[source] = sources.get(source, 0) + 1
+    assert set(sources) == {"record", "procedure"}
+
+
+def test_proposer_table_matches_the_batch_log():
+    """Every attribution in proposers.json is checked against the record it cites."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    with open(os.path.join(root, "pipeline", "state.json"), encoding="utf-8") as fh:
+        log = {b["id"]: json.dumps(b, ensure_ascii=False) for b in json.load(fh)["batches"]}
+    table = export_rdf.PROPOSERS
+    with open(os.path.join(root, "pipeline", "README.md"), encoding="utf-8") as fh:
+        assert table["procedure"]["as_recorded"] in fh.read()
+    for batch in table["excluded"]:
+        assert batch in log and "haiku" in log[batch].lower()
+    for batch, entry in table["records"].items():
+        assert batch in log, batch
+        if entry["evidence"].startswith("pipeline/state.json"):
+            assert entry["as_recorded"] in log[batch], batch
+            assert "agent" not in entry
+        else:
+            path = os.path.join(root, entry["evidence"].split(",")[0])
+            if os.path.exists(path):  # the candidates files are local and gitignored
+                with open(path, encoding="utf-8") as fh:
+                    assert json.load(fh)["model"] == entry["agent"]
+    for arc, entry in table["arc_records"].items():
+        windows = [b for b in log if b.rpartition("-")[0] == arc]
+        assert len(windows) == entry["windows"], arc
+        assert entry["as_recorded"] in log[f"{arc}-{entry['windows']}"], arc
 
 
 @pytest.mark.parametrize("record, expected", [

@@ -691,6 +691,8 @@ Proposed shape:
 
 New terms: two datatype properties on `sw:Proposal`, a proposer-as-recorded literal and an attribution-source literal, in `tools/query/vocabulary.json` (which writes both the OWL file and `/vocabulary`). The comment on `sw:Proposal` and the export header both say claims have no Proposal stage, and both change. The notes for the TGDK paper say the same and need the new count. For the forward fix, the mining task can write the miner's model id into each candidates file, as the five Aion files did, so new batches land in the first group.
 
+Ruled and built (Damian, 2026-11-06: "yes to both proposer decisions"). The documented procedure counts as a source, labelled as such. The table is `tools/query/proposers.json`, and each attribution in it is tested against the record it cites. In the export, a claim links by `prov:wasGeneratedBy` to `swk:proposal-<batch>`, which carries `sw:batch`, `sw:proposerAsRecorded` and `sw:attributionSource`. Counts at b-cw16-5: "record" 1,962 claims (221 with the agent `claude-opus-5`, 1,741 by family only), "procedure" 1,871, none 726 (the 666 July references and b-cw11-8's 60). `sw:batch` now has the domain `sw:Stage`. Still open: a new batch counts as "procedure" until it gets a "records" entry, so once the mining task writes the miner's model id, adding that entry is a step of each merge.
+
 ## v2.3.0: book links to Bookshop.org (added 2026-11-06)
 
 Damian's decision: "add the book links (Bookshop.org) to the build backlog for 2.3.0." Backlog entry only, nothing built yet. It is the site's first revenue feature.

@@ -32,6 +32,7 @@ from kg_query import (  # noqa: E402
 )
 
 VOCABULARY = load_json(os.path.join(HERE, "vocabulary.json"))
+PROPOSERS = load_json(os.path.join(HERE, "proposers.json"))
 
 # The namespace is the "namespace" line of vocabulary.json, and it is provisional
 # until a human registers it. Each file says so wherever it appears.
@@ -289,7 +290,9 @@ def named(prefix, local):
 
 def stage_block(local, kind, target, agent=None, date=None, extra=()):
     """One prov:Activity. Only the fields the record states are passed in."""
-    pairs = [("a", f"sw:{kind}"), ("prov:used", target)]
+    pairs = [("a", f"sw:{kind}")]
+    if target:
+        pairs.append(("prov:used", target))
     if agent:
         pairs.append(("prov:wasAssociatedWith", named("swg", agent)))
     if date:
@@ -308,6 +311,24 @@ def audit_block(local, target, record):
     return stage_block(local, "CrossVendorAudit", target, parsed["agent"], parsed["date"], extra), parsed["agent"]
 
 
+def proposer_for(batch):
+    """(agent, as recorded, source) for a mining batch, from proposers.json. A batch
+    with its own record, or inside an arc whose close note covers every window, is
+    "record"; any other b- batch is "procedure". None for an excluded batch and for
+    a reference whose audit names no batch."""
+    if not batch or batch in PROPOSERS["excluded"]:
+        return None
+    entry = PROPOSERS["records"].get(batch)
+    if entry is None:
+        arc, _, window = batch.rpartition("-")
+        covered = PROPOSERS["arc_records"].get(arc)
+        if covered and window.isdigit() and int(window) <= covered["windows"]:
+            entry = covered
+    if entry is not None:
+        return entry.get("agent"), entry["as_recorded"], "record"
+    return None, PROPOSERS["procedure"]["as_recorded"], "procedure"
+
+
 def assigned_by(value):
     """A `by` string as recorded, less a parenthetical that quotes the text: this
     goes in the CC BY file."""
@@ -319,7 +340,7 @@ def assigned_by(value):
 def build_claims(graph):
     """Relation records, claims, references and stages. Reads only seed.json fields.
     Notes and normalization qualifiers stay out: they can carry quoted words."""
-    out, agents = [], set()
+    out, agents, proposals = [], set(), {}
 
     for edge in graph.edges:
         eid = edge_id(edge)
@@ -402,18 +423,36 @@ def build_claims(graph):
                 stages.append(block)
                 pairs.append(("sw:checkedBy", named("swk", f"{local}-audit")))
                 agents.add(agent)
+                batch = parse_audit(ref["crossvendor_checked"])["batch"]
+                proposer = proposer_for(batch)
+                if proposer:
+                    proposals[batch] = proposer
+                    pairs.append(("prov:wasGeneratedBy", named("swk", f"proposal-{batch}")))
             out.append(statement(claim, pairs))
             out.append(statement(reference, [("a", "sw:Reference"),
                                              ("sw:volume", literal(str(ref["volume"]))),
                                              ("sw:paragraph", str(ref["paragraph"]))]))
             out.extend(stages)
 
+    out += ["", "# ---- one Proposal per mining batch " + "-" * 40]
+    for batch in sorted(proposals):
+        agent, as_recorded, source = proposals[batch]
+        extra = [("sw:batch", literal(batch)),
+                 ("sw:proposerAsRecorded", literal(as_recorded)),
+                 ("sw:attributionSource", literal(source))]
+        out.append(stage_block(f"proposal-{batch}", "Proposal", None, agent, extra=extra))
+        if agent:
+            agents.add(agent)
+
     head = ["", "# ---- claims and provenance " + "-" * 48,
             "# One sw:Relation per edge, one sw:Claim and one sw:Reference per citation.",
             "# Stages are prov:Activity records with only what seed.json states. Dates are",
             "# xsd:date on dcterms:date because the record holds no time of day, and",
-            "# prov:endedAtTime requires one. seed.json names no proposer or date for a",
-            "# claim, so a claim has no Proposal stage; normalized forms do.",
+            "# prov:endedAtTime requires one. A claim links to its batch's sw:Proposal",
+            "# by prov:wasGeneratedBy, where tools/query/proposers.json gives a source:",
+            "# \"record\" (a batch record names the proposer) or \"procedure\" (the documented",
+            "# mining procedure does). A claim whose audit names no batch, or whose batch",
+            "# is excluded there, has no Proposal stage. No record gives a mining date.",
             "# Notes and normalization qualifiers are not exported: they can carry quoted",
             "# words, and this file is under CC BY.", ""]
     for prefix, iri in PROVENANCE_PREFIXES:
