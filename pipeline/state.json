@@ -867,11 +867,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw16-7",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW16 §425-494",
+   "result": "CW 16 WINDOW 7: The Practice of Psychotherapy §425-494, the marriage quaternio in fairytale and in the primitive cross-cousin marriage, kinship libido, the endogamous tendency as an instinct that finds its outlet in the spirit (Layard), the anima in projection, the alchemists' matter recognized as the psyche, the mandala as the self, the self as synthesis of ego and unconscious, the transference neurosis, the two aspects of individuation, then the Rosarium pictures three to eight: the naked truth and the moral demand of the opus (Tractatus aureus), repression and dissociation, the immersion in the bath as solutio and night sea journey, wholeness through the soul and the rotundum, Nous in the embrace of Physis, the conjunction as symbol of the unio oppositorum, the symbol freeing instinct, the coniunctio against participation mystique and the resolving of the transference, the archetypal images under the transference, death as an interim stage, the incestuous coniunctio, the royal game whose goal is individuation, withdrawal of projections and self-knowledge, incest disguising the drive for wholeness, identification and inflation, the filius philosophorum and the atman, the ascent of the soul, dissociation and the schizophrenic state, the fugitive Mercurius, the nigredo and the dark night of St. John of the Cross, the divine child as the inner man, Gideon's dew as aqua permanens and herald of the soul's return, water as sapientia, thinking against feeling, intuition anticipating the lapis, the soul animating the body. Rosarium and related text appears in two references typed jung-quotes-source with the source named (§438 Layard, §450 Tractatus aureus). Case material: the lady of §377ff. recalled at §461, cited in Jung's own voice. Mined 49 candidates/64 refs (Opus-family miner subagent, blinded). Pre-check dropped one reference on its elision rule (kinship-libido|is-a|instinct §445, gap over 30 tokens; the candidate keeps §431) and kept 63. Fable gate 49 TRUE / 14 CORRECTED / 0 FALSE. Corrections: §494 soul|animates|the-body from jung-asserts to jung-reports-parallel (Jung describing the picture's allegory); thirteen confidence demotions: single cases at §430 marriage-quaternio|prevents|incest and §461 the-unconscious|produces|symbol; hedges at §443 cross-cousin-marriage|satisfies|endogamous-tendency ('more or less') and §488 thinking|impairs|feeling ('lest'); a partial object at §444 the-self|is-synthesis-of|the-ego; referents a step away at §440 matter|is-recognized-as|psyche, §446 regression|leads-to|transference-neurosis, §448 individuation|involves|personal-relationship, §454 the-sea|signifies|solutio, §457 nous|is-embraced-by|physis, §467 death|precedes|rebirth, §471 incest|symbolizes|wholeness and §472 identification|causes|ego-inflation. Gemini cross-vendor 61 PASS / 2 FINDING on 63 post-gate refs; both findings (§454 the immersion rather than the sea, §472 the node label against identification with unconscious contents) name the step the gate had already recorded and demoted for, and were overruled with audit notes. VOCABULARY NOTE FOR THE REVIEW: the standing node identification carries the label 'Identification (unconscious identity with the parents)' from its one earlier edge (CW 16 §142); Jung's term is general and §472 uses it of unconscious contents; the label is referred to the vocabulary review, no change made here. Six mints added: fairytale, kinship-libido, transference-neurosis, bath, physis, dew; none stranded. +40 edges, 11 refs attached to standing edges, +63 refs, +6 nodes. Graph 866/3460/4685. Transfer: reuse 50.0% (24 reused of 48 window edges per transfer.py), 0 sentence-shaped. Family sweep 40 edges under v0.7.2: agreement 34/40 (85%), 34 assigned, 6 queued, 0 no-family, 0 text-undecided; queue 608; the Gemini arm returned two bare 'unclassified' rows (n 3420, 3432), normalized to unclassified(no-family) before assembly, raw file kept as family_sweep_gemini_b-cw16-7_raw.json. Both arms assigned amplification to edge 3452 (nigredo|parallels|dark-night-of-the-soul, §479 'adduce as a parallel'), the family's first agreed member since v0.7.1 left it at zero; the Opus arm noted for the sitting that edge 3432 (kinship-libido|underlies|transference, queued) it judged outside the underlies / based-on ambiguity. strain: 0 no-family, 0 text-undecided of 40 swept; new homeless strings: none. Fable spend: the gate ran on claude-fable-5-1 inside the mining chat's nightly firing, the second of three windows, 63 refs judged against the full paragraphs; no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 866/3460/4685, distinct paragraphs 2976, claim mix 3774/678/233; named-source strings and hedged figures left at their earlier values as before. Note quotes (RULES #24): seed.json holds no '[...]'; correction and audit notes are in the gate's own words with short quoted fragments only. Run by the nightly job in the mining chat (Damian, 2026-11-06: three windows a night). Data committed only: build and deploy belong to the build track.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a744c77583481a357, 16 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 29 assistant turns after the miner finished at 2026-11-07T02:24:51.109Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW16-DUE: window 7 (§425-494)",
- "nodes": 860,
- "edges": 3420,
- "refs": 4622,
+ "next": "CW16-DUE: window 8 (§495-564)",
+ "nodes": 866,
+ "edges": 3460,
+ "refs": 4685,
  "as_of": "2026-11-07"
 }
