@@ -3818,7 +3818,8 @@
   {
    "id": "transformation",
    "label": "Transformation (of the god)",
-   "type": "Concept"
+   "type": "Concept",
+   "vocabulary_note": "the label names the sense the node was minted in (CW 11, the transformation of the god in the Mass); the node carries transformation in the general sense, as its CW 5 and CW 16 edges show (serpent|symbolizes, the-sacrifice|leads-to, archetypal-image|undergoes). Recorded at b-cw16-6 on a cross-vendor finding."
   },
   {
    "id": "baldur",
@@ -4294,6 +4295,26 @@
    "id": "unio-mystica",
    "label": "Unio mystica",
    "type": "Concept"
+  },
+  {
+   "id": "psychological-induction",
+   "label": "Psychological induction",
+   "type": "Concept"
+  },
+  {
+   "id": "kundalini",
+   "label": "Kundalini",
+   "type": "Concept"
+  },
+  {
+   "id": "disiunctio",
+   "label": "Disiunctio",
+   "type": "Operation"
+  },
+  {
+   "id": "soror-mystica",
+   "label": "Soror mystica",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -7428,6 +7449,18 @@
      "claim_type": "jung-asserts",
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25"
+    },
+    {
+     "volume": "16",
+     "paragraph": 398,
+     "quote": "the nuptiae chymicae , the royal marriage, occupies such an important place in alchemy as a symbol of the supreme and ultimate union",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim spans in order; the royal marriage 'as a symbol of the supreme and ultimate union' that binds the opposites, in Jung's own explanation. The mint nuptiae-chymicae duplicates the standing node hierosgamos, whose label reads 'sacred marriage / chymical wedding'; §401 itself calls the royal pair's union the hierosgamos. Subject nuptiae-chymicae -> hierosgamos, which attaches to the standing CW 12 edge."
     }
    ],
    "relation_family": {
@@ -18915,6 +18948,28 @@
      "verified_date": "2026-11-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
      "note": "a condition on the compensation's effectiveness"
+    },
+    {
+     "volume": "16",
+     "paragraph": 372,
+     "quote": "a deficit in the form of loss of energy. The energy so lost raises the psychic potency of certain compensating contents in the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 394,
+     "quote": "the conscious situation moves away from a certain point of equilibrium, the more forceful ... become the unconscious contents that are struggling to restore the balance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
     }
    ],
    "relation_family": {
@@ -53512,6 +53567,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 414,
+     "quote": "these symbolical pictures spring from the corresponding unconscious contents—half spiritual, half sexual",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
     }
    ],
    "relation_family": {
@@ -80030,6 +80096,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-23",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-11, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 378,
+     "quote": "for the child is a symbol of the self and the quaternity is a symbolical expression of this",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
     }
    ],
    "relation_family": {
@@ -99528,6 +99605,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-04",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-1, PASS, 2026-11-04)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 390,
+     "quote": "the only salutary powers visible in the world today are the great psychotherapeutic systems which we call the religions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
     }
    ],
    "relation_family": {
@@ -101916,6 +102004,29 @@
      "source": "an old master (unnamed in the text)",
      "correction_note": "gate correction: Verbatim and rightly a quoted source, but the paragraph gives only 'an old master' and does not call the dictum alchemical, so the source is trimmed to what the text says; the dictum speaks of the art and the application to psychotherapy is Jung's; high -> medium.",
      "note": "Jung applies the dictum about the art to the psychotherapist"
+    },
+    {
+     "volume": "16",
+     "paragraph": 367,
+     "quote": "the higher psychotherapy is a most exacting business ... it sets tasks which challenge not only our understanding or our sympathy, but the whole man",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim spans in order, but 'sometimes it sets tasks which challenge ... the whole man' is hedged with 'sometimes'; high -> medium."
+    },
+    {
+     "volume": "16",
+     "paragraph": 400,
+     "quote": "“Ars requirit totum hominem,” we read in an old treatise. 59 This is in the highest degree true of psychotherapeutic work.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
     }
    ],
    "relation_family": {
@@ -102219,6 +102330,18 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-3, PASS, 2026-11-05)",
      "correction_note": "gate correction: Both spans verbatim, the elision within bounds; but the transference is 'at best only an intermediate stage' that gives the patient 'a chance' to withdraw the projection; a chance is not an assured effect; high -> medium.",
      "note": "at best an intermediate stage"
+    },
+    {
+     "volume": "16",
+     "paragraph": 420,
+     "quote": "Medical treatment of the transference gives the patient a priceless opportunity to withdraw his projections",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim, but the subject in the text is 'Medical treatment of the transference', one step from the node; high -> medium."
     }
    ],
    "relation_family": {
@@ -102339,6 +102462,39 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 357,
+     "quote": "the doctor is nearly always put in the place of the father, the brother, and even (though naturally more rarely) the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 368,
+     "quote": "Their exogamous transference to the doctor does not alter the situation. He is merely drawn into the peculiar atmosphere of family incest through the projection.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 420,
+     "quote": "archaic, infantile fantasies which were originally vested in members of the patient’s own family ... The transference of these fantasies to the doctor",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
     }
    ],
    "relation_family": {
@@ -103376,6 +103532,17 @@
      "verified_date": "2026-11-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)",
      "correction_note": "gate correction: Verbatim, but the sentence goes on to allow a second route, the doctor who analyses himself through his patient; a requirement with a stated alternative takes medium; high -> medium."
+    },
+    {
+     "volume": "16",
+     "paragraph": 366,
+     "quote": "anybody who intends to practise psychotherapy should first submit to a training analysis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
     }
    ],
    "relation_family": {
@@ -104495,6 +104662,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 410,
+     "quote": "The arcanum artis , or coniunctio Solis et Lunae as supreme union of hostile opposites",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
     }
    ],
    "relation_family": {
@@ -104527,6 +104705,1138 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-06"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "is-a",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 355,
+     "quote": "The coniunctio is an a priori image that occupies a prominent place in the history of man’s mental development.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, FINDING-adjudicated, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim; the text's words are 'an a priori image', Jung's own synonym, and the node name is one terminological step from them; high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the auditor read 'a priori image' against the node name as an overreach; it is Jung's own synonym for the primordial image (§396 in the same window), the gate recorded the terminological step and set medium, and the standing node is the right carrier."
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "manifests-through",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 357,
+     "quote": "Practical analysis has shown that unconscious contents are invariably projected at first upon concrete persons and situations.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 383,
+     "quote": "For as a rule the unconscious first appears in projected form.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "resembles",
+   "object": "chemical-combination",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 358,
+     "quote": "When two chemical substances combine, both are altered. This is precisely what happens in the transference.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "takes-over",
+   "object": "suffering",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 358,
+     "quote": "It is inevitable that the doctor should be influenced to a certain extent ... He quite literally “takes over” the sufferings of his patient",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 364,
+     "quote": "The doctor, by voluntarily and consciously taking over the psychic sufferings of the patient",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "is-akin-to",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 359,
+     "quote": "the very word “transference” is closely akin to “projection”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "abaissement-du-niveau-mental",
+   "relation": "brings-about",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 361,
+     "quote": "A certain abaissement du niveau mental ... is enough to set these instinctive urges and desires in motion and bring about a dissociation of personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "contains",
+   "object": "incest",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 362,
+     "quote": "The transference is far from being a simple phenomenon ... The same applies to its specific content, commonly called incest.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "psychological-induction",
+   "relation": "affects",
+   "object": "the-analyst",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 363,
+     "quote": "can also have an inductive effect on the unconscious of the impartial spectator, in this case the doctor",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim, but the grammatical subject is the unconscious contents, which 'can' have an inductive effect on the doctor; the minted term is Jung's own at §399, yet here the subject is a step away and the sentence is hedged; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "rests-on",
+   "object": "unconsciousness",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 364,
+     "quote": "Doctor and patient thus find themselves in a relationship founded on mutual unconsciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 367,
+     "quote": "he is caught up in a bond, a combination resting on mutual unconsciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "incest",
+   "relation": "complicates",
+   "object": "psychotherapy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 371,
+     "quote": "The existence of the incest element involves not only an intellectual difficulty but, worst of all, an emotional complication of the therapeutic situation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "alters",
+   "object": "the-analyst",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 375,
+     "quote": "The transference, however, alters the psychological stature of the doctor, though this is at first imperceptible to him.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "announces",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 376,
+     "quote": "Occasionally dreams occur about this time, announcing the appearance of the transference.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim, but 'Occasionally dreams occur ... announcing' is hedged; the note carries the hedge and the confidence must too; high -> medium.",
+     "note": "occasional, not regular"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "divine-child",
+   "relation": "is-born-from",
+   "object": "tree",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 379,
+     "quote": "she suddenly had a vision of a tiny golden child lying at the foot of the tree (tree-birth motif)",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim, but the quoted sentence is Jung's narration of the vision and his own gloss '(tree-birth motif)', not the analysand's words; Jung reading case material in his own voice is jung-asserts. Medium stands for a single vision, and the note stays.",
+     "note": "the analysand's vision; the tree-birth gloss is Jung's"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "represents",
+   "object": "kundalini",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 380,
+     "quote": "The serpent represents the hissing ascent of Kundalini",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim and Jung's own reading, but of the serpent in one patient's picture; a single case takes medium; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "union-of-opposites",
+   "relation": "is-analogous-to",
+   "object": "hierosgamos",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 381,
+     "quote": "an as-yet-unfulfilled programme that culminates in the union of opposites. This union is analogous to the “royal marriage” in alchemy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, FINDING-adjudicated, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim spans in order; 'This union is analogous to the royal marriage in alchemy'. The mint nuptiae-chymicae duplicates the standing node hierosgamos, whose label reads 'sacred marriage / chymical wedding'; §401 itself calls the royal pair's union the hierosgamos. Object nuptiae-chymicae -> hierosgamos.",
+     "audit_note": "cross-vendor finding overruled: the auditor read 'royal marriage' against hierosgamos as an overreach; the gate rejected the mint nuptiae-chymicae as a duplicate of the standing node, whose label reads 'sacred marriage / chymical wedding', and §401 names the royal pair's union the hierosgamos."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "corresponds-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 383,
+     "quote": "the mysterious prima materia . The latter corresponds to the nature of the unconscious content in every respect",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 385,
+     "quote": "The refining of the prima materia , the unconscious content, demands endless patience",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "personifies",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 384,
+     "quote": "The alchemists aptly personified it as the wily god of revelation, Hermes or Mercurius",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "16",
+     "paragraph": 389,
+     "quote": "The Mercurius who personifies the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "depicts",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 388,
+     "quote": "An excellent picture, and one which exactly describes the grotesque and sinister side of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim, but what the picture of the devil describes is 'the grotesque and sinister side of the unconscious', narrower than the node; the note says so and the confidence must match; high -> medium.",
+     "note": "the grotesque and sinister side only"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "is-source-of",
+   "object": "summum-bonum",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 389,
+     "quote": "The unconscious is not just evil by nature, it is also the source of the highest good",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "has-affinity-with",
+   "object": "dogma",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 391,
+     "quote": "The unconscious thus possesses a natural affinity with the spiritual values of the Church, particularly in their dogmatic form",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim spans in order, but the affinity is with 'the spiritual values of the Church, particularly in their dogmatic form'; the node is a step from that object; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "undergoes",
+   "object": "transformation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 396,
+     "quote": "The primordial images undergo ceaseless transformation and yet remain ever the same",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, FINDING-adjudicated, 2026-11-07)",
+     "audit_note": "cross-vendor finding overruled: the auditor read the node label 'Transformation (of the god)' as narrower than the text; the node has carried transformation in the general sense since CW 5 (serpent|symbolizes, the-sacrifice|leads-to) and a vocabulary note now records that; the text supports the claim."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "possession",
+   "relation": "means",
+   "object": "disiunctio",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 397,
+     "quote": "Possession by the unconscious means being torn apart into many people and things, a disiunctio",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "parallels",
+   "object": "analytic-process",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 399,
+     "quote": "Alchemy describes ... the same psychological phenomenology which can be observed in the analysis of unconscious processes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "resembles",
+   "object": "artifex",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 399,
+     "quote": "often the doctor is in much the same position as the alchemist who no longer knew whether he was melting the mysterious amalgam",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim, but 'often the doctor is in much the same position as the alchemist' is hedged with 'often'; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "psychological-induction",
+   "relation": "leads-to",
+   "object": "transformation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 399,
+     "quote": "Psychological induction inevitably causes the two parties to get involved in the transformation of the third and to be themselves transformed in the process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, FINDING-adjudicated, 2026-11-07)",
+     "audit_note": "cross-vendor finding overruled: same label objection as §396; the node carries the general sense, the vocabulary note records it, and the text supports the claim."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "quintessence",
+   "relation": "derives-from",
+   "object": "four-elements",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 402,
+     "quote": "a fifth star which represents the fifth entity, the “One” derived from the four, the quinta essentia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-counterpart-of",
+   "object": "the-trinity",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 403,
+     "quote": "he is a trinity, triunus or trinus , the chthonic, lower, or even infernal counterpart of the Heavenly Trinity",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "axiom-of-maria",
+   "relation": "runs-through",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 404,
+     "quote": "from the number 4 to 3 to 2 to 1 is the “axiom of Maria,” which runs in various forms through the whole of alchemy",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "produces",
+   "object": "filius-philosophorum",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 404,
+     "quote": "constellate the idea of sexual union as the means of producing the 1, which is then consistently called the filius regius or filius philosophorum",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim spans in order, but the text's subject is 'the idea of sexual union as the means of producing the 1'; the node is a step from it; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "derives-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 407,
+     "quote": "the methods and philosophy of alchemy ... they can only derive from the unconscious psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "appears-as",
+   "object": "ouroboros",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 409,
+     "quote": "this is an essential characteristic of Mercurius because he is also the serpent that fertilizes, kills, and devours itself and brings itself to birth again",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "the-opus",
+   "relation": "is-work-of",
+   "object": "nature",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 411,
+     "quote": "and so our magisterium is the work of Nature and not of the worker",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "source": "Rosarium Philosophorum"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "artifex",
+   "relation": "is-entangled-in",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 414,
+     "quote": "Somehow the artifex was entangled in this game of unconscious projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "involves",
+   "object": "incest",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 415,
+     "quote": "the desired coniunctio was not a legitimate union but was always—one could almost say, on principleincestuous",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "coincides-with",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 416,
+     "quote": "His coincidence with the Holy Ghost as the third person of the Trinity certainly has no foundation in dogma",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "note": "an unorthodox alchemical identification; Jung notes it has no basis in dogma"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "anthropos",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 417,
+     "quote": "the Anthropos idea in medieval alchemy was largely “autochthonous,” ... It is an “eternal” idea, an archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "anthropos",
+   "relation": "is-called",
+   "object": "true-man",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 417,
+     "quote": "We meet the Anthropos even in ancient Chinese alchemy ... There he is called chên-jên (‘true man’).",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "note": "in the writings of Wei Po-yang"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "anthropos",
+   "relation": "parallels",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 418,
+     "quote": "The revelation of the Anthropos ... signifies much the same thing as the vision of Christ for the believing Christian",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)",
+     "correction_note": "gate correction: Verbatim spans in order, but the comparison is between 'the revelation of the Anthropos' and 'the vision of Christ', two experiences; the figures are a step away; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "incest",
+   "relation": "symbolizes",
+   "object": "unio-mystica",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 419,
+     "quote": "the intervention of the Holy Ghost reveals the hidden meaning of the incest ... as a repulsive symbol for the unio mystica",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "incest",
+   "relation": "symbolizes",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 419,
+     "quote": "Incest symbolizes union with one’s own being, it means individuation or becoming a self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "sol-niger",
+   "relation": "corresponds-to",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 420,
+     "quote": "the umbra solis or sol niger of the alchemists, the black shadow which everybody carries with him",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "represents",
+   "object": "artifex",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 421,
+     "quote": "the man (in this case the adept) is represented by the queen, and the woman (the soror mystica ) by the king",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "represents",
+   "object": "soror-mystica",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 421,
+     "quote": "the man (in this case the adept) is represented by the queen, and the woman (the soror mystica ) by the king",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "contrasexuality",
+   "relation": "complicates",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "16",
+     "paragraph": 422,
+     "quote": "contra-sexual side of the adept and his soror leads to a painful complication which by no means simplifies the problem of transference",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-07",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-07"
    }
   }
  ]
