@@ -931,11 +931,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw7-3",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW7 §135-201",
+   "result": "CW 7 WINDOW 3: Two Essays on Analytical Psychology §135-201, the close of 'On the Psychology of the Unconscious': the crab dream's identification with Mrs X and the artist, fascination rising from the unconscious, the magician and demon projected on the doctor as contents of the collective unconscious, the collective against the individual psyche, the religious function lapsing into the unconscious and the rationalism that precipitated the irrational there, the archetypes crystallized in the collective unconscious and appearing in projection, the devil as a variant of the shadow, the magic demon as archetype, stage of the God-concept, type of the medicine-man and positive wise old man, the archetypes posited as psychic realities, Semon's engrams forcing regression, the transcendent function as progressive development and the hero swallowed by the monster (Frobenius), the two cathedral dreams of the young man and the compensatory function of dreams, the Church as mother freeing from unconscious identity, puberty rites engraved on the unconscious, the transcendent function mediated by the archetypes and uniting the opposites, the quaternity and circle as symbols of wholeness, individuation as the model of the method, the dangers of the unconscious (heaped-up energy, instigated accidents, psyche and body one life), its favourable prospective side, and the closing retrospect. Reporting discipline: one reports-parallel reference (Frobenius, §160); the proposer's Goethe reference (§153) is Jung's own reading of Faust and the gate moved it to jung-asserts, in line with the auditor's b-cw7-2 ruling; no patient statement is quoted, the case material enters through Jung's own interpretive sentences at medium. The DEFINITIONS clause held: the identity relations (§150, §152, §153, §159, §171, §185, §194) rest on sentences that state them. Mined 50 candidates/53 refs (Opus-family miner subagent, blinded; its first draft ran to 94 candidates and it cut to the band by dropping case-specific triples). Pre-check kept all 53. Fable gate 41 TRUE / 12 CORRECTED / 0 FALSE; eleven confidence demotions and one claim type: the zodiacal crab node against the dream animal at §138 crab|symbolizes|the-unconscious; the self-correcting sentence at §140 water|signifies|the-unconscious; single cases at §142 projection|lies-anchored-in|the-unconscious, §157 fear|is-dread-of|collective-unconscious and §157 the-analyst|becomes-image-for|magician; hedges at §152 archetype|appears-in|projection ('usually'), §159 engram|forces-into|regression ('liable'), §158 archetype|exhibits|autonomy ('largely'); a conditional at §187 the-unconscious|arranges|symptom; a scope at §192 psychic-energy|heaps-up-in|the-unconscious; the dream-specific node at §197 the-unconscious|exhibits|prospective-function; claim type at §153 faust|exemplifies|magician to jung-asserts. Gemini cross-vendor 52 PASS / 1 FINDING on 53 post-gate refs; the finding (§197, the prospective-function node is dream-specific) is the object step the gate had already demoted for and is overruled with an audit note. No reference dropped. Five mints added: fascination, individual-psyche, engram (Semon), circle, accident; none stranded. VOCABULARY: the prospective-function node (label 'The prospective function of dreams') joins the crab and identification nodes in the vocabulary review. +47 edges, 4 refs attached to standing edges, +53 refs, +5 nodes. Graph 889/3638/4928. Transfer: reuse 23.4% (11 reused of 47 window edges per transfer.py), 0 sentence-shaped. Family sweep 47 edges under v0.7.2: agreement 38/47 (81%), 34 assigned, 9 queued, 4 no-family, 0 text-undecided; queue 642; the Gemini arm returned four bare 'unclassified' rows (n 3618, 3629, 3635, 3636), normalized to unclassified(no-family) before assembly, raw file kept as family_sweep_gemini_b-cw7-3_raw.json. strain: 4 no-family, 0 text-undecided of 47 swept; new homeless strings: is-dread-of, has-function-of, guides (the last two fall in the recorded property-attribution and governing-principle gaps; exhibits was named at b-cw7-1). Fable spend: the gate ran on claude-fable-5-1 inside the mining chat's nightly firing, the third of three windows, 53 refs judged against the full paragraphs; no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 889/3638/4928, distinct paragraphs 3130, claim mix 3977/707/244; named-source strings and hedged figures left at their earlier values as before. Note quotes (RULES #24): seed.json holds no '[...]'; correction and audit notes are in the gate's own words with short quoted fragments only. The first essay is complete (§1-201); the next window is b-cw7-4 (§202-269), the opening of 'The Relations between the Ego and the Unconscious'. Run by the nightly job in the mining chat (Damian, 2026-11-06: three windows a night). Data committed only: build and deploy belong to the build track.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a7dc412bb2a8b5d9e, 30 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 52 assistant turns after the miner finished at 2026-11-08T02:42:11.754Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW7-DUE: window 3 (§135-201)",
- "nodes": 884,
- "edges": 3591,
- "refs": 4875,
+ "next": "CW7-DUE: window 4 (§202-269)",
+ "nodes": 889,
+ "edges": 3638,
+ "refs": 4928,
  "as_of": "2026-11-08"
 }

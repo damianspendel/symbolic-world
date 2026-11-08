@@ -4435,6 +4435,31 @@
    "id": "cancer",
    "label": "Cancer (the disease)",
    "type": "Concept"
+  },
+  {
+   "id": "fascination",
+   "label": "Fascination",
+   "type": "Concept"
+  },
+  {
+   "id": "individual-psyche",
+   "label": "The individual psyche",
+   "type": "Concept"
+  },
+  {
+   "id": "engram",
+   "label": "Engram (Semon)",
+   "type": "Concept"
+  },
+  {
+   "id": "circle",
+   "label": "The circle",
+   "type": "Symbol"
+  },
+  {
+   "id": "accident",
+   "label": "Accident (psychically caused)",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -48780,6 +48805,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 184,
+     "quote": "the transcendent function reveals itself as a mode of apprehension mediated by the archetypes and capable of uniting the opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
     }
    ],
    "relation_family": {
@@ -55167,6 +55203,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-8, PASS, 2026-08-20)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 187,
+     "quote": "The unconscious compensation of a neurotic conscious attitude contains all the elements that could effectively and healthily correct the one-sidedness of the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
     }
    ],
    "relation_family": {
@@ -110119,6 +110166,29 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-2, PASS, 2026-11-08)",
      "correction_note": "gate correction: Verbatim; 'the relative autonomy of the archetypes'; the qualifier limits the degree, high -> medium.",
      "note": "relative autonomy"
+    },
+    {
+     "volume": "7",
+     "paragraph": 158,
+     "quote": "we postulate the psychic existence of such contents ... not just a question of cognitive contents, but of transubjective, largely autonomous psychic systems",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim spans in order; 'largely autonomous psychic systems'; the qualifier, high -> medium. Attach."
+    },
+    {
+     "volume": "7",
+     "paragraph": 184,
+     "quote": "An archetype, as we have said, is a dynamic image ... which can be truly understood only if experienced as an autonomous entity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
     }
    ],
    "relation_family": {
@@ -111097,6 +111167,1173 @@
    ],
    "relation_family": {
     "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "fascination",
+   "relation": "rises-up-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 136,
+     "quote": "Fascination is a compulsive phenomenon ... something that rises up from the unconscious and forcibly obtrudes itself upon the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "crab",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 138,
+     "quote": "The crab is therefore the symbol for the unconscious contents",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; 'The crab is therefore the symbol for the unconscious contents'; the standing crab node is the zodiacal sign and this is the dream animal, as at b-cw7-2; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "water",
+   "relation": "signifies",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 140,
+     "quote": "Thus the water signifies the unconscious, or rather, the state of unconsciousness, of concealment",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; the sentence corrects itself, 'or rather, the state of unconsciousness', and is said of the one dream; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "lies-anchored-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 142,
+     "quote": "cannot very well have taken the projection with him, since it lies anchored in the unconscious of the patient",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; said of this patient's projection ('the unconscious of the patient'); a single case, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "magician",
+   "relation": "indicates-projection-of",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 150,
+     "quote": "These attributes always indicate that contents of the transpersonal or collective unconscious are being projected. Personal memories cannot account for “demons,” or for “wicked magicians,”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "collective-psyche",
+   "relation": "opposed-to",
+   "object": "individual-psyche",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 150,
+     "quote": "as contents of the collective psyche, they are opposed to and different from the individual psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "religious-function",
+   "relation": "lapses-into",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 150,
+     "quote": "the corresponding psychological function was by no means disposed of; it lapsed into the unconscious ... so powerful a function as the religious function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "rationalism",
+   "relation": "depreciates",
+   "object": "the-irrational",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 150,
+     "quote": "the rationalism of modern life, which, by depreciating everything irrational, precipitated the function of the irrational into the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "crystallizes-in",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 151,
+     "quote": "The collective unconscious, being the repository ... In this image certain features, the archetypes or dominants, have crystallized out in the course of time",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "appears-in",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 152,
+     "quote": "the archetypes usually appear in projection",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; 'the archetypes usually appear in projection'; the hedge 'usually', high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "is-variant-of",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 152,
+     "quote": "The devil is a variant of the “shadow” archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "magician",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 153,
+     "quote": "One of the archetypes that is almost invariably met with in the projection of unconscious collective contents is the “magic demon” with mysterious powers",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "note": "the 'magic demon'; called 'the magician type' later in the paragraph"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "faust",
+   "relation": "exemplifies",
+   "object": "magician",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 153,
+     "quote": "The magician type also figures in Zarathustra , while in Faust he is the actual hero",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; 'in Faust he is the actual hero' is Jung's own reading of the literary figure, not Goethe's doctrine reported (the auditor's b-cw7-2 ruling on the parallel Faust reference); jung-reports-parallel -> jung-asserts, source dropped."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "magician",
+   "relation": "forms-stage-of",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 154,
+     "quote": "The image of this demon forms one of the lowest and most ancient stages in the conception of God",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "magician",
+   "relation": "is-type-of",
+   "object": "shaman",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 154,
+     "quote": "It is the type of primitive tribal sorcerer or medicine-man, a peculiarly gifted personality endowed with magical power",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "magician",
+   "relation": "appears-as",
+   "object": "wise-old-man",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 154,
+     "quote": "the demon can also have a very positive aspect as the “wise old man.”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "fear",
+   "relation": "is-dread-of",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 157,
+     "quote": "This fear is a primitive dread of the contents of the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; 'This fear' is the fear in the one dream, as the note says; a single case, high -> medium.",
+     "note": "the fear in the patient's dream"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-analyst",
+   "relation": "becomes-image-for",
+   "object": "magician",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 157,
+     "quote": "on the subjective level I became an image for the figure of the magician in the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; 'I became an image for the figure of the magician', Jung in this one case; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "posited-as",
+   "object": "psychic-reality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 158,
+     "quote": "consolidate them as psychological realities outside the individual psyche. Through the act of cognition we “posit” the reality of the archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "engram",
+   "relation": "forces-into",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 159,
+     "quote": "These residues, or “engrams,” as Semon calls them, 7 are extremely liable, when activated ... actually to force it into regression",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 9 tokens); the engrams are 'extremely liable, when activated ... to force it into regression', a disposition under a condition; high -> medium.",
+     "note": "term from Semon; the claim is Jung's"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "establishes-cycle-of",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 159,
+     "quote": "The religions have established this cycle of energy in a concrete way by means of ritual communion with the gods",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "transcendent-function",
+   "relation": "is-synonymous-with",
+   "object": "psychic-development",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 159,
+     "quote": "is therefore appropriately called the transcendent function . It is synonymous with progressive development towards a new attitude",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "sea-monster",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 160,
+     "quote": "the typical struggle of the hero with the monster (the unconscious content) takes place beside the water",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "swallowed-by",
+   "object": "sea-monster",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 160,
+     "quote": "In the decisive battle the hero is, like Jonah, invariably swallowed by the monster, as Frobenius has shown",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "source": "Frobenius"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "reborn-through",
+   "object": "transcendent-function",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 160,
+     "quote": "the hero, new-born through the transcendent function (the “night sea journey,” as Frobenius calls it), steps forth",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "lets-loose",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 163,
+     "quote": "through the transference the activity of archetypal figures is liable to be let loose",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-opposites",
+   "relation": "resolved-through",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 166,
+     "quote": "the solution of the problem of opposites can be reached only irrationally, by way of contributions from the unconscious, i.e., from dreams",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "has-function-of",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 170,
+     "quote": "in my experience the vast majority of dreams are compensatory",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 182,
+     "quote": "They clearly reveal their special function. This function I have called compensation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 190,
+     "quote": "Experiences of this kind, although paid for very dearly, lead to an unshakable confidence in the reliability of dream compensations",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "instinct",
+   "relation": "seeks-to-replace",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 171,
+     "quote": "For this reason instinct seizes on the first opportunity to replace the mother by another object",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "church",
+   "relation": "is-a",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 171,
+     "quote": "for the Church is, in the fullest sense, a mother. We speak not only of Mother Church, but even of the Church’s womb",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "church",
+   "relation": "frees-from",
+   "object": "identification",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 172,
+     "quote": "it frees the individual from an unconscious natural relationship ... simply a condition of inchoate, unconscious identity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "puberty-rites",
+   "relation": "engraved-on",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 172,
+     "quote": "These practices are undoubtedly very old. They have almost become instinctive mechanisms ... They are engraved on the unconscious as a primordial image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "stands-behind",
+   "object": "church",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 176,
+     "quote": "behind the Church there is a living primordial image which in certain conditions is capable of enforcing them",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "transcendent-function",
+   "relation": "mediated-by",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 184,
+     "quote": "the transcendent function reveals itself as a mode of apprehension mediated by the archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-shadow",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 185,
+     "quote": "certain definite archetypes. I would mention in particular the shadow, the animal, the wise old man, the anima, the animus, the mother, the child",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 185,
+     "quote": "certain definite archetypes. I would mention in particular the shadow, the animal, the wise old man, the anima, the animus, the mother, the child",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "expresses",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 186,
+     "quote": "The symbols used by the unconscious ... to express wholeness, completeness, and perfection: symbols, as a rule, of the quaternity and the circle",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "circle",
+   "relation": "expresses",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 186,
+     "quote": "The symbols used by the unconscious ... to express wholeness, completeness, and perfection: symbols, as a rule, of the quaternity and the circle",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "guides",
+   "object": "psychotherapy",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 187,
+     "quote": "This natural process of individuation served me both as a model and guiding principle for my method of treatment",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "arranges",
+   "object": "symptom",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 187,
+     "quote": "the unconscious opposition will, if consistently ignored, arrange symptoms and situations which irresistibly thwart our conscious intentions",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; 'if consistently ignored', a conditional; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "psychic-energy",
+   "relation": "heaps-up-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 192,
+     "quote": "as soon as a neurosis is present it is a sign of a special heaping up of energy in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; said 'as soon as a neurosis is present', a scope the note names; high -> medium.",
+     "note": "where a neurosis is present"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "analytic-process",
+   "relation": "activates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 192,
+     "quote": "since the analytical technique activates the unconscious and brings it to the fore",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "instigates",
+   "object": "accident",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 194,
+     "quote": "the unconscious may also turn dangerous on its own account. One of the commonest forms of danger is the instigating of accidents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "is-one-with",
+   "object": "the-body",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 194,
+     "quote": "for psyche and body are not separate entities but one and the same life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "has-dynamics-of",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 195,
+     "quote": "the dynamics of the unconscious are identical with instinctual energy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "exhibits",
+   "object": "prospective-function",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 197,
+     "quote": "It produces, no less than the conscious mind, subliminal combinations that are prospective",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, FINDING-adjudicated, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; the standing node is the prospective function of dreams and the sentence speaks of the unconscious at large; a step, high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the auditor objected that the sentence attributes prospective combinations to the unconscious at large while the standing node names the prospective function of dreams; the gate had demoted the reference to medium on that step; the reference stands at medium and the node goes to the vocabulary review with the crab and identification nodes."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "fails-to-grasp",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 201,
+     "quote": "the totality of the psyche can never be grasped by intellect alone",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-08"
