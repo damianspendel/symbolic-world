@@ -4370,6 +4370,41 @@
    "id": "chakra",
    "label": "Chakra (padma, psychic centre of Tantric yoga)",
    "type": "Concept"
+  },
+  {
+   "id": "symptom",
+   "label": "Symptom (neurotic)",
+   "type": "Concept"
+  },
+  {
+   "id": "hysteria",
+   "label": "Hysteria",
+   "type": "Concept"
+  },
+  {
+   "id": "predisposition",
+   "label": "Predisposition (psychic disposition)",
+   "type": "Concept"
+  },
+  {
+   "id": "erotic-conflict",
+   "label": "Erotic conflict",
+   "type": "Concept"
+  },
+  {
+   "id": "death-instinct",
+   "label": "Death instinct (Freud)",
+   "type": "Concept"
+  },
+  {
+   "id": "ego-instinct",
+   "label": "Ego-instinct (Freud)",
+   "type": "Concept"
+  },
+  {
+   "id": "arrangement",
+   "label": "Arrangement (Adler)",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -68430,6 +68465,29 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-7, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 1,
+     "quote": "nervous disorders and all that is embraced by the terms “nervousness,” hysteria, etc. are of psychic origin and therefore logically require psychic treatment",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 4,
+     "quote": "Already in Charcot’s time it was known that the neurotic symptom is “psychogenic,” i.e., originates in the psyche",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Charcot school"
     }
    ],
    "relation_family": {
@@ -99927,6 +99985,18 @@
      "verified_date": "2026-11-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-4, PASS, 2026-11-05)",
      "source": "Alfred Adler"
+    },
+    {
+     "volume": "7",
+     "paragraph": 44,
+     "quote": "Alfred Adler, should formulate a view of neurosis 2 based exclusively on the power principle",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Adler"
     }
    ],
    "relation_family": {
@@ -108253,6 +108323,1351 @@
     "state": "no-family",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-07"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "founded",
+   "object": "psychoanalysis",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 2,
+     "quote": "To Freud belongs the undying merit of having laid the foundations of a psychology of the neuroses ... a method which he called psychoanalysis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "josef-breuer",
+   "relation": "developed",
+   "object": "cathartic-method",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 5,
+     "quote": "Breuer had observed that ... her condition was eased for several hours afterwards. He made systematic use of this discovery for further treatment.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Breuer",
+     "correction_note": "gate correction: Verbatim spans in order; the paragraph names the 'talking cure', the standing node is the cathartic method, one step; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "cathartic-method",
+   "relation": "removes",
+   "object": "symptom",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 7,
+     "quote": "Such was the scene in which the paralysis and the speech disturbance originated, and with the narration of this scene the disturbance itself was removed",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Breuer",
+     "note": "Breuer's case; Jung adds the cure 'is said' to have been final"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "hysteria",
+   "relation": "derives-from",
+   "object": "trauma",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 8,
+     "quote": "the hysterical symptom, and, in so far as the symptoms constitute the illness, hysteria in general, derive from psychic injuries or traumata",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Breuer and Freud (trauma theory)",
+     "note": "the trauma theory, later abandoned (§15)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "trauma",
+   "relation": "impinges-on",
+   "object": "predisposition",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 9,
+     "quote": "it is not the shock as such that has a pathogenic effect ... it must impinge on a special psychic disposition",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "opposes",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 12,
+     "quote": "the conscious mind was struggling to bring about the engagement to Mr. B. The unconscious drive in the other direction was stronger.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "stated of one case"
+    },
+    {
+     "volume": "7",
+     "paragraph": 18,
+     "quote": "the conscious mind wants to hang on to its moral ideal, while the unconscious strives after its—in the contemporary sense—unmoral ideal",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "'in most people'"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "erotic-conflict",
+   "relation": "causes",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 13,
+     "quote": "a much deeper and more comprehensive conception which sees the pathogenic agent as an erotic conflict",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, FINDING-adjudicated, 2026-11-08)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is stating this as a confirmed conclusion ('we have learnt')."
+    },
+    {
+     "volume": "7",
+     "paragraph": 14,
+     "quote": "why should the erotic conflict be the cause of the neurosis ... in point of fact it frequently is so",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "frequently, not necessarily"
+    },
+    {
+     "volume": "7",
+     "paragraph": 15,
+     "quote": "with the discovery that not the trauma but a hidden erotic conflict is the root of the neurosis, the trauma loses its causal significance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, FINDING-adjudicated, 2026-11-08)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is stating this as a factual discovery."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "contains",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 16,
+     "quote": "there are in a neurosis two tendencies standing in strict opposition to one another, one of which is unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; Jung's own formulation of 'two tendencies standing in strict opposition', but the paragraph does not use the term the standing node names, one step; high -> medium."
+    },
+    {
+     "volume": "7",
+     "paragraph": 27,
+     "quote": "one side of him wants to suppress, the other longs to be free—and this struggle goes by the name of neurosis",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "culture",
+   "relation": "subjugates",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 17,
+     "quote": "The growth of culture consists, as we know, in a progressive subjugation of the animal in man.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "the text says 'the animal in man'"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "reflects",
+   "object": "spirit-of-the-age",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 17,
+     "quote": "Without being aware of it, the neurotic participates in the dominant currents of his age and reflects them in his own conflict.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 18,
+     "quote": "Neurosis is intimately bound up with the problem of our time",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "involves",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 18,
+     "quote": "Neurosis is self-division.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "the text says 'self-division'"
+    },
+    {
+     "volume": "7",
+     "paragraph": 63,
+     "quote": "for instance with neurotics, one frequently does not know ... owing to the dissociation of the personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "morality",
+   "relation": "falls-into",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 18,
+     "quote": "they have their moral side which has fallen into the unconscious just as surely as the immoral side in the case of the moral man",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; stated of the disreputable type of man, whose 'moral side' has fallen into the unconscious, with the moral man's immoral side as the mirror case; a typed scope, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "association-test",
+   "relation": "demonstrates",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 20,
+     "quote": "the so-called association method. 1 It demonstrates very accurately the presence of conflicts in the form of “complexes”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "is-emissary-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 21,
+     "quote": "Now we see it as the emissary of the unconscious, whose task it is to reveal the secrets that are hidden from the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "expresses",
+   "object": "wish-fulfilment",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 21,
+     "quote": "According to Freud, the painful and incompatible elements in the conflict ... we we may speak of a “wish-fulfilment.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "incest",
+   "relation": "is-secondary-in",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 23,
+     "quote": "The symptomatology of incest, which is undoubtedly there and which Freud rightly saw, is to my mind a secondary phenomenon, already pathological.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "has",
+   "object": "meaning",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 24,
+     "quote": "This discovery compels rather more respect for the so-called superstition that dreams have a meaning",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; Jung's own respect for the view 'that dreams have a meaning'; the standing node's label names meaning as a connecting principle, the text's sense is plain meaning; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "dream-analysis",
+   "relation": "leads-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 25,
+     "quote": "As Freud says, dream-analysis is the via regia to the unconscious.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "analytic-process",
+   "relation": "consists-of",
+   "object": "dream-analysis",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 26,
+     "quote": "The analytical method in general, and not only the specifically Freudian psychoanalysis, consists in the main of numerous dream-analyses.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "emphasizes",
+   "object": "sexuality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 27,
+     "quote": "The Freudian mode of investigation sought to prove that an overwhelming importance attaches to the erotic or sexual factor",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    },
+    {
+     "volume": "7",
+     "paragraph": 31,
+     "quote": "The Freudian school is so convinced of the fundamental, indeed exclusive, importance of sexuality in neurosis",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freudian school"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "psychoanalysis",
+   "relation": "makes-conscious",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 28,
+     "quote": "It is true that psychoanalysis makes the animal instincts conscious ... rather to incorporating them in a purposeful whole",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "morality",
+   "relation": "is-function-of",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 30,
+     "quote": "morality was not brought down on tables of stone from Sinai and imposed on the people, but is a function of the human soul",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "eros",
+   "relation": "related-to",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 32,
+     "quote": "He belongs on one side to man’s primordial animal nature ... On the other side he is related to the highest forms of the spirit",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "eros",
+   "relation": "is-a",
+   "object": "daemon",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 33,
+     "quote": "“Eros is a mighty daemon,” as the wise Diotima said to Socrates.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Diotima (Plato, Symposium)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 42,
+     "quote": "The will to power is surely just as mighty a daemon as Eros, and just as old and original.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "represents",
+   "object": "materialism",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 33,
+     "quote": "In this respect Freud is a typical representative of the materialistic epoch",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; 'In this respect' Freud is 'a typical representative of the materialistic epoch'; the standing node is the materialistic world view and the scope is one respect; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "death-instinct",
+   "relation": "opposes",
+   "object": "eros",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 33,
+     "quote": "he opposed to Eros, whom he called libido, the destructive or death instinct",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "psychic-energy",
+   "relation": "proceeds-from",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 34,
+     "quote": "every process is a phenomenon of energy, and that all energy can proceed only from the tension of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-body",
+   "relation": "casts",
+   "object": "the-shadow",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 35,
+     "quote": "we have a body which, like all bodies, casts a shadow",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; the sentence is a figure inside 'A dim premonition tells us', and the paragraph then makes the body the beast whose shadow we must unite with; figurative carrier, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "nietzsche",
+   "relation": "failed-to-live",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 37,
+     "quote": "Nietzsche failed to live this instinct, the animal urge to life.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "power-drive",
+   "relation": "is-a",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 39,
+     "quote": "It is of this last instinct, the will to power , that Nietzsche obviously speaks.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 43,
+     "quote": "If we inquire whether Freud knew of that other instinct, the urge to power",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-shadow",
+   "relation": "appears-as",
+   "object": "power-drive",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 42,
+     "quote": "What did the collision with the shadow, namely the will to power, reveal to him?",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "in Nietzsche's case"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "power-drive",
+   "relation": "is-a",
+   "object": "daemon",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 42,
+     "quote": "The will to power is surely just as mighty a daemon as Eros, and just as old and original.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "power-drive",
+   "relation": "conceived-as",
+   "object": "ego-instinct",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 43,
+     "quote": "whether Freud knew of that other instinct, the urge to power, we find that he conceived it under the name of “ego-instinct.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "conflicts-with",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 43,
+     "quote": "human nature bears the burden of a terrible and unending conflict between the principle of the ego and the principle of instinct",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "applies",
+   "object": "causality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 44,
+     "quote": "with Freud everything follows from antecedent circumstances according to a rigorous causality",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    },
+    {
+     "volume": "7",
+     "paragraph": 45,
+     "quote": "The Freudian method at once begins burrowing into the inner causality of the sickness and its symptoms.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "alfred-adler",
+   "relation": "applies",
+   "object": "teleology",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 44,
+     "quote": "with Adler everything is a teleological “arrangement.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Adler"
+    },
+    {
+     "volume": "7",
+     "paragraph": 54,
+     "quote": "Neurosis is teleologically oriented. In establishing this Adler has won for himself no small credit.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Adler"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "eros",
+   "relation": "serves",
+   "object": "power-drive",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 50,
+     "quote": "Love and good behaviour are, from the standpoint of the power-instinct, known to be a choice means to this end.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Adler"
+    },
+    {
+     "volume": "7",
+     "paragraph": 55,
+     "quote": "love is just a means to the end, which is ascendency",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Adler"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "symptom",
+   "relation": "springs-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 51,
+     "quote": "It was an hysterical laughter, a psychogenic symptom, something that sprang from unconscious motives and not from those of the conscious ego.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "correction_note": "gate correction: Verbatim; stated of the one laughing-fit, 'a psychogenic symptom, something that sprang from unconscious motives'; Jung's own voice on a single case, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "symptom",
+   "relation": "is-a",
+   "object": "arrangement",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 54,
+     "quote": "It is correct that neurotic symptoms and complexes are also elaborate “arrangements” which inexorably pursue their aims",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "exhibits",
+   "object": "teleology",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 54,
+     "quote": "Neurosis is teleologically oriented.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "alfred-adler",
+   "relation": "emphasizes",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 57,
+     "quote": "This view lays undue emphasis upon the subject, before which the idiosyncrasy and significance of objects entirely vanish.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "the text says 'the subject'"
+    },
+    {
+     "volume": "7",
+     "paragraph": 59,
+     "quote": "With Adler the emphasis is placed on a subject who, no matter what the object, seeks his own security and supremacy",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Adler"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "emphasizes",
+   "object": "transference",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 58,
+     "quote": "The pièce de résistance of his theory is the concept of transference, i.e., the patient’s relation to the doctor.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "depends-on",
+   "object": "personal-relationship",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 61,
+     "quote": "It is of crucial importance for the treatment whether a good relationship between doctor and patient is possible or not.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "introversion",
+   "relation": "is-a",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 62,
+     "quote": "come to postulate two fundamental attitudes, namely introversion and extraversion",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "extraversion",
+   "relation": "is-a",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 62,
+     "quote": "come to postulate two fundamental attitudes, namely introversion and extraversion",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "psychoanalysis",
+   "relation": "is-a",
+   "object": "reductive-method",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 65,
+     "quote": "They are critical methods, having, like all criticism, the power to do good when there is something that must be destroyed, dissolved, or reduced",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "said of both the Freudian and the Adlerian theory"
+    },
+    {
+     "volume": "7",
+     "paragraph": 67,
+     "quote": "The two theories of neurosis are not universal theories: they are caustic remedies to be applied, as it were, locally. They are destructive and reductive.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
+     "note": "said of both the Freudian and the Adlerian theory"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "symptom",
+   "relation": "attempts-synthesis-of",
+   "object": "life",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 67,
+     "quote": "The symptoms of a neurosis are not simply the effects of long-past causes ... they are also attempts at a new synthesis of life",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "power-drive",
+   "relation": "pervades",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 67,
+     "quote": "the urge to power certainly pervades the heights and depths of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-08",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-08"
    }
   }
  ]
