@@ -4560,6 +4560,31 @@
    "id": "court-of-conscience",
    "label": "Court of Conscience (Wells)",
    "type": "Motif"
+  },
+  {
+   "id": "fantasy-image",
+   "label": "Fantasy-image",
+   "type": "Concept"
+  },
+  {
+   "id": "active-participation",
+   "label": "Active participation (in the fantasy)",
+   "type": "Operation"
+  },
+  {
+   "id": "concretization",
+   "label": "Concretization (taking fantasies or images literally)",
+   "type": "Concept"
+  },
+  {
+   "id": "function-of-relationship",
+   "label": "Function of relationship (between conscious and unconscious)",
+   "type": "Concept"
+  },
+  {
+   "id": "lehmann",
+   "label": "Lehmann (author of the monograph on mana)",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -24363,6 +24388,17 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
      "note": "Jung's own terminological decision, stated in his own voice."
+    },
+    {
+     "volume": "7",
+     "paragraph": 399,
+     "quote": "I have called this centre the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -48974,6 +49010,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 360,
+     "quote": "the transcendent function, the transformation of personality through the blending and fusion ... of the differentiated with the inferior functions, of the conscious with the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -75212,6 +75259,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-09",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 405,
+     "quote": "The individuated ego senses itself as the object of an unknown and supraordinate subject",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -95122,6 +95180,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-7, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 341,
+     "quote": "The masculine hero figure who almost unfailingly appears is the animus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "note": "in the fantasies of women patients"
     }
    ],
    "relation_family": {
@@ -108805,6 +108875,18 @@
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-1, PASS, 2026-11-08)",
      "note": "'in most people'"
+    },
+    {
+     "volume": "7",
+     "paragraph": 346,
+     "quote": "the unconscious has an inimical or ruthless bearing towards the conscious only when the latter adopts a false or pretentious attitude",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "note": "only when the conscious attitude is false or pretentious"
     }
    ],
    "relation_family": {
@@ -111729,6 +111811,18 @@
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
      "correction_note": "gate correction: Verbatim; 'in Faust he is the actual hero' is Jung's own reading of the literary figure, not Goethe's doctrine reported (the auditor's b-cw7-2 ruling on the parallel Faust reference); jung-reports-parallel -> jung-asserts, source dropped."
+    },
+    {
+     "volume": "7",
+     "paragraph": 397,
+     "quote": "Goethe and Nietzsche try to solve it by the idea of mastery, the former through the figure of the magician",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; Goethe solves the problem 'through the figure of the magician' is Jung's own reading of Faust, the b-cw7-2 ruling on this very edge; jung-reports-parallel -> jung-asserts, source dropped; medium stays. Attach."
     }
    ],
    "relation_family": {
@@ -112357,6 +112451,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 367,
+     "quote": "a fourfold nirdvandva (“free from opposites”) followed by an approximation to the circle, to undivided wholeness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -114978,6 +115083,1122 @@
    ],
    "relation_family": {
     "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "appears-in",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 338,
+     "quote": "the animus is better expressed as a bevy of Flying Dutchmen or unknown wanderers from over the sea ... These personifications appear especially in dreams",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "maintains",
+   "object": "symptom",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 342,
+     "quote": "the determining influence of the unconscious is unabated, and that it will in some cases persist in maintaining neurotic symptoms",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "note": "where no transformation occurs; in some cases"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "withdraws",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 344,
+     "quote": "The unconscious has simply gained an unassailable ascendency; it wields an attractive force ... it can withdraw libido from the conscious world",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 9 tokens); 'it can withdraw libido from the conscious world', said of cases of this sort, the young man's psychogenic depression; a scope and a modal, high -> medium."
+    },
+    {
+     "volume": "7",
+     "paragraph": 357,
+     "quote": "the negative movement of the unconscious, a tendency to recoil from the conscious world so energetically that it sucks away the libido from consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'sucks away the libido from consciousness' is what 'my patient's fantasy clearly reveals'; a single case, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "produces",
+   "object": "depression",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 344,
+     "quote": "The unconscious has simply gained an unassailable ascendency ... thereby produce a “depression,”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 22 tokens); 'thereby produce a \"depression\"', the same case-bound sentence as above; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "is-identical-with",
+   "object": "fantasy-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 345,
+     "quote": "Libido can never be apprehended except in a definite form; that is to say, it is identical with fantasy-images",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mood",
+   "relation": "expresses-itself-in",
+   "object": "fantasy-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 349,
+     "quote": "because he gave his mood a chance to express itself in an image",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'he gave his mood a chance to express itself in an image', the one patient; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "spontaneous-fantasy",
+   "relation": "demands",
+   "object": "active-participation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 350,
+     "quote": "the fantasy, to be completely experienced, demands not just perception and passivity, but active participation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "active-participation",
+   "relation": "extends",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 358,
+     "quote": "Continual conscious realization of unconscious fantasies, together with active participation in the fantastic events, has ... the effect firstly of extending the conscious horizon",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "assimilated-to",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 359,
+     "quote": "Conscious realization and experience of fantasies assimilates the unconscious inferior functions to the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "has-as-secret",
+   "object": "transcendent-function",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 360,
+     "quote": "The secret of alchemy was in fact the transcendent function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "hampered-by",
+   "object": "concretization",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 361,
+     "quote": "alchemical philosophy, hampered by the inevitable concretizations of the still crude and undifferentiated intellect, never advanced to any clear psychological formulation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "ensures-foundation-for",
+   "object": "personality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 365,
+     "quote": "a virtual centre which, on account of its focal position between conscious and unconscious, ensures for the personality a new and more solid foundation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "squaring-of-the-circle",
+   "relation": "symbolizes",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 367,
+     "quote": "the squaring of the circle, which belongs to the field of alchemy. Here it takes its rightful place as a symbol of individuation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "transcendent-function",
+   "relation": "born-of",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 368,
+     "quote": "That is the transcendent function born of the union of opposites.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "church",
+   "relation": "hides",
+   "object": "mysterium-magnum",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 369,
+     "quote": "the man who has found his way back to Mother Church. There is no doubt that the mysterium magnum is hidden in her forms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "becomes",
+   "object": "function-of-relationship",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 370,
+     "quote": "the personified figure of anima or animus will disappear. It becomes the function of relationship between conscious and unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'It becomes the function of relationship between conscious and unconscious' to the degree that the patient takes an active part, the condition the note names; high -> medium.",
+     "note": "to the degree that the patient takes an active part"
+    },
+    {
+     "volume": "7",
+     "paragraph": 374,
+     "quote": "the conquest of the anima as an autonomous complex, and her transformation into a function of relationship between the conscious and the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 387,
+     "quote": "a state in which animus and anima become functions of relationship to the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "becomes",
+   "object": "function-of-relationship",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 370,
+     "quote": "the personified figure of anima or animus will disappear. It becomes the function of relationship between conscious and unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; the same conditional sentence as the anima reference at §370; high -> medium.",
+     "note": "to the degree that the patient takes an active part"
+    },
+    {
+     "volume": "7",
+     "paragraph": 387,
+     "quote": "a state in which animus and anima become functions of relationship to the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "produces",
+   "object": "fantasy-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 372,
+     "quote": "The second fantasy is a typical example of the kind of content produced by the collective unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "she-who-must-be-obeyed",
+   "relation": "is-a",
+   "object": "mana-personality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 375,
+     "quote": "“She” is a mana-personality, a being full of some occult and bewitching quality ( mana ), endowed with magical knowledge and power",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; '\"She\" is a mana-personality' is Jung's own reading of Rider Haggard's figure, not Haggard's doctrine reported (the Faust ruling of b-cw7-2/-3, applied to this node at b-cw7-5); jung-reports-parallel -> jung-asserts, source dropped; the sentence states the identity."
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "loses",
+   "object": "mana",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 376,
+     "quote": "Now when the anima loses her mana, what becomes of it?",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'Now when the anima loses her mana' is a question's presupposition, carried by §374's 'she is depotentiated'; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "becomes",
+   "object": "mana-personality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 377,
+     "quote": "Obviously the conscious ego, and therefore the ego has taken over the mana. Thus the ego becomes a mana-personality.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'Thus the ego becomes a mana-personality' is a step in an argument Jung then qualifies at §380-381 as a delusion of inflation (the note says so); the phenomenon stands, the claim at high does not; high -> medium.",
+     "note": "Jung qualifies this as inflation at §380"
+    },
+    {
+     "volume": "7",
+     "paragraph": 389,
+     "quote": "in so far as the ego apparently draws to itself the power belonging to the anima, the ego does become a mana-personality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'in so far as the ego apparently draws to itself the power ... the ego does become a mana-personality'; the hedge 'apparently', high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mana-personality",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 377,
+     "quote": "the mana-personality is a dominant of the collective unconscious, the well-known archetype of the mighty man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 393,
+     "quote": "In differentiating the ego from the archetype of the mana-personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mana-personality",
+   "relation": "is-a",
+   "object": "dominants",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 377,
+     "quote": "But the mana-personality is a dominant of the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 391,
+     "quote": "the unconscious reacts with a subtle attack, deploying the dominant of the mana-personality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mana-personality",
+   "relation": "inflates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 378,
+     "quote": "This masculine collective figure ... by inflating the conscious mind it can destroy everything that was gained by coming to terms with the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "magician",
+   "relation": "attracts",
+   "object": "mana",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 378,
+     "quote": "it is the figure of the magician, as I will call it for short, who attracts the mana to himself",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "magician",
+   "relation": "has-equivalent",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 379,
+     "quote": "The figure of the magician has a no less dangerous equivalent in women: a sublime, matriarchal figure, the Great Mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mana",
+   "relation": "falls-to",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 382,
+     "quote": "the mana must have fallen to something that is both conscious and unconscious ... This something is the desired “mid-point” of the personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "spontaneous-fantasy",
+   "relation": "analogous-to",
+   "object": "initiation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 384,
+     "quote": "We could therefore most fittingly describe these later series of fantasies as processes of initiation, since these form the closest analogy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "christianity",
+   "relation": "preserves",
+   "object": "initiation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 384,
+     "quote": "Christianity was one, and even in its present form it still preserves the old initiation ceremonies",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "initiation",
+   "relation": "rises-up-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 385,
+     "quote": "the whole symbolism of initiation rises up, clear and unmistakable, in the unconscious contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "lehmann",
+   "relation": "defines",
+   "object": "mana",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 388,
+     "quote": "the idea of “the extraordinarily potent,” which is the term that Lehmann, in his celebrated monograph, 4 uses for his definition of mana",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "source": "Lehmann"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mana-personality",
+   "relation": "evolves-into",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 389,
+     "quote": "Historically, the mana-personality evolves into the hero and the godlike being",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mana-personality",
+   "relation": "casts-spell-over",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 391,
+     "quote": "the dominant of the mana-personality, whose enormous prestige casts a spell over the ego",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'whose enormous prestige casts a spell over the ego' if the ego presumes to wield power over the unconscious, the condition the note names; high -> medium.",
+     "note": "when the ego presumes to wield power over the unconscious"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "initiation",
+   "relation": "aims-at",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 393,
+     "quote": "the concretistic primitive initiations up to and including baptism, namely, severance from the “carnal” (or animal) parents, and rebirth in novam infantiam",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "source": "primitive initiations and ancient mystery religions"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mana-personality",
+   "relation": "concretized-as",
+   "object": "god-the-father",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 394,
+     "quote": "instead of identifying with the mana-personality, one will concretize it as an extramundane “Father in Heaven,” complete with the attribute of absoluteness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "note": "stated as a possibility"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "counterbalances",
+   "object": "summum-bonum",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 394,
+     "quote": "a devil of equal weight and dimensions who could act as the psychological counterbalance to my summum bonum",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "assimilation",
+   "relation": "dissolves",
+   "object": "mana-personality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 398,
+     "quote": "the dissolution of the mana-personality through conscious assimilation of its contents leads us, by a natural route, back to ourselves",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "is-also-called",
+   "object": "god-within",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 399,
+     "quote": "Intellectually the self is no more than a psychological concept ... It might equally well be called the “God within us.”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "differs-from",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 400,
+     "quote": "the self has as much to do with the ego as the sun with the earth. They are not interchangeable.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "expresses",
+   "object": "autonomy",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 400,
+     "quote": "we make use of the concept of a God we are simply formulating ... the independence and sovereignty of certain psychic contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 403,
+     "quote": "By using the concept of a divine being we give apt expression to ... the workings of these autonomous contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "expresses",
+   "object": "individuality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 404,
+     "quote": "So too the self is our life’s goal, for it is the completest expression of that fateful combination we call individuality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "revolves-about",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 405,
+     "quote": "Sensing the self as something irrational ... to which the ego is neither opposed nor subjected, but merely attached, and about which it revolves",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)",
+     "note": "framed by the simile of the earth revolving round the sun"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-09"

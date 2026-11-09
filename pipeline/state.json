@@ -979,11 +979,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw7-6",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW7 §338-406",
+   "result": "CW 7 WINDOW 6: Two Essays on Analytical Psychology §338-406, the close of 'The Relations between the Ego and the Unconscious' and of the volume: the plurality of the animus against the anima's uni-personality, the transformation of the autonomous complex as the aim of analysis, the young man's suicide fantasy and the demand for active participation, libido identical with fantasy-images, the transcendent function read through alchemy with Silberer, the woman's vision of the four gods and the mid-point of the personality, the mana-personality (She, the magician, the Great Mother), the ego's inflation and the mana falling to the mid-point, initiation as the closest analogy to the fantasy series, Lehmann's mana, and the self as centre, 'God within us', goal of individuation and the sun about which the ego revolves. THE CW 7 ARC IS COMPLETE: six windows, §1-406, every reference through Opus -> Fable -> Gemini; the CW 7 arc-end adjudication sitting and strain review are due (queue 665). Reporting discipline: two reports-parallel references stand with their sources (Lehmann §388; the primitive initiations and mystery religions §393); the proposer's Rider Haggard (§375) and Goethe (§397) references are Jung's own readings of literary figures and the gate moved them to jung-asserts under the Faust ruling of b-cw7-2/-3, the §397 one on the very edge that ruling began with; neither patient fantasy is quoted, the case material enters through Jung's own interpretive sentences at medium. The DEFINITIONS clause held: the identity relations (§345, §375, §377 three times, §393, §399) rest on sentences that state them. Mined 50 candidates/58 refs (Opus-family miner subagent, blinded; the method asides and the case narratives themselves, §339-340, §343, §347-348, §351-353, §356, §362-364, §366, §371, §373, §383, §386, §395-396, §401-402 and §406, carry no candidate). Pre-check kept all 58. Fable gate 45 TRUE / 12 CORRECTED / 1 FALSE; the FALSE at §380 the-ego|appropriates|mana, where the paragraph concludes that the ego never acquired the mana and the quoted question is the premise Jung rejects; two claim types (§375 she-who-must-be-obeyed|is-a|mana-personality, §397 faust|exemplifies|magician, both to jung-asserts); ten confidence demotions: the case scope at §344 twice (the-unconscious|withdraws|libido, the-unconscious|produces|depression), §349 mood|expresses-itself-in|fantasy-image and §357 the-unconscious|withdraws|libido; the conditions at §370 twice (anima and animus |becomes|function-of-relationship) and §391 mana-personality|casts-spell-over|the-ego; the presupposing question at §376 anima|loses|mana; the steps Jung himself qualifies at §377 and §389 the-ego|becomes|mana-personality. Gemini cross-vendor 57 PASS / 0 FINDING on 57 post-gate refs. Five mints added: fantasy-image, active-participation, concretization, function-of-relationship, lehmann; none stranded. The mid-point of the personality sits on the standing the-centre node (the virtual midpoint of the mandala), which §382 and §399 make Jung's own identification. +42 edges, 7 refs attached to standing edges, +57 refs, +5 nodes. Graph 914/3770/5104. Transfer: reuse 23.8% (10 reused of 42 window edges per transfer.py), 0 sentence-shaped. Family sweep 42 edges under v0.7.2: agreement 34/42 (81%), 34 assigned, 8 queued, 0 no-family, 0 text-undecided; queue 665; the Gemini arm returned three bare 'unclassified' rows (n 3728, 3737, 3747), normalized to unclassified(no-family) before assembly, raw file kept as family_sweep_gemini_b-cw7-6_raw.json; its second chunk timed out once and succeeded on retry. strain: 0 no-family, 0 text-undecided of 42 swept; new homeless strings: none. Fable spend: the gate ran on claude-fable-5-1 inside the mining chat's nightly firing, the third of three windows, 58 refs judged against the full paragraphs; no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 914/3770/5104, distinct paragraphs 3252, claim mix 4145/714/245; named-source strings and hedged figures left at their earlier values as before. Note quotes (RULES #24): seed.json holds no '[...]'; correction notes are in the gate's own words with short quoted fragments only. BUILD TRACK: the volume map needs the CW 7 title (Two Essays on Analytical Psychology) before the next deploy, as the b-cw7-1 record said, and will need the CW 6 title (Psychological Types, chapters X and XI) once b-cw6-1 merges. The marker rolls to CW 6 window 1 (§556-613); its first-window chore raises the REVIEW volume count from 10 to 11. Run by the nightly job in the mining chat (Damian, 2026-11-06: three windows a night). Data committed only: build and deploy belong to the build track.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a316082c615308560, 22 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 59 assistant turns after the miner finished at 2026-11-09T02:39:27.454Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW7-DUE: window 6 (§338-406)",
- "nodes": 909,
- "edges": 3728,
- "refs": 5047,
+ "next": "CW6-DUE: window 1 (§556-613)",
+ "nodes": 914,
+ "edges": 3770,
+ "refs": 5104,
  "as_of": "2026-11-09"
 }
