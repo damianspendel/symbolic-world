@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
   "nodes": 695,
@@ -947,11 +947,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw7-4",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW7 §202-269",
+   "result": "CW 7 WINDOW 4: Two Essays on Analytical Psychology §202-269, the opening of 'The Relations between the Ego and the Unconscious': Freud's view of the unconscious and Jung's wider definition (repressed, subliminal and not-yet-conscious material), the philosophy student's transference and the dreams that swelled the doctor into a wind-giant, the archaic god-image as reactivated archetype and the collective unconscious named, the phenomena of assimilating the unconscious (godlikeness after Adler and Faust, psychic inflation defined, the locksmith's apprentice and Schopenhauer, the star vision, Bleuler's schizophrenia), the collective psyche with Janet's parties inferieures, prestige and the persona among primitives, the persona as segment and mask of the collective psyche, the ego-consciousness at first identical with it, the dissolution of the persona and the regressive restoration, the Freudian and Adlerian theories as instruments against the transference and Jung's verdict that infantile eroticism and the power drive are one, the unconscious as source of libido, identification with the collective psyche with prophet and disciple, and individuation defined against individualism. Reporting discipline: five reports-parallel references stand with their sources (Freud §202, §256, §261; Adler §224, §256); the proposer's Schopenhauer reference (§229) was Jung's own judgement of what Schopenhauer did and the gate moved it to jung-asserts before the auditor dropped it on shape; no patient statement is quoted, the case material enters through Jung's own interpretive sentences at medium. The DEFINITIONS clause held: the identity relations (§210, §245 twice, §246, §247, §251, §256, §258, §264, §219) rest on sentences that state them. Mined 54 candidates/62 refs (Opus-family miner subagent, blinded; its first draft ran to 93 candidates and it cut to 54 by dropping weaker and duplicate claims, leaving §213-214, §221-223, §225-226, §228, §230-232, §241, §244, §260 and §262-263 without a candidate). Pre-check kept all 62. Fable gate 38 TRUE / 23 CORRECTED / 1 FALSE; the FALSE at §238 collective-psyche|dissolves|prestige, where the sentence makes prestige the safeguard against dissolution in the collective psyche, not its victim (the edge keeps its §239 reference); one claim type at §229 schopenhauer|raised-into|collective-consciousness to jung-asserts; twenty-two confidence demotions: single cases at §206 father-imago|transferred-to|the-analyst, §217 three times (transpersonal-control-point|expresses-itself-as|god-image, dream|develops|god-image, god-image|corresponds-to|wotan), §248 three times (persona|hides|the-self, transference|consists-of|personal-unconscious, dream|brings-up|collective-unconscious); the conditional at §237 personality|dissolves-into|the-opposites; the possibility at §233 archetype|causes|ego-inflation; the aim stated at §269 twice (individuation|frees-from|persona, |archetypal-image); 'at first' at §247 the-ego|identical-with|persona; object or subject steps at §204 the-unconscious|contains|repression, §235 brain|leads-to|collective-psyche, §240 identification|brings|godlikeness, §254/§257/§259 regression|restores|persona, §256 transference|explained-as|sexuality and reductive-method|fits|neurosis, §261 regression|conceived-as|incest, §264 identification|causes|ego-inflation. Gemini cross-vendor 55 PASS / 6 FINDING on 61 post-gate refs; one finding substantive and dropped with the auditor as tiebreaker (§229, the triple drops the sentence's object: Schopenhauer raised the vision, not himself, into collective consciousness; its single-reference edge goes with it); five findings (§254, §257, §259 the regression subject; §256 the reductive-method subject; §264 the identification label) are the steps the gate had already demoted for and are overruled with audit notes. Eight mints added: transpersonal-control-point, godlikeness, prestige, imitation, individuality, infantile-eroticism (Freud), the-prophet (Figure), individualism; none stranded. VOCABULARY: the regression node (label 'Regression of libido') now carries the regressive restoration of the persona at medium on three references and joins the identification, crab, prospective-function and principle-of-constancy nodes in the vocabulary review; the identification node carries identity with the collective psyche at §240 and §264. +44 edges, 10 refs attached to standing edges, +60 refs, +8 nodes. Graph 897/3682/4988. Transfer: reuse 25.0% (11 reused of 44 window edges per transfer.py), 0 sentence-shaped. Family sweep 44 edges under v0.7.2: agreement 36/44 (82%), 33 assigned, 8 queued, 3 no-family, 0 text-undecided; queue 650; the Gemini arm returned seven bare 'unclassified' rows (n 3648, 3660, 3662, 3664, 3665, 3666, 3673), normalized to unclassified(no-family) before assembly, raw file kept as family_sweep_gemini_b-cw7-4_raw.json. strain: 3 no-family, 0 text-undecided of 44 swept; new homeless strings: feigns, points-to (exhibits was named at b-cw7-1 and falls in the recorded property-attribution gap). Fable spend: the gate ran on claude-fable-5-1 inside the mining chat's nightly firing, the first of three windows, 62 refs judged against the full paragraphs; no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 897/3682/4988, distinct paragraphs 3168, claim mix 4032/712/244; named-source strings and hedged figures left at their earlier values as before. Note quotes (RULES #24): seed.json holds no '[...]'; correction and audit notes are in the gate's own words with short quoted fragments only. The next window is b-cw7-5 (§270-337), the anima and animus chapters. Run by the nightly job in the mining chat (Damian, 2026-11-06: three windows a night). Data committed only: build and deploy belong to the build track.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-abc975dfa039d693c, 24 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 88 assistant turns after the miner finished at 2026-11-09T01:59:08.283Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW7-DUE: window 4 (§202-269)",
- "nodes": 889,
- "edges": 3638,
- "refs": 4928,
- "as_of": "2026-11-08"
+ "next": "CW7-DUE: window 5 (§270-337)",
+ "nodes": 897,
+ "edges": 3682,
+ "refs": 4988,
+ "as_of": "2026-11-09"
 }

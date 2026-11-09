@@ -4460,6 +4460,46 @@
    "id": "accident",
    "label": "Accident (psychically caused)",
    "type": "Concept"
+  },
+  {
+   "id": "transpersonal-control-point",
+   "label": "Transpersonal control-point",
+   "type": "Concept"
+  },
+  {
+   "id": "godlikeness",
+   "label": "Godlikeness",
+   "type": "Concept"
+  },
+  {
+   "id": "prestige",
+   "label": "Prestige (magical)",
+   "type": "Concept"
+  },
+  {
+   "id": "imitation",
+   "label": "Imitation",
+   "type": "Concept"
+  },
+  {
+   "id": "individuality",
+   "label": "Individuality",
+   "type": "Concept"
+  },
+  {
+   "id": "infantile-eroticism",
+   "label": "Infantile eroticism (Freud)",
+   "type": "Concept"
+  },
+  {
+   "id": "the-prophet",
+   "label": "The prophet",
+   "type": "Figure"
+  },
+  {
+   "id": "individualism",
+   "label": "Individualism",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -20025,6 +20065,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-2, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 219,
+     "quote": "We are dealing with a reactivated archetype , as I have elsewhere called these primordial images.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "note": "refers to the god-image of the dream"
     }
    ],
    "relation_family": {
@@ -42319,6 +42371,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-2, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 233,
+     "quote": "the attractive power of a collective image, 4 which, as the present example shows, can cause such a high degree of inflation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'the attractive power of a collective image ... can cause such a high degree of inflation'; a possibility ('can cause'), and the sentence says collective image where the standing edge says archetype (noted); high -> medium. Attach.",
+     "note": "collective image, i.e. archetypal image"
     }
    ],
    "relation_family": {
@@ -46322,6 +46387,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-09",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-6, PASS, 2026-08-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 219,
+     "quote": "My patient was quite unconscious of the derivation of “spirit” from “wind,” or of the parallelism between the two.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -81524,6 +81600,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-23",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-11, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 220,
+     "quote": "the unconscious contains not only personal, but also impersonal collective components in the form of inherited categories 6 or archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -87039,6 +87126,17 @@
      "verified_date": "2026-10-29",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-2, PASS, 2026-10-29)",
      "note": "stated as a heuristic hypothesis"
+    },
+    {
+     "volume": "7",
+     "paragraph": 210,
+     "quote": "the psychic process, like any other life-process, is not just a causal sequence, but is also a process with a teleological orientation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -107199,6 +107297,19 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-7, FINDING-adjudicated, 2026-11-07)",
      "correction_note": "gate correction: Verbatim and Jung's own sentence, but the standing node's label reads 'unconscious identity with the parents' (minted at §142) and the text means identification with unconscious contents; the referent is a step from the label; high -> medium.",
      "audit_note": "cross-vendor finding overruled: the auditor read the node label 'unconscious identity with the parents' against the text's identification with unconscious contents; the gate recorded the same step and set medium, and the label (from the node's one earlier edge at §142) is referred to the vocabulary review."
+    },
+    {
+     "volume": "7",
+     "paragraph": 264,
+     "quote": "when inflated by identification with the collective psyche, suddenly burst upon the world scene",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, FINDING-adjudicated, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'when inflated by identification with the collective psyche'; the standing identification node names identity with the parents (vocabulary review); high -> medium. Attach.",
+     "audit_note": "cross-vendor finding overruled: the auditor objected that the standing identification node is labelled as identity with the parents while the sentence says identification with the collective psyche; the gate had demoted the reference to medium on that step and the node is in the vocabulary review; it stands at medium."
     }
    ],
    "relation_family": {
@@ -110250,6 +110361,17 @@
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-2, PASS, 2026-11-08)",
      "correction_note": "gate correction: Verbatim; said of the energy 'streaming back' from the adult's withdrawn projections, not of psychic energy at large; a scoped case, high -> medium."
+    },
+    {
+     "volume": "7",
+     "paragraph": 252,
+     "quote": "The energy thus freed disappears from consciousness and falls into the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -110469,6 +110591,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-2, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 218,
+     "quote": "we have to distinguish in the unconscious a layer which we may call the personal unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -110504,6 +110637,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-2, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 220,
+     "quote": "at its deeper levels the unconscious possesses collective contents in a relatively active state. That is why I speak of a collective unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 243,
+     "quote": "to annex the deeper layers of the unconscious, which I have called the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -112337,6 +112492,1163 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-08"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "reducible-to",
+   "object": "infantilism",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 202,
+     "quote": "In Freud’s view, as most people know, the contents of the unconscious are reducible to infantile tendencies which are repressed",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "contains",
+   "object": "repression",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 203,
+     "quote": "it includes not only repressed contents, but all psychic material that lies below the threshold of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "note": "object is the repressed contents"
+    },
+    {
+     "volume": "7",
+     "paragraph": 204,
+     "quote": "in addition to the repressed material the unconscious contains all those psychic components that have fallen below the threshold",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'in addition to the repressed material the unconscious contains' the sub-threshold components; the object node is the operation, the sentence names the repressed material; high -> medium as at §203."
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "father-imago",
+   "relation": "transferred-to",
+   "object": "the-analyst",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 206,
+     "quote": "In the course of treatment the patient transfers the father-imago to the doctor, thus making him, in a sense, the father",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'the patient transfers the father-imago to the doctor'; Jung's own interpretive sentence about the philosophy student, a single case; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "is-product-of",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 210,
+     "quote": "Therefore the dream is, properly speaking, a highly objective, natural product of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "transpersonal-control-point",
+   "relation": "expresses-itself-as",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 217,
+     "quote": "the unconscious development of a transpersonal control-point ... that expressed itself symbolically in a form which can only be described as a vision of God",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 5 tokens), 25 tokens; 'a transpersonal control-point ... that expressed itself symbolically in a form which can only be described as a vision of God', said of this patient's dreams; a single case, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "develops",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 217,
+     "quote": "Out of the purely personal form the dreams develop an archaic god-image that is infinitely far from the conscious idea of God.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'Out of the purely personal form the dreams develop an archaic god-image'; the dreams of the one case; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "god-image",
+   "relation": "corresponds-to",
+   "object": "wotan",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 217,
+     "quote": "the god-image of the dreams corresponded to the archaic conception of a naturedaemon, something like Wotan",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'corresponded to the archaic conception of a naturedaemon, something like Wotan'; one case and a hedged comparison; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "assimilation",
+   "relation": "leads-to",
+   "object": "ego-inflation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 243,
+     "quote": "to annex the deeper layers of the unconscious ... produces an enlargement of the personality leading to the state of inflation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "note": "the deeper layers are the collective unconscious"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "alfred-adler",
+   "relation": "employs",
+   "object": "godlikeness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 224,
+     "quote": "Adler has employed the term “godlikeness” to characterize certain basic features of neurotic power psychology.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "source": "Adler"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "ego-inflation",
+   "relation": "extends",
+   "object": "personality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 227,
+     "quote": "the state we are discussing involves an extension of the personality beyond individual limits, in other words, a state of being puffed up",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "exhibits",
+   "object": "autonomy",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 233,
+     "quote": "some innate weakness of the personality against the autonomy of collective unconscious contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "brain",
+   "relation": "leads-to",
+   "object": "collective-psyche",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 235,
+     "quote": "The universal similarity of human brains leads to the universal possibility of a uniform mental functioning. This functioning is the collective psyche .",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim, 22 tokens; 'The universal similarity of human brains leads to ... a uniform mental functioning. This functioning is the collective psyche'; the sentence's subject is the similarity of brains and the standing node is the brain itself; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "collective-psyche",
+   "relation": "devalues",
+   "object": "personality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 235,
+     "quote": "it has the effect of crushing and devaluing the personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "analytic-process",
+   "relation": "makes-conscious",
+   "object": "personal-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 236,
+     "quote": "By raising the personal unconscious to consciousness, the analysis makes the subject aware of things which he is generally aware of in others",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "personality",
+   "relation": "dissolves-into",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 237,
+     "quote": "including the collective psyche in the inventory of personal psychic functions, a dissolution of the personality into its paired opposites inevitably follows",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'a dissolution of the personality into its paired opposites inevitably follows' only 'If ... we make the mistake of including the collective psyche in the inventory of personal psychic functions'; a conditional, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "collective-psyche",
+   "relation": "contains",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 237,
+     "quote": "the imaginary virtues and the imaginary wickednesses are simply the moral pair of opposites contained in the collective psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "collective-psyche",
+   "relation": "dissolves",
+   "object": "prestige",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 239,
+     "quote": "the greatest danger of all is the premature dissolution of prestige by an invasion of the collective psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "identification",
+   "relation": "brings",
+   "object": "godlikeness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 240,
+     "quote": "identity with the collective psyche always brings with it a feeling of universal validity—“godlikeness”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'identity with the collective psyche always brings with it a feeling of universal validity—\"godlikeness\"'; the standing identification node is labelled as identity with the parents and this is identity with the collective psyche (node already in the vocabulary review since b-cw16-7); high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "influences",
+   "object": "individual-psyche",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 240,
+     "quote": "is identically true of the influence of the collective unconscious upon the individual psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "imitation",
+   "relation": "harms",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 242,
+     "quote": "Human beings have one faculty which, though it is of the greatest utility for collective purposes, is most pernicious for individuation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "persona",
+   "relation": "is-segment-of",
+   "object": "collective-psyche",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 245,
+     "quote": "This arbitrary segment of collective psyche—often fashioned with considerable pains—I have called the persona .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "persona",
+   "relation": "is-mask-of",
+   "object": "collective-psyche",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 245,
+     "quote": "It is, as its name implies, only a mask of the collective psyche, a mask that feigns individuality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 246,
+     "quote": "what seemed to be individual is at bottom collective; in other words, that the persona was only a mask of the collective psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "persona",
+   "relation": "feigns",
+   "object": "individuality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 245,
+     "quote": "only a mask of the collective psyche, a mask that feigns individuality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "identical-with",
+   "object": "persona",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 247,
+     "quote": "Although the ego-consciousness is at first identical with the persona—that compromise role in which we parade before the community",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'the ego-consciousness is at first identical with the persona'; the identity is stated but holds 'at first' (the note carries it) and the same paragraph says the unconscious self is always present; high -> medium.",
+     "note": "at first"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "persona",
+   "relation": "hides",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 248,
+     "quote": "a persona behind which her real and authentic being, her individual self, lay hidden",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'a persona behind which her real and authentic being, her individual self, lay hidden'; one patient, and 'her individual self' is a step from the standing Self node; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "consists-of",
+   "object": "personal-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 248,
+     "quote": "The transference too consisted at first of contents from the personal unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'The transference too consisted at first of contents from the personal unconscious', this case and 'at first' (noted); high -> medium.",
+     "note": "at first"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "brings-up",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 248,
+     "quote": "the dreams I spoke of in Chapter I began to materialize. They brought up bits of the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'They brought up bits of the collective unconscious', the dreams of the one case; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "mythologem",
+   "relation": "points-to",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 250,
+     "quote": "The obvious occurrence of mythological and religious motifs in a dream also points to the activity of the collective unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "spontaneous-fantasy",
+   "relation": "is-activity-of",
+   "object": "collective-psyche",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 251,
+     "quote": "a release of involuntary fantasy, which is apparently nothing else than the specific activity of the collective psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "note": "apparently"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "psychic-energy",
+   "relation": "activates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 252,
+     "quote": "Obviously the energy that fell away from consciousness has activated the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "restores",
+   "object": "persona",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 254,
+     "quote": "then, technically speaking, he will have restored his persona in a regressive way",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, FINDING-adjudicated, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'he will have restored his persona in a regressive way'; the standing node is the regression of libido and the text's regressive restoration is the man's retreat to an earlier phase of his personality; a subject step, high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the auditor objected that the man, not regression, restores the persona; the triple names the process Jung himself calls the regressive restoration of the persona, and the gate had demoted the reference to medium for the step from the standing regression-of-libido node; it stands at medium."
+    },
+    {
+     "volume": "7",
+     "paragraph": 257,
+     "quote": "Rather than face the conflict he will turn back and, as best he can, regressively restore his shattered persona",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, FINDING-adjudicated, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'regressively restore his shattered persona'; the same subject step, high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the same objection and the same gate demotion as at §254; the reference stands at medium."
+    },
+    {
+     "volume": "7",
+     "paragraph": 259,
+     "quote": "regressive restoration of the persona is a possible course only for the man who owes the critical failure of his life to his own inflatedness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, FINDING-adjudicated, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim, 25 tokens; 'regressive restoration of the persona is a possible course only for the man' ruined by his own inflatedness; the same subject step, high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the same objection and the same gate demotion as at §254; the reference stands at medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "explained-as",
+   "object": "sexuality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 256,
+     "quote": "The dependence of the patient is explained as an infantile sexual demand that takes the place of a rational application of sexuality.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "source": "Freud",
+     "correction_note": "gate correction: Verbatim; 'The dependence of the patient is explained as an infantile sexual demand', the Freudian theory reported; the object node is sexuality at large where the sentence says an infantile sexual demand; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "transference",
+   "relation": "explained-as",
+   "object": "power-drive",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 256,
+     "quote": "the Adlerian theory, 1 which explains the transference as an infantile power-aim, and as a “security measure.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "source": "Adler"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "infantile-eroticism",
+   "relation": "identical-with",
+   "object": "power-drive",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 256,
+     "quote": "Freud’s “infantile eroticism” and Adler’s “power drive” are one and the same thing",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "is-source-of",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 258,
+     "quote": "it not only contains but is itself the source of the libido from which the psychic elements flow",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "reductive-method",
+   "relation": "fits",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 256,
+     "quote": "Both theories fit the neurotic mentality so neatly that every case of neurosis can be explained by both theories at once.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, FINDING-adjudicated, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'Both theories fit the neurotic mentality so neatly'; the subject node is the reductive method where the sentence names the two theories (called reductive only at §259, as the note says); high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the auditor objected that §256 names the Freudian and Adlerian theories and calls them reductive only at §259; the gate had demoted the reference to medium on that step and the §259 reference of the same edge carries the term; it stands at medium.",
+     "note": "the Freudian and Adlerian theories, called reductive in §259"
+    },
+    {
+     "volume": "7",
+     "paragraph": 259,
+     "quote": "That is precisely why these reductive theories fit the essence of neurosis so beautifully",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "conceived-as",
+   "object": "incest",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 261,
+     "quote": "the regressive longing, which Freud conceives as “infantile fixation” or the “incest wish,”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "source": "Freud",
+     "correction_note": "gate correction: Verbatim; 'the regressive longing, which Freud conceives as \"infantile fixation\" or the \"incest wish\"'; reported with the source named; the standing node is symbolic incest and Freud's conception is the literal wish; an object step, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-hero",
+   "relation": "gives-way-to",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 261,
+     "quote": "the heroes, who give way to their regressive longing and purposely expose themselves to the danger of being devoured by the monster",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-prophet",
+   "relation": "is-a",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 264,
+     "quote": "just as the prophet is a primordial image from the collective psyche, so also is the disciple of the prophet",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "brings-about",
+   "object": "ego-inflation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 265,
+     "quote": "In both cases inflation is brought about by the collective unconscious, and the independence of the individuality suffers injury.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "implies-becoming",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 266,
+     "quote": "in so far as “individuality” embraces our innermost, last, and incomparable uniqueness, it also implies becoming one’s own self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "differs-from",
+   "object": "individualism",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 267,
+     "quote": "This misunderstanding is quite general, because we do not sufficiently distinguish between individualism and individuation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 268,
+     "quote": "the individualistic emphasis on one’s own peculiarity is a contradiction ... Individuation, on the other hand, aims at a living co-operation of all factors.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "frees-from",
+   "object": "persona",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 269,
+     "quote": "The aim of individuation is nothing less than to divest the self of the false wrappings of the persona",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'The aim of individuation is nothing less than to divest the self of the false wrappings of the persona'; the sentence names the aim, the verb states the result; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "frees-from",
+   "object": "archetypal-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 269,
+     "quote": "The aim of individuation is nothing less than to divest the self ... of the suggestive power of primordial images on the other",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-4, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 12 tokens); 'to divest the self ... of the suggestive power of primordial images'; the aim, as above; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
    }
   }
  ]
