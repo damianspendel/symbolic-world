@@ -4500,6 +4500,66 @@
    "id": "individualism",
    "label": "Individualism",
    "type": "Concept"
+  },
+  {
+   "id": "collective-image",
+   "label": "Collective image",
+   "type": "Concept"
+  },
+  {
+   "id": "compulsion-neurosis",
+   "label": "Compulsion neurosis",
+   "type": "Concept"
+  },
+  {
+   "id": "psychic-objectivity",
+   "label": "Psychic objectivity",
+   "type": "Concept"
+  },
+  {
+   "id": "spirits",
+   "label": "Spirits (primitive spirits of the dead, revenants)",
+   "type": "Figure"
+  },
+  {
+   "id": "soul-image",
+   "label": "Soul-image (the imago of woman)",
+   "type": "Concept"
+  },
+  {
+   "id": "she-who-must-be-obeyed",
+   "label": "She-who-must-be-obeyed (Rider Haggard's She)",
+   "type": "Figure"
+  },
+  {
+   "id": "woman",
+   "label": "Woman (the real woman as bearer of projection)",
+   "type": "Concept"
+  },
+  {
+   "id": "objectivation",
+   "label": "Objectivation (of the anima and her effects)",
+   "type": "Operation"
+  },
+  {
+   "id": "differentiation",
+   "label": "Differentiation (of consciousness)",
+   "type": "Concept"
+  },
+  {
+   "id": "mood",
+   "label": "Mood (anima-produced)",
+   "type": "Concept"
+  },
+  {
+   "id": "opinion",
+   "label": "Opinion (animus-produced)",
+   "type": "Concept"
+  },
+  {
+   "id": "court-of-conscience",
+   "label": "Court of Conscience (Wells)",
+   "type": "Motif"
   }
  ],
  "edges": [
@@ -19189,6 +19249,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-8, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 274,
+     "quote": "the unconscious processes stand in a compensatory relation to the conscious mind.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 275,
+     "quote": "The unconscious processes that compensate the conscious ego contain all those elements that are necessary for the self regulation of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -75119,6 +75201,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 274,
+     "quote": "the self is a quantity that is supraordinate to the conscious ego",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
     }
    ],
    "relation_family": {
@@ -112339,6 +112432,18 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)",
      "correction_note": "gate correction: Verbatim; said 'as soon as a neurosis is present', a scope the note names; high -> medium.",
      "note": "where a neurosis is present"
+    },
+    {
+     "volume": "7",
+     "paragraph": 291,
+     "quote": "they save energy; bit by bit it accumulates in the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'they save energy; bit by bit it accumulates in the unconscious', said of the few 'higher' persons who stay too long on a primitive level, a scope; high -> medium, as at §192. Attach."
     }
    ],
    "relation_family": {
@@ -113646,6 +113751,1233 @@
    ],
    "relation_family": {
     "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "manifests-through",
+   "object": "symptom",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 272,
+     "quote": "But sometimes they manifest themselves, partly through symptoms, partly through actions, opinions, affects, fantasies, and dreams.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 273,
+     "quote": "These things are all symptoms of some consistent unconscious activity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 323,
+     "quote": "the other side is driven into indirect and purely symptomatic manifestations, mostly of an emotional kind",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'the other side is driven into indirect and purely symptomatic manifestations' as a result of the repressive conscious attitude, a condition; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "big-dream",
+   "relation": "compensates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 277,
+     "quote": "the collective dream ... must therefore be built into our conscious relations, because it compensates these",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "note": "object is 'our conscious relations'"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "appears-as",
+   "object": "witch",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 280,
+     "quote": "She appeared in the dreams as a witch, as a ghost, as a pursuing demon.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, FINDING-adjudicated, 2026-11-09)",
+     "source": "a young woman patient",
+     "correction_note": "gate correction: Verbatim; the young woman's dreams, in which her mother 'appeared ... as a witch, as a ghost, as a pursuing demon'; the analysand convention gives jung-quotes-source with the patient named as the text names her; a single case, high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the auditor asked for jung-asserts because Jung reports his own clinical case; the graph's analysand convention (b-cw9i-8 precedent) types a patient's dream material as jung-quotes-source with the analysand named as the text names her, and the gate had already demoted the reference to medium as a single case; it stands as typed."
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "witch",
+   "relation": "is-a",
+   "object": "collective-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 284,
+     "quote": "The “witch” is a collective image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "evil",
+   "relation": "produces",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 285,
+     "quote": "The universal problem of evil and sin ... Almost more than any other, therefore, this problem produces collective compensations.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 10 tokens); 'this problem produces collective compensations', the problem of evil and sin, where the node is evil itself; a subject step, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "compulsion-neurosis",
+   "relation": "contains",
+   "object": "evil",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 286,
+     "quote": "the compulsion neuroses ... are indeed brimfull of inhuman beastliness and ruthless evil",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "compensation",
+   "relation": "brings-back",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 288,
+     "quote": "purely personal compensations, whose manifest aim is to bring the conscious mind back to ordinary reality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "note": "scope: illegitimate interest in impersonal problems"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "contrives",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 290,
+     "quote": "Thanks to the neurosis contrived by the unconscious, they are shaken out of their apathy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "urges-towards",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 291,
+     "quote": "The driving force, so far as it is possible for us to grasp it, seems to be in essence only an urge towards self-realization.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "note": "text says self-realization (equated with individuation at §310); hedged 'seems'"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "psychic-objectivity",
+   "relation": "amounts-to",
+   "object": "belief-in-spirits",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 293,
+     "quote": "The idea of psychic objectivity ... is nothing less than the conviction as to the concrete existence of a spirit-world.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "spirits",
+   "relation": "is-manifestation-of",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 293,
+     "quote": "so these primitive spirits are manifestations of unconscious complexes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "imago",
+   "relation": "appears-as",
+   "object": "spirits",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 295,
+     "quote": "the more numerous the psychic contents (imagos) which meet him as quasi-external apparitions, either in the form of spirits",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; imagos 'meet him as quasi-external apparitions, either in the form of spirits' the more limited his field of consciousness, a scope the note names; high -> medium.",
+     "note": "scope: the more limited a man's field of consciousness"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "ka",
+   "relation": "is-a",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 295,
+     "quote": "The archaic souls, the ba and ka of the Egyptians, are complexes of this kind.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "contrasexuality",
+   "relation": "accumulates-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 297,
+     "quote": "The repression of feminine traits and inclinations naturally causes these contrasexual demands to accumulate in the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'these contrasexual demands' accumulate in the unconscious; the standing node is labelled as the inversion of sex roles where the text means the man's repressed femininity; a label step, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "soul-image",
+   "relation": "becomes-receptacle-for",
+   "object": "contrasexuality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 297,
+     "quote": "the imago of woman (the soul-image) becomes a receptacle for these demands",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'the imago of woman (the soul-image) becomes a receptacle for these demands'; the same object-label step as above, high -> medium.",
+     "note": "'these demands' = the contrasexual demands of the preceding sentence"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "she-who-must-be-obeyed",
+   "relation": "exemplifies",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 298,
+     "quote": "Most men, probably, who have any psychological insight at all will know what Rider Haggard means by “She-who-must-be-obeyed,”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; men 'will know what Rider Haggard means by \"She-who-must-be-obeyed\"' is Jung's own reading of the literary figure, not Haggard's doctrine reported (the Faust ruling of b-cw7-2/-3); jung-reports-parallel -> jung-asserts, source dropped; the quote itself does not name the anima, which §299 supplies; high -> medium."
+    },
+    {
+     "volume": "7",
+     "paragraph": 299,
+     "quote": "Both Rider Haggard and Benoît give unmistakable utterance to this supposition in the historical aspect of their anima figures.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'Both Rider Haggard and Benoit give unmistakable utterance to this supposition in the historical aspect of their anima figures' is Jung's own reading; jung-reports-parallel -> jung-asserts, source dropped."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "soul",
+   "relation": "understood-as",
+   "object": "complex",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 302,
+     "quote": "concept of the soul, but with the psychological recognition of the existence of a semiconscious psychic complex, having partial autonomy of function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "immortality",
+   "relation": "included-in",
+   "object": "autonomy",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 302,
+     "quote": "The quality of personal immortality ... is, for science, no more than a psychological indicium which is already included in the idea of autonomy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "compensates",
+   "object": "persona",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 304,
+     "quote": "a compensatory relationship exists between persona and anima.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 309,
+     "quote": "The persona, the ideal picture of a man as he should be, is inwardly compensated by feminine weakness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "note": "the same sentence names the feminine weakness as the anima"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "persona",
+   "relation": "conceals",
+   "object": "individuality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 305,
+     "quote": "The persona is a complicated system of relations ... and, on the other, to conceal the true nature of the individual",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "identification",
+   "relation": "is-source-of",
+   "object": "neurosis",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 307,
+     "quote": "These identifications with a social role are a very fruitful source of neuroses.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'These identifications with a social role are a very fruitful source of neuroses'; the standing identification node is labelled as identity with the parents (vocabulary review); high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "projected-onto",
+   "object": "woman",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 309,
+     "quote": "the anima, remains completely in the dark and is at once projected, so that our hero comes under the heel of his wife’s slipper",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 314,
+     "quote": "She likewise is a personality, and this is why she is so easily projected upon a woman.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "requires-consciousness-of",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 310,
+     "quote": "individuation, or self-realization, ... that he should become conscious of his invisible system of relations to the unconscious, and especially of the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-opposites",
+   "relation": "necessary-for",
+   "object": "self-regulating-system",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 311,
+     "quote": "the tragic counterplay between inside and outside ... represents, at bottom, the energetics of the life process, the polar tension that is necessary for self-regulation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "note": "subject in text: the counterplay between inside and outside, the polar tension"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "complex",
+   "relation": "appears-as",
+   "object": "personality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 312,
+     "quote": "every autonomous or even relatively autonomous complex has the peculiarity of appearing as a personality, i.e., of being personified.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 313,
+     "quote": "The tendency of the relatively autonomous complex to direct personification",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "is-a",
+   "object": "personality",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 314,
+     "quote": "also holds true of the anima. She likewise is a personality",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "bears",
+   "object": "soul-image",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 314,
+     "quote": "The first bearer of the soul-image is always the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "puberty-rites",
+   "relation": "effects-separation-from",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 314,
+     "quote": "initiations into the “men’s house” and ceremonies of rebirth are still needed in order to make the separation from the mother",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 315,
+     "quote": "In the puberty rites, therefore, the initiate receives instruction ... so that he is put in a position to dispense with his mother’s protection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "protects-against",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 315,
+     "quote": "the mother protects him against the dangers that threaten from the darkness of his psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 316,
+     "quote": "The safeguard against the unconscious, which is what his mother meant to him",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "transferred-to",
+   "object": "woman",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 316,
+     "quote": "the anima, in the form of the mother-imago, is transferred to the wife",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "note": "object in text: the wife"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "thwarts",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 318,
+     "quote": "When the anima continually thwarts the good intentions of the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'When the anima continually thwarts the good intentions of the conscious mind', a case put conditionally; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "objectivation",
+   "relation": "directed-at",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 321,
+     "quote": "The first step is what I would call the objectivation of the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "7",
+     "paragraph": 327,
+     "quote": "to objectivate the effects of the anima and then try to understand what contents underlie those effects",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "inner-dialogue",
+   "relation": "educates",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 323,
+     "quote": "the indispensable conditions of this technique for educating the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "inner-dialogue",
+   "relation": "requires",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 323,
+     "quote": "the dissociation required for our dialectics with the anima is not so terribly difficult",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'the dissociation required for our dialectics with the anima'; the standing node is the pathological splitting of the personality and the text means a deliberate technical dissociation; a label step, high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "rationalism",
+   "relation": "shattered-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 324,
+     "quote": "our rational Weltanschauung with its scientific and moral certitudes ... is shattered by the facts of the other side",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 8 tokens); 'our rational Weltanschauung ... is shattered by the facts of the other side', framed as the extent to which the fear is legitimate; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "born-of",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 326,
+     "quote": "The old religions ... did not drop from the blue, but were born of this human soul that dwells within us at this moment.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "compensates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 328,
+     "quote": "The anima, being of feminine gender, is exclusively a figure that compensates the masculine consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "compensates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 328,
+     "quote": "In woman the compensating figure is of a masculine character, and can therefore appropriately be termed the animus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "differentiation",
+   "relation": "is-essence-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 329,
+     "quote": "Differentiation is the essence, the sine qua non of consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "produces",
+   "object": "mood",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 331,
+     "quote": "as the anima produces moods , so the animus produces opinions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "produces",
+   "object": "opinion",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 331,
+     "quote": "as the anima produces moods , so the animus produces opinions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "court-of-conscience",
+   "relation": "corresponds-to",
+   "object": "animus",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 332,
+     "quote": "This collection of condemnatory judges, a sort of College of Preceptors, corresponds to a personification of the animus.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'This collection of condemnatory judges ... corresponds to a personification of the animus' is Jung's own reading of Wells's figure, not Wells's doctrine (the Faust ruling); jung-reports-parallel -> jung-asserts, source dropped."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "undergoes",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 333,
+     "quote": "It goes without saying that the animus is just as often projected as the anima.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "plays-up",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 334,
+     "quote": "it is an inescapable fact that the animus always plays up the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "facilitates-relations-with",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 336,
+     "quote": "The animus does not belong to the function of conscious relationship; his function is rather to facilitate relations with the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-09"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "endangers",
+   "object": "persona",
+   "references": [
+    {
+     "volume": "7",
+     "paragraph": 337,
+     "quote": "A woman possessed by the animus is always in danger of losing her femininity, her adapted feminine persona",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-09",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)",
+     "correction_note": "gate correction: Verbatim; 'A woman possessed by the animus is always in danger of losing ... her adapted feminine persona', the scope being possession; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-09"
