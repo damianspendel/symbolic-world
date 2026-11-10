@@ -127,6 +127,12 @@ if not og_match:
     check('EMIT_OG_IMAGE readable from web/build-atlas.mjs', False, 'the constant is missing or no longer a literal')
 if og_match and og_match.group(1) == 'true':
     ALLOW.add('social-preview.png')
+# spec-reader-v1, A4: the /evidence page, while MENU_READER is on
+mr_match = re.search(r'^const MENU_READER = (true|false)$', build_src, re.M)
+if not mr_match:
+    check('MENU_READER readable from web/build-atlas.mjs', False, 'the constant is missing or no longer a literal')
+if mr_match and mr_match.group(1) == 'true':
+    ALLOW.add('evidence.html')
 # spec-reader-v1, A3: the names file behind the landing search, while HOME_SEARCH is on
 hs_match = re.search(r'^const HOME_SEARCH = (true|false)$', build_src, re.M)
 if not hs_match:

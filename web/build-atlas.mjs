@@ -54,6 +54,14 @@ const CONCEPT_READER_LAYOUT = true
 // literal to expect the names file in dist. Off, the landing page is today's.
 const HOME_SEARCH = true
 
+// spec-reader-v1, item A4: the reader menu. Six entries in one unlabelled
+// group (concepts, search, atlas, routes, about, evidence), and an /evidence
+// page that lists what the provenance, reference and about groups held. The
+// app's static menu in web/atlas.html is rewritten from the same list, and
+// tools/build_ledger_page.py and tools/pages/preflight.py read this literal.
+// Off, the four-group menu returns.
+const MENU_READER = true
+
 // spec-seo-minor-v1, item 2: the batch pages and /ledger are provenance
 // records, kept for readers who follow a link but not offered to search:
 // they carry noindex, follow and leave the sitemap. tools/build_ledger_page.py,
@@ -227,12 +235,16 @@ const rootBlock = () => ':root {\n' + cssVars(TOKENS) + '\n}\n' +
 // deliberately absent: they are reached through the ledger's facet links and
 // through the release entries that shipped them, and putting 57 of them behind
 // a menu item is what made the ledger unwieldy in the first place.
-const MENU = [
+const MENU_LEGACY = [
   ['explore', [['/atlas#/atlas', 'atlas'], ['/routes', 'routes'], ['/query', 'query'], ['/atlas#/concordance', 'concordance']]],
   ['reference', [['/concepts', 'concepts'], ['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
   ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/nutshell', 'in a nutshell'], ['/atlas#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
+const MENU_READER_LIST = [
+  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas#/atlas', 'atlas'], ['/routes', 'routes'], ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/evidence', 'evidence']]]
+]
+const MENU = MENU_READER ? MENU_READER_LIST : MENU_LEGACY
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
 // The theme boot (before paint: stored choice, else the OS preference) and
@@ -267,7 +279,7 @@ const siteHeader = (current, where, tools = '') => `<header class="site-header">
 <div class="hrow hrow-2"><span class="where">${esc(where || '')}</span>${tools ? `<span class="hdr-tools">${tools}</span>` : ''}${THEME_BUTTON}</div>
 </header>`
 const topMenu = (current) => '<nav class="topmenu">' + MENU.map(([group, items]) =>
-  `<span class="mgrp"><span class="mgroup">${group}</span>` + items.map(([href, label]) =>
+  `<span class="mgrp">${group ? `<span class="mgroup">${group}</span>` : ''}` + items.map(([href, label]) =>
     `<a href="${href}"${href === current ? ' aria-current="page"' : ''}>${label}</a>`).join('') + '</span>'
 ).join('') + '</nav>'
 
@@ -1086,6 +1098,17 @@ writeFileSync(here('./src/chrome.json'), JSON.stringify({
 </header>`,
   menu: MENU
 }))
+{
+  // the two hand-kept pages, the app's static header and /disputes, carry the
+  // same menu, rewritten from MENU so they cannot drift; a file is written only
+  // when its menu changed
+  for (const [rel, current] of [['./atlas.html', '/atlas#/atlas'], ['./public/disputes.html', '/disputes']]) {
+    const path = here(rel)
+    const page = readFileSync(path, 'utf8')
+    const synced = page.replace(/<nav class="topmenu">[\s\S]*?<\/nav>/, topMenu(current))
+    if (synced !== page) { writeFileSync(path, synced); console.log(`menu: web/${rel.slice(2)} rewritten from MENU`) }
+  }
+}
 
 
 // ------------------------------------------------------ #/method · the page ---
@@ -2936,6 +2959,38 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
   // /#/... link in circulation keeps working. The copy is the about page's
   // first paragraph (final wording from the outreach review, 2026-10-22) and
   // the four reader journeys that page describes, one card each.
+  // spec-reader-v1, A4: /evidence lists what the provenance, reference and
+  // about groups of the old menu held. Each line restates that page's own
+  // description, so the page adds no claim.
+  if (MENU_READER) {
+    const EVIDENCE = [
+      ['/ledger', 'ledger', 'Every verified reference in the graph, with the batch that added it and its verification record.'],
+      ['/releases', 'releases', 'What each release added, with its version pin and receipts.'],
+      ['/disputes', 'disputes', 'Challenged claims, with the objection and the outcome of each.'],
+      ['/families', 'families', 'The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.'],
+      ['/method', 'method', 'How a claim gets into the graph, and what the checks do and do not cover.'],
+      ['/ontology', 'design', 'The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.'],
+      ['/vocabulary', 'vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.'],
+      ['/nutshell', 'in a nutshell', 'The method on one page: a real claim followed through proposal, verification, cross-vendor audit and human refereeing to its published receipt.'],
+      ...(SUPPORT_URL ? [['/support', 'support', 'Tips cover the running costs. The atlas, the dataset and the ledger stay free.']] : [])
+    ]
+    const evidenceBody = `<div class="titleband"><p class="eyebrow">evidence</p>
+<h1>Evidence</h1></div>
+<p class="lede">The records behind the atlas, and the rules its checks follow.</p>
+<dl class="evlist">
+${EVIDENCE.map(([href, label, d]) => `<dt><a href="${href}">${esc(label)}</a></dt><dd>${esc(d)}</dd>`).join('\n')}
+</dl>`
+    registerPage({
+      slug: 'evidence', title: 'Evidence', where: 'evidence', nav: 'evidence',
+      changefreq: 'monthly', priority: '0.5',
+      description: 'The records behind The Symbolic World, a verified knowledge graph of Jung’s Collected Works: the ledger, releases, disputes, relation families, method and design.',
+      style: '.evlist dt { margin-top: 1rem; font-family: var(--display); font-size: 1.15rem; }\n.evlist dd { margin: .2rem 0 0; color: var(--ink-faint); font-size: .95rem; line-height: 1.55; max-width: 38em; }',
+      body: evidenceBody
+    })
+    V2_COPY.push(['public/evidence.html (generated)', stripEvidence(evidenceBody)])
+    console.log('evidence page: written')
+  }
+
   // spec-reader-v1, A3: the landing search. A label that starts with the
   // query ranks first, then one with a word that starts with it, then any
   // other match; ties keep the /concepts order. Enter opens the first hit.

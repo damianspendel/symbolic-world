@@ -706,12 +706,14 @@ def menu_shape(html):
             current = (token.group(1), [])
             groups.append(current)
         else:
-            assert current, "a menu link appears before any group label"
+            if current is None:  # an unlabelled group (the reader menu)
+                current = ("", [])
+                groups.append(current)
             current[1].append((token.group(2), token.group(3)))
     return groups
 
 
-EXPECTED_MENU = [
+EXPECTED_MENU_LEGACY = [
     ("explore", [("/atlas#/atlas", "atlas"), ("/routes", "routes"),
                  ("/query", "query"), ("/atlas#/concordance", "concordance")]),
     ("reference", [("/concepts", "concepts"), ("/families", "families")]),
@@ -720,6 +722,13 @@ EXPECTED_MENU = [
     ("about", [("/about", "about"), ("/nutshell", "in a nutshell"), ("/atlas#/method", "method"),
                ("/ontology", "design"), ("/support", "support")]),
 ]
+# spec-reader-v1, A4: six entries in one unlabelled group
+EXPECTED_MENU_READER = [
+    ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas#/atlas", "atlas"),
+          ("/routes", "routes"), ("/about", "about"), ("/evidence", "evidence")]),
+]
+EXPECTED_MENU = (EXPECTED_MENU_READER if re.search(r"^const MENU_READER = true$",
+                 read(os.path.join(ROOT, "web", "build-atlas.mjs")), re.M) else EXPECTED_MENU_LEGACY)
 
 
 def test_every_generated_page_carries_the_same_menu():
@@ -778,8 +787,10 @@ def test_the_app_survives_the_removed_toolbar_buttons():
 def test_both_generator_languages_hold_the_same_menu_list():
     """One list per language; this is what keeps them one menu."""
     js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
-    block = js[js.index("const MENU = ["):js.index("const topMenu")]
-    js_groups = re.findall(r"^\s*\['(\w+)', \[(.*)\]\],?$", block, re.M)
+    reader = re.search(r"^const MENU_READER = true$", js, re.M)
+    start = js.index("const MENU_READER_LIST = [" if reader else "const MENU_LEGACY = [")
+    block = js[start:js.index("\n]\n", start)]
+    js_groups = re.findall(r"^\s*\['(\w*)', \[(.*)\]\],?$", block, re.M)
     parsed = [(group, re.findall(r"\['(/[^']*)', '([\w ]+)'\]", items))
               for group, items in js_groups]
     assert parsed == [(g, list(i)) for g, i in ledger_gen.MENU]
@@ -788,8 +799,8 @@ def test_both_generator_languages_hold_the_same_menu_list():
 
 def test_the_menu_marks_the_page_it_is_on():
     """Every static destination marks itself, and only itself."""
-    for slug in ("releases", "query", "ontology", "families", "ledger", "disputes",
-                 "concepts", "routes", "support", "about"):
+    static = [href[1:] for _g, items in EXPECTED_MENU for href, _l in items if "#" not in href]
+    for slug in static:
         html = read(os.path.join(PUBLIC, slug + ".html"))
         current = re.findall(r'<a href="([^"]+)" aria-current="page">', MENU_RE.search(html).group(1))
         assert current == [f"/{slug}"], (slug, current)

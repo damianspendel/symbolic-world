@@ -38,6 +38,9 @@ NOINDEX_PROVENANCE = re.search(r"^const NOINDEX_PROVENANCE = (true|false)$",
 ROBOTS_NOINDEX = '<meta name="robots" content="noindex, follow">\n' if NOINDEX_PROVENANCE else ""
 EMIT_ABOUT_PAGE = re.search(r"^const EMIT_ABOUT_PAGE = (true|false)$",
                             (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1) == "true"
+# spec-reader-v1, A4: the reader menu follows web/build-atlas.mjs's gate.
+MENU_READER = re.search(r"^const MENU_READER = (true|false)$",
+                        (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1) == "true"
 
 
 
@@ -53,7 +56,7 @@ def esc(s):
 # same list web/build-atlas.mjs holds for the pages node writes. Batches are
 # deliberately not a menu item — they are reached from the ledger's facet links
 # and from the release entries that shipped them.
-MENU = [
+MENU_LEGACY = [
     ("explore", [("/atlas#/atlas", "atlas"), ("/routes", "routes"),
                  ("/query", "query"), ("/atlas#/concordance", "concordance")]),
     ("reference", [("/concepts", "concepts"), ("/families", "families")]),
@@ -64,6 +67,11 @@ MENU = [
                  ("/ontology", "design")]
               + ([("/support", "support")] if SUPPORT_URL else [])),
 ]
+MENU_READER_LIST = [
+    ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas#/atlas", "atlas"), ("/routes", "routes")]
+         + ([("/about", "about")] if EMIT_ABOUT_PAGE else []) + [("/evidence", "evidence")]),
+]
+MENU = MENU_READER_LIST if MENU_READER else MENU_LEGACY
 
 
 THEME_SNIPPET = '<script src="/theme.js"></script>'
@@ -88,7 +96,7 @@ def site_header(current="", where="", tools=""):
 def top_menu(current=""):
     out = ['<nav class="topmenu">']
     for group, items in MENU:
-        out.append(f'<span class="mgrp"><span class="mgroup">{group}</span>')
+        out.append('<span class="mgrp">' + (f'<span class="mgroup">{group}</span>' if group else ''))
         for href, label in items:
             current_mark = ' aria-current="page"' if href == current else ""
             out.append(f'<a href="{href}"{current_mark}>{label}</a>')
