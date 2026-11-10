@@ -2509,7 +2509,7 @@ ${QUERY_EXAMPLES_HTML}
   <div class="fld"><label for="f-object">object</label><input id="f-object" placeholder="any"><span class="hint">same matching rule as subject</span></div>
   <div class="fld"><label for="f-volume">volume</label><select id="f-volume"></select><span class="hint">a reference cites this CW volume</span></div>
   <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">${QUERY_EXAMPLES ? 'whose voice the quote is in' : 'read off the reference, not the edge'}</span></div>
-  <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">${QUERY_EXAMPLES ? 'part of how the family was assigned' : 'substring of relation_family.by'}</span></div>
+  <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">${QUERY_EXAMPLES ? 'part of the record of the family’s assignment' : 'substring of relation_family.by'}</span></div>
   <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>${EMIT_QUOTE_SEARCH ? `
   <div class="fld"><label for="f-quote">quote contains</label><input id="f-quote" placeholder="words, or a &quot;phrase&quot;"><span class="hint">words inside the graph's own verbatim quotes, 25 words at most. This does not search the corpus.</span></div>` : ''}
 </div>
