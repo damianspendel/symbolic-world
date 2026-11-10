@@ -2099,15 +2099,12 @@ ${e.refs.length ? `<ul class="cites">\n${citeLines(e)}\n</ul>` : ''}
 ${top.map(e => { const r = bestRef(e); return `<div class="trow"><div class="triple">${tripleOf(e)}</div>` +
   (r ? `<p class="tq ev">${quoteHead(r, voiceOf(r))}</p>` : '') + '</div>' }).join('\n')}
 </div>` : ''
-      const methodLine = 'A machine checks each quotation against its source paragraph. The ' +
-        '<a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.'
 
       readerBody = `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
 <h1><span class="ev">${esc(node.label)}</span>${latinShown ? ` <em class="latin ev">${esc(latinShown)}</em>` : ''}</h1>
 <p class="sub">${ns(`<span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span>`)}</p></div>
 ${opening}
 ${topBlock}
-<p class="meta">${ns(methodLine)}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
 ${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
 ${neighbourBlock}
