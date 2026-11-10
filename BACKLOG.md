@@ -731,3 +731,12 @@ Damian's decision on item A5 of spec-reader-v1: "backlog work pages, until we've
 - One page per work at `/work-<id>`: title, volume, years written and revised, coverage as "claims from N of M paragraphs", the most-cited concepts in the work's paragraph range, and the claims in paragraph order. An index at `/works`. Each concept page gains an "appears in" line.
 - The data exists: `works.json` at the repo root (commit 9da0c608, 73 works over the eleven extracted volumes, with a tiling test).
 - Timing: after the mining chat finishes CW 6, before the trilogy. Build it behind a gate `EMIT_WORK_PAGES`, switched off until Damian has reviewed it on localhost.
+
+## Prose review by Fable 5.2 with the declauding skill (added 2026-11-10)
+
+Damian's words: "apparently Fable 5.2 has better prose. add to the backlog, for Fable 5.2 to install the skill 'declauding' and review AI generated text." Backlog entry only. Nothing installed, no review started.
+
+- A Fable 5.2 session installs the declauding skill and reviews the AI-generated prose. On the site that is `docs/METHOD_COPY.md`, the concept-page template in `web/build-atlas.mjs`, the vocabulary page and `docs/GLOSSARY.md`. In the docs it is `README.md` and the release notes (`docs/RELEASES.md`, `docs/releases/`).
+- Nobody has found the skill yet. It is not in `~/.claude/skills`, and a search of the claude.ai skills catalog for "declauding" returns nothing. Before any session installs it, Damian names its source and someone reads the skill in full.
+- Fable 5.2 reviewing text Opus wrote keeps proposer and verifier in different model families. Text Fable wrote needs a reviewer from another family. `docs/METHOD_COPY.md` is one such file: the Fable session authored it, per the comment beside `methodPath` in `web/build-atlas.mjs`.
+- The review proposes edits only. Damian approves each change, and the approved set comes with a "Changes in this pass" list.
