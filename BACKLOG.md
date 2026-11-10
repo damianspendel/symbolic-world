@@ -730,4 +730,4 @@ Damian's decision on item A5 of spec-reader-v1: "backlog work pages, until we've
 
 - One page per work at `/work-<id>`: title, volume, years written and revised, coverage as "claims from N of M paragraphs", the most-cited concepts in the work's paragraph range, and the claims in paragraph order. An index at `/works`. Each concept page gains an "appears in" line.
 - The data exists: `works.json` at the repo root (commit 9da0c608, 73 works over the eleven extracted volumes, with a tiling test).
-- Timing: after CW 6 is mined, before the trilogy. Build it behind a gate `EMIT_WORK_PAGES`, switched off until Damian has reviewed it on localhost.
+- Timing: after the mining chat finishes CW 6, before the trilogy. Build it behind a gate `EMIT_WORK_PAGES`, switched off until Damian has reviewed it on localhost.
