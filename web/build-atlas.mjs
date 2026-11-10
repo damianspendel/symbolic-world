@@ -13,7 +13,7 @@
 //            layer, kind, volumes, confidence, refs }
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs'
 import { familyMap, byKind } from './family-map.mjs'
-import { byVolume } from './query-semantics.mjs'
+import { byVolume, select as querySelect, routesBetween } from './query-semantics.mjs'
 
 // The off switch for the per-concept static pages (spec-concept-pages-v1).
 // When false: no concept page is registered, no sitemap entry is written, and
@@ -61,6 +61,14 @@ const HOME_SEARCH = true
 // tools/build_ledger_page.py and tools/pages/preflight.py read this literal.
 // Off, the four-group menu returns.
 const MENU_READER = true
+
+// spec-reader-v1, item A6: three worked examples on /routes and on /query,
+// each a link that fills the form and runs it, and plain words for the hints
+// that named record fields. The build runs every example against the graph
+// and stops if one returns nothing. Off, both pages are today's.
+const QUERY_EXAMPLES = true
+const ns0 = (html) => `<span data-nosnippet>${html}</span>`
+const EXAMPLES_CSS = QUERY_EXAMPLES ? '\n.examples { font: .66rem/1.8 var(--mono); color: var(--ink-faint); margin: .6rem 0 0; }\n.examples a { color: var(--gold); text-decoration: none; }\n.examples a:hover { text-decoration: underline; }\n' : ''
 
 // spec-seo-minor-v1, item 2: the batch pages and /ledger are provenance
 // records, kept for readers who follow a link but not offered to search:
@@ -2226,7 +2234,7 @@ ${rows}
 // page reads /graph.json and runs routesBetween from /query.js — the same
 // module the panel and the CLI parity tests cover. Deep link: /routes?from&to.
 if (ROUTES_IN_UI) {
-  const routesStyle = `
+  const routesStyle = `${EXAMPLES_CSS}
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }
 .fld { display: flex; flex-direction: column; gap: .25rem; }
 .fld label { font: .55rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
@@ -2249,6 +2257,18 @@ if (ROUTES_IN_UI) {
 .rcopy:hover { color: var(--gold); border-color: var(--gold-dim); }
 `
 
+  // spec-reader-v1, A6: each example must find at least one route today
+  let ROUTE_EXAMPLES_HTML = ''
+  if (QUERY_EXAMPLES) {
+    const pub = JSON.parse(readFileSync(here('./public/graph.json'), 'utf8'))
+    const pubLabel = new Map(pub.nodes.map(n => [n.id, n.label || n.id]))
+    const ROUTE_EXAMPLES = [['persona', 'mandala'], ['trickster', 'the-self'], ['lapis', 'the-self']]
+    for (const [from, to] of ROUTE_EXAMPLES) {
+      if (!routesBetween(pub, from, to, 3, 50).length) { console.error(`ROUTES EXAMPLE: ${from} to ${to} finds no route — refusing to offer it.`); process.exit(1) }
+    }
+    ROUTE_EXAMPLES_HTML = `<p class="examples">${ns0(`examples: ${ROUTE_EXAMPLES.map(([from, to]) =>
+      `<a href="/routes?from=${from}&amp;to=${to}">${esc(pubLabel.get(from))} to ${esc(pubLabel.get(to))}</a>`).join(' · ')}`)}</p>\n`
+  }
   const routesBody = `<div class="titleband"><p class="eyebrow">explore</p>
 <h1>Routes</h1>
 <p class="sub">the chains of verified claims between any two concepts</p></div>
@@ -2258,7 +2278,7 @@ if (ROUTES_IN_UI) {
   <div class="fld"><label for="r-to">to</label><select id="r-to"></select><span class="hint">routes run both ways; arrows show each claim's own direction</span></div>
   <div class="fld"><label aria-hidden="true">&nbsp;</label><button class="runbtn" type="button" id="runroutes" style="margin:0">find routes</button></div>
 </div>
-<div class="routes" id="routes"><p class="dim" id="status">Reading the dataset…</p></div>
+${ROUTE_EXAMPLES_HTML}<div class="routes" id="routes"><p class="dim" id="status">Reading the dataset…</p></div>
 <p class="meta">Every leg is one verified claim with its paragraph and quote. The <a href="/query">query panel</a> carries the full filter set.</p>`
 
   const routesHead = `<script type="module">
@@ -2396,17 +2416,32 @@ if (DECL) {
     `${(DECL.transcribed_from || {}).document_version || '?'}, ${activeDecls.length} active`
   derived(seed.nodes.length, seed.edges.length, ...Object.values(tally), activeDecls.length)
 
+  // spec-reader-v1, A6: each example must return rows today
+  let QUERY_EXAMPLES_HTML = ''
+  if (QUERY_EXAMPLES) {
+    const pub = JSON.parse(readFileSync(here('./public/graph.json'), 'utf8'))
+    const QUERY_EXAMPLE_LIST = [
+      ['“shadow” in the quotes of CW 9ii', { quote: 'shadow', volume: '9ii' }],
+      ['Mercurius as subject, in the symbolization family', { family: 'symbolization', subject: 'mercurius' }],
+      ['Jung quoting a source, in CW 11', { claim_type: 'jung-quotes-source', volume: '11' }]
+    ]
+    for (const [label, f] of QUERY_EXAMPLE_LIST) {
+      if (!querySelect(pub, DECL, { closure: false, ...f }).length) { console.error(`QUERY EXAMPLE: "${label}" returns no rows — refusing to offer it.`); process.exit(1) }
+    }
+    QUERY_EXAMPLES_HTML = `<p class="examples">${ns0(`examples: ${QUERY_EXAMPLE_LIST.map(([label, f]) =>
+      `<a href="/query?${Object.entries(f).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&amp;')}">${esc(label)}</a>`).join(' · ')}`)}</p>\n`
+  }
   const queryBody = `<div class="titleband"><p class="eyebrow">read-only</p>
 <h1>Query the graph</h1></div>
-
+${QUERY_EXAMPLES_HTML}
 <div class="filters" id="filters">
   <div class="fld"><label for="f-family">family</label><select id="f-family"></select><span class="hint" id="h-family"></span></div>
   <div class="fld"><label for="f-state">state</label><select id="f-state"></select><span class="hint">assigned, or one of the three ways an edge carries no family</span></div>
-  <div class="fld"><label for="f-subject">subject</label><input id="f-subject" placeholder="any"><span class="hint">node id, else substring of an id or a label</span></div>
+  <div class="fld"><label for="f-subject">subject</label><input id="f-subject" placeholder="any"><span class="hint">${QUERY_EXAMPLES ? 'a concept’s id, or part of its name' : 'node id, else substring of an id or a label'}</span></div>
   <div class="fld"><label for="f-object">object</label><input id="f-object" placeholder="any"><span class="hint">same matching rule as subject</span></div>
   <div class="fld"><label for="f-volume">volume</label><select id="f-volume"></select><span class="hint">a reference cites this CW volume</span></div>
-  <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">read off the reference, not the edge</span></div>
-  <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">substring of relation_family.by</span></div>
+  <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">${QUERY_EXAMPLES ? 'whose voice the quote is in' : 'read off the reference, not the edge'}</span></div>
+  <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">${QUERY_EXAMPLES ? 'part of how the family was assigned' : 'substring of relation_family.by'}</span></div>
   <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>${EMIT_QUOTE_SEARCH ? `
   <div class="fld"><label for="f-quote">quote contains</label><input id="f-quote" placeholder="words, or a &quot;phrase&quot;"><span class="hint">words inside the graph's own verbatim quotes, 25 words at most. This does not search the corpus.</span></div>` : ''}
 </div>
@@ -2429,7 +2464,7 @@ ${WALK_IN_UI ? `<h2>Identity walk</h2>
 <div class="walk" id="walk"></div>` : ''}
 `
 
-  const queryStyle = `
+  const queryStyle = `${EXAMPLES_CSS}
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }
 .fld { display: flex; flex-direction: column; gap: .25rem; }
 .fld label { font: .55rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
@@ -2508,7 +2543,12 @@ function ready () {
   fill('f-claim_type', [...cts.entries()].sort((a, b) => b[1] - a[1]), 'any claim type')
   const normalized = graph.edges.filter(e => e.relation_normalized && e.relation_normalized.relation).length
   $('h-normalized').textContent = normalized + ' relations carry a normalized string beside the verbatim one'
-  $('status').textContent = 'Ready. Run with no filter to read the whole graph.'
+  $('status').textContent = 'Ready. Run with no filter to read the whole graph.'${QUERY_EXAMPLES ? `
+  // spec-reader-v1, A6: a link can fill the form; the run below then uses it
+  const qp = new URLSearchParams(location.search)
+  for (const k of ['family', 'state', 'subject', 'object', 'volume', 'claim_type', 'provenance', 'relation'${EMIT_QUOTE_SEARCH ? ", 'quote'" : ''}]) {
+    if (qp.has(k) && $('f-' + k)) $('f-' + k).value = qp.get(k)
+  }` : ''}
   run()
 }
 

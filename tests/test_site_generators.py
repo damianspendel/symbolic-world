@@ -2119,3 +2119,24 @@ def test_the_landing_search_finds_concepts_by_name():
     assert page.count('id="land-q"') == 1
     assert "/concept-names.json" in page
     assert "/query?" not in page, "the quote-search row was ruled out (names only)"
+
+
+def test_query_and_routes_carry_three_worked_examples():
+    """A6: three links each; every query link names only fields the form has,
+    and the page fills them from its query string; no hint names a record field."""
+    if not _gate_on("QUERY_EXAMPLES"):
+        pytest.skip("QUERY_EXAMPLES is off")
+    for slug, field_re in (("query", r'id="f-([a-z_]+)"'), ("routes", r'id="r-([a-z]+)"')):
+        page = read(os.path.join(PUBLIC, slug + ".html"))
+        block = re.search(r'<p class="examples">(.*?)</p>', page, re.S)
+        assert block, slug
+        links = re.findall(rf'<a href="/{slug}\?([^"]+)">', block.group(1))
+        assert len(links) == 3, slug
+        fields = set(re.findall(field_re, page))
+        for qs in links:
+            for pair in html_lib.unescape(qs).split("&"):
+                key = pair.split("=")[0]
+                assert key in fields or (slug == "routes" and key in ("from", "to")), (slug, key)
+    query = read(os.path.join(PUBLIC, "query.html"))
+    assert "relation_family.by" not in query
+    assert "new URLSearchParams(location.search)" in query
