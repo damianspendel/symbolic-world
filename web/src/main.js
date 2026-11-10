@@ -980,8 +980,11 @@ function wireLocalFilter(rootEl, apply) {
 // pages get their mark at build time; a route rendering the shared template got
 // none, so concordance, method, families and the queue never lit gold. Marked
 // here, at the one place every route passes through, rather than in each view.
+// the atlas entry's href comes from the generated menu: /atlas in the reader
+// menu, /atlas#/atlas in the four-group one
+const ATLAS_MENU_HREF = chrome.menu.flatMap(g => g[1]).some(([h]) => h === '/atlas') ? '/atlas' : '/atlas#/atlas'
 const MENU_HREF = {
-  '#/atlas': '/atlas#/atlas',
+  '#/atlas': ATLAS_MENU_HREF,
   '#/concordance': '/atlas#/concordance',
   '#/method': '/atlas#/method',
   '#/families': '/families',

@@ -55,7 +55,7 @@ const CONCEPT_READER_LAYOUT = true
 const HOME_SEARCH = true
 
 // spec-reader-v1, item A4: the reader menu. Six entries in one unlabelled
-// group (concepts, search, atlas, routes, about, evidence), and an /evidence
+// group (concepts, search, atlas, routes, evidence, about), and an /evidence
 // page that lists what the provenance, reference and about groups held. The
 // app's static menu in web/atlas.html is rewritten from the same list, and
 // tools/build_ledger_page.py and tools/pages/preflight.py read this literal.
@@ -276,9 +276,13 @@ const MENU_LEGACY = [
   ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/nutshell', 'in a nutshell'], ['/atlas#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
 const MENU_READER_LIST = [
-  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas#/atlas', 'atlas'], ['/routes', 'routes'], ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/evidence', 'evidence']]]
+  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : [])]]
 ]
 const MENU = MENU_READER ? MENU_READER_LIST : MENU_LEGACY
+// The reader menu's atlas link has no route after the #, so the app plays its
+// assembly from the lapis on every visit through the menu (Damian, 2026-11-10:
+// "that stays please, never remove that"). A /atlas#/... link skips it.
+const ATLAS_HREF = MENU_READER ? '/atlas' : '/atlas#/atlas'
 // V2-R11 — the header fragment. Row one is identical on every surface; row two
 // carries whatever varies.
 // The theme boot (before paint: stored choice, else the OS preference) and
@@ -1136,7 +1140,7 @@ writeFileSync(here('./src/chrome.json'), JSON.stringify({
   // the two hand-kept pages, the app's static header and /disputes, carry the
   // same menu, rewritten from MENU so they cannot drift; a file is written only
   // when its menu changed
-  for (const [rel, current] of [['./atlas.html', '/atlas#/atlas'], ['./public/disputes.html', '/disputes']]) {
+  for (const [rel, current] of [['./atlas.html', ATLAS_HREF], ['./public/disputes.html', '/disputes']]) {
     const path = here(rel)
     const page = readFileSync(path, 'utf8')
     const synced = page.replace(/<nav class="topmenu">[\s\S]*?<\/nav>/, topMenu(current))

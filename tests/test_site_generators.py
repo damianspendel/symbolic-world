@@ -725,8 +725,8 @@ EXPECTED_MENU_LEGACY = [
 ]
 # spec-reader-v1, A4: six entries in one unlabelled group
 EXPECTED_MENU_READER = [
-    ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas#/atlas", "atlas"),
-          ("/routes", "routes"), ("/about", "about"), ("/evidence", "evidence")]),
+    ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas", "atlas"),
+          ("/routes", "routes"), ("/evidence", "evidence"), ("/about", "about")]),
 ]
 EXPECTED_MENU = (EXPECTED_MENU_READER if re.search(r"^const MENU_READER = true$",
                  read(os.path.join(ROOT, "web", "build-atlas.mjs")), re.M) else EXPECTED_MENU_LEGACY)
@@ -800,7 +800,8 @@ def test_both_generator_languages_hold_the_same_menu_list():
 
 def test_the_menu_marks_the_page_it_is_on():
     """Every static destination marks itself, and only itself."""
-    static = [href[1:] for _g, items in EXPECTED_MENU for href, _l in items if "#" not in href]
+    # /atlas is the app, which marks itself in web/atlas.html (checked below)
+    static = [href[1:] for _g, items in EXPECTED_MENU for href, _l in items if "#" not in href and href != "/atlas"]
     for slug in static:
         html = read(os.path.join(PUBLIC, slug + ".html"))
         current = re.findall(r'<a href="([^"]+)" aria-current="page">', MENU_RE.search(html).group(1))
@@ -817,7 +818,7 @@ def test_every_destination_can_be_marked_current_somewhere():
     block = block[:block.index("}")]
     routed = set(re.findall(r"'(/[^']*)'", block))
     static = set()
-    for path in generated_pages():
+    for path in generated_pages() + [os.path.join(ROOT, "web", "atlas.html")]:
         for href in re.findall(r'<a href="([^"]+)" aria-current="page">',
                                MENU_RE.search(read(path)).group(1)):
             static.add(href)
