@@ -1003,10 +1003,33 @@ def test_one_left_edge_on_every_generated_page():
 
 # ------------------------------------- item 22 · the title band is locked ----
 
+def _one_row_header():
+    return _gate_on("HEADER_ONE_ROW")
+
+
+def test_the_one_row_header_drops_the_breadcrumb():
+    """Damian, 2026-11-10: the menu marks the page you are on, so the
+    breadcrumb under the brand goes and the day/night switch ends row one."""
+    if not _one_row_header():
+        pytest.skip("HEADER_ONE_ROW is off")
+    for path in generated_pages():
+        header = re.search(HEADER_RE, read(path)).group(0)
+        assert 'class="hrow hrow-2"' not in header, os.path.basename(path)
+        assert 'class="where"' not in header, os.path.basename(path)
+        row_one = header[header.index("hrow-1"):]
+        assert row_one.index('class="topmenu"') < row_one.index('class="themetoggle"'), os.path.basename(path)
+    app = read(os.path.join(ROOT, "web", "atlas.html"))
+    top = app[app.index('class="hrow hrow-1"'):app.index('class="hrow hrow-2"')]
+    assert 'class="themetoggle"' in top, "the app's switch is not on row one"
+    assert 'class="where"' not in app
+
+
 def test_the_second_header_row_is_a_reserved_constant_height():
     """The band's offset is measured from the header's bottom edge, so that edge
     has to be at the same y everywhere. The row is a reserved slot: it holds a
     breadcrumb, the tools cluster, both or neither, and keeps its height."""
+    if _one_row_header():
+        pytest.skip("HEADER_ONE_ROW is on: pages carry one row, the app keeps its own second row")
     css = read(os.path.join(PUBLIC, "chrome.css"))
     row = re.search(r"\.site-header \.hrow-2 {([^}]*)}", css).group(1)
     assert re.search(r"height:\s*[\d.]+rem", row), f"the row is not a fixed height: {row.strip()}"
@@ -1410,6 +1433,8 @@ def test_the_header_has_the_same_structural_order_everywhere():
             reference = shape
         assert shape == reference, os.path.basename(path)
         assert body.index('class="brand"') < body.index('class="topmenu"'), os.path.basename(path)
+        if _one_row_header():
+            continue  # no breadcrumb and no second row: see the one-row test
         assert body.index('class="topmenu"') < body.index('class="where"'), os.path.basename(path)
         assert body.index('hrow-1') < body.index('hrow-2'), os.path.basename(path)
         # the breadcrumb is on the second row, not beside the menu
@@ -1442,7 +1467,7 @@ def test_the_app_routes_render_the_shared_header_fragment():
     chrome = json.loads(read(os.path.join(SRC, "chrome.json")))
     header = chrome["header"]
     assert header.index('class="brand"') < header.index('class="topmenu"')
-    assert header.index('class="topmenu"') < header.index("{{ROW2}}")
+    assert header.index('class="topmenu"') < header.index("{{TOOLS}}" if _one_row_header() else "{{ROW2}}")
     assert "{{BRAND_HREF}}" in header
     # the same menu the generated pages carry, link for link
     assert menu_items(header) == menu_items(read(os.path.join(PUBLIC, "releases.html")))

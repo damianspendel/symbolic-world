@@ -41,6 +41,8 @@ EMIT_ABOUT_PAGE = re.search(r"^const EMIT_ABOUT_PAGE = (true|false)$",
 # spec-reader-v1, A4: the reader menu follows web/build-atlas.mjs's gate.
 MENU_READER = re.search(r"^const MENU_READER = (true|false)$",
                         (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1) == "true"
+HEADER_ONE_ROW = re.search(r"^const HEADER_ONE_ROW = (true|false)$",
+                           (ROOT / "web" / "build-atlas.mjs").read_text(), re.M).group(1) == "true"
 
 
 
@@ -83,6 +85,14 @@ def site_header(current="", where="", tools=""):
     """V2-R11 — the header fragment, the same structure web/build-atlas.mjs
     emits: row one is brand then menu and is identical on every surface; row two
     carries the breadcrumb, which is the part that varies."""
+    if HEADER_ONE_ROW:  # the breadcrumb goes; the switch ends row one (2026-11-10)
+        return (
+            '<header class="site-header">'
+            '<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a>'
+            f'{top_menu(current)}'
+            + (f'<span class="hdr-tools">{tools}</span>' if tools else "")
+            + THEME_BUTTON
+            + "</div></header>")
     return (
         '<header class="site-header">'
         '<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a>'

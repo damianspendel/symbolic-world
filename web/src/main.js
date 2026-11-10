@@ -965,7 +965,9 @@ function pageBar({ where, extra = '' } = {}) {
   const tools = `${extra}`
   const row2 = `<span class="where">${esc(where || '')}</span>` +
     (tools.trim() ? `<span class="hdr-tools">${tools}</span>` : '')
+  // the one-row template has a {{TOOLS}} slot and no {{ROW2}}; the two-row one the reverse
   return chrome.header.replace('{{BRAND_HREF}}', '/').replace('{{ROW2}}', row2)
+    .replace('{{TOOLS}}', tools.trim() ? `<span class="hdr-tools">${tools}</span>` : '')
 }
 // Item 25 — a view's own list filter. It narrows that view's cards and touches
 // nothing else: no typeahead into the graph, no selection, no camera. The graph
