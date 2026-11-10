@@ -121,6 +121,11 @@ body.atlas #overlay { pointer-events: none; opacity: 0; visibility: hidden; }
   opacity: 0; pointer-events: none; transition: opacity 600ms ease;
 }
 body.atlas #topbar { opacity: 1; pointer-events: auto; }
+/* The top row (brand and menu) shows on the intro too, as on every page of the
+   site (Damian, 2026-11-10); the atlas's own controls on row two wait until
+   the reader enters the atlas. The day/night switch shows throughout. */
+#topbar { opacity: 1; pointer-events: auto; }
+body:not(.atlas) #topbar .hrow-2 > :not(.themetoggle) { opacity: 0; pointer-events: none; transition: opacity 600ms ease; }
 .brand .eyebrow { margin: 0; }
 .brand h1 { font-family: var(--display); color: var(--ink); font-size: 1.15rem; font-weight: 500; letter-spacing: 0.005em; }
 .brand { cursor: pointer; }

@@ -965,7 +965,7 @@ function pageBar({ where, extra = '' } = {}) {
   const tools = `${extra}`
   const row2 = `<span class="where">${esc(where || '')}</span>` +
     (tools.trim() ? `<span class="hdr-tools">${tools}</span>` : '')
-  return chrome.header.replace('{{BRAND_HREF}}', '#/atlas').replace('{{ROW2}}', row2)
+  return chrome.header.replace('{{BRAND_HREF}}', '/').replace('{{ROW2}}', row2)
 }
 // Item 25 — a view's own list filter. It narrows that view's cards and touches
 // nothing else: no typeahead into the graph, no selection, no camera. The graph
@@ -1027,7 +1027,7 @@ function openMethod() {
       `<div class="titleband"><p class="eyebrow">about</p><h1>The method</h1>` +
       `<p class="sub">An explanation of how a citation enters the map.</p></div>` +
       `${method.html}</div>`
-    modeEl.querySelector('[data-back]').addEventListener('click', goAtlas)
+    modeEl.querySelector('[data-back]')?.addEventListener('click', goAtlas)
   }, '#/method')
   setHash('#/method')
 }
@@ -1093,7 +1093,7 @@ function drawFamilies() {
       <h2 id="queue-section" style="margin-top:2.6rem">Awaiting review <span class="badge-count">${queued}</span></h2>
       ${queueBody()}
     </div>`
-  modeEl.querySelector('[data-back]').addEventListener('click', goAtlas)
+  modeEl.querySelector('[data-back]')?.addEventListener('click', goAtlas)
   modeEl.querySelectorAll('[data-fam-filter-go]').forEach(b => b.addEventListener('click', () => {
     SEL.family.clear(); SEL.family.add(b.dataset.famFilterGo); goAtlas(); applyFilters()
   }))
@@ -1534,7 +1534,8 @@ window.addEventListener('keydown', ev => {
     ev.preventDefault(); $('scroll-cue').click()
   }
 })
-$('brand').addEventListener('click', leaveAtlas)
+// the brand is a plain link to the home page, as on every other page
+// (Damian, 2026-11-10: "when i've entered the atlas, how the hell do i get out again")
 
 // ------------------------------------------------------------- R6 · router ---
 function applyHash() {

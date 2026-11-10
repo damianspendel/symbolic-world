@@ -1426,7 +1426,9 @@ def test_the_app_header_matches_that_structure():
     between = re.sub(r"<!--.*?-->", "", body[body.index('class="hrow hrow-1"'):
                                              body.index('class="topmenu"')], flags=re.S)
     tags = re.findall(r"<(/?\w+)", between)
-    assert tags == ["div", "h1", "/h1", "/div", "nav"], tags
+    # the brand is a link home, as on every generated page (2026-11-10)
+    assert tags == ["a", "h1", "/h1", "/a", "nav"], tags
+    assert re.search(r'<a class="brand" id="brand" href="/"', body)
     for control in ('id="version"', 'id="search"', 'id="stats"', 'id="fit"', 'id="relayout"'):
         assert body.index(control) > body.index('class="topmenu"'), control
         assert control in body[body.index("hrow-2"):], control
