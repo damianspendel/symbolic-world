@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/evidence">
+<meta name="description" content="The records behind The Symbolic World, a verified knowledge graph of Jung’s Collected Works: the ledger, releases, disputes, relation families, method and design.">
+<meta property="og:image" content="https://symbolicworld.observer/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="The Symbolic World: an atlas of C. G. Jung's Collected Works, with the graph of concepts">
+<title>Evidence · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<script src="/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.evlist dt { margin-top: 1rem; font-family: var(--display); font-size: 1.15rem; }
+.evlist dd { margin: .2rem 0 0; color: var(--ink-faint); font-size: .95rem; line-height: 1.55; max-width: 38em; }</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence" aria-current="page">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">evidence</p>
+<h1>Evidence</h1></div>
+<p class="lede">The records behind the atlas, and the rules its checks follow.</p>
+<dl class="evlist">
+<dt><a href="/ledger">ledger</a></dt><dd>Every verified reference in the graph, with the batch that added it and its verification record.</dd>
+<dt><a href="/releases">releases</a></dt><dd>What each release added, with its version pin and receipts.</dd>
+<dt><a href="/disputes">disputes</a></dt><dd>Challenged claims, with the objection and the outcome of each.</dd>
+<dt><a href="/families">families</a></dt><dd>The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.</dd>
+<dt><a href="/method">method</a></dt><dd>How a claim gets into the graph, and what the checks do and do not cover.</dd>
+<dt><a href="/ontology">design</a></dt><dd>The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.</dd>
+<dt><a href="/vocabulary">vocabulary</a></dt><dd>The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.</dd>
+<dt><a href="/nutshell">in a nutshell</a></dt><dd>The method on one page: a real claim followed through proposal, verification, cross-vendor audit and human refereeing to its published receipt.</dd>
+<dt><a href="/support">support</a></dt><dd>Tips cover the running costs. The atlas, the dataset and the ledger stay free.</dd>
+</dl>
+</main></body></html>

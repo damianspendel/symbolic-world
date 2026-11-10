@@ -87,8 +87,7 @@ table.findings .src { font: .58rem var(--mono); }
 </head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/atlas#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/atlas#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/atlas#/method">method</a><a href="/ontology" aria-current="page">design</a><a href="/support">support</a></span></nav></div>
-<div class="hrow hrow-2"><span class="where">design</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">the design</p>
@@ -114,9 +113,9 @@ table.findings .src { font: .58rem var(--mono); }
 
 <figure class="ofig">
 <div class="ofig-tier">
-  <div class="ofig-strings"><span class="chip ev"><code>undergoes</code> <span class="n">23</span></span><span class="chip ev"><code>compensates</code> <span class="n">15</span></span><span class="chip ev"><code>activates</code> <span class="n">13</span></span><span class="chip ev"><code>leads-to</code> <span class="n">12</span></span></div>
+  <div class="ofig-strings"><span class="chip ev"><code>undergoes</code> <span class="n">23</span></span><span class="chip ev"><code>compensates</code> <span class="n">16</span></span><span class="chip ev"><code>leads-to</code> <span class="n">14</span></span><span class="chip ev"><code>activates</code> <span class="n">13</span></span></div>
   <span class="ofig-arm">&rarr;</span>
-  <span class="chip f-ok ev">psychic-effect <span class="n">404</span></span>
+  <span class="chip f-ok ev">psychic-effect <span class="n">428</span></span>
 </div>
 <figcaption>The second tier: different relation strings, each verified in its own paragraph, assigned to one family. The family only classifies relations.</figcaption>
 </figure>
@@ -197,17 +196,17 @@ table.findings .src { font: .58rem var(--mono); }
 <h2>The pitfall scan</h2>
 <p>Run at every build by <code>tools/ontology_qa/quality.py</code>. Our stance on each finding follows. Where a finding is answered by the declarations layer, equivalence is stated per edge in its paragraph, and where the definitions document rules on a specific pair a declaration records it and the query layer applies it at read time. 7 of the 19 findings are decisions recorded above, 8 are answered by the declarations, and 4 are open defects.</p>
 <div class="qa">
-  <div class="fig"><span class="figv ev">71.4%</span><span class="figl">of relation strings are used exactly once <span class="ev">(1025 of 1435)</span></span></div>
+  <div class="fig"><span class="figv ev">70.6%</span><span class="figl">of relation strings are used exactly once <span class="ev">(1050 of 1487)</span></span></div>
   <div class="fig"><span class="figv ev">270</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">271</span> relations</span></div>
-  <div class="fig"><span class="figv ev">2/9</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(388</span> relations carry a declared string)</span></div>
-  <div class="fig"><span class="figv ev">4</span><span class="figl">component detached from the main graph <span class="ev">(906</span> of 914 nodes are in it)</span></div>
+  <div class="fig"><span class="figv ev">2/9</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(394</span> relations carry a declared string)</span></div>
+  <div class="fig"><span class="figv ev">4</span><span class="figl">component detached from the main graph <span class="ev">(971</span> of 979 nodes are in it)</span></div>
 </div>
 <details class="disclose">
 <summary>19 findings: 7 recorded design decisions, 8 answered by the declarations, 4 open defects.<span class="more">every finding, with its stance</span></summary>
 <div class="tw"><table class="findings"><thead><tr><th>severity</th><th>the scan's finding</th><th>stance</th></tr></thead><tbody>
 <tr class="st-design">
 <td class="sev">critical</td>
-<td><div class="ev tag">P22 no naming/vocabulary regularity</div><div class="ev fmsg">1025/1435 relations (71%) are used exactly once. The relation set is open-vocabulary, not an ontology property set.</div></td>
+<td><div class="ev tag">P22 no naming/vocabulary regularity</div><div class="ev fmsg">1050/1487 relations (71%) are used exactly once. The relation set is open-vocabulary, not an ontology property set.</div></td>
 <td><span class="chip st-design">recorded design decision</span><div class="why">The relation slot holds Jung’s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it.</div></td>
 </tr>
 <tr class="st-open">
@@ -222,22 +221,22 @@ table.findings .src { font: .58rem var(--mono); }
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
-<td><div class="ev tag">P02/P30 synonymous relations, symbolisation</div><div class="ev fmsg">13 distinct relation strings express the same semantics across 378 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
+<td><div class="ev tag">P02/P30 synonymous relations, symbolisation</div><div class="ev fmsg">13 distinct relation strings express the same semantics across 381 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
 <td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
-<td><div class="ev tag">P02/P30 synonymous relations, analogy/correspondence</div><div class="ev fmsg">10 distinct relation strings express the same semantics across 207 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
+<td><div class="ev tag">P02/P30 synonymous relations, analogy/correspondence</div><div class="ev fmsg">10 distinct relation strings express the same semantics across 208 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
 <td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
-<td><div class="ev tag">P02/P30 synonymous relations, part/containment</div><div class="ev fmsg">10 distinct relation strings express the same semantics across 83 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
+<td><div class="ev tag">P02/P30 synonymous relations, part/containment</div><div class="ev fmsg">10 distinct relation strings express the same semantics across 84 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
 <td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
 <td class="sev">critical</td>
-<td><div class="ev tag">P02/P30 synonymous relations, generation/origin</div><div class="ev fmsg">15 distinct relation strings express the same semantics across 130 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
+<td><div class="ev tag">P02/P30 synonymous relations, generation/origin</div><div class="ev fmsg">15 distinct relation strings express the same semantics across 131 edges, with no equivalence declared. A query on any one misses the rest.</div></td>
 <td><span class="chip st-declared">answered by the declarations layer</span><div class="why">Answered by the declarations layer (see the note above the table).</div></td>
 </tr>
 <tr class="st-declared">
@@ -247,7 +246,7 @@ table.findings .src { font: .58rem var(--mono); }
 </tr>
 <tr class="st-design">
 <td class="sev">critical</td>
-<td><div class="ev tag">P06/no backbone: taxonomy is vestigial</div><div class="ev fmsg">Only 73/3770 edges (1.9%) are taxonomic and only 57/914 nodes (6%) have any parent. There is no subsumption hierarchy to inherit or reason over — this is an associative network with a 6-way type tag, not a subsumption ontology.</div></td>
+<td><div class="ev tag">P06/no backbone: taxonomy is vestigial</div><div class="ev fmsg">Only 76/3934 edges (1.9%) are taxonomic and only 60/979 nodes (6%) have any parent. There is no subsumption hierarchy to inherit or reason over — this is an associative network with a 6-way type tag, not a subsumption ontology.</div></td>
 <td><span class="chip st-design">recorded design decision</span><div class="why">By design. The paper describes the graph as an associative network with a type tag.</div></td>
 </tr>
 <tr class="st-declared">
@@ -292,7 +291,7 @@ table.findings .src { font: .58rem var(--mono); }
 </tr>
 <tr class="st-open">
 <td class="sev">minor</td>
-<td><div class="ev tag">P21 catch-all class</div><div class="ev fmsg">`Concept` holds 363/914 nodes (40%) with no subdivision. The type system carries little discriminating power.</div></td>
+<td><div class="ev tag">P21 catch-all class</div><div class="ev fmsg">`Concept` holds 422/979 nodes (43%) with no subdivision. The type system carries little discriminating power.</div></td>
 <td><span class="chip st-open">open: recorded as a defect</span><div class="why">The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.</div></td>
 </tr>
 <tr class="st-design">
@@ -325,8 +324,8 @@ table.findings .src { font: .58rem var(--mono); }
 
 
 <div class="receipts"><b>receipts</b>
-external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:99ef61b6c404</span>, run at build;<br>
+external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:e6f4081e948c</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-11-10 at commit 7ed1396f
+built 2026-11-10 at commit f6f80e82
 </div>
 </main></body></html>

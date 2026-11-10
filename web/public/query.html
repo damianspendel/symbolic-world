@@ -54,6 +54,10 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
 
+.examples { font: .66rem/1.8 var(--mono); color: var(--ink-faint); margin: .6rem 0 0; }
+.examples a { color: var(--gold); text-decoration: none; }
+.examples a:hover { text-decoration: underline; }
+
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }
 .fld { display: flex; flex-direction: column; gap: .25rem; }
 .fld label { font: .55rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
@@ -129,6 +133,11 @@ function ready () {
   const normalized = graph.edges.filter(e => e.relation_normalized && e.relation_normalized.relation).length
   $('h-normalized').textContent = normalized + ' relations carry a normalized string beside the verbatim one'
   $('status').textContent = 'Ready. Run with no filter to read the whole graph.'
+  // spec-reader-v1, A6: a link can fill the form; the run below then uses it
+  const qp = new URLSearchParams(location.search)
+  for (const k of ['family', 'state', 'subject', 'object', 'volume', 'claim_type', 'provenance', 'relation', 'quote']) {
+    if (qp.has(k) && $('f-' + k)) $('f-' + k).value = qp.get(k)
+  }
   run()
 }
 
@@ -213,21 +222,21 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 </script></head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/atlas#/atlas">atlas</a><a href="/routes">routes</a><a href="/query" aria-current="page">query</a><a href="/atlas#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/atlas#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
-<div class="hrow hrow-2"><span class="where">query</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query" aria-current="page">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main records">
 <div class="titleband"><p class="eyebrow">read-only</p>
 <h1>Query the graph</h1></div>
+<p class="examples"><span data-nosnippet>examples: <a href="/query?quote=shadow&amp;volume=9ii">“shadow” in the quotes of CW 9ii</a> · <a href="/query?family=symbolization&amp;subject=mercurius">Mercurius as subject, in the symbolization family</a> · <a href="/query?claim_type=jung-quotes-source&amp;volume=11">Jung quoting a source, in CW 11</a></span></p>
 
 <div class="filters" id="filters">
   <div class="fld"><label for="f-family">family</label><select id="f-family"></select><span class="hint" id="h-family"></span></div>
   <div class="fld"><label for="f-state">state</label><select id="f-state"></select><span class="hint">assigned, or one of the three ways an edge carries no family</span></div>
-  <div class="fld"><label for="f-subject">subject</label><input id="f-subject" placeholder="any"><span class="hint">node id, else substring of an id or a label</span></div>
+  <div class="fld"><label for="f-subject">subject</label><input id="f-subject" placeholder="any"><span class="hint">a concept’s id, or part of its name</span></div>
   <div class="fld"><label for="f-object">object</label><input id="f-object" placeholder="any"><span class="hint">same matching rule as subject</span></div>
   <div class="fld"><label for="f-volume">volume</label><select id="f-volume"></select><span class="hint">a reference cites this CW volume</span></div>
-  <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">read off the reference, not the edge</span></div>
-  <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">substring of relation_family.by</span></div>
+  <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">whose voice the quote is in</span></div>
+  <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">part of the record of the family’s assignment</span></div>
   <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>
   <div class="fld"><label for="f-quote">quote contains</label><input id="f-quote" placeholder="words, or a &quot;phrase&quot;"><span class="hint">words inside the graph's own verbatim quotes, 25 words at most. This does not search the corpus.</span></div>
 </div>
@@ -239,7 +248,7 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 </div>
 
 <div class="rows" id="rows"><p class="dim" id="status">Reading the dataset…</p></div>
-<div class="receipts"><b>receipts</b><span id="receipts">graph state: 914 nodes / 3770 edges; families 2928 assigned, 665 pending-adjudication, 174 no-family, 3 text-undecided; seed.json sha256:99ef61b6c404; declarations relation_declarations.json from FAMILY_DEFINITIONS v0.7.1, 8 active</span></div>
+<div class="receipts"><b>receipts</b><span id="receipts">graph state: 979 nodes / 3934 edges; families 3043 assigned, 693 pending-adjudication, 195 no-family, 3 text-undecided; seed.json sha256:e6f4081e948c; declarations relation_declarations.json from FAMILY_DEFINITIONS v0.7.1, 8 active</span></div>
 
 
 </main></body></html>

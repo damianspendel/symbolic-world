@@ -224,6 +224,10 @@ h4 {
    is exactly this height on desktop; on narrow screens it wraps and grows, as
    the rest of the header does. */
 .site-header .hrow-2 { height: 2.9rem; padding-bottom: 0; gap: 0.9rem; flex-wrap: wrap; }
+/* the one-row header: the switch sits at the end of the top row */
+.site-header .hrow-1 .themetoggle { margin-left: auto; flex: 0 0 auto; }
+.site-header .hrow-1 .hdr-tools { margin-left: auto; }
+.site-header .hrow-1 .hdr-tools + .themetoggle { margin-left: .4rem; }
 .site-header .brand {
   flex: 0 0 11.5rem; font-family: var(--display); font-size: 1.05rem; font-weight: 500;
   color: var(--ink); text-decoration: none; white-space: nowrap; letter-spacing: 0.005em;
@@ -243,6 +247,10 @@ h4 {
   .site-header .brand { flex: 0 0 auto; }
   .site-header .hrow { gap: 0.6rem; }
   .site-header .hrow-1 { height: auto; padding-top: 0.45rem; flex-wrap: wrap; }
+  /* the one-row header on a phone: brand and switch share the first line, the
+     menu takes the whole second line */
+  .site-header .hrow-1 .themetoggle { order: 1; }
+  .site-header .hrow-1 .topmenu { order: 2; flex: 1 0 100%; padding-bottom: .35rem; }
 }
 /* V2-R10 — the site menu. One definition, used by the app's header, by every
    generated page's header, and by the pages the python generator writes. */

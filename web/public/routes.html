@@ -54,6 +54,10 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
 
+.examples { font: .66rem/1.8 var(--mono); color: var(--ink-faint); margin: .6rem 0 0; }
+.examples a { color: var(--gold); text-decoration: none; }
+.examples a:hover { text-decoration: underline; }
+
 .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .7rem .9rem; margin-top: 1rem; }
 .fld { display: flex; flex-direction: column; gap: .25rem; }
 .fld label { font: .55rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
@@ -147,8 +151,7 @@ fetch('/graph.json').then(r => r.json()).then(g => {
 </script></head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/atlas#/atlas">atlas</a><a href="/routes" aria-current="page">routes</a><a href="/query">query</a><a href="/atlas#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/atlas#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
-<div class="hrow hrow-2"><span class="where">routes</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes" aria-current="page">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main records">
 <div class="titleband"><p class="eyebrow">explore</p>
@@ -160,6 +163,7 @@ fetch('/graph.json').then(r => r.json()).then(g => {
   <div class="fld"><label for="r-to">to</label><select id="r-to"></select><span class="hint">routes run both ways; arrows show each claim's own direction</span></div>
   <div class="fld"><label aria-hidden="true">&nbsp;</label><button class="runbtn" type="button" id="runroutes" style="margin:0">find routes</button></div>
 </div>
+<p class="examples"><span data-nosnippet>examples: <a href="/routes?from=persona&amp;to=mandala">The persona to Mandala</a> · <a href="/routes?from=trickster&amp;to=the-self">Trickster to The Self</a> · <a href="/routes?from=lapis&amp;to=the-self">Lapis philosophorum to The Self</a></span></p>
 <div class="routes" id="routes"><p class="dim" id="status">Reading the dataset…</p></div>
 <p class="meta">Every leg is one verified claim with its paragraph and quote. The <a href="/query">query panel</a> carries the full filter set.</p>
 </main></body></html>

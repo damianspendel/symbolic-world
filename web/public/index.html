@@ -69,6 +69,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
 .land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
 .land-card-all { text-decoration: none; }
+.land-search { position: relative; z-index: 1; display: block; }
+.land-search .std-search { width: 100%; box-sizing: border-box; }
+.land-hits { display: flex; flex-direction: column; margin-top: .3rem; }
+.land-hits:empty { display: none; }
+.land-hits a { padding: .35rem .5rem; border-radius: 4px; color: var(--ink); text-decoration: none; font-size: .92rem; }
+.land-hits a:hover, .land-hits a:focus-visible, .land-hits a.on { background: var(--well); color: var(--gold); }
+.land-hits .latin { font-style: italic; color: var(--ink-faint); margin-left: .4rem; }
+.land-hits .none { padding: .35rem .5rem; font-size: .86rem; color: var(--ink-faint); }
 .land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
 .land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
 .land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
@@ -99,6 +107,23 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .land-foot a:hover { color: var(--gold); }
 </style>
 <script>(function(){var f=function(){if(/^#\//.test(location.hash))location.replace('/atlas'+location.hash)};f();addEventListener('hashchange',f)})()</script>
+<script>(function(){
+var names=null,loading=null,on=-1;
+function fold(s){return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[-_]/g,' ')}
+function load(){if(names||loading)return loading;loading=fetch('/concept-names.json').then(function(r){return r.json()}).then(function(d){names=d.concepts.map(function(c){return{id:c[0],label:c[1],latin:c[2]||'',keys:[fold(c[1]),fold(c[0]),fold(c[2]||'')]}});return names});return loading}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function rank(n,q){var best=9;n.keys.forEach(function(k){if(!k)return;var i=k.indexOf(q);if(i<0)return;var r=i===0?0:k.charAt(i-1)===' '?1:2;if(r<best)best=r});return best}
+function show(box,hits,q){on=-1;if(!q){box.innerHTML='';return}
+if(!hits.length){box.innerHTML='<span class="none">no concept by that name</span>';return}
+box.innerHTML=hits.map(function(n){return '<a role="option" href="/concept-'+n.id+'">'+esc(n.label)+(n.latin?'<span class="latin">'+esc(n.latin)+'</span>':'')+'</a>'}).join('')}
+document.addEventListener('DOMContentLoaded',function(){
+var q=document.getElementById('land-q'),box=document.getElementById('land-hits');if(!q||!box)return;
+function run(){var v=fold(q.value).trim();if(!v){show(box,[],'');return}
+load().then(function(all){var hits=[];all.forEach(function(n,i){var r=rank(n,v);if(r<9)hits.push([r,i,n])});hits.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});show(box,hits.slice(0,8).map(function(h){return h[2]}),v)})}
+q.addEventListener('focus',load,{once:true});q.addEventListener('input',run);
+q.addEventListener('keydown',function(e){var links=box.querySelectorAll('a');if(e.key==='ArrowDown'||e.key==='ArrowUp'){if(!links.length)return;e.preventDefault();on=(on+(e.key==='ArrowDown'?1:links.length-1))%links.length;links.forEach(function(a,i){a.classList.toggle('on',i===on)})}
+else if(e.key==='Enter'){var a=links[on<0?0:on];if(a){e.preventDefault();location.href=a.getAttribute('href')}}
+else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()</script>
 <meta property="og:title" content="The Symbolic World — a verified atlas of Jung's Collected Works">
 <meta property="og:description" content="Every claim cites its exact CW volume and paragraph, with Jung's verbatim words. Explore the graph, the Concordance, and the public dispute log.">
 <meta property="og:url" content="https://symbolicworld.observer/">
@@ -127,8 +152,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </script></head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><span class="mgroup">explore</span><a href="/atlas#/atlas">atlas</a><a href="/routes">routes</a><a href="/query">query</a><a href="/atlas#/concordance">concordance</a></span><span class="mgrp"><span class="mgroup">reference</span><a href="/concepts">concepts</a><a href="/families">families</a></span><span class="mgrp"><span class="mgroup">provenance</span><a href="/ledger">ledger</a><a href="/releases">releases</a><a href="/disputes">disputes</a></span><span class="mgrp"><span class="mgroup">about</span><a href="/about">about</a><a href="/nutshell">in a nutshell</a><a href="/atlas#/method">method</a><a href="/ontology">design</a><a href="/support">support</a></span></nav></div>
-<div class="hrow hrow-2"><span class="where">home</span><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose landing">
 <section class="land-hero">
@@ -139,7 +163,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <section class="land-tasks">
 <p class="eyebrow">Start with a question</p>
 <div class="land-grid">
-<div class="land-card"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span><span class="land-starts">Common starting points: <a href="/concept-the-self">The Self</a>&nbsp;&middot; <a href="/concept-archetype">Archetype</a>&nbsp;&middot; <a href="/concept-collective-unconscious">The collective unconscious</a>&nbsp;&middot; <a href="/concept-the-shadow">The shadow</a>&nbsp;&middot; <a href="/concept-anima">Anima</a>&nbsp;&middot; <a href="/concept-animus">Animus</a>&nbsp;&middot; <a href="/concept-individuation">Individuation</a>&nbsp;&middot; <a href="/concept-synchronicity">Synchronicity</a>&nbsp;&middot; <a href="/concept-dream">Dream</a>&nbsp;&middot; <a href="/concept-mandala">Mandala</a>&nbsp;&middot; <a href="/concept-mercurius">Mercurius</a>&nbsp;&middot; <a href="/concept-coniunctio">Coniunctio</a></span><a class="land-card-k land-card-all" href="/concepts">concepts</a></div>
+<div class="land-card"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span>
+<span class="land-search"><input id="land-q" class="std-search facet-filter" type="search" placeholder="find a concept: anima, lapis, mandala…" aria-label="find a concept by name" aria-controls="land-hits" autocomplete="off" spellcheck="false"><span id="land-hits" class="land-hits" role="listbox"></span></span><span class="land-starts">Common starting points: <a href="/concept-the-self">The Self</a>&nbsp;&middot; <a href="/concept-archetype">Archetype</a>&nbsp;&middot; <a href="/concept-collective-unconscious">The collective unconscious</a>&nbsp;&middot; <a href="/concept-the-shadow">The shadow</a>&nbsp;&middot; <a href="/concept-anima">Anima</a>&nbsp;&middot; <a href="/concept-animus">Animus</a>&nbsp;&middot; <a href="/concept-individuation">Individuation</a>&nbsp;&middot; <a href="/concept-synchronicity">Synchronicity</a>&nbsp;&middot; <a href="/concept-dream">Dream</a>&nbsp;&middot; <a href="/concept-mandala">Mandala</a>&nbsp;&middot; <a href="/concept-mercurius">Mercurius</a>&nbsp;&middot; <a href="/concept-coniunctio">Coniunctio</a></span><a class="land-card-k land-card-all" href="/concepts">concepts</a></div>
 <a class="land-card" href="/query"><span class="land-card-t">Check a claim against the book</span><span class="land-card-d">Filter by volume, family and claim type, and search the words inside the quotes.</span><span class="land-card-k">query</span></a>
 <a class="land-card" href="/atlas#/concordance"><span class="land-card-t">Set Jung beside the alchemists</span><span class="land-card-d">See his psychological concepts next to the alchemical figures and operations he reads them through, with a citation for each pairing.</span><span class="land-card-k">concordance</span></a>
 <a class="land-card" href="/routes"><span class="land-card-t">Trace one idea to another</span><span class="land-card-d">See how one concept reaches another.</span><span class="land-card-k">routes</span></a>
@@ -149,7 +174,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="land-link-text">
 <p class="eyebrow">One example</p>
 <p class="land-claim ev"><a href="/concept-lapis">Lapis philosophorum</a> <em>is-projection-of</em> <a href="/concept-the-self">The Self</a></p>
-<p class="land-note">The atlas holds 5104 such links. Every one names its source paragraph, says whether Jung asserts the claim or reports it, and records who checked it.</p>
+<p class="land-note">The atlas holds 5292 such links. Every one names its source paragraph, says whether Jung asserts the claim or reports it, and records who checked it.</p>
 </div>
 <blockquote class="land-quote ev"><p>&ldquo;we would say that the stone is a projection of the unified self&rdquo;</p><p class="meta">CW 9ii &sect;264 &middot; jung asserts &middot; verified by claude-fable-5</p></blockquote>
 </section>
@@ -163,7 +188,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </div>
 </section>
 <footer class="land-foot">
-<span>914 concepts &middot; 3770 relations &middot; 5104 citations</span>
+<span>979 concepts &middot; 3934 relations &middot; 5292 citations</span>
 <span>updated 2026-11-10</span>
 <span>open data, CC BY</span>
 <a href="/method">the method</a><a href="/disputes">disputes log</a><a href="/support">support the project</a>
