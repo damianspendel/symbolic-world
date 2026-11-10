@@ -2030,3 +2030,63 @@ def test_the_vocabulary_page_has_an_anchor_for_every_term():
     assert sorted(ids) == sorted(terms)
     assert vocab["namespace"] in html
     assert ("provisional" in html) == vocab["namespace_provisional"]
+
+
+# ------------------------------------------- spec-reader-v1, A1 and A7 ------
+
+def _gate_on(name):
+    src = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
+    m = re.search(rf"^const {name} = (true|false)$", src, re.M)
+    assert m, f"{name} is not a readable literal"
+    return m.group(1) == "true"
+
+
+def test_concept_pages_read_for_a_reader():
+    """A1: reader headings shelve every row; each row names its family; each
+    quote shows volume, paragraph and voice, with the check record folded;
+    relations print with spaces and keep the stored string in the title; the
+    most cited claims repeat rows from below. A7: an exact repeat prints once."""
+    if not _gate_on("CONCEPT_READER_LAYOUT"):
+        pytest.skip("CONCEPT_READER_LAYOUT is off")
+    atlas = json.loads(read(os.path.join(SRC, "atlas.json")))
+    edges_of = {}
+    for e in atlas["edges"]:
+        for nid in {e["source"], e["target"]}:
+            edges_of.setdefault(nid, []).append(e)
+    headings = {"What it is, and what it is not", "What it does, and what acts on it", "How it appears",
+                "What it is set beside or against", "How it changes", "How a named source reads it", "Not yet sorted"}
+    voice = {"jung-asserts": "Jung asserts", "jung-reports-parallel": "Jung reports a parallel",
+             "jung-quotes-source": "Jung quotes a source"}
+    rel_span = re.compile(r'<span class="rel ev" title="([^"]*)">([^<]*)</span>')
+    for path in sorted(glob.glob(os.path.join(PUBLIC, "concept-*.html"))):
+        cid = os.path.basename(path)[len("concept-"):-len(".html")]
+        page = read(path)
+        main = page[page.index("<main"):]
+        found = re.findall(r'<h2 class="cfam" id="g-[a-z-]+">([^<]*)</h2>', main)
+        assert found and set(found) <= headings, cid
+        rows = re.findall(r'<div class="crow">(.*?)\n</div>', main, re.S)
+        edges = edges_of.get(cid, [])
+        assert len(rows) == len(edges), cid
+        for stored, shown in rel_span.findall(main):
+            assert html_lib.unescape(shown) == html_lib.unescape(stored).replace("-", " "), cid
+        quotes_below = 0
+        for r in rows:
+            assert '<span class="prov" data-nosnippet>' in r, cid
+            items = re.findall(r'<li class="ev">CW (\S+) §(\d+) — “(.*?)” <span class="voice" data-nosnippet>([^<]*)</span>'
+                               r' <details class="chk"><summary>.*?checked.*?</summary>(.*?)</details></li>', r, re.S)
+            keys = [(v, p, q) for v, p, q, _, _ in items]
+            assert len(keys) == len(set(keys)), f"{cid}: a repeat printed twice"
+            assert len(items) == r.count('<li class="ev">'), cid
+            for _, _, _, words, fold in items:
+                assert all(w in voice.values() for w in words.split(" / ")), cid
+                assert fold.count('<span class="cmeta" data-nosnippet>') >= 1, cid
+            quotes_below += sum(f.count('class="cmeta"') for *_, f in items)
+        assert quotes_below == sum(len(e["refs"]) for e in edges), f"{cid}: a check record went missing"
+        top = re.search(r'<div class="top">(.*?)\n</div>', main, re.S)
+        if len(edges) > 3:
+            trows = re.findall(r'<div class="trow"><div class="triple">(.*?)</div>', top.group(1))
+            assert len(trows) == 3, cid
+            for t in trows:
+                assert any(t in r for r in rows), f"{cid}: a most cited claim is not a row below"
+        else:
+            assert not top, cid

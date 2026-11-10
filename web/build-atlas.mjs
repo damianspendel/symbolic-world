@@ -39,6 +39,14 @@ const EMIT_QUOTE_SEARCH = true
 // their interface labels data-nosnippet. Off, today's markup returns.
 const CONCEPT_SEARCH_HEAD = true
 
+// spec-reader-v1, item A1 (with A7): the concept page laid out for a reader.
+// It opens on one computed line and the most cited claims, groups the rows
+// under reader headings (each row keeps its family as a link), folds each
+// quote's check record into a "checked" toggle, prints a relation's hyphens as
+// spaces (the stored string stays in the title attribute) and prints an exact
+// repeat of a quote once. Off, today's layout returns.
+const CONCEPT_READER_LAYOUT = true
+
 // spec-seo-minor-v1, item 2: the batch pages and /ledger are provenance
 // records, kept for readers who follow a link but not offered to search:
 // they carry noindex, follow and leave the sitemap. tools/build_ledger_page.py,
@@ -1744,7 +1752,20 @@ const styleConcept = `
 .nbrs ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .15rem 1rem; }
 .nbrs li { font-size: .9rem; line-height: 1.6; margin: 0; }
 .nbrs .vmc { margin-left: .25rem; }
-`
+${CONCEPT_READER_LAYOUT ? `
+.voice { font: .62rem var(--mono); color: var(--ink-faint); margin-left: .35rem; white-space: nowrap; }
+.prov a { color: inherit; }
+details.chk { display: inline; margin-left: .35rem; }
+details.chk summary { display: inline; cursor: pointer; font: .58rem var(--mono); color: var(--ink-faint); list-style: none; }
+details.chk summary::-webkit-details-marker { display: none; }
+details.chk summary::before { content: "\\25B8\\FE0E "; }
+details.chk[open] summary::before { content: "\\25BE\\FE0E "; }
+details.chk[open] .cmeta { display: block; }
+.top { margin: .6rem 0 .4rem; }
+.top-t { font: .58rem var(--mono); letter-spacing: .08em; color: var(--ink-faint); margin: 0 0 .25rem; max-width: none; }
+.trow { border-left: 2px solid var(--gold-dim); padding: .2rem 0 .2rem .7rem; margin: .45rem 0; }
+.trow .tq { font-size: .85rem; line-height: 1.55; color: var(--ink-label); margin: .1rem 0 0; max-width: none; }
+` : ''}`
 if (EMIT_CONCEPT_PAGES) {
   const conceptFamIds = new Set(families.map(f => f.id))
   const conceptFamName = new Map(families.map(f => [f.id, f.name]))
@@ -1777,6 +1798,42 @@ if (EMIT_CONCEPT_PAGES) {
   // paragraph's interface text is wrapped in a span rather than marked itself
   const ns = (html) => CONCEPT_SEARCH_HEAD ? `<span class="ns" data-nosnippet>${html}</span>` : html
   const PENDING = '·pending', UNCLASSIFIED = '·unclassified'
+
+  // spec-reader-v1, A1: the reader headings. They are interface, a way to
+  // shelve the rows, and say nothing about any single edge; each row still
+  // names its own family and how that family was assigned. Every family of
+  // FAMILY_DEFINITIONS sits under exactly one heading, or the build stops.
+  const READER_GROUPS = [
+    ['what-it-is', 'What it is, and what it is not', ['classification', 'archetypal-identity', 'composition', 'structural-position', 'privation']],
+    ['what-it-does', 'What it does, and what acts on it', ['psychic-effect', 'generation', 'dependence', 'instrumentality', 'telos', 'derivation']],
+    ['how-it-appears', 'How it appears', ['symbolization', 'manifestation', 'personification', 'projection']],
+    ['beside-or-against', 'What it is set beside or against', ['correspondence', 'opposition', 'union', 'separation', 'prefiguration', 'amplification', 'kinship']],
+    ['how-it-changes', 'How it changes', ['transformation', 'sequence']],
+    ['named-source', 'How a named source reads it', ['doctrinal-attribution']],
+    ['not-yet-sorted', 'Not yet sorted', []]
+  ]
+  const readerGroupOf = new Map(READER_GROUPS.flatMap(([key, , fams]) => fams.map(f => [f, key])))
+  if (CONCEPT_READER_LAYOUT) {
+    const shelved = [...readerGroupOf.keys()].sort(), defined = [...conceptFamIds].sort()
+    if (shelved.length !== readerGroupOf.size || shelved.join() !== defined.join()) {
+      throw new Error(`reader headings: families shelved ${shelved.join(', ')} do not match the definitions ${defined.join(', ')}`)
+    }
+  }
+  const readerKeyOf = (e) => e.family && e.family.state === 'family' && readerGroupOf.has(e.family.value)
+    ? readerGroupOf.get(e.family.value) : 'not-yet-sorted'
+  const VOICE_WORDS = { 'jung-asserts': 'Jung asserts', 'jung-reports-parallel': 'Jung reports a parallel', 'jung-quotes-source': 'Jung quotes a source' }
+  const voiceOf = (r) => VOICE_WORDS[r.claim_type] || r.claim_type
+  const relShown = (s) => String(s).replace(/-/g, ' ')
+  const confRank = (c) => c === 'high' ? 0 : c === 'medium' ? 1 : 2
+  const firstVol = (e) => [...e.volumes].sort(byVolume)[0]
+  const byVolOf = (a, b) => (a === undefined) - (b === undefined) || (a === undefined ? 0 : byVolume(a, b))
+  // most citations first, then high confidence, then volume order
+  const byCitations = (a, b) => b.refs.length - a.refs.length || confRank(a.confidence) - confRank(b.confidence) ||
+    byVolOf(firstVol(a), firstVol(b)) || a.id.localeCompare(b.id, 'en', { numeric: true })
+  // an edge's best quote: high confidence, Jung's own voice, then volume and paragraph order
+  const bestRef = (e) => [...e.refs].sort((a, b) => confRank(a.confidence) - confRank(b.confidence) ||
+    (b.claim_type === 'jung-asserts') - (a.claim_type === 'jung-asserts') ||
+    byVolume(a.volume, b.volume) || Number(a.paragraph) - Number(b.paragraph))[0]
   let conceptCount = 0
   const headOverflow = { titles: [], descriptions: [] }
   for (const node of atlasNodes) {
@@ -1885,7 +1942,85 @@ ${neighbours.map(nb => `<li><a class="ev" href="/concept-${nb.id}">${esc(labelOf
       (edges.length ? ` The atlas holds ${count(edges.length, 'relation')} for it` +
         (passages ? `, drawn from ${count(passages, 'passage')} quoted with volume and paragraph${volList}` : '') + '.' : '') + '</p>'
 
-    const body = `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
+    // spec-reader-v1, A1 and A7
+    let readerBody = null
+    if (CONCEPT_READER_LAYOUT) {
+      const tripleOf = (e) => {
+        const out = e.source === node.id
+        const otherId = out ? e.target : e.source
+        const rel = (e.relation_normalized && e.relation_normalized.relation) || e.relation
+        const other = `<a class="ev" href="/concept-${otherId}">${esc(conceptLabel.get(otherId) || otherId)}</a>`
+        const self = `<span class="ev">${esc(node.label)}</span>`
+        return `${out ? self : other} <span class="rel ev" title="${esc(rel)}">${esc(relShown(rel))}</span> ${out ? other : self}`
+      }
+      const famTag = (e) => {
+        const f = e.family
+        const name = f && f.state === 'family' && conceptFamIds.has(f.value)
+          ? `<a href="/family-${f.value}">${esc(conceptFamName.get(f.value) || f.value)}</a> · ` : ''
+        return `<span class="prov"${NS}>${name}${esc(provLabel(f))}</span>`
+      }
+      const quoteHead = (r, voices) => `CW ${esc(r.volume)} §${esc(r.paragraph)} — “${esc(r.quote)}”` +
+        ` <span class="voice"${NS}>${esc(voices)}</span>`
+      // A7: an exact repeat (same volume, paragraph and quote) prints once,
+      // with every check record kept in its fold
+      const citeLines = (e) => {
+        const same = new Map()
+        for (const r of e.refs) {
+          const k = `${r.volume}\u0000${r.paragraph}\u0000${r.quote}`
+          if (!same.has(k)) same.set(k, [])
+          same.get(k).push(r)
+        }
+        return [...same.values()].map(rs => {
+          const voices = [...new Set(rs.map(voiceOf))].join(' / ')
+          const records = rs.map(r => `<span class="cmeta"${NS}>${esc(r.claim_type)} · verified by ${esc(r.verified_by)}, ${esc(r.verified_date)}` +
+            `${r.crossvendor_checked ? ` · cross-checked: ${esc(r.crossvendor_checked)}` : ''}</span>`).join('')
+          return `<li class="ev">${quoteHead(rs[0], voices)} <details class="chk"><summary>${ns('checked')}</summary>${records}</details></li>`
+        }).join('\n')
+      }
+      const readerRow = (e) => `<div class="crow">
+<div class="triple">${tripleOf(e)} ${famTag(e)}</div>
+${e.refs.length ? `<ul class="cites">\n${citeLines(e)}\n</ul>` : ''}
+</div>`
+
+      const shelves = READER_GROUPS
+        .map(([key, heading]) => [key, heading, edges.filter(e => readerKeyOf(e) === key).sort(byCitations)])
+        .filter(([, , rows]) => rows.length)
+      const shelfBlocks = shelves.map(([key, heading, rows]) =>
+        `<h2 class="cfam" id="g-${key}">${esc(heading)}</h2>\n${rows.map(readerRow).join('\n')}`).join('\n')
+      const shelfChips = shelves.map(([key, heading, rows]) =>
+        `<a class="chip ${key === 'not-yet-sorted' ? 'f-pend' : 'f-ok'}" href="#g-${key}">${esc(heading)} ${derived(rows.length)}</a>`).join('\n')
+
+      // the opening line: every figure computed (RULE 17)
+      const opening = `<p class="lede">${count(edges.length, 'relation')}` +
+        (passages ? ` from ${count(passages, 'passage')}` : '') +
+        (vols.length ? ` in CW ${vols.join(', ')}` : '') +
+        ` · ${ordinal(derived(conceptRankOf.get(node.id)))} most connected of ${derived(atlasNodes.length)} concepts.</p>`
+      // the most cited claims repeat rows below, so the block adds no claim;
+      // a page with three relations or fewer shows them all below instead
+      const top = edges.length > 3 ? [...edges].sort(byCitations).slice(0, 3) : []
+      const topBlock = top.length ? `<div class="top">
+<p class="top-t"${NS}>most cited claims</p>
+${top.map(e => { const r = bestRef(e); return `<div class="trow"><div class="triple">${tripleOf(e)}</div>` +
+  (r ? `<p class="tq ev">${quoteHead(r, voiceOf(r))}</p>` : '') + '</div>' }).join('\n')}
+</div>` : ''
+      const methodLine = 'A machine checks each quotation against its source paragraph. The ' +
+        '<a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.'
+
+      readerBody = `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
+<h1><span class="ev">${esc(node.label)}</span>${node.latin ? ` <em class="latin ev">${esc(node.latin)}</em>` : ''}</h1>
+<p class="sub">${ns(`<span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span>`)}</p></div>
+${opening}
+${topBlock}
+<p class="meta">${ns(methodLine)}</p>
+<p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
+${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${neighbourBlock}
+${shelves.length > 1 ? `<p class="chips">${ns(`\n${shelfChips}\n`)}</p>` : ''}
+${shelfBlocks}
+<p class="meta">${ns(`<a href="/atlas#/n/${node.id}">open in the atlas</a> · <a href="/ledger">the ledger</a>`)}</p>`
+    }
+
+    const body = readerBody || `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
 <h1><span class="ev">${esc(node.label)}</span>${node.latin ? ` <em class="latin ev">${esc(node.latin)}</em>` : ''}</h1>
 <p class="sub">${ns(`<span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span>`)}</p></div>
 ${CONCEPT_SEARCH_HEAD ? lede + '\n' : ''}<p class="meta">${ns(registerNote)}</p>
