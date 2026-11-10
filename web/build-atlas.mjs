@@ -908,7 +908,7 @@ h4 {
 // is deep and where it is thin. Counts are computed here so the strip never
 // recomputes them at runtime.
 const VOL_LABEL = {
-  '5': 'Symbols of Transformation', '7': 'Two Essays on Analytical Psychology',
+  '5': 'Symbols of Transformation', '6': 'Psychological Types', '7': 'Two Essays on Analytical Psychology',
   '8': 'Structure & Dynamics of the Psyche',
   '9i': 'Archetypes & the Collective Unconscious', '9ii': 'Aion',
   '11': 'Psychology & Religion', '12': 'Psychology & Alchemy',
