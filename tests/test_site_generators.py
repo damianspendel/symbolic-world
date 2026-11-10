@@ -2166,3 +2166,22 @@ def test_the_sitemap_dates_each_page_from_its_own_record():
         assert dated.get(f"concept-{nid}") == d, nid
     for fid, d in by_family.items():
         assert dated.get(f"family-{fid}") == d, fid
+
+
+def test_concept_pages_carry_a_defined_term_and_no_quotation():
+    """B2 (DefinedTerm only): one block per page, naming the node as the atlas
+    holds it; no Quotation, so no quote enters machine-readable markup."""
+    if not _gate_on("CONCEPT_JSONLD"):
+        pytest.skip("CONCEPT_JSONLD is off")
+    atlas = json.loads(read(os.path.join(SRC, "atlas.json")))
+    nodes = {n["id"]: n for n in atlas["nodes"]}
+    for path in sorted(glob.glob(os.path.join(PUBLIC, "concept-*.html"))):
+        cid = os.path.basename(path)[len("concept-"):-len(".html")]
+        blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', read(path), re.S)
+        assert len(blocks) == 1, cid
+        ld = json.loads(blocks[0])
+        assert ld["@type"] == "DefinedTerm" and ld["name"] == nodes[cid]["label"], cid
+        assert ld["url"] == f"https://symbolicworld.observer/concept-{cid}", cid
+        assert ld["inDefinedTermSet"]["url"] == "https://symbolicworld.observer/concepts", cid
+        assert ld.get("alternateName", "") == (nodes[cid].get("latin") or ""), cid
+        assert "Quotation" not in blocks[0] and "quote" not in blocks[0].lower(), cid

@@ -73,6 +73,11 @@ const QUERY_EXAMPLES = true
 // any other page takes the date of the last commit that touched its sources.
 // A row whose date cannot be read carries none: never the build date.
 const SITEMAP_LASTMOD = true
+
+// spec-reader-v1, item B2 (DefinedTerm only, Damian 2026-11-10): one JSON-LD
+// block per concept page naming the term, its URL, the /concepts set and its
+// Latin name. No Quotation items: no quote enters machine-readable markup.
+const CONCEPT_JSONLD = true
 const ns0 = (html) => `<span data-nosnippet>${html}</span>`
 const EXAMPLES_CSS = QUERY_EXAMPLES ? '\n.examples { font: .66rem/1.8 var(--mono); color: var(--ink-faint); margin: .6rem 0 0; }\n.examples a { color: var(--gold); text-decoration: none; }\n.examples a:hover { text-decoration: underline; }\n' : ''
 
@@ -2126,8 +2131,17 @@ ${groupBlocks}
     }
     if (!description) { descLabel = labelSteps[labelSteps.length - 1]; description = descOf(descLabel, false); headOverflow.descriptions.push(node.id) }
 
+    const conceptLd = CONCEPT_JSONLD ? `<script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'DefinedTerm',
+      name: node.label,
+      ...(node.latin ? { alternateName: node.latin } : {}),
+      url: `https://symbolicworld.observer/concept-${node.id}`,
+      inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'Concepts in The Symbolic World', url: 'https://symbolicworld.observer/concepts' }
+    }).replace(/</g, '\\u003c')}</script>` : ''
     registerPage({
       ...(SITEMAP_LASTMOD ? { lastmod: latestVerified(edges) } : {}),
+      ...(CONCEPT_JSONLD ? { head: conceptLd } : {}),
       slug: 'concept-' + node.id,
       title: `${node.label} — ${node.type} in Jung’s Collected Works`,
       ...(CONCEPT_SEARCH_HEAD ? { titleFull } : {}),
