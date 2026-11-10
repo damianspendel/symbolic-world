@@ -667,6 +667,17 @@ nothing is to be built. Figures are as of 2026-10-22.
    existing rule on sourced claims stays untouched, and a design document
    comes before any build.
 
+## v2.3.0 scope (added 2026-11-10)
+
+Damian's scope for v2.3.0, set on 2026-11-10. The trilogy pass and his paused rulings go to the release after it.
+
+- The data through CW 6.
+- The RDF export, with the vocabulary and the proposer attribution (section below).
+- The work pages, behind `EMIT_WORK_PAGES` and his localhost review (section "Work pages").
+- The Bookshop.org links. These wait for his affiliate ID, his edition choices and his disclosure wording.
+- The glossary pass, with Vale and the declauding skill.
+- The SSH Open Marketplace entry, after the DOI.
+
 ## v2.3.0: the RDF export (added 2026-11-05)
 
 `exports/` is gitignored, because the export moves with every merged window. At the freeze, run `python3 tools/query/export_rdf.py --out-dir exports/rdf`, remove `exports/` from `.gitignore` and commit the three files, so the tag pins them. The Turtle files come to about 6.7 MB.
@@ -723,6 +734,7 @@ Damian's decision: "add to backlog for 2.3.0 to run vale over the glossary entri
 - The glossary's opening says the entries keep the words Damian got at the time. So the pass proposes each rewrite to him, old wording beside new, and changes an entry only on his yes.
 - A passive stays where the entry does not care who acts. Those hits get a note saying why, and no edit.
 - No definition changes meaning. The pass is wording only, and it ends with the hook run again and the remaining hits listed.
+- 2026-11-10, Damian: "update to 3, the vale pass, this skill https://github.com/oaustegard/claude-skills/tree/main/declauding". The pass now runs Vale and the declauding skill. Install and run the skill as the section "Prose review by Fable 5.2 with the declauding skill" sets out.
 
 ## Work pages (added 2026-11-10)
 
@@ -738,5 +750,10 @@ Damian's words: "apparently Fable 5.2 has better prose. add to the backlog, for 
 
 - A Fable 5.2 session installs the declauding skill and reviews the AI-generated prose. On the site that is `docs/METHOD_COPY.md`, the concept-page template in `web/build-atlas.mjs`, the vocabulary page and `docs/GLOSSARY.md`. In the docs it is `README.md` and the release notes (`docs/RELEASES.md`, `docs/releases/`).
 - Nobody has found the skill yet. It is not in `~/.claude/skills`, and a search of the claude.ai skills catalog for "declauding" returns nothing. Before any session installs it, Damian names its source and someone reads the skill in full.
+  - Answered 2026-11-10. Damian named the source: github.com/oaustegard/claude-skills, folder `declauding`, MIT licence, latest commit 6baa7290 (10 Nov 2026). The summary chat read its README and hook that day, and these points come from that reading.
+  - The folder holds `SKILL.md`, references, five Python scripts and `hooks/hooks.json`. The hook is a Stop hook that runs `scripts/fresh_eyes.py hook` when someone installs the folder as a plugin. Install the skill folder alone, without the hook, unless Damian decides otherwise.
+  - `declaude_review.py` sends headers and opening and closing sentences to Gemini when `GEMINI_API_KEY` is set, or to Claude when `ANTHROPIC_API_KEY` is set. With neither set, it prints the prompt for an agent to answer. Run it with neither key set.
+  - `declaude_rank.py` needs torch and transformers. Leave it out.
+  - Pin the commit you install. Read `SKILL.md` and every script in full before installing: the summary chat has not read them.
 - Fable 5.2 reviewing text Opus wrote keeps proposer and verifier in different model families. Text Fable wrote needs a reviewer from another family. `docs/METHOD_COPY.md` is one such file: the Fable session authored it, per the comment beside `methodPath` in `web/build-atlas.mjs`.
 - The review proposes edits only. Damian approves each change, and the approved set comes with a "Changes in this pass" list.
