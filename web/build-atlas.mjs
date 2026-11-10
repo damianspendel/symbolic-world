@@ -87,6 +87,12 @@ const CONCEPT_JSONLD = true
 // v2.1 item). tools/pages/preflight.py reads this literal. Off, robots.txt is
 // today's and no llms.txt is written.
 const EMIT_LLMS_TXT = true
+
+// spec-reader-v1, item B4: where a node's Latin form differs from its label,
+// the page title carries both, "Label (latin)", and the h1 keeps the Latin in
+// italics. A Latin field that only repeats the label is not printed twice.
+// Today's three Latin fields repeat their labels; the entity layer fills the rest.
+const TITLE_BOTH_NAMES = true
 const ns0 = (html) => `<span data-nosnippet>${html}</span>`
 const EXAMPLES_CSS = QUERY_EXAMPLES ? '\n.examples { font: .66rem/1.8 var(--mono); color: var(--ink-faint); margin: .6rem 0 0; }\n.examples a { color: var(--gold); text-decoration: none; }\n.examples a:hover { text-decoration: underline; }\n' : ''
 
@@ -1918,8 +1924,12 @@ if (EMIT_CONCEPT_PAGES) {
     byVolume(a.volume, b.volume) || Number(a.paragraph) - Number(b.paragraph))[0]
   let conceptCount = 0
   const headOverflow = { titles: [], descriptions: [] }
+  const foldName = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim()
   for (const node of atlasNodes) {
     const edges = edgesByNode.get(node.id)
+    // B4: the Latin form, unless it only repeats the label
+    const latinShown = !TITLE_BOTH_NAMES ? node.latin
+      : (node.latin && foldName(node.latin) !== foldName(node.label) ? node.latin : '')
     const refTotal = edges.reduce((a, e) => a + e.refs.length, 0)
     const vols = [...new Set(edges.flatMap(e => e.volumes))].sort(byVolume)
     derived(edges.length, refTotal)
@@ -2089,7 +2099,7 @@ ${top.map(e => { const r = bestRef(e); return `<div class="trow"><div class="tri
         '<a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.'
 
       readerBody = `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
-<h1><span class="ev">${esc(node.label)}</span>${node.latin ? ` <em class="latin ev">${esc(node.latin)}</em>` : ''}</h1>
+<h1><span class="ev">${esc(node.label)}</span>${latinShown ? ` <em class="latin ev">${esc(latinShown)}</em>` : ''}</h1>
 <p class="sub">${ns(`<span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span>`)}</p></div>
 ${opening}
 ${topBlock}
@@ -2103,7 +2113,7 @@ ${shelfBlocks}
     }
 
     const body = readerBody || `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
-<h1><span class="ev">${esc(node.label)}</span>${node.latin ? ` <em class="latin ev">${esc(node.latin)}</em>` : ''}</h1>
+<h1><span class="ev">${esc(node.label)}</span>${latinShown ? ` <em class="latin ev">${esc(latinShown)}</em>` : ''}</h1>
 <p class="sub">${ns(`<span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span>`)}</p></div>
 ${CONCEPT_SEARCH_HEAD ? lede + '\n' : ''}<p class="meta">${ns(registerNote)}</p>
 <p>${ns(provLine)}</p>
@@ -2117,7 +2127,7 @@ ${groupBlocks}
     // spec-seo-minor-v1, item 1: a title that fits 60 and a description that
     // fits 155. A label shortens by dropping a trailing parenthetical, then by
     // cutting at the first ; , : or " / "; the brand is added only when it fits.
-    const labelSteps = [node.label]
+    const labelSteps = TITLE_BOTH_NAMES && latinShown ? [`${node.label} (${latinShown})`, node.label] : [node.label]
     const noParen = node.label.replace(/\s*\([^()]*\)\s*$/, '')
     if (noParen && noParen !== node.label) labelSteps.push(noParen)
     const cut = noParen.search(/;|,|:| \/ /)

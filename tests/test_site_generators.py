@@ -36,6 +36,7 @@ import re
 import shutil
 import subprocess
 import sys
+import unicodedata
 
 import pytest
 
@@ -2204,3 +2205,22 @@ def test_llms_txt_and_the_robots_groups():
     for agent in ("Google-Extended", "Applebot-Extended"):
         assert f"User-agent: {agent}\nDisallow: /\n" in robots, agent
     assert robots.rstrip().endswith("Sitemap: https://symbolicworld.observer/sitemap.xml")
+
+
+def test_concept_titles_carry_a_distinct_latin_name():
+    """B4: a Latin form that differs from the label joins the title as
+    "Label (latin)" where it fits and stays in the h1; one that only repeats
+    the label is printed once."""
+    if not _gate_on("TITLE_BOTH_NAMES"):
+        pytest.skip("TITLE_BOTH_NAMES is off")
+    fold = lambda s: unicodedata.normalize("NFD", (s or "").lower()).encode("ascii", "ignore").decode().strip()
+    atlas = json.loads(read(os.path.join(SRC, "atlas.json")))
+    overflow = set(json.loads(read(os.path.join(SRC, "concept-head-overflow.json")))["titles"])
+    for n in atlas["nodes"]:
+        page = read(os.path.join(PUBLIC, f"concept-{n['id']}.html"))
+        h1 = re.search(r"<h1>(.*?)</h1>", page).group(1)
+        title = html_lib.unescape(re.search(r"<title>(.*?)</title>", page).group(1))
+        distinct = bool(n.get("latin")) and fold(n["latin"]) != fold(n["label"])
+        assert ('class="latin ev"' in h1) == distinct, n["id"]
+        if distinct and n["id"] not in overflow and len(f"{n['label']} ({n['latin']}) in Jung’s Collected Works") <= 60:
+            assert f"({n['latin']})" in title, n["id"]
