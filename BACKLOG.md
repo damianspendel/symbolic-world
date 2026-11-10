@@ -684,6 +684,8 @@ Damian's scope for v2.3.0, set on 2026-11-10. The trilogy pass and his paused ru
 
 Quotes: Damian ruled on 2026-11-05 that readers find them elsewhere, so the export carries none (`QUOTES_MODE = "omit"` in `tools/query/export_rdf.py`). Still open: the namespace, which waits on his w3id.org registration and goes live only after `/vocabulary` is deployed, and how to handle the four names in the CC BY file that still share eight or more words with a quote (`KNOWN_NAMES_REPEATING_THE_SOURCE` in `tests/test_query.py`).
 
+Namespace blocker cleared (2026-11-10). davidlehn merged perma-id/w3id.org PR #7091, "Create .htaccess for Symbolic World redirects", on 2026-11-06 at 19:52 UTC. The summary chat tested the redirects on 2026-11-10: `w3id.org/symbolicworld/ns` answers 303 to `/vocabulary`, `/node/anima` 303 to `/concept-anima`, `/family/privation` 303 to `/family-privation`, and `/data/` 302 to doi.org/10.5281/zenodo.21631523. Relation, edge, claim, reference, stage and agent IRIs answer 303 to `/vocabulary`. The export still uses its provisional base (`namespace_provisional: true` in `tools/query/vocabulary.json`). Switching it to the w3id base IRI is part of the v2.3.0 build. The four names that repeat words from a quote are still open.
+
 The proposer gap (added 2026-11-06, Damian: "send the proposer gap to the build chat"). Each `sw:Claim` records its gate and its audit but not the miner run that proposed it, so a reader of the PROV-O cannot trace the rule that the proposer never signs off. The TGDK paper will point reviewers to the export. Not built: the export stays as it is until Damian decides.
 
 What the records hold, counted over the 4,559 references at b-cw16-5:
