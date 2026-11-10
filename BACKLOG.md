@@ -723,3 +723,11 @@ Damian's decision: "add to backlog for 2.3.0 to run vale over the glossary entri
 - The glossary's opening says the entries keep the words Damian got at the time. So the pass proposes each rewrite to him, old wording beside new, and changes an entry only on his yes.
 - A passive stays where the entry does not care who acts. Those hits get a note saying why, and no edit.
 - No definition changes meaning. The pass is wording only, and it ends with the hook run again and the remaining hits listed.
+
+## Work pages (added 2026-11-10)
+
+Damian's decision on item A5 of spec-reader-v1: "backlog work pages, until we've mined CW 6 and before the trilogy". Backlog entry only, nothing built.
+
+- One page per work at `/work-<id>`: title, volume, years written and revised, coverage as "claims from N of M paragraphs", the most-cited concepts in the work's paragraph range, and the claims in paragraph order. An index at `/works`. Each concept page gains an "appears in" line.
+- The data exists: `works.json` at the repo root (commit 9da0c608, 73 works over the eleven extracted volumes, with a tiling test).
+- Timing: after CW 6 is mined, before the trilogy. Build it behind a gate `EMIT_WORK_PAGES`, switched off until Damian has reviewed it on localhost.
