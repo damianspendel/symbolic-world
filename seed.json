@@ -4805,6 +4805,111 @@
    "id": "battle-of-two-animals",
    "label": "Battle or encounter of two animals or monsters",
    "type": "Motif"
+  },
+  {
+   "id": "abstraction",
+   "label": "Abstraction",
+   "type": "Concept"
+  },
+  {
+   "id": "idea",
+   "label": "Idea (the pure abstract)",
+   "type": "Concept"
+  },
+  {
+   "id": "affectivity",
+   "label": "Affectivity (Bleuler)",
+   "type": "Concept"
+  },
+  {
+   "id": "active-apperception",
+   "label": "Active apperception",
+   "type": "Concept"
+  },
+  {
+   "id": "passive-apperception",
+   "label": "Passive apperception",
+   "type": "Concept"
+  },
+  {
+   "id": "archaism",
+   "label": "Archaism",
+   "type": "Concept"
+  },
+  {
+   "id": "fantasy",
+   "label": "Fantasy (fantasm and imaginative activity)",
+   "type": "Concept"
+  },
+  {
+   "id": "concretism",
+   "label": "Concretism",
+   "type": "Concept"
+  },
+  {
+   "id": "expectation",
+   "label": "Expectation",
+   "type": "Concept"
+  },
+  {
+   "id": "collective",
+   "label": "Collective (contents belonging to many)",
+   "type": "Concept"
+  },
+  {
+   "id": "feeling-of-inferiority",
+   "label": "Feeling of inferiority (Adler)",
+   "type": "Concept"
+  },
+  {
+   "id": "collective-attitude",
+   "label": "Collective attitude",
+   "type": "Concept"
+  },
+  {
+   "id": "undifferentiated-function",
+   "label": "Undifferentiated function",
+   "type": "Concept"
+  },
+  {
+   "id": "empathy",
+   "label": "Empathy",
+   "type": "Concept"
+  },
+  {
+   "id": "active-fantasy",
+   "label": "Active fantasy",
+   "type": "Concept"
+  },
+  {
+   "id": "passive-fantasy",
+   "label": "Passive fantasy",
+   "type": "Concept"
+  },
+  {
+   "id": "imagination",
+   "label": "Imagination (imaginative activity)",
+   "type": "Concept"
+  },
+  {
+   "id": "judgment",
+   "label": "Judgment",
+   "type": "Concept"
+  },
+  {
+   "id": "rational-function",
+   "label": "Rational function",
+   "type": "Concept"
+  },
+  {
+   "id": "active-feeling",
+   "label": "Active (directed) feeling",
+   "type": "Concept"
+  },
+  {
+   "id": "feeling-type",
+   "label": "Feeling type",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -116657,6 +116762,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-1, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 710,
+     "quote": "When extraversion is habitual, we speak of the extraverted type (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
     }
    ],
    "relation_family": {
@@ -119365,6 +119481,1328 @@
    ],
    "relation_family": {
     "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "abstraction",
+   "relation": "devalues",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 679,
+     "quote": "For me, therefore, abstraction amounts to an energic devaluation of the object",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "abstraction",
+   "relation": "is-introverting-movement-of",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 679,
+     "quote": "In other words, abstraction is an introverting movement of libido",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "abstraction",
+   "relation": "culminates-in",
+   "object": "idea",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 680,
+     "quote": "abstraction at its highest level detaches itself absolutely from the object ... It is this pure “abstract” which I term an idea",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "emotion",
+   "relation": "distinguished-from",
+   "object": "feeling",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 681,
+     "quote": "I distinguish—in contrast to Bleuler (v. Affectivity)—feeling (q.v.) from affect",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "note": "headword AFFECT; Jung uses emotion as synonymous with affect"
+    },
+    {
+     "volume": "6",
+     "paragraph": 725,
+     "quote": "Feeling is distinguished from affect by the fact that it produces no perceptible physical innervations",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "feeling",
+   "relation": "turns-into",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 681,
+     "quote": "every feeling, after attaining a certain strength, releases physical innervations, thus becoming an affect",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 725,
+     "quote": "When the intensity of feeling increases, it turns into an affect",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "affectivity",
+   "relation": "comprises",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 682,
+     "quote": "AFFECTIVITY is a term coined by Bleuler. ... “not only the affects proper, but also the slight feelings or feeling-tones of pain and pleasure.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "source": "Bleuler"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "active-apperception",
+   "relation": "distinguished-from",
+   "object": "passive-apperception",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 683,
+     "quote": "We distinguish active from passive apperception.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "archaism",
+   "relation": "exhibits-qualities-of",
+   "object": "primitive-mentality",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 684,
+     "quote": "We may describe as archaic all psychological traits that exhibit the qualities of the primitive mentality.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, FINDING-adjudicated, 2026-11-10)",
+     "correction_note": "cross-vendor correction: The text states that archaic psychological traits exhibit the qualities of the primitive mentality, not the abstract concept of archaism itself."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "archaism",
+   "relation": "attaches-to",
+   "object": "fantasy",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 684,
+     "quote": "It is clear that archaism attaches primarily to the fantasies (q.v.) of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "concretism",
+   "relation": "is-a",
+   "object": "archaism",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 684,
+     "quote": "Concretism (q.v.) of thought and feeling is archaic",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'Concretism (q.v.) of thought and feeling is archaic': the sentence predicates the adjective, not the noun the identity relation needs (§697 states it); high -> medium under the DEFINITIONS clause."
+    },
+    {
+     "volume": "6",
+     "paragraph": 697,
+     "quote": "Concretism, therefore, is an archaism (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "assimilation",
+   "relation": "is-process-of",
+   "object": "apperception",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 685,
+     "quote": "Fundamentally, assimilation is a process of apperception (q.v.)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "psychological-attitude",
+   "relation": "is-readiness-of",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 687,
+     "quote": "For us, attitude is a readiness of the psyche to act or react in a certain way.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "active-apperception",
+   "relation": "requires",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 687,
+     "quote": "Active apperception (q.v.) is impossible without an attitude.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "psychological-attitude",
+   "relation": "has-affinity-with",
+   "object": "apperception",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 688,
+     "quote": "The concept of attitude has some affinity with Wundt’s concept of apperception",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, FINDING-adjudicated, 2026-11-10)",
+     "correction_note": "cross-vendor correction: Jung is asserting the affinity between his concept of attitude and Wundt's concept of apperception in his own voice; the claim type should be 'jung-asserts'."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "psychological-attitude",
+   "relation": "signifies",
+   "object": "expectation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 688,
+     "quote": "Attitude signifies expectation , and expectation always operates selectively",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "collective",
+   "relation": "is-antithesis-of",
+   "object": "individuality",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 692,
+     "quote": "The antithesis of collective is individual (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'The antithesis of collective is individual (q.v.)': the entry's antithesis is the individual, which the Definitions treat apart from individuality (§755 against §756), one step from the object node; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "collective-representations",
+   "relation": "exemplifies",
+   "object": "collective",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 692,
+     "quote": "Such contents are what Lévy-Bruhl 18 calls the représentations collectives of primitives",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "source": "Lévy-Bruhl"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "compensation",
+   "relation": "balances",
+   "object": "feeling-of-inferiority",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 693,
+     "quote": "the neuroses by Adler. 20 He understands by it the functional balancing of the feeling of inferiority by a compensatory psychological system",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "source": "Adler"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "compensation",
+   "relation": "conceived-as",
+   "object": "adjustment",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 693,
+     "quote": "COMPENSATION means balancing, adjusting, supplementing",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'COMPENSATION means balancing, adjusting, supplementing': adjusting is one of three glosses, one step from 'conceived as adjustment', and the standing adjustment node was minted at §564 in the sense Jung sets against adaptation (a vocabulary note); high -> medium."
+    },
+    {
+     "volume": "6",
+     "paragraph": 694,
+     "quote": "Whereas Adler restricts his concept of compensation ... I conceive it as functional adjustment in general, an inherent self-regulation of the psychic apparatus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "balances",
+   "object": "one-sidedness",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 694,
+     "quote": "I regard the activity of the unconscious (q.v.) as a balancing of the one-sidedness of the general attitude (q.v.)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "neurosis",
+   "relation": "disturbs",
+   "object": "compensation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 695,
+     "quote": "In neurosis the unconscious appears in such stark contrast to the conscious state that compensation is disturbed.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim, 20 tokens; 'In neurosis the unconscious appears in such stark contrast to the conscious state that compensation is disturbed': neurosis is the state in which compensation is disturbed, the causal verb a step from the sentence; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "concretism",
+   "relation": "is-antithesis-of",
+   "object": "abstraction",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 696,
+     "quote": "CONCRETISM . By this I mean a peculiarity of thinking and feeling which is the antithesis of abstraction",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "concretism",
+   "relation": "falls-under",
+   "object": "participation-mystique",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 698,
+     "quote": "Concretism is a concept which falls under the more general concept of participation mystique",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "concretism",
+   "relation": "results-in",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 699,
+     "quote": "concretism results in a projection (q.v.) of these inner factors into the objective data",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "maintains-relation-to",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 700,
+     "quote": "Consciousness is the function or activity 26 which maintains the relation of psychic contents to the ego",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 706,
+     "quote": "a psychic element is conscious to me only in so far as it is related to my ego-complex",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, FINDING-adjudicated, 2026-11-10)",
+     "correction_note": "cross-vendor correction: The quote and paragraph state that a psychic element's relation to the ego is a condition for it being conscious, not that consciousness 'maintains' this relation (which was stated in paragraph 700, not 706)."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "distinguished-from",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 700,
+     "quote": "Consciousness is not identical with the psyche (v. Soul ), because the psyche represents the totality of all psychic contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "constructive-method",
+   "relation": "is-antithesis-of",
+   "object": "reductive-method",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 701,
+     "quote": "I use constructive and synthetic to designate a method that is the antithesis of the reductive (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "maeder",
+   "relation": "speaks-of",
+   "object": "prospective-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 701,
+     "quote": "Maeder actually speaks of a prospective function of the unconscious (q.v.), which half playfully anticipates future developments.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "source": "Maeder"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "restricts",
+   "object": "prospective-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 701,
+     "quote": "Freud himself allows the dream a teleological role ... for him its prospective function is essentially restricted to “wishing.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "complements",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 702,
+     "quote": "according to the compensation (q.v.) theory, the activity of the unconscious has an essentially complementary significance for the conscious situation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 694,
+     "quote": "As a rule, the unconscious compensation does not run counter to consciousness, but is rather a balancing or supplementing of the conscious orientation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "reductive-method",
+   "relation": "leads-back-to",
+   "object": "collective-attitude",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 704,
+     "quote": "The reductive method, on the contrary, is collective (q.v.), since it leads back from the individual to basic collective attitudes or facts.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "undifferentiated-function",
+   "relation": "exhibits",
+   "object": "archaism",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 705,
+     "quote": "So long as a function is still so fused with one or more other functions ... it is in an archaic (q.v.) condition",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "constitutes-centre-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 706,
+     "quote": "By ego I understand a complex of ideas which constitutes the centre of my field of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "distinguished-from",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 706,
+     "quote": "I therefore distinguish between the ego and the self (q.v.), since the ego is only the subject of my consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "empathy",
+   "relation": "is-introjection-of",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 707,
+     "quote": "EMPATHY 36 is an introjection (q.v.) of the object.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "enantiodromia",
+   "relation": "designates-play-of",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 708,
+     "quote": "In the philosophy of Heraclitus 37 it is used to designate the play of opposites in the course of events",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "source": "Heraclitus"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "enantiodromia",
+   "relation": "denotes-emergence-of",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 709,
+     "quote": "I use the term enantiodromia for the emergence of the unconscious opposite in the course of time.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, FINDING-adjudicated, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim, 19 tokens; 'the emergence of the unconscious opposite in the course of time': the opposite that is unconscious, one step from the unconscious as object (the note); high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the auditor names the step from 'the unconscious opposite' to the unconscious as object; the gate had already set medium for that step and the reference's note carries the opposite.",
+     "note": "the object is the unconscious opposite"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "extraversion",
+   "relation": "is-outward-turning-of",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 710,
+     "quote": "EXTRAVERSION is an outward-turning of libido (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "active-fantasy",
+   "relation": "distinguished-from",
+   "object": "passive-fantasy",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 712,
+     "quote": "We can distinguish between active and passive fantasy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "active-fantasy",
+   "relation": "is-product-of",
+   "object": "intuition",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 712,
+     "quote": "Active fantasies are the product of intuition (q.v.)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "passive-fantasy",
+   "relation": "presupposes",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 712,
+     "quote": "Naturally, they can appear only as a result of a relative dissociation of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 714,
+     "quote": "passive fantasy is never the expression of a unified individuality since, as already observed, it presupposes a considerable degree of dissociation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim, 21 tokens; 'it presupposes a considerable degree of dissociation' is stated 'As a general rule'; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "is-a",
+   "object": "passive-fantasy",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 715,
+     "quote": "In fantasies as in dreams (which are nothing but passive fantasies)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "uses",
+   "object": "reductive-method",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 716,
+     "quote": "As we know, Freud has made intensive use of this method. It is a method of interpretation which I call reductive (q.v.).",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "psyche",
+   "relation": "characterized-by",
+   "object": "teleology",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 718,
+     "quote": "not rely exclusively on the strictly causal standpoint ... for it has also to consider the purposive nature of the psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 6 tokens), 18 tokens; 'the purposive nature of the psyche' is what a scientific psychology has to consider: the standing teleology node is a step from 'purposive nature'; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "fantasy",
+   "relation": "seems-like",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 720,
+     "quote": "Purposively interpreted, it seems like a symbol , seeking to characterize a definite goal",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
+     "note": "when purposively interpreted"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "imagination",
+   "relation": "is-flow-of",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 722,
+     "quote": "Fantasy as imaginative activity is identical with the flow of psychic energy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "feeling",
+   "relation": "is-kind-of",
+   "object": "judgment",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 725,
+     "quote": "Hence feeling is a kind of judgment",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "feeling",
+   "relation": "is-a",
+   "object": "rational-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 727,
+     "quote": "Feeling, like thinking, is a rational (q.v.) function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "fails-to-formulate",
+   "object": "feeling",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 728,
+     "quote": "The intellect proves incapable of formulating the real nature of feeling in conceptual terms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "active-feeling",
+   "relation": "is-act-of",
+   "object": "will",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 729,
+     "quote": "Hence active feeling is a directed function, an act of the will (q.v.)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "feeling-type",
+   "relation": "oriented-by",
+   "object": "feeling",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 729,
+     "quote": "When the subject’s attitude as a whole is oriented by the feeling function, we speak of a feeling type",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-10"
