@@ -47,6 +47,13 @@ const CONCEPT_SEARCH_HEAD = true
 // repeat of a quote once. Off, today's layout returns.
 const CONCEPT_READER_LAYOUT = true
 
+// spec-reader-v1, item A3 (names only, Damian 2026-11-10): a search box on the
+// landing page that finds a concept by its label, id or Latin name and goes to
+// its page. The names load from /concept-names.json when the box takes focus,
+// so the page's first load does not grow. tools/pages/preflight.py reads this
+// literal to expect the names file in dist. Off, the landing page is today's.
+const HOME_SEARCH = true
+
 // spec-seo-minor-v1, item 2: the batch pages and /ledger are provenance
 // records, kept for readers who follow a link but not offered to search:
 // they carry noindex, follow and leave the sitemap. tools/build_ledger_page.py,
@@ -2929,6 +2936,26 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
   // /#/... link in circulation keeps working. The copy is the about page's
   // first paragraph (final wording from the outreach review, 2026-10-22) and
   // the four reader journeys that page describes, one card each.
+  // spec-reader-v1, A3: the landing search. A label that starts with the
+  // query ranks first, then one with a word that starts with it, then any
+  // other match; ties keep the /concepts order. Enter opens the first hit.
+  const LANDING_SEARCH_JS = `(function(){
+var names=null,loading=null,on=-1;
+function fold(s){return String(s).toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/[-_]/g,' ')}
+function load(){if(names||loading)return loading;loading=fetch('/concept-names.json').then(function(r){return r.json()}).then(function(d){names=d.concepts.map(function(c){return{id:c[0],label:c[1],latin:c[2]||'',keys:[fold(c[1]),fold(c[0]),fold(c[2]||'')]}});return names});return loading}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function rank(n,q){var best=9;n.keys.forEach(function(k){if(!k)return;var i=k.indexOf(q);if(i<0)return;var r=i===0?0:k.charAt(i-1)===' '?1:2;if(r<best)best=r});return best}
+function show(box,hits,q){on=-1;if(!q){box.innerHTML='';return}
+if(!hits.length){box.innerHTML='<span class="none">no concept by that name</span>';return}
+box.innerHTML=hits.map(function(n){return '<a role="option" href="/concept-'+n.id+'">'+esc(n.label)+(n.latin?'<span class="latin">'+esc(n.latin)+'</span>':'')+'</a>'}).join('')}
+document.addEventListener('DOMContentLoaded',function(){
+var q=document.getElementById('land-q'),box=document.getElementById('land-hits');if(!q||!box)return;
+function run(){var v=fold(q.value).trim();if(!v){show(box,[],'');return}
+load().then(function(all){var hits=[];all.forEach(function(n,i){var r=rank(n,v);if(r<9)hits.push([r,i,n])});hits.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});show(box,hits.slice(0,8).map(function(h){return h[2]}),v)})}
+q.addEventListener('focus',load,{once:true});q.addEventListener('input',run);
+q.addEventListener('keydown',function(e){var links=box.querySelectorAll('a');if(e.key==='ArrowDown'||e.key==='ArrowUp'){if(!links.length)return;e.preventDefault();on=(on+(e.key==='ArrowDown'?1:links.length-1))%links.length;links.forEach(function(a,i){a.classList.toggle('on',i===on)})}
+else if(e.key==='Enter'){var a=links[on<0?0:on];if(a){e.preventDefault();location.href=a.getAttribute('href')}}
+else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()`
   {
     const landingEdge = atlasEdges.find(e => e.key === 'lapis|is-projection-of|the-self' && e.refs.length)
     if (!landingEdge) { console.error('LANDING PAGE: the figure edge lapis|is-projection-of|the-self is not in the graph — refusing to show a link that is not there.'); process.exit(1) }
@@ -2948,7 +2975,8 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 <section class="land-tasks">
 <p class="eyebrow">Start with a question</p>
 <div class="land-grid">
-<div class="land-card"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span><span class="land-starts">Common starting points: ${LANDING_STARTS.map(([text, id]) => `<a href="/concept-${id}">${esc(text)}</a>`).join('&nbsp;&middot; ')}</span><a class="land-card-k land-card-all" href="/concepts">concepts</a></div>
+<div class="land-card"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span>${HOME_SEARCH ? `
+<span class="land-search"><input id="land-q" class="std-search facet-filter" type="search" placeholder="find a concept: anima, lapis, mandala…" aria-label="find a concept by name" aria-controls="land-hits" autocomplete="off" spellcheck="false"><span id="land-hits" class="land-hits" role="listbox"></span></span>` : ''}<span class="land-starts">Common starting points: ${LANDING_STARTS.map(([text, id]) => `<a href="/concept-${id}">${esc(text)}</a>`).join('&nbsp;&middot; ')}</span><a class="land-card-k land-card-all" href="/concepts">concepts</a></div>
 <a class="land-card" href="/query"><span class="land-card-t">Check a claim against the book</span><span class="land-card-d">Filter by volume, family and claim type, and search the words inside the quotes.</span><span class="land-card-k">query</span></a>
 <a class="land-card" href="/atlas#/concordance"><span class="land-card-t">Set Jung beside the alchemists</span><span class="land-card-d">See his psychological concepts next to the alchemical figures and operations he reads them through, with a citation for each pairing.</span><span class="land-card-k">concordance</span></a>
 <a class="land-card" href="/routes"><span class="land-card-t">Trace one idea to another</span><span class="land-card-d">See how one concept reaches another.</span><span class="land-card-k">routes</span></a>
@@ -2993,7 +3021,14 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 .land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
 .land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
 .land-card-all { text-decoration: none; }
-.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
+${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; }
+.land-hits { display: flex; flex-direction: column; margin-top: .3rem; }
+.land-hits:empty { display: none; }
+.land-hits a { padding: .35rem .5rem; border-radius: 4px; color: var(--ink); text-decoration: none; font-size: .92rem; }
+.land-hits a:hover, .land-hits a:focus-visible, .land-hits a.on { background: var(--well); color: var(--gold); }
+.land-hits .latin { font-style: italic; color: var(--ink-faint); margin-left: .4rem; }
+.land-hits .none { padding: .35rem .5rem; font-size: .86rem; color: var(--ink-faint); }
+` : ''}.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
 .land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
 .land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
 .land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
@@ -3025,7 +3060,7 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
     // Forward a hash route to the app: on load, and on a hash change too, since a
     // click on an old /#/... link from this page changes the hash without a load.
     const landingHead = `<script>(function(){var f=function(){if(/^#\\//.test(location.hash))location.replace('/atlas'+location.hash)};f();addEventListener('hashchange',f)})()</script>
-<meta property="og:title" content="The Symbolic World — a verified atlas of Jung's Collected Works">
+${HOME_SEARCH ? `<script>${LANDING_SEARCH_JS}</script>\n` : ''}<meta property="og:title" content="The Symbolic World — a verified atlas of Jung's Collected Works">
 <meta property="og:description" content="Every claim cites its exact CW volume and paragraph, with Jung's verbatim words. Explore the graph, the Concordance, and the public dispute log.">
 <meta property="og:url" content="https://symbolicworld.observer/">
 <meta property="og:type" content="website">
@@ -3050,6 +3085,12 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
   "distribution": { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://symbolicworld.observer/graph.json" }
 }
 </script>`
+    if (HOME_SEARCH) {
+      // the names the landing search matches, in the /concepts rank order
+      const names = conceptRanked.map(n => n.latin ? [n.id, n.label, n.latin] : [n.id, n.label])
+      writeFileSync(here('./public/concept-names.json'), JSON.stringify({ concepts: names }) + '\n')
+      console.log(`landing search: ${names.length} concept names written to /concept-names.json`)
+    }
     writeFileSync(here('./public/index.html'), renderPage({
       slug: '', title: "An atlas of Jung's Collected Works", where: 'home', kind: 'prose landing',
       description: "A verified knowledge graph of C. G. Jung's Collected Works. Every symbolic relation, from the stone to the anima, cites its exact volume and paragraph with Jung's verbatim words. Method, dispute log and dataset all public.",

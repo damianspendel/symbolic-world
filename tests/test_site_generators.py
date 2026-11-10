@@ -2090,3 +2090,21 @@ def test_concept_pages_read_for_a_reader():
                 assert any(t in r for r in rows), f"{cid}: a most cited claim is not a row below"
         else:
             assert not top, cid
+
+
+def test_the_landing_search_finds_concepts_by_name():
+    """A3 (names only): the landing page carries one search box and no quote
+    search; the names file lists every atlas node once, in /concepts order."""
+    if not _gate_on("HOME_SEARCH"):
+        pytest.skip("HOME_SEARCH is off")
+    atlas = json.loads(read(os.path.join(SRC, "atlas.json")))
+    names = json.loads(read(os.path.join(PUBLIC, "concept-names.json")))["concepts"]
+    assert sorted(c[0] for c in names) == sorted(n["id"] for n in atlas["nodes"])
+    label = {n["id"]: n["label"] for n in atlas["nodes"]}
+    latin = {n["id"]: n.get("latin") or "" for n in atlas["nodes"]}
+    for c in names:
+        assert c[1] == label[c[0]] and (c[2] if len(c) > 2 else "") == latin[c[0]], c[0]
+    page = read(os.path.join(PUBLIC, "index.html"))
+    assert page.count('id="land-q"') == 1
+    assert "/concept-names.json" in page
+    assert "/query?" not in page, "the quote-search row was ruled out (names only)"

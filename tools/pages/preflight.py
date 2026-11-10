@@ -127,6 +127,12 @@ if not og_match:
     check('EMIT_OG_IMAGE readable from web/build-atlas.mjs', False, 'the constant is missing or no longer a literal')
 if og_match and og_match.group(1) == 'true':
     ALLOW.add('social-preview.png')
+# spec-reader-v1, A3: the names file behind the landing search, while HOME_SEARCH is on
+hs_match = re.search(r'^const HOME_SEARCH = (true|false)$', build_src, re.M)
+if not hs_match:
+    check('HOME_SEARCH readable from web/build-atlas.mjs', False, 'the constant is missing or no longer a literal')
+if hs_match and hs_match.group(1) == 'true':
+    ALLOW.add('concept-names.json')
 # the /support page exists only while SUPPORT_URL is set (2026-10-21)
 su_match = re.search(r"^const SUPPORT_URL = '([^']*)'$", build_src, re.M)
 if not su_match:
