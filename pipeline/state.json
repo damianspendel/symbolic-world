@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-10",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
   "nodes": 695,
@@ -995,11 +995,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw6-1",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW6 §556-613",
+   "result": "CW 6 WINDOW 1: Psychological Types §556-613, the opening of chapter X, 'General Description of the Types': the attitude-types and function-types and their biological footing, the extraverted attitude of consciousness and its danger, the attitude of the unconscious as compensation, extraverted thinking and the extraverted thinking type (the intellectual formula, the repression of feeling, negative thinking, Mephistopheles, theosophy), extraverted feeling and the extraverted feeling type, the rational types, extraverted sensation and the sensation type, extraverted intuition and the opening of the intuitive type. THE CW 6 ARC IS OPEN: five windows over §556-844 (chapters X and XI only), the last arc of the corpus. FIRST-WINDOW CHORE DONE: the Graph line of docs/REVIEW.md now says 11 volumes. Reporting discipline: the whole window is Jung's own descriptive voice; the proposer's two reports-parallel references (Spitteler's Epimetheus §563, Goethe's Mephistopheles §593) are Jung's own use of a literary figure for his own concept and the gate moved them to jung-asserts under the Faust ruling of b-cw7-2; Freud is named at §571 and §572 and no claim rests on him. The TYPE DESCRIPTIONS clause did most of the gate's work: type-bound statements carried by a general node were demoted to medium (the attitude of the unconscious at §569, §571, §572 twice; the unconscious §573; repression §587; extraverted thinking §593; negative thinking §600; intuition §608). The DEFINITIONS clause held: the identity and definition relations (§559, §563 twice, §564, §594, §595, §597, §601 twice) rest on sentences that state or distinguish. Mined 58 candidates/70 refs (Opus-family miner subagent, blinded; above the 35-50 candidate guide, inside the reference guide; no attaches, the volume's own triple list being empty and no triple matching another volume's). Pre-check kept all 70. Fable gate 51 TRUE / 19 CORRECTED / 0 FALSE: two claim types (§563, §593, both to jung-asserts) and seventeen confidence demotions (the type-bound scopes above; the exaggerated case stated as the type's condition at §565 and §569; subjects or objects a step from the sentence's term at §556 libido, §560 predisposition, §594 theosophy, §595 the feeling judgment, §601 the irrational, §609 compulsion symptoms). Gemini cross-vendor 68 PASS / 2 FINDING on 70 post-gate refs: §593 extraverted-thinking|turns-into|negative-thinking (subject overreach) overruled with an audit note, the paragraph sitting in the extraverted thinking section and the gate having already set medium for the scope; §613 extraverted-intuitive-type|distinguished-from|extraverted-sensation-type (the ellipsis) overruled with an audit note, a valid three-token ellipsis under the quote convention. Twenty-four mints added, the chapter's own typology vocabulary: attitude-type, function-type, extraverted-type, introverted-type, the four extraverted functions and introverted-thinking, the four extraverted function-types, rational-type, superior-function, the-object, attitude-of-the-unconscious, adjustment, intellectual-formula, negative-thinking, theosophy, possibility (a generic noun, flagged for vocabulary review at arc end), and the Figures epimetheus and mephistopheles; none stranded, none duplicating a standing node. +58 edges, 0 refs attached to standing edges, +70 refs, +24 nodes. Graph 938/3828/5174. Transfer: reuse 8.6% (5 reused of 58 window edges per transfer.py: leads-to twice, compensates, personifies, manifests-as), 0 sentence-shaped; a low figure expected of a volume whose vocabulary is typological rather than symbolic. Family sweep 58 edges under v0.7.2: agreement 53/58 (91%), 46 assigned, 5 queued, 7 no-family, 0 text-undecided; queue 670; the Gemini arm returned no bare 'unclassified' rows this window, raw file kept as family_sweep_gemini_b-cw6-1_raw.json. strain: 7 no-family, 0 text-undecided of 58 swept; new homeless strings: distinguished-by, connected-with, most-frequent-neurosis-of, principal-neurosis-of, prone-to (the three pathology strings are one shape, a type's typical neurosis, and may seed a candidate gap; characterized-by twice falls in the characterization gap FAMILY_DEFINITIONS records under ruling 44). Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-10, a daytime catch-up of the nightly firing the scheduler skipped (Damian, 2026-11-10: start CW 6 windows 1 to 3 once the new build has deployed; the build chat confirmed the 914/3770/5104 data refresh deployed and VERIFY GREEN), the first of three windows, 70 refs judged against the full paragraphs; no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 938/3828/5174, distinct paragraphs 3297, claim mix 4215/714/245, REVIEW volumes 10 -> 11; named-source strings and hedged figures left at their earlier values as before. Note quotes (RULES #24): seed.json holds no '[...]'; audit notes are in the gate's own words with short quoted fragments only. BUILD TRACK: the volume map needs the CW 6 title (Psychological Types, chapters X and XI only, §556-844) before the next deploy. The marker moves to CW 6 window 2 (§614-671). Data committed only: build and deploy belong to the build track; the iCloud archive step runs after the commit (Damian, 2026-11-10).",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a138aae0ee86a697e, 16 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 60 assistant turns after the miner finished at 2026-11-10T11:46:47.606Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW6-DUE: window 1 (§556-613)",
- "nodes": 914,
- "edges": 3770,
- "refs": 5104,
- "as_of": "2026-11-09"
+ "next": "CW6-DUE: window 2 (§614-671)",
+ "nodes": 938,
+ "edges": 3828,
+ "refs": 5174,
+ "as_of": "2026-11-10"
 }
