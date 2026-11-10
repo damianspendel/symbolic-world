@@ -33,6 +33,12 @@ from kg_query import (  # noqa: E402
 
 VOCABULARY = load_json(os.path.join(HERE, "vocabulary.json"))
 PROPOSERS = load_json(os.path.join(HERE, "proposers.json"))
+# Batch records from 2026-11-07 on carry a models field naming the proposer.
+BATCH_MODELS = {
+    b["id"]: b["models"]["proposer"]
+    for b in load_json(os.path.join(HERE, "..", "..", "pipeline", "state.json"))["batches"]
+    if (b.get("models") or {}).get("proposer")
+}
 
 # The namespace is the "namespace" line of vocabulary.json, and it is provisional
 # until a human registers it. Each file says so wherever it appears.
@@ -312,13 +318,16 @@ def audit_block(local, target, record):
 
 
 def proposer_for(batch):
-    """(agent, as recorded, source) for a mining batch, from proposers.json. A batch
-    with its own record, or inside an arc whose close note covers every window, is
-    "record"; any other b- batch is "procedure". None for an excluded batch and for
-    a reference whose audit names no batch."""
+    """(agent, as recorded, source) for a mining batch, from proposers.json or the
+    models field of the batch record in pipeline/state.json. A batch with its own
+    record, or inside an arc whose close note covers every window, is "record"; any
+    other b- batch is "procedure". None for an excluded batch and for a reference
+    whose audit names no batch."""
     if not batch or batch in PROPOSERS["excluded"]:
         return None
     entry = PROPOSERS["records"].get(batch)
+    if entry is None and batch in BATCH_MODELS:
+        entry = {"agent": BATCH_MODELS[batch], "as_recorded": BATCH_MODELS[batch]}
     if entry is None:
         arc, _, window = batch.rpartition("-")
         covered = PROPOSERS["arc_records"].get(arc)
@@ -449,8 +458,9 @@ def build_claims(graph):
             "# Stages are prov:Activity records with only what seed.json states. Dates are",
             "# xsd:date on dcterms:date because the record holds no time of day, and",
             "# prov:endedAtTime requires one. A claim links to its batch's sw:Proposal",
-            "# by prov:wasGeneratedBy, where tools/query/proposers.json gives a source:",
-            "# \"record\" (a batch record names the proposer) or \"procedure\" (the documented",
+            "# by prov:wasGeneratedBy, where tools/query/proposers.json or the models field",
+            "# of the batch record in pipeline/state.json gives a source: \"record\" (a",
+            "# batch record names the proposer) or \"procedure\" (the documented",
             "# mining procedure does). A claim whose audit names no batch, or whose batch",
             "# is excluded there, has no Proposal stage. No record gives a mining date.",
             "# Notes and normalization qualifiers are not exported: they can carry quoted",

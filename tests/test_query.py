@@ -712,6 +712,8 @@ def test_stages_state_only_what_the_seed_records(graph, parsed):
     ("b-cw16-2", (None, "Opus-family miner subagent", "record")),
     ("b-cw9i-3", (None, "every reference proposed by Opus", "record")),
     ("b-cw8-14", (None, "every reference through Opus -> Fable -> Gemini", "record")),
+    ("b-cw7-6", ("claude-opus-5-5", "claude-opus-5-5", "record")),
+    ("b-cw16-8", ("claude-opus-5-5", "claude-opus-5-5", "record")),
     ("b-cw9ii-2", (None, "miner (Opus family)", "procedure")),
     ("b-cw5-4", (None, "miner (Opus family)", "procedure")),
     ("b-cw11-8", None),

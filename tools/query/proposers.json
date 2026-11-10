@@ -1,5 +1,5 @@
 {
-  "_about": "Who proposed each mining batch, as far as a record or the documented procedure shows. tools/query/export_rdf.py reads this to write one sw:Proposal per batch. A reference's batch is the one its crossvendor_checked string names. Damian ruled on 2026-11-06 that the documented procedure counts as a source, labelled as such; a batch the procedure attribution would misdescribe is excluded, and a reference whose audit names no batch gets no Proposal stage. Nothing here is inferred.",
+  "_about": "Who proposed each mining batch, as far as a record or the documented procedure shows. tools/query/export_rdf.py reads this to write one sw:Proposal per batch. A reference's batch is the one its crossvendor_checked string names. Damian ruled on 2026-11-06 that the documented procedure counts as a source, labelled as such; a batch the procedure attribution would misdescribe is excluded, and a reference whose audit names no batch gets no Proposal stage. Batch records from b-cw16-6 on carry a models field in pipeline/state.json, and the exporter reads the proposer from it, so those batches need no entry here. Nothing here is inferred.",
   "decided": "Damian, 2026-11-06: \"yes to both proposer decisions\"",
   "procedure": {
     "as_recorded": "miner (Opus family)",
