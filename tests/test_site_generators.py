@@ -2104,7 +2104,7 @@ def test_concept_pages_read_for_a_reader():
         main = page[page.index("<main"):]
         found = re.findall(r'<h2 class="cfam" id="g-[a-z-]+">([^<]*)</h2>', main)
         assert found and set(found) <= headings, cid
-        rows = re.findall(r'<div class="crow">(.*?)\n</div>', main, re.S)
+        rows = re.findall(r'<div class="crow" id="r-[^"]+">(.*?)\n</div>', main, re.S)
         edges = edges_of.get(cid, [])
         assert len(rows) == len(edges), cid
         for stored, shown in rel_span.findall(main):
@@ -2127,7 +2127,15 @@ def test_concept_pages_read_for_a_reader():
             trows = re.findall(r'<div class="trow"><div class="triple">(.*?)</div>', top.group(1))
             assert len(trows) == 3, cid
             for t in trows:
-                assert any(t in r for r in rows), f"{cid}: a most cited claim is not a row below"
+                assert any(t in r for r in rows), f"{cid}: a top claim is not a row below"
+            # each top row names its passage count and links to its full row
+            links = re.findall(r'<a href="#(r-[^"]+)">(\d+) passages?, each quoted below', top.group(1))
+            assert len(links) == 3, cid
+            by_id = {e["id"]: e for e in edges}
+            for anchor, n in links:
+                assert f'<div class="crow" id="{anchor}">' in main, (cid, anchor)
+                e = by_id[anchor[2:]]
+                assert int(n) == len({(str(r["volume"]), str(r["paragraph"])) for r in e["refs"]}), (cid, anchor)
         else:
             assert not top, cid
 

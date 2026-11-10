@@ -1880,6 +1880,11 @@ details.chk[open] .cmeta { display: block; }
 .top-t { font: .58rem var(--mono); letter-spacing: .08em; color: var(--ink-faint); margin: 0 0 .25rem; max-width: none; }
 .trow { border-left: 2px solid var(--gold-dim); padding: .2rem 0 .2rem .7rem; margin: .45rem 0; }
 .trow .tq { font-size: .85rem; line-height: 1.55; color: var(--ink-label); margin: .1rem 0 0; max-width: none; }
+.trow .tmore { font: .6rem var(--mono); margin: .2rem 0 0; max-width: none; }
+.trow .tmore a { color: var(--gold); text-decoration: none; }
+.trow .tmore a:hover { text-decoration: underline; }
+.crow:target { border-color: var(--gold-dim); }
+.crow { scroll-margin-top: 6rem; }
 ` : ''}`
 if (EMIT_CONCEPT_PAGES) {
   const conceptFamIds = new Set(families.map(f => f.id))
@@ -1945,6 +1950,10 @@ if (EMIT_CONCEPT_PAGES) {
   // most citations first, then high confidence, then volume order
   const byCitations = (a, b) => b.refs.length - a.refs.length || confRank(a.confidence) - confRank(b.confidence) ||
     byVolOf(firstVol(a), firstVol(b)) || a.id.localeCompare(b.id, 'en', { numeric: true })
+  // the top block ranks by distinct passages (volume and paragraph), the count
+  // its label names and its link shows
+  const passageCount = (e) => new Set(e.refs.map(r => `${r.volume}\u00a7${r.paragraph}`)).size
+  const byPassages = (a, b) => passageCount(b) - passageCount(a) || byCitations(a, b)
   // an edge's best quote: high confidence, Jung's own voice, then volume and paragraph order
   const bestRef = (e) => [...e.refs].sort((a, b) => confRank(a.confidence) - confRank(b.confidence) ||
     (b.claim_type === 'jung-asserts') - (a.claim_type === 'jung-asserts') ||
@@ -2096,7 +2105,7 @@ ${neighbours.map(nb => `<li><a class="ev" href="/concept-${nb.id}">${esc(labelOf
           return `<li class="ev">${quoteHead(rs[0], voices)} <details class="chk"><summary>${ns('checked')}</summary>${records}</details></li>`
         }).join('\n')
       }
-      const readerRow = (e) => `<div class="crow">
+      const readerRow = (e) => `<div class="crow" id="r-${e.id}">
 <div class="triple">${tripleOf(e)} ${famTag(e)}</div>
 ${e.refs.length ? `<ul class="cites">\n${citeLines(e)}\n</ul>` : ''}
 </div>`
@@ -2116,11 +2125,14 @@ ${e.refs.length ? `<ul class="cites">\n${citeLines(e)}\n</ul>` : ''}
         ` · ${ordinal(derived(conceptRankOf.get(node.id)))} most connected of ${derived(atlasNodes.length)} concepts.</p>`
       // the most cited claims repeat rows below, so the block adds no claim;
       // a page with three relations or fewer shows them all below instead
-      const top = edges.length > 3 ? [...edges].sort(byCitations).slice(0, 3) : []
+      const top = edges.length > 3 ? [...edges].sort(byPassages).slice(0, 3) : []
+      // each row links to its full row below, where every passage is quoted
+      // with its check record
       const topBlock = top.length ? `<div class="top">
-<p class="top-t"${NS}>most cited claims</p>
-${top.map(e => { const r = bestRef(e); return `<div class="trow"><div class="triple">${tripleOf(e)}</div>` +
-  (r ? `<p class="tq ev">${quoteHead(r, voiceOf(r))}</p>` : '') + '</div>' }).join('\n')}
+<p class="top-t"${NS}>claims with the most passages</p>
+${top.map(e => { const r = bestRef(e), n = passageCount(e); return `<div class="trow"><div class="triple">${tripleOf(e)}</div>` +
+  (r ? `<p class="tq ev">${quoteHead(r, voiceOf(r))}</p>` : '') +
+  `<p class="tmore"${NS}><a href="#r-${e.id}">${derived(n)} passage${n === 1 ? '' : 's'}, each quoted below ↓</a></p></div>` }).join('\n')}
 </div>` : ''
 
       readerBody = `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
