@@ -2093,7 +2093,7 @@ def test_concept_pages_read_for_a_reader():
     for e in atlas["edges"]:
         for nid in {e["source"], e["target"]}:
             edges_of.setdefault(nid, []).append(e)
-    headings = {"What it is, and what it is not", "What it does, and what acts on it", "How it appears",
+    headings = {"What this is", "What it does, and what acts on it", "How it appears",
                 "What it is set beside or against", "How it changes", "How a named source reads it", "Not yet sorted"}
     voice = {"jung-asserts": "Jung asserts", "jung-reports-parallel": "Jung reports a parallel",
              "jung-quotes-source": "Jung quotes a source"}

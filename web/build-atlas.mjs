@@ -1919,7 +1919,7 @@ if (EMIT_CONCEPT_PAGES) {
   // names its own family and how that family was assigned. Every family of
   // FAMILY_DEFINITIONS sits under exactly one heading, or the build stops.
   const READER_GROUPS = [
-    ['what-it-is', 'What it is, and what it is not', ['classification', 'archetypal-identity', 'composition', 'structural-position', 'privation']],
+    ['what-it-is', 'What this is', ['classification', 'archetypal-identity', 'composition', 'structural-position', 'privation']],
     ['what-it-does', 'What it does, and what acts on it', ['psychic-effect', 'generation', 'dependence', 'instrumentality', 'telos', 'derivation']],
     ['how-it-appears', 'How it appears', ['symbolization', 'manifestation', 'personification', 'projection']],
     ['beside-or-against', 'What it is set beside or against', ['correspondence', 'opposition', 'union', 'separation', 'prefiguration', 'amplification', 'kinship']],
