@@ -1,0 +1,676 @@
+{
+ "_about": "One row per work in the eleven volumes of the Collected Works extracted for the graph. Titles and dates follow the volumes' contents pages and the editors' notes; year_written is the first year the dated contents list gives, year_revised the second where there is one. Paragraph ranges are the CW paragraph numbers (§) each work spans in the corpus; within a volume they cover every extracted paragraph once. Volumes are strings as in seed.json. tests/test_works.py checks the file.",
+ "works": [
+  {
+   "id": "cw5-symbols-of-transformation",
+   "title": "Symbols of Transformation",
+   "volume": "5",
+   "first_paragraph": 1,
+   "last_paragraph": 685,
+   "year_written": 1912,
+   "year_revised": 1952,
+   "note": "Written 1911-12 and published 1912 as Wandlungen und Symbole der Libido; the fourth Swiss edition of 1952 rewrote it, and the translation follows that edition."
+  },
+  {
+   "id": "cw6-psychological-types",
+   "title": "Psychological Types",
+   "volume": "6",
+   "first_paragraph": 556,
+   "last_paragraph": 844,
+   "year_written": 1921,
+   "year_revised": null,
+   "note": "Only chapters X (General Description of the Types) and XI (Definitions), §556-844, are in the corpus."
+  },
+  {
+   "id": "cw7-on-the-psychology-of-the-unconscious",
+   "title": "On the Psychology of the Unconscious",
+   "volume": "7",
+   "first_paragraph": 1,
+   "last_paragraph": 201,
+   "year_written": 1917,
+   "year_revised": 1943,
+   "note": "Grew out of New Paths in Psychology (1912); revised for the third edition (1926) and again for the fifth (1943)."
+  },
+  {
+   "id": "cw7-the-relations-between-the-ego-and-the-unconscious",
+   "title": "The Relations between the Ego and the Unconscious",
+   "volume": "7",
+   "first_paragraph": 202,
+   "last_paragraph": 406,
+   "year_written": 1928,
+   "year_revised": null,
+   "note": "A revision of The Structure of the Unconscious (1916). The volume's appendices (§407-521) are not in the corpus."
+  },
+  {
+   "id": "cw8-on-psychic-energy",
+   "title": "On Psychic Energy",
+   "volume": "8",
+   "first_paragraph": 1,
+   "last_paragraph": 130,
+   "year_written": 1928,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-the-transcendent-function",
+   "title": "The Transcendent Function",
+   "volume": "8",
+   "first_paragraph": 131,
+   "last_paragraph": 193,
+   "year_written": 1916,
+   "year_revised": 1957,
+   "note": "Written 1916; first published 1957, and revised by the author for the German edition of 1958."
+  },
+  {
+   "id": "cw8-a-review-of-the-complex-theory",
+   "title": "A Review of the Complex Theory",
+   "volume": "8",
+   "first_paragraph": 194,
+   "last_paragraph": 219,
+   "year_written": 1934,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-the-significance-of-constitution-and-heredity-in-psychology",
+   "title": "The Significance of Constitution and Heredity in Psychology",
+   "volume": "8",
+   "first_paragraph": 220,
+   "last_paragraph": 231,
+   "year_written": 1929,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-psychological-factors-determining-human-behaviour",
+   "title": "Psychological Factors Determining Human Behaviour",
+   "volume": "8",
+   "first_paragraph": 232,
+   "last_paragraph": 262,
+   "year_written": 1937,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-instinct-and-the-unconscious",
+   "title": "Instinct and the Unconscious",
+   "volume": "8",
+   "first_paragraph": 263,
+   "last_paragraph": 282,
+   "year_written": 1919,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-the-structure-of-the-psyche",
+   "title": "The Structure of the Psyche",
+   "volume": "8",
+   "first_paragraph": 283,
+   "last_paragraph": 342,
+   "year_written": 1927,
+   "year_revised": 1931
+  },
+  {
+   "id": "cw8-on-the-nature-of-the-psyche",
+   "title": "On the Nature of the Psyche",
+   "volume": "8",
+   "first_paragraph": 343,
+   "last_paragraph": 442,
+   "year_written": 1947,
+   "year_revised": 1954
+  },
+  {
+   "id": "cw8-general-aspects-of-dream-psychology",
+   "title": "General Aspects of Dream Psychology",
+   "volume": "8",
+   "first_paragraph": 443,
+   "last_paragraph": 529,
+   "year_written": 1916,
+   "year_revised": 1948
+  },
+  {
+   "id": "cw8-on-the-nature-of-dreams",
+   "title": "On the Nature of Dreams",
+   "volume": "8",
+   "first_paragraph": 530,
+   "last_paragraph": 569,
+   "year_written": 1945,
+   "year_revised": 1948
+  },
+  {
+   "id": "cw8-the-psychological-foundations-of-belief-in-spirits",
+   "title": "The Psychological Foundations of Belief in Spirits",
+   "volume": "8",
+   "first_paragraph": 570,
+   "last_paragraph": 600,
+   "year_written": 1920,
+   "year_revised": 1948
+  },
+  {
+   "id": "cw8-spirit-and-life",
+   "title": "Spirit and Life",
+   "volume": "8",
+   "first_paragraph": 601,
+   "last_paragraph": 648,
+   "year_written": 1926,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-basic-postulates-of-analytical-psychology",
+   "title": "Basic Postulates of Analytical Psychology",
+   "volume": "8",
+   "first_paragraph": 649,
+   "last_paragraph": 688,
+   "year_written": 1931,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-analytical-psychology-and-weltanschauung",
+   "title": "Analytical Psychology and Weltanschauung",
+   "volume": "8",
+   "first_paragraph": 689,
+   "last_paragraph": 741,
+   "year_written": 1928,
+   "year_revised": 1931
+  },
+  {
+   "id": "cw8-the-real-and-the-surreal",
+   "title": "The Real and the Surreal",
+   "volume": "8",
+   "first_paragraph": 742,
+   "last_paragraph": 748,
+   "year_written": 1933,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-the-stages-of-life",
+   "title": "The Stages of Life",
+   "volume": "8",
+   "first_paragraph": 749,
+   "last_paragraph": 795,
+   "year_written": 1930,
+   "year_revised": 1931
+  },
+  {
+   "id": "cw8-the-soul-and-death",
+   "title": "The Soul and Death",
+   "volume": "8",
+   "first_paragraph": 796,
+   "last_paragraph": 815,
+   "year_written": 1934,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-synchronicity-an-acausal-connecting-principle",
+   "title": "Synchronicity: An Acausal Connecting Principle",
+   "volume": "8",
+   "first_paragraph": 816,
+   "last_paragraph": 968,
+   "year_written": 1952,
+   "year_revised": null
+  },
+  {
+   "id": "cw8-on-synchronicity",
+   "title": "On Synchronicity",
+   "volume": "8",
+   "first_paragraph": 969,
+   "last_paragraph": 997,
+   "year_written": 1951,
+   "year_revised": null,
+   "note": "Appendix to the volume: the Eranos lecture of 1951 drawn from the monograph."
+  },
+  {
+   "id": "cw9i-archetypes-of-the-collective-unconscious",
+   "title": "Archetypes of the Collective Unconscious",
+   "volume": "9i",
+   "first_paragraph": 1,
+   "last_paragraph": 86,
+   "year_written": 1934,
+   "year_revised": 1954
+  },
+  {
+   "id": "cw9i-the-concept-of-the-collective-unconscious",
+   "title": "The Concept of the Collective Unconscious",
+   "volume": "9i",
+   "first_paragraph": 87,
+   "last_paragraph": 110,
+   "year_written": 1936,
+   "year_revised": null
+  },
+  {
+   "id": "cw9i-concerning-the-archetypes-with-special-reference-to-the-anima-concept",
+   "title": "Concerning the Archetypes, with Special Reference to the Anima Concept",
+   "volume": "9i",
+   "first_paragraph": 111,
+   "last_paragraph": 147,
+   "year_written": 1936,
+   "year_revised": 1954
+  },
+  {
+   "id": "cw9i-psychological-aspects-of-the-mother-archetype",
+   "title": "Psychological Aspects of the Mother Archetype",
+   "volume": "9i",
+   "first_paragraph": 148,
+   "last_paragraph": 198,
+   "year_written": 1938,
+   "year_revised": 1954
+  },
+  {
+   "id": "cw9i-concerning-rebirth",
+   "title": "Concerning Rebirth",
+   "volume": "9i",
+   "first_paragraph": 199,
+   "last_paragraph": 258,
+   "year_written": 1940,
+   "year_revised": 1950
+  },
+  {
+   "id": "cw9i-the-psychology-of-the-child-archetype",
+   "title": "The Psychology of the Child Archetype",
+   "volume": "9i",
+   "first_paragraph": 259,
+   "last_paragraph": 305,
+   "year_written": 1940,
+   "year_revised": null,
+   "note": "Translated from the fourth revised edition (1951) of Einführung in das Wesen der Mythologie."
+  },
+  {
+   "id": "cw9i-the-psychological-aspects-of-the-kore",
+   "title": "The Psychological Aspects of the Kore",
+   "volume": "9i",
+   "first_paragraph": 306,
+   "last_paragraph": 383,
+   "year_written": 1941,
+   "year_revised": null,
+   "note": "Translated from the fourth revised edition (1951) of Einführung in das Wesen der Mythologie."
+  },
+  {
+   "id": "cw9i-the-phenomenology-of-the-spirit-in-fairytales",
+   "title": "The Phenomenology of the Spirit in Fairytales",
+   "volume": "9i",
+   "first_paragraph": 384,
+   "last_paragraph": 455,
+   "year_written": 1945,
+   "year_revised": 1948
+  },
+  {
+   "id": "cw9i-on-the-psychology-of-the-trickster-figure",
+   "title": "On the Psychology of the Trickster-Figure",
+   "volume": "9i",
+   "first_paragraph": 456,
+   "last_paragraph": 488,
+   "year_written": 1954,
+   "year_revised": null
+  },
+  {
+   "id": "cw9i-conscious-unconscious-and-individuation",
+   "title": "Conscious, Unconscious, and Individuation",
+   "volume": "9i",
+   "first_paragraph": 489,
+   "last_paragraph": 524,
+   "year_written": 1939,
+   "year_revised": null
+  },
+  {
+   "id": "cw9i-a-study-in-the-process-of-individuation",
+   "title": "A Study in the Process of Individuation",
+   "volume": "9i",
+   "first_paragraph": 525,
+   "last_paragraph": 626,
+   "year_written": 1934,
+   "year_revised": 1950
+  },
+  {
+   "id": "cw9i-concerning-mandala-symbolism",
+   "title": "Concerning Mandala Symbolism",
+   "volume": "9i",
+   "first_paragraph": 627,
+   "last_paragraph": 712,
+   "year_written": 1950,
+   "year_revised": null
+  },
+  {
+   "id": "cw9i-mandalas",
+   "title": "Mandalas",
+   "volume": "9i",
+   "first_paragraph": 713,
+   "last_paragraph": 718,
+   "year_written": 1955,
+   "year_revised": null,
+   "note": "Appendix to the volume."
+  },
+  {
+   "id": "cw9ii-aion-researches-into-the-phenomenology-of-the-self",
+   "title": "Aion: Researches into the Phenomenology of the Self",
+   "volume": "9ii",
+   "first_paragraph": 1,
+   "last_paragraph": 429,
+   "year_written": 1951,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-psychology-and-religion",
+   "title": "Psychology and Religion",
+   "volume": "11",
+   "first_paragraph": 1,
+   "last_paragraph": 168,
+   "year_written": 1938,
+   "year_revised": 1940,
+   "note": "The Terry Lectures of 1937."
+  },
+  {
+   "id": "cw11-a-psychological-approach-to-the-dogma-of-the-trinity",
+   "title": "A Psychological Approach to the Dogma of the Trinity",
+   "volume": "11",
+   "first_paragraph": 169,
+   "last_paragraph": 295,
+   "year_written": 1942,
+   "year_revised": 1948
+  },
+  {
+   "id": "cw11-transformation-symbolism-in-the-mass",
+   "title": "Transformation Symbolism in the Mass",
+   "volume": "11",
+   "first_paragraph": 296,
+   "last_paragraph": 448,
+   "year_written": 1942,
+   "year_revised": 1954
+  },
+  {
+   "id": "cw11-foreword-to-whites-god-and-the-unconscious",
+   "title": "Foreword to White's God and the Unconscious",
+   "volume": "11",
+   "first_paragraph": 449,
+   "last_paragraph": 467,
+   "year_written": 1952,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-foreword-to-werblowskys-lucifer-and-prometheus",
+   "title": "Foreword to Werblowsky's Lucifer and Prometheus",
+   "volume": "11",
+   "first_paragraph": 468,
+   "last_paragraph": 473,
+   "year_written": 1952,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-brother-klaus",
+   "title": "Brother Klaus",
+   "volume": "11",
+   "first_paragraph": 474,
+   "last_paragraph": 487,
+   "year_written": 1933,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-psychotherapists-or-the-clergy",
+   "title": "Psychotherapists or the Clergy",
+   "volume": "11",
+   "first_paragraph": 488,
+   "last_paragraph": 538,
+   "year_written": 1932,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-psychoanalysis-and-the-cure-of-souls",
+   "title": "Psychoanalysis and the Cure of Souls",
+   "volume": "11",
+   "first_paragraph": 539,
+   "last_paragraph": 552,
+   "year_written": 1928,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-answer-to-job",
+   "title": "Answer to Job",
+   "volume": "11",
+   "first_paragraph": 553,
+   "last_paragraph": 758,
+   "year_written": 1952,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-psychological-commentary-on-the-tibetan-book-of-the-great-liberation",
+   "title": "Psychological Commentary on The Tibetan Book of the Great Liberation",
+   "volume": "11",
+   "first_paragraph": 759,
+   "last_paragraph": 830,
+   "year_written": 1939,
+   "year_revised": 1954
+  },
+  {
+   "id": "cw11-psychological-commentary-on-the-tibetan-book-of-the-dead",
+   "title": "Psychological Commentary on The Tibetan Book of the Dead",
+   "volume": "11",
+   "first_paragraph": 831,
+   "last_paragraph": 858,
+   "year_written": 1935,
+   "year_revised": 1953
+  },
+  {
+   "id": "cw11-yoga-and-the-west",
+   "title": "Yoga and the West",
+   "volume": "11",
+   "first_paragraph": 859,
+   "last_paragraph": 876,
+   "year_written": 1936,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-foreword-to-suzukis-introduction-to-zen-buddhism",
+   "title": "Foreword to Suzuki's Introduction to Zen Buddhism",
+   "volume": "11",
+   "first_paragraph": 877,
+   "last_paragraph": 907,
+   "year_written": 1939,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-the-psychology-of-eastern-meditation",
+   "title": "The Psychology of Eastern Meditation",
+   "volume": "11",
+   "first_paragraph": 908,
+   "last_paragraph": 949,
+   "year_written": 1943,
+   "year_revised": null
+  },
+  {
+   "id": "cw11-the-holy-men-of-india",
+   "title": "The Holy Men of India",
+   "volume": "11",
+   "first_paragraph": 950,
+   "last_paragraph": 963,
+   "year_written": 1944,
+   "year_revised": null,
+   "note": "Introduction to Zimmer's Der Weg zum Selbst."
+  },
+  {
+   "id": "cw11-foreword-to-the-i-ching",
+   "title": "Foreword to the I Ching",
+   "volume": "11",
+   "first_paragraph": 964,
+   "last_paragraph": 1018,
+   "year_written": 1950,
+   "year_revised": null
+  },
+  {
+   "id": "cw12-psychology-and-alchemy",
+   "title": "Psychology and Alchemy",
+   "volume": "12",
+   "first_paragraph": 1,
+   "last_paragraph": 565,
+   "year_written": 1944,
+   "year_revised": 1952,
+   "note": "Parts II and III grew out of the Eranos lectures of 1935 and 1936; the second Swiss edition of 1952 is revised."
+  },
+  {
+   "id": "cw13-commentary-on-the-secret-of-the-golden-flower",
+   "title": "Commentary on The Secret of the Golden Flower",
+   "volume": "13",
+   "first_paragraph": 1,
+   "last_paragraph": 84,
+   "year_written": 1929,
+   "year_revised": null
+  },
+  {
+   "id": "cw13-the-visions-of-zosimos",
+   "title": "The Visions of Zosimos",
+   "volume": "13",
+   "first_paragraph": 85,
+   "last_paragraph": 144,
+   "year_written": 1938,
+   "year_revised": 1954
+  },
+  {
+   "id": "cw13-paracelsus-as-a-spiritual-phenomenon",
+   "title": "Paracelsus as a Spiritual Phenomenon",
+   "volume": "13",
+   "first_paragraph": 145,
+   "last_paragraph": 238,
+   "year_written": 1942,
+   "year_revised": null
+  },
+  {
+   "id": "cw13-the-spirit-mercurius",
+   "title": "The Spirit Mercurius",
+   "volume": "13",
+   "first_paragraph": 239,
+   "last_paragraph": 303,
+   "year_written": 1943,
+   "year_revised": 1948
+  },
+  {
+   "id": "cw13-the-philosophical-tree",
+   "title": "The Philosophical Tree",
+   "volume": "13",
+   "first_paragraph": 304,
+   "last_paragraph": 482,
+   "year_written": 1945,
+   "year_revised": 1954
+  },
+  {
+   "id": "cw14-mysterium-coniunctionis",
+   "title": "Mysterium Coniunctionis",
+   "volume": "14",
+   "first_paragraph": 1,
+   "last_paragraph": 792,
+   "year_written": 1955,
+   "year_revised": null,
+   "note": "Published in two parts, 1955 and 1956. The appendix of Latin and Greek texts carries no numbered paragraphs."
+  },
+  {
+   "id": "cw16-principles-of-practical-psychotherapy",
+   "title": "Principles of Practical Psychotherapy",
+   "volume": "16",
+   "first_paragraph": 1,
+   "last_paragraph": 27,
+   "year_written": 1935,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-what-is-psychotherapy",
+   "title": "What Is Psychotherapy?",
+   "volume": "16",
+   "first_paragraph": 28,
+   "last_paragraph": 45,
+   "year_written": 1935,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-some-aspects-of-modern-psychotherapy",
+   "title": "Some Aspects of Modern Psychotherapy",
+   "volume": "16",
+   "first_paragraph": 46,
+   "last_paragraph": 65,
+   "year_written": 1930,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-the-aims-of-psychotherapy",
+   "title": "The Aims of Psychotherapy",
+   "volume": "16",
+   "first_paragraph": 66,
+   "last_paragraph": 113,
+   "year_written": 1931,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-problems-of-modern-psychotherapy",
+   "title": "Problems of Modern Psychotherapy",
+   "volume": "16",
+   "first_paragraph": 114,
+   "last_paragraph": 174,
+   "year_written": 1929,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-psychotherapy-and-a-philosophy-of-life",
+   "title": "Psychotherapy and a Philosophy of Life",
+   "volume": "16",
+   "first_paragraph": 175,
+   "last_paragraph": 191,
+   "year_written": 1943,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-medicine-and-psychotherapy",
+   "title": "Medicine and Psychotherapy",
+   "volume": "16",
+   "first_paragraph": 192,
+   "last_paragraph": 211,
+   "year_written": 1945,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-psychotherapy-today",
+   "title": "Psychotherapy Today",
+   "volume": "16",
+   "first_paragraph": 212,
+   "last_paragraph": 229,
+   "year_written": 1945,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-fundamental-questions-of-psychotherapy",
+   "title": "Fundamental Questions of Psychotherapy",
+   "volume": "16",
+   "first_paragraph": 230,
+   "last_paragraph": 254,
+   "year_written": 1951,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-the-therapeutic-value-of-abreaction",
+   "title": "The Therapeutic Value of Abreaction",
+   "volume": "16",
+   "first_paragraph": 255,
+   "last_paragraph": 293,
+   "year_written": 1921,
+   "year_revised": 1928
+  },
+  {
+   "id": "cw16-the-practical-use-of-dream-analysis",
+   "title": "The Practical Use of Dream-Analysis",
+   "volume": "16",
+   "first_paragraph": 294,
+   "last_paragraph": 352,
+   "year_written": 1934,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-the-psychology-of-the-transference",
+   "title": "The Psychology of the Transference",
+   "volume": "16",
+   "first_paragraph": 353,
+   "last_paragraph": 539,
+   "year_written": 1946,
+   "year_revised": null
+  },
+  {
+   "id": "cw16-the-realities-of-practical-psychotherapy",
+   "title": "The Realities of Practical Psychotherapy",
+   "volume": "16",
+   "first_paragraph": 540,
+   "last_paragraph": 564,
+   "year_written": 1937,
+   "year_revised": null,
+   "note": "Appendix to the volume: a lecture of 1937, added to the second edition in 1966."
+  }
+ ]
+}
