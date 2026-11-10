@@ -4705,6 +4705,106 @@
    "id": "extraverted-intuitive-type",
    "label": "The extraverted intuitive type",
    "type": "Concept"
+  },
+  {
+   "id": "irrational-type",
+   "label": "Irrational (perceiving) type",
+   "type": "Concept"
+  },
+  {
+   "id": "rapport",
+   "label": "Rapport (psychic relationship)",
+   "type": "Concept"
+  },
+  {
+   "id": "weininger",
+   "label": "Otto Weininger",
+   "type": "Figure"
+  },
+  {
+   "id": "mneme",
+   "label": "Mneme (Semon)",
+   "type": "Concept"
+  },
+  {
+   "id": "primordial-image",
+   "label": "Primordial image (Burckhardt's term)",
+   "type": "Concept"
+  },
+  {
+   "id": "psychasthenia",
+   "label": "Psychasthenia",
+   "type": "Concept"
+  },
+  {
+   "id": "kant",
+   "label": "Immanuel Kant",
+   "type": "Figure"
+  },
+  {
+   "id": "introverted-thinking-type",
+   "label": "The introverted thinking type",
+   "type": "Concept"
+  },
+  {
+   "id": "introverted-feeling",
+   "label": "Introverted feeling",
+   "type": "Concept"
+  },
+  {
+   "id": "introverted-feeling-type",
+   "label": "The introverted feeling type",
+   "type": "Concept"
+  },
+  {
+   "id": "neurasthenia",
+   "label": "Neurasthenia",
+   "type": "Concept"
+  },
+  {
+   "id": "introverted-sensation",
+   "label": "Introverted sensation",
+   "type": "Concept"
+  },
+  {
+   "id": "introverted-sensation-type",
+   "label": "The introverted sensation type",
+   "type": "Concept"
+  },
+  {
+   "id": "introverted-intuition",
+   "label": "Introverted intuition",
+   "type": "Concept"
+  },
+  {
+   "id": "inner-object",
+   "label": "The inner object (contents of the unconscious)",
+   "type": "Concept"
+  },
+  {
+   "id": "introverted-intuitive-type",
+   "label": "The introverted intuitive type",
+   "type": "Concept"
+  },
+  {
+   "id": "noumenon",
+   "label": "Noumenon (Kant)",
+   "type": "Concept"
+  },
+  {
+   "id": "the-artist",
+   "label": "The artist",
+   "type": "Figure"
+  },
+  {
+   "id": "auxiliary-function",
+   "label": "The auxiliary (secondary) function",
+   "type": "Concept"
+  },
+  {
+   "id": "battle-of-two-animals",
+   "label": "Battle or encounter of two animals or monsters",
+   "type": "Motif"
   }
  ],
  "edges": [
@@ -117876,6 +117976,1395 @@
    ],
    "relation_family": {
     "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "extraverted-intuitive-type",
+   "relation": "prone-to",
+   "object": "compulsion-neurosis",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 615,
+     "quote": "Cases of this kind are themselves symptomatic of compulsion, to which the intuitive is as prone as the sensation type.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "note": "the text says compulsion, in neurotic form"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "extraverted-intuitive-type",
+   "relation": "classed-as",
+   "object": "irrational-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 616,
+     "quote": "I call the two preceding types irrational for the reasons previously discussed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "extraverted-sensation-type",
+   "relation": "classed-as",
+   "object": "irrational-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 616,
+     "quote": "I call the two preceding types irrational for the reasons previously discussed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "rapport",
+   "relation": "rests-on",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 618,
+     "quote": "A rapport of this kind is by far the most frequent; it rests on mutual projection",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'A rapport of this kind is by far the most frequent; it rests on mutual projection': said of the rapport between opposite types that comes about without conscious assessment (the note), while the subject node is rapport as such; high -> medium.",
+     "note": "the most frequent kind of rapport between opposite types"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-type",
+   "relation": "oriented-by",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 620,
+     "quote": "the introvert is distinguished from the extravert ... but by subjective factors",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 621,
+     "quote": "Although the introverted consciousness is naturally aware of external conditions, it selects the subjective determinants as the decisive ones.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "weininger",
+   "relation": "depreciates",
+   "object": "introversion",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 621,
+     "quote": "with Weininger, to describe the introverted attitude as philautic, autoerotic, egocentric, subjectivistic, egotistic, etc., to be misleading in principle and thoroughly depreciatory",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "source": "Weininger"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "subjective-factor",
+   "relation": "merges-with",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 622,
+     "quote": "By the subjective factor I understand that psychological action or reaction which merges with the effect produced by the object",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim, 21 tokens; the subjective factor 'merges with the effect produced by the object': with the object's effect, one step from the object node; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "is-identical-with",
+   "object": "mneme",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 624,
+     "quote": "The psychic structure is the same as what Semon calls “mneme” 5 and what I call the “collective unconscious.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "source": "Semon"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "is-identical-with",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 624,
+     "quote": "What I understand by it is identical with the “primordial image,” a term borrowed from Jacob Burckhardt",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "distinguished-from",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 624,
+     "quote": "The inborn mode of acting has long been known as instinct , and for the inborn mode of psychic apprehension I have proposed the term archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "subjective-factor",
+   "relation": "devalues",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 626,
+     "quote": "The predominance of the subjective factor in consciousness naturally involves a devaluation of the object.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'The predominance of the subjective factor in consciousness naturally involves a devaluation of the object': the predominance devalues, one step from the factor as such; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "attitude-of-the-unconscious",
+   "relation": "reinforces",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 626,
+     "quote": "this naturally produces, by way of compensation, an unconscious reinforcement of the influence of the object",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'an unconscious reinforcement of the influence of the object' arises by way of compensation in the introverted type once the ego has usurped the claims of the subject (the note): type-bound and conditional on a general node; high -> medium.",
+     "note": "in the introverted type"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "psychasthenia",
+   "relation": "typical-neurosis-of",
+   "object": "introverted-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 626,
+     "quote": "The typical form his neurosis takes is psychasthenia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-type",
+   "relation": "fears",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 627,
+     "quote": "His fear of objects develops into a peculiar kind of cowardliness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'His fear of objects develops into a peculiar kind of cowardliness' belongs to the analysis of the introvert's personal unconscious in the compensatory situation of §626-627, not to the type's conscious attitude; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-thinking",
+   "relation": "oriented-by",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 628,
+     "quote": "Introverted thinking is primarily oriented by the subjective factor.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "compensates",
+   "object": "introverted-thinking",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 630,
+     "quote": "The extraordinary impoverishment of introverted thinking is compensated by a wealth of unconscious facts.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'The extraordinary impoverishment of introverted thinking is compensated by a wealth of unconscious facts': the compensation is of the impoverishment of thinking carried to extremes, the paragraph's case; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "kant",
+   "relation": "represents",
+   "object": "introverted-thinking-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 632,
+     "quote": "the normal introverted thinking type could be represented by Kant",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-thinking-type",
+   "relation": "characterized-by",
+   "object": "introverted-thinking",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 633,
+     "quote": "The introverted thinking type is characterized by the primacy of the kind of thinking I have just described.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-type",
+   "relation": "relates-negatively-to",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 633,
+     "quote": "This negative relation to the object, ranging from indifference to aversion, characterizes every introvert",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-thinking",
+   "relation": "approximates-to",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 637,
+     "quote": "The thinking of the introverted type is positive and synthetic in developing ideas which approximate ... to the eternal validity of the primordial images",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 3 tokens), 22 tokens; the ideas 'approximate more and more to the eternal validity of the primordial images': to their validity, one step from the images; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-thinking",
+   "relation": "counterbalanced-by",
+   "object": "feeling",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 639,
+     "quote": "introverted thinking is counterbalanced by a primitive feeling, to which objects attach themselves with magical force",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-feeling",
+   "relation": "counterbalanced-by",
+   "object": "thinking",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 639,
+     "quote": "introverted feeling is counterbalanced by a primitive thinking, whose concretism and slavery to facts surpass all bounds",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-feeling",
+   "relation": "determined-by",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 638,
+     "quote": "Introverted feeling is determined principally by the subjective factor.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-feeling",
+   "relation": "subordinates",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 638,
+     "quote": "Its aim is not to adjust itself to the object, but to subordinate it in an unconscious effort to realize the underlying images.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim, 23 tokens; 'Its aim is not to adjust itself to the object, but to subordinate it': an aim, not an accomplished subordination; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-feeling-type",
+   "relation": "found-among",
+   "object": "woman",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 640,
+     "quote": "It is principally among women that I have found the predominance of introverted feeling.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "neurasthenia",
+   "relation": "form-of-neurosis-in",
+   "object": "introverted-feeling-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 643,
+     "quote": "The form of neurosis is neurasthenic rather than hysterical, often with severe physical complications",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-thinking-type",
+   "relation": "classed-as",
+   "object": "rational-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 644,
+     "quote": "Both the foregoing types may be termed rational, since they are grounded on the functions of rational judgment.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-feeling-type",
+   "relation": "classed-as",
+   "object": "rational-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 644,
+     "quote": "Both the foregoing types may be termed rational, since they are grounded on the functions of rational judgment.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-type",
+   "relation": "depreciates",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 645,
+     "quote": "Because of its invisibility, he is obliged to depreciate the subjective factor",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'he is obliged to depreciate the subjective factor' in so far as he is 'a convinced participator in the general style': conditional; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-type",
+   "relation": "leans-towards",
+   "object": "egoism",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 646,
+     "quote": "His undervaluation of his own principle makes his leanings towards egotism unavoidable",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'makes his leanings towards egotism unavoidable', conditional on the undervaluation of his own principle, and the object node is egoism for Jung's 'egotism'; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-sensation",
+   "relation": "based-on",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 647,
+     "quote": "In the introverted attitude sensation is based predominantly on the subjective component of perception.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-sensation",
+   "relation": "apprehends",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 649,
+     "quote": "Introverted sensation apprehends the background of the physical world rather than its surface ... the reality of the subjective factor, of the primordial images",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 10 tokens), 21 tokens; introverted sensation apprehends the background of the physical world, and 'The decisive thing is ... the reality of the subjective factor, of the primordial images': the images are what is decisive, one step from what the verb takes as object; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-sensation",
+   "relation": "contrasts-with",
+   "object": "extraverted-sensation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 649,
+     "quote": "The bare sense impression develops in depth, reaching into the past and future, while extraverted sensation seizes on the momentary existence of things",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-sensation-type",
+   "relation": "classed-as",
+   "object": "irrational-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 650,
+     "quote": "The predominance of introverted sensation produces a definite type ... It is an irrational type",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-sensation-type",
+   "relation": "distinguished-from",
+   "object": "extraverted-sensation-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 650,
+     "quote": "Whereas the extraverted sensation type is guided by the intensity of objective influences, the introverted type is guided by the intensity of the subjective sensation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-sensation-type",
+   "relation": "alienated-from",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 653,
+     "quote": "Above all, his development alienates him from the reality of the object, leaving him at the mercy of his subjective perceptions",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-sensation-type",
+   "relation": "represses",
+   "object": "intuition",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 654,
+     "quote": "His unconscious is distinguished chiefly by the repression of intuition, which consequently acquires an extraverted and archaic character.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-sensation-type",
+   "relation": "prone-to",
+   "object": "compulsion-neurosis",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 654,
+     "quote": "The result is usually a compulsion neurosis, in which the hysterical features are masked by symptoms of exhaustion.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-intuition",
+   "relation": "directed-to",
+   "object": "inner-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 655,
+     "quote": "Introverted intuition is directed to the inner object, a term that might justly be applied to the contents of the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-intuition",
+   "relation": "determined-by",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 656,
+     "quote": "intuition has its subjective factor, which is ... the decisive factor in the intuition of the introvert",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-intuitive-type",
+   "relation": "indifferent-to",
+   "object": "inner-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 658,
+     "quote": "The remarkable indifference of the extraverted intuitive to external objects is shared by the introverted intuitive in relation to inner objects.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-intuition",
+   "relation": "apprehends",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 659,
+     "quote": "Introverted intuition apprehends the images arising from the a priori inherited foundations of the unconscious. These archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; introverted intuition 'apprehends the images arising from the a priori inherited foundations of the unconscious', which the next sentence calls archetypes and the last calls the noumenon of the image intuition perceives: it apprehends the images, the archetype itself being 'inaccessible to experience'; one step; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "likened-to",
+   "object": "noumenon",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 659,
+     "quote": "The archetype would thus be, to borrow from Kant, the noumenon of the image which intuition perceives",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, FINDING-adjudicated, 2026-11-10)",
+     "correction_note": "cross-vendor correction: Claim type should be 'jung-asserts' because Jung is using Kant's terminology in his own interpretive voice to explain his own concept, not reporting Kant's doctrine."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "the-artist",
+   "relation": "represents",
+   "object": "introverted-intuitive-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 661,
+     "quote": "The artist might be regarded as the normal representative of this type",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-intuitive-type",
+   "relation": "produced-by",
+   "object": "introverted-intuition",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 661,
+     "quote": "The peculiar nature of introverted intuition, if it gains the ascendency, produces a peculiar type of man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-intuitive-type",
+   "relation": "represses",
+   "object": "sensation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 663,
+     "quote": "What the introverted intuitive represses most of all is the sensation of the object, and this colours his whole unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-intuitive-type",
+   "relation": "compensated-by",
+   "object": "extraverted-sensation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 663,
+     "quote": "It gives rise to a compensatory extraverted sensation function of an archaic character.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "introverted-intuitive-type",
+   "relation": "prone-to",
+   "object": "compulsion-neurosis",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 663,
+     "quote": "The form of neurosis is a compulsion neurosis with hypochondriacal symptoms",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'The form of neurosis is a compulsion neurosis with hypochondriacal symptoms' follows 'if, through a forced exaggeration of the conscious attitude ... the unconscious goes over to the opposition': conditional, as the sister references at §615 and §654 already are; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "auxiliary-function",
+   "relation": "not-antagonistic-to",
+   "object": "superior-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 668,
+     "quote": "the secondary function is always one whose nature is different from, though not antagonistic to, the primary function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 667,
+     "quote": "only those functions can appear as auxiliary whose nature is not opposed to the dominant function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "auxiliary-function",
+   "relation": "serves",
+   "object": "superior-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 668,
+     "quote": "Hence the auxiliary function is possible and useful only in so far as it serves the dominant function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "thinking",
+   "relation": "excludes",
+   "object": "feeling",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 667,
+     "quote": "Thinking, if it is to be real thinking and true to its own principle, must rigorously exclude feeling.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim, 19 tokens; 'Thinking, if it is to be real thinking and true to its own principle, must rigorously exclude feeling': a condition on what counts as real thinking; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "thinking",
+   "relation": "pairs-with",
+   "object": "intuition",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 668,
+     "quote": "thinking as the primary function can readily pair with intuition as the auxiliary",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'can readily pair with intuition as the auxiliary': a capacity ('can'); high -> medium."
+    },
+    {
+     "volume": "6",
+     "paragraph": 669,
+     "quote": "speculative thinking forging ahead with intuition",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'speculative thinking forging ahead with intuition' is one of the familiar combinations, offered 'for instance'; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "thinking",
+   "relation": "pairs-with",
+   "object": "sensation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 668,
+     "quote": "thinking as the primary function can readily pair with intuition as the auxiliary, or indeed equally well with sensation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim, 19 tokens; 'or indeed equally well with sensation', the same capacity sentence; high -> medium."
+    },
+    {
+     "volume": "6",
+     "paragraph": 669,
+     "quote": "practical thinking allied with sensation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)",
+     "correction_note": "gate correction: Verbatim; 'practical thinking allied with sensation', an example; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "auxiliary-function",
+   "relation": "gives-access-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 670,
+     "quote": "the approach to the unconscious and to the most repressed function is disclosed ... when the way of development proceeds via the auxiliary function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "symbolized-by",
+   "object": "battle-of-two-animals",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 671,
+     "quote": "The unconscious functions exist in an archaic, animal state. Hence their symbolic appearance in dreams and fantasies is usually represented as the battle",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-10",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, FINDING-adjudicated, 2026-11-10)",
+     "audit_note": "cross-vendor finding overruled: the auditor read 'the unconscious functions' as wider than the inferior function; in this chapter the unconscious functions are the less differentiated, inferior functions (§575-576, §664), so the subject stands; medium stands for the paragraph's 'usually'."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-10"
