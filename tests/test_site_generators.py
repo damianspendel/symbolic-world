@@ -2185,3 +2185,22 @@ def test_concept_pages_carry_a_defined_term_and_no_quotation():
         assert ld["inDefinedTermSet"]["url"] == "https://symbolicworld.observer/concepts", cid
         assert ld.get("alternateName", "") == (nodes[cid].get("latin") or ""), cid
         assert "Quotation" not in blocks[0] and "quote" not in blocks[0].lower(), cid
+
+
+def test_llms_txt_and_the_robots_groups():
+    """B3 (llms.txt only): the file names the method page, the dataset, the
+    concept URL pattern, /concepts, the licence with its quotation exclusion
+    and the removal contact; no per-concept markdown is written; robots.txt
+    keeps the open group and the sitemap and adds the two opt-out groups."""
+    if not _gate_on("EMIT_LLMS_TXT"):
+        pytest.skip("EMIT_LLMS_TXT is off")
+    llms = read(os.path.join(PUBLIC, "llms.txt"))
+    for needle in ("/method", "/graph.json", "/concept-<id>", "/concepts", "CC BY 4.0",
+                   "does not cover the verbatim quotations", "damian.spendel@gmail.com"):
+        assert needle in llms, needle
+    assert not glob.glob(os.path.join(PUBLIC, "concept-*.md"))
+    robots = read(os.path.join(PUBLIC, "robots.txt"))
+    assert "User-agent: *\nAllow: /\n" in robots
+    for agent in ("Google-Extended", "Applebot-Extended"):
+        assert f"User-agent: {agent}\nDisallow: /\n" in robots, agent
+    assert robots.rstrip().endswith("Sitemap: https://symbolicworld.observer/sitemap.xml")

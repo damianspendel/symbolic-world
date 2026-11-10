@@ -78,6 +78,15 @@ const SITEMAP_LASTMOD = true
 // block per concept page naming the term, its URL, the /concepts set and its
 // Latin name. No Quotation items: no quote enters machine-readable markup.
 const CONCEPT_JSONLD = true
+
+// spec-reader-v1, item B3 (llms.txt only, Damian 2026-11-10): a plain
+// /llms.txt naming the method page, the dataset, the concept URL pattern,
+// /concepts, the licence with its quotation exclusion and the removal contact.
+// No per-concept markdown: the quotes stay on the concept pages. The same gate
+// adds the Google-Extended and Applebot-Extended groups to robots.txt (BACKLOG
+// v2.1 item). tools/pages/preflight.py reads this literal. Off, robots.txt is
+// today's and no llms.txt is written.
+const EMIT_LLMS_TXT = true
 const ns0 = (html) => `<span data-nosnippet>${html}</span>`
 const EXAMPLES_CSS = QUERY_EXAMPLES ? '\n.examples { font: .66rem/1.8 var(--mono); color: var(--ink-faint); margin: .6rem 0 0; }\n.examples a { color: var(--gold); text-decoration: none; }\n.examples a:hover { text-decoration: underline; }\n' : ''
 
@@ -3397,6 +3406,32 @@ ${methodHTML}
 
 function emitPages() {
   for (const p of NEW_PAGES) writeFileSync(here(`./public/${p.slug}.html`), renderPage(p))
+  // B3: robots.txt, and llms.txt while the gate is on
+  writeFileSync(here('./public/robots.txt'), 'User-agent: *\nAllow: /\n' +
+    (EMIT_LLMS_TXT ? '\nUser-agent: Google-Extended\nDisallow: /\n\nUser-agent: Applebot-Extended\nDisallow: /\n\n' : '') +
+    'Sitemap: https://symbolicworld.observer/sitemap.xml\n')
+  if (EMIT_LLMS_TXT) {
+    const site = 'https://symbolicworld.observer'
+    writeFileSync(here('./public/llms.txt'), `# The Symbolic World
+
+> A verified knowledge graph of C. G. Jung's Collected Works. Each relation between two concepts cites a volume and paragraph of the Collected Works with a short verbatim quote, and records the checks the claim passed.
+
+## Pages
+
+- [Method](${site}/method): how a claim gets into the graph, and what the checks do and do not cover
+- [Concepts](${site}/concepts): every concept in the graph, with its relations and citations counted
+- Concept pages: ${site}/concept-<id>, one per concept, for example ${site}/concept-anima
+
+## Data
+
+- [The dataset](${site}/graph.json): the whole graph as one JSON file
+
+## Licence
+
+- The structure, relations, claim typing and metadata are under CC BY 4.0. That grant does not cover the verbatim quotations from the Collected Works, which remain with their rights holders.
+- Removal requests for any quotation: damian.spendel@gmail.com
+`)
+  }
   const listed = SITE_PAGES.filter(p => !p.noindex)
   const lastmodOf = (p) => !SITEMAP_LASTMOD ? '' : (p.lastmod || lastCommitDate(PAGE_SOURCES[p.slug] || DEFAULT_SOURCES))
   const urls = listed.map(p => { const lm = lastmodOf(p)
