@@ -3181,6 +3181,7 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()`
 .land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
 .land-card-all { text-decoration: none; }
 ${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; }
+.land-search .std-search { width: 100%; box-sizing: border-box; }
 .land-hits { display: flex; flex-direction: column; margin-top: .3rem; }
 .land-hits:empty { display: none; }
 .land-hits a { padding: .35rem .5rem; border-radius: 4px; color: var(--ink); text-decoration: none; font-size: .92rem; }
