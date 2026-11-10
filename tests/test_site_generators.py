@@ -2140,3 +2140,29 @@ def test_query_and_routes_carry_three_worked_examples():
     query = read(os.path.join(PUBLIC, "query.html"))
     assert "relation_family.by" not in query
     assert "new URLSearchParams(location.search)" in query
+
+
+def test_the_sitemap_dates_each_page_from_its_own_record():
+    """B1: every row carries a lastmod; a concept or family page's date is the
+    newest verified_date among the references it shows."""
+    if not _gate_on("SITEMAP_LASTMOD"):
+        pytest.skip("SITEMAP_LASTMOD is off")
+    sitemap = read(os.path.join(PUBLIC, "sitemap.xml"))
+    rows = re.findall(r"<url><loc>https://symbolicworld\.observer/([^<]*)</loc>(?:<lastmod>([^<]*)</lastmod>)?", sitemap)
+    assert rows and all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) for _, d in rows), "a sitemap row has no lastmod"
+    atlas = json.loads(read(os.path.join(SRC, "atlas.json")))
+    newest, by_family = {}, {}
+    for e in atlas["edges"]:
+        dates = [r["verified_date"] for r in e.get("refs") or []]
+        if not dates:
+            continue
+        for nid in {e["source"], e["target"]}:
+            newest[nid] = max(newest.get(nid, ""), *dates)
+        f = e.get("family") or {}
+        if f.get("state") == "family":
+            by_family[f["value"]] = max(by_family.get(f["value"], ""), *dates)
+    dated = dict(rows)
+    for nid, d in newest.items():
+        assert dated.get(f"concept-{nid}") == d, nid
+    for fid, d in by_family.items():
+        assert dated.get(f"family-{fid}") == d, fid

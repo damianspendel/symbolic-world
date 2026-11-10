@@ -67,6 +67,12 @@ const MENU_READER = true
 // that named record fields. The build runs every example against the graph
 // and stops if one returns nothing. Off, both pages are today's.
 const QUERY_EXAMPLES = true
+
+// spec-reader-v1, item B1: every sitemap row carries a lastmod. A concept or
+// family page takes the latest verified_date among the references it shows;
+// any other page takes the date of the last commit that touched its sources.
+// A row whose date cannot be read carries none: never the build date.
+const SITEMAP_LASTMOD = true
 const ns0 = (html) => `<span data-nosnippet>${html}</span>`
 const EXAMPLES_CSS = QUERY_EXAMPLES ? '\n.examples { font: .66rem/1.8 var(--mono); color: var(--ink-faint); margin: .6rem 0 0; }\n.examples a { color: var(--gold); text-decoration: none; }\n.examples a:hover { text-decoration: underline; }\n' : ''
 
@@ -1316,8 +1322,31 @@ function registerExternalPage(p) {
 
 function registerPage(p) {
   NEW_PAGES.push(p)
-  SITE_PAGES.push({ slug: p.slug, title: p.title, nav: p.nav || null, changefreq: p.changefreq || 'weekly', priority: p.priority || '0.5' })
+  SITE_PAGES.push({ slug: p.slug, title: p.title, nav: p.nav || null, changefreq: p.changefreq || 'weekly', priority: p.priority || '0.5',
+    ...(p.lastmod ? { lastmod: p.lastmod } : {}) })
   return p
+}
+// B1: the newest verified_date among a page's references
+const latestVerified = (edges) => edges.flatMap(e => e.refs.map(r => r.verified_date))
+  .filter(d => /^\d{4}-\d{2}-\d{2}$/.test(String(d))).sort().pop()
+// B1: what each other page is built from, for its last-commit date (paths from the repo root)
+const PAGE_SOURCES = {
+  atlas: ['web/atlas.html', 'web/src/main.js', 'seed.json'],
+  families: ['docs/FAMILY_DEFINITIONS.md', 'seed.json', 'web/build-atlas.mjs'],
+  disputes: ['web/public/disputes.html', 'web/public/disputes.json'],
+  vocabulary: ['tools/query/vocabulary.json', 'web/build-atlas.mjs'],
+  method: ['docs/METHOD_COPY.md', 'web/build-atlas.mjs']
+}
+const DEFAULT_SOURCES = ['web/build-atlas.mjs', 'seed.json']
+const commitDates = new Map()
+const lastCommitDate = (paths) => {
+  const key = paths.join('\u0000')
+  if (!commitDates.has(key)) {
+    let d = ''
+    try { d = execFileSync('git', ['log', '-1', '--format=%cs', '--', ...paths], { cwd: here('..'), encoding: 'utf8' }).trim() } catch { d = '' }
+    commitDates.set(key, /^\d{4}-\d{2}-\d{2}$/.test(d) ? d : '')
+  }
+  return commitDates.get(key)
 }
 
 // The shared shell: page-bar in the fixed position R10.6 wants, chrome.css for
@@ -1693,6 +1722,7 @@ built ${buildDate}
 <div class="callout"><p>Checked once against outside scholarship on a small sample. No scholar has reviewed the vocabulary.</p></div>`
 
   const p = registerPage({
+    ...(SITEMAP_LASTMOD ? { lastmod: latestVerified(atlasEdges.filter(e => e.family && e.family.state === 'family' && e.family.value === fam.id)) } : {}),
     slug: `family-${fam.id}`, title: `${fam.name} — a relation family`,
     where: `families · ${fam.name}`, nav: null, changefreq: 'weekly', priority: '0.4',
     description: `${fam.name}: a relation family in The Symbolic World’s graph of Jung’s Collected Works: definition, boundary rulings, and the edges assigned to it.`,
@@ -2097,6 +2127,7 @@ ${groupBlocks}
     if (!description) { descLabel = labelSteps[labelSteps.length - 1]; description = descOf(descLabel, false); headOverflow.descriptions.push(node.id) }
 
     registerPage({
+      ...(SITEMAP_LASTMOD ? { lastmod: latestVerified(edges) } : {}),
       slug: 'concept-' + node.id,
       title: `${node.label} — ${node.type} in Jung’s Collected Works`,
       ...(CONCEPT_SEARCH_HEAD ? { titleFull } : {}),
@@ -3353,8 +3384,9 @@ ${methodHTML}
 function emitPages() {
   for (const p of NEW_PAGES) writeFileSync(here(`./public/${p.slug}.html`), renderPage(p))
   const listed = SITE_PAGES.filter(p => !p.noindex)
-  const urls = listed.map(p =>
-    `  <url><loc>https://symbolicworld.observer/${p.slug}</loc><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>`)
+  const lastmodOf = (p) => !SITEMAP_LASTMOD ? '' : (p.lastmod || lastCommitDate(PAGE_SOURCES[p.slug] || DEFAULT_SOURCES))
+  const urls = listed.map(p => { const lm = lastmodOf(p)
+    return `  <url><loc>https://symbolicworld.observer/${p.slug}</loc>${lm ? `<lastmod>${lm}</lastmod>` : ''}<changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>` })
   writeFileSync(here('./public/sitemap.xml'),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`)
   console.log(`pages: ${NEW_PAGES.length} generated (${NEW_PAGES.map(p => '/' + p.slug).join(' ')}) · sitemap ${listed.length} urls (${SITE_PAGES.length - listed.length} noindex pages left out)`)
