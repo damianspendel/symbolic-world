@@ -53,19 +53,36 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose[open] > summary::before { transform: rotate(90deg); }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
+.page-main.landing { padding-top: 2.4rem; }
+.page-main.landing > * { max-width: none; }
+.land-hero { margin-bottom: 3rem; }
+.land-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin: .4rem 0 0; }
+.land-lead { margin-top: 1.2rem; }
+.land-hero h1 em { font-style: italic; color: var(--gold); }
+.land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
+.land-tasks { margin-bottom: 3.5rem; }
+.land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+.land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
+.land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
+.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
+.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 
 .page-main > .kofi-panel { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; margin: 1.2rem 0 .6rem; background: var(--panel); max-width: 420px; }
 </style>
 </head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/atlas#/concordance">concordance</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a><a href="/support" aria-current="page">support</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
-<main class="page-main prose">
+<main class="page-main prose landing">
+<section class="land-hero">
 <div class="titleband"><p class="eyebrow">about</p>
 <h1>Support</h1>
 <p class="sub">tips cover the running costs</p></div>
-<p>Tips cover the running costs. The atlas, the dataset and the verification ledger are free to use, and nothing on the site is for sale. Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs $0.09 to $0.16. A tip of any size helps keep the atlas checked and correct.</p>
+<p class="land-lead">Tips cover the running costs. The atlas, the dataset and the verification ledger are free to use, and nothing on the site is for sale.</p>
+</section>
+<p>Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs $0.09 to $0.16. A tip of any size helps keep the atlas checked and correct.</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="https://ko-fi.com/symbolicworld/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
 </div>

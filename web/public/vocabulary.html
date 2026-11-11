@@ -53,20 +53,32 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose[open] > summary::before { transform: rotate(90deg); }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
-.vterm { margin: .9rem 0; scroll-margin-top: 7rem; }
+.vterm, .vexport { scroll-margin-top: 7rem; }
+.vterm { margin: .9rem 0; }
 .vterm p { margin: .1rem 0; }
 .vname code { color: var(--gold); }</style>
 </head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/atlas#/concordance">concordance</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a><a href="/support">support</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">reference</p>
 <h1>Vocabulary</h1>
 <p class="sub">the terms of the RDF export</p></div>
 <p>These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how strongly it is committed, and which checks it passed. They build on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type.</p>
-<p class="meta">The namespace <code>https://w3id.org/symbolicworld/</code> is provisional and not yet registered, so these terms do not resolve yet. The prefix <code>sw:</code> stands for <code>https://w3id.org/symbolicworld/ns#</code>.</p>
+<section id="export" class="vexport">
+<h2>The RDF export</h2>
+<p>The export ships with v2.3.0, as Turtle files on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. The site does not serve them. Their licence is CC BY 4.0.</p>
+<p>The files hold the nodes, the relations, one claim per citation, the references, and for each claim the stages that checked it, in PROV-O. They leave out the quotations, which stay on the concept pages, and any inference over the nodes.</p>
+<ul>
+<li><code>symbolicworld-graph.ttl</code>: the nodes, relations, claims, references and the stages that checked each claim (<span class="ev">8.3 MB</span> at this build)</li>
+<li><code>symbolicworld-ontology.ttl</code>: the terms on this page, as OWL (<span class="ev">24 kB</span> at this build)</li>
+<li><code>symbolicworld-void.ttl</code>: a VoID description of the dataset: its counts, licence and source (<span class="ev">2 kB</span> at this build)</li>
+</ul>
+<p>The <a href="/ontology">design page</a> explains why the graph has no class hierarchy over its nodes and no transitivity.</p>
+</section>
+<p class="meta">The prefix <code>sw:</code> stands for <code>https://w3id.org/symbolicworld/ns#</code>.</p>
 <h2>Classes</h2>
 <div class="vterm" id="Node"><p class="vname"><code>sw:Node</code></p>
 <p>A named thing in the graph. Its type is a coarse label, and nothing is inferred from it.</p></div>

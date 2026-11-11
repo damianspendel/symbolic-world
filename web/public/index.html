@@ -65,6 +65,9 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
 .land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
 .land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
+.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
+.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 .land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
 .land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
 .land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
@@ -78,9 +81,6 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .land-hits .latin { font-style: italic; color: var(--ink-faint); margin-left: .4rem; }
 .land-hits .none { padding: .35rem .5rem; font-size: .86rem; color: var(--ink-faint); }
 .land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
-.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
-.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
-.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 .land-link { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: flex-start; padding: 2.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin-bottom: 3.5rem; }
 .land-link-text { flex: 1 1 22rem; min-width: 0; }
 .land-claim { font-family: var(--display); font-size: 1.7rem; line-height: 1.25; margin: .5rem 0 .8rem; max-width: none; }
@@ -152,7 +152,7 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()</script>
 </script></head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/atlas#/concordance">concordance</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a><a href="/support">support</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose landing">
 <section class="land-hero">
@@ -174,7 +174,7 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()</script>
 <div class="land-link-text">
 <p class="eyebrow">One example</p>
 <p class="land-claim ev"><a href="/concept-lapis">Lapis philosophorum</a> <em>is-projection-of</em> <a href="/concept-the-self">The Self</a></p>
-<p class="land-note">The atlas holds 5292 such links. Every one names its source paragraph, says whether Jung asserts the claim or reports it, and records who checked it.</p>
+<p class="land-note">The atlas holds 5359 such links. Every one names its source paragraph, says whether Jung asserts the claim or reports it, and records who checked it.</p>
 </div>
 <blockquote class="land-quote ev"><p>&ldquo;we would say that the stone is a projection of the unified self&rdquo;</p><p class="meta">CW 9ii &sect;264 &middot; jung asserts &middot; verified by claude-fable-5</p></blockquote>
 </section>
@@ -188,8 +188,8 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()</script>
 </div>
 </section>
 <footer class="land-foot">
-<span>979 concepts &middot; 3934 relations &middot; 5292 citations</span>
-<span>updated 2026-11-10</span>
+<span>989 concepts &middot; 3991 relations &middot; 5359 citations</span>
+<span>updated 2026-11-11</span>
 <span>open data, CC BY</span>
 <a href="/method">the method</a><a href="/disputes">disputes log</a><a href="/support">support the project</a>
 </footer>
