@@ -872,7 +872,10 @@ h4 {
   /* the one-row header on a phone: brand and switch share the first line, the
      menu takes the whole second line */
   .site-header .hrow-1 .themetoggle { order: 1; }
-  .site-header .hrow-1 .topmenu { order: 2; flex: 1 0 100%; padding-bottom: .35rem; }` : ''}
+  .site-header .hrow-1 .topmenu { order: 2; flex: 1 0 100%; padding-bottom: .35rem; }
+  /* eight entries outrun a 375px line (interim build, 2026-11-11); the reader
+     menu's one group has no label to orphan, so its items may wrap */
+  .site-header .hrow-1 .topmenu .mgrp { flex-wrap: wrap; row-gap: .15rem; }` : ''}
 }
 /* V2-R10 — the site menu. One definition, used by the app's header, by every
    generated page's header, and by the pages the python generator writes. */
