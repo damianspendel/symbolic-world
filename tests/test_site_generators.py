@@ -343,7 +343,7 @@ def test_the_families_page_is_reference_not_method():
         assert gone not in exposition, f"method content is still on /families: {gone}"
     # the boundary rules are read in the definitions document itself since
     # 2026-11-11; the excerpt repeated them word for word
-    for kept in ("Where the layer stands", "How each settled record was reached",
+    for kept in ("Where the layer stands", "How each was reached",
                  "The map: which relation strings land in which family",
                  "What fits nowhere", "The boundary rules are in the definitions document below"):
         assert kept in exposition, f"reference content went missing: {kept}"

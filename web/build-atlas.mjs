@@ -1058,7 +1058,7 @@ function familiesPageCopy(map, version) {
 <p class="sub">Which relation strings fall in which family, and the document that defines the families.</p></div>
 
 <p>A family is a classification assigned to a relation that has already been verified. The <a href="/ontology">design page</a> explains why the layer exists, and the <a href="/method">method page</a> covers the checks.</p>
-<p>Two models classify each relation blind, each reading the definitions document and neither seeing the other's answer. Where they name the same family, the assignment stands. Where they differ, a person rules. ${num(gateAudited)} of the assignments also carry a supporting audit by the calibrated family gate.</p>
+<p>Two models classify each relation blind, each reading the definitions document and neither seeing the other's answer. Where they name the same family, the assignment stands, and a person rules where the two differ. ${num(gateAudited)} of the assignments also carry a supporting audit by the calibrated family gate.</p>
 
 <h2>Where the layer stands</h2>
 <div class="tw"><table>
@@ -1069,7 +1069,7 @@ function familiesPageCopy(map, version) {
 <tr><td>no family</td><td>${t.no_family}</td><td>well-formed relation, our vocabulary does not cover it</td></tr>
 <tr><td>text undecided</td><td>${t.text_undecided}</td><td>the source sentence hedges between two families</td></tr>
 </tbody></table></div>
-<p>How each settled record was reached. The ${num(settled)} settled records are the assigned relations and those with no family or an undecided text:</p>
+<p>The ${num(settled)} settled records are the assigned relations plus those with no family or an undecided text. How each was reached:</p>
 <div class="tw"><table><thead><tr><th>Arrived at by</th><th>Relations</th></tr></thead><tbody>${provRows}</tbody></table></div>
 
 <h2>The map: which relation strings land in which family</h2>
@@ -1084,7 +1084,7 @@ ${map.text_undecided.length ? `<p>And the strings where Jung's sentence itself h
 <div class="strs homeless">${stringList(map.text_undecided)}</div>` : ''}
 
 <p>The boundary rules are in the definitions document below.</p>
-${EV ? `<p class="meta">We checked the assignments once against outside scholarship. <a href="/ontology#checked">The result is on the design page.</a></p>
+${EV ? `<p class="meta">We checked a sample of the assignments once against outside scholarship. <a href="/ontology#checked">The result is on the design page.</a></p>
 ` : ''}`
 }
 
