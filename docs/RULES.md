@@ -21,6 +21,18 @@ response to the inspection and binding from now on.
    run, builds fail closed.
 4. **[STANDING] One mining pass per window, ever.** Covered ground is never
    re-mined. Overriding this is a human decision, named per window.
+   **[OVERRIDDEN 2026-11-11 for 26 named windows.]** Damian, ruling on the
+   trilogy agenda: "all as recommended, start mining tonight - I have some
+   Fable resets open so may well use those." The override covers the second
+   pass over the alchemical trilogy and nothing else, in this order: CW 14
+   §1-70, 71-140, 141-210, 211-280, 281-350, 351-420, 421-490, 491-560,
+   561-630, 631-700, 701-792; CW 12 §1-70, 71-140, 141-210, 211-280,
+   281-350, 351-420, 421-490, 491-565; CW 13 §1-70, 71-140, 141-210,
+   211-280, 281-350, 351-420, 421-482 (pipeline/mining/trilogy_windows.json).
+   Each runs once more under the 2026-11-11 brief (form rule, attach rule,
+   the attribution clause with the borrowed-terms sentence, source fields,
+   names list, cross-register flag, a 9 percent quotation cap per volume
+   enforced at pre-check). The rule stands for every other window.
 5. **[STANDING] The miner is blinded.** No batch prompt names tracked metrics,
    trend files, or the transfer question. Form constraints (quote cap, relation
    form rule) are allowed; targets are not.

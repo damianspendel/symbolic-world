@@ -1,0 +1,10 @@
+{
+ "_about": "The 26 windows of the trilogy second pass, in running order (Damian, 2026-11-11: CW 14, then CW 12, then CW 13; RULE 4 overridden for these windows by name, docs/RULES.md). prep_trilogy.py and record_trilogy.py read this table to set the state.json marker; the marker text is 'CW<V>-DUE: window <N> (§LO-HI)'. After the last window the marker reads TRILOGY PASS COMPLETE.",
+ "order": ["14", "12", "13"],
+ "windows": {
+  "14": [[1, 70], [71, 140], [141, 210], [211, 280], [281, 350], [351, 420], [421, 490], [491, 560], [561, 630], [631, 700], [701, 792]],
+  "12": [[1, 70], [71, 140], [141, 210], [211, 280], [281, 350], [351, 420], [421, 490], [491, 565]],
+  "13": [[1, 70], [71, 140], [141, 210], [211, 280], [281, 350], [351, 420], [421, 482]]
+ },
+ "complete_marker": "TRILOGY PASS COMPLETE — CW 14, 12 and 13 second pass merged end to end; report to Damian"
+}
