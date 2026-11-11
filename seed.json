@@ -37,6 +37,11 @@
      "volume": "14",
      "paragraph": 188,
      "batch": "b-cw14-3"
+    },
+    {
+     "volume": "14",
+     "paragraph": 258,
+     "batch": "b-cw14-4"
     }
    ],
    "aliases": [
@@ -68,7 +73,18 @@
    "type": "Operation",
    "label": "Albedo",
    "latin": "albedo",
-   "color_phase": "white"
+   "color_phase": "white",
+   "aliases": [
+    "dealbatio",
+    "salsatura"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 240,
+     "batch": "b-cw14-4"
+    }
+   ]
   },
   {
    "id": "rubedo",
@@ -138,13 +154,20 @@
    "type": "Figure",
    "label": "Mercurius",
    "aliases": [
-    "Mercurius duplex"
+    "Mercurius duplex",
+    "mercurial serpent",
+    "spirit Mercurius"
    ],
    "name_refs": [
     {
      "volume": "14",
      "paragraph": 34,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "14",
+     "paragraph": 251,
+     "batch": "b-cw14-4"
     }
    ]
   },
@@ -270,7 +293,27 @@
      "volume": "14",
      "paragraph": 135,
      "batch": "b-cw14-2"
+    },
+    {
+     "volume": "14",
+     "paragraph": 240,
+     "batch": "b-cw14-4"
+    },
+    {
+     "volume": "14",
+     "paragraph": 242,
+     "batch": "b-cw14-4"
+    },
+    {
+     "volume": "14",
+     "paragraph": 254,
+     "batch": "b-cw14-4"
     }
+   ],
+   "aliases": [
+    "ens centrale",
+    "salt of the wise",
+    "salt-spirit"
    ]
   },
   {
@@ -393,7 +436,17 @@
   {
    "id": "nous",
    "type": "Concept",
-   "label": "Nous"
+   "label": "Nous",
+   "aliases": [
+    "Agathodaimon"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 251,
+     "batch": "b-cw14-4"
+    }
+   ]
   },
   {
    "id": "homunculus",
@@ -575,7 +628,17 @@
   {
    "id": "the-devil",
    "type": "Figure",
-   "label": "The Devil / Satan"
+   "label": "The Devil / Satan",
+   "aliases": [
+    "four-horned serpent"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 238,
+     "batch": "b-cw14-4"
+    }
+   ]
   },
   {
    "id": "yahweh",
@@ -651,7 +714,15 @@
   {
    "id": "bitterness",
    "type": "Concept",
-   "label": "Bitterness (amaritudo)"
+   "label": "Bitterness (amaritudo)",
+   "latin": "amaritudo",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 245,
+     "batch": "b-cw14-4"
+    }
+   ]
   },
   {
    "id": "green-lion",
@@ -1000,6 +1071,11 @@
      "volume": "14",
      "paragraph": 3,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "14",
+     "paragraph": 244,
+     "batch": "b-cw14-4"
     }
    ]
   },
@@ -1202,22 +1278,63 @@
   {
    "id": "ash",
    "type": "Substance",
-   "label": "Ash (cinis / avis Hermetis)"
+   "label": "Ash (cinis / avis Hermetis)",
+   "aliases": [
+    "ash of Hermes",
+    "bird of Hermes"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 247,
+     "batch": "b-cw14-4"
+    }
+   ]
   },
   {
    "id": "red-sea",
    "type": "Symbol",
-   "label": "The Red Sea (mare rubrum)"
+   "label": "The Red Sea (mare rubrum)",
+   "aliases": [
+    "Erythraean Sea"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 278,
+     "batch": "b-cw14-4"
+    }
+   ]
   },
   {
    "id": "chariot",
    "type": "Symbol",
-   "label": "The Chariot (currus / Merkabah)"
+   "label": "The Chariot (currus / Merkabah)",
+   "aliases": [
+    "Merkabah"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 266,
+     "batch": "b-cw14-4"
+    }
+   ]
   },
   {
    "id": "paradise",
    "type": "Symbol",
-   "label": "Paradise (Garden of Eden)"
+   "label": "Paradise (Garden of Eden)",
+   "aliases": [
+    "Garden of Eden"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 276,
+     "batch": "b-cw14-4"
+    }
+   ]
   },
   {
    "id": "ortus",
@@ -5600,6 +5717,70 @@
      "batch": "b-cw14-3"
     }
    ]
+  },
+  {
+   "id": "lux-moderna",
+   "label": "Lux moderna (the new light of the alchemists)",
+   "type": "Symbol",
+   "latin": "lux moderna",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 211,
+     "batch": "b-cw14-4"
+    }
+   ]
+  },
+  {
+   "id": "spiritual-metals",
+   "label": "The six spiritual metals (planets or spirits of the metals)",
+   "type": "Substance"
+  },
+  {
+   "id": "feminine-consciousness",
+   "label": "Feminine consciousness (lunar consciousness)",
+   "type": "Concept"
+  },
+  {
+   "id": "tinctura-philosophorum",
+   "label": "Tinctura philosophorum (the alchemical tincture)",
+   "type": "Substance",
+   "latin": "tinctura philosophorum",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 259,
+     "batch": "b-cw14-4"
+    }
+   ]
+  },
+  {
+   "id": "aqua-pontica",
+   "label": "Aqua pontica (sea-water)",
+   "type": "Substance",
+   "latin": "aqua pontica",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 244,
+     "batch": "b-cw14-4"
+    }
+   ]
+  },
+  {
+   "id": "four-functions",
+   "label": "The four basic functions of consciousness",
+   "type": "Concept"
+  },
+  {
+   "id": "ezekiels-vision",
+   "label": "Ezekiel's vision (the four creatures and wheels)",
+   "type": "Symbol"
+  },
+  {
+   "id": "africa",
+   "label": "Africa (the fourth region of Maier's peregrination)",
+   "type": "Symbol"
   }
  ],
  "edges": [
@@ -5949,6 +6130,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-2, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 253,
+     "quote": "the nigredo and mortificatio, which was then followed by the “purgatorial fire” and the albedo",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -7195,6 +7389,17 @@
      "verified_date": "2026-07-25",
      "modality_swept": true,
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 234,
+     "quote": "Since Luna symbolizes the unconscious, Sal, as one of its attributes, is a special instance of the lunar symbolism.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -7430,6 +7635,33 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 240,
+     "quote": "in Senior, who says that Mercurius is made from salt",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, FINDING-adjudicated, 2026-11-11)",
+     "source": "Senior",
+     "source_author": "Senior",
+     "audit_note": "cross-vendor (Gemini) noted that Senior's 'Mercurius is made from salt' states a material origin rather than active generation; begets is the standing edge's relation, and the attach stands at the proposed confidence"
+    },
+    {
+     "volume": "14",
+     "paragraph": 243,
+     "quote": "Senior, as we noted, says that “by divers operations” Mercurius is made from salt",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Senior",
+     "source_author": "Senior"
     }
    ],
    "relation_family": {
@@ -9268,6 +9500,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 222,
+     "quote": "But as we have previously identified Sol with consciousness and Luna with the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the sentence restates the earlier identification, and the next paragraph calls it an error in part; medium with the qualification noted",
+     "note": "qualified at §223: the equation holds chiefly of the unconscious of a man; the moon also gives light and can represent consciousness"
     }
    ],
    "relation_family": {
@@ -9276,6 +9521,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-4",
+    "date": "2026-11-11"
    }
   },
   {
@@ -13724,6 +13974,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 241,
+     "quote": "The “salt of the metals” is the lapis.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "later alchemical writers, n. 408",
+     "source_author": "the alchemists",
+     "note": "the 'salt of the metals'"
     }
    ],
    "relation_family": {
@@ -18064,6 +18328,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 277,
+     "quote": "He was convinced that the legend of this creature referred to the phoenix",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Maier, Symbola aureae mensae",
+     "source_author": "Maier",
+     "correction_note": "gate correction: Maier's report; the paragraph names no title (Symbola aureae mensae is named at §279), so source_text is withdrawn"
     }
    ],
    "relation_family": {
@@ -19705,6 +19983,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 252,
+     "quote": "This antique spirit is also the spirit of alchemy, which today we can interpret as the unconscious projected into heavenly space and external objects.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -19713,6 +20002,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-4",
+    "date": "2026-11-11"
    }
   },
   {
@@ -40714,6 +41008,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 238,
+     "quote": "as the lapis had always been regarded as a quaternity of elements",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "medieval natural philosophers, Dorn in particular",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -50394,6 +50701,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-09",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-6, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 261,
+     "quote": "The transformation corresponds to the psychic process of assimilation and integration by means of the transcendent function. ... This function unites the pairs of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -108367,6 +108685,17 @@
      "verified_date": "2026-11-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-7, PASS, 2026-11-07)",
      "note": "'it' is the self, named in the preceding sentences"
+    },
+    {
+     "volume": "14",
+     "paragraph": 262,
+     "quote": "which bring the mandala of the total personality, 488 the ground-plan of the self, closer to consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -127265,6 +127594,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-3, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 213,
+     "quote": "the mystery of the stone, or of the self, will then develop an aspect which, though still unconscious to us today",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
     }
    ],
    "cross_register": {
@@ -127610,6 +127950,19 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-3, PASS, 2026-11-11)",
      "source": "the alchemists",
      "source_author": "the alchemists"
+    },
+    {
+     "volume": "14",
+     "paragraph": 219,
+     "quote": "refers in the first instance to Luna, for it is during her work of whitening that the illumination takes place",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, FINDING-adjudicated, 2026-11-11)",
+     "correction_note": "gate correction: 'her work of whitening' is the albedo by name only one step on; the standing edge takes the attach at medium",
+     "audit_note": "cross-vendor (Gemini) read the standing relation the other way round: the whitening is Luna's work rather than Luna's membership of the albedo; the gate had set this reference to medium on the same step, and the standing edge keeps its relation"
     }
    ],
    "relation_family": {
@@ -128577,6 +128930,1257 @@
    ],
    "relation_family": {
     "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "lux-moderna",
+   "relation": "signifies",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 211,
+     "quote": "The “light” that shines at the end is the lux moderna of the alchemists, the new widening of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-4",
+    "date": "2026-11-11"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "mother-of",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 217,
+     "quote": "This image corresponds to the psychologem of the pregnant anima, whose child is the self",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the pregnant anima's child 'is the self, or is marked by the attributes of the hero'; the alternative is dropped by the edge, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "luna",
+   "relation": "represents",
+   "object": "spiritual-metals",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 217,
+     "quote": "Just as the anima represents and personifies the collective unconscious, so Luna represents the six planets or spirits of the metals.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 218,
+     "quote": "Luna is thus the sum and essence of the metals’ natures, which are all taken up in her shimmering whiteness.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Jung's summarizing sentence on Dorn's enumeration ('Luna is thus the sum and essence'); represents is one step from the sentence, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "luna",
+   "relation": "consists-of",
+   "object": "spiritual-metals",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 217,
+     "quote": "For Luna consists of the six spiritual metals and their powers, of which each has two.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Dorn, cited at n. 361",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sol",
+   "relation": "hidden-in",
+   "object": "luna",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 219,
+     "quote": "In her water “Sol is hidden like a fire”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "alchemical text cited at n. 370",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "contains",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 220,
+     "quote": "The opposites are contained in it in potentia, hence the hermaphroditism of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 253,
+     "quote": "The unconscious is both good and evil and yet neither, the matrix of all potentialities.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "luna",
+   "relation": "characterizes",
+   "object": "feminine-consciousness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 223,
+     "quote": "This is indeed so in the case of woman: her consciousness has a lunar rather than a solar character.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 227,
+     "quote": "If our formula regarding the lunar nature of feminine consciousness is correct",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the sentence is conditional ('If our formula ... is correct'), affirmed only by appeal to the consensus omnium; medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-4",
+    "date": "2026-11-11"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "contrasexuality",
+   "relation": "produces",
+   "object": "possession",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 225,
+     "quote": "Wherever this exists we find a forcible intrusion of the unconscious ... and to a certain extent even the presence of symptoms of possession",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sol-niger",
+   "relation": "appears-in",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 231,
+     "quote": "As a man normally gets to know his anima only in projected form, so too a woman in the case of her dark sun.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the sentence says a woman gets to know her dark sun only in projected form; the subject is the feminine Sol niger of §229-230, and 'appears-in projection' is one step from 'known in projected form'; medium"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "triad",
+   "relation": "corresponds-to",
+   "object": "the-trinity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 235,
+     "quote": "From the time of Paracelsus the most important triad was Sulphur-Mercurius-Sal, which was held to correspond with the Trinity.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "alchemists from the time of Paracelsus",
+     "source_author": "the alchemists",
+     "note": "the triad Sulphur-Mercurius-Sal"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "triad",
+   "relation": "conceals",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 235,
+     "quote": "Like the Trinity, the alchemical “triunity” is a quaternity in disguise owing to the duplicity of the central figure",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "note": "the alchemical triad Sulphur-Mercurius-Sal"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "is-analogue-of",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 235,
+     "quote": "This makes it clear that the dragon is analogous to the devil and the lapis to Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mary",
+   "relation": "taken-up-into",
+   "object": "the-trinity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 237,
+     "quote": "the taking up not only of the soul but of the body of Mary into the Trinity",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Jung's reading of what the dogma of the Assumption emphasizes; the dogma itself does not say 'into the Trinity', so the claim rests on his interpretation, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "extracted-from",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 238,
+     "quote": "on which is depicted the extraction of Mercurius from the prima materia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Reusner, Pandora, illustration of the Assumption",
+     "source_author": "Reusner",
+     "source_text": "Pandora"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "excluded-from",
+   "object": "the-trinity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 238,
+     "quote": "He is the metaphysical figure who is excluded from the Trinity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "counterpart-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 238,
+     "quote": "but who, as the counterpart of Christ, is the sine qua non of the drama of redemption",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "salt",
+   "relation": "undergoes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 241,
+     "quote": "“The whole magistery lies in the salt and its solution.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "later alchemical writers, n. 414",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "salt",
+   "relation": "undergoes",
+   "object": "coagulatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 241,
+     "quote": "it “becomes impure and pure of itself, it dissolves and coagulates itself",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "later alchemical writers, n. 412",
+     "source_author": "the alchemists"
+    },
+    {
+     "volume": "14",
+     "paragraph": 244,
+     "quote": "According to Rupescissa (ca. 1350), salt is “water, which the dryness of the fire has coagulated.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Rupescissa",
+     "source_author": "other",
+     "correction_note": "gate correction: the words 'water, which the dryness of the fire has coagulated' are Rupescissa's own, quoted; jung-quotes-source"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "salt",
+   "relation": "synonym-of",
+   "object": "tinctura-philosophorum",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 241,
+     "quote": "For Mylius it is synonymous with the tincture",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Mylius",
+     "source_author": "Mylius"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "undergoes",
+   "object": "coagulatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 244,
+     "quote": "the dragon is saturated with his water and coagulated, and so he eats his tail",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Mylius, Philosophia reformata",
+     "source_author": "Mylius",
+     "correction_note": "gate correction: supported as Mylius's text; the paragraph names Mylius and no title (the footnote does), so source_text is withdrawn"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "salt",
+   "relation": "belongs-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 244,
+     "quote": "The rarely mentioned relation of salt to the nigredo 425 is worth noting here",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the sentence states a relation to the nigredo, not a stage assignment; the Mylius text above it has the salt black; medium stands, with the scope noted",
+     "note": "Jung notes salt's rarely mentioned relation to the nigredo (Mylius's black salt, 'our earth'), against its usual association with the albedo"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "aqua-pontica",
+   "relation": "synonym-of",
+   "object": "aqua-permanens",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 244,
+     "quote": "The aqua pontica plays an important role as a synonym for the aqua permanens",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "aqua-pontica",
+   "relation": "synonym-of",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 246,
+     "quote": "The prima materia is often called aqua pontica.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "derives-colour-from",
+   "object": "bitterness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 245,
+     "quote": "This is the stone that hath in it glory and colour. And she: Whence cometh its colour? He replied: From its exceeding strong bitterness.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Zosimos to Theosebeia, in Rosinus ad Euthiciam",
+     "source_author": "Zosimos",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "bitterness",
+   "relation": "characterizes",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 245,
+     "quote": "“Each thing in its first matter is corrupt and bitter,” says Ripley.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Ripley",
+     "source_author": "Ripley"
+    },
+    {
+     "volume": "14",
+     "paragraph": 246,
+     "quote": "corruption and bitterness are on the same footing, they denote the state of imperfect bodies, the initial state of the prima materia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "chaos",
+   "relation": "belongs-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 253,
+     "quote": "The alchemists understood the return to chaos as an essential part of the opus. It was the stage of the nigredo",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mortificatio",
+   "relation": "belongs-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 253,
+     "quote": "It was the stage of the nigredo and mortificatio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "the alchemists",
+     "source_author": "the alchemists",
+     "correction_note": "gate correction: 'the stage of the nigredo and mortificatio' coordinates the two; belongs-to reads the mortificatio as the operation of that stage, one step, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "red-sea",
+   "relation": "equivalent-of",
+   "object": "aqua-pontica",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 256,
+     "quote": "the Red Sea ... is a term for the healing and transforming baptismal water, 465 and is thus an equivalent of the alchemical aqua pontica",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "red-sea",
+   "relation": "signifies",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 257,
+     "quote": "The Red Sea is a water of death ... for those that are “conscious” it is a baptismal water of rebirth and transcendence",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "the Peratae, reported by Hippolytus",
+     "source_author": "Hippolytus",
+     "correction_note": "gate correction: the paragraph names the Peratic interpretation and no text; Hippolytus is named only at §259, so source_text is withdrawn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 274,
+     "quote": "The continuation of the opus leads to the dangerous crossing of the Red Sea, signifying death and rebirth.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "tinctura-philosophorum",
+   "relation": "derives-from",
+   "object": "red-sea",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 259,
+     "quote": "The tincture is the “dip” and the baptismal water of the alchemists, here asserted to come from the Red Sea.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "Rosinus ad Euthiciam",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "identified-with",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 261,
+     "quote": "The serpent is the prima materia, the Serpens Hermetis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "note": "the serpent of the Tractatus Aristotelis"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "nous",
+   "relation": "animates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 261,
+     "quote": "the Nous that animates the cold part of nature—that is, the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-4",
+    "date": "2026-11-11"
+   },
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "prefigures",
+   "object": "four-functions",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 261,
+     "quote": "what we today call the schema of functions is archetypally prefigured by one of the oldest patterns of order known to man, namely the quaternity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "undergoes",
+   "object": "sublimatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 262,
+     "quote": "Through the incubation the snake-like content is vapourized, literally “sublimated,”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the sentence has 'the snake-like content' sublimated; the subject node is the serpent of the recipe, one step, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-4",
+    "date": "2026-11-11"
+   },
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "undergoes",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 264,
+     "quote": "for the nigredo (terra nigra ) still prevails and the substance of the stone is still black",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "four-elements",
+   "relation": "corresponds-to",
+   "object": "four-functions",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 265,
+     "quote": "The four natures or elements are gathered together ... i.e., the four aspects or functions are integrated with consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 276,
+     "quote": "If we take the four directions and the four elements (see note 505) as a symbolical equivalent of the four basic functions of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-4",
+    "date": "2026-11-11"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "ezekiels-vision",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 269,
+     "quote": "Psychologically the vision of Ezekiel is a symbol of the self consisting of four individual creatures and wheels",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 271,
+     "quote": "As Ezekiel’s vision can be interpreted psychologically as a symbol of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "chariot",
+   "relation": "symbolizes",
+   "object": "anima-mundi",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 270,
+     "quote": "It is a symbol of the arcane substance and the quintessence ... a God-image or, to be more accurate, an image of the anima mundi.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "ezekiels-vision",
+   "relation": "embodies",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 272,
+     "quote": "Ezekiel’s vision is of psychological importance because the quaternity embodied in it is the vehicle or throne",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "synthesizes",
+   "object": "four-functions",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 274,
+     "quote": "The quaternity, as we have seen, is a quaternio of opposites, a synthesis of the four originally divergent functions.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "africa",
+   "relation": "symbolizes",
+   "object": "inferior-function",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 276,
+     "quote": "the “inferior” function, which is the darkest and the most unconscious of all. “Africa” is not a bad image for this.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-4",
+    "date": "2026-11-11"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "is-goal-of",
+   "object": "peregrinatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 276,
+     "quote": "a coniunctio Solis et Lunae, the union of supreme opposites, and this is the crowning of the opus and the goal of the peregrination",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "has-seat-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 277,
+     "quote": "The fourth function has its seat in the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "nous",
+   "relation": "merges-with",
+   "object": "hermes",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 251,
+     "quote": "This spirit is the snake-like Nous or Agathodaimon, which in Hellenistic syncretism merges together with Hermes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "enthroned-on",
+   "object": "chariot",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 273,
+     "quote": "it is characteristic of the mystical philosophy of the alchemists that the Mercurial serpent is enthroned on the chariot",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
+     "source": "the alchemists, on the Tractatus Aristotelis",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-11"

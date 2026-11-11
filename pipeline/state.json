@@ -1137,11 +1137,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-4",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §211-280",
+   "result": "CW 14 WINDOW 4: Mysterium Coniunctionis §211-280, the close of the Luna chapter (the end of the Philaletha allegory, the moon-nature, Dorn on Luna as the sum of the six spiritual metals, the psychology of the moon: lunar feminine consciousness, Logos and Eros, the woman's Sol niger and the father-imago) and the opening of Sal (salt as arcane substance in the Sulphur-Mercurius-Sal triad and the quaternity, the Assumption, the bitterness and the sea, the salt-spirit, the Red Sea in the Fathers and the Peratae, the chariot of Aristotle read as the self, Ezekiel's vision, Maier's peregrination to the Erythraean Sea and the fourth of the three). Run by the one-shot evening firing in the mining chat on 2026-11-11 (the 5-hour meter had reached 81 percent at 18:26 with this window due), the fourth window of the trilogy pass. Mined 57 candidates/66 refs (Opus-family miner subagent, blinded, model id stamped; twelve attaches onto standing edges; the miner cut about twenty weaker candidates and left §214, §228-230, §233, §247-250, §254-255, §258, §260, §263, §267-268 and §278-280 without a reference; 18 names entries; 9 cross-register flags; 11 stage candidates: Luna in the albedo, salt in the solutio and the coagulatio, Mylius's dragon in the coagulatio, salt's relation to the nigredo, chaos and the mortificatio in the nigredo followed by the albedo, the snake-like content sublimated, the black stone in the nigredo; stages_note recorded). Pre-check kept all 66 (quotation share of CW 14 after the window 5.23 percent against the 9 percent cap). Fable gate 52 TRUE / 14 CORRECTED / 0 FALSE: one claim type raised to jung-quotes-source (§244, Rupescissa's own words quoted), three source_text withdrawals where the paragraph names the author and no title (§244 Mylius, §257 the Peratic text, §277 Maier), one note added (§244 salt's rarely mentioned relation to the nigredo against its usual albedo), nine confidence demotions for one-step or conditional readings (§217 the anima's child 'or marked by the attributes of the hero', §218 Jung's summary of Dorn, §227 and §231 conditional or projected-form sentences, §237 Jung's reading of the Assumption dogma, §253 'nigredo and mortificatio' coordinated, §262 the snake-like content, §219 Luna's 'work of whitening', §222 the Luna-unconscious equation qualified at §223 with a note). Names: seventeen accepted, one rejected (avis Hermetis as the Latin name of the ash: it names the bird of Hermes, which §247 equates with the ash). Gemini cross-vendor 64 PASS / 2 FINDING on 66 post-gate refs; both findings fall on standing edges (luna belongs-to albedo read the other way round, salt begets mercurius against Senior's 'made from') and are overruled with audit notes, the first already at medium from the gate. Names applied to 17 entries on 15 nodes; cross_register set on 8 edges; eight mints: lux-moderna, spiritual-metals, feminine-consciousness, tinctura-philosophorum (the standing tincture node is Pordage's love-fire Tincture), aqua-pontica, four-functions, ezekiels-vision, africa. Sources written as other: Rupescissa, and Rosinus ad Euthiciam as a text (both added to the controlled list after this window). +45 edges, 21 refs attached to standing or this window's edges, +66 refs, +8 nodes. Graph 1034/4225/5666; CW 14 now 661 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 45 edges under v0.7.2: agreement 40/45 (89 percent), 36 assigned, 5 queued, 4 no-family, 0 text-undecided; queue 732; no-family 204; the Gemini arm returned two bare unclassified rows (n 4186, 4203), normalized to no-family before assembly, raw file kept as family_sweep_gemini_b-cw14-4_raw.json. strain: 4 no-family, 0 text-undecided of 45 swept; new homeless strings: characterizes, derives-colour-from (embodies is already discussed in the definitions and splits by object type). FAMILY GAP FOR THE SITTING, continued: the stage placement salt belongs-to nigredo split the arms again (Opus no family, Gemini structural-position) and went to the queue; both arms agreed no family for 'characterizes' used of a quality (bitterness of the prima materia, Luna of feminine consciousness). Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-11, 66 refs judged against the full paragraphs; weekly Fable 28 percent before the gate, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1034/4225/5666, distinct paragraphs 3555, claim mix 4574/823/269. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-aeb3da09ee2614d06, 34 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 58 assistant turns after the miner finished at 2026-11-11T19:15:19.944Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 4 (§211-280)",
- "nodes": 1026,
- "edges": 4180,
- "refs": 5600,
+ "next": "CW14-DUE: window 5 (§281-350)",
+ "nodes": 1034,
+ "edges": 4225,
+ "refs": 5666,
  "as_of": "2026-11-11"
 }
