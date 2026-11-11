@@ -28,9 +28,9 @@ ALLOW = {
     # the terms of the RDF export, so a term IRI has a page to resolve to
     'vocabulary.html',
     'relation_declarations.json', 'batch_pages.json',
-    # the method-page poster (2026-08-28): a static page asset, not a page —
-    # extensionless convention does not apply, no sitemap entry
-    'method-poster.png', 'nutshell.html',
+    # Pages redirect rules (2026-11-11): /nutshell to /method, 301. Pages reads
+    # the file at deploy and does not serve it
+    '_redirects',
     # the static twin of the SPA's #/method view (spec-concept-pages-v1)
     'method.html',
     # what Pages serves, with a 404 status, for an unknown path. Its presence
@@ -304,7 +304,6 @@ check('repo /v1.3 == frozen baseline', proc.stdout.strip() == V13_BASELINE,
 
 print('== gates ==')
 for name, cmd in [('paper facts', 'python3 tools/check_paper_facts.py'),
-                  ('poster facts (pixels vs live seed.json)', 'python3 tools/check_poster_facts.py'),
                   ('test harness', 'python3 tests/test_graph.py')]:
     p = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=ROOT)
     check(name, p.returncode == 0, (p.stdout + p.stderr).strip().splitlines()[-1] if (p.stdout or p.stderr) else '')

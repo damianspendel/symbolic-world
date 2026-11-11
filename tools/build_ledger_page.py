@@ -65,7 +65,7 @@ MENU_LEGACY = [
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
     ("about", ([("/about", "about")] if EMIT_ABOUT_PAGE else [])
-              + [("/nutshell", "in a nutshell"), ("/atlas#/method", "method"),
+              + [("/atlas#/method", "method"),
                  ("/ontology", "design")]
               + ([("/support", "support")] if SUPPORT_URL else [])),
 ]

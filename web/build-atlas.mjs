@@ -139,7 +139,7 @@ const EMIT_ABOUT_PAGE = true
 const ROUTES_IN_UI = true
 
 // The support link (Ko-fi, decision of 2026-10-21): one footer link on every
-// generated page plus one sentence on /nutshell, nothing else monetized.
+// generated page and the /support page, nothing else monetized.
 // Empty renders nothing anywhere. tools/build_ledger_page.py reads this
 // constant from the source, so the python pages follow the same knob.
 const SUPPORT_URL = 'https://ko-fi.com/symbolicworld'
@@ -280,7 +280,7 @@ const MENU_LEGACY = [
   ['explore', [['/atlas#/atlas', 'atlas'], ['/routes', 'routes'], ['/query', 'query'], ['/atlas#/concordance', 'concordance']]],
   ['reference', [['/concepts', 'concepts'], ['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
-  ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/nutshell', 'in a nutshell'], ['/atlas#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
+  ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/atlas#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
 const MENU_READER_LIST = [
   ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : [])]]
@@ -3111,7 +3111,6 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
       ['/method', 'method', 'How a claim gets into the graph, and what the checks do and do not cover.'],
       ['/ontology', 'design', 'The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.'],
       ['/vocabulary', 'vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.'],
-      ['/nutshell', 'in a nutshell', 'The method on one page: a real claim followed through proposal, verification, cross-vendor audit and human refereeing to its published receipt.'],
       ...(SUPPORT_URL ? [['/support', 'support', 'Tips cover the running costs. The atlas, the dataset and the ledger stay free.']] : [])
     ]
     const evidenceBody = `<div class="titleband"><p class="eyebrow">evidence</p>
@@ -3325,33 +3324,9 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     console.log('support page: SUPPORT_URL is empty — not registered')
   }
 
-  // ------------------------------------------------ /nutshell --------------
-  // The method poster on its own page (Damian, 2026-08-28: an additional menu
-  // item, NOT a replacement for /atlas#/method). The page is one figure; the poster
-  // follows the same lapis edge the method page's claim figure draws, so the
-  // guard above (which exits the build if that edge leaves the graph) protects
-  // this page too. The numbers in the image are pixels: they are re-verified
-  // against the tagged seed.json at release time by hand, per
-  // docs/figures/METHOD_POSTER_HANDOFF.md.
-  const nutshellBody = `<div class="titleband"><p class="eyebrow">about</p>
-<h1>In a nutshell</h1>
-<p class="sub">A one-pager on how the atlas was constructed: one citation
-followed from the map through the checks it passed. The full explanation is on the <a href="/atlas#/method">method</a>
-page.</p></div>
-<figure class="fig fig-poster">
-  <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
-    alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
-  <figcaption>The method on one page. Counts as of ${esc(JSON.parse(readFileSync(here('../docs/figures/method_poster_facts.json'), 'utf8')).date_label)}.</figcaption>
-</figure>
-${SUPPORT_URL ? `<p class="meta">The atlas, the dataset and the ledger are free. Tips cover the running costs: <a href="/support">support the project</a>.</p>` : ''}`
-  registerPage({
-    slug: 'nutshell', title: 'In a nutshell', where: 'in a nutshell',
-    nav: 'in a nutshell', changefreq: 'monthly', priority: '0.5',
-    description: 'How The Symbolic World is made, on one page: a real claim from Jung’s Collected Works followed through proposal, verification, cross-vendor audit and human refereeing to its published receipt.',
-    style: '.fig-poster img { width: 100%; height: auto; display: block; border-radius: 6px; }\n.fig-poster { margin-top: 1.2rem; }',
-    body: nutshellBody
-  })
-  V2_COPY.push(['public/nutshell.html (generated)', stripEvidence(nutshellBody)])
+  // /nutshell retired in the interim build (Damian, 2026-11-10: structure A
+  // revised, the poster dropped). web/public/_redirects sends the path to
+  // /method with a 301, so links in circulation still land.
   // The scan's findings, kept for whatever reads them next (the #/method route
   // is the obvious candidate). The example lists are dropped: they come out of
   // set iteration inside the tool and are not stable between two runs over the

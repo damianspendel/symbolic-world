@@ -117,7 +117,8 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
   per family and per batch; facets, permalinks and the assignment-history
   chip on the ledger; the taxonomy and rules V2-R7 to V2-R13 in
   `docs/ATLAS_REQUIREMENTS.md`.
-- Added [in a nutshell](/nutshell), the method poster on its own page; the
+- Added in a nutshell, the method poster on its own page (retired on
+  2026-11-11, and `/nutshell` now redirects to `/method`); the
   identity walk stays in `kg_query.py`, not exposed on the site.
 
 ## v2.1.0: CW 11 and the atlas as an instrument

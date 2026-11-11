@@ -720,7 +720,7 @@ EXPECTED_MENU_LEGACY = [
     ("reference", [("/concepts", "concepts"), ("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
-    ("about", [("/about", "about"), ("/nutshell", "in a nutshell"), ("/atlas#/method", "method"),
+    ("about", [("/about", "about"), ("/atlas#/method", "method"),
                ("/ontology", "design"), ("/support", "support")]),
 ]
 # spec-reader-v1, A4: six entries in one unlabelled group
