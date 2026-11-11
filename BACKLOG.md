@@ -785,3 +785,10 @@ An animation of the alchemical journey, in the spirit of the atlas, covering the
 ## v2.4.0 (added 2026-11-11)
 
 - **Evidence page: "How the checks work" links to the method page.** Damian, 2026-11-11, in the mining chat: "backlog for 2.4.0 HOW THE CHECKS WORK -> METHOD (on the evidence page)." The heading or link on the evidence page that reads "How the checks work" should take the reader to `/method` (the indexable twin of the atlas method route) rather than stand as a label of its own. Build track; site code only; no data change.
+
+## Atlas: drag a whole group to spread the map out (added 2026-11-11, unscheduled)
+
+Damian: "backlog idea for the graph: drag and drop the groups (the psyche, the figures) to space things out". Backlog entry only, with no version yet.
+
+- On /atlas the reader can drag a whole cluster or register group, such as the psyche or the figures, and the nodes in it move together. That spreads a crowded part of the map apart without moving one node at a time.
+- No one has built or specified it. A spec would settle what counts as a group (the register, the node type, or a layout cluster), whether a dragged position persists, and whether it changes the lapis assembly animation, which stays as it is.
