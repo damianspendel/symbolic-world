@@ -1121,11 +1121,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-3",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §141-210",
+   "result": "CW 14 WINDOW 3: Mysterium Coniunctionis §141-210, the close of the chapter on Sulphur (the dragon's head and the lapis, sulphur as arcane substance, the Christ-lapis parallel and the shadow, compulsion) and the first part of Luna (the significance of the moon, the dog, the alchemical allegory of Philaletha's winged youth and the thief read as a dream). Run by hand in the mining chat on 2026-11-11, the third window of the trilogy pass, after the build chat's merge of v2.3.0 (993468a2). Mined 56 candidates/62 refs (Opus-family miner subagent, blinded, model id stamped; six attaches onto standing edges; the miner cut a first draft of 154 to 56 and left §160, §162, §164, §170, §176, §186 and §189-206 thinly covered; 16 names entries; 9 cross-register flags; 15 stage candidates: Luna, the terra alba foliata and the dew in the albedo, Sol in the rubedo, the novilunium and Luna's blackness in the nigredo, sulphur and the rabid dog in the sublimatio, the dragon, Sol and the lion in the mortificatio, Sol's dissolutio and Luna's coagulatio from the Epistola Solis ad Lunam, the exaltatio intellectus, the extractio of the succus lunariae; stages_note recorded). Pre-check kept all 62 (quotation share of CW 14 after the window 4.59 percent against the 9 percent cap). Fable gate 54 TRUE / 8 CORRECTED / 0 FALSE: one source_text withdrawn (§142 names Mylius and no text), seven confidence demotions for one-step readings (§143 the salt of four colours as salt, §144 the wounded physician as Jung's gloss on medicina et medicus, §146 the equivalent of a redeemer, §151 a conditional, §155 the dew bringing about the albedo, §166 Jung's framing of a reported idea, §177 the poodle rather than Mephistopheles). All sixteen names accepted. Gemini cross-vendor 62 PASS / 0 FINDING on 62 post-gate refs. Names applied to 16 entries on 14 nodes; cross_register set on 9 edges; thirteen mints: compulsion, umbra-solis, terra-alba-foliata, plenilunium, novilunium, moon-plant, epinoia, concupiscentia, crude-sulphur and the operations exaltatio, dissolutio, coagulatio, extractio. Sources written as other: the Epistola Solis ad Lunam crescentem, Kalid's Liber secretorum, the Magic Papyri, the Dicta Belini (all added to the controlled list after this window). +50 edges, 12 refs attached to standing or this window's edges, +62 refs, +13 nodes. Graph 1026/4180/5600; CW 14 now 595 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 50 edges under v0.7.2: agreement 37/50 (74 percent), 37 assigned, 13 queued, 0 no-family, 0 text-undecided; queue 727; the Gemini arm returned four bare unclassified rows (n 4143, 4144, 4147, 4149), normalized to no-family before assembly, raw file kept as family_sweep_gemini_b-cw14-3_raw.json. strain: 0 no-family, 0 text-undecided of 50 swept; new homeless strings: none. FAMILY GAP FOR THE SITTING: the stage relation belongs-to (a substance or symbol to its stage) splits the arms every time, Opus reading structural-position and Gemini no family; four of this window's thirteen queued edges are stage placements (luna, terra-alba-foliata and dew in the albedo, sol in the rubedo) and a fifth is novilunium in the nigredo. FAMILY_DEFINITIONS has no family for stage assignment; the trilogy pass will queue every such edge until one is ruled. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-11, 62 refs judged against the full paragraphs; weekly Fable about 30 percent after the gate, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1026/4180/5600, distinct paragraphs 3537, claim mix 4532/807/261. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit; the build chat's BACKLOG.md commit follows on its request before window 4.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a0c627097673d1a0d, 30 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 27 assistant turns after the miner finished at 2026-11-11T17:18:53.087Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 3 (§141-210)",
- "nodes": 1013,
- "edges": 4130,
- "refs": 5538,
+ "next": "CW14-DUE: window 4 (§211-280)",
+ "nodes": 1026,
+ "edges": 4180,
+ "refs": 5600,
  "as_of": "2026-11-11"
 }
