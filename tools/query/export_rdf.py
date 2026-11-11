@@ -644,7 +644,7 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
                 ("a", "void:Dataset"),
                 ("dcterms:title", literal(VOCABULARY["title"])),
                 ("dcterms:license", f"<{LICENSE}>"),
-                ("void:dataDump", f"<{BASE}data/{ONTOLOGY_FILE}>"),
+                ("void:dataDump", f"<https://symbolicworld.observer/{ONTOLOGY_FILE}>"),
                 ("void:triples", f"{count_triples(ontology_text)}")])]
     if quotes_text is not None:
         # dcterms:rights, not dcterms:license: the CC BY grant excludes this subset
