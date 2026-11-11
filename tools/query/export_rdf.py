@@ -630,7 +630,9 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
              ("void:uriSpace", literal(BASE)),
              ("void:vocabulary", f"<{BASE}ns>"),
              ("void:vocabulary", "<http://www.w3.org/ns/prov#>"),
-             ("void:dataDump", f"<{BASE}data/{GRAPH_FILE}>"),
+             # the file itself, as the site serves it (Damian, 2026-11-11, for v2.4.0):
+             # the w3id data/ address answers 302 to the DOI landing page
+             ("void:dataDump", f"<https://symbolicworld.observer/{GRAPH_FILE}>"),
              ("void:triples", f'{count_triples(graph_text)}'),
              ("void:entities", f"{sum(n for _, n in partitions)}")]
     pairs += [("void:classPartition", f"[ void:class {c} ; void:entities {n} ]") for c, n in partitions]
