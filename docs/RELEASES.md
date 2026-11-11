@@ -138,10 +138,10 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
   {{ev_agrees}}/{{ev_treated}} treated agreed, {{ev_disagrees}} disagreed,
   {{ev_split}} split; {{ev_rulings}} rules changed. Receipts in
   `docs/experiments/external_validity_2026-08/`.
-- Withdrew four reviewer citations, keeping one, and the calibration figures
-  from before August, which the original harness could not support. Marked the
-  comparison of the first two *Aion* batches as confounded: the miner's brief
-  changed between them.
+- Withdrew the calibration figures from before August, which the original
+  harness could not support. Marked the comparison of the first two *Aion*
+  batches as confounded: the first miner was watched and the second ran
+  blind.
 - Added release checks: ledger freshness, the batch manifest, the size budget,
   the copy contract, and a check of the poster's numbers against the graph.
 
@@ -216,7 +216,8 @@ pin: graph v2.2.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
   {{batches}} batches; {{pending}} relations await adjudication.
 - One CW 11 reference, to paragraph 960, waited for a ruling after the auditor
-  objected to its ellipsis. A Fable-family ruling upheld it.
+  objected to its ellipsis. A Fable-family ruling upheld it and lowered its
+  confidence from high to medium.
 - Mining resumes with CW 16, one window nightly.
 
 ### governance
