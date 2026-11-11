@@ -1644,7 +1644,11 @@ if (existsSync(releasesPath)) {
     '>' + text.replace(idPattern, (id) =>
       batchIds.has(id) ? `<a href="/${batchSlug(id)}">${id}</a>` : id) + '<')
 
-  const pinHtml = (pin) => `<div class="pin">` + inline(pin)
+  // The calibration record is named by its date and run, not its file path
+  // (prose review R3, 2026-11-11); the path stays in the receipts.
+  const pinHtml = (pin) => `<div class="pin">` + inline(pin
+    .replace(/pipeline\/family_calibration\/records\/(\d{4}-\d{2}-\d{2})_v\d+(?:_run(\d+))?\.json/g,
+      (m, d, run) => `of ${d}${run ? `, run ${run}` : ''}`))
     .replace(/(graph|ruleset)\s+(v[\d.]+|pending)/g, '$1 <span class="v">$2</span>') + `</div>`
   const relBody = `<div class="titleband"><p class="eyebrow">release notes</p>
 <h1>Releases</h1></div>
@@ -1674,7 +1678,7 @@ external-validity figures from <code>docs/experiments/external_validity_2026-08/
   registerPage({
     slug: 'releases', title: 'Releases', where: 'releases', nav: 'releases',
     changefreq: 'monthly', priority: '0.5',
-    description: 'Release notes for The Symbolic World, a verified knowledge graph of Jung’s Collected Works: what each release added, with its version pin and receipts.',
+    description: 'Release notes for The Symbolic World, a verified knowledge graph of Jung’s Collected Works: what each release added, with its versions and sources.',
     style: relStyle, body: relBody
   })
   V2_COPY.push(['public/releases.html (generated from docs/RELEASES.md)', stripEvidence(relBody)])

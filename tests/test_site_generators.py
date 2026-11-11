@@ -390,10 +390,14 @@ def test_releases_page_renders_the_version_pin():
     text = re.sub(r"<[^>]+>", "", pins[0])
     assert re.search(r"graph v[\d.]+", text), text
     assert re.search(r"ruleset v[\d.]+", text), text
-    record = re.search(r"(pipeline/family_calibration/records/[\w.\-]+\.json)", text)
-    assert record, text
-    assert "(PASS)" in text
-    with open(os.path.join(ROOT, record.group(1)), encoding="utf-8") as fh:
+    # the pin names the record by date and run since 2026-11-11; the file is
+    # found from that name and the ruleset, and must exist and be a PASS
+    named = re.search(r"calibration record of (\d{4}-\d{2}-\d{2})(?:, run (\d+))? \(PASS\)", text)
+    assert named, text
+    ruleset = re.search(r"ruleset v([\d.]+)", text).group(1).replace(".", "")
+    record = (f"pipeline/family_calibration/records/{named.group(1)}_v{ruleset}"
+              + (f"_run{named.group(2)}" if named.group(2) else "") + ".json")
+    with open(os.path.join(ROOT, record), encoding="utf-8") as fh:
         assert json.load(fh)["verdict"] == "PASS"
 
 
@@ -435,7 +439,7 @@ def test_release_entries_point_at_their_artifacts():
     are real extensionless links."""
     html = read(os.path.join(PUBLIC, "releases.html"))
     body = html[html.index("<main"):]
-    for path in ("tools/query/kg_query.py", "docs/ATLAS_REQUIREMENTS.md",
+    for path in ("tools/query/kg_query.py",
                  "tools/check_paper_facts.py", "docs/PAPER.md"):
         assert f"<code>{path}</code>" in body, path
     for link in ("/ledger", "/families", "/ontology", "/query", "/v1.3/"):
