@@ -115,8 +115,14 @@
      "volume": "14",
      "paragraph": 188,
      "batch": "b-cw14-3"
+    },
+    {
+     "volume": "14",
+     "paragraph": 490,
+     "batch": "b-cw14-7"
     }
-   ]
+   ],
+   "latin": "lapis Philosophorum"
   },
   {
    "id": "ouroboros",
@@ -179,6 +185,11 @@
      "volume": "14",
      "paragraph": 416,
      "batch": "b-cw14-6"
+    },
+    {
+     "volume": "14",
+     "paragraph": 480,
+     "batch": "b-cw14-7"
     }
    ]
   },
@@ -581,7 +592,15 @@
   {
    "id": "dragon",
    "type": "Symbol",
-   "label": "Dragon"
+   "label": "Dragon",
+   "latin": "draco",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 482,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "paracelsus",
@@ -598,6 +617,11 @@
      "volume": "14",
      "paragraph": 120,
      "batch": "b-cw14-2"
+    },
+    {
+     "volume": "14",
+     "paragraph": 478,
+     "batch": "b-cw14-7"
     }
    ]
   },
@@ -641,10 +665,16 @@
      "volume": "14",
      "paragraph": 409,
      "batch": "b-cw14-6"
+    },
+    {
+     "volume": "14",
+     "paragraph": 434,
+     "batch": "b-cw14-7"
     }
    ],
    "aliases": [
     "Hermetic vessel",
+    "cucurbita",
     "thalamus"
    ]
   },
@@ -661,7 +691,17 @@
   {
    "id": "sapientia",
    "type": "Concept",
-   "label": "Sapientia / Wisdom"
+   "label": "Sapientia / Wisdom",
+   "aliases": [
+    "Sapientia Dei"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 443,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "rex-marinus",
@@ -877,7 +917,18 @@
   {
    "id": "filius-regius",
    "type": "Figure",
-   "label": "Filius Regius (King's Son)"
+   "label": "Filius Regius (King's Son)",
+   "latin": "puellus regius",
+   "aliases": [
+    "kingly boy"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 465,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "solificatio",
@@ -887,22 +938,39 @@
   {
    "id": "holy-ghost",
    "type": "Figure",
-   "label": "Holy Ghost (Paraclete)"
+   "label": "Holy Ghost (Paraclete)",
+   "aliases": [
+    "Paraclete"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 444,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "anima-mundi",
    "type": "Figure",
    "label": "Anima Mundi",
    "aliases": [
-    "World-Soul"
+    "World-Soul",
+    "anima media natura"
    ],
    "name_refs": [
     {
      "volume": "14",
      "paragraph": 50,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "14",
+     "paragraph": 450,
+     "batch": "b-cw14-7"
     }
-   ]
+   ],
+   "latin": "anima mundi"
   },
   {
    "id": "phoenix",
@@ -912,7 +980,15 @@
   {
    "id": "worm",
    "type": "Symbol",
-   "label": "Worm (vermis)"
+   "label": "Worm (vermis)",
+   "latin": "vermis",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 482,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "the-passion",
@@ -924,20 +1000,37 @@
    "type": "Figure",
    "label": "True Man (chen-yen)",
    "aliases": [
-    "Chên-yên"
+    "Chên-yên",
+    "chên-yên"
    ],
    "name_refs": [
     {
      "volume": "14",
      "paragraph": 152,
      "batch": "b-cw14-3"
+    },
+    {
+     "volume": "14",
+     "paragraph": 490,
+     "batch": "b-cw14-7"
     }
    ]
   },
   {
    "id": "quintessence",
    "type": "Substance",
-   "label": "Quintessence (quinta essentia)"
+   "label": "Quintessence (quinta essentia)",
+   "latin": "Quinta Essentia",
+   "aliases": [
+    "the One born of the Four"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 439,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "rex",
@@ -1224,12 +1317,32 @@
   {
    "id": "mary",
    "type": "Figure",
-   "label": "Mary (Mother of God)"
+   "label": "Mary (Mother of God)",
+   "aliases": [
+    "Queen of Heaven"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 450,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "arcane-substance",
    "type": "Substance",
-   "label": "Arcane substance (arcanum)"
+   "label": "Arcane substance (arcanum)",
+   "aliases": [
+    "antimony of the philosophers"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 466,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "communion-both-kinds",
@@ -1534,12 +1647,31 @@
   {
    "id": "filius-macrocosmi",
    "type": "Figure",
-   "label": "Filius Macrocosmi (Son of the Great World)"
+   "label": "Filius Macrocosmi (Son of the Great World)",
+   "latin": "filius Mundi Maioris",
+   "aliases": [
+    "Son of the great World"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 460,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "filius-unius-diei",
    "type": "Motif",
-   "label": "Filius unius diei (Son of one day)"
+   "label": "Filius unius diei (Son of one day)",
+   "latin": "filius unius diei",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 476,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "unconsciousness",
@@ -1749,7 +1881,15 @@
   {
    "id": "vir-unus",
    "type": "Concept",
-   "label": "Vir Unus (the unified man)"
+   "label": "Vir Unus (the unified man)",
+   "latin": "vir unus",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 490,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "man",
@@ -1815,7 +1955,15 @@
    "id": "serpent",
    "type": "Symbol",
    "label": "The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)",
-   "vocabulary_note": "the label names the transformation/renewal aspect; the node carries the serpent symbol in all its aspects, including the tempter and the devil (CW 9ii, CW 5 §69) — recorded 2026-10-28 at the b-cw5-1 merge after a cross-vendor label-scope finding"
+   "vocabulary_note": "the label names the transformation/renewal aspect; the node carries the serpent symbol in all its aspects, including the tempter and the devil (CW 9ii, CW 5 §69) — recorded 2026-10-28 at the b-cw5-1 merge after a cross-vendor label-scope finding",
+   "latin": "serpens",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 482,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "circumambulatio",
@@ -1899,6 +2047,11 @@
      "volume": "14",
      "paragraph": 355,
      "batch": "b-cw14-6"
+    },
+    {
+     "volume": "14",
+     "paragraph": 422,
+     "batch": "b-cw14-7"
     }
    ]
   },
@@ -4257,7 +4410,17 @@
   {
    "id": "womb",
    "label": "The womb (matrix)",
-   "type": "Symbol"
+   "type": "Symbol",
+   "aliases": [
+    "uterus"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 434,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "the-key",
@@ -4442,7 +4605,17 @@
   {
    "id": "church",
    "label": "The Church (Ecclesia, communion of saints)",
-   "type": "Figure"
+   "type": "Figure",
+   "aliases": [
+    "Mater Ecclesia"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 435,
+     "batch": "b-cw14-7"
+    }
+   ]
   },
   {
    "id": "marriage-classes",
@@ -5920,7 +6093,15 @@
      "volume": "14",
      "paragraph": 171,
      "batch": "b-cw14-3"
+    },
+    {
+     "volume": "14",
+     "paragraph": 437,
+     "batch": "b-cw14-7"
     }
+   ],
+   "aliases": [
+    "new moon"
    ]
   },
   {
@@ -6172,6 +6353,21 @@
      "batch": "b-cw14-6"
     }
    ]
+  },
+  {
+   "id": "melancholia",
+   "label": "Melancholia",
+   "type": "Concept"
+  },
+  {
+   "id": "aether",
+   "label": "Aether",
+   "type": "Substance"
+  },
+  {
+   "id": "incineratio",
+   "label": "Incineratio",
+   "type": "Operation"
   }
  ],
  "edges": [
@@ -6550,6 +6746,20 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
      "source": "the alchemists",
      "source_author": "the alchemists"
+    },
+    {
+     "volume": "14",
+     "paragraph": 440,
+     "quote": "Thus from a Square, the Bed a Globe is made, And Purest Whiteness from the Blackest Shade",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "correction_note": "gate correction: verse 28, supported ('Purest Whiteness from the Blackest Shade'); the paragraph is the verse with no title named, source_text withdrawn"
     }
    ],
    "relation_family": {
@@ -6593,6 +6803,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 434,
+     "quote": "This denotes the first stage of completion ... thus initiating the second and usually final stage, the rubedo",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -13087,6 +13308,17 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
      "source": "Dorn",
      "source_author": "Dorn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 434,
+     "quote": "solvent and solute together pass into a higher state immediately following the cauda pavonis, namely the albedo",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -13498,6 +13730,31 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 429,
+     "quote": "The uroboric relationship between queen and lion is quite evident here: she drinks his blood while he sucks her milk.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 453,
+     "quote": "A Lyon Greene did in her Lapp reside ... The Blood gush’d out: The Virgin drunck it upp",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "correction_note": "gate correction: verses 31-35, supported; the paragraph is the verse with no title named, source_text withdrawn"
     }
    ],
    "layer": "amplification",
@@ -13574,6 +13831,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 449,
+     "quote": "Four Elements, Brave Armes, and Polish’d well God gave him",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "correction_note": "gate correction: verse 30, supported ('him' is the regenerated king of §450); the paragraph is the verse with no title named, source_text withdrawn"
     }
    ],
    "relation_family": {
@@ -13625,6 +13896,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 465,
+     "quote": "but as the reborn puellus regius (kingly boy) he is an allegory of Christ",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Philalethes, Introitus apertus",
+     "source_author": "Philalethes",
+     "source_text": "Introitus apertus"
     }
    ],
    "relation_family": {
@@ -19548,6 +19833,21 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 436,
+     "quote": "the senex-puer is described by Ripley himself as the “Ancient of Days.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "source_text": "Cantilena Riplaei",
+     "correction_note": "gate correction: the sentence says the senex-puer is so described by Ripley; the king is one step on, medium"
     }
    ],
    "relation_family": {
@@ -19639,6 +19939,17 @@
      "verified_date": "2026-07-25",
      "modality_swept": true,
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 430,
+     "quote": "This display of colours is an indication of the queen’s Venus and peacock nature ( cauda pavonis ). ... These changes presage the coming birth.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -20153,6 +20464,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 450,
+     "quote": "The Maid is “crowned” ( redimita ), and in her we recognize the crowned Virgin, the Queen of Heaven",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -20483,6 +20805,19 @@
      "verified_date": "2026-07-25",
      "source": "alchemical poem (CW14 §480)",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 479,
+     "quote": "But through his descent Mercurius is made captive and can be freed only by the art",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Crasselame, Sopra la composizione della pietra",
+     "source_author": "other"
     }
    ],
    "relation_family": {
@@ -20508,6 +20843,48 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 431,
+     "quote": "The King Revivèd was in Thirty more, His Birth was Fragrant as the Prim-Rose Flower.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "correction_note": "gate correction: verse 20, supported; the paragraph is the verse with no title named, source_text withdrawn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 438,
+     "quote": "Her time being come, the Child Conceiv’d before Issues re-borne out of her Wombe once more; And thereupon resumes a Kingly State",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "correction_note": "gate correction: verses 26-27, supported; the paragraph is the verse with no title named, source_text withdrawn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 465,
+     "quote": "Herewith was completed the Time when the King of the Earth was released and renewed, well apparelled, and quite handsome",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Trismosin, Splendor solis",
+     "source_author": "other",
+     "source_text": "Splendor solis"
     }
    ],
    "relation_family": {
@@ -20594,6 +20971,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 446,
+     "quote": "The projections of the alchemists were nothing other than unconscious contents appearing in matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -73810,6 +74198,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-3, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 485,
+     "quote": "corner-stone Jesus Christ, that is to say, how he is compared and united with the earthly philosophical stone of the Sages",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Aquarium sapientum",
+     "source_author": "the alchemists",
+     "source_text": "Aquarium sapientum"
     }
    ],
    "relation_family": {
@@ -126070,6 +126472,17 @@
      "source": "Augustine, Epistola LV",
      "source_author": "Augustine",
      "audit_note": "cross-vendor finding overruled: the auditor objects to the standing node label, which aggregates what the graph knows of the node from other paragraphs; the claim, the quote and the referent at this paragraph are supported, and labels are not re-judged per citation."
+    },
+    {
+     "volume": "14",
+     "paragraph": 436,
+     "quote": "The elevation of the “matrix,” the chemical solution, from the state of materiality to Luna is the classic allegory of the Church",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -128655,6 +129068,18 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, FINDING-adjudicated, 2026-11-11)",
      "correction_note": "gate correction: 'her work of whitening' is the albedo by name only one step on; the standing edge takes the attach at medium",
      "audit_note": "cross-vendor (Gemini) read the standing relation the other way round: the whitening is Luna's work rather than Luna's membership of the albedo; the gate had set this reference to medium on the same step, and the standing edge keeps its relation"
+    },
+    {
+     "volume": "14",
+     "paragraph": 434,
+     "quote": "namely the albedo. This denotes the first stage of completion and is identified with Luna.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, FINDING-adjudicated, 2026-11-12)",
+     "audit_note": "cross-vendor (Gemini) asked for identified-with; the sentence does say the albedo 'is identified with Luna', and the standing edge carries the stage placement under the ruled stage relation belongs-to (a symbol to its stage), which this attach supports; the relation of the standing edge is not changed by an attach"
     }
    ],
    "relation_family": {
@@ -132234,6 +132659,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 434,
+     "quote": "She is the “water” in which the old king, as in the Arisleus vision, is dissolved into atoms.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -133096,6 +133532,927 @@
     "value": "separation",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rose",
+   "relation": "symbolizes",
+   "object": "mary",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 421,
+     "quote": "and this is also true of the rose. Above all it is an allegory of Mary",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "ecclesiastical allegory",
+     "source_author": "the Church Fathers"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "symbolizes",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 422,
+     "quote": "the figure of the mother-beloved shines ... She is the chaste bride and whore who symbolizes the prima materia",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "gate correction: the sentence's subject is 'the figure of the mother-beloved'; regina is one step on (the Queen Mother of the Cantilena, as the note says), medium",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence names the mother-beloved and the anima rather than the queen; the gate had set this reference to medium with a note on the same step",
+     "note": "the mother-beloved is the Queen Mother of the Cantilena"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "ouroboros",
+   "relation": "parallels",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 423,
+     "quote": "The uroboros is a very ancient pagan symbol ... although the analogy with Christ, who as the one God begets himself",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "cibatio",
+   "relation": "signifies",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 424,
+     "quote": "At the same time the cibatio and imbibitio of the anima-mother indicate the integration and completion of the entire personality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-7",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "renewed-through",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 424,
+     "quote": "The anima becomes creative when the old king renews himself in her.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-7",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lumen-naturae",
+   "relation": "weakens",
+   "object": "dogma",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 425,
+     "quote": "the dogmatic view of the world should lose its force as the lumen naturae gained in attraction",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence states, for 'those individuals whose particular interest lay in the investigation of natural things', that the dogmatic view lost force as the lumen naturae gained attraction; a scoped correlation rather than a general cause, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "integrates",
+   "object": "accrescent-soul",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 426,
+     "quote": "These are animal substances she has to integrate, the “accrescent soul”-peacock and lion with their positive and negative qualities",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-7",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "attains",
+   "object": "wider-consciousness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 427,
+     "quote": "If contents like these are integrated in the queen, it means that her consciousness is widened in both directions.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "correction_note": "gate correction: conditional ('If contents like these are integrated in the queen'), medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-7",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "undergoes",
+   "object": "cauda-pavonis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 430,
+     "quote": "This display of colours is an indication of the queen’s Venus and peacock nature ( cauda pavonis ).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "homunculus",
+   "relation": "contained-in",
+   "object": "the-vessel",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 433,
+     "quote": "This is the image of the homunculus in the Hermetic vessel!",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "foetus-spagyricus",
+   "relation": "undergoes",
+   "object": "putrefactio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 434,
+     "quote": "And when the Child’s Limbs there had putrefy’d, The Foulness of the Flesh was laid aside",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "correction_note": "gate correction: verse 25 of the Cantilena, supported; the paragraph names neither Ripley nor the title (it says 'the poet'), source_text withdrawn",
+     "note": "the Child of the Cantilena, which Jung calls the foetus spagyricus in §436"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "parallels",
+   "object": "church",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 435,
+     "quote": "an indication that she stands in the same relationship to the king as Mater Ecclesia to the believer",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "squaring-of-the-circle",
+   "relation": "synonym-of",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 439,
+     "quote": "The squaring of the circle, a favourite synonym for the magistery, has been accomplished.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "undergoes",
+   "object": "sublimatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 442,
+     "quote": "Rais’d him like Luna to th’Imperiall Place, Sublim’d him to the Heavens",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "correction_note": "gate correction: verse 29, supported ('Sublim'd him to the Heavens', the king of §443); the paragraph names no title, source_text withdrawn"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "likened-to",
+   "object": "messiah",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 443,
+     "quote": "If nevertheless it is praised as the second coming of the Messiah one must assume that the alchemists really did mean something of the kind.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "nigredo",
+   "relation": "identified-with",
+   "object": "melancholia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 446,
+     "quote": "It was not for nothing that the old Masters identified their nigredo with melancholia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "the old Masters",
+     "source_author": "the alchemists"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-7",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "quintessence",
+   "relation": "equivalent-of",
+   "object": "aether",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 452,
+     "quote": "the quintessence, portraying the disharmonious elements as a unity, is equivalent to aether, the finest and most subtle substance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "corresponds-to",
+   "object": "dominant-of-consciousness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 466,
+     "quote": "The arcane substance corresponds to the Christian dominant, which was originally alive and present in consciousness but then sank into the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "cross-vendor correction: The text specifically states 'Christian dominant', making 'Dominant of consciousness' an overgeneralization.",
+     "note": "the Christian dominant"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-7",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sulphur",
+   "relation": "attribute-of",
+   "object": "sol",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 467,
+     "quote": "Sulphur is an attribute of Sol as Leo is of Rex.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "compensates",
+   "object": "dogma",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 470,
+     "quote": "It is characteristic of the alchemists that they never lost sight of this polarity, thereby compensating the world of dogma",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "phoenix",
+   "relation": "transforms-into",
+   "object": "worm",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 472,
+     "quote": "According to the Ancoratus of Epiphanius, the phoenix emerges from his ashes first in the form of a worm",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Epiphanius, Ancoratus",
+     "source_author": "Epiphanius"
+    },
+    {
+     "volume": "14",
+     "paragraph": 483,
+     "quote": "just as the rejuvenated phoenix (falcon) first takes the form of a worm",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "filius-unius-diei",
+   "relation": "synonym-of",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 472,
+     "quote": "Khunrath’s Amphitheatrum to the “filius unius (SVI) diei” ... as a designation for the “Hermaphrodite of nature,” i.e., the arcane substance",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Khunrath, Amphitheatrum",
+     "source_author": "Khunrath",
+     "source_text": "Amphitheatrum sapientiae aeternae"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "is-lowest-form-of",
+   "object": "rex",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 473,
+     "quote": "The dragon as the lowest and most inchoate form of the king",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "phoenix",
+   "relation": "symbolizes",
+   "object": "resurrection",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 475,
+     "quote": "Since the phoenix is mainly an allegory of resurrection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "phoenix",
+   "relation": "signifies",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 476,
+     "quote": "In alchemy the uniting of the soul with the body is the miracle of the coniunctio ... The phoenix signifies precisely this moment.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "filius-unius-diei",
+   "relation": "identified-with",
+   "object": "logos",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 476,
+     "quote": "The son of this one day is the Light, the Logos (John 1:5), who is the Johannine Christ.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "correction_note": "gate correction: Jung's own interpretation, introduced as 'The one day probably refers to Genesis 1:5' and closed with 'So interpreted'; hedged, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-opus",
+   "relation": "recapitulates",
+   "object": "creation-of-the-world",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 478,
+     "quote": "The opus alchymicum recapitulates the secret of creation which began with the incubation of the waters.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Crasselame, Sopra la composizione della pietra",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "is-dark-aspect-of",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 480,
+     "quote": "Mercurius is a compound of opposites, and the alchemists were primarily concerned with his dark side, the serpent.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "worm",
+   "relation": "symbolizes",
+   "object": "death",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 482,
+     "quote": "The worm or serpent is all-devouring death.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sol",
+   "relation": "undergoes",
+   "object": "putrefactio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 485,
+     "quote": "when the putrefied body of the Sun lies dead, inactive, like ashes, in the bottom of the phial",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "Aquarium sapientum",
+     "source_author": "the alchemists",
+     "source_text": "Aquarium sapientum"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "undergoes",
+   "object": "incineratio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 486,
+     "quote": "The various fatalities which the old king has to suffer ... incineration in the fire, and renewal out of the chaos",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists",
+     "correction_note": "gate correction: the fatalities of the old king are the texts' content, which Jung lists and then says the alchemists derived from chemical procedures; a report of the alchemists, not Jung's own interpretive voice (in doubt: reports)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "inner-man",
+   "relation": "parallels",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 488,
+     "quote": "The inner spiritual man bears a resemblance to Christ—that is the unconscious premise for the statements about the filius regius .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dogma",
+   "relation": "activates",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 488,
+     "quote": "when a dogma loses its vitality, it must perforce activate the archetype that has always helped man to express the mystery of the soul",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence is conditional on the dogma losing its vitality; medium with the condition noted",
+     "note": "when a dogma loses its vitality ('it must perforce activate the archetype')"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dogma",
+   "relation": "rooted-in",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 489,
+     "quote": "how far the truth of dogma is rooted in the human psyche, which is not the work of human hands",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "inner-man",
+   "relation": "is",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 490,
+     "quote": "The inner spiritual man of the Gnostics is the Anthropos, the man created in the image of the Nous",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
+     "source": "the Gnostics",
+     "source_author": "the Gnostics"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
     "date": "2026-11-12"
    }
   }

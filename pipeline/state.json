@@ -1185,11 +1185,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-7",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §421-490",
+   "result": "CW 14 WINDOW 7: Mysterium Coniunctionis §421-490, the chapter on Rex and Regina continued: the rose and the mother-beloved, the queen's diet read as the integration of the anima's contents, the king as a dominant of consciousness and the lumen naturae, the remaining verses of Ripley's Cantilena with Jung's commentary (the queen's pregnancy and colours, the dissolution of the king and Luna as the albedo, the square bed made round, the crowned Maid in the fifth circle, the apotheosis of the queen, the triumphant king), Ripley's theology and the assimilation between revealed truth and the knowledge of nature, the dark side of the king (the sunken king, antimony, the phoenix and the worm, the filius unius diei, Crasselame's poem, the serpent) and the opening of the king as Anthropos. Run by the nightly job in the mining chat on 2026-11-12, the seventh window of the trilogy pass. Mined 51 candidates/55 refs (Opus-family miner subagent, blinded, model id stamped; sixteen attaches onto standing edges; the self-check showed about thirty further attaches already cited on the same paragraphs by the first pass, which the miner dropped; 22 names entries; 7 cross-register flags; 10 stage candidates: the queen in the cauda pavonis, the orders cauda pavonis before albedo, albedo before rubedo and nigredo before albedo, Luna in the albedo, the foetus spagyricus and Sol in the putrefactio, the king in the solutio, the sublimatio and the incineratio; stages_note recorded, fixatio only described at §478). Pre-check kept all 55 (quotation share of CW 14 after the window 6.92 percent against the 9 percent cap). Fable gate 41 TRUE / 14 CORRECTED / 0 FALSE: seven source_text withdrawals on Cantilena verse paragraphs that name no title (§431, §434, §438, §440, §442, §449, §453), one claim-type correction (§486 the fatalities of the old king, a report of the alchemists with source fields supplied), six confidence demotions for one-step readings and conditions (§422 the mother-beloved for the queen, §425 a scoped correlation, §427 conditional, §436 the senex-puer for the king, §476 Jung's hedged interpretation of the one day, §488 the dogma's loss of vitality as condition, noted). All twenty-two names accepted. Gemini cross-vendor 52 PASS / 3 FINDING on 55 post-gate refs: §466 demoted to medium (the sentence says the Christian dominant); §422 already medium at the gate; §434 an attach onto the standing stage-placement edge luna belongs-to albedo, where the auditor asked for identified-with, overruled with an audit note because the ruled stage relation is belongs-to and an attach does not change a standing relation. Names applied to 22 entries on 22 nodes; cross_register set on 6 edges; three mints: melancholia, aether and the operation incineratio. Sources written as other: Trismosin (Splendor solis, the text on the list) and Crasselame (Sopra la composizione della pietra), both added to the controlled list after this window. +35 edges, 20 refs attached to standing or this window's edges, +55 refs, +3 nodes. Graph 1055/4336/5833; CW 14 now 828 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 35 edges under v0.7.2: agreement 30/35 (86 percent), 29 assigned, 5 queued, 1 no-family, 0 text-undecided; queue 747; the Gemini arm returned one bare unclassified row (n 4319), normalized to no-family before assembly, raw file kept as family_sweep_gemini_b-cw14-7_raw.json. strain: 1 no-family, 0 text-undecided of 35 swept; new homeless strings: attribute-of. FAMILY GAP FOR THE SITTING: the five splits are all attribution against content (lapis likened-to messiah, nigredo identified-with melancholia and inner-man is anthropos: Opus doctrinal-attribution, Gemini correspondence or archetypal-identity; alchemy compensates dogma: opposition against psychic-effect; dogma rooted-in psyche: generation against derivation, the open underlies/based-on question). Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 55 refs judged against the full paragraphs; weekly Fable 36 percent after the sweep, 5-hour meter 43 percent, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1055/4336/5833, distinct paragraphs 3621, claim mix 4666/870/297. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-add0e41746618b57d, 36 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 22 assistant turns after the miner finished at 2026-11-11T23:18:52.798Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 7 (§421-490)",
- "nodes": 1052,
- "edges": 4301,
- "refs": 5778,
+ "next": "CW14-DUE: window 8 (§491-560)",
+ "nodes": 1055,
+ "edges": 4336,
+ "refs": 5833,
  "as_of": "2026-11-12"
 }
