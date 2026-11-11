@@ -684,6 +684,9 @@ writeFileSync(here('./src/families.json'), JSON.stringify({
 // document in full — the "full definitions" destination in R3.3. The exposition
 // is kept in its own variable because the copy assertions scan it and must NOT
 // scan the rendered source document (see the note above copySources).
+// counts the families copy computes itself; the copy contract allows them
+// (read below, where the contract's allowlist is built)
+const FAM_COPY_NUMBERS = []
 const famPageCopy = famVersion ? familiesPageCopy(famMap, famVersion) : ''
 writeFileSync(here('./public/families.html'), renderDoc(famDoc, famPageCopy))
 
@@ -1043,52 +1046,56 @@ function familiesPageCopy(map, version) {
   const provRows = map.provenance.map(p =>
     `<tr><td>${esc(p.kind)}</td><td>${p.edges}</td></tr>`).join('')
 
-  const worked = boundaryRules
-    .filter(r => /layer: amplification|indistinguishability/i.test(r.title))
-    .map(r => `<li>${r.html}</li>`).join('\n')
+  // X1 of the prose review (2026-11-11): the one full statement of how a
+  // family is assigned. The calibrated gate audited only part of the
+  // assignments (its v0.7.1 re-audit), so the count is read from the records.
+  const gateAudited = seed.edges.filter(e => e.relation_family && /SUPPORTED/.test(String(e.relation_family.audit || ''))).length
+  const settled = t.assigned + t.no_family + t.text_undecided
+  FAM_COPY_NUMBERS.push(gateAudited, settled)
 
   return `<div class="titleband"><p class="eyebrow">reference</p>
 <h1>Families</h1></div>
 
-<p>A family is an assigned classification over a verified relation: the <a href="/ontology">design</a> is on the design page, the <a href="/method">checks</a> on the method page.</p>
+<p>A family is a classification assigned to a relation that has already been verified. The <a href="/ontology">design page</a> explains why the layer exists, and the <a href="/method">method page</a> covers the checks.</p>
+<p>Two models classify each relation blind, each reading the definitions document and neither seeing the other's answer. Where they name the same family, the assignment stands. Where they differ, a person rules. ${num(gateAudited)} of the assignments also carry a supporting audit by the calibrated family gate.</p>
 
 <h2>Where the layer stands</h2>
 <div class="tw"><table>
 <thead><tr><th>State</th><th>Relations</th><th>What it means</th></tr></thead>
 <tbody>
 <tr><td>assigned</td><td>${t.assigned}</td><td>both arms named the same family, or a person ruled</td></tr>
-<tr><td>pending a ruling</td><td>${t.pending}</td><td>the arms disagreed; queued for ruling</td></tr>
+<tr><td>pending a ruling</td><td>${t.pending}</td><td>the arms disagreed, or a check disputed their agreement; queued for a ruling</td></tr>
 <tr><td>no family</td><td>${t.no_family}</td><td>well-formed relation, our vocabulary does not cover it</td></tr>
 <tr><td>text undecided</td><td>${t.text_undecided}</td><td>the source sentence hedges between two families</td></tr>
 </tbody></table></div>
-<p>That is ${num(t.assigned)} of ${num(t.edges)} relations classified, with ${num(t.pending)} still waiting on a person.</p>
-<p>How the records were arrived at:</p>
+<p>How each settled record was reached. The ${num(settled)} settled records are the assigned relations and those with no family or an undecided text:</p>
 <div class="tw"><table><thead><tr><th>Arrived at by</th><th>Relations</th></tr></thead><tbody>${provRows}</tbody></table></div>
 
 <h2>The map: which relation strings land in which family</h2>
-<p>The reverse index, derived from the graph on every build. ${num(t.families)} families over ${num(t.assigned_strings)} distinct relation strings; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
+<p>Each family with the relation strings assigned to it, rebuilt from the graph at every build. ${num(t.families)} families over the ${num(t.assigned_strings)} relation strings that carry at least one assigned relation; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
 ${famBlocks}
 ${empty.length ? `<p>${empty.map(id => `<a href="/family-${esc(id)}">${esc(id)}</a>`).join(', ')} ${empty.length === 1 ? 'is a family in the ruleset that currently holds no assigned relation' : 'are families in the ruleset that currently hold no assigned relation'}, so ${empty.length === 1 ? 'it has' : 'they have'} no block above. ${empty.length === 1 ? 'The page is' : 'The pages are'} kept, and ${empty.length === 1 ? 'reports' : 'report'} the count as zero: a family emptied by a reclassification is a finding, and dropping the page would hide the finding.</p>` : ''}
 
 <h2>What fits nowhere</h2>
-<p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted rather than forced into the nearest fit:</p>
+<p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted here and left unassigned:</p>
 <div class="strs homeless">${stringList(map.homeless)}</div>
-${map.text_undecided.length ? `<p>And the strings whose source sentence hedges between two families; that is a property of the text, not of the vocabulary:</p>
+${map.text_undecided.length ? `<p>And the strings where Jung's sentence itself hedges between two families:</p>
 <div class="strs homeless">${stringList(map.text_undecided)}</div>` : ''}
 
-<h2>Where the boundaries are decided</h2>
-<p>Two of the rules that do the discriminating, quoted from the definitions document exactly as they stand at ${esc(version)}. Each was written because a ruling forced it.</p>
-<ul class="worked">
-${worked}
-</ul>
-
-${EV ? `<p class="meta">Checked once against outside scholarship: ${EV.agrees} of ${EV.treated} treated items agreed — <a href="/ontology#checked">the full result</a>.</p>
+<p>The boundary rules are in the definitions document below.</p>
+${EV ? `<p class="meta">The assignments were checked once against outside scholarship. <a href="/ontology#checked">The result is on the design page.</a></p>
 ` : ''}`
 }
 
 function renderDoc(md, frontCopy) {
   const version = famVersion
-  const out = [frontCopy || '', '<hr>', renderMarkdown(md)]
+  // F1 of the prose review (2026-11-11): the reader is told where the page's
+  // own copy ends and the definitions document begins, at that boundary, and
+  // the document sits in a closed fold. Its counts date from its drafting.
+  const out = [frontCopy || '', '<hr>',
+    `<p class="docnote">Everything from here down is the definitions document at ${esc(version)}, shown as written. Counts inside it date from its drafting; the live counts are in the tables above.</p>`,
+    `<details class="docfold"><summary>The definitions document, ${esc(version)}</summary>`,
+    renderMarkdown(md), '</details>']
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1125,12 +1132,12 @@ hr { border: 0; border-top: 1px solid var(--hairline); margin: 3rem 0 2rem; }
 .homeless .sstr { border-color: var(--b-amber); }
 .worked li { border-left: 2px solid var(--hairline); padding-left: .8rem; margin-bottom: 1rem; }
 .docnote { border-left: 2px solid var(--b-amber); padding-left: .8rem; color: var(--ink-faint); font-size: .92rem; }
+.docfold > summary { cursor: pointer; font-family: var(--display); font-size: 1.15rem; color: var(--gold); margin: .4rem 0 1rem; }
 </style></head>
 <body>
 ${siteHeader('/families', 'Relation families')}
 <main class="page-main prose">
 ${out.join('\n')}
-<p class="gen">The exposition above is generated by <code>web/build-atlas.mjs</code>; every count in it is derived from <code>seed.json</code> at build time. The document below it is rendered from <code>docs/FAMILY_DEFINITIONS.md</code> as written \u2014 the atlas quotes that document, it never paraphrases it.</p>
 </main></body></html>`
 }
 
@@ -3628,6 +3635,7 @@ const allowedNumbers = new Set([
   ...famMap.provenance.map(p => p.edges),
   ...famMap.families.flatMap(f => [f.edges, ...f.strings.map(s => s.edges)]),
   ...famMap.homeless.map(r => r.edges), ...famMap.text_undecided.map(r => r.edges),
+  ...FAM_COPY_NUMBERS,
   // V2 — the figures the v2.0 pages interpolate, collected at the point each
   // one is computed (see `derived` above).
   ...V2_NUMBERS

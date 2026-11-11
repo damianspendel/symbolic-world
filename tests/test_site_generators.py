@@ -323,7 +323,7 @@ def test_the_external_check_lives_on_ontology_and_the_links_point_at_it():
     # /families keeps one line, and it is a link to the record
     exposition = fam[:fam.index("<hr>")]
     assert exposition.count("/ontology#checked") == 1, "the families link is not once"
-    assert "Checked once against outside scholarship" in exposition
+    assert "checked once against outside scholarship" in exposition
     # and no page still points at the anchor's old home
     for path in generated_pages():
         assert "/families#checked" not in read(path), os.path.basename(path)
@@ -341,13 +341,15 @@ def test_the_families_page_is_reference_not_method():
     for gone in ("What a family is", "How an edge gets a family",
                  "Agreement between the two arms", "planting classification errors"):
         assert gone not in exposition, f"method content is still on /families: {gone}"
-    for kept in ("Where the layer stands", "How the records were arrived at",
+    # the boundary rules are read in the definitions document itself since
+    # 2026-11-11; the excerpt repeated them word for word
+    for kept in ("Where the layer stands", "How each settled record was reached",
                  "The map: which relation strings land in which family",
-                 "What fits nowhere", "Where the boundaries are decided"):
+                 "What fits nowhere", "The boundary rules are in the definitions document below"):
         assert kept in exposition, f"reference content went missing: {kept}"
     # one header sentence, carrying both pointers
-    assert '<a href="/ontology">design</a>' in exposition
-    assert '<a href="/method">checks</a>' in exposition
+    assert '<a href="/ontology">design page</a>' in exposition
+    assert '<a href="/method">method page</a>' in exposition
     # and the page is now a fraction of what it was: the copy above the
     # document's rule ran to about 3,000 words before the redistribution.
     # The string->family map grows with the graph and is data, not copy, so
