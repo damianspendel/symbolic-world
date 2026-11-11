@@ -1105,11 +1105,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §71-140",
+   "result": "CW 14 WINDOW 2: Mysterium Coniunctionis §71-140, the rest of the enigma of Bologna (Aldrovandus, White, Turrius, Licetus, Gevartius, Veranius, Schwartz, Eckhart's daughter) closing the paradoxa, then the personification of the opposites: Sol (§104-133, the chymical marriage, the sun as gold and virtus, Dorn's sulphur, Sol as projection and the ego) and the opening of Sulphur (§134-140). Run by hand in the mining chat on 2026-11-11, the second window of the trilogy pass, under the brief as amended the same evening (stage data a hard rule with the relations belongs-to, undergoes, precedes, follows). Mined 50 candidates/56 refs (Opus-family miner subagent, blinded, model id stamped; eleven attaches onto standing edges, six of them triples already in the graph from other volumes; the miner trimmed a first draft of 136 and left §74 and §76-79, parable and dream narrative, without candidates; 19 names entries; 7 cross-register flags; 3 stage candidates and a fourth stage statement kept as sulphur causes putrefactio; stages_note recorded). Pre-check kept all 56 (quotation share of CW 14 after the window 4.02 percent against the 9 percent cap). Fable gate 46 TRUE / 10 CORRECTED / 0 FALSE, all confidence demotions: dream-bound and parable-bound scopes (§80, §84), specific substances read onto the general node (§112 the solar sulphur, §118 the natural sulphur in man, §140 the wingless dragon's serpent), Jung's glosses on a source's words (§114 Dorn's single element as the quintessence, §126 Dorn's physiology as projection), hedges inside the report (§134 \"sometimes identified\", §138 \"causes or signifies\") and an is-a statement attached to a synonym edge (§137). Gemini cross-vendor 46 PASS / 10 FINDING on 56 post-gate refs: one applied as a confidence demotion (§140 dragon corresponds-to sulphur, the sentence naming the wingless dragon); nine overruled with audit notes: four label objections to standing nodes (spirits, horse, serpent), three steps the gate had already demoted for (§84, §137, §138), one reading of belongs-to against \"coincides with\" (§113 the black sun in the nigredo, which is the brief's sense of the stage relation), and two claim-type findings asking for jung-quotes-source where the claim rests on Jung's paraphrase with a short quoted phrase inside it (§136, §138; the reporting clause decides). Names applied to 10 nodes; nine entries rejected at the gate because the miner put epithets, equations and descriptions in the latin field (spiritus animalis, Sol Philosophorum, sulphur duplex, cinis extractus a cinere, nostra anima, sperma homogeneum, amor sapientiae, incertissima amasia, Mercurius duplex); the three builders now say what the latin field may hold. cross_register set on 7 edges. Five mints: harmonia, niobe, sol-terrenus, sublimatio, putrefactio. Sources written as other: Aldrovandus, Richard White, Pernety, Schwartz, De arte chymica (all added to the controlled list after this window). +39 edges, 17 refs attached to standing or this window's edges, +56 refs, +5 nodes. Graph 1013/4130/5538; CW 14 now 533 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 39 edges under v0.7.2: agreement 35/39 (90 percent), 35 assigned, 4 queued (dragon banished-into oak; sol signifies gold; sulphur synonym-of mercurius; sulphur causes putrefactio), 0 no-family, 0 text-undecided; queue 714; the Gemini arm returned one bare unclassified row (n 4096), normalized to no-family before assembly, raw file kept as family_sweep_gemini_b-cw14-2_raw.json. strain: 0 no-family, 0 text-undecided of 39 swept; new homeless strings: none. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-11, 56 refs judged against the full paragraphs; no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1013/4130/5538, distinct paragraphs 3510, claim mix 4501/779/258. Note quotes (RULES #24): seed.json holds no '[...]'. VOCABULARY REVIEW: the generic nodes spirits, horse and serpent draw label objections from every auditor pass; a specific node or a scope note at the edge would end it. BUILD TRACK: v2.3.0 merge of interim-v1 into mining-away follows this commit on the build chat's request; the mining chat holds window 3 until that merge is reported. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a357ab8957c66758c, 27 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 36 assistant turns after the miner finished at 2026-11-11T16:59:42.124Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 2 (§71-140)",
- "nodes": 1008,
- "edges": 4091,
- "refs": 5482,
+ "next": "CW14-DUE: window 3 (§141-210)",
+ "nodes": 1013,
+ "edges": 4130,
+ "refs": 5538,
  "as_of": "2026-11-11"
 }
