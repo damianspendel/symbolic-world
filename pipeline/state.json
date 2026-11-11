@@ -1201,11 +1201,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-8",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §491-560",
+   "result": "CW 14 WINDOW 8: Mysterium Coniunctionis §491-560, the close of the chapter on Rex and Regina and the opening of the chapter on Adam and Eve: the true man and the Anthropos, the adept's involvement in the work (Olympiodorus, Dorn, Wei Po-yang, Khunrath), the relation of the king-symbol to consciousness (the apotheosis as a new dominant, the planetary simile, the ageing of dominants, the planetary bath, the Christian dominant and the filius regius), the religious problem of the king's renewal (the confrontation with the shadow, the One, Koepgen's androgyny), Regina (the syzygy, the Queen of Sheba, Mercurius in feminine form, the anima), then Adam as arcane substance, the bath, Adam's quaternary nature and the statue. Run by the nightly job in the mining chat on 2026-11-12, the eighth window of the trilogy pass. Mined 54 candidates/66 refs (Opus-family miner subagent, blinded, model id stamped; sixteen attaches onto standing edges; the miner cut a first draft of 164 to 54; 17 names entries; 19 cross-register flags; 0 stage candidates: the window names the nigredo, the operations of §494 and the tetrameria without assigning anything to a stage or ordering stages, stages_note recorded). Pre-check kept all 66 (quotation share of CW 14 after the window 7.50 percent against the 9 percent cap). Fable gate 55 TRUE / 11 CORRECTED / 0 FALSE: three claim-type corrections to jung-quotes-source where the claim rests on the source's quoted words (§547 Ruland's definition of the Adech, source_text withdrawn since neither §547 nor §545 names the Lexicon; §554 Dorn's two phrases on the ternarius), one source_text withdrawal (§556 continues the Cave of Treasures without naming it), seven confidence demotions (§494 the suffering compared to Job for the nigredo, §510 the decay followed by chaos, §523 twice for the two-column schema, §527 Koepgen's androgyny for the Rebis, §516 counterfactual, §559 scoped to Komarios). All seventeen names accepted. Gemini cross-vendor 65 PASS / 1 FINDING on 66 post-gate refs: the finding (§510) fell on the step the gate had demoted for, with the same reading noted; overruled with an audit note. Names applied to 17 entries on 16 nodes; cross_register set on 16 edges; eight mints: ophiuchos, pregnancy, queen-of-sheba, adech, telum-passionis, ternarius, unarius, mumia. Sources written as other: Rosinus, the Book of the Cave of Treasures and Koepgen's Die Gnosis des Christentums (all added to the controlled list after this window) and an unnamed old tradition (§551). +38 edges, 28 refs attached to standing or this window's edges, +66 refs, +8 nodes. Graph 1063/4374/5899; CW 14 now 894 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 38 edges under v0.7.2: agreement 36/38 (95 percent), 35 assigned, 2 queued, 1 no-family, 0 text-undecided; queue 749; the Gemini arm returned one bare unclassified row (n 4359), normalized to no-family before assembly, raw file kept as family_sweep_gemini_b-cw14-8_raw.json. strain: 1 no-family, 0 text-undecided of 38 swept; new homeless strings: none (wields is a known homeless string). FAMILY GAP FOR THE SITTING: bath renews rex split instrumentality against psychic-effect (the renewed-through rule again), and rex akin-to anima split correspondence against no family; the Opus arm flags takes-the-place-of, which derivation's string list captures although the edge is not doctrinal transmission. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 66 refs judged against the full paragraphs; weekly Fable 37 percent after the sweep, 5-hour meter 50 percent, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1063/4374/5899, distinct paragraphs 3650, claim mix 4709/882/308. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a8d2320c859ec7170, 39 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 18 assistant turns after the miner finished at 2026-11-11T23:36:09.038Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 8 (§491-560)",
- "nodes": 1055,
- "edges": 4336,
- "refs": 5833,
+ "next": "CW14-DUE: window 9 (§561-630)",
+ "nodes": 1063,
+ "edges": 4374,
+ "refs": 5899,
  "as_of": "2026-11-12"
 }

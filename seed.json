@@ -42,6 +42,16 @@
      "volume": "14",
      "paragraph": 258,
      "batch": "b-cw14-4"
+    },
+    {
+     "volume": "14",
+     "paragraph": 528,
+     "batch": "b-cw14-8"
+    },
+    {
+     "volume": "14",
+     "paragraph": 540,
+     "batch": "b-cw14-8"
     }
    ],
    "aliases": [
@@ -108,7 +118,8 @@
    "type": "Symbol",
    "label": "Lapis philosophorum",
    "aliases": [
-    "cervus fugitivus"
+    "cervus fugitivus",
+    "cibus immortalis"
    ],
    "name_refs": [
     {
@@ -120,6 +131,11 @@
      "volume": "14",
      "paragraph": 490,
      "batch": "b-cw14-7"
+    },
+    {
+     "volume": "14",
+     "paragraph": 525,
+     "batch": "b-cw14-8"
     }
    ],
    "latin": "lapis Philosophorum"
@@ -196,7 +212,17 @@
   {
    "id": "prima-materia",
    "type": "Substance",
-   "label": "Prima materia"
+   "label": "Prima materia",
+   "aliases": [
+    "materia vilis"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 552,
+     "batch": "b-cw14-8"
+    }
+   ]
   },
   {
    "id": "axiom-of-maria",
@@ -219,7 +245,18 @@
    "id": "anthropos",
    "type": "Motif",
    "label": "Anthropos / Adam Kadmon",
-   "tradition": "Gnostic-Kabbalistic"
+   "tradition": "Gnostic-Kabbalistic",
+   "aliases": [
+    "Adam Kadmon",
+    "Primordial Man"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 548,
+     "batch": "b-cw14-8"
+    }
+   ]
   },
   {
    "id": "the-ego",
@@ -1035,12 +1072,32 @@
   {
    "id": "rex",
    "type": "Figure",
-   "label": "Rex (the King)"
+   "label": "Rex (the King)",
+   "aliases": [
+    "Albaon"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 537,
+     "batch": "b-cw14-8"
+    }
+   ]
   },
   {
    "id": "regina",
    "type": "Figure",
-   "label": "Regina (the Queen)"
+   "label": "Regina (the Queen)",
+   "aliases": [
+    "soror et sponsa"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 535,
+     "batch": "b-cw14-8"
+    }
+   ]
   },
   {
    "id": "logos",
@@ -1171,7 +1228,17 @@
   {
    "id": "adam",
    "type": "Figure",
-   "label": "Adam"
+   "label": "Adam",
+   "aliases": [
+    "tall man"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 547,
+     "batch": "b-cw14-8"
+    }
+   ]
   },
   {
    "id": "the-statue",
@@ -3710,7 +3777,18 @@
   {
    "id": "microcosm",
    "label": "The microcosm (man as the little world)",
-   "type": "Concept"
+   "type": "Concept",
+   "latin": "mundus minor",
+   "aliases": [
+    "lesser world"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 552,
+     "batch": "b-cw14-8"
+    }
+   ]
   },
   {
    "id": "johannes-kepler",
@@ -4540,7 +4618,15 @@
   {
    "id": "crown",
    "label": "The crown",
-   "type": "Symbol"
+   "type": "Symbol",
+   "latin": "Corona regis",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 499,
+     "batch": "b-cw14-8"
+    }
+   ]
   },
   {
    "id": "the-hand",
@@ -6015,6 +6101,7 @@
    "type": "Symbol",
    "latin": "plenilunium",
    "aliases": [
+    "circulus lunaris",
     "full moon"
    ],
    "name_refs": [
@@ -6022,6 +6109,11 @@
      "volume": "14",
      "paragraph": 154,
      "batch": "b-cw14-3"
+    },
+    {
+     "volume": "14",
+     "paragraph": 498,
+     "batch": "b-cw14-8"
     }
    ]
   },
@@ -6368,6 +6460,101 @@
    "id": "incineratio",
    "label": "Incineratio",
    "type": "Operation"
+  },
+  {
+   "id": "ophiuchos",
+   "label": "Ophiuchos (the demon who hinders the work)",
+   "type": "Figure"
+  },
+  {
+   "id": "pregnancy",
+   "label": "Pregnancy (of the mother in the Cantilena)",
+   "type": "Symbol"
+  },
+  {
+   "id": "queen-of-sheba",
+   "label": "The Queen of Sheba (Queen of the South)",
+   "type": "Figure",
+   "aliases": [
+    "Queen of the South"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 535,
+     "batch": "b-cw14-8"
+    }
+   ]
+  },
+  {
+   "id": "adech",
+   "label": "Adech (Paracelsus' great or inner man)",
+   "type": "Figure",
+   "aliases": [
+    "great man"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 547,
+     "batch": "b-cw14-8"
+    }
+   ]
+  },
+  {
+   "id": "telum-passionis",
+   "label": "Telum passionis (the dart of passion)",
+   "type": "Symbol",
+   "latin": "telum passionis",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 550,
+     "batch": "b-cw14-8"
+    }
+   ]
+  },
+  {
+   "id": "ternarius",
+   "label": "Ternarius (the number three)",
+   "type": "Symbol",
+   "latin": "ternarius",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 554,
+     "batch": "b-cw14-8"
+    }
+   ]
+  },
+  {
+   "id": "unarius",
+   "label": "Unarius (the number one, the One)",
+   "type": "Symbol",
+   "latin": "unarius",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 554,
+     "batch": "b-cw14-8"
+    }
+   ]
+  },
+  {
+   "id": "mumia",
+   "label": "Mumia (mummy as a medicament)",
+   "type": "Substance",
+   "latin": "mumia",
+   "aliases": [
+    "Mumia balsamita"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 560,
+     "batch": "b-cw14-8"
+    }
+   ]
   }
  ],
  "edges": [
@@ -6623,6 +6810,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 504,
+     "quote": "King Sol, as the archetype of consciousness, voyages through the world of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -6631,6 +6829,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
    }
   },
   {
@@ -9938,6 +10141,39 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 501,
+     "quote": "The king represents ego-consciousness, the subject of all subjects, as an object.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 519,
+     "quote": "“King Sol” is not a pleonasm; it denotes a consciousness which is not only conscious as such but is conscious in a quite special way.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 522,
+     "quote": "Although the renewed king corresponds to a renewed consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -9946,6 +10182,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
    }
   },
   {
@@ -10152,6 +10393,17 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
      "correction_note": "gate correction: the sentence restates the earlier identification, and the next paragraph calls it an error in part; medium with the qualification noted",
      "note": "qualified at §223: the equation holds chiefly of the unconscious of a man; the moon also gives light and can represent consciousness"
+    },
+    {
+     "volume": "14",
+     "paragraph": 498,
+     "quote": "then the apotheosis must also have made mother Luna visible, that is to say made the unconscious conscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -13910,6 +14162,17 @@
      "source": "Philalethes, Introitus apertus",
      "source_author": "Philalethes",
      "source_text": "Introitus apertus"
+    },
+    {
+     "volume": "14",
+     "paragraph": 507,
+     "quote": "the alchemists praised their “son” it is quite evident that they meant by this symbol either Christ himself or something that corresponded to him.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -15635,6 +15898,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 545,
+     "quote": "“Mercurius of the Philosophers, that most renowned Microcosm and Adam.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "John Dee",
+     "source_author": "Dee"
     }
    ],
    "relation_family": {
@@ -15685,6 +15961,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 553,
+     "quote": "This material clearly shows the tetradic and ogdoadic nature of Adam",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -15784,6 +16071,32 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 526,
+     "quote": "gave rise to the view that Adam had been created an androgyne.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Gnostic doctrine of the hermaphroditic Primordial Man",
+     "source_author": "the Gnostics"
+    },
+    {
+     "volume": "14",
+     "paragraph": 551,
+     "quote": "According to an old tradition Adam was androgynous before the creation of Eve.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "old tradition cited in n. 15",
+     "source_author": "other"
     }
    ],
    "relation_family": {
@@ -19807,6 +20120,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 506,
+     "quote": "In consequence the king, the previous dominant of consciousness, is transformed into a real and workable whole",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -19815,6 +20139,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
    }
   },
   {
@@ -20187,6 +20516,52 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 498,
+     "quote": "The apotheosis of the king, the renewed rising of the sun, means, on our hypothesis, that a new dominant of consciousness has been produced",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 503,
+     "quote": "passes to the human king who personifies the prevailing dominant idea and must therefore share its fate.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 516,
+     "quote": "would have regarded the king’s renewal as a transformation of the conscious dominant",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "correction_note": "gate correction: counterfactual ('Had he had any idea of psychology, he would ... have regarded the king's renewal as a transformation of the conscious dominant'), medium"
+    },
+    {
+     "volume": "14",
+     "paragraph": 523,
+     "quote": "Ego-bound state with feeble dominant Sick king, enfeebled by age, about to die",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "correction_note": "gate correction: read off the two-column schema of §523 (feeble dominant beside sick king); a table alignment rather than a sentence, medium"
     }
    ],
    "relation_family": {
@@ -20195,6 +20570,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
    }
   },
   {
@@ -21864,6 +22244,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 514,
+     "quote": "he will unfailingly observe compensations from the unconscious which aim at producing a unity.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -74212,6 +74603,31 @@
      "source": "Aquarium sapientum",
      "source_author": "the alchemists",
      "source_text": "Aquarium sapientum"
+    },
+    {
+     "volume": "14",
+     "paragraph": 492,
+     "quote": "That is why the text says that Christ was “compared and united” with the stone.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Aquarium sapientum",
+     "source_author": "the alchemists",
+     "source_text": "Aquarium sapientum"
+    },
+    {
+     "volume": "14",
+     "paragraph": 526,
+     "quote": "Its veiled androgyny reflects the hermaphroditism of the lapis",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -128116,6 +128532,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-2, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 534,
+     "quote": "This medium has the nature of Mercurius, that paradoxical being, whose one definable meaning is the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "cross_register": {
@@ -128699,6 +129126,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 524,
+     "quote": "To that extent the lapis exactly corresponds to the psychological idea of the self, the product of conscious and unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "cross_register": {
@@ -129995,6 +130433,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-3, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 540,
+     "quote": "The coronation, apotheosis, and marriage signalize the equal status of conscious and unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 541,
+     "quote": "The union of conscious and unconscious symbolized by the royal marriage is a mythological idea",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -130002,6 +130462,11 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-11"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
    }
   },
   {
@@ -132390,6 +132855,17 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
      "source": "Khunrath, Von hylealischen Chaos",
      "source_author": "Khunrath"
+    },
+    {
+     "volume": "14",
+     "paragraph": 521,
+     "quote": "clearly showing that the stone is indeed a king towards whom the artifex behaves as a subject.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -133845,6 +134321,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 535,
+     "quote": "In this “soror et sponsa” we can easily discern the analogy with the Church",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -134453,6 +134940,1077 @@
     "value": null,
     "state": "pending-adjudication",
     "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "true-man",
+   "relation": "expresses",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 491,
+     "quote": "The “true man” expresses the Anthropos in the individual human being.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "suffers",
+   "object": "the-passion",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 492,
+     "quote": "It is the arcane substance that suffers those physical and moral tortures",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "nigredo",
+   "relation": "induces",
+   "object": "melancholia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 493,
+     "quote": "The nigredo not only brought decay ... it also cast the shadow of its melancholy over his own solitary soul.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "ophiuchos",
+   "relation": "impedes",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 493,
+     "quote": "Without great pains this work is not perfected ... the demon Ophiuchos 358 instils negligence",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Olympiodorus",
+     "source_author": "Olympiodorus"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "nigredo",
+   "relation": "parallels",
+   "object": "job",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 494,
+     "quote": "Evidently the nigredo brought about a deformation and a psychic suffering which the author compared to the plight of the unfortunate Job.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Aquarium sapientum",
+     "source_author": "the alchemists",
+     "source_text": "Aquarium sapientum",
+     "correction_note": "gate correction: the Aquarium's author compared the suffering the nigredo brought about to Job's plight; the nigredo itself paralleling Job is one step on, and the sentence is Jung's 'Evidently' gloss, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "plenilunium",
+   "relation": "corresponds-to",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 498,
+     "quote": "her roundness ( plenilunium, circulus lunaris ) ... the psychological self, or psychic totality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "prefigures",
+   "object": "rotundum",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 500,
+     "quote": "The fact that the rotundum is, as it were, contained in the anima and is prefigured by her",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 501,
+     "quote": "so consciousness, which refers everything to its own ego as the centre of the universe, is only one among the archetypes of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "bath",
+   "relation": "renews",
+   "object": "rex",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 504,
+     "quote": "When the king grows old and needs renewing, a kind of planetary bath is instituted—a bath into which all the planets pour their “influences.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "alchemical texts cited in n. 387",
+     "source_author": "the alchemists",
+     "note": "a planetary bath"
+    },
+    {
+     "volume": "14",
+     "paragraph": 546,
+     "quote": "Adam is also the king 7 who is renewed in the bath.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "alchemical texts cited in n. 7",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "pregnancy",
+   "relation": "symbolizes",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 506,
+     "quote": "the opposites, just because they are in conflict, will gradually draw together ... a latent state of concord, suitably expressed by the symbol of pregnancy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 523,
+     "quote": "Conflict and synthesis of conscious and unconscious Pregnancy, sick-bed, symptoms, display of colours",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dominant-of-consciousness",
+   "relation": "decays-into",
+   "object": "chaos",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 510,
+     "quote": "Just as the decay of the conscious dominant is followed by an irruption of chaos in the individual",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "gate correction: the sentence has the decay followed by an irruption of chaos, not the dominant decaying into chaos; medium with the sentence's own order noted",
+     "audit_note": "cross-vendor (Gemini) objected that the decay is followed by an irruption of chaos rather than the dominant decaying into chaos; the gate had set this reference to medium with a note stating the sentence's own order",
+     "note": "the decay of the conscious dominant 'is followed by an irruption of chaos in the individual'"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lion",
+   "relation": "symbolizes",
+   "object": "concupiscentia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 511,
+     "quote": "the wolf, lion, and other ravening beasts which for the alchemists symbolized the appetites that break loose",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "stems-from",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 513,
+     "quote": "the secret of the prima materia which, as a projection, unquestionably stems from man’s unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dominant-of-consciousness",
+   "relation": "controls",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 519,
+     "quote": "It is controlled and directed by a dominant that, in the last resort, is the arbiter of values.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "renewed-through",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 520,
+     "quote": "Consciousness is renewed through its descent into the unconscious, whereby the two are joined.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "filius-regius",
+   "relation": "symbolizes",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 520,
+     "quote": "The renewed consciousness does not contain the unconscious but forms with it a totality symbolized by the son.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "takes-the-place-of",
+   "object": "rex",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 520,
+     "quote": "a critical ego knowingly took the place of the sick king",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "filius-regius",
+   "relation": "corresponds-to",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 523,
+     "quote": "Formation of a new dominant; circular symbols (e.g., mandala) of the self King’s son, hermaphrodite, rotundum",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "correction_note": "gate correction: read off the two-column schema of §523 (circular symbols of the self beside King's son, hermaphrodite, rotundum); a table alignment rather than a sentence, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "embodies",
+   "object": "rebis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 527,
+     "quote": "“in the person of Jesus the male is united with the female.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Koepgen, Die Gnosis des Christentums",
+     "source_author": "Koepgen",
+     "source_text": "other",
+     "correction_note": "gate correction: Koepgen's words say the male is united with the female in Jesus; the step from that androgyny to the alchemical Rebis is Jung's (§526, §528), medium"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "appears-as",
+   "object": "luna",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 532,
+     "quote": "We have seen that as Luna she is the archetypal companion of Sol.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sol-terrenus",
+   "relation": "set-in",
+   "object": "queen-of-sheba",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 533,
+     "quote": "the earthly or mineral sun will do likewise, when he is set in his own heaven, which is named the “Queen of Sheba,”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Penotus",
+     "source_author": "Penotus"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "queen-of-sheba",
+   "relation": "identified-with",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 536,
+     "quote": "In both cases she seems to be identified with Jesus.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "note": "Jung says she seems to be"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "perishes-in",
+   "object": "bath",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 537,
+     "quote": "Nor is the queen freed; she must perish in this fiery bath.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Abraham Eleazar",
+     "source_author": "Abraham Eleazar"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "akin-to",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 538,
+     "quote": "the king, as the dominant of consciousness, is almost identical with the archetypal figure that personifies the unconscious, namely the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "note": "almost identical"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lion",
+   "relation": "transforms-into",
+   "object": "rex",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 540,
+     "quote": "The transformation of the kingly substance from a lion into a king",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "queen-of-sheba",
+   "relation": "merges-with",
+   "object": "sapientia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 543,
+     "quote": "The Queen of Sheba, Wisdom, the royal art, and the “daughter of the philosophers” are all so interfused",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "adam",
+   "relation": "identified-with",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 545,
+     "quote": "Adam is mentioned as the arcane substance in Rosinus.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Rosinus",
+     "source_author": "other"
+    },
+    {
+     "volume": "14",
+     "paragraph": 550,
+     "quote": "Here again Adam is the transformative substance, the “old Adam” who is to renew himself.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "adech",
+   "relation": "is",
+   "object": "inner-man",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 547,
+     "quote": "the Adech, 10 whom Ruland defines as “our inner and invisible man.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Ruland, Lexicon alchemiae, on Paracelsus",
+     "source_author": "Ruland",
+     "correction_note": "gate correction: the defining words are Ruland's own in quotation marks ('our inner and invisible man'), so jung-quotes-source; neither §547 nor §545 names the Lexicon, source_text withdrawn"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "inner-man",
+   "relation": "is",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 548,
+     "quote": "In both cases the “higher spiritual man” is the more comprehensive, supra-ordinate totality which we know as the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-8",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "wields",
+   "object": "telum-passionis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 550,
+     "quote": "The arrows recall the telum passionis of Mercurius",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "adam",
+   "relation": "consists-of",
+   "object": "four-elements",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 552,
+     "quote": "“For out of the four elements were created our Father Adam and his children,” says the Turba",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Turba philosophorum",
+     "source_author": "the alchemists",
+     "source_text": "Turba philosophorum"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "adam",
+   "relation": "identified-with",
+   "object": "microcosm",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 552,
+     "quote": "When the water fell upon the earth, Adam was created, who is the lesser world.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Tractatus Micreris",
+     "source_author": "the alchemists",
+     "source_text": "Tractatus Micreris"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "ternarius",
+   "relation": "peculiar-to",
+   "object": "adam",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 554,
+     "quote": "Dorn calls the ternarius (the number three) “peculiar to Adam” ( Adamo proprius )",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: the claim rests on Dorn's quoted phrase ('peculiar to Adam', Adamo proprius), jung-quotes-source"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "ternarius",
+   "relation": "offspring-of",
+   "object": "unarius",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 554,
+     "quote": "the ternarius was the “offspring of the unarius”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: the claim rests on Dorn's quoted phrase ('offspring of the unarius'), jung-quotes-source"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "adam",
+   "relation": "buried-at",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 555,
+     "quote": "Adam, too, was buried at the centre of the earth—on Golgotha.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Book of the Cave of Treasures",
+     "source_author": "other",
+     "source_text": "other",
+     "note": "the centre of the earth"
+    },
+    {
+     "volume": "14",
+     "paragraph": 556,
+     "quote": "At the midpoint where Adam was buried, the “four corners come together;",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Book of the Cave of Treasures",
+     "source_author": "other",
+     "correction_note": "gate correction: the quotation continues the Book of the Cave of Treasures from §555, but §556 itself names only the Ethiopic Clementines, the Life of Adam and Eve and the Pirke de Rabbi Eliezer; source_text withdrawn, the free-text source kept"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "adam",
+   "relation": "visualizes",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 558,
+     "quote": "he is a symbol of the self, and hence a visualization of the “irrepresentable” Godhead.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "note": "the irrepresentable Godhead"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-statue",
+   "relation": "signifies",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 559,
+     "quote": "Here the statue evidently denotes the end-product of the process, the lapis Philosophorum or its equivalent.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "correction_note": "gate correction: 'Here' scopes the claim to the Komarios passage and §560 opens with a different significance in Senior; medium with a scope note",
+     "note": "in the Book of Komarios ('Here the statue evidently denotes'); Senior gives the statue a different sense at §560"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mumia",
+   "relation": "synonym-of",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 560,
+     "quote": "It is mentioned in Khunrath as synonymous with the prima materia.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)",
+     "source": "Khunrath",
+     "source_author": "Khunrath"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-12"
    }
   }
