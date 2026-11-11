@@ -15,7 +15,7 @@
     {"id": "CrossVendorAudit", "label": "Cross-vendor audit", "parents": ["Stage"], "comment": "A model from another company judged the work again. The verdict is the one the record gives. Where the record gives none, the export gives none."},
     {"id": "FamilyAssignment", "label": "Family assignment", "parents": ["Stage"], "comment": "An assignment of a relation to a family, or a record that none was settled. A family is assigned when the two arms agree or a person rules. Some assignments also carry an audit by the calibrated family gate, given in sw:familyAudit."},
     {"id": "Voice", "label": "Voice", "closed": true, "comment": "Whose voice the claim is in. This is a separate question from whether the claim is true."},
-    {"id": "Commitment", "label": "Commitment", "closed": true, "comment": "The confidence recorded for the claim, from the confidence field of its reference: high, medium or low. A later check can lower it, as an audit or a dispute has done for some claims."},
+    {"id": "Commitment", "label": "Commitment", "closed": true, "comment": "The confidence recorded for the claim, from the confidence field of its reference: high, medium or low. The gate, an audit or a dispute can lower it, and the reference then keeps the original string."},
     {"id": "Rung", "label": "Rung", "closed": true, "comment": "A warrant: the backing a part of a claim has. The rungs have no order in this vocabulary, because passing one warrants nothing about another."},
     {"id": "FamilyState", "label": "Family state", "closed": true, "comment": "Where a relation stands in the family layer."}
   ],
