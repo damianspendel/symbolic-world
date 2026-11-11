@@ -698,10 +698,10 @@ def build():
       claim about the text and does not change the result of the check above.</p>
     </div>
   </div>
-  <p class="intro">Each reference also shows the dates and verdicts of those checks: the
+  <p class="intro">Each reference also shows the dates and verdicts of its checks: the
   <b>quote</b> check, the <b>gate</b> (verifier and date), the <b>voice</b> audit (whose voice the
-  claim is in), the <b>cross-vendor</b> check and, where a person has read the paragraph, that
-  person's <b>human</b> validation. Disputed records link to the
+  claim is in), the <b>cross-vendor</b> check and, where a person has read the paragraph, the
+  <b>human</b> validation. Disputed records link to the
   <a href="/disputes">dispute log</a>.</p>
   <div class="meta">{len(seed["nodes"])} nodes · {len(seed["edges"])} edges · {refs_total} references ·
     100% gate-verified · {xv_n} cross-vendor checked · {human_n} human-validated ·
