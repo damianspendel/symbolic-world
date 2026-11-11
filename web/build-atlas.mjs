@@ -3371,7 +3371,6 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
 <div class="titleband"><p class="eyebrow">about</p>
 <h1>Support</h1>
 <p class="sub">tips cover the running costs</p></div>
-<p class="land-lead">Tips cover the running costs. The atlas, the dataset and the verification ledger are free to use, and nothing on the site is for sale.</p>
 </section>
 <p>Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
 <div class="kofi-panel">
