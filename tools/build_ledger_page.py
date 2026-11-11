@@ -375,8 +375,9 @@ def batch_page(batch, delta, commits):
 <body>
 {site_header("/ledger", f'<a href="/ledger">ledger</a> · {esc(batch["id"])}')}
 <main class="page-main prose">
-  <div class="titleband"><p class="eyebrow">batch delta</p>
-  <h1><span class="idtok">{esc(batch["id"])}</span></h1></div>
+  <div class="titleband"><p class="eyebrow">Evidence</p>
+  <h1><span class="idtok">{esc(batch["id"])}</span></h1>
+  <p class="sub">What this mining window added to the graph, and what it changed.</p></div>
   <div class="meta">{f'<span class="cite">{esc(window)}</span> · ' if window else ''}<span class="badge">{esc(batch["status"])}</span></div>
   {f'<h2>What it merged</h2><p class="note">The log the window wrote at merge time, kept as it was.</p><details class="story-fold"><summary>mining log</summary><div class="story">{esc(story)}</div></details>' if story else ''}
   {derived_block}
@@ -677,7 +678,7 @@ def build():
 <body>
 {site_header("/ledger", "ledger")}
 <main class="page-main records">
-  <div class="titleband"><p class="eyebrow">provenance</p>
+  <div class="titleband"><p class="eyebrow">Evidence</p>
   <h1>Ledger</h1>
   <p class="sub">Every published record and the gates it passed.</p></div>
   <p class="intro">Two different kinds of record appear on every card below:</p>

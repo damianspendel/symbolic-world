@@ -23,7 +23,7 @@
      ORDER. Entries are sorted newest-first by the version in their heading, so
      a new entry can be appended anywhere in the file. -->
 
-What each release changed. The paper, *Trust, Layered*, describes v2.0.0.
+The paper, *Trust, Layered*, describes v2.0.0.
 
 Each entry opens with the graph version, the ruleset version it shipped with
 (the two are deliberately separate numbers) and the calibration record in force

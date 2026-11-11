@@ -1053,8 +1053,9 @@ function familiesPageCopy(map, version) {
   const settled = t.assigned + t.no_family + t.text_undecided
   FAM_COPY_NUMBERS.push(gateAudited, settled)
 
-  return `<div class="titleband"><p class="eyebrow">reference</p>
-<h1>Families</h1></div>
+  return `<div class="titleband"><p class="eyebrow">Evidence</p>
+<h1>Families</h1>
+<p class="sub">Which relation strings fall in which family, and the document that defines the families.</p></div>
 
 <p>A family is a classification assigned to a relation that has already been verified. The <a href="/ontology">design page</a> explains why the layer exists, and the <a href="/method">method page</a> covers the checks.</p>
 <p>Two models classify each relation blind, each reading the definitions document and neither seeing the other's answer. Where they name the same family, the assignment stands. Where they differ, a person rules. ${num(gateAudited)} of the assignments also carry a supporting audit by the calibrated family gate.</p>
@@ -1649,8 +1650,9 @@ if (existsSync(releasesPath)) {
     .replace(/pipeline\/family_calibration\/records\/(\d{4}-\d{2}-\d{2})_v\d+(?:_run(\d+))?\.json/g,
       (m, d, run) => `of ${d}${run ? `, run ${run}` : ''}`))
     .replace(/(graph|ruleset)\s+(v[\d.]+|pending)/g, '$1 <span class="v">$2</span>') + `</div>`
-  const relBody = `<div class="titleband"><p class="eyebrow">release notes</p>
-<h1>Releases</h1></div>
+  const relBody = `<div class="titleband"><p class="eyebrow">Evidence</p>
+<h1>Releases</h1>
+<p class="sub">What each release changed.</p></div>
 ${renderMarkdown(preamble.split('\n').slice(1).join('\n'))}
 ${entries.map(e => `<section class="rel-entry${e.future ? ' future' : ''}">
 <h2>${inline(e.heading)}</h2>
@@ -1769,9 +1771,10 @@ ${evTable(fam.id)}
 
   const zeroNote = row.edges === 0 ? `<p>No edge in the graph currently carries this family. A family with no members stays in the ruleset and is reported at zero rather than dropped: dropping it would hide the reclassification that emptied it, and the empty count is a finding about the definition.</p>` : ''
 
-  const body = `<div class="titleband"><p class="eyebrow">relation family</p>
+  const body = `<div class="titleband"><p class="eyebrow">Evidence</p>
 <h1><span class="ev">${esc(fam.name)}</span></h1>
-<p class="sub"><span class="chip f-ok">assigned, not verified</span> What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer: a quote checked letter-exact against its paragraph and judged by a model of a different family. That was already done before any of this began.</p></div>
+<p class="sub"><span class="chip f-ok">assigned, not verified</span> What this family covers, what it fails to cover, and every relation string in the graph that lands in it.</p></div>
+<p>A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer: a quote checked letter-exact against its paragraph and judged by a model of a different family. That was already done before any of this began.</p>
 <div class="countstrip">
   <span><b>${row.edges}</b> assigned relations</span>
   <span><b>${strings.length}</b> effective relation strings</span>
@@ -2305,9 +2308,9 @@ if (EMIT_CONCEPTS_INDEX) {
 </tr>`
   }).join('\n')
 
-  const conceptsBody = `<div class="titleband"><p class="eyebrow">index</p>
+  const conceptsBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>Concepts</h1>
-<p class="sub">every concept in the graph, ranked by its verified evidence</p></div>
+<p class="sub">Every concept in the graph, ranked by its verified evidence.</p></div>
 <p>${derived(atlasNodes.length)} concepts, ${derived(atlasEdges.length)} verified relations, ${derived(meta.counts.references)} citations.
 Each row links to that concept's own page: its relations grouped by family, with
 the verbatim, paragraph-referenced quotations behind each one.</p>
@@ -2409,9 +2412,9 @@ if (ROUTES_IN_UI) {
     ROUTE_EXAMPLES_HTML = `<p class="examples">${ns0(`examples: ${ROUTE_EXAMPLES.map(([from, to]) =>
       `<a href="/routes?from=${from}&amp;to=${to}">${esc(pubLabel.get(from))} to ${esc(pubLabel.get(to))}</a>`).join(' · ')}`)}</p>\n`
   }
-  const routesBody = `<div class="titleband"><p class="eyebrow">explore</p>
+  const routesBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>Routes</h1>
-<p class="sub">the chains of verified claims between any two concepts</p></div>
+<p class="sub">The chains of verified claims between any two concepts.</p></div>
 <p>Pick two concepts and see the chains of claims that connect them.</p>
 <div class="filters">
   <div class="fld"><label for="r-from">from</label><select id="r-from"></select><span class="hint">any concept in the graph</span></div>
@@ -2571,8 +2574,9 @@ if (DECL) {
     QUERY_EXAMPLES_HTML = `<p class="examples">${ns0(`examples: ${QUERY_EXAMPLE_LIST.map(([label, f]) =>
       `<a href="/query?${Object.entries(f).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&amp;')}">${esc(label)}</a>`).join(' · ')}`)}</p>\n`
   }
-  const queryBody = `<div class="titleband"><p class="eyebrow">read-only</p>
-<h1>Query the graph</h1></div>
+  const queryBody = `<div class="titleband"><p class="eyebrow">Explore</p>
+<h1>Query the graph</h1>
+<p class="sub">Filter the verified claims by volume, family, voice and the words in their quotes.</p></div>
 ${QUERY_EXAMPLES_HTML}
 <div class="filters" id="filters">
   <div class="fld"><label for="f-family">family</label><select id="f-family"></select><span class="hint" id="h-family"></span></div>
@@ -2985,8 +2989,9 @@ if (QA && DECL) {
 <figcaption>The second tier: different relation strings, each verified in its own paragraph, assigned to one family.</figcaption>
 </figure>`
 
-  const ontBody = `<div class="titleband"><p class="eyebrow">evidence</p>
-<h1>The design</h1></div>
+  const ontBody = `<div class="titleband"><p class="eyebrow">Evidence</p>
+<h1>The design</h1>
+<p class="sub">Why the graph has two tiers, what its quality scan found, and how it compared with outside scholarship.</p></div>
 <p>The atlas is a network of asserted relations between named things. Each relation rests on a paragraph of the Collected Works and a quote from it. This page records the design decisions and the results of a standard pitfall scan over the graph.</p>
 <p>The terms the RDF export uses for claims, references and their checks are on the <a href="/vocabulary">vocabulary</a> page.</p>
 
@@ -3137,9 +3142,9 @@ ${exportFiles.map(([f, d], i) => `<li>${exportLinks[i]}: ${esc(d)}</li>`).join('
 </ul>
 <p>The <a href="/ontology">design page</a> explains why the graph has no class hierarchy over its nodes and no transitivity.</p>
 </section>`
-  const vocabBody = `<div class="titleband"><p class="eyebrow">reference</p>
+  const vocabBody = `<div class="titleband"><p class="eyebrow">Evidence</p>
 <h1>Vocabulary</h1>
-<p class="sub">the terms of the RDF export</p></div>
+<p class="sub">The terms of the RDF export.</p></div>
 <p>${esc(vocab.definition_note)}</p>
 ${exportBlock}
 ${vocab.namespace_provisional ? `<p class="meta">The namespace <code>${esc(vocab.namespace)}</code> is provisional and not yet registered, so these terms do not resolve yet. The prefix <code>sw:</code> stands for <code>${esc(vocab.namespace)}ns#</code>.</p>` : `<p class="meta">The prefix <code>sw:</code> stands for <code>${esc(vocab.namespace)}ns#</code>.</p>`}
@@ -3169,9 +3174,9 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
   // item 4). The text is final wording from the outreach review, 2026-10-22,
   // with Damian's closing paragraph; it is carried, not rewritten here.
   if (EMIT_ABOUT_PAGE) {
-    const aboutBody = `<div class="titleband"><p class="eyebrow">about</p>
-<h1>About</h1>
-<p class="sub">who the atlas is for, and what each reader can do with it</p></div>
+    const aboutBody = `<div class="titleband"><p class="eyebrow">About</p>
+<h1>About the atlas</h1>
+<p class="sub">Who the atlas is for, and what each reader can do with it.</p></div>
 <p>The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
 <p>Analysts and trainees can look up where Jung treats a concept and follow it across volumes, with a citation ready to carry into their own work. The <a href="/query">query page</a> filters by volume, family and claim type, and it searches the words inside the quotes.</p>
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
@@ -3255,11 +3260,9 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
           [`<a href="/graph.json" download>graph.json</a> <span class="ev">${fmtSize(statSync(here('./public/graph.json')).size)}</span>`]]
       ]]
     ]
-    const evidenceBody = `<section class="land-hero">
-<div class="titleband"><p class="eyebrow">evidence</p>
-<h1>Evidence</h1></div>
-<p class="land-lead">The records behind the atlas, and the rules its checks follow.</p>
-</section>
+    const evidenceBody = `<div class="titleband"><p class="eyebrow">Overview</p>
+<h1>Evidence</h1>
+<p class="sub">The records behind the atlas, and the rules its checks follow.</p></div>
 ${EVIDENCE_GROUPS.map(([group, cards]) => `<section class="land-tasks">
 <p class="eyebrow">${esc(group)}</p>
 <div class="land-grid">
@@ -3429,10 +3432,9 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
   // tip without leaving the site, and a plain link for anyone whose browser
   // blocks the frame. Nothing else monetized; no sitewide widget script.
   if (SUPPORT_URL) {
-    const supportBody = `<section class="land-hero">
-<div class="titleband"><p class="eyebrow">about</p>
-<h1>Support</h1></div>
-</section>
+    const supportBody = `<div class="titleband"><p class="eyebrow">About</p>
+<h1>Support</h1>
+<p class="sub">How to help keep the atlas running.</p></div>
 <p>Maintaining and evolving this project costs money: the domain, the model spend for checks, corrections and answers to disputes. A verified citation costs approximately ${'$'}0.09 to ${'$'}0.16 presently. A tip of any size helps. Thank you!</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
@@ -3443,7 +3445,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
 .page-main > .kofi-panel { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; margin: 1.2rem 0 .6rem; background: var(--panel); max-width: 420px; }
 `
     registerPage({
-      slug: 'support', title: 'Support', where: 'support', nav: 'support', kind: 'prose landing',
+      slug: 'support', title: 'Support', where: 'support', nav: 'support',
       changefreq: 'monthly', priority: '0.4',
       description: 'Support The Symbolic World: a tip helps pay for the domain and the model checks behind the verified Jung atlas.',
       style: supportStyle, body: supportBody
@@ -3532,7 +3534,7 @@ if (methodHTML) {
 .cite-meta { font: .7rem var(--mono); color: var(--ink-faint); margin-top: .35rem; }
 .cite-doi { font: .7rem var(--mono); color: var(--ink-dim); margin-top: .25rem; }
 `
-  const methodBody = `<div class="titleband"><p class="eyebrow">about</p>
+  const methodBody = `<div class="titleband"><p class="eyebrow">Evidence</p>
 <h1>The method</h1>
 <p class="sub">An explanation of how a citation enters the map.</p></div>
 <div class="method-page">
