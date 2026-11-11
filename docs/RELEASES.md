@@ -32,8 +32,7 @@ when the release was cut.
 ## v2.3.0: CW 16, CW 7 and CW 6
 
 status: released 2026-11-11. Tag `v2.3.0`, GitHub Release, Zenodo record
-under the concept DOI. *Trust, Layered* still describes v2.0.0 and stays
-pinned to that tag.
+under the concept DOI.
 pin: graph v2.3.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
