@@ -3369,10 +3369,9 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
   if (SUPPORT_URL) {
     const supportBody = `<section class="land-hero">
 <div class="titleband"><p class="eyebrow">about</p>
-<h1>Support</h1>
-<p class="sub">tips cover the running costs</p></div>
+<h1>Support</h1></div>
 </section>
-<p>Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
+<p>Keeping it going costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
 </div>
