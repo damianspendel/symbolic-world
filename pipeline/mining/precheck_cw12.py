@@ -141,11 +141,11 @@ def check_ref(subj, rel, obj, r, kind):
         out.append(f"[provenance] jung-quotes-source without source: {tag}")
     if r.get('confidence') not in {'high', 'medium', 'low'}:
         out.append(f"[provenance] bad confidence {r.get('confidence')!r}: {tag}")
-    if rel in STAGE_RELS:
+    if rel in STAGE_RELS and (rel in ('precedes', 'follows') or obj in STAGES | OPERATIONS):
         global n_stage
         n_stage += 1
-        if rel == 'stage-of' and obj not in STAGES:
-            out.append(f"[stage] stage-of must point at a stage id ({sorted(STAGES)}): {tag}")
+        if rel == 'belongs-to' and obj in STAGES | OPERATIONS and obj not in STAGES:
+            out.append(f"[stage] belongs-to points at a stage id, not an operation: {tag}")
         if rel in ('precedes', 'follows') and not ({subj, obj} <= STAGES | OPERATIONS):
             out.append(f"[stage] {rel} joins stage or operation ids only: {tag}")
     if subj not in known:

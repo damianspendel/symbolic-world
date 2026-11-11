@@ -10,11 +10,13 @@ _adjudication.json written by the gate session after reading the auditor's findi
      "correct_confidence": {"...": "medium"},
      "upheld_notes": {"...": "cross-vendor finding overruled: ..."},
      "substantive": ["..."],
+     "correct_relation": {"...": "belongs-to"},
      "labels": {"node-id": "Label the gate set"},
      "names_reject": ["node|paragraph", ...]}
 
 Rules as in every merge since b-cw9i-8: gate FALSE drops; a FINDING is applied as a claim-type or confidence
-correction, overruled with an audit note, or dropped as substantive (the auditor is the tiebreaker); an
+correction, a relation correction (the auditor's reading of the relation string, applied with a note), overruled
+with an audit note, or dropped as substantive (the auditor is the tiebreaker); an
 unadjudicated FINDING stops the merge. The 2026-11-11 fields ride along: source_author and source_text on the
 reference, cross_register on the edge (with the batch that set it), and the names list onto the nodes (latin
 where the node has none, aliases appended, name_refs recording volume, paragraph and batch).
@@ -51,6 +53,7 @@ CORRECT_CLAIMTYPE = {k4(k): v for k, v in adj.get('correct_claimtype', {}).items
 CORRECT_CONFIDENCE = {k4(k): v for k, v in adj.get('correct_confidence', {}).items()}
 UPHELD_NOTES = {k4(k): v for k, v in adj.get('upheld_notes', {}).items()}
 SUBSTANTIVE = {k4(k) for k in adj.get('substantive', [])}
+CORRECT_RELATION = {k4(k): v for k, v in adj.get('correct_relation', {}).items()}
 LABELS = adj.get('labels', {})
 NAMES_REJECT = {(p.split('|')[0], int(p.split('|')[1])) for p in adj.get('names_reject', [])}
 REF_CORRECTIONS = ('claim_type', 'confidence', 'source', 'source_author', 'source_text', 'note')
@@ -106,6 +109,9 @@ for kind in ('candidates', 'attaches'):
                     ref['correction_note'] = 'cross-vendor correction: ' + (x['reason'] or '')
                 elif xk in UPHELD_NOTES:
                     ref['audit_note'] = UPHELD_NOTES[xk]
+                elif xk in CORRECT_RELATION:
+                    ref['correction_note'] = 'cross-vendor correction (relation): ' + (x['reason'] or '')
+                    rel = CORRECT_RELATION[xk]
                 elif xk in SUBSTANTIVE:
                     dropped.append((xk, 'xv FINDING (substantive): ' + (x['reason'] or '')))
                     continue

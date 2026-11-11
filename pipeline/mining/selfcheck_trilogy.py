@@ -62,7 +62,8 @@ for c in cand["candidates"]:
     if len(toks) > 4: print("REL LONG", t)
     if (t in existing) != bool(c.get("existing_edge")): print("FLAG existing_edge should be", t in existing, t)
     if "cross_register" in c and not isinstance(c["cross_register"], bool): print("FLAG cross_register not boolean", t)
-    if c["relation"] == "stage-of" and c["object"] not in STAGES: print("STAGE stage-of must point at a stage id", t)
+    if c["relation"] == "stage-of": print("STAGE stage-of is retired: use belongs-to (to a stage), undergoes, precedes or follows", t)
+    if c["relation"] == "belongs-to" and c["object"] in OPERATIONS and c["object"] not in STAGES: print("STAGE belongs-to points at a stage id, not an operation", t)
     if c["relation"] in ("precedes", "follows") and not ({c["subject"], c["object"]} <= STAGES | OPERATIONS): print("STAGE precedes/follows joins stage or operation ids only", t)
     flagged += 1 if c.get("cross_register") is True else 0
     for n in c.get("new_nodes", []):
@@ -110,6 +111,6 @@ for nm in cand.get("names", []):
     for v in vals:
         if fold(v) not in fold(paras[para]): print("NAME not in paragraph", para, repr(v))
 if not str(cand.get("stages_note", "")).strip(): print("STAGES missing stages_note (required; 'none in this window' is valid)")
-nstage = sum(1 for c in cand["candidates"] if c["relation"] in STAGE_RELS)
+nstage = sum(1 for c in cand["candidates"] if c["relation"] in STAGE_RELS and (c["relation"] in ("precedes", "follows") or c["object"] in STAGES | OPERATIONS))
 print("candidates", len(cand["candidates"]), "refs", nrefs, "names", len(cand.get("names", [])), "cross_register", flagged, "stage candidates", nstage)
 print(minted)
