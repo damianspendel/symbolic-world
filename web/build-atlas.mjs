@@ -1044,7 +1044,7 @@ function familiesPageCopy(map, version) {
   return `<div class="titleband"><p class="eyebrow">reference</p>
 <h1>Families</h1></div>
 
-<p>A family is an assigned classification over a verified relation: the <a href="/ontology">design</a> is on the design page, the <a href="/atlas#/method">checks</a> on the method page.</p>
+<p>A family is an assigned classification over a verified relation: the <a href="/ontology">design</a> is on the design page, the <a href="/method">checks</a> on the method page.</p>
 
 <h2>Where the layer stands</h2>
 <div class="tw"><table>
@@ -1184,17 +1184,25 @@ if (existsSync(methodPath)) {
   const raw = readFileSync(methodPath, 'utf8')
   const body = raw.slice(raw.indexOf('\n---\n') + 5)   // drop the authoring front-matter
 
-  // {{last_proposed}} / {{last_merged}} are read from the newest merged batch in
-  // pipeline/state.json, so the next window updates them without a code change.
+  // {{all_proposed}} / {{all_merged}} / {{windows_counted}} sum every merged
+  // batch in pipeline/state.json whose result records both counts, so the next
+  // window updates them without a code change. They replaced the newest
+  // window's pair (interim build, 2026-11-11): a window where nothing was
+  // removed made "the checks remove real material" read as 59 became 59.
   const st = JSON.parse(readFileSync(here('../pipeline/state.json'), 'utf8'))
   const merged = st.batches.filter(b => String(b.status || '').startsWith('merged'))
-  const lastBatch = merged[merged.length - 1] || {}
-  const res = String(lastBatch.result || '')
-  const mProp = res.match(/Mined\s+\d+\s*candidates?\/(\d+)\s*refs/i)
-  const mMerg = res.match(/\+(\d+)\s*refs/i)
-  if (!mProp || !mMerg) {
-    console.error(`METHOD PAGE: cannot derive last_proposed/last_merged from batch ${lastBatch.id}. ` +
-      `The copy states them as measured facts, so the build refuses rather than print a stale pair.`)
+  const counted = merged.map(b => {
+    const res = String(b.result || '')
+    const p = res.match(/Mined\s+\d+\s*candidates?\/(\d+)\s*refs/i)
+    const m = res.match(/\+(\d+)\s*refs/i)
+    return p && m ? [Number(p[1]), Number(m[1])] : null
+  }).filter(Boolean)
+  const allProposed = counted.reduce((n, [p]) => n + p, 0)
+  const allMerged = counted.reduce((n, [, m]) => n + m, 0)
+  if (!counted.length || allMerged >= allProposed) {
+    console.error(`METHOD PAGE: cannot derive all_proposed/all_merged from pipeline/state.json ` +
+      `(${counted.length} windows, ${allProposed} proposed, ${allMerged} merged). ` +
+      `The copy states them as measured facts, so the build refuses rather than print a wrong pair.`)
     process.exit(1)
   }
   const validations = JSON.parse(readFileSync(here('./public/validations.json'), 'utf8')).validations || []
@@ -1204,7 +1212,7 @@ if (existsSync(methodPath)) {
     nodes: meta.counts.nodes, edges: meta.counts.edges, refs: meta.counts.references,
     xv_stamped: xvStamped,
     xv_pct: Math.round(100 * xvStamped / meta.counts.references),
-    last_proposed: Number(mProp[1]), last_merged: Number(mMerg[1]),
+    all_proposed: allProposed, all_merged: allMerged, windows_counted: counted.length,
     human_chips: validations.length,
     // item 34 — the dispute count is derived from the same file the disputes
     // page reads, so the two surfaces cannot disagree again
@@ -1912,7 +1920,7 @@ if (EMIT_CONCEPT_PAGES) {
   // what the page is, no stronger claim anywhere below it
   const registerNote = 'A machine checks each quotation against the source paragraph. ' +
     'A documented procedure assigns the relation families. The ' +
-    '<a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.'
+    '<a href="/method">method page</a> sets out what the checks cover and what they leave out.'
 
   const NS = CONCEPT_SEARCH_HEAD ? ' data-nosnippet' : ''
   // Google honours data-nosnippet on span, div and section only, so a
@@ -3108,7 +3116,7 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
 <p>Readers of alchemy can use the <a href="/atlas#/concordance">concordance</a>, which sets Jung's psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
 <p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>. The original structure and metadata are open for reuse under CC BY 4.0, and the quotations stay with their rights holders.</p>
-<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.</p>
+<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/method">method page</a> sets out what the checks cover and what they leave out.</p>
 <p>In case of concerns, please contact <a href="mailto:damian.spendel@gmail.com">the author</a>.</p>`
     registerPage({
       slug: 'about', title: 'About', where: 'about', nav: 'about',

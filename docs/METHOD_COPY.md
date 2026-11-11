@@ -97,8 +97,9 @@ Under all five stations, the model that proposes a claim never signs it off.
 Proposer and gate are different model families (Anthropic's Opus and Fable
 lines) and the auditor is a different vendor (Google's Gemini).
 
-The checks remove real material: in the most recent window, {{last_proposed}}
-proposed citations became {{last_merged}} merged ones.
+The checks remove real material: across the {{windows_counted}} windows whose
+records give both counts, {{all_proposed}} proposed citations became
+{{all_merged}} merged ones.
 
 ## Human oversight
 
