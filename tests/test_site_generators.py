@@ -347,7 +347,7 @@ def test_the_families_page_is_reference_not_method():
         assert kept in exposition, f"reference content went missing: {kept}"
     # one header sentence, carrying both pointers
     assert '<a href="/ontology">design</a>' in exposition
-    assert '<a href="/atlas#/method">checks</a>' in exposition
+    assert '<a href="/method">checks</a>' in exposition
     # and the page is now a fraction of what it was: the copy above the
     # document's rule ran to about 3,000 words before the redistribution.
     # The string->family map grows with the graph and is data, not copy, so
