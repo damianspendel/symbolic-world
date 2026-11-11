@@ -139,7 +139,7 @@ const EMIT_ABOUT_PAGE = true
 const ROUTES_IN_UI = true
 
 // The support link (Ko-fi, decision of 2026-10-21): one footer link on every
-// generated page plus one sentence on /nutshell, nothing else monetized.
+// generated page, the /support page and its menu entry, nothing else monetized.
 // Empty renders nothing anywhere. tools/build_ledger_page.py reads this
 // constant from the source, so the python pages follow the same knob.
 const SUPPORT_URL = 'https://ko-fi.com/symbolicworld'
@@ -280,10 +280,13 @@ const MENU_LEGACY = [
   ['explore', [['/atlas#/atlas', 'atlas'], ['/routes', 'routes'], ['/query', 'query'], ['/atlas#/concordance', 'concordance']]],
   ['reference', [['/concepts', 'concepts'], ['/families', 'families']]],
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
-  ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/nutshell', 'in a nutshell'], ['/atlas#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
+  ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/atlas#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
+// The concordance and support came back in the interim build (Damian,
+// 2026-11-10: "the whole concordance part vanished. That was a key value
+// proposition"; 2026-11-11: "reintroduce the support page with the Ko-fi").
 const MENU_READER_LIST = [
-  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : [])]]
+  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/atlas#/concordance', 'concordance'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(SUPPORT_URL ? [['/support', 'support']] : []), ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : [])]]
 ]
 const MENU = MENU_READER ? MENU_READER_LIST : MENU_LEGACY
 // The reader menu's atlas link has no route after the #, so the app plays its
@@ -681,6 +684,9 @@ writeFileSync(here('./src/families.json'), JSON.stringify({
 // document in full — the "full definitions" destination in R3.3. The exposition
 // is kept in its own variable because the copy assertions scan it and must NOT
 // scan the rendered source document (see the note above copySources).
+// counts the families copy computes itself; the copy contract allows them
+// (read below, where the contract's allowlist is built)
+const FAM_COPY_NUMBERS = []
 const famPageCopy = famVersion ? familiesPageCopy(famMap, famVersion) : ''
 writeFileSync(here('./public/families.html'), renderDoc(famDoc, famPageCopy))
 
@@ -869,7 +875,10 @@ h4 {
   /* the one-row header on a phone: brand and switch share the first line, the
      menu takes the whole second line */
   .site-header .hrow-1 .themetoggle { order: 1; }
-  .site-header .hrow-1 .topmenu { order: 2; flex: 1 0 100%; padding-bottom: .35rem; }` : ''}
+  .site-header .hrow-1 .topmenu { order: 2; flex: 1 0 100%; padding-bottom: .35rem; }
+  /* eight entries outrun a 375px line (interim build, 2026-11-11); the reader
+     menu's one group has no label to orphan, so its items may wrap */
+  .site-header .hrow-1 .topmenu .mgrp { flex-wrap: wrap; row-gap: .15rem; }` : ''}
 }
 /* V2-R10 — the site menu. One definition, used by the app's header, by every
    generated page's header, and by the pages the python generator writes. */
@@ -931,7 +940,7 @@ for (const e of atlasEdges) for (const r of e.refs) if (r.claim_type) voices[r.c
 // ------------------------------------------------------------- atlas.json ---
 const refCount = seed.edges.reduce((a, e) => a + (e.references || []).length, 0)
 const meta = {
-  version: 'v2.2.0',   // the release label; between releases the ceremony leaves it on the last tag
+  version: 'v2.3.0',   // the release label; between releases the ceremony leaves it on the last tag
   built: new Date().toISOString().slice(0, 10),
   // spec-orientation-v1, item 3: the forty most connected concepts by relation
   // count, named here so the atlas's "core" control is a build-time set
@@ -1037,52 +1046,57 @@ function familiesPageCopy(map, version) {
   const provRows = map.provenance.map(p =>
     `<tr><td>${esc(p.kind)}</td><td>${p.edges}</td></tr>`).join('')
 
-  const worked = boundaryRules
-    .filter(r => /layer: amplification|indistinguishability/i.test(r.title))
-    .map(r => `<li>${r.html}</li>`).join('\n')
+  // X1 of the prose review (2026-11-11): the one full statement of how a
+  // family is assigned. The calibrated gate audited only part of the
+  // assignments (its v0.7.1 re-audit), so the count is read from the records.
+  const gateAudited = seed.edges.filter(e => e.relation_family && /SUPPORTED/.test(String(e.relation_family.audit || ''))).length
+  const settled = t.assigned + t.no_family + t.text_undecided
+  FAM_COPY_NUMBERS.push(gateAudited, settled)
 
-  return `<div class="titleband"><p class="eyebrow">reference</p>
-<h1>Families</h1></div>
+  return `<div class="titleband"><p class="eyebrow">Evidence</p>
+<h1>Families</h1>
+<p class="sub">Which relation strings fall in which family, and the document that defines the families.</p></div>
 
-<p>A family is an assigned classification over a verified relation: the <a href="/ontology">design</a> is on the design page, the <a href="/atlas#/method">checks</a> on the method page.</p>
+<p>A family is a classification assigned to a relation that has already been verified. The <a href="/ontology">design page</a> explains why the layer exists, and the <a href="/method">method page</a> covers the checks.</p>
+<p>Two models classify each relation blind, each reading the definitions document and neither seeing the other's answer. Where they name the same family, the assignment stands, and a person rules where the two differ. ${num(gateAudited)} of the assignments also carry a supporting audit by the calibrated family gate.</p>
 
 <h2>Where the layer stands</h2>
 <div class="tw"><table>
 <thead><tr><th>State</th><th>Relations</th><th>What it means</th></tr></thead>
 <tbody>
 <tr><td>assigned</td><td>${t.assigned}</td><td>both arms named the same family, or a person ruled</td></tr>
-<tr><td>pending a ruling</td><td>${t.pending}</td><td>the arms disagreed; queued for ruling</td></tr>
+<tr><td>pending a ruling</td><td>${t.pending}</td><td>the arms disagreed, or a check disputed their agreement; queued for a ruling</td></tr>
 <tr><td>no family</td><td>${t.no_family}</td><td>well-formed relation, our vocabulary does not cover it</td></tr>
 <tr><td>text undecided</td><td>${t.text_undecided}</td><td>the source sentence hedges between two families</td></tr>
 </tbody></table></div>
-<p>That is ${num(t.assigned)} of ${num(t.edges)} relations classified, with ${num(t.pending)} still waiting on a person.</p>
-<p>How the records were arrived at:</p>
+<p>The ${num(settled)} settled records are the assigned relations plus those with no family or an undecided text. How each was reached:</p>
 <div class="tw"><table><thead><tr><th>Arrived at by</th><th>Relations</th></tr></thead><tbody>${provRows}</tbody></table></div>
 
 <h2>The map: which relation strings land in which family</h2>
-<p>The reverse index, derived from the graph on every build. ${num(t.families)} families over ${num(t.assigned_strings)} distinct relation strings; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
+<p>Each family with the relation strings assigned to it, rebuilt from the graph at every build. ${num(t.families)} families over the ${num(t.assigned_strings)} relation strings that carry at least one assigned relation; the number beside each string is how many relations carry it. ${num(t.split_strings)} of those strings appear under more than one family: a family is assigned to an edge in its paragraph, never to a string in the abstract. <code>is</code> alone spans identity, classification and position.</p>
 ${famBlocks}
 ${empty.length ? `<p>${empty.map(id => `<a href="/family-${esc(id)}">${esc(id)}</a>`).join(', ')} ${empty.length === 1 ? 'is a family in the ruleset that currently holds no assigned relation' : 'are families in the ruleset that currently hold no assigned relation'}, so ${empty.length === 1 ? 'it has' : 'they have'} no block above. ${empty.length === 1 ? 'The page is' : 'The pages are'} kept, and ${empty.length === 1 ? 'reports' : 'report'} the count as zero: a family emptied by a reclassification is a finding, and dropping the page would hide the finding.</p>` : ''}
 
 <h2>What fits nowhere</h2>
-<p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted rather than forced into the nearest fit:</p>
+<p>${num(t.homeless_strings)} relation strings carry a relation that is well formed and that no family covers. They are counted here and left unassigned:</p>
 <div class="strs homeless">${stringList(map.homeless)}</div>
-${map.text_undecided.length ? `<p>And the strings whose source sentence hedges between two families; that is a property of the text, not of the vocabulary:</p>
+${map.text_undecided.length ? `<p>And the strings where Jung's sentence itself hedges between two families:</p>
 <div class="strs homeless">${stringList(map.text_undecided)}</div>` : ''}
 
-<h2>Where the boundaries are decided</h2>
-<p>Two of the rules that do the discriminating, quoted from the definitions document exactly as they stand at ${esc(version)}. Each was written because a ruling forced it.</p>
-<ul class="worked">
-${worked}
-</ul>
-
-${EV ? `<p class="meta">Checked once against outside scholarship: ${EV.agrees} of ${EV.treated} treated items agreed — <a href="/ontology#checked">the full result</a>.</p>
+<p>The boundary rules are in the definitions document below.</p>
+${EV ? `<p class="meta">We checked a sample of the assignments once against outside scholarship. <a href="/ontology#checked">The result is on the design page.</a></p>
 ` : ''}`
 }
 
 function renderDoc(md, frontCopy) {
   const version = famVersion
-  const out = [frontCopy || '', '<hr>', renderMarkdown(md)]
+  // F1 of the prose review (2026-11-11): the reader is told where the page's
+  // own copy ends and the definitions document begins, at that boundary, and
+  // the document sits in a closed fold. Its counts date from its drafting.
+  const out = [frontCopy || '', '<hr>',
+    `<p class="docnote">Everything from here down is the definitions document at ${esc(version)}, shown as written. Counts inside it date from its drafting; the live counts are in the tables above.</p>`,
+    `<details class="docfold"><summary>The definitions document, ${esc(version)}</summary>`,
+    renderMarkdown(md), '</details>']
   return `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1119,12 +1133,14 @@ hr { border: 0; border-top: 1px solid var(--hairline); margin: 3rem 0 2rem; }
 .homeless .sstr { border-color: var(--b-amber); }
 .worked li { border-left: 2px solid var(--hairline); padding-left: .8rem; margin-bottom: 1rem; }
 .docnote { border-left: 2px solid var(--b-amber); padding-left: .8rem; color: var(--ink-faint); font-size: .92rem; }
+.docfold table { display: block; overflow-x: auto; }
+.docfold code { overflow-wrap: anywhere; }
+.docfold > summary { cursor: pointer; font-family: var(--display); font-size: 1.15rem; color: var(--gold); margin: .4rem 0 1rem; }
 </style></head>
 <body>
 ${siteHeader('/families', 'Relation families')}
 <main class="page-main prose">
 ${out.join('\n')}
-<p class="gen">The exposition above is generated by <code>web/build-atlas.mjs</code>; every count in it is derived from <code>seed.json</code> at build time. The document below it is rendered from <code>docs/FAMILY_DEFINITIONS.md</code> as written \u2014 the atlas quotes that document, it never paraphrases it.</p>
 </main></body></html>`
 }
 
@@ -1178,23 +1194,46 @@ writeFileSync(here('./src/chrome.json'), JSON.stringify({
 // It never edits prose. Bare numbers in the copy are frozen measured results,
 // registered in the copy assertion's method-constants allowlist below with the
 // sources the document itself records.
+// The family-gate calibration records, read before the method page because its
+// copy binds the record in force (2026-11-11); the releases page reads them too.
+const calibRecords = []
+const calibDir = here('../pipeline/family_calibration/records')
+try {
+  for (const f of readdirSync(calibDir)) {
+    if (!f.endsWith('.json')) continue
+    const rec = JSON.parse(readFileSync(new URL(`../pipeline/family_calibration/records/${f}`, import.meta.url), 'utf8'))
+    calibRecords.push({ file: `pipeline/family_calibration/records/${f}`, ...rec })
+  }
+} catch { /* no records directory — handled below */ }
+const bindingCalib = calibRecords
+  .filter(r => r.definitions_version === famVersion && r.verdict === 'PASS')
+  .sort((a, b) => String(a.planted_at || a.file).localeCompare(String(b.planted_at || b.file)))
+  .pop()
 const methodPath = here('../docs/METHOD_COPY.md')
 let methodHTML = '', methodTokens = {}
 if (existsSync(methodPath)) {
   const raw = readFileSync(methodPath, 'utf8')
   const body = raw.slice(raw.indexOf('\n---\n') + 5)   // drop the authoring front-matter
 
-  // {{last_proposed}} / {{last_merged}} are read from the newest merged batch in
-  // pipeline/state.json, so the next window updates them without a code change.
+  // {{all_proposed}} / {{all_merged}} / {{windows_counted}} sum every merged
+  // batch in pipeline/state.json whose result records both counts, so the next
+  // window updates them without a code change. They replaced the newest
+  // window's pair (interim build, 2026-11-11): a window where nothing was
+  // removed made "the checks remove real material" read as 59 became 59.
   const st = JSON.parse(readFileSync(here('../pipeline/state.json'), 'utf8'))
   const merged = st.batches.filter(b => String(b.status || '').startsWith('merged'))
-  const lastBatch = merged[merged.length - 1] || {}
-  const res = String(lastBatch.result || '')
-  const mProp = res.match(/Mined\s+\d+\s*candidates?\/(\d+)\s*refs/i)
-  const mMerg = res.match(/\+(\d+)\s*refs/i)
-  if (!mProp || !mMerg) {
-    console.error(`METHOD PAGE: cannot derive last_proposed/last_merged from batch ${lastBatch.id}. ` +
-      `The copy states them as measured facts, so the build refuses rather than print a stale pair.`)
+  const counted = merged.map(b => {
+    const res = String(b.result || '')
+    const p = res.match(/Mined\s+\d+\s*candidates?\/(\d+)\s*refs/i)
+    const m = res.match(/\+(\d+)\s*refs/i)
+    return p && m ? [Number(p[1]), Number(m[1])] : null
+  }).filter(Boolean)
+  const allProposed = counted.reduce((n, [p]) => n + p, 0)
+  const allMerged = counted.reduce((n, [, m]) => n + m, 0)
+  if (!counted.length || allMerged >= allProposed) {
+    console.error(`METHOD PAGE: cannot derive all_proposed/all_merged from pipeline/state.json ` +
+      `(${counted.length} windows, ${allProposed} proposed, ${allMerged} merged). ` +
+      `The copy states them as measured facts, so the build refuses rather than print a wrong pair.`)
     process.exit(1)
   }
   const validations = JSON.parse(readFileSync(here('./public/validations.json'), 'utf8')).validations || []
@@ -1204,16 +1243,38 @@ if (existsSync(methodPath)) {
     nodes: meta.counts.nodes, edges: meta.counts.edges, refs: meta.counts.references,
     xv_stamped: xvStamped,
     xv_pct: Math.round(100 * xvStamped / meta.counts.references),
-    last_proposed: Number(mProp[1]), last_merged: Number(mMerg[1]),
+    all_proposed: allProposed, all_merged: allMerged, windows_counted: counted.length,
     human_chips: validations.length,
     // item 34 — the dispute count is derived from the same file the disputes
     // page reads, so the two surfaces cannot disagree again
     disputes: JSON.parse(readFileSync(here('./public/disputes.json'), 'utf8')).disputes.length,
     ev_works: EV ? EV.works_consulted : 0, ev_agrees: EV ? EV.agrees : 0,
     ev_treated: EV ? EV.treated : 0,
+    ev_disagrees: EV ? EV.disagrees : 0, ev_split: EV ? EV.scholars_split : 0,
     families: families.length,
     queue: pending.items ? pending.items.length : 0,
-    edges_classified: atlasEdges.filter(e => e.family).length
+    // citations with no audit stamp (2026-11-11: the copy says how many), and
+    // stamps that name only the model, with no audit or date
+    unstamped: meta.counts.references - xvStamped,
+    stamps_bare: atlasEdges.reduce((n, e) => n + e.refs.filter(r => r.crossvendor_checked && !/\(/.test(String(r.crossvendor_checked))).length, 0),
+    // the two classifying models' agreement, live (Damian, 2026-11-11: "go with
+    // the live figure"): agreed = records the arms agreed on; compared adds the
+    // records of a disagreement, open or ruled by a person
+    ...(() => {
+      const by = seed.edges.map(e => String((e.relation_family || {}).by || ''))
+      const agreed = by.filter(b => b.startsWith('opus+gemini-agreed')).length
+      const disagreed = by.filter(b => b.startsWith('arms-disagree') || b.startsWith('human-adjudication')).length
+      const compared = agreed + disagreed
+      return { arms_agreed: agreed, arms_compared: compared, arms_pct: (100 * agreed / compared).toFixed(1),
+        arms_other: seed.edges.length - compared }
+    })(),
+    // the family gate's calibration in force (A3 of the method review): the
+    // same record the releases pin names
+    ruleset: famVersion,
+    cal_caught: bindingCalib ? bindingCalib.sensitivity.caught : 0,
+    cal_planted: bindingCalib ? bindingCalib.sensitivity.of : 0,
+    cal_clean: bindingCalib ? bindingCalib.specificity.clean_left_alone : 0,
+    cal_clean_of: bindingCalib ? bindingCalib.specificity.of : 0
   }
 
   // the two figures, rendered in the page's own node/relation styling
@@ -1260,7 +1321,7 @@ if (existsSync(methodPath)) {
   const maxV = Math.max(...volumes.map(v => v.references))
   const figWorks = `<figure class="fig">
     <div class="works-fig">${volumes.map(v => `<span class="work-fig" style="flex:${v.references} 1 0;opacity:${(0.3 + 0.7 * v.references / maxV).toFixed(2)}"><span>CW ${esc(v.volume)}</span></span>`).join('')}</div>
-    <figcaption>This bar appears at the bottom of the atlas and shows one segment per volume included in the atlas. The size of the bar indicates the number of citations.</figcaption>
+    <figcaption>The works bar from the foot of the atlas: one segment per volume, its width set by the volume's citations.</figcaption>
   </figure>`
 
   const cit = JSON.parse(readFileSync(here('../.zenodo.json'), 'utf8'))
@@ -1314,9 +1375,11 @@ function nodeLabel(id) { const n = atlasNodes.find(x => x.id === id); return n ?
 // ===========================================================================
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
-import { readdirSync } from 'node:fs'
+import { readdirSync, mkdtempSync, statSync, rmSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 
 const repoDir = new URL('../', import.meta.url).pathname
+const fileURLToPathSafe = (u) => decodeURIComponent(u.pathname)
 const seedDigest = createHash('sha256').update(readFileSync(here('../seed.json'))).digest('hex')
 const buildDate = new Date().toISOString().slice(0, 10)
 const gitCommit = (() => {
@@ -1466,19 +1529,6 @@ ${p.body}
 // figures are tokens bound here, so an entry cannot state a count the graph and
 // the receipts do not currently produce, and an unbound token fails the build
 // rather than shipping as literal braces.
-const calibRecords = []
-const calibDir = here('../pipeline/family_calibration/records')
-try {
-  for (const f of readdirSync(calibDir)) {
-    if (!f.endsWith('.json')) continue
-    const rec = JSON.parse(readFileSync(new URL(`../pipeline/family_calibration/records/${f}`, import.meta.url), 'utf8'))
-    calibRecords.push({ file: `pipeline/family_calibration/records/${f}`, ...rec })
-  }
-} catch { /* no records directory — handled below */ }
-const bindingCalib = calibRecords
-  .filter(r => r.definitions_version === famVersion && r.verdict === 'PASS')
-  .sort((a, b) => String(a.planted_at || a.file).localeCompare(String(b.planted_at || b.file)))
-  .pop()
 
 const declPath = here('../pipeline/family/relation_declarations.json')
 const DECL = existsSync(declPath) ? JSON.parse(readFileSync(declPath, 'utf8')) : null
@@ -1607,10 +1657,15 @@ if (existsSync(releasesPath)) {
     '>' + text.replace(idPattern, (id) =>
       batchIds.has(id) ? `<a href="/${batchSlug(id)}">${id}</a>` : id) + '<')
 
-  const pinHtml = (pin) => `<div class="pin">` + inline(pin)
+  // The calibration record is named by its date and run, not its file path
+  // (prose review R3, 2026-11-11); the path stays in the receipts.
+  const pinHtml = (pin) => `<div class="pin">` + inline(pin
+    .replace(/pipeline\/family_calibration\/records\/(\d{4}-\d{2}-\d{2})_v\d+(?:_run(\d+))?\.json/g,
+      (m, d, run) => `of ${d}${run ? `, run ${run}` : ''}`))
     .replace(/(graph|ruleset)\s+(v[\d.]+|pending)/g, '$1 <span class="v">$2</span>') + `</div>`
-  const relBody = `<div class="titleband"><p class="eyebrow">release notes</p>
-<h1>Releases</h1></div>
+  const relBody = `<div class="titleband"><p class="eyebrow">Evidence</p>
+<h1>Releases</h1>
+<p class="sub">What each release changed.</p></div>
 ${renderMarkdown(preamble.split('\n').slice(1).join('\n'))}
 ${entries.map(e => `<section class="rel-entry${e.future ? ' future' : ''}">
 <h2>${inline(e.heading)}</h2>
@@ -1637,7 +1692,7 @@ external-validity figures from <code>docs/experiments/external_validity_2026-08/
   registerPage({
     slug: 'releases', title: 'Releases', where: 'releases', nav: 'releases',
     changefreq: 'monthly', priority: '0.5',
-    description: 'Release notes for The Symbolic World, a verified knowledge graph of Jung’s Collected Works: what each release added, with its version pin and receipts.',
+    description: 'Release notes for The Symbolic World, a verified knowledge graph of Jung’s Collected Works: what each release added, with its versions and sources.',
     style: relStyle, body: relBody
   })
   V2_COPY.push(['public/releases.html (generated from docs/RELEASES.md)', stripEvidence(relBody)])
@@ -1667,7 +1722,7 @@ const EVROWS = (EV && EV.per_family && EV.per_family.rows) || []
 const evTable = (currentFamily) => {
   if (!EVROWS.length) return ''
   const rows = EVROWS.map(r => `<tr class="${r.total ? 'total' : ''}${r.family === currentFamily ? ' this' : ''}">` +
-    `<td>${esc(r.label)}</td><td class="n">${esc(r.agrees)}</td><td class="n">${esc(r.disagrees)}</td>` +
+    `<td>${esc(r.label.replace('personif.', 'personification'))}</td><td class="n">${esc(r.agrees)}</td><td class="n">${esc(r.disagrees)}</td>` +
     `<td class="n">${esc(r.split)}</td><td class="n">${esc(r.not_treated)}</td></tr>`).join('\n')
   return `<div class="tw"><table>
 <thead><tr><th>family</th><th>agrees</th><th>disagrees</th><th>split</th><th>not treated</th></tr></thead>
@@ -1729,9 +1784,10 @@ ${evTable(fam.id)}
 
   const zeroNote = row.edges === 0 ? `<p>No edge in the graph currently carries this family. A family with no members stays in the ruleset and is reported at zero rather than dropped: dropping it would hide the reclassification that emptied it, and the empty count is a finding about the definition.</p>` : ''
 
-  const body = `<div class="titleband"><p class="eyebrow">relation family</p>
+  const body = `<div class="titleband"><p class="eyebrow">Evidence</p>
 <h1><span class="ev">${esc(fam.name)}</span></h1>
-<p class="sub"><span class="chip f-ok">assigned, not verified</span> What this family covers, what it fails to cover, and every relation string in the graph that lands in it. A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer: a quote checked letter-exact against its paragraph and judged by a model of a different family. That was already done before any of this began.</p></div>
+<p class="sub"><span class="chip f-ok">assigned, not verified</span> What this family covers, what it fails to cover, and every relation string in the graph that lands in it.</p></div>
+<p>A family is <em>assigned</em>: two models read the definitions document and named the same kind of relation, or a person ruled where they did not. <em>Verified</em> is the other layer: a quote checked letter-exact against its paragraph and judged by a model of a different family. That was already done before any of this began.</p>
 <div class="countstrip">
   <span><b>${row.edges}</b> assigned relations</span>
   <span><b>${strings.length}</b> effective relation strings</span>
@@ -1911,7 +1967,7 @@ if (EMIT_CONCEPT_PAGES) {
   // what the page is, no stronger claim anywhere below it
   const registerNote = 'A machine checks each quotation against the source paragraph. ' +
     'A documented procedure assigns the relation families. The ' +
-    '<a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.'
+    '<a href="/method">method page</a> sets out what the checks cover and what they leave out.'
 
   const NS = CONCEPT_SEARCH_HEAD ? ' data-nosnippet' : ''
   // Google honours data-nosnippet on span, div and section only, so a
@@ -2265,9 +2321,9 @@ if (EMIT_CONCEPTS_INDEX) {
 </tr>`
   }).join('\n')
 
-  const conceptsBody = `<div class="titleband"><p class="eyebrow">index</p>
+  const conceptsBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>Concepts</h1>
-<p class="sub">every concept in the graph, ranked by its verified evidence</p></div>
+<p class="sub">Every concept in the graph ranked by its verified evidence.</p></div>
 <p>${derived(atlasNodes.length)} concepts, ${derived(atlasEdges.length)} verified relations, ${derived(meta.counts.references)} citations.
 Each row links to that concept's own page: its relations grouped by family, with
 the verbatim, paragraph-referenced quotations behind each one.</p>
@@ -2369,9 +2425,9 @@ if (ROUTES_IN_UI) {
     ROUTE_EXAMPLES_HTML = `<p class="examples">${ns0(`examples: ${ROUTE_EXAMPLES.map(([from, to]) =>
       `<a href="/routes?from=${from}&amp;to=${to}">${esc(pubLabel.get(from))} to ${esc(pubLabel.get(to))}</a>`).join(' · ')}`)}</p>\n`
   }
-  const routesBody = `<div class="titleband"><p class="eyebrow">explore</p>
+  const routesBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>Routes</h1>
-<p class="sub">the chains of verified claims between any two concepts</p></div>
+<p class="sub">The chains of verified claims between any two concepts.</p></div>
 <p>Pick two concepts and see the chains of claims that connect them.</p>
 <div class="filters">
   <div class="fld"><label for="r-from">from</label><select id="r-from"></select><span class="hint">any concept in the graph</span></div>
@@ -2531,8 +2587,9 @@ if (DECL) {
     QUERY_EXAMPLES_HTML = `<p class="examples">${ns0(`examples: ${QUERY_EXAMPLE_LIST.map(([label, f]) =>
       `<a href="/query?${Object.entries(f).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&amp;')}">${esc(label)}</a>`).join(' · ')}`)}</p>\n`
   }
-  const queryBody = `<div class="titleband"><p class="eyebrow">read-only</p>
-<h1>Query the graph</h1></div>
+  const queryBody = `<div class="titleband"><p class="eyebrow">Explore</p>
+<h1>Query the graph</h1>
+<p class="sub">Filter the verified claims by volume, family, voice and the words in their quotes.</p></div>
 ${QUERY_EXAMPLES_HTML}
 <div class="filters" id="filters">
   <div class="fld"><label for="f-family">family</label><select id="f-family"></select><span class="hint" id="h-family"></span></div>
@@ -2782,13 +2839,13 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 // reason the project exists. The panel says which is which, in a column, and it
 // neither counts a decision as a defect nor hides what a decision costs.
 const QA_STANCE = [
-  [/^P22/, 'design', 'The relation slot holds Jung\u2019s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it.'],
+  [/^P22/, 'design', 'The relation slot holds Jung\u2019s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it. An open vocabulary is hard to query by predicate, which is why the family layer and the routes exist.'],
   [/^P24 relation name/, 'open', 'A predicate carrying a whole proposition is the project\u2019s named defect. New mining is constrained by a form rule, and the normalization layer repairs the old edges beside their frozen originals rather than over them.'],
   [/^P24 node label/, 'open', 'A label that is a sentence cannot be matched across edges. Counted here, not yet repaired.'],
-  [/^P02\/P30 synonymous/, 'declared', 'Answered by the declarations layer (see the note above the table).'],
+  [/^P02\/P30 synonymous/, 'family', 'A query by family returns every assigned relation in that family, whatever its string. Relations still waiting for a ruling are not returned. No string is declared equivalent to another, because each edge is assigned in its own paragraph.'],
   [/^P05\/P13/, 'declared', 'The declarations name the inverse pairs the document rules on. They are applied when a query asks for closure and are never written into the graph.'],
   [/^P25/, 'declared', 'Same answer: a symmetric declaration is read at query time. Asserting the second direction in the graph would put a claim in it that no paragraph was gated for.'],
-  [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains can be read one edge at a time by the walk in tools/query/kg_query.py, which prints each hop\u2019s own citation and asserts nothing about the ends; it is not exposed on the site in this release.'],
+  [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains can be read one edge at a time by the identity walk in the query tool, which prints each hop\u2019s own citation and asserts nothing about the ends; it is not exposed on the site in this release.'],
   [/^P04/, 'open', 'A detached component is a gap in what has been mined, not a decision.'],
   [/^P11\/P12/, 'design', 'No relation is given a domain or a range as a constraint. The observed signatures are a measurement of the corpus; a constraint would reject an edge because of what the schema expects rather than what the paragraph says.'],
   [/^P21/, 'open', 'The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.'],
@@ -2824,6 +2881,7 @@ const PITFALLS = {
 const STANCE_LABEL = {
   design: 'recorded design decision',
   declared: 'answered by the declarations layer',
+  family: 'answered by the family layer',
   open: 'open: recorded as a defect',
   unclassified: 'not classified'
 }
@@ -2844,16 +2902,27 @@ if (QA && DECL) {
     const hit = QA_STANCE.find(([re]) => re.test(tag))
     return hit ? { kind: hit[1], why: hit[2] } : { kind: 'unclassified', why: 'This finding has no recorded stance. It is shown as the scan reported it.' }
   }
-  const findingRows = ['critical', 'important', 'minor'].flatMap(sev =>
-    QA[sev].map(f => {
+  // The synonym findings (one per group of relation strings) share one stance
+  // and differ only in two numbers, so they render as one row listing the
+  // groups (prose review, 2026-11-11).
+  const isSynonym = (f) => /^P02\/P30 synonymous/.test(f.tag)
+  const findingRows = ['critical', 'important', 'minor'].flatMap(sev => {
+    const syn = QA[sev].filter(isSynonym)
+    return QA[sev].map(f => {
+      if (isSynonym(f) && f !== syn[0]) return ''
       const s = stanceOf(f.tag)
+      const finding = isSynonym(f)
+        ? `<div class="ev tag">P02/P30 synonymous relations, ${syn.length} groups</div><ul class="ev fmsg">${syn.map(x =>
+            `<li>${esc(x.tag.replace(/^P02\/P30 synonymous relations, /, ''))}: ${esc(x.message.replace(/ express the same semantics across /, ' over ').replace(/, with no equivalence declared\. A query on any one misses the rest\./, ''))}</li>`).join('')}</ul><div class="ev fmsg">In each group no equivalence is declared, so a query on any one string misses the rest.</div>`
+        : `<div class="ev tag">${esc(f.tag)}</div><div class="ev fmsg">${esc(f.message)}</div>`
       return `<tr class="st-${s.kind}">
 <td class="sev">${esc(sev)}</td>
-<td><div class="ev tag">${esc(f.tag)}</div><div class="ev fmsg">${esc(f.message)}</div></td>
+<td>${finding}</td>
 <td><span class="chip st-${s.kind}">${esc(STANCE_LABEL[s.kind])}</span><div class="why">${esc(s.why)}</div></td>
 </tr>`
-    })).join('\n')
-  const counts = { design: 0, declared: 0, open: 0, unclassified: 0 }
+    })
+  }).filter(Boolean).join('\n')
+  const counts = { design: 0, declared: 0, family: 0, open: 0, unclassified: 0 }
   for (const sev of ['critical', 'important', 'minor']) for (const f of QA[sev]) counts[stanceOf(f.tag).kind]++
   derived(...Object.values(counts), QA.totals.critical + QA.totals.important + QA.totals.minor,
     h.hapax_relations, h.distinct_relations, h.sentence_shaped_relations, h.sentence_shaped_edges,
@@ -2861,14 +2930,29 @@ if (QA && DECL) {
     di.active_declarations, di.observed_inverse_pairs_in_vocabulary, di.observed_pairs_declared,
     di.edges_carrying_a_declared_string, DECL.candidates_awaiting_ruling.length, DECL.rulings.length)
 
+  // the definitions document's section, named for a reader: 'family 3
+  // (manifestation)' or 'precedents table', without line numbers (O6)
+  const declSourceLabel = (sec) => {
+    const t = sectionLabel(sec)
+    const fam = t.match(/^(\d+)\.\s*([a-z-]+)/)
+    if (fam) return `definitions document, family ${fam[1]} (${fam[2]})`
+    if (/precedents/i.test(t)) return 'definitions document, precedents table'
+    return `definitions document, ${t}`
+  }
   const declRows = activeDecls.map(d => `<tr>
 <td class="ev"><code>${esc(d.kind === 'inverse' ? `${d.forward} / ${d.inverse}` : d.relation)}</code></td>
 <td>${esc(d.kind)}${d.applies_to_family ? `<br><span class="dim">only where the edge carries <span class="ev">${esc(d.applies_to_family)}</span></span>` : ''}${d.carried_qualifier ? `<br><span class="dim">carries <span class="ev">${esc(d.carried_qualifier)}</span> into the derived row</span>` : ''}</td>
-<td class="ev src">${d.source.map(s => `${esc(sectionLabel(s.section))} (line ${s.line})`).join('<br>')}</td>
+<td class="ev src">${d.source.map(s => esc(declSourceLabel(s.section))).join('<br>')}</td>
 </tr>`).join('\n')
 
+  // O7: a ruling is shown in words a reader can follow. The stored ruling stays
+  // as written in pipeline/family/relation_declarations.json; a ruling with no
+  // entry here is shown as stored.
+  const RULING_FOR_READERS = {
+    '2026-08-13': 'aspect-of is a plain inverse of manifests-as. is-dark-aspect-of is also an inverse, and the derived row keeps the words \u201cdark aspect\u201d. The general rule: a derived row carries everything the stored row asserted, and where it cannot, no declaration is made.'
+  }
   const rulingRows = (DECL.rulings || []).map(r => `<tr>
-<td class="n">${esc(r.date)}</td><td class="ev">${esc(r.ruled_by)}</td><td class="ev">${esc(r.ruling)}</td>
+<td class="n">${esc(r.date)}</td><td class="ev">${esc(r.ruled_by)}</td><td class="ev">${esc(RULING_FOR_READERS[r.date] || r.ruling)}</td>
 </tr>`).join('\n')
 
   // the codes the tool actually cites, read out of its findings and its source,
@@ -2915,18 +2999,20 @@ if (QA && DECL) {
   <span class="ofig-arm">&rarr;</span>
   <span class="chip f-ok ev">${esc(tierFamily.family)} <span class="n">${tierFamily.edges}</span></span>
 </div>
-<figcaption>The second tier: different relation strings, each verified in its own paragraph, assigned to one family. The family only classifies relations.</figcaption>
+<figcaption>The second tier: different relation strings, each verified in its own paragraph, assigned to one family.</figcaption>
 </figure>`
 
-  const ontBody = `<div class="titleband"><p class="eyebrow">the design</p>
-<h1>The atlas</h1></div>
-<p>The atlas is a network of asserted relations between named things. Each relation is evidenced by a paragraph and a quote from the Collected Works. This page records the design decisions and the results of a standard pitfall scan over the graph.</p>
+  const ontBody = `<div class="titleband"><p class="eyebrow">Evidence</p>
+<h1>The design</h1>
+<p class="sub">Why the graph has two tiers, what its quality scan found, and how it compared with outside scholarship.</p></div>
+<p>The atlas is a network of asserted relations between named things. Each relation rests on a paragraph of the Collected Works and a quote from it. This page records the design decisions and the results of a standard pitfall scan over the graph.</p>
+<p>The terms the RDF export uses for claims, references and their checks are on the <a href="/vocabulary">vocabulary</a> page.</p>
 
 <h2>Two tiers</h2>
 <p>Jung's relations come in many wordings, so the graph has two tiers.</p>
 <p>The first tier is the relation in Jung's own wording.</p>
-<p>The second tier is the family: a classification <em>over</em> the verified relation. We use a similar pipeline for assignment of relations to families: an assignment stands when two models reading that document independently name the same family; a person rules when they do not.</p>
-<p>The families are this project's sorting of the relations Jung wrote. The field has not agreed on them and the graph does not claim they are his structure. The second tier is where the map's limit shows: it sorts what Jung asserted and does not interpret it.</p>
+<p>The second tier is the family: a classification <em>over</em> the verified relation. Two models read the family definitions and classify each relation without seeing the other's answer. Where they name the same family, the assignment stands. Where they differ, a person rules. The <a href="/families">families page</a> sets out the whole procedure.</p>
+<p>The families are this project's sorting of the relations Jung wrote. The field has not agreed on them and the graph does not claim they are his structure.</p>
 ${figAnatomy}
 <p>Where a relation was a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original. ${meta.normalized} relations carry that layer. The family layer classifies the normalized form where it exists.</p>
 
@@ -2942,40 +3028,39 @@ ${rulingRows ? `<h4>rulings behind them</h4>
 ${rulingRows}
 </tbody></table></div>` : ''}
 
-<h2>Atlas, Graph, Ontology</h2>
-<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur in published ontologies and describes how to detect each one. The catalogue is a list of known issues rather than a standard to comply with and so can provide design guidance. <code>tools/ontology_qa/quality.py</code> implements a subset against this graph and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
+<h2>The pitfall catalogue</h2>
+<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur in published ontologies and describes how to detect each one. The catalogue is a list of known issues rather than a standard to comply with and so can provide design guidance. Our scan script implements a subset against this graph and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
 <p class="meta">Poveda-Villal\u00f3n, G\u00f3mez-P\u00e9rez and Su\u00e1rez-Figueroa, "OOPS! (OntOlogy Pitfall Scanner!): An On-line Tool for Ontology Evaluation", <i>International Journal on Semantic Web and Information Systems</i> 10(2), 2014.</p>
 <div class="tw"><table><thead><tr><th>pitfall</th><th>what the catalogue names</th><th>use here</th></tr></thead><tbody>
 ${pitfallRows}
 </tbody></table></div>
 <p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is relations between named things.</p>
 
-<h2>The pitfall scan</h2>
-<p>Run at every build by <code>tools/ontology_qa/quality.py</code>. Our stance on each finding follows. Where a finding is answered by the declarations layer, equivalence is stated per edge in its paragraph, and where the definitions document rules on a specific pair a declaration records it and the query layer applies it at read time. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects.</p>
+<h2>What the scan found</h2>
+<p>The scan runs at every build. The table gives each finding and our answer to it.</p>
 <div class="qa">
   <div class="fig"><span class="figv ev">${h.hapax_pct.toFixed(1)}%</span><span class="figl">of relation strings are used exactly once <span class="ev">(${h.hapax_relations} of ${h.distinct_relations})</span></span></div>
-  <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
+  <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped relation strings, on <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
   <div class="fig"><span class="figv ev">${di.observed_pairs_declared}/${di.observed_inverse_pairs_in_vocabulary}</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(${di.edges_carrying_a_declared_string}</span> relations carry a declared string)</span></div>
-  <div class="fig"><span class="figv ev">${h.detached_components}</span><span class="figl">component detached from the main graph <span class="ev">(${h.largest_component}</span> of ${h.nodes} nodes are in it)</span></div>
+  <div class="fig"><span class="figv ev">${h.detached_components}</span><span class="figl">${h.detached_components === 1 ? 'component' : 'components'} detached; the main graph holds <span class="ev">${h.largest_component}</span> of ${h.nodes} nodes</span></div>
 </div>
 <details class="disclose">
-<summary>${QA.totals.critical + QA.totals.important + QA.totals.minor} findings: ${counts.design} recorded design decisions, ${counts.declared} answered by the declarations, ${counts.open} open defects.<span class="more">every finding, with its stance</span></summary>
+<summary>${QA.totals.critical + QA.totals.important + QA.totals.minor} findings: ${counts.design} recorded design decisions, ${counts.family} answered by the family layer, ${counts.declared} by the declarations, ${counts.open} open defects.<span class="more">every finding, with its stance</span></summary>
 <div class="tw"><table class="findings"><thead><tr><th>severity</th><th>the scan's finding</th><th>stance</th></tr></thead><tbody>
 ${findingRows}
 </tbody></table></div>
 </details>
-<p class="meta">An open vocabulary is hard to query by predicate, which is the rationale for the family layer and the “routes”.</p>
 
 ${EVROWS.length ? `<h2 id="checked">Checked against readers of Jung</h2>
 <p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The check asked whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
 
-<p>The literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs were not treated at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<p>The literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs were not treated at all. The literature often does not discuss Jung's assertions about single images. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <details class="disclose">
-<summary>${EV.agrees} of ${EV.treated} treated items agreed with our family, across ${EV.works_consulted} works of scholarship.<span class="more">the whole table</span></summary>
+<summary>The whole table, family by family.<span class="more">open</span></summary>
 ${evTable()}
 </details>
 
-<p>Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+<p>No scholar reviewed this vocabulary, so agreement means only that a scholar's rendering falls in the same family. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 ` : ''}
 
 <div class="receipts"><b>receipts</b>
@@ -3038,10 +3123,43 @@ table.findings .src { font: .58rem var(--mono); }
     ...(t.xsd ? [`takes <code>xsd:${esc(t.xsd)}</code>`] : [])])
   const vocabClassRow = (t) => vocabRow(t, (t.parents || []).map(p => `subclass of ${vocabRef(p)}`))
   const vocabClosed = vocab.classes.filter(c => c.closed)
-  const vocabBody = `<div class="titleband"><p class="eyebrow">reference</p>
+  // The RDF export (interim build, 2026-11-11). Damian reversed the "Zenodo
+  // only" default the same day ("Put the turtle files in the build today"), so
+  // the build runs tools/query/export_rdf.py into web/public and the site serves
+  // the three files from its root. They are regenerated on every build and kept
+  // out of git (.gitignore). QUOTES_MODE in the exporter stays "omit", so no
+  // quotes file is written, and preflight fails if one appears. Sizes on the
+  // page are measured from the files just written. A failed export stops the
+  // build, since the page links the files.
+  const exportFiles = [
+    ['symbolicworld-graph.ttl', 'the nodes, relations, claims, references and the stages that checked each claim'],
+    ['symbolicworld-ontology.ttl', 'the terms on this page, as OWL'],
+    ['symbolicworld-void.ttl', 'a VoID description of the dataset: its counts, licence and source']
+  ]
+  const exportSizes = {}
+  try {
+    execFileSync('python3', [`${repoDir}tools/query/export_rdf.py`, '--out-dir', fileURLToPathSafe(here('./public'))], { cwd: repoDir, stdio: 'ignore' })
+    for (const [f] of exportFiles) exportSizes[f] = statSync(here('./public/' + f)).size
+  } catch (err) {
+    console.error(`RDF EXPORT: tools/query/export_rdf.py did not write the Turtle files (${String(err.message).split('\n')[0]}). The vocabulary and evidence pages link them, so the build refuses.`)
+    process.exit(1)
+  }
+  const fmtSize = (b) => b >= 1e6 ? `${(b / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(b / 1e3))} kB`
+  const exportLinks = exportFiles.map(([f]) => `<a href="/${esc(f)}" download>${esc(f)}</a> <span class="ev">${fmtSize(exportSizes[f])}</span>`)
+  const exportBlock = `<section id="export" class="vexport">
+<h2>The RDF export</h2>
+<p>The export is three Turtle files, served from this site and regenerated with every update of the graph. Each release since v2.3.0 also carries them on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. Their licence is CC BY 4.0.</p>
+<p>The files hold the nodes, the relations, one claim per citation, the references, and for each claim the stages that checked it, in PROV-O. They leave out the quotations, which stay on the concept pages, and any inference over the nodes.</p>
+<ul>
+${exportFiles.map(([f, d], i) => `<li>${exportLinks[i]}: ${esc(d)}</li>`).join('\n')}
+</ul>
+<p>The <a href="/ontology">design page</a> explains why the graph has no class hierarchy over its nodes and no transitivity.</p>
+</section>`
+  const vocabBody = `<div class="titleband"><p class="eyebrow">Evidence</p>
 <h1>Vocabulary</h1>
-<p class="sub">the terms of the RDF export</p></div>
+<p class="sub">The terms of the RDF export.</p></div>
 <p>${esc(vocab.definition_note)}</p>
+${exportBlock}
 ${vocab.namespace_provisional ? `<p class="meta">The namespace <code>${esc(vocab.namespace)}</code> is provisional and not yet registered, so these terms do not resolve yet. The prefix <code>sw:</code> stands for <code>${esc(vocab.namespace)}ns#</code>.</p>` : `<p class="meta">The prefix <code>sw:</code> stands for <code>${esc(vocab.namespace)}ns#</code>.</p>`}
 <h2>Classes</h2>
 ${vocab.classes.map(vocabClassRow).join('\n')}
@@ -3054,7 +3172,10 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
     slug: 'vocabulary', title: 'Vocabulary', where: 'vocabulary',
     nav: null, changefreq: 'monthly', priority: '0.3',
     description: 'The terms of The Symbolic World’s RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.',
-    style: `.vterm { margin: .9rem 0; scroll-margin-top: 7rem; }
+    style: `.vterm, .vexport { scroll-margin-top: 7rem; }
+.vexport ul { padding-left: 1.2rem; margin: .5rem 0 1rem; }
+.vexport li { margin: .25rem 0; }
+.vterm { margin: .9rem 0; }
 .vterm p { margin: .1rem 0; }
 .vname code { color: var(--gold); }`,
     body: vocabBody
@@ -3066,15 +3187,15 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
   // item 4). The text is final wording from the outreach review, 2026-10-22,
   // with Damian's closing paragraph; it is carried, not rewritten here.
   if (EMIT_ABOUT_PAGE) {
-    const aboutBody = `<div class="titleband"><p class="eyebrow">about</p>
-<h1>About</h1>
-<p class="sub">who the atlas is for, and what each reader can do with it</p></div>
+    const aboutBody = `<div class="titleband"><p class="eyebrow">About</p>
+<h1>About the atlas</h1>
+<p class="sub">The purpose of the atlas.</p></div>
 <p>The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
 <p>Analysts and trainees can look up where Jung treats a concept and follow it across volumes, with a citation ready to carry into their own work. The <a href="/query">query page</a> filters by volume, family and claim type, and it searches the words inside the quotes.</p>
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
 <p>Readers of alchemy can use the <a href="/atlas#/concordance">concordance</a>, which sets Jung's psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
 <p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>. The original structure and metadata are open for reuse under CC BY 4.0, and the quotations stay with their rights holders.</p>
-<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/atlas#/method">method page</a> sets out what the checks cover and what they leave out.</p>
+<p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/method">method page</a> sets out what the checks cover and what they leave out.</p>
 <p>In case of concerns, please contact <a href="mailto:damian.spendel@gmail.com">the author</a>.</p>`
     registerPage({
       slug: 'about', title: 'About', where: 'about', nav: 'about',
@@ -3099,33 +3220,75 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
   // /#/... link in circulation keeps working. The copy is the about page's
   // first paragraph (final wording from the outreach review, 2026-10-22) and
   // the four reader journeys that page describes, one card each.
-  // spec-reader-v1, A4: /evidence lists what the provenance, reference and
-  // about groups of the old menu held. Each line restates that page's own
-  // description, so the page adds no claim.
+  // The landing page's components (2026-11-11, Damian: "the visuals of the
+  // evidence page could look a little like the new landing page, no? whatever
+  // it is, ensure consistency"). One copy of the rules: the landing, /evidence
+  // and /support all take them from here, so the three cannot drift apart.
+  const LANDING_CSS = `.page-main.landing { padding-top: 2.4rem; }
+.page-main.landing > * { max-width: none; }
+.land-hero { margin-bottom: 3rem; }
+.land-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin: .4rem 0 0; }
+.land-lead { margin-top: 1.2rem; }
+.land-hero h1 em { font-style: italic; color: var(--gold); }
+.land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
+.land-tasks { margin-bottom: 3.5rem; }
+.land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+.land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
+.land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
+.land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
+.land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
+.land-card-all { text-decoration: none; }
+.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
+.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
+.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
+.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+`
+  // /evidence (spec-reader-v1 A4; regrouped in the interim build of
+  // 2026-11-11 to the slimming review's structure A, revised): three groups
+  // of landing cards. Each card restates its page's own description, so the
+  // page adds no claim. The RDF export has no page of its own: its card
+  // opens the export section at the top of /vocabulary.
   if (MENU_READER) {
-    const EVIDENCE = [
-      ['/ledger', 'ledger', 'Every verified reference in the graph, with the batch that added it and its verification record.'],
-      ['/releases', 'releases', 'What each release added, with its version pin and receipts.'],
-      ['/disputes', 'disputes', 'Challenged claims, with the objection and the outcome of each.'],
-      ['/families', 'families', 'The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.'],
-      ['/method', 'method', 'How a claim gets into the graph, and what the checks do and do not cover.'],
-      ['/ontology', 'design', 'The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.'],
-      ['/vocabulary', 'vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.'],
-      ['/nutshell', 'in a nutshell', 'The method on one page: a real claim followed through proposal, verification, cross-vendor audit and human refereeing to its published receipt.'],
-      ...(SUPPORT_URL ? [['/support', 'support', 'Tips cover the running costs. The atlas, the dataset and the ledger stay free.']] : [])
+    const EVIDENCE_GROUPS = [
+      ['How the checks work', [
+        ['/method', 'The method', 'How a claim gets into the graph, and what the checks do and do not cover.', 'method'],
+        ['/ledger', 'The ledger', 'Every verified reference in the graph, with the batch that added it and its verification record.', 'ledger'],
+        ['/releases', 'Releases', 'What each release added, with its versions and sources.', 'releases'],
+        ['/disputes', 'Disputes', 'Challenged claims, with the objection and the outcome of each.', 'disputes']
+      ]],
+      ['Design', [
+        ['/ontology', 'The design', 'Why the graph has two tiers, what its quality scan found, and how it compared with outside scholarship.', 'design'],
+        ['/families', 'Relation families', 'Which relation strings fall in which family, how many are settled, and the definitions document.', 'families'],
+        ['/vocabulary', 'Vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.', 'vocabulary']
+      ]],
+      // Damian, 2026-11-11 ("Agreed with split"): vocabulary moves to Design.
+      // The two Data cards share one shape (Damian, same day: "the tiles for RDF
+      // export and Graph should align"): a title, one line, then the files as
+      // download links with their sizes. They carry no footer link; the
+      // detail is on /vocabulary#export, which the Vocabulary card leads to.
+      ['Data', [
+        [null, 'The RDF export', 'The graph as Turtle files, CC BY 4.0.', null, exportLinks],
+        [null, 'The graph file', 'The whole graph as one JSON file.', null,
+          [`<a href="/graph.json" download>graph.json</a> <span class="ev">${fmtSize(statSync(here('./public/graph.json')).size)}</span>`]]
+      ]]
     ]
-    const evidenceBody = `<div class="titleband"><p class="eyebrow">evidence</p>
-<h1>Evidence</h1></div>
-<p class="lede">The records behind the atlas, and the rules its checks follow.</p>
-<dl class="evlist">
-${EVIDENCE.map(([href, label, d]) => `<dt><a href="${href}">${esc(label)}</a></dt><dd>${esc(d)}</dd>`).join('\n')}
-</dl>`
+    const evidenceBody = `<div class="titleband"><p class="eyebrow">Overview</p>
+<h1>Evidence</h1>
+<p class="sub">The records behind the atlas and how they are checked.</p></div>
+${EVIDENCE_GROUPS.map(([group, cards]) => `<section class="land-tasks">
+<p class="eyebrow">${esc(group)}</p>
+<div class="land-grid">
+${cards.map(([href, t, d, k, links]) => links
+  ? `<div class="land-card"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-starts">${links.join('<br>')}</span>${href ? `<a class="land-card-k land-card-all" href="${href}">${esc(k)}</a>` : ''}</div>`
+  : `<a class="land-card" href="${href}"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-card-k">${esc(k)}</span></a>`).join('\n')}
+</div>
+</section>`).join('\n')}`
     registerPage({
-      slug: 'evidence', title: 'Evidence', where: 'evidence', nav: 'evidence',
+      slug: 'evidence', title: 'Evidence', where: 'evidence', nav: 'evidence', kind: 'prose landing',
       changefreq: 'monthly', priority: '0.5',
-      description: 'The records behind The Symbolic World, a verified knowledge graph of Jung’s Collected Works: the ledger, releases, disputes, relation families, method and design.',
-      style: '.evlist dt { margin-top: 1rem; font-family: var(--display); font-size: 1.15rem; }\n.evlist dd { margin: .2rem 0 0; color: var(--ink-faint); font-size: .95rem; line-height: 1.55; max-width: 38em; }',
-      body: evidenceBody
+      description: 'The records behind The Symbolic World, a verified knowledge graph of Jung’s Collected Works: the method, ledger, releases, disputes, design, relation families and the data.',
+      style: LANDING_CSS, body: evidenceBody
     })
     V2_COPY.push(['public/evidence.html (generated)', stripEvidence(evidenceBody)])
     console.log('evidence page: written')
@@ -3198,25 +3361,9 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()`
 <span>${lc.nodes} concepts &middot; ${lc.edges} relations &middot; ${lc.refs} citations</span>
 <span>updated ${esc(meta.built)}</span>
 <span>open data, CC BY</span>
-<a href="/method">the method</a><a href="/disputes">disputes log</a>${SUPPORT_URL ? '<a href="/support">support the project</a>' : ''}
 </footer>`
     const landingStyle = `
-.page-main.landing { padding-top: 2.4rem; }
-.page-main.landing > * { max-width: none; }
-.land-hero { margin-bottom: 3rem; }
-.land-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin: .4rem 0 0; }
-.land-lead { margin-top: 1.2rem; }
-.land-hero h1 em { font-style: italic; color: var(--gold); }
-.land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
-.land-tasks { margin-bottom: 3.5rem; }
-.land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
-.land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
-.land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
-.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
-.land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
-.land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
-.land-card-all { text-decoration: none; }
-${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; }
+${LANDING_CSS}${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; }
 .land-search .std-search { width: 100%; box-sizing: border-box; }
 .land-hits { display: flex; flex-direction: column; margin-top: .3rem; }
 .land-hits:empty { display: none; }
@@ -3224,11 +3371,7 @@ ${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; 
 .land-hits a:hover, .land-hits a:focus-visible, .land-hits a.on { background: var(--well); color: var(--gold); }
 .land-hits .latin { font-style: italic; color: var(--ink-faint); margin-left: .4rem; }
 .land-hits .none { padding: .35rem .5rem; font-size: .86rem; color: var(--ink-faint); }
-` : ''}.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
-.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
-.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
-.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
-.land-link { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: flex-start; padding: 2.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin-bottom: 3.5rem; }
+` : ''}.land-link { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: flex-start; padding: 2.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin-bottom: 3.5rem; }
 .land-link-text { flex: 1 1 22rem; min-width: 0; }
 .land-claim { font-family: var(--display); font-size: 1.7rem; line-height: 1.25; margin: .5rem 0 .8rem; max-width: none; }
 .land-claim em { font-style: normal; color: var(--gold); }
@@ -3302,21 +3445,22 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
   // tip without leaving the site, and a plain link for anyone whose browser
   // blocks the frame. Nothing else monetized; no sitewide widget script.
   if (SUPPORT_URL) {
-    const supportBody = `<div class="titleband"><p class="eyebrow">about</p>
+    const supportBody = `<div class="titleband"><p class="eyebrow">About</p>
 <h1>Support</h1>
-<p class="sub">tips cover the running costs</p></div>
-<p>Tips cover the running costs. The atlas, the dataset and the verification ledger are free to use, and nothing on the site is for sale. Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
+<p class="sub">How to help keep the atlas running.</p></div>
+<p>Maintaining and evolving this project costs money: the domain, the model spend for checks, corrections and answers to disputes. A verified citation costs approximately ${'$'}0.09 to ${'$'}0.16 presently. A tip of any size helps. Thank you!</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
 </div>
 <p class="meta">If the panel does not load: <a href="${SUPPORT_URL}" rel="noopener">${SUPPORT_URL.replace('https://', '')}</a>.</p>`
-    const supportStyle = `
+    // the landing page's components, as on /evidence (interim build, 2026-11-11)
+    const supportStyle = `${LANDING_CSS}
 .page-main > .kofi-panel { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; margin: 1.2rem 0 .6rem; background: var(--panel); max-width: 420px; }
 `
     registerPage({
       slug: 'support', title: 'Support', where: 'support', nav: 'support',
       changefreq: 'monthly', priority: '0.4',
-      description: 'Support The Symbolic World: tips cover the running costs of the verified Jung atlas. The atlas, dataset and ledger stay free.',
+      description: 'Support The Symbolic World: a tip helps pay for the domain and the model checks behind the verified Jung atlas.',
       style: supportStyle, body: supportBody
     })
     V2_COPY.push(['public/support.html (generated)', stripEvidence(supportBody)])
@@ -3325,33 +3469,9 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     console.log('support page: SUPPORT_URL is empty — not registered')
   }
 
-  // ------------------------------------------------ /nutshell --------------
-  // The method poster on its own page (Damian, 2026-08-28: an additional menu
-  // item, NOT a replacement for /atlas#/method). The page is one figure; the poster
-  // follows the same lapis edge the method page's claim figure draws, so the
-  // guard above (which exits the build if that edge leaves the graph) protects
-  // this page too. The numbers in the image are pixels: they are re-verified
-  // against the tagged seed.json at release time by hand, per
-  // docs/figures/METHOD_POSTER_HANDOFF.md.
-  const nutshellBody = `<div class="titleband"><p class="eyebrow">about</p>
-<h1>In a nutshell</h1>
-<p class="sub">A one-pager on how the atlas was constructed: one citation
-followed from the map through the checks it passed. The full explanation is on the <a href="/atlas#/method">method</a>
-page.</p></div>
-<figure class="fig fig-poster">
-  <a href="/method-poster.png"><img src="/method-poster.png" loading="lazy" width="2160" height="5426"
-    alt="Poster: one real claim — lapis, is projection of, the self — followed through proposal, a second-family check, a cross-vendor audit, and human refereeing, ending with its published receipt."></a>
-  <figcaption>The method on one page. Counts as of ${esc(JSON.parse(readFileSync(here('../docs/figures/method_poster_facts.json'), 'utf8')).date_label)}.</figcaption>
-</figure>
-${SUPPORT_URL ? `<p class="meta">The atlas, the dataset and the ledger are free. Tips cover the running costs: <a href="/support">support the project</a>.</p>` : ''}`
-  registerPage({
-    slug: 'nutshell', title: 'In a nutshell', where: 'in a nutshell',
-    nav: 'in a nutshell', changefreq: 'monthly', priority: '0.5',
-    description: 'How The Symbolic World is made, on one page: a real claim from Jung’s Collected Works followed through proposal, verification, cross-vendor audit and human refereeing to its published receipt.',
-    style: '.fig-poster img { width: 100%; height: auto; display: block; border-radius: 6px; }\n.fig-poster { margin-top: 1.2rem; }',
-    body: nutshellBody
-  })
-  V2_COPY.push(['public/nutshell.html (generated)', stripEvidence(nutshellBody)])
+  // /nutshell retired in the interim build (Damian, 2026-11-10: structure A
+  // revised, the poster dropped). web/public/_redirects sends the path to
+  // /method with a 301, so links in circulation still land.
   // The scan's findings, kept for whatever reads them next (the #/method route
   // is the obvious candidate). The example lists are dropped: they come out of
   // set iteration inside the tool and are not stable between two runs over the
@@ -3427,7 +3547,7 @@ if (methodHTML) {
 .cite-meta { font: .7rem var(--mono); color: var(--ink-faint); margin-top: .35rem; }
 .cite-doi { font: .7rem var(--mono); color: var(--ink-dim); margin-top: .25rem; }
 `
-  const methodBody = `<div class="titleband"><p class="eyebrow">about</p>
+  const methodBody = `<div class="titleband"><p class="eyebrow">Evidence</p>
 <h1>The method</h1>
 <p class="sub">An explanation of how a citation enters the map.</p></div>
 <div class="method-page">
@@ -3472,6 +3592,7 @@ function emitPages() {
 ## Data
 
 - [The dataset](${site}/graph.json): the whole graph as one JSON file
+- [The RDF export](${site}/vocabulary#export): the graph as Turtle files with PROV-O provenance and no quotations, served from this site and carried by each release on the Zenodo record https://doi.org/10.5281/zenodo.21631523
 
 ## Licence
 
@@ -3532,6 +3653,7 @@ const allowedNumbers = new Set([
   ...famMap.provenance.map(p => p.edges),
   ...famMap.families.flatMap(f => [f.edges, ...f.strings.map(s => s.edges)]),
   ...famMap.homeless.map(r => r.edges), ...famMap.text_undecided.map(r => r.edges),
+  ...FAM_COPY_NUMBERS,
   // V2 — the figures the v2.0 pages interpolate, collected at the point each
   // one is computed (see `derived` above).
   ...V2_NUMBERS
@@ -3566,8 +3688,8 @@ for (const [name, text, extraAllowed] of copySources) {
     if (allowedNumbers.has(n)) continue
     if (extraAllowed && extraAllowed.has(n)) continue
     if (n >= 1900 && n <= 2100) continue            // years
-    if (/(?:ms|px|rem|zoom|duration|width|height|top|left|z-index|opacity|\bcw\b|paragraph|§|zenodo|doi)/i
-      .test(scan.slice(Math.max(0, m.index - 40), m.index))) continue   // geometry, timing, citations
+    if (/(?:ms|px|rem|zoom|duration|width|height|top|left|z-index|opacity|\bcw\b|paragraph|§|zenodo|doi|pull\s+request)/i
+      .test(scan.slice(Math.max(0, m.index - 40), m.index))) continue   // geometry, timing, citations, pull request numbers
     copyProblems.push(`${name}: literal ${n} in copy is not derived from atlas.json meta`)
   }
 }

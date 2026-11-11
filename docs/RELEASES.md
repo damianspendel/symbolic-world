@@ -23,11 +23,50 @@
      ORDER. Entries are sorted newest-first by the version in their heading, so
      a new entry can be appended anywhere in the file. -->
 
-What each release changed.
+The paper, *Trust, Layered*, describes v2.0.0.
 
 Each entry opens with the graph version, the ruleset version it shipped with
 (the two are deliberately separate numbers) and the calibration record in force
 when the release was cut.
+
+## v2.3.0: CW 16, CW 7 and CW 6
+
+status: released 2026-11-11. Tag `v2.3.0`, GitHub Release, Zenodo record
+under the concept DOI.
+pin: graph v2.3.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
+
+### mining status
+
+- Mined three arcs end to end since v2.2.0: CW 16, *The Practice of
+  Psychotherapy*; CW 7, *Two Essays on Analytical Psychology*; and CW 6,
+  *Psychological Types*, chapters X and XI, paragraphs 556 to 844.
+- An outside audit covered the trilogy references that had never had one; its
+  findings changed three claim types and lowered one confidence.
+- Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
+  {{batches}} batches; {{pending}} relations await adjudication.
+- Mining pauses until the rulings for a second pass over CW 12, 13 and 14
+  are in.
+
+### governance
+
+- w3id.org registered the symbolicworld namespace (perma-id pull
+  request 7091).
+- Three names in the RDF export that repeated a quote are shorter.
+
+### core build
+
+- The site serves the RDF export: graph, ontology and VoID as Turtle
+  under CC BY 4.0, with no quotations. Every build regenerates it, the
+  release commits a copy to the repository, and preflight refuses a quotes
+  file.
+- `/nutshell` forwards to [/method](/method); the method poster left the site.
+
+### UI
+
+- [/evidence](/evidence) in three groups: how the checks work, design, data.
+- The [concordance](/atlas#/concordance) and [support](/support) are back in the menu.
+- Method links go to /method, and the design page has one name,
+  "The design".
 
 ## v1.3.0: the published baseline
 
@@ -39,7 +78,7 @@ calibration record none
 
 - Mined CW 14 with seven incidental volumes: {{frozen_nodes}} nodes,
   {{frozen_edges}} relations, {{frozen_refs}} references.
-- Ran at 0–0.5% clause predicates; this material predates the windowed pipeline.
+- Ran at 0 to 0.5% clause predicates; this material predates the windowed pipeline.
 
 ### governance
 
@@ -68,17 +107,18 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
 ### mining status
 
 - Mined the trilogy (CW 12, 13, 14), Aion to b-cw9ii-7, CW 9i to
-  b-cw9i-10, and CW 8 to b-cw8-14 (2026-08-28): five volumes end to end.
+  b-cw9i-10, and CW 8 to b-cw8-14 (2026-08-28): six volumes end to end.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
   {{batches}} merged batches, all on the [ledger](/ledger); {{normalized}}
   relations normalized, the verbatim string frozen beside each.
 - Families: {{assigned}} assigned, {{pending}} queued, {{no_family}} no
   family, {{text_undecided}} text undecided ([families](/families)).
-- Found the clause-predicate defect at b-cw12-1 ({{clause_edges}} relations
-  with a proposition in the predicate), traced it to a briefing bullet, and
-  replaced the bullet with a form rule at b-cw9ii-3; every blind batch since
-  ran at 0%. No re-mine: the relations are verified true and carry the
-  normalization layer; reuse per window is in `pipeline/transfer_trend.jsonl`.
+- Found the clause-predicate defect in the first CW 12 batch, b-cw12-1:
+  {{clause_edges}} relations whose predicate held a whole proposition. One
+  line of the mining brief caused it. A form rule replaced that line at
+  b-cw9ii-3, and no batch since has shown the defect.
+- We kept the affected relations. Each had passed its check, and the
+  normalization layer records a short form beside the original.
 
 ### governance
 
@@ -90,24 +130,24 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
 - Declared {{declarations_active}} inverse and symmetric pairs, each citing
   its ruleset line.
 - Calibrated the family gate: {{cal_caught}}/{{cal_planted}} planted errors
-  caught, {{cal_clean}}/{{cal_clean_of}} clean left alone. Gate model
-  {{gate_model}}: within-vendor role separation, not cross-vendor.
+  caught, {{cal_clean}}/{{cal_clean_of}} clean left alone. The gate is a
+  Gemini model ({{gate_model}}), as is one of the two classifying models: they
+  share a vendor and differ only in role.
 - Checked {{ev_items}} assignments against {{ev_works}} works:
   {{ev_agrees}}/{{ev_treated}} treated agreed, {{ev_disagrees}} disagreed,
   {{ev_split}} split; {{ev_rulings}} rules changed. Receipts in
   `docs/experiments/external_validity_2026-08/`.
-- Withdrew four reviewer citations (one held) and the pre-August
-  calibration figures; flagged b-cw9ii-1 vs b-cw9ii-2 as confounded.
-- Added release checkpoints: ledger freshness, batch manifest, size budget, the
-  copy contract, and the poster fact check, `tools/check_poster_facts.py`
-  (the image's numbers are pixels; preflight compares its sidecar to
-  seed.json).
+- Withdrew the calibration figures from before August, which the original
+  harness could not support. Marked the comparison of the first two *Aion*
+  batches as confounded: the first miner was watched and the second ran
+  blind.
+- Added release checks: ledger freshness, the batch manifest, the size budget,
+  the copy contract, and a check of the poster's numbers against the graph.
 
 ### core build
 
-- Launched on Cloudflare Pages 2026-08-07; extensionless URLs 2026-08-10;
-  deterministic generators; emitted [/graph.json](/graph.json), the
-  declarations, the batch manifest, the family map and the ontology scan.
+- Launched on Cloudflare Pages 2026-08-07; emitted [/graph.json](/graph.json),
+  the declarations, the batch manifest, the family map and the ontology scan.
 - Shipped the query engine (`tools/query/kg_query.py`, read-only) with
   read-time closure and the Turtle export; no transitivity anywhere.
 
@@ -115,16 +155,14 @@ pin: graph v2.0 · ruleset {{ruleset}} · calibration record {{calibration_recor
 
 - Added [releases](/releases), [ontology](/ontology), [query](/query), a page
   per family and per batch; facets, permalinks and the assignment-history
-  chip on the ledger; the taxonomy and rules V2-R7 to V2-R13 in
-  `docs/ATLAS_REQUIREMENTS.md`.
-- Added [in a nutshell](/nutshell), the method poster on its own page; the
-  identity walk stays in `kg_query.py`, not exposed on the site.
+  chip on the ledger.
+- Added in a nutshell, the method poster on its own page (retired on
+  2026-11-11, and `/nutshell` now redirects to `/method`).
 
 ## v2.1.0: CW 11 and the atlas as an instrument
 
 status: released 2026-10-23. Tag `v2.1.0`, GitHub Release, Zenodo record
-under the concept DOI. *Trust, Layered* still describes v2.0.0 and stays
-pinned to that tag.
+under the concept DOI.
 pin: graph v2.1.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
@@ -132,10 +170,9 @@ pin: graph v2.1.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 - Mined CW 11, *Psychology and Religion: West and East*, end to end:
   fourteen windows, paragraphs 1 to 1018.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
-  {{batches}} batches; {{pending}} relations await adjudication at arc end.
-- Mining stops at CW 11, with CW 5 and CW 16 on hold. The mining track
-  commits data and the build track deploys; preflight's count checks keep
-  the two in step.
+  {{batches}} batches; {{pending}} relations awaited adjudication when mining
+  finished the volume.
+- Mining stops at CW 11, with CW 5 and CW 16 on hold.
 
 ### governance
 
@@ -143,8 +180,6 @@ pin: graph v2.1.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 - The legal statement's figures come from the graph at the tag.
 - A citation file joins the repository, and the integrity check is green
   again; contributing and security files added.
-- Batch pages fold the mining log; the ledger states the classification
-  note once instead of on every card.
 - Two reader-raised items from issue 2 are on the backlog: mining around
   quotations, and an editorial layer for connections Jung never states.
 
@@ -152,12 +187,9 @@ pin: graph v2.1.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 
 - A `quote contains` search in the query CLI and its browser port, over the
   graph's own quotes only, with parity tests.
-- The maintainer's rewrite of every page carried into the generators, with
-  a humanizer pass.
+- The maintainer's rewrite of every page carried into the generators.
 - The root is a landing page for the reader; the atlas moved to
   [/atlas](/atlas), and old links forward to it.
-- The colour token table gained a day block; the atlas reads its canvas
-  colours from it live.
 
 ### UI
 
@@ -173,8 +205,7 @@ pin: graph v2.1.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 ## v2.2.0: CW 5, *Symbols of Transformation*
 
 status: released 2026-10-31. Tag `v2.2.0`, GitHub Release, Zenodo record
-under the concept DOI. *Trust, Layered* still describes v2.0.0 and stays
-pinned to that tag.
+under the concept DOI.
 pin: graph v2.2.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
@@ -183,7 +214,9 @@ pin: graph v2.2.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   paragraphs 1 to 685.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
   {{batches}} batches; {{pending}} relations await adjudication.
-- A Fable-family ruling upheld the deferred CW 11 reference to paragraph 960.
+- One CW 11 reference, to paragraph 960, waited for a ruling after the auditor
+  objected to its ellipsis. A Fable-family ruling upheld it and lowered its
+  confidence from high to medium.
 - Mining resumes with CW 16, one window nightly.
 
 ### governance
@@ -194,7 +227,6 @@ pin: graph v2.2.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 - Sixteen working notes, superseded plans and unused figures left the
   tracked tree.
 - NOTICE names a contact for removal requests.
-- The atlas size ceiling moved from 3.5 to 4.5 MB.
 
 ### core build
 

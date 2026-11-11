@@ -28,9 +28,13 @@ ALLOW = {
     # the terms of the RDF export, so a term IRI has a page to resolve to
     'vocabulary.html',
     'relation_declarations.json', 'batch_pages.json',
-    # the method-page poster (2026-08-28): a static page asset, not a page —
-    # extensionless convention does not apply, no sitemap entry
-    'method-poster.png', 'nutshell.html',
+    # Pages redirect rules (2026-11-11): /nutshell to /method, 301. Pages reads
+    # the file at deploy and does not serve it
+    '_redirects',
+    # the RDF export, served from the root since the interim build (Damian,
+    # 2026-11-11). Static downloads, no sitemap entry. The quotes file is
+    # never among them: it is FORBIDDEN below
+    'symbolicworld-graph.ttl', 'symbolicworld-ontology.ttl', 'symbolicworld-void.ttl',
     # the static twin of the SPA's #/method view (spec-concept-pages-v1)
     'method.html',
     # what Pages serves, with a 404 status, for an unknown path. Its presence
@@ -61,6 +65,8 @@ FORBIDDEN = [
     re.compile(r'gemini\.key'), re.compile(r'\.token$'),
     re.compile(r'resume_notes'), re.compile(r'_input\.json$'),
     re.compile(r'candidates'),
+    # the export's quotes file is never published (QUOTES_MODE "omit")
+    re.compile(r'symbolicworld-quotes\.ttl$'),
 ]
 
 fails = []
@@ -264,6 +270,29 @@ else:
 # downloads grows quietly with the graph. This is a ratchet, not a limit anyone
 # is near: it fails the deploy if the bundle crosses the ceiling, and prints the
 # actual against it either way so the trend is visible in the log.
+print('== RDF export ==')
+# The Turtle files must come from this seed.json: the graph file's header names
+# the first twelve hex digits of the seed's sha256.
+seed_digest = hashlib.sha256((ROOT / 'seed.json').read_bytes()).hexdigest()[:12]
+for name in ('symbolicworld-graph.ttl', 'symbolicworld-ontology.ttl', 'symbolicworld-void.ttl'):
+    check(f'dist serves {name}', (DIST / name).is_file())
+ttl = DIST / 'symbolicworld-graph.ttl'
+head = ttl.read_text(errors='replace')[:2000] if ttl.is_file() else ''
+check('RDF export built from this seed.json', f'sha256:{seed_digest}' in head,
+      f'seed sha256:{seed_digest}')
+
+# The release copy in exports/rdf (first committed at v2.3.0). It is written at
+# a release freeze and is expected to lag the seed between releases, so a
+# digest difference is reported, not failed. A tracked quotes file fails.
+tracked = subprocess.run(['git', 'ls-files', 'exports'], capture_output=True, text=True, cwd=ROOT).stdout.split()
+check('no quotes file tracked under exports/', not any('quotes' in t for t in tracked), ', '.join(tracked))
+rel = ROOT / 'exports' / 'rdf' / 'symbolicworld-graph.ttl'
+if rel.is_file():
+    rel_digest = re.search(r'sha256:([0-9a-f]{12})', rel.read_text(errors='replace')[:2000])
+    same = bool(rel_digest) and rel_digest.group(1) == seed_digest
+    print(f"  info committed release export built from seed sha256:{rel_digest.group(1) if rel_digest else '?'}"
+          f"{' (this seed)' if same else ' (an earlier seed: refresh it at the next release freeze)'}")
+
 print('== landing starting points ==')
 # The twelve concept links on the landing page are what lets a crawler reach
 # concept pages from the root (2026-11-04). Each must lead to a page in this build.
@@ -304,7 +333,6 @@ check('repo /v1.3 == frozen baseline', proc.stdout.strip() == V13_BASELINE,
 
 print('== gates ==')
 for name, cmd in [('paper facts', 'python3 tools/check_paper_facts.py'),
-                  ('poster facts (pixels vs live seed.json)', 'python3 tools/check_poster_facts.py'),
                   ('test harness', 'python3 tests/test_graph.py')]:
     p = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=ROOT)
     check(name, p.returncode == 0, (p.stdout + p.stderr).strip().splitlines()[-1] if (p.stdout or p.stderr) else '')

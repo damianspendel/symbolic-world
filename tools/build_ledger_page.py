@@ -65,12 +65,14 @@ MENU_LEGACY = [
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
     ("about", ([("/about", "about")] if EMIT_ABOUT_PAGE else [])
-              + [("/nutshell", "in a nutshell"), ("/atlas#/method", "method"),
+              + [("/atlas#/method", "method"),
                  ("/ontology", "design")]
               + ([("/support", "support")] if SUPPORT_URL else [])),
 ]
 MENU_READER_LIST = [
-    ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas", "atlas"), ("/routes", "routes"), ("/evidence", "evidence")]
+    ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas", "atlas"),
+          ("/atlas#/concordance", "concordance"), ("/routes", "routes"), ("/evidence", "evidence")]
+         + ([("/support", "support")] if SUPPORT_URL else [])
          + ([("/about", "about")] if EMIT_ABOUT_PAGE else [])),
 ]
 MENU = MENU_READER_LIST if MENU_READER else MENU_LEGACY
@@ -373,8 +375,9 @@ def batch_page(batch, delta, commits):
 <body>
 {site_header("/ledger", f'<a href="/ledger">ledger</a> · {esc(batch["id"])}')}
 <main class="page-main prose">
-  <div class="titleband"><p class="eyebrow">batch delta</p>
-  <h1><span class="idtok">{esc(batch["id"])}</span></h1></div>
+  <div class="titleband"><p class="eyebrow">Evidence</p>
+  <h1><span class="idtok">{esc(batch["id"])}</span></h1>
+  <p class="sub">What this mining window added to the graph, and what it changed.</p></div>
   <div class="meta">{f'<span class="cite">{esc(window)}</span> · ' if window else ''}<span class="badge">{esc(batch["status"])}</span></div>
   {f'<h2>What it merged</h2><p class="note">The log the window wrote at merge time, kept as it was.</p><details class="story-fold"><summary>mining log</summary><div class="story">{esc(story)}</div></details>' if story else ''}
   {derived_block}
@@ -667,12 +670,15 @@ def build():
   .brow .bid:hover {{ text-decoration:underline; }}
   .bnums {{ font:.6rem var(--mono); color:var(--ink-faint); margin-left:auto; }}
   .bnums.dimmer {{ color:var(--ink-dim); }}
+  /* a long batch status or citation wraps on a phone instead of widening the
+     page (the trilogy audit record, 2026-11-11, was the first to overflow) */
+  @media (max-width: 600px) {{ .badge, .cite {{ white-space:normal; }} }}
 </style>
 </head>
 <body>
 {site_header("/ledger", "ledger")}
 <main class="page-main records">
-  <div class="titleband"><p class="eyebrow">provenance</p>
+  <div class="titleband"><p class="eyebrow">Evidence</p>
   <h1>Ledger</h1>
   <p class="sub">Every published record and the gates it passed.</p></div>
   <p class="intro">Two different kinds of record appear on every card below:</p>
@@ -681,21 +687,21 @@ def build():
       <h3>Text relation</h3>
       <p>A claim about what Jung wrote, gated against the paragraph it cites. The quote is checked
       mechanically, then a model of a different family reads the full paragraph and judges whether it
-      supports the claim, in the right direction, in the right voice. This is the verification the
-      project's method claim is about.</p>
+      supports the claim, in the right direction, in the right voice. The
+      <a href="/method">method page</a> describes this check.</p>
     </div>
     <div class="kind k-fam">
       <h3>Family assignment</h3>
       <p>A classification of a relation that is <em>already</em> verified: which kind of relation it
-      is, drawn from a fixed vocabulary. Two model arms classify blind, a calibrated gate checks them,
-      and a human rules where they disagree. It says nothing new about the text and never re-opens the
-      gate above it.</p>
+      is, drawn from a fixed vocabulary. Two models classify it independently, and a person rules
+      where they differ; the <a href="/families">families page</a> sets out the procedure. It adds no
+      claim about the text and does not change the result of the check above.</p>
     </div>
   </div>
-  <p class="intro">Each reference shows its full verification trail: the deterministic
-  <b>quote</b> check, the independent <b>gate</b> (verifier and date), the narrow <b>voice</b> audit,
-  the <b>cross-vendor</b> check, and, where a person has checked the paragraph,
-  <b>human</b> validation from the gold set. Disputed records link to the
+  <p class="intro">Each reference also shows the dates and verdicts of its checks: the
+  <b>quote</b> check, the <b>gate</b> (verifier and date), the <b>voice</b> audit (whose voice the
+  claim is in), the <b>cross-vendor</b> check and, where a person has read the paragraph, the
+  <b>human</b> validation. Disputed records link to the
   <a href="/disputes">dispute log</a>.</p>
   <div class="meta">{len(seed["nodes"])} nodes · {len(seed["edges"])} edges · {refs_total} references ·
     100% gate-verified · {xv_n} cross-vendor checked · {human_n} human-validated ·

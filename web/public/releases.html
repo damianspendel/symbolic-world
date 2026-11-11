@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://symbolicworld.observer/releases">
-<meta name="description" content="Release notes for The Symbolic World, a verified knowledge graph of Jung’s Collected Works: what each release added, with its version pin and receipts.">
+<meta name="description" content="Release notes for The Symbolic World, a verified knowledge graph of Jung’s Collected Works: what each release added, with its versions and sources.">
 <meta property="og:image" content="https://symbolicworld.observer/social-preview.png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
@@ -67,22 +67,51 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/atlas#/concordance">concordance</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/support">support</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose">
-<div class="titleband"><p class="eyebrow">release notes</p>
-<h1>Releases</h1></div>
-<p>What each release changed.</p>
+<div class="titleband"><p class="eyebrow">Evidence</p>
+<h1>Releases</h1>
+<p class="sub">What each release changed.</p></div>
+<p>The paper, <em>Trust, Layered</em>, describes v2.0.0.</p>
 <p>Each entry opens with the graph version, the ruleset version it shipped with (the two are deliberately separate numbers) and the calibration record in force when the release was cut.</p>
 <section class="rel-entry">
+<h2>v2.3.0: CW 16, CW 7 and CW 6</h2>
+<div class="meta">released 2026-11-11. Tag <code>v2.3.0</code>, GitHub Release, Zenodo record under the concept DOI.</div>
+<div class="pin">graph <span class="v">v2.3.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
+<h4>mining status</h4>
+<ul>
+<li>Mined three arcs end to end since v2.2.0: CW 16, <em>The Practice of Psychotherapy</em>; CW 7, <em>Two Essays on Analytical Psychology</em>; and CW 6, <em>Psychological Types</em>, chapters X and XI, paragraphs 556 to 844.</li>
+<li>An outside audit covered the trilogy references that had never had one; its findings changed three claim types and lowered one confidence.</li>
+<li>Graph: 999 nodes, 4035 relations, 5418 references over 108 batches; 708 relations await adjudication.</li>
+<li>Mining pauses until the rulings for a second pass over CW 12, 13 and 14 are in.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li>w3id.org registered the symbolicworld namespace (perma-id pull request 7091).</li>
+<li>Three names in the RDF export that repeated a quote are shorter.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li>The site serves the RDF export: graph, ontology and VoID as Turtle under CC BY 4.0, with no quotations. Every build regenerates it, the release commits a copy to the repository, and preflight refuses a quotes file.</li>
+<li><code>/nutshell</code> forwards to <a href="/method">/method</a>; the method poster left the site.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li><a href="/evidence">/evidence</a> in three groups: how the checks work, design, data.</li>
+<li>The <a href="/atlas#/concordance">concordance</a> and <a href="/support">support</a> are back in the menu.</li>
+<li>Method links go to /method, and the design page has one name, "The design".</li>
+</ul>
+</section>
+<section class="rel-entry">
 <h2>v2.2.0: CW 5, <em>Symbols of Transformation</em></h2>
-<div class="meta">released 2026-10-31. Tag <code>v2.2.0</code>, GitHub Release, Zenodo record under the concept DOI. <em>Trust, Layered</em> still describes v2.0.0 and stays pinned to that tag.</div>
-<div class="pin">graph <span class="v">v2.2.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
+<div class="meta">released 2026-10-31. Tag <code>v2.2.0</code>, GitHub Release, Zenodo record under the concept DOI.</div>
+<div class="pin">graph <span class="v">v2.2.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
 <h4>mining status</h4>
 <ul>
 <li>Mined CW 5, <em>Symbols of Transformation</em>, end to end: ten windows, paragraphs 1 to 685.</li>
 <li>Graph: 807 nodes, 3169 relations, 4280 references over 89 batches; 549 relations await adjudication.</li>
-<li>A Fable-family ruling upheld the deferred CW 11 reference to paragraph 960.</li>
+<li>One CW 11 reference, to paragraph 960, waited for a ruling after the auditor objected to its ellipsis. A Fable-family ruling upheld it and lowered its confidence from high to medium.</li>
 <li>Mining resumes with CW 16, one window nightly.</li>
 </ul>
 <h4>governance</h4>
@@ -90,7 +119,6 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li>A standing rule on what goes public: the repository tracks only the published artifact, and a release push needs the history audit and approval of the files added since the last tag.</li>
 <li>Sixteen working notes, superseded plans and unused figures left the tracked tree.</li>
 <li>NOTICE names a contact for removal requests.</li>
-<li>The atlas size ceiling moved from 3.5 to 4.5 MB.</li>
 </ul>
 <h4>core build</h4>
 <ul>
@@ -104,28 +132,26 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </section>
 <section class="rel-entry">
 <h2>v2.1.0: CW 11 and the atlas as an instrument</h2>
-<div class="meta">released 2026-10-23. Tag <code>v2.1.0</code>, GitHub Release, Zenodo record under the concept DOI. <em>Trust, Layered</em> still describes v2.0.0 and stays pinned to that tag.</div>
-<div class="pin">graph <span class="v">v2.1.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
+<div class="meta">released 2026-10-23. Tag <code>v2.1.0</code>, GitHub Release, Zenodo record under the concept DOI.</div>
+<div class="pin">graph <span class="v">v2.1.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
 <h4>mining status</h4>
 <ul>
 <li>Mined CW 11, <em>Psychology and Religion: West and East</em>, end to end: fourteen windows, paragraphs 1 to 1018.</li>
-<li>Graph: 695 nodes, 2668 relations, 3562 references over 79 batches; 465 relations await adjudication at arc end.</li>
-<li>Mining stops at CW 11, with CW 5 and CW 16 on hold. The mining track commits data and the build track deploys; preflight's count checks keep the two in step.</li>
+<li>Graph: 695 nodes, 2668 relations, 3562 references over 79 batches; 465 relations awaited adjudication when mining finished the volume.</li>
+<li>Mining stops at CW 11, with CW 5 and CW 16 on hold.</li>
 </ul>
 <h4>governance</h4>
 <ul>
 <li>The poster re-renders at each deploy with live counts and a dated caption.</li>
 <li>The legal statement's figures come from the graph at the tag.</li>
 <li>A citation file joins the repository, and the integrity check is green again; contributing and security files added.</li>
-<li>Batch pages fold the mining log; the ledger states the classification note once instead of on every card.</li>
 <li>Two reader-raised items from issue 2 are on the backlog: mining around quotations, and an editorial layer for connections Jung never states.</li>
 </ul>
 <h4>core build</h4>
 <ul>
 <li>A <code>quote contains</code> search in the query CLI and its browser port, over the graph's own quotes only, with parity tests.</li>
-<li>The maintainer's rewrite of every page carried into the generators, with a humanizer pass.</li>
+<li>The maintainer's rewrite of every page carried into the generators.</li>
 <li>The root is a landing page for the reader; the atlas moved to <a href="/atlas">/atlas</a>, and old links forward to it.</li>
-<li>The colour token table gained a day block; the atlas reads its canvas colours from it live.</li>
 </ul>
 <h4>UI</h4>
 <ul>
@@ -138,33 +164,34 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <section class="rel-entry">
 <h2>v2.0: the graph as a queryable instrument</h2>
 <div class="meta">released 2026-09-05. Tag <code>v2.0.0</code>, GitHub Release, Zenodo record <a href="https://doi.org/10.5281/zenodo.22339291">10.5281/zenodo.22339291</a> under the concept DOI; the v1.3 record is marked superseded and retained. Paper: <em>Trust, Layered</em>, promoted to docs/PAPER.md after four cross-vendor hostile passes. The v1.4 and v1.5 plans are folded in.</div>
-<div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
+<div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
 <h4>mining status</h4>
 <ul>
-<li>Mined the trilogy (CW 12, 13, 14), Aion to <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>, CW 9i to <a href="/batch-b-cw9i-10">b-cw9i-10</a>, and CW 8 to <a href="/batch-b-cw8-14">b-cw8-14</a> (2026-08-28): five volumes end to end.</li>
+<li>Mined the trilogy (CW 12, 13, 14), Aion to <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>, CW 9i to <a href="/batch-b-cw9i-10">b-cw9i-10</a>, and CW 8 to <a href="/batch-b-cw8-14">b-cw8-14</a> (2026-08-28): six volumes end to end.</li>
 <li>Graph: 589 nodes, 2091 relations, 2678 references over 65 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
 <li>Families: 1669 assigned, 354 queued, 65 no family, 3 text undecided (<a href="/families">families</a>).</li>
-<li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a> (271 relations with a proposition in the predicate), traced it to a briefing bullet, and replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>; every blind batch since ran at 0%. No re-mine: the relations are verified true and carry the normalization layer; reuse per window is in <code>pipeline/transfer_trend.jsonl</code>.</li>
+<li>Found the clause-predicate defect in the first CW 12 batch, <a href="/batch-b-cw12-1">b-cw12-1</a>: 271 relations whose predicate held a whole proposition. One line of the mining brief caused it. A form rule replaced that line at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>, and no batch since has shown the defect.</li>
+<li>We kept the affected relations. Each had passed its check, and the normalization layer records a short form beside the original.</li>
 </ul>
 <h4>governance</h4>
 <ul>
 <li>Moved the ruleset to v0.7.2, 25 families; every version carries a PASS record and <code>tools/check_paper_facts.py</code> refuses one without it.</li>
 <li>Re-ran every <code>amplified-by</code> edge under ruling 1; <code>amplification</code> now holds none; <a href="/family-amplification">the page</a> carries the count.</li>
 <li>Declared 7 inverse and symmetric pairs, each citing its ruleset line.</li>
-<li>Calibrated the family gate: 19/19 planted errors caught, 39/41 clean left alone. Gate model gemini-3.1-pro-preview: within-vendor role separation, not cross-vendor.</li>
+<li>Calibrated the family gate: 19/19 planted errors caught, 39/41 clean left alone. The gate is a Gemini model (gemini-3.1-pro-preview), as is one of the two classifying models: they share a vendor and differ only in role.</li>
 <li>Checked 27 assignments against 8 works: 8/16 treated agreed, 6 disagreed, 2 split; 7 rules changed. Receipts in <code>docs/experiments/external_validity_2026-08/</code>.</li>
-<li>Withdrew four reviewer citations (one held) and the pre-August calibration figures; flagged <a href="/batch-b-cw9ii-1">b-cw9ii-1</a> vs <a href="/batch-b-cw9ii-2">b-cw9ii-2</a> as confounded.</li>
-<li>Added release checkpoints: ledger freshness, batch manifest, size budget, the copy contract, and the poster fact check, <code>tools/check_poster_facts.py</code> (the image's numbers are pixels; preflight compares its sidecar to seed.json).</li>
+<li>Withdrew the calibration figures from before August, which the original harness could not support. Marked the comparison of the first two <em>Aion</em> batches as confounded: the first miner was watched and the second ran blind.</li>
+<li>Added release checks: ledger freshness, the batch manifest, the size budget, the copy contract, and a check of the poster's numbers against the graph.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>Launched on Cloudflare Pages 2026-08-07; extensionless URLs 2026-08-10; deterministic generators; emitted <a href="/graph.json">/graph.json</a>, the declarations, the batch manifest, the family map and the ontology scan.</li>
+<li>Launched on Cloudflare Pages 2026-08-07; emitted <a href="/graph.json">/graph.json</a>, the declarations, the batch manifest, the family map and the ontology scan.</li>
 <li>Shipped the query engine (<code>tools/query/kg_query.py</code>, read-only) with read-time closure and the Turtle export; no transitivity anywhere.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li>Added <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per family and per batch; facets, permalinks and the assignment-history chip on the ledger; the taxonomy and rules V2-R7 to V2-R13 in <code>docs/ATLAS_REQUIREMENTS.md</code>.</li>
-<li>Added <a href="/nutshell">in a nutshell</a>, the method poster on its own page; the identity walk stays in <code>kg_query.py</code>, not exposed on the site.</li>
+<li>Added <a href="/releases">releases</a>, <a href="/ontology">ontology</a>, <a href="/query">query</a>, a page per family and per batch; facets, permalinks and the assignment-history chip on the ledger.</li>
+<li>Added in a nutshell, the method poster on its own page (retired on 2026-11-11, and <code>/nutshell</code> now redirects to <code>/method</code>).</li>
 </ul>
 </section>
 <section class="rel-entry">
@@ -174,7 +201,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h4>mining status</h4>
 <ul>
 <li>Mined CW 14 with seven incidental volumes: 248 nodes, 669 relations, 699 references.</li>
-<li>Ran at 0–0.5% clause predicates; this material predates the windowed pipeline.</li>
+<li>Ran at 0 to 0.5% clause predicates; this material predates the windowed pipeline.</li>
 </ul>
 <h4>governance</h4>
 <ul>
@@ -192,8 +219,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 </section>
 <div class="receipts"><b>receipts</b>
-prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:e6f4081e948c</span>;<br>
+prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:a90f825eff62</span>;<br>
 ruleset v0.7.2 with calibration record <code>pipeline/family_calibration/records/2026-08-13_v072_run4.json</code> (PASS);<br>
-external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-11-10
+external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-11-11
 </div>
 </main></body></html>

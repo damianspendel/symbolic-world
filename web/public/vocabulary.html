@@ -53,20 +53,34 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .disclose[open] > summary::before { transform: rotate(90deg); }
 .disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
 .disclose[open] > summary { margin-bottom: .5rem; }
-.vterm { margin: .9rem 0; scroll-margin-top: 7rem; }
+.vterm, .vexport { scroll-margin-top: 7rem; }
+.vexport ul { padding-left: 1.2rem; margin: .5rem 0 1rem; }
+.vexport li { margin: .25rem 0; }
+.vterm { margin: .9rem 0; }
 .vterm p { margin: .1rem 0; }
 .vname code { color: var(--gold); }</style>
 </head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/atlas#/concordance">concordance</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/support">support</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose">
-<div class="titleband"><p class="eyebrow">reference</p>
+<div class="titleband"><p class="eyebrow">Evidence</p>
 <h1>Vocabulary</h1>
-<p class="sub">the terms of the RDF export</p></div>
-<p>These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how strongly it is committed, and which checks it passed. They build on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type.</p>
-<p class="meta">The namespace <code>https://w3id.org/symbolicworld/</code> is provisional and not yet registered, so these terms do not resolve yet. The prefix <code>sw:</code> stands for <code>https://w3id.org/symbolicworld/ns#</code>.</p>
+<p class="sub">The terms of the RDF export.</p></div>
+<p>These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how much confidence its record carries, and which checks it passed. They build on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type.</p>
+<section id="export" class="vexport">
+<h2>The RDF export</h2>
+<p>The export is three Turtle files, served from this site and regenerated with every update of the graph. Each release since v2.3.0 also carries them on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. Their licence is CC BY 4.0.</p>
+<p>The files hold the nodes, the relations, one claim per citation, the references, and for each claim the stages that checked it, in PROV-O. They leave out the quotations, which stay on the concept pages, and any inference over the nodes.</p>
+<ul>
+<li><a href="/symbolicworld-graph.ttl" download>symbolicworld-graph.ttl</a> <span class="ev">8.4 MB</span>: the nodes, relations, claims, references and the stages that checked each claim</li>
+<li><a href="/symbolicworld-ontology.ttl" download>symbolicworld-ontology.ttl</a> <span class="ev">24 kB</span>: the terms on this page, as OWL</li>
+<li><a href="/symbolicworld-void.ttl" download>symbolicworld-void.ttl</a> <span class="ev">2 kB</span>: a VoID description of the dataset: its counts, licence and source</li>
+</ul>
+<p>The <a href="/ontology">design page</a> explains why the graph has no class hierarchy over its nodes and no transitivity.</p>
+</section>
+<p class="meta">The prefix <code>sw:</code> stands for <code>https://w3id.org/symbolicworld/ns#</code>.</p>
 <h2>Classes</h2>
 <div class="vterm" id="Node"><p class="vname"><code>sw:Node</code></p>
 <p>A named thing in the graph. Its type is a coarse label, and nothing is inferred from it.</p></div>
@@ -83,7 +97,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>One recorded step of the pipeline, dated where the record gives a date.</p>
 <p class="meta">subclass of <code>prov:Activity</code></p></div>
 <div class="vterm" id="Proposal"><p class="vname"><code>sw:Proposal</code></p>
-<p>A model drafted something. For a claim it is the mining batch, linked by prov:wasGeneratedBy, and sw:attributionSource says whether a batch record or the documented procedure names the proposer. Claims whose audit names no batch have none.</p>
+<p>The step in which a model drafted a claim or a normalized form. For a claim it is the mining batch, linked by prov:wasGeneratedBy, and sw:attributionSource says whether a batch record or the documented procedure names the proposer. Claims whose audit names no batch have none.</p>
 <p class="meta">subclass of <a href="#Stage"><code>sw:Stage</code></a></p></div>
 <div class="vterm" id="GateCheck"><p class="vname"><code>sw:GateCheck</code></p>
 <p>A model of a different family from the proposer judged the paragraph against the claim, or a normalized form against its claim.</p>
@@ -97,7 +111,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="vterm" id="Voice"><p class="vname"><code>sw:Voice</code></p>
 <p>Whose voice the claim is in. This is a separate question from whether the claim is true.</p></div>
 <div class="vterm" id="Commitment"><p class="vname"><code>sw:Commitment</code></p>
-<p>How strongly the claim is committed, from the confidence field of the reference.</p></div>
+<p>The confidence recorded for the claim, from the confidence field of its reference: high, medium or low. The gate, an audit or a dispute can lower it, and the reference then keeps the original string.</p></div>
 <div class="vterm" id="Rung"><p class="vname"><code>sw:Rung</code></p>
 <p>A warrant: the backing a part of a claim has. The rungs have no order in this vocabulary, because passing one warrants nothing about another.</p></div>
 <div class="vterm" id="FamilyState"><p class="vname"><code>sw:FamilyState</code></p>
@@ -113,7 +127,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="vterm" id="CommitmentHigh"><p class="vname"><code>sw:CommitmentHigh</code></p>
 <p>The reference records its confidence as high.</p></div>
 <div class="vterm" id="CommitmentMedium"><p class="vname"><code>sw:CommitmentMedium</code></p>
-<p>The reference records its confidence as medium. A record of high -&gt; medium also lands here, with the original string kept beside it.</p></div>
+<p>The reference records its confidence as medium. A reference recorded as lowered from high to medium also lands here, with the original string kept beside it.</p></div>
 <div class="vterm" id="CommitmentLow"><p class="vname"><code>sw:CommitmentLow</code></p>
 <p>The reference records its confidence as low.</p></div>
 <h2>Rung</h2>
@@ -153,7 +167,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>Whose voice the claim is in.</p>
 <p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <a href="#Voice"><code>sw:Voice</code></a></p></div>
 <div class="vterm" id="commitment"><p class="vname"><code>sw:commitment</code></p>
-<p>How strongly the claim is committed.</p>
+<p>The confidence recorded for the claim.</p>
 <p class="meta">on <a href="#Claim"><code>sw:Claim</code></a> · takes <a href="#Commitment"><code>sw:Commitment</code></a></p></div>
 <div class="vterm" id="reachedRung"><p class="vname"><code>sw:reachedRung</code></p>
 <p>A rung the record shows this claim or relation has reached. Absence means the record does not show it.</p>

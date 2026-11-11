@@ -40,9 +40,13 @@ BATCH_MODELS = {
     if (b.get("models") or {}).get("proposer")
 }
 
-# The namespace is the "namespace" line of vocabulary.json, and it is provisional
-# until a human registers it. Each file says so wherever it appears.
+# The namespace is the "namespace" line of vocabulary.json.
 BASE = VOCABULARY["namespace"]
+PROVISIONAL = VOCABULARY.get("namespace_provisional", True)
+# What each file says about the namespace. While the flag in vocabulary.json is
+# true, the files carry the provisional warning; once it is false (w3id.org PR
+# 7091, merged 2026-11-06), they state the registration instead.
+REGISTERED_NOTE = f"# The namespace {BASE} is registered at w3id.org."
 
 # Damian ruled (2026-11-05) that quotes are found elsewhere: "omit" writes no
 # quotes file, and a reader finds each quote on its concept page. "separate"
@@ -107,10 +111,12 @@ def header(graph, declarations, split_strings, unresolved_declarations):
         f"FAMILY_DEFINITIONS "
         f"{declarations.get('transcribed_from', {}).get('document_version', '?')}.",
         "#",
-        "# THE NAMESPACE IS PROVISIONAL. This repository has never minted one; the",
-        f"# base IRI {BASE} is not registered, so",
-        "# these IRIs do not resolve yet. It should be settled by a human before",
-        "# anything is published against it.",
+        *([
+            "# THE NAMESPACE IS PROVISIONAL. This repository has never minted one; the",
+            f"# base IRI {BASE} is not registered, so",
+            "# these IRIs do not resolve yet. It should be settled by a human before",
+            "# anything is published against it.",
+        ] if PROVISIONAL else [REGISTERED_NOTE]),
         "#",
         "# Shape: verbatim relations are leaf properties, families are",
         "# super-properties (FAMILY_DEFINITIONS line 125, the W3C two-tier",
@@ -493,7 +499,7 @@ def build_quotes(graph):
            "# docs/LEGAL.md in the repository. The file also holds the frozen wording of",
            "# normalized relations, since a long predicate can repeat the source's words.",
            "#",
-           f"# THE NAMESPACE IS PROVISIONAL: {BASE} is not registered.",
+           f"# THE NAMESPACE IS PROVISIONAL: {BASE} is not registered." if PROVISIONAL else REGISTERED_NOTE,
            ""]
     for prefix, iri in PROVENANCE_PREFIXES:
         out.append(f"@prefix {prefix}: <{iri}> .")
@@ -533,7 +539,7 @@ def build_ontology(graph):
     ontology = f"<{BASE}ns>"
     out = ["# The Symbolic World — an ontology of claims and warrants, built on PROV-O. CC BY 4.0.",
            "#",
-           f"# THE NAMESPACE IS PROVISIONAL: {BASE} is not registered.",
+           f"# THE NAMESPACE IS PROVISIONAL: {BASE} is not registered." if PROVISIONAL else REGISTERED_NOTE,
            "#",
            "# This describes what the atlas records about a claim. It is not a domain ontology",
            "# of Jung's concepts: no class hierarchy over the nodes, no domain or range on any",
@@ -607,8 +613,8 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
                   ("sw:Claim", references), ("sw:Reference", references))
     out = ["# The Symbolic World — VoID description. CC BY 4.0.",
            "#",
-           f"# THE NAMESPACE IS PROVISIONAL: {BASE} is not registered, so the IRIs here",
-           "# do not resolve yet.",
+           *([f"# THE NAMESPACE IS PROVISIONAL: {BASE} is not registered, so the IRIs here",
+              "# do not resolve yet."] if PROVISIONAL else [REGISTERED_NOTE]),
            "",
            "@prefix void: <http://rdfs.org/ns/void#> ."]
     for prefix, iri in PROVENANCE_PREFIXES:
@@ -624,7 +630,9 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
              ("void:uriSpace", literal(BASE)),
              ("void:vocabulary", f"<{BASE}ns>"),
              ("void:vocabulary", "<http://www.w3.org/ns/prov#>"),
-             ("void:dataDump", f"<{BASE}data/{GRAPH_FILE}>"),
+             # the file itself, as the site serves it (Damian, 2026-11-11, for v2.4.0):
+             # the w3id data/ address answers 302 to the DOI landing page
+             ("void:dataDump", f"<https://symbolicworld.observer/{GRAPH_FILE}>"),
              ("void:triples", f'{count_triples(graph_text)}'),
              ("void:entities", f"{sum(n for _, n in partitions)}")]
     pairs += [("void:classPartition", f"[ void:class {c} ; void:entities {n} ]") for c, n in partitions]
@@ -636,7 +644,7 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
                 ("a", "void:Dataset"),
                 ("dcterms:title", literal(VOCABULARY["title"])),
                 ("dcterms:license", f"<{LICENSE}>"),
-                ("void:dataDump", f"<{BASE}data/{ONTOLOGY_FILE}>"),
+                ("void:dataDump", f"<https://symbolicworld.observer/{ONTOLOGY_FILE}>"),
                 ("void:triples", f"{count_triples(ontology_text)}")])]
     if quotes_text is not None:
         # dcterms:rights, not dcterms:license: the CC BY grant excludes this subset

@@ -59,6 +59,10 @@ for p in files:
     # 404.html has no URL of its own: it is checked below, through a missing path
     if str(rel) == '404.html':
         continue
+    # _redirects is read by Pages at deploy and never served: its rules are
+    # checked below, one probe per line
+    if str(rel) == '_redirects':
+        continue
     url = f'{BASE}/{rel}' if rel.name != 'index.html' or len(rel.parts) > 1 \
         else f'{BASE}/'
     try:
@@ -92,6 +96,40 @@ for probe in ('/definitely-not-a-real-path-xyz', '/concept-definitely-not-a-node
         else:
             fails.append(probe)
             print(f'  FAIL {probe} -> {e.code}, not-found page served: {same}')
+
+# The rules in _redirects (2026-11-11). Unlike the extensionless check below,
+# these are ours, so a wrong answer fails the run.
+rules = DIST / '_redirects'
+
+
+class _Stop(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+rules_opener = urllib.request.build_opener(_Stop)
+if rules.exists():
+    print('== _redirects ==')
+    for line in rules.read_text().splitlines():
+        parts = line.split()
+        if len(parts) != 3 or line.lstrip().startswith('#'):
+            continue
+        src, dst, code = parts[0], parts[1], int(parts[2])
+        req = urllib.request.Request(f'{BASE}{src}', headers={'User-Agent': 'jungkg-verify'})
+        try:
+            with rules_opener.open(req, timeout=30) as r:
+                fails.append(src)
+                print(f'  FAIL {src} returned {r.status}, not {code}')
+        except urllib.error.HTTPError as e:
+            target = e.headers.get('location', '')
+            if e.code == code and target.rstrip('/').endswith(dst):
+                print(f'  ok  {src} -> {e.code} -> {target}')
+            else:
+                fails.append(src)
+                print(f'  FAIL {src} -> {e.code} -> {target or "(no location)"}, wanted {code} -> {dst}')
+        except Exception as e:
+            fails.append(src)
+            print(f'  FAIL {src} could not be checked: {e}')
 
 # Item 29 — the extensionless convention is Cloudflare's to honour, not ours:
 # Pages 308s every .html path to its extensionless twin, and GSC filed redirect

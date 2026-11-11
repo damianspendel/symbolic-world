@@ -1026,7 +1026,7 @@ function openEdgeFromPage(id) {
 function openMethod() {
   openPage(() => {
     modeEl.innerHTML = `${pageBar({ where: 'about' })}<div class="page method-page">` +
-      `<div class="titleband"><p class="eyebrow">about</p><h1>The method</h1>` +
+      `<div class="titleband"><p class="eyebrow">Evidence</p><h1>The method</h1>` +
       `<p class="sub">An explanation of how a citation enters the map.</p></div>` +
       `${method.html}</div>`
     modeEl.querySelector('[data-back]')?.addEventListener('click', goAtlas)
@@ -1067,7 +1067,7 @@ function drawFamilies() {
   modeEl.innerHTML = `
     ${pageBar({ where: 'families', extra: `<a class="back" href="${esc(families.doc_url)}">the full document →</a>` })}
     <div class="page">
-      <div class="titleband"><p class="eyebrow">reference</p>
+      <div class="titleband"><p class="eyebrow">Evidence</p>
       <h1>The relation-family vocabulary</h1></div>
       <p class="lede2">${families.families.length} families, ${esc(families.version)}, quoted from <code>docs/FAMILY_DEFINITIONS.md</code> without paraphrase. A family names the kind of relation an edge asserts. ${FAMILY_ON ? `<b>${META.familyLayer.states.family || 0}</b> edges carry a family, <b>${META.familyLayer.states.pending || 0}</b> await a human ruling, <b>${META.familyLayer.states.unclassified || 0}</b> carry none.` : 'The assignment pass has not merged, so no edge carries a family yet.'}</p>
 

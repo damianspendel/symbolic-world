@@ -262,7 +262,7 @@ def test_the_ontology_findings_list_sits_behind_its_counts(qa_json):
     assert f"{total} findings" in summary
     assert "table class=\"findings\"" in block
     # the four headline figures stay outside the fold
-    panel = html[html.index("<h2>The pitfall scan"):html.index("<details class=\"disclose\">")]
+    panel = html[html.index("<h2>What the scan found"):html.index("<details class=\"disclose\">")]
     assert str(qa_json["headline"]["hapax_pct"]) in panel
 
 
@@ -323,7 +323,7 @@ def test_the_external_check_lives_on_ontology_and_the_links_point_at_it():
     # /families keeps one line, and it is a link to the record
     exposition = fam[:fam.index("<hr>")]
     assert exposition.count("/ontology#checked") == 1, "the families link is not once"
-    assert "Checked once against outside scholarship" in exposition
+    assert "assignments once against outside scholarship" in exposition
     # and no page still points at the anchor's old home
     for path in generated_pages():
         assert "/families#checked" not in read(path), os.path.basename(path)
@@ -341,13 +341,15 @@ def test_the_families_page_is_reference_not_method():
     for gone in ("What a family is", "How an edge gets a family",
                  "Agreement between the two arms", "planting classification errors"):
         assert gone not in exposition, f"method content is still on /families: {gone}"
-    for kept in ("Where the layer stands", "How the records were arrived at",
+    # the boundary rules are read in the definitions document itself since
+    # 2026-11-11; the excerpt repeated them word for word
+    for kept in ("Where the layer stands", "How each was reached",
                  "The map: which relation strings land in which family",
-                 "What fits nowhere", "Where the boundaries are decided"):
+                 "What fits nowhere", "The boundary rules are in the definitions document below"):
         assert kept in exposition, f"reference content went missing: {kept}"
     # one header sentence, carrying both pointers
-    assert '<a href="/ontology">design</a>' in exposition
-    assert '<a href="/atlas#/method">checks</a>' in exposition
+    assert '<a href="/ontology">design page</a>' in exposition
+    assert '<a href="/method">method page</a>' in exposition
     # and the page is now a fraction of what it was: the copy above the
     # document's rule ran to about 3,000 words before the redistribution.
     # The string->family map grows with the graph and is data, not copy, so
@@ -388,10 +390,14 @@ def test_releases_page_renders_the_version_pin():
     text = re.sub(r"<[^>]+>", "", pins[0])
     assert re.search(r"graph v[\d.]+", text), text
     assert re.search(r"ruleset v[\d.]+", text), text
-    record = re.search(r"(pipeline/family_calibration/records/[\w.\-]+\.json)", text)
-    assert record, text
-    assert "(PASS)" in text
-    with open(os.path.join(ROOT, record.group(1)), encoding="utf-8") as fh:
+    # the pin names the record by date and run since 2026-11-11; the file is
+    # found from that name and the ruleset, and must exist and be a PASS
+    named = re.search(r"calibration record of (\d{4}-\d{2}-\d{2})(?:, run (\d+))? \(PASS\)", text)
+    assert named, text
+    ruleset = re.search(r"ruleset v([\d.]+)", text).group(1).replace(".", "")
+    record = (f"pipeline/family_calibration/records/{named.group(1)}_v{ruleset}"
+              + (f"_run{named.group(2)}" if named.group(2) else "") + ".json")
+    with open(os.path.join(ROOT, record), encoding="utf-8") as fh:
         assert json.load(fh)["verdict"] == "PASS"
 
 
@@ -433,7 +439,7 @@ def test_release_entries_point_at_their_artifacts():
     are real extensionless links."""
     html = read(os.path.join(PUBLIC, "releases.html"))
     body = html[html.index("<main"):]
-    for path in ("tools/query/kg_query.py", "docs/ATLAS_REQUIREMENTS.md",
+    for path in ("tools/query/kg_query.py",
                  "tools/check_paper_facts.py", "docs/PAPER.md"):
         assert f"<code>{path}</code>" in body, path
     for link in ("/ledger", "/families", "/ontology", "/query", "/v1.3/"):
@@ -564,7 +570,7 @@ def test_qa_json_mode_reports_the_same_findings_as_the_prose_mode(qa_json):
 
 def test_the_qa_panels_numbers_appear_on_the_rendered_page(qa_json):
     html = read(os.path.join(PUBLIC, "ontology.html"))
-    panel = html[html.index("The pitfall scan"):]
+    panel = html[html.index("What the scan found"):]
     head = qa_json["headline"]
     for value in (head["hapax_relations"], head["distinct_relations"],
                   head["sentence_shaped_relations"], head["sentence_shaped_edges"],
@@ -580,12 +586,16 @@ def test_every_scan_finding_reaches_the_page_with_a_stance(qa_json):
     html = read(os.path.join(PUBLIC, "ontology.html"))
     stances = re.findall(r'<span class="chip st-(\w+)">', html)
     findings = [f for sev in ("critical", "important", "minor") for f in qa_json[sev]]
-    assert len(stances) == len(findings)
+    # the synonym findings share one stance and render as one row listing the
+    # groups (prose review, 2026-11-11)
+    synonyms = [f for f in findings if f["tag"].startswith("P02/P30 synonymous")]
+    assert len(stances) == len(findings) - max(len(synonyms) - 1, 0)
     assert "unclassified" not in stances, (
         "a finding has no recorded stance — add one to QA_STANCE in build-atlas.mjs "
         "rather than leaving the page to report it unexplained")
     for f in findings:
-        assert f["tag"] in html, f["tag"]
+        shown = f["tag"].replace("P02/P30 synonymous relations, ", "") if f in synonyms else f["tag"]
+        assert shown in html, f["tag"]
 
 
 def test_no_rendered_page_leaks_raw_markdown():
@@ -615,10 +625,16 @@ def test_a_declaration_section_renders_as_a_label(qa_json):
             continue
         for source in decl["source"]:
             label = re.sub(r"^\s*#+\s*", "", source["section"])
-            assert f"{label} (line {source['line']})" in html, label
+            fam = re.match(r"(\d+)\.\s*([a-z-]+)", label)
+            # named for a reader since 2026-11-11: the family or the precedents
+            # table, without the document's line number
+            reader = (f"definitions document, family {fam.group(1)} ({fam.group(2)})" if fam
+                      else "definitions document, precedents table")
+            assert reader in html, label
+            assert "#" not in reader
     js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
     assert "const sectionLabel = (t) =>" in js
-    assert "esc(sectionLabel(" in js
+    assert "esc(declSourceLabel(" in js
 
 
 def test_the_ontology_page_puts_the_evidence_before_the_conclusions():
@@ -627,8 +643,8 @@ def test_the_ontology_page_puts_the_evidence_before_the_conclusions():
     than assertions made ahead of it."""
     html = read(os.path.join(PUBLIC, "ontology.html"))
     order = [re.sub(r"<[^>]+>", "", h) for h in re.findall(r"<h2[^>]*>.*?</h2>", html)]
-    assert order == ["Two tiers", "The declarations", "Atlas, Graph, Ontology",
-                     "The pitfall scan", "Checked against readers of Jung"], order
+    assert order == ["Two tiers", "The declarations", "The pitfall catalogue",
+                     "What the scan found", "Checked against readers of Jung"], order
 
 
 def test_the_ontology_figures_carry_real_data():
@@ -658,7 +674,7 @@ def test_the_ontology_page_states_where_its_checks_come_from(qa_json):
     """The scan borrows the OOPS! catalogue's numbering; the page says so, cites
     it, and lists every pitfall code the tool actually uses."""
     html = read(os.path.join(PUBLIC, "ontology.html"))
-    section = html[html.index("Atlas, Graph, Ontology"):html.index("<h2>The pitfall scan")]
+    section = html[html.index("The pitfall catalogue"):html.index("<h2>What the scan found")]
     assert "OntOlogy Pitfall Scanner" in section
     assert "Poveda-Villal" in section
     assert "not the OOPS! service" in section
@@ -720,13 +736,15 @@ EXPECTED_MENU_LEGACY = [
     ("reference", [("/concepts", "concepts"), ("/families", "families")]),
     ("provenance", [("/ledger", "ledger"), ("/releases", "releases"),
                     ("/disputes", "disputes")]),
-    ("about", [("/about", "about"), ("/nutshell", "in a nutshell"), ("/atlas#/method", "method"),
+    ("about", [("/about", "about"), ("/atlas#/method", "method"),
                ("/ontology", "design"), ("/support", "support")]),
 ]
-# spec-reader-v1, A4: six entries in one unlabelled group
+# spec-reader-v1, A4: one unlabelled group; the concordance and support
+# returned in the interim build of 2026-11-11
 EXPECTED_MENU_READER = [
     ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas", "atlas"),
-          ("/routes", "routes"), ("/evidence", "evidence"), ("/about", "about")]),
+          ("/atlas#/concordance", "concordance"), ("/routes", "routes"),
+          ("/evidence", "evidence"), ("/support", "support"), ("/about", "about")]),
 ]
 EXPECTED_MENU = (EXPECTED_MENU_READER if re.search(r"^const MENU_READER = true$",
                  read(os.path.join(ROOT, "web", "build-atlas.mjs")), re.M) else EXPECTED_MENU_LEGACY)
@@ -2260,3 +2278,15 @@ def test_concept_titles_carry_a_distinct_latin_name():
         assert ('class="latin ev"' in h1) == distinct, n["id"]
         if distinct and n["id"] not in overflow and len(f"{n['label']} ({n['latin']}) in Jung’s Collected Works") <= 60:
             assert f"({n['latin']})" in title, n["id"]
+
+
+def test_the_release_export_tracks_only_the_three_cc_by_files():
+    """exports/rdf is committed at a release freeze (first v2.3.0). Only the
+    graph, ontology and VoID files are tracked; the quotes file never is."""
+    tracked = subprocess.run(["git", "ls-files", "exports"], capture_output=True,
+                             text=True, cwd=ROOT).stdout.split()
+    if not tracked:
+        return
+    assert sorted(tracked) == ["exports/rdf/symbolicworld-graph.ttl",
+                               "exports/rdf/symbolicworld-ontology.ttl",
+                               "exports/rdf/symbolicworld-void.ttl"], tracked

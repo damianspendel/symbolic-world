@@ -34,15 +34,15 @@ lab = lambda i: NODES.get(i, {}).get('label', i)
 hapax = sorted(r for r, c in rel.items() if c == 1)
 if len(hapax) / len(rel) > 0.4:
     crit("P22 no naming/vocabulary regularity",
-         f"{len(hapax)}/{len(rel)} relations ({len(hapax)/len(rel)*100:.0f}%) are used exactly once. "
-         f"The relation set is open-vocabulary, not an ontology property set.",
+         f"{len(hapax)}/{len(rel)} relation strings ({len(hapax)/len(rel)*100:.0f}%) are used exactly once. "
+         f"The relation set is an open vocabulary.",
          hapax[:10])
 
 sentence_rels = sorted(r for r in rel if r.count('-') >= 4)
 if sentence_rels:
     crit("P24 relation name encodes a proposition",
-         f"{len(sentence_rels)} relations are sentence-shaped — the predicate carries content that "
-         f"belongs in the object or a qualifier, so it can never be queried or reasoned over.",
+         f"{len(sentence_rels)} relation strings are sentence-shaped: the predicate carries content that "
+         f"belongs in the object or a qualifier, so it cannot be queried as written.",
          sentence_rels[:8])
 
 # ---- P02/P30: equivalent relations not declared equivalent ---------------
@@ -149,7 +149,7 @@ for i in NODES:
 parts.sort(key=len, reverse=True)
 if len(parts) > 1:
     imp("P04 unconnected ontology element",
-        f"{len(parts)-1} component(s) detached from the main graph.",
+        f"{len(parts)-1} component{'' if len(parts)-1 == 1 else 's'} detached from the main graph.",
         [[lab(x) for x in c][:2] for c in parts[1:]])
 
 # ---- P08/P24: label quality ----------------------------------------------
@@ -157,7 +157,7 @@ long_lab = [(i, n['label']) for i, n in NODES.items() if len(n['label'].split())
 if long_lab:
     imp("P24 node label is a definition, not a term",
         f"{len(long_lab)} nodes carry a full descriptive sentence as their label. These are "
-        f"assertions modelled as entities — they cannot be reused or matched across edges.",
+        f"assertions modelled as entities, so they cannot be reused or matched across edges.",
         [l[:90] for _, l in long_lab[:4]])
 
 norm = lambda s: re.sub(r'[^a-z]', '', s.lower())
@@ -205,8 +205,8 @@ kids = {e['subject'] for e in taxo}
 crit("P06/no backbone: taxonomy is vestigial",
      f"Only {len(taxo)}/{len(EDGES)} edges ({len(taxo)/len(EDGES)*100:.1f}%) are taxonomic and only "
      f"{len(kids)}/{len(NODES)} nodes ({len(kids)/len(NODES)*100:.0f}%) have any parent. "
-     f"There is no subsumption hierarchy to inherit or reason over — this is an associative "
-     f"network with a 6-way type tag, not a subsumption ontology.",
+     f"There is no subsumption hierarchy to inherit or reason over. The graph is an associative "
+     f"network with a 6-way type tag.",
      [f"taxonomic relations present: {sorted(TAXO & set(rel))}"])
 
 # ---- generic 'is' ----------------------------------------------------------
@@ -220,7 +220,7 @@ if 'is' in rel:
 # ---- evidence-side (not OOPS!, project-specific) --------------------------
 noref = [e for e in EDGES if not e['references']]
 if noref:
-    imp("evidence gap", f"{len(noref)} edge(s) carry zero references.",
+    imp("evidence gap", f"{len(noref)} edge{' carries' if len(noref) == 1 else 's carry'} no reference.",
         [(lab(e['subject']), e['relation'], lab(e['object'])) for e in noref])
 
 def show(title, items):

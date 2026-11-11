@@ -206,7 +206,7 @@ def detected(cls, base, after, n_injected):
     b, a = "".join(base.values()), "".join(after.values())
     P_CLOSURE  = r"largest identity-closure cluster:\s*(\d+)"
     P_CLUSTERS = r"(\d+) clusters of 3\+ nodes are chained by identity"
-    P_SENT     = r"(\d+) relations are sentence-shaped"
+    P_SENT     = r"(\d+) relation strings are sentence-shaped"
     P_ONEWAY   = r"(\d+) edges use a symmetric relation but only assert one"
     P_ISOLATED = r"isolated nodes \(no edge at all\):\s*(\d+)"
 
