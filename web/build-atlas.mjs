@@ -3386,7 +3386,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
 <div class="titleband"><p class="eyebrow">about</p>
 <h1>Support</h1></div>
 </section>
-<p>Keeping it going costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
+<p>Maintaining and evolving this project costs money: the domain, the model spend for checks, corrections and answers to disputes. A verified citation costs approximately ${'$'}0.09 to ${'$'}0.16 presently. A tip of any size helps. Thank you!</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
 </div>
