@@ -3167,6 +3167,11 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 .land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
 .land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
 .land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
+.land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
+.land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
+.land-card-all { text-decoration: none; }
+.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
 .land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
 .land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
 .land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
@@ -3186,11 +3191,15 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
       ]],
       ['Design', [
         ['/ontology', 'The design', 'The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.', 'design'],
-        ['/families', 'Relation families', 'The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.', 'families']
+        ['/families', 'Relation families', 'The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.', 'families'],
+        ['/vocabulary', 'Vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.', 'vocabulary']
       ]],
+      // Damian, 2026-11-11 ("Agreed with split"): vocabulary moves to Design, and
+      // the RDF export card is about the files and links each one. A card with
+      // more than one link uses the landing page's own pattern for that (its
+      // concept card): links inside, and the key link covering the card.
       ['Data', [
-        ['/vocabulary#export', 'The RDF export', 'The graph as Turtle files: what they hold, what they leave out, and where to download them.', 'rdf export'],
-        ['/vocabulary', 'Vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.', 'vocabulary'],
+        ['/vocabulary#export', 'The RDF export', 'The graph as three Turtle files: the nodes, relations, claims, references and the checks on each claim, in PROV-O. No quotations. CC BY 4.0.', 'about the export', exportLinks],
         ['/graph.json', 'The graph file', 'The whole graph as one JSON file, the same data the atlas draws.', 'graph.json']
       ]]
     ]
@@ -3202,7 +3211,9 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 ${EVIDENCE_GROUPS.map(([group, cards]) => `<section class="land-tasks">
 <p class="eyebrow">${esc(group)}</p>
 <div class="land-grid">
-${cards.map(([href, t, d, k]) => `<a class="land-card" href="${href}"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-card-k">${esc(k)}</span></a>`).join('\n')}
+${cards.map(([href, t, d, k, links]) => links
+  ? `<div class="land-card"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-starts">${links.join('<br>')}</span><a class="land-card-k land-card-all" href="${href}">${esc(k)}</a></div>`
+  : `<a class="land-card" href="${href}"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-card-k">${esc(k)}</span></a>`).join('\n')}
 </div>
 </section>`).join('\n')}`
     registerPage({
@@ -3285,11 +3296,7 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()`
 <a href="/method">the method</a><a href="/disputes">disputes log</a>${SUPPORT_URL ? '<a href="/support">support the project</a>' : ''}
 </footer>`
     const landingStyle = `
-${LANDING_CSS}.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
-.land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
-.land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
-.land-card-all { text-decoration: none; }
-${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; }
+${LANDING_CSS}${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; }
 .land-search .std-search { width: 100%; box-sizing: border-box; }
 .land-hits { display: flex; flex-direction: column; margin-top: .3rem; }
 .land-hits:empty { display: none; }
@@ -3297,8 +3304,7 @@ ${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; 
 .land-hits a:hover, .land-hits a:focus-visible, .land-hits a.on { background: var(--well); color: var(--gold); }
 .land-hits .latin { font-style: italic; color: var(--ink-faint); margin-left: .4rem; }
 .land-hits .none { padding: .35rem .5rem; font-size: .86rem; color: var(--ink-faint); }
-` : ''}.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
-.land-link { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: flex-start; padding: 2.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin-bottom: 3.5rem; }
+` : ''}.land-link { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: flex-start; padding: 2.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin-bottom: 3.5rem; }
 .land-link-text { flex: 1 1 22rem; min-width: 0; }
 .land-claim { font-family: var(--display); font-size: 1.7rem; line-height: 1.25; margin: .5rem 0 .8rem; max-width: none; }
 .land-claim em { font-style: normal; color: var(--gold); }
