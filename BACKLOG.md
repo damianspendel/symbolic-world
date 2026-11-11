@@ -667,9 +667,9 @@ nothing is to be built. Figures are as of 2026-10-22.
    existing rule on sourced claims stays untouched, and a design document
    comes before any build.
 
-## v2.3.0 scope (added 2026-11-10)
+## v2.4.0 scope (added 2026-11-10 as v2.3.0 scope; relabelled 2026-11-11)
 
-Damian's scope for v2.3.0, set on 2026-11-10. The trilogy pass and his paused rulings go to the release after it.
+Damian's scope, set on 2026-11-10. On 2026-11-11 he made that day's build v2.3.0 ("I think this becomes 2.3.0 and we bump friday to 2.4.0") and moved the rest to v2.4.0 on Friday 13 November, with the /query autocomplete added ("/query autocomplete is Friday please"). The data through CW 6 and the RDF export shipped in v2.3.0. The trilogy pass and his paused rulings go to a later release. v2.4.0's data stays at v2.3.0's seed unless Damian says otherwise.
 
 - The data through CW 6.
 - The RDF export, with the vocabulary and the proposer attribution (section below).
@@ -706,7 +706,7 @@ New terms: two datatype properties on `sw:Proposal`, a proposer-as-recorded lite
 
 Ruled and built (Damian, 2026-11-06: "yes to both proposer decisions"). The documented procedure counts as a source, labelled as such. The table is `tools/query/proposers.json`, and each attribution in it is tested against the record it cites. In the export, a claim links by `prov:wasGeneratedBy` to `swk:proposal-<batch>`, which carries `sw:batch`, `sw:proposerAsRecorded` and `sw:attributionSource`. Counts at b-cw16-5: "record" 1,962 claims (221 with the agent `claude-opus-5`, 1,741 by family only), "procedure" 1,871, none 726 (the 666 July references and b-cw11-8's 60). `sw:batch` now has the domain `sw:Stage`. Still open: a new batch counts as "procedure" until it gets a "records" entry, so once the mining task writes the miner's model id, adding that entry is a step of each merge.
 
-## v2.3.0: book links to Bookshop.org (added 2026-11-06)
+## v2.4.0: book links to Bookshop.org (added 2026-11-06 for v2.3.0; moved 2026-11-11)
 
 Damian's decision: "add the book links (Bookshop.org) to the build backlog for 2.3.0." Backlog entry only, nothing built yet. It is the site's first revenue feature.
 
@@ -717,7 +717,7 @@ Damian's decision: "add the book links (Bookshop.org) to the build backlog for 2
 - The map covers the same volumes as the volume title map, `VOL_LABEL` in `web/build-atlas.mjs`. That map has CW 5, 8, 9i, 9ii, 11, 12, 13, 14 and 16 today. The mining chat needs CW 6 and CW 7 added to it before the first deploy that carries citations from them, and the book-link map gets the same two entries at the same time.
 - Plain links only. No tracking script, and nothing beyond the affiliate parameter in the URL.
 
-## v2.3.0: list the dataset in the SSH Open Marketplace (added 2026-11-06)
+## After the v2.3.0 DOI: list the dataset in the SSH Open Marketplace (added 2026-11-06)
 
 Damian's decision: "add to 2.3". The entry goes on marketplace.sshopencloud.eu as entry type Datasets.
 
@@ -727,7 +727,7 @@ Damian's decision: "add to 2.3". The entry goes on marketplace.sshopencloud.eu a
 - The build's part is the text Damian pastes in: title, short description, keywords, licence line and DOIs. The description goes through Vale before he gets it.
 - Before preparing that text, re-read the live contribute page on the marketplace. The earlier research read it from a mirror, so the field list may differ.
 
-## v2.3.0: run Vale over the glossary (added 2026-11-06)
+## v2.4.0: run Vale over the glossary (added 2026-11-06 for v2.3.0; moved 2026-11-11)
 
 Damian's decision: "add to backlog for 2.3.0 to run vale over the glossary entries". Backlog entry only, nothing edited yet.
 
