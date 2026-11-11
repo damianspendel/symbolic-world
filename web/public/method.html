@@ -102,7 +102,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p class="sub">An explanation of how a citation enters the map.</p></div>
 <div class="method-page">
 <h2>What this is</h2>
-<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 999 symbols, figures and concepts, joined by 4035 relations, resting on 5418 citations to his <em>Collected Works</em> (CW). Every claim was proposed by one AI model (Opus family) after reading the CW and judged against its source paragraph by a different model (Fable family); an auditor (Gemini) from a different vendor re-reads each new batch in full — 98% of all 5418 citations have been certified this way. Every claim can be considered a transaction in a ledger: the exact paragraph, a verbatim quote, and the record of which model (or expert) checked what. This is a map of assertions, not a Jungian reading.</p>
+<p>The Symbolic World is a map of C. G. Jung's symbolic thought: 999 symbols, figures and concepts, joined by 4035 relations, resting on 5418 citations to his <em>Collected Works</em> (CW). One AI model (Opus family) proposed each claim from a window of paragraphs, and a model of a different family (Fable) judged it against its source paragraph. An auditor from another vendor (Google's Gemini) then re-read the result: 98% of the 5418 citations carry an audit stamp that names the audit and its date. Each claim is a ledger entry: the exact paragraph, a verbatim quote, and a record of which model, or which person, checked what. This is a map of assertions, not a Jungian reading.</p>
+<p>A relation joins two nodes. Each citation that supports it, a paragraph with its quote, is one claim, so a relation can rest on several.</p>
 <figure class="fig fig-claim">
     <div class="claim-fig">
       <span class="fig-node" data-type="Symbol">Lapis philosophorum</span>
@@ -112,61 +113,57 @@ td.n { font-family: var(--mono); font-size: .78rem; }
     </div>
     <figcaption>One claim visualized.</figcaption>
   </figure>
-<p>Reading it: the stone (lapis) is claimed to be a projection of the self, Jung says so at paragraph 264 of <em>Aion</em>, and clicking the claim on this site shows the verbatim citation.</p>
+<p>Read it as: Jung says, at paragraph 264 of <em>Aion</em>, that the stone (lapis) is a projection of the self. Clicking the claim in the atlas shows the quote.</p>
 <h2>One corpus</h2>
 <p>Everything comes from a single source: the Bollingen edition of the <em>Collected Works</em>, in English. No secondary literature, no commentary, no symbol dictionaries. That keeps the map close to Jung's own text, at the cost of breadth.</p>
 <figure class="fig">
     <div class="works-fig"><span class="work-fig" style="flex:740 1 0;opacity:0.87"><span>CW 5</span></span><span class="work-fig" style="flex:314 1 0;opacity:0.54"><span>CW 6</span></span><span class="work-fig" style="flex:362 1 0;opacity:0.58"><span>CW 7</span></span><span class="work-fig" style="flex:850 1 0;opacity:0.96"><span>CW 8</span></span><span class="work-fig" style="flex:567 1 0;opacity:0.74"><span>CW 9i</span></span><span class="work-fig" style="flex:386 1 0;opacity:0.60"><span>CW 9ii</span></span><span class="work-fig" style="flex:906 1 0;opacity:1.00"><span>CW 11</span></span><span class="work-fig" style="flex:223 1 0;opacity:0.47"><span>CW 12</span></span><span class="work-fig" style="flex:176 1 0;opacity:0.44"><span>CW 13</span></span><span class="work-fig" style="flex:413 1 0;opacity:0.62"><span>CW 14</span></span><span class="work-fig" style="flex:481 1 0;opacity:0.67"><span>CW 16</span></span></div>
-    <figcaption>This bar appears at the bottom of the atlas and shows one segment per volume included in the atlas. The size of the bar indicates the number of citations.</figcaption>
+    <figcaption>The works bar from the foot of the atlas: one segment per volume, its width set by the volume's citations.</figcaption>
   </figure>
-<p>The bar along the bottom of the atlas shows the corpus: one segment per volume, sized by how much verified evidence it carries, so where mining has gone deep is visible immediately. The segments enable scope selection: click one and the atlas shows only that volume's claims.</p>
+<p>Click a segment and the atlas shows only that volume's claims.</p>
 <h2>Reading the atlas</h2>
 <figure class="fig">
     <ul class="metals-fig"><li><i class="metal-dot" style="background:var(--m-concept)"></i><span class="metal-kind">Concept</span><span class="metal-name">gold</span></li><li><i class="metal-dot" style="background:var(--m-symbol)"></i><span class="metal-kind">Symbol</span><span class="metal-name">silver</span></li><li><i class="metal-dot" style="background:var(--m-figure)"></i><span class="metal-kind">Figure</span><span class="metal-name">copper</span></li><li><i class="metal-dot" style="background:var(--m-operation)"></i><span class="metal-kind">Operation</span><span class="metal-name">iron</span></li><li><i class="metal-dot" style="background:var(--m-substance)"></i><span class="metal-kind">Substance</span><span class="metal-name">verdigris</span></li><li><i class="metal-dot" style="background:var(--m-motif)"></i><span class="metal-kind">Motif</span><span class="metal-name">lead</span></li></ul>
     <figcaption>The metals legend: six node kinds, six metals.</figcaption>
   </figure>
-<p>The type of node is indicated by node colour. The palette borrows alchemy's metals: gold for concepts, silver for symbols, copper for figures, iron for operations, verdigris for substances, lead for motifs. Alchemy assigned its metals to the planets; mapping node kinds is a design choice for the atlas, and not authoritative.</p>
+<p>Node colour shows the kind of node. The palette borrows alchemy's metals: gold for concepts, silver for symbols, copper for figures, iron for operations, verdigris for substances, lead for motifs. Alchemy assigned its metals to the planets. Assigning them to node kinds is our design choice and carries no alchemical meaning.</p>
 <ul>
 <li><strong>Search</strong> finds a symbol, a relation, a family, quote text, or a citation such as CW 14 §1. Typing offers completions, and choosing a symbol or a family opens it.</li>
 <li><strong>Click</strong> a node to read its connections; click a connection to open the citation itself: relation, quote, paragraph, verdicts. <strong>Copy link</strong> on any selection gives a URL that reopens it.</li>
 <li><strong>The chips</strong> beside the search box are the active filters: volume, family, voice, layer. Remove one with its ×.</li>
-<li><strong>The bar along the bottom</strong> selects volumes; each segment is sized by the verified evidence that volume carries.</li>
-<li>Every citation shows a status dot: green, human-validated; amber, machine-verified default without human validation; red, disputed, on the record. These can be viewed in the ledger.</li>
+<li>Every citation shows a status dot: green, human-validated; amber, machine-verified default without human validation; red, disputed, on the record. The ledger lists all three.</li>
 </ul>
 <h2>How a claim gets in</h2>
-<p>Five stations.</p>
 <ol>
-<li><strong>Propose.</strong> An Opus-family model reads a collection of paragraphs and proposes claims, each with a verbatim citation.</li>
-<li><strong>Check.</strong> A machine confirms the quote is letter-exact in its paragraph and at most 25 words, and that the relation is well formed, i.e. structured as a relationship between two nodes. Failures are then excluded.</li>
-<li><strong>Gate.</strong> A Fable-family model judges every claim against its full source paragraph. By default it is hostile: the claim survives only if the model judges that the paragraph supports it.</li>
-<li><strong>Audit.</strong> A Gemini model re-reads what survived, before any of it touches the graph. Universal for every batch since the <em>Aion</em> arc (mid-2026). (Earlier material was audited by sampling, and evidenced in the ledger; 5315 of 5418 citations have been audited this way as at time of publication.) When gate and auditor disagree, the auditor wins.</li>
+<li><strong>Propose.</strong> An Opus-family model reads a window of consecutive paragraphs and proposes claims, each with a verbatim citation.</li>
+<li><strong>Check.</strong> A machine confirms the quote is letter-exact in its paragraph and at most 25 words, and that the claim has the form of one relation between two nodes. The pipeline drops claims that fail.</li>
+<li><strong>Gate.</strong> A Fable-family model judges every claim against its full source paragraph. Its instructions tell it to reject: a claim survives only if the model finds that the paragraph supports it.</li>
+<li><strong>Audit.</strong> A Gemini model re-reads every claim that survived the gate, before it enters the graph. That has been the procedure for every batch since mid-2026, when work on <em>Aion</em> began. Later passes audited the older material, by whole volumes and by samples, and each citation's stamp says which. 5315 of 5418 citations carry a stamp. The other 103, all in volumes mined since <em>Aion</em>, have none yet. Where gate and auditor disagree on whether the paragraph supports the claim, the auditor's verdict stands. Findings about claim type or confidence become corrections, and a recorded project convention can overrule the auditor; the claim's record then shows the override.</li>
 <li><strong>Merge.</strong> The claim enters with its provenance stamped: dates, verdicts, corrections.</li>
 </ol>
-<p>Under all five stations, the model that proposes a claim never signs it off. Proposer and gate are different model families (Anthropic's Opus and Fable lines) and the auditor is a different vendor (Google's Gemini).</p>
+<p>At every step, the model that proposes a claim never signs it off. Proposer and gate are different model families (Anthropic's Opus and Fable lines) and the auditor is a different vendor (Google's Gemini).</p>
 <p>The checks remove real material: across the 67 windows whose records give both counts, 4491 proposed citations became 4113 merged ones.</p>
 <h2>Human oversight</h2>
-<p>A person rules on disagreements, decides releases, and answers for what is published.</p>
+<p>One person, the author, rules on disagreements, decides releases and answers for everything the site publishes.</p>
 <ul>
 <li><strong>Gold set.</strong> 50 claims carry a <em>human-validated</em> mark in the <a href="/ledger">ledger</a>: a person read the cited paragraph. The rest carry the amber dot: machine-verified without human validation.</li>
-<li><strong>Adjudication.</strong> Two blind arms sort relations into 25 families: one Opus-family model, one Gemini, each reading the definitions document and the edge, neither able to see the other's answer. These arms disagree on 708 claims today. No model breaks a tie. A person rules, in sittings, and the rulings land in the ledger. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
-<li><strong>Refusals are kept apart.</strong> <em>No family</em> means our vocabulary is short. <em>Text undecided</em> means Jung's own sentence hedges between two readings. Pooling them would let a thin vocabulary hide inside a hedge.</li>
+<li><strong>Adjudication.</strong> Two models sort each relation into one of 25 families, working blind: one Opus-family model and one Gemini, each given the definitions and the claim, neither able to see the other's answer. A Fable-family model drafted the definitions; neither classifying model comes from that family. 708 relations wait for a person's ruling, most because the two models disagreed, a few because a later check disputed their agreement. No model breaks a tie. A person rules on each one, and the ruling goes into the ledger. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
+<li><strong>We count two kinds of unclassified relation separately.</strong> <em>No family</em> means none of our families fits. <em>Text undecided</em> means Jung's sentence supports two readings. Counting them together would hide gaps in our vocabulary among real ambiguities in the text.</li>
 <li><strong>Disputes.</strong> 18 challenges are on the record with their outcomes, in the <a href="/disputes">dispute log</a>.</li>
-<li><strong>Publication.</strong> Releases, deploys and rulings are human decisions.</li>
 </ul>
-<h2>Confidence levels</h2>
-<p>The checks are themselves checked:</p>
+<h2>How we test the checks</h2>
 <ul>
-<li>Every one of the 5418 quotes is mechanically verified against the corpus. The verification set seeds seven deliberately corrupted claims. So far, all seven have been caught on every run. Whether a paragraph supports its claim is a judgment call made by a model. It is not a mechanical proof.</li>
-<li>The family layer is checked by seeding corruptions among real assignments. A family label means: two models, judging independently, agreed on the assignment of the relation to the family. Also here, in the case of disagreement, a human decides.</li>
-<li>The classification vocabulary was checked outside this repository, against 8 works of scholarship: 8 of 16 treated items agreed with our families. We have also published the disagreements (<a href="/ontology#checked">the check</a>). It tests the classification of relations into families, not whether a claim is true.</li>
-<li>The two blind classification arms agreed on 86% of 4035 relations. Agreement measures whether the definitions can be followed consistently, not whether they are right: neither arm is authoritative. Definitions were drafted by one of the model families working in this pipeline.</li>
+<li>Every one of the 5418 quotes is mechanically verified against the corpus. The verification set seeds seven deliberately corrupted claims. So far, all seven have been caught on every run. Whether a paragraph supports its claim stays a model's judgment, which the gate and the auditor make independently.</li>
+<li>The family gate faces the same kind of test: we plant corrupted assignments among real ones. At ruleset v0.7.2 it caught 19 of 19 planted errors and left 39 of 41 clean assignments alone. A family label means two models, judging independently, put the relation in that family, or a person ruled where they disagreed.</li>
+<li>We checked the classification vocabulary against 8 published works of Jung scholarship. Where the literature discusses a relation at all (16 cases), scholars' readings matched our family in 8, differed in 6 and were split in 2. <a href="/ontology#checked">The design page</a> lists the disagreements and the rule changes they produced. The check tests our sorting of relations into families. It says nothing about whether a claim is true.</li>
+<li>Agreement between the two classifying models shows whether two readers apply the definitions the same way. It does not show that the definitions are right: neither model is authoritative.</li>
 </ul>
 <p>What the instruments do not cover:</p>
-<div class="tw"><table><thead><tr><th>Known limit</th><th>Options</th></tr></thead><tbody>
+<div class="tw"><table><thead><tr><th>Known limit</th><th>What would close it</th></tr></thead><tbody>
 <tr><td>One human reviewer; no second annotator yet</td><td>Independent second annotation with agreement statistics</td></tr>
 <tr><td>A class of identity drift (two names for one thing entering as two things) is invisible to the current audit</td><td>No instrument yet</td></tr>
 <tr><td>English translation only (Hull)</td><td>German cross-check against the <em>Gesammelte Werke</em></td></tr>
-<tr><td>Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked</td><td>Opposing claims are mined where Jung himself qualifies, and the books remain the reading</td></tr>
+<tr><td>Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked</td><td>Partly offset: where Jung qualifies a claim, the map records the qualifying claim too. A reading of the essay or volume is still needed</td></tr>
 </tbody></table></div>
 <h2>The paper</h2>
 <p>The method was published with release v1.3.0: 248 symbols, 669 relations, 699 citations. That exact snapshot, atlas and ledger included, is preserved unchanged at <a href="/v1.3/">/v1.3/</a>. The live counts at the top of every page show how far the atlas has grown since. The checks grew too: the relation families and the form rule for relations came after v1.3.0.</p>
