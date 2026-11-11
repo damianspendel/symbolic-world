@@ -723,10 +723,12 @@ EXPECTED_MENU_LEGACY = [
     ("about", [("/about", "about"), ("/atlas#/method", "method"),
                ("/ontology", "design"), ("/support", "support")]),
 ]
-# spec-reader-v1, A4: six entries in one unlabelled group
+# spec-reader-v1, A4: one unlabelled group; the concordance and support
+# returned in the interim build of 2026-11-11
 EXPECTED_MENU_READER = [
     ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas", "atlas"),
-          ("/routes", "routes"), ("/evidence", "evidence"), ("/about", "about")]),
+          ("/atlas#/concordance", "concordance"), ("/routes", "routes"),
+          ("/evidence", "evidence"), ("/about", "about"), ("/support", "support")]),
 ]
 EXPECTED_MENU = (EXPECTED_MENU_READER if re.search(r"^const MENU_READER = true$",
                  read(os.path.join(ROOT, "web", "build-atlas.mjs")), re.M) else EXPECTED_MENU_LEGACY)

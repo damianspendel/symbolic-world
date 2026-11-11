@@ -139,7 +139,7 @@ const EMIT_ABOUT_PAGE = true
 const ROUTES_IN_UI = true
 
 // The support link (Ko-fi, decision of 2026-10-21): one footer link on every
-// generated page and the /support page, nothing else monetized.
+// generated page, the /support page and its menu entry, nothing else monetized.
 // Empty renders nothing anywhere. tools/build_ledger_page.py reads this
 // constant from the source, so the python pages follow the same knob.
 const SUPPORT_URL = 'https://ko-fi.com/symbolicworld'
@@ -282,8 +282,11 @@ const MENU_LEGACY = [
   ['provenance', [['/ledger', 'ledger'], ['/releases', 'releases'], ['/disputes', 'disputes']]],
   ['about', [...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ['/atlas#/method', 'method'], ['/ontology', 'design'], ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
+// The concordance and support came back in the interim build (Damian,
+// 2026-11-10: "the whole concordance part vanished. That was a key value
+// proposition"; 2026-11-11: "reintroduce the support page with the Ko-fi").
 const MENU_READER_LIST = [
-  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : [])]]
+  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/atlas#/concordance', 'concordance'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
 ]
 const MENU = MENU_READER ? MENU_READER_LIST : MENU_LEGACY
 // The reader menu's atlas link has no route after the #, so the app plays its
@@ -3361,19 +3364,23 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
   // tip without leaving the site, and a plain link for anyone whose browser
   // blocks the frame. Nothing else monetized; no sitewide widget script.
   if (SUPPORT_URL) {
-    const supportBody = `<div class="titleband"><p class="eyebrow">about</p>
+    const supportBody = `<section class="land-hero">
+<div class="titleband"><p class="eyebrow">about</p>
 <h1>Support</h1>
 <p class="sub">tips cover the running costs</p></div>
-<p>Tips cover the running costs. The atlas, the dataset and the verification ledger are free to use, and nothing on the site is for sale. Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
+<p class="land-lead">Tips cover the running costs. The atlas, the dataset and the verification ledger are free to use, and nothing on the site is for sale.</p>
+</section>
+<p>Keeping it going still costs money: the domain, and the model spend for checks, corrections and answers to disputes. At measured rates a verified citation costs ${'$'}0.09 to ${'$'}0.16. A tip of any size helps keep the atlas checked and correct.</p>
 <div class="kofi-panel">
 <iframe id="kofiframe" src="${SUPPORT_URL}/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;" height="620" title="Support The Symbolic World on Ko-fi"></iframe>
 </div>
 <p class="meta">If the panel does not load: <a href="${SUPPORT_URL}" rel="noopener">${SUPPORT_URL.replace('https://', '')}</a>.</p>`
-    const supportStyle = `
+    // the landing page's components, as on /evidence (interim build, 2026-11-11)
+    const supportStyle = `${LANDING_CSS}
 .page-main > .kofi-panel { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; margin: 1.2rem 0 .6rem; background: var(--panel); max-width: 420px; }
 `
     registerPage({
-      slug: 'support', title: 'Support', where: 'support', nav: 'support',
+      slug: 'support', title: 'Support', where: 'support', nav: 'support', kind: 'prose landing',
       changefreq: 'monthly', priority: '0.4',
       description: 'Support The Symbolic World: tips cover the running costs of the verified Jung atlas. The atlas, dataset and ledger stay free.',
       style: supportStyle, body: supportBody
