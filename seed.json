@@ -4910,6 +4910,56 @@
    "id": "feeling-type",
    "label": "Feeling type",
    "type": "Concept"
+  },
+  {
+   "id": "dissimilation",
+   "label": "Dissimilation",
+   "type": "Operation"
+  },
+  {
+   "id": "identity",
+   "label": "Identity",
+   "type": "Concept"
+  },
+  {
+   "id": "sandor-ferenczi",
+   "label": "Sándor Ferenczi",
+   "type": "Figure"
+  },
+  {
+   "id": "introjection",
+   "label": "Introjection",
+   "type": "Operation"
+  },
+  {
+   "id": "irrational-function",
+   "label": "Irrational function",
+   "type": "Concept"
+  },
+  {
+   "id": "intuitive-type",
+   "label": "Intuitive type",
+   "type": "Concept"
+  },
+  {
+   "id": "reason",
+   "label": "Reason",
+   "type": "Concept"
+  },
+  {
+   "id": "orientation",
+   "label": "Orientation",
+   "type": "Concept"
+  },
+  {
+   "id": "levy-bruhl",
+   "label": "Lucien Lévy-Bruhl",
+   "type": "Figure"
+  },
+  {
+   "id": "power-complex",
+   "label": "Power-complex",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -118321,6 +118371,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-2, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 747,
+     "quote": "The primordial image, elsewhere also termed archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -119900,6 +119961,18 @@
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
      "correction_note": "gate correction: Verbatim; 'The antithesis of collective is individual (q.v.)': the entry's antithesis is the individual, which the Definitions treat apart from individuality (§755 against §756), one step from the object node; high -> medium."
+    },
+    {
+     "volume": "6",
+     "paragraph": 756,
+     "quote": "Everything that is not collective (q.v.) is individual, everything in fact that pertains only to one individual",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 20 tokens; 'Everything that is not collective (q.v.) is individual': within the INDIVIDUALITY entry, still said of the individual, as at §692; high -> medium, matching the standing reference. Attach."
     }
    ],
    "relation_family": {
@@ -120396,6 +120469,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 784,
+     "quote": "Taken as a whole, empathy is a process of introjection, since it brings the object into intimate relation with the subject.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -120727,6 +120811,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 787,
+     "quote": "Thinking and feeling (qq.v.) are rational functions in so far as they are decisively influenced by reflection .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -120806,6 +120901,1461 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-10"
+   }
+  },
+  {
+   "subject": "thinking",
+   "relation": "differs-from",
+   "object": "feeling",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 731,
+     "quote": "The principle of thinking, for instance, is absolutely different from the principle of feeling",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "idea",
+   "relation": "expresses-meaning-of",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 732,
+     "quote": "I use the term idea to express the meaning of a primordial image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "wundt",
+   "relation": "conceives",
+   "object": "idea",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 732,
+     "quote": "an idea is an abstraction (q.v.), it has the appearance of something derived ... This is the sense in which it is conceived by Wundt",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "source": "Wundt",
+     "note": "the idea as derived, a product of thought"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "kant",
+   "relation": "defines",
+   "object": "idea",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 733,
+     "quote": "Kant defines it as the “archetype [ Urbild ] of all practical employment of reason,” a transcendental concept",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "source": "Kant"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "idea",
+   "relation": "derived-from",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 736,
+     "quote": "the primary nature of the idea ... It derives this quality from its precursor—the primordial, symbolic image.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 750,
+     "quote": "The idea derives this quality from the primordial image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "idea",
+   "relation": "determines",
+   "object": "thinking",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 737,
+     "quote": "The idea is a psychological factor that not only determines thinking but, as a practical idea, also conditions feeling.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "identification",
+   "relation": "involves",
+   "object": "dissimilation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 738,
+     "quote": "IDENTIFICATION . By this I mean a psychological process in which the personality is partially or totally dissimilated (v. Assimilation ).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "identification",
+   "relation": "differs-from",
+   "object": "imitation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 738,
+     "quote": "Identification differs from imitation in that it is an unconscious imitation, whereas imitation is a conscious copying.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "identification",
+   "relation": "differs-from",
+   "object": "identity",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 740,
+     "quote": "Identification with members of the family differs from identity in that it is not an a priori but a secondary phenomenon",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "identity",
+   "relation": "is-foundation-of",
+   "object": "participation-mystique",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 741,
+     "quote": "Psychological identity presupposes that it is unconscious. It is a characteristic of the primitive mentality and the real foundation of participation mystique",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "participation-mystique",
+   "relation": "is-relic-of",
+   "object": "original-unity",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 741,
+     "quote": "participation mystique (q.v.), which is nothing but a relic of the original non-differentiation of subject and object",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 18 tokens; 'a relic of the original non-differentiation of subject and object': the standing original-unity node is a step from Jung's 'non-differentiation'; high -> medium (the §781 reference says 'oneness')."
+    },
+    {
+     "volume": "6",
+     "paragraph": 781,
+     "quote": "This identity results from an a priori oneness of subject and object. Participation mystique is a vestige of this primitive condition.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "identity",
+   "relation": "provides-basis-for",
+   "object": "identification",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 741,
+     "quote": "Identity with the parents provides the basis for subsequent identification (q.v.) with them",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "identity",
+   "relation": "is-conformity-with",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 742,
+     "quote": "Identity is primarily an unconscious conformity with objects.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "fantasy-image",
+   "relation": "depends-on",
+   "object": "fantasy",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 743,
+     "quote": "This image depends much more on unconscious fantasy activity, and as the product of such activity it appears more or less abruptly in consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "fantasy-image",
+   "relation": "expresses",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 745,
+     "quote": "Accordingly the image is an expression of the unconscious as well as the conscious situation of the moment.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "primordial-image",
+   "relation": "possesses",
+   "object": "archaism",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 746,
+     "quote": "I call the image primordial when it possesses an archaic (q.v.) character.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "primordial-image",
+   "relation": "expresses",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 746,
+     "quote": "I call the image primordial when it possesses an archaic (q.v.) character ... It then expresses material primarily derived from the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "primordial-image",
+   "relation": "conceived-as",
+   "object": "engram",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 748,
+     "quote": "the scientific, causal standpoint the primordial image can be conceived as a mnemic deposit, an imprint or engram (Semon)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "source": "Semon",
+     "note": "Jung later finds Semon's engram theory insufficient"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "primordial-image",
+   "relation": "is-precursor-of",
+   "object": "idea",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 750,
+     "quote": "The primordial image is the precursor of the idea (q.v.), and its matrix.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 772,
+     "quote": "by mediating perceptions of mythological images, the precursors of ideas (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, FINDING-adjudicated, 2026-11-11)",
+     "audit_note": "cross-vendor finding overruled: the auditor names the step from 'mythological images' to the primordial image; §746 makes the image primordial by its mythological character, and the gate had already set medium for the step.",
+     "note": "mythological images"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "idea",
+   "relation": "is-formulation-of",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 751,
+     "quote": "The further development of thought leads to the idea, which is nothing other than the primordial image intellectually formulated.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "primordial-image",
+   "relation": "appears-as",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 751,
+     "quote": "At this juncture the primordial image appears in the inner field of vision as a symbol (q.v.)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "schopenhauer",
+   "relation": "discerns",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 753,
+     "quote": "Schopenhauer clearly discerned that the “idea,” or the primordial image as I define it, cannot be produced in the same way that a concept",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "source": "Schopenhauer"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "primordial-image",
+   "relation": "is-counterpart-of",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 754,
+     "quote": "It is thus the necessary counterpart of instinct (q.v.) ... This apprehension is guaranteed by the pre-existent primordial image.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "brings-to-consciousness",
+   "object": "individuality",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 755,
+     "quote": "A conscious process of differentiation (q.v.), or individuation (q.v.), is needed to bring the individuality to consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "is-process-of",
+   "object": "differentiation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 757,
+     "quote": "Individuation, therefore, is a process of differentiation (q.v.), having for its goal the development of the individual personality.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 755,
+     "quote": "A conscious process of differentiation (q.v.), or individuation (q.v.), is needed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "connected-with",
+   "object": "transcendent-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 759,
+     "quote": "Individuation is closely connected with the transcendent function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "individualism",
+   "relation": "distinguished-from",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 761,
+     "quote": "which is the actual aim of extreme individualism ... It has, accordingly, nothing to do with individuation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "amounts-to-development-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 762,
+     "quote": "Individuation is practically the same as the development of consciousness out of the original state of identity (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "lags-behind-in",
+   "object": "differentiation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 763,
+     "quote": "This term is used to denote the function that lags behind in the process of differentiation (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "identification",
+   "relation": "gives-rise-to",
+   "object": "function-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 763,
+     "quote": "a man identifies more or less completely with the most favoured ... function. It is this that gives rise to the various psychological types",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, FINDING-adjudicated, 2026-11-11)",
+     "audit_note": "cross-vendor finding overruled: the auditor read the identification node's label (identity with the parents) as the claim's subject; Jung's entry (§738-740) covers identification with persons, things and functions, and §739 names identification with the best developed function; the label is a vocabulary-review item; medium stands.",
+     "note": "as a general rule"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "sinks-into",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 764,
+     "quote": "the inferior function remains conscious, at least in its effects; but in a neurosis it sinks wholly or in part into the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 24 tokens; 'in a neurosis it sinks wholly or in part into the unconscious', while 'in normal cases the inferior function remains conscious': the condition the note names; high -> medium.",
+     "note": "in neurosis"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "reverts-to",
+   "object": "archaism",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 764,
+     "quote": "the inferior function undergoes a regressive development; it reverts to the archaic (q.v.) stage",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "emotion",
+   "relation": "is-process-of",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 765,
+     "quote": "Thus affects (q.v.) are as much instinctive processes as they are feeling (q.v.) processes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "note": "affects"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "defined-as",
+   "object": "directed-thinking",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 766,
+     "quote": "I call directed thinking (q.v.) intellect.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sandor-ferenczi",
+   "relation": "defines",
+   "object": "introjection",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 767,
+     "quote": "Ferenczi has now defined introjection as the opposite of projection, namely as an indrawing of the object into the subjective sphere of interest",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "source": "Ferenczi"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "introjection",
+   "relation": "is-process-of",
+   "object": "assimilation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 768,
+     "quote": "Psychologically speaking, introjection is a process of assimilation (q.v.), while projection is a process of dissimilation .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "is-process-of",
+   "object": "dissimilation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 768,
+     "quote": "Psychologically speaking, introjection is a process of assimilation (q.v.), while projection is a process of dissimilation .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 783,
+     "quote": "PROJECTION means the expulsion of a subjective content into an object ... Accordingly it is a process of dissimilation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "introjection",
+   "relation": "is-process-of",
+   "object": "extraversion",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 768,
+     "quote": "Introjection is a process of extraversion (q.v.), since assimilation to the object requires empathy (q.v.)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "introversion",
+   "relation": "is-inward-turning-of",
+   "object": "libido",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 769,
+     "quote": "INTROVERSION means an inward-turning of libido (q.v.), in the sense of a negative relation of subject to object.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "introverted-type",
+   "relation": "is-habitual-form-of",
+   "object": "introversion",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 769,
+     "quote": "When introversion is habitual, we speak of an introverted type (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "intuition",
+   "relation": "is-a",
+   "object": "irrational-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 772,
+     "quote": "Although intuition is an irrational function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 787,
+     "quote": "The irrational functions, sensation and intuition (qq.v.), are those whose aim is pure perception",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sensation",
+   "relation": "is-a",
+   "object": "irrational-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 787,
+     "quote": "The irrational functions, sensation and intuition (qq.v.), are those whose aim is pure perception",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "intuitive-type",
+   "relation": "oriented-by",
+   "object": "intuition",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 773,
+     "quote": "Everyone whose general attitude (q.v.) is oriented by intuition belongs to the intuitive type (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-irrational",
+   "relation": "lies-beyond",
+   "object": "reason",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 774,
+     "quote": "I use this term not as denoting something contrary to reason, but something beyond reason, something, therefore, not grounded on reason.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "irrational-function",
+   "relation": "opposed-to",
+   "object": "rational-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 776,
+     "quote": "I call them irrational functions, as opposed to thinking and feeling",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, FINDING-adjudicated, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim; 'I call them irrational functions, as opposed to thinking and feeling': the opposition is stated to thinking and feeling, which §727 and §787 make the rational functions, one step from the object node; high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the auditor names the step from 'thinking and feeling' to the rational-function node; §727 and §787 make thinking and feeling the rational functions, and the gate had already set medium."
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "defined-as",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 778,
+     "quote": "By libido I mean psychic energy .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "libido",
+   "relation": "distinguished-from",
+   "object": "psychic-force",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 778,
+     "quote": "Neither do I understand libido as a psychic force , a misconception that has led many critics astray.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "practises",
+   "object": "objective-level-interpretation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 779,
+     "quote": "Freud’s interpretation of dreams is almost entirely on the objective level",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "orientation",
+   "relation": "governs",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 780,
+     "quote": "ORIENTATION . I use this term to denote the general principle governing an attitude (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "participation-mystique",
+   "relation": "derived-from",
+   "object": "levy-bruhl",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 781,
+     "quote": "PARTICIPATION MYSTIQUE is a term derived from Lévy-Bruhl.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "source": "Lévy-Bruhl"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "power-complex",
+   "relation": "subordinates-influences-to",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 782,
+     "quote": "the whole complex of ideas and strivings which seek to subordinate all other influences to the ego (q.v.)",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 20 tokens; the complex of ideas and strivings 'which seek to subordinate all other influences to the ego': a striving, not an accomplished subordination; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "is-opposite-of",
+   "object": "introjection",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 783,
+     "quote": "PROJECTION means the expulsion of a subjective content into an object; it is the opposite of introjection (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "results-from",
+   "object": "identity",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 783,
+     "quote": "Projection results from the archaic identity (q.v.) of subject and object",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "is-process-of",
+   "object": "introversion",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 784,
+     "quote": "Projection, accordingly, is a process of introversion (q.v.) since, unlike introjection, it does not lead to ingestion and assimilation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "reason",
+   "relation": "conceived-as",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 785,
+     "quote": "I conceive reason as an attitude (q.v.) whose principle it is to conform thought, feeling, and action to objective values.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "reason",
+   "relation": "expresses",
+   "object": "adaptation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 786,
+     "quote": "Human reason, accordingly, is nothing other than the expression of man’s adaptability to average occurrences",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 15 tokens; 'Human reason, accordingly, is nothing other than the expression of man's adaptability to average occurrences': adaptability, one step from the adaptation node; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "thinking",
+   "relation": "is-a",
+   "object": "rational-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 787,
+     "quote": "Thinking and feeling (qq.v.) are rational functions in so far as they are decisively influenced by reflection .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-4, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
    }
   }
  ]
