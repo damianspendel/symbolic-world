@@ -677,6 +677,8 @@ Damian's scope, set on 2026-11-10. On 2026-11-11 he made that day's build v2.3.0
 - The Bookshop.org links. These wait for his affiliate ID, his edition choices and his disclosure wording.
 - The glossary pass, with Vale and the declauding skill.
 - The SSH Open Marketplace entry, after the DOI.
+- The evidence-page prose items Damian deferred on 2026-11-11 ("Rest as per Friday"), with the summary chat's defaults: a limits row on /method saying that nothing measures what the map lacks (recall); the status-dot words stay as they are; "gold set" becomes "human-validated"; one terminology sweep across the evidence pages (claim, relation, edge, reference, record); the cuts on /ontology (the 15-row catalogue table into the fold) and /releases (toward about 700 words). The questions themselves are in the build chat's report on the evidence-page prose pass of 2026-11-11.
+- For the mining record after the trilogy pass, not this build: whether v0.7.2 changed any declaration (receipts cite v0.7.1); the edge with no reference (albedo precedes rubedo), a design decision on the design page and a defect in the definitions document; the definitions document's "Twenty-five candidates" against "The 24 families"; why 103 citations have no audit stamp.
 
 ## v2.3.0: the RDF export (added 2026-11-05)
 
