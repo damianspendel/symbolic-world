@@ -1697,7 +1697,7 @@ const EVROWS = (EV && EV.per_family && EV.per_family.rows) || []
 const evTable = (currentFamily) => {
   if (!EVROWS.length) return ''
   const rows = EVROWS.map(r => `<tr class="${r.total ? 'total' : ''}${r.family === currentFamily ? ' this' : ''}">` +
-    `<td>${esc(r.label)}</td><td class="n">${esc(r.agrees)}</td><td class="n">${esc(r.disagrees)}</td>` +
+    `<td>${esc(r.label.replace('personif.', 'personification'))}</td><td class="n">${esc(r.agrees)}</td><td class="n">${esc(r.disagrees)}</td>` +
     `<td class="n">${esc(r.split)}</td><td class="n">${esc(r.not_treated)}</td></tr>`).join('\n')
   return `<div class="tw"><table>
 <thead><tr><th>family</th><th>agrees</th><th>disagrees</th><th>split</th><th>not treated</th></tr></thead>
@@ -2812,10 +2812,10 @@ Promise.all([fetch('/graph.json').then(r => r.json()), fetch('/relation_declarat
 // reason the project exists. The panel says which is which, in a column, and it
 // neither counts a decision as a defect nor hides what a decision costs.
 const QA_STANCE = [
-  [/^P22/, 'design', 'The relation slot holds Jung\u2019s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it.'],
+  [/^P22/, 'design', 'The relation slot holds Jung\u2019s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it. An open vocabulary is hard to query by predicate, which is why the family layer and the routes exist.'],
   [/^P24 relation name/, 'open', 'A predicate carrying a whole proposition is the project\u2019s named defect. New mining is constrained by a form rule, and the normalization layer repairs the old edges beside their frozen originals rather than over them.'],
   [/^P24 node label/, 'open', 'A label that is a sentence cannot be matched across edges. Counted here, not yet repaired.'],
-  [/^P02\/P30 synonymous/, 'declared', 'Answered by the declarations layer (see the note above the table).'],
+  [/^P02\/P30 synonymous/, 'family', 'A query by family returns every one of these strings. No string is declared equivalent to another, because each edge is assigned in its own paragraph.'],
   [/^P05\/P13/, 'declared', 'The declarations name the inverse pairs the document rules on. They are applied when a query asks for closure and are never written into the graph.'],
   [/^P25/, 'declared', 'Same answer: a symmetric declaration is read at query time. Asserting the second direction in the graph would put a claim in it that no paragraph was gated for.'],
   [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains can be read one edge at a time by the walk in tools/query/kg_query.py, which prints each hop\u2019s own citation and asserts nothing about the ends; it is not exposed on the site in this release.'],
@@ -2854,6 +2854,7 @@ const PITFALLS = {
 const STANCE_LABEL = {
   design: 'recorded design decision',
   declared: 'answered by the declarations layer',
+  family: 'answered by the family layer',
   open: 'open: recorded as a defect',
   unclassified: 'not classified'
 }
@@ -2874,16 +2875,27 @@ if (QA && DECL) {
     const hit = QA_STANCE.find(([re]) => re.test(tag))
     return hit ? { kind: hit[1], why: hit[2] } : { kind: 'unclassified', why: 'This finding has no recorded stance. It is shown as the scan reported it.' }
   }
-  const findingRows = ['critical', 'important', 'minor'].flatMap(sev =>
-    QA[sev].map(f => {
+  // The synonym findings (one per group of relation strings) share one stance
+  // and differ only in two numbers, so they render as one row listing the
+  // groups (prose review, 2026-11-11).
+  const isSynonym = (f) => /^P02\/P30 synonymous/.test(f.tag)
+  const findingRows = ['critical', 'important', 'minor'].flatMap(sev => {
+    const syn = QA[sev].filter(isSynonym)
+    return QA[sev].map(f => {
+      if (isSynonym(f) && f !== syn[0]) return ''
       const s = stanceOf(f.tag)
+      const finding = isSynonym(f)
+        ? `<div class="ev tag">P02/P30 synonymous relations, ${syn.length} groups</div><ul class="ev fmsg">${syn.map(x =>
+            `<li>${esc(x.tag.replace(/^P02\/P30 synonymous relations, /, ''))}: ${esc(x.message.replace(/ express the same semantics across /, ' over ').replace(/, with no equivalence declared\. A query on any one misses the rest\./, ''))}</li>`).join('')}</ul>`
+        : `<div class="ev tag">${esc(f.tag)}</div><div class="ev fmsg">${esc(f.message)}</div>`
       return `<tr class="st-${s.kind}">
 <td class="sev">${esc(sev)}</td>
-<td><div class="ev tag">${esc(f.tag)}</div><div class="ev fmsg">${esc(f.message)}</div></td>
+<td>${finding}</td>
 <td><span class="chip st-${s.kind}">${esc(STANCE_LABEL[s.kind])}</span><div class="why">${esc(s.why)}</div></td>
 </tr>`
-    })).join('\n')
-  const counts = { design: 0, declared: 0, open: 0, unclassified: 0 }
+    })
+  }).filter(Boolean).join('\n')
+  const counts = { design: 0, declared: 0, family: 0, open: 0, unclassified: 0 }
   for (const sev of ['critical', 'important', 'minor']) for (const f of QA[sev]) counts[stanceOf(f.tag).kind]++
   derived(...Object.values(counts), QA.totals.critical + QA.totals.important + QA.totals.minor,
     h.hapax_relations, h.distinct_relations, h.sentence_shaped_relations, h.sentence_shaped_edges,
@@ -2891,14 +2903,29 @@ if (QA && DECL) {
     di.active_declarations, di.observed_inverse_pairs_in_vocabulary, di.observed_pairs_declared,
     di.edges_carrying_a_declared_string, DECL.candidates_awaiting_ruling.length, DECL.rulings.length)
 
+  // the definitions document's section, named for a reader: 'family 3
+  // (manifestation)' or 'precedents table', without line numbers (O6)
+  const declSourceLabel = (sec) => {
+    const t = sectionLabel(sec)
+    const fam = t.match(/^(\d+)\.\s*([a-z-]+)/)
+    if (fam) return `definitions document, family ${fam[1]} (${fam[2]})`
+    if (/precedents/i.test(t)) return 'definitions document, precedents table'
+    return `definitions document, ${t}`
+  }
   const declRows = activeDecls.map(d => `<tr>
 <td class="ev"><code>${esc(d.kind === 'inverse' ? `${d.forward} / ${d.inverse}` : d.relation)}</code></td>
 <td>${esc(d.kind)}${d.applies_to_family ? `<br><span class="dim">only where the edge carries <span class="ev">${esc(d.applies_to_family)}</span></span>` : ''}${d.carried_qualifier ? `<br><span class="dim">carries <span class="ev">${esc(d.carried_qualifier)}</span> into the derived row</span>` : ''}</td>
-<td class="ev src">${d.source.map(s => `${esc(sectionLabel(s.section))} (line ${s.line})`).join('<br>')}</td>
+<td class="ev src">${d.source.map(s => esc(declSourceLabel(s.section))).join('<br>')}</td>
 </tr>`).join('\n')
 
+  // O7: a ruling is shown in words a reader can follow. The stored ruling stays
+  // as written in pipeline/family/relation_declarations.json; a ruling with no
+  // entry here is shown as stored.
+  const RULING_FOR_READERS = {
+    '2026-08-13': 'aspect-of is a plain inverse of manifests-as. is-dark-aspect-of is also an inverse, and the derived row keeps the words \u201cdark aspect\u201d. The general rule: a derived row carries everything the stored row asserted, and where it cannot, no declaration is made.'
+  }
   const rulingRows = (DECL.rulings || []).map(r => `<tr>
-<td class="n">${esc(r.date)}</td><td class="ev">${esc(r.ruled_by)}</td><td class="ev">${esc(r.ruling)}</td>
+<td class="n">${esc(r.date)}</td><td class="ev">${esc(r.ruled_by)}</td><td class="ev">${esc(RULING_FOR_READERS[r.date] || r.ruling)}</td>
 </tr>`).join('\n')
 
   // the codes the tool actually cites, read out of its findings and its source,
@@ -2945,19 +2972,19 @@ if (QA && DECL) {
   <span class="ofig-arm">&rarr;</span>
   <span class="chip f-ok ev">${esc(tierFamily.family)} <span class="n">${tierFamily.edges}</span></span>
 </div>
-<figcaption>The second tier: different relation strings, each verified in its own paragraph, assigned to one family. The family only classifies relations.</figcaption>
+<figcaption>The second tier: different relation strings, each verified in its own paragraph, assigned to one family.</figcaption>
 </figure>`
 
   const ontBody = `<div class="titleband"><p class="eyebrow">evidence</p>
 <h1>The design</h1></div>
-<p>The atlas is a network of asserted relations between named things. Each relation is evidenced by a paragraph and a quote from the Collected Works. This page records the design decisions and the results of a standard pitfall scan over the graph.</p>
+<p>The atlas is a network of asserted relations between named things. Each relation rests on a paragraph of the Collected Works and a quote from it. This page records the design decisions and the results of a standard pitfall scan over the graph.</p>
 <p>The terms the RDF export uses for claims, references and their checks are on the <a href="/vocabulary">vocabulary</a> page.</p>
 
 <h2>Two tiers</h2>
 <p>Jung's relations come in many wordings, so the graph has two tiers.</p>
 <p>The first tier is the relation in Jung's own wording.</p>
-<p>The second tier is the family: a classification <em>over</em> the verified relation. We use a similar pipeline for assignment of relations to families: an assignment stands when two models reading that document independently name the same family; a person rules when they do not.</p>
-<p>The families are this project's sorting of the relations Jung wrote. The field has not agreed on them and the graph does not claim they are his structure. The second tier is where the map's limit shows: it sorts what Jung asserted and does not interpret it.</p>
+<p>The second tier is the family: a classification <em>over</em> the verified relation. Two models read the family definitions and classify each relation without seeing the other's answer. Where they name the same family, the assignment stands. Where they differ, a person rules. The <a href="/families">families page</a> sets out the whole procedure.</p>
+<p>The families are this project's sorting of the relations Jung wrote. The field has not agreed on them and the graph does not claim they are his structure.</p>
 ${figAnatomy}
 <p>Where a relation was a whole clause, a normalization layer records a cleaned verb phrase beside the frozen original. ${meta.normalized} relations carry that layer. The family layer classifies the normalized form where it exists.</p>
 
@@ -2973,7 +3000,7 @@ ${rulingRows ? `<h4>rulings behind them</h4>
 ${rulingRows}
 </tbody></table></div>` : ''}
 
-<h2>Atlas, Graph, Ontology</h2>
+<h2>The pitfall catalogue</h2>
 <p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur in published ontologies and describes how to detect each one. The catalogue is a list of known issues rather than a standard to comply with and so can provide design guidance. <code>tools/ontology_qa/quality.py</code> implements a subset against this graph and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
 <p class="meta">Poveda-Villal\u00f3n, G\u00f3mez-P\u00e9rez and Su\u00e1rez-Figueroa, "OOPS! (OntOlogy Pitfall Scanner!): An On-line Tool for Ontology Evaluation", <i>International Journal on Semantic Web and Information Systems</i> 10(2), 2014.</p>
 <div class="tw"><table><thead><tr><th>pitfall</th><th>what the catalogue names</th><th>use here</th></tr></thead><tbody>
@@ -2981,32 +3008,31 @@ ${pitfallRows}
 </tbody></table></div>
 <p class="meta">The catalogue was written for ontologies built out of classes and properties; this graph is relations between named things.</p>
 
-<h2>The pitfall scan</h2>
-<p>Run at every build by <code>tools/ontology_qa/quality.py</code>. Our stance on each finding follows. Where a finding is answered by the declarations layer, equivalence is stated per edge in its paragraph, and where the definitions document rules on a specific pair a declaration records it and the query layer applies it at read time. ${counts.design} of the ${QA.totals.critical + QA.totals.important + QA.totals.minor} findings are decisions recorded above, ${counts.declared} are answered by the declarations, and ${counts.open} are open defects.</p>
+<h2>What the scan found</h2>
+<p>The scan runs at every build. The table gives each finding and our answer to it.</p>
 <div class="qa">
   <div class="fig"><span class="figv ev">${h.hapax_pct.toFixed(1)}%</span><span class="figl">of relation strings are used exactly once <span class="ev">(${h.hapax_relations} of ${h.distinct_relations})</span></span></div>
-  <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped predicates remain, over <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
+  <div class="fig"><span class="figv ev">${h.sentence_shaped_relations}</span><span class="figl">sentence-shaped relation strings, on <span class="ev">${h.sentence_shaped_edges}</span> relations</span></div>
   <div class="fig"><span class="figv ev">${di.observed_pairs_declared}/${di.observed_inverse_pairs_in_vocabulary}</span><span class="figl">inverse pairs present in the vocabulary have a declaration <span class="ev">(${di.edges_carrying_a_declared_string}</span> relations carry a declared string)</span></div>
-  <div class="fig"><span class="figv ev">${h.detached_components}</span><span class="figl">component detached from the main graph <span class="ev">(${h.largest_component}</span> of ${h.nodes} nodes are in it)</span></div>
+  <div class="fig"><span class="figv ev">${h.detached_components}</span><span class="figl">${h.detached_components === 1 ? 'component' : 'components'} detached; the main graph holds <span class="ev">${h.largest_component}</span> of ${h.nodes} nodes</span></div>
 </div>
 <details class="disclose">
-<summary>${QA.totals.critical + QA.totals.important + QA.totals.minor} findings: ${counts.design} recorded design decisions, ${counts.declared} answered by the declarations, ${counts.open} open defects.<span class="more">every finding, with its stance</span></summary>
+<summary>${QA.totals.critical + QA.totals.important + QA.totals.minor} findings: ${counts.design} recorded design decisions, ${counts.family} answered by the family layer, ${counts.declared} by the declarations, ${counts.open} open defects.<span class="more">every finding, with its stance</span></summary>
 <div class="tw"><table class="findings"><thead><tr><th>severity</th><th>the scan's finding</th><th>stance</th></tr></thead><tbody>
 ${findingRows}
 </tbody></table></div>
 </details>
-<p class="meta">An open vocabulary is hard to query by predicate, which is the rationale for the family layer and the “routes”.</p>
 
 ${EVROWS.length ? `<h2 id="checked">Checked against readers of Jung</h2>
 <p>In August 2026 we put a sample of these assignments to the secondary literature: ${EV.items} items, drawn by seeded stratification and weighted toward the contested families, checked in ${['zero','one','two','three','four'][EV.passes]} pre-registered passes against ${['zero','one','two','three','four','five','six','seven','eight','nine'][EV.works_consulted]} works of Jungian scholarship: Jacobi's <em>The Psychology of C. G. Jung</em>, Samuels, Shorter and Plaut's <em>A Critical Dictionary of Jungian Analysis</em>, von Franz's <em>Alchemy: An Introduction to the Symbolism and the Psychology</em>, ${['zero','one','two','three','four'][EV.edinger_volumes]} volumes of Edinger, and Abraham's <em>A Dictionary of Alchemical Imagery</em>. The check asked whether the <em>kind</em> of relation we recorded is the kind a reader of the literature would say Jung asserts.</p>
 
-<p>The literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs were not treated at all. Jung's image-level assertions are often simply not discussed anywhere. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
+<p>The literature treats ${EV.treated} of the ${EV.assigned_purposive_scored} sampled assignments (the other ${EV.items - EV.assigned_purposive_scored} of the ${EV.items} items were queued arm-disagreements, scored separately); scholars' renderings agreed with our family on ${EV.agrees} of those ${EV.treated}, disagreed on ${EV.disagrees}, and split among themselves on ${EV.scholars_split}. The other ${EV.not_treated} pairs were not treated at all. The literature often does not discuss Jung's assertions about single images. The disagreements produced ${['zero','one','two','three','four','five','six','seven'][EV.rulings_produced]} rule changes, folded into the ruleset as ${esc(EV.ruleset_version_produced)}; the largest sends every <code>amplified-by</code> edge back for reclassification, because two independent reference authors read those relations as content claims, not adduced parallels.</p>
 <details class="disclose">
-<summary>${EV.agrees} of ${EV.treated} treated items agreed with our family, across ${EV.works_consulted} works of scholarship.<span class="more">the whole table</span></summary>
+<summary>The whole table, family by family.<span class="more">open</span></summary>
 ${evTable()}
 </details>
 
-<p>Agreement here is not endorsement: no scholar reviewed this vocabulary. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+<p>No scholar reviewed this vocabulary, so agreement means only that the literature words the relation the same way. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 ` : ''}
 
 <div class="receipts"><b>receipts</b>

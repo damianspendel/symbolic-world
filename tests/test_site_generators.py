@@ -262,7 +262,7 @@ def test_the_ontology_findings_list_sits_behind_its_counts(qa_json):
     assert f"{total} findings" in summary
     assert "table class=\"findings\"" in block
     # the four headline figures stay outside the fold
-    panel = html[html.index("<h2>The pitfall scan"):html.index("<details class=\"disclose\">")]
+    panel = html[html.index("<h2>What the scan found"):html.index("<details class=\"disclose\">")]
     assert str(qa_json["headline"]["hapax_pct"]) in panel
 
 
@@ -568,7 +568,7 @@ def test_qa_json_mode_reports_the_same_findings_as_the_prose_mode(qa_json):
 
 def test_the_qa_panels_numbers_appear_on_the_rendered_page(qa_json):
     html = read(os.path.join(PUBLIC, "ontology.html"))
-    panel = html[html.index("The pitfall scan"):]
+    panel = html[html.index("What the scan found"):]
     head = qa_json["headline"]
     for value in (head["hapax_relations"], head["distinct_relations"],
                   head["sentence_shaped_relations"], head["sentence_shaped_edges"],
@@ -584,12 +584,16 @@ def test_every_scan_finding_reaches_the_page_with_a_stance(qa_json):
     html = read(os.path.join(PUBLIC, "ontology.html"))
     stances = re.findall(r'<span class="chip st-(\w+)">', html)
     findings = [f for sev in ("critical", "important", "minor") for f in qa_json[sev]]
-    assert len(stances) == len(findings)
+    # the synonym findings share one stance and render as one row listing the
+    # groups (prose review, 2026-11-11)
+    synonyms = [f for f in findings if f["tag"].startswith("P02/P30 synonymous")]
+    assert len(stances) == len(findings) - max(len(synonyms) - 1, 0)
     assert "unclassified" not in stances, (
         "a finding has no recorded stance — add one to QA_STANCE in build-atlas.mjs "
         "rather than leaving the page to report it unexplained")
     for f in findings:
-        assert f["tag"] in html, f["tag"]
+        shown = f["tag"].replace("P02/P30 synonymous relations, ", "") if f in synonyms else f["tag"]
+        assert shown in html, f["tag"]
 
 
 def test_no_rendered_page_leaks_raw_markdown():
@@ -619,10 +623,16 @@ def test_a_declaration_section_renders_as_a_label(qa_json):
             continue
         for source in decl["source"]:
             label = re.sub(r"^\s*#+\s*", "", source["section"])
-            assert f"{label} (line {source['line']})" in html, label
+            fam = re.match(r"(\d+)\.\s*([a-z-]+)", label)
+            # named for a reader since 2026-11-11: the family or the precedents
+            # table, without the document's line number
+            reader = (f"definitions document, family {fam.group(1)} ({fam.group(2)})" if fam
+                      else "definitions document, precedents table")
+            assert reader in html, label
+            assert "#" not in reader
     js = read(os.path.join(ROOT, "web", "build-atlas.mjs"))
     assert "const sectionLabel = (t) =>" in js
-    assert "esc(sectionLabel(" in js
+    assert "esc(declSourceLabel(" in js
 
 
 def test_the_ontology_page_puts_the_evidence_before_the_conclusions():
@@ -631,8 +641,8 @@ def test_the_ontology_page_puts_the_evidence_before_the_conclusions():
     than assertions made ahead of it."""
     html = read(os.path.join(PUBLIC, "ontology.html"))
     order = [re.sub(r"<[^>]+>", "", h) for h in re.findall(r"<h2[^>]*>.*?</h2>", html)]
-    assert order == ["Two tiers", "The declarations", "Atlas, Graph, Ontology",
-                     "The pitfall scan", "Checked against readers of Jung"], order
+    assert order == ["Two tiers", "The declarations", "The pitfall catalogue",
+                     "What the scan found", "Checked against readers of Jung"], order
 
 
 def test_the_ontology_figures_carry_real_data():
@@ -662,7 +672,7 @@ def test_the_ontology_page_states_where_its_checks_come_from(qa_json):
     """The scan borrows the OOPS! catalogue's numbering; the page says so, cites
     it, and lists every pitfall code the tool actually uses."""
     html = read(os.path.join(PUBLIC, "ontology.html"))
-    section = html[html.index("Atlas, Graph, Ontology"):html.index("<h2>The pitfall scan")]
+    section = html[html.index("The pitfall catalogue"):html.index("<h2>What the scan found")]
     assert "OntOlogy Pitfall Scanner" in section
     assert "Poveda-Villal" in section
     assert "not the OOPS! service" in section
