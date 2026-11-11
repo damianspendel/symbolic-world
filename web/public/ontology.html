@@ -218,8 +218,8 @@ table.findings .src { font: .58rem var(--mono); }
 </tr>
 <tr class="st-family">
 <td class="sev">critical</td>
-<td><div class="ev tag">P02/P30 synonymous relations, 6 groups</div><ul class="ev fmsg"><li>identity/equivalence: 12 distinct relation strings over 107 edges</li><li>symbolisation: 13 distinct relation strings over 385 edges</li><li>analogy/correspondence: 10 distinct relation strings over 209 edges</li><li>part/containment: 10 distinct relation strings over 84 edges</li><li>generation/origin: 15 distinct relation strings over 131 edges</li><li>transformation: 8 distinct relation strings over 34 edges</li></ul></td>
-<td><span class="chip st-family">answered by the family layer</span><div class="why">A query by family returns every one of these strings. No string is declared equivalent to another, because each edge is assigned in its own paragraph.</div></td>
+<td><div class="ev tag">P02/P30 synonymous relations, 6 groups</div><ul class="ev fmsg"><li>identity/equivalence: 12 distinct relation strings over 107 edges</li><li>symbolisation: 13 distinct relation strings over 385 edges</li><li>analogy/correspondence: 10 distinct relation strings over 209 edges</li><li>part/containment: 10 distinct relation strings over 84 edges</li><li>generation/origin: 15 distinct relation strings over 131 edges</li><li>transformation: 8 distinct relation strings over 34 edges</li></ul><div class="ev fmsg">In each group no equivalence is declared, so a query on any one string misses the rest.</div></td>
+<td><span class="chip st-family">answered by the family layer</span><div class="why">A query by family returns every assigned relation in that family, whatever its string. Relations still waiting for a ruling are not returned. No string is declared equivalent to another, because each edge is assigned in its own paragraph.</div></td>
 </tr>
 <tr class="st-design">
 <td class="sev">critical</td>
@@ -296,12 +296,12 @@ table.findings .src { font: .58rem var(--mono); }
 <tr class="total"><td>All</td><td class="n">8/16</td><td class="n">6/16</td><td class="n">2/16</td><td class="n">6</td></tr></tbody></table></div>
 </details>
 
-<p>No scholar reviewed this vocabulary, so agreement means only that the literature words the relation the same way. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+<p>No scholar reviewed this vocabulary, so agreement means only that a scholar's rendering falls in the same family. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 
 
 <div class="receipts"><b>receipts</b>
 external-validity result from <code>docs/experiments/external_validity_2026-08/results.json</code> (report v3, closed 2026-08-12);<br>scan output from <code>tools/ontology_qa/quality.py --json</code> over seed.json <span class="hash">sha256:a90f825eff62</span>, run at build;<br>
 declarations from <code>pipeline/family/relation_declarations.json</code>, transcribed from FAMILY_DEFINITIONS v0.7.1;<br>
-built 2026-11-11 at commit 9f80043c
+built 2026-11-11 at commit ef87ce35
 </div>
 </main></body></html>
