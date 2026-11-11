@@ -323,7 +323,7 @@ def test_the_external_check_lives_on_ontology_and_the_links_point_at_it():
     # /families keeps one line, and it is a link to the record
     exposition = fam[:fam.index("<hr>")]
     assert exposition.count("/ontology#checked") == 1, "the families link is not once"
-    assert "checked once against outside scholarship" in exposition
+    assert "assignments once against outside scholarship" in exposition
     # and no page still points at the anchor's old home
     for path in generated_pages():
         assert "/families#checked" not in read(path), os.path.basename(path)

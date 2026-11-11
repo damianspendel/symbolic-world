@@ -1083,7 +1083,7 @@ ${map.text_undecided.length ? `<p>And the strings where Jung's sentence itself h
 <div class="strs homeless">${stringList(map.text_undecided)}</div>` : ''}
 
 <p>The boundary rules are in the definitions document below.</p>
-${EV ? `<p class="meta">The assignments were checked once against outside scholarship. <a href="/ontology#checked">The result is on the design page.</a></p>
+${EV ? `<p class="meta">We checked the assignments once against outside scholarship. <a href="/ontology#checked">The result is on the design page.</a></p>
 ` : ''}`
 }
 
@@ -2829,7 +2829,7 @@ const QA_STANCE = [
   [/^P02\/P30 synonymous/, 'family', 'A query by family returns every one of these strings. No string is declared equivalent to another, because each edge is assigned in its own paragraph.'],
   [/^P05\/P13/, 'declared', 'The declarations name the inverse pairs the document rules on. They are applied when a query asks for closure and are never written into the graph.'],
   [/^P25/, 'declared', 'Same answer: a symmetric declaration is read at query time. Asserting the second direction in the graph would put a claim in it that no paragraph was gated for.'],
-  [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains can be read one edge at a time by the walk in tools/query/kg_query.py, which prints each hop\u2019s own citation and asserts nothing about the ends; it is not exposed on the site in this release.'],
+  [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains can be read one edge at a time by the identity walk in the query tool, which prints each hop\u2019s own citation and asserts nothing about the ends; it is not exposed on the site in this release.'],
   [/^P04/, 'open', 'A detached component is a gap in what has been mined, not a decision.'],
   [/^P11\/P12/, 'design', 'No relation is given a domain or a range as a constraint. The observed signatures are a measurement of the corpus; a constraint would reject an edge because of what the schema expects rather than what the paragraph says.'],
   [/^P21/, 'open', 'The type tag is coarse and does little work. It colours the map and picks the Concordance registers; nothing rests on it.'],
@@ -3012,7 +3012,7 @@ ${rulingRows}
 </tbody></table></div>` : ''}
 
 <h2>The pitfall catalogue</h2>
-<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur in published ontologies and describes how to detect each one. The catalogue is a list of known issues rather than a standard to comply with and so can provide design guidance. <code>tools/ontology_qa/quality.py</code> implements a subset against this graph and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
+<p>The scan follows the OOPS! catalogue, the OntOlogy Pitfall Scanner, which numbers the modelling faults that recur in published ontologies and describes how to detect each one. The catalogue is a list of known issues rather than a standard to comply with and so can provide design guidance. Our scan script implements a subset against this graph and keeps the catalogue's numbering so a finding can be looked up in the literature. It is not the OOPS! service and does not run its full test set.</p>
 <p class="meta">Poveda-Villal\u00f3n, G\u00f3mez-P\u00e9rez and Su\u00e1rez-Figueroa, "OOPS! (OntOlogy Pitfall Scanner!): An On-line Tool for Ontology Evaluation", <i>International Journal on Semantic Web and Information Systems</i> 10(2), 2014.</p>
 <div class="tw"><table><thead><tr><th>pitfall</th><th>what the catalogue names</th><th>use here</th></tr></thead><tbody>
 ${pitfallRows}
