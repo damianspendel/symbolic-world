@@ -732,7 +732,7 @@ EXPECTED_MENU_LEGACY = [
 EXPECTED_MENU_READER = [
     ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas", "atlas"),
           ("/atlas#/concordance", "concordance"), ("/routes", "routes"),
-          ("/evidence", "evidence"), ("/about", "about"), ("/support", "support")]),
+          ("/evidence", "evidence"), ("/support", "support"), ("/about", "about")]),
 ]
 EXPECTED_MENU = (EXPECTED_MENU_READER if re.search(r"^const MENU_READER = true$",
                  read(os.path.join(ROOT, "web", "build-atlas.mjs")), re.M) else EXPECTED_MENU_LEGACY)

@@ -286,7 +286,7 @@ const MENU_LEGACY = [
 // 2026-11-10: "the whole concordance part vanished. That was a key value
 // proposition"; 2026-11-11: "reintroduce the support page with the Ko-fi").
 const MENU_READER_LIST = [
-  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/atlas#/concordance', 'concordance'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : []), ...(SUPPORT_URL ? [['/support', 'support']] : [])]]
+  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/atlas#/concordance', 'concordance'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(SUPPORT_URL ? [['/support', 'support']] : []), ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : [])]]
 ]
 const MENU = MENU_READER ? MENU_READER_LIST : MENU_LEGACY
 // The reader menu's atlas link has no route after the #, so the app plays its
