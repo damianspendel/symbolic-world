@@ -3074,7 +3074,7 @@ table.findings .src { font: .58rem var(--mono); }
   const fmtSize = (b) => b >= 1e6 ? `${(b / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(b / 1e3))} kB`
   const exportBlock = `<section id="export" class="vexport">
 <h2>The RDF export</h2>
-<p>The export ships with v2.3.0, as Turtle files on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. The site does not serve them. They are licensed CC BY 4.0.</p>
+<p>The export ships with v2.3.0, as Turtle files on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. The site does not serve them. Their licence is CC BY 4.0.</p>
 <p>The files hold the nodes, the relations, one claim per citation, the references, and for each claim the stages that checked it, in PROV-O. They leave out the quotations, which stay on the concept pages, and any inference over the nodes.</p>
 <ul>
 ${exportFiles.map(([f, d]) => `<li><code>${esc(f)}</code>: ${esc(d)}${exportSizes[f] ? ` (<span class="ev">${fmtSize(exportSizes[f])}</span> at this build)` : ''}</li>`).join('\n')}
