@@ -159,6 +159,7 @@
    "type": "Figure",
    "label": "Mercurius",
    "aliases": [
+    "Kyllenios",
     "Mercurius duplex",
     "mercurial serpent",
     "spirit Mercurius"
@@ -173,6 +174,11 @@
      "volume": "14",
      "paragraph": 251,
      "batch": "b-cw14-4"
+    },
+    {
+     "volume": "14",
+     "paragraph": 416,
+     "batch": "b-cw14-6"
     }
    ]
   },
@@ -341,7 +347,17 @@
   {
    "id": "lion",
    "type": "Symbol",
-   "label": "Lion (leo)"
+   "label": "Lion (leo)",
+   "aliases": [
+    "Leo antiquus"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 405,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "bitch",
@@ -413,12 +429,33 @@
   {
    "id": "meretrix",
    "type": "Figure",
-   "label": "Meretrix (the whore)"
+   "label": "Meretrix (the whore)",
+   "latin": "meretrix",
+   "aliases": [
+    "whore"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 415,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "venus",
    "type": "Figure",
-   "label": "Venus"
+   "label": "Venus",
+   "aliases": [
+    "Venus pugnax"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 415,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "ethiopian-moor",
@@ -478,7 +515,17 @@
   {
    "id": "homunculus",
    "type": "Figure",
-   "label": "Homunculus"
+   "label": "Homunculus",
+   "aliases": [
+    "Anthroparion"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 412,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "lumen-naturae",
@@ -584,7 +631,21 @@
      "volume": "14",
      "paragraph": 6,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "14",
+     "paragraph": 373,
+     "batch": "b-cw14-6"
+    },
+    {
+     "volume": "14",
+     "paragraph": 409,
+     "batch": "b-cw14-6"
     }
+   ],
+   "aliases": [
+    "Hermetic vessel",
+    "thalamus"
    ]
   },
   {
@@ -775,7 +836,17 @@
   {
    "id": "cauda-pavonis",
    "type": "Symbol",
-   "label": "Cauda pavonis (peacock's tail)"
+   "label": "Cauda pavonis (peacock's tail)",
+   "aliases": [
+    "peacock’s tail"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 388,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "raven",
@@ -795,6 +866,11 @@
      "volume": "14",
      "paragraph": 167,
      "batch": "b-cw14-3"
+    },
+    {
+     "volume": "14",
+     "paragraph": 358,
+     "batch": "b-cw14-6"
     }
    ]
   },
@@ -1424,6 +1500,11 @@
      "volume": "14",
      "paragraph": 6,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "14",
+     "paragraph": 354,
+     "batch": "b-cw14-6"
     }
    ]
   },
@@ -1435,7 +1516,15 @@
   {
    "id": "ancient-of-days",
    "type": "Figure",
-   "label": "Ancient of Days (Antiquus dierum)"
+   "label": "Ancient of Days (Antiquus dierum)",
+   "latin": "Antiquus dierum",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 405,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "dominant-of-consciousness",
@@ -1803,7 +1892,15 @@
   {
    "id": "chaos",
    "type": "Substance",
-   "label": "The massa confusa or chaos confusum out of which the stone arises; one of the recurring names of the prima materia"
+   "label": "The massa confusa or chaos confusum out of which the stone arises; one of the recurring names of the prima materia",
+   "latin": "massa confusa",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 355,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "three-legged-ass",
@@ -2590,7 +2687,17 @@
   {
    "id": "peacock",
    "label": "The peacock",
-   "type": "Symbol"
+   "type": "Symbol",
+   "aliases": [
+    "bird of Hermes"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 391,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "navaho-sandpainting",
@@ -3580,7 +3687,17 @@
   {
    "id": "ka-mutef",
    "label": "Ka-mutef (\"bull of his mother\", the procreative power of the deity)",
-   "type": "Figure"
+   "type": "Figure",
+   "aliases": [
+    "bull of his mother"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 351,
+     "batch": "b-cw14-6"
+    }
+   ]
   },
   {
    "id": "ka",
@@ -5957,6 +6074,104 @@
    "id": "calcinatio",
    "label": "Calcinatio",
    "type": "Operation"
+  },
+  {
+   "id": "dropsy",
+   "label": "Dropsy (inward drowning)",
+   "type": "Motif"
+  },
+  {
+   "id": "veritas",
+   "label": "Veritas (Dorn's truth)",
+   "type": "Concept"
+  },
+  {
+   "id": "spagyric-marriage",
+   "label": "Spagyric marriage (Dorn)",
+   "type": "Motif"
+  },
+  {
+   "id": "accrescent-soul",
+   "label": "Accrescent soul (Isidore)",
+   "type": "Concept"
+  },
+  {
+   "id": "renewal-of-god",
+   "label": "Renewal of the ageing god",
+   "type": "Motif"
+  },
+  {
+   "id": "adoption",
+   "label": "Rite of adoption",
+   "type": "Motif"
+  },
+  {
+   "id": "cibatio",
+   "label": "Cibatio (feeding)",
+   "type": "Operation",
+   "latin": "cibatio",
+   "aliases": [
+    "feeding"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 388,
+     "batch": "b-cw14-6"
+    }
+   ]
+  },
+  {
+   "id": "omnes-colores",
+   "label": "Omnes colores (all colours)",
+   "type": "Symbol",
+   "latin": "omnes colores",
+   "aliases": [
+    "all colours"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 388,
+     "batch": "b-cw14-6"
+    }
+   ]
+  },
+  {
+   "id": "dead-spiritual-body",
+   "label": "Dead spiritual body (bird without wings)",
+   "type": "Symbol",
+   "aliases": [
+    "bird without wings"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 396,
+     "batch": "b-cw14-6"
+    }
+   ]
+  },
+  {
+   "id": "digestio",
+   "label": "Digestio (digestion)",
+   "type": "Operation"
+  },
+  {
+   "id": "imbibitio",
+   "label": "Imbibitio (saturation)",
+   "type": "Operation",
+   "latin": "imbibitio",
+   "aliases": [
+    "saturation"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 401,
+     "batch": "b-cw14-6"
+    }
+   ]
   }
  ],
  "edges": [
@@ -6132,6 +6347,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-8, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 364,
+     "quote": "The lapis, of course, is a symbol of the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -6140,6 +6366,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
    }
   },
   {
@@ -12843,6 +13074,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 396,
+     "quote": "“changes into the raven’s head and finally into the peacock’s tail, after which it attains to the whitest plumage of the swan",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
     }
    ],
    "relation_family": {
@@ -13505,6 +13749,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 396,
+     "quote": "the phoenix, which, like the peacock, plays a considerable role in alchemy as a symbol of renewal and resurrection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -16690,6 +16945,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 412,
+     "quote": "Just as in alchemical philosophy the Anthroparion or homunculus corresponds, as the lapis, to the Anthropos",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "gate correction: the sentence states a correspondence; the standing relation manifests-as is stronger than the quoted sentence (RELATION STRENGTH), medium with a note",
+     "audit_note": "cross-vendor (Gemini) objected that 'corresponds' is an analogy; the gate had set this reference to medium with a note on the same point",
+     "note": "the sentence says the homunculus corresponds, as the lapis, to the Anthropos"
     }
    ],
    "relation_family": {
@@ -19304,6 +19573,21 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 382,
+     "quote": "Hereto the Mother Animates the King, Hasts his Conception, and does forthwith bring Him closely hidden underneath her Traine",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "source": "Ripley, Cantilena, verse 13",
+     "source_author": "Ripley",
+     "correction_note": "gate correction: verse 13 of the Cantilena, supported; the paragraph itself is the verse with no title or author named (the Cantilena is named at §369 and §401), source_text withdrawn",
+     "audit_note": "cross-vendor (Gemini) objected that the verse says 'the Mother'; the mother of the Cantilena is the Queen Mother in Jung's own reading (§400 'the Queen Mother', §401 'the queen's diet'), so the standing edge stands; the gate withdrew source_text because the paragraph names no title"
     }
    ],
    "relation_family": {
@@ -19456,6 +19740,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 420,
+     "quote": "Red and rose-red are the colour of blood, a synonym for the aqua permanens and the soul",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -42922,6 +43217,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-7, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 364,
+     "quote": "Water in all its forms—sea, lake, river, spring—is one of the commonest typifications of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -42930,6 +43236,11 @@
     "by": "opus+gemini-agreed (v0.5)",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
    }
   },
   {
@@ -126646,6 +126957,21 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
      "source": "Ripley",
      "source_author": "Ripley"
+    },
+    {
+     "volume": "14",
+     "paragraph": 357,
+     "quote": "the Egyptian physicians, who tore the king into little pieces, ground them to powder, mixed them with their “moistening” medicines",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Allegoria Merlini",
+     "source_author": "other",
+     "source_text": "Allegoria Merlini",
+     "correction_note": "gate correction: the quoted span is Jung's retelling of the allegory ('The allegory tells us'), not the source's own words in quotation marks; jung-reports-parallel, source fields kept"
     }
    ],
    "relation_family": {
@@ -131078,6 +131404,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 381,
+     "quote": "In this massa confusa the elements are in conflict and repel one another; all connections are dissolved.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists",
+     "correction_note": "gate correction: the sentence says the elements are in conflict and 'all connections are dissolved'; the elements undergoing the solutio is one step on, medium"
     }
    ],
    "relation_family": {
@@ -131580,6 +131920,1183 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "ka",
+   "relation": "corresponds-to",
+   "object": "ka-mutef",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 351,
+     "quote": "Just as Pharaoh corresponded on the human plane to the divine son, so his ka corresponded to the divine Procreator, the ka-mutef",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Egyptian kingship theology (Jacobsohn)",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "identified-with",
+   "object": "rex",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 355,
+     "quote": "you will see the Philosophical Stone, our King and Lord of Lords, come forth from the couch and throne of his glassy sepulchre",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Khunrath, Von hylealischen Chaos",
+     "source_author": "Khunrath"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "afflicted-with",
+   "object": "dropsy",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 358,
+     "quote": "In this tale the king was afflicted with a “dropsy” both real and metaphorical",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Allegoria Merlini",
+     "source_author": "other",
+     "correction_note": "gate correction: supported as Jung's reading of the parable; §358 says 'this tale' and names no title (Allegoria Merlini is named at §357), source_text withdrawn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 360,
+     "quote": "Or the king is dropsical and conceals himself in the “belly of the horse” in order to sweat out the water.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "the alchemists (n. 42)",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "undergoes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 361,
+     "quote": "The dissolution of the initial material plays a great role in alchemy as an integral part of the process.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "veritas",
+   "relation": "contains",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 361,
+     "quote": "In this citadel is contained the true and undoubted stone and treasure of the philosophers",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Dorn, Speculativa philosophia, first stage",
+     "source_author": "Dorn",
+     "source_text": "Speculativa philosophia"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "putrefactio",
+   "relation": "precedes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 363,
+     "quote": "so natural things are disposed by putrefaction to solution [ ad solutionem ]",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Dorn, Speculativa philosophia",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: Dorn's words ('Later Dorn says'); the paragraph names Physica Trithemii and Philosophia chemica for later quotations but not the title this sentence comes from (Speculativa philosophia is named at §361), source_text withdrawn"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "solutio",
+   "relation": "identified-with",
+   "object": "spagyric-marriage",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 363,
+     "quote": "Dissolution is knowledge, or the spagyric 56 union of the male with the female",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Dorn, Philosophia chemica",
+     "source_author": "Dorn",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "solutio",
+   "relation": "achieved-by",
+   "object": "self-knowledge",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 364,
+     "quote": "The first part of the work is a psychic “solution” of doubts and conflicts, achieved by self-knowledge",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Dorn, as read by Jung",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: Jung's summary of Dorn's position ('It is evident from these statements that Dorn understood'); a reported idea in Jung's framing, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "veritas",
+   "relation": "personified-as",
+   "object": "sapientia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 364,
+     "quote": "the citadel or fortress is a feminine symbol, containing within it the treasure of the “truth,” also personified as Wisdom.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 366,
+     "quote": "“marination” meant the “in-forming” penetration of sapientia (Dorn’s “veritas”) into the ignoble mass",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "the adepts, glossing Dorn",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "overwhelmed-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 365,
+     "quote": "But when he drinks he is overwhelmed by the water, i.e., by the unconscious, and medical help becomes necessary.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "undergoes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 365,
+     "quote": "The king is subjected to various forms of dissolution: dismemberment, trituration, dissolution in water.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "tinctura-philosophorum",
+   "relation": "identical-to",
+   "object": "aqua-permanens",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 372,
+     "quote": "the tincture is identical with the aqua permanens, the wonderful water of transformation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "accrescent-soul",
+   "relation": "is-projection-of",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 374,
+     "quote": "one is justified in calling it a projection of this empirically demonstrable fact in the form of a metaphysical hypostasis.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the quote carries both terms as pronouns ('it', 'this empirically demonstrable fact'), each resolved in the sentence before; two steps from the quote, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "renewal-of-god",
+   "relation": "derives-from",
+   "object": "egyptian-kingship-theology",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 375,
+     "quote": "the idea of God’s ageing and need of renewal is. It does in fact derive from ancient Egypt",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "gate correction: the sentence says 'ancient Egypt'; the step to the theology of kingship rests on the chapter's argument (§377 'God's renewal in Egyptian theology'), medium",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence says 'ancient Egypt' rather than the theology of kingship; the gate had set this reference to medium on the same step"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "god-the-father",
+   "relation": "rejuvenated-in",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 375,
+     "quote": "in the figurative language of the Church, God the Father was represented as an old man and his birth as a rejuvenation in the Son.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "figurative language of the Church",
+     "source_author": "other"
+    },
+    {
+     "volume": "14",
+     "paragraph": 376,
+     "quote": "God the Father, a bearded old man, is worshipped in God the Son as a newborn child.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Paulinus of Nola, hymn to the Church",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "gabricus-beya",
+   "relation": "undergoes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 381,
+     "quote": "Thus, in the Arisleus vision, Gabricus is dissolved into atoms in the body of his sister-wife.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "source": "Visio Arislei",
+     "source_author": "other",
+     "source_text": "Visio Arislei",
+     "correction_note": "gate correction: the sentence dissolves Gabricus alone, in Beya's body; the pair node carries the claim one step on, medium with a scope note",
+     "audit_note": "cross-vendor (Gemini) objected that Gabricus alone is dissolved; the gate had set this reference to medium with a scope note on the same point",
+     "note": "Gabricus is dissolved in the body of Beya, his sister-wife; the subject node is the pair"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "hierosgamos",
+   "relation": "takes-form-of",
+   "object": "adoption",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 383,
+     "quote": "Here the “chymical wedding” takes the form of the ancient rite of adoption",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "correction_note": "gate correction: 'Here' scopes the claim to Ripley's verse 13; a general claim about the hierosgamos is one step on, medium with a scope note",
+     "note": "in Ripley's Cantilena, verse 13 ('Here the chymical wedding takes the form')"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "undergoes",
+   "object": "cibatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 388,
+     "quote": "The pregnancy diet described here is the equivalent of the “cibatio,” the “feeding” of the transformative substance.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "cauda-pavonis",
+   "relation": "precedes",
+   "object": "rubedo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 388,
+     "quote": "Immediately before the albedo or rubedo 98 “all colours” appear, as if the peacock were spreading his shimmering fan.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "identified-with",
+   "object": "sol",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 389,
+     "quote": "“Our stone is the star-strewn Sol, from whom every colour proceeds by transformation, as flowers come forth in the spring.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Mylius, Philosophia reformata",
+     "source_author": "Mylius",
+     "correction_note": "gate correction: Mylius's words ('Mylius says'); the paragraph names no title, source_text withdrawn"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "omnes-colores",
+   "relation": "corresponds-to",
+   "object": "four-functions",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 390,
+     "quote": "the synthesis of the four or seven colours would mean nothing less than the integration of the personality, the union of the four basic functions",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "correction_note": "gate correction: conditional ('would mean nothing less than') and the sentence speaks of 'the four or seven colours'; medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dead-spiritual-body",
+   "relation": "undergoes",
+   "object": "digestio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 394,
+     "quote": "“While the digestion 124 and coction of the dead spiritual body goes forward in man",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Aquarium sapientum",
+     "source_author": "other",
+     "source_text": "Aquarium sapientum"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "peacock",
+   "relation": "symbolizes",
+   "object": "resurrection",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 395,
+     "quote": "The peacock is an ancient Christian symbol of resurrection, like the phoenix.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dead-spiritual-body",
+   "relation": "undergoes",
+   "object": "cauda-pavonis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 396,
+     "quote": "In Dorn the “dead spiritual body” is the “bird without wings.” It “changes into the raven’s head and finally into the peacock’s tail",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "undergoes",
+   "object": "imbibitio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 401,
+     "quote": "In the Cantilena the imbibitio (saturation) 138 of the “dead” 139 arcane substance is performed not on the king",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Ripley, Cantilena",
+     "source_author": "Ripley",
+     "source_text": "Cantilena Riplaei",
+     "correction_note": "gate correction: the paragraph supports the claim in full, but the quote stops at 'not on the king' and does not carry the object; medium with the continuation noted",
+     "note": "the sentence continues: the imbibitio is performed 'not on the king, as in the Allegoria Merlini, but on the queen'"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regina",
+   "relation": "feminine-aspect-of",
+   "object": "rex",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 402,
+     "quote": "so the mother who dissolves her son in herself is none other than the feminine aspect of the father-son.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "gate correction: the sentence's subject is 'the mother who dissolves her son' and its object 'the father-son'; regina and rex are one step on each side, medium",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence speaks of the mother and the father-son; the gate had set this reference to medium with a note on the same step",
+     "note": "the mother who dissolves her son, in the Cantilena; the feminine aspect of the father-son"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lion",
+   "relation": "prefigures",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 404,
+     "quote": "The two lions are prefigurations of the royal pair, hence they wear crowns.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "gate correction: the sentence has the lions prefigure the royal pair; the step from the pair to their union is Jung's at §408, medium for this reference",
+     "audit_note": "cross-vendor (Gemini) objected that the lions prefigure the royal pair rather than the coniunctio; the gate had set this reference to medium on the same step, and the §408 reference of the same edge names the coniunctio"
+    },
+    {
+     "volume": "14",
+     "paragraph": 408,
+     "quote": "But in so far as the lion and lioness are forerunners of the (incestuous) coniunctio",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lion",
+   "relation": "expresses",
+   "object": "emotion",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 404,
+     "quote": "this is precisely what the fiery lion is intended to express—the passionate emotionality that precedes the recognition of unconscious contents.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lion",
+   "relation": "signifies",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 404,
+     "quote": "The lion thus signifies the arcane substance, described as terra",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "green-lion",
+   "relation": "undergoes",
+   "object": "imbibitio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 404,
+     "quote": "The “Gloria Mundi” calls the green lion the mineral stone that “consumes a great quantity of its own spirit,”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Gloria mundi",
+     "source_author": "other",
+     "source_text": "Gloria mundi",
+     "correction_note": "gate correction: the Gloria mundi's words are 'consumes a great quantity of its own spirit'; the reading as imbibitio is Jung's gloss in the next clause, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lion",
+   "relation": "represents",
+   "object": "rex",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 405,
+     "quote": "At the same time he represents the king in his theriomorphic form, that is, as he appears in his unconscious state.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 409,
+     "quote": "In the “lion hunt” of Marchos 172 the lion, as we have seen, takes the place of the king.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "the lion-hunt of Marchos, in Senior",
+     "source_author": "Senior"
+    },
+    {
+     "volume": "14",
+     "paragraph": 416,
+     "quote": "Venus or the whore corresponds to the erotic aspect of the lion, who in turn is an attribute of the king.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence makes the lion 'an attribute of the king', a weaker relation than representation; medium for this reference"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "transforms-into",
+   "object": "lion",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 406,
+     "quote": "According to the statements of the alchemists the king changes into his animal attribute, that is to say he returns to his animal nature",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists",
+     "correction_note": "gate correction: the sentence says 'his animal attribute', the lion by the argument of §405; one step, medium",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence says 'animal attribute' and the example is an ass; the gate had set this reference to medium on the same step, the lion being the attribute of §405"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lion",
+   "relation": "embodies",
+   "object": "accrescent-soul",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 410,
+     "quote": "The love-affair is projected on the lion, the animal nature or “accrescent soul” of the king",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "hierosgamos",
+   "relation": "takes-place-in",
+   "object": "collective-psyche",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 410,
+     "quote": "the alchemical consummation of the royal marriage in the cucurbita could be understood as a synthetic process in the psyche “outside” the ego.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "note": "the psyche outside the ego, the psychic non-ego"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-6",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "venus",
+   "relation": "identified-with",
+   "object": "regina",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 415,
+     "quote": "The nobility of this Venus derives from the fact that she is also the queen, the “chaste bride” of the king.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "the alchemists (n. 182)",
+     "source_author": "the alchemists"
+    },
+    {
+     "volume": "14",
+     "paragraph": 416,
+     "quote": "In other texts Venus represents the queen at the wedding, as in the “Introitus apertus”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Introitus apertus (Philalethes)",
+     "source_author": "Philalethes",
+     "source_text": "Introitus apertus",
+     "correction_note": "gate correction: the sentence says Venus 'represents the queen at the wedding'; representation is not identity (RELATION STRENGTH), the identity rests on §415; medium for this reference"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "venus",
+   "relation": "identified-with",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 416,
+     "quote": "Sometimes he and sometimes she is hermaphroditic, 195 because at bottom they are nothing other than Mercurius duplex.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 417,
+     "quote": "because of Venus, [who is] a corrupt [and] mixed quicksilver",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Rosinus ad Sarratantam",
+     "source_author": "other",
+     "source_text": "Rosinus ad Sarratantam"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "green-lion",
+   "relation": "possesses",
+   "object": "rose-coloured-blood",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 419,
+     "quote": "the green lion has, surprisingly enough, rose-coloured blood, as mentioned by Dorn 206 and by his contemporary, Khunrath.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "Dorn and Khunrath",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rose",
+   "relation": "belongs-to",
+   "object": "albedo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 419,
+     "quote": "The white and the red rose 209 are synonyms for the albedo 210 and rubedo.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "source": "the alchemists (nn. 209-210)",
+     "source_author": "the alchemists",
+     "correction_note": "cross-vendor correction: The text specifies that the *white* rose is a synonym for the albedo, not the rose in general.",
+     "note": "the white rose for the albedo, the red for the rubedo"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rose",
+   "relation": "belongs-to",
+   "object": "rubedo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 419,
+     "quote": "The white and the red rose 209 are synonyms for the albedo 210 and rubedo.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, FINDING-adjudicated, 2026-11-12)",
+     "source": "the alchemists (nn. 209-210)",
+     "source_author": "the alchemists",
+     "correction_note": "cross-vendor correction: The text specifies that the *red* rose is a synonym for the rubedo, not the rose in general.",
+     "note": "the white rose for the albedo, the red for the rubedo"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "aqua-permanens",
+   "relation": "extracted-from",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 420,
+     "quote": "the aqua permanens and the soul, which are extracted from the prima materia and bring “dead” bodies to life.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
    }
   }
  ]

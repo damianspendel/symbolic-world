@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
   "nodes": 695,
@@ -1169,11 +1169,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-6",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §351-420",
+   "result": "CW 14 WINDOW 6: Mysterium Coniunctionis §351-420, the chapter on Rex and Regina as far as the window runs: the Egyptian background of the king (Pharaoh, the ka-mutef and the double trinity), gold and spirit in Zosimos, Ruland and Khunrath, the transformation of the king in the Allegoria Merlini and Dorn's reading of the solutio, the regeneration of the king in Ripley's Cantilena (the sick king, the Ancient of Days, the adoption, the pregnancy diet), the cauda pavonis and the colours, the lion, Venus and the whore. Run by the nightly job in the mining chat, started 2026-11-11 23:50 and merged 2026-11-12, the sixth window of the trilogy pass. Mined 49 candidates/57 refs (Opus-family miner subagent, blinded, model id stamped; nine attaches onto standing edges, two of them from other volumes; the miner cut a first draft of 159 to 49; 18 names entries; 9 cross-register flags; 14 stage candidates: the prima materia, the king, the elements and Gabricus in the solutio, putrefactio before solutio, cibatio, imbibitio and digestio, the cauda pavonis before albedo and rubedo, the white and red rose to albedo and rubedo; stages_note recorded). Pre-check kept all 57 (quotation share of CW 14 after the window 6.36 percent against the 9 percent cap). Fable gate 37 TRUE / 20 CORRECTED / 0 FALSE: four source_text withdrawals where the paragraph names no title (§358 the Allegoria named at §357, §363 Dorn's Speculativa named at §361, §389 Mylius, §382 the Cantilena verse), one claim-type correction (§357 Jung's retelling of the allegory to jung-reports-parallel), fifteen confidence demotions for one-step readings and scope (§364 Jung's summary of Dorn, §374 two pronouns, §375 ancient Egypt to the theology of kingship, §381 Gabricus alone for the pair, §383 scoped to verse 13, §390 conditional, §401 the quote stops before the queen, §402 the mother and the father-son, §404 the royal pair for the coniunctio and the Gloria mundi's words for imbibitio, §406 the animal attribute, §416 attribute and representation for identity, §381 the elements' connections dissolved, §412 correspondence for manifestation). All eighteen names accepted. Gemini cross-vendor 48 PASS / 9 FINDING on 57 post-gate refs: the two rose placements (§419) demoted to medium (the sentence assigns the white rose to the albedo and the red to the rubedo while the node is the rose in general); seven findings fell on steps the gate had already demoted for, or on the Cantilena's Mother read as the Queen Mother, and were overruled with audit notes. Names applied to 18 entries on 17 nodes; cross_register set on 9 edges; eleven mints: dropsy, veritas, spagyric-marriage, accrescent-soul, renewal-of-god, adoption, omnes-colores, dead-spiritual-body and the operations cibatio, digestio, imbibitio. Sources written as other: anonymous texts already on the controlled list (Allegoria Merlini, Aquarium sapientum, Gloria mundi, Rosinus ad Sarratantam, Visio Arislei) carry other as author by design; Paulinus of Nola and Dorn's Philosophia chemica and Physica Trithemii added to the list after this window. +40 edges, 17 refs attached to standing or this window's edges, +57 refs, +11 nodes. Graph 1052/4301/5778; CW 14 now 773 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 40 edges under v0.7.2: agreement 36/40 (90 percent), 34 assigned, 4 queued, 2 no-family, 0 text-undecided; queue 742; no bare unclassified rows from the Gemini arm. strain: 2 no-family, 0 text-undecided of 40 swept; new homeless strings: afflicted-with. FAMILY GAP FOR THE SITTING: the undergoes placements split the arms again (three solutio edges: Opus separation, Gemini psychic-effect), and lion represents rex split manifestation against symbolization; the Opus arm read the two rose placements as archetypal-identity because the sentence says synonyms, which belongs-to does not fit. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 57 refs judged against the full paragraphs; weekly Fable 34 percent after the sweep, 5-hour meter 36 percent, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1052/4301/5778, distinct paragraphs 3598, claim mix 4633/858/287. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-ad90d607c4ac659db, 34 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 37 assistant turns after the miner finished at 2026-11-11T23:00:55.255Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 6 (§351-420)",
- "nodes": 1041,
- "edges": 4261,
- "refs": 5721,
- "as_of": "2026-11-11"
+ "next": "CW14-DUE: window 7 (§421-490)",
+ "nodes": 1052,
+ "edges": 4301,
+ "refs": 5778,
+ "as_of": "2026-11-12"
 }
