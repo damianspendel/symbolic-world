@@ -3237,12 +3237,12 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
       ['How the checks work', [
         ['/method', 'The method', 'How a claim gets into the graph, and what the checks do and do not cover.', 'method'],
         ['/ledger', 'The ledger', 'Every verified reference in the graph, with the batch that added it and its verification record.', 'ledger'],
-        ['/releases', 'Releases', 'What each release added, with its version pin and receipts.', 'releases'],
+        ['/releases', 'Releases', 'What each release added, with its versions and sources.', 'releases'],
         ['/disputes', 'Disputes', 'Challenged claims, with the objection and the outcome of each.', 'disputes']
       ]],
       ['Design', [
-        ['/ontology', 'The design', 'The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.', 'design'],
-        ['/families', 'Relation families', 'The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.', 'families'],
+        ['/ontology', 'The design', 'Why the graph has two tiers, what its quality scan found, and how it compared with outside scholarship.', 'design'],
+        ['/families', 'Relation families', 'Which relation strings fall in which family, how many are settled, and the definitions document.', 'families'],
         ['/vocabulary', 'Vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.', 'vocabulary']
       ]],
       // Damian, 2026-11-11 ("Agreed with split"): vocabulary moves to Design.
