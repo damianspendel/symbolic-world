@@ -4960,6 +4960,56 @@
    "id": "power-complex",
    "label": "Power-complex",
    "type": "Concept"
+  },
+  {
+   "id": "perception",
+   "label": "Perception",
+   "type": "Concept"
+  },
+  {
+   "id": "abstract-sensation",
+   "label": "Abstract sensation",
+   "type": "Concept"
+  },
+  {
+   "id": "concrete-sensation",
+   "label": "Concrete sensation",
+   "type": "Concept"
+  },
+  {
+   "id": "sensation-type",
+   "label": "Sensation type",
+   "type": "Concept"
+  },
+  {
+   "id": "functional-complex",
+   "label": "Functional complex",
+   "type": "Concept"
+  },
+  {
+   "id": "narcissism",
+   "label": "Narcissism (Freud)",
+   "type": "Concept"
+  },
+  {
+   "id": "ideation",
+   "label": "Ideation",
+   "type": "Concept"
+  },
+  {
+   "id": "active-thinking",
+   "label": "Active thinking",
+   "type": "Concept"
+  },
+  {
+   "id": "thought",
+   "label": "Thought",
+   "type": "Concept"
+  },
+  {
+   "id": "thinking-type",
+   "label": "Thinking type",
+   "type": "Concept"
   }
  ],
  "edges": [
@@ -19671,6 +19721,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-09",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-5, PASS, 2026-11-09)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 843,
+     "quote": "The functional relation of the unconscious processes to consciousness may be described as compensatory",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -37423,6 +37484,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-7, SUPPORTED, 2026-08-06)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 791,
+     "quote": "Its empirical symbols ... very often possess a distinct numinosity , i.e., an a priori emotional value, as in the case of the mandala",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -38355,6 +38427,29 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-5, SUPPORTED, 2026-08-06)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 825,
+     "quote": "standing in a compensatory (q.v.) relation to both. It thus forms the middle ground on which the opposites can be united.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "note": "Jung's 'new content' / 'mediatory product'"
+    },
+    {
+     "volume": "6",
+     "paragraph": 828,
+     "quote": "The raw material shaped by thesis and antithesis, and in the shaping of which the opposites are united, is the living symbol.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -120083,6 +120178,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 843,
+     "quote": "The compensatory function of the unconscious becomes more obvious the more one-sided the conscious attitude (q.v.) is",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -120264,6 +120370,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 788,
+     "quote": "The reductive method is oriented backwards, in contrast to the constructive (q.v.) method",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -120689,6 +120806,19 @@
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
      "source": "Freud"
+    },
+    {
+     "volume": "6",
+     "paragraph": 788,
+     "quote": "The interpretive methods of both Freud and Adler are reductive",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, FINDING-adjudicated, 2026-11-11)",
+     "source": "Freud",
+     "audit_note": "cross-vendor finding overruled: the auditor asked for jung-asserts because Jung classifies Freud's method in his own terms; the edge's standing §716 reference carries the same claim as jung-reports-parallel with Freud as source and the auditor passed it there, so the attach keeps the edge's type; the borrowed-terms sitting covers the question."
     }
    ],
    "relation_family": {
@@ -122353,6 +122483,1168 @@
    ],
    "relation_family": {
     "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "reductive-method",
+   "relation": "interprets-as",
+   "object": "sign",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 788,
+     "quote": "a method of psychological interpretation which regards the unconscious product not as a symbol (q.v.) but semiotically , as a sign or symptom",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "expresses-unity-of",
+   "object": "personality",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 789,
+     "quote": "the self designates the whole range of psychic phenomena in man. It expresses the unity of the personality as a whole.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "appears-as",
+   "object": "the-hero",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 790,
+     "quote": "the self appears in dreams, myths, and fairytales in the figure of the “supraordinate personality” (v. EGO ), such as a king, hero, prophet",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "represents",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 790,
+     "quote": "When it represents a complexio oppositorum , a union of opposites, it can also appear as a united duality",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim; 'When it represents a complexio oppositorum, a union of opposites, it can also appear as a united duality': a 'when', and the paragraph's own statement is that the self is 'conceived as a totality and unity in which the opposites are united'; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sensation",
+   "relation": "is-identical-with",
+   "object": "perception",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 792,
+     "quote": "Sensation is the psychological function that mediates the perception of a physical stimulus. It is, therefore, identical with perception.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 793,
+     "quote": "Primarily, therefore, sensation is sense perception —perception mediated by the sense organs",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sensation",
+   "relation": "distinguished-from",
+   "object": "feeling",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 792,
+     "quote": "Sensation must be strictly distinguished from feeling (q.v.), since the latter is an entirely different process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "abstract-sensation",
+   "relation": "distinguished-from",
+   "object": "concrete-sensation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 794,
+     "quote": "A distinction must be made between sensuous or concrete (q.v.) sensation and abstract (q.v.) sensation.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sensation",
+   "relation": "opposed-to",
+   "object": "intuition",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 795,
+     "quote": "I regard sensation as conscious, and intuition as unconscious, perception. For me sensation and intuition represent a pair of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "thinking",
+   "relation": "developed-from",
+   "object": "sensation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 795,
+     "quote": "Thinking and feeling as independent functions are developed, both ontogenetically and phylogenetically, from sensation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sensation-type",
+   "relation": "oriented-by",
+   "object": "sensation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 795,
+     "quote": "A person whose-whole attitude (q.v.) is oriented by sensation belongs to the sensation type (q.v.).",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "soul",
+   "relation": "distinguished-from",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 797,
+     "quote": "to make a conceptual distinction between soul and psyche . By psyche I understand the totality of all psychic processes, conscious as well as unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "soul",
+   "relation": "is-a",
+   "object": "functional-complex",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 797,
+     "quote": "By soul, on the other hand, I understand a clearly demarcated functional complex that can best be described as a “personality.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "persona",
+   "relation": "is-a",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 800,
+     "quote": "This mask, i.e., the ad hoc adopted attitude, I have called the persona",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 803,
+     "quote": "I call the outer attitude, the outward face, the persona",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "inner-object",
+   "relation": "is-identical-with",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 801,
+     "quote": "The subject, conceived as the “inner object,” is the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "turned-towards",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 803,
+     "quote": "the characteristic face, that is turned towards the unconscious ... the inner attitude, the inward face, I call the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "complementary-to",
+   "object": "persona",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 804,
+     "quote": "my experience confirms the rule that it is, by and large, complementary to the character of the persona",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "note": "by and large; subject is the anima's character"
+    },
+    {
+     "volume": "6",
+     "paragraph": 806,
+     "quote": "As to its common human qualities, the character of the anima can be deduced from that of the persona.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "note": "common human qualities only, not individual ones"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "animus",
+   "relation": "is-name-for",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 805,
+     "quote": "we must logically speak of the animus of a woman, if we are to give the soul of a woman its right name",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 23 tokens; 'the animus of a woman, if we are to give the soul of a woman its right name': the animus names a woman's soul, a scope the triple does not carry; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "shaped-by",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 806,
+     "quote": "the anima is shaped by the unconscious and its qualities",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "projected-upon",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 807,
+     "quote": "Moreover, the anima is inevitably projected upon a real object",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim; 'the anima is inevitably projected upon a real object' in the case of identity with the persona (the note); high -> medium.",
+     "note": "in identity with the persona"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "represented-by",
+   "object": "soul-image",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 808,
+     "quote": "the soul, i.e., anima, or inner attitude, is represented in the unconscious by definite persons ... Such an image is called a “soul-image.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "soul-image",
+   "relation": "projected-onto",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 808,
+     "quote": "the soul-image is transferred to a real person",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "note": "where there is identity with the persona"
+    },
+    {
+     "volume": "6",
+     "paragraph": 810,
+     "quote": "If the soul-image is projected, the result is an absolute affective tie to the object.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 18 tokens; 'If the soul-image is projected, the result is an absolute affective tie to the object': the projection is the sentence's premise, one of two cases the entry sets side by side; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "freud",
+   "relation": "describes",
+   "object": "narcissism",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 810,
+     "quote": "If it is not projected, a relatively unadapted state develops, which Freud has described as narcissism .",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "source": "Freud"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "imago",
+   "relation": "distinguished-from",
+   "object": "the-object",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 812,
+     "quote": "we would do well to make a rigorous distinction between the image or imago of a man and his real existence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "subjective-level-interpretation",
+   "relation": "refers-to",
+   "object": "subjective-factor",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 812,
+     "quote": "interpreting a dream or fantasy on the subjective level, I mean that the persons or situations appearing in it refer to subjective factors",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 813,
+     "quote": "Interpretation of an unconscious product on the subjective level reveals the presence of subjective judgments and tendencies",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, FINDING-adjudicated, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 17 tokens; 'reveals the presence of subjective judgments and tendencies': judgments and tendencies, one step from the subjective factor; high -> medium.",
+     "audit_note": "cross-vendor finding overruled: the auditor names the step from 'subjective judgments and tendencies' to the subjective factor; the gate had already set medium for it, and the §812 reference carries the entry's own wording."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "distinguished-from",
+   "object": "sign",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 814,
+     "quote": "The concept of a symbol should in my view be strictly distinguished from that of a sign .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 817,
+     "quote": "An expression that stands for a known thing remains a mere sign and is never a symbol.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "becomes",
+   "object": "sign",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 816,
+     "quote": "For every esoteric interpretation the symbol is dead, because esotericism has already given it ... a better expression, whereupon it becomes merely a conventional sign",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "note": "the dead symbol, once a better expression is found"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "depends-on",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 818,
+     "quote": "Whether a thing is a symbol or not depends chiefly on the attitude (q.v.) of the observing consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 821,
+     "quote": "it is the symbolic attitude of the observing consciousness that endows them both with the character of a symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "formulates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 820,
+     "quote": "The living symbol formulates an essential unconscious factor",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, FINDING-adjudicated, 2026-11-11)",
+     "audit_note": "cross-vendor finding overruled: the auditor names the step from 'an essential unconscious factor' to the unconscious; the reference's note names the factor and the gate kept medium for that step.",
+     "note": "the living symbol; an unconscious factor"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "distinguished-from",
+   "object": "symptom",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 821,
+     "quote": "In that case it is perfectly correct to speak of a “symptom” and not of a “symbol.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "6",
+     "paragraph": 822,
+     "quote": "It is left to our discretion and our critical judgment to decide whether the thing we are dealing with is a symptom or a symbol.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "transcendent-function",
+   "relation": "arises-from",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 824,
+     "quote": "a new, uniting function that transcends them. This function arises quite naturally from the regression of libido (q.v.) caused by the blockage.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "transcendent-function",
+   "relation": "facilitates-transition-between",
+   "object": "psychological-attitude",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 828,
+     "quote": "I have called this process in its totality the transcendent function ... merely the fact that this function facilitates a transition from one attitude to another",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "thinking",
+   "relation": "distinguished-from",
+   "object": "ideation",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 831,
+     "quote": "a mere stringing together of ideas, such as is described by certain psychologists as associative thinking , 87 is not thinking at all, but mere ideation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "active-thinking",
+   "relation": "is-act-of",
+   "object": "will",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 830,
+     "quote": "Active thinking is an act of the will (q.v.), passive thinking is a mere occurrence.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "active-thinking",
+   "relation": "corresponds-to",
+   "object": "directed-thinking",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 830,
+     "quote": "Active thinking, accordingly, would correspond to my concept of directed thinking",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim; 'Active thinking, accordingly, would correspond to my concept of directed thinking': the conditional mood, as for 'would thus be' at §659; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "directed-thinking",
+   "relation": "is-a",
+   "object": "rational-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 832,
+     "quote": "I call directed thinking a rational (q.v.) function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "fantasy-thinking",
+   "relation": "is-a",
+   "object": "irrational-function",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 832,
+     "quote": "Undirected thinking is in my view an irrational (q.v.) function",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim; 'Undirected thinking is in my view an irrational (q.v.) function': the subject is undirected (passive) thinking, which §830 says was 'inadequately described in my previous work as \"fantasy thinking\"' and is now called intuitive thinking; the standing node is a step away and the term disowned; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "thought",
+   "relation": "is-content-of",
+   "object": "thinking",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 834,
+     "quote": "Thought is the specific content or material of the thinking function",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "thinking-type",
+   "relation": "classed-as",
+   "object": "rational-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 835,
+     "quote": "the rational and the irrational (qq.v.). The thinking and feeling types belong to the former class, the sensation and intuitive types to the latter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sensation-type",
+   "relation": "classed-as",
+   "object": "irrational-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 835,
+     "quote": "the rational and the irrational (qq.v.). The thinking and feeling types belong to the former class, the sensation and intuitive types to the latter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "attitude-type",
+   "relation": "distinguished-from",
+   "object": "function-type",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 836,
+     "quote": "we must treat the introverted and extraverted types as categories over and above the function-types",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "not-related-to",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 837,
+     "quote": "the unconscious is a psychological borderline concept, which covers all psychic contents or processes that are not conscious, i.e., not related to the ego",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim, 24 tokens; the unconscious 'covers all psychic contents or processes that are not conscious, i.e., not related to the ego in any perceptible way': the relation drops 'in any perceptible way', which carries Jung's point; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "personal-unconscious",
+   "relation": "distinguished-from",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 842,
+     "quote": "which do not originate in personal acquisitions but in the inherited possibility of psychic functioning in general ... migration. I call these contents the collective unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)",
+     "correction_note": "gate correction: Verbatim spans in order (gap 30 tokens), 25 tokens, repaired after pre-check; the contents 'which do not originate in personal acquisitions' set against 'I call these contents the collective unconscious' carry the distinction, but the personal unconscious enters the quote only by contrast; high -> medium."
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "will",
+   "relation": "is-amount-of",
+   "object": "psychic-energy",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 844,
+     "quote": "I regard the will as the amount of psychic energy at the disposal of consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "will",
+   "relation": "owes-existence-to",
+   "object": "culture",
+   "references": [
+    {
+     "volume": "6",
+     "paragraph": 844,
+     "quote": "The will is a psychological phenomenon that owes its existence to culture and moral education",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-5, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-11"
