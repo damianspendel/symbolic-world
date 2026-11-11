@@ -940,7 +940,7 @@ for (const e of atlasEdges) for (const r of e.refs) if (r.claim_type) voices[r.c
 // ------------------------------------------------------------- atlas.json ---
 const refCount = seed.edges.reduce((a, e) => a + (e.references || []).length, 0)
 const meta = {
-  version: 'v2.2.0',   // the release label; between releases the ceremony leaves it on the last tag
+  version: 'v2.3.0',   // the release label; between releases the ceremony leaves it on the last tag
   built: new Date().toISOString().slice(0, 10),
   // spec-orientation-v1, item 3: the forty most connected concepts by relation
   // count, named here so the atlas's "core" control is a build-time set
@@ -3130,7 +3130,7 @@ table.findings .src { font: .58rem var(--mono); }
   const exportLinks = exportFiles.map(([f]) => `<a href="/${esc(f)}" download>${esc(f)}</a> <span class="ev">${fmtSize(exportSizes[f])}</span>`)
   const exportBlock = `<section id="export" class="vexport">
 <h2>The RDF export</h2>
-<p>The export is three Turtle files, served from this site and regenerated with every update of the graph. From v2.3.0 each release also carries them on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. Their licence is CC BY 4.0.</p>
+<p>The export is three Turtle files, served from this site and regenerated with every update of the graph. Each release since v2.3.0 also carries them on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. Their licence is CC BY 4.0.</p>
 <p>The files hold the nodes, the relations, one claim per citation, the references, and for each claim the stages that checked it, in PROV-O. They leave out the quotations, which stay on the concept pages, and any inference over the nodes.</p>
 <ul>
 ${exportFiles.map(([f, d], i) => `<li>${exportLinks[i]}: ${esc(d)}</li>`).join('\n')}
@@ -3577,7 +3577,7 @@ function emitPages() {
 ## Data
 
 - [The dataset](${site}/graph.json): the whole graph as one JSON file
-- [The RDF export](${site}/vocabulary#export): the graph as Turtle files with PROV-O provenance and no quotations, published with v2.3.0 on the Zenodo record https://doi.org/10.5281/zenodo.21631523
+- [The RDF export](${site}/vocabulary#export): the graph as Turtle files with PROV-O provenance and no quotations, served from this site and carried by each release on the Zenodo record https://doi.org/10.5281/zenodo.21631523
 
 ## Licence
 

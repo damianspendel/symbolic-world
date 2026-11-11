@@ -11,7 +11,7 @@ Live atlas: [symbolicworld.observer](https://symbolicworld.observer). Paper: [do
 
 ![The atlas, showing the graph and a selected concept](docs/img/atlas.png)
 
-The graph holds 999 concepts, 4035 relations and 5418 citations as of 2026-11-11 on the mining branch; release v2.2.0 shipped 807 concepts, 3169 relations and 4280 citations. The live atlas grows as mining continues.
+The graph holds 999 concepts, 4035 relations and 5418 citations as of release v2.3.0. The live atlas grows as mining continues.
 
 ### Three ways in
 
@@ -21,7 +21,7 @@ The graph holds 999 concepts, 4035 relations and 5418 citations as of 2026-11-11
 
 ### Project status
 
-Mining of the Collected Works has finished CW 5, 8, 9i, 9ii, 11, 12, 13 and 14. CW 16 is next. Issues get a reply within seven days.
+Mining of the Collected Works has finished CW 5, 7, 8, 9i, 9ii, 11, 12, 13, 14 and 16, and CW 6 chapters X and XI. A second pass over CW 12, 13 and 14 is next. Issues get a reply within seven days.
 
 ## Dispute an edge
 

@@ -1,7 +1,7 @@
 # Legal statement
 
 The Symbolic World: a knowledge graph of C. G. Jung's *Collected Works*
-Date: 2026-07-27. Figures as of the v2.2.0 freeze, 2026-10-31.
+Date: 2026-07-27. Figures as of the v2.3.0 freeze, 2026-11-11.
 
 This statement sets out what the project publishes and the legal basis for it.
 
@@ -9,7 +9,7 @@ This statement sets out what the project publishes and the legal basis for it.
 
 The Symbolic World is a scholarly knowledge graph of C. G. Jung's *Collected Works* (CW), built by Damian Spendel with AI collaborators. It has three parts: a public web application (symbolicworld.observer), a dataset (`seed.json`), and a research paper (`docs/PAPER.md`).
 
-The dataset contains 4,280 references at release v2.2.0, and it grows under the same rules. Each reference includes:
+The dataset contains 5,418 references at release v2.3.0, and it grows under the same rules. Each reference includes:
 
 - a verbatim quotation of at most 25 words from a single CW paragraph
 - the CW volume and paragraph number (§)
@@ -44,9 +44,9 @@ Switzerland. The project is run from Switzerland, where the quotation right is i
 
 ## 4. The dataset as a whole
 
-Any single 25-word quotation is plainly within quotation norms. A dataset of 4,280 such quotations is an aggregation, and this section addresses it as one.
+Any single 25-word quotation is plainly within quotation norms. A dataset of 5,418 such quotations is an aggregation, and this section addresses it as one.
 
-- Scale: 4,280 quotations of at most 25 words come to 66,959 words, a mean of 15.6 words each. They are drawn from the nine volumes mined so far, which hold about 1.24 million words, so the quotations are 5.4% of those volumes. The highest share in any one volume is 8.0% (CW 5). The *Collected Works* run to roughly twenty volumes, so the share of the whole is lower.
+- Scale: 5,418 quotations of at most 25 words come to 86,732 words, a mean of 16.0 words each. They are drawn from the eleven volumes mined so far, which hold about 1.39 million words, so the quotations are 6.3% of those volumes. The highest share in any one volume is 8.9% (CW 6). The *Collected Works* run to roughly twenty volumes, so the share of the whole is lower.
 - Non-substitutive: the quotations are discontinuous fragments selected because they anchor citations, not because they represent the work's expressive interest. Read together they do not form readable text and could not serve anyone as a substitute for reading Jung.
 - Toward the books: if anything, the dataset sends readers to Jung. A quotation of 25 words or fewer cannot stand in for its paragraph, and each one gives the volume, paragraph, and page where the reader finds the full passage in the printed edition.
 - Function: the dataset works as a concordance, a finding aid that tells a reader where in the CW a claim rests and gives enough verbatim text to verify the match. Paragraph (§) numbers and page numbers are facts, and copyright does not protect facts.
