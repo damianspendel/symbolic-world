@@ -75,6 +75,34 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>What each release changed.</p>
 <p>Each entry opens with the graph version, the ruleset version it shipped with (the two are deliberately separate numbers) and the calibration record in force when the release was cut.</p>
 <section class="rel-entry">
+<h2>Interim, 11 November 2026: CW 16, CW 7 and CW 6</h2>
+<div class="meta">deployed 2026-11-11. A site deploy only: no tag, no GitHub Release, no Zenodo record. The next versioned release is v2.3.0.</div>
+<div class="pin">graph untagged · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
+<h4>mining status</h4>
+<ul>
+<li>Mined three arcs end to end since v2.2.0: CW 16, <em>The Practice of Psychotherapy</em>; CW 7, <em>Two Essays on Analytical Psychology</em>; and CW 6, <em>Psychological Types</em>, chapters X and XI, paragraphs 556 to 844.</li>
+<li>An outside audit of the trilogy references that had none; its findings changed three claim types and one confidence.</li>
+<li>Graph: 999 nodes, 4035 relations, 5418 references over 108 batches; 708 relations await adjudication.</li>
+<li>Mining pauses until the rulings for a second pass over CW 12, 13 and 14.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li>w3id.org registered the symbolicworld namespace (perma-id pull request 7091).</li>
+<li>Three names in the export that repeated a quote are shorter.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li>The RDF export, served from the site: graph, ontology and VoID as Turtle under CC BY 4.0, with no quotations. It is rebuilt at every deploy, and preflight refuses a quotes file.</li>
+<li><code>/nutshell</code> forwards to <a href="/method">/method</a>; the method poster left the site.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li><a href="/evidence">/evidence</a> in three groups: how the checks work, design, data.</li>
+<li>The concordance and <a href="/support">support</a> are back in the menu.</li>
+<li>Method links go to /method, and the design page has one name.</li>
+</ul>
+</section>
+<section class="rel-entry">
 <h2>v2.2.0: CW 5, <em>Symbols of Transformation</em></h2>
 <div class="meta">released 2026-10-31. Tag <code>v2.2.0</code>, GitHub Release, Zenodo record under the concept DOI. <em>Trust, Layered</em> still describes v2.0.0 and stays pinned to that tag.</div>
 <div class="pin">graph <span class="v">v2.2.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
@@ -123,7 +151,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h4>core build</h4>
 <ul>
 <li>A <code>quote contains</code> search in the query CLI and its browser port, over the graph's own quotes only, with parity tests.</li>
-<li>The maintainer's rewrite of every page carried into the generators, with a humanizer pass.</li>
+<li>The maintainer's rewrite of every page carried into the generators.</li>
 <li>The root is a landing page for the reader; the atlas moved to <a href="/atlas">/atlas</a>, and old links forward to it.</li>
 <li>The colour token table gained a day block; the atlas reads its canvas colours from it live.</li>
 </ul>
@@ -141,7 +169,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="pin">graph <span class="v">v2.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record pipeline/family_calibration/records/2026-08-13_v072_run4.json (PASS)</div>
 <h4>mining status</h4>
 <ul>
-<li>Mined the trilogy (CW 12, 13, 14), Aion to <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>, CW 9i to <a href="/batch-b-cw9i-10">b-cw9i-10</a>, and CW 8 to <a href="/batch-b-cw8-14">b-cw8-14</a> (2026-08-28): five volumes end to end.</li>
+<li>Mined the trilogy (CW 12, 13, 14), Aion to <a href="/batch-b-cw9ii-7">b-cw9ii-7</a>, CW 9i to <a href="/batch-b-cw9i-10">b-cw9i-10</a>, and CW 8 to <a href="/batch-b-cw8-14">b-cw8-14</a> (2026-08-28): six volumes end to end.</li>
 <li>Graph: 589 nodes, 2091 relations, 2678 references over 65 merged batches, all on the <a href="/ledger">ledger</a>; 260 relations normalized, the verbatim string frozen beside each.</li>
 <li>Families: 1669 assigned, 354 queued, 65 no family, 3 text undecided (<a href="/families">families</a>).</li>
 <li>Found the clause-predicate defect at <a href="/batch-b-cw12-1">b-cw12-1</a> (271 relations with a proposition in the predicate), traced it to a briefing bullet, and replaced the bullet with a form rule at <a href="/batch-b-cw9ii-3">b-cw9ii-3</a>; every blind batch since ran at 0%. No re-mine: the relations are verified true and carry the normalization layer; reuse per window is in <code>pipeline/transfer_trend.jsonl</code>.</li>
