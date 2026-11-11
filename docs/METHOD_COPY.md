@@ -160,7 +160,8 @@ What the instruments do not cover:
 The method was published with release v1.3.0: 248 symbols, 669 relations,
 699 citations. That exact snapshot, atlas and ledger included, is preserved
 unchanged at [/v1.3/](/v1.3/). The live counts at the top of every page show
-how far the atlas has grown since, using the same methodology.
+how far the atlas has grown since. The checks grew too: the relation families
+and the form rule for relations came after v1.3.0.
 
 [citation block — wired from the repo's citation metadata; DOI
 10.5281/zenodo.21631523]
