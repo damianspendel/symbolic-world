@@ -41,7 +41,7 @@ pin: graph v2.3.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 - Mined three arcs end to end since v2.2.0: CW 16, *The Practice of
   Psychotherapy*; CW 7, *Two Essays on Analytical Psychology*; and CW 6,
   *Psychological Types*, chapters X and XI, paragraphs 556 to 844.
-- An outside audit of the trilogy references that had never had one; its
+- An outside audit covered the trilogy references that had never had one; its
   findings changed three claim types and lowered one confidence.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
   {{batches}} batches; {{pending}} relations await adjudication.
