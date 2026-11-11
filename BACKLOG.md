@@ -776,3 +776,7 @@ A, B and C need no mining. The review put them first, and Damian deferred them t
 ## v3.0.0: an animation of the alchemical journey (added 2026-11-11)
 
 An animation of the alchemical journey, in the spirit of the atlas, covering the seven stages. Damian, 2026-11-11: "I have a vision of how we could articulate the alchemical journey, i'd love a really cool animation for that, similar to the atlas. I'd like the seven stages also covered in some way." Concept chosen in the brainstorm chat; data from the trilogy pass (stage fields). The pass records, for every paragraph that says so, which operation, symbol or substance belongs to which stage and what precedes what (`stage-of`, `precedes`, `follows`; ids in `pipeline/mining/stages_controlled.json`), so the route the animation follows rests on cited sentences and nothing is inferred.
+
+## v2.4.0 (added 2026-11-11)
+
+- **Evidence page: "How the checks work" links to the method page.** Damian, 2026-11-11, in the mining chat: "backlog for 2.4.0 HOW THE CHECKS WORK -> METHOD (on the evidence page)." The heading or link on the evidence page that reads "How the checks work" should take the reader to `/method` (the indexable twin of the atlas method route) rather than stand as a label of its own. Build track; site code only; no data change.
