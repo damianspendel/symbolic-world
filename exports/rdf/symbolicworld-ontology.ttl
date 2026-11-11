@@ -1,0 +1,436 @@
+# The Symbolic World — an ontology of claims and warrants, built on PROV-O. CC BY 4.0.
+#
+# The namespace https://w3id.org/symbolicworld/ is registered at w3id.org.
+#
+# This describes what the atlas records about a claim. It is not a domain ontology
+# of Jung's concepts: no class hierarchy over the nodes, no domain or range on any
+# relation or family, nothing inferred from a node's type. NO TRANSITIVITY AXIOM
+# APPEARS IN THIS FILE. The families are object properties; the verbatim relations
+# are leaf properties under them in the graph file, for strings in exactly one family.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sw: <https://w3id.org/symbolicworld/ns#> .
+@prefix swf: <https://w3id.org/symbolicworld/family/> .
+@prefix swr: <https://w3id.org/symbolicworld/relation/> .
+@prefix swn: <https://w3id.org/symbolicworld/node/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix swe: <https://w3id.org/symbolicworld/edge/> .
+@prefix swc: <https://w3id.org/symbolicworld/claim/> .
+@prefix swt: <https://w3id.org/symbolicworld/reference/> .
+@prefix swk: <https://w3id.org/symbolicworld/stage/> .
+@prefix swg: <https://w3id.org/symbolicworld/agent/> .
+
+<https://w3id.org/symbolicworld/ns> a owl:Ontology ;
+    rdfs:label "The Symbolic World: claims and warrants" ;
+    rdfs:comment "These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how much confidence its record carries, and which checks it passed. They build on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type." ;
+    owl:imports <http://www.w3.org/ns/prov-o#> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:creator "Damian Spendel" .
+
+sw:Node a owl:Class ;
+    rdfs:label "Node" ;
+    rdfs:comment "A named thing in the graph. Its type is a coarse label, and nothing is inferred from it." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Relation a owl:Class ;
+    rdfs:subClassOf rdf:Statement ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Relation" ;
+    rdfs:comment "One stored edge: a subject, a relation and an object. It carries the family. The rdf:predicate is the effective relation, which is the normalized form where one exists." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Claim a owl:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Claim" ;
+    rdfs:comment "One statement backed by one passage. A relation has one claim per citation, and the gate rules on each claim separately." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Reference a owl:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Reference" ;
+    rdfs:comment "The place a claim rests on: a volume and a paragraph of the Collected Works. The export does not carry the quoted words, which are on the concept page for the claim." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Stage a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Stage" ;
+    rdfs:comment "One recorded step of the pipeline, dated where the record gives a date." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Proposal a owl:Class ;
+    rdfs:subClassOf sw:Stage ;
+    rdfs:label "Proposal" ;
+    rdfs:comment "The step in which a model drafted a claim or a normalized form. For a claim it is the mining batch, linked by prov:wasGeneratedBy, and sw:attributionSource says whether a batch record or the documented procedure names the proposer. Claims whose audit names no batch have none." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:GateCheck a owl:Class ;
+    rdfs:subClassOf sw:Stage ;
+    rdfs:label "Gate check" ;
+    rdfs:comment "A model of a different family from the proposer judged the paragraph against the claim, or a normalized form against its claim." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:CrossVendorAudit a owl:Class ;
+    rdfs:subClassOf sw:Stage ;
+    rdfs:label "Cross-vendor audit" ;
+    rdfs:comment "A model from another company judged the work again. The verdict is the one the record gives. Where the record gives none, the export gives none." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:FamilyAssignment a owl:Class ;
+    rdfs:subClassOf sw:Stage ;
+    rdfs:label "Family assignment" ;
+    rdfs:comment "An assignment of a relation to a family, or a record that none was settled. A family is assigned when the two arms agree or a person rules. Some assignments also carry an audit by the calibrated family gate, given in sw:familyAudit." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Voice a owl:Class ;
+    owl:oneOf ( sw:JungAsserts sw:JungReportsParallel sw:JungQuotesSource ) ;
+    rdfs:label "Voice" ;
+    rdfs:comment "Whose voice the claim is in. This is a separate question from whether the claim is true." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Commitment a owl:Class ;
+    owl:oneOf ( sw:CommitmentHigh sw:CommitmentMedium sw:CommitmentLow ) ;
+    rdfs:label "Commitment" ;
+    rdfs:comment "The confidence recorded for the claim, from the confidence field of its reference: high, medium or low. A later check can lower it, as an audit or a dispute has done for some claims." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Rung a owl:Class ;
+    owl:oneOf ( sw:Attested sw:ModelSupported sw:CrossChecked sw:Normalized sw:FamilyAssigned sw:Derived sw:HumanReviewed sw:HumanAgreed ) ;
+    rdfs:label "Rung" ;
+    rdfs:comment "A warrant: the backing a part of a claim has. The rungs have no order in this vocabulary, because passing one warrants nothing about another." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:FamilyState a owl:Class ;
+    owl:oneOf ( sw:StateAssigned sw:StatePendingAdjudication sw:StateNoFamily sw:StateTextUndecided ) ;
+    rdfs:label "Family state" ;
+    rdfs:comment "Where a relation stands in the family layer." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+
+sw:JungAsserts a owl:NamedIndividual ;
+    a sw:Voice ;
+    sw:recordedAs "jung-asserts" ;
+    rdfs:label "Jung asserts" ;
+    rdfs:comment "Jung says it himself." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:JungReportsParallel a owl:NamedIndividual ;
+    a sw:Voice ;
+    sw:recordedAs "jung-reports-parallel" ;
+    rdfs:label "Jung reports a parallel" ;
+    rdfs:comment "Jung reports someone else's material as a parallel." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:JungQuotesSource a owl:NamedIndividual ;
+    a sw:Voice ;
+    sw:recordedAs "jung-quotes-source" ;
+    rdfs:label "Jung quotes a source" ;
+    rdfs:comment "Jung quotes a source, and the claim names it." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:CommitmentHigh a owl:NamedIndividual ;
+    a sw:Commitment ;
+    sw:recordedAs "high" ;
+    rdfs:label "High commitment" ;
+    rdfs:comment "The reference records its confidence as high." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:CommitmentMedium a owl:NamedIndividual ;
+    a sw:Commitment ;
+    sw:recordedAs "medium" ;
+    rdfs:label "Medium commitment" ;
+    rdfs:comment "The reference records its confidence as medium. A reference recorded as lowered from high to medium also lands here, with the original string kept beside it." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:CommitmentLow a owl:NamedIndividual ;
+    a sw:Commitment ;
+    sw:recordedAs "low" ;
+    rdfs:label "Low commitment" ;
+    rdfs:comment "The reference records its confidence as low." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Attested a owl:NamedIndividual ;
+    a sw:Rung ;
+    rdfs:label "Attested" ;
+    rdfs:comment "The quote is in the paragraph. It settles only that the words are in the book." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:ModelSupported a owl:NamedIndividual ;
+    a sw:Rung ;
+    rdfs:label "Model-supported" ;
+    rdfs:comment "A gate of a different family from the proposer passed the claim." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:CrossChecked a owl:NamedIndividual ;
+    a sw:Rung ;
+    rdfs:label "Cross-checked" ;
+    rdfs:comment "A model from another company judged the claim again. Read the audit's verdict beside this rung." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Normalized a owl:NamedIndividual ;
+    a sw:Rung ;
+    rdfs:label "Normalized" ;
+    rdfs:comment "The relation has a short normalized form beside the frozen wording." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:FamilyAssigned a owl:NamedIndividual ;
+    a sw:Rung ;
+    rdfs:label "Family-assigned" ;
+    rdfs:comment "The relation is filed under a family. It inherits nothing from the verification of the claim beneath it." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:Derived a owl:NamedIndividual ;
+    a sw:Rung ;
+    rdfs:label "Derived" ;
+    rdfs:comment "A row produced at query time by a declared inverse or symmetry rule. Derived rows are never stored, so this rung has no instances in the export." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:HumanReviewed a owl:NamedIndividual ;
+    a sw:Rung ;
+    rdfs:label "Human-reviewed" ;
+    rdfs:comment "One person judged it. The review records sit outside the graph's source data, so this export reports no instances." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:HumanAgreed a owl:NamedIndividual ;
+    a sw:Rung ;
+    rdfs:label "Human-agreed" ;
+    rdfs:comment "Two people judged it independently. No item in the graph has reached this rung." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:StateAssigned a owl:NamedIndividual ;
+    a sw:FamilyState ;
+    sw:recordedAs "assigned" ;
+    rdfs:label "Assigned" ;
+    rdfs:comment "A family is on record." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:StatePendingAdjudication a owl:NamedIndividual ;
+    a sw:FamilyState ;
+    sw:recordedAs "pending-adjudication" ;
+    rdfs:label "Pending adjudication" ;
+    rdfs:comment "The arms disagreed, and the relation waits for a person to rule." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:StateNoFamily a owl:NamedIndividual ;
+    a sw:FamilyState ;
+    sw:recordedAs "no-family" ;
+    rdfs:label "No family" ;
+    rdfs:comment "No family carries the relation." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:StateTextUndecided a owl:NamedIndividual ;
+    a sw:FamilyState ;
+    sw:recordedAs "text-undecided" ;
+    rdfs:label "Text undecided" ;
+    rdfs:comment "The text does not decide between families." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:recordedAs a owl:AnnotationProperty ;
+    rdfs:label "recorded as" ;
+    rdfs:comment "The string the graph's source data stores for this individual." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+
+sw:ofRelation a owl:ObjectProperty ;
+    rdfs:domain sw:Claim ;
+    rdfs:range sw:Relation ;
+    rdfs:label "of relation" ;
+    rdfs:comment "The relation a claim backs." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:hasEvidence a owl:ObjectProperty ;
+    rdfs:domain sw:Claim ;
+    rdfs:range sw:Reference ;
+    rdfs:label "has evidence" ;
+    rdfs:comment "The place the claim rests on." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:voice a owl:ObjectProperty ;
+    rdfs:domain sw:Claim ;
+    rdfs:range sw:Voice ;
+    rdfs:label "voice" ;
+    rdfs:comment "Whose voice the claim is in." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:commitment a owl:ObjectProperty ;
+    rdfs:domain sw:Claim ;
+    rdfs:range sw:Commitment ;
+    rdfs:label "commitment" ;
+    rdfs:comment "The confidence recorded for the claim." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:reachedRung a owl:ObjectProperty ;
+    rdfs:range sw:Rung ;
+    rdfs:label "reached rung" ;
+    rdfs:comment "A rung the record shows this claim or relation has reached. Absence means the record does not show it." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:checkedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    rdfs:range sw:Stage ;
+    rdfs:label "checked by" ;
+    rdfs:comment "A recorded stage that acted on this claim or relation." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:family a owl:ObjectProperty ;
+    rdfs:domain sw:Relation ;
+    rdfs:label "family" ;
+    rdfs:comment "The family this relation is filed under, named by its super-property. The assignment belongs to the edge, not to the relation string." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:familyState a owl:ObjectProperty ;
+    rdfs:domain sw:Relation ;
+    rdfs:range sw:FamilyState ;
+    rdfs:label "family state" ;
+    rdfs:comment "Where the relation stands in the family layer." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:verbatimRelation a owl:ObjectProperty ;
+    rdfs:domain sw:Relation ;
+    rdfs:label "verbatim relation" ;
+    rdfs:comment "The frozen wording the gate judged, where a normalized form replaced it as the effective relation. The export does not carry it, because a long predicate can repeat the source's words." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:nodeType a owl:DatatypeProperty ;
+    rdfs:domain sw:Node ;
+    rdfs:range xsd:string ;
+    rdfs:label "node type" ;
+    rdfs:comment "The node's coarse type label, as recorded." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:volume a owl:DatatypeProperty ;
+    rdfs:domain sw:Reference ;
+    rdfs:range xsd:string ;
+    rdfs:label "volume" ;
+    rdfs:comment "The volume of the Collected Works, as recorded: 9i, 14." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:paragraph a owl:DatatypeProperty ;
+    rdfs:domain sw:Reference ;
+    rdfs:range xsd:integer ;
+    rdfs:label "paragraph" ;
+    rdfs:comment "The numbered paragraph." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:quote a owl:DatatypeProperty ;
+    rdfs:domain sw:Reference ;
+    rdfs:range xsd:string ;
+    rdfs:label "quote" ;
+    rdfs:comment "The quoted words. The export does not carry them, and a switch in the exporter can write them to a separate file outside the CC BY grant." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:voiceSource a owl:DatatypeProperty ;
+    rdfs:domain sw:Claim ;
+    rdfs:range xsd:string ;
+    rdfs:label "voice source" ;
+    rdfs:comment "The source named for the claim's voice, as recorded." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:confidenceAsRecorded a owl:DatatypeProperty ;
+    rdfs:domain sw:Claim ;
+    rdfs:range xsd:string ;
+    rdfs:label "confidence as recorded" ;
+    rdfs:comment "The original confidence string, given where it is a downgrade rather than a single level." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:verdict a owl:DatatypeProperty ;
+    rdfs:domain sw:CrossVendorAudit ;
+    rdfs:range xsd:string ;
+    rdfs:label "verdict" ;
+    rdfs:comment "The audit's verdict as recorded. Older audits use different words, and the export keeps them as they are." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:batch a owl:DatatypeProperty ;
+    rdfs:domain sw:Stage ;
+    rdfs:range xsd:string ;
+    rdfs:label "batch" ;
+    rdfs:comment "The mining batch named in a stage: the batch an audit names, or the batch a proposal is." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:auditRecord a owl:DatatypeProperty ;
+    rdfs:domain sw:CrossVendorAudit ;
+    rdfs:range xsd:string ;
+    rdfs:label "audit record" ;
+    rdfs:comment "The audit record as stored. The agent, date, verdict and batch here are read from this string." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:proposerAsRecorded a owl:DatatypeProperty ;
+    rdfs:domain sw:Proposal ;
+    rdfs:range xsd:string ;
+    rdfs:label "proposer as recorded" ;
+    rdfs:comment "The words that name the proposer, as the source gives them: a model id, or a family such as Opus-family miner subagent." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:attributionSource a owl:DatatypeProperty ;
+    rdfs:domain sw:Proposal ;
+    rdfs:range xsd:string ;
+    rdfs:label "attribution source" ;
+    rdfs:comment "Where the proposer comes from: record, when a batch record names it, or procedure, when only the documented mining procedure does." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:assignedBy a owl:DatatypeProperty ;
+    rdfs:domain sw:FamilyAssignment ;
+    rdfs:range xsd:string ;
+    rdfs:label "assigned by" ;
+    rdfs:comment "How the family was assigned, as recorded: the two arms agreeing, or a person ruling." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:familyAudit a owl:DatatypeProperty ;
+    rdfs:domain sw:FamilyAssignment ;
+    rdfs:range xsd:string ;
+    rdfs:label "family audit" ;
+    rdfs:comment "The calibrated gate's audit of the assignment, as recorded." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+
+# ---- the relation families ------------------------------------------------
+
+swf:amplification a owl:ObjectProperty ;
+    rdfs:label "amplification" ;
+    rdfs:comment "Relation family amplification, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:archetypal-identity a owl:ObjectProperty ;
+    rdfs:label "archetypal-identity" ;
+    rdfs:comment "Relation family archetypal-identity, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:classification a owl:ObjectProperty ;
+    rdfs:label "classification" ;
+    rdfs:comment "Relation family classification, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:composition a owl:ObjectProperty ;
+    rdfs:label "composition" ;
+    rdfs:comment "Relation family composition, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:correspondence a owl:ObjectProperty ;
+    rdfs:label "correspondence" ;
+    rdfs:comment "Relation family correspondence, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:dependence a owl:ObjectProperty ;
+    rdfs:label "dependence" ;
+    rdfs:comment "Relation family dependence, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:derivation a owl:ObjectProperty ;
+    rdfs:label "derivation" ;
+    rdfs:comment "Relation family derivation, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:doctrinal-attribution a owl:ObjectProperty ;
+    rdfs:label "doctrinal-attribution" ;
+    rdfs:comment "Relation family doctrinal-attribution, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:generation a owl:ObjectProperty ;
+    rdfs:label "generation" ;
+    rdfs:comment "Relation family generation, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:instrumentality a owl:ObjectProperty ;
+    rdfs:label "instrumentality" ;
+    rdfs:comment "Relation family instrumentality, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:kinship a owl:ObjectProperty ;
+    rdfs:label "kinship" ;
+    rdfs:comment "Relation family kinship, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:manifestation a owl:ObjectProperty ;
+    rdfs:label "manifestation" ;
+    rdfs:comment "Relation family manifestation, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:opposition a owl:ObjectProperty ;
+    rdfs:label "opposition" ;
+    rdfs:comment "Relation family opposition, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:personification a owl:ObjectProperty ;
+    rdfs:label "personification" ;
+    rdfs:comment "Relation family personification, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:prefiguration a owl:ObjectProperty ;
+    rdfs:label "prefiguration" ;
+    rdfs:comment "Relation family prefiguration, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:privation a owl:ObjectProperty ;
+    rdfs:label "privation" ;
+    rdfs:comment "Relation family privation, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:projection a owl:ObjectProperty ;
+    rdfs:label "projection" ;
+    rdfs:comment "Relation family projection, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:psychic-effect a owl:ObjectProperty ;
+    rdfs:label "psychic-effect" ;
+    rdfs:comment "Relation family psychic-effect, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:separation a owl:ObjectProperty ;
+    rdfs:label "separation" ;
+    rdfs:comment "Relation family separation, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:sequence a owl:ObjectProperty ;
+    rdfs:label "sequence" ;
+    rdfs:comment "Relation family sequence, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:structural-position a owl:ObjectProperty ;
+    rdfs:label "structural-position" ;
+    rdfs:comment "Relation family structural-position, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:symbolization a owl:ObjectProperty ;
+    rdfs:label "symbolization" ;
+    rdfs:comment "Relation family symbolization, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:telos a owl:ObjectProperty ;
+    rdfs:label "telos" ;
+    rdfs:comment "Relation family telos, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:transformation a owl:ObjectProperty ;
+    rdfs:label "transformation" ;
+    rdfs:comment "Relation family transformation, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+swf:union a owl:ObjectProperty ;
+    rdfs:label "union" ;
+    rdfs:comment "Relation family union, as defined in docs/FAMILY_DEFINITIONS.md. An assignment on record, not a verified fact." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .

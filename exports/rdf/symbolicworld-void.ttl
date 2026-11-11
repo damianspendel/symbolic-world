@@ -1,0 +1,45 @@
+# The Symbolic World — VoID description. CC BY 4.0.
+#
+# The namespace https://w3id.org/symbolicworld/ is registered at w3id.org.
+
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sw: <https://w3id.org/symbolicworld/ns#> .
+@prefix swf: <https://w3id.org/symbolicworld/family/> .
+@prefix swr: <https://w3id.org/symbolicworld/relation/> .
+@prefix swn: <https://w3id.org/symbolicworld/node/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix swe: <https://w3id.org/symbolicworld/edge/> .
+@prefix swc: <https://w3id.org/symbolicworld/claim/> .
+@prefix swt: <https://w3id.org/symbolicworld/reference/> .
+@prefix swk: <https://w3id.org/symbolicworld/stage/> .
+@prefix swg: <https://w3id.org/symbolicworld/agent/> .
+
+<https://w3id.org/symbolicworld/data/graph> a void:Dataset ;
+    dcterms:title "The Symbolic World: structure and provenance" ;
+    dcterms:description "A knowledge graph of C. G. Jung's Collected Works, generated from seed.json sha256:a90f825eff62." ;
+    dcterms:creator "Damian Spendel" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:identifier "10.5281/zenodo.21631523" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.21631523> ;
+    dcterms:modified "2026-11-11"^^xsd:date ;
+    void:uriSpace "https://w3id.org/symbolicworld/" ;
+    void:vocabulary <https://w3id.org/symbolicworld/ns> ;
+    void:vocabulary <http://www.w3.org/ns/prov#> ;
+    void:dataDump <https://w3id.org/symbolicworld/data/symbolicworld-graph.ttl> ;
+    void:triples 197017 ;
+    void:entities 15870 ;
+    void:classPartition [ void:class sw:Node ; void:entities 999 ] ;
+    void:classPartition [ void:class sw:Relation ; void:entities 4035 ] ;
+    void:classPartition [ void:class sw:Claim ; void:entities 5418 ] ;
+    void:classPartition [ void:class sw:Reference ; void:entities 5418 ] .
+
+<https://w3id.org/symbolicworld/ns> a void:Dataset ;
+    dcterms:title "The Symbolic World: claims and warrants" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    void:dataDump <https://w3id.org/symbolicworld/data/symbolicworld-ontology.ttl> ;
+    void:triples 440 .

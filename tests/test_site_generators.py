@@ -2278,3 +2278,15 @@ def test_concept_titles_carry_a_distinct_latin_name():
         assert ('class="latin ev"' in h1) == distinct, n["id"]
         if distinct and n["id"] not in overflow and len(f"{n['label']} ({n['latin']}) in Jung’s Collected Works") <= 60:
             assert f"({n['latin']})" in title, n["id"]
+
+
+def test_the_release_export_tracks_only_the_three_cc_by_files():
+    """exports/rdf is committed at a release freeze (first v2.3.0). Only the
+    graph, ontology and VoID files are tracked; the quotes file never is."""
+    tracked = subprocess.run(["git", "ls-files", "exports"], capture_output=True,
+                             text=True, cwd=ROOT).stdout.split()
+    if not tracked:
+        return
+    assert sorted(tracked) == ["exports/rdf/symbolicworld-graph.ttl",
+                               "exports/rdf/symbolicworld-ontology.ttl",
+                               "exports/rdf/symbolicworld-void.ttl"], tracked

@@ -281,6 +281,18 @@ head = ttl.read_text(errors='replace')[:2000] if ttl.is_file() else ''
 check('RDF export built from this seed.json', f'sha256:{seed_digest}' in head,
       f'seed sha256:{seed_digest}')
 
+# The release copy in exports/rdf (first committed at v2.3.0). It is written at
+# a release freeze and is expected to lag the seed between releases, so a
+# digest difference is reported, not failed. A tracked quotes file fails.
+tracked = subprocess.run(['git', 'ls-files', 'exports'], capture_output=True, text=True, cwd=ROOT).stdout.split()
+check('no quotes file tracked under exports/', not any('quotes' in t for t in tracked), ', '.join(tracked))
+rel = ROOT / 'exports' / 'rdf' / 'symbolicworld-graph.ttl'
+if rel.is_file():
+    rel_digest = re.search(r'sha256:([0-9a-f]{12})', rel.read_text(errors='replace')[:2000])
+    same = bool(rel_digest) and rel_digest.group(1) == seed_digest
+    print(f"  info committed release export built from seed sha256:{rel_digest.group(1) if rel_digest else '?'}"
+          f"{' (this seed)' if same else ' (an earlier seed: refresh it at the next release freeze)'}")
+
 print('== landing starting points ==')
 # The twelve concept links on the landing page are what lets a crawler reach
 # concept pages from the root (2026-11-04). Each must lead to a page in this build.
