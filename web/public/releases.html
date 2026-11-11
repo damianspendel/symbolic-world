@@ -75,31 +75,31 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>What each release changed. The paper, <em>Trust, Layered</em>, describes v2.0.0.</p>
 <p>Each entry opens with the graph version, the ruleset version it shipped with (the two are deliberately separate numbers) and the calibration record in force when the release was cut.</p>
 <section class="rel-entry">
-<h2>Interim, 11 November 2026: CW 16, CW 7 and CW 6</h2>
-<div class="meta">deployed 2026-11-11. A site deploy only: no tag, no GitHub Release, no Zenodo record. The next versioned release is v2.3.0.</div>
-<div class="pin">graph untagged · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
+<h2>v2.3.0: CW 16, CW 7 and CW 6</h2>
+<div class="meta">released 2026-11-11. Tag <code>v2.3.0</code>, GitHub Release, Zenodo record under the concept DOI. <em>Trust, Layered</em> still describes v2.0.0 and stays pinned to that tag.</div>
+<div class="pin">graph <span class="v">v2.3.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
 <h4>mining status</h4>
 <ul>
 <li>Mined three arcs end to end since v2.2.0: CW 16, <em>The Practice of Psychotherapy</em>; CW 7, <em>Two Essays on Analytical Psychology</em>; and CW 6, <em>Psychological Types</em>, chapters X and XI, paragraphs 556 to 844.</li>
-<li>An outside audit of the trilogy references that had none; its findings changed three claim types and one confidence.</li>
+<li>An outside audit of the trilogy references that had never had one; its findings changed three claim types and lowered one confidence.</li>
 <li>Graph: 999 nodes, 4035 relations, 5418 references over 108 batches; 708 relations await adjudication.</li>
-<li>Mining pauses until the rulings for a second pass over CW 12, 13 and 14.</li>
+<li>Mining pauses until the rulings for a second pass over CW 12, 13 and 14 are in.</li>
 </ul>
 <h4>governance</h4>
 <ul>
 <li>w3id.org registered the symbolicworld namespace (perma-id pull request 7091).</li>
-<li>Three names in the export that repeated a quote are shorter.</li>
+<li>Three names in the RDF export that repeated a quote are shorter.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>The RDF export, served from the site: graph, ontology and VoID as Turtle under CC BY 4.0, with no quotations. It is rebuilt at every deploy, and preflight refuses a quotes file.</li>
+<li>The site serves the RDF export: graph, ontology and VoID as Turtle under CC BY 4.0, with no quotations. Every build regenerates it, the release commits a copy to the repository, and preflight refuses a quotes file.</li>
 <li><code>/nutshell</code> forwards to <a href="/method">/method</a>; the method poster left the site.</li>
 </ul>
 <h4>UI</h4>
 <ul>
 <li><a href="/evidence">/evidence</a> in three groups: how the checks work, design, data.</li>
-<li>The concordance and <a href="/support">support</a> are back in the menu.</li>
-<li>Method links go to /method, and the design page has one name.</li>
+<li>The <a href="/atlas#/concordance">concordance</a> and <a href="/support">support</a> are back in the menu.</li>
+<li>Method links go to /method, and the design page has one name, "The design".</li>
 </ul>
 </section>
 <section class="rel-entry">
