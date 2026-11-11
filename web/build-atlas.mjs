@@ -1184,6 +1184,21 @@ writeFileSync(here('./src/chrome.json'), JSON.stringify({
 // It never edits prose. Bare numbers in the copy are frozen measured results,
 // registered in the copy assertion's method-constants allowlist below with the
 // sources the document itself records.
+// The family-gate calibration records, read before the method page because its
+// copy binds the record in force (2026-11-11); the releases page reads them too.
+const calibRecords = []
+const calibDir = here('../pipeline/family_calibration/records')
+try {
+  for (const f of readdirSync(calibDir)) {
+    if (!f.endsWith('.json')) continue
+    const rec = JSON.parse(readFileSync(new URL(`../pipeline/family_calibration/records/${f}`, import.meta.url), 'utf8'))
+    calibRecords.push({ file: `pipeline/family_calibration/records/${f}`, ...rec })
+  }
+} catch { /* no records directory — handled below */ }
+const bindingCalib = calibRecords
+  .filter(r => r.definitions_version === famVersion && r.verdict === 'PASS')
+  .sort((a, b) => String(a.planted_at || a.file).localeCompare(String(b.planted_at || b.file)))
+  .pop()
 const methodPath = here('../docs/METHOD_COPY.md')
 let methodHTML = '', methodTokens = {}
 if (existsSync(methodPath)) {
@@ -1225,9 +1240,18 @@ if (existsSync(methodPath)) {
     disputes: JSON.parse(readFileSync(here('./public/disputes.json'), 'utf8')).disputes.length,
     ev_works: EV ? EV.works_consulted : 0, ev_agrees: EV ? EV.agrees : 0,
     ev_treated: EV ? EV.treated : 0,
+    ev_disagrees: EV ? EV.disagrees : 0, ev_split: EV ? EV.scholars_split : 0,
     families: families.length,
     queue: pending.items ? pending.items.length : 0,
-    edges_classified: atlasEdges.filter(e => e.family).length
+    // citations with no audit stamp (2026-11-11: the copy says how many)
+    unstamped: meta.counts.references - xvStamped,
+    // the family gate's calibration in force (A3 of the method review): the
+    // same record the releases pin names
+    ruleset: famVersion,
+    cal_caught: bindingCalib ? bindingCalib.sensitivity.caught : 0,
+    cal_planted: bindingCalib ? bindingCalib.sensitivity.of : 0,
+    cal_clean: bindingCalib ? bindingCalib.specificity.clean_left_alone : 0,
+    cal_clean_of: bindingCalib ? bindingCalib.specificity.of : 0
   }
 
   // the two figures, rendered in the page's own node/relation styling
@@ -1274,7 +1298,7 @@ if (existsSync(methodPath)) {
   const maxV = Math.max(...volumes.map(v => v.references))
   const figWorks = `<figure class="fig">
     <div class="works-fig">${volumes.map(v => `<span class="work-fig" style="flex:${v.references} 1 0;opacity:${(0.3 + 0.7 * v.references / maxV).toFixed(2)}"><span>CW ${esc(v.volume)}</span></span>`).join('')}</div>
-    <figcaption>This bar appears at the bottom of the atlas and shows one segment per volume included in the atlas. The size of the bar indicates the number of citations.</figcaption>
+    <figcaption>The works bar from the foot of the atlas: one segment per volume, its width set by the volume's citations.</figcaption>
   </figure>`
 
   const cit = JSON.parse(readFileSync(here('../.zenodo.json'), 'utf8'))
@@ -1482,19 +1506,6 @@ ${p.body}
 // figures are tokens bound here, so an entry cannot state a count the graph and
 // the receipts do not currently produce, and an unbound token fails the build
 // rather than shipping as literal braces.
-const calibRecords = []
-const calibDir = here('../pipeline/family_calibration/records')
-try {
-  for (const f of readdirSync(calibDir)) {
-    if (!f.endsWith('.json')) continue
-    const rec = JSON.parse(readFileSync(new URL(`../pipeline/family_calibration/records/${f}`, import.meta.url), 'utf8'))
-    calibRecords.push({ file: `pipeline/family_calibration/records/${f}`, ...rec })
-  }
-} catch { /* no records directory — handled below */ }
-const bindingCalib = calibRecords
-  .filter(r => r.definitions_version === famVersion && r.verdict === 'PASS')
-  .sort((a, b) => String(a.planted_at || a.file).localeCompare(String(b.planted_at || b.file)))
-  .pop()
 
 const declPath = here('../pipeline/family/relation_declarations.json')
 const DECL = existsSync(declPath) ? JSON.parse(readFileSync(declPath, 'utf8')) : null
