@@ -53,7 +53,7 @@ VARIANTS = SRC['variants']
 SOURCED = {'jung-quotes-source', 'jung-reports-parallel'}
 other_sources = []
 STG = json.load(open('pipeline/mining/stages_controlled.json', encoding='utf-8'))
-STAGES, OPERATIONS, STAGE_RELS = set(STG['stages']), set(STG['operations']), set(STG['relations'])
+STAGES, OPERATIONS, STAGE_RELS = set(STG['stages']) | set(STG['dorn_stages']), set(STG['operations']), set(STG['relations'])
 n_stage = 0
 
 c = json.load(open(CAND, encoding='utf-8'))

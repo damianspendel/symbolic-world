@@ -23,7 +23,7 @@ SRC = json.load(open("pipeline/mining/sources_controlled.json", encoding="utf-8"
 AUTHORS = set(SRC["authors"]) | set(SRC["traditions"]) | set(SRC["variants"])
 TEXTS = set(SRC["texts"]) | set(SRC["variants"])
 STG = json.load(open("pipeline/mining/stages_controlled.json", encoding="utf-8"))
-STAGES, OPERATIONS, STAGE_RELS = set(STG["stages"]), set(STG["operations"]), set(STG["relations"])
+STAGES, OPERATIONS, STAGE_RELS = set(STG["stages"]) | set(STG["dorn_stages"]), set(STG["operations"]), set(STG["relations"])
 paras = {p["paragraph"]: p["text"] for p in inp["paragraphs"]}
 vocab = {l.split("|")[0] for l in inp["vocabulary"]}
 TYPES = {"Concept", "Figure", "Motif", "Operation", "Substance", "Symbol"}
