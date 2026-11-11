@@ -3194,13 +3194,15 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
         ['/families', 'Relation families', 'The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.', 'families'],
         ['/vocabulary', 'Vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.', 'vocabulary']
       ]],
-      // Damian, 2026-11-11 ("Agreed with split"): vocabulary moves to Design, and
-      // the RDF export card is about the files and links each one. A card with
-      // more than one link uses the landing page's own pattern for that (its
-      // concept card): links inside, and the key link covering the card.
+      // Damian, 2026-11-11 ("Agreed with split"): vocabulary moves to Design.
+      // The two Data cards share one shape (Damian, same day: "the tiles for RDF
+      // export and Graph should align"): a title, one line, then the files as
+      // download links with their sizes. They carry no footer link; the
+      // detail is on /vocabulary#export, which the Vocabulary card leads to.
       ['Data', [
-        ['/vocabulary#export', 'The RDF export', 'The graph as three Turtle files: the nodes, relations, claims, references and the checks on each claim, in PROV-O. No quotations. CC BY 4.0.', 'about the export', exportLinks],
-        ['/graph.json', 'The graph file', 'The whole graph as one JSON file, the same data the atlas draws.', 'graph.json']
+        [null, 'The RDF export', 'The graph as Turtle files, CC BY 4.0.', null, exportLinks],
+        [null, 'The graph file', 'The whole graph as one JSON file.', null,
+          [`<a href="/graph.json" download>graph.json</a> <span class="ev">${fmtSize(statSync(here('./public/graph.json')).size)}</span>`]]
       ]]
     ]
     const evidenceBody = `<section class="land-hero">
@@ -3212,7 +3214,7 @@ ${EVIDENCE_GROUPS.map(([group, cards]) => `<section class="land-tasks">
 <p class="eyebrow">${esc(group)}</p>
 <div class="land-grid">
 ${cards.map(([href, t, d, k, links]) => links
-  ? `<div class="land-card"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-starts">${links.join('<br>')}</span><a class="land-card-k land-card-all" href="${href}">${esc(k)}</a></div>`
+  ? `<div class="land-card"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-starts">${links.join('<br>')}</span>${href ? `<a class="land-card-k land-card-all" href="${href}">${esc(k)}</a>` : ''}</div>`
   : `<a class="land-card" href="${href}"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-card-k">${esc(k)}</span></a>`).join('\n')}
 </div>
 </section>`).join('\n')}`
