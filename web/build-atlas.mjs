@@ -1332,6 +1332,7 @@ import { readdirSync, mkdtempSync, statSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 
 const repoDir = new URL('../', import.meta.url).pathname
+const fileURLToPathSafe = (u) => decodeURIComponent(u.pathname)
 const seedDigest = createHash('sha256').update(readFileSync(here('../seed.json'))).digest('hex')
 const buildDate = new Date().toISOString().slice(0, 10)
 const gitCommit = (() => {
@@ -3054,33 +3055,35 @@ table.findings .src { font: .58rem var(--mono); }
     ...(t.xsd ? [`takes <code>xsd:${esc(t.xsd)}</code>`] : [])])
   const vocabClassRow = (t) => vocabRow(t, (t.parents || []).map(p => `subclass of ${vocabRef(p)}`))
   const vocabClosed = vocab.classes.filter(c => c.closed)
-  // The RDF export block (interim build, 2026-11-11). The Turtle files go on the
-  // Zenodo record only (Damian, 2026-11-10), so the site describes them and
-  // serves none. Their sizes are measured here by running the exporter into a
-  // scratch directory, so the page never states a size by hand. A failed run
-  // drops the sizes and says so in the build log.
+  // The RDF export (interim build, 2026-11-11). Damian reversed the "Zenodo
+  // only" default the same day ("Put the turtle files in the build today"), so
+  // the build runs tools/query/export_rdf.py into web/public and the site serves
+  // the three files from its root. They are regenerated on every build and kept
+  // out of git (.gitignore). QUOTES_MODE in the exporter stays "omit", so no
+  // quotes file is written, and preflight fails if one appears. Sizes on the
+  // page are measured from the files just written. A failed export stops the
+  // build, since the page links the files.
   const exportFiles = [
     ['symbolicworld-graph.ttl', 'the nodes, relations, claims, references and the stages that checked each claim'],
     ['symbolicworld-ontology.ttl', 'the terms on this page, as OWL'],
     ['symbolicworld-void.ttl', 'a VoID description of the dataset: its counts, licence and source']
   ]
-  let exportSizes = {}
+  const exportSizes = {}
   try {
-    const dir = mkdtempSync(tmpdir() + '/sw-rdf-')
-    execFileSync('python3', [`${repoDir}tools/query/export_rdf.py`, '--out-dir', dir], { cwd: repoDir, stdio: 'ignore' })
-    for (const [f] of exportFiles) exportSizes[f] = statSync(dir + '/' + f).size
-    rmSync(dir, { recursive: true, force: true })
+    execFileSync('python3', [`${repoDir}tools/query/export_rdf.py`, '--out-dir', fileURLToPathSafe(here('./public'))], { cwd: repoDir, stdio: 'ignore' })
+    for (const [f] of exportFiles) exportSizes[f] = statSync(here('./public/' + f)).size
   } catch (err) {
-    exportSizes = {}
-    console.warn(`vocabulary page: the RDF export did not run (${String(err.message).split('\n')[0]}); sizes left out`)
+    console.error(`RDF EXPORT: tools/query/export_rdf.py did not write the Turtle files (${String(err.message).split('\n')[0]}). The vocabulary and evidence pages link them, so the build refuses.`)
+    process.exit(1)
   }
   const fmtSize = (b) => b >= 1e6 ? `${(b / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(b / 1e3))} kB`
+  const exportLinks = exportFiles.map(([f]) => `<a href="/${esc(f)}" download>${esc(f)}</a> <span class="ev">${fmtSize(exportSizes[f])}</span>`)
   const exportBlock = `<section id="export" class="vexport">
 <h2>The RDF export</h2>
-<p>The export ships with v2.3.0, as Turtle files on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. The site does not serve them. Their licence is CC BY 4.0.</p>
+<p>The export is three Turtle files, served from this site and regenerated with every update of the graph. From v2.3.0 each release also carries them on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. Their licence is CC BY 4.0.</p>
 <p>The files hold the nodes, the relations, one claim per citation, the references, and for each claim the stages that checked it, in PROV-O. They leave out the quotations, which stay on the concept pages, and any inference over the nodes.</p>
 <ul>
-${exportFiles.map(([f, d]) => `<li><code>${esc(f)}</code>: ${esc(d)}${exportSizes[f] ? ` (<span class="ev">${fmtSize(exportSizes[f])}</span> at this build)` : ''}</li>`).join('\n')}
+${exportFiles.map(([f, d], i) => `<li>${exportLinks[i]}: ${esc(d)}</li>`).join('\n')}
 </ul>
 <p>The <a href="/ontology">design page</a> explains why the graph has no class hierarchy over its nodes and no transitivity.</p>
 </section>`
@@ -3102,6 +3105,8 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
     nav: null, changefreq: 'monthly', priority: '0.3',
     description: 'The terms of The Symbolic World’s RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.',
     style: `.vterm, .vexport { scroll-margin-top: 7rem; }
+.vexport ul { padding-left: 1.2rem; margin: .5rem 0 1rem; }
+.vexport li { margin: .25rem 0; }
 .vterm { margin: .9rem 0; }
 .vterm p { margin: .1rem 0; }
 .vname code { color: var(--gold); }`,

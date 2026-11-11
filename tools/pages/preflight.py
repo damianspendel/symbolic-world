@@ -31,6 +31,10 @@ ALLOW = {
     # Pages redirect rules (2026-11-11): /nutshell to /method, 301. Pages reads
     # the file at deploy and does not serve it
     '_redirects',
+    # the RDF export, served from the root since the interim build (Damian,
+    # 2026-11-11). Static downloads, no sitemap entry. The quotes file is
+    # never among them: it is FORBIDDEN below
+    'symbolicworld-graph.ttl', 'symbolicworld-ontology.ttl', 'symbolicworld-void.ttl',
     # the static twin of the SPA's #/method view (spec-concept-pages-v1)
     'method.html',
     # what Pages serves, with a 404 status, for an unknown path. Its presence
@@ -61,6 +65,8 @@ FORBIDDEN = [
     re.compile(r'gemini\.key'), re.compile(r'\.token$'),
     re.compile(r'resume_notes'), re.compile(r'_input\.json$'),
     re.compile(r'candidates'),
+    # the export's quotes file is never published (QUOTES_MODE "omit")
+    re.compile(r'symbolicworld-quotes\.ttl$'),
 ]
 
 fails = []
@@ -264,6 +270,17 @@ else:
 # downloads grows quietly with the graph. This is a ratchet, not a limit anyone
 # is near: it fails the deploy if the bundle crosses the ceiling, and prints the
 # actual against it either way so the trend is visible in the log.
+print('== RDF export ==')
+# The Turtle files must come from this seed.json: the graph file's header names
+# the first twelve hex digits of the seed's sha256.
+seed_digest = hashlib.sha256((ROOT / 'seed.json').read_bytes()).hexdigest()[:12]
+for name in ('symbolicworld-graph.ttl', 'symbolicworld-ontology.ttl', 'symbolicworld-void.ttl'):
+    check(f'dist serves {name}', (DIST / name).is_file())
+ttl = DIST / 'symbolicworld-graph.ttl'
+head = ttl.read_text(errors='replace')[:2000] if ttl.is_file() else ''
+check('RDF export built from this seed.json', f'sha256:{seed_digest}' in head,
+      f'seed sha256:{seed_digest}')
+
 print('== landing starting points ==')
 # The twelve concept links on the landing page are what lets a crawler reach
 # concept pages from the root (2026-11-04). Each must lead to a page in this build.

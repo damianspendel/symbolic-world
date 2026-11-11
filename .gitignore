@@ -18,6 +18,8 @@ web/src/graph.json
 web/src/pages.json
 web/public/graph.json
 web/public/pages.json
+# the RDF export, written into public by web/build-atlas.mjs on every build
+web/public/symbolicworld-*.ttl
 
 # runtime artifacts
 web/serve.log
