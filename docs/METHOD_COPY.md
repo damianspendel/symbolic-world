@@ -69,8 +69,7 @@ alchemical meaning.
   selection gives a URL that reopens it.
 - **The chips** beside the search box are the active filters: volume, family,
   voice, layer. Remove one with its ×.
-- Every citation shows a status dot: green, checked by a person; amber, checked
-  by the machines only; red, disputed. The ledger lists all three.
+- Every citation shows a status dot: green, human-validated; amber, machine-verified default without human validation; red, disputed, on the record. The ledger lists all three.
 
 ## How a claim gets in
 
@@ -110,7 +109,7 @@ for everything the site publishes.
 
 - **Gold set.** {{human_chips}} claims carry a *human-validated* mark in the
   [ledger](/ledger): a person read the cited paragraph. The rest carry the
-  amber dot: checked by the machines only.
+  amber dot: machine-verified without human validation.
 - **Adjudication.** Two models sort each relation into one of {{families}}
   families, working blind: one Opus-family model and one Gemini, each given the
   definitions and the claim, neither able to see the other's answer. A
