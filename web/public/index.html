@@ -65,13 +65,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
 .land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
 .land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
-.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
-.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
-.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 .land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
 .land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
 .land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
 .land-card-all { text-decoration: none; }
+.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
+.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
+.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
+.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 .land-search { position: relative; z-index: 1; display: block; }
 .land-search .std-search { width: 100%; box-sizing: border-box; }
 .land-hits { display: flex; flex-direction: column; margin-top: .3rem; }
@@ -80,7 +81,6 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .land-hits a:hover, .land-hits a:focus-visible, .land-hits a.on { background: var(--well); color: var(--gold); }
 .land-hits .latin { font-style: italic; color: var(--ink-faint); margin-left: .4rem; }
 .land-hits .none { padding: .35rem .5rem; font-size: .86rem; color: var(--ink-faint); }
-.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
 .land-link { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: flex-start; padding: 2.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin-bottom: 3.5rem; }
 .land-link-text { flex: 1 1 22rem; min-width: 0; }
 .land-claim { font-family: var(--display); font-size: 1.7rem; line-height: 1.25; margin: .5rem 0 .8rem; max-width: none; }

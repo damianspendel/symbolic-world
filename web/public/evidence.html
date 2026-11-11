@@ -64,6 +64,11 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
 .land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
 .land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
+.land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
+.land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
+.land-card-all { text-decoration: none; }
+.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
 .land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
 .land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
 .land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
@@ -93,13 +98,13 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="land-grid">
 <a class="land-card" href="/ontology"><span class="land-card-t">The design</span><span class="land-card-d">The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.</span><span class="land-card-k">design</span></a>
 <a class="land-card" href="/families"><span class="land-card-t">Relation families</span><span class="land-card-d">The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.</span><span class="land-card-k">families</span></a>
+<a class="land-card" href="/vocabulary"><span class="land-card-t">Vocabulary</span><span class="land-card-d">The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.</span><span class="land-card-k">vocabulary</span></a>
 </div>
 </section>
 <section class="land-tasks">
 <p class="eyebrow">Data</p>
 <div class="land-grid">
-<a class="land-card" href="/vocabulary#export"><span class="land-card-t">The RDF export</span><span class="land-card-d">The graph as Turtle files: what they hold, what they leave out, and where to download them.</span><span class="land-card-k">rdf export</span></a>
-<a class="land-card" href="/vocabulary"><span class="land-card-t">Vocabulary</span><span class="land-card-d">The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.</span><span class="land-card-k">vocabulary</span></a>
+<div class="land-card"><span class="land-card-t">The RDF export</span><span class="land-card-d">The graph as three Turtle files: the nodes, relations, claims, references and the checks on each claim, in PROV-O. No quotations. CC BY 4.0.</span><span class="land-starts"><a href="/symbolicworld-graph.ttl" download>symbolicworld-graph.ttl</a> <span class="ev">8.4 MB</span><br><a href="/symbolicworld-ontology.ttl" download>symbolicworld-ontology.ttl</a> <span class="ev">24 kB</span><br><a href="/symbolicworld-void.ttl" download>symbolicworld-void.ttl</a> <span class="ev">2 kB</span></span><a class="land-card-k land-card-all" href="/vocabulary#export">about the export</a></div>
 <a class="land-card" href="/graph.json"><span class="land-card-t">The graph file</span><span class="land-card-d">The whole graph as one JSON file, the same data the atlas draws.</span><span class="land-card-k">graph.json</span></a>
 </div>
 </section>
