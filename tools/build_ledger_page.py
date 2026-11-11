@@ -669,6 +669,9 @@ def build():
   .brow .bid:hover {{ text-decoration:underline; }}
   .bnums {{ font:.6rem var(--mono); color:var(--ink-faint); margin-left:auto; }}
   .bnums.dimmer {{ color:var(--ink-dim); }}
+  /* a long batch status or citation wraps on a phone instead of widening the
+     page (the trilogy audit record, 2026-11-11, was the first to overflow) */
+  @media (max-width: 600px) {{ .badge, .cite {{ white-space:normal; }} }}
 </style>
 </head>
 <body>
