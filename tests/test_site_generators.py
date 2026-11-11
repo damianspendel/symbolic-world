@@ -474,12 +474,8 @@ def test_releases_are_ordered_newest_first():
     order the file happens to be written in."""
     html = read(os.path.join(PUBLIC, "releases.html"))
     headings = re.findall(r'<section class="rel-entry[^"]*">\s*<h2>(.*?)</h2>', html, re.S)
-    # an interim deploy carries no version and sorts above every release
-    # (2026-11-11); the versioned entries below it run newest first
-    has_version = [bool(re.search(r"v\d+\.\d+", h)) for h in headings]
-    assert has_version == sorted(has_version), headings
     versions = [tuple(int(n) for n in re.search(r"v(\d+)\.(\d+)", h).groups())
-                for h in headings if re.search(r"v\d+\.\d+", h)]
+                for h in headings]
     assert versions == sorted(versions, reverse=True), headings
     source = read(os.path.join(ROOT, "docs", "RELEASES.md"))
     in_file = [tuple(int(n) for n in m.groups())

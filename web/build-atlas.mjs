@@ -1622,19 +1622,16 @@ if (existsSync(releasesPath)) {
   })
   // Newest first, from the version in each heading rather than from the order
   // the file happens to be written in. An entry whose heading carries no
-  // version is an interim deploy made after the newest release (the first,
-  // 2026-11-11) and sorts first; a skeleton entry with no version keeps its
-  // position at the end rather than sorting as zero.
+  // version keeps its position at the end rather than sorting as zero.
   const versionOf = (h) => {
     const m = h.match(/v(\d+)\.(\d+)(?:\.(\d+))?/)
     return m ? [Number(m[1]), Number(m[2]), Number(m[3] || 0)] : null
   }
   entries.sort((a, b) => {
     const va = versionOf(a.heading), vb = versionOf(b.heading)
-    const rank = (e, v) => v ? 1 : (e.future ? 2 : 0)
-    const ra = rank(a, va), rb = rank(b, vb)
-    if (ra !== rb) return ra - rb
-    if (!va || !vb) return 0
+    if (!va && !vb) return 0
+    if (!va) return 1
+    if (!vb) return -1
     return (vb[0] - va[0]) || (vb[1] - va[1]) || (vb[2] - va[2])
   })
   // V2-R7 — a batch named in a release entry links to its delta page. The link

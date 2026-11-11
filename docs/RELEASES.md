@@ -21,9 +21,7 @@
      Where a number is small and not count-like, write the word.
 
      ORDER. Entries are sorted newest-first by the version in their heading, so
-     a new entry can be appended anywhere in the file. An entry with no version
-     in its heading is an interim deploy after the newest release and sorts
-     first; a skeleton entry with no version sorts last. -->
+     a new entry can be appended anywhere in the file. -->
 
 What each release changed. The paper, *Trust, Layered*, describes v2.0.0.
 
@@ -31,41 +29,45 @@ Each entry opens with the graph version, the ruleset version it shipped with
 (the two are deliberately separate numbers) and the calibration record in force
 when the release was cut.
 
-## Interim, 11 November 2026: CW 16, CW 7 and CW 6
+## v2.3.0: CW 16, CW 7 and CW 6
 
-status: deployed 2026-11-11. A site deploy only: no tag, no GitHub Release,
-no Zenodo record. The next versioned release is v2.3.0.
-pin: graph untagged · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
+status: released 2026-11-11. Tag `v2.3.0`, GitHub Release, Zenodo record
+under the concept DOI. *Trust, Layered* still describes v2.0.0 and stays
+pinned to that tag.
+pin: graph v2.3.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
 
 - Mined three arcs end to end since v2.2.0: CW 16, *The Practice of
   Psychotherapy*; CW 7, *Two Essays on Analytical Psychology*; and CW 6,
   *Psychological Types*, chapters X and XI, paragraphs 556 to 844.
-- An outside audit of the trilogy references that had none; its findings
-  changed three claim types and one confidence.
+- An outside audit of the trilogy references that had never had one; its
+  findings changed three claim types and lowered one confidence.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
   {{batches}} batches; {{pending}} relations await adjudication.
-- Mining pauses until the rulings for a second pass over CW 12, 13 and 14.
+- Mining pauses until the rulings for a second pass over CW 12, 13 and 14
+  are in.
 
 ### governance
 
 - w3id.org registered the symbolicworld namespace (perma-id pull
   request 7091).
-- Three names in the export that repeated a quote are shorter.
+- Three names in the RDF export that repeated a quote are shorter.
 
 ### core build
 
-- The RDF export, served from the site: graph, ontology and VoID as Turtle
-  under CC BY 4.0, with no quotations. It is rebuilt at every deploy, and
-  preflight refuses a quotes file.
+- The site serves the RDF export: graph, ontology and VoID as Turtle
+  under CC BY 4.0, with no quotations. Every build regenerates it, the
+  release commits a copy to the repository, and preflight refuses a quotes
+  file.
 - `/nutshell` forwards to [/method](/method); the method poster left the site.
 
 ### UI
 
 - [/evidence](/evidence) in three groups: how the checks work, design, data.
-- The concordance and [support](/support) are back in the menu.
-- Method links go to /method, and the design page has one name.
+- The [concordance](/atlas#/concordance) and [support](/support) are back in the menu.
+- Method links go to /method, and the design page has one name,
+  "The design".
 
 ## v1.3.0: the published baseline
 
