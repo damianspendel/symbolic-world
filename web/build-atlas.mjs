@@ -2842,7 +2842,7 @@ const QA_STANCE = [
   [/^P22/, 'design', 'The relation slot holds Jung\u2019s own predication, frozen verbatim. A closed property set would mean editing the claim to fit the schema, so the vocabulary stays open and the family layer classifies over it. An open vocabulary is hard to query by predicate, which is why the family layer and the routes exist.'],
   [/^P24 relation name/, 'open', 'A predicate carrying a whole proposition is the project\u2019s named defect. New mining is constrained by a form rule, and the normalization layer repairs the old edges beside their frozen originals rather than over them.'],
   [/^P24 node label/, 'open', 'A label that is a sentence cannot be matched across edges. Counted here, not yet repaired.'],
-  [/^P02\/P30 synonymous/, 'family', 'A query by family returns every one of these strings. No string is declared equivalent to another, because each edge is assigned in its own paragraph.'],
+  [/^P02\/P30 synonymous/, 'family', 'A query by family returns every assigned relation in that family, whatever its string. Relations still waiting for a ruling are not returned. No string is declared equivalent to another, because each edge is assigned in its own paragraph.'],
   [/^P05\/P13/, 'declared', 'The declarations name the inverse pairs the document rules on. They are applied when a query asks for closure and are never written into the graph.'],
   [/^P25/, 'declared', 'Same answer: a symmetric declaration is read at query time. Asserting the second direction in the graph would put a claim in it that no paragraph was gated for.'],
   [/^P30 identity clusters/, 'design', 'Transitivity is rejected on every family. Identity chains can be read one edge at a time by the identity walk in the query tool, which prints each hop\u2019s own citation and asserts nothing about the ends; it is not exposed on the site in this release.'],
@@ -2913,7 +2913,7 @@ if (QA && DECL) {
       const s = stanceOf(f.tag)
       const finding = isSynonym(f)
         ? `<div class="ev tag">P02/P30 synonymous relations, ${syn.length} groups</div><ul class="ev fmsg">${syn.map(x =>
-            `<li>${esc(x.tag.replace(/^P02\/P30 synonymous relations, /, ''))}: ${esc(x.message.replace(/ express the same semantics across /, ' over ').replace(/, with no equivalence declared\. A query on any one misses the rest\./, ''))}</li>`).join('')}</ul>`
+            `<li>${esc(x.tag.replace(/^P02\/P30 synonymous relations, /, ''))}: ${esc(x.message.replace(/ express the same semantics across /, ' over ').replace(/, with no equivalence declared\. A query on any one misses the rest\./, ''))}</li>`).join('')}</ul><div class="ev fmsg">In each group no equivalence is declared, so a query on any one string misses the rest.</div>`
         : `<div class="ev tag">${esc(f.tag)}</div><div class="ev fmsg">${esc(f.message)}</div>`
       return `<tr class="st-${s.kind}">
 <td class="sev">${esc(sev)}</td>
@@ -3060,7 +3060,7 @@ ${EVROWS.length ? `<h2 id="checked">Checked against readers of Jung</h2>
 ${evTable()}
 </details>
 
-<p>No scholar reviewed this vocabulary, so agreement means only that the literature words the relation the same way. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
+<p>No scholar reviewed this vocabulary, so agreement means only that a scholar's rendering falls in the same family. Agreement was mostly on the everyday families. The check also measured the literature itself: the same reference author writes "X is Mercurius" and "X is a symbol of Mercurius" for the same pair, sometimes on one page. The full record (sample, per-item worksheets, both review passes, the disagreements in full) is committed at <code>docs/experiments/external_validity_2026-08/</code> in the repository.</p>
 ` : ''}
 
 <div class="receipts"><b>receipts</b>
