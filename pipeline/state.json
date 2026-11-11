@@ -1153,11 +1153,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-5",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §281-350",
+   "result": "CW 14 WINDOW 5: Mysterium Coniunctionis §281-350, the rest of the chapter on Sal (the fourth of the three: Maier's Ortus and the sibyl; ascent and descent in the Tabula smaragdina, the Consilium coniugii and Dorn; the journey through the planetary houses beside the Shepherd of Hermas, the secret and the silence of Maier; the regeneration in sea-water: baptism, the solutio, the glorified body in the albedo; the interpretation and meaning of salt: soul, Eros, wisdom, bitterness, the Sethian salt in Hippolytus, the bitter water of the Gloria mundi, the shadow) and the opening of Rex and Regina (§349-350, Christ the King, the Pharaoh). Run by the one-shot evening firing in the mining chat on 2026-11-11, the fifth window of the trilogy pass and the fifth merge of the calendar night. Mined 50 candidates/55 refs (Opus-family miner subagent, blinded, model id stamped; fourteen attaches onto standing edges; the miner cut a first draft of 160 to 50 and left §301-302, §304, §309-312, §315, §317, §323-324, §326, §328, §330-333, §338-339, §343-345, §347 and §350 without a reference, naming §309, §312, §326 and §350 as acceptable candidates dropped for density; 19 names entries; 17 cross-register flags; 7 stage candidates: the marriage in the rubedo, the albedo preceding the rubedo, the four elements in the solutio and the separatio, the lato in the ablutio, the glorified body in the albedo, salt calcined; stages_note recorded). Pre-check kept all 55 (quotation share of CW 14 after the window 5.77 percent against the 9 percent cap). Fable gate 44 TRUE / 11 CORRECTED / 0 FALSE: one claim type raised to jung-quotes-source with the author set to the alchemists (§313, the quoted definition of the immensa meditatio; the paragraph names neither Ruland nor his Lexicon), four source_text withdrawals where the paragraph names the author and no title (§285 and §300 Maier, §288 Maier with a demotion, §327 Hippolytus), six further confidence demotions for one-step or conditional readings (§290 the artifex's wholeness, §305 the good shepherd as Christ, §306 dream analysis as the cause of the loosening, §334 the differentiation of feeling, §335 the alchemists' statements as alchemy, §342 the chaotic water as the aqua permanens). Names: eighteen accepted, one rejected (serpens mercurialis as the Latin name of Mercurius: it names the mercurial serpent, held as an alias since §251). Gemini cross-vendor 49 PASS / 6 FINDING on 55 post-gate refs: two object to the single ' ... ' ellipsis the quote rules allow (§293, §308; overruled with audit notes), one label objection to the standing monad node (§294; overruled, for the sitting), one claim-type request on Jung's narration of Maier using Dorn's term (§303; overruled, the Dorn attribution stands on the §296 reference), one finding on a step the gate had demoted for (§342; overruled), and one applied: consciousness confronts the-shadow at §313 demoted to medium (the sentence has consciousness confronting the ego with its shadow). Names applied to 18 entries on 15 nodes; cross_register set on 16 edges; seven mints: foetus-spagyricus, planetary-spheres, sibyl, lato and the operations separatio, ablutio, calcinatio. Sources written as other: Dorn's Physica Trismegisti as a text (added to the controlled list after this window). +36 edges, 19 refs attached to standing or this window's edges, +55 refs, +7 nodes. Graph 1041/4261/5721; CW 14 now 716 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 36 edges under v0.7.2: agreement 30/36 (83 percent), 27 assigned, 6 queued, 3 no-family, 0 text-undecided; queue 738; no-family 207; the Gemini arm returned no bare unclassified rows, raw file kept as family_sweep_gemini_b-cw14-5_raw.json. strain: 3 no-family, 0 text-undecided of 36 swept; new homeless strings: enacts (the arcane substance, the foetus spagyricus and the dragon enacting the ascent and descent; both arms found no family for a performed movement). FAMILY GAP FOR THE SITTING, continued: the stage placement coniunctio belongs-to rubedo split the arms (Opus structural-position, Gemini composition) and the two undergoes placements of the four elements split separation against psychic-effect; the Opus arm notes a conflict inside the definitions on aqua-permanens dissolves the-body (the solutio seed points to separation, refinement 2 to transformation). Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-11, 55 refs judged against the full paragraphs; weekly Fable 30 percent before the gate, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1041/4261/5721, distinct paragraphs 3580, claim mix 4608/836/277. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit. Five merges tonight (windows 1-5): the nightly job's budget rule says no sixth; window 6 (§351-420) waits for the next firing.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a5435b531d3526141, 32 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 31 assistant turns after the miner finished at 2026-11-11T19:35:52.374Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 5 (§281-350)",
- "nodes": 1034,
- "edges": 4225,
- "refs": 5666,
+ "next": "CW14-DUE: window 6 (§351-420)",
+ "nodes": 1041,
+ "edges": 4261,
+ "refs": 5721,
  "as_of": "2026-11-11"
 }
