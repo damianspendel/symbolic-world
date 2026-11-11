@@ -30,7 +30,15 @@
   {
    "id": "quaternity",
    "type": "Concept",
-   "label": "The quaternity"
+   "label": "The quaternity",
+   "latin": "quaternio",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 1,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "nigredo",
@@ -86,7 +94,17 @@
   {
    "id": "mercurius",
    "type": "Figure",
-   "label": "Mercurius"
+   "label": "Mercurius",
+   "aliases": [
+    "Mercurius duplex"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 34,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "prima-materia",
@@ -180,7 +198,17 @@
   {
    "id": "sulphur",
    "type": "Substance",
-   "label": "Sulphur"
+   "label": "Sulphur",
+   "aliases": [
+    "kibrit"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 31,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "salt",
@@ -220,7 +248,17 @@
   {
    "id": "gabricus-beya",
    "type": "Figure",
-   "label": "Gabricus & Beya"
+   "label": "Gabricus & Beya",
+   "aliases": [
+    "Thabritius"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 2,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "meretrix",
@@ -345,7 +383,15 @@
   {
    "id": "the-vessel",
    "type": "Symbol",
-   "label": "The Hermetic Vessel (vas Hermetis)"
+   "label": "The Hermetic Vessel (vas Hermetis)",
+   "latin": "vas Hermeticum",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 6,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "the-mass",
@@ -451,12 +497,30 @@
   {
    "id": "scintilla",
    "type": "Symbol",
-   "label": "Scintilla (soul-spark)"
+   "label": "Scintilla (soul-spark)",
+   "aliases": [
+    "little soul-spark"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 42,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "caelum",
    "type": "Substance",
-   "label": "Caelum (Dorn's heaven / quintessence)"
+   "label": "Caelum (Dorn's heaven / quintessence)",
+   "latin": "coelum",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 46,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "leviathan",
@@ -471,7 +535,15 @@
   {
    "id": "widow",
    "type": "Motif",
-   "label": "The Widow (vidua)"
+   "label": "The Widow (vidua)",
+   "latin": "vidua",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 14,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "eros",
@@ -521,7 +593,17 @@
   {
    "id": "anima-mundi",
    "type": "Figure",
-   "label": "Anima Mundi"
+   "label": "Anima Mundi",
+   "aliases": [
+    "World-Soul"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 50,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "phoenix",
@@ -641,7 +723,17 @@
   {
    "id": "matter",
    "type": "Concept",
-   "label": "Matter"
+   "label": "Matter",
+   "aliases": [
+    "hyle"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 33,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "rabid-dog",
@@ -691,7 +783,18 @@
   {
    "id": "malchuth",
    "type": "Motif",
-   "label": "Malchuth (Kingdom)"
+   "label": "Malchuth (Kingdom)",
+   "aliases": [
+    "Domina",
+    "Shekinah"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 18,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "parvati",
@@ -741,7 +844,15 @@
   {
    "id": "the-sea",
    "type": "Symbol",
-   "label": "The Sea (mare)"
+   "label": "The Sea (mare)",
+   "latin": "mare nostrum",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 3,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "synchronicity",
@@ -751,7 +862,15 @@
   {
    "id": "balsam",
    "type": "Substance",
-   "label": "Balsam (elixir vitae)"
+   "label": "Balsam (elixir vitae)",
+   "latin": "balsamum vitae",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 27,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "mary",
@@ -856,7 +975,15 @@
   {
    "id": "fishes-eyes",
    "type": "Symbol",
-   "label": "Fishes' eyes (oculi piscium)"
+   "label": "Fishes' eyes (oculi piscium)",
+   "latin": "oculi piscium",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 45,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "splinter-psyche",
@@ -866,7 +993,19 @@
   {
    "id": "archeus",
    "type": "Concept",
-   "label": "Archeus (invisible sun in man)"
+   "label": "Archeus (invisible sun in man)",
+   "aliases": [
+    "Adech",
+    "Archaeus",
+    "Vulcan"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 43,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "proteus",
@@ -936,7 +1075,15 @@
   {
    "id": "philosophic-gold",
    "type": "Substance",
-   "label": "Philosophic gold (aurum non vulgi)"
+   "label": "Philosophic gold (aurum non vulgi)",
+   "latin": "aurum philosophorum",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 6,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "ego-inflation",
@@ -986,7 +1133,17 @@
   {
    "id": "ogdoad",
    "type": "Symbol",
-   "label": "Ogdoad (double quaternity)"
+   "label": "Ogdoad (double quaternity)",
+   "aliases": [
+    "double quaternio"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 8,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "filius-canis",
@@ -1237,7 +1394,15 @@
   {
    "id": "the-centre",
    "type": "Concept",
-   "label": "The centre towards which the eyes must always be turned; virtual midpoint of the mandala and locus of creative change"
+   "label": "The centre towards which the eyes must always be turned; virtual midpoint of the mandala and locus of creative change",
+   "latin": "circulus exiguus",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 9,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "magic-circle",
@@ -1252,7 +1417,15 @@
   {
    "id": "the-wheel",
    "type": "Symbol",
-   "label": "The wheel (eight-spoked wheel, rota, Ezekiel's wheel) as symbol of the circulating process and of wholeness"
+   "label": "The wheel (eight-spoked wheel, rota, Ezekiel's wheel) as symbol of the circulating process and of wholeness",
+   "latin": "rota",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 34,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "world-clock",
@@ -3859,7 +4032,18 @@
   {
    "id": "arrow",
    "label": "Arrow (the wounding shaft)",
-   "type": "Symbol"
+   "type": "Symbol",
+   "latin": "telum passionis",
+   "aliases": [
+    "Cupid’s arrow"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 23,
+     "batch": "b-cw14-1"
+    }
+   ]
   },
   {
    "id": "heavenly-cow",
@@ -5010,6 +5194,72 @@
    "id": "thinking-type",
    "label": "Thinking type",
    "type": "Concept"
+  },
+  {
+   "id": "pelican",
+   "label": "Pelican (the bird of the Christ allegory, and the circular distillation named after it)",
+   "type": "Symbol"
+  },
+  {
+   "id": "ecclesia-spiritualis",
+   "label": "Ecclesia spiritualis (spiritual Church)",
+   "type": "Concept"
+  },
+  {
+   "id": "mercurial-fountain",
+   "label": "Mercurial Fountain",
+   "type": "Symbol"
+  },
+  {
+   "id": "mani",
+   "label": "Mani (Manes, Cubricus)",
+   "type": "Figure",
+   "aliases": [
+    "Cubricus",
+    "Manes"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 31,
+     "batch": "b-cw14-1"
+    }
+   ]
+  },
+  {
+   "id": "joel",
+   "label": "Joel (Manichaean virago)",
+   "type": "Figure"
+  },
+  {
+   "id": "scorpion",
+   "label": "Scorpion",
+   "type": "Symbol"
+  },
+  {
+   "id": "interment",
+   "label": "Interment (burial)",
+   "type": "Operation"
+  },
+  {
+   "id": "mortificatio",
+   "label": "Mortificatio",
+   "type": "Operation"
+  },
+  {
+   "id": "nirdvandva",
+   "label": "Nirdvandva (free from the opposites)",
+   "type": "Concept",
+   "aliases": [
+    "free from the opposites"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 66,
+     "batch": "b-cw14-1"
+    }
+   ]
   }
  ],
  "edges": [
@@ -5362,7 +5612,21 @@
    "subject": "albedo",
    "relation": "precedes",
    "object": "rubedo",
-   "references": [],
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 7,
+     "quote": "“The stone is first an old man, in the end a youth, because the albedo comes at the beginning and the rubedo at the end.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "alchemical saying cited after the Consilium coniugii (n. 34)",
+     "source_author": "the alchemists"
+    }
+   ],
    "relation_family": {
     "value": "sequence",
     "state": "assigned",
@@ -20509,6 +20773,19 @@
      "verified_date": "2026-07-25",
      "source": "Philippians 2:6 (kenosis) and patristic Sol-Luna allegory (Hilary, Ephraem Syrus)",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 28,
+     "quote": "Thus has Luna proclaimed the mystery of Christ.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "St. Ambrose, cited by Rahner, Mysterium Lunae",
+     "source_author": "the Church Fathers"
     }
    ],
    "relation_family": {
@@ -71989,6 +72266,30 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-23",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-11, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 11,
+     "quote": "the lapis is frequently compared to Christ as the lapis angularis (cornerstone)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "alchemical texts (n. 55)",
+     "source_author": "the alchemists"
+    },
+    {
+     "volume": "14",
+     "paragraph": 33,
+     "quote": "Christ as saviour of man (Microcosm), and the lapis Philosophorum as saviour of the Macrocosm",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -106440,6 +106741,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 6,
+     "quote": "the prima materia, which is the original chaos and the sea (the unconscious)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -106447,6 +106759,11 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-07"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-1",
+    "date": "2026-11-11"
    }
   },
   {
@@ -108792,6 +109109,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-8, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 11,
+     "quote": "He reconciles the two “in one body,” 54 an idea which is figuratively represented in alchemy as the two-headed hermaphrodite.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
     }
    ],
    "relation_family": {
@@ -123746,6 +124074,1479 @@
    ],
    "relation_family": {
     "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "unites",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 1,
+     "quote": "The factors which come together in the coniunctio are conceived as opposites, either confronting one another in enmity or attracting one another in love.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "the alchemical texts, as summarized by Jung",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "gabricus-beya",
+   "relation": "personifies",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 2,
+     "quote": "the masculine-feminine opposition is personified as King and Queen ... in the “Visio Arislei” they appear as Gabricus (or Thabritius) and Beya",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Visio Arislei",
+     "source_author": "the alchemists",
+     "source_text": "Visio Arislei"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "alchemical-fish",
+   "relation": "produces",
+   "object": "aqua-permanens",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 3,
+     "quote": "From them is produced a mare immensum , which is the aqua permanens (permanent water).",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, FINDING-adjudicated, 2026-11-11)",
+     "source": "Lambspringk, Symbols",
+     "source_author": "Lambspringk",
+     "audit_note": "cross-vendor finding overruled: the auditor objects to the standing node label, which aggregates what the graph knows of the node from other paragraphs; the claim, the quote and the referent at this paragraph are supported, and labels are not re-judged per citation."
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "philosophic-gold",
+   "relation": "identical-to",
+   "object": "filius-philosophorum",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 6,
+     "quote": "the aurum philosophorum , 28 the bird of Hermes or the son of the bird, who is the same as the filius philosophorum .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, FINDING-adjudicated, 2026-11-11)",
+     "audit_note": "cross-vendor finding overruled: the auditor objects to the standing node label, which aggregates what the graph knows of the node from other paragraphs; the claim, the quote and the referent at this paragraph are supported, and labels are not re-judged per citation."
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "ogdoad",
+   "relation": "symbolizes",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 8,
+     "quote": "The double quaternio or ogdoad stands for a totality, for something that is at once heavenly and earthly, spiritual or corporeal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "pelican",
+   "relation": "designates",
+   "object": "circulatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 8,
+     "quote": "They are united into one thing by means of the circular distillation, named the Pelican",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "scholia to the Tractatus aureus Hermetis",
+     "source_author": "other",
+     "source_text": "Tractatus aureus"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "mediates-between",
+   "object": "four-elements",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 9,
+     "quote": "a “mediator making peace between the enemies or elements, that they may love one another in a meet embrace.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, FINDING-adjudicated, 2026-11-11)",
+     "source": "scholia to the Tractatus aureus Hermetis",
+     "source_author": "other",
+     "source_text": "Tractatus aureus",
+     "audit_note": "cross-vendor finding overruled: the auditor objects to the standing node label, which aggregates what the graph knows of the node from other paragraphs; the claim, the quote and the referent at this paragraph are supported, and labels are not re-judged per citation."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "pelican",
+   "relation": "symbolizes",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 10,
+     "quote": "the choice of the term “Pelican” for the circular process, since this bird is a well-known allegory of Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "likened-to",
+   "object": "pelican",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 11,
+     "quote": "by the shedding of his own blood he calls back those who are near to death, ... like the pelican",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, FINDING-adjudicated, 2026-11-11)",
+     "source": "scholia to the Tractatus aureus Hermetis",
+     "source_author": "other",
+     "source_text": "Tractatus aureus",
+     "audit_note": "cross-vendor finding applied to the label, not the claim: the scholia compare Mercurius to the pelican bird shedding its blood, and §8 names the circular distillation after the bird; the new node's label now carries both senses, and the claim stands as quoted."
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-analogue-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 11,
+     "quote": "Mercurius is conceived as “spiritual blood,” 52 on the analogy of the blood of Christ.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "scholia to the Tractatus aureus Hermetis",
+     "source_author": "other",
+     "source_text": "Tractatus aureus"
+    },
+    {
+     "volume": "14",
+     "paragraph": 22,
+     "quote": "The alchemical equivalent of the God-Man and the Son of God was Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 33,
+     "quote": "a Christ capable of suffering ( patibilis ), 223 whose role is something like that of a spiritus vegetativus , or of Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the Christus patibilis is Manichaean doctrine, but the comparison with a spiritus vegetativus or Mercurius is Jung's own ('something like that of'); Jung's comparison takes jung-asserts, medium for the hedge"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "coincides-with",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 12,
+     "quote": "the usual quaternary structure of the mandala 57 would coincide with the alchemists’ quaternio of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "correction_note": "gate correction: 'would coincide' is a conditional consequence Jung draws from the scholia; one step, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-1",
+    "date": "2026-11-11"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "ecclesia-spiritualis",
+   "relation": "is-goal-of",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 12,
+     "quote": "an Ecclesia spiritualis above all creeds and owing allegiance solely to Christ, the Anthropos, is the real aim of the alchemists’ endeavours",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "scholia to the Tractatus aureus Hermetis",
+     "source_author": "other",
+     "source_text": "Tractatus aureus"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "widow",
+   "relation": "counterpart-of",
+   "object": "orphan",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 14,
+     "quote": "The “orphan” referred to by Hermes must therefore have for his counterpart a vidua (widow)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "kinship",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "isis",
+   "relation": "personifies",
+   "object": "widow",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 14,
+     "quote": "The widow appears here as the classical figure of the mourning Isis.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Maier, on Delphinas",
+     "source_author": "Maier"
+    }
+   ],
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "widow",
+   "relation": "signifies",
+   "object": "church",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 17,
+     "quote": "“The whole Church is one widow, desolate in this world.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, FINDING-adjudicated, 2026-11-11)",
+     "source": "St. Augustine",
+     "source_author": "Augustine",
+     "audit_note": "cross-vendor finding overruled: the auditor objects to the standing node label, which aggregates what the graph knows of the node from other paragraphs; the claim, the quote and the referent at this paragraph are supported, and labels are not re-judged per citation."
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "church",
+   "relation": "likened-to",
+   "object": "luna",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 20,
+     "quote": "He also mentions (Epistola LV, 10) the Church as Luna",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, FINDING-adjudicated, 2026-11-11)",
+     "source": "Augustine, Epistola LV",
+     "source_author": "Augustine",
+     "audit_note": "cross-vendor finding overruled: the auditor objects to the standing node label, which aggregates what the graph knows of the node from other paragraphs; the claim, the quote and the referent at this paragraph are supported, and labels are not re-judged per citation."
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "luna",
+   "relation": "akin-to",
+   "object": "death",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 20,
+     "quote": "The moon and death significantly reveal their affinity.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "luna",
+   "relation": "darkens",
+   "object": "sol",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 21,
+     "quote": "The changefulness of the moon and her ability to grow dark are interpreted as her corruptibility, and this negative quality can even darken the sun.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Consilium coniugii",
+     "source_author": "the alchemists",
+     "source_text": "Consilium coniugii"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "unites",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 22,
+     "quote": "a son who resolves the antagonisms of the parents and is himself a “united double nature.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sol",
+   "relation": "descends-into",
+   "object": "mercurial-fountain",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 23,
+     "quote": "The alchemists also represented the “eclipse” as the descent of the sun into the (feminine) Mercurial Fountain",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "alchemical texts (n. 160)",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "shulamite",
+   "relation": "alludes-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 24,
+     "quote": "The sponsa says (1 : 4): “I am black, but comely,” ... This allusion to the nigredo was not missed by the alchemists.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Song of Songs as read by the alchemists",
+     "source_author": "the alchemists",
+     "source_text": "Bible",
+     "correction_note": "gate correction: the paragraph says the bride's 'I am black' was read by the alchemists as an allusion to the nigredo; that is a symbolic allusion, not an assignment of the bride to the stage, and the paragraph names the sponsa, the Shulamite only by §44; relation alludes-to, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "church",
+   "relation": "wounds",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 25,
+     "quote": "So was Christ upon the cross wounded for love of his Church",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Honorius of Autun, commentary on the Song of Songs",
+     "source_author": "other",
+     "correction_note": "gate correction: supported: Honorius puts 'thou hast wounded my heart' in Christ's mouth to the Church and Jung reads the union as a wounding of the sponsus; Honorius of Autun is a twelfth-century theologian, not a Church Father, so source_author is 'other' with the free-text source kept"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "dew",
+   "relation": "derives-from",
+   "object": "luna",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 27,
+     "quote": "The dew comes from the moon, and he who is wounded is the sun.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Turba philosophorum",
+     "source_author": "the alchemists",
+     "source_text": "Turba philosophorum"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mani",
+   "relation": "child-of",
+   "object": "widow",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 31,
+     "quote": "Mani is the best-known example of the “son of the widow.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "manichaean-dualism",
+   "relation": "concerns",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 31,
+     "quote": "He propounded a dualistic doctrine which, according to Epiphanius, 204 was concerned with pairs of opposites",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Epiphanius, on Scythianos",
+     "source_author": "Epiphanius",
+     "correction_note": "gate correction: the dualistic doctrine Epiphanius describes is Scythianos's, from whose books Mani concocted his heresy; the subject is one step from the sentence, medium"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sulphur",
+   "relation": "synonym-of",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 32,
+     "quote": "In the Aurora consurgens “sulphur nigrum” stands side by side with “vetula,” the first being a synonym for spirit",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Aurora consurgens",
+     "source_author": "the alchemists",
+     "source_text": "Aurora consurgens",
+     "correction_note": "gate correction: the Aurora's synonym for spirit is 'sulphur nigrum', the black sulphur, not sulphur as such; scope narrower than the subject, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "sulphur",
+   "relation": "is-aspect-of",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 32,
+     "quote": "The “black sulphur” is a pejorative name for the active, masculine substance of Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the sentence makes 'black sulphur' a name for the active masculine substance of Mercurius; from that to sulphur as an aspect of Mercurius is one step, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-wheel",
+   "relation": "symbolizes",
+   "object": "circulatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 34,
+     "quote": "In alchemy the rota is the symbol of the opus circulatorium",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "alchemical texts",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "joel",
+   "relation": "corresponds-to",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 34,
+     "quote": "The role she plays in regard to the princes of darkness corresponds to that of Mercurius duplex",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "harbours",
+   "object": "rebirth",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 35,
+     "quote": "The material we have adduced shows what an archetypal drama of death and rebirth lies hidden in the coniunctio",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-1",
+    "date": "2026-11-11"
+   },
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "contains",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 36,
+     "quote": "the arcane substance, which was believed to contain the opposites in uncombined form as the prima materia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "alchemical texts",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "synonym-of",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 38,
+     "quote": "As Mercurius is the principal name for the arcane substance, he deserves mention here as the paradox par excellence.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "synonym-of",
+   "object": "son-of-man",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 38,
+     "quote": "The arcane substance is also synonymous with the Monad and the Son of Man mentioned in Hippolytus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "indivisible-point",
+   "relation": "identical-to",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 40,
+     "quote": "The point is identical with the prima materia of the metals, which is a “fatty water” ( aqua pinguis )",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the identity sentence is Jung's gloss after the Novum lumen quotation, which only tells the reader to consider the point in nature; Jung's own reading takes jung-asserts, the identity is stated in his sentence"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "indivisible-point",
+   "relation": "identified-with",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 41,
+     "quote": "Mylius adds that this is the bird of Hermes, 36 or the spirit Mercurius.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Mylius",
+     "source_author": "Mylius",
+     "correction_note": "gate correction: supported as Mylius's doctrine; the paragraph names Mylius and no text (the footnote does), so source_text is not given"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "gold",
+   "relation": "embodies",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 41,
+     "quote": "The gold is a “twice-bisected circle,” i.e., one divided into four quadrants and therefore a quaternity",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Maier",
+     "source_author": "Maier"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "archeus",
+   "relation": "is-analogue-of",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 43,
+     "quote": "The Archaeus, the creative centre of the earth, is hermaphroditic like the Protanthropos",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "consists-of",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 43,
+     "quote": "According to this, the centre consists in a conjunction of male and female.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "undergoes",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 43,
+     "quote": "the arcane substance laments being in the state of nigredo",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, FINDING-adjudicated, 2026-11-11)",
+     "source": "Abraham Eleazar",
+     "source_author": "Abraham Eleazar",
+     "correction_note": "cross-vendor correction (relation): Relation is inverted; nigredo is a state/stage of the arcane substance, the arcane substance is not a stage of nigredo."
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "identified-with",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 44,
+     "quote": "the invisible centre, is Adam Kadmon, the Original Man of Jewish gnosis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "grows-from",
+   "object": "fishes-eyes",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 45,
+     "quote": "The eyes indicate that the lapis is in the process of evolution and grows from these ubiquitous eyes.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "the-eye",
+   "relation": "symbolizes",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 47,
+     "quote": "The eye, like the sun, is a symbol as well as an allegory of consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "scintilla",
+   "relation": "grows-into",
+   "object": "lumen-naturae",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 48,
+     "quote": "sparks shining day by day and more and more and growing into such a great light ... This light is the “light of nature.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Dorn, chapter on knowledge",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "scintilla",
+   "relation": "corresponds-to",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 48,
+     "quote": "He hath given us a spark of His light. Thus the truth is to be sought not in ourselves, but in the image of God",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Dorn, Philosophia meditativa",
+     "source_author": "Dorn",
+     "source_text": "other",
+     "correction_note": "gate correction: Dorn's words give a spark of God's light and the image of God within us in two sentences; the correspondence is one step, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "scintilla",
+   "relation": "derives-from",
+   "object": "anima-mundi",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 50,
+     "quote": "There are . . . fiery sparks of the World-Soul, that is of the light of nature",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Khunrath",
+     "source_author": "Khunrath"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "aelia-laelia-inscription",
+   "relation": "attracts",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 52,
+     "quote": "one that for centuries brilliantly fulfilled its function as a flypaper for every conceivable projection that buzzed in the human mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "aelia-laelia-inscription",
+   "relation": "symbolizes",
+   "object": "rebis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 57,
+     "quote": "The subject, he says, is a man and a woman, ... and an hermaphrodite because two bodies are united in one.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Maier",
+     "source_author": "Maier",
+     "correction_note": "gate correction: Maier makes the inscription's subject a hermaphrodite of two bodies united; subject-of-the-inscription to rebis is one step, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "scorpion",
+   "relation": "synonym-of",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 58,
+     "quote": "like the scorpion, which is another synonym for the arcane substance",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "alchemical texts (n. 134)",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "replaces",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 62,
+     "quote": "just as the filius philosophorum takes the place of the maternal prima materia, which till then had been the only effective arcane substance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "undergoes",
+   "object": "dismemberment",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 64,
+     "quote": "Ripley says that at the death of the king all his limbs were torn into “atoms.” 148 This is the motif of dismemberment",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Ripley",
+     "source_author": "Ripley"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "interment",
+   "relation": "is-identical-with",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 65,
+     "quote": "Interment is identical with the nigredo .",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, FINDING-adjudicated, 2026-11-11)",
+     "source": "alchemical texts (n. 154)",
+     "source_author": "the alchemists",
+     "correction_note": "cross-vendor correction (relation): The text explicitly states interment is 'identical with' the nigredo, making the relation 'stage-of' inaccurate."
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "precedes",
+   "object": "mortificatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 66,
+     "quote": "they must be extracted, conjoined, buried and mortified, and turned into ashes",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Barnaud",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "nirdvandva",
+   "relation": "parallels",
+   "object": "union-of-opposites",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 66,
+     "quote": "The Hindus described this as nirdvandva , “free from the opposites,”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "contains",
+   "object": "anima-mundi",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 68,
+     "quote": "This refers, of course, to the Mercurial serpent or prima materia, ... to force the light-seeds of the anima mundi hidden within it into flower",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "source": "Tractatus Aristotelis",
+     "source_author": "other",
+     "source_text": "other",
+     "correction_note": "gate correction: the treatise has the prima materia hiding the light-seeds of the anima mundi; 'contains anima-mundi' compresses 'seeds of', medium"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "tree-nymph",
+   "relation": "personifies",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 70,
+     "quote": "Mythologically, nymphs, dryads, etc. are nature- and tree-numina, but psychologically they are anima projections",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-11"
+   }
+  },
+  {
+   "subject": "oak",
+   "relation": "carrier-of",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 70,
+     "quote": "as the feminine carrier of the anima projection, it is Jupiter’s spouse and Agatho’s beloved",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-11",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)",
+     "correction_note": "gate correction: the oak is the carrier of the anima projection in this one reading of the inscription (Agatho's anima); stated of the case, generalized by the edge, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-11"
