@@ -552,13 +552,10 @@ DCTERMS = rdflib.Namespace(export_rdf.NS["dcterms"])
 PROV = rdflib.Namespace(export_rdf.NS["prov"])
 VOID = rdflib.Namespace("http://rdfs.org/ns/void#")
 
-# Names in the CC BY file that still share a run of eight words with a quote: two
-# relations never normalized, a node label drawn from the text, and a book's title.
-# They stay until someone rules on them; any new one fails the test.
+# Names in the CC BY file that still share a run of eight words with a quote: a
+# book's title, kept by ruling (Damian, 2026-11-11; the two relations and the node
+# label that sat here were shortened the same day). Any new one fails the test.
 KNOWN_NAMES_REPEATING_THE_SOURCE = {
-    "understands-good-and-evil-as-the-right-and-left-hand-of-god",
-    "are-united-in-the-pre-manichaean-god-image-just-as-yang-and-yin-are-united-in",
-    "The diamond of the dreamer\u2019s ring, whose prism contains all the hues of the rainbow; identified with the lapis",
     "Bardo Th\u00f6dol (The Tibetan Book of the Dead)",
 }
 
