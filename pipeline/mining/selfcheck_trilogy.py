@@ -5,7 +5,7 @@ Prints one line per problem, then totals and the minted-node dictionary. Covers 
 per-window self-checks (existing_edge flags against the whole graph, unknown nodes, minted ids that already
 exist, verbatim quotes, the 25-token cap, one ellipsis, closed sets) and the rulings of 2026-11-11: a quote
 already in the graph on the same paragraph (ALREADY QUOTED), source_author and source_text on quoted and
-reported claims against the controlled list (SOURCE), the names list (NAME), and the cross-register flag (FLAG).
+reported claims against the controlled list (SOURCE), the names list (NAME), the cross-register flag (FLAG), and the stage data (STAGE, stages_note).
 
 Run from the repo root:  python3 pipeline/mining/selfcheck_trilogy.py <volume> <N>
 """
@@ -22,6 +22,8 @@ seed = json.load(open("seed.json", encoding="utf-8"))
 SRC = json.load(open("pipeline/mining/sources_controlled.json", encoding="utf-8"))
 AUTHORS = set(SRC["authors"]) | set(SRC["traditions"]) | set(SRC["variants"])
 TEXTS = set(SRC["texts"]) | set(SRC["variants"])
+STG = json.load(open("pipeline/mining/stages_controlled.json", encoding="utf-8"))
+STAGES, OPERATIONS, STAGE_RELS = set(STG["stages"]), set(STG["operations"]), set(STG["relations"])
 paras = {p["paragraph"]: p["text"] for p in inp["paragraphs"]}
 vocab = {l.split("|")[0] for l in inp["vocabulary"]}
 TYPES = {"Concept", "Figure", "Motif", "Operation", "Substance", "Symbol"}
@@ -60,6 +62,8 @@ for c in cand["candidates"]:
     if len(toks) > 4: print("REL LONG", t)
     if (t in existing) != bool(c.get("existing_edge")): print("FLAG existing_edge should be", t in existing, t)
     if "cross_register" in c and not isinstance(c["cross_register"], bool): print("FLAG cross_register not boolean", t)
+    if c["relation"] == "stage-of" and c["object"] not in STAGES: print("STAGE stage-of must point at a stage id", t)
+    if c["relation"] in ("precedes", "follows") and not ({c["subject"], c["object"]} <= STAGES | OPERATIONS): print("STAGE precedes/follows joins stage or operation ids only", t)
     flagged += 1 if c.get("cross_register") is True else 0
     for n in c.get("new_nodes", []):
         minted[n["id"]] = n.get("type")
@@ -105,5 +109,7 @@ for nm in cand.get("names", []):
     if not vals: print("NAME without latin or aliases", nm)
     for v in vals:
         if fold(v) not in fold(paras[para]): print("NAME not in paragraph", para, repr(v))
-print("candidates", len(cand["candidates"]), "refs", nrefs, "names", len(cand.get("names", [])), "cross_register", flagged)
+if not str(cand.get("stages_note", "")).strip(): print("STAGES missing stages_note (required; 'none in this window' is valid)")
+nstage = sum(1 for c in cand["candidates"] if c["relation"] in STAGE_RELS)
+print("candidates", len(cand["candidates"]), "refs", nrefs, "names", len(cand.get("names", [])), "cross_register", flagged, "stage candidates", nstage)
 print(minted)

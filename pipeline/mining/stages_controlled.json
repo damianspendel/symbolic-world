@@ -1,0 +1,10 @@
+{
+ "_about": "Stage data for the trilogy second pass (Damian, 2026-11-11: 'Yes, inform the mining chat to collect info on the stages, too.'; concordance field 3 is a required field). Stage and operation node ids the stage relations may join; the miner mints a missing one as type Operation (a stage or operation) only where the paragraph names it. Relations: stage-of (an operation, symbol or substance to the stage it belongs to), precedes and follows (between stages, between operations, or between an operation and a stage). Every such candidate rests on a quote from the paragraph that says so; no stage or order is inferred.",
+ "stages": ["nigredo", "albedo", "citrinitas", "rubedo", "cauda-pavonis", "viriditas"],
+ "operations": [
+  "ablutio", "calcinatio", "cibatio", "circulatio", "coagulatio", "coniunctio", "digestio", "dissolutio", "distillatio",
+  "divisio", "exaltatio", "fermentatio", "fixatio", "imbibitio", "incineratio", "mortificatio", "multiplicatio",
+  "projectio", "putrefactio", "reductio", "separatio", "solutio", "sublimatio", "the-opus"
+ ],
+ "relations": ["stage-of", "precedes", "follows"]
+}

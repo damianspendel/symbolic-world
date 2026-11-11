@@ -52,6 +52,9 @@ TEXTS = set(SRC['texts'])
 VARIANTS = SRC['variants']
 SOURCED = {'jung-quotes-source', 'jung-reports-parallel'}
 other_sources = []
+STG = json.load(open('pipeline/mining/stages_controlled.json', encoding='utf-8'))
+STAGES, OPERATIONS, STAGE_RELS = set(STG['stages']), set(STG['operations']), set(STG['relations'])
+n_stage = 0
 
 c = json.load(open(CAND, encoding='utf-8'))
 # flatten per-candidate new_nodes to the top level the checker expects
@@ -138,6 +141,13 @@ def check_ref(subj, rel, obj, r, kind):
         out.append(f"[provenance] jung-quotes-source without source: {tag}")
     if r.get('confidence') not in {'high', 'medium', 'low'}:
         out.append(f"[provenance] bad confidence {r.get('confidence')!r}: {tag}")
+    if rel in STAGE_RELS:
+        global n_stage
+        n_stage += 1
+        if rel == 'stage-of' and obj not in STAGES:
+            out.append(f"[stage] stage-of must point at a stage id ({sorted(STAGES)}): {tag}")
+        if rel in ('precedes', 'follows') and not ({subj, obj} <= STAGES | OPERATIONS):
+            out.append(f"[stage] {rel} joins stage or operation ids only: {tag}")
     if subj not in known:
         out.append(f"[node] undefined subject {subj}: {tag}")
     if obj not in known:
@@ -216,6 +226,10 @@ orphan_nodes = sorted(new_ids - used)
 kept_nodes = [n for n in c.get('new_nodes', []) if n.get('id') in used]
 
 n_refs = sum(len(e['references']) for k in kept for e in kept[k])
+# stage data (Damian, 2026-11-11): the stages_note is a required field of the candidates file
+if not str(c.get('stages_note', '')).strip():
+    print('HOLD: the candidates file has no stages_note (STAGES AND OPERATIONS is a hard rule); nothing written. Send the miner back.')
+    raise SystemExit(2)
 # the quotation cap (Damian, 2026-11-11, option B): the window may not take its volume over the cap
 new_quotes = [r['quote'] for k in kept for e in kept[k] for r in e['references']]
 cw, qw, pct = QS.share('13', seed, new_quotes)
@@ -231,6 +245,7 @@ print(f"references in:  {sum(len(e.get('references', [])) for k in ('candidates'
 print(f"references kept: {n_refs}")
 print(f"references dropped: {len(dropped)}")
 print(f"names kept: {len(kept_names)}, names dropped: {len(name_fails)}")
+print(f"stage candidates seen: {n_stage}; stages_note: {c.get('stages_note')}")
 for f in name_fails:
     print('  -', f['name'].get('node'), f['reasons'])
 print(f"'other' sources (candidates for the controlled list): {sorted(set(s for s in other_sources if s))}")
@@ -242,7 +257,8 @@ for d in dropped:
 json.dump({'batch': 'b-cw13-' + str(N), 'window': str(LO) + '-' + str(HI), 'new_nodes': kept_nodes,
            'candidates': kept['candidates'], 'attaches': kept['attaches'], 'names': kept_names,
            'dropped': dropped, 'names_dropped': name_fails, 'dedup_note': c.get('dedup_note', ''),
-           'proposer_model': c.get('proposer_model'), 'quotation_share_after': round(pct, 2)},
+           'proposer_model': c.get('proposer_model'), 'quotation_share_after': round(pct, 2),
+           'stages_note': c.get('stages_note')},
           open(OUT, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
 print(f"\nwrote {OUT}: {len(kept['candidates'])} candidates, {len(kept['attaches'])} attaches, "
       f"{len(kept_nodes)} new nodes, {n_refs} refs, {len(kept_names)} names")
