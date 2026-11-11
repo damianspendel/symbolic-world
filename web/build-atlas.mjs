@@ -2323,7 +2323,7 @@ if (EMIT_CONCEPTS_INDEX) {
 
   const conceptsBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>Concepts</h1>
-<p class="sub">Every concept in the graph, ranked by its verified evidence.</p></div>
+<p class="sub">Every concept in the graph ranked by its verified evidence.</p></div>
 <p>${derived(atlasNodes.length)} concepts, ${derived(atlasEdges.length)} verified relations, ${derived(meta.counts.references)} citations.
 Each row links to that concept's own page: its relations grouped by family, with
 the verbatim, paragraph-referenced quotations behind each one.</p>
@@ -3189,7 +3189,7 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
   if (EMIT_ABOUT_PAGE) {
     const aboutBody = `<div class="titleband"><p class="eyebrow">About</p>
 <h1>About the atlas</h1>
-<p class="sub">Who the atlas is for, and what each reader can do with it.</p></div>
+<p class="sub">The purpose of the atlas.</p></div>
 <p>The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
 <p>Analysts and trainees can look up where Jung treats a concept and follow it across volumes, with a citation ready to carry into their own work. The <a href="/query">query page</a> filters by volume, family and claim type, and it searches the words inside the quotes.</p>
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
@@ -3275,7 +3275,7 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
     ]
     const evidenceBody = `<div class="titleband"><p class="eyebrow">Overview</p>
 <h1>Evidence</h1>
-<p class="sub">The records behind the atlas, and the rules its checks follow.</p></div>
+<p class="sub">The records behind the atlas and how they are checked.</p></div>
 ${EVIDENCE_GROUPS.map(([group, cards]) => `<section class="land-tasks">
 <p class="eyebrow">${esc(group)}</p>
 <div class="land-grid">
