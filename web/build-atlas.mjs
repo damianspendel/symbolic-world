@@ -3298,7 +3298,6 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()`
 <span>${lc.nodes} concepts &middot; ${lc.edges} relations &middot; ${lc.refs} citations</span>
 <span>updated ${esc(meta.built)}</span>
 <span>open data, CC BY</span>
-<a href="/method">the method</a><a href="/disputes">disputes log</a>${SUPPORT_URL ? '<a href="/support">support the project</a>' : ''}
 </footer>`
     const landingStyle = `
 ${LANDING_CSS}${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; }
