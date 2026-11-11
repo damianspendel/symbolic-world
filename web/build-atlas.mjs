@@ -1314,7 +1314,8 @@ function nodeLabel(id) { const n = atlasNodes.find(x => x.id === id); return n ?
 // ===========================================================================
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
-import { readdirSync } from 'node:fs'
+import { readdirSync, mkdtempSync, statSync, rmSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 
 const repoDir = new URL('../', import.meta.url).pathname
 const seedDigest = createHash('sha256').update(readFileSync(here('../seed.json'))).digest('hex')
@@ -2918,9 +2919,10 @@ if (QA && DECL) {
 <figcaption>The second tier: different relation strings, each verified in its own paragraph, assigned to one family. The family only classifies relations.</figcaption>
 </figure>`
 
-  const ontBody = `<div class="titleband"><p class="eyebrow">the design</p>
-<h1>The atlas</h1></div>
+  const ontBody = `<div class="titleband"><p class="eyebrow">evidence</p>
+<h1>The design</h1></div>
 <p>The atlas is a network of asserted relations between named things. Each relation is evidenced by a paragraph and a quote from the Collected Works. This page records the design decisions and the results of a standard pitfall scan over the graph.</p>
+<p>The terms the RDF export uses for claims, references and their checks are on the <a href="/vocabulary">vocabulary</a> page.</p>
 
 <h2>Two tiers</h2>
 <p>Jung's relations come in many wordings, so the graph has two tiers.</p>
@@ -3038,10 +3040,41 @@ table.findings .src { font: .58rem var(--mono); }
     ...(t.xsd ? [`takes <code>xsd:${esc(t.xsd)}</code>`] : [])])
   const vocabClassRow = (t) => vocabRow(t, (t.parents || []).map(p => `subclass of ${vocabRef(p)}`))
   const vocabClosed = vocab.classes.filter(c => c.closed)
+  // The RDF export block (interim build, 2026-11-11). The Turtle files go on the
+  // Zenodo record only (Damian, 2026-11-10), so the site describes them and
+  // serves none. Their sizes are measured here by running the exporter into a
+  // scratch directory, so the page never states a size by hand. A failed run
+  // drops the sizes and says so in the build log.
+  const exportFiles = [
+    ['symbolicworld-graph.ttl', 'the nodes, relations, claims, references and the stages that checked each claim'],
+    ['symbolicworld-ontology.ttl', 'the terms on this page, as OWL'],
+    ['symbolicworld-void.ttl', 'a VoID description of the dataset: its counts, licence and source']
+  ]
+  let exportSizes = {}
+  try {
+    const dir = mkdtempSync(tmpdir() + '/sw-rdf-')
+    execFileSync('python3', [`${repoDir}tools/query/export_rdf.py`, '--out-dir', dir], { cwd: repoDir, stdio: 'ignore' })
+    for (const [f] of exportFiles) exportSizes[f] = statSync(dir + '/' + f).size
+    rmSync(dir, { recursive: true, force: true })
+  } catch (err) {
+    exportSizes = {}
+    console.warn(`vocabulary page: the RDF export did not run (${String(err.message).split('\n')[0]}); sizes left out`)
+  }
+  const fmtSize = (b) => b >= 1e6 ? `${(b / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(b / 1e3))} kB`
+  const exportBlock = `<section id="export" class="vexport">
+<h2>The RDF export</h2>
+<p>The export ships with v2.3.0, as Turtle files on the dataset's Zenodo record, <a href="https://doi.org/10.5281/zenodo.21631523">10.5281/zenodo.21631523</a>. The site does not serve them. They are licensed CC BY 4.0.</p>
+<p>The files hold the nodes, the relations, one claim per citation, the references, and for each claim the stages that checked it, in PROV-O. They leave out the quotations, which stay on the concept pages, and any inference over the nodes.</p>
+<ul>
+${exportFiles.map(([f, d]) => `<li><code>${esc(f)}</code>: ${esc(d)}${exportSizes[f] ? ` (<span class="ev">${fmtSize(exportSizes[f])}</span> at this build)` : ''}</li>`).join('\n')}
+</ul>
+<p>The <a href="/ontology">design page</a> explains why the graph has no class hierarchy over its nodes and no transitivity.</p>
+</section>`
   const vocabBody = `<div class="titleband"><p class="eyebrow">reference</p>
 <h1>Vocabulary</h1>
 <p class="sub">the terms of the RDF export</p></div>
 <p>${esc(vocab.definition_note)}</p>
+${exportBlock}
 ${vocab.namespace_provisional ? `<p class="meta">The namespace <code>${esc(vocab.namespace)}</code> is provisional and not yet registered, so these terms do not resolve yet. The prefix <code>sw:</code> stands for <code>${esc(vocab.namespace)}ns#</code>.</p>` : `<p class="meta">The prefix <code>sw:</code> stands for <code>${esc(vocab.namespace)}ns#</code>.</p>`}
 <h2>Classes</h2>
 ${vocab.classes.map(vocabClassRow).join('\n')}
@@ -3054,7 +3087,8 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
     slug: 'vocabulary', title: 'Vocabulary', where: 'vocabulary',
     nav: null, changefreq: 'monthly', priority: '0.3',
     description: 'The terms of The Symbolic World’s RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.',
-    style: `.vterm { margin: .9rem 0; scroll-margin-top: 7rem; }
+    style: `.vterm, .vexport { scroll-margin-top: 7rem; }
+.vterm { margin: .9rem 0; }
 .vterm p { margin: .1rem 0; }
 .vname code { color: var(--gold); }`,
     body: vocabBody

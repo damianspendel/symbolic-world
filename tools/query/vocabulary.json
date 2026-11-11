@@ -1,7 +1,7 @@
 {
-  "_about": "The claim and warrant vocabulary. tools/query/export_rdf.py writes the OWL file from this, and web/build-atlas.mjs writes the /vocabulary page from it. The namespace below is the one place to change it. It is provisional until Damian registers it.",
+  "_about": "The claim and warrant vocabulary. tools/query/export_rdf.py writes the OWL file from this, and web/build-atlas.mjs writes the /vocabulary page from it. The namespace below is the one place to change it. It is registered at w3id.org (perma-id/w3id.org PR #7091, merged 2026-11-06).",
   "namespace": "https://w3id.org/symbolicworld/",
-  "namespace_provisional": true,
+  "namespace_provisional": false,
   "title": "The Symbolic World: claims and warrants",
   "definition_note": "These terms describe what the atlas records about a claim: where it rests, whose voice it is in, how strongly it is committed, and which checks it passed. They build on PROV-O. They say nothing about Jung's concepts: there is no class hierarchy over the nodes, no domain or range on any relation of the graph, no transitivity, and nothing is inferred from a node's type.",
   "classes": [
