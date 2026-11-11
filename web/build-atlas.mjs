@@ -3396,7 +3396,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     registerPage({
       slug: 'support', title: 'Support', where: 'support', nav: 'support', kind: 'prose landing',
       changefreq: 'monthly', priority: '0.4',
-      description: 'Support The Symbolic World: tips cover the running costs of the verified Jung atlas. The atlas, dataset and ledger stay free.',
+      description: 'Support The Symbolic World: a tip helps pay for the domain and the model checks behind the verified Jung atlas.',
       style: supportStyle, body: supportBody
     })
     V2_COPY.push(['public/support.html (generated)', stripEvidence(supportBody)])
