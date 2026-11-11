@@ -3099,32 +3099,64 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
   // /#/... link in circulation keeps working. The copy is the about page's
   // first paragraph (final wording from the outreach review, 2026-10-22) and
   // the four reader journeys that page describes, one card each.
-  // spec-reader-v1, A4: /evidence lists what the provenance, reference and
-  // about groups of the old menu held. Each line restates that page's own
-  // description, so the page adds no claim.
+  // The landing page's components (2026-11-11, Damian: "the visuals of the
+  // evidence page could look a little like the new landing page, no? whatever
+  // it is, ensure consistency"). One copy of the rules: the landing, /evidence
+  // and /support all take them from here, so the three cannot drift apart.
+  const LANDING_CSS = `.page-main.landing { padding-top: 2.4rem; }
+.page-main.landing > * { max-width: none; }
+.land-hero { margin-bottom: 3rem; }
+.land-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin: .4rem 0 0; }
+.land-lead { margin-top: 1.2rem; }
+.land-hero h1 em { font-style: italic; color: var(--gold); }
+.land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
+.land-tasks { margin-bottom: 3.5rem; }
+.land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+.land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
+.land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
+.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
+.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+`
+  // /evidence (spec-reader-v1 A4; regrouped in the interim build of
+  // 2026-11-11 to the slimming review's structure A, revised): three groups
+  // of landing cards. Each card restates its page's own description, so the
+  // page adds no claim. The RDF export has no page of its own: its card
+  // opens the export section at the top of /vocabulary.
   if (MENU_READER) {
-    const EVIDENCE = [
-      ['/ledger', 'ledger', 'Every verified reference in the graph, with the batch that added it and its verification record.'],
-      ['/releases', 'releases', 'What each release added, with its version pin and receipts.'],
-      ['/disputes', 'disputes', 'Challenged claims, with the objection and the outcome of each.'],
-      ['/families', 'families', 'The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.'],
-      ['/method', 'method', 'How a claim gets into the graph, and what the checks do and do not cover.'],
-      ['/ontology', 'design', 'The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.'],
-      ['/vocabulary', 'vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.'],
-      ...(SUPPORT_URL ? [['/support', 'support', 'Tips cover the running costs. The atlas, the dataset and the ledger stay free.']] : [])
+    const EVIDENCE_GROUPS = [
+      ['How the checks work', [
+        ['/method', 'The method', 'How a claim gets into the graph, and what the checks do and do not cover.', 'method'],
+        ['/ledger', 'The ledger', 'Every verified reference in the graph, with the batch that added it and its verification record.', 'ledger'],
+        ['/releases', 'Releases', 'What each release added, with its version pin and receipts.', 'releases'],
+        ['/disputes', 'Disputes', 'Challenged claims, with the objection and the outcome of each.', 'disputes']
+      ]],
+      ['Design', [
+        ['/ontology', 'The design', 'The design of the graph: its quality scan, the check against outside scholarship, and what is deliberately absent.', 'design'],
+        ['/families', 'Relation families', 'The relation families: the definitions document in full, the map of relation strings to families, and how each settled record came about.', 'families']
+      ]],
+      ['Data', [
+        ['/vocabulary#export', 'The RDF export', 'The graph as Turtle files: what they hold, what they leave out, and where to download them.', 'rdf export'],
+        ['/vocabulary', 'Vocabulary', 'The terms of the RDF export: claims, references, the stages that check them, voice, commitment and the rungs of a warrant.', 'vocabulary'],
+        ['/graph.json', 'The graph file', 'The whole graph as one JSON file, the same data the atlas draws.', 'graph.json']
+      ]]
     ]
-    const evidenceBody = `<div class="titleband"><p class="eyebrow">evidence</p>
+    const evidenceBody = `<section class="land-hero">
+<div class="titleband"><p class="eyebrow">evidence</p>
 <h1>Evidence</h1></div>
-<p class="lede">The records behind the atlas, and the rules its checks follow.</p>
-<dl class="evlist">
-${EVIDENCE.map(([href, label, d]) => `<dt><a href="${href}">${esc(label)}</a></dt><dd>${esc(d)}</dd>`).join('\n')}
-</dl>`
+<p class="land-lead">The records behind the atlas, and the rules its checks follow.</p>
+</section>
+${EVIDENCE_GROUPS.map(([group, cards]) => `<section class="land-tasks">
+<p class="eyebrow">${esc(group)}</p>
+<div class="land-grid">
+${cards.map(([href, t, d, k]) => `<a class="land-card" href="${href}"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-card-k">${esc(k)}</span></a>`).join('\n')}
+</div>
+</section>`).join('\n')}`
     registerPage({
-      slug: 'evidence', title: 'Evidence', where: 'evidence', nav: 'evidence',
+      slug: 'evidence', title: 'Evidence', where: 'evidence', nav: 'evidence', kind: 'prose landing',
       changefreq: 'monthly', priority: '0.5',
-      description: 'The records behind The Symbolic World, a verified knowledge graph of Jung’s Collected Works: the ledger, releases, disputes, relation families, method and design.',
-      style: '.evlist dt { margin-top: 1rem; font-family: var(--display); font-size: 1.15rem; }\n.evlist dd { margin: .2rem 0 0; color: var(--ink-faint); font-size: .95rem; line-height: 1.55; max-width: 38em; }',
-      body: evidenceBody
+      description: 'The records behind The Symbolic World, a verified knowledge graph of Jung’s Collected Works: the method, ledger, releases, disputes, design, relation families and the data.',
+      style: LANDING_CSS, body: evidenceBody
     })
     V2_COPY.push(['public/evidence.html (generated)', stripEvidence(evidenceBody)])
     console.log('evidence page: written')
@@ -3200,18 +3232,7 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()`
 <a href="/method">the method</a><a href="/disputes">disputes log</a>${SUPPORT_URL ? '<a href="/support">support the project</a>' : ''}
 </footer>`
     const landingStyle = `
-.page-main.landing { padding-top: 2.4rem; }
-.page-main.landing > * { max-width: none; }
-.land-hero { margin-bottom: 3rem; }
-.land-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin: .4rem 0 0; }
-.land-lead { margin-top: 1.2rem; }
-.land-hero h1 em { font-style: italic; color: var(--gold); }
-.land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
-.land-tasks { margin-bottom: 3.5rem; }
-.land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
-.land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
-.land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
-.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
+${LANDING_CSS}.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
 .land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
 .land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
 .land-card-all { text-decoration: none; }
@@ -3224,9 +3245,6 @@ ${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; 
 .land-hits .latin { font-style: italic; color: var(--ink-faint); margin-left: .4rem; }
 .land-hits .none { padding: .35rem .5rem; font-size: .86rem; color: var(--ink-faint); }
 ` : ''}.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
-.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
-.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
-.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
 .land-link { display: flex; flex-wrap: wrap; gap: 2rem 3.5rem; align-items: flex-start; padding: 2.4rem 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin-bottom: 3.5rem; }
 .land-link-text { flex: 1 1 22rem; min-width: 0; }
 .land-claim { font-family: var(--display); font-size: 1.7rem; line-height: 1.25; margin: .5rem 0 .8rem; max-width: none; }
