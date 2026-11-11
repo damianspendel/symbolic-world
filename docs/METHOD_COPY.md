@@ -7,8 +7,9 @@ measured results; the build registers them in the copy assertion's
 method-constants allowlist with their source noted here.
 
 Sources for the frozen numbers: the dispute count binds from disputes.json as
-{{disputes}}. The 86% arm-agreement figure left the copy on 2026-11-11: its
-only source, pipeline/work/family_pass_summary.json, is not committed. The family-calibration figures
+{{disputes}}. The arm agreement binds live from seed.json's relation_family.by
+since 2026-11-11 (Damian: "go with the live figure"); the earlier 86% came from
+pipeline/work/family_pass_summary.json, which is not committed. The family-calibration figures
 (19/19, 20/20, 38/40) were WITHDRAWN 2026-08-12 after the blind code
 inspection (RULES.md #12) and live only in the version-bound records per
 RULES.md #16. The 14-of-20 themis figure left the copy in the 2026-10-18
@@ -24,7 +25,8 @@ symbols, figures and concepts, joined by {{edges}} relations, resting on
 proposed each claim from a window of paragraphs, and a model of a different
 family (Fable) judged it against its source paragraph. An auditor from another
 vendor (Google's Gemini) then re-read the result: {{xv_pct}}% of the {{refs}}
-citations carry an audit stamp that names the audit and its date. Each claim is
+citations carry an audit stamp, and all but {{stamps_bare}} of the stamps name the
+audit and its date. Each claim is
 a ledger entry: the exact paragraph, a verbatim quote, and a record of which
 model, or which person, checked what. This is a map of assertions, not a
 Jungian reading.
@@ -79,14 +81,14 @@ alchemical meaning.
    at most 25 words, and that the claim has the form of one relation between
    two nodes. The pipeline drops claims that fail.
 3. **Gate.** A Fable-family model judges every claim against its full source
-   paragraph. Its instructions tell it to reject: a claim survives only if the
-   model finds that the paragraph supports it.
+   paragraph. Its instructions make rejection the default: a claim survives
+   only if the model finds that the paragraph supports it.
 4. **Audit.** A Gemini model re-reads every claim that survived the gate,
-   before it enters the graph. That has been the procedure for every batch
-   since mid-2026, when work on *Aion* began. Later passes audited the older
-   material, by whole volumes and by samples, and each citation's stamp says
-   which. {{xv_stamped}} of {{refs}} citations carry a stamp. The other
-   {{unstamped}}, all in volumes mined since *Aion*, have none yet. Where gate
+   before it enters the graph. The step became the rule in mid-2026, when work
+   on *Aion* began. Later passes audited the older material, by whole volumes
+   and by samples, and each citation's stamp says which. {{xv_stamped}} of
+   {{refs}} citations carry a stamp. The other {{unstamped}}, in *Aion* and the
+   volumes mined after it, have none yet, and the record does not say why. Where gate
    and auditor disagree on whether the paragraph supports the claim, the
    auditor's verdict stands. Findings about claim type or confidence become
    corrections, and a recorded project convention can overrule the auditor;
@@ -136,7 +138,8 @@ for everything the site publishes.
 - The family gate faces the same kind of test: we plant corrupted assignments
   among real ones. At ruleset {{ruleset}} it caught {{cal_caught}} of
   {{cal_planted}} planted errors and left {{cal_clean}} of {{cal_clean_of}}
-  clean assignments alone. A family label means two models, judging
+  clean assignments alone. The gate is a Gemini model, as is one of the two
+  classifying models. A family label means two models, judging
   independently, put the relation in that family, or a person ruled where they
   disagreed.
 - We checked the classification vocabulary against {{ev_works}} published works
@@ -146,13 +149,16 @@ for everything the site publishes.
   [The design page](/ontology#checked) lists the disagreements and the rule
   changes they produced. The check tests our sorting of relations into
   families. It says nothing about whether a claim is true.
-- Agreement between the two classifying models shows whether two readers apply
-  the definitions the same way. It does not show that the definitions are
-  right: neither model is authoritative.
+- The two classifying models agreed on {{arms_agreed}} of {{arms_compared}}
+  relations ({{arms_pct}}%): the relations whose record shows either their
+  agreement or a disagreement for a person to settle. The other {{arms_other}}
+  rest on a precedent or on a later check. Agreement shows whether two readers
+  apply the definitions the same way. It does not show that the definitions
+  are right: neither model is authoritative.
 
 What the instruments do not cover:
 
-| Known limit | What would close it |
+| Known limit | What would close it, or what offsets it |
 |---|---|
 | One human reviewer; no second annotator yet | Independent second annotation with agreement statistics |
 | A class of identity drift (two names for one thing entering as two things) is invisible to the current audit | No instrument yet |

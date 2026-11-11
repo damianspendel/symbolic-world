@@ -1253,8 +1253,21 @@ if (existsSync(methodPath)) {
     ev_disagrees: EV ? EV.disagrees : 0, ev_split: EV ? EV.scholars_split : 0,
     families: families.length,
     queue: pending.items ? pending.items.length : 0,
-    // citations with no audit stamp (2026-11-11: the copy says how many)
+    // citations with no audit stamp (2026-11-11: the copy says how many), and
+    // stamps that name only the model, with no audit or date
     unstamped: meta.counts.references - xvStamped,
+    stamps_bare: atlasEdges.reduce((n, e) => n + e.refs.filter(r => r.crossvendor_checked && !/\(/.test(String(r.crossvendor_checked))).length, 0),
+    // the two classifying models' agreement, live (Damian, 2026-11-11: "go with
+    // the live figure"): agreed = records the arms agreed on; compared adds the
+    // records of a disagreement, open or ruled by a person
+    ...(() => {
+      const by = seed.edges.map(e => String((e.relation_family || {}).by || ''))
+      const agreed = by.filter(b => b.startsWith('opus+gemini-agreed')).length
+      const disagreed = by.filter(b => b.startsWith('arms-disagree') || b.startsWith('human-adjudication')).length
+      const compared = agreed + disagreed
+      return { arms_agreed: agreed, arms_compared: compared, arms_pct: (100 * agreed / compared).toFixed(1),
+        arms_other: seed.edges.length - compared }
+    })(),
     // the family gate's calibration in force (A3 of the method review): the
     // same record the releases pin names
     ruleset: famVersion,
