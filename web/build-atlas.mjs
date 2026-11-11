@@ -3507,6 +3507,7 @@ function emitPages() {
 ## Data
 
 - [The dataset](${site}/graph.json): the whole graph as one JSON file
+- [The RDF export](${site}/vocabulary#export): the graph as Turtle files with PROV-O provenance and no quotations, published with v2.3.0 on the Zenodo record https://doi.org/10.5281/zenodo.21631523
 
 ## Licence
 

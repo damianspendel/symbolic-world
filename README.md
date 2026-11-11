@@ -44,7 +44,7 @@ its edge, that finding falsifies the edge, publicly.
 | `pipeline/` | Construction pipeline: runners, transaction ledger (`state.json`), batches |
 | `tests/test_graph.py` | Integrity validators + 7 self-testing corruption canaries |
 | `web/` | The atlas web app (Vite + Cytoscape) |
-| `james/` | Second-corpus replication (James, *Varieties*): full reproduction package + [visual graph](https://symbolicworld.observer/james.html) |
+| `james/` | Second-corpus replication (James, *Varieties*): full reproduction package + [visual graph](https://symbolicworld.observer/james) |
 | `manage.sh` | Build / deploy / service management |
 
 ## Copyright posture
