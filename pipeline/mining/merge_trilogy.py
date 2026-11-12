@@ -61,7 +61,7 @@ REF_CORRECTIONS = ('claim_type', 'confidence', 'source', 'source_author', 'sourc
 seed = json.load(open('seed.json', encoding='utf-8'))
 before = (len(seed['nodes']), len(seed['edges']), sum(len(e.get('references', [])) for e in seed['edges']))
 assert list(before) == list(adj['before']), f"seed.json moved since orientation: {before} != {adj['before']}"
-if any(BATCH in str(r.get('crossvendor_checked', '')) for e in seed['edges'] for r in e.get('references', [])):
+if any(BATCH in str(r.get('crossvendor_checked', '')) and DATE in str(r.get('crossvendor_checked', '')) for e in seed['edges'] for r in e.get('references', [])):
     raise SystemExit(f'seed.json already carries {BATCH} audit tags: {BATCH} looks merged')
 node_by_id = {n['id']: n for n in seed['nodes']}
 index = {(e['subject'], e['relation'], e['object']): e for e in seed['edges']}
