@@ -138,6 +138,13 @@ const EMIT_ABOUT_PAGE = true
 // either way; it is inert without this page.
 const ROUTES_IN_UI = true
 
+// v2.4.0: /opus, the Rosarium page, replaces the concordance in the menu and on
+// the landing card (Damian, 2026-11-12: "/opus will replace /concordance").
+// Off, the page is not written and the landing card points at the concordance
+// as before; the menu entry is written literally (the menu parity test reads
+// the list as text), so switching the page off means editing the menu too.
+const EMIT_OPUS_PAGE = true
+
 // The support link (Ko-fi, decision of 2026-10-21): one footer link on every
 // generated page, the /support page and its menu entry, nothing else monetized.
 // Empty renders nothing anywhere. tools/build_ledger_page.py reads this
@@ -286,7 +293,7 @@ const MENU_LEGACY = [
 // 2026-11-10: "the whole concordance part vanished. That was a key value
 // proposition"; 2026-11-11: "reintroduce the support page with the Ko-fi").
 const MENU_READER_LIST = [
-  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/atlas#/concordance', 'concordance'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(SUPPORT_URL ? [['/support', 'support']] : []), ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : [])]]
+  ['', [['/concepts', 'concepts'], ['/query', 'search'], ['/atlas', 'atlas'], ['/opus', 'opus'], ['/routes', 'routes'], ['/evidence', 'evidence'], ...(SUPPORT_URL ? [['/support', 'support']] : []), ...(EMIT_ABOUT_PAGE ? [['/about', 'about']] : [])]]
 ]
 const MENU = MENU_READER ? MENU_READER_LIST : MENU_LEGACY
 // The reader menu's atlas link has no route after the #, so the app plays its
@@ -3336,7 +3343,7 @@ else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()`
 <div class="land-card"><span class="land-card-t">Look up a concept</span><span class="land-card-d">The ideas Jung returns to the most. Each concept's page holds everything the atlas has on it.</span>${HOME_SEARCH ? `
 <span class="land-search"><input id="land-q" class="std-search facet-filter" type="search" placeholder="find a concept: anima, lapis, mandala…" aria-label="find a concept by name" aria-controls="land-hits" autocomplete="off" spellcheck="false"><span id="land-hits" class="land-hits" role="listbox"></span></span>` : ''}<span class="land-starts">Common starting points: ${LANDING_STARTS.map(([text, id]) => `<a href="/concept-${id}">${esc(text)}</a>`).join('&nbsp;&middot; ')}</span><a class="land-card-k land-card-all" href="/concepts">concepts</a></div>
 <a class="land-card" href="/query"><span class="land-card-t">Check a claim against the book</span><span class="land-card-d">Filter by volume, family and claim type, and search the words inside the quotes.</span><span class="land-card-k">query</span></a>
-<a class="land-card" href="/atlas#/concordance"><span class="land-card-t">Set Jung beside the alchemists</span><span class="land-card-d">See his psychological concepts next to the alchemical figures and operations he reads them through, with a citation for each pairing.</span><span class="land-card-k">concordance</span></a>
+${EMIT_OPUS_PAGE ? `<a class="land-card" href="/opus"><span class="land-card-t">Follow the alchemical work</span><span class="land-card-d">Jung's reading of the ten pictures of the Rosarium philosophorum, with the colours of the work where he names them.</span><span class="land-card-k">opus</span></a>` : `<a class="land-card" href="/atlas#/concordance"><span class="land-card-t">Set Jung beside the alchemists</span><span class="land-card-d">See his psychological concepts next to the alchemical figures and operations he reads them through, with a citation for each pairing.</span><span class="land-card-k">concordance</span></a>`}
 <a class="land-card" href="/routes"><span class="land-card-t">Trace one idea to another</span><span class="land-card-d">See how one concept reaches another.</span><span class="land-card-k">routes</span></a>
 </div>
 </section>
@@ -3437,6 +3444,143 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     }))
     V2_COPY.push(['public/index.html (generated)', stripEvidence(landingBody)])
     console.log('landing page: written to / (the app is at /atlas)')
+  }
+
+  // ------------------------------------------------ /opus -------------------
+  // The alchemical journey (v2.4.0; concept from the brainstorm chat, chosen by
+  // Damian on 2026-11-12; colour table and the white hold approved the same
+  // day). One scrolling page through the ten woodcuts of the Rosarium
+  // philosophorum in the order Jung reads them in CW 16, "The Psychology of the
+  // Transference". Each picture shows up to three verified claims from the
+  // graph whose citation falls in its paragraph range (structure taken from the
+  // book's headings, not a claim). The page background changes only where Jung
+  // names a colour stage, at the paragraph that names it. Two quotes sit
+  // outside the graph, allowed on this page only (Damian, 2026-11-12): each was
+  // matched letter-exact against its paragraph, counted at 25 words or fewer,
+  // and read by claude-fable-5-2 (Opus proposed them). The woodcuts are
+  // placeholder frames until the scan's rights are cleared. /opus replaces the
+  // concordance in the menu and on the landing card (Damian, 2026-11-12).
+  if (EMIT_OPUS_PAGE) {
+    const OPUS_VOICE = { 'jung-asserts': 'Jung asserts', 'jung-reports-parallel': 'Jung reports a parallel', 'jung-quotes-source': 'Jung quotes a source' }
+    const OPUS_PICTURES = [
+      [1, 'The Mercurial Fountain', 402, 409, 'none'],
+      [2, 'King and Queen', 410, 449, 'none'],
+      [3, 'The Naked Truth', 450, 452, 'none'],
+      [4, 'Immersion in the Bath', 453, 456, 'none'],
+      [5, 'The Conjunction', 457, 466, 'none'],
+      [6, 'Death', 467, 474, 'black'],
+      [7, 'The Ascent of the Soul', 475, 482, 'black'],
+      [8, 'Purification', 483, 493, 'fade'],
+      [9, 'The Return of the Soul', 494, 524, 'white'],
+      [10, 'The New Birth', 525, 539, 'white']
+    ]
+    // the colour cites: the claim each stage change rests on (graph edges), and
+    // where the change is stated
+    const OPUS_STAGE = {
+      6: { edge: 'coniunctio|followed-by|nigredo', para: 468, note: 'The page turns black where Jung names the nigredo.' },
+      7: { edge: 'nigredo|parallels|dark-night-of-the-soul', para: 479, note: 'The black holds.' },
+      8: { edge: 'nigredo|precedes|albedo', para: 493, note: 'The black fades to white. Jung names the whitening at CW 16 §484, and it is complete at §493.' },
+      9: { edge: 'nigredo|precedes|albedo', para: 515, note: 'White.' },
+      10: { edge: null, para: null, note: 'Jung names no stage in these paragraphs; the white holds as a choice of display, not a claim.' }
+    }
+    // outside the graph; checked 2026-11-12 (exact match, length, Fable read)
+    const OPUS_OUTSIDE = {
+      shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
+      close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
+    }
+    const inRange = (r, a, b) => String(r.volume) === '16' && Number(r.paragraph) >= a && Number(r.paragraph) <= b
+    const claimLine = (e, r) => `<li class="opus-claim"><p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
+<blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
+    const sections = OPUS_PICTURES.map(([n, title, a, b, stage]) => {
+      const pool = []
+      for (const e of atlasEdges) for (const r of e.refs) if (inRange(r, a, b) && r.quote) pool.push([e, r])
+      const st = OPUS_STAGE[n]
+      const forced = st && st.edge ? pool.filter(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para) : []
+      const rank = (x) => [x[1].claim_type === 'jung-asserts' ? 0 : 1, Number(x[1].paragraph)]
+      const rest = pool.filter(x => !forced.includes(x)).sort((x, y) => { const a1 = rank(x), b1 = rank(y); return a1[0] - b1[0] || a1[1] - b1[1] })
+      const chosen = [], seen = new Set()
+      for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === 3) break }
+      if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
+      const shimmer = n === 7 ? `<div class="opus-shimmer" aria-hidden="true"></div>
+<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.shimmer.quote)}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
+      return `<section class="opus-pic" id="picture-${n}" data-stage="${stage}">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut ${n} of the Rosarium philosophorum, ${esc(title)}"><span>Woodcut ${n}</span><span class="opus-frame-t">${esc(title)}</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture ${n} · CW 16 §${a} to §${b}</p>
+<h2>${esc(title)}</h2>
+${st ? `<p class="opus-stage">${esc(st.note)}${st.para ? ` CW 16 §${st.para}.` : ''}</p>` : ''}
+<ul class="opus-claims">
+${chosen.map(([e, r]) => claimLine(e, r)).join('\n')}
+</ul>
+${shimmer}
+</div>
+</section>`
+    }).join('\n')
+    derived(1550)   // the Rosarium's first printing, a fact of the book, not a count
+    const opusBody = `<div class="titleband"><p class="eyebrow">Explore</p>
+<h1>The opus</h1>
+<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with the colours of the work where he names them.</p></div>
+<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below carries claims from the graph, cited to the paragraphs where he discusses it. The page darkens and whitens only where Jung names the black and the white.</p>
+<div class="opus-ground" aria-hidden="true"></div>
+${sections}
+<section class="opus-close" id="the-red" data-stage="red">
+<div class="opus-text">
+<p class="eyebrow">After the white</p>
+<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
+<p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
+</div>
+</section>
+<p class="meta">The woodcuts are placeholders until we clear the rights to a scan. Picture titles and paragraph ranges follow the headings of CW 16.</p>`
+    const opusStyle = `
+.page-main.prose > .opus-ground { position: fixed; inset: 0; max-width: none; width: auto; z-index: -1; background: transparent; transition: background-color .6s ease; pointer-events: none; }
+.page-main.opus-black, .page-main.opus-white, .page-main.opus-red { transition: color .6s ease; }
+.page-main.opus-black { color: #ece6d8; } .page-main.opus-black a { color: #e2c46b; }
+.page-main.opus-white { color: #1d1a14; } .page-main.opus-white a { color: #7a5a12; }
+.page-main.opus-red { color: #f6e9dc; } .page-main.opus-red a { color: #ffd9a8; }
+.page-main.opus-black .eyebrow, .page-main.opus-black .opus-cite, .page-main.opus-black .meta { color: #b9ad94; }
+.page-main.opus-white .eyebrow, .page-main.opus-white .opus-cite, .page-main.opus-white .meta { color: #6b5f48; }
+.page-main.opus-red .eyebrow, .page-main.opus-red .opus-cite, .page-main.opus-red .meta { color: #f0d6c2; }
+.opus-pic { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: 1.5rem 2.5rem; align-items: start; padding: 4rem 0; min-height: 70vh; }
+.opus-frame { aspect-ratio: 3 / 4; border: 1px dashed currentColor; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; opacity: .75; font: .7rem var(--mono); letter-spacing: .08em; }
+.opus-frame-t { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0; }
+.opus-text h2 { margin: .2rem 0 .8rem; }
+.opus-stage { font-style: italic; }
+.opus-claims { list-style: none; padding: 0; margin: 1rem 0; }
+.opus-claim { margin: 0 0 1.3rem; }
+.opus-rel { font-family: var(--display); font-size: 1.15rem; margin: 0 0 .3rem; }
+.opus-rel em { font-style: normal; opacity: .8; }
+.opus-claim blockquote, .opus-outside { margin: 0; padding: .2rem 0 .2rem .9rem; border-left: 2px solid currentColor; font-family: var(--display); font-size: 1.02rem; line-height: 1.5; }
+.opus-cite { display: block; font: .64rem/1.7 var(--mono); margin-top: .3rem; }
+.opus-shimmer { height: 6px; border-radius: 3px; margin: 1.6rem 0 1rem; background: linear-gradient(90deg, #1f6f6b, #3b5bb5, #7b3fa0, #b0367a, #c9772e, #d9b23a, #1f6f6b); background-size: 300% 100%; animation: opus-shimmer 6s linear infinite; }
+@keyframes opus-shimmer { to { background-position: 300% 0; } }
+.opus-close { padding: 5rem 0 4rem; min-height: 60vh; }
+@media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; } .opus-frame { max-width: 16rem; } }
+@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main { transition: none !important; } .opus-shimmer { animation: none; } }
+`
+    // the scroll: the stage of the section nearest the viewport's middle sets
+    // the ground; the fade section mixes black to white by how far it has
+    // scrolled; the closing section warms towards red
+    const OPUS_JS = `(function(){
+var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main');if(!g||!m)return;
+var secs=[].slice.call(document.querySelectorAll('[data-stage]'));
+function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
+var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18];
+function tick(){var mid=innerHeight/2,cur=null;secs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<=mid&&r.bottom>mid)cur=s});
+var st=cur?cur.getAttribute('data-stage'):'none',bg='transparent',cls='';
+if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
+else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
+else if(st==='fade'){var r=cur.getBoundingClientRect(),t=Math.min(1,Math.max(0,(mid-r.top)/r.height));bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
+else if(st==='red'){var r2=cur.getBoundingClientRect(),t2=Math.min(1,Math.max(0,(mid-r2.top)/(r2.height*.6)));bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
+g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick()})();`
+    registerPage({
+      slug: 'opus', title: 'The opus', where: 'opus', nav: 'opus',
+      changefreq: 'monthly', priority: '0.6',
+      description: 'Jung’s reading of the ten woodcuts of the Rosarium philosophorum in CW 16, with verified claims and quotes, and the colours of the alchemical work where he names them.',
+      style: opusStyle, body: opusBody + `\n<script>${OPUS_JS}</script>`
+    })
+    V2_COPY.push(['public/opus.html (generated)', stripEvidence(opusBody)])
+    console.log('opus page: written (woodcuts as placeholders)')
   }
 
   // ------------------------------------------------ /support ----------------

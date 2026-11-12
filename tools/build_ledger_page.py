@@ -71,7 +71,8 @@ MENU_LEGACY = [
 ]
 MENU_READER_LIST = [
     ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas", "atlas"),
-          ("/atlas#/concordance", "concordance"), ("/routes", "routes"), ("/evidence", "evidence")]
+          ("/opus", "opus"),
+          ("/routes", "routes"), ("/evidence", "evidence")]
          + ([("/support", "support")] if SUPPORT_URL else [])
          + ([("/about", "about")] if EMIT_ABOUT_PAGE else [])),
 ]

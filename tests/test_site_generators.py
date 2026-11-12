@@ -743,7 +743,7 @@ EXPECTED_MENU_LEGACY = [
 # returned in the interim build of 2026-11-11
 EXPECTED_MENU_READER = [
     ("", [("/concepts", "concepts"), ("/query", "search"), ("/atlas", "atlas"),
-          ("/atlas#/concordance", "concordance"), ("/routes", "routes"),
+          ("/opus", "opus"), ("/routes", "routes"),
           ("/evidence", "evidence"), ("/support", "support"), ("/about", "about")]),
 ]
 EXPECTED_MENU = (EXPECTED_MENU_READER if re.search(r"^const MENU_READER = true$",

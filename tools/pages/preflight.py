@@ -37,6 +37,8 @@ ALLOW = {
     'symbolicworld-graph.ttl', 'symbolicworld-ontology.ttl', 'symbolicworld-void.ttl',
     # the static twin of the SPA's #/method view (spec-concept-pages-v1)
     'method.html',
+    # the Rosarium page (v2.4.0)
+    'opus.html',
     # what Pages serves, with a 404 status, for an unknown path. Its presence
     # also ends the single-page fallback to the homepage (2026-11-04)
     '404.html',
