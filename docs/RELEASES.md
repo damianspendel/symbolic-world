@@ -29,6 +29,53 @@ Each entry opens with the graph version, the ruleset version it shipped with
 (the two are deliberately separate numbers) and the calibration record in force
 when the release was cut.
 
+## v2.4.0: the trilogy second pass, CW 14 and CW 12
+
+status: in preparation. This draft covers CW 14 and CW 12; the second pass
+over CW 13 is not in it.
+pin: graph v2.4.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
+
+### mining status
+
+- Mined CW 14, *Mysterium Coniunctionis*, and CW 12, *Psychology and
+  Alchemy*, a second time, in windows of seventy paragraphs: eleven windows
+  for CW 14 and eight for CW 12. The first pass over these volumes predates
+  the form rule and the reporting clause.
+- New references name their source author, and the source text where Jung
+  gives one. Nodes in `seed.json` carry their Latin form, their aliases and
+  the paragraph that names them.
+- Quotations have a cap per volume, and the pre-check enforces it.
+- Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
+  {{batches}} batches; {{pending}} relations await adjudication.
+
+### governance
+
+- The VoID files for the graph and the ontology name as their data dump the
+  Turtle file the site serves. The w3id address they named before redirected
+  to the DOI landing page.
+- The RDF export in `exports/rdf/` is rebuilt from this release's graph.
+
+### core build
+
+- [/opus](/opus) takes the concordance's place in the menu and on the landing
+  page. The concordance stays at [/atlas#/concordance](/atlas#/concordance).
+
+### UI
+
+- [/opus](/opus) follows Jung's reading of the ten woodcuts of the *Rosarium
+  philosophorum* in CW 16. Each picture has up to three verified claims from
+  the graph, some of them from the CW 14 second pass. The background turns
+  black, white, yellow and red where Jung names the stage, and each change
+  shows the claim it rests on. The woodcuts come from Jung's own copy of the
+  1550 edition, digitised by e-rara.ch.
+- [/query](/query) suggests concepts in the subject and object fields and
+  relations as you type, and offers provenance as a list.
+- [/method](/method) says "Validated by a person" for the gold set and adds a
+  row on recall to its limits. The "How the checks work" heading on
+  [/evidence](/evidence) links to it.
+- New subtitles on [/evidence](/evidence), [/about](/about) and
+  [/concepts](/concepts).
+
 ## v2.3.0: CW 16, CW 7 and CW 6
 
 status: released 2026-11-11. Tag `v2.3.0`, GitHub Release, Zenodo record
