@@ -73,7 +73,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .opus-pinned .opus-pin { position: sticky; top: var(--opus-top, 0px); height: calc(100vh - var(--opus-top, 0px)); overflow: hidden; }
 .opus-pinned .opus-seg { position: absolute; inset: 0; min-height: 0; padding: 1.5rem 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s linear .7s; overflow-y: auto; }
 .opus-pinned .opus-seg.is-active { opacity: 1; visibility: visible; transition: opacity .7s ease, visibility 0s; }
-.opus-pinned .opus-pic { align-items: center; }
+.opus-pinned .opus-pic { align-items: start; align-content: start; padding-top: 2rem; }
 .opus-pinned .opus-close { display: flex; flex-direction: column; justify-content: center; }
 .opus-frame { aspect-ratio: 3 / 4; border: 1px dashed currentColor; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; opacity: .75; font: .7rem var(--mono); letter-spacing: .08em; }
 .opus-frame-t { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0; }
@@ -99,8 +99,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The opus</h1>
-<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with the colours of the work where he names them.</p></div>
-<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below carries claims from the graph, cited to the paragraphs where he discusses it. The page darkens and whitens only where Jung names the black and the white.</p>
+<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum.</p></div>
+<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses.</p>
 <div class="opus-ground" aria-hidden="true"></div>
 <div class="opus-track" style="--opus-n: 11">
 <div class="opus-pin">
