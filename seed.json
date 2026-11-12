@@ -201,11 +201,13 @@
     "Hydrolith",
     "Salvator",
     "aenigma regis",
+    "carbuncle",
     "cervus fugitivus",
     "cibus immortalis",
     "lapis aethereus",
     "lapis angularis",
     "lapis invisibilitatis",
+    "vilis vilissimus",
     "water-stone"
    ],
    "name_refs": [
@@ -263,6 +265,16 @@
      "volume": "12",
      "paragraph": 487,
      "batch": "b-cw12-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 514,
+     "batch": "b-cw12-8"
+    },
+    {
+     "volume": "12",
+     "paragraph": 552,
+     "batch": "b-cw12-8"
     }
    ],
    "latin": "lapis Philosophorum"
@@ -323,7 +335,18 @@
   {
    "id": "rebis",
    "type": "Symbol",
-   "label": "Rebis / Hermaphrodite"
+   "label": "Rebis / Hermaphrodite",
+   "aliases": [
+    "hermaphroditus",
+    "monstrum"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 517,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "mercurius",
@@ -337,6 +360,8 @@
     "cervus fugitivus",
     "mercurial serpent",
     "quicksilver",
+    "salvator",
+    "servator",
     "servus",
     "spirit Mercurius",
     "spiritus mercurialis"
@@ -381,6 +406,11 @@
      "volume": "12",
      "paragraph": 187,
      "batch": "b-cw12-3"
+    },
+    {
+     "volume": "12",
+     "paragraph": 529,
+     "batch": "b-cw12-8"
     }
    ],
    "latin": "argentum vivum"
@@ -398,6 +428,7 @@
     "limbus microcosmicus",
     "massa informis",
     "materia vilis",
+    "mysterium magnum",
     "radix ipsius"
    ],
    "name_refs": [
@@ -425,6 +456,11 @@
      "volume": "12",
      "paragraph": 429,
      "batch": "b-cw12-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 516,
+     "batch": "b-cw12-8"
     }
    ]
   },
@@ -845,7 +881,15 @@
   {
    "id": "philosophical-tree",
    "type": "Symbol",
-   "label": "The Philosophical Tree (arbor philosophica)"
+   "label": "The Philosophical Tree (arbor philosophica)",
+   "latin": "arbor philosophica",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 499,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "golden-flower",
@@ -1031,7 +1075,17 @@
   {
    "id": "filius-philosophorum",
    "type": "Figure",
-   "label": "Filius Philosophorum"
+   "label": "Filius Philosophorum",
+   "aliases": [
+    "unicus filius"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 530,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "divine-child",
@@ -1240,7 +1294,15 @@
   {
    "id": "the-assumption",
    "type": "Motif",
-   "label": "The Assumption of Mary"
+   "label": "The Assumption of Mary",
+   "latin": "assumptio Beatae Mariae Virginis",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 500,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "scintilla",
@@ -2510,12 +2572,42 @@
   {
    "id": "stag",
    "type": "Symbol",
-   "label": "Stag"
+   "label": "Stag",
+   "latin": "cervus fugitivus",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 518,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "unicorn",
    "type": "Symbol",
-   "label": "Unicorn"
+   "label": "Unicorn",
+   "aliases": [
+    "ch’i-lin",
+    "ha-unicorius",
+    "re’em"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 540,
+     "batch": "b-cw12-8"
+    },
+    {
+     "volume": "12",
+     "paragraph": 546,
+     "batch": "b-cw12-8"
+    },
+    {
+     "volume": "12",
+     "paragraph": 548,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "circulatio",
@@ -2674,7 +2766,17 @@
   {
    "id": "spiritus-mundi",
    "type": "Concept",
-   "label": "Spiritus mundi (world spirit)"
+   "label": "Spiritus mundi (world spirit)",
+   "aliases": [
+    "Archaeus"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 512,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "blood",
@@ -2929,7 +3031,17 @@
   {
    "id": "three-legged-ass",
    "type": "Symbol",
-   "label": "Three-legged ass (Bundahish)"
+   "label": "Three-legged ass (Bundahish)",
+   "aliases": [
+    "daemon triunus"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 539,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "og-king-of-bashan",
@@ -8100,8 +8212,14 @@
      "volume": "12",
      "paragraph": 420,
      "batch": "b-cw12-6"
+    },
+    {
+     "volume": "12",
+     "paragraph": 498,
+     "batch": "b-cw12-8"
     }
-   ]
+   ],
+   "latin": "elixir vitae"
   },
   {
    "id": "fermentatio",
@@ -8162,7 +8280,15 @@
   {
    "id": "subtle-body",
    "label": "Subtle body (corpus subtile)",
-   "type": "Concept"
+   "type": "Concept",
+   "latin": "corpus subtile",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 511,
+     "batch": "b-cw12-8"
+    }
+   ]
   },
   {
    "id": "intermediate-realm",
@@ -8215,6 +8341,39 @@
   {
    "id": "melchior-cibinensis",
    "label": "Melchior Cibinensis (Nicholas Melchior of Hermannstadt)",
+   "type": "Figure"
+  },
+  {
+   "id": "crowned-maid",
+   "label": "The Crowned Maid (virgo redimita)",
+   "type": "Figure",
+   "latin": "virgo redimita",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 499,
+     "batch": "b-cw12-8"
+    }
+   ]
+  },
+  {
+   "id": "alicorn",
+   "label": "The alicorn (the single horn of the unicorn)",
+   "type": "Symbol"
+  },
+  {
+   "id": "manu",
+   "label": "Manu (the Vedic first man)",
+   "type": "Figure"
+  },
+  {
+   "id": "euphorion",
+   "label": "Euphorion (Goethe's Faust)",
+   "type": "Figure"
+  },
+  {
+   "id": "superman",
+   "label": "The superman (Nietzsche's Zarathustra)",
    "type": "Figure"
   }
  ],
@@ -10331,6 +10490,20 @@
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)",
      "vocabulary_note": "speaker (the old king of Ripley's Cantilena) resolved from preceding paragraphs, not this one"
+    },
+    {
+     "volume": "12",
+     "paragraph": 491,
+     "quote": "to dissolve himself in the prima materia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "Ripley, Cantilena Riplaei, as paraphrased by Jung",
+     "source_author": "Ripley",
+     "source_text": "Cantilena Riplaei"
     }
    ],
    "relation_family": {
@@ -16037,6 +16210,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 499,
+     "quote": "the anima mundi , the feminine half of Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -30296,6 +30480,19 @@
      "source": "Honorius of Autun",
      "correction_note": "stage1: §523 gives Honorius of Autun's directly quoted words; reports->quotes-source",
      "note": "Honorius of Autun, Speculum de mysteriis ecclesiae, rendered as a block quotation"
+    },
+    {
+     "volume": "12",
+     "paragraph": 522,
+     "quote": "St. Basil takes the filius unicornium to be Christ",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "St. Basil, via Nicolas Caussin",
+     "source_author": "the Church Fathers"
     }
    ],
    "relation_family": {
@@ -55275,6 +55472,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 499,
+     "quote": "The arbor philosophica is a favourite symbol for the alchemical process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -142969,6 +143177,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 557,
+     "quote": "it was the impersonal, collective archetypes that were projected",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
     }
    ],
    "cross_register": {
@@ -145088,6 +145307,20 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
      "source": "alchemical usage",
      "source_author": "the alchemists"
+    },
+    {
+     "volume": "12",
+     "paragraph": 518,
+     "quote": "as cervus fugitivus , is also a symbol of Mercurius",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "Lambspringk, Figure III",
+     "source_author": "Lambspringk",
+     "correction_note": "gate correction: the sentence attributes the stag to Lambspringk's symbols and names no title; the Musaeum hermeticum stands only in the figure caption; source_text withdrawn, author stands"
     }
    ],
    "relation_family": {
@@ -150049,6 +150282,895 @@
    ],
    "relation_family": {
     "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "represents",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 496,
+     "quote": "The king represents the domineering conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-8",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "gabricus-beya",
+   "relation": "stands-for",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 496,
+     "quote": "The brother-sister pair stands for the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "note": "the brother-sister pair of the Visio Arislei"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-8",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "incest",
+   "relation": "is-variant-of",
+   "object": "ouroboros",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 496,
+     "quote": "This endogamous mating is simply a variant of the Uroboros",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "undergoes",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 496,
+     "quote": "swallowed up by it. This brings about the nigredo",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-8",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "green-lion",
+   "relation": "is-form-of",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 498,
+     "quote": "The green lion is also one of the forms of Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-mother",
+   "relation": "identical-with",
+   "object": "philosophical-tree",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 499,
+     "quote": "the mother is identical with the tree",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the identity is stated of the mother 'as the giver of new birth' in Ripley's image; the standing node is the mother at large, medium with the proposer's scope note",
+     "note": "as the giver of new birth"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "crowned-maid",
+   "relation": "is-recognized-as",
+   "object": "anima-mundi",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 499,
+     "quote": "we at once recognize the anima mundi",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "is-comparable-with",
+   "object": "mary",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 506,
+     "quote": "Mercurius can in fact be compared with ... the Christian Virgin Mary",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, FINDING-adjudicated, 2026-11-13)",
+     "correction_note": "cross-vendor correction: Claim type 'jung-asserts' is incorrect; Jung explicitly states 'note that I am only giving the opinion of our anonymous author'.",
+     "note": "as the anima mundi"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "considered-as",
+   "object": "subtle-body",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 508,
+     "quote": "Mercurius philosophorum is to be considered a spiritual body",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "Basilius Valentinus, Allegoria sanctissimae trinitatis et lapidis philosophici",
+     "source_author": "Basilius Valentinus",
+     "source_text": "other",
+     "correction_note": "gate correction: Valentinus says 'a spiritual body'; reading that as the corpus subtile of the standing node is one step, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "diamond-body",
+   "relation": "stands-for",
+   "object": "immortality",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 511,
+     "quote": "the “diamond body,” in other words, the attainment of immortality",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "Chinese alchemy, The Secret of the Golden Flower",
+     "source_author": "other",
+     "source_text": "Secret of the Golden Flower"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "nous",
+   "relation": "entangled-in",
+   "object": "physis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 513,
+     "quote": "Nous entangled in the embrace of Physis",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "the Gnostic vision, recalled by Jung in Orthelius",
+     "source_author": "the Gnostics"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "rests-on",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 516,
+     "quote": "all consciousness rests on unconscious premises",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "conceived-as",
+   "object": "rebis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 517,
+     "quote": "conceived as a paradoxical double being called monstrum, hermaphroditus , or rebis",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "the alchemists, as summarized by Jung",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "dove",
+   "relation": "is-a-symbol-of",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 518,
+     "quote": "a white dove, 6 another symbol of Mercurius",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "Rosencreutz, Chymical Wedding",
+     "source_author": "other",
+     "source_text": "Chymical Wedding"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "parallels",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 518,
+     "quote": "in his volatile form of spiritus , is a parallel of the Holy Ghost",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the parallel is stated of Mercurius in his volatile form; scope note added, confidence as proposed",
+     "note": "in his volatile form of spiritus"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "green-lion",
+   "relation": "replaces",
+   "object": "unicorn",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 519,
+     "quote": "the green lion has replaced the unicorn here",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the replacement is said of Ripley's image, not generally; scope note added",
+     "note": "in Ripley's image of the lion in the virgin's lap"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "alicorn",
+   "relation": "symbolizes",
+   "object": "cross",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 521,
+     "quote": "His horns are the ends of the cross",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, FINDING-adjudicated, 2026-11-13)",
+     "source": "Tertullian, quoted by Jung",
+     "source_author": "the Church Fathers",
+     "correction_note": "cross-vendor correction: Referent mismatch: The quote 'His horns are the ends of the cross' refers to the plural horns of the bull in Tertullian's text, not the single horn (alicorn) of the unicorn."
+    },
+    {
+     "volume": "12",
+     "paragraph": 549,
+     "quote": "for his horn is a symbol of the cross",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "Physiologus Graecus",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "unicorn",
+   "relation": "is",
+   "object": "the-devil",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 525,
+     "quote": "beware of the unicorn, who is the Demon",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "St. Basil",
+     "source_author": "the Church Fathers"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "unicorn",
+   "relation": "symbolizes",
+   "object": "rebis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 526,
+     "quote": "a singularly appropriate symbol for the monstrum hermaphroditum of alchemy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "consists-of",
+   "object": "four-elements",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 529,
+     "quote": "Mercurius philosophorum consists of the four elements",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "alchemical doctrine, as stated by Jung",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "scarab",
+   "relation": "sacred-to",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 530,
+     "quote": "the scarab is unicorned ... sacred to Mercurius",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "Horapollo, Hieroglyphica, ch. 10",
+     "source_author": "Horapollo",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "is",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 530,
+     "quote": "The unicus filius is the filius philosophorum , i.e., the stone",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "scarab",
+   "relation": "undergoes",
+   "object": "separatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 530,
+     "quote": "The scarab undergoes the same dismemberment as the dragon, the “separation of the elements,”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "aqua-nostra",
+   "relation": "is",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 531,
+     "quote": "The aqua nostra is nothing other than the aqua divina , i.e., Mercurius",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "manu",
+   "relation": "corresponds-to",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 533,
+     "quote": "In many respects he corresponds to the Greek Anthropos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "three-legged-ass",
+   "relation": "recalls",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 536,
+     "quote": "it recalls the monstrous personifications of the prima materia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "three-legged-ass",
+   "relation": "has",
+   "object": "mana",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 537,
+     "quote": "both are or have mana",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "three-legged-ass",
+   "relation": "stands-for",
+   "object": "panacea",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 538,
+     "quote": "The monster and the tree both stand for the ... and the panacea",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "alicorn",
+   "relation": "is-a",
+   "object": "uniting-symbol",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 553,
+     "quote": "we are dealing here with a “uniting symbol”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "faust",
+   "relation": "recognizes",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 558,
+     "quote": "modern man, disguised in the figure of Faust, recognizes the projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-8",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "euphorion",
+   "relation": "represents",
+   "object": "filius-philosophorum",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 558,
+     "quote": "Euphorion, who is supposed to be the filius philosophorum",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-8",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "nietzsche",
+   "relation": "identifies-with",
+   "object": "superman",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 560,
+     "quote": "identifying his ego with the superman Zarathustra",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-opus",
+   "relation": "separates",
+   "object": "spiritus-mundi",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 512,
+     "quote": "the art to separate the Archaeus, 204 the spiritus mundi",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)",
+     "source": "Orthelius, as quoted by Jung",
+     "source_author": "Orthelius"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "draws-from",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 565,
+     "quote": "the primordial images, from which the religions each draw their absolute truth",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-8, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-13"

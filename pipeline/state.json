@@ -1377,11 +1377,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw12-8-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §491-565",
+   "result": "CW 12 WINDOW 8: Psychology and Alchemy §491-565, the close of Part III and the Epilogue: Ripley's Cantilena (the sterile king dissolved in the prima materia, the mother-son incest as a variant of the uroboros, the king as the domineering conscious mind swallowed by the unconscious into the nigredo, the green lion as a form of Mercurius, the Crowned Maid as anima mundi, the mother identical with the tree), the Epigoni (the Liber de arte chymica's Mercurius beside the Virgin Mary, Valentinus's Mercurius as spiritual body, Orthelius's spiritus mundi, the diamond body of Chinese alchemy), consciousness resting on unconscious premises, the prima materia as rebis, the paradigm of the unicorn (dove, stag, lion and green lion as Mercurius, the horn as the cross in Tertullian and the Physiologus, St. Basil's unicorn as the Demon, the unicorn as the monstrum hermaphroditum, Horapollo's scarab sacred to Mercurius and dismembered in the separatio, the aqua nostra as Mercurius, Manu beside the Anthropos, the three-legged ass as prima materia, mana and panacea, the horn as uniting symbol), and the Epilogue (Faust recognizing the projection, Euphorion as filius philosophorum, Nietzsche identified with the superman, the archetypes projected into matter, the primordial images). Run by hand in the mining chat in the night of 2026-11-12/13 on Damian's instruction to run all remaining windows overnight; the eighth and last window of CW 12 in the second pass (state record b-cw12-8-pass2). The window ran under a quote budget of 380 letter tokens (CW 12 at 8.61 percent of the 9 percent cap with 395 tokens of headroom); the miner used 372 and cut a first draft of 550 to fit. Mined 40 candidates/41 refs (Opus-family miner subagent, blinded, model id stamped; six attaches onto standing edges; 18 names entries; 6 cross-register flags; 2 stage candidates; stages_note recorded; density below the usual band by design; the Epilogue thin because its strongest sentences are already quoted). Pre-check kept all 41 (quotation share of CW 12 after the window 8.98 percent against the 9 percent cap; the volume closes 23 letter tokens under it). Fable gate 36 TRUE / 5 CORRECTED / 0 FALSE: two confidence demotions (§499 the mother identical with the tree as giver of new birth, §508 Valentinus's 'spiritual body' read as the subtle body); scope notes on §518 Mercurius in his volatile form as parallel of the Holy Ghost and §519 the green lion replacing the unicorn in Ripley's image; §518 source_text withdrawn for Lambspringk's symbols. Seventeen names accepted and one rejected (alicorn|518, the mint's own label repeated as an alias). Gemini cross-vendor 39 PASS / 2 FINDING on 41 post-gate refs: §506 demoted to medium (Jung's comparison of Mercurius with the Virgin Mary, at once limited to the anonymous author's opinion) and §521 demoted to medium (Tertullian's horns of the bull-Christ, one step from the single horn; the §549 reference carries the claim). Names applied to 17 entries on 14 nodes; cross_register set on 5 edges; five mints: crowned-maid, alicorn, manu, euphorion, superman. Sources written as other: Rosencreutz and the Physiologus Graecus as authors, Chinese alchemy as a tradition, and the texts Allegoria sanctissimae trinitatis, Hieroglyphica and Chymical Wedding (all added to the controlled list in the tooling commit). +34 edges, 6 refs attached to standing edges and 1 further ref on this window's new edges, +41 refs, +5 nodes. Graph 1156/4829/6480; CW 12 now 632 references. CW 12 IS COMPLETE in the second pass: eight windows, §1-565, 376 references added across them. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 34 edges under v0.7.2: agreement 31/34 (91 percent), 29 assigned, 3 queued, 2 no-family, 0 text-undecided; queue 838; one bare unclassified row from the Gemini arm (n 4815) normalized to no-family before assembly, raw file kept. strain: 2 no-family, 0 text-undecided of 34 swept; new homeless strings: sacred-to; has (mana) recurs as property attribution. FAMILY GAP FOR THE SITTING: undergoes split psychic-effect against separation on the scarab's dismemberment (§530), the recurring seed question; conceived-as split archetypal-identity against doctrinal-attribution on the prima materia as rebis (§517); recognizes left one arm without a family (Faust and the projection); the Opus arm flags consciousness rests-on the-unconscious (§516) as falling inside the open underlies/based-on question even though both arms agreed on dependence. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-13, 41 refs judged against the full paragraphs; weekly Fable 69 percent and 5-hour meter 27 percent at the window's start, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1156/4829/6480, distinct paragraphs 3864, claim mix 5071/1041/368. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a31a3df5e01ad1b85, 32 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 12 assistant turns after the miner finished at 2026-11-12T23:24:14.591Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW12-DUE: window 8 (§491-565)",
- "nodes": 1151,
- "edges": 4795,
- "refs": 6439,
+ "next": "CW13-DUE: window 1 (§1-70)",
+ "nodes": 1156,
+ "edges": 4829,
+ "refs": 6480,
  "as_of": "2026-11-13"
 }
