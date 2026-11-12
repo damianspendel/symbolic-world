@@ -782,3 +782,18 @@ A, B and C need no mining. The review put them first, and Damian deferred them t
 - **D. Latin names and aliases in titles, descriptions and search.** High. "arbor philosophica" as a searchable name, and "also called" lines from the 22 `synonym-of` edges. Needs `latin` on about 250 laboratory nodes. The build can lift about 20 from labels now, and the re-mine supplies the rest. Low cost for the first 20, medium after.
 - **E. The opus as an ordered route.** Medium now, high after the re-mine. One ordered section on `/concordance`: nigredo, albedo, citrinitas where the data has it, rubedo, each with its operations and psychological reading, replacing the two guided walks. Needs stage and sequence data, most of which the re-mine has to supply. Medium cost.
 - **F. An index of the alchemists and texts Jung cites.** Medium. A section on `/concordance`, not a new page: Dorn, Maier, Khunrath, Zosimos, the Rosarium and others, each with the claims Jung quotes or reports from them. Needs a normalized source field. Today 383 of 5,292 references carry a free-text `source`. Low cost for the code, and the data comes from the re-mine.
+
+## v3.0.0: an animation of the alchemical journey (added 2026-11-11)
+
+An animation of the alchemical journey, in the spirit of the atlas, covering the seven stages. Damian, 2026-11-11: "I have a vision of how we could articulate the alchemical journey, i'd love a really cool animation for that, similar to the atlas. I'd like the seven stages also covered in some way." Concept chosen in the brainstorm chat; data from the trilogy pass (stage fields). The pass records, for every paragraph that says so, which operation, symbol or substance belongs to which stage and what precedes what (`stage-of`, `precedes`, `follows`; ids in `pipeline/mining/stages_controlled.json`), so the route the animation follows rests on cited sentences and nothing is inferred.
+
+## v2.4.0 (added 2026-11-11)
+
+- **Evidence page: "How the checks work" links to the method page.** Damian, 2026-11-11, in the mining chat: "backlog for 2.4.0 HOW THE CHECKS WORK -> METHOD (on the evidence page)." The heading or link on the evidence page that reads "How the checks work" should take the reader to `/method` (the indexable twin of the atlas method route) rather than stand as a label of its own. Build track; site code only; no data change.
+
+## Atlas: drag a whole group to spread the map out (added 2026-11-11, unscheduled)
+
+Damian: "backlog idea for the graph: drag and drop the groups (the psyche, the figures) to space things out". Backlog entry only, with no version yet.
+
+- On /atlas the reader can drag a whole cluster or register group, such as the psyche or the figures, and the nodes in it move together. That spreads a crowded part of the map apart without moving one node at a time.
+- No one has built or specified it. A spec would settle what counts as a group (the register, the node type, or a layout cluster), whether a dragged position persists, and whether it changes the lapis assembly animation, which stays as it is.

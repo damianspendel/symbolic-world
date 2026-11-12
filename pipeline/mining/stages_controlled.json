@@ -1,0 +1,48 @@
+{
+ "_about": "Stage data for the trilogy second pass (Damian, 2026-11-11: 'Yes, inform the mining chat to collect info on the stages, too.'; concordance field 3 is a required field). Stage and operation node ids the stage relations may join; the miner mints a missing one as type Operation (a stage or operation) only where the paragraph names it. Relations: belongs-to (an operation, symbol or substance to the stage it belongs to), undergoes (a substance or figure to the stage or operation it passes through), precedes and follows (between stages, between operations, or between an operation and a stage). The string stage-of was retired after b-cw14-1: the auditor read it as 'is a stage of', the inverse of its intended sense. Every such candidate rests on a quote from the paragraph that says so; no stage or order is inferred. Dorn's three stages of the coniunctio, as Jung reads them in CW 14 chapter VI (Damian, 2026-11-11: 'add Dorn's three stages to the list'), are stages too: unio-mentalis and unus-mundus already stand in the graph; reunion-with-the-body is minted when a paragraph names the second stage. precedes, follows and stage-of join them to coniunctio where a paragraph says so.",
+ "stages": [
+  "nigredo",
+  "albedo",
+  "citrinitas",
+  "rubedo",
+  "cauda-pavonis",
+  "viriditas"
+ ],
+ "operations": [
+  "ablutio",
+  "calcinatio",
+  "cibatio",
+  "circulatio",
+  "coagulatio",
+  "coniunctio",
+  "digestio",
+  "dissolutio",
+  "distillatio",
+  "divisio",
+  "exaltatio",
+  "fermentatio",
+  "fixatio",
+  "imbibitio",
+  "incineratio",
+  "mortificatio",
+  "multiplicatio",
+  "projectio",
+  "putrefactio",
+  "reductio",
+  "separatio",
+  "solutio",
+  "sublimatio",
+  "the-opus"
+ ],
+ "relations": [
+  "belongs-to",
+  "undergoes",
+  "precedes",
+  "follows"
+ ],
+ "dorn_stages": [
+  "unio-mentalis",
+  "reunion-with-the-body",
+  "unus-mundus"
+ ]
+}
