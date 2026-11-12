@@ -96,7 +96,17 @@
    "edges": 20,
    "new_nodes": 8,
    "verdicts": "pipeline/batches/b-cw12-1_verdicts.json",
-   "result": "20/0/0"
+   "result": "20/0/0",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-afb0afd6f45d540b5, 28 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 19 assistant turns after the miner finished at 2026-11-12T19:31:49.354Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   },
   {
    "id": "b-cw12-2",
@@ -1267,7 +1277,7 @@
    }
   }
  ],
- "next": "CW12-DUE: window 1 (§1-70)",
+ "next": "b-cw12-1 (§1-70) IN FLIGHT by the mining chat (Damian, 2026-11-12: all remaining windows today) 2026-11-12 — further firings stand down",
  "nodes": 1077,
  "edges": 4498,
  "refs": 6071,

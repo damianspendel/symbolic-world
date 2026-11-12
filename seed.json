@@ -15,7 +15,17 @@
   {
    "id": "the-unconscious",
    "type": "Concept",
-   "label": "The unconscious"
+   "label": "The unconscious",
+   "aliases": [
+    "objective psyche"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 48,
+     "batch": "b-cw12-1"
+    }
+   ]
   },
   {
    "id": "consciousness",
@@ -135,7 +145,8 @@
    "label": "Lapis philosophorum",
    "aliases": [
     "cervus fugitivus",
-    "cibus immortalis"
+    "cibus immortalis",
+    "lapis angularis"
    ],
    "name_refs": [
     {
@@ -157,6 +168,11 @@
      "volume": "14",
      "paragraph": 674,
      "batch": "b-cw14-10"
+    },
+    {
+     "volume": "12",
+     "paragraph": 41,
+     "batch": "b-cw12-1"
     }
    ],
    "latin": "lapis Philosophorum"
@@ -737,7 +753,15 @@
      "volume": "14",
      "paragraph": 482,
      "batch": "b-cw14-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 26,
+     "batch": "b-cw12-1"
     }
+   ],
+   "aliases": [
+    "serpens mercurii"
    ]
   },
   {
@@ -760,6 +784,11 @@
      "volume": "14",
      "paragraph": 478,
      "batch": "b-cw14-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 42,
+     "batch": "b-cw12-1"
     }
    ]
   },
@@ -771,7 +800,17 @@
   {
    "id": "hierosgamos",
    "type": "Operation",
-   "label": "Hierosgamos (sacred marriage / chymical wedding)"
+   "label": "Hierosgamos (sacred marriage / chymical wedding)",
+   "aliases": [
+    "chymical wedding"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 43,
+     "batch": "b-cw12-1"
+    }
+   ]
   },
   {
    "id": "filius-philosophorum",
@@ -1791,7 +1830,15 @@
      "volume": "14",
      "paragraph": 152,
      "batch": "b-cw14-3"
+    },
+    {
+     "volume": "12",
+     "paragraph": 6,
+     "batch": "b-cw12-1"
     }
+   ],
+   "aliases": [
+    "homo totus"
    ]
   },
   {
@@ -1965,7 +2012,15 @@
      "volume": "14",
      "paragraph": 354,
      "batch": "b-cw14-6"
+    },
+    {
+     "volume": "12",
+     "paragraph": 40,
+     "batch": "b-cw12-1"
     }
+   ],
+   "aliases": [
+    "aurum nostrum"
    ]
   },
   {
@@ -1997,13 +2052,19 @@
    "label": "Filius Macrocosmi (Son of the Great World)",
    "latin": "filius Mundi Maioris",
    "aliases": [
-    "Son of the great World"
+    "Son of the great World",
+    "salvator macrocosmi"
    ],
    "name_refs": [
     {
      "volume": "14",
      "paragraph": 460,
      "batch": "b-cw14-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 26,
+     "batch": "b-cw12-1"
     }
    ]
   },
@@ -7009,6 +7070,73 @@
    "id": "depositum-fidei",
    "label": "Depositum fidei",
    "type": "Concept"
+  },
+  {
+   "id": "longissima-via",
+   "label": "Longissima via (the longest way)",
+   "type": "Motif",
+   "latin": "longissima via",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 6,
+     "batch": "b-cw12-1"
+    }
+   ]
+  },
+  {
+   "id": "paradox",
+   "label": "The paradox (of religious statement)",
+   "type": "Concept"
+  },
+  {
+   "id": "seed-of-unity",
+   "label": "The seed of unity",
+   "type": "Concept"
+  },
+  {
+   "id": "heimarmene",
+   "label": "Heimarmene (fate, dependence of character on the moment in time)",
+   "type": "Concept"
+  },
+  {
+   "id": "descensus-ad-inferos",
+   "label": "Descensus ad inferos (descent into hell)",
+   "type": "Motif",
+   "latin": "descensus ad inferos",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 42,
+     "batch": "b-cw12-1"
+    }
+   ]
+  },
+  {
+   "id": "hat",
+   "label": "The hat (dream symbol)",
+   "type": "Symbol"
+  },
+  {
+   "id": "stair",
+   "label": "The stair (dream symbol)",
+   "type": "Symbol"
+  },
+  {
+   "id": "illuminatio",
+   "label": "Illuminatio (enlightenment)",
+   "type": "Concept",
+   "latin": "illuminatio",
+   "aliases": [
+    "enlightenment"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 68,
+     "batch": "b-cw12-1"
+    }
+   ]
   }
  ],
  "edges": [
@@ -8018,6 +8146,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-9, PASS, 2026-10-30)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 22,
+     "quote": "perhaps the most highly developed and differentiated symbol of the self, apart from the figure of the Buddha",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -13166,6 +13305,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-23",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-10, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 24,
+     "quote": "the truth about the self—the unfathomable union of good and evil—comes out concretely in the paradox",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 25,
+     "quote": "the psychic archetype of the self, where even these opposites seem to be united",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -23020,6 +23181,39 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 26,
+     "quote": "the unconscious chose rather the Cybele-Attis type ... thus proving that it is not complementary but compensatory",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 48,
+     "quote": "as a rule the standpoint of the unconscious is complementary or compensatory 4 to consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 51,
+     "quote": "Were it not so, it could not carry out its most characteristic function: the compensation of the conscious mind.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -41652,6 +41846,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-6, SUPPORTED, 2026-08-06)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 20,
+     "quote": "I have found myself obliged to give the corresponding archetype the psychological name of the “self”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -52362,6 +52567,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 44,
+     "quote": "it is the centre of this totality, just as the ego is the centre of consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -108644,6 +108860,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-06",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-5, PASS, 2026-11-06)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 48,
+     "quote": "every dream, and every part of a dream, is unknown at the outset, and to attempt an interpretation only after carefully taking up the context",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -116531,6 +116758,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw7-3, PASS, 2026-11-08)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 31,
+     "quote": "The number three is not a natural expression of wholeness, since four represents the minimum number of determinants in a whole judgment.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -137720,6 +137958,19 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-11, PASS, 2026-11-12)",
      "source": "the alchemists",
      "source_author": "the alchemists"
+    },
+    {
+     "volume": "12",
+     "paragraph": 41,
+     "quote": "the nigredo , the first stage of the work, which was felt as “melancholia” in alchemy",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "source": "the alchemists, as reported by Jung",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -140361,6 +140612,1047 @@
    ],
    "relation_family": {
     "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "requires",
+   "object": "the-whole-man",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 6,
+     "quote": "“Ars totum requirit hominem!” exclaims an old alchemist. It is just this homo totus whom we seek.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "source": "an unnamed old alchemist, quoted by Jung",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "analytic-process",
+   "relation": "seeks",
+   "object": "the-whole-man",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 6,
+     "quote": "The labours of the doctor as well as the quest of the patient are directed towards that hidden and as yet unmanifest “whole” man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "longissima-via",
+   "relation": "unites",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 6,
+     "quote": "It is a longissima via , not straight but snakelike, a path that unites the opposites in the manner of the guiding caduceus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "projection",
+   "relation": "robs",
+   "object": "soul",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 11,
+     "quote": "An exclusively religious projection may rob the soul of its values",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence is about an exclusively religious projection and is modal ('may rob'); the general node is one step on, medium with the scope noted",
+     "note": "'an exclusively religious projection may rob the soul of its values'"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "soul",
+   "relation": "contains-equivalents-of",
+   "object": "dogma",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 14,
+     "quote": "on the contrary contains the equivalents of everything that has been formulated in dogma and a good deal more",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "tertullian",
+   "relation": "affirms",
+   "object": "paradox",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 18,
+     "quote": "As witness to this we have Tertullian’s avowal: “And the Son of God is dead, which is worthy of belief because it is absurd.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "source": "Tertullian, quoted by Jung",
+     "source_author": "the Church Fathers"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dogma",
+   "relation": "contains",
+   "object": "paradox",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 19,
+     "quote": "We simply do not understand any more what is meant by the paradoxes contained in dogma",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "produces",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 19,
+     "quote": "allow the unconscious of the individual that free play which is the basic condition for the production of archetypes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "fills-out",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 20,
+     "quote": "In the West the archetype is filled out with the dogmatic figure of Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "atman",
+   "relation": "fills-out",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 20,
+     "quote": "the archetype is filled out with the dogmatic figure of Christ; in the East, with Purusha, the Atman",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "expresses",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 20,
+     "quote": "a term on the one hand definite enough to convey the essence of human wholeness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "represents",
+   "object": "good",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 22,
+     "quote": "since Christ simply represents good, and his counterpart the devil, evil",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "axiom-of-maria",
+   "relation": "is-central-to",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 26,
+     "quote": "we come to one of the central axioms of alchemy, namely the saying of Maria Prophetissa",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "filius-macrocosmi",
+   "relation": "is-counterpart-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 26,
+     "quote": "produces a son—not the antithesis of Christ but rather his chthonic counterpart, not a divine man but a fabulous being",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "holds",
+   "object": "seed-of-unity",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 30,
+     "quote": "the gulf between it and the father-world is not unbridgeable, seeing that the unconscious holds the seed of the unity of both",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-1",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "is-concerned-with",
+   "object": "seed-of-unity",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 31,
+     "quote": "Alchemy is pre-eminently concerned with the seed of unity which lies hidden in the chaos of Tiamat",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "seed-of-unity",
+   "relation": "corresponds-to",
+   "object": "four-elements",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 31,
+     "quote": "According to other authorities it corresponds to the unity of the four elements and is therefore a quaternity.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "source": "unnamed alchemical authorities reported by Jung",
+     "source_author": "the alchemists",
+     "correction_note": "gate correction: the sentence has the seed correspond to the unity of the four elements, hence a quaternity; the elements themselves are one step on, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "brings-up",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 31,
+     "quote": "on becoming conscious, it brings up among others the archetype of the self as well",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "analytic-process",
+   "relation": "leads-to",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 32,
+     "quote": "I began my introduction with human wholeness as the goal to which the psychotherapeutic process ultimately leads.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "archetypal-image",
+   "relation": "corresponds-to",
+   "object": "dogma",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 32,
+     "quote": "the archetypal images—which in a certain sense correspond to the dogmatic images—must be brought into consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence says the archetypal images correspond 'in a certain sense' to the dogmatic images; hedged, and dogma itself is one step on, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dream",
+   "relation": "circumambulates",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 34,
+     "quote": "As manifestations of unconscious processes the dreams rotate or circumambulate round the centre",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "philosophical-tree",
+   "relation": "symbolizes",
+   "object": "hermetic-philosophy",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 34,
+     "quote": "In alchemy the tree is the symbol of Hermetic philosophy.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "is-basis-of",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 40,
+     "quote": "once the process has reached the sphere of the collective unconscious we are dealing with ... the universal basis of the individually varied psyche",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "offers-hooks-for",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 40,
+     "quote": "alchemy afforded numerous “hooks” for the projection of those archetypes which could not be fitted smoothly into the Christian process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "astrology",
+   "relation": "leads-back-to",
+   "object": "heimarmene",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 40,
+     "quote": "Astrology led the conscious mind back again and again to the knowledge of Heimarmene",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "philosophic-gold",
+   "relation": "differs-from",
+   "object": "gold",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 40,
+     "quote": "Their own standpoint they proclaimed with propositions like “Aurum nostrum non est aurum vulgi.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "source": "the alchemists' maxim, quoted by Jung",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "christianity",
+   "relation": "is-rooted-in",
+   "object": "gnosticism",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 41,
+     "quote": "The central ideas of Christianity are rooted in Gnostic philosophy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "gnosticism",
+   "relation": "arises-from",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 41,
+     "quote": "It was founded on the perception of symbols thrown up by the unconscious individuation process",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "artifex",
+   "relation": "undergoes",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 41,
+     "quote": "The author of this sentence must have been undergoing the experience of the nigredo , the first stage of the work",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "correction_note": "gate correction: Jung's inference about the author of the prayer ('must have been undergoing the experience of the nigredo'); medium"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "nigredo",
+   "relation": "corresponds-to",
+   "object": "shadow-confrontation",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 41,
+     "quote": "the nigredo , the first stage of the work, which was felt as “melancholia” in alchemy and corresponds to the encounter with the shadow in psychology",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-1",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "descensus-ad-inferos",
+   "relation": "is-a",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 42,
+     "quote": "the descensus ad inferos depicted in Faust , which, consciously or unconsciously, is an opus alchymicum",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence is about the descent depicted in Faust, 'consciously or unconsciously' an opus alchymicum; the general motif is one step on, medium with a scope note",
+     "note": "the descensus ad inferos depicted in Faust"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-shadow",
+   "relation": "calls-up",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 43,
+     "quote": "The problem of opposites called up by the shadow plays a great—indeed, the decisive—role in alchemy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "archetype",
+   "relation": "is-projected-into",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 43,
+     "quote": "he had no opportunity to identify himself with the archetypes as they appeared, since they were all projected immediately into the chemical substances",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-1",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "embraces",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 44,
+     "quote": "The self is not only the centre, but also the whole circumference which embraces both conscious and unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "refers-to",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 45,
+     "quote": "images that refer directly and exclusively to the new centre ... I call mandala symbolism",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "appears-in",
+   "object": "initial-dream",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 46,
+     "quote": "extracts from the twenty-two initial dreams in order to show how the mandala symbolism makes a very early appearance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "hat",
+   "relation": "alludes-to",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 53,
+     "quote": "Encircling the head, the hat is round like the sun-disc of a crown and therefore contains the first allusion to the mandala.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "secret",
+   "relation": "activates",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 57,
+     "quote": "Isolation by a secret results as a rule in an animation of the psychic atmosphere ... It causes an activation of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "ascent-descent",
+   "relation": "corresponds-to",
+   "object": "sublimatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 66,
+     "quote": "The initiations of late classical syncretism, already saturated with alchemy ... were particularly concerned with the theme of ascent, i.e., sublimation.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "stair",
+   "relation": "indicates",
+   "object": "ascent-descent",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 65,
+     "quote": "the allusion is to a stair, thus indicating an ascent or a descent",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "soul",
+   "relation": "returns-to",
+   "object": "helios",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 66,
+     "quote": "The idea of an ascent through the seven spheres of the planets symbolizes the return of the soul to the sun-god",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
+     "source": "Firmicus Maternus, as reported by Jung",
+     "source_author": "Firmicus Maternus",
+     "note": "Helios stands for the sun-god"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "solificatio",
+   "relation": "corresponds-to",
+   "object": "illuminatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 68,
+     "quote": "The process would seem to correspond to the illuminatio , or enlightenment.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-12"
