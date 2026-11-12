@@ -261,6 +261,7 @@
    "label": "Uroboros",
    "aliases": [
     "Uroboros",
+    "tail-eater",
     "uroboros"
    ],
    "name_refs": [
@@ -273,6 +274,11 @@
      "volume": "12",
      "paragraph": 165,
      "batch": "b-cw12-3"
+    },
+    {
+     "volume": "12",
+     "paragraph": 404,
+     "batch": "b-cw12-6"
     }
    ]
   },
@@ -603,6 +609,11 @@
      "volume": "14",
      "paragraph": 329,
      "batch": "b-cw14-5"
+    },
+    {
+     "volume": "12",
+     "paragraph": 360,
+     "batch": "b-cw12-6"
     }
    ],
    "aliases": [
@@ -930,7 +941,15 @@
      "volume": "12",
      "paragraph": 42,
      "batch": "b-cw12-1"
+    },
+    {
+     "volume": "12",
+     "paragraph": 404,
+     "batch": "b-cw12-6"
     }
+   ],
+   "aliases": [
+    "rota"
    ]
   },
   {
@@ -2290,6 +2309,7 @@
    "label": "Filius Macrocosmi (Son of the Great World)",
    "latin": "filius Mundi Maioris",
    "aliases": [
+    "Son of the Great World",
     "Son of the great World",
     "salvator macrocosmi"
    ],
@@ -2303,6 +2323,11 @@
      "volume": "12",
      "paragraph": 26,
      "batch": "b-cw12-1"
+    },
+    {
+     "volume": "12",
+     "paragraph": 390,
+     "batch": "b-cw12-6"
     }
    ]
   },
@@ -2502,13 +2527,27 @@
      "volume": "12",
      "paragraph": 219,
      "batch": "b-cw12-4"
+    },
+    {
+     "volume": "12",
+     "paragraph": 355,
+     "batch": "b-cw12-6"
     }
-   ]
+   ],
+   "latin": "vera imaginatio"
   },
   {
    "id": "amplification",
    "type": "Operation",
-   "label": "Amplification (amplificatio)"
+   "label": "Amplification (amplificatio)",
+   "latin": "amplificatio",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 403,
+     "batch": "b-cw12-6"
+    }
+   ]
   },
   {
    "id": "gnosticism",
@@ -2768,9 +2807,15 @@
      "volume": "12",
      "paragraph": 199,
      "batch": "b-cw12-3"
+    },
+    {
+     "volume": "12",
+     "paragraph": 356,
+     "batch": "b-cw12-6"
     }
    ],
    "aliases": [
+    "Chaos Naturae",
     "massa"
    ]
   },
@@ -2802,7 +2847,15 @@
   {
    "id": "the-intellect",
    "type": "Concept",
-   "label": "The intellect"
+   "label": "The intellect",
+   "latin": "intellectus",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 369,
+     "batch": "b-cw12-6"
+    }
+   ]
   },
   {
    "id": "treasure-hard-to-attain",
@@ -3643,7 +3696,15 @@
   {
    "id": "star",
    "label": "The star",
-   "type": "Symbol"
+   "type": "Symbol",
+   "latin": "astrum",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 394,
+     "batch": "b-cw12-6"
+    }
+   ]
   },
   {
    "id": "peacock",
@@ -7903,13 +7964,19 @@
    "type": "Substance",
    "aliases": [
     "aurum potabile",
-    "elixir vitae"
+    "elixir vitae",
+    "medicina catholica"
    ],
    "name_refs": [
     {
      "volume": "12",
      "paragraph": 335,
      "batch": "b-cw12-5"
+    },
+    {
+     "volume": "12",
+     "paragraph": 420,
+     "batch": "b-cw12-6"
     }
    ]
   },
@@ -7922,6 +7989,85 @@
    "id": "chemistry",
    "label": "Chemistry",
    "type": "Concept"
+  },
+  {
+   "id": "mens",
+   "label": "Mens (the mind)",
+   "type": "Concept",
+   "latin": "mens",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 381,
+     "batch": "b-cw12-6"
+    }
+   ]
+  },
+  {
+   "id": "discretio-intellectualis",
+   "label": "Discretio intellectualis (intellectual discrimination)",
+   "type": "Concept",
+   "latin": "discretio intellectualis",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 372,
+     "batch": "b-cw12-6"
+    }
+   ]
+  },
+  {
+   "id": "cogitatio",
+   "label": "Cogitatio (the product extracted from matter)",
+   "type": "Concept"
+  },
+  {
+   "id": "occiput",
+   "label": "The occiput (vessel of transformation)",
+   "type": "Symbol"
+  },
+  {
+   "id": "darknesses-of-the-mind",
+   "label": "The horrible darknesses of the mind (Aurora consurgens)",
+   "type": "Motif"
+  },
+  {
+   "id": "amor-perfectissimus",
+   "label": "Amor perfectissimus (the adept's most perfect love)",
+   "type": "Concept"
+  },
+  {
+   "id": "subtle-body",
+   "label": "Subtle body (corpus subtile)",
+   "type": "Concept"
+  },
+  {
+   "id": "intermediate-realm",
+   "label": "The intermediate realm between mind and matter",
+   "type": "Concept"
+  },
+  {
+   "id": "anima-corporalis",
+   "label": "Anima corporalis (the bodily soul)",
+   "type": "Concept",
+   "latin": "anima corporalis",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 397,
+     "batch": "b-cw12-6"
+    }
+   ]
+  },
+  {
+   "id": "projectio",
+   "label": "Projectio (projection of the tincture)",
+   "type": "Operation"
+  },
+  {
+   "id": "god-man",
+   "label": "The God-man",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -10550,6 +10696,20 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
      "source": "medieval alchemical speculation on Mercurius",
      "source_author": "the alchemists"
+    },
+    {
+     "volume": "12",
+     "paragraph": 404,
+     "quote": "It is, as Ruland says,’ 9 a variant of Mercurius.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Ruland",
+     "source_author": "Ruland",
+     "correction_note": "gate correction: §404 says 'as Ruland says' and names no title; source_text withdrawn, author stands"
     }
    ],
    "relation_family": {
@@ -11528,6 +11688,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (post-merge due diligence, xv-trilogy-july, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 404,
+     "quote": "But Mercurius is the divine winged Hermes ( fig. 146 ) manifest in matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -19436,6 +19607,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 414,
+     "quote": "attributes the state of suffering and consequent need of redemption to the anima mundi imprisoned in matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -28012,6 +28194,19 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, SUPPORTED, 2026-07-30)",
      "source": "Gerhard Dorn"
+    },
+    {
+     "volume": "12",
+     "paragraph": 378,
+     "quote": "“Transform yourselves from dead stones into living philosophical stones!”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Gerard Dorn",
+     "source_author": "Dorn"
     }
    ],
    "relation_family": {
@@ -79771,6 +79966,20 @@
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-5, PASS, 2026-10-19)",
      "source": "Martin Ruland, Lexicon alchemiae"
+    },
+    {
+     "volume": "12",
+     "paragraph": 390,
+     "quote": "“The word meditatio is used when a man has an inner dialogue with someone unseen.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Ruland, Lexicon alchemiae",
+     "source_author": "Ruland",
+     "source_text": "Lexicon alchemiae"
     }
    ],
    "relation_family": {
@@ -145798,6 +146007,21 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-4, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 360,
+     "quote": "the work must be performed “with the true and not with the fantastic imagination,”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "the anonymous author of the Rosarium",
+     "source_author": "other",
+     "source_text": "Rosarium philosophorum",
+     "correction_note": "gate correction: the words 'with the true and not with the fantastic imagination' are the Rosarium's own, quoted; jung-quotes-source, source fields as proposed"
     }
    ],
    "relation_family": {
@@ -147209,6 +147433,32 @@
      "source": "Theobald de Hoghelande",
      "source_author": "Hoghelande",
      "correction_note": "gate correction: Hoghelande's sentence says figures appear in the course of the work; reading them as visionary experience is Jung's at §350, one step, medium"
+    },
+    {
+     "volume": "12",
+     "paragraph": 351,
+     "quote": "you can see certain fugitive spirits condensed in the air in the shape of divers monsters, beasts and men",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Raymond Lully",
+     "source_author": "Lully"
+    },
+    {
+     "volume": "12",
+     "paragraph": 353,
+     "quote": "he saw the surface of the substance cover itself with colours",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Hoghelande, biographical notes (1594)",
+     "source_author": "Hoghelande"
     }
    ],
    "relation_family": {
@@ -147271,6 +147521,1316 @@
     "state": "no-family",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "is",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 355,
+     "quote": "The serpent is Mercurius, who as the fundamental substance ( hypostatica ) forms himself in the water",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the identity is stated of the Tractatus's serpent, not of the serpent symbol at large; the standing node is the general one, so medium with a scope note",
+     "note": "the serpent of the Tractatus Aristotelis, as Jung reads it"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "active-imagination",
+   "relation": "sets-going",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 357,
+     "quote": "This seems to point to active imagination as the thing that sets the process really going.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "note": "hedged: 'seems to point'"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "philosophical-tree",
+   "relation": "grows-through",
+   "object": "imaginatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 357,
+     "quote": "look with the eyes of the mind at this little tree of the grain of wheat",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, FINDING-adjudicated, 2026-11-13)",
+     "source": "an anonymous alchemical author (§357 n. 27-28)",
+     "source_author": "other",
+     "audit_note": "cross-vendor (Gemini) objected that the source speaks of planting the tree; the reference stands at medium as proposed, and the §393 reference of the same edge carries Jung's 'made to grow through contemplation'"
+    },
+    {
+     "volume": "12",
+     "paragraph": 393,
+     "quote": "we saw elsewhere [par. 357] how the philosophical tree can be made to grow through contemplation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "note": "Jung says contemplation, in his discussion of imaginatio"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "artifex",
+   "relation": "is-condition-for",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 358,
+     "quote": "the “artifex,” whose unity is postulated as the absolute condition for the completion of the work",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 394,
+     "quote": "he works with and through his own quintessence and is himself the indispensable condition of his own experiment",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "salt",
+   "relation": "is-akin-to",
+   "object": "mens",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 360,
+     "quote": "But as a matter of fact “mind” and “salt” are close cousins— cum grano salis!",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "correction_note": "gate correction: 'close cousins — cum grano salis!' is a jest in Jung's own voice; the kinship is asserted lightly, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-opus",
+   "relation": "requires",
+   "object": "meditatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 362,
+     "quote": "They insist throughout upon careful study and meditation of the books.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "the alchemical authors",
+     "source_author": "the alchemists"
+    },
+    {
+     "volume": "12",
+     "paragraph": 365,
+     "quote": "to study and to labour with steadfast meditation on the words of the philosophers",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Richardus Anglicus, Correctorium alchymiae",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-opus",
+   "relation": "depends-on",
+   "object": "psyche",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 365,
+     "quote": "There is an unmistakable hint here that the work and its goal depended very largely on a mental condition.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 382,
+     "quote": "Since the investigator’s psyche was so closely bound up with the work",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "is-form-of",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 366,
+     "quote": "“In truth the form, which is the intellect of man, is the beginning, middle and end of the procedure",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Gerard Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "represents",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 369,
+     "quote": "take this intellectus as the highest lucidity of which consciousness is capable",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "correction_note": "gate correction: Jung takes the text's intellectus as the highest lucidity of which consciousness is capable; 'represents consciousness' is one step from that, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "discretio-intellectualis",
+   "relation": "corresponds-to",
+   "object": "apperception",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 372,
+     "quote": "The senses mediate perception, while the discretio intellectualis corresponds to apperception.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "cogitatio",
+   "relation": "is-extracted-from",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 375,
+     "quote": "the product to be extracted from matter was known as the cogitatio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Liber Platonis quartorum (Harranite treatise)",
+     "source_author": "other",
+     "source_text": "Liber Platonis quartorum"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "occiput",
+   "relation": "used-as",
+   "object": "the-vessel",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 376,
+     "quote": "recommends the use of the occiput ( fig. 75 ) as the vessel of transformation",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Liber Platonis quartorum (Harranite treatise)",
+     "source_author": "other",
+     "source_text": "Liber Platonis quartorum"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "defined-as",
+   "object": "veritas",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 377,
+     "quote": "This medicine is clearly the arcane substance which he defines elsewhere as veritas",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Dorn's definition, as Jung reports it",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: the sentence states Dorn's usage ('which he defines elsewhere as veritas'); a report of the author, not Jung's own definition"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "darknesses-of-the-mind",
+   "relation": "coincides-with",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 383,
+     "quote": "Here the “darknesses of our mind” coincide unmistakably with the nigredo",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 389,
+     "quote": "The difficulty and grief ... coincide with the nigredo , like the “horrible darknesses of our mind”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) objected to the quote's ellipsis; the quote joins two verbatim spans of the sentence with the one ' ... ' the quote rules allow"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "amor-perfectissimus",
+   "relation": "expresses-devotion-to",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 389,
+     "quote": "The term he uses for the attitude of the adept— amor perfectissimus —expresses an extraordinary devotion to the work.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "inner-dialogue",
+   "relation": "comes-to-terms-with",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 390,
+     "quote": "it is an essential part of the technique for coming to terms with the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, FINDING-adjudicated, 2026-11-13)",
+     "correction_note": "gate correction: the sentence makes the inner dialogue an essential part of the technique for coming to terms with the unconscious; the relation compresses that by a step, medium",
+     "audit_note": "cross-vendor (Gemini) objected that the dialogue is part of the technique for coming to terms with the unconscious; the gate had set this reference to medium on the same step"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "undergoes",
+   "object": "sublimatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 390,
+     "quote": "it will become still more spiritualized, volatilized, or sublimated",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "note": "Jung's gloss on Philalethes"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "meditatio",
+   "relation": "relates-to",
+   "object": "dominants",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 391,
+     "quote": "must be taken in the sense of a living dialectical relationship to certain dominants of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the sentence is about Maier's phrase, read by Jung as a dialectical relationship to dominants of the unconscious; the standing node is meditatio at large, medium with a scope note",
+     "note": "Maier's 'meditation of the heavenly good', as Jung reads it"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "imaginatio",
+   "relation": "is",
+   "object": "star",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 394,
+     "quote": "Ruland says, “Imagination is the star in man, the celestial or supercelestial body.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Ruland, Lexicon alchemiae",
+     "source_author": "Ruland",
+     "source_text": "Lexicon alchemiae"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "imaginatio",
+   "relation": "conceived-as",
+   "object": "subtle-body",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 394,
+     "quote": "but as something corporeal, a “subtle body” ( fig. 139 ), semi-spiritual in nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "intermediate-realm",
+   "relation": "is-realm-of",
+   "object": "subtle-body",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 394,
+     "quote": "there did exist an intermediate realm between mind and matter, i.e., a psychic realm of subtle bodies",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "imaginatio",
+   "relation": "is-key-to",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 396,
+     "quote": "The concept of imaginatio is perhaps the most important key to the understanding of the opus .",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 400,
+     "quote": "The imaginatio , as the alchemists understand it, is in truth a key that opens the door to the secret of the opus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "soul",
+   "relation": "operates-in",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 396,
+     "quote": "has the greater part of its function ( operatio ) outside the body (or, we might add by way of explanation, in projection)",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the author says the soul has the greater part of its function outside the body; 'in projection' is Jung's parenthetical explanation, medium with a scope note",
+     "note": "the soul of the De sulphure; 'in projection' is Jung's gloss"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "anima-corporalis",
+   "relation": "corresponds-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 397,
+     "quote": "The soul in this text is evidently an anima corporalis ( figs. 91 , 208 ) that dwells in the blood. It would therefore correspond to the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "correction_note": "gate correction: 'It would therefore correspond to the unconscious, if this is understood as ...' is conditional, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "shows-identity-of",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 398,
+     "quote": "identity of opposites is a characteristic feature of every psychic event in the unconscious state",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "dissolutio",
+   "relation": "precedes",
+   "object": "coagulatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 400,
+     "quote": "For it is the picture of the first dissolution and coagulation and of the resultant second dissolution.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Libavius, Alchymia (1606), explicatio locorum signatorum of fig. 142",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "ouroboros",
+   "relation": "is-image-of",
+   "object": "coagulatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 400,
+     "quote": "a dragon lies on his back and devours his own tail: he is an image of the second coagulation",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Libavius, Alchymia (1606), explicatio locorum signatorum of fig. 142",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "amplification",
+   "relation": "understood-as",
+   "object": "theoria",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 403,
+     "quote": "is understood by the alchemist as theoria",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "amplification",
+   "relation": "applied-to",
+   "object": "dream",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 403,
+     "quote": "we resort to amplification in the interpretation of dreams",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "symbolizes",
+   "object": "visionary-experience",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 404,
+     "quote": "The dragon symbolizes the visionary experience of the alchemist as he works in his laboratory and “theorizes.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "belongs-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 404,
+     "quote": "he is the prima materia , the caput corvi , the nigredo",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, FINDING-adjudicated, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence says Mercurius is the nigredo; belongs-to is the ruled relation for assigning a substance or figure to a stage (Damian, 2026-11-11), and the identity statement is carried by the quote"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "belongs-to",
+   "object": "cauda-pavonis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 404,
+     "quote": "He is the play of colours in the cauda pavonis",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, FINDING-adjudicated, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence says Mercurius is the play of colours in the cauda pavonis; belongs-to is the ruled stage relation, and the quote carries the sentence"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "undergoes",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 404,
+     "quote": "He is the hermaphrodite that was in the beginning, that splits into the classical brother-sister duality and is reunited in the coniunctio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "has",
+   "object": "spirit",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 405,
+     "quote": "Go to the waters of the Nile and there you will find a stone that has a spirit",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "Ostanes, quoted by Zosimos, Concerning the Art and Its Interpretation",
+     "source_author": "Ostanes",
+     "correction_note": "gate correction: the quoted stone is Ostanes's; its reading as the lapis is Jung's at §406, one step, medium with a note",
+     "note": "Ostanes's stone with a spirit, read by Jung as the marvellous stone (§406)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "undergoes",
+   "object": "projectio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 406,
+     "quote": "The possessor of this penetrating Mercurius ( fig. 150 ) can “project” it into other substances",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "krater",
+   "relation": "used-as",
+   "object": "the-vessel",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 408,
+     "quote": "he recommends the “krater” as a vessel of transformation",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, FINDING-adjudicated, 2026-11-13)",
+     "source": "Zosimos, missive to Theosebeia",
+     "source_author": "Zosimos",
+     "correction_note": "cross-vendor correction: The text refers to the krater as a 'vessel of transformation', but does not explicitly identify it as 'The Hermetic Vessel (vas Hermetis)', making the object label an overreach."
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "nous",
+   "relation": "is-kind-of",
+   "object": "tinctura-philosophorum",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 409,
+     "quote": "The nous is thus a kind of βαφεīον , dyestuff or tincture, that ennobles base substances.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the sentence says 'a kind of dyestuff or tincture'; the equivalence with the tincturing stone-extract is the next sentence, one step to the philosophers' tincture, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "nous",
+   "relation": "identical-with",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 410,
+     "quote": "Nous seems to be identical with the god Anthropos",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) objected to the standing node's label 'Anthropos / Adam Kadmon'; the paragraph names the Anthropos, which the node id is; the label question goes to the sitting",
+     "note": "hedged: 'seems'"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "anthropos",
+   "relation": "expresses",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 411,
+     "quote": "In such visionary images as the Anthropos glimpsing his own reflection there is expressed the whole phenomenon of the unconscious projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) objected to the standing node's label 'Anthropos / Adam Kadmon'; same ruling as §410"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-6",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "embodies",
+   "object": "god-man",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 412,
+     "quote": "the Son of God, he embodies the God-man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "is-avatar-of",
+   "object": "nous",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 412,
+     "quote": "as an incarnation of the Logos by “pneumatic” impregnation, he is an avatar of the divine vоῡς",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "holy-ghost",
+   "relation": "descends-into",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 413,
+     "quote": "whereas in alchemy the descent goes right down into the darkness of inanimate matter",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the quoted clause says 'the descent'; that it is the descensus spiritus sancti rests on the preceding clause, one step, medium"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "undergoes",
+   "object": "mortificatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 417,
+     "quote": "one could say that a physical slaying 42 ( mortificatio ) of his body has taken place",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)",
+     "note": "in the sacramental state of the Mass"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "bread-and-wine",
+   "relation": "passes-into",
+   "object": "subtle-body",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 417,
+     "quote": "The latter is a transmutation of the elements, which pass from a natural, soiled, imperfect material state into a subtle body.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "commixtio",
+   "relation": "produces",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 417,
+     "quote": "a piece of the host is mingled with the wine, thus producing the coniunctio of the soul with the body",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "filius-macrocosmi",
+   "relation": "contrasts-with",
+   "object": "son-of-man",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 420,
+     "quote": "the spirit that manifests itself in the transformation is not the “Son of Man” but, as Khunrath very properly puts it, 44 the filius macrocosmi",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
    }
   }
  ]

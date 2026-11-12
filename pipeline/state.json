@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "note": "all listed candidate batches are merged into seed.json (see git log); retro_gate*/audit verdicts likewise applied",
  "graph": {
   "nodes": 695,
@@ -1345,11 +1345,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw12-6-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §351-420",
+   "result": "CW 12 WINDOW 6: Psychology and Alchemy §351-420, Part III: the visionary accounts of Lully, Dorn, Hoghelande and the Tractatus Aristotelis (the serpent as Mercurius formed through illusion), dreams and divine revelation as sources of the art, the mental attitude towards the opus (Dorn's one thing of thyself, the Rosarium's salt and mind, study of the books, Dorn's intellect as the form of the opus, the four series of the Liber Platonis quartorum, the occiput as vessel, Dorn's veritas and the living philosophical stone), the double face of alchemy, the psychic condition of the artifex (the Aurora's darknesses of the mind as nigredo, Morienus, Maier's amor perfectissimus), meditatio as inner dialogue and imaginatio as the star in man, the subtle body and the intermediate realm, the De sulphure's soul and the anima corporalis, Libavius's picture, the amplificatio as theoria, the dragon and Mercurius as uniting symbol, the spirit in matter (Ostanes, Nietzsche, Zosimos's krater, nous and Anthropos, Christ as God-man), the Dyad and the anima mundi, and the work of redemption (the Mass, transubstantiation, the commixtio as coniunctio, the filius macrocosmi). Run by hand in the mining chat in the night of 2026-11-12/13 on Damian's instruction to run all remaining windows overnight; the sixth window of CW 12 in the second pass (state record b-cw12-6-pass2). Mined 53 candidates/60 refs (Opus-family miner subagent, blinded, model id stamped; seven attaches onto standing edges; the miner cut a first draft of 104 candidates to 53 for density; 13 names entries; 15 cross-register flags; 7 stage candidates; stages_note recorded). Pre-check kept all 60 (quotation share of CW 12 after the window 8.19 percent against the 9 percent cap; the remaining two windows carry a quote budget). Fable gate 47 TRUE / 13 CORRECTED / 0 FALSE: eight confidence demotions on one-step or conditional readings (§355 the Tractatus serpent, §360 the salt-mind jest, §369 intellectus as consciousness, §390 the inner dialogue, §391 Maier's meditation, §396 the De sulphure's soul, §397 the anima corporalis conditional, §405 Ostanes's stone, §409 the nous as tincture, §413 the descent); two claim-type corrections (§377 Dorn's definition of the arcanum as veritas to jung-reports-parallel; §360 the Rosarium's quoted words to jung-quotes-source); §404 source_text withdrawn for 'as Ruland says'. All thirteen names accepted. Gemini cross-vendor 52 PASS / 8 FINDING on 60 post-gate refs: §408 demoted to medium (Zosimos's krater read as the Hermetic vessel, one step); §357 and §390 on steps already at medium, §389 the allowed ellipsis, §404 (two) the ruled stage relation belongs-to, §410 and §411 the standing Anthropos / Adam Kadmon label: all overruled with audit notes. Names applied to 13 entries on 13 nodes; cross_register set on 15 edges; eleven mints: mens, discretio-intellectualis, cogitatio, occiput, darknesses-of-the-mind, amor-perfectissimus, subtle-body, intermediate-realm, anima-corporalis, projectio (the alchemical operation, distinct from psychological projection), god-man. Sources written as other: Richardus Anglicus and Libavius (both added to the controlled list in the tooling commit), the Liber Platonis quartorum's author (the text is listed), and the anonymous authors at §357 and of the Rosarium. +46 edges, 8 refs attached to standing edges and 6 further refs on this window's new edges, +60 refs, +11 nodes. Graph 1148/4756/6396; CW 12 now 548 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 46 edges under v0.7.2: agreement 35/46 (76 percent), 30 assigned, 11 queued, 5 no-family, 0 text-undecided; queue 831; eight bare unclassified rows from the Gemini arm normalized to no-family before assembly, raw file kept. strain: 5 no-family, 0 text-undecided of 46 swept; new homeless strings: expresses-devotion-to, relates-to, shows-identity-of, has (possession), descends-into. FAMILY GAP FOR THE SITTING: used-as split instrumentality against doctrinal-attribution on both 'he recommends' edges (§376, §408); undergoes split psychic-effect against union on the coniunctio (§404); belongs-to split classification or structural-position against manifestation on Mercurius's stages (§404); produces split generation against union on the commixtio (§417); operates-in split structural-position against projection; is-form-of, represents, comes-to-terms-with and conceived-as each left one arm without a family. The Opus arm reports that unlocks-secret-of sits both in composition's homeless list and as an instrumentality seed (§400) in FAMILY_DEFINITIONS v0.7.2; the arms agreed on instrumentality for imaginatio is-key-to the-opus, but the double placement is a document defect for the sitting. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-13, 60 refs judged against the full paragraphs; weekly Fable 66 percent and 5-hour meter 14 percent at the window's start, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1148/4756/6396, distinct paragraphs 3824, claim mix 5022/1016/358. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a9da48554e3fd8abb, 30 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 21 assistant turns after the miner finished at 2026-11-12T22:57:09.922Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW12-DUE: window 6 (§351-420)",
- "nodes": 1137,
- "edges": 4710,
- "refs": 6336,
- "as_of": "2026-11-12"
+ "next": "CW12-DUE: window 7 (§421-490)",
+ "nodes": 1148,
+ "edges": 4756,
+ "refs": 6396,
+ "as_of": "2026-11-13"
 }
