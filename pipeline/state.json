@@ -1233,11 +1233,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-10",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §631-700",
+   "result": "CW 14 WINDOW 10: Mysterium Coniunctionis §631-700, the close of the chapter on Adam and Eve (Eleazar's conclusion, Yesod and Mercurius, the sapphire and the crystal, the three mystical stages, the Shulamite as anima, the Sefiroth and Geryon) and the opening of the chapter on the Conjunction (the alchemical view of the union of opposites, Dorn's unus mundus and the collective unconscious, synchronicity, the three stages of the coniunctio, the production of the quintessence from the philosophic wine and its gamonymous ingredients, the meaning of the alchemical procedure). Run by the nightly job in the mining chat on 2026-11-12, the tenth window of the trilogy pass and the fifth merge dated this calendar day. Mined 55 candidates/61 refs (Opus-family miner subagent, blinded, model id stamped; fourteen attaches onto standing edges, seven of them from other volumes; the miner cut a first draft of about 140 to 55; 18 names entries; 18 cross-register flags; 18 stage candidates: the sapphire in solutio, coagulatio and fixatio, Dorn's three stages ordered (unio mentalis, reunion with the body, unus mundus), separatio before the reunion, the Assumption and the chymical marriage placed with the second stage, the quintessence in the circulatio, Mercurius in the exaltatio, the philosophic wine in the distillatio, the body in the incineratio, chaos and the unio naturalis in the nigredo, the king in the solutio; stages_note recorded, Dionysius's three mystical stages outside the lists). Pre-check kept all 61 (quotation share of CW 14 after the window 8.57 percent against the 9 percent cap; the cap binds within the next window or two and the pre-check refuses a window that would pass it, so the miner of window 11 must keep quotes short). Fable gate 49 TRUE / 12 CORRECTED / 0 FALSE: seven source_text withdrawals on paragraphs that name the author but not the title (§632 Eleazar, §663 three Dorn references and §685, §640 Knorr von Rosenroth), one claim-type correction (§659 Jung's paraphrase of Dorn to jung-reports-parallel), four confidence demotions for one-step readings (§664 the third stage for the unus mundus, §679 the man who knows his wholeness, §681 and §691 Dorn's rotation read as the circulatio, noted, §691 the corpus as the wine's residue). All eighteen names accepted. Gemini cross-vendor 57 PASS / 4 FINDING on 61 post-gate refs: §677 (unio-mentalis precedes reunion-with-the-body) demoted to medium, the first stage being named at §676; §659 overruled (the span is Jung's paraphrase), §664 already medium, §677 (coniunctio belongs-to reunion-with-the-body) overruled under the ruled stage relation for a symbol placed with its stage. Names applied to 18 entries on 18 nodes; cross_register set on 16 edges; eight mints: reunion-with-the-body, fixatio, distillatio (operations from the stage lists), sefiroth, honey, mercurialis, philosophic-wine, unio-naturalis. Sources written as other: the French manuscript of the fils de l'homme (§635), a one-off not added to the list. +41 edges, 20 refs attached to standing or this window's edges, +61 refs, +8 nodes. Graph 1072/4457/6017; CW 14 now 1012 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 41 edges under v0.7.2: agreement 35/41 (85 percent), 35 assigned, 6 queued, 0 no-family, 0 text-undecided; queue 765; no bare unclassified rows from the Gemini arm. strain: 0 no-family, 0 text-undecided of 41 swept; new homeless strings: none. FAMILY GAP FOR THE SITTING: the Opus arm reports that all nine undergoes edges of this window went to psychic-effect because the definitions list undergoes as a psychic-effect seed, while every one is a chemical operation applied to a substance (the seed list, not the edges, is the cause); the two belongs-to placements and realizes have no seed or placement in the document; the splits are generation against separation (dragon emerges-from chaos), correspondence against opposition (the serpent complementing the Trinity), sequence against prefiguration (the Shulamite's preliminary stage), dependence against sequence (the second stage before the unus mundus), structural-position against no family (unio-naturalis belongs-to nigredo) and projection against symbolization (Chelidonia and the self). Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 61 refs judged against the full paragraphs; weekly Fable 39 percent after the sweep, 5-hour meter 7 percent in a fresh window, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1072/4457/6017, distinct paragraphs 3692, claim mix 4765/924/328. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit. Five merges dated 2026-11-12 (windows 6 to 10): the nightly job stands down after this window; window 11 (§701-770) waits for the next firing.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a9986bc19a3af5a9f, 32 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 19 assistant turns after the miner finished at 2026-11-12T00:09:05.609Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 10 (§631-700)",
- "nodes": 1064,
- "edges": 4416,
- "refs": 5956,
+ "next": "CW14-DUE: window 11 (§701-792)",
+ "nodes": 1072,
+ "edges": 4457,
+ "refs": 6017,
  "as_of": "2026-11-12"
 }

@@ -136,6 +136,11 @@
      "volume": "14",
      "paragraph": 525,
      "batch": "b-cw14-8"
+    },
+    {
+     "volume": "14",
+     "paragraph": 674,
+     "batch": "b-cw14-10"
     }
    ],
    "latin": "lapis Philosophorum"
@@ -332,7 +337,18 @@
   {
    "id": "unus-mundus",
    "type": "Concept",
-   "label": "Unus mundus"
+   "label": "Unus mundus",
+   "latin": "unus mundus",
+   "aliases": [
+    "one world"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 659,
+     "batch": "b-cw14-10"
+    }
+   ]
   },
   {
    "id": "sulphur",
@@ -405,7 +421,18 @@
   {
    "id": "unio-mentalis",
    "type": "Concept",
-   "label": "Unio mentalis"
+   "label": "Unio mentalis",
+   "latin": "unio mentalis",
+   "aliases": [
+    "mental union"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 663,
+     "batch": "b-cw14-10"
+    }
+   ]
   },
   {
    "id": "lion",
@@ -872,15 +899,22 @@
    "type": "Symbol",
    "label": "Scintilla (soul-spark)",
    "aliases": [
-    "little soul-spark"
+    "little soul-spark",
+    "sparks of light"
    ],
    "name_refs": [
     {
      "volume": "14",
      "paragraph": 42,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "14",
+     "paragraph": 700,
+     "batch": "b-cw14-10"
     }
-   ]
+   ],
+   "latin": "scintillae"
   },
   {
    "id": "caelum",
@@ -892,6 +926,11 @@
      "volume": "14",
      "paragraph": 46,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "14",
+     "paragraph": 682,
+     "batch": "b-cw14-10"
     }
    ]
   },
@@ -967,7 +1006,9 @@
    "label": "Aqua permanens (permanent water)",
    "latin": "aqua permanens",
    "aliases": [
-    "aqua Mercurialis"
+    "aqua Mercurialis",
+    "aqua aëris",
+    "spiritual water"
    ],
    "name_refs": [
     {
@@ -979,6 +1020,11 @@
      "volume": "14",
      "paragraph": 358,
      "batch": "b-cw14-6"
+    },
+    {
+     "volume": "14",
+     "paragraph": 658,
+     "batch": "b-cw14-10"
     }
    ]
   },
@@ -1098,6 +1144,7 @@
    "label": "Quintessence (quinta essentia)",
    "latin": "Quinta Essentia",
    "aliases": [
+    "incorruptible One",
     "the One born of the Four"
    ],
    "name_refs": [
@@ -1105,6 +1152,11 @@
      "volume": "14",
      "paragraph": 439,
      "batch": "b-cw14-7"
+    },
+    {
+     "volume": "14",
+     "paragraph": 655,
+     "batch": "b-cw14-10"
     }
    ]
   },
@@ -1382,18 +1434,49 @@
      "volume": "14",
      "paragraph": 295,
      "batch": "b-cw14-5"
+    },
+    {
+     "volume": "14",
+     "paragraph": 634,
+     "batch": "b-cw14-10"
     }
+   ],
+   "aliases": [
+    "fils de l’homme"
    ]
   },
   {
    "id": "yesod",
    "type": "Motif",
-   "label": "Yesod (Foundation)"
+   "label": "Yesod (Foundation)",
+   "aliases": [
+    "Jezoth",
+    "Just One",
+    "Zaddik"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 634,
+     "batch": "b-cw14-10"
+    }
+   ]
   },
   {
    "id": "sapphire",
    "type": "Substance",
-   "label": "Sapphire (lapis sapphireus)"
+   "label": "Sapphire (lapis sapphireus)",
+   "latin": "Lapis Sapphireus",
+   "aliases": [
+    "Sapphirinus"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 642,
+     "batch": "b-cw14-10"
+    }
+   ]
   },
   {
    "id": "eve",
@@ -1494,7 +1577,18 @@
   {
    "id": "chelidonia",
    "type": "Substance",
-   "label": "Chelidonia (celandine)"
+   "label": "Chelidonia (celandine)",
+   "latin": "Chelidonium maius",
+   "aliases": [
+    "celandine"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 687,
+     "batch": "b-cw14-10"
+    }
+   ]
   },
   {
    "id": "lily",
@@ -1504,7 +1598,17 @@
   {
    "id": "rosemary",
    "type": "Substance",
-   "label": "Rosemary (ros marinus)"
+   "label": "Rosemary (ros marinus)",
+   "aliases": [
+    "ros marinus"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 688,
+     "batch": "b-cw14-10"
+    }
+   ]
   },
   {
    "id": "human-blood",
@@ -2199,6 +2303,11 @@
      "volume": "14",
      "paragraph": 422,
      "batch": "b-cw14-7"
+    },
+    {
+     "volume": "14",
+     "paragraph": 696,
+     "batch": "b-cw14-10"
     }
    ]
   },
@@ -6365,10 +6474,16 @@
      "volume": "14",
      "paragraph": 329,
      "batch": "b-cw14-5"
+    },
+    {
+     "volume": "14",
+     "paragraph": 688,
+     "batch": "b-cw14-10"
     }
    ],
    "aliases": [
-    "aqua benedicta"
+    "aqua benedicta",
+    "sea-water"
    ]
   },
   {
@@ -6425,7 +6540,17 @@
   {
    "id": "separatio",
    "label": "Separatio",
-   "type": "Operation"
+   "type": "Operation",
+   "aliases": [
+    "distractio"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 671,
+     "batch": "b-cw14-10"
+    }
+   ]
   },
   {
    "id": "lato",
@@ -6662,6 +6787,74 @@
    "id": "second-adam",
    "label": "Second Adam",
    "type": "Figure"
+  },
+  {
+   "id": "fixatio",
+   "label": "Fixatio",
+   "type": "Operation"
+  },
+  {
+   "id": "sefiroth",
+   "label": "Sefiroth",
+   "type": "Symbol"
+  },
+  {
+   "id": "reunion-with-the-body",
+   "label": "Reunion with the body",
+   "type": "Operation"
+  },
+  {
+   "id": "mercurialis",
+   "label": "Mercurialis",
+   "type": "Substance",
+   "aliases": [
+    "dog’s mercury"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 688,
+     "batch": "b-cw14-10"
+    }
+   ]
+  },
+  {
+   "id": "philosophic-wine",
+   "label": "Philosophic wine",
+   "type": "Substance"
+  },
+  {
+   "id": "distillatio",
+   "label": "Distillatio",
+   "type": "Operation"
+  },
+  {
+   "id": "unio-naturalis",
+   "label": "Unio naturalis",
+   "type": "Concept",
+   "latin": "unio naturalis",
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 696,
+     "batch": "b-cw14-10"
+    }
+   ]
+  },
+  {
+   "id": "honey",
+   "label": "Honey",
+   "type": "Substance",
+   "aliases": [
+    "sweetness of the earths"
+   ],
+   "name_refs": [
+    {
+     "volume": "14",
+     "paragraph": 698,
+     "batch": "b-cw14-10"
+    }
+   ]
   }
  ],
  "edges": [
@@ -6848,6 +7041,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-6, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 649,
+     "quote": "This paradox can only be something like the symbol of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -8260,6 +8464,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 664,
+     "quote": "consummation of the mysterium coniunctionis ... only when the unity of spirit, soul, and body is made one with the original unus mundus",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn's view as Jung paraphrases it",
+     "source_author": "Dorn"
     }
    ],
    "relation_family": {
@@ -8917,6 +9134,19 @@
      "source": "Gerhard Dorn",
      "modality_swept": true,
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 676,
+     "quote": "The alchemists rightly regarded “mental union in the overcoming of the body” as only the first stage of conjunction",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "alchemical tradition",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -8944,6 +9174,20 @@
      "source": "Gerhard Dorn",
      "modality_swept": true,
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 685,
+     "quote": "At length the body is compelled to resign itself to, and obey, the union of the two that are united [soul and spirit].",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn, Philosophia meditativa",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: Dorn's words, supported; the paragraph is the continuation of his text with no title named, source_text withdrawn"
     }
    ],
    "relation_family": {
@@ -16800,6 +17044,30 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 635,
+     "quote": "Yesod has many meanings, which in the manuscript are related to Mercurius.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "the French manuscript of the fils de l'homme",
+     "source_author": "other"
+    },
+    {
+     "volume": "14",
+     "paragraph": 636,
+     "quote": "Just as Mercurius is the prima materia and the basis of the whole process, so Yesod means “foundation.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -17255,6 +17523,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 688,
+     "quote": "add rosemary to the mixture as an alexipharmic (antidote) and a synonym for Mercurius ( aqua permanens )",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
     }
    ],
    "relation_family": {
@@ -17403,6 +17684,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 674,
+     "quote": "The goal of the procedure is the unio mentalis , the attainment of full knowledge of the heights and depths of one’s own character.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -17411,6 +17703,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
    }
   },
   {
@@ -20497,6 +20794,21 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 640,
+     "quote": "it fulfils the function of Adam Kadmon as the “capital-stone,",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Knorr von Rosenroth, Kabbala denudata",
+     "source_author": "Knorr von Rosenroth",
+     "correction_note": "gate correction: supported as Knorr von Rosenroth's words on the Cabalistic stone; the paragraph names Knorr but no title (Kabbala denudata is named at §636), source_text withdrawn",
+     "note": "the Cabalistic stone; Adam Kadmon as the Anthropos"
     }
    ],
    "relation_family": {
@@ -20909,6 +21221,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 656,
+     "quote": "the quaternio of elements united in the quinta essentia at the end",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -27048,6 +27371,17 @@
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-6, SUPPORTED, 2026-07-30)",
      "note": "Jung’s summary of the unattributed alchemical passage quoted immediately before (fn. 129)."
+    },
+    {
+     "volume": "14",
+     "paragraph": 699,
+     "quote": "inwardly he is a “deus terrenus” and an anima mundi",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -27056,6 +27390,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
    }
   },
   {
@@ -128778,6 +129117,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 700,
+     "quote": "In a psychological sense Mercurius represents the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
     }
    ],
    "cross_register": {
@@ -131473,6 +131823,19 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-4, PASS, 2026-11-11)",
      "source": "the alchemists",
      "source_author": "the alchemists"
+    },
+    {
+     "volume": "14",
+     "paragraph": 696,
+     "quote": "The original, half-animal state of unconsciousness was known to the adept as the nigredo , the chaos, the massa confusa",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "alchemical tradition",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -131480,6 +131843,11 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-11"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
    }
   },
   {
@@ -133381,6 +133749,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "14",
+     "paragraph": 669,
+     "quote": "Thus the coniunctio is represented ... or by the king dissolving in water",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "alchemical tradition",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -135169,6 +135550,17 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)",
      "source": "the Gnostics",
      "source_author": "the Gnostics"
+    },
+    {
+     "volume": "14",
+     "paragraph": 648,
+     "quote": "a realization of the inner man or Anthropos, an archetypal totality transcending the sexes",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -137382,6 +137774,1187 @@
    },
    "relation_family": {
     "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "emerges-from",
+   "object": "chaos",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 632,
+     "quote": "This-old Father-Begetter 280 will one day be drawn from the primordial Chaos, 281 and he is the fire-spewing dragon.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Abraham Eleazar, Uraltes Chymisches Werck",
+     "source_author": "Abraham Eleazar",
+     "correction_note": "gate correction: Eleazar's words, supported; the paragraph says 'Eleazar says' and names no title (Uraltes Chymisches Werck is named at §591), source_text withdrawn"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "yesod",
+   "relation": "contains",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 636,
+     "quote": "In natural things Yesod contains in himself quicksilver, for this is the basis of the whole art of transmutation",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Kabbala denudata",
+     "source_author": "Knorr von Rosenroth",
+     "source_text": "Kabbala denudata",
+     "note": "not ordinary quicksilver, as the next sentence says"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sapphire",
+   "relation": "undergoes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 641,
+     "quote": "the virtue which lies in the sapphire is given from heaven by way of solution, coagulation, and fixation",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Paracelsus, as quoted by Jung",
+     "source_author": "Paracelsus"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sapphire",
+   "relation": "undergoes",
+   "object": "coagulatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 641,
+     "quote": "the virtue which lies in the sapphire is given from heaven by way of solution, coagulation, and fixation",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Paracelsus, as quoted by Jung",
+     "source_author": "Paracelsus"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sapphire",
+   "relation": "undergoes",
+   "object": "fixatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 641,
+     "quote": "the virtue which lies in the sapphire is given from heaven by way of solution, coagulation, and fixation",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Paracelsus, as quoted by Jung",
+     "source_author": "Paracelsus"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "complements",
+   "object": "the-trinity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 643,
+     "quote": "The three-headed Mercurial serpent was, indeed, a triunity in matter",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "note": "the three-headed Mercurial serpent; complementing the divine Trinity"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "shulamite",
+   "relation": "prefigures",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 645,
+     "quote": "can thus be conceived as the preliminary stage of an individuation process",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "shulamite",
+   "relation": "undergoes",
+   "object": "solificatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 647,
+     "quote": "the illumination or solificatio of the Shulamite is not the first transformation but the second",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "solificatio",
+   "relation": "signifies",
+   "object": "differentiation",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 647,
+     "quote": "The second, or solificatio , is the conscious differentiation of the masculine aspect",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sefiroth",
+   "relation": "symbolizes",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 652,
+     "quote": "the system itself is a highly differentiated coniunctio symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "unus-mundus",
+   "relation": "divided-into",
+   "object": "binarius",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 659,
+     "quote": "In the beginning God created one world ( unus mundus ). 39 This he divided into two—heaven and earth.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, FINDING-adjudicated, 2026-11-12)",
+     "source": "Dorn, Physica Trismegisti",
+     "source_author": "Dorn",
+     "source_text": "Physica Trismegisti",
+     "correction_note": "gate correction: the quoted span is Jung's paraphrase of Dorn ('Dorn gives the philosophical explanation ... In the beginning God created one world'), not Dorn's words in quotation marks; jung-reports-parallel, source fields kept",
+     "audit_note": "cross-vendor (Gemini) asked for jung-quotes-source; the quoted span is Jung's own paraphrase of Dorn's explanation ('In the beginning God created one world. This he divided into two'), not Dorn's words in quotation marks, so the gate's jung-reports-parallel with Dorn as source stands"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "personifies",
+   "object": "collective-unconscious",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 660,
+     "quote": "The Mercurius of the alchemists is a personification and concretization of what we today would call the collective unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "personification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "equivalent-of",
+   "object": "unus-mundus",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 661,
+     "quote": "a unus mundus. The alchemical equivalent is the lapis and its synonyms",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "anticipates",
+   "object": "synchronicity",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 662,
+     "quote": "a premonition of that “tertium quid” which ... I have called “synchronicity.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "unio-mentalis",
+   "relation": "overcomes",
+   "object": "the-body",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 663,
+     "quote": "meditative philosophy consists in the overcoming of the body by mental union [ unio mentalis ]",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn, Philosophia meditativa",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: Dorn's words, supported; the paragraph names Dorn but not the title (Philosophia meditativa is named at §690), source_text withdrawn"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "unio-mentalis",
+   "relation": "precedes",
+   "object": "reunion-with-the-body",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 663,
+     "quote": "This first union does not as yet make the wise man ... The second union of the mind with the body shows forth the wise man",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn, Philosophia meditativa",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: Dorn's words, supported; the paragraph names Dorn but not the title (Philosophia meditativa is named at §690), source_text withdrawn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 677,
+     "quote": "The second step on the way to the production of this substance was the reunion of the spirit with the body.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, FINDING-adjudicated, 2026-11-12)",
+     "source": "alchemical tradition, after Dorn",
+     "source_author": "the alchemists",
+     "correction_note": "cross-vendor correction: The paragraph does not mention unio mentalis, so it does not support it as the subject of this relation."
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "reunion-with-the-body",
+   "relation": "precedes",
+   "object": "unus-mundus",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 663,
+     "quote": "The second union of the mind with the body shows forth the wise man, hoping for and expecting that blessed third union",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn, Philosophia meditativa",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: Dorn's words, supported; the paragraph names Dorn but not the title (Philosophia meditativa is named at §690), source_text withdrawn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 679,
+     "quote": "The second stage of conjunction ... is particularly important, as only from here can the complete conjunction be attained—union with the unus mundus.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "unus-mundus",
+   "relation": "depicted-as",
+   "object": "the-assumption",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 664,
+     "quote": "This third stage of the coniunctio was depicted 51 after the manner of an Assumption and Coronation of Mary",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, FINDING-adjudicated, 2026-11-12)",
+     "source": "alchemical illustration, cited in n. 51",
+     "source_author": "the alchemists",
+     "correction_note": "gate correction: the sentence depicts the third stage of the coniunctio, the union with the unus mundus; the unus mundus itself is one step on, medium",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence depicts the third stage of the coniunctio rather than the unus mundus itself; the gate had set this reference to medium on the same step"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-assumption",
+   "relation": "belongs-to",
+   "object": "reunion-with-the-body",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 666,
+     "quote": "both of them remain at the second, anticipatory stage of the coniunctio, the union of the unio mentalis with the body",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "signifies",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 669,
+     "quote": "Gerard Dorn had recognized the psychological aspect of the chymical marriage and clearly understood it as what we today would call the individuation process",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn, as Jung reads him",
+     "source_author": "Dorn"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "takes-place-in",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 670,
+     "quote": "Dorn correctly recognized that the entity in which the union took place is the psychological authority which I have called the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "unio-mentalis",
+   "relation": "corresponds-to",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 670,
+     "quote": "The unio mentalis , the interior oneness which today we call individuation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "separatio",
+   "relation": "precedes",
+   "object": "reunion-with-the-body",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 671,
+     "quote": "in order to bring about their subsequent reunion, the mind ( mens ) must be separated from the body",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn, as Jung paraphrases him",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "separatio",
+   "relation": "corresponds-to",
+   "object": "death",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 671,
+     "quote": "must be separated from the body—which is equivalent to “voluntary death”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 674,
+     "quote": "they rediscovered the old truth that every operation of this kind is a figurative death",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "separatio",
+   "relation": "signifies",
+   "object": "withdrawal-of-projections",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 673,
+     "quote": "Hence the separation means withdrawing the soul and her projections from the bodily sphere",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "belongs-to",
+   "object": "reunion-with-the-body",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 677,
+     "quote": "For this procedure there were many symbols. One of the most important was the chymical marriage, which took place in the retort.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, FINDING-adjudicated, 2026-11-12)",
+     "source": "alchemical tradition",
+     "source_author": "the alchemists",
+     "audit_note": "cross-vendor (Gemini) asked for signifies or symbolizes; the sentence makes the chymical marriage one of the symbols of the second step, and under the ruled stage relations (Damian, 2026-11-11) a symbol is placed with its stage by belongs-to, which this edge records"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "reunion-with-the-body",
+   "relation": "realizes",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 679,
+     "quote": "The second stage of conjunction therefore consists in making a reality of the man who has acquired some knowledge of his paradoxical wholeness.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence has the second stage make a reality of the man who knows his wholeness; wholeness as the object is one step on, medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "quintessence",
+   "relation": "undergoes",
+   "object": "circulatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 681,
+     "quote": "The extracted essence is reduced to its “greatest simplicity” by “assiduous rotary movements,”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: Dorn speaks of reduction by assiduous rotary movements; reading the rotation as the operation circulatio is the proposer's step, medium with a note",
+     "note": "Dorn's 'assiduous rotary movements' (rotation), read as the circulatio"
+    },
+    {
+     "volume": "14",
+     "paragraph": 691,
+     "quote": "The tartaric water was the quintessence of the philosophic and even of ordinary wine, and was then subjected to the above-mentioned rotation.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn's recipe as Jung details it",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: the tartaric water is subjected to 'the above-mentioned rotation', which Jung likens to a centrifuge; reading it as the circulatio is the proposer's step, medium with a note",
+     "note": "Dorn's 'assiduous rotary movements' (rotation), read as the circulatio"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "caelum",
+   "relation": "is",
+   "object": "substantia-coelestis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 682,
+     "quote": "The caelum therefore is a heavenly substance and a universal form, containing in itself all forms",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "undergoes",
+   "object": "exaltatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 683,
+     "quote": "our Mercurius is concocted by the highest sublimation [ exaltatione ]",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "quintessence",
+   "relation": "enables",
+   "object": "reunion-with-the-body",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 686,
+     "quote": "the quintessence, which was evidently needed for uniting the unio mentalis with the body",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "generated-from",
+   "object": "mercurialis",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 688,
+     "quote": "Mercurius himself was said to be generated from an extract of it",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "alchemical tradition",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "human-blood",
+   "relation": "enables",
+   "object": "reunion-with-the-body",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 690,
+     "quote": "a powerful medicine for uniting the unio mentalis with the body",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "alchemical tradition",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "philosophic-wine",
+   "relation": "undergoes",
+   "object": "distillatio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 691,
+     "quote": "the product of the alchemical procedure, which in this case consisted in first distilling the “philosophic wine.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-body",
+   "relation": "undergoes",
+   "object": "incineratio",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 691,
+     "quote": "The residue, called the corpus (body), was reduced to ashes in the “most vehement fire”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: the corpus reduced to ashes is the residue of the distilled wine, as the note says; the general node is one step on, medium",
+     "note": "the corpus is the residue of the distilled wine"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "caelum",
+   "relation": "identified-with",
+   "object": "veritas",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 693,
+     "quote": "The caelum , for Dorn, was the celestial substance hidden in man, the secret “truth,”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    },
+    {
+     "volume": "14",
+     "paragraph": 697,
+     "quote": "his chemical caelum coincided with the heavenly substance in the body, the “truth.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "unio-mentalis",
+   "relation": "coincides-with",
+   "object": "quintessence",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 695,
+     "quote": "the unquestionably psychic unio mentalis ... which in turn coincides with the quintessence",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "Dorn's identification as Jung analyses it",
+     "source_author": "Dorn"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "unio-naturalis",
+   "relation": "belongs-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 696,
+     "quote": "an inextricable interweaving of the soul with the body, which together formed a dark unity (the unio naturalis )",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)",
+     "source": "alchemical tradition",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "honey",
+   "relation": "signifies",
+   "object": "will-to-live",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 698,
+     "quote": "It expresses, psychologically, the joy of life and the life urge",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "chelidonia",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 698,
+     "quote": "the addition of Chelidonia projects the highest value, which is identical with the quaternity of the self, into the mixture",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "magnet-of-the-wise",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "14",
+     "paragraph": 700,
+     "quote": "The “magnet” that attracts the hidden thing is the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw14-10",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-12"
