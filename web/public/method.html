@@ -94,7 +94,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </head>
 <body>
 <header class="site-header">
-<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/atlas#/concordance">concordance</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/support">support</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/opus">opus</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/support">support</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
 </header>
 <main class="page-main prose">
 <div class="titleband"><p class="eyebrow">Evidence</p>
@@ -146,8 +146,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <h2>Human oversight</h2>
 <p>One person, the author, rules on disagreements, decides releases and answers for everything the site publishes.</p>
 <ul>
-<li><strong>Gold set.</strong> 50 claims carry a <em>human-validated</em> mark in the <a href="/ledger">ledger</a>: a person read the cited paragraph. The rest carry the amber dot: machine-verified without human validation.</li>
-<li><strong>Adjudication.</strong> Two models sort each relation into one of 25 families, working blind: one Opus-family model and one Gemini, each given the definitions and the claim, neither able to see the other's answer. A Fable-family model drafted the definitions; neither classifying model comes from that family. 708 relations wait for a person's ruling, most because the two models disagreed, a few because a later check disputed their agreement. No model breaks a tie. A person rules on each one, and the ruling goes into the ledger. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
+<li><strong>Validated by a person.</strong> 50 claims carry a <em>human-validated</em> mark in the <a href="/ledger">ledger</a>: a person read the cited paragraph. The rest carry the amber dot: machine-verified without human validation.</li>
+<li><strong>Adjudication.</strong> Two models sort each relation into one of 25 families, working blind: one Opus-family model and one Gemini, each given the definitions and the claim, neither able to see the other's answer. A Fable-family model drafted the definitions; neither classifying model comes from that family. 777 relations wait for a person's ruling, most because the two models disagreed, a few because a later check disputed their agreement. No model breaks a tie. A person rules on each one, and the ruling goes into the ledger. An assignment is recorded with the ruleset version it was agreed under, because a later version can retire the rule it rested on.</li>
 <li><strong>We count two kinds of unclassified relation separately.</strong> <em>No family</em> means none of our families fits. <em>Text undecided</em> means Jung's sentence supports two readings. Counting them together would hide gaps in our vocabulary among real ambiguities in the text.</li>
 <li><strong>Disputes.</strong> 18 challenges are on the record with their outcomes, in the <a href="/disputes">dispute log</a>.</li>
 </ul>
@@ -161,6 +161,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>What the instruments do not cover:</p>
 <div class="tw"><table><thead><tr><th>Known limit</th><th>What would close it, or what offsets it</th></tr></thead><tbody>
 <tr><td>One human reviewer; no second annotator yet</td><td>Independent second annotation with agreement statistics</td></tr>
+<tr><td>Nothing measures recall: every check tests what entered the map, and none estimates what Jung asserts that the map lacks</td><td>A sampled audit of recall, paragraph by paragraph</td></tr>
 <tr><td>A class of identity drift (two names for one thing entering as two things) is invisible to the current audit</td><td>No instrument yet</td></tr>
 <tr><td>English translation only (Hull)</td><td>German cross-check against the <em>Gesammelte Werke</em></td></tr>
 <tr><td>Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked</td><td>Partly offset: where Jung qualifies a claim, the map records the qualifying claim too. A reading of the essay or volume is still needed</td></tr>

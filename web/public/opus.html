@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/opus">
+<meta name="description" content="Jung’s reading of the ten woodcuts of the Rosarium philosophorum in CW 16, with verified claims and quotes, and the colours of the alchemical work where he names them.">
+<meta property="og:image" content="https://symbolicworld.observer/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="The Symbolic World: an atlas of C. G. Jung's Collected Works, with the graph of concepts">
+<title>The opus · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<script src="/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+
+.page-main.prose > .opus-ground { position: fixed; inset: 0; max-width: none; width: auto; z-index: -1; background: transparent; transition: background-color .6s ease; pointer-events: none; }
+.page-main.opus-black, .page-main.opus-white, .page-main.opus-red { transition: color .6s ease; }
+.page-main.opus-black { color: #ece6d8; } .page-main.opus-black a { color: #e2c46b; }
+.page-main.opus-white { color: #1d1a14; } .page-main.opus-white a { color: #7a5a12; }
+.page-main.opus-red { color: #f6e9dc; } .page-main.opus-red a { color: #ffd9a8; }
+.page-main.opus-black .eyebrow, .page-main.opus-black .opus-cite, .page-main.opus-black .meta { color: #b9ad94; }
+.page-main.opus-white .eyebrow, .page-main.opus-white .opus-cite, .page-main.opus-white .meta { color: #6b5f48; }
+.page-main.opus-red .eyebrow, .page-main.opus-red .opus-cite, .page-main.opus-red .meta { color: #f0d6c2; }
+.opus-pic { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: 1.5rem 2.5rem; align-items: start; padding: 4rem 0; min-height: 70vh; }
+.opus-frame { aspect-ratio: 3 / 4; border: 1px dashed currentColor; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; opacity: .75; font: .7rem var(--mono); letter-spacing: .08em; }
+.opus-frame-t { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0; }
+.opus-text h2 { margin: .2rem 0 .8rem; }
+.opus-stage { font-style: italic; }
+.opus-claims { list-style: none; padding: 0; margin: 1rem 0; }
+.opus-claim { margin: 0 0 1.3rem; }
+.opus-rel { font-family: var(--display); font-size: 1.15rem; margin: 0 0 .3rem; }
+.opus-rel em { font-style: normal; opacity: .8; }
+.opus-claim blockquote, .opus-outside { margin: 0; padding: .2rem 0 .2rem .9rem; border-left: 2px solid currentColor; font-family: var(--display); font-size: 1.02rem; line-height: 1.5; }
+.opus-cite { display: block; font: .64rem/1.7 var(--mono); margin-top: .3rem; }
+.opus-shimmer { height: 6px; border-radius: 3px; margin: 1.6rem 0 1rem; background: linear-gradient(90deg, #1f6f6b, #3b5bb5, #7b3fa0, #b0367a, #c9772e, #d9b23a, #1f6f6b); background-size: 300% 100%; animation: opus-shimmer 6s linear infinite; }
+@keyframes opus-shimmer { to { background-position: 300% 0; } }
+.opus-close { padding: 5rem 0 4rem; min-height: 60vh; }
+@media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; } .opus-frame { max-width: 16rem; } }
+@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main { transition: none !important; } .opus-shimmer { animation: none; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/opus" aria-current="page">opus</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/support">support</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">Explore</p>
+<h1>The opus</h1>
+<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with the colours of the work where he names them.</p></div>
+<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below carries claims from the graph, cited to the paragraphs where he discusses it. The page darkens and whitens only where Jung names the black and the white.</p>
+<div class="opus-ground" aria-hidden="true"></div>
+<section class="opus-pic" id="picture-1" data-stage="none">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 1 of the Rosarium philosophorum, The Mercurial Fountain"><span>Woodcut 1</span><span class="opus-frame-t">The Mercurial Fountain</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 1 · CW 16 §402 to §409</p>
+<h2>The Mercurial Fountain</h2>
+
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-alchemy">Alchemy</a> <em title="derives-from">derives from</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the methods and philosophy of alchemy ... they can only derive from the unconscious psyche&rdquo;</blockquote><p class="opus-cite">CW 16 §407 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-quintessence">Quintessence (quinta essentia)</a> <em title="derives-from">derives from</em> <a href="/concept-four-elements">The four elements</a></p>
+<blockquote class="ev">&ldquo;a fifth star which represents the fifth entity, the “One” derived from the four, the quinta essentia&rdquo;</blockquote><p class="opus-cite">CW 16 §402 · Jung reports a parallel</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-mercurius">Mercurius</a> <em title="is-counterpart-of">is counterpart of</em> <a href="/concept-the-trinity">The Trinity</a></p>
+<blockquote class="ev">&ldquo;he is a trinity, triunus or trinus , the chthonic, lower, or even infernal counterpart of the Heavenly Trinity&rdquo;</blockquote><p class="opus-cite">CW 16 §403 · Jung reports a parallel</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-pic" id="picture-2" data-stage="none">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 2 of the Rosarium philosophorum, King and Queen"><span>Woodcut 2</span><span class="opus-frame-t">King and Queen</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 2 · CW 16 §410 to §449</p>
+<h2>King and Queen</h2>
+
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-the-unconscious">The unconscious</a> <em title="produces">produces</em> <a href="/concept-symbol">The symbol</a></p>
+<blockquote class="ev">&ldquo;these symbolical pictures spring from the corresponding unconscious contents—half spiritual, half sexual&rdquo;</blockquote><p class="opus-cite">CW 16 §414 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-artifex">The artifex (alchemist-operator)</a> <em title="is-entangled-in">is entangled in</em> <a href="/concept-projection">Projection</a></p>
+<blockquote class="ev">&ldquo;Somehow the artifex was entangled in this game of unconscious projection&rdquo;</blockquote><p class="opus-cite">CW 16 §414 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-coniunctio">Coniunctio</a> <em title="involves">involves</em> <a href="/concept-incest">Incest (symbolic)</a></p>
+<blockquote class="ev">&ldquo;the desired coniunctio was not a legitimate union but was always—one could almost say, on principleincestuous&rdquo;</blockquote><p class="opus-cite">CW 16 §415 · Jung asserts</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-pic" id="picture-3" data-stage="none">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 3 of the Rosarium philosophorum, The Naked Truth"><span>Woodcut 3</span><span class="opus-frame-t">The Naked Truth</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 3 · CW 16 §450 to §452</p>
+<h2>The Naked Truth</h2>
+
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <em title="requires">requires</em> <a href="/concept-morality">Morality</a></p>
+<blockquote class="ev">&ldquo;the opus demands not only intellectual and technical ability ... it is a moral as well as a psychological undertaking&rdquo;</blockquote><p class="opus-cite">CW 16 §451 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-repression">Repression</a> <em title="leads-to">leads to</em> <a href="/concept-dissociation">Dissociation (splitting of the personality)</a></p>
+<blockquote class="ev">&ldquo;Repression leads to a one-sided development if not to stagnation, and eventually to neurotic dissociation.&rdquo;</blockquote><p class="opus-cite">CW 16 §452 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-coniunctio">Coniunctio</a> <em title="amplified-by">amplified by</em> <a href="/concept-sol">Sol</a></p>
+<blockquote class="ev">&ldquo;Sol says, O Luna, let me be thy husband&rdquo;</blockquote><p class="opus-cite">CW 16 §451 · Jung quotes a source</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-pic" id="picture-4" data-stage="none">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 4 of the Rosarium philosophorum, Immersion in the Bath"><span>Woodcut 4</span><span class="opus-frame-t">Immersion in the Bath</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 4 · CW 16 §453 to §456</p>
+<h2>Immersion in the Bath</h2>
+
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-wholeness">Wholeness / totality</a> <em title="requires">requires</em> <a href="/concept-soul">Soul</a></p>
+<blockquote class="ev">&ldquo;The unrelated human being lacks wholeness, for he can achieve wholeness only through the soul&rdquo;</blockquote><p class="opus-cite">CW 16 §454 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-rotundum">The rotundum (the round element)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;Wholeness is a combination of I and You ... whose nature can only be grasped symbolically, as in the symbols of the rotundum&rdquo;</blockquote><p class="opus-cite">CW 16 §454 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-bath">Bath</a> <em title="is-form-of">is form of</em> <a href="/concept-night-sea-journey">The Night Sea Journey</a></p>
+<blockquote class="ev">&ldquo;The immersion in the bath is another “night sea journey,”&rdquo;</blockquote><p class="opus-cite">CW 16 §455 · Jung asserts</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-pic" id="picture-5" data-stage="none">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 5 of the Rosarium philosophorum, The Conjunction"><span>Woodcut 5</span><span class="opus-frame-t">The Conjunction</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 5 · CW 16 §457 to §466</p>
+<h2>The Conjunction</h2>
+
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-nous">Nous</a> <em title="is-embraced-by">is embraced by</em> <a href="/concept-physis">Physis</a></p>
+<blockquote class="ev">&ldquo;Physis has wrapped the “man of light” in a passionate embrace.&rdquo;</blockquote><p class="opus-cite">CW 16 §457 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-water">Water</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the coitus is taking place in the water, the mare tenebrositatis , i.e., the unconscious&rdquo;</blockquote><p class="opus-cite">CW 16 §459 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-coniunctio">Coniunctio</a> <em title="expresses">expresses</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;Our pictures of the coniunctio are to be understood in this sense: union on the biological level is a symbol of the unio oppositorum&rdquo;</blockquote><p class="opus-cite">CW 16 §460 · Jung asserts</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-pic" id="picture-6" data-stage="black">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 6 of the Rosarium philosophorum, Death"><span>Woodcut 6</span><span class="opus-frame-t">Death</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 6 · CW 16 §467 to §474</p>
+<h2>Death</h2>
+<p class="opus-stage">The page turns black where Jung names the nigredo. CW 16 §468.</p>
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-coniunctio">Coniunctio</a> <em title="followed-by">followed by</em> <a href="/concept-nigredo">Nigredo</a></p>
+<blockquote class="ev">&ldquo;The coniunctio was incestuous...The nigredo always appears in conjunction with tenebrositas&rdquo;</blockquote><p class="opus-cite">CW 16 §468 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-death">Death</a> <em title="precedes">precedes</em> <a href="/concept-rebirth">Rebirth / Renovatio</a></p>
+<blockquote class="ev">&ldquo;an indication that this death is an interim stage to be followed by a new life&rdquo;</blockquote><p class="opus-cite">CW 16 §467 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-coniunctio">Coniunctio</a> <em title="produces">produces</em> <a href="/concept-rebis">Rebis / Hermaphrodite</a></p>
+<blockquote class="ev">&ldquo;turns out to be the long-sought rebis or lapis&rdquo;</blockquote><p class="opus-cite">CW 16 §468 · Jung asserts</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-pic" id="picture-7" data-stage="black">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 7 of the Rosarium philosophorum, The Ascent of the Soul"><span>Woodcut 7</span><span class="opus-frame-t">The Ascent of the Soul</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 7 · CW 16 §475 to §482</p>
+<h2>The Ascent of the Soul</h2>
+<p class="opus-stage">The black holds. CW 16 §479.</p>
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-nigredo">Nigredo</a> <em title="parallels">parallels</em> <a href="/concept-dark-night-of-the-soul">Dark night of the soul</a></p>
+<blockquote class="ev">&ldquo;allows us to adduce as a parallel to the nigredo the writings of St. John of the Cross 7 concerning the “dark night.”&rdquo;</blockquote><p class="opus-cite">CW 16 §479 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-dissociation">Dissociation (splitting of the personality)</a> <em title="is-analogous-to">is analogous to</em> <a href="/concept-schizophrenia">Schizophrenia (dementia praecox)</a></p>
+<blockquote class="ev">&ldquo;The decomposition of the elements indicates dissociation and the collapse of the existing ego-consciousness. It is closely analogous to the schizophrenic state&rdquo;</blockquote><p class="opus-cite">CW 16 §476 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-mercurius">Mercurius</a> <em title="resists-integration-into">resists integration into</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;Mercurius, the servus or cervus fugitivus who is ever about to flee—or who, in other words, resists integration (into consciousness)&rdquo;</blockquote><p class="opus-cite">CW 16 §478 · Jung asserts</p></li>
+</ul>
+<div class="opus-shimmer" aria-hidden="true"></div>
+<blockquote class="opus-outside">&ldquo;The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
+</div>
+</section>
+<section class="opus-pic" id="picture-8" data-stage="fade">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 8 of the Rosarium philosophorum, Purification"><span>Woodcut 8</span><span class="opus-frame-t">Purification</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 8 · CW 16 §483 to §493</p>
+<h2>Purification</h2>
+<p class="opus-stage">The black fades to white. Jung names the whitening at CW 16 §484, and it is complete at §493. CW 16 §493.</p>
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-nigredo">Nigredo</a> <em title="precedes">precedes</em> <a href="/concept-albedo">Albedo</a></p>
+<blockquote class="ev">&ldquo;the nigredo gives way to the albedo&rdquo;</blockquote><p class="opus-cite">CW 16 §493 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-water">Water</a> <em title="symbolizes">symbolizes</em> <a href="/concept-sapientia">Sapientia / Wisdom</a></p>
+<blockquote class="ev">&ldquo;water as a symbol of wisdom and spirit can be traced back to the parable which Christ told to the Samaritan woman at the well&rdquo;</blockquote><p class="opus-cite">CW 16 §485 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-dew">Dew</a> <em title="heralds-return-of">heralds return of</em> <a href="/concept-soul">Soul</a></p>
+<blockquote class="ev">&ldquo;“Gideon’s dew” is a sign of divine intervention, it is the moisture that heralds the return of the soul.&rdquo;</blockquote><p class="opus-cite">CW 16 §487 · Jung asserts</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-pic" id="picture-9" data-stage="white">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 9 of the Rosarium philosophorum, The Return of the Soul"><span>Woodcut 9</span><span class="opus-frame-t">The Return of the Soul</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 9 · CW 16 §494 to §524</p>
+<h2>The Return of the Soul</h2>
+<p class="opus-stage">White. CW 16 §515.</p>
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-nigredo">Nigredo</a> <em title="precedes">precedes</em> <a href="/concept-albedo">Albedo</a></p>
+<blockquote class="ev">&ldquo;They call it their resurrection, because the white rises up out of the black&rdquo;</blockquote><p class="opus-cite">CW 16 §515 · Jung quotes a source</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-artifex">The artifex (alchemist-operator)</a> <em title="focuses-on">focuses on</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;on the part of the alchemist ... his main interest is focussed on the unconscious itself&rdquo;</blockquote><p class="opus-cite">CW 16 §498 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-coniunctio">Coniunctio</a> <em title="occurs-in">occurs in</em> <a href="/concept-collective-unconscious">The collective unconscious</a></p>
+<blockquote class="ev">&ldquo;not only the coniunctio but the reanimation of the “body” is an altogether transmundane event, a process occurring in the psychic non-ego&rdquo;</blockquote><p class="opus-cite">CW 16 §499 · Jung asserts</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-pic" id="picture-10" data-stage="white">
+<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 10 of the Rosarium philosophorum, The New Birth"><span>Woodcut 10</span><span class="opus-frame-t">The New Birth</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-text">
+<p class="eyebrow">Picture 10 · CW 16 §525 to §539</p>
+<h2>The New Birth</h2>
+<p class="opus-stage">Jung names no stage in these paragraphs; the white holds as a choice of display, not a claim.</p>
+<ul class="opus-claims">
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-anthropos">Anthropos / Adam Kadmon</a> <em title="parallels">parallels</em> <a href="/concept-christ">Christ (as symbol)</a></p>
+<blockquote class="ev">&ldquo;the Platonic conception of the bisexual First Man, for Christ is ultimately the Anthropos&rdquo;</blockquote><p class="opus-cite">CW 16 §525 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-denarius">Denarius (the number ten)</a> <em title="means">means</em> <a href="/concept-christ">Christ (as symbol)</a></p>
+<blockquote class="ev">&ldquo;Hence the real meaning of the denarius is the Son of God.&rdquo;</blockquote><p class="opus-cite">CW 16 §525 · Jung asserts</p></li>
+<li class="opus-claim"><p class="opus-rel"><a href="/concept-rebis">Rebis / Hermaphrodite</a> <em title="is-product-of">is product of</em> <a href="/concept-incest">Incest (symbolic)</a></p>
+<blockquote class="ev">&ldquo;this anima becomes fruitful and is born together with her son, in the shape of the Hermaphroditus, the product of mother-son incest&rdquo;</blockquote><p class="opus-cite">CW 16 §529 · Jung asserts</p></li>
+</ul>
+
+</div>
+</section>
+<section class="opus-close" id="the-red" data-stage="red">
+<div class="opus-text">
+<p class="eyebrow">After the white</p>
+<blockquote class="opus-outside">&ldquo;The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
+<p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
+</div>
+</section>
+<p class="meta">The woodcuts are placeholders until we clear the rights to a scan. Picture titles and paragraph ranges follow the headings of CW 16.</p>
+<script>(function(){
+var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main');if(!g||!m)return;
+var secs=[].slice.call(document.querySelectorAll('[data-stage]'));
+function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
+var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18];
+function tick(){var mid=innerHeight/2,cur=null;secs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<=mid&&r.bottom>mid)cur=s});
+var st=cur?cur.getAttribute('data-stage'):'none',bg='transparent',cls='';
+if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
+else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
+else if(st==='fade'){var r=cur.getBoundingClientRect(),t=Math.min(1,Math.max(0,(mid-r.top)/r.height));bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
+else if(st==='red'){var r2=cur.getBoundingClientRect(),t2=Math.min(1,Math.max(0,(mid-r2.top)/(r2.height*.6)));bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
+g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick()})();</script>
+</main></body></html>
