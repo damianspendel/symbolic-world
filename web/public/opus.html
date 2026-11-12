@@ -63,6 +63,18 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .page-main.opus-white .eyebrow, .page-main.opus-white .opus-cite, .page-main.opus-white .meta { color: #6b5f48; }
 .page-main.opus-red .eyebrow, .page-main.opus-red .opus-cite, .page-main.opus-red .meta { color: #f0d6c2; }
 .opus-pic { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: 1.5rem 2.5rem; align-items: start; padding: 4rem 0; min-height: 70vh; }
+.opus-cut { margin: 0; }
+.opus-cut img { display: block; width: 100%; height: auto; max-height: 62vh; object-fit: contain; background: #fbf8f1; border-radius: 4px; box-shadow: 0 1px 0 rgba(0,0,0,.08); }
+/* the pinned stage (Damian, 2026-11-12: "i would like the images to fade in
+   and out on scroll, not for the page to go down"). Without the script the
+   sections simply follow one another; with it, a sticky stage sits over a
+   tall track, one viewport of scroll per picture, and the pictures crossfade */
+.opus-pinned .opus-track { position: relative; height: calc((var(--opus-n) + 1) * 100vh); }
+.opus-pinned .opus-pin { position: sticky; top: var(--opus-top, 0px); height: calc(100vh - var(--opus-top, 0px)); overflow: hidden; }
+.opus-pinned .opus-seg { position: absolute; inset: 0; min-height: 0; padding: 1.5rem 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s linear .7s; overflow-y: auto; }
+.opus-pinned .opus-seg.is-active { opacity: 1; visibility: visible; transition: opacity .7s ease, visibility 0s; }
+.opus-pinned .opus-pic { align-items: center; }
+.opus-pinned .opus-close { display: flex; flex-direction: column; justify-content: center; }
 .opus-frame { aspect-ratio: 3 / 4; border: 1px dashed currentColor; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; opacity: .75; font: .7rem var(--mono); letter-spacing: .08em; }
 .opus-frame-t { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0; }
 .opus-text h2 { margin: .2rem 0 .8rem; }
@@ -76,8 +88,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .opus-shimmer { height: 6px; border-radius: 3px; margin: 1.6rem 0 1rem; background: linear-gradient(90deg, #1f6f6b, #3b5bb5, #7b3fa0, #b0367a, #c9772e, #d9b23a, #1f6f6b); background-size: 300% 100%; animation: opus-shimmer 6s linear infinite; }
 @keyframes opus-shimmer { to { background-position: 300% 0; } }
 .opus-close { padding: 5rem 0 4rem; min-height: 60vh; }
-@media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; } .opus-frame { max-width: 16rem; } }
-@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main { transition: none !important; } .opus-shimmer { animation: none; } }
+@media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; gap: 1rem; } .opus-frame { max-width: 16rem; } .opus-cut img { max-height: 30vh; width: auto; max-width: 100%; margin: 0 auto; } .opus-pinned .opus-pic { align-items: start; } }
+@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } .opus-shimmer { animation: none; } }
 </style>
 </head>
 <body>
@@ -90,8 +102,10 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with the colours of the work where he names them.</p></div>
 <p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below carries claims from the graph, cited to the paragraphs where he discusses it. The page darkens and whitens only where Jung names the black and the white.</p>
 <div class="opus-ground" aria-hidden="true"></div>
-<section class="opus-pic" id="picture-1" data-stage="none">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 1 of the Rosarium philosophorum, The Mercurial Fountain"><span>Woodcut 1</span><span class="opus-frame-t">The Mercurial Fountain</span><span class="opus-frame-n">image to follow</span></div>
+<div class="opus-track" style="--opus-n: 11">
+<div class="opus-pin">
+<section class="opus-pic opus-seg" id="picture-1" data-stage="none">
+<figure class="opus-cut"><img src="/opus-woodcut-01.png" width="741" height="900" alt="Woodcut 1 of the Rosarium philosophorum (1550): The Mercurial Fountain" loading="eager"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 1 · CW 16 §402 to §409</p>
 <h2>The Mercurial Fountain</h2>
@@ -107,8 +121,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-pic" id="picture-2" data-stage="none">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 2 of the Rosarium philosophorum, King and Queen"><span>Woodcut 2</span><span class="opus-frame-t">King and Queen</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-2" data-stage="none">
+<figure class="opus-cut"><img src="/opus-woodcut-02.png" width="627" height="900" alt="Woodcut 2 of the Rosarium philosophorum (1550): King and Queen" loading="eager"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 2 · CW 16 §410 to §449</p>
 <h2>King and Queen</h2>
@@ -124,8 +138,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-pic" id="picture-3" data-stage="none">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 3 of the Rosarium philosophorum, The Naked Truth"><span>Woodcut 3</span><span class="opus-frame-t">The Naked Truth</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-3" data-stage="none">
+<figure class="opus-cut"><img src="/opus-woodcut-03.png" width="658" height="900" alt="Woodcut 3 of the Rosarium philosophorum (1550): The Naked Truth" loading="lazy"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 3 · CW 16 §450 to §452</p>
 <h2>The Naked Truth</h2>
@@ -141,8 +155,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-pic" id="picture-4" data-stage="none">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 4 of the Rosarium philosophorum, Immersion in the Bath"><span>Woodcut 4</span><span class="opus-frame-t">Immersion in the Bath</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-4" data-stage="none">
+<figure class="opus-cut"><img src="/opus-woodcut-04.png" width="760" height="742" alt="Woodcut 4 of the Rosarium philosophorum (1550): Immersion in the Bath" loading="lazy"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 4 · CW 16 §453 to §456</p>
 <h2>Immersion in the Bath</h2>
@@ -158,8 +172,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-pic" id="picture-5" data-stage="none">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 5 of the Rosarium philosophorum, The Conjunction"><span>Woodcut 5</span><span class="opus-frame-t">The Conjunction</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-5" data-stage="none">
+<figure class="opus-cut"><img src="/opus-woodcut-05.png" width="760" height="613" alt="Woodcut 5 of the Rosarium philosophorum (1550): The Conjunction" loading="lazy"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 5 · CW 16 §457 to §466</p>
 <h2>The Conjunction</h2>
@@ -175,8 +189,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-pic" id="picture-6" data-stage="black">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 6 of the Rosarium philosophorum, Death"><span>Woodcut 6</span><span class="opus-frame-t">Death</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-6" data-stage="black">
+<figure class="opus-cut"><img src="/opus-woodcut-06.png" width="760" height="523" alt="Woodcut 6 of the Rosarium philosophorum (1550): Death" loading="lazy"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 6 · CW 16 §467 to §474</p>
 <h2>Death</h2>
@@ -192,8 +206,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-pic" id="picture-7" data-stage="black">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 7 of the Rosarium philosophorum, The Ascent of the Soul"><span>Woodcut 7</span><span class="opus-frame-t">The Ascent of the Soul</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-7" data-stage="black">
+<figure class="opus-cut"><img src="/opus-woodcut-07.png" width="760" height="771" alt="Woodcut 7 of the Rosarium philosophorum (1550): The Ascent of the Soul" loading="lazy"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 7 · CW 16 §475 to §482</p>
 <h2>The Ascent of the Soul</h2>
@@ -210,8 +224,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="opus-outside">&ldquo;The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
 </div>
 </section>
-<section class="opus-pic" id="picture-8" data-stage="fade">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 8 of the Rosarium philosophorum, Purification"><span>Woodcut 8</span><span class="opus-frame-t">Purification</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-8" data-stage="fade">
+<figure class="opus-cut"><img src="/opus-woodcut-08.png" width="760" height="787" alt="Woodcut 8 of the Rosarium philosophorum (1550): Purification" loading="lazy"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 8 · CW 16 §483 to §493</p>
 <h2>Purification</h2>
@@ -227,8 +241,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-pic" id="picture-9" data-stage="white">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 9 of the Rosarium philosophorum, The Return of the Soul"><span>Woodcut 9</span><span class="opus-frame-t">The Return of the Soul</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-9" data-stage="white">
+<figure class="opus-cut"><img src="/opus-woodcut-09.png" width="760" height="844" alt="Woodcut 9 of the Rosarium philosophorum (1550): The Return of the Soul" loading="lazy"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 9 · CW 16 §494 to §524</p>
 <h2>The Return of the Soul</h2>
@@ -244,8 +258,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-pic" id="picture-10" data-stage="white">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut 10 of the Rosarium philosophorum, The New Birth"><span>Woodcut 10</span><span class="opus-frame-t">The New Birth</span><span class="opus-frame-n">image to follow</span></div>
+<section class="opus-pic opus-seg" id="picture-10" data-stage="white">
+<figure class="opus-cut"><img src="/opus-woodcut-10.png" width="760" height="886" alt="Woodcut 10 of the Rosarium philosophorum (1550): The New Birth" loading="lazy"></figure>
 <div class="opus-text">
 <p class="eyebrow">Picture 10 · CW 16 §525 to §539</p>
 <h2>The New Birth</h2>
@@ -261,25 +275,31 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 
 </div>
 </section>
-<section class="opus-close" id="the-red" data-stage="red">
+<section class="opus-close opus-seg" id="the-red" data-stage="red">
 <div class="opus-text">
 <p class="eyebrow">After the white</p>
 <blockquote class="opus-outside">&ldquo;The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
 <p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
 </div>
 </section>
-<p class="meta">The woodcuts are placeholders until we clear the rights to a scan. Picture titles and paragraph ranges follow the headings of CW 16.</p>
+</div>
+</div>
+<p class="meta">Woodcuts from the <em>Rosarium philosophorum</em> (Frankfurt, 1550). Picture titles and paragraph ranges follow the headings of CW 16.</p>
 <script>(function(){
-var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main');if(!g||!m)return;
-var secs=[].slice.call(document.querySelectorAll('[data-stage]'));
+var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main'),track=document.querySelector('.opus-track');if(!g||!m||!track)return;
+var segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header');
+document.documentElement.classList.add('opus-pinned');
+function top(){var h=head?head.offsetHeight:0;document.documentElement.style.setProperty('--opus-top',h+'px');return h}
 function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
-var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18];
-function tick(){var mid=innerHeight/2,cur=null;secs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<=mid&&r.bottom>mid)cur=s});
-var st=cur?cur.getAttribute('data-stage'):'none',bg='transparent',cls='';
+var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],cur=-1;
+function tick(){var h=top(),r=track.getBoundingClientRect(),step=innerHeight,p=Math.max(0,(h-r.top)/step),i=Math.min(segs.length-1,Math.floor(p)),t=Math.min(1,Math.max(0,p-i));
+if(r.top>h+step*0.5)i=-1;
+if(i!==cur){segs.forEach(function(s,k){s.classList.toggle('is-active',k===i)});cur=i}
+var st=i<0?'none':segs[i].getAttribute('data-stage'),bg='transparent',cls='';
 if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
 else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
-else if(st==='fade'){var r=cur.getBoundingClientRect(),t=Math.min(1,Math.max(0,(mid-r.top)/r.height));bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
-else if(st==='red'){var r2=cur.getBoundingClientRect(),t2=Math.min(1,Math.max(0,(mid-r2.top)/(r2.height*.6)));bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
+else if(st==='fade'){bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
+else if(st==='red'){var t2=Math.min(1,t*1.6);bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
-addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick()})();</script>
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);segs[0]&&segs[0].classList.add('is-active');tick()})();</script>
 </main></body></html>
