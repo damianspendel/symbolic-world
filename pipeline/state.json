@@ -1329,11 +1329,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw12-5-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §281-350",
+   "result": "CW 12 WINDOW 5: Psychology and Alchemy §281-350, the close of the dream series and the opening of Part III: the potter's wheel and the rotating seasons, the precious stone and the apaches, the disturbed oblong mandala with the four bowls and the missing blue, the kernels and the nuts, the rotating square room, the House of the Gathering and the holy fire, the fire mountain of Enoch, the silver bowl with four cracked nuts, the children with the dark ring and the ludus puerorum, the egg and the black eagle, the vision of the world clock with its three rhythms, the thirty-two paths of the Cabala, Guillaume de Digulleville's Pélerinage de l'âme with its missing blue and the Queen, the symbols of the self (the spiral centre, the spider, the quaternity and carbon, the mandala as archetype), the decline of alchemy and projection into matter, the four stages and their colours, the nigredo to rubedo sequence, conceptions of the goal, the aqua permanens and the fire, the Hermetic vessel, Quercetanus's twelve operations, the psychic nature of the work and the visionary accounts of Hoghelande, the 'Ethiopian' treatise and the Novum lumen. Run by hand in the mining chat after the 23:30 reset on 2026-11-12/13 on Damian's instruction to run all remaining windows overnight; the fifth window of CW 12 in the second pass (state record b-cw12-5-pass2). Mined 55 candidates/56 refs (Opus-family miner subagent, blinded, model id stamped; five attaches onto standing edges; 16 names entries; 4 cross-register flags; 21 stage candidates including the nine consecutive pairs of Quercetanus's sequence from calcinatio to exaltatio, augmentatio and proiectio left out as absent from the controlled operation list; 5 dream-linkage candidates; stages_note recorded; density above the 35-50 guide because the stage rule makes each ordering a candidate). Pre-check kept all 56 (quotation share of CW 12 after the window 7.31 percent against the 9 percent cap). Fable gate 51 TRUE / 4 CORRECTED / 1 FALSE: the viriditas mint refused again as a duplicate of the standing benedicta-viriditas typed Operation (ruled at window 3), its §333 ordering after the nigredo goes to the sitting as a medium edge for the standing node; three confidence demotions (§296 the dream's view of religion as wholeness, §349 Hoghelande's figures read as visionary experience, §350 the Novum lumen's imagination with a scope note); §337 the Exercitationes in Turbam given source_author other. All sixteen names accepted (the Greek stage names melanosis, leukosis, xanthosis and iosis as aliases; aurum vulgi on the gold node beside the standing philosophic-gold). Gemini cross-vendor 55 PASS / 0 FINDING on 55 post-gate refs. Names applied to 16 entries on 14 nodes; cross_register set on 4 edges; thirteen mints: potters-wheel, the-year, the-vertical, house-of-the-gathering, the-children, ludus-puerorum, three-regimina, thirty-two, disturbed-mandala, spider, panacea, fermentatio, chemistry; the viriditas mint stranded and not added. Sources written as other: Josephus Quercetanus and Guillaume de Digulleville's Pélerinage de l'âme (both added to the controlled list in the tooling commit) and the unnamed treatise alleged to be translated from Ethiopian (§347, left as other). +49 edges, 6 refs attached to standing edges, +55 refs, +13 nodes. Graph 1137/4710/6336; CW 12 now 488 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 49 edges under v0.7.2: agreement 39/49 (80 percent), 36 assigned, 10 queued, 3 no-family, 0 text-undecided; queue 820; one bare unclassified row from the Gemini arm (n 4705) normalized to no-family before assembly, raw file kept. strain: 3 no-family, 0 text-undecided of 49 swept; new homeless strings: perceives (imagination perceives visionary-experience); is-characterized-by recurs (two edges, both arms no-family, as the standing celestial-pole ruling). FAMILY GAP FOR THE SITTING: undergoes split psychic-effect against separation on both solutio edges (§337, §349), the recurring seed question; precedes split sequence against generation where the text says 'produced by' (§334); belongs-to left one arm without a family (silver belongs-to albedo); points-to, is-rationalization-of and embodies each left one or both arms without a family; corresponds-to split correspondence against symbolization on the vertical; is-equated-with split archetypal-identity against doctrinal-attribution on the dream's view of religion; is-analogous-to split correspondence against amplification. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12/13, 56 refs judged against the full paragraphs; weekly Fable 65 percent and 5-hour meter 4 percent at the window's start, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1137/4710/6336, distinct paragraphs 3799, claim mix 4985/1004/347. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-ac065281b4afa4960, 27 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 28 assistant turns after the miner finished at 2026-11-12T22:42:31.212Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW12-DUE: window 5 (§281-350)",
- "nodes": 1124,
- "edges": 4661,
- "refs": 6281,
+ "next": "CW12-DUE: window 6 (§351-420)",
+ "nodes": 1137,
+ "edges": 4710,
+ "refs": 6336,
  "as_of": "2026-11-12"
 }

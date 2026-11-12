@@ -95,6 +95,7 @@
    "color_phase": "black",
    "aliases": [
     "caput corvi",
+    "melanosis",
     "tenebrositas"
    ],
    "name_refs": [
@@ -107,6 +108,11 @@
      "volume": "14",
      "paragraph": 727,
      "batch": "b-cw14-11"
+    },
+    {
+     "volume": "12",
+     "paragraph": 333,
+     "batch": "b-cw12-5"
     }
    ]
   },
@@ -118,7 +124,10 @@
    "color_phase": "white",
    "aliases": [
     "dealbatio",
-    "salsatura"
+    "lapis albus",
+    "leukosis",
+    "salsatura",
+    "tinctura alba"
    ],
    "name_refs": [
     {
@@ -130,6 +139,16 @@
      "volume": "14",
      "paragraph": 320,
      "batch": "b-cw14-5"
+    },
+    {
+     "volume": "12",
+     "paragraph": 333,
+     "batch": "b-cw12-5"
+    },
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "batch": "b-cw12-5"
     }
    ]
   },
@@ -138,13 +157,26 @@
    "type": "Operation",
    "label": "Rubedo",
    "latin": "rubedo",
-   "color_phase": "red"
+   "color_phase": "red",
+   "aliases": [
+    "iosis"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 333,
+     "batch": "b-cw12-5"
+    }
+   ]
   },
   {
    "id": "coniunctio",
    "type": "Operation",
    "label": "Coniunctio",
    "aliases": [
+    "coitus",
+    "coniugium",
+    "matrimonium",
     "matrimonium alchymicum"
    ],
    "name_refs": [
@@ -152,6 +184,11 @@
      "volume": "12",
      "paragraph": 209,
      "batch": "b-cw12-3"
+    },
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "batch": "b-cw12-5"
     }
    ]
   },
@@ -160,9 +197,12 @@
    "type": "Symbol",
    "label": "Lapis philosophorum",
    "aliases": [
+    "Deus terrestris",
+    "Salvator",
     "aenigma regis",
     "cervus fugitivus",
     "cibus immortalis",
+    "lapis aethereus",
     "lapis angularis",
     "lapis invisibilitatis"
    ],
@@ -201,6 +241,16 @@
      "volume": "12",
      "paragraph": 243,
      "batch": "b-cw12-4"
+    },
+    {
+     "volume": "12",
+     "paragraph": 335,
+     "batch": "b-cw12-5"
+    },
+    {
+     "volume": "12",
+     "paragraph": 343,
+     "batch": "b-cw12-5"
     }
    ],
    "latin": "lapis Philosophorum"
@@ -644,7 +694,17 @@
   {
    "id": "gold",
    "type": "Substance",
-   "label": "Gold (aurum)"
+   "label": "Gold (aurum)",
+   "aliases": [
+    "aurum vulgi"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 343,
+     "batch": "b-cw12-5"
+    }
+   ]
   },
   {
    "id": "silver",
@@ -946,6 +1006,11 @@
      "volume": "12",
      "paragraph": 243,
      "batch": "b-cw12-4"
+    },
+    {
+     "volume": "12",
+     "paragraph": 338,
+     "batch": "b-cw12-5"
     }
    ],
    "aliases": [
@@ -953,7 +1018,8 @@
     "cucurbita",
     "thalamus",
     "unum vas",
-    "vas bene clausum"
+    "vas bene clausum",
+    "vas mirabile"
    ]
   },
   {
@@ -1191,6 +1257,11 @@
      "volume": "14",
      "paragraph": 388,
      "batch": "b-cw14-6"
+    },
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "batch": "b-cw12-5"
     }
    ]
   },
@@ -1215,6 +1286,7 @@
    "aliases": [
     "aqua Mercurialis",
     "aqua aëris",
+    "aqua mercurialis",
     "argentum vivum",
     "spiritual water"
    ],
@@ -1238,6 +1310,11 @@
      "volume": "12",
      "paragraph": 90,
      "batch": "b-cw12-2"
+    },
+    {
+     "volume": "12",
+     "paragraph": 336,
+     "batch": "b-cw12-5"
     }
    ]
   },
@@ -2544,13 +2621,19 @@
    "aliases": [
     "aqua vitae",
     "mercurius vivus",
-    "vinum ardens"
+    "vinum ardens",
+    "water of life"
    ],
    "name_refs": [
     {
      "volume": "12",
      "paragraph": 94,
      "batch": "b-cw12-2"
+    },
+    {
+     "volume": "12",
+     "paragraph": 287,
+     "batch": "b-cw12-5"
     }
    ]
   },
@@ -7046,7 +7129,17 @@
   {
    "id": "ablutio",
    "label": "Ablutio",
-   "type": "Operation"
+   "type": "Operation",
+   "aliases": [
+    "baptisma"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "batch": "b-cw12-5"
+    }
+   ]
   },
   {
    "id": "calcinatio",
@@ -7729,11 +7822,105 @@
   {
    "id": "citrinitas",
    "label": "Citrinitas (yellowing)",
-   "type": "Operation"
+   "type": "Operation",
+   "aliases": [
+    "xanthosis"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 333,
+     "batch": "b-cw12-5"
+    }
+   ]
   },
   {
    "id": "mysterium-iniquitatis",
    "label": "Mysterium iniquitatis (the mystery of evil)",
+   "type": "Concept"
+  },
+  {
+   "id": "potters-wheel",
+   "label": "The potter's wheel (dream 49)",
+   "type": "Symbol"
+  },
+  {
+   "id": "the-year",
+   "label": "The year (cycle of the seasons, dream 50)",
+   "type": "Symbol"
+  },
+  {
+   "id": "the-vertical",
+   "label": "The vertical (height and depth in the dream mandalas)",
+   "type": "Symbol"
+  },
+  {
+   "id": "house-of-the-gathering",
+   "label": "The House of the Gathering (dream 54)",
+   "type": "Symbol"
+  },
+  {
+   "id": "the-children",
+   "label": "The children (dwarf-gods) carrying the dark ring (dream 56)",
+   "type": "Motif"
+  },
+  {
+   "id": "ludus-puerorum",
+   "label": "Ludus puerorum (children's play, a portion of the opus)",
+   "type": "Motif",
+   "latin": "ludus puerorum",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 302,
+     "batch": "b-cw12-5"
+    }
+   ]
+  },
+  {
+   "id": "three-regimina",
+   "label": "The three regimina (conversions of the four elements into one another)",
+   "type": "Concept"
+  },
+  {
+   "id": "thirty-two",
+   "label": "The number thirty-two (pulses of the world clock; paths of wisdom)",
+   "type": "Symbol"
+  },
+  {
+   "id": "disturbed-mandala",
+   "label": "The disturbed mandala (dream 51, the oblong without blue)",
+   "type": "Symbol"
+  },
+  {
+   "id": "spider",
+   "label": "The spider in its web (image of the centre)",
+   "type": "Symbol"
+  },
+  {
+   "id": "panacea",
+   "label": "Panacea (aurum potabile, elixir vitae)",
+   "type": "Substance",
+   "aliases": [
+    "aurum potabile",
+    "elixir vitae"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 335,
+     "batch": "b-cw12-5"
+    }
+   ]
+  },
+  {
+   "id": "fermentatio",
+   "label": "Fermentatio",
+   "type": "Operation"
+  },
+  {
+   "id": "chemistry",
+   "label": "Chemistry",
    "type": "Concept"
   }
  ],
@@ -8154,6 +8341,19 @@
      "source": "Ripley, Cantilena",
      "source_author": "Ripley",
      "correction_note": "gate correction: verse 28, supported ('Purest Whiteness from the Blackest Shade'); the paragraph is the verse with no title named, source_text withdrawn"
+    },
+    {
+     "volume": "12",
+     "paragraph": 333,
+     "quote": "Four stages are distinguished ( fig. 114 ), characterized by the original colours mentioned in Heraclitus: melanosis (blackening), leukosis (whitening)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -14923,6 +15123,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-7, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "quote": "or “peacock’s tail” ( cauda pavonis ), lead to the one white colour that contains all colours",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -14949,6 +15162,18 @@
      "verified_date": "2026-07-28",
      "quote_repaired": "2026-07-28: elision exceeded 30-word bound; trimmed to strongest contiguous fragment; re-gated 2026-07-28 (SUPPORTED)",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27) — NOTE: audit predates the 2026-07-28 quote repair; not re-audited cross-vendor"
+    },
+    {
+     "volume": "12",
+     "paragraph": 331,
+     "quote": "The cauda pavonis , combination of all colours, symbolizing wholeness.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "note": "figure caption 111"
     }
    ],
    "relation_family": {
@@ -14957,6 +15182,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-5",
+    "date": "2026-11-12"
    }
   },
   {
@@ -75299,6 +75529,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-6, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 332,
+     "quote": "What he sees in matter, or thinks he can see, is chiefly the data of his own unconscious which he is projecting into it.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 345,
+     "quote": "he projected the unconscious into the darkness of matter in order to illuminate it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -75306,6 +75558,11 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-14"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-5",
+    "date": "2026-11-12"
    }
   },
   {
@@ -138835,6 +139092,19 @@
      "source": "Abraham Eleazar, Uraltes Chymisches Werck",
      "source_author": "Abraham Eleazar",
      "correction_note": "gate correction: the washing brings about the whitening, supported; Eleazar's text is named by author only in this paragraph (Uraltes Chymisches Werck is named at §591), source_text withdrawn, the free-text source kept"
+    },
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "quote": "From this the washing ( ablutio, baptisma ) either leads direct to the whitening ( albedo )",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -145745,6 +146015,1260 @@
    "relation_family": {
     "value": "symbolization",
     "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "potters-wheel",
+   "relation": "symbolizes",
+   "object": "circulatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 281,
+     "quote": "The potter’s wheel also symbolizes the recurrent theme of circulation.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "note": "the dream's theme of circulation, read through the alchemical circulatio"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-year",
+   "relation": "symbolizes",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 283,
+     "quote": "The year is a symbol of the original man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "four-functions",
+   "relation": "is-characterized-by",
+   "object": "four-colours",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 287,
+     "quote": "The four are generally characterized by the four colours of the rainbow.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-vertical",
+   "relation": "corresponds-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 291,
+     "quote": "The cause of the disturbance was an underestimation of the demands of the unconscious (the vertical)",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "house-of-the-gathering",
+   "relation": "corresponds-to",
+   "object": "square",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 295,
+     "quote": "The house probably corresponds to the square, which is a “gathering place”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "wholeness",
+   "relation": "requires",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 295,
+     "quote": "The production of wholeness, which is prevented by the “tax evasion,” naturally requires the “image of the woman,”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "religion",
+   "relation": "is-equated-with",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 296,
+     "quote": "According to it, religion is equated with wholeness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "correction_note": "gate correction: 'According to it' reports the dream's view; Jung's own adoption is one step on, medium",
+     "note": "the dream's view, as Jung reads it"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-children",
+   "relation": "plays-part-in",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 302,
+     "quote": "Note that children also play a part in the opus alchymicum",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "ludus-puerorum",
+   "relation": "points-to",
+   "object": "cabiri",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 302,
+     "quote": "It would thus point to a co-operation on the part of “infantile” or unconscious forces represented as Cabiri and hobgoblins",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-5",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "eagle",
+   "relation": "depicts",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 305,
+     "quote": "In the last resort all these symbols depict the consciousness-transcending fact we call the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-5",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "world-clock",
+   "relation": "is-analogous-to",
+   "object": "three-regimina",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 310,
+     "quote": "The only analogy I could adduce would be the three regimina mentioned in the Introduction",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "note": "analogy offered for the three rhythms; Jung says he cannot substantiate it"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "world-clock",
+   "relation": "is-analogous-to",
+   "object": "rebis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 311,
+     "quote": "our mandala aspires to the most complete union of opposites ... on the analogy of the alchemical hermaphrodite",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "world-clock",
+   "relation": "embodies",
+   "object": "space-time",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 312,
+     "quote": "a small-scale model or perhaps even a source of space-time, or at any rate an embodiment of it",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "note": "Jung says the interpretation lies beyond his powers of proof"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "thirty-two",
+   "relation": "is-attributed-to",
+   "object": "sapientia",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 313,
+     "quote": "the learned Jews attribute the number 32 to Wisdom",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Cornelius Agrippa, reporting the learned Jews",
+     "source_author": "Agrippa"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "wheel-of-birth",
+   "relation": "is-a",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 314,
+     "quote": "The horoscope ( fig. 100 ) is itself a mandala (a clock) with a dark centre",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "paradise",
+   "relation": "consists-of",
+   "object": "sphere",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 315,
+     "quote": "a vision of Paradise, which consists of seven large spheres each containing seven smaller spheres",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Guillaume de Digulleville, Pélerinage de l’âme, last canto",
+     "source_author": "other",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "disturbed-mandala",
+   "relation": "lacks",
+   "object": "blue",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 320,
+     "quote": "Why is blue missing? This colour was also missing in the “disturbed” mandala of our dreamer",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "is-pictured-as",
+   "object": "spider",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 325,
+     "quote": "the centre is (in other cases) often pictured as a spider in its web",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "is-characterized-by",
+   "object": "quaternity",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 327,
+     "quote": "Among the various characteristics of the centre the one that struck me from the beginning was the phenomenon of the quaternity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "joins-forces-with",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 328,
+     "quote": "the unconscious is thus shown its own secret reflection, in which it recognizes itself and so joins forces with the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "note": "where images of the goal have dogmatic validity"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "separatio",
+   "relation": "precedes",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "quote": "The nigredo or blackness ( fig. 115 ) is the initial state ... or else produced by the separation ( solutio, separatio, divisio, putrefactio ) of the elements",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mortificatio",
+   "relation": "follows",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "quote": "(called the coniugium, matrimonium, coniunctio, coitus ), followed by the death of the product of the union ( mortificatio, calcinatio, putrefactio )",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "silver",
+   "relation": "belongs-to",
+   "object": "albedo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "quote": "namely the albedo, tinctura alba, terra alba foliata, lapis albus , etc., highly prized ... It is the silver or moon condition",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rubedo",
+   "relation": "follows",
+   "object": "albedo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "quote": "The rubedo then follows direct from the albedo as the result of raising the heat of the fire to its highest intensity.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "citrinitas",
+   "relation": "precedes",
+   "object": "rubedo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "quote": "The transition to the rubedo is formed by the citrinitas",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "hierosgamos",
+   "relation": "belongs-to",
+   "object": "rubedo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 334,
+     "quote": "The red and the white are King and Queen, who may also celebrate their “chymical wedding” at this stage",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "panacea",
+   "relation": "is-goal-of",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 335,
+     "quote": "their conception of the goal: ... or again it is the panacea ( aurum potabile, elixir vitae )",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "is-comparable-with",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 335,
+     "quote": "a figure we can only compare with the Gnostic Anthropos, the divine original man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "aqua-permanens",
+   "relation": "is-identical-with",
+   "object": "fire",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 336,
+     "quote": "Although these two elements are antagonistic ... they are yet one and the same according to the testimony of the authors",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "aqua-permanens",
+   "relation": "is-extracted-from",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 336,
+     "quote": "the water is extracted from the stone or prima materia as its life-giving soul ( anima )",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "undergoes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 337,
+     "quote": "Grind the stone to a very fine powder ... and it will at once be dissolved into the philosophical water",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "VIII Exercitatio in Turbam",
+     "source_author": "other",
+     "source_text": "Exercitationes in Turbam",
+     "correction_note": "gate correction: the prescription is the anonymous VIII Exercitatio in Turbam; the quoted text is named, the author is not, so source_author is 'other'"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "maria-prophetissa",
+   "relation": "locates-secret-in",
+   "object": "the-vessel",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 338,
+     "quote": "Maria Prophetissa ( fig. 78 ) says that the whole secret lies in knowing about the Hermetic vessel.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Maria Prophetissa",
+     "source_author": "Maria Prophetissa"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-vessel",
+   "relation": "is-a",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 338,
+     "quote": "the vessel is more a mystical idea, a true symbol like all the central ideas of alchemy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-vessel",
+   "relation": "is",
+   "object": "aqua-permanens",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 338,
+     "quote": "Thus we hear that the vas is the water or aqua permanens",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "the alchemical authors as Jung summarizes them",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "calcinatio",
+   "relation": "precedes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Calcinatio 2. Solutio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "solutio",
+   "relation": "precedes",
+   "object": "separatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Solutio 3. Elementorum separatio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "separatio",
+   "relation": "precedes",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Elementorum separatio 4. Coniunctio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "precedes",
+   "object": "putrefactio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Coniunctio 5. Putrefactio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "putrefactio",
+   "relation": "precedes",
+   "object": "coagulatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Putrefactio 6. Coagulatio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "coagulatio",
+   "relation": "precedes",
+   "object": "cibatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Coagulatio 7. Cibatio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "cibatio",
+   "relation": "precedes",
+   "object": "sublimatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Cibatio 8. Sublimatio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sublimatio",
+   "relation": "precedes",
+   "object": "fermentatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Sublimatio 9. Fermentatio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "fermentatio",
+   "relation": "precedes",
+   "object": "exaltatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 340,
+     "quote": "Fermentatio 10. Exaltatio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Josephus Quercetanus (1576), sequence of twelve operations",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "sequence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "is-forerunner-of",
+   "object": "chemistry",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 341,
+     "quote": "As the forerunner of chemistry alchemy had a sufficient raison d’être",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "correspondentia",
+   "relation": "is-rationalization-of",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 346,
+     "quote": "this theory is more likely to be a rationalization of the experience of projection",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-opus",
+   "relation": "re-enacts",
+   "object": "creation-of-the-world",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 347,
+     "quote": "Let your eyes judge of it; for thus was the world created.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "treatise alleged to be translated from Ethiopian, ch. VIII, 'The Creation'",
+     "source_author": "other",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "visionary-experience",
+   "relation": "occurs-in",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 349,
+     "quote": "different names are given to the stone on account of the wonderful variety of figures that appear in the course of the work",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Theobald de Hoghelande",
+     "source_author": "Hoghelande",
+     "correction_note": "gate correction: Hoghelande's sentence says figures appear in the course of the work; reading them as visionary experience is Jung's at §350, one step, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-body",
+   "relation": "undergoes",
+   "object": "solutio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 349,
+     "quote": "when the body is dissolved",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Hoghelande, citing a fragment of a book ascribed to Moses",
+     "source_author": "Hoghelande"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "imagination",
+   "relation": "perceives",
+   "object": "visionary-experience",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 350,
+     "quote": "the eyes of the understanding [ intellectus ] and of the imagination perceive them [ percipiunt ] with true and truest vision",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
+     "source": "Novum lumen, quoted by Jung",
+     "source_author": "Sendivogius",
+     "source_text": "Novum lumen chemicum",
+     "correction_note": "gate correction: the Novum lumen says the eyes of the imagination perceive the hidden things with true vision; the object node is Jung's framing of such seeing, medium with a scope note",
+     "note": "the Novum lumen's hidden things, perceived 'with true and truest vision'"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-12"
    }
