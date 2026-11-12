@@ -1297,11 +1297,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw12-3-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §141-210",
+   "result": "CW 12 WINDOW 3: Psychology and Alchemy §141-210, the mandala dreams continued: the Tractatus aureus king and the Monogenes, dreams 11 to 22 of the series (the airplane and the croquet ball, the tram with the family, the treasure in the sea and the garden with the fountain, the chemist's special water and the Rubicon, the four on the river, the leftward circumambulation of the square and the gibbon to be reconstructed, the squaring of the circle and Khunrath's circular distillation, Thoth and the ape, the universal Catholic Church and the Dionysian mystery, the animals transformed into men, the war of two peoples, the boys in the cave, the transparent sphere, the American hotel with the eight-spoked wheel), Goethe's Cabiri and the seven and eight, rust and the viriditas, Maria Prophetissa and the gum. Run by hand in the mining chat on 2026-11-12 evening on Damian's instruction to run all remaining windows today; the third window of CW 12 in the second pass (state record b-cw12-3-pass2). Mined 50 candidates/51 refs (Opus-family miner subagent, blinded, model id stamped; eight attaches onto standing edges; the miner cut a first draft of 102 to 50 and left the dream texts and already-quoted paragraphs uncovered; 19 names entries; 3 cross-register flags; 4 stage candidates: the quintessence in the sublimatio and the distillatio, the quaternarius in the circulatio, the ternarius in the separatio; 5 dream-linkage candidates: the special water as aqua nostra, the shapeless life-mass as chaos and its circumambulatio, the circumambulatio and the meditatio, the fountain and garden as analogues of the lapis; stages_note recorded). Pre-check kept all 51 (quotation share of CW 12 after the window 5.81 percent against the 9 percent cap). Fable gate 44 TRUE / 6 CORRECTED / 1 FALSE: the FALSE is viriditas changes-into philosophic-gold (§207), a mint typed Operation that duplicates the standing node benedicta-viriditas, refused with its name entry and left for the sitting as an edge of the standing node; four confidence demotions for one-step readings (§165 the quintessence as product of the sublimatio and the distillatio, §204 Goethe's thinking as the fourth function, §175 the ego as a planet round the sun) and two scope notes (§173 Christ Pantokrator, §203 the instinctual side of the unconscious). Gemini cross-vendor 47 PASS / 3 FINDING on 50 post-gate refs, all on steps already set to medium, overruled with audit notes. Names applied to 18 entries on 16 nodes; cross_register set on 3 edges; eighteen mints: non-ego, mirror, croquet-ball, garden, fountain, special-water, the-left, square, thoth, cynocephalus, sphere, tortoise, cabiri, rust, imperfection, maria-prophetissa, gum, purusha (the viriditas mint refused). Sources written as other: Paracelsus's De vita longa (added to the controlled list after this window), the Egyptian tradition of the Book of the Dead and an unnamed heretical interpretation. +41 edges, 9 refs attached to standing or this window's edges, +50 refs, +18 nodes. Graph 1116/4618/6228; CW 12 now 380 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 41 edges under v0.7.2: agreement 31/41 (76 percent), 31 assigned, 10 queued, 0 no-family, 0 text-undecided; queue 801; no bare unclassified rows from the Gemini arm. strain: 0 no-family, 0 text-undecided of 41 swept; new homeless strings: none. FAMILY GAP FOR THE SITTING: the four undergoes edges split instrumentality or separation against psychic-effect (the undergoes seed again), refers-to split archetypal-identity against symbolization, belongs-to outside a stage (unknown-woman belongs-to non-ego) split classification against composition, conceived-as and designates split doctrinal-attribution against the content families, yields split instrumentality against generation, regresses-to split telos against no family. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 51 refs judged against the full paragraphs; weekly Fable 58 percent after the sweep, 5-hour meter 75 percent, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1116/4618/6228, distinct paragraphs 3770, claim mix 4923/969/336. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a62b1ea78f027e29e, 38 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 21 assistant turns after the miner finished at 2026-11-12T20:02:34.867Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW12-DUE: window 3 (§141-210)",
- "nodes": 1098,
- "edges": 4577,
- "refs": 6178,
+ "next": "CW12-DUE: window 4 (§211-280)",
+ "nodes": 1116,
+ "edges": 4618,
+ "refs": 6228,
  "as_of": "2026-11-12"
 }

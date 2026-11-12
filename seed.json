@@ -137,13 +137,24 @@
   {
    "id": "coniunctio",
    "type": "Operation",
-   "label": "Coniunctio"
+   "label": "Coniunctio",
+   "aliases": [
+    "matrimonium alchymicum"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 209,
+     "batch": "b-cw12-3"
+    }
+   ]
   },
   {
    "id": "lapis",
    "type": "Symbol",
    "label": "Lapis philosophorum",
    "aliases": [
+    "aenigma regis",
     "cervus fugitivus",
     "cibus immortalis",
     "lapis angularis"
@@ -173,6 +184,11 @@
      "volume": "12",
      "paragraph": 41,
      "batch": "b-cw12-1"
+    },
+    {
+     "volume": "12",
+     "paragraph": 142,
+     "batch": "b-cw12-3"
     }
    ],
    "latin": "lapis Philosophorum"
@@ -182,6 +198,7 @@
    "type": "Symbol",
    "label": "Uroboros",
    "aliases": [
+    "Uroboros",
     "uroboros"
    ],
    "name_refs": [
@@ -189,6 +206,11 @@
      "volume": "14",
      "paragraph": 718,
      "batch": "b-cw14-11"
+    },
+    {
+     "volume": "12",
+     "paragraph": 165,
+     "batch": "b-cw12-3"
     }
    ]
   },
@@ -232,8 +254,10 @@
     "Kyllenios",
     "Mercurius duplex",
     "Mercurius non vulgi",
+    "cervus fugitivus",
     "mercurial serpent",
     "quicksilver",
+    "servus",
     "spirit Mercurius",
     "spiritus mercurialis"
    ],
@@ -267,8 +291,19 @@
      "volume": "12",
      "paragraph": 84,
      "batch": "b-cw12-2"
+    },
+    {
+     "volume": "12",
+     "paragraph": 172,
+     "batch": "b-cw12-3"
+    },
+    {
+     "volume": "12",
+     "paragraph": 187,
+     "batch": "b-cw12-3"
     }
-   ]
+   ],
+   "latin": "argentum vivum"
   },
   {
    "id": "prima-materia",
@@ -981,6 +1016,7 @@
    "type": "Figure",
    "label": "The Devil / Satan",
    "aliases": [
+    "ape of God",
     "four-horned serpent"
    ],
    "name_refs": [
@@ -988,6 +1024,11 @@
      "volume": "14",
      "paragraph": 238,
      "batch": "b-cw14-4"
+    },
+    {
+     "volume": "12",
+     "paragraph": 181,
+     "batch": "b-cw12-3"
     }
    ]
   },
@@ -1214,7 +1255,8 @@
    "label": "Anima Mundi",
    "aliases": [
     "World-Soul",
-    "anima media natura"
+    "anima media natura",
+    "world-soul"
    ],
    "name_refs": [
     {
@@ -1231,6 +1273,11 @@
      "volume": "14",
      "paragraph": 766,
      "batch": "b-cw14-11"
+    },
+    {
+     "volume": "12",
+     "paragraph": 172,
+     "batch": "b-cw12-3"
     }
    ],
    "latin": "anima mundi"
@@ -2561,7 +2608,20 @@
      "volume": "14",
      "paragraph": 718,
      "batch": "b-cw14-11"
+    },
+    {
+     "volume": "12",
+     "paragraph": 185,
+     "batch": "b-cw12-3"
+    },
+    {
+     "volume": "12",
+     "paragraph": 199,
+     "batch": "b-cw12-3"
     }
+   ],
+   "aliases": [
+    "massa"
    ]
   },
   {
@@ -3338,7 +3398,17 @@
   {
    "id": "shiva",
    "label": "Shiva (the One Existent, Shiva-bindu)",
-   "type": "Figure"
+   "type": "Figure",
+   "aliases": [
+    "Ishvara"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 199,
+     "batch": "b-cw12-3"
+    }
+   ]
   },
   {
    "id": "shakti",
@@ -3377,6 +3447,11 @@
      "volume": "12",
      "paragraph": 139,
      "batch": "b-cw12-2"
+    },
+    {
+     "volume": "12",
+     "paragraph": 192,
+     "batch": "b-cw12-3"
     }
    ]
   },
@@ -7237,7 +7312,15 @@
      "volume": "12",
      "paragraph": 42,
      "batch": "b-cw12-1"
+    },
+    {
+     "volume": "12",
+     "paragraph": 178,
+     "batch": "b-cw12-3"
     }
+   ],
+   "aliases": [
+    "nekyia"
    ]
   },
   {
@@ -7350,6 +7433,157 @@
      "batch": "b-cw12-2"
     }
    ]
+  },
+  {
+   "id": "non-ego",
+   "label": "Non-ego",
+   "type": "Concept"
+  },
+  {
+   "id": "mirror",
+   "label": "Mirror",
+   "type": "Symbol"
+  },
+  {
+   "id": "croquet-ball",
+   "label": "Croquet ball",
+   "type": "Symbol"
+  },
+  {
+   "id": "garden",
+   "label": "Garden",
+   "type": "Symbol",
+   "aliases": [
+    "rose garden of the philosophers"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 155,
+     "batch": "b-cw12-3"
+    }
+   ]
+  },
+  {
+   "id": "fountain",
+   "label": "Fountain",
+   "type": "Symbol",
+   "aliases": [
+    "source of life"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 157,
+     "batch": "b-cw12-3"
+    }
+   ]
+  },
+  {
+   "id": "special-water",
+   "label": "Special water",
+   "type": "Motif"
+  },
+  {
+   "id": "the-left",
+   "label": "The left (leftward movement)",
+   "type": "Symbol"
+  },
+  {
+   "id": "square",
+   "label": "Square",
+   "type": "Symbol"
+  },
+  {
+   "id": "thoth",
+   "label": "Thoth",
+   "type": "Figure"
+  },
+  {
+   "id": "cynocephalus",
+   "label": "Cynocephalus",
+   "type": "Symbol",
+   "aliases": [
+    "dog-headed baboon"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 175,
+     "batch": "b-cw12-3"
+    }
+   ]
+  },
+  {
+   "id": "sphere",
+   "label": "Sphere",
+   "type": "Symbol"
+  },
+  {
+   "id": "tortoise",
+   "label": "Tortoise",
+   "type": "Symbol"
+  },
+  {
+   "id": "cabiri",
+   "label": "Cabiri",
+   "type": "Figure",
+   "aliases": [
+    "Dactyls"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 203,
+     "batch": "b-cw12-3"
+    }
+   ]
+  },
+  {
+   "id": "rust",
+   "label": "Rust",
+   "type": "Substance",
+   "aliases": [
+    "leprosy"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 207,
+     "batch": "b-cw12-3"
+    }
+   ]
+  },
+  {
+   "id": "imperfection",
+   "label": "Imperfection",
+   "type": "Concept"
+  },
+  {
+   "id": "maria-prophetissa",
+   "label": "Maria Prophetissa",
+   "type": "Figure",
+   "aliases": [
+    "the Copt",
+    "the Jewess"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 209,
+     "batch": "b-cw12-3"
+    }
+   ]
+  },
+  {
+   "id": "gum",
+   "label": "Gum",
+   "type": "Substance"
+  },
+  {
+   "id": "purusha",
+   "label": "Purusha",
+   "type": "Figure"
   }
  ],
  "edges": [
@@ -28090,6 +28324,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-10, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 172,
+     "quote": "argentum vivum or Mercurius. Chemically this term denotes quicksilver, but philosophically it means the spiritus vitae , or even the world-soul",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "alchemical usage",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -48502,6 +48749,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 197,
+     "quote": "The cave represents the darkness and seclusion of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -53342,6 +53600,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-8, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 195,
+     "quote": "The conscious mind is defending its position and trying to suppress the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -61686,6 +61955,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-18",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw8-4, PASS, 2026-08-18)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 153,
+     "quote": "he is borne along on intuitions emanating from the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -75287,6 +75567,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-19",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-4, PASS, 2026-10-19)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 192,
+     "quote": "the interpretation of the Holy Ghost as Sophia being considered heretical",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "a heretical interpretation",
+     "source_author": "other"
     }
    ],
    "relation_family": {
@@ -128734,6 +129027,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 172,
+     "quote": "alchemy identifies its transforming substance with the argentum vivum or Mercurius",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "alchemical usage",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -141598,6 +141904,20 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)",
      "source": "the alchemists' maxim, quoted by Jung",
      "source_author": "the alchemists"
+    },
+    {
+     "volume": "12",
+     "paragraph": 207,
+     "quote": "Our gold is not the common gold.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "Rosarium philosophorum",
+     "source_author": "the alchemists",
+     "source_text": "Rosarium philosophorum"
     }
    ],
    "relation_family": {
@@ -142788,6 +143108,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 175,
+     "quote": "his ego ... must presumably be satisfied with the position of a satellite, or at least of a planet revolving round the sun",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence makes the ego a satellite or planet revolving round the sun; the centre is one step on (the gibbon's place), medium"
     }
    ],
    "relation_family": {
@@ -142997,6 +143329,1059 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "parallels",
+   "object": "monogenes",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 141,
+     "quote": "The following passage from chapter 4 of the “Tractatus aureus” provides an interesting parallel to the Monogenes ... But the king reigns",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "refers-to",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 142,
+     "quote": "The “king” refers to the lapis .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "unknown-woman",
+   "relation": "belongs-to",
+   "object": "non-ego",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 148,
+     "quote": "Doctor, pilot, and unknown woman are characterized as belonging to the non-ego by the fact that all three of them are strangers.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "superior-function",
+   "relation": "carries",
+   "object": "the-ego",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 148,
+     "quote": "the dreamer has retained possession only of the differentiated function, which carries the ego",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "note": "the differentiated function, i.e. the superior function"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mirror",
+   "relation": "refers-to",
+   "object": "the-intellect",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 149,
+     "quote": "The “mirror” as an “indispensable instrument of navigation” doubtless refers to the intellect",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "croquet-ball",
+   "relation": "symbolizes",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 150,
+     "quote": "The croquet ball is connected with the “round” motif and is therefore a symbol of wholeness, that is, of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "adech",
+   "relation": "designates",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 150,
+     "quote": "Paracelsus describes the “four” as Scaiolae , but the self as Adech",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "Paracelsus, De vita longa",
+     "source_author": "Paracelsus",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "treasure-hard-to-attain",
+   "relation": "is",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 155,
+     "quote": "the treasure in the sea, the companion, and the garden with the fountain are all one and the same thing: the self",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "note": "Jung marks this as conjecture"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "garden",
+   "relation": "is-a",
+   "object": "temenos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 155,
+     "quote": "For the garden is another temenos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "fountain",
+   "relation": "represents",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 155,
+     "quote": "The centre and the circle, here represented by fountain and garden",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "is-analogue-of",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 155,
+     "quote": "The centre and the circle ... are analogues of the lapis , which is among other things a living being",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-3",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "aqua-nostra",
+   "relation": "conceived-as",
+   "object": "fire",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 157,
+     "quote": "the alchemical philosophers conceive their aqua nostra to be ignis (fire)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "the alchemical philosophers",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "special-water",
+   "relation": "is",
+   "object": "aqua-nostra",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 159,
+     "quote": "The “special water” is literally the aqua nostra non vulgi.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-father",
+   "relation": "appears-as",
+   "object": "wise-old-man",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 159,
+     "quote": "he appears as the archetypal father figure, the “wise old man.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "quintessence",
+   "relation": "undergoes",
+   "object": "sublimatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 165,
+     "quote": "The production of one from four is the result of a process of distillation and sublimation",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, FINDING-adjudicated, 2026-11-12)",
+     "source": "alchemical procedure",
+     "source_author": "the alchemists",
+     "correction_note": "gate correction: the quintessence is the product of the distillation and sublimation ('the production of one from four'); the distillate undergoes them, the product is one step on, medium",
+     "audit_note": "cross-vendor (Gemini) objected that the quintessence is the product of the sublimation; the gate had set this reference to medium on the same step"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "quintessence",
+   "relation": "undergoes",
+   "object": "distillatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 165,
+     "quote": "a process of distillation and sublimation ... The product is generally called the “quintessence,”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, FINDING-adjudicated, 2026-11-12)",
+     "source": "alchemical procedure",
+     "source_author": "the alchemists",
+     "correction_note": "gate correction: as for the sublimatio: the quintessence is the product of the circular distillation, one step from the sentence, medium",
+     "audit_note": "cross-vendor (Gemini) objected that the quintessence is the product of the distillation; the gate had set this reference to medium on the same step"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "quaternity",
+   "relation": "undergoes",
+   "object": "circulatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 165,
+     "quote": "Through Circumrotation or a Circular Philosophical revolving of the Quaternarius, it is brought back to the highest and purest Simplicity of the plusquamperfect Catholic Monad",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "Heinrich Khunrath, on the circular distillation",
+     "source_author": "Khunrath",
+     "note": "the Quaternarius"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "ternarius",
+   "relation": "undergoes",
+   "object": "separatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 165,
+     "quote": "The spirit (or spirit and soul) is the ternarius or number three which must first be separated from its body",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "Khunrath, paraphrased",
+     "source_author": "Khunrath"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-left",
+   "relation": "represents",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 166,
+     "quote": "The left, the “sinister” side, is the unconscious side.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "squaring-of-the-circle",
+   "relation": "leads-to",
+   "object": "non-ego",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 167,
+     "quote": "It is one of those paths to the centre of the non-ego which were also trodden by the medieval investigators when producing the lapis .",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-3",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "circle",
+   "relation": "yields",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 167,
+     "quote": "Make a round circle and you will have the philosophers’ stone",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "Rosarium philosophorum",
+     "source_author": "the alchemists",
+     "source_text": "Rosarium philosophorum"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "square",
+   "relation": "corresponds-to",
+   "object": "temenos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 166,
+     "quote": "The square also conveys the idea of a house or temple, or of an inner walled-in space",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, FINDING-adjudicated, 2026-11-12)",
+     "audit_note": "cross-vendor (Gemini) objected that §166 says 'an inner walled-in space' and names the temenos only at §170; the reference stands at medium as proposed, and the §170 reference of the same edge names the temenos"
+    },
+    {
+     "volume": "12",
+     "paragraph": 170,
+     "quote": "The square corresponds to the temenos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "is-image-of",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 173,
+     "quote": "the Gnostic quadripartite original man 50 ( fig. 64 ) as well as Christ Pantokrator is an imago lapidis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "correction_note": "gate correction: supported ('Christ Pantokrator is an imago lapidis'); the sentence's subject is Christ Pantokrator, noted",
+     "note": "Christ Pantokrator, beside the Gnostic quadripartite original man"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "thoth",
+   "relation": "represented-as",
+   "object": "the-ape",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 173,
+     "quote": "The attribute of Thoth was the baboon, or again he was represented outright as an ape.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "Egyptian tradition, Book of the Dead",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "cynocephalus",
+   "relation": "symbolizes",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 175,
+     "quote": "its godlike affinities make it an equally appropriate symbol for that part of the unconscious which transcends the conscious level",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "note": "the part of the unconscious that transcends consciousness"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-left",
+   "relation": "regresses-to",
+   "object": "dionysos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 178,
+     "quote": "The movement to the left is thus confirmed as a withdrawal from the modern world of ideas and a regression to pre-Christian Dionysos worship",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "regression",
+   "relation": "amounts-to",
+   "object": "descensus-ad-inferos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 178,
+     "quote": "Hence it is not a relapse but a kind of systematic descent ad inferos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "note": "this regressive development"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "seeks-to-restore",
+   "object": "dionysos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 181,
+     "quote": "the unconscious has no such blasphemous intentions; it is only trying to restore the lost Dionysos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "shapeless-life-mass",
+   "relation": "recalls",
+   "object": "chaos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 185,
+     "quote": "The “shapeless life-mass” immediately recalls the ideas of the alchemical “chaos,”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "shapeless-life-mass",
+   "relation": "requires",
+   "object": "circumambulatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 186,
+     "quote": "But if the life-mass is to be transformed a circumambulatio is necessary",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "circumambulatio",
+   "relation": "parallels",
+   "object": "meditatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 187,
+     "quote": "attention on the centre ... clear parallels in the opus alchymicum: the need to concentrate on the work and to meditate upon it",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "appears-as",
+   "object": "stag",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 187,
+     "quote": "Mercurius is evasive and is labelled servus (servant) or cervus fugitivus (fugitive stag).",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "alchemical usage",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "corresponds-to",
+   "object": "inferior-function",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 192,
+     "quote": "In the more harmless psychological version he is merely the inferior function.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "note": "the devil as fourth person"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "sphere",
+   "relation": "embodies",
+   "object": "wholeness",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 199,
+     "quote": "The sphere is a whole that embraces all its contents",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "tortoise",
+   "relation": "symbolizes",
+   "object": "instinct",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 203,
+     "quote": "a tortoise 71 ( fig. 76 ), which, primitive and cold-blooded like the snake, symbolizes the instinctual side of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "correction_note": "gate correction: supported; the sentence's object is the instinctual side of the unconscious, noted",
+     "note": "the instinctual side of the unconscious"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "inferior-function",
+   "relation": "takes-form-of",
+   "object": "cabiri",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 204,
+     "quote": "Because of its contamination with the unconscious it takes on the grotesque form of the Cabiri",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence is about thinking as Goethe's fourth function, as the note says; the general node is one step on, medium",
+     "note": "thinking as Goethe's fourth function"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "rust",
+   "relation": "is",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 207,
+     "quote": "In the alchemical view rust, like verdigris, is the metal’s sickness. But at the same time this leprosy is the vera prima materia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "alchemical view",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "wholeness",
+   "relation": "requires",
+   "object": "imperfection",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 208,
+     "quote": "a kind of alchemical quip, which at bottom only says that there is no light without shadow and no psychic wholeness without imperfection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-3",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "axiom-of-maria",
+   "relation": "attributed-to",
+   "object": "maria-prophetissa",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 209,
+     "quote": "In alchemical literature this prophetess is taken to be Maria Prophetissa",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "alchemical literature on the texts ascribed to Christianos",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "gum",
+   "relation": "designates",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 209,
+     "quote": "it is used here as a secret name for the transforming substance, on account of its adhesive quality",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
+     "source": "the treatise of Maria, 'Marry gum with gum'",
+     "source_author": "Maria Prophetissa"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "anthropos",
+   "relation": "parallels",
+   "object": "purusha",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 209,
+     "quote": "Anthropos of Gnosticism ... whose parallel in India is purusha",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
