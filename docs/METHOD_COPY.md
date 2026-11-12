@@ -109,7 +109,7 @@ records give both counts, {{all_proposed}} proposed citations became
 One person, the author, rules on disagreements, decides releases and answers
 for everything the site publishes.
 
-- **Gold set.** {{human_chips}} claims carry a *human-validated* mark in the
+- **Validated by a person.** {{human_chips}} claims carry a *human-validated* mark in the
   [ledger](/ledger): a person read the cited paragraph. The rest carry the
   amber dot: machine-verified without human validation.
 - **Adjudication.** Two models sort each relation into one of {{families}}
@@ -161,6 +161,7 @@ What the instruments do not cover:
 | Known limit | What would close it, or what offsets it |
 |---|---|
 | One human reviewer; no second annotator yet | Independent second annotation with agreement statistics |
+| Nothing measures recall: every check tests what entered the map, and none estimates what Jung asserts that the map lacks | A sampled audit of recall, paragraph by paragraph |
 | A class of identity drift (two names for one thing entering as two things) is invisible to the current audit | No instrument yet |
 | English translation only (Hull) | German cross-check against the *Gesammelte Werke* |
 | Claims are checked at paragraph granularity; fidelity to Jung's movement of thought across an essay or volume is not checked | Partly offset: where Jung qualifies a claim, the map records the qualifying claim too. A reading of the essay or volume is still needed |

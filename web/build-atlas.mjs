@@ -3295,7 +3295,7 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 <h1>Evidence</h1>
 <p class="sub">The records behind the atlas and how they are checked.</p></div>
 ${EVIDENCE_GROUPS.map(([group, cards]) => `<section class="land-tasks">
-<p class="eyebrow">${esc(group)}</p>
+<p class="eyebrow">${group === 'How the checks work' ? `<a href="/method">${esc(group)}</a>` : esc(group)}</p>
 <div class="land-grid">
 ${cards.map(([href, t, d, k, links]) => links
   ? `<div class="land-card"><span class="land-card-t">${esc(t)}</span><span class="land-card-d">${esc(d)}</span><span class="land-starts">${links.join('<br>')}</span>${href ? `<a class="land-card-k land-card-all" href="${href}">${esc(k)}</a>` : ''}</div>`
