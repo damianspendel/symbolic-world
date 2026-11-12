@@ -2594,6 +2594,19 @@ if (DECL) {
     QUERY_EXAMPLES_HTML = `<p class="examples">${ns0(`examples: ${QUERY_EXAMPLE_LIST.map(([label, f]) =>
       `<a href="/query?${Object.entries(f).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&amp;')}">${esc(label)}</a>`).join(' · ')}`)}</p>\n`
   }
+  // v2.4.0 (Damian, 11 Nov: subject, object and relation as you type, and a
+  // dropdown for provenance). Relation suggests every verbatim and normalized
+  // string in the graph; provenance offers the kinds of record the graph
+  // holds, each matched as the start of relation_family.by, with its count.
+  const QUERY_RELATIONS = [...new Set([...seed.edges.map(e => e.relation),
+    ...seed.edges.map(e => (e.relation_normalized || {}).relation).filter(Boolean)])].sort()
+  // each label's count is what the filter returns for it (the filter matches
+  // part of the record, so a kind can also catch a record that mentions it)
+  const provKinds = new Set(seed.edges.map(e => String((e.relation_family || {}).by || '').split(' (')[0]).filter(Boolean))
+  const pubForProv = JSON.parse(readFileSync(here('./public/graph.json'), 'utf8'))
+  const QUERY_PROVENANCE = [...provKinds].map(k => [k, querySelect(pubForProv, DECL, { closure: false, provenance: k }).length])
+    .sort((a, b) => b[1] - a[1])
+  derived(...QUERY_PROVENANCE.map(([, n]) => n))
   const queryBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>Query the graph</h1>
 <p class="sub">Filter the verified claims by volume, family, voice and the words in their quotes.</p></div>
@@ -2605,9 +2618,10 @@ ${QUERY_EXAMPLES_HTML}
   <div class="fld"><label for="f-object">object</label><input id="f-object" placeholder="any" list="concept-list" autocomplete="off"><span class="hint">same matching rule as subject</span></div>
   <div class="fld"><label for="f-volume">volume</label><select id="f-volume"></select><span class="hint">a reference cites this CW volume</span></div>
   <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">${QUERY_EXAMPLES ? 'whose voice the quote is in' : 'read off the reference, not the edge'}</span></div>
-  <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">${QUERY_EXAMPLES ? 'part of the record of the family’s assignment' : 'substring of relation_family.by'}</span></div>
-  <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>${EMIT_QUOTE_SEARCH ? `
+  <div class="fld"><label for="f-provenance">provenance</label><select id="f-provenance"><option value="">any</option>${QUERY_PROVENANCE.map(([k, n]) => `<option value="${esc(k)}">${esc(k)} (${n})</option>`).join('')}</select><span class="hint">${QUERY_EXAMPLES ? 'part of the record of the family’s assignment' : 'substring of relation_family.by'}</span></div>
+  <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized" list="relation-list" autocomplete="off"><span class="hint" id="h-normalized"></span></div>${EMIT_QUOTE_SEARCH ? `
   <datalist id="concept-list"></datalist>
+  <datalist id="relation-list">${QUERY_RELATIONS.map(r => `<option value="${esc(r)}">`).join('')}</datalist>
   <div class="fld"><label for="f-quote">quote contains</label><input id="f-quote" placeholder="words, or a &quot;phrase&quot;"><span class="hint">words inside the graph's own verbatim quotes, 25 words at most. This does not search the corpus.</span></div>` : ''}
 </div>
 
