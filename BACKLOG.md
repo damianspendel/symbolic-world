@@ -669,11 +669,14 @@ nothing is to be built. Figures are as of 2026-10-22.
 
 ## v2.4.0 scope (added 2026-11-10 as v2.3.0 scope; relabelled 2026-11-11)
 
-Damian's scope, set on 2026-11-10. On 2026-11-11 he made that day's build v2.3.0 ("I think this becomes 2.3.0 and we bump friday to 2.4.0") and moved the rest to v2.4.0 on Friday 13 November, with the /query autocomplete added ("/query autocomplete is Friday please"). The data through CW 6 and the RDF export shipped in v2.3.0. The trilogy pass and his paused rulings go to a later release. v2.4.0's data stays at v2.3.0's seed unless Damian says otherwise.
+Damian's scope, set on 2026-11-10. On 2026-11-11 he made that day's build v2.3.0 ("I think this becomes 2.3.0 and we bump friday to 2.4.0") and moved the rest to v2.4.0 on Friday 13 November, with the /query autocomplete added ("/query autocomplete is Friday please"). The data through CW 6 and the RDF export shipped in v2.3.0.
 
-- The data through CW 6.
-- The RDF export, with the vocabulary and the proposer attribution (section below).
-- The work pages, behind `EMIT_WORK_PAGES` and his localhost review (section "Work pages").
+On 12 November Damian reset the focus: "descope the works pages from this release. strike the two items now. Add the animation from the brainstorm chat. make a note that /opus will replace /concordance.... tomorrow needs to be primarily focussed on the alchemical update, after the mining that should complete tonight." So v2.4.0 is first of all the alchemical update: the trilogy re-mine's data, merged once tonight's mining completes, replaces the earlier rule that v2.4.0's data stays at v2.3.0's seed. The items below follow it.
+
+- The alchemical update: the trilogy re-mine's data (CW 12, 13 and 14), merged into the release branch when the mining chat reports the pass complete, then rebuilt, gated and reviewed like any data release.
+- The alchemical journey from the brainstorm chat, at `/opus`: one scrolling page through the ten woodcuts of the *Rosarium philosophorum* in the order Jung reads them in CW 16, each with two or three verified claims, the background colour changing only where Jung names a colour stage, ending in a closing panel that links to the rubedo page. The full concept, the picture-to-paragraph table and the colour table are in the brainstorm chat's note `alchemical-journey-brainstorm.md` in the summary chat's notes folder. Before it ships: Damian approves the colour table (and the white hold in picture 10); the three quotes outside the graph (CW 16 §480, CW 16 §484, CW 12 §334) pass the exact-match, length and Fable check; the ten woodcut scans come from a holder that releases them, with the library credited.
+- `/opus` replaces `/concordance` (Damian, 2026-11-12). Today the concordance is the atlas view `/atlas#/concordance`, linked from the menu and the landing card. When `/opus` ships, the menu entry and the landing card point at it, and Damian decides the concordance view's fate with the redesign items below.
+
 - The Bookshop.org links. These wait for his affiliate ID, his edition choices and his disclosure wording.
 - The glossary pass, with Vale and the declauding skill.
 - The SSH Open Marketplace entry, after the DOI.
@@ -745,7 +748,7 @@ Damian's decision: "add to backlog for 2.3.0 to run vale over the glossary entri
 
 ## Work pages (added 2026-11-10)
 
-Damian's decision on item A5 of spec-reader-v1: "backlog work pages, until we've mined CW 6 and before the trilogy". Backlog entry only, nothing built.
+Damian's decision on item A5 of spec-reader-v1: "backlog work pages, until we've mined CW 6 and before the trilogy". Backlog entry only, nothing built. Descoped from v2.4.0 on 2026-11-12 ("descope the works pages from this release"); no release named yet.
 
 - One page per work at `/work-<id>`: title, volume, years written and revised, coverage as "claims from N of M paragraphs", the most-cited concepts in the work's paragraph range, and the claims in paragraph order. An index at `/works`. Each concept page gains an "appears in" line.
 - The data exists: `works.json` at the repo root (commit 9da0c608, 73 works over the eleven extracted volumes, with a tiling test).
@@ -766,6 +769,8 @@ Damian's words: "apparently Fable 5.2 has better prose. add to the backlog, for 
 - The review proposes edits only. Damian approves each change, and the approved set comes with a "Changes in this pass" list.
 
 ## Concordance redesign, for the build after the trilogy re-mine (added 2026-11-10)
+
+Damian, 2026-11-12: "/opus will replace /concordance". Read the items below against the `/opus` page in the v2.4.0 scope: A (a static `/concordance` page) is overtaken by `/opus`, and B to F become candidates for `/opus` and the concept pages.
 
 Damian's decision: "put the link to the existing stuff back tomorrow. Add the rest as backlog items for the build that comes after alchemical remining." The interim build of 11 November returns the concordance menu link only. The items below come from a read-only Fable 5.2 review of 10 November (`concordance-review-2026-11-10.md` in the summary chat's notes folder). The summary chat checked five of its figures against `seed.json` and `web/src/atlas.json`. The grades are the review's.
 
