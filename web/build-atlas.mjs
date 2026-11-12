@@ -3514,6 +3514,30 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
       close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
     }
+    // the trilogy picks (Damian, 2026-11-12): claims from the CW 14 second
+    // pass, shown on the picture they bear on and marked by their CW 14 cite.
+    // Each replaces the lowest-ranked of the picture's three claims under the
+    // page's own order; the colour cite is never replaced. The closing panel
+    // carries its own, and the yellow before the red rests on CW 12 §271.
+    const OPUS_PICKS = {
+      2: [['luna|belongs-to|albedo', '14', 181], ['sol|belongs-to|rubedo', '14', 181]],
+      5: [['coniunctio|is-a|hierosgamos', '14', 120]],
+      6: [['sol-niger|belongs-to|nigredo', '14', 113]],
+      7: [['cauda-pavonis|precedes|rubedo', '14', 388]],
+      8: [['dew|belongs-to|albedo', '14', 155]],
+      9: [['unio-mentalis|precedes|reunion-with-the-body', '14', 677]],
+      10: [['rebis|symbolizes|union-of-opposites', '14', 11]],
+      close: [['coniunctio|belongs-to|rubedo', '14', 307]]
+    }
+    const OPUS_YELLOW = ['citrinitas|coincides-with|rubedo', '12', 271]
+    const edgeByKey = new Map(atlasEdges.map(e => [e.key, e]))
+    const findPick = ([key, vol, para], hard = true) => {
+      const e = edgeByKey.get(key)
+      const r = e && e.refs.find(x => String(x.volume) === vol && Number(x.paragraph) === para && x.quote)
+      if (!r && hard) { console.error(`OPUS PAGE: the pick ${key} at CW ${vol} §${para} is not in the graph — refusing to cite a claim that is not there.`); process.exit(1) }
+      return r ? [e, r] : null
+    }
+    const yellow = findPick(OPUS_YELLOW, false)
     // the woodcuts: Jung's own copy of the 1550 Rosarium, Stiftung der Werke von
     // C.G. Jung, Zürich, digitised on e-rara.ch (doi:10.3931/e-rara-10570, Public
     // Domain Mark); one crop per picture, paper tone kept (Damian, 2026-11-12)
@@ -3529,8 +3553,12 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       const forced = st && st.edge ? pool.filter(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para) : []
       const rank = (x) => [x[1].claim_type === 'jung-asserts' ? 0 : 1, Number(x[1].paragraph)]
       const rest = pool.filter(x => !forced.includes(x)).sort((x, y) => { const a1 = rank(x), b1 = rank(y); return a1[0] - b1[0] || a1[1] - b1[1] })
-      const chosen = [], seen = new Set()
+      const picks = (OPUS_PICKS[n] || []).map(x => findPick(x))
+      const chosen = [], seen = new Set(picks.map(x => x[0].key))
       for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === 3) break }
+      const dropped = chosen.splice(Math.max(forced.length ? 1 : 0, 3 - picks.length))
+      chosen.push(...picks)
+      for (const [e, r] of dropped) console.log(`opus picks: picture ${n} drops ${e.key} (CW ${r.volume} §${r.paragraph})`)
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
       const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.verdure.quote)}&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
 <blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.shimmer.quote)}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
@@ -3560,10 +3588,14 @@ ${shimmer}
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
 <div class="opus-pin">
 ${sections}
-<section class="opus-close opus-seg" id="the-red" data-stage="red">
+<section class="opus-close opus-seg" id="the-red" data-stage="red"${yellow ? ' data-yellow="1"' : ''}>
 <div class="opus-text">
 <p class="eyebrow">After the white</p>
+${yellow ? `<p class="opus-stage">The white turns yellow, then red. CW 12 §271.</p>` : ''}
 <blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
+<ul class="opus-claims">
+${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map(([e, r]) => claimLine(e, r)).join('\n')}
+</ul>
 <p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
 </div>
 </section>
@@ -3619,7 +3651,7 @@ var segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.queryS
 document.documentElement.classList.add('opus-pinned');
 function top(){var h=head?head.offsetHeight:0;document.documentElement.style.setProperty('--opus-top',h+'px');return h}
 function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
-var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],cur=-1,gr=g.querySelector('.opus-green'),pk=g.querySelector('.opus-peacock'),pl=g.querySelector('.opus-peacock-label');
+var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],YELLOW=[216,170,52],cur=-1,gr=g.querySelector('.opus-green'),pk=g.querySelector('.opus-peacock'),pl=g.querySelector('.opus-peacock-label');
 function ramp(t,a,b){return Math.min(1,Math.max(0,(t-a)/(b-a)))}
 function colours(on,t){var gn=0,po=0,u=0;if(on){gn=ramp(t,.1,.42)*(1-ramp(t,.62,.9));u=ramp(t,.48,.94);po=Math.sin(Math.PI*u)}
 if(gr)gr.style.opacity=gn.toFixed(3);if(pk){pk.style.opacity=(po*.6).toFixed(3);pk.style.transform='translateX('+(-90+180*u).toFixed(1)+'%)'}if(pl)pl.style.opacity=po.toFixed(3)}
@@ -3630,7 +3662,7 @@ var st=i<0?'none':segs[i].getAttribute('data-stage'),bg='transparent',cls='';
 if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
 else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
 else if(st==='fade'){bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
-else if(st==='red'){var t2=Math.min(1,t*1.6);bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
+else if(st==='red'){var t2=Math.min(1,t*1.6);if(segs[i].getAttribute('data-yellow')){bg=t2<.5?mix(WHITE,YELLOW,t2*2):mix(YELLOW,RED,(t2-.5)*2);cls=t2<.72?'opus-white':'opus-red'}else{bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}}
 colours(i>=0&&segs[i].id==='picture-7',t);
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
 addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);segs[0]&&segs[0].classList.add('is-active');tick()})();`
@@ -3641,7 +3673,7 @@ addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);s
       style: opusStyle, body: opusBody + `\n<script>${OPUS_JS}</script>`
     })
     V2_COPY.push(['public/opus.html (generated)', stripEvidence(opusBody)])
-    console.log('opus page: written, pinned stage, woodcuts ' + (woodcutSize(1) ? 'in' : 'as placeholders'))
+    console.log('opus page: written, pinned stage, woodcuts ' + (woodcutSize(1) ? 'in' : 'as placeholders') + ', yellow ' + (yellow ? 'in (CW 12 §271)' : 'left out (CW 12 §271 edge not in the graph)'))
   }
 
   // ------------------------------------------------ /support ----------------
