@@ -198,13 +198,15 @@
    "label": "Lapis philosophorum",
    "aliases": [
     "Deus terrestris",
+    "Hydrolith",
     "Salvator",
     "aenigma regis",
     "cervus fugitivus",
     "cibus immortalis",
     "lapis aethereus",
     "lapis angularis",
-    "lapis invisibilitatis"
+    "lapis invisibilitatis",
+    "water-stone"
    ],
    "name_refs": [
     {
@@ -251,6 +253,16 @@
      "volume": "12",
      "paragraph": 343,
      "batch": "b-cw12-5"
+    },
+    {
+     "volume": "12",
+     "paragraph": 471,
+     "batch": "b-cw12-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 487,
+     "batch": "b-cw12-7"
     }
    ],
    "latin": "lapis Philosophorum"
@@ -378,8 +390,15 @@
    "type": "Substance",
    "label": "Prima materia",
    "aliases": [
+    "Adamica",
+    "Monad",
+    "Unica Res",
+    "Unum",
+    "elementum primordiale",
+    "limbus microcosmicus",
     "massa informis",
-    "materia vilis"
+    "materia vilis",
+    "radix ipsius"
    ],
    "name_refs": [
     {
@@ -391,6 +410,21 @@
      "volume": "12",
      "paragraph": 244,
      "batch": "b-cw12-4"
+    },
+    {
+     "volume": "12",
+     "paragraph": 426,
+     "batch": "b-cw12-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 427,
+     "batch": "b-cw12-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 429,
+     "batch": "b-cw12-7"
     }
    ]
   },
@@ -727,6 +761,7 @@
    "type": "Figure",
    "label": "Gabricus & Beya",
    "aliases": [
+    "Beya",
     "Thabritius"
    ],
    "name_refs": [
@@ -734,6 +769,11 @@
      "volume": "14",
      "paragraph": 2,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "12",
+     "paragraph": 435,
+     "batch": "b-cw12-7"
     }
    ]
   },
@@ -787,7 +827,15 @@
   {
    "id": "dove",
    "type": "Symbol",
-   "label": "Dove (columba)"
+   "label": "Dove (columba)",
+   "latin": "avis Hermetis",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 443,
+     "batch": "b-cw12-7"
+    }
+   ]
   },
   {
    "id": "the-body",
@@ -1044,7 +1092,15 @@
   {
    "id": "the-mass",
    "type": "Motif",
-   "label": "The Mass"
+   "label": "The Mass",
+   "latin": "Mysterium Altaris",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 490,
+     "batch": "b-cw12-7"
+    }
+   ]
   },
   {
    "id": "peregrinatio",
@@ -1069,7 +1125,15 @@
   {
    "id": "rex-marinus",
    "type": "Figure",
-   "label": "Rex marinus (King of the Sea)"
+   "label": "Rex marinus (King of the Sea)",
+   "latin": "Rex marinus",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 435,
+     "batch": "b-cw12-7"
+    }
+   ]
   },
   {
    "id": "archetype",
@@ -1343,6 +1407,7 @@
    "label": "Filius Regius (King's Son)",
    "latin": "puellus regius",
    "aliases": [
+    "King’s Son",
     "kingly boy"
    ],
    "name_refs": [
@@ -1350,6 +1415,16 @@
      "volume": "14",
      "paragraph": 465,
      "batch": "b-cw14-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 436,
+     "batch": "b-cw12-7"
+    },
+    {
+     "volume": "12",
+     "paragraph": 434,
+     "batch": "b-cw12-7"
     }
    ]
   },
@@ -1750,15 +1825,22 @@
    "label": "Ignis gehennalis (central fire)",
    "aliases": [
     "central fire",
-    "fire of hell"
+    "fire of hell",
+    "hell-fire"
    ],
    "name_refs": [
     {
      "volume": "14",
      "paragraph": 113,
      "batch": "b-cw14-2"
+    },
+    {
+     "volume": "12",
+     "paragraph": 433,
+     "batch": "b-cw12-7"
     }
-   ]
+   ],
+   "latin": "ignis gehennalis"
   },
   {
    "id": "son-of-man",
@@ -2567,7 +2649,17 @@
   {
    "id": "homo-philosophicus",
    "type": "Figure",
-   "label": "Homo philosophicus (second Adam)"
+   "label": "Homo philosophicus (second Adam)",
+   "aliases": [
+    "philosophic man"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 475,
+     "batch": "b-cw12-7"
+    }
+   ]
   },
   {
    "id": "transubstantiation",
@@ -2738,7 +2830,16 @@
      "volume": "14",
      "paragraph": 34,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "12",
+     "paragraph": 469,
+     "batch": "b-cw12-7"
     }
+   ],
+   "aliases": [
+    "opus circulatorium",
+    "rota philosophica"
    ]
   },
   {
@@ -2812,10 +2913,16 @@
      "volume": "12",
      "paragraph": 356,
      "batch": "b-cw12-6"
+    },
+    {
+     "volume": "12",
+     "paragraph": 433,
+     "batch": "b-cw12-7"
     }
    ],
    "aliases": [
     "Chaos Naturae",
+    "chaos confusum",
     "massa"
    ]
   },
@@ -6877,7 +6984,17 @@
   {
    "id": "sublimatio",
    "label": "Sublimatio",
-   "type": "Operation"
+   "type": "Operation",
+   "aliases": [
+    "great south wind"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 473,
+     "batch": "b-cw12-7"
+    }
+   ]
   },
   {
    "id": "putrefactio",
@@ -7342,8 +7459,14 @@
      "volume": "14",
      "paragraph": 535,
      "batch": "b-cw14-8"
+    },
+    {
+     "volume": "12",
+     "paragraph": 466,
+     "batch": "b-cw12-7"
     }
-   ]
+   ],
+   "latin": "regina Austri"
   },
   {
    "id": "adech",
@@ -8067,6 +8190,31 @@
   {
    "id": "god-man",
    "label": "The God-man",
+   "type": "Figure"
+  },
+  {
+   "id": "tapas",
+   "label": "Tapas (self-incubation)",
+   "type": "Operation",
+   "aliases": [
+    "self-incubation"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 441,
+     "batch": "b-cw12-7"
+    }
+   ]
+  },
+  {
+   "id": "antimimos",
+   "label": "Antimimos (the counterfeiting daemon)",
+   "type": "Figure"
+  },
+  {
+   "id": "melchior-cibinensis",
+   "label": "Melchior Cibinensis (Nicholas Melchior of Hermannstadt)",
    "type": "Figure"
   }
  ],
@@ -11778,6 +11926,20 @@
      "verified_date": "2026-07-25",
      "source": "Nicholas Melchior (Melchior Cibinensis)",
      "crossvendor_checked": "gemini-3.1-pro (post-merge due diligence, xv-trilogy-july, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 474,
+     "quote": "the opus alchemicum is deemed the equal of the opus divinum or Mass",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Aurora consurgens, ch. II",
+     "source_author": "the alchemists",
+     "source_text": "Aurora consurgens"
     }
    ],
    "relation_family": {
@@ -26258,6 +26420,18 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, SUPPORTED, 2026-07-30)",
      "correction_note": "stage1: narrated alchemical self-understanding ('The alchemists emphasize this point'); asserts->reports",
      "note": "New reference from this window for an existing edge; the elided words are “which God himself”."
+    },
+    {
+     "volume": "12",
+     "paragraph": 463,
+     "quote": "the philosophical opus seemed like a parallel ... of the divine work of redemption",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) asked for jung-reports-parallel; the sentence is Jung's own historical judgment of what Petrus Bonus's text shows ('shows beyond all doubt that ... the philosophical opus seemed like a parallel'), and the reference attaches to a standing edge in Jung's voice"
     }
    ],
    "relation_family": {
@@ -42387,6 +42561,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-05",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9ii-4, SUPPORTED, 2026-08-05)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 436,
+     "quote": "The darkness and depths of the sea symbolize the unconscious state",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -42395,6 +42580,11 @@
     "by": "opus+gemini-agreed",
     "date": "2026-08-07",
     "audit": "v0.7.1 gate SUPPORTED 2026-08-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-7",
+    "date": "2026-11-13"
    }
   },
   {
@@ -46235,6 +46425,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 437,
+     "quote": "By descending into the unconscious, the conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -148828,6 +149029,1026 @@
    ],
    "relation_family": {
     "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "is-mother-of",
+   "object": "four-elements",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 430,
+     "quote": "is the mother of the elements and of all created things",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Paracelsus, Philosophia ad Athenienses",
+     "source_author": "Paracelsus",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "corresponds-to",
+   "object": "great-mother",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 431,
+     "quote": "suggest a principle equal to the Deity, corresponding to a dea mater",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "note": "in Paracelsus; dea mater"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "is",
+   "object": "water",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 433,
+     "quote": "According to Ripley the prima materia is water",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Ripley",
+     "source_author": "Ripley"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "belongs-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 433,
+     "quote": "the prima materia sometimes coincides ... the nigredo",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, FINDING-adjudicated, 2026-11-13)",
+     "correction_note": "gate correction: 'sometimes coincides with the idea of the initial stage' is a qualified assignment, medium",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence says the prima materia coincides with the nigredo; belongs-to is the ruled relation for assigning a substance to a stage (Damian, 2026-11-11), and the gate had set this reference to medium for the 'sometimes'"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "filius-regius",
+   "relation": "lies-in",
+   "object": "the-sea",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 434,
+     "quote": "the King’s Son lies in the dark depths of the sea",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "the alchemists (n. 32-33)",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "rex-marinus",
+   "relation": "is-father-of",
+   "object": "gabricus-beya",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 435,
+     "quote": "Thabritius with Beya, 37 his two children whom he has hatched in his brain",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Visio Arislei",
+     "source_author": "the alchemists",
+     "source_text": "Visio Arislei"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "gabricus-beya",
+   "relation": "stands-for",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 436,
+     "quote": "The brother-sister pair stands allegorically for the whole conception of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "gabricus-beya",
+   "relation": "undergoes",
+   "object": "mortificatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 439,
+     "quote": "he is dissolved into atoms ... equivalent to a form of mortificatio",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, FINDING-adjudicated, 2026-11-13)",
+     "correction_note": "cross-vendor correction: Subject conflation: The text specifies that Gabricus alone ('he is dissolved') undergoes mortificatio in the body of Beya, not the Gabricus & Beya pair.",
+     "note": "Gabricus, in the Rosarium version of the Visio"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "filius-regius",
+   "relation": "swallowed-up-by",
+   "object": "physis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 440,
+     "quote": "the regius filius —spirit, Logos, Nous—is swallowed up by Physis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "tapas",
+   "relation": "aims-at",
+   "object": "resurrection",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 441,
+     "quote": "The aim of tapas is ... transformation and resurrection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "dove",
+   "relation": "is",
+   "object": "queen-of-sheba",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 443,
+     "quote": "The dove is the “chaste, wise, and rich Queen of Sheba",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Johannes Grasseus",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "gold",
+   "relation": "is-image-of",
+   "object": "sol",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 445,
+     "quote": "gold is the sun’s image in the earth",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Michael Maier",
+     "source_author": "Maier"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "fire",
+   "relation": "is",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 446,
+     "quote": "This fire is the Holy Ghost, who unites father and son",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Ripley",
+     "source_author": "Ripley"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "nous",
+   "relation": "is-one-with",
+   "object": "physis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 447,
+     "quote": "Nous and Physis are indistinguishably one in the prima materia",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the oneness is stated of Nous and Physis in the prima materia, a scope the relation drops; medium with a scope note",
+     "note": "in the prima materia, where the Gnostic myth is transformed"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-opus",
+   "relation": "compared-with",
+   "object": "active-imagination",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 448,
+     "quote": "can best be compared with what we call active imagination",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-7",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "deals-with",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 448,
+     "quote": "alchemy deals with the same ... ultimately with the process of individuation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-7",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "artifex",
+   "relation": "takes-place-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 451,
+     "quote": "he takes the place of the Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: Jung says the alchemist takes the place of the Christ who sacrifices himself in the Mass and in the same paragraph that he does not identify himself with Christ; the analogy is held at arm's length, medium",
+     "note": "in the Mass analogy; Jung adds he does not identify himself with Christ"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "fire",
+   "relation": "is-image-of",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 451,
+     "quote": "The fire is “like unto” Christ, an imago Christi",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "rite of hallowing the fire on Holy Saturday",
+     "source_author": "other",
+     "correction_note": "gate correction: the imago Christi is said of the Easter fire of the rite, not of fire at large; the standing node is the general one, medium with a scope note",
+     "note": "the new fire hallowed on Holy Saturday"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "adam",
+   "relation": "corresponds-to",
+   "object": "thoth",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 458,
+     "quote": "Adam corresponds to Thoth",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Zosimos",
+     "source_author": "Zosimos"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "antimimos",
+   "relation": "guides",
+   "object": "adam",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 456,
+     "quote": "the earthly Adam and his guide Antimimos",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Zosimos, On the letter Omega",
+     "source_author": "Zosimos"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "antimimos",
+   "relation": "opposes",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 460,
+     "quote": "Antimimos, ... appears as the antagonist of the Son of God",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Zosimos",
+     "source_author": "Zosimos",
+     "correction_note": "gate correction: the antagonist is Zosimos's Son of God, mapped onto the christ node on Jung's §457 reading (a Gnostic Christ), one step, medium",
+     "note": "Zosimos' Son of God"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "is-paradigm-of",
+   "object": "sublimatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 457,
+     "quote": "the Son of God is a sort of paradigm of sublimation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: 'a sort of paradigm of sublimation' is hedged, and the subject is Zosimos's Son of God mapped onto christ; medium",
+     "note": "the Son of God of Zosimos and of later Christian alchemy"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "anthropos",
+   "relation": "symbolized-by",
+   "object": "four-elements",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 457,
+     "quote": "the Anthropos, the first man, symbolized by the four elements",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "manifests-in",
+   "object": "ouroboros",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 460,
+     "quote": "the double nature of Mercurius, which shows itself most clearly in the Uroboros",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "depends-on",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 462,
+     "quote": "There could be no alchemy without this stone",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Petrus Bonus, Pretiosa margarita novella",
+     "source_author": "Petrus Bonus",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "sapientia",
+   "relation": "identified-with",
+   "object": "queen-of-sheba",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 466,
+     "quote": "For our author Sapientia is the “regina Austri",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Aurora consurgens",
+     "source_author": "the alchemists",
+     "source_text": "Aurora consurgens"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "wind",
+   "relation": "allegory-of",
+   "object": "holy-ghost",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 473,
+     "quote": "the south wind is an allegory of the Holy Ghost",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "the Church Fathers",
+     "source_author": "the Church Fathers",
+     "correction_note": "gate correction: the allegory is said of the south wind; scope note added, confidence as proposed",
+     "note": "the south wind, in the Church Fathers"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-wheel",
+   "relation": "arises-from",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 469,
+     "quote": "The wheel of creation takes its rise from the prima materia",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-wheel",
+   "relation": "connected-with",
+   "object": "ezekiels-vision",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 471,
+     "quote": "cannot resist connecting the wheel with the vision of Ezekiel",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Laurentius Ventura",
+     "source_author": "Ventura"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "is-a",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 472,
+     "quote": "the idea of the arcane substance is itself an archetype",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-7",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "second-adam",
+   "relation": "identified-with",
+   "object": "homo-philosophicus",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 475,
+     "quote": "the second Adam, who is called the philosophic man",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Aurora consurgens, sixth parable",
+     "source_author": "the alchemists",
+     "source_text": "Aurora consurgens"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "parallels",
+   "object": "second-adam",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 476,
+     "quote": "the parallel between the lapis ... and the second Adam",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "melchior-cibinensis",
+   "relation": "paraphrases",
+   "object": "the-mass",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 480,
+     "quote": "He expounded the alchemical process in the form of a Mass",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Nicholas Melchior of Hermannstadt",
+     "source_author": "Melchior Cibinensis"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "ethiopian-moor",
+   "relation": "undergoes",
+   "object": "calcinatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 484,
+     "quote": "the mighty Ethiopian, burned, calcined, discoloured, altogether dead and lifeless",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "Melchior Cibinensis, alchemical paraphrase of the Ave Praeclara",
+     "source_author": "Melchior Cibinensis"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "ethiopian-moor",
+   "relation": "belongs-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 484,
+     "quote": "The “Ethiopian” as the nigredo",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the quote is the caption of fig. 219, which is Jung's editorial description of Trismosin's picture, not Trismosin's words; jung-asserts at medium with the caption noted, source fields withdrawn",
+     "note": "figure caption 219 (Trismosin, Splendor solis)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "rebirth",
+   "relation": "is-equivalent-of",
+   "object": "transubstantiation",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 486,
+     "quote": "The regeneration of the Ethiopian is actually the equivalent of the transubstantiation",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the equivalence is stated of the Ethiopian's regeneration in Melchior's text; the standing node is rebirth at large, medium with the proposer's note",
+     "note": "the regeneration of the Ethiopian in Melchior's text"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "luna",
+   "relation": "is",
+   "object": "prima-materia",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 487,
+     "quote": "the moon, like Isis, is the prima materia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "sapientia",
+   "relation": "identical-with",
+   "object": "luna",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 487,
+     "quote": "scientia or sapientia is here identical with the moon",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: 'is here identical with the moon' is scoped to the text under discussion, medium with a scope note",
+     "note": "'here', in Melchior's text read through Senior"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-mass",
+   "relation": "attributed-to",
+   "object": "gold",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 490,
+     "quote": "the Mysterium Altaris (i.e., the Mass) being attributed to gold",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-7, PASS, 2026-11-13)",
+     "source": "B. à Portu (Penotus), table in Ripley's Liber duodecim portarum",
+     "source_author": "Penotus",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-13"
