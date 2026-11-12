@@ -3514,10 +3514,11 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
       close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
     }
-    // the woodcuts (Damian, 2026-11-12: "i found a pdf … i'm sure enough these
-    // things are public domain, add them in"): cropped from a scan of a 2008
-    // edition of the 1550 Rosarium, one file per picture
-    const woodcutSize = (n) => { try { const b = readFileSync(here(`./public/opus-woodcut-${String(n).padStart(2, '0')}.png`)); return [b.readUInt32BE(16), b.readUInt32BE(20)] } catch { return null } }
+    // the woodcuts: Jung's own copy of the 1550 Rosarium, Stiftung der Werke von
+    // C.G. Jung, Zürich, digitised on e-rara.ch (doi:10.3931/e-rara-10570, Public
+    // Domain Mark); one crop per picture, paper tone kept (Damian, 2026-11-12)
+    const woodcutFile = (n) => `opus-rosarium-${String(n).padStart(2, '0')}.jpg`
+    const woodcutSize = (n) => { try { const b = readFileSync(here(`./public/${woodcutFile(n)}`)); let o = 2; while (o < b.length) { if (b[o] !== 0xFF) return null; const mk = b[o + 1], len = b.readUInt16BE(o + 2); if (mk >= 0xC0 && mk <= 0xCF && mk !== 0xC4 && mk !== 0xC8 && mk !== 0xCC) return [b.readUInt16BE(o + 7), b.readUInt16BE(o + 5)]; o += 2 + len } return null } catch { return null } }
     const inRange = (r, a, b) => String(r.volume) === '16' && Number(r.paragraph) >= a && Number(r.paragraph) <= b
     const claimLine = (e, r) => `<li class="opus-claim"><p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
 <blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
@@ -3535,7 +3536,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
 <blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.shimmer.quote)}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
       const wsz = woodcutSize(n)
       const figure = wsz
-        ? `<figure class="opus-cut"><img src="/opus-woodcut-${String(n).padStart(2, '0')}.png" width="${wsz[0]}" height="${wsz[1]}" alt="Woodcut ${n} of the Rosarium philosophorum (1550): ${esc(title)}" loading="${n <= 2 ? 'eager' : 'lazy'}"></figure>`
+        ? `<figure class="opus-cut"><img src="/${woodcutFile(n)}" width="${wsz[0]}" height="${wsz[1]}" alt="Woodcut ${n} of the Rosarium philosophorum (1550): ${esc(title)}" loading="${n <= 2 ? 'eager' : 'lazy'}"></figure>`
         : `<div class="opus-frame" role="img" aria-label="Placeholder for woodcut ${n} of the Rosarium philosophorum, ${esc(title)}"><span>Woodcut ${n}</span><span class="opus-frame-t">${esc(title)}</span><span class="opus-frame-n">image to follow</span></div>`
       return `<section class="opus-pic opus-seg" id="picture-${n}" data-stage="${stage}">
 ${figure}
@@ -3568,7 +3569,7 @@ ${sections}
 </section>
 </div>
 </div>
-<p class="meta">Woodcuts from the <em>Rosarium philosophorum</em> (Frankfurt, 1550). Picture titles and paragraph ranges follow the headings of CW 16.</p>`
+<p class="meta">Woodcuts from Jung's own copy of the <em>Rosarium philosophorum</em> (Frankfurt, 1550): Stiftung der Werke von C.G. Jung, Zürich, digitised by e-rara.ch, <a href="https://doi.org/10.3931/e-rara-10570">doi:10.3931/e-rara-10570</a>, Public Domain Mark. Picture titles and paragraph ranges follow the headings of CW 16.</p>`
     const opusStyle = `
 .page-main.prose > .opus-ground { position: fixed; inset: 0; max-width: none; width: auto; z-index: -1; background: transparent; transition: background-color .6s ease; pointer-events: none; }
 .page-main.opus-black, .page-main.opus-white, .page-main.opus-red { transition: color .6s ease; }
