@@ -1281,11 +1281,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw12-2-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §71-140",
+   "result": "CW 12 WINDOW 2: Psychology and Alchemy §71-140, the dream series continued: the initial dreams and visions 9 to 22 (the land of sheep and the anima as psychopomp, the children's land, the ladders and the seventh, Mercurius as the seven and the eighth, the man with the pointed beard as Mephistopheles and the intellect, the mother's water and the sister as carrier of the anima, the ace of clubs and the seven, the blue flower, the rejected gold coins, the death's-head and the red ball, the globe, the nymphs, the ape-man and the voice of the light) and the opening of the mandala dreams (the mandala in Lamaism, the mandala symbols recapitulated, dreams 6 to 10 of the new series: the circling, the clock, the ship's bearings, the perpetuum mobile, the Peterhofstatt and the four functions, the Monad of the Codex Brucianus). Run by hand in the mining chat on 2026-11-12 evening on Damian's instruction to run all remaining windows today; the second window of CW 12 in the second pass (state record b-cw12-2-pass2, since the first pass already holds a batch named b-cw12-2). Mined 51 candidates/55 refs (Opus-family miner subagent, blinded, model id stamped; thirteen attaches onto standing edges; 17 names entries; 3 cross-register flags; 2 stage candidates: the sol niger in the nigredo (an attach) and a putrefactio-before-the-opus edge the gate rejected; 5 dream-linkage candidates: the anima's solificatio, the intellect as familiaris, the seven's culmination in the solificatio, the blue flower and the solar gold, the gold coins and the philosophic gold; stages_note recorded). Pre-check kept all 55 (quotation share of CW 12 after the window 5.07 percent against the 9 percent cap). Fable gate 51 TRUE / 3 CORRECTED / 1 FALSE: the FALSE is putrefactio precedes the-opus (§135, a figure caption saying the goal of the opus cannot be reached without the putrefactio: the operation lies inside the opus, and the opus is not a stage the ruled precedes relation joins); two confidence demotions for one-step readings (§99 the seven stages' transformation, §139 the comparison of the Monad) and one scope note (§139 the Lamaic mandala). All seventeen names accepted. Gemini cross-vendor 50 PASS / 4 FINDING on 54 post-gate refs: two attaches demoted to medium (§80 the ladder theme pointing to psychic transformation, §116 the Mylius caption identifying the sol niger as the nigredo's image); §99 already medium; §122 a label objection to the standing node magic-circle, overruled with an audit note for the sitting. Names applied to 17 entries on 16 nodes; cross_register set on 3 edges; thirteen mints: childrens-land, seven, man-with-pointed-beard, the-sister, acetum-fontis, ace-of-clubs, gold-coins, deaths-head, red-ball, clock, eternity, doll-woman, monogenes. Sources written as other: the Codex Brucianus, Stolcius de Stolcenberg's Viridarium chymicum (both added to the controlled list after this window), the Secret of the Golden Flower as author (the text is on the list) and the rimpoche Lingdam Gomchen (a conversation, not added). +37 edges, 17 refs attached to standing or this window's edges, +54 refs, +13 nodes. Graph 1098/4577/6178; CW 12 now 330 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 37 edges under v0.7.2: agreement 23/37 (62 percent, the lowest of the pass), 22 assigned, 14 queued, 1 no-family, 0 text-undecided; queue 791; the Gemini arm returned twelve bare unclassified rows (n 4541, 4542, 4546, 4552, 4554, 4556, 4557, 4558, 4560, 4564, 4569, 4570), normalized to no-family before assembly, raw file kept as family_sweep_gemini_b-cw12-2_raw.json. strain: 1 no-family, 0 text-undecided of 37 swept; new homeless strings: moves-in. FAMILY GAP FOR THE SITTING: the dream-series relation strings (alludes-to, points-to, is-linked-to, marks-off, carries, is-exemplified-in, dramatizes, predicates, has-properties-of, is-led-back-to) have no seed in the definitions; the Gemini arm left ten of them unclassified while the Opus arm read them into symbolization, correspondence, personification, amplification or telos, so nearly every dream-linkage edge of this volume will queue until the sitting rules on a dream-motif family; the Opus arm also flags lotus forms-basis-of mandala as inside the recorded underlies/based-on ambiguity. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 55 refs judged against the full paragraphs; weekly Fable 56 percent after the sweep, 5-hour meter 65 percent, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1098/4577/6178, distinct paragraphs 3754, claim mix 4889/956/333. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a1ee3f30c975c55fa, 35 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 21 assistant turns after the miner finished at 2026-11-12T19:48:11.237Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW12-DUE: window 2 (§71-140)",
- "nodes": 1085,
- "edges": 4540,
- "refs": 6124,
+ "next": "CW12-DUE: window 3 (§141-210)",
+ "nodes": 1098,
+ "edges": 4577,
+ "refs": 6178,
  "as_of": "2026-11-12"
 }

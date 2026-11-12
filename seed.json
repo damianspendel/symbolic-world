@@ -228,12 +228,14 @@
    "type": "Figure",
    "label": "Mercurius",
    "aliases": [
+    "Hermes Psychopompos",
     "Kyllenios",
     "Mercurius duplex",
     "Mercurius non vulgi",
     "mercurial serpent",
     "quicksilver",
-    "spirit Mercurius"
+    "spirit Mercurius",
+    "spiritus mercurialis"
    ],
    "name_refs": [
     {
@@ -260,6 +262,11 @@
      "volume": "14",
      "paragraph": 712,
      "batch": "b-cw14-11"
+    },
+    {
+     "volume": "12",
+     "paragraph": 84,
+     "batch": "b-cw12-2"
     }
    ]
   },
@@ -370,7 +377,17 @@
   {
    "id": "mandala",
    "type": "Symbol",
-   "label": "Mandala"
+   "label": "Mandala",
+   "aliases": [
+    "khilkor"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 123,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "god-image",
@@ -557,6 +574,11 @@
      "volume": "14",
      "paragraph": 332,
      "batch": "b-cw14-5"
+    },
+    {
+     "volume": "12",
+     "paragraph": 140,
+     "batch": "b-cw12-2"
     }
    ]
   },
@@ -795,7 +817,15 @@
   {
    "id": "squaring-of-the-circle",
    "type": "Motif",
-   "label": "Squaring of the Circle"
+   "label": "Squaring of the Circle",
+   "latin": "quadratura circuli",
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 123,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "hierosgamos",
@@ -1108,6 +1138,7 @@
    "aliases": [
     "aqua Mercurialis",
     "aqua aëris",
+    "argentum vivum",
     "spiritual water"
    ],
    "name_refs": [
@@ -1125,6 +1156,11 @@
      "volume": "14",
      "paragraph": 658,
      "batch": "b-cw14-10"
+    },
+    {
+     "volume": "12",
+     "paragraph": 90,
+     "batch": "b-cw12-2"
     }
    ]
   },
@@ -1424,7 +1460,18 @@
   {
    "id": "one-scintilla-monad",
    "type": "Symbol",
-   "label": "One Scintilla / Monad"
+   "label": "One Scintilla / Monad",
+   "aliases": [
+    "Spinther",
+    "spark of light"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 139,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "adam",
@@ -2017,6 +2064,16 @@
      "volume": "12",
      "paragraph": 40,
      "batch": "b-cw12-1"
+    },
+    {
+     "volume": "12",
+     "paragraph": 99,
+     "batch": "b-cw12-2"
+    },
+    {
+     "volume": "12",
+     "paragraph": 103,
+     "batch": "b-cw12-2"
     }
    ],
    "aliases": [
@@ -2129,7 +2186,18 @@
   {
    "id": "succus-lunariae",
    "type": "Substance",
-   "label": "Succus lunariae (juice of the moon-plant)"
+   "label": "Succus lunariae (juice of the moon-plant)",
+   "latin": "succus lunariae",
+   "aliases": [
+    "sap of the moon-plant"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 94,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "basilisk",
@@ -2357,7 +2425,20 @@
   {
    "id": "aqua-nostra",
    "type": "Substance",
-   "label": "Aqua Nostra"
+   "label": "Aqua Nostra",
+   "latin": "aqua nostra",
+   "aliases": [
+    "aqua vitae",
+    "mercurius vivus",
+    "vinum ardens"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 94,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "the-mother",
@@ -2928,13 +3009,19 @@
    "label": "The rotundum (the round element)",
    "type": "Symbol",
    "aliases": [
-    "corpus rotundum"
+    "corpus rotundum",
+    "materia globosa"
    ],
    "name_refs": [
     {
      "volume": "14",
      "paragraph": 626,
      "batch": "b-cw14-9"
+    },
+    {
+     "volume": "12",
+     "paragraph": 116,
+     "batch": "b-cw12-2"
     }
    ]
   },
@@ -3056,7 +3143,17 @@
   {
    "id": "abaissement-du-niveau-mental",
    "label": "Abaissement du niveau mental",
-   "type": "Concept"
+   "type": "Concept",
+   "aliases": [
+    "dissolution of consciousness"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 116,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "loss-of-soul",
@@ -3256,12 +3353,32 @@
   {
    "id": "world-wheel",
    "label": "The Tibetan World Wheel",
-   "type": "Symbol"
+   "type": "Symbol",
+   "aliases": [
+    "sidpe-korlo"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 123,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "lotus",
    "label": "The lotus (padma)",
-   "type": "Symbol"
+   "type": "Symbol",
+   "aliases": [
+    "padma"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 139,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "the-city",
@@ -4412,7 +4529,18 @@
   {
    "id": "paredros",
    "label": "Paredros (familiar spirit of ancient alchemy)",
-   "type": "Figure"
+   "type": "Figure",
+   "latin": "familiaris",
+   "aliases": [
+    "πάρεδρος"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 84,
+     "batch": "b-cw12-2"
+    }
+   ]
   },
   {
    "id": "flaying",
@@ -7137,6 +7265,91 @@
      "batch": "b-cw12-1"
     }
    ]
+  },
+  {
+   "id": "childrens-land",
+   "label": "The children's land (the world of childhood, where the way begins)",
+   "type": "Motif"
+  },
+  {
+   "id": "seven",
+   "label": "The seven / the seventh (dream motif)",
+   "type": "Symbol"
+  },
+  {
+   "id": "man-with-pointed-beard",
+   "label": "The man with the pointed beard (dream figure)",
+   "type": "Figure",
+   "aliases": [
+    "Pointed Beard"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 119,
+     "batch": "b-cw12-2"
+    }
+   ]
+  },
+  {
+   "id": "the-sister",
+   "label": "The sister (dream figure)",
+   "type": "Figure"
+  },
+  {
+   "id": "acetum-fontis",
+   "label": "Acetum fontis (the corrosive water)",
+   "type": "Substance"
+  },
+  {
+   "id": "ace-of-clubs",
+   "label": "The ace of clubs (dream 16)",
+   "type": "Symbol"
+  },
+  {
+   "id": "gold-coins",
+   "label": "The golden coins (dream 18)",
+   "type": "Motif"
+  },
+  {
+   "id": "deaths-head",
+   "label": "The death's-head (vision 19)",
+   "type": "Symbol"
+  },
+  {
+   "id": "red-ball",
+   "label": "The red ball (vision 19)",
+   "type": "Symbol"
+  },
+  {
+   "id": "clock",
+   "label": "The clock (dreams 7 and 9)",
+   "type": "Symbol"
+  },
+  {
+   "id": "eternity",
+   "label": "Eternity (relative timelessness)",
+   "type": "Concept"
+  },
+  {
+   "id": "doll-woman",
+   "label": "The doll woman (dream 10)",
+   "type": "Figure"
+  },
+  {
+   "id": "monogenes",
+   "label": "Monogenes (the Only-begotten)",
+   "type": "Figure",
+   "aliases": [
+    "Only-begotten"
+   ],
+   "name_refs": [
+    {
+     "volume": "12",
+     "paragraph": 138,
+     "batch": "b-cw12-2"
+    }
+   ]
   }
  ],
  "edges": [
@@ -9739,6 +9952,19 @@
      "verified_date": "2026-07-25",
      "source": "alchemical tradition",
      "crossvendor_checked": "gemini-3.1-pro (post-merge due diligence, xv-trilogy-july, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 84,
+     "quote": "For instance he is dragon, lion, eagle, raven",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "medieval alchemical speculation on Mercurius",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -9767,6 +9993,19 @@
      "modality_swept": true,
      "crossvendor_checked": "gemini-3.1-pro (post-merge due diligence, xv-trilogy-july, FINDING-adjudicated, 2026-11-11)",
      "audit_note": "cross-vendor finding overruled: the auditor objected to the quote's form (footnote digits, a figure reference, quote-mark style or an ellipsis); the graph's quote check compares letter tokens, so digits and punctuation are not part of the quote, and one ellipsis joining two in-order spans is the standing convention; the quote passes tests/test_graph.py."
+    },
+    {
+     "volume": "12",
+     "paragraph": 84,
+     "quote": "In the alchemical hierarchy of gods Mercurius comes lowest as prima materia",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "the alchemical hierarchy of gods",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -10731,6 +10970,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (post-merge due diligence, xv-trilogy-july, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 84,
+     "quote": "The spiritus mercurialis ( fig. 23 ) is the alchemists’ guide (Hermes Psychopompos",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "the alchemists' spiritus mercurialis",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -18128,6 +18380,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-25",
      "crossvendor_checked": "gemini-3.1-pro (E7 full-volume audit, rubric-free, 2026-07-27)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 84,
+     "quote": "In the alchemical hierarchy of gods Mercurius comes ... highest as lapis philosophorum",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "the alchemical hierarchy of gods",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -35818,6 +36083,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-5, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 112,
+     "quote": "Anima and sun are thus distinct ... The latter is a personification of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -45429,6 +45705,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-1, PASS, 2026-08-07)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 74,
+     "quote": "now appears as the psychopomp, the one who shows the way",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -48991,6 +49278,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-23",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-12, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 120,
+     "quote": "“Everything must be ruled by the light,” which presumably means the light of the discerning, conscious mind",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -55002,6 +55300,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 123,
+     "quote": "they are all based on a quaternary system, a quadratura circuli",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "note": "Lamaic mandalas"
     }
    ],
    "relation_family": {
@@ -124494,6 +124804,17 @@
      "verified_date": "2026-11-10",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw6-3, PASS, 2026-11-10)",
      "source": "Heraclitus"
+    },
+    {
+     "volume": "12",
+     "paragraph": 108,
+     "quote": "Evidently an enantiodromia, a play of opposites",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -129577,6 +129898,21 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-11, PASS, 2026-11-12)",
      "source": "the alchemists",
      "source_author": "the alchemists"
+    },
+    {
+     "volume": "12",
+     "paragraph": 116,
+     "quote": "The nigredo standing on the rotundum , i.e., sol niger",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, FINDING-adjudicated, 2026-11-12)",
+     "source": "Mylius, Philosophia reformata (1622), fig. 34 caption",
+     "source_author": "Mylius",
+     "source_text": "Philosophia reformata",
+     "correction_note": "cross-vendor correction: The text describes an image of the nigredo standing on the sol niger (rotundum), which does not support a 'belongs-to' relationship."
     }
    ],
    "relation_family": {
@@ -139789,6 +140125,19 @@
      "source": "Albertus Magnus, Liber octo capitulorum de lapide philosophorum",
      "source_author": "Albertus Magnus",
      "source_text": "other"
+    },
+    {
+     "volume": "12",
+     "paragraph": 90,
+     "quote": "Therefore in alchemy Mercurius is sometimes a “spirit” and sometimes a “water,” the so-called aqua permanens",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "alchemical usage",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -141502,6 +141851,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 127,
+     "quote": "I will recapitulate the mandala symbols which occur in the initial dreams and visions already discussed",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
@@ -141598,6 +141958,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 80,
+     "quote": "the steps and ladders theme (cf. figs. 14 , 15 ) points to the process of psychic transformation, with all its ups and downs",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "cross-vendor correction: The quote states the theme points to 'psychic transformation', not directly to 'ascent and descent' (which is given as a separate example)."
     }
    ],
    "relation_family": {
@@ -141649,6 +142021,982 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-1, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "anticipates",
+   "object": "solificatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 74,
+     "quote": "The anima, having already anticipated the solificatio",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-2",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "is-led-back-to",
+   "object": "childrens-land",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 74,
+     "quote": "the fountainhead can only be found if the conscious mind will suffer itself to be led back to the “children’s land,”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "note": "a condition for finding the fountainhead"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "stair",
+   "relation": "is-exemplified-in",
+   "object": "zosimos-vision",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 80,
+     "quote": "We find a classic example of this in Zosimos’ ascent and descent of the fifteen steps of light and darkness.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "Zosimos, the ascent and descent of the fifteen steps (n. 16)",
+     "source_author": "Zosimos"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "seven",
+   "relation": "stands-for",
+   "object": "illuminatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 83,
+     "quote": "In the language of initiation, “seven” stands for the highest stage of illumination",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "note": "in the language of initiation"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "represented-as",
+   "object": "rebis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 84,
+     "quote": "Hermes or Mercurius possessed a double nature ... for which reason he was represented as a hermaphrodite",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "post-classical and alchemical representations of Hermes-Mercurius",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "appears-as",
+   "object": "paredros",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 84,
+     "quote": "sometimes he was a ministering and helpful spirit, a πάρεδρος (literally “assistant, comrade”) or familiaris",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "the natural philosophers of the Middle Ages",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "faust",
+   "relation": "dramatizes",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 85,
+     "quote": "Faust is an alchemical drama from beginning to end",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "man-with-pointed-beard",
+   "relation": "is",
+   "object": "mephistopheles",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 87,
+     "quote": "The “man with a pointed beard” is our time-honoured Mephisto",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 88,
+     "quote": "the dreamer himself had recognized the figure of Mephistopheles in the “man with the pointed beard.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "man-with-pointed-beard",
+   "relation": "represents",
+   "object": "the-intellect",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 88,
+     "quote": "Hence the man with the pointed beard represents the intellect",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 137,
+     "quote": "the man with the pointed beard the “employed” intellect (Mephisto)",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-intellect",
+   "relation": "appears-as",
+   "object": "paredros",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 88,
+     "quote": "the intellect, which is introduced by the dream as a real familiaris , an obliging if somewhat dangerous spirit",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-2",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "symbolizes",
+   "object": "the-intellect",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 90,
+     "quote": "Mercurius as quicksilver is an eminently suitable symbol for the “fluid,” i.e., mobile, intellect",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 88,
+     "quote": "Versatility of mind as well as the inventive gift and scientific leanings are attributes of the astrological Mercurius.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "note": "attributes of the astrological Mercurius"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw12-2",
+    "date": "2026-11-12"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "replaces",
+   "object": "the-mother",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 92,
+     "quote": "the transferring of the water of life to the sister really means that the mother has been replaced by the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-sister",
+   "relation": "carries",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 92,
+     "quote": "we know definitely from later dreams that she was the carrier of the anima-image",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "acetum-fontis",
+   "relation": "leads-to",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 94,
+     "quote": "Acetum fontis is a powerful corrosive water ... leads to the most durable of all products, the mysterious lapis",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "the old alchemists' synonyms for the water",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "ace-of-clubs",
+   "relation": "points-to",
+   "object": "cross",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 98,
+     "quote": "The ace of clubs, being in the form of a cross, points to the Christian symbol.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "seven",
+   "relation": "culminates-in",
+   "object": "solificatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 99,
+     "quote": "The seven stages symbolize the transformation ... culminates in the solificatio",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, FINDING-adjudicated, 2026-11-12)",
+     "correction_note": "gate correction: the sentence's subject is 'the seven stages', and the culmination is read 'judging by the earlier archaic allusions'; the node seven is one step on and the claim hedged, medium",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence's subject is the transformation symbolized by the seven stages; the gate had set this reference to medium on the same step, and the quote joins two verbatim spans with the one ' ... ' the quote rules allow"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "blue-flower",
+   "relation": "is-linked-to",
+   "object": "solificatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 101,
+     "quote": "the old solar gold which connects the innocent flower with ... the blasphemous pagan idea of the solificatio",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "note": "linked through the solar gold"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "gold-coins",
+   "relation": "alludes-to",
+   "object": "philosophic-gold",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 103,
+     "quote": "The “gold” is offered and is indignantly refused. Such a misinterpretation of the aurum philosophicum is easy to understand.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "marks-off",
+   "object": "temenos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 105,
+     "quote": "the snake describes a magic circle and thus marks off the taboo area, the temenos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "note": "the snake of vision 5"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "deaths-head",
+   "relation": "transforms-into",
+   "object": "red-ball",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 108,
+     "quote": "when he tries to ward off the sinister vision of the death’s-head it is transformed into a red ball",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "red-ball",
+   "relation": "alludes-to",
+   "object": "sol",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 108,
+     "quote": "a red ball, which we may take as an allusion to the rising sun",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "evokes",
+   "object": "regression",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 112,
+     "quote": "any allusion to alchemy wafts one back to the ancient world and makes one suspect regression to pagan levels",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-opus",
+   "relation": "crowned-by",
+   "object": "rotundum",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 116,
+     "quote": "The work is crowned by the production of the rotundum",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "alchemical doctrine of the rotundum",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "abaissement-du-niveau-mental",
+   "relation": "comes-close-to",
+   "object": "primitive-mentality",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 116,
+     "quote": "The dissolution of consciousness or, as Janet calls it, abaissement du niveau mental , comes very close to the primitive state of mind.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "denotes",
+   "object": "magic-circle",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 122,
+     "quote": "this word denotes the ritual or magic circle used in Lamaism and also in Tantric yoga as a yantra or aid to contemplation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, FINDING-adjudicated, 2026-11-12)",
+     "audit_note": "cross-vendor (Gemini) objected to the standing node's label, which carries psychological glosses the paragraph does not state; the sentence says the word mandala denotes the ritual or magic circle, which is the claim; the label question goes to the sitting"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "is-built-through",
+   "object": "imagination",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 123,
+     "quote": "a mental image which can be built up only by a fully instructed lama through the power of imagination",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "Lingdam Gomchen, Lamaic rimpoche, conversation at Bhutia Busty, 1938",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "has-properties-of",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 125,
+     "quote": "The text of the Golden Flower ... specifies in addition certain “alchemical” properties of this centre after the manner of the lapis",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "The Secret of the Golden Flower (Taoist)",
+     "source_author": "other",
+     "source_text": "Secret of the Golden Flower"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "serpent",
+   "relation": "anticipates",
+   "object": "circumambulatio",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 129,
+     "quote": "The snake anticipates a circular movement in which the subject is going to be involved",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-ego",
+   "relation": "revolves-around",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 129,
+     "quote": "a potential centre which is not identical with the ego and round which the ego revolves",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "clock",
+   "relation": "moves-in",
+   "object": "circle",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 131,
+     "quote": "for a clock’s hands go round in a circle",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "12",
+     "paragraph": 135,
+     "quote": "This is a species of clock whose hands move unceasingly ... it is a perpetuum mobile , an everlasting movement in a circle",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "predicates",
+   "object": "eternity",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 135,
+     "quote": "eternity is a quality predicated by the unconscious, and not a hypostasis",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "doll-woman",
+   "relation": "is-image-of",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 137,
+     "quote": "Since the doll is a childish object it is an excellent image for the non-ego nature of the anima",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "the-centre",
+   "relation": "corresponds-to",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 137,
+     "quote": "the centre of the circle which expresses such a totality would correspond not to the ego but to the self",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "monogenes",
+   "relation": "dwells-in",
+   "object": "one-scintilla-monad",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 138,
+     "quote": "This same is he [Monogenes] who dwelleth in the Monad",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "source": "Codex Brucianus, Coptic Gnostic treatise",
+     "source_author": "the Gnostics",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "one-scintilla-monad",
+   "relation": "corresponds-to",
+   "object": "temenos",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 139,
+     "quote": "The comparison of the Monad with a field and a city corresponds to the idea of the temenos",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "correction_note": "gate correction: the sentence has the comparison of the Monad with a field and a city correspond to the idea of the temenos; the Monad itself is one step on, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "lotus",
+   "relation": "forms-basis-of",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 139,
+     "quote": "the padma or lotus, the basic form of the Lamaic mandala",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)",
+     "correction_note": "gate correction: supported; the sentence scopes the basic form to the Lamaic mandala, noted",
+     "note": "the Lamaic mandala"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-12"
+   }
+  },
+  {
+   "subject": "monogenes",
+   "relation": "recalls",
+   "object": "sol-niger",
+   "references": [
+    {
+     "volume": "12",
+     "paragraph": 140,
+     "quote": "the Monogenes is called the “dark light,” 18 a reminder of the sol niger",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-12",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
     }
    ],
    "relation_family": {
