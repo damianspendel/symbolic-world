@@ -3510,6 +3510,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     }
     // outside the graph; checked 2026-11-12 (exact match, length, Fable read)
     const OPUS_OUTSIDE = {
+      verdure: { volume: '16', paragraph: 479, voice: 'rosarium', quote: 'Afterwards thou makest new and multitudinous things to grow, causing with thy verdure the many colours to appear.' },
       shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
       close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
     }
@@ -3530,7 +3531,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       const chosen = [], seen = new Set()
       for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === 3) break }
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
-      const shimmer = n === 7 ? `<div class="opus-shimmer" aria-hidden="true"></div>
+      const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.verdure.quote)}&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
 <blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.shimmer.quote)}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
       const wsz = woodcutSize(n)
       const figure = wsz
@@ -3554,7 +3555,7 @@ ${shimmer}
 <h1>The opus</h1>
 <p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum.</p></div>
 <p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses.</p>
-<div class="opus-ground" aria-hidden="true"></div>
+<div class="opus-ground" aria-hidden="true"><div class="opus-green"></div><div class="opus-peacock"></div><p class="opus-peacock-label">cauda pavonis, the peacock's tail</p></div>
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
 <div class="opus-pin">
 ${sections}
@@ -3600,11 +3601,13 @@ ${sections}
 .opus-rel em { font-style: normal; opacity: .8; }
 .opus-claim blockquote, .opus-outside { margin: 0; padding: .2rem 0 .2rem .9rem; border-left: 2px solid currentColor; font-family: var(--display); font-size: 1.02rem; line-height: 1.5; }
 .opus-cite { display: block; font: .64rem/1.7 var(--mono); margin-top: .3rem; }
-.opus-shimmer { height: 6px; border-radius: 3px; margin: 1.6rem 0 1rem; background: linear-gradient(90deg, #1f6f6b, #3b5bb5, #7b3fa0, #b0367a, #c9772e, #d9b23a, #1f6f6b); background-size: 300% 100%; animation: opus-shimmer 6s linear infinite; }
-@keyframes opus-shimmer { to { background-position: 300% 0; } }
+.opus-green, .opus-peacock { position: absolute; pointer-events: none; opacity: 0; }
+.opus-green { inset: 0; background: radial-gradient(ellipse 85% 65% at 50% 105%, rgba(52,150,96,.55), rgba(30,90,60,.18) 55%, transparent 80%); }
+.opus-peacock { left: -10%; right: -10%; top: 38%; height: 26vh; background: linear-gradient(90deg, transparent, #1d7a55 14%, #2353a8 32%, #c79a2e 52%, #6a3b9e 72%, #1d7a55 86%, transparent); filter: blur(22px); will-change: transform, opacity; }
+.page-main.prose > .opus-ground .opus-peacock-label { position: absolute; left: auto; right: 1.5rem; top: calc(var(--opus-top, 0px) + .9rem); margin: 0; max-width: none; text-align: right; font: .72rem var(--mono); letter-spacing: .14em; color: #e8dcc0; opacity: 0; }
 .opus-close { padding: 5rem 0 4rem; min-height: 60vh; }
 @media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; gap: 1rem; } .opus-frame { max-width: 16rem; } .opus-cut img { max-height: 30vh; width: auto; max-width: 100%; margin: 0 auto; } .opus-pinned .opus-pic { align-items: start; } }
-@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } .opus-shimmer { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } }
 `
     // the scroll: the stage of the section nearest the viewport's middle sets
     // the ground; the fade section mixes black to white by how far it has
@@ -3615,7 +3618,10 @@ var segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.queryS
 document.documentElement.classList.add('opus-pinned');
 function top(){var h=head?head.offsetHeight:0;document.documentElement.style.setProperty('--opus-top',h+'px');return h}
 function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
-var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],cur=-1;
+var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],cur=-1,gr=g.querySelector('.opus-green'),pk=g.querySelector('.opus-peacock'),pl=g.querySelector('.opus-peacock-label');
+function ramp(t,a,b){return Math.min(1,Math.max(0,(t-a)/(b-a)))}
+function colours(on,t){var gn=0,po=0,u=0;if(on){gn=ramp(t,.1,.42)*(1-ramp(t,.62,.9));u=ramp(t,.48,.94);po=Math.sin(Math.PI*u)}
+if(gr)gr.style.opacity=gn.toFixed(3);if(pk){pk.style.opacity=(po*.6).toFixed(3);pk.style.transform='translateX('+(-90+180*u).toFixed(1)+'%)'}if(pl)pl.style.opacity=po.toFixed(3)}
 function tick(){var h=top(),r=track.getBoundingClientRect(),step=innerHeight,p=Math.max(0,(h-r.top)/step),i=Math.min(segs.length-1,Math.floor(p)),t=Math.min(1,Math.max(0,p-i));
 if(r.top>h+step*0.5)i=-1;
 if(i!==cur){segs.forEach(function(s,k){s.classList.toggle('is-active',k===i)});cur=i}
@@ -3624,6 +3630,7 @@ if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
 else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
 else if(st==='fade'){bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
 else if(st==='red'){var t2=Math.min(1,t*1.6);bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
+colours(i>=0&&segs[i].id==='picture-7',t);
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
 addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);segs[0]&&segs[0].classList.add('is-active');tick()})();`
     registerPage({
