@@ -3513,6 +3513,10 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
       close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
     }
+    // the woodcuts (Damian, 2026-11-12: "i found a pdf … i'm sure enough these
+    // things are public domain, add them in"): cropped from a scan of a 2008
+    // edition of the 1550 Rosarium, one file per picture
+    const woodcutSize = (n) => { try { const b = readFileSync(here(`./public/opus-woodcut-${String(n).padStart(2, '0')}.png`)); return [b.readUInt32BE(16), b.readUInt32BE(20)] } catch { return null } }
     const inRange = (r, a, b) => String(r.volume) === '16' && Number(r.paragraph) >= a && Number(r.paragraph) <= b
     const claimLine = (e, r) => `<li class="opus-claim"><p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
 <blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
@@ -3528,8 +3532,12 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
       const shimmer = n === 7 ? `<div class="opus-shimmer" aria-hidden="true"></div>
 <blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.shimmer.quote)}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
-      return `<section class="opus-pic" id="picture-${n}" data-stage="${stage}">
-<div class="opus-frame" role="img" aria-label="Placeholder for woodcut ${n} of the Rosarium philosophorum, ${esc(title)}"><span>Woodcut ${n}</span><span class="opus-frame-t">${esc(title)}</span><span class="opus-frame-n">image to follow</span></div>
+      const wsz = woodcutSize(n)
+      const figure = wsz
+        ? `<figure class="opus-cut"><img src="/opus-woodcut-${String(n).padStart(2, '0')}.png" width="${wsz[0]}" height="${wsz[1]}" alt="Woodcut ${n} of the Rosarium philosophorum (1550): ${esc(title)}" loading="${n <= 2 ? 'eager' : 'lazy'}"></figure>`
+        : `<div class="opus-frame" role="img" aria-label="Placeholder for woodcut ${n} of the Rosarium philosophorum, ${esc(title)}"><span>Woodcut ${n}</span><span class="opus-frame-t">${esc(title)}</span><span class="opus-frame-n">image to follow</span></div>`
+      return `<section class="opus-pic opus-seg" id="picture-${n}" data-stage="${stage}">
+${figure}
 <div class="opus-text">
 <p class="eyebrow">Picture ${n} · CW 16 §${a} to §${b}</p>
 <h2>${esc(title)}</h2>
@@ -3547,15 +3555,19 @@ ${shimmer}
 <p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with the colours of the work where he names them.</p></div>
 <p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below carries claims from the graph, cited to the paragraphs where he discusses it. The page darkens and whitens only where Jung names the black and the white.</p>
 <div class="opus-ground" aria-hidden="true"></div>
+<div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
+<div class="opus-pin">
 ${sections}
-<section class="opus-close" id="the-red" data-stage="red">
+<section class="opus-close opus-seg" id="the-red" data-stage="red">
 <div class="opus-text">
 <p class="eyebrow">After the white</p>
 <blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
 <p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
 </div>
 </section>
-<p class="meta">The woodcuts are placeholders until we clear the rights to a scan. Picture titles and paragraph ranges follow the headings of CW 16.</p>`
+</div>
+</div>
+<p class="meta">Woodcuts from the <em>Rosarium philosophorum</em> (Frankfurt, 1550). Picture titles and paragraph ranges follow the headings of CW 16.</p>`
     const opusStyle = `
 .page-main.prose > .opus-ground { position: fixed; inset: 0; max-width: none; width: auto; z-index: -1; background: transparent; transition: background-color .6s ease; pointer-events: none; }
 .page-main.opus-black, .page-main.opus-white, .page-main.opus-red { transition: color .6s ease; }
@@ -3566,6 +3578,18 @@ ${sections}
 .page-main.opus-white .eyebrow, .page-main.opus-white .opus-cite, .page-main.opus-white .meta { color: #6b5f48; }
 .page-main.opus-red .eyebrow, .page-main.opus-red .opus-cite, .page-main.opus-red .meta { color: #f0d6c2; }
 .opus-pic { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: 1.5rem 2.5rem; align-items: start; padding: 4rem 0; min-height: 70vh; }
+.opus-cut { margin: 0; }
+.opus-cut img { display: block; width: 100%; height: auto; max-height: 62vh; object-fit: contain; background: #fbf8f1; border-radius: 4px; box-shadow: 0 1px 0 rgba(0,0,0,.08); }
+/* the pinned stage (Damian, 2026-11-12: "i would like the images to fade in
+   and out on scroll, not for the page to go down"). Without the script the
+   sections simply follow one another; with it, a sticky stage sits over a
+   tall track, one viewport of scroll per picture, and the pictures crossfade */
+.opus-pinned .opus-track { position: relative; height: calc((var(--opus-n) + 1) * 100vh); }
+.opus-pinned .opus-pin { position: sticky; top: var(--opus-top, 0px); height: calc(100vh - var(--opus-top, 0px)); overflow: hidden; }
+.opus-pinned .opus-seg { position: absolute; inset: 0; min-height: 0; padding: 1.5rem 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s linear .7s; overflow-y: auto; }
+.opus-pinned .opus-seg.is-active { opacity: 1; visibility: visible; transition: opacity .7s ease, visibility 0s; }
+.opus-pinned .opus-pic { align-items: center; }
+.opus-pinned .opus-close { display: flex; flex-direction: column; justify-content: center; }
 .opus-frame { aspect-ratio: 3 / 4; border: 1px dashed currentColor; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; opacity: .75; font: .7rem var(--mono); letter-spacing: .08em; }
 .opus-frame-t { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0; }
 .opus-text h2 { margin: .2rem 0 .8rem; }
@@ -3579,25 +3603,29 @@ ${sections}
 .opus-shimmer { height: 6px; border-radius: 3px; margin: 1.6rem 0 1rem; background: linear-gradient(90deg, #1f6f6b, #3b5bb5, #7b3fa0, #b0367a, #c9772e, #d9b23a, #1f6f6b); background-size: 300% 100%; animation: opus-shimmer 6s linear infinite; }
 @keyframes opus-shimmer { to { background-position: 300% 0; } }
 .opus-close { padding: 5rem 0 4rem; min-height: 60vh; }
-@media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; } .opus-frame { max-width: 16rem; } }
-@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main { transition: none !important; } .opus-shimmer { animation: none; } }
+@media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; gap: 1rem; } .opus-frame { max-width: 16rem; } .opus-cut img { max-height: 30vh; width: auto; max-width: 100%; margin: 0 auto; } .opus-pinned .opus-pic { align-items: start; } }
+@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } .opus-shimmer { animation: none; } }
 `
     // the scroll: the stage of the section nearest the viewport's middle sets
     // the ground; the fade section mixes black to white by how far it has
     // scrolled; the closing section warms towards red
     const OPUS_JS = `(function(){
-var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main');if(!g||!m)return;
-var secs=[].slice.call(document.querySelectorAll('[data-stage]'));
+var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main'),track=document.querySelector('.opus-track');if(!g||!m||!track)return;
+var segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header');
+document.documentElement.classList.add('opus-pinned');
+function top(){var h=head?head.offsetHeight:0;document.documentElement.style.setProperty('--opus-top',h+'px');return h}
 function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
-var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18];
-function tick(){var mid=innerHeight/2,cur=null;secs.forEach(function(s){var r=s.getBoundingClientRect();if(r.top<=mid&&r.bottom>mid)cur=s});
-var st=cur?cur.getAttribute('data-stage'):'none',bg='transparent',cls='';
+var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],cur=-1;
+function tick(){var h=top(),r=track.getBoundingClientRect(),step=innerHeight,p=Math.max(0,(h-r.top)/step),i=Math.min(segs.length-1,Math.floor(p)),t=Math.min(1,Math.max(0,p-i));
+if(r.top>h+step*0.5)i=-1;
+if(i!==cur){segs.forEach(function(s,k){s.classList.toggle('is-active',k===i)});cur=i}
+var st=i<0?'none':segs[i].getAttribute('data-stage'),bg='transparent',cls='';
 if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
 else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
-else if(st==='fade'){var r=cur.getBoundingClientRect(),t=Math.min(1,Math.max(0,(mid-r.top)/r.height));bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
-else if(st==='red'){var r2=cur.getBoundingClientRect(),t2=Math.min(1,Math.max(0,(mid-r2.top)/(r2.height*.6)));bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
+else if(st==='fade'){bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
+else if(st==='red'){var t2=Math.min(1,t*1.6);bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
-addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick()})();`
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);segs[0]&&segs[0].classList.add('is-active');tick()})();`
     registerPage({
       slug: 'opus', title: 'The opus', where: 'opus', nav: 'opus',
       changefreq: 'monthly', priority: '0.6',
@@ -3605,7 +3633,7 @@ addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);t
       style: opusStyle, body: opusBody + `\n<script>${OPUS_JS}</script>`
     })
     V2_COPY.push(['public/opus.html (generated)', stripEvidence(opusBody)])
-    console.log('opus page: written (woodcuts as placeholders)')
+    console.log('opus page: written, pinned stage, woodcuts ' + (woodcutSize(1) ? 'in' : 'as placeholders'))
   }
 
   // ------------------------------------------------ /support ----------------

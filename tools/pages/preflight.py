@@ -37,8 +37,18 @@ ALLOW = {
     'symbolicworld-graph.ttl', 'symbolicworld-ontology.ttl', 'symbolicworld-void.ttl',
     # the static twin of the SPA's #/method view (spec-concept-pages-v1)
     'method.html',
-    # the Rosarium page (v2.4.0)
+    # the Rosarium page (v2.4.0) and its ten woodcuts
     'opus.html',
+    'opus-woodcut-01.png',
+    'opus-woodcut-02.png',
+    'opus-woodcut-03.png',
+    'opus-woodcut-04.png',
+    'opus-woodcut-05.png',
+    'opus-woodcut-06.png',
+    'opus-woodcut-07.png',
+    'opus-woodcut-08.png',
+    'opus-woodcut-09.png',
+    'opus-woodcut-10.png',
     # what Pages serves, with a 404 status, for an unknown path. Its presence
     # also ends the single-page fallback to the homepage (2026-11-04)
     '404.html',
