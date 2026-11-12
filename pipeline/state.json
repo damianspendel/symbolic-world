@@ -1217,11 +1217,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-9",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §561-630",
+   "result": "CW 14 WINDOW 9: Mysterium Coniunctionis §561-630, the chapter on Adam and Eve continued: the statue (Lully, Norton, the statues of Mercurius, the Mandaean statue of Adam, Mylius's living statue, the Manichaean statue, Vigenerus's statua Dei and the Cabalistic stone of Bethel), Adam as the first adept (the Introitus, Maier, the Aquarium, the Gloria mundi, the Rabbinic and Arabian legends, the Clementine true prophet and P'an Ku, the Ophite diagram and the ogdoad), the polarity of Adam (Boehme, Baader, Origen, the Naassene Adamas, Lilith), Adam as the homo maximus, Abraham Eleazar's black Shulamite and the old Adam (Adam Kadmon, the nigredo as original sin, the marriage quaternio, the Axiom of Maria, the benedicta viriditas), rotundum, head and brain, and the opening of Adam as totality. Run by the nightly job in the mining chat on 2026-11-12, the ninth window of the trilogy pass. Mined 52 candidates/57 refs (Opus-family miner subagent, blinded, model id stamped; ten attaches onto standing edges; the miner cut a first draft of 106 to 52 and left the legend catalogues of §561-563, §571-573, §575-579, §581-585 and §620-624 thinly covered; 13 names entries; 2 cross-register flags; 6 stage candidates: the Shulamite and melancholia in the nigredo, the Shulamite in the ablutio, ablutio before albedo, the novilunium in the albedo; stages_note recorded). Pre-check kept all 57 (quotation share of CW 14 after the window 8.00 percent against the 9 percent cap; the cap will bind within the next two windows and the pre-check refuses a window that would pass it). Fable gate 41 TRUE / 16 CORRECTED / 0 FALSE: nine source_text withdrawals on paragraphs that name Eleazar's text by author only (§596, §600, §606, §607 twice, §622, §625) or no author at all (§622), one claim-type correction to jung-quotes-source (§568 Vigenerus's quoted phrase), one to jung-reports-parallel with the tradition as source (§600 the Cabalistic emanation of Adam Kadmon, a standing-edge attach), one source_author supplied (§626 the anonymous Visio Arislei), and confidence demotions for one-step readings and scope (§567 the end-state, §574 the step to the eighth, §603 the primitive level, §607 moral consciousness, §614 conscious realization, §586 Origen's second Adam, §622 the fairest green as the benedicta viriditas). One name rejected: 'mountain dweller' (§622) is the meaning of Parvati's name, not a name the text calls her by. Gemini cross-vendor 55 PASS / 2 FINDING on 57 post-gate refs: both object to the single ' ... ' ellipsis the quote rules allow; the §568 attribution point is carried by the free-text source (Dionysius cited by Vigenerus) and the §574 step was already demoted at the gate; both overruled with audit notes. Names applied to 12 entries on 11 nodes; cross_register set on 2 edges; one mint: second-adam. Sources written as other: Pseudo-Dionysius, the Mandaean tradition and Eleazar's Uraltes Chymisches Werck (all added to the controlled list after this window; Bible was already on it). +42 edges, 15 refs attached to standing or this window's edges, +57 refs, +1 node. Graph 1064/4416/5956; CW 14 now 951 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 42 edges under v0.7.2: agreement 32/42 (76 percent), 30 assigned, 10 queued, 2 no-family, 0 text-undecided; queue 759; no bare unclassified rows from the Gemini arm. strain: 2 no-family, 0 text-undecided of 42 swept; new homeless strings: discovers. FAMILY GAP FOR THE SITTING: ten splits, the largest of the pass so far; attribution against content again (sophia-wisdom is-called ogdoad, anthropos identified-with christ: Opus doctrinal-attribution, Gemini archetypal-identity), psychic-effect against transformation or generation on the solificatio and transformation edges (§606, §614), a stage placement split structural-position against composition (melancholia belongs-to nigredo) and another queued on confidence alone (novilunium belongs-to albedo); the Opus arm notes that christ is second-adam is ruling 7's own worked example of a scholars-split and should queue rather than auto-assign (both arms assigned it archetypal-identity). Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 57 refs judged against the full paragraphs; weekly Fable 38 percent after the sweep, 5-hour meter 57 percent at the end of its window, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1064/4416/5956, distinct paragraphs 3667, claim mix 4740/899/317. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a0023b2c176668eb2, 34 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 19 assistant turns after the miner finished at 2026-11-11T23:53:03.081Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 9 (§561-630)",
- "nodes": 1063,
- "edges": 4374,
- "refs": 5899,
+ "next": "CW14-DUE: window 10 (§631-700)",
+ "nodes": 1064,
+ "edges": 4416,
+ "refs": 5956,
  "as_of": "2026-11-12"
 }
