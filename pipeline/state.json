@@ -96,17 +96,7 @@
    "edges": 20,
    "new_nodes": 8,
    "verdicts": "pipeline/batches/b-cw12-1_verdicts.json",
-   "result": "20/0/0",
-   "models": {
-    "proposer": "claude-opus-5-5",
-    "gate": "claude-fable-5-1",
-    "auditor": "gemini-3.1-pro-preview",
-    "source": {
-     "proposer": "miner subagent transcript agent-afb0afd6f45d540b5, 28 assistant turns",
-     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 19 assistant turns after the miner finished at 2026-11-12T19:31:49.354Z",
-     "auditor": "request model in pipeline/crossvendor_run.py"
-    }
-   }
+   "result": "20/0/0"
   },
   {
    "id": "b-cw12-2",
@@ -1275,11 +1265,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw12-1-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §1-70",
+   "result": "CW 12 WINDOW 1: Psychology and Alchemy §1-70, the introduction to the religious and psychological problems of alchemy (the goal of the analytic process and the whole man, the imitatio Christi and the Western attitude, the soul's religious function and the archetype of the God-image, the self and the Christ-symbol, the problem of opposites and probabilism, the axiom of Maria and alchemy as the undercurrent of Christianity, the two sons, three and four, the shadow and the nigredo, alchemy and the individuation process) and the opening of the dream series (the self and mandala symbolism, the material and the method, the initial dreams and visions 1 to 8: the stranger's hat, the railway window, the flood, the female forms, the snake's circle, the veiled woman on the stair, her sun-like face, the rainbow bridge). Run by hand in the mining chat on 2026-11-12 evening on Damian's instruction to run all remaining windows today; the first window of CW 12 in the second pass, after the first pass's 131 triples from this volume. Mined 50 candidates/53 refs (Opus-family miner subagent, blinded, model id stamped; eight attaches onto standing edges; 11 names entries; 3 cross-register flags; 2 stage candidates: the artifex in the nigredo, melancholia in the nigredo; 1 dream-linkage candidate: the stair's ascent read as the sublimatio; stages_note recorded). Pre-check kept all 53 (quotation share of CW 12 after the window 4.28 percent against the 9 percent cap). Fable gate 48 TRUE / 5 CORRECTED / 0 FALSE: five confidence demotions for scope and one-step readings (§11 an exclusively religious projection, 'may rob', noted; §31 the unity of the four elements; §32 'in a certain sense' the dogmatic images; §41 Jung's inference about the praying alchemist; §42 the descent depicted in Faust, noted). All eleven names accepted. Gemini cross-vendor 53 PASS / 0 FINDING on 53 post-gate refs. Names applied to 11 entries on 11 nodes; cross_register set on 3 edges; eight mints: longissima-via, paradox, seed-of-unity, heimarmene, descensus-ad-inferos, hat, stair, illuminatio. No source written as other (Tertullian filed under the Church Fathers with his name in the free-text source). +42 edges, 11 refs attached to standing edges, +53 refs, +8 nodes. Graph 1085/4540/6124; CW 12 now 276 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 42 edges under v0.7.2: agreement 36/42 (86 percent), 35 assigned, 6 queued, 1 no-family, 0 text-undecided; queue 777; the Gemini arm returned one bare unclassified row (n 4513), normalized to no-family before assembly, raw file kept as family_sweep_gemini_b-cw12-1_raw.json. strain: 1 no-family, 0 text-undecided of 42 swept; new homeless strings: is-concerned-with. FAMILY GAP FOR THE SITTING: the two fills-out edges (Christ and the Atman filling out the archetype) split manifestation against composition; contains-equivalents-of split correspondence against composition; is-counterpart-of split correspondence against kinship; offers-hooks-for split projection against instrumentality; appears-in split composition against structural-position. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 53 refs judged against the full paragraphs; weekly Fable 54 percent after the sweep, 5-hour meter 48 percent, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1085/4540/6124, distinct paragraphs 3734, claim mix 4849/943/332. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-afb0afd6f45d540b5, 28 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 26 assistant turns after the miner finished at 2026-11-12T19:31:49.354Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "b-cw12-1 (§1-70) IN FLIGHT by the mining chat (Damian, 2026-11-12: all remaining windows today) 2026-11-12 — further firings stand down",
- "nodes": 1077,
- "edges": 4498,
- "refs": 6071,
+ "next": "CW12-DUE: window 2 (§71-140)",
+ "nodes": 1085,
+ "edges": 4540,
+ "refs": 6124,
  "as_of": "2026-11-12"
 }
