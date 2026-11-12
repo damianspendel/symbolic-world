@@ -1395,7 +1395,7 @@
    }
   }
  ],
- "next": "CW13-DUE: window 1 (§1-70)",
+ "next": "b-cw13-1 (§1-70) HELD at gated by the mining chat, 2026-11-13 01:05 CET: mined, pre-checked and Fable-gated (pipeline/work/b-cw13-1_gate.json: 54 refs, 51 TRUE / 3 CORRECTED / 0 FALSE); the Gemini cross-vendor stage cannot run. The Gemini API answers HTTP 402 Payment Required on every chunk: \"Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay.\" (status RESOURCE_EXHAUSTED). Damian must top up the credits; the run then resumes at the xv stage (python3 pipeline/work/xv_b-cw13-1.py), re-orienting first. CW 14 and CW 12 are complete in the second pass; CW 13 windows 1 to 7 remain. Further scheduled firings stand down.",
  "nodes": 1156,
  "edges": 4829,
  "refs": 6480,
