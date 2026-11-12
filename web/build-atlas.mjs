@@ -2601,12 +2601,13 @@ ${QUERY_EXAMPLES_HTML}
 <div class="filters" id="filters">
   <div class="fld"><label for="f-family">family</label><select id="f-family"></select><span class="hint" id="h-family"></span></div>
   <div class="fld"><label for="f-state">state</label><select id="f-state"></select><span class="hint">assigned, or one of the three ways an edge carries no family</span></div>
-  <div class="fld"><label for="f-subject">subject</label><input id="f-subject" placeholder="any"><span class="hint">${QUERY_EXAMPLES ? 'a concept’s id, or part of its name' : 'node id, else substring of an id or a label'}</span></div>
-  <div class="fld"><label for="f-object">object</label><input id="f-object" placeholder="any"><span class="hint">same matching rule as subject</span></div>
+  <div class="fld"><label for="f-subject">subject</label><input id="f-subject" placeholder="any" list="concept-list" autocomplete="off"><span class="hint">${QUERY_EXAMPLES ? 'a concept’s id, or part of its name' : 'node id, else substring of an id or a label'}</span></div>
+  <div class="fld"><label for="f-object">object</label><input id="f-object" placeholder="any" list="concept-list" autocomplete="off"><span class="hint">same matching rule as subject</span></div>
   <div class="fld"><label for="f-volume">volume</label><select id="f-volume"></select><span class="hint">a reference cites this CW volume</span></div>
   <div class="fld"><label for="f-claim_type">claim type</label><select id="f-claim_type"></select><span class="hint">${QUERY_EXAMPLES ? 'whose voice the quote is in' : 'read off the reference, not the edge'}</span></div>
   <div class="fld"><label for="f-provenance">provenance</label><input id="f-provenance" placeholder="e.g. human-adjudication"><span class="hint">${QUERY_EXAMPLES ? 'part of the record of the family’s assignment' : 'substring of relation_family.by'}</span></div>
   <div class="fld"><label for="f-relation">relation</label><input id="f-relation" placeholder="verbatim or normalized"><span class="hint" id="h-normalized"></span></div>${EMIT_QUOTE_SEARCH ? `
+  <datalist id="concept-list"></datalist>
   <div class="fld"><label for="f-quote">quote contains</label><input id="f-quote" placeholder="words, or a &quot;phrase&quot;"><span class="hint">words inside the graph's own verbatim quotes, 25 words at most. This does not search the corpus.</span></div>` : ''}
 </div>
 
@@ -2626,6 +2627,16 @@ ${WALK_IN_UI ? `<h2>Identity walk</h2>
   <div class="fld"><label aria-hidden="true">&nbsp;</label><button class="runbtn" type="button" id="runwalk" style="margin:0">walk</button></div>
 </div>
 <div class="walk" id="walk"></div>` : ''}
+<script>
+// v2.4.0 (Damian: "/query autocomplete is Friday please"): the subject and
+// object fields suggest concepts as you type. The names load from
+// /concept-names.json the first time either field takes focus; each
+// suggestion fills in the concept's id, which the filter matches exactly.
+(function(){var dl=document.getElementById('concept-list'),done=false;
+function load(){if(done)return;done=true;fetch('/concept-names.json').then(function(r){return r.json()}).then(function(d){
+var f=document.createDocumentFragment();d.concepts.forEach(function(c){var o=document.createElement('option');o.value=c[0];o.label=c[1]+(c[2]&&c[2]!==c[1]?' ('+c[2]+')':'');f.appendChild(o)});dl.appendChild(f)}).catch(function(){done=false})}
+['f-subject','f-object'].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('focus',load)})})();
+</script>
 `
 
   const queryStyle = `${EXAMPLES_CSS}
