@@ -1313,11 +1313,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw12-4-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW12 §211-280",
+   "result": "CW 12 WINDOW 4: Psychology and Alchemy §211-280, the mandala dreams continued: the red-haired man and the eight-spoked wheel, the wheel as circulatio and Boehme's wheel, the four colours and the quaternity as preliminary stage of the lapis, the imaginatio and the vas bene clausum, the diamond, the central point and the symmetry of left and right, the circulation of the light, the rose garden and the fountain, the round table, the glass with the gelatinous mass and the unum vas, the uterus and the Kundalini serpent, the mandala as attitude and the self as lapis invisibilitatis, the bleeding Christ and individuation, the hat as mandala, the Marienhof, the prince's diamond ring, the bear with four eyes, the Pole, the yellow light with eight rays, the prison of the Lilliputians, the eight-rayed star. Run by hand in the mining chat on 2026-11-12 evening on Damian's instruction to run all remaining windows today; the fourth window of CW 12 in the second pass (state record b-cw12-4-pass2). Mined 52 candidates/53 refs (Opus-family miner subagent, blinded, model id stamped; nine attaches onto standing edges; fifteen drafted claims dropped because the first pass already cites them on this window; 15 names entries; 5 cross-register flags; 3 stage candidates: the cauda pavonis following the nigredo, the circulatio including the ascent and descent, citrinitas coinciding with the rubedo; 6 dream-linkage candidates: the fountain and the aqua nostra, the glass and the unum vas, the gelatinous mass and the prima materia, the cave and the vessel, the diamond and the lapis, the four colours leading to the lapis; stages_note recorded). Pre-check kept all 53 (quotation share of CW 12 after the window 6.59 percent against the 9 percent cap). Fable gate 51 TRUE / 2 CORRECTED / 0 FALSE: two confidence demotions (§243 Faust's Homunculus for the alchemical one, noted; §220 the Raymundus recipe for the standing circle-yields-lapis edge). All fifteen names accepted; the citrinitas mint is typed Operation like the standing nigredo, albedo and rubedo nodes. Gemini cross-vendor 52 PASS / 1 FINDING on 53 post-gate refs: §269 demoted to medium (the philosophus of dream 42 read as the wise old man of dream 47, one step on). Names applied to 15 entries on 14 nodes; cross_register set on 5 edges; eight mints: red-haired-man, four-colours, round-table, gelatinous-mass, the-glass, nostoc, citrinitas, mysterium-iniquitatis. Sources written as other: two anonymous alchemical texts quoted in footnotes (§218, §220), the medieval hymns to the Virgin and Tantric symbolism; none added to the list. +43 edges, 10 refs attached to standing or this window's edges, +53 refs, +8 nodes. Graph 1124/4661/6281; CW 12 now 433 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 43 edges under v0.7.2: agreement 34/43 (79 percent), 34 assigned, 9 queued, 0 no-family, 0 text-undecided; queue 810; no bare unclassified rows from the Gemini arm. strain: 0 no-family, 0 text-undecided of 43 swept; new homeless strings: none. FAMILY GAP FOR THE SITTING: produces (two edges) split instrumentality against generation; operates-with split derivation against instrumentality; concretizes split manifestation against symbolization; becomes-counterpart-of split correspondence against opposition; contrasts-with split privation against opposition; carries ('in his belly') split generation against composition; offers and shows each left one arm without a family. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 53 refs judged against the full paragraphs; weekly Fable 60 percent after the sweep, 5-hour meter 84 percent (so the next window waits for the 23:30 reset, per the pacing rule), no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1124/4661/6281, distinct paragraphs 3783, claim mix 4960/980/341. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a3153a0208c4261c1, 32 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 21 assistant turns after the miner finished at 2026-11-12T20:16:18.292Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW12-DUE: window 4 (§211-280)",
- "nodes": 1116,
- "edges": 4618,
- "refs": 6228,
+ "next": "CW12-DUE: window 5 (§281-350)",
+ "nodes": 1124,
+ "edges": 4661,
+ "refs": 6281,
  "as_of": "2026-11-12"
 }
