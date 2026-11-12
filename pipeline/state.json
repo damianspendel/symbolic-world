@@ -1249,11 +1249,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw14-11",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW14 §701-792",
+   "result": "CW 14 WINDOW 11: Mysterium Coniunctionis §701-792, the close of the volume: the remaining ingredients of Dorn's mixture (rosemary, Mercurialis, the lily, blood, Tartarus), active imagination, self-knowledge (the unio mentalis as knowledge of oneself, Albertus Magnus on quicksilver, the monocolus of the Abraham le Juif manuscript, the raven and the caput corvi, the skull of the Sabaeans), the content and meaning of the first two stages, the third stage with the unus mundus, the self and the bounds of knowledge, and the Epilogue. Run by hand in the mining chat on 2026-11-12 evening on Damian's instruction to run all remaining windows of the pass today (his words: \"i think we can do all the windows overnight ... i'd like you to start now\"), which overrides the five-merges-a-night ceiling for this run; the eleventh and last window of CW 14. Mined 54 candidates/54 refs under a quote budget (Opus-family miner subagent, blinded, model id stamped; told to keep the sum of its quotes under 650 letter tokens because the volume's quotation cap was 739 tokens away; it used 605; thirteen attaches onto standing edges; 18 names entries; 14 cross-register flags; 11 stage candidates: putrefactio, solutio, separatio, divisio, melancholia and the sol niger in the nigredo, the brain in the nigredo, the body in the mortificatio, the philosophic wine in the separatio, the unio mentalis before the reunion with the body, the lapis placed with the second stage; stages_note recorded). Pre-check kept all 54 (quotation share of CW 14 after the window 8.92 percent against the 9 percent cap; CW 14 closes under the cap). Fable gate 41 TRUE / 13 CORRECTED / 0 FALSE: one claim-type correction with source_text withdrawn (§714 Jung's paraphrase of Albertus, title named at §712), two notes added without demotion (§706 active imagination, §735 the cosmogonic incest), ten confidence demotions for one-step readings (§705 the production of the caelum, §716 'this idea', §719 'this symbol', §722 what projection hid, §728 the night raven, noted, §734 Osiris's dismemberment, noted, §744 the quote stops before the object, noted, §757 'this state', §762 the third degree, §786 origination). One name rejected: nycticorax (§728) names the night raven, a distinct bird. Gemini cross-vendor 48 PASS / 6 FINDING on 54 post-gate refs: §752 demoted to medium (the second degree of conjunction for the reunion, as ruled for §677 in window 10); §714's relation objection overruled under the ruled stage relation; the other four fell on steps the gate had demoted for, overruled with audit notes. Names applied to 17 entries on 15 nodes; cross_register set on 13 edges; five mints: servus-rubeus, divisio, beheading, rohita, depositum-fidei. Sources written as other: Albertus Magnus's Liber octo capitulorum (added to the controlled list after this window). +41 edges, 13 refs attached to standing edges, +54 refs, +5 nodes. Graph 1077/4498/6071; CW 14 now 1066 references, mined end to end in the second pass. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 41 edges under v0.7.2: agreement 35/41 (85 percent), 33 assigned, 6 queued, 1 no-family, 1 text-undecided; queue 771; no bare unclassified rows from the Gemini arm. strain: 1 no-family, 1 text-undecided of 41 swept; new homeless strings: none (connected-with is known). FAMILY GAP FOR THE SITTING: the splits are structural-position against derivation (the-self replaces the-ego, 'supplants' on derivation's list), projection against instrumentality (unio-mentalis makes-conscious projection), instrumentality against telos (beheading), amplification against correspondence (monocolus parallels rohita, the adducing act), separation against psychic-effect (philosophic-wine undergoes separatio, the undergoes seed again) and doctrinal-attribution against no family (lapis belongs-to reunion-with-the-body, 'for him'); both arms left unus-mundus corresponds-to atman text-undecided on 'relation or identity'. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-12, 54 refs judged against the full paragraphs; weekly Fable 51 percent after the sweep, 5-hour meter 28 percent, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1077/4498/6071, distinct paragraphs 3721, claim mix 4802/940/329. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit; the marker rolls to CW 12 window 1.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a2cd38c478fff5b82, 22 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 22 assistant turns after the miner finished at 2026-11-12T19:18:02.411Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW14-DUE: window 11 (§701-792)",
- "nodes": 1072,
- "edges": 4457,
- "refs": 6017,
+ "next": "CW12-DUE: window 1 (§1-70)",
+ "nodes": 1077,
+ "edges": 4498,
+ "refs": 6071,
  "as_of": "2026-11-12"
 }
