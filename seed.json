@@ -113,6 +113,11 @@
      "volume": "12",
      "paragraph": 333,
      "batch": "b-cw12-5"
+    },
+    {
+     "volume": "13",
+     "paragraph": 444,
+     "batch": "b-cw13-7"
     }
    ]
   },
@@ -1938,6 +1943,11 @@
      "volume": "14",
      "paragraph": 490,
      "batch": "b-cw14-7"
+    },
+    {
+     "volume": "13",
+     "paragraph": 432,
+     "batch": "b-cw13-7"
     }
    ]
   },
@@ -3440,6 +3450,11 @@
      "volume": "12",
      "paragraph": 433,
      "batch": "b-cw12-7"
+    },
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "batch": "b-cw13-7"
     }
    ],
    "aliases": [
@@ -4002,7 +4017,17 @@
   {
    "id": "theoria",
    "label": "Theoria (the alchemical doctrine, aqua doctrinae)",
-   "type": "Concept"
+   "type": "Concept",
+   "aliases": [
+    "scientia"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 482,
+     "batch": "b-cw13-7"
+    }
+   ]
   },
   {
    "id": "wheel-of-birth",
@@ -5584,7 +5609,17 @@
   {
    "id": "thysia",
    "label": "Thysia (sacrificial burning)",
-   "type": "Motif"
+   "type": "Motif",
+   "aliases": [
+    "θυσία"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "batch": "b-cw13-7"
+    }
+   ]
   },
   {
    "id": "deipnon",
@@ -6810,7 +6845,17 @@
   {
    "id": "collective-representations",
    "label": "Collective representations (Lévy-Bruhl)",
-   "type": "Concept"
+   "type": "Concept",
+   "aliases": [
+    "représentations collectives"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 478,
+     "batch": "b-cw13-7"
+    }
+   ]
   },
   {
    "id": "william-mcdougall",
@@ -9633,6 +9678,11 @@
      "volume": "13",
      "paragraph": 410,
      "batch": "b-cw13-6"
+    },
+    {
+     "volume": "13",
+     "paragraph": 460,
+     "batch": "b-cw13-7"
     }
    ]
   },
@@ -9640,6 +9690,91 @@
    "id": "tree-numen",
    "label": "Tree-numen",
    "type": "Concept"
+  },
+  {
+   "id": "andalusian-prince",
+   "label": "The Andalusian prince (Book of Ostanes)",
+   "type": "Figure"
+  },
+  {
+   "id": "enkidu",
+   "label": "Enkidu",
+   "type": "Figure"
+  },
+  {
+   "id": "hostile-stone",
+   "label": "The hostile stone (motif)",
+   "type": "Motif"
+  },
+  {
+   "id": "psychic-experience",
+   "label": "Psychic experience",
+   "type": "Concept"
+  },
+  {
+   "id": "black-mass",
+   "label": "The black mass (Wei Po-yang)",
+   "type": "Substance"
+  },
+  {
+   "id": "chi",
+   "label": "Ch'i (the divine air, spirit, ethereal essence)",
+   "type": "Substance",
+   "aliases": [
+    "ch’i"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "batch": "b-cw13-7"
+    }
+   ]
+  },
+  {
+   "id": "understanding",
+   "label": "Understanding (as a means of defence)",
+   "type": "Concept"
+  },
+  {
+   "id": "torture",
+   "label": "Torture (the motif of torment in the opus)",
+   "type": "Motif"
+  },
+  {
+   "id": "unnatural-fire",
+   "label": "Unnatural fire (ignis contra naturam)",
+   "type": "Substance"
+  },
+  {
+   "id": "crucifixion",
+   "label": "Crucifixion",
+   "type": "Motif"
+  },
+  {
+   "id": "naas",
+   "label": "Naas (the serpent of the Nous)",
+   "type": "Figure"
+  },
+  {
+   "id": "sophia-achamoth",
+   "label": "Sophia-Achamoth",
+   "type": "Figure"
+  },
+  {
+   "id": "heavenly-bride",
+   "label": "The shaman's heavenly bride",
+   "type": "Figure",
+   "aliases": [
+    "ayami"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 460,
+     "batch": "b-cw13-7"
+    }
+   ]
   }
  ],
  "edges": [
@@ -9859,6 +9994,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-13",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-6, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 428,
+     "quote": "The lapis and its synonyms are likewise symbols of the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -51530,6 +51676,17 @@
      "verified_date": "2026-08-08",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-4, PASS, 2026-08-08)",
      "note": "Jung hedges with 'may well be'."
+    },
+    {
+     "volume": "13",
+     "paragraph": 428,
+     "quote": "and on the other hand to the self, Khidr",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -79008,6 +79165,19 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-8, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 437,
+     "quote": "to put it, as a microcosm and a man, on a par with Christ",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "the alchemists generally",
+     "source_author": "the alchemists"
     }
    ],
    "relation_family": {
@@ -105271,6 +105441,17 @@
      "verified_date": "2026-10-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw5-10, FINDING-adjudicated, 2026-10-30)",
      "correction_note": "cross-vendor correction: Subject conflates the specific green snake in Miss Miller's vision with the universal Kundalini/healing serpent, and the object overgeneralizes her personal unconscious to the universal unconscious."
+    },
+    {
+     "volume": "13",
+     "paragraph": 448,
+     "quote": "Hence it is an excellent symbol for the two aspects of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -113627,6 +113808,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-07",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw16-6, PASS, 2026-11-07)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 449,
+     "quote": "Mercurius, 34 who is quite definitely a personification of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 481,
+     "quote": "This elusive entity symbolizes the unconscious in every particular",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -113634,6 +113837,11 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-07"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-7",
+    "date": "2026-11-13"
    }
   },
   {
@@ -159106,6 +159314,17 @@
      "source": "alchemical tradition as summarized by Jung",
      "source_author": "the alchemists",
      "audit_note": "cross-vendor (Gemini) asked for jung-asserts; 'the fourfold Mercurius is also the tree or its spiritus vegetativus' summarizes alchemical doctrine, kept as a report under the in-doubt rule"
+    },
+    {
+     "volume": "13",
+     "paragraph": 459,
+     "quote": "Its identity with Mercurius, the spiritus vegetativus , confirms this view.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -160268,6 +160487,1245 @@
     "value": null,
     "state": "pending-adjudication",
     "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "is",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 422,
+     "quote": "“The prima materia is an oily water and is the philosophic stone, from which branches multiply into infinity,” says Mylius.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Mylius, Philosophia reformata",
+     "source_author": "Mylius",
+     "source_text": "Philosophia reformata"
+    },
+    {
+     "volume": "13",
+     "paragraph": 421,
+     "quote": "so also is the lapis in its double significance as the prima and ultima materia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "is",
+   "object": "tree",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 423,
+     "quote": "For it is the tree whose branches, leaves, flowers, and fruits come from it and through it and for it",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Consilium coniugii, commenting on Senior",
+     "source_author": "Senior",
+     "source_text": "Consilium coniugii"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "andalusian-prince",
+   "relation": "is-synonym-for",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 425,
+     "quote": "The water, the tree, the young Egyptian, and the Andalusian prince all refer to the stone.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Book of Ostanes (Arabic)",
+     "source_author": "Ostanes",
+     "source_text": "other"
+    },
+    {
+     "volume": "13",
+     "paragraph": 424,
+     "quote": "It is a tree that grows on the tops of the mountains, a young man born in Egypt, a prince from Andalusia",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Book of Ostanes (Arabic)",
+     "source_author": "Ostanes",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "andalusian-prince",
+   "relation": "is-enemy-of",
+   "object": "artifex",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 424,
+     "quote": "a prince from Andalusia, who desires the torment of the seekers. He has slain their leaders.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Book of Ostanes (Arabic)",
+     "source_author": "Ostanes",
+     "source_text": "other"
+    },
+    {
+     "volume": "13",
+     "paragraph": 425,
+     "quote": "He is their enemy and “has slain their leaders,” that is, the masters and authorities of the art.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Book of Ostanes (Arabic)",
+     "source_author": "Ostanes",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "andalusian-prince",
+   "relation": "parallels",
+   "object": "enkidu",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 425,
+     "quote": "Enkidu ... so that he may kill the hero. In the same way the prince “desires the torment of the seekers.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) objected to the quote's ellipsis; the quote joins two verbatim spans of the paragraph with the one ' ... ' the quote rules allow"
+    },
+    {
+     "volume": "13",
+     "paragraph": 428,
+     "quote": "As a further parallel to the initial hostility of Enkidu and the Andalusian prince and of the stone in general",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "dragon",
+   "relation": "personifies",
+   "object": "hostile-stone",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 426,
+     "quote": "This enemy appears in alchemy in the guise of the poisonous or fire-spitting dragon",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "causes",
+   "object": "psychosis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 428,
+     "quote": "The danger is that of an inundation by the unconscious, which in a bad case may take the form of a psychosis",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "note": "in a bad case, where consciousness cannot assimilate the invasion"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-devil",
+   "relation": "hinders",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 429,
+     "quote": "the deceptions of the devil, who often insinuates himself into the chemical operations",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Hoghelande",
+     "source_author": "Hoghelande"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "ophiuchos",
+   "relation": "hinders",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 430,
+     "quote": "the demon Ophiuchos instils negligence, impeding our intentions",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Olympiodorus",
+     "source_author": "Olympiodorus"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "possesses",
+   "object": "numinosity",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 431,
+     "quote": "The miracle of the stone which the alchemist expected or experienced must have been intensely numinous",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lapis",
+   "relation": "is",
+   "object": "psychic-experience",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 431,
+     "quote": "The most probable hypothesis, it seems to me, is that it was a psychic experience",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "note": "stated as Jung's most probable hypothesis"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-7",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "black-mass",
+   "relation": "is",
+   "object": "chaos",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "quote": "The black mass is the massa confusa , the chaos or nigredo of Western alchemy",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "black-mass",
+   "relation": "belongs-to",
+   "object": "nigredo",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "quote": "The black mass is the massa confusa , the chaos or nigredo of Western alchemy, the prima materia",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence says the black mass is the nigredo; belongs-to is the ruled relation for assigning a substance to a stage (Damian, 2026-11-11), and the identity is carried by the quote and by the companion edge black-mass is chaos"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "true-man",
+   "relation": "is",
+   "object": "the-whole-man",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "quote": "It is the chên-yên hidden in the darkness, the whole man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "chi",
+   "relation": "corresponds-to",
+   "object": "rose-coloured-blood",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "quote": "The ch’i , the quintessence (the rose-coloured blood of Western alchemy) cannot be “held back”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "undergoes",
+   "object": "thysia",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 433,
+     "quote": "It is indeed a self-sacrifice, a true θυσία of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "artifex",
+   "relation": "serves",
+   "object": "lapis",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 436,
+     "quote": "“The philosopher is not the master of the stone, but rather its minister.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "alchemical saying cited by Jung",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "understanding",
+   "relation": "overcomes",
+   "object": "andalusian-prince",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 436,
+     "quote": "but with a reserve of understanding which would finally enable them to slay the prince",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 424,
+     "quote": "I can see no weapon against him save resignation, no charger but knowledge, no buckler but understanding.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Book of Ostanes (Arabic)",
+     "source_author": "Ostanes",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "understanding",
+   "relation": "disarms",
+   "object": "symptom",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 436,
+     "quote": "neurotic symptoms which seem impossible to attack can often be rendered harmless by conscious understanding",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "daemon",
+   "relation": "drives-towards",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 437,
+     "quote": "use the daemon as a familiar ... it is the source of that fearful power which drives us towards individuation",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the sentence is about the ambivalent figure the magician tries to use as a familiar; scope note added, confidence as proposed",
+     "note": "the autonomous, ambivalent figure of the daemon-familiar (Mercurius)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "undergoes",
+   "object": "torture",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 439,
+     "quote": "the tormented one being not the artifex but Mercurius, or the lapis or tree",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "the Western alchemical texts",
+     "source_author": "the alchemists"
+    },
+    {
+     "volume": "13",
+     "paragraph": 444,
+     "quote": "have persecuted this Mercurius with various torments",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Dorn",
+     "source_author": "Dorn"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-body",
+   "relation": "undergoes",
+   "object": "torture",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 439,
+     "quote": "“Take the old black spirit and destroy and torture ... with it the bodies, until they are changed.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Turba philosophorum",
+     "source_author": "the alchemists",
+     "source_text": "Turba philosophorum"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "arcane-substance",
+   "relation": "undergoes",
+   "object": "torture",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 440,
+     "quote": "in the second case the tormented thing is without doubt the arcane substance",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "soul",
+   "relation": "undergoes",
+   "object": "torture",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 441,
+     "quote": "“It must be tormented with the most subtle spiritual thing, namely with the fiery nature which is akin to it.",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Tractatus Micreris",
+     "source_author": "other",
+     "source_text": "Tractatus Micreris"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "springs-from",
+   "object": "meditatio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 443,
+     "quote": "the most important discoveries of the alchemists sprang from their meditations on their own psychic processes",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the sentence has the alchemists' discoveries springing from their meditations on their own psychic processes; the standing meditatio node is the alchemical operation, one step from Jung's 'meditations', medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-7",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "unnatural-fire",
+   "relation": "is",
+   "object": "dragon",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 444,
+     "quote": "“The unnatural fire must torment the bodies, for it is the dragon violently burning, like the fire of hell.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Ripley",
+     "source_author": "Ripley"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "undergoes",
+   "object": "sublimatio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 444,
+     "quote": "some with sublimations, coagulations, precipitations",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Dorn",
+     "source_author": "Dorn",
+     "note": "Dorn lists these among the Sophists' mistaken torments"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mercurius",
+   "relation": "undergoes",
+   "object": "coagulatio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 444,
+     "quote": "various torments, some with sublimations, coagulations",
+     "claim_type": "jung-quotes-source",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Dorn",
+     "source_author": "Dorn",
+     "note": "Dorn lists these among the Sophists' mistaken torments"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "nigredo",
+   "relation": "is",
+   "object": "melancholia",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 445,
+     "quote": "The “Consilium coniugii” equates the nigredo with melancholia.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Consilium coniugii",
+     "source_author": "the alchemists",
+     "source_text": "Consilium coniugii"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-7",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lead",
+   "relation": "is",
+   "object": "depression",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 445,
+     "quote": "lead, which had always been considered an arcane substance, was identical with the subjective state of depression",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Vigenère",
+     "source_author": "Vigenerus"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-7",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "rex",
+   "relation": "undergoes",
+   "object": "crucifixion",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 446,
+     "quote": "In Ripley the royal pair, the supreme opposites, are crucified for the purpose of union and rebirth.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Ripley",
+     "source_author": "Ripley",
+     "note": "the king with the queen as the royal pair"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-sword",
+   "relation": "hangs-on",
+   "object": "tree",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 447,
+     "quote": "hanging the sword on a tree: and so God’s wrath is turned into love",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "Dorn, Speculativa philosophia",
+     "source_author": "Dorn",
+     "source_text": "Speculativa philosophia"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-sword",
+   "relation": "parallels",
+   "object": "serpent",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 448,
+     "quote": "Christ as the sword hanging on a tree is almost certainly an analogy of the serpent hanging on the cross",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "correction_note": "gate correction: 'almost certainly an analogy' is hedged, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "logos",
+   "relation": "is-synonymous-with",
+   "object": "naas",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 448,
+     "quote": "Christ as Logos is synonymous with the Naas, the serpent of the Nous among the Ophites.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "the Ophites",
+     "source_author": "the Ophites"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "sophia-achamoth",
+   "relation": "represents",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 454,
+     "quote": "The emotional state of Sophia sunk in unconsciousness ... characterize very clearly the anima of a man",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "coniunctio",
+   "relation": "is",
+   "object": "death",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 457,
+     "quote": "The coniunctio is a culminating point of life and at the same time a death",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "tree-numen",
+   "relation": "represents",
+   "object": "the-self",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 458,
+     "quote": "The interpretation of the feminine tree-numen as the self therefore holds good for women",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "note": "for women"
+    }
+   ],
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "tree",
+   "relation": "is-born-from",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 459,
+     "quote": "“From man [= Anthropos] and gnosis is born the tree, which they also call gnosis.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "source": "the Barbeliots, reported in Irenaeus",
+     "source_author": "Irenaeus"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "heavenly-bride",
+   "relation": "is-projection-of",
+   "object": "anima",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 460,
+     "quote": "the heavenly bride, 12 who is a typical anima projection",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "shaman",
+   "relation": "is-projection-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 462,
+     "quote": "shamanistic symbolism, namely that it is a projection of the individuation process",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, FINDING-adjudicated, 2026-11-13)",
+     "correction_note": "gate correction: the sentence says shamanistic symbolism is a projection of the individuation process; the subject shaman is one step from it (the proposer's note says so), medium",
+     "audit_note": "cross-vendor (Gemini) objected that the sentence speaks of shamanistic symbolism; the gate had set this reference to medium on the same step, with the proposer's note",
+     "note": "shamanistic symbolism"
+    }
+   ],
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "eagle",
+   "relation": "represents",
+   "object": "god-image",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 475,
+     "quote": "Assuming that the eagle is an archaic God-image whose power a person cannot escape",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)",
+     "note": "stated as an assumption"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "supplies",
+   "object": "archetype",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 476,
+     "quote": "The unconscious supplies as it were the archetypal form, which in itself is empty and irrepresentable.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "amplification",
+   "relation": "overcomes",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 480,
+     "quote": "In this way the unconscious can be integrated and the dissociation overcome.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "reductive-method",
+   "relation": "reinforces",
+   "object": "one-sidedness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 480,
+     "quote": "The reductive procedure, on the other hand, leads away from the unconscious and merely reinforces the one-sidedness of the conscious mind.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "gives-rise-to",
+   "object": "chemistry",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 482,
+     "quote": "others converted the oratorium into a laboratorium and discovered chemistry",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-7, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-13"
    }
   }

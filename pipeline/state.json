@@ -1489,11 +1489,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw13-7-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §421-482",
+   "result": "CW 13 WINDOW 7: Alchemical Studies §421-482, the close of The Philosophical Tree and of the volume: the tree as the lapis (Mylius's oily water as prima materia and stone, the Consilium coniugii's stone as tree), the Book of Ostanes's Andalusian prince as synonym and enemy of the seekers beside Enkidu, the dragon as the hostile stone, the first meeting with the self and the danger of psychosis, the devil and the demon Ophiuchos hindering the work, the numinous stone as psychic experience, Wei Po-yang's black mass as the chaos of the nigredo and the chên-yên as the whole man, the ch'i as rose-coloured blood, the self-sacrifice of the self, the philosopher as minister of the stone, understanding overcoming the prince and disarming the symptom, the daemon driving towards individuation, the torture of Mercurius, the bodies, the arcane substance and the soul, alchemy springing from the alchemists' meditations, Ripley's unnatural fire as dragon, Dorn's rejected sublimations and coagulations, the nigredo as melancholia and lead as depression, Ripley's crucified royal pair, Dorn's sword hung on a tree and its parallel with the serpent on the cross, the Logos and the Naas, Sophia-Achamoth as the anima, the coniunctio as death, the tree-numen as the self for women, the tree born from the Anthropos, the heavenly bride as anima projection, shamanism as projected individuation, the eagle as God-image, the unconscious supplying the archetypal form, amplification overcoming dissociation against the reductive method, and alchemy giving rise to chemistry. Run by hand in the mining chat on 2026-11-13 morning on Damian's instruction to run all remaining windows; the seventh and last window of CW 13 in the second pass (state record b-cw13-7-pass2). Mined 52 candidates/59 refs (Opus-family miner subagent, blinded, model id stamped; six attaches onto standing edges; the miner cut a first draft of 116 candidates to 52; 10 names entries; 5 cross-register flags; 3 stage candidates; stages_note recorded). Pre-check kept all 59 (quotation share of CW 13 after the window 8.58 percent against the 9 percent cap). Fable gate 54 TRUE / 4 CORRECTED / 1 FALSE: the primordial-man mint refused as a duplicate of the standing anthropos (alias Primordial Man), its edge dropped and the claim anthropos corresponds-to collective-unconscious sent to the sitting; three confidence demotions (§443 the alchemists' meditations on the meditatio node, §448 'almost certainly an analogy', §462 shamanistic symbolism on the shaman node); §437 scope note on the daemon as familiar. Nine names accepted and one rejected (primordial-man|450, the refused mint). Gemini cross-vendor 55 PASS / 3 FINDING on 58 post-gate refs: §425 the allowed ellipsis, §433 the ruled stage relation belongs-to, §462 a reference already at medium; all overruled with audit notes. Names applied to 9 entries on 9 nodes; cross_register set on 5 edges; thirteen mints: andalusian-prince, enkidu, hostile-stone, psychic-experience, black-mass, chi, understanding, torture, unnatural-fire, crucifixion, naas, sophia-achamoth, heavenly-bride. Sources written as other: the Book of Ostanes and the Tractatus Micreris (both added to the controlled list as texts in the tooling commit), Revelation and East Siberian shamanism in free text. +45 edges, 6 refs attached to standing edges and 7 further refs on this window's new edges, +58 refs, +13 nodes. Graph 1244/5132/6887; CW 13 now 655 references. CW 13 IS COMPLETE in the second pass: seven windows, §1-482. THE TRILOGY SECOND PASS IS COMPLETE: CW 14 (eleven windows), CW 12 (eight) and CW 13 (seven), twenty-six windows end to end, from 1004/4180/5553 at the start of the pass on 2026-11-11 to 1244/5132/6887. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 45 edges under v0.7.2: agreement 40/45 (89 percent), 39 assigned, 5 queued, 1 no-family, 0 text-undecided; queue 890; no bare unclassified rows from the Gemini arm. strain: 1 no-family, 0 text-undecided of 45 swept; new homeless strings: none (possesses is listed as homeless). FAMILY GAP FOR THE SITTING: personifies split personification against manifestation on the dragon as hostile stone; is split archetypal-identity against correspondence on the black mass as chaos; belongs-to left the Gemini arm without a family on the black mass in the nigredo; is-synonymous-with split archetypal-identity against doctrinal-attribution on 'among the Ophites'; represents split classification against archetypal-identity on the eagle as God-image. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-13, 59 refs judged against the full paragraphs; weekly Fable 85 percent and 5-hour meter 78 percent at the window's start against today's 95 percent stop (Damian, relayed 06:58), no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1244/5132/6887, distinct paragraphs 4043, claim mix 5335/1135/417. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-af1bfbd48f5830faf, 37 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 14 assistant turns after the miner finished at 2026-11-13T07:26:58.839Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW13-DUE: window 7 (§421-482)",
- "nodes": 1231,
- "edges": 5087,
- "refs": 6829,
+ "next": "TRILOGY PASS COMPLETE — CW 14, 12 and 13 second pass merged end to end; report to Damian",
+ "nodes": 1244,
+ "edges": 5132,
+ "refs": 6887,
  "as_of": "2026-11-13"
 }
