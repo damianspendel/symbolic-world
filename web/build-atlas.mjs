@@ -3514,32 +3514,40 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
       close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
     }
-    // the trilogy picks (Damian, 2026-11-12): claims from the CW 14 second
-    // pass, shown on the picture they bear on and marked by their CW 14 cite.
-    // Each replaces the lowest-ranked of the picture's three claims under the
-    // page's own order; the colour cite is never replaced. The closing panel
-    // carries its own, and the yellow before the red rests on CW 12 §271.
-    // Four claims a picture (Damian, 2026-11-13: "let's make everthing have
-    // four - a quaternity if you like"). Picture 2 is set by hand from his
-    // ruling the same day; a group of edges sharing one quote shows as one claim.
+    // The claims on each picture, in a pinned order (Damian, 2026-11-13: "let's
+    // make everthing have four - a quaternity if you like"; picture 2 "414, 532,
+    // 421 and 415"; "for all the others, try and apply an order"): first the
+    // claim that frames the image, then its figures, then the psychological
+    // reading, last Jung's crux. A group of edges that share one quote shows as
+    // one claim. CW 14 entries are the trilogy picks of 2026-11-12, marked by
+    // their cite. The order is explicit so a data change cannot reshuffle it;
+    // the build refuses if an entry leaves the graph or a picture's colour cite
+    // is not among its claims. The closing panel has its own pick, and the
+    // yellow before the red rests on CW 12 §271.
     const OPUS_CLAIMS = 4
-    const OPUS_FIXED = {
-      2: [
-        [['coniunctio|involves|incest', '16', 415]],
-        [['regina|represents|artifex', '16', 421], ['rex|represents|soror-mystica', '16', 421]],
-        [['regina|appears-as|luna', '14', 532]],
-        [['rex|symbolizes|consciousness', '14', 501]]
-      ]
+    const OPUS_ORDER = {
+      1: [[['alchemy|derives-from|the-unconscious', '16', 407]], [['quintessence|derives-from|four-elements', '16', 402]],
+          [['mercurius|is-counterpart-of|the-trinity', '16', 403]], [['axiom-of-maria|runs-through|alchemy', '16', 404]]],
+      2: [[['the-unconscious|produces|symbol', '16', 414]], [['regina|appears-as|luna', '14', 532]],
+          [['regina|represents|artifex', '16', 421], ['rex|represents|soror-mystica', '16', 421]], [['coniunctio|involves|incest', '16', 415]]],
+      3: [[['the-opus|requires|morality', '16', 451]], [['coniunctio|amplified-by|sol', '16', 451], ['coniunctio|amplified-by|luna', '16', 451]],
+          [['the-opus|requires|morality', '16', 450]], [['repression|leads-to|dissociation', '16', 452]]],
+      4: [[['bath|is-form-of|night-sea-journey', '16', 455]], [['the-sea|signifies|solutio', '16', 454]],
+          [['rotundum|corresponds-to|wholeness', '16', 454]], [['wholeness|requires|soul', '16', 454]]],
+      5: [[['coniunctio|expresses|union-of-opposites', '16', 460]], [['nous|is-embraced-by|physis', '16', 457]],
+          [['water|symbolizes|the-unconscious', '16', 459]], [['coniunctio|is-a|hierosgamos', '14', 120]]],
+      6: [[['death|precedes|rebirth', '16', 467]], [['coniunctio|followed-by|nigredo', '16', 468]],
+          [['sol-niger|belongs-to|nigredo', '14', 113]], [['coniunctio|produces|rebis', '16', 468]]],
+      7: [[['dissociation|is-analogous-to|schizophrenia', '16', 476]], [['mercurius|resists-integration-into|consciousness', '16', 478]],
+          [['nigredo|parallels|dark-night-of-the-soul', '16', 479]], [['cauda-pavonis|precedes|rubedo', '14', 388]]],
+      8: [[['water|symbolizes|sapientia', '16', 485]], [['dew|heralds-return-of|soul', '16', 487]],
+          [['dew|belongs-to|albedo', '14', 155]], [['nigredo|precedes|albedo', '16', 493]]],
+      9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['coniunctio|occurs-in|collective-unconscious', '16', 499]],
+          [['unio-mentalis|precedes|reunion-with-the-body', '14', 677]], [['nigredo|precedes|albedo', '16', 515]]],
+      10: [[['anthropos|parallels|christ', '16', 525]], [['denarius|means|christ', '16', 525]],
+           [['rebis|is-product-of|incest', '16', 529]], [['rebis|symbolizes|union-of-opposites', '14', 11]]]
     }
-    const OPUS_PICKS = {
-      5: [['coniunctio|is-a|hierosgamos', '14', 120]],
-      6: [['sol-niger|belongs-to|nigredo', '14', 113]],
-      7: [['cauda-pavonis|precedes|rubedo', '14', 388]],
-      8: [['dew|belongs-to|albedo', '14', 155]],
-      9: [['unio-mentalis|precedes|reunion-with-the-body', '14', 677]],
-      10: [['rebis|symbolizes|union-of-opposites', '14', 11]],
-      close: [['coniunctio|belongs-to|rubedo', '14', 307]]
-    }
+    const OPUS_PICKS = { close: [['coniunctio|belongs-to|rubedo', '14', 307]] }
     const OPUS_YELLOW = ['citrinitas|coincides-with|rubedo', '12', 271]
     const edgeByKey = new Map(atlasEdges.map(e => [e.key, e]))
     const findPick = ([key, vol, para], hard = true) => {
@@ -3567,15 +3575,13 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       const forced = st && st.edge ? pool.filter(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para) : []
       const rank = (x) => [x[1].claim_type === 'jung-asserts' ? 0 : 1, Number(x[1].paragraph)]
       const rest = pool.filter(x => !forced.includes(x)).sort((x, y) => { const a1 = rank(x), b1 = rank(y); return a1[0] - b1[0] || a1[1] - b1[1] })
-      const picks = (OPUS_PICKS[n] || []).map(x => findPick(x))
-      const chosen = [], seen = new Set(picks.map(x => x[0].key))
+      // a picture without a pinned order falls back to the ranking: the colour
+      // cite first, then Jung asserts by paragraph
+      const chosen = [], seen = new Set()
       for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === OPUS_CLAIMS) break }
-      const dropped = chosen.splice(Math.max(forced.length ? 1 : 0, OPUS_CLAIMS - picks.length))
-      chosen.push(...picks)
-      for (const [e, r] of dropped) console.log(`opus picks: picture ${n} drops ${e.key} (CW ${r.volume} §${r.paragraph})`)
-      const fixed = OPUS_FIXED[n] ? OPUS_FIXED[n].map(g => g.map(x => findPick(x))) : null
+      const fixed = OPUS_ORDER[n] ? OPUS_ORDER[n].map(g => g.map(x => findPick(x))) : null
       if (fixed) for (const g of fixed) if (new Set(g.map(([, r]) => r.quote)).size !== 1) { console.error(`OPUS PAGE: picture ${n} groups claims that do not share one quote`); process.exit(1) }
-      if (fixed && st && st.edge) { console.error(`OPUS PAGE: picture ${n} is set by hand but carries a colour cite`); process.exit(1) }
+      if (fixed && forced.length && !fixed.some(g => g.some(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para))) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at §${st.para} is not among its pinned claims`); process.exit(1) }
       const claimsHtml = fixed ? fixed.map(g => claimGroup(g)).join('\n') : chosen.map(([e, r]) => claimLine(e, r)).join('\n')
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
       const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.verdure.quote)}&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
