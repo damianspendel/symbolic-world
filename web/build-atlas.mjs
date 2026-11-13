@@ -1225,6 +1225,34 @@ const bindingCalib = calibRecords
   .filter(r => r.definitions_version === famVersion && r.verdict === 'PASS')
   .sort((a, b) => String(a.planted_at || a.file).localeCompare(String(b.planted_at || b.file)))
   .pop()
+// The method page reports the family gate pooled over every calibration run at
+// the binding ruleset, PASS and FAIL alike (v2.4.1, method correction A; the
+// "Best of N" rule in docs/GLOSSARY.md: report the pooled rate, not the best
+// run). The releases pin above still names the PASS record. A Wilson 95%
+// interval goes with the pooled sensitivity. The build refuses if the runs did
+// not plant the same number of errors, since the copy says each run planted the
+// same count.
+const poolRuns = calibRecords.filter(r => r.definitions_version === famVersion)
+const pooledCalib = poolRuns.length ? (() => {
+  const perRun = [...new Set(poolRuns.map(r => r.sensitivity.of))]
+  if (perRun.length !== 1) {
+    console.error(`METHOD PAGE: the ${famVersion} calibration runs planted different error counts (${perRun.join(', ')}); ` +
+      `the copy says each run planted the same number, so the build refuses.`)
+    process.exit(1)
+  }
+  const caught = poolRuns.reduce((n, r) => n + r.sensitivity.caught, 0)
+  const planted = poolRuns.reduce((n, r) => n + r.sensitivity.of, 0)
+  const z = 1.959963984540054, p = caught / planted, d = 1 + z * z / planted
+  const centre = (p + z * z / (2 * planted)) / d
+  const half = z * Math.sqrt(p * (1 - p) / planted + z * z / (4 * planted * planted)) / d
+  return {
+    runs: poolRuns.length, failed: poolRuns.filter(r => r.verdict !== 'PASS').length, planted_per_run: perRun[0],
+    caught, planted,
+    clean: poolRuns.reduce((n, r) => n + r.specificity.clean_left_alone, 0),
+    clean_of: poolRuns.reduce((n, r) => n + r.specificity.of, 0),
+    caught_pct: (100 * p).toFixed(1), caught_lo: (100 * (centre - half)).toFixed(1), caught_hi: (100 * (centre + half)).toFixed(1)
+  }
+})() : null
 const methodPath = here('../docs/METHOD_COPY.md')
 let methodHTML = '', methodTokens = {}
 if (existsSync(methodPath)) {
@@ -1284,13 +1312,23 @@ if (existsSync(methodPath)) {
       return { arms_agreed: agreed, arms_compared: compared, arms_pct: (100 * agreed / compared).toFixed(1),
         arms_other: seed.edges.length - compared }
     })(),
-    // the family gate's calibration in force (A3 of the method review): the
-    // same record the releases pin names
+    // the family gate's calibration at the binding ruleset, pooled over every
+    // run (v2.4.1, method correction A); the releases pin still names the PASS
+    // record
     ruleset: famVersion,
-    cal_caught: bindingCalib ? bindingCalib.sensitivity.caught : 0,
-    cal_planted: bindingCalib ? bindingCalib.sensitivity.of : 0,
-    cal_clean: bindingCalib ? bindingCalib.specificity.clean_left_alone : 0,
-    cal_clean_of: bindingCalib ? bindingCalib.specificity.of : 0
+    cal_runs: pooledCalib ? pooledCalib.runs : 0,
+    cal_failed: pooledCalib ? pooledCalib.failed : 0,
+    cal_planted_per_run: pooledCalib ? pooledCalib.planted_per_run : 0,
+    cal_caught: pooledCalib ? pooledCalib.caught : 0,
+    cal_planted: pooledCalib ? pooledCalib.planted : 0,
+    cal_caught_pct: pooledCalib ? pooledCalib.caught_pct : '0.0',
+    cal_caught_lo: pooledCalib ? pooledCalib.caught_lo : '0.0',
+    cal_caught_hi: pooledCalib ? pooledCalib.caught_hi : '0.0',
+    cal_clean: pooledCalib ? pooledCalib.clean : 0,
+    cal_clean_of: pooledCalib ? pooledCalib.clean_of : 0,
+    // edges a person settled (v2.4.1, method correction D3): relation_family.by
+    // starting "human-adjudication"; a precedent drawn from a ruling is not counted
+    human_rulings: seed.edges.filter(e => String((e.relation_family || {}).by || '').startsWith('human-adjudication')).length
   }
 
   // the two figures, rendered in the page's own node/relation styling
@@ -4082,7 +4120,14 @@ bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribut
 // file.)
 const METHOD_CONSTANTS = new Set([
   248, 669, 699,        // the release the paper describes, pinned to v1.3.0
-  5281, 21631523        // the concept DOI
+  5281, 21631523,       // the concept DOI
+  // v2.4.1, method correction C: the auditor's findings and how adjudication
+  // settled them, frozen at seed sha256 42ab7afd from tools/findings/ablation.py
+  // on interim-v1 (overall.adjudication_outcomes, and the windows table: 87 of
+  // 134 windows hold the adjudication). 404 findings: 176 dropped, 88 corrected,
+  // 139 overruled, 1 deferred. The sub-100 figures (87, 88, 1) sit below the
+  // scan's three-digit floor; the source is recorded in docs/METHOD_COPY.md.
+  134, 404, 176, 139
 ])
 if (methodHTML) {
   const methodStyle = `

@@ -15,13 +15,26 @@ inspection (RULES.md #12) and live only in the version-bound records per
 RULES.md #16. The 14-of-20 themis figure left the copy in the 2026-10-18
 rewrite.
 
+v2.4.1 method corrections (drafted 2026-11-13, approved by Damian as drafted):
+the family-gate figures bind pooled over every calibration record at the
+binding ruleset, PASS and FAIL alike, with a Wilson 95% interval computed in
+the build (the "Best of N" rule in docs/GLOSSARY.md; the releases pin still
+names the PASS record). The gate model id comes from the records' gate_model
+field. {{human_rulings}} binds live: edges whose relation_family.by starts
+"human-adjudication". The audit-finding figures in step 4 (87 of 134 windows,
+404 findings, 176 dropped, 88 corrected, 139 overruled, 1 deferred) are frozen:
+`python3 tools/findings/ablation.py` on interim-v1 at seed sha256 42ab7afd,
+overall.adjudication_outcomes and the windows table. tools/findings/ is not on
+the release branch, so the build registers 134, 404, 176 and 139 in the
+method-constants allowlist.
+
 ---
 
 ## What this is
 
 The Symbolic World is a map of C. G. Jung's symbolic thought: {{nodes}}
 symbols, figures and concepts, joined by {{edges}} relations, resting on
-{{refs}} citations to his *Collected Works* (CW). One AI model (Opus family)
+{{refs}} citations to his *Collected Works* (CW). An AI model from the Opus family
 proposed each claim from a window of paragraphs, and a model of a different
 family (Fable) judged it against its source paragraph. An auditor from another
 vendor (Google's Gemini) then re-read the result: {{xv_pct}}% of the {{refs}}
@@ -78,21 +91,24 @@ alchemical meaning.
 1. **Propose.** An Opus-family model reads a window of consecutive paragraphs
    and proposes claims, each with a verbatim citation.
 2. **Check.** A machine confirms the quote is letter-exact in its paragraph and
-   at most 25 words, and that the claim has the form of one relation between
+   at most 25 words long, counting runs of letters, and that the claim has the form of one relation between
    two nodes. The pipeline drops claims that fail.
 3. **Gate.** A Fable-family model judges every claim against its full source
    paragraph. Its instructions make rejection the default: a claim survives
    only if the model finds that the paragraph supports it.
-4. **Audit.** A Gemini model re-reads every claim that survived the gate,
-   before it enters the graph. The step became the rule in mid-2026, when work
-   on *Aion* began. Later passes audited the older material, by whole volumes
+4. **Audit.** A Gemini model re-reads each claim that survived the gate, as a
+   rule before it enters the graph. The step became the rule in mid-2026, during
+   work on *Aion*. The first *Aion* window entered the graph before its audit,
+   which ran afterwards. Later passes audited the older material, by whole volumes
    and by samples, and each citation's stamp says which. {{xv_stamped}} of
    {{refs}} citations carry a stamp. The other {{unstamped}}, in *Aion* and the
-   volumes mined after it, have none yet, and the record does not say why. Where gate
-   and auditor disagree on whether the paragraph supports the claim, the
-   auditor's verdict stands. Findings about claim type or confidence become
-   corrections, and a recorded project convention can overrule the auditor;
-   the claim's record then shows the override.
+   volumes mined after it, have none yet, and the record does not say why. Every
+   finding the auditor raises goes to adjudication. In the 87 of 134 windows
+   whose records hold the adjudication, the auditor raised 404 findings.
+   Adjudication upheld 176 of them and dropped the claim, upheld 88 as a
+   correction to the claim's type, confidence or relation, overruled 139 and
+   kept the claim with the reason written on it, and deferred 1. For the other
+   windows the records do not say how adjudication settled each finding.
 5. **Merge.** The claim enters with its provenance stamped: dates, verdicts,
    corrections.
 
@@ -118,8 +134,8 @@ for everything the site publishes.
   Fable-family model drafted the definitions; neither classifying model comes
   from that family. {{queue}} relations wait for a person's ruling, most because
   the two models disagreed, a few because a later check disputed their
-  agreement. No model breaks a tie. A person rules on each one, and the ruling
-  goes into the ledger. An assignment is recorded with the ruleset version it
+  agreement. No model breaks a tie. Only a person settles one, and the ruling
+  goes into the ledger. {{human_rulings}} rulings are on record so far. An assignment is recorded with the ruleset version it
   was agreed under, because a later version can retire the rule it rested on.
 - **We count two kinds of unclassified relation separately.** *No family* means
   none of our families fits. *Text undecided* means Jung's sentence supports two
@@ -131,15 +147,21 @@ for everything the site publishes.
 ## How we test the checks
 
 - Every one of the {{refs}} quotes is mechanically verified against the
-  corpus. The verification set seeds seven deliberately corrupted claims. So
-  far, all seven have been caught on every run. Whether a paragraph supports
-  its claim stays a model's judgment, which the gate and the auditor make
-  independently.
+  corpus. The verification set seeds seven deliberately corrupted claims. The
+  test suite fails if any of the seven gets through, and it passes at this
+  release. Whether a paragraph supports its claim stays a model's judgment. The
+  gate makes it first. The auditor then reads the claim as the gate left it,
+  without the gate's verdict or reasons.
 - The family gate faces the same kind of test: we plant corrupted assignments
-  among real ones. At ruleset {{ruleset}} it caught {{cal_caught}} of
-  {{cal_planted}} planted errors and left {{cal_clean}} of {{cal_clean_of}}
-  clean assignments alone. The gate is a Gemini model, as is one of the two
-  classifying models. A family label means two models, judging
+  among real ones. At ruleset {{ruleset}} the test ran {{cal_runs}} times, each
+  with a fresh sample and {{cal_planted_per_run}} fresh planted errors, and
+  {{cal_failed}} of the runs missed one error and failed the pass bar of
+  catching all of them. Pooled across the runs, the gate caught {{cal_caught}}
+  of {{cal_planted}} planted errors ({{cal_caught_pct}}%, 95% interval
+  {{cal_caught_lo}} to {{cal_caught_hi}}%) and left {{cal_clean}} of
+  {{cal_clean_of}} clean assignments alone. The family gate is
+  gemini-3.1-pro-preview, the same model as one of the two classifying models,
+  so this check is not cross-vendor. A family label means two models, judging
   independently, put the relation in that family, or a person ruled where they
   disagreed.
 - We checked the classification vocabulary against {{ev_works}} published works
