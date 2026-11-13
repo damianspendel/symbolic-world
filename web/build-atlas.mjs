@@ -3896,7 +3896,7 @@ ${rows.map(claimRow).join('\n')}
     const claimsBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The Rosarium pictures: every claim</h1>
 <p class="sub">Every verified claim on the figures of the ten pictures, across CW 12, 13, 14 and 16.</p></div>
-<p>Each section below gathers the claims cited in one picture's paragraphs of "The Psychology of the Transference" (CW 16) as well as claims anywhere in CW 12, 13, 14 and 16. A claim can appear in more than one section. The pictures themselves, with three claims each, are on <a href="/opus">/opus</a>.</p>
+<p>Each section below gathers the claims cited in one picture's paragraphs of "The Psychology of the Transference" (CW 16) as well as claims on the same figures anywhere in CW 12, 13, 14 and 16. A claim can appear in more than one section. The pictures themselves, with up to three claims each, are on <a href="/opus">/opus</a>.</p>
 <div class="c-filter" role="group" aria-label="Show volumes">${CLAIM_VOLS.map(v => `<button type="button" class="chip c-chip on" data-v="${v}" aria-pressed="true">CW ${v}</button>`).join('')}</div>
 ${sectionsHtml}
 <p class="meta">Every row is one verified reference in the graph, with the quote as stored. Sorted CW 16, 14, 12, 13, then by paragraph.</p>`

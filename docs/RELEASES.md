@@ -37,56 +37,34 @@ pin: graph v2.4.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 
 ### mining status
 
-- Mined the three alchemical volumes a second time, in windows of seventy
-  paragraphs: CW 14, *Mysterium Coniunctionis*, in eleven windows; CW 12,
-  *Psychology and Alchemy*, in eight; CW 13, *Alchemical Studies*, in seven.
-  The first pass over these volumes predates the form rule and the
-  reporting clause.
-- New references name their source author, and the source text where Jung
-  gives one. Nodes carry their Latin form, their aliases and the paragraph
-  that names them.
-- The graph records the stages of the work: nigredo, albedo, citrinitas,
-  rubedo, the cauda pavonis and the viriditas, the operations, and Dorn's
-  three stages of the coniunctio. Relations name them as belongs-to,
-  undergoes, precedes and follows.
-- Quotations have a cap of 9% per volume, and the pre-check enforces it.
+- Mined CW 12, 13 and 14 a second time, in 26 windows of seventy
+  paragraphs. The first pass predates the form rule and the reporting clause.
+- References name their source author and text; nodes carry their Latin
+  form and aliases. The stages of the work are in the graph as data.
+- Quotations have a cap of 9% per volume.
 - Graph: {{nodes}} nodes, {{edges}} relations, {{refs}} references over
   {{batches}} batches; {{pending}} relations await adjudication.
 
 ### governance
 
-- The VoID files for the graph and the ontology name the Turtle files the
-  site serves as their data dump. The w3id address they named before
-  redirected to the DOI landing page.
-- The RDF export in `exports/rdf/` is rebuilt from this release's graph.
-- Three subtitles that went live with v2.3.0 after its tag reach the
-  repository with this release.
+- The RDF export is rebuilt, and its VoID files name the site's Turtle
+  files as their data dump.
+- Three subtitles that went live after the v2.3.0 tag reach the repository.
 
 ### core build
 
-- [/opus](/opus) takes the concordance's place in the menu and on the
-  landing page. The concordance stays at
-  [/atlas#/concordance](/atlas#/concordance), linked from /opus and
-  [/about](/about).
-- The concordance takes in the new terms from the second pass.
+- [/opus](/opus) replaces the concordance in the menu. The
+  [concordance](/atlas#/concordance) stays, with the new terms.
 - The atlas size ceiling is 6.0 MB.
 
 ### UI
 
-- [/opus](/opus) follows Jung's reading of the ten woodcuts of the *Rosarium
-  philosophorum* in CW 16. Each picture carries up to three verified claims
-  from CW 16. Under each picture, a tile gathers what Jung says of the same
-  figures across the trilogy. The background changes where Jung, or a text
-  he quotes, names a stage. On a desktop the pictures cross-fade in place;
-  on a phone the page scrolls. The woodcuts come from Jung's own copy of the
-  1550 edition, digitised by e-rara.ch.
-- [/opus-claims](/opus-claims) lists every verified claim on the figures of
-  the ten pictures across CW 12, 13, 14 and 16, picture by picture.
-- [/query](/query) suggests concepts and relations as you type, and offers
-  provenance as a list.
-- [/method](/method) says "Validated by a person" for the gold set and adds
-  a row on recall to its limits. The "How the checks work" heading on
-  [/evidence](/evidence) links to it.
+- [/opus](/opus) follows Jung's reading of the ten woodcuts of the
+  *Rosarium philosophorum* in CW 16, from Jung's own copy on e-rara.ch. A
+  tile under each picture gathers what he says of the same figures across
+  the trilogy, and [/opus-claims](/opus-claims) lists every such claim.
+- [/query](/query) suggests concepts and relations as you type.
+- [/method](/method) says "Validated by a person" and adds a row on recall.
 
 ## v2.3.0: CW 16, CW 7 and CW 6
 
