@@ -102,7 +102,7 @@ else {
       out.innerHTML = '<p class="triple ev"><a href="/concept-' + esc(e.subject) + '">' + esc(e.subject) + '</a> <em>' + esc(e.relation) +
         '</em> <a href="/concept-' + esc(e.object) + '">' + esc(e.object) + '</a></p>' +
         '<p class="meta">' + famLine + '</p><ul class="refs">' + refs.map(item).join('') + '</ul>' +
-        '<p class="meta">IRI: <code>' + esc(iri) + '</code></p>' +
+        '<p class="meta" style="overflow-wrap: anywhere; word-break: break-word">IRI: <code>' + esc(iri) + '</code></p>' +
         '<p><a href="/concept-' + esc(e.subject) + '#r-e' + ei + '">See it on the concept page</a> · <a href="/symbolicworld-graph.ttl">the graph in Turtle</a></p>'
     }
   }
