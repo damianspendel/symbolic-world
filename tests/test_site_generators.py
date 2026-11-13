@@ -2131,7 +2131,7 @@ def test_concept_pages_read_for_a_reader():
         quotes_below = 0
         for r in rows:
             assert '<span class="prov" data-nosnippet>' in r, cid
-            items = re.findall(r'<li class="ev">CW (\S+) §(\d+) — “(.*?)” <span class="voice" data-nosnippet>([^<]*)</span>'
+            items = re.findall(r'<li class="ev">CW (\S+) §(\d+): “(.*?)” <span class="voice" data-nosnippet>([^<]*)</span>'
                                r' <details class="chk"><summary>.*?checked.*?</summary>(.*?)</details></li>', r, re.S)
             keys = [(v, p, q) for v, p, q, _, _ in items]
             assert len(keys) == len(set(keys)), f"{cid}: a repeat printed twice"

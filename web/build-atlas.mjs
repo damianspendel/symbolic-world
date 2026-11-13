@@ -2159,7 +2159,7 @@ ${neighbours.map(nb => `<li><a class="ev" href="/concept-${nb.id}">${esc(labelOf
           ? `<a href="/family-${f.value}">${esc(conceptFamName.get(f.value) || f.value)}</a> · ` : ''
         return `<span class="prov"${NS}>${name}${esc(provLabel(f))}</span>`
       }
-      const quoteHead = (r, voices) => `CW ${esc(r.volume)} §${esc(r.paragraph)} — “${esc(r.quote)}”` +
+      const quoteHead = (r, voices) => `CW ${esc(r.volume)} §${esc(r.paragraph)}: “${esc(r.quote)}”` +
         ` <span class="voice"${NS}>${esc(voices)}</span>`
       // A7: an exact repeat (same volume, paragraph and quote) prints once,
       // with every check record kept in its fold
