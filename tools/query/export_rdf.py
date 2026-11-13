@@ -138,6 +138,15 @@ def wikidata_links(graph, path=LINKS_FILE):
     return {node["id"]: chosen[node["id"]] for node in graph.nodes if node["id"] in chosen}
 
 
+def spot_check_state(path=LINKS_FILE):
+    """(done, date) from the links file. The export states a spot check only once
+    the maintainer has marked the sample, so the VoID never claims one early."""
+    if not os.path.exists(path):
+        return False, None
+    sc = load_json(path).get("spot_check") or {}
+    return bool(sc.get("done")) and bool(sc.get("date")), sc.get("date")
+
+
 def link_families(path=LINKS_FILE):
     """(proposer families, checker families) over the exported links, as words."""
     links = [l for l in load_json(path)["links"] if l["kind"] == "figure" and l["check"] == "accept"]
@@ -152,7 +161,9 @@ def links_note(count):
         f"# Links to Wikidata: {count} nodes carry skos:closeMatch to a Wikidata item,",
         "# in their node blocks. Each link was proposed by one model family",
         f"# ({proposer}) from a public Wikidata search and checked by a second",
-        f"# ({checker}); the maintainer spot-checks a seeded sample. Only links the",
+        f"# ({checker}); " + (f"the maintainer spot-checked a seeded sample on {spot_check_state()[1]}."
+                                if spot_check_state()[0] else "a seeded sample awaits the maintainer's spot check.")
+        + " Only links the",
         "# checker accepted are here, and only for nodes: links to authors and texts",
         "# have no node and are not exported. The check records are in",
         "# tools/linking/wikidata_links.json in the repository.",
@@ -731,8 +742,10 @@ def build_void(graph, graph_text, ontology_text, quotes_text, links):
             ("dcterms:description", literal(
                 "Links from nodes of the graph to Wikidata items, by skos:closeMatch. "
                 f"Each link was proposed by one model family ({proposer}) from a public "
-                f"Wikidata search, checked by a second family ({checker}), and spot-checked "
-                "by the maintainer on a seeded sample. Only links the checker accepted are "
+                f"Wikidata search and checked by a second family ({checker}). "
+                + (f"The maintainer spot-checked a seeded sample on {spot_check_state()[1]}. "
+                   if spot_check_state()[0] else "A seeded sample awaits the maintainer's spot check. ")
+                + "Only links the checker accepted are "
                 "exported; the check records are in tools/linking/wikidata_links.json in "
                 "the repository.")),
             ("void:subjectsTarget", dataset),

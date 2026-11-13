@@ -1,5 +1,5 @@
 {
- "_about": "Links from Symbolic World to Wikidata, v3.0.0 item 1. A link is here only when the proposer (Opus family) chose it from a public Wikidata search and a checker from another family (Fable) accepted it. Candidates from tools/linking/wikidata_candidates.py; Damian spot-checks a seeded sample before release.",
+ "_about": "Links from Symbolic World to Wikidata, v3.0.0 item 1. A link is here only when the proposer (Opus family) chose it from a public Wikidata search and a checker from another family (Fable) accepted it. Candidates from tools/linking/wikidata_candidates.py; Damian spot-checks a seeded sample before release; spot_check records whether he has.",
  "graph_release": "v2.4.0",
  "links": [
   {
@@ -3282,5 +3282,11 @@
    "check_reason": "Q900529 (Turba Philosophorum: alchemical work) is the referent the string names, and no listed candidate fits better.",
    "date": "2026-11-13"
   }
- ]
+ ],
+ "spot_check": {
+  "done": false,
+  "date": null,
+  "sample": "a seeded sample of 30 accepted links (seed 20261113) plus the links accepted on thin evidence",
+  "note": "Set done to true and give the date only after Damian has marked the sample. The exporter states the spot check from this field."
+ }
 }
