@@ -76,6 +76,30 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The paper, <em>Trust, Layered</em>, describes v2.0.0.</p>
 <p>Each entry opens with the graph version, the ruleset version it shipped with (the two are deliberately separate numbers) and the calibration record in force when the release was cut.</p>
 <section class="rel-entry">
+<h2>v2.4.1: corrections to the method page</h2>
+<div class="meta">in preparation. Tag <code>v2.4.1</code>, GitHub Release and Zenodo record under the concept DOI once released.</div>
+<div class="pin">graph <span class="v">v2.4.1</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
+<h4>mining status</h4>
+<ul>
+<li>A patch release on the data of v2.4.0, unchanged: 1244 nodes, 5132 relations, 6887 references over 134 batches. This release mines nothing new.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li><a href="/method">/method</a> now claims only what the records show. The family-gate figures pool every calibration run at the ruleset in force, failed runs included, and the page says that check is not cross-vendor. The audit step says how adjudication settled the auditor's findings. The page states the quote cap, the seeded corrupted claims, the human rulings and the proposer as the records support them.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li><a href="/record">/record</a> gives each claim, edge and reference in the RDF export a page of its own, so their IRIs resolve.</li>
+<li>The site check after a deploy finds Cloudflare's injected script by its opening. It had cut the inline script at the end of /opus and reported a false difference.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li><a href="/opus">/opus</a> has a night mode: true black for the nigredo, with a lighter rule above it.</li>
+<li>/opus has its own title and description, and a link to one of its pictures scrolls to that picture.</li>
+<li>On a desktop screen, no panel on /opus scrolls inside itself.</li>
+</ul>
+</section>
+<section class="rel-entry">
 <h2>v2.4.0: the alchemical trilogy, mined a second time</h2>
 <div class="meta">released 2026-11-13. Tag <code>v2.4.0</code>, GitHub Release, Zenodo record under the concept DOI.</div>
 <div class="pin">graph <span class="v">v2.4.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>

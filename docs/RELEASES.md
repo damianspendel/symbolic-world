@@ -29,6 +29,43 @@ Each entry opens with the graph version, the ruleset version it shipped with
 (the two are deliberately separate numbers) and the calibration record in force
 when the release was cut.
 
+## v2.4.1: corrections to the method page
+
+status: in preparation. Tag `v2.4.1`, GitHub Release and Zenodo record under
+the concept DOI once released.
+pin: graph v2.4.1 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
+
+### mining status
+
+- A patch release on the data of v2.4.0, unchanged: {{nodes}} nodes,
+  {{edges}} relations, {{refs}} references over {{batches}} batches. This
+  release mines nothing new.
+
+### governance
+
+- [/method](/method) now claims only what the records show. The family-gate
+  figures pool every calibration run at the ruleset in force, failed runs
+  included, and the page says that check is not cross-vendor. The audit step
+  says how adjudication settled the auditor's findings. The page states the
+  quote cap, the seeded corrupted claims, the human rulings and the proposer
+  as the records support them.
+
+### core build
+
+- [/record](/record) gives each claim, edge and reference in the RDF export a
+  page of its own, so their IRIs resolve.
+- The site check after a deploy finds Cloudflare's injected script by its
+  opening. It had cut the inline script at the end of /opus and reported a
+  false difference.
+
+### UI
+
+- [/opus](/opus) has a night mode: true black for the nigredo, with a lighter
+  rule above it.
+- /opus has its own title and description, and a link to one of its pictures
+  scrolls to that picture.
+- On a desktop screen, no panel on /opus scrolls inside itself.
+
 ## v2.4.0: the alchemical trilogy, mined a second time
 
 status: released 2026-11-13. Tag `v2.4.0`, GitHub Release, Zenodo record
