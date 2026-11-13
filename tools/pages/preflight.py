@@ -316,7 +316,7 @@ absent = [s for s in starts if not (DIST / f'{s}.html').exists()]
 check('every starting point has its page', not absent, f'missing: {absent}' if absent else '')
 
 print('== size budget ==')
-INDEX_CEILING = 5.5 * 1024 * 1024   # raised from 4.5 by Damian's ruling, 2026-11-10 (CW 7 took it to 4.51 MB, room for CW 6); 3.5 -> 4.5 on 2026-10-31; 3.0 -> 3.5 on 2026-10-20
+INDEX_CEILING = 6.0 * 1024 * 1024   # raised from 5.5 by Damian's ruling, 2026-11-13 ("atlas to 6MB is fine"; the trilogy second pass took it to 5.61 MB); 4.5 -> 5.5 on 2026-11-10; 3.5 -> 4.5 on 2026-10-31; 3.0 -> 3.5 on 2026-10-20
 # the single-file app is dist/atlas.html since 2026-10-23; dist/index.html is the landing page
 idx_path = DIST / 'atlas.html'
 if idx_path.exists():
