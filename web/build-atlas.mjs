@@ -3682,7 +3682,9 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 .opus-flow .opus-pic h2 { order: 1; }
 .opus-flow .opus-pic > .opus-cut, .opus-flow .opus-pic > .opus-frame { order: 2; margin: .4rem 0 1.2rem; }
 .opus-flow .opus-pic .opus-stage, .opus-flow .opus-pic .opus-claims, .opus-flow .opus-pic .opus-outside { order: 3; }
-.opus-flow .opus-cut img { max-height: 60vh; width: auto; max-width: 100%; margin: 0 auto; opacity: 0; transition: opacity .9s ease; }
+/* the box is reserved from the width and height attributes before the image
+   loads, so nothing jumps under a scrolling finger */
+.opus-flow .opus-cut img { width: 100%; height: auto; max-height: 60vh; object-fit: contain; background: transparent; box-shadow: none; margin: 0 auto; opacity: 0; transition: opacity .9s ease; }
 .opus-flow .opus-cut img.in { opacity: 1; }
 .opus-flow .opus-close { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
 @media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } .opus-flow .opus-cut img { opacity: 1 !important; transition: none !important; } }
