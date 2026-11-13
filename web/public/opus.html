@@ -85,13 +85,24 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .opus-rel em { font-style: normal; opacity: .8; }
 .opus-claim blockquote, .opus-outside { margin: 0; padding: .2rem 0 .2rem .9rem; border-left: 2px solid currentColor; font-family: var(--display); font-size: 1.02rem; line-height: 1.5; }
 .opus-cite { display: block; font: .64rem/1.7 var(--mono); margin-top: .3rem; }
-.opus-tile { margin: 1.2rem 0 0; border-top: 1px solid currentColor; padding-top: .2rem; }
-.opus-tile > summary { display: block; width: 100%; cursor: pointer; list-style: none; padding: .95rem 0; min-height: 44px; font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+.opus-tile { margin: 1.2rem 0 0; border-left: 3px solid rgba(217,180,74,.75); border-radius: 0 8px 8px 0; background: rgba(217,180,74,.10); }
+.opus-tile[open] { background: rgba(217,180,74,.14); padding-bottom: .6rem; }
+.opus-tile > summary { display: flex; align-items: center; width: 100%; min-height: 44px; cursor: pointer; list-style: none; padding: .7rem .9rem; border: 1px solid rgba(217,180,74,.55); border-left: 0; border-radius: 0 8px 8px 0; background: rgba(217,180,74,.20); font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.opus-tile > summary:hover, .opus-tile > summary:focus-visible { background: rgba(217,180,74,.32); }
 .opus-tile > summary::-webkit-details-marker { display: none; }
-.opus-tile > summary::after { content: " \25b8"; }
-.opus-tile[open] > summary::after { content: " \25be"; }
-.opus-tile .opus-claims { margin-top: .4rem; }
-.opus-tile-all { font-size: .82rem; margin: 0 0 .4rem; }
+.opus-tile .t-open, .opus-tile[open] .t-closed { display: none; }
+.opus-tile[open] .t-open { display: inline; }
+.opus-tile .opus-claims { margin: .8rem 0 .2rem; padding: 0 .9rem; }
+.opus-tile-foot { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; align-items: center; justify-content: space-between; margin: 0; padding: 0 .9rem; font-size: .82rem; }
+.opus-tile-close { font: .62rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: inherit; background: rgba(217,180,74,.20); border: 1px solid rgba(217,180,74,.55); border-radius: 6px; padding: .55rem .8rem; min-height: 40px; cursor: pointer; }
+.opus-tile-close:hover, .opus-tile-close:focus-visible { background: rgba(217,180,74,.32); }
+/* desktop: an open tile takes the claim column's place, so the pinned panel
+   does not grow (Damian, 2026-11-13: "adds a scroll bar") */
+.opus-pinned .opus-pic.tile-open .opus-text > .opus-claims, .opus-pinned .opus-pic.tile-open .opus-text > .opus-outside { display: none; }
+.opus-pinned .opus-pic.tile-open .opus-tile { margin-top: .6rem; }
+.opus-tile .opus-claim { margin-bottom: .9rem; }
+.opus-tile .opus-rel { font-size: 1.05rem; }
+.opus-tile .opus-claim blockquote { font-size: .96rem; line-height: 1.45; }
 .opus-flow .opus-pic .opus-tile { order: 3; }
 .opus-related { font: .6rem var(--mono); letter-spacing: .12em; text-transform: uppercase; opacity: .75; margin: 0 0 .2rem; }
 .opus-green, .opus-peacock { position: absolute; pointer-events: none; opacity: 0; }
@@ -146,7 +157,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;he is a trinity, triunus or trinus, the chthonic, lower, or even infernal counterpart of the Heavenly Trinity&rdquo;</blockquote><p class="opus-cite">CW 16 §403 · Jung reports a parallel</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 68 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 68 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-quintessence">Quintessence (quinta essentia)</a> <em title="produced-from">produced from</em> <a href="/concept-four-elements">The four elements</a></p>
 <blockquote class="ev">&ldquo;The One born of the Four is the Quinta Essentia&rdquo;</blockquote><p class="opus-cite">CW 14 §439 · Jung asserts</p></li>
@@ -157,7 +168,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-sol">Sol</a> <em title="descends-into">descends into</em> <a href="/concept-mercurial-fountain">Mercurial Fountain</a></p>
 <blockquote class="ev">&ldquo;The alchemists also represented the “eclipse” as the descent of the sun into the (feminine) Mercurial Fountain&rdquo;</blockquote><p class="opus-cite">CW 14 §23 · Jung reports a parallel</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-1">All 68 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-1">All 68 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -177,7 +188,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;the desired coniunctio was not a legitimate union but was always—one could almost say, on principle—incestuous&rdquo;</blockquote><p class="opus-cite">CW 16 §415 · Jung asserts</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 209 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 209 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-sol">Sol</a> <em title="opposes">opposes</em> <a href="/concept-luna">Luna</a></p>
 <blockquote class="ev">&ldquo;the primary pair of opposites, consciousness and unconsciousness, whose symbols are Sol and Luna&rdquo;</blockquote><p class="opus-cite">CW 14 §127 · Jung asserts</p></li>
@@ -186,7 +197,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-rex">Rex (the King)</a> <em title="conforms-to">conforms to</em> <a href="/concept-christ">Christ (as symbol)</a></p>
 <blockquote class="ev">&ldquo;Conforming to the prototype of Christ the King in the Christian world of ideas, the King plays a central role in alchemy&rdquo;</blockquote><p class="opus-cite">CW 14 §349 · Jung asserts</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-2">All 209 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-2">All 209 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -204,14 +215,14 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;Repression leads to a one-sided development if not to stagnation, and eventually to neurotic dissociation.&rdquo;</blockquote><p class="opus-cite">CW 16 §452 · Jung asserts</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 6 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 6 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-arcane-substance">Arcane substance (arcanum)</a> <em title="defined-as">defined as</em> <a href="/concept-veritas">Veritas (Dorn's truth)</a></p>
 <blockquote class="ev">&ldquo;This medicine is clearly the arcane substance which he defines elsewhere as veritas&rdquo;</blockquote><p class="opus-cite">CW 12 §377 · Jung reports a parallel</p></li>
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-veritas">Veritas (Dorn's truth)</a> <em title="personified-as">personified as</em> <a href="/concept-sapientia">Sapientia / Wisdom</a></p>
 <blockquote class="ev">&ldquo;“marination” meant the “in-forming” penetration of sapientia (Dorn’s “veritas”) into the ignoble mass&rdquo;</blockquote><p class="opus-cite">CW 14 §366 · Jung reports a parallel</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-3">All 6 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-3">All 6 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -230,7 +241,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;The unrelated human being lacks wholeness, for he can achieve wholeness only through the soul&rdquo;</blockquote><p class="opus-cite">CW 16 §454 · Jung asserts</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 44 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 44 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-night-sea-journey">The Night Sea Journey</a> <em title="is-a-descent-into">is a descent into</em> <a href="/concept-the-unconscious">The unconscious</a></p>
 <blockquote class="ev">&ldquo;the necessity of a descent into the dark world of the unconscious … the perilous adventure of the night sea journey&rdquo;</blockquote><p class="opus-cite">CW 12 §436 · Jung asserts</p></li>
@@ -241,7 +252,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-bath">Bath</a> <em title="renews">renews</em> <a href="/concept-rex">Rex (the King)</a></p>
 <blockquote class="ev">&ldquo;When the king grows old and needs renewing, a kind of planetary bath is instituted—a bath into which all the planets pour their “influences.”&rdquo;</blockquote><p class="opus-cite">CW 14 §504 · Jung reports a parallel</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-4">All 44 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-4">All 44 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -258,7 +269,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;the coitus is taking place in the water, the mare tenebrositatis, i.e., the unconscious&rdquo;</blockquote><p class="opus-cite">CW 16 §459 · Jung asserts</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 90 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 90 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
 <blockquote class="ev">&ldquo;the union of opposites in the archetypal form of the hierosgamos&rdquo;</blockquote><p class="opus-cite">CW 12 §43 · Jung asserts</p></li>
@@ -269,7 +280,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a> <em title="embodies">embodies</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
 <blockquote class="ev">&ldquo;the consummation of the hierosgamos, the “earthing” of the spirit and the spiritualizing of the earth, the union of opposites&rdquo;</blockquote><p class="opus-cite">CW 14 §207 · Jung asserts</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-5">All 90 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-5">All 90 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -286,7 +297,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;The coniunctio was incestuous and therefore sinful, leaving pollution behind it. The nigredo always appears in conjunction with tenebrositas&rdquo;</blockquote><p class="opus-cite">CW 16 §468 · Jung asserts</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 86 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 86 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-nigredo">Nigredo</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-shadow-confrontation">Confrontation with the shadow</a></p>
 <blockquote class="ev">&ldquo;the nigredo, the first stage of the work, which was felt as “melancholia” in alchemy and corresponds to the encounter with the shadow in psychology&rdquo;</blockquote><p class="opus-cite">CW 12 §41 · Jung asserts</p></li>
@@ -297,7 +308,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-sol-niger">Sol niger (black sun)</a> <em title="belongs-to">belongs to</em> <a href="/concept-nigredo">Nigredo</a></p>
 <blockquote class="ev">&ldquo;Hence there is also a Sol niger, a black sun, which coincides with the nigredo and putrefactio, the state of death.&rdquo;</blockquote><p class="opus-cite">CW 14 §113 · Jung reports a parallel</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-6">All 86 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-6">All 86 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -317,7 +328,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 <blockquote class="opus-outside">&ldquo;Afterwards thou makest new and multitudinous things to grow, causing with thy verdure the many colours to appear.&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
 <blockquote class="opus-outside">&ldquo;The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
-<details class="opus-tile"><summary>Amplification across the trilogy · 46 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 46 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-cauda-pavonis">Cauda pavonis (peacock's tail)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
 <blockquote class="ev">&ldquo;The cauda pavonis, combination of all colours, symbolizing wholeness.&rdquo;</blockquote><p class="opus-cite">CW 12 §331 · Jung asserts</p></li>
@@ -326,7 +337,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-regina">Regina (the Queen)</a> <em title="undergoes">undergoes</em> <a href="/concept-cauda-pavonis">Cauda pavonis (peacock's tail)</a></p>
 <blockquote class="ev">&ldquo;This display of colours is an indication of the queen’s Venus and peacock nature (cauda pavonis).&rdquo;</blockquote><p class="opus-cite">CW 14 §430 · Jung asserts</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-7">All 46 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-7">All 46 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -343,7 +354,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;the nigredo gives way to the albedo&rdquo;</blockquote><p class="opus-cite">CW 16 §493 · Jung asserts</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 36 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 36 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-albedo">Albedo</a> <em title="emerges-from">emerges from</em> <a href="/concept-the-unconscious">The unconscious</a></p>
 <blockquote class="ev">&ldquo;From the darkness of the unconscious comes the light of illumination, the albedo&rdquo;</blockquote><p class="opus-cite">CW 14 §220 · Jung asserts</p></li>
@@ -354,7 +365,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-dew">Dew</a> <em title="belongs-to">belongs to</em> <a href="/concept-albedo">Albedo</a></p>
 <blockquote class="ev">&ldquo;the dew falls from heaven, purifies the body, and makes it ready to receive the soul; in other words, it brings about the albedo&rdquo;</blockquote><p class="opus-cite">CW 14 §155 · Jung reports a parallel</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-8">All 36 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-8">All 36 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -371,7 +382,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;They call it their resurrection, because the white rises up out of the black&rdquo;</blockquote><p class="opus-cite">CW 16 §515 · Jung quotes a source</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 71 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 71 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-unio-mentalis">Unio mentalis</a> <em title="conjoined-with">conjoined with</em> <a href="/concept-the-body">The body (corpus)</a></p>
 <blockquote class="ev">&ldquo;The second stage is reached when the mental union... is conjoined with the body&rdquo;</blockquote><p class="opus-cite">CW 14 §664 · Jung reports a parallel</p></li>
@@ -382,7 +393,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-anima-mundi">Anima Mundi</a> <em title="imprisoned-in">imprisoned in</em> <a href="/concept-matter">Matter</a></p>
 <blockquote class="ev">&ldquo;attributes the state of suffering and consequent need of redemption to the anima mundi imprisoned in matter&rdquo;</blockquote><p class="opus-cite">CW 12 §414 · Jung asserts</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-9">All 71 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-9">All 71 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -399,7 +410,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <blockquote class="ev">&ldquo;Hence the real meaning of the denarius is the Son of God.&rdquo;</blockquote><p class="opus-cite">CW 16 §525 · Jung asserts</p></li>
 </ul>
 
-<details class="opus-tile"><summary>Amplification across the trilogy · 253 claims</summary>
+<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · 253 claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-rebis">Rebis / Hermaphrodite</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
 <blockquote class="ev">&ldquo;He reconciles the two “in one body,” an idea which is figuratively represented in alchemy as the two-headed hermaphrodite.&rdquo;</blockquote><p class="opus-cite">CW 14 §11 · Jung asserts</p></li>
@@ -410,7 +421,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <li class="opus-claim"><p class="opus-rel"><a href="/concept-anthropos">Anthropos / Adam Kadmon</a> <em title="stands-for">stands for</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
 <blockquote class="ev">&ldquo;the Anthropos idea that stands for man’s wholeness, that is, the conception of a unitary being who existed before man&rdquo;</blockquote><p class="opus-cite">CW 12 §210 · Jung asserts</p></li>
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-10">All 253 &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-10">All 253 &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>
 </div>
 </section>
@@ -459,5 +470,6 @@ else if(st==='red'){var t2=Math.min(1,t*1.6);if(segs[i].getAttribute('data-yello
 colours(i>=0&&segs[i].id==='picture-7',t);
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
 setMode();if(mode==='pinned'&&segs[0])segs[0].classList.add('is-active');
+[].slice.call(document.querySelectorAll('.opus-tile')).forEach(function(d){var sec=d.closest('.opus-pic');d.addEventListener('toggle',function(){if(sec)sec.classList.toggle('tile-open',d.open)});var c=d.querySelector('.opus-tile-close');if(c)c.addEventListener('click',function(){d.open=false;var s=d.querySelector('summary');if(s)s.focus()})});
 addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});tick()})();</script>
 </main></body></html>
