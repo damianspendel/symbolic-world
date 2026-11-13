@@ -4194,8 +4194,8 @@ emitPages()
 // relation, and a claim adds its volume and paragraph, with a numeral for a
 // second claim on one paragraph. record-index.json maps each edge id to its
 // position in graph.json, whose edges keep seed order; tests/test_record_index.py
-// checks every id against the exporter. The page has no URL worth indexing, so
-// it carries noindex and stays out of the sitemap.
+// checks every id against the exporter. The page carries its canonical /record
+// like every page, plus noindex, and stays out of the sitemap.
 {
   const recordIndex = {}
   seed.edges.forEach((e, i) => {
@@ -4252,7 +4252,8 @@ else {
 }
 </script>`
   writeFileSync(here('./public/record.html'), renderPage({
-    slug: 'record', title: 'Record', where: 'record', notFound: true, body: recordBody,
+    slug: 'record', title: 'Record', where: 'record', body: recordBody,
+    head: '<meta name="robots" content="noindex">',
     style: '#rec .triple{font-size:1.15rem} #rec ul.refs{list-style:none;padding:0} #rec blockquote{margin:.6rem 0 .2rem} #rec .meta{font-size:.85rem;opacity:.85;margin:.15rem 0}',
   }))
   V2_COPY.push(['public/record.html (generated)', recordBody.replace(/<script[\s\S]*<\/script>/, '')])
