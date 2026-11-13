@@ -21,7 +21,7 @@ The graph holds 1244 concepts, 5132 relations and 6887 citations as of release v
 
 ### Project status
 
-Mining of the Collected Works has finished CW 5, 7, 8, 9i, 9ii, 11, 12, 13, 14 and 16, and CW 6 chapters X and XI. A second pass over CW 12, 13 and 14 is next. Issues get a reply within seven days.
+Mining of the Collected Works has finished CW 5, 7, 8, 9i, 9ii, 11, 12, 13, 14 and 16, and CW 6 chapters X and XI. The second pass over CW 12, 13 and 14 is complete as of v2.4.0. Issues get a reply within seven days.
 
 ## Dispute an edge
 
