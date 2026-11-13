@@ -4213,12 +4213,16 @@ emitPages()
 const VOICE = { 'jung-asserts': 'Jung asserts it', 'jung-reports-parallel': 'Jung reports what others hold', 'jung-quotes-source': 'Jung quotes a named source' }
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
 const out = document.getElementById('rec')
-const fail = msg => { out.innerHTML = '<p>' + msg + ' Try <a href="/concepts">the concept list</a> or <a href="/vocabulary">the vocabulary</a>.</p>' }
+const example = 'try an example: <a href="/record?claim=63b4b3d1dc9a8131-14-1">coniunctio is a union of opposites (CW 14 §1)</a>.'
+const more = '<p>Or start from <a href="/concepts">the concept list</a> or <a href="/vocabulary">the vocabulary</a>.</p>'
+const fail = msg => { out.innerHTML = '<p>' + msg + ' Open a claim from its address, or ' + example + '</p>' + more }
+const explain = () => { out.innerHTML = '<p>Every claim, relation and reference in the graph has its own address. This page shows the one the address names. Open it from a claim&#39;s address, or ' + example + '</p>' + more }
 const q = new URLSearchParams(location.search)
 const kind = ['claim', 'reference', 'edge'].find(k => q.has(k))
 const id = kind ? q.get(kind) : ''
 const m = /^([0-9a-f]{16})(?:-([0-9a-z]+)-([0-9]+)(?:-([0-9]+))?)?$/.exec(id || '')
-if (!kind || !m || (kind !== 'edge') !== Boolean(m[2])) fail('This address names no record.')
+if (!kind) explain()
+else if (!m || (kind !== 'edge') !== Boolean(m[2])) fail('This address names no record.')
 else {
   const [idx, g] = await Promise.all([fetch('/record-index.json').then(r => r.json()), fetch('/graph.json').then(r => r.json())])
   const ei = idx.edges[m[1]]
