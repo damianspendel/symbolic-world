@@ -3518,8 +3518,10 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     // make everthing have four - a quaternity if you like"; picture 2 "414, 532,
     // 421 and 415"; "for all the others, try and apply an order"): first the
     // claim that frames the image, then its figures, then the psychological
-    // reading, last Jung's crux. A group of edges that share one quote shows as
-    // one claim. CW 14 entries are the trilogy picks of 2026-11-12, marked by
+    // reading, last Jung's crux. Pictures 3 and 7 keep three ("Go with A":
+    // picture 3's two morality quotes sit under one claim; picture 7's §480
+    // quote already says what the cauda pavonis pick said). A group shows as
+    // one claim: edges that share one quote, or one edge with several quotes. CW 14 entries are the trilogy picks of 2026-11-12, marked by
     // their cite. The order is explicit so a data change cannot reshuffle it;
     // the build refuses if an entry leaves the graph or a picture's colour cite
     // is not among its claims. The closing panel has its own pick, and the
@@ -3530,16 +3532,17 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
           [['mercurius|is-counterpart-of|the-trinity', '16', 403]], [['axiom-of-maria|runs-through|alchemy', '16', 404]]],
       2: [[['the-unconscious|produces|symbol', '16', 414]], [['regina|appears-as|luna', '14', 532]],
           [['regina|represents|artifex', '16', 421], ['rex|represents|soror-mystica', '16', 421]], [['coniunctio|involves|incest', '16', 415]]],
-      3: [[['the-opus|requires|morality', '16', 451]], [['coniunctio|amplified-by|sol', '16', 451], ['coniunctio|amplified-by|luna', '16', 451]],
-          [['the-opus|requires|morality', '16', 450]], [['repression|leads-to|dissociation', '16', 452]]],
-      4: [[['bath|is-form-of|night-sea-journey', '16', 455]], [['the-sea|signifies|solutio', '16', 454]],
+      3: [[['the-opus|requires|morality', '16', 451], ['the-opus|requires|morality', '16', 450]],
+          [['coniunctio|amplified-by|sol', '16', 451], ['coniunctio|amplified-by|luna', '16', 451]],
+          [['repression|leads-to|dissociation', '16', 452]]],
+      4: [[['bath|is-form-of|night-sea-journey', '16', 455]], [['night-sea-journey|amplified-by|rex-marinus', '16', 455]],
           [['rotundum|corresponds-to|wholeness', '16', 454]], [['wholeness|requires|soul', '16', 454]]],
       5: [[['coniunctio|expresses|union-of-opposites', '16', 460]], [['nous|is-embraced-by|physis', '16', 457]],
           [['water|symbolizes|the-unconscious', '16', 459]], [['coniunctio|is-a|hierosgamos', '14', 120]]],
       6: [[['death|precedes|rebirth', '16', 467]], [['coniunctio|followed-by|nigredo', '16', 468]],
           [['sol-niger|belongs-to|nigredo', '14', 113]], [['coniunctio|produces|rebis', '16', 468]]],
       7: [[['dissociation|is-analogous-to|schizophrenia', '16', 476]], [['mercurius|resists-integration-into|consciousness', '16', 478]],
-          [['nigredo|parallels|dark-night-of-the-soul', '16', 479]], [['cauda-pavonis|precedes|rubedo', '14', 388]]],
+          [['nigredo|parallels|dark-night-of-the-soul', '16', 479]]],
       8: [[['water|symbolizes|sapientia', '16', 485]], [['dew|heralds-return-of|soul', '16', 487]],
           [['dew|belongs-to|albedo', '14', 155]], [['nigredo|precedes|albedo', '16', 493]]],
       9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['coniunctio|occurs-in|collective-unconscious', '16', 499]],
@@ -3566,8 +3569,13 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     const claimLine = (e, r) => `<li class="opus-claim"><p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
 <blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
     const relLine = (e) => `<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>`
-    const claimGroup = (g) => g.length === 1 ? claimLine(g[0][0], g[0][1]) : `<li class="opus-claim">${g.map(([e]) => relLine(e)).join('\n')}
-<blockquote class="ev">&ldquo;${esc(g[0][1].quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(g[0][1].volume)} §${esc(g[0][1].paragraph)} · ${esc(OPUS_VOICE[g[0][1].claim_type] || g[0][1].claim_type)}</p></li>`
+    const claimGroup = (g) => {
+      if (g.length === 1) return claimLine(g[0][0], g[0][1])
+      const edges = [...new Map(g.map(([e]) => [e.key, e])).values()]
+      const refs = [...new Map(g.map(([, r]) => [r.quote, r])).values()]
+      return `<li class="opus-claim">${edges.map(relLine).join('\n')}
+${refs.map(r => `<blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p>`).join('\n')}</li>`
+    }
     const sections = OPUS_PICTURES.map(([n, title, a, b, stage]) => {
       const pool = []
       for (const e of atlasEdges) for (const r of e.refs) if (inRange(r, a, b) && r.quote) pool.push([e, r])
@@ -3580,7 +3588,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       const chosen = [], seen = new Set()
       for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === OPUS_CLAIMS) break }
       const fixed = OPUS_ORDER[n] ? OPUS_ORDER[n].map(g => g.map(x => findPick(x))) : null
-      if (fixed) for (const g of fixed) if (new Set(g.map(([, r]) => r.quote)).size !== 1) { console.error(`OPUS PAGE: picture ${n} groups claims that do not share one quote`); process.exit(1) }
+      if (fixed) for (const g of fixed) if (new Set(g.map(([, r]) => r.quote)).size !== 1 && new Set(g.map(([e]) => e.key)).size !== 1) { console.error(`OPUS PAGE: picture ${n} groups claims that share neither one quote nor one edge`); process.exit(1) }
       if (fixed && forced.length && !fixed.some(g => g.some(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para))) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at §${st.para} is not among its pinned claims`); process.exit(1) }
       const claimsHtml = fixed ? fixed.map(g => claimGroup(g)).join('\n') : chosen.map(([e, r]) => claimLine(e, r)).join('\n')
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
