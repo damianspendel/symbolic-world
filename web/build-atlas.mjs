@@ -3514,41 +3514,39 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
       close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
     }
-    // The claims on each picture, in a pinned order (Damian, 2026-11-13: "let's
-    // make everthing have four - a quaternity if you like"; picture 2 "414, 532,
-    // 421 and 415"; "for all the others, try and apply an order"): first the
-    // claim that frames the image, then its figures, then the psychological
-    // reading, last Jung's crux. Pictures 3 and 7 keep three ("Go with A":
-    // picture 3's two morality quotes sit under one claim; picture 7's §480
-    // quote already says what the cauda pavonis pick said). A group shows as
-    // one claim: edges that share one quote, or one edge with several quotes. CW 14 entries are the trilogy picks of 2026-11-12, marked by
+    // The claims on each picture, in a pinned order. Three a picture (Damian,
+    // 2026-11-13: "we need to go back to three quotes, it just looks better",
+    // reversing the four of the same morning). The order is his pattern: the
+    // claim that frames the image, its figures, the psychological reading,
+    // Jung's crux. A group shows as one claim: edges that share one quote, or
+    // one edge with several quotes. CW 14 entries are trilogy picks, marked by
     // their cite. The order is explicit so a data change cannot reshuffle it;
     // the build refuses if an entry leaves the graph or a picture's colour cite
     // is not among its claims. The closing panel has its own pick, and the
     // yellow before the red rests on CW 12 §271.
-    const OPUS_CLAIMS = 4
+    const OPUS_CLAIMS = 3
     const OPUS_ORDER = {
       1: [[['alchemy|derives-from|the-unconscious', '16', 407]], [['quintessence|derives-from|four-elements', '16', 402]],
-          [['mercurius|is-counterpart-of|the-trinity', '16', 403]], [['axiom-of-maria|runs-through|alchemy', '16', 404]]],
-      2: [[['the-unconscious|produces|symbol', '16', 414]], [['regina|appears-as|luna', '14', 532]],
+          [['mercurius|is-counterpart-of|the-trinity', '16', 403]]],
+      2: [[['the-unconscious|produces|symbol', '16', 414]],
           [['regina|represents|artifex', '16', 421], ['rex|represents|soror-mystica', '16', 421]], [['coniunctio|involves|incest', '16', 415]]],
       3: [[['the-opus|requires|morality', '16', 451], ['the-opus|requires|morality', '16', 450]],
           [['coniunctio|amplified-by|sol', '16', 451], ['coniunctio|amplified-by|luna', '16', 451]],
           [['repression|leads-to|dissociation', '16', 452]]],
-      4: [[['bath|is-form-of|night-sea-journey', '16', 455]], [['night-sea-journey|amplified-by|rex-marinus', '16', 455]],
-          [['rotundum|corresponds-to|wholeness', '16', 454]], [['wholeness|requires|soul', '16', 454]]],
-      5: [[['coniunctio|expresses|union-of-opposites', '16', 460]], [['nous|is-embraced-by|physis', '16', 457]],
-          [['water|symbolizes|the-unconscious', '16', 459]], [['coniunctio|is-a|hierosgamos', '14', 120]]],
+      4: [[['bath|is-form-of|night-sea-journey', '16', 455]], [['rotundum|corresponds-to|wholeness', '16', 454]],
+          [['wholeness|requires|soul', '16', 454]]],
+      5: [[['nous|is-embraced-by|physis', '16', 457]], [['water|symbolizes|the-unconscious', '16', 459]],
+          [['coniunctio|is-a|hierosgamos', '14', 120]]],
       6: [[['death|precedes|rebirth', '16', 467]], [['coniunctio|followed-by|nigredo', '16', 468]],
-          [['sol-niger|belongs-to|nigredo', '14', 113]], [['coniunctio|produces|rebis', '16', 468]]],
+          [['sol-niger|belongs-to|nigredo', '14', 113]]],
       7: [[['dissociation|is-analogous-to|schizophrenia', '16', 476]], [['mercurius|resists-integration-into|consciousness', '16', 478]],
           [['nigredo|parallels|dark-night-of-the-soul', '16', 479]]],
-      8: [[['water|symbolizes|sapientia', '16', 485]], [['dew|heralds-return-of|soul', '16', 487]],
-          [['dew|belongs-to|albedo', '14', 155]], [['nigredo|precedes|albedo', '16', 493]]],
-      9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['coniunctio|occurs-in|collective-unconscious', '16', 499]],
-          [['unio-mentalis|precedes|reunion-with-the-body', '14', 677]], [['nigredo|precedes|albedo', '16', 515]]],
+      8: [[['water|symbolizes|sapientia', '16', 485]], [['dew|belongs-to|albedo', '14', 155]],
+          [['nigredo|precedes|albedo', '16', 493]]],
+      9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['unio-mentalis|precedes|reunion-with-the-body', '14', 677]],
+          [['nigredo|precedes|albedo', '16', 515]]],
       10: [[['anthropos|parallels|christ', '16', 525]], [['denarius|means|christ', '16', 525]],
-           [['rebis|is-product-of|incest', '16', 529]], [['rebis|symbolizes|union-of-opposites', '14', 11]]]
+           [['rebis|symbolizes|union-of-opposites', '14', 11]]]
     }
     const OPUS_PICKS = { close: [['coniunctio|belongs-to|rubedo', '14', 307]] }
     const OPUS_YELLOW = ['citrinitas|coincides-with|rubedo', '12', 271]
