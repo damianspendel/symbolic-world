@@ -1409,11 +1409,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw13-2-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §71-140",
+   "result": "CW 13 WINDOW 2: Alchemical Studies §71-140, the close of the Golden Flower commentary (Christian values and the new integration, psychologism and the autonomous complex, the diamond body growing in the golden flower, the Pauline Christ symbol and the release from participation mystique, the imitatio Christi against self-realization, the bridge between East and West) and the first part of The Visions of Zosimos: the visions and the résumé, their reading as experiences during the opus, the divine water extracted through the torment of fire, the separatio as dismemberment, the sacrificial act (dismemberment, flaying, the touchstone, the head as arcane substance, the Meridian of the Sun and the solificatio), the krater as the vas Hermetis, lead as the tomb of Osiris, the rotundum as aqua permanens and a bit of the world soul, water as spirit, the king and the mortificatio, the head as seat of consciousness, the angels as transmitters of unconscious contents, Mercurius as the sword, circular thinking in Christianity and alchemy, the temple as vessel and the self as its own container, the transformation in the head, the inner man as homunculus confronting the ego, Zosimos under the spell of projection, participation mystique caused by projection, Thoth bearing the spiritual man, the lapis as deus absconditus and God in man, churingas full of mana, Estsánatlehi as anima and self, the lapis and immortality, the visions personifying the divine water, alchemy as concretized individuation. Run by hand in the mining chat on 2026-11-13 morning on Damian's instruction to run all remaining windows; the second window of CW 13 in the second pass (state record b-cw13-2-pass2). Mined 49 candidates/51 refs (Opus-family miner subagent, blinded, model id stamped; six attaches onto standing edges; twelve draft claims dropped because the graph already quotes or cites them; 18 names entries; 11 cross-register flags; 2 stage candidates; stages_note recorded). Pre-check kept all 51 (quotation share of CW 13 after the window 4.37 percent against the 9 percent cap). Fable gate 46 TRUE / 4 CORRECTED / 1 FALSE: the autonomous-complex mint refused as a duplicate of the standing splinter-psyche (label 'Splinter psyche / autonomous complex'), its edge psychologism denies autonomous-complex dropped and the psychologism mint stranded, the claim going to the sitting; three confidence demotions (§88 'I am inclined to think', §102 'often identical', §115 the vessel as the self one step from 'the self is its own container'); §140 scope note (the mystical side of alchemy, 'to all appearances') with medium. All eighteen names accepted; Dorn's vas pellicanicum (§115) will not overwrite the vessel's standing Latin name and is noted for the sitting as an alias. Gemini cross-vendor 46 PASS / 4 FINDING on 50 post-gate refs: §106 on a reference already at medium with the scope note, §113 and §131 anaphora resolved by the previous paragraph, §127 a report asked of Jung's own sentence whose source sits on the §125 reference; all four overruled with audit notes. Names applied to 18 entries on 16 nodes; cross_register set on 11 edges; six mints: self-realization, touchstone, angel, circular-thinking, deus-absconditus, estsanatlehi. Sources written as other: the Treatise of Zosimos concerning the Art and the Dictionary of Goldmaking (both added to the controlled list as texts in the tooling commit) and the Australian and Melanesian churinga belief. +42 edges, 7 refs attached to standing edges and 1 further ref on this window's new edges, +50 refs, +6 nodes. Graph 1184/4918/6584; CW 13 now 352 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 42 edges under v0.7.2: agreement 36/42 (86 percent), 34 assigned, 6 queued, 2 no-family, 0 text-undecided; queue 854; no bare unclassified rows from the Gemini arm. strain: 2 no-family, 0 text-undecided of 42 swept; new homeless strings: relates-to (recurs), exhibits. FAMILY GAP FOR THE SITTING: is split classification against archetypal-identity on the krater as the vas Hermetis; guards split dependence against structural-position; reveals left one arm without a family; transmits-contents-of split personification against instrumentality; confronts split opposition against psychic-effect; concretizes split symbolization against projection. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-13, 51 refs judged against the full paragraphs; weekly Fable 77 percent and 5-hour meter under 30 percent at the window's start, no capacity warning; today's weekly stop is 95 percent on Damian's word (relayed 06:58), back to 85 tomorrow. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1184/4918/6584, distinct paragraphs 3913, claim mix 5147/1059/378. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-af39fda886351004a, 27 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 25 assistant turns after the miner finished at 2026-11-13T06:01:54.332Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW13-DUE: window 2 (§71-140)",
- "nodes": 1178,
- "edges": 4876,
- "refs": 6534,
+ "next": "CW13-DUE: window 3 (§141-210)",
+ "nodes": 1184,
+ "edges": 4918,
+ "refs": 6584,
  "as_of": "2026-11-13"
 }
