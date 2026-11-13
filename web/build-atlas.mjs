@@ -3607,6 +3607,10 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
            ['lapis|represents-a-transcendent-totality-which-coincides-with|the-self', '13', 134], ['anthropos|stands-for|wholeness', '12', 210]]
     }
     const OPUS_TILE_MIN = 2
+    // the tiles are off (Damian, 2026-11-13, option 2): each picture shows its
+    // CW 16 claims only, and /opus-claims, linked under the intro, carries what
+    // Jung says of the same figures elsewhere. The picks stay for a later return
+    const OPUS_SHOW_TILES = false
     const OPUS_PICKS = { close: [['coniunctio|belongs-to|rubedo', '14', 307]] }
     const OPUS_YELLOW = ['citrinitas|coincides-with|rubedo', '12', 271]
     const edgeByKey = new Map(atlasEdges.map(e => [e.key, e]))
@@ -3720,15 +3724,17 @@ ${st ? `<p class="opus-stage">${esc(st.note)}${st.para && !st.inline ? ` CW 16 Â
 ${claimsHtml}
 </ul>
 ${shimmer}
-${tileHtml(n)}
+${OPUS_SHOW_TILES ? tileHtml(n) : ''}
 </div>
 </section>`
     }).join('\n')
     derived(1550)   // the Rosarium's first printing, a fact of the book, not a count
     const opusBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The opus</h1>
-<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, and of their figures across CW 12, 13, 14 and 16.</p></div>
-<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses. The colours change where Jung, or a text he quotes, names a stage.</p>
+<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum.</p></div>
+<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16), and each picture below carries claims from that reading. The colours change where Jung, or a text he quotes, names a stage.</p>
+<p class="opus-aside"><a href="/opus-claims">What Jung says of the same figures across CW 12, 13, 14 and 16: the full table &rarr;</a></p>
+<p class="opus-aside"><a href="/atlas#/concordance">Jung's concepts beside the alchemical terms: the concordance &rarr;</a></p>
 <div class="opus-ground" aria-hidden="true"><div class="opus-green"></div><div class="opus-peacock"></div><p class="opus-peacock-label">cauda pavonis, the peacock's tail</p></div>
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
 <div class="opus-pin">
@@ -3742,8 +3748,6 @@ ${relatedTag('12')}<blockquote class="opus-outside">&ldquo;${esc(tidy(OPUS_OUTSI
 ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map(([e, r]) => claimLine(e, r)).join('\n')}
 </ul>
 <p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
-<p class="opus-aside"><a href="/atlas#/concordance">Jung's concepts beside the alchemical terms: the concordance &rarr;</a></p>
-<p class="opus-aside"><a href="/opus-claims">Here we relate the citations to the stages of the alchemical work &rarr;</a></p>
 </div>
 </section>
 </div>
