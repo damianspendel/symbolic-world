@@ -3520,9 +3520,10 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       9: { edge: 'nigredo|precedes|albedo', para: 515, note: 'White.' },
       10: { edge: null, para: null, note: 'Jung names no stage in these paragraphs; the white holds as a choice of display, not a claim.' }
     }
-    // outside the graph; checked 2026-11-12 (exact match, length, Fable read)
+    // outside the graph; checked 2026-11-12 (exact match, length, Fable read).
+    // The §479 Rosarium line left picture 7 on 2026-11-13 (fix b of the
+    // pinned-panel backlog entry)
     const OPUS_OUTSIDE = {
-      verdure: { volume: '16', paragraph: 479, voice: 'rosarium', quote: 'Afterwards thou makest new and multitudinous things to grow, causing with thy verdure the many colours to appear.' },
       shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
       close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
     }
@@ -3708,8 +3709,10 @@ ${picks.map(([e, r]) => claimLine(e, r, false)).join('\n')}
       if (fixed && forced.length && !fixed.some(g => g.some(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para))) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at §${st.para} is not among its pinned claims`); process.exit(1) }
       const claimsHtml = fixed ? fixed.map(g => claimGroup(g)).join('\n') : chosen.map(([e, r]) => claimLine(e, r)).join('\n')
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
-      const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(tidy(OPUS_OUTSIDE.verdure.quote, '16', 479))}&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
-<blockquote class="opus-outside">&ldquo;${esc(tidy(OPUS_OUTSIDE.shimmer.quote, '16', 480))}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
+      // picture 7 keeps the §480 quote only: the §479 Rosarium line left so the
+      // picture fits the desktop stage (BACKLOG, "/opus: pinned panels scroll
+      // inside themselves on desktop", fix b)
+      const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(tidy(OPUS_OUTSIDE.shimmer.quote, '16', 480))}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
       const wsz = woodcutSize(n)
       const figure = wsz
         ? `<figure class="opus-cut"><img src="/${woodcutFile(n)}" width="${wsz[0]}" height="${wsz[1]}" alt="Woodcut ${n} of the Rosarium philosophorum (1550): ${esc(title)}" loading="${n <= 2 ? 'eager' : 'lazy'}"></figure>`
@@ -3833,7 +3836,11 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
     // the scroll. Two modes, chosen at load and on resize: the pinned stage
     // (one viewport of scroll per picture, crossfading) where the screen is wide
     // and tall enough, and plain page flow on phones and short touch screens,
-    // erring toward flow. In both, the stage of the picture in view sets the
+    // erring toward flow. The stage also gives way to flow whenever any panel's
+    // content is taller than the stage, so no panel scrolls inside itself
+    // (BACKLOG, "/opus: pinned panels scroll inside themselves on desktop",
+    // fix a): measured with the pinned layout applied, at load, once the fonts
+    // are in, and on resize. In both, the stage of the picture in view sets the
     // ground with the same thresholds: the fade mixes black to white by how far
     // it has gone, picture 7 raises the green and sweeps the peacock band, the
     // closing panel warms white to red (the yellow branch stays for a
@@ -3851,7 +3858,8 @@ function colours(on,t){var gn=0,po=0,u=0;if(on){gn=ramp(t,.1,.42)*(1-ramp(t,.62,
 if(gr)gr.style.opacity=gn.toFixed(3);if(pk){pk.style.opacity=(po*.6).toFixed(3);pk.style.transform='translateX('+(-90+180*u).toFixed(1)+'%)'}if(pl)pl.style.opacity=po.toFixed(3)}
 function wantPinned(){var coarse=window.matchMedia&&matchMedia('(pointer: coarse)').matches;return innerWidth>=768&&!(coarse&&innerHeight<900)}
 var io=null,imgs=[].slice.call(track.querySelectorAll('.opus-cut img'));
-function setMode(){var w=wantPinned()?'pinned':'flow';if(w===mode)return;mode=w;
+function overflows(){var p=de.classList.contains('opus-pinned'),f=de.classList.contains('opus-flow'),o;top();de.classList.add('opus-pinned');de.classList.remove('opus-flow');o=segs.some(function(s){return s.scrollHeight>s.clientHeight+1});de.classList.toggle('opus-pinned',p);de.classList.toggle('opus-flow',f);return o}
+function setMode(){var w=wantPinned()&&!overflows()?'pinned':'flow';if(w===mode)return;mode=w;
 de.classList.toggle('opus-pinned',w==='pinned');de.classList.toggle('opus-flow',w==='flow');
 segs.forEach(function(s){s.classList.remove('is-active')});cur=-1;
 if(w==='flow'){if('IntersectionObserver' in window){io=io||new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});imgs.forEach(function(im){if(!im.classList.contains('in'))io.observe(im)})}else imgs.forEach(function(im){im.classList.add('in')})}}
@@ -3870,7 +3878,7 @@ g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-re
 setMode();if(mode==='pinned'&&segs[0])segs[0].classList.add('is-active');
 [].slice.call(document.querySelectorAll('.opus-tile')).forEach(function(d){var sec=d.closest('.opus-pic');d.addEventListener('toggle',function(){if(sec)sec.classList.toggle('tile-open',d.open)});var c=d.querySelector('.opus-tile-close');if(c)c.addEventListener('click',function(){d.open=false;var s=d.querySelector('summary');if(s)s.focus()})});
 function jump(){var id=location.hash.slice(1),k=-1;if(!id)return;segs.forEach(function(s,j){if(s.id===id)k=j});if(k<0)return;var h=top();if(mode!=='pinned'){segs[k].scrollIntoView();return}var r=track.getBoundingClientRect();scrollTo(0,Math.round(scrollY+r.top-h+k*innerHeight+2));tick()}
-addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});addEventListener('hashchange',jump);addEventListener('load',function(){setTimeout(jump,60)});tick();jump()})();`
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});addEventListener('hashchange',jump);addEventListener('load',function(){setMode();tick();setTimeout(jump,60)});if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){setMode();tick()});tick();jump()})();`
     // SEO after v2.4.0, items 1 to 3 (Damian, 2026-11-13): a title a search can
     // match, a description of the page as it stands (the tiles are off), and
     // schema.org data for the page and its woodcuts, each image carrying the
