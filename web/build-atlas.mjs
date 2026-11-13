@@ -3564,7 +3564,10 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     const woodcutFile = (n) => `opus-rosarium-${String(n).padStart(2, '0')}.jpg`
     const woodcutSize = (n) => { try { const b = readFileSync(here(`./public/${woodcutFile(n)}`)); let o = 2; while (o < b.length) { if (b[o] !== 0xFF) return null; const mk = b[o + 1], len = b.readUInt16BE(o + 2); if (mk >= 0xC0 && mk <= 0xCF && mk !== 0xC4 && mk !== 0xC8 && mk !== 0xCC) return [b.readUInt16BE(o + 7), b.readUInt16BE(o + 5)]; o += 2 + len } return null } catch { return null } }
     const inRange = (r, a, b) => String(r.volume) === '16' && Number(r.paragraph) >= a && Number(r.paragraph) <= b
-    const claimLine = (e, r) => `<li class="opus-claim"><p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
+    // Claims from outside CW 16 carry a visible mark (Damian, 2026-11-13, after
+    // the Gemini hostile review: "Mark the claims in the subtitle")
+    const relatedTag = (v) => String(v) === '16' ? '' : `<p class="opus-related">Related claim · CW ${esc(v)}</p>`
+    const claimLine = (e, r) => `<li class="opus-claim${String(r.volume) === '16' ? '' : ' is-related'}">${relatedTag(r.volume)}<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
 <blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
     const relLine = (e) => `<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>`
     const claimGroup = (g) => {
@@ -3612,7 +3615,7 @@ ${shimmer}
     derived(1550)   // the Rosarium's first printing, a fact of the book, not a count
     const opusBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The opus</h1>
-<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum.</p></div>
+<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with related claims from CW 12 and 14 marked as such.</p></div>
 <p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses.</p>
 <div class="opus-ground" aria-hidden="true"><div class="opus-green"></div><div class="opus-peacock"></div><p class="opus-peacock-label">cauda pavonis, the peacock's tail</p></div>
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
@@ -3622,7 +3625,7 @@ ${sections}
 <div class="opus-text">
 <p class="eyebrow">After the white</p>
 ${yellow ? `<p class="opus-stage">The white turns yellow, then red. CW 12 §271.</p>` : ''}
-<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
+${relatedTag('12')}<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
 <ul class="opus-claims">
 ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map(([e, r]) => claimLine(e, r)).join('\n')}
 </ul>
@@ -3666,6 +3669,7 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 .opus-rel em { font-style: normal; opacity: .8; }
 .opus-claim blockquote, .opus-outside { margin: 0; padding: .2rem 0 .2rem .9rem; border-left: 2px solid currentColor; font-family: var(--display); font-size: 1.02rem; line-height: 1.5; }
 .opus-cite { display: block; font: .64rem/1.7 var(--mono); margin-top: .3rem; }
+.opus-related { font: .6rem var(--mono); letter-spacing: .12em; text-transform: uppercase; opacity: .75; margin: 0 0 .2rem; }
 .opus-green, .opus-peacock { position: absolute; pointer-events: none; opacity: 0; }
 .opus-green { inset: 0; background: radial-gradient(ellipse 85% 65% at 50% 105%, rgba(52,150,96,.55), rgba(30,90,60,.18) 55%, transparent 80%); }
 .opus-peacock { left: -10%; right: -10%; top: 38%; height: 26vh; background: linear-gradient(90deg, transparent, #1d7a55 14%, #2353a8 32%, #c79a2e 52%, #6a3b9e 72%, #1d7a55 86%, transparent); filter: blur(22px); will-change: transform, opacity; }
