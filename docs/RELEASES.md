@@ -31,8 +31,8 @@ when the release was cut.
 
 ## v2.4.0: the alchemical trilogy, mined a second time
 
-status: in preparation. Tag `v2.4.0`, GitHub Release and Zenodo record under
-the concept DOI once released.
+status: released 2026-11-13. Tag `v2.4.0`, GitHub Release, Zenodo record
+under the concept DOI.
 pin: graph v2.4.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
