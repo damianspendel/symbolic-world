@@ -15,8 +15,12 @@ import urllib.request
 # check measures OUR content, not Cloudflare's armour. Two observed variants
 # (2026-10-08): the original iframe-wrapping `(function(){...})` form, and a
 # bare `window.__CF$cv$params={...}` assignment — responses carry either, at
-# Cloudflare's whim, so both must normalize away.
-CF_INJECT = re.compile(rb'<script>(?:\(function\(\)\{.{0,4000}?|window\.)__CF\$cv\$params.*?</script>', re.S)
+# Cloudflare's whim, so both must normalize away. The pattern starts only at
+# Cloudflare's own opening, `<script>(function(){function c(){` or
+# `<script>window.__CF`, and the gap to `__CF$cv$params` may not cross a
+# `</script>`: a page that ends with its own inline `(function(){...})()`
+# script (opus.html, opus-claims.html) keeps that script (2026-11-13).
+CF_INJECT = re.compile(rb'<script>(?:\(function\(\)\{function c\(\)\{(?:(?!</script>).){0,4000}?|window\.)__CF\$cv\$params.*?</script>', re.S)
 # Cloudflare Email Address Obfuscation (zone feature; first seen 2026-10-23, on
 # the /about contact link) rewrites each mailto href to an encoded
 # /cdn-cgi/l/email-protection#<hex> link and injects its decoder script. The
