@@ -1441,11 +1441,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw13-4-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §211-280",
+   "result": "CW 13 WINDOW 4: Alchemical Studies §211-280, the close of Paracelsus as a Spiritual Phenomenon (the difficult Adech hindering and guiding the artifex, Dorn's Melusina as the vision appearing in the mind, the Scaiolae as emanations of the Anthropos stimulating Melusina, the opus aiming at individuation, the acts of Melusina distilled into the liquor Sophiae, fixatio as the consolidation of feeling, the marriage of the Lamb as the Christian hierosgamos, the angel of Revelation as Adech, the hierosgamos of Venus and Mars, alchemy as forerunner of psychology) and the first half of The Spirit Mercurius (the spirit confined in the bottle, the oak as the self, the lapis as goal of individuation, Mercurius as spiritus vegetativus and principle of individuation, the retort as anima mundi, Mercurius resembling the devil and imprisoned in the roots of the self, the paredros, alchemy's material from the collective unconscious, Mercurius as quicksilver, fire, anima media natura, snow in the albedo, the arcane substance as psyche, Mercurius and the Trinity, the Logos become world, Lucifer, the uroboros, identity with the lapis and with Saturn, the axiom of Maria, Saturn as father, the devil contained, the projection of the collective unconscious). Run by hand in the mining chat on 2026-11-13 morning on Damian's instruction to run all remaining windows; the fourth window of CW 13 in the second pass (state record b-cw13-4-pass2). Mined 51 candidates/64 refs (Opus-family miner subagent, blinded, model id stamped; eleven attaches onto standing edges; the miner cut a first draft of 157 candidates to 51; 29 names entries; 18 cross-register flags; 3 stage candidates; stages_note recorded). Pre-check dropped one reference whose ellipsis skipped more than 30 tokens (§241 the forest as the unconscious) and kept 63 (quotation share of CW 13 after the window 6.07 percent against the 9 percent cap). Fable gate 60 TRUE / 3 CORRECTED / 0 FALSE: §222 the acts of Melusina undergoing distillatio demoted to medium (Jung's 'as in a process of distillation'); §226 the angel scoped to the angel of Revelation with medium; §253 alchemy stemming from the collective unconscious scoped to its psychic material with medium. Twenty-seven names accepted and two rejected (the-unconscious|229 'supra-consciousness' as a characterization, bottle|239 'the spirit in the bottle' naming the spirit). Gemini cross-vendor 59 PASS / 4 FINDING on 63 post-gate refs: §273 demoted to medium (Lucifer in the generic sense of light-bringer, the §271 reference carrying the figure); §215 demoted to medium (the Scaiolae's four powers correspond to Jung's four functions through §207, as the standing edge records); §250 on a reference already at medium and §238 against the standing dual-mother motif Jung invokes at §153, both overruled with audit notes. Names applied to 27 entries on 17 nodes; cross_register set on 16 edges; ten mints: acts-of-melusina, liquor-sophiae, marriage-of-the-lamb, mars, bottle, spiritus-vegetativus, quicksilver, anima-media-natura, snow, lucifer. Sources written as other: Grimm's fairytale The Spirit in the Bottle (author and text added to the controlled list in the tooling commit), the Verus Hermes poem (text added) and the Aurelia occulta's speaker (the text is listed). +39 edges, 12 refs attached to standing edges and 12 further refs on this window's new edges, +63 refs, +10 nodes. Graph 1203/5002/6707; CW 13 now 475 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 39 edges under v0.7.2: agreement 31/39 (79 percent), 29 assigned, 8 queued, 2 no-family, 0 text-undecided; queue 868; no bare unclassified rows from the Gemini arm. strain: 2 no-family, 0 text-undecided of 39 swept; new homeless strings: exemplifies (is-principle-of is listed as homeless). FAMILY GAP FOR THE SITTING: emanate-from left the Gemini arm text-undecided against generation; undergoes split psychic-effect against separation on the distillatio (the recurring seed question); is-confined-in and is-imprisoned-in split composition against structural-position both ways; belongs-to left the Gemini arm without a family on snow in the albedo; is-defined-as, is-conceived-as and is-identical-with split a content family against doctrinal-attribution on 'many treatises', 'the alchemists themselves conceived' and 'in Khunrath' (the last on the document's own §274 identity seed). Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-13, 63 refs judged against the full paragraphs; weekly Fable 81 percent and 5-hour meter 49 percent at the window's start against today's 95 percent stop, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1203/5002/6707, distinct paragraphs 3960, claim mix 5223/1093/391. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-aa9b4706d8894a419, 34 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 16 assistant turns after the miner finished at 2026-11-13T06:37:17.821Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW13-DUE: window 4 (§211-280)",
- "nodes": 1193,
- "edges": 4963,
- "refs": 6644,
+ "next": "CW13-DUE: window 5 (§281-350)",
+ "nodes": 1203,
+ "edges": 5002,
+ "refs": 6707,
  "as_of": "2026-11-13"
 }
