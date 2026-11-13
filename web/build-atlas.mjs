@@ -2248,7 +2248,7 @@ ${groupBlocks}
     }
     if (!titleFull) { titleLabel = labelSteps[labelSteps.length - 1]; titleFull = `${titleLabel} in Jung’s Collected Works`; headOverflow.titles.push(node.id) }
     const descOf = (v, withVols) => passages
-      ? `${v} in C. G. Jung’s Collected Works: ${count(passages, 'passage')} quoted with volume and paragraph${withVols ? volList : ''}, each machine-checked against the source text.`
+      ? `${v} in C. G. Jung’s Collected Works: ${count(passages, 'passage')} quoted with volume and paragraph${withVols ? volList : ''}, ${passages === 1 ? '' : 'each '}machine-checked against the source text.`
       : `${v} in C. G. Jung’s Collected Works: ${count(edges.length, 'relation')} in a verified knowledge graph of the Collected Works.`
     const descSteps = [[node.label, true], [node.label, false], ...labelSteps.slice(1).map(v => [v, false])]
     let description = null, descLabel = node.label
