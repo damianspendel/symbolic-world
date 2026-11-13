@@ -2018,6 +2018,19 @@ for (const l of JSON.parse(readFileSync(here('../tools/linking/wikidata_links.js
   const label = (l.decision && l.decision.wikidata_label) || l.wikidata_label
   if (label && String(label).trim()) WIKIDATA_LABEL.set(l.key, String(label).trim())
 }
+// Concordance links (2026-11-13): a concept page whose node
+// has a card on /concordance links to that card. The alchemical (laboratory)
+// side of each bridge is its card; /concordance groups its pairs with the same
+// function, so the two lists cannot drift.
+const concordanceSides = (e) => {
+  const lab = registerById[e.source] === 'laboratory' ? e.source : e.target
+  return { lab, psy: lab === e.source ? e.target : e.source }
+}
+const CONCORDANCE_TERMS = new Set()
+if (EMIT_CONCORDANCE_PAGE) {
+  const bridgeEdge = new Map(atlasEdges.map(e => [e.id, e]))
+  for (const id of bridges) CONCORDANCE_TERMS.add(concordanceSides(bridgeEdge.get(id)).lab)
+}
 if (EMIT_CONCEPT_PAGES) {
   const conceptFamIds = new Set(families.map(f => f.id))
   const conceptFamName = new Map(families.map(f => [f.id, f.name]))
@@ -2202,6 +2215,7 @@ ${neighbours.map(nb => `<li><a class="ev" href="/concept-${nb.id}">${esc(labelOf
       (edges.length ? ` The atlas holds ${count(edges.length, 'relation')} for it` +
         (passages ? `, drawn from ${count(passages, 'passage')} quoted with volume and paragraph${volList}` : '') + '.' : '') + '</p>'
 
+    const concLink = CONCORDANCE_TERMS.has(node.id) ? `<p>${ns(`<a href="/concordance#${node.id}">In the concordance →</a>`)}</p>\n` : ''
     const qid = WIKIDATA_OF.get(node.id)
     const wdLabel = WIKIDATA_LABEL.get(node.id)
     const wikidataLink = qid ? `<p class="meta">${ns(`Wikidata: <a href="https://www.wikidata.org/wiki/${qid}">${wdLabel ? `<span class="ev">${esc(wdLabel)}</span> (${qid})` : qid}</a>`)}</p>\n` : ''
@@ -2278,7 +2292,7 @@ ${opening}
 ${topBlock}
 <p class="meta">${ns('Quotations are mechanically checked against the source paragraph. The method is documented <a href="/method">here</a>.')}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
-${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${concLink}${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
 ${neighbourBlock}
 ${shelves.length > 1 ? `<p class="chips">${ns(`\n${shelfChips}\n`)}</p>` : ''}
 ${shelfBlocks}
@@ -2291,7 +2305,7 @@ ${shelfBlocks}
 ${CONCEPT_SEARCH_HEAD ? lede + '\n' : ''}<p class="meta">${ns(registerNote)}</p>
 <p>${ns(provLine)}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
-${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${concLink}${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
 ${neighbourBlock}
 ${order.length > 1 ? `<p class="chips">${ns(`\n${chips}\n`)}</p>` : ''}
 ${groupBlocks}
@@ -3299,7 +3313,7 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 <p>The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
 <p>Analysts and trainees can look up where Jung treats a concept and follow it across volumes, with a citation ready to carry into their own work. The <a href="/query">query page</a> filters by volume, family and claim type, and it searches the words inside the quotes.</p>
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
-<p>Readers of alchemy can follow Jung's reading of the ten Rosarium pictures in <a href="/opus">the opus</a>, and use the <a href="/atlas#/concordance">concordance</a>, which sets his psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
+<p>Readers of alchemy can follow Jung's reading of the ten Rosarium pictures in <a href="/opus">the opus</a>, and use the <a href="/concordance">concordance</a>, which sets his psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
 <p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>. The original structure and metadata are open for reuse under CC BY 4.0, and the quotations stay with their rights holders.</p>
 <p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/method">method page</a> sets out what the checks cover and what they leave out.</p>
 <p>In case of concerns, please contact <a href="mailto:damian.spendel@gmail.com">the author</a>.</p>`
@@ -3801,7 +3815,7 @@ ${OPUS_SHOW_TILES ? tileHtml(n) : ''}
 <p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum.</p></div>
 <p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16), and each picture below carries claims from that reading. The colours change where Jung, or a text he quotes, names a stage.</p>
 <p class="opus-aside"><a href="/opus-claims">What Jung says of the same figures across CW 12, 13, 14 and 16: the full table &rarr;</a></p>
-<p class="opus-aside"><a href="/atlas#/concordance">Jung's concepts beside the alchemical terms: the concordance &rarr;</a></p>
+<p class="opus-aside"><a href="/concordance">Jung's concepts beside the alchemical terms: the concordance &rarr;</a></p>
 <div class="opus-ground" aria-hidden="true"><div class="opus-green"></div><div class="opus-peacock"></div><p class="opus-peacock-label">cauda pavonis, the peacock's tail</p></div>
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
 <div class="opus-pin">
@@ -4102,8 +4116,7 @@ bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribut
     const terms = new Map()
     for (const id of bridges) {
       const e = edgeById.get(id)
-      const lab = registerById[e.source] === 'laboratory' ? e.source : e.target
-      const psy = lab === e.source ? e.target : e.source
+      const { lab, psy } = concordanceSides(e)
       if (registerById[lab] !== 'laboratory' || registerById[psy] !== 'psyche') { console.error(`CONCORDANCE PAGE: bridge ${id} (${e.key}) does not join the two registers`); process.exit(1) }
       const r = pickRef(e)
       if (!r) { console.error(`CONCORDANCE PAGE: bridge ${id} (${e.key}) has no quoted reference`); process.exit(1) }
@@ -4111,6 +4124,8 @@ bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribut
       terms.get(lab).push({ e, psy, r })
     }
     const termIds = [...terms.keys()].sort(byLabel)
+    // the concept pages link to these cards from CONCORDANCE_TERMS; the sets must agree
+    if (termIds.length !== CONCORDANCE_TERMS.size || termIds.some(id => !CONCORDANCE_TERMS.has(id))) { console.error('CONCORDANCE PAGE: card set differs from CONCORDANCE_TERMS'); process.exit(1) }
     const pairTotal = derived(bridges.length), termTotal = derived(termIds.length)
     const cLink = (id) => `<a href="/concept-${esc(id)}">${esc(nodeLabel(id))}</a>`
     const row = ({ e, r }) => {
