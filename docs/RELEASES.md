@@ -65,8 +65,8 @@ pin: graph v2.4.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   the trilogy, and [/opus-claims](/opus-claims) lists every such claim.
 - [/query](/query) suggests concepts and relations as you type.
 - [/method](/method) says "Validated by a person" and adds a row on recall.
-- Concept pages say again how their quotations are checked, and set each
-  citation off with a colon.
+- Concept pages again carry the note on how a machine checks their
+  quotations, and set each citation off with a colon.
 
 ## v2.3.0: CW 16, CW 7 and CW 6
 
