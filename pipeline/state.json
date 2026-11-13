@@ -1457,11 +1457,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw13-5-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §281-350",
+   "result": "CW 13 WINDOW 5: Alchemical Studies §281-350, the second half of The Spirit Mercurius (Hermes giving his name to Hermetic philosophy, Mercurius as ultima materia and son of Tiamat, the prima materia as increatum, the stone as symbol of the inorganic, the objective spirit as the unconscious, the opus repeating creation, Mercurius as the atman of the tree, the Malus Philosophus saying on the lapis and consciousness, the philosophical tree from the tree of knowledge, Lilith as an aspect of Mercurius, the self as complexio oppositorum, Mercurius partaking of the deus absconditus, the lapis arising from the unconscious, Christ against the Antichrist, Freud and the shadow, enantiodromia and compensation, Mercurius compensating Christ, Christ based on archetype, Augustine's cognitio matutina as self-knowledge, the self as light in the Upanishad, the lumen naturae as ignis fatuus) and the first part of The Philosophical Tree (the tree as the self in profile, the world-tree, water as fire, the hierosgamos of Mercurius duplex, the uroboros as hieroglyph of eternity, the fish and the paradisal state, the lapis of four elements, Krishna as the self and the animus identifying with it, mana and libido, the animus crystallizing in individuation and transcended by the self, the tree guarding the stone). Run by hand in the mining chat on 2026-11-13 morning on Damian's instruction to run all remaining windows; the fifth window of CW 13 in the second pass (state record b-cw13-5-pass2). Mined 52 candidates/57 refs (Opus-family miner subagent, blinded, model id stamped; fifteen attaches onto standing edges; the miner cut a first draft roughly in half; 20 names entries; 7 cross-register flags; 0 stage candidates, the window naming no stage or operation; stages_note recorded). Pre-check kept all 57 (quotation share of CW 13 after the window 6.84 percent against the 9 percent cap). Fable gate 53 TRUE / 4 CORRECTED / 0 FALSE: §304 the tree as the self demoted to medium (conditional on the mandala sentence); §334 the fish and paradise demoted to medium (the restored paradisal state, one step); §349 the tree guarding the stone scoped to Jung's reading of Noël Pierre's poem with medium; §322 source_text withdrawn for 'in Horapollo'. All twenty names accepted. Gemini cross-vendor 53 PASS / 4 FINDING on 57 post-gate refs: §287 retyped jung-asserts (Jung's framing of the Malus Philosophus saying); §283 a report asked of Jung's own synthesis on a standing edge, §316 and §321 standing-label objections (serpent, bird), all overruled with audit notes. Names applied to 20 entries on 16 nodes; cross_register set on 5 edges; ten mints: ultima-materia, increatum, the-inorganic, objective-spirit, tree-of-knowledge, complexio-oppositorum, cognitio-matutina, ignis-fatuus, world-tree, krishna. Sources written as other: Yajñavalkya and the Brihadaranyaka Upanishad, the Bhagavadgita (all added to the controlled list in the tooling commit) and Malus Philosophus cited in Rosinus ad Sarratantam. +37 edges, 17 refs attached to standing edges and 3 further refs on this window's new edges, +57 refs, +10 nodes. Graph 1213/5039/6764; CW 13 now 532 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 37 edges under v0.7.2: agreement 29/37 (78 percent), 27 assigned, 8 queued, 2 no-family, 0 text-undecided; queue 876; no bare unclassified rows from the Gemini arm. strain: 2 no-family, 0 text-undecided of 37 swept; new homeless strings: uncovers (relates-to recurs). FAMILY GAP FOR THE SITTING: identifies-with split archetypal-identity against no-family on the animus and the self (psychological identification, not identity); is split manifestation against archetypal-identity on 'Self is his light'; symbolizes split symbolization against doctrinal-attribution on 'in Horapollo'; accords-with split correspondence against dependence; partakes-of, is-made-one-in, crystallizes-during and guards each left the Gemini arm without a family; the Opus arm flags christ is-based-on archetype as falling inside the open underlies/based-on question though both arms agreed on derivation. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-13, 57 refs judged against the full paragraphs; weekly Fable 82 percent and 5-hour meter 57 percent at the window's start against today's 95 percent stop, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1213/5039/6764, distinct paragraphs 3983, claim mix 5266/1104/394. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a70786e01aa6c92cb, 32 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 20 assistant turns after the miner finished at 2026-11-13T06:51:56.503Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW13-DUE: window 5 (§281-350)",
- "nodes": 1203,
- "edges": 5002,
- "refs": 6707,
+ "next": "CW13-DUE: window 6 (§351-420)",
+ "nodes": 1213,
+ "edges": 5039,
+ "refs": 6764,
  "as_of": "2026-11-13"
 }
