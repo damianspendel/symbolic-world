@@ -59,10 +59,10 @@ pin: graph v2.4.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 
 ### UI
 
-- [/opus](/opus) follows Jung's reading of the ten woodcuts of the
-  *Rosarium philosophorum* in CW 16, from Jung's own copy on e-rara.ch. A
-  tile under each picture gathers what he says of the same figures across
-  the trilogy, and [/opus-claims](/opus-claims) lists every such claim.
+- [/opus](/opus) follows Jung's reading of the ten woodcuts of the *Rosarium
+  philosophorum* in CW 16, from Jung's own copy on e-rara.ch, and
+  [/opus-claims](/opus-claims) lists what he says of the same figures across
+  the trilogy.
 - [/query](/query) suggests concepts and relations as you type.
 - [/method](/method) says "Validated by a person" and adds a row on recall.
 - Concept pages again carry the note on how a machine checks their
