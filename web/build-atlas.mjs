@@ -3672,24 +3672,48 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 .opus-close { padding: 5rem 0 4rem; min-height: 60vh; }
 .opus-aside { margin-top: .9rem; font-size: .82rem; opacity: .8; }
 @media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; gap: 1rem; } .opus-frame { max-width: 16rem; } .opus-cut img { max-height: 30vh; width: auto; max-width: 100%; margin: 0 auto; } .opus-pinned .opus-pic { align-items: start; } }
-@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } }
+/* the phone layout (Damian, 2026-11-13: "go ahead with the phone lay out"):
+   below 768px, or on a touch screen too short for the stage, the page scrolls
+   as a page. Each picture reads title, woodcut, claims; the woodcut fades in
+   as it enters; the ground follows the picture in view */
+.opus-flow .opus-pic { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 3rem 0; min-height: 0; }
+.opus-flow .opus-pic > .opus-text { display: contents; }
+.opus-flow .opus-pic .eyebrow { order: 0; }
+.opus-flow .opus-pic h2 { order: 1; }
+.opus-flow .opus-pic > .opus-cut, .opus-flow .opus-pic > .opus-frame { order: 2; margin: .4rem 0 1.2rem; }
+.opus-flow .opus-pic .opus-stage, .opus-flow .opus-pic .opus-claims, .opus-flow .opus-pic .opus-outside { order: 3; }
+.opus-flow .opus-cut img { max-height: 60vh; width: auto; max-width: 100%; margin: 0 auto; opacity: 0; transition: opacity .9s ease; }
+.opus-flow .opus-cut img.in { opacity: 1; }
+.opus-flow .opus-close { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } .opus-flow .opus-cut img { opacity: 1 !important; transition: none !important; } }
 `
-    // the scroll: the stage of the section nearest the viewport's middle sets
-    // the ground; the fade section mixes black to white by how far it has
-    // scrolled; the closing section warms towards red
+    // the scroll. Two modes, chosen at load and on resize: the pinned stage
+    // (one viewport of scroll per picture, crossfading) where the screen is wide
+    // and tall enough, and plain page flow on phones and short touch screens,
+    // erring toward flow. In both, the stage of the picture in view sets the
+    // ground with the same thresholds: the fade mixes black to white by how far
+    // it has gone, picture 7 raises the green and sweeps the peacock band, the
+    // closing panel warms white to yellow to red.
     const OPUS_JS = `(function(){
 var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main'),track=document.querySelector('.opus-track');if(!g||!m||!track)return;
-var segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header');
-document.documentElement.classList.add('opus-pinned');
-function top(){var h=head?head.offsetHeight:0;document.documentElement.style.setProperty('--opus-top',h+'px');return h}
+var de=document.documentElement,segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header'),mode='';
+function top(){var h=head?head.offsetHeight:0;de.style.setProperty('--opus-top',h+'px');return h}
 function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
 var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],YELLOW=[216,170,52],cur=-1,gr=g.querySelector('.opus-green'),pk=g.querySelector('.opus-peacock'),pl=g.querySelector('.opus-peacock-label');
 function ramp(t,a,b){return Math.min(1,Math.max(0,(t-a)/(b-a)))}
 function colours(on,t){var gn=0,po=0,u=0;if(on){gn=ramp(t,.1,.42)*(1-ramp(t,.62,.9));u=ramp(t,.48,.94);po=Math.sin(Math.PI*u)}
 if(gr)gr.style.opacity=gn.toFixed(3);if(pk){pk.style.opacity=(po*.6).toFixed(3);pk.style.transform='translateX('+(-90+180*u).toFixed(1)+'%)'}if(pl)pl.style.opacity=po.toFixed(3)}
-function tick(){var h=top(),r=track.getBoundingClientRect(),step=innerHeight,p=Math.max(0,(h-r.top)/step),i=Math.min(segs.length-1,Math.floor(p)),t=Math.min(1,Math.max(0,p-i));
-if(r.top>h+step*0.5)i=-1;
-if(i!==cur){segs.forEach(function(s,k){s.classList.toggle('is-active',k===i)});cur=i}
+function wantPinned(){var coarse=window.matchMedia&&matchMedia('(pointer: coarse)').matches;return innerWidth>=768&&!(coarse&&innerHeight<900)}
+var io=null,imgs=[].slice.call(track.querySelectorAll('.opus-cut img'));
+function setMode(){var w=wantPinned()?'pinned':'flow';if(w===mode)return;mode=w;
+de.classList.toggle('opus-pinned',w==='pinned');de.classList.toggle('opus-flow',w==='flow');
+segs.forEach(function(s){s.classList.remove('is-active')});cur=-1;
+if(w==='flow'){if('IntersectionObserver' in window){io=io||new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});imgs.forEach(function(im){if(!im.classList.contains('in'))io.observe(im)})}else imgs.forEach(function(im){im.classList.add('in')})}}
+function where(h){var r,i,t;if(mode==='pinned'){r=track.getBoundingClientRect();var step=innerHeight,p=Math.max(0,(h-r.top)/step);i=Math.min(segs.length-1,Math.floor(p));t=Math.min(1,Math.max(0,p-i));if(r.top>h+step*0.5)i=-1;return [i,t]}
+var y=innerHeight*0.5;i=-1;for(var k=0;k<segs.length;k++){if(segs[k].getBoundingClientRect().top<=y)i=k;else break}
+if(i<0)return [-1,0];r=segs[i].getBoundingClientRect();return [i,Math.min(1,Math.max(0,(y-r.top)/r.height))]}
+function tick(){var h=top(),w=where(h),i=w[0],t=w[1];
+if(mode==='pinned'&&i!==cur){segs.forEach(function(s,k){s.classList.toggle('is-active',k===i)});cur=i}
 var st=i<0?'none':segs[i].getAttribute('data-stage'),bg='transparent',cls='';
 if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
 else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
@@ -3697,7 +3721,8 @@ else if(st==='fade'){bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
 else if(st==='red'){var t2=Math.min(1,t*1.6);if(segs[i].getAttribute('data-yellow')){bg=t2<.5?mix(WHITE,YELLOW,t2*2):mix(YELLOW,RED,(t2-.5)*2);cls=t2<.72?'opus-white':'opus-red'}else{bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}}
 colours(i>=0&&segs[i].id==='picture-7',t);
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
-addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);segs[0]&&segs[0].classList.add('is-active');tick()})();`
+setMode();if(mode==='pinned'&&segs[0])segs[0].classList.add('is-active');
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});tick()})();`
     registerPage({
       slug: 'opus', title: 'The opus', where: 'opus', nav: 'opus',
       changefreq: 'monthly', priority: '0.6',
