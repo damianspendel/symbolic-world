@@ -51,6 +51,8 @@ ALLOW = {
     'opus-rosarium-10.jpg',
     # the claims table for the ten pictures (v2.4.0) and its thumbnails
     'opus-claims.html',
+    # v3.0.0 item 7: the page the w3id claim, edge and reference IRIs resolve to
+    'record.html', 'record-index.json',
     'opus-rosarium-01-thumb.jpg',
     'opus-rosarium-02-thumb.jpg',
     'opus-rosarium-03-thumb.jpg',
@@ -294,6 +296,22 @@ else:
 # downloads grows quietly with the graph. This is a ratchet, not a limit anyone
 # is near: it fails the deploy if the bundle crosses the ceiling, and prints the
 # actual against it either way so the trend is visible in the log.
+print('== record page ==')
+# /record resolves the RDF's claim, edge and reference ids (v3.0.0 item 7). Its
+# index must come from this seed.json and cover every edge in the graph.json it
+# reads; tests/test_record_index.py checks each id against the exporter.
+rec_index = DIST / 'record-index.json'
+check('dist serves record.html', (DIST / 'record.html').is_file())
+if rec_index.is_file():
+    rec = json.loads(rec_index.read_text())
+    full_digest = hashlib.sha256((ROOT / 'seed.json').read_bytes()).hexdigest()
+    check('record index built from this seed.json', rec.get('_seed_sha256') == full_digest)
+    n_edges = len(json.loads((DIST / 'graph.json').read_text())['edges'])
+    check('record index covers every edge in graph.json', len(rec['edges']) == n_edges,
+          f"{len(rec['edges'])} ids for {n_edges} edges")
+else:
+    check('dist serves record-index.json', False)
+
 print('== RDF export ==')
 # The Turtle files must come from this seed.json: the graph file's header names
 # the first twelve hex digits of the seed's sha256.

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta property="og:image" content="https://symbolicworld.observer/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="The Symbolic World: an atlas of C. G. Jung's Collected Works, with the graph of concepts">
+<title>Record · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<script src="/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+#rec .triple{font-size:1.15rem} #rec ul.refs{list-style:none;padding:0} #rec blockquote{margin:.6rem 0 .2rem} #rec .meta{font-size:.85rem;opacity:.85;margin:.15rem 0}</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/opus">opus</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/support">support</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+</header>
+<main class="page-main prose">
+<div class="titleband"><p class="eyebrow">record</p><h1 id="rec-title">Record</h1>
+<p class="sub">A relation, claim or reference in the graph, as the RDF export names it.</p></div>
+<div id="rec"><p>Looking up the record…</p></div>
+<script type="module">
+const VOICE = { 'jung-asserts': 'Jung asserts it', 'jung-reports-parallel': 'Jung reports what others hold', 'jung-quotes-source': 'Jung quotes a named source' }
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+const out = document.getElementById('rec')
+const fail = msg => { out.innerHTML = '<p>' + msg + ' Try <a href="/concepts">the concept list</a> or <a href="/vocabulary">the vocabulary</a>.</p>' }
+const q = new URLSearchParams(location.search)
+const kind = ['claim', 'reference', 'edge'].find(k => q.has(k))
+const id = kind ? q.get(kind) : ''
+const m = /^([0-9a-f]{16})(?:-([0-9a-z]+)-([0-9]+)(?:-([0-9]+))?)?$/.exec(id || '')
+if (!kind || !m || (kind !== 'edge') !== Boolean(m[2])) fail('This address names no record.')
+else {
+  const [idx, g] = await Promise.all([fetch('/record-index.json').then(r => r.json()), fetch('/graph.json').then(r => r.json())])
+  const ei = idx.edges[m[1]]
+  const e = ei === undefined ? null : g.edges[ei]
+  if (!e) fail('The graph has no record with this id.')
+  else {
+    let refs = e.references || []
+    if (kind !== 'edge') {
+      const nth = Number(m[4] || 1)
+      refs = refs.filter(r => String(r.volume) === m[2] && String(r.paragraph) === m[3]).slice(nth - 1, nth)
+    }
+    if (!refs.length) fail('The graph has no claim with this id.')
+    else {
+      const fam = e.relation_family || {}
+      const famLine = fam.state === 'assigned' ? 'family <a href="/family-' + esc(fam.value) + '">' + esc(fam.value) + '</a>' : 'family not settled (' + esc(fam.state || 'none') + ')'
+      const iri = 'https://w3id.org/symbolicworld/' + kind + '/' + id
+      document.getElementById('rec-title').textContent = kind === 'edge' ? 'Relation' : kind === 'claim' ? 'Claim' : 'Reference'
+      document.title = document.getElementById('rec-title').textContent + ' · The Symbolic World'
+      const item = r => '<li><blockquote class="ev">' + esc(r.quote) + '</blockquote>' +
+        '<p class="meta">CW ' + esc(r.volume) + ', paragraph ' + esc(r.paragraph) + ' · ' + esc(VOICE[r.claim_type] || r.claim_type) +
+        ' · confidence ' + esc(r.confidence) + '</p>' +
+        '<p class="meta">Gate: ' + esc(r.verified_by) + ', ' + esc(r.verified_date) + '. Audit: ' +
+        (r.crossvendor_checked ? esc(r.crossvendor_checked) : 'none on record') + '.</p></li>'
+      out.innerHTML = '<p class="triple ev"><a href="/concept-' + esc(e.subject) + '">' + esc(e.subject) + '</a> <em>' + esc(e.relation) +
+        '</em> <a href="/concept-' + esc(e.object) + '">' + esc(e.object) + '</a></p>' +
+        '<p class="meta">' + famLine + '</p><ul class="refs">' + refs.map(item).join('') + '</ul>' +
+        '<p class="meta">IRI: <code>' + esc(iri) + '</code></p>' +
+        '<p><a href="/concept-' + esc(e.subject) + '#r-e' + ei + '">See it on the concept page</a> · <a href="/symbolicworld-graph.ttl">the graph in Turtle</a></p>'
+    }
+  }
+}
+</script>
+</main></body></html>

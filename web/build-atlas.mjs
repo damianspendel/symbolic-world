@@ -4145,6 +4145,80 @@ emitPages()
   V2_COPY.push(['public/404.html (generated)', notFoundBody])
 }
 
+// ------------------------------------------------ /record (v3.0.0 item 7) ---
+// The RDF names every relation, claim and reference with an IRI under
+// https://w3id.org/symbolicworld/ (edge/<id>, claim/<id>, reference/<id>), and
+// the w3id rules send each to /record?<kind>=<id>. This page resolves the id
+// against /graph.json and shows that record: the quote, its place, its voice
+// and its checks. The ids are tools/query/export_rdf.py's: an edge is the first
+// sixteen hex digits of sha256("subject|relation|object") over the frozen
+// relation, and a claim adds its volume and paragraph, with a numeral for a
+// second claim on one paragraph. record-index.json maps each edge id to its
+// position in graph.json, whose edges keep seed order; tests/test_record_index.py
+// checks every id against the exporter. The page has no URL worth indexing, so
+// it carries noindex and stays out of the sitemap.
+{
+  const recordIndex = {}
+  seed.edges.forEach((e, i) => {
+    recordIndex[createHash('sha256').update(`${e.subject}|${e.relation}|${e.object}`, 'utf8').digest('hex').slice(0, 16)] = i
+  })
+  writeFileSync(here('./public/record-index.json'), JSON.stringify({
+    _about: 'Edge id (as in the RDF export) to the edge\'s position in /graph.json. Read by /record.',
+    _seed_sha256: seedDigest,
+    edges: recordIndex,
+  }) + '\n')
+  const recordBody = `<div class="titleband"><p class="eyebrow">record</p><h1 id="rec-title">Record</h1>
+<p class="sub">A relation, claim or reference in the graph, as the RDF export names it.</p></div>
+<div id="rec"><p>Looking up the record…</p></div>
+<script type="module">
+const VOICE = { 'jung-asserts': 'Jung asserts it', 'jung-reports-parallel': 'Jung reports what others hold', 'jung-quotes-source': 'Jung quotes a named source' }
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+const out = document.getElementById('rec')
+const fail = msg => { out.innerHTML = '<p>' + msg + ' Try <a href="/concepts">the concept list</a> or <a href="/vocabulary">the vocabulary</a>.</p>' }
+const q = new URLSearchParams(location.search)
+const kind = ['claim', 'reference', 'edge'].find(k => q.has(k))
+const id = kind ? q.get(kind) : ''
+const m = /^([0-9a-f]{16})(?:-([0-9a-z]+)-([0-9]+)(?:-([0-9]+))?)?$/.exec(id || '')
+if (!kind || !m || (kind !== 'edge') !== Boolean(m[2])) fail('This address names no record.')
+else {
+  const [idx, g] = await Promise.all([fetch('/record-index.json').then(r => r.json()), fetch('/graph.json').then(r => r.json())])
+  const ei = idx.edges[m[1]]
+  const e = ei === undefined ? null : g.edges[ei]
+  if (!e) fail('The graph has no record with this id.')
+  else {
+    let refs = e.references || []
+    if (kind !== 'edge') {
+      const nth = Number(m[4] || 1)
+      refs = refs.filter(r => String(r.volume) === m[2] && String(r.paragraph) === m[3]).slice(nth - 1, nth)
+    }
+    if (!refs.length) fail('The graph has no claim with this id.')
+    else {
+      const fam = e.relation_family || {}
+      const famLine = fam.state === 'assigned' ? 'family <a href="/family-' + esc(fam.value) + '">' + esc(fam.value) + '</a>' : 'family not settled (' + esc(fam.state || 'none') + ')'
+      const iri = 'https://w3id.org/symbolicworld/' + kind + '/' + id
+      document.getElementById('rec-title').textContent = kind === 'edge' ? 'Relation' : kind === 'claim' ? 'Claim' : 'Reference'
+      document.title = document.getElementById('rec-title').textContent + ' · The Symbolic World'
+      const item = r => '<li><blockquote class="ev">' + esc(r.quote) + '</blockquote>' +
+        '<p class="meta">CW ' + esc(r.volume) + ', paragraph ' + esc(r.paragraph) + ' · ' + esc(VOICE[r.claim_type] || r.claim_type) +
+        ' · confidence ' + esc(r.confidence) + '</p>' +
+        '<p class="meta">Gate: ' + esc(r.verified_by) + ', ' + esc(r.verified_date) + '. Audit: ' +
+        (r.crossvendor_checked ? esc(r.crossvendor_checked) : 'none on record') + '.</p></li>'
+      out.innerHTML = '<p class="triple ev"><a href="/concept-' + esc(e.subject) + '">' + esc(e.subject) + '</a> <em>' + esc(e.relation) +
+        '</em> <a href="/concept-' + esc(e.object) + '">' + esc(e.object) + '</a></p>' +
+        '<p class="meta">' + famLine + '</p><ul class="refs">' + refs.map(item).join('') + '</ul>' +
+        '<p class="meta">IRI: <code>' + esc(iri) + '</code></p>' +
+        '<p><a href="/concept-' + esc(e.subject) + '#r-e' + ei + '">See it on the concept page</a> · <a href="/symbolicworld-graph.ttl">the graph in Turtle</a></p>'
+    }
+  }
+}
+</script>`
+  writeFileSync(here('./public/record.html'), renderPage({
+    slug: 'record', title: 'Record', where: 'record', notFound: true, body: recordBody,
+    style: '#rec .triple{font-size:1.15rem} #rec ul.refs{list-style:none;padding:0} #rec blockquote{margin:.6rem 0 .2rem} #rec .meta{font-size:.85rem;opacity:.85;margin:.15rem 0}',
+  }))
+  V2_COPY.push(['public/record.html (generated)', recordBody.replace(/<script[\s\S]*<\/script>/, '')])
+}
+
 // ------------------------------------ R10.0 / R10.9 · the copy assertions ---
 // Two rules the build enforces rather than trusts:
 //  1. Every count-like number in user-facing copy must come from atlas.json meta.
