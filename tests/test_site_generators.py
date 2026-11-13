@@ -2148,7 +2148,7 @@ def test_concept_pages_read_for_a_reader():
             for t in trows:
                 assert any(t in r for r in rows), f"{cid}: a top claim is not a row below"
             # each top row names its passage count and links to its full row
-            links = re.findall(r'<a href="#(r-[^"]+)">(\d+) passages?, each quoted below', top.group(1))
+            links = re.findall(r'<a href="#(r-[^"]+)">(\d+) (?:passage, quoted|passages, each quoted) below', top.group(1))
             assert len(links) == 3, cid
             by_id = {e["id"]: e for e in edges}
             for anchor, n in links:

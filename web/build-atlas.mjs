@@ -2204,7 +2204,7 @@ ${e.refs.length ? `<ul class="cites">\n${citeLines(e)}\n</ul>` : ''}
 <p class="top-t"${NS}>claims with the most passages</p>
 ${top.map(e => { const r = bestRef(e), n = passageCount(e); return `<div class="trow"><div class="triple">${tripleOf(e)}</div>` +
   (r ? `<p class="tq ev">${quoteHead(r, voiceOf(r))}</p>` : '') +
-  `<p class="tmore"${NS}><a href="#r-${e.id}">${derived(n)} passage${n === 1 ? '' : 's'}, each quoted below ↓</a></p></div>` }).join('\n')}
+  `<p class="tmore"${NS}><a href="#r-${e.id}">${derived(n)} ${n === 1 ? 'passage, quoted' : 'passages, each quoted'} below ↓</a></p></div>` }).join('\n')}
 </div>` : ''
 
       readerBody = `<div class="titleband"><p class="eyebrow">${ns('concept')}</p>
