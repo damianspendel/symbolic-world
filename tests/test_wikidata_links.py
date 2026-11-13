@@ -99,7 +99,13 @@ def test_void_linkset_counts_the_close_matches(parsed, close_matches):
     assert str(v.value(target, export_rdf_term("dcterms", "title"))) == "Wikidata"
     assert (dataset, VOID.subset, linkset) in v
     description = str(v.value(linkset, export_rdf_term("dcterms", "description")))
-    assert "public Wikidata search" in description and "spot-checked" in description
+    assert "public Wikidata search" in description
+    # The spot check is stated only as the links file records it (spot_check).
+    done, date = export_rdf.spot_check_state()
+    if done:
+        assert f"spot-checked a seeded sample on {date}" in description
+    else:
+        assert "awaits the maintainer's spot check" in description and "spot-checked" not in description
 
 
 def test_no_author_or_text_link_is_exported(links, parsed, close_matches):
