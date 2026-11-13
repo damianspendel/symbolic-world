@@ -3628,6 +3628,7 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 </ul>
 <p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
 <p class="opus-aside"><a href="/atlas#/concordance">Jung's concepts beside the alchemical terms: the concordance &rarr;</a></p>
+<p class="opus-aside"><a href="/opus-claims">Every claim on these pictures, across the trilogy &rarr;</a></p>
 </div>
 </section>
 </div>
@@ -3733,6 +3734,103 @@ addEventListener('scroll',tick,{passive:true});addEventListener('resize',functio
     })
     V2_COPY.push(['public/opus.html (generated)', stripEvidence(opusBody)])
     console.log('opus page: written, pinned stage, woodcuts ' + (woodcutSize(1) ? 'in' : 'as placeholders') + ', yellow ' + (yellow ? 'in (CW 12 §271)' : 'left out (CW 12 §271 edge not in the graph)'))
+
+    // ------------------------------------------------ /opus-claims --------
+    // Every verified claim on the figures of the ten pictures (Damian,
+    // 2026-11-13: "concept sets are right, this release, please"). A section's
+    // rows are the union of the verified references in its CW 16 paragraph range
+    // and the verified references in CW 12, 13, 14 or 16 whose subject or object
+    // is in its concept set. One row per reference; a claim may sit in more than
+    // one section. Nothing here is new text: every quote is the seed's own.
+    const CLAIMS_SETS = {
+      1: ['mercurial-fountain', 'fountain', 'aqua-permanens', 'quintessence', 'axiom-of-maria'],
+      2: ['rex', 'regina', 'sol', 'luna'],
+      3: ['veritas'],
+      4: ['bath', 'night-sea-journey', 'solutio', 'dissolutio', 'rex-marinus', 'the-sea'],
+      5: ['coniunctio', 'hierosgamos', 'union-of-opposites'],
+      6: ['nigredo', 'mortificatio', 'putrefactio', 'sol-niger', 'death'],
+      7: ['sublimatio', 'cauda-pavonis', 'benedicta-viriditas', 'soul'],
+      8: ['dew', 'ablutio', 'albedo'],
+      9: ['unio-mentalis', 'reunion-with-the-body', 'unus-mundus', 'anima-mundi'],
+      10: ['rebis', 'filius-philosophorum', 'rebirth', 'lapis', 'anthropos'],
+      close: ['rubedo', 'citrinitas']
+    }
+    const nodeIds = new Set(atlasNodes.map(x => x.id))
+    for (const [k, ids] of Object.entries(CLAIMS_SETS)) for (const id of ids) if (!nodeIds.has(id)) { console.error(`OPUS CLAIMS: concept ${id} (section ${k}) is not a node in the graph`); process.exit(1) }
+    const CLAIM_VOLS = ['16', '14', '12', '13']
+    const volRank = (v) => CLAIM_VOLS.indexOf(String(v))
+    const claimRows = (range, set) => {
+      const inSet = new Set(set), rows = []
+      for (const e of atlasEdges) for (const r of e.refs) {
+        if (r.verified !== true || !r.quote || volRank(r.volume) < 0) continue
+        const byRange = range && String(r.volume) === '16' && Number(r.paragraph) >= range[0] && Number(r.paragraph) <= range[1]
+        if (byRange || inSet.has(e.source) || inSet.has(e.target)) rows.push([e, r])
+      }
+      return rows.sort((x, y) => volRank(x[1].volume) - volRank(y[1].volume) || Number(x[1].paragraph) - Number(y[1].paragraph) || x[0].key.localeCompare(y[0].key))
+    }
+    const cLink = (id) => `<a href="/concept-${esc(id)}">${esc(nodeLabel(id))}</a>`
+    const claimRow = ([e, r]) => `<tr data-v="${esc(r.volume)}"><td class="c-rel">${cLink(e.source)} <em>${esc(String(e.relation).replace(/-/g, ' '))}</em> ${cLink(e.target)}</td><td class="c-q">&ldquo;${esc(r.quote)}&rdquo;</td><td class="c-cite">CW ${esc(r.volume)} §${esc(r.paragraph)}</td><td class="c-type">${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</td></tr>`
+    const claimSections = [...OPUS_PICTURES.map(([n, title, a, b]) => ({ id: `picture-${n}`, label: `Picture ${n} · ${title}`, thumb: `opus-rosarium-${String(n).padStart(2, '0')}-thumb.jpg`, range: [a, b], set: CLAIMS_SETS[n], extra: n === 1 ? ` Mercurius is left out of this set because his claims would fill the section; see ${cLink('mercurius')}.` : '' })),
+      { id: 'the-red', label: 'After the white · the rubedo', thumb: null, range: null, set: CLAIMS_SETS.close, extra: '' }]
+    let claimTotal = 0
+    const counts = []
+    const sectionsHtml = claimSections.map(sc => {
+      const rows = claimRows(sc.range, sc.set)
+      claimTotal += rows.length; counts.push([sc.id, rows.length])
+      const thumb = sc.thumb ? `<img class="c-thumb" src="/${sc.thumb}" alt="" width="40" height="52" loading="lazy">` : `<span class="c-thumb c-swatch" aria-hidden="true"></span>`
+      const scope = sc.range ? `Claims cited in CW 16 §${sc.range[0]} to §${sc.range[1]}, and claims in CW 12, 13, 14 and 16 on ` : `Claims in CW 12, 13, 14 and 16 on `
+      return `<details class="c-sec" id="${sc.id}"><summary>${thumb}<span class="c-sum"><span class="c-title">${esc(sc.label)}</span><span class="c-count" data-total="${rows.length}">${rows.length} claims</span></span></summary>
+<p class="c-intro">${scope}${sc.set.map(cLink).join(', ')}.${sc.extra}</p>
+<table class="c-table ev"><thead><tr><th>Claim</th><th>Quote</th><th>Cite</th><th>Kind</th></tr></thead><tbody>
+${rows.map(claimRow).join('\n')}
+</tbody></table></details>`
+    }).join('\n')
+    derived(claimTotal, ...counts.map(c => c[1]))
+    const claimsBody = `<div class="titleband"><p class="eyebrow">Explore</p>
+<h1>The Rosarium pictures: every claim</h1>
+<p class="sub">Every verified claim on the figures of the ten pictures, across CW 12, 13, 14 and 16.</p></div>
+<p>Each section below gathers the claims cited in one picture's paragraphs of "The Psychology of the Transference" (CW 16) and the claims anywhere in CW 12, 13, 14 and 16 on the figures the picture shows. A claim can appear in more than one section. The pictures themselves, with three claims each, are on <a href="/opus">/opus</a>.</p>
+<div class="c-filter" role="group" aria-label="Show volumes">${CLAIM_VOLS.map(v => `<button type="button" class="chip c-chip on" data-v="${v}" aria-pressed="true">CW ${v}</button>`).join('')}</div>
+${sectionsHtml}
+<p class="meta">Every row is one verified reference in the graph, with the quote as stored. Sorted CW 16, 14, 12, 13, then by paragraph.</p>`
+    const claimsStyle = `
+.c-filter { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0 1.2rem; }
+.c-chip { cursor: pointer; background: transparent; font-size: .66rem; padding: .25rem .7rem; }
+.c-chip.on { color: var(--gold); border-color: var(--gold-dim); }
+.c-sec { border: 1px solid var(--hairline); border-radius: 8px; margin: .6rem 0; background: var(--surface); }
+.c-sec > summary { display: flex; align-items: center; gap: .8rem; padding: .55rem .8rem; cursor: pointer; list-style: none; }
+.c-sec > summary::-webkit-details-marker { display: none; }
+.c-thumb { width: 40px; height: 52px; object-fit: contain; flex: none; background: #fbf8f1; border-radius: 3px; }
+.c-swatch { display: block; background: linear-gradient(#f4f0e7, #d8aa34 45%, #7a1f12); }
+.c-sum { display: flex; flex-direction: column; min-width: 0; }
+.c-title { font-family: var(--display); font-size: 1.05rem; }
+.c-count { font: .62rem var(--mono); color: var(--ink-faint); letter-spacing: .04em; }
+.c-intro { font-size: .84rem; color: var(--ink-label); padding: 0 .8rem; margin: .2rem 0 .6rem; }
+.c-table { margin: 0 0 .4rem; }
+.c-table td { font-size: .84rem; }
+.c-rel { width: 28%; } .c-rel em { font-style: normal; color: var(--ink-label); }
+.c-q { font-family: var(--display); }
+.c-cite, .c-type { font: .66rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.c-hide-16 tr[data-v="16"], .c-hide-14 tr[data-v="14"], .c-hide-12 tr[data-v="12"], .c-hide-13 tr[data-v="13"] { display: none; }
+@media (max-width: 720px) {
+  .c-table thead { display: none; }
+  .c-table, .c-table tbody, .c-table tr, .c-table td { display: block; width: auto; }
+  .c-table tr { padding: .6rem .8rem; border-bottom: 1px solid var(--hairline); }
+  .c-table td { border: 0; padding: .1rem 0; }
+  .c-cite, .c-type { display: inline-block !important; white-space: normal; margin-right: .6rem; }
+}
+`
+    const CLAIMS_JS = `(function(){var m=document.querySelector('.page-main'),bs=[].slice.call(document.querySelectorAll('.c-chip'));if(!m)return;
+function counts(){[].slice.call(document.querySelectorAll('.c-sec')).forEach(function(s){var n=0;[].slice.call(s.querySelectorAll('tbody tr')).forEach(function(r){if(!m.classList.contains('c-hide-'+r.getAttribute('data-v')))n++});var c=s.querySelector('.c-count'),t=c.getAttribute('data-total');c.textContent=(String(n)===t?t:n+' of '+t)+' claims'})}
+bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-v'),on=!b.classList.contains('on');b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');m.classList.toggle('c-hide-'+v,!on);counts()})})})();`
+    registerPage({
+      slug: 'opus-claims', title: 'The Rosarium pictures: every claim', where: 'opus',
+      changefreq: 'weekly', priority: '0.5',
+      description: 'Every verified claim on the figures of the ten woodcuts of the Rosarium philosophorum, across CW 12, 13, 14 and 16, with the quote and citation for each.',
+      style: claimsStyle, body: claimsBody + `\n<script>${CLAIMS_JS}</script>`
+    })
+    V2_COPY.push(['public/opus-claims.html (generated)', stripEvidence(claimsBody)])
+    console.log(`opus claims page: ${claimTotal} rows — ` + counts.map(([id, c]) => `${id} ${c}`).join(', '))
   }
 
   // ------------------------------------------------ /support ----------------

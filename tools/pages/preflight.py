@@ -49,6 +49,18 @@ ALLOW = {
     'opus-rosarium-08.jpg',
     'opus-rosarium-09.jpg',
     'opus-rosarium-10.jpg',
+    # the claims table for the ten pictures (v2.4.0) and its thumbnails
+    'opus-claims.html',
+    'opus-rosarium-01-thumb.jpg',
+    'opus-rosarium-02-thumb.jpg',
+    'opus-rosarium-03-thumb.jpg',
+    'opus-rosarium-04-thumb.jpg',
+    'opus-rosarium-05-thumb.jpg',
+    'opus-rosarium-06-thumb.jpg',
+    'opus-rosarium-07-thumb.jpg',
+    'opus-rosarium-08-thumb.jpg',
+    'opus-rosarium-09-thumb.jpg',
+    'opus-rosarium-10-thumb.jpg',
     # what Pages serves, with a 404 status, for an unknown path. Its presence
     # also ends the single-page fallback to the homepage (2026-11-04)
     '404.html',
