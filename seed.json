@@ -532,7 +532,17 @@
   {
    "id": "anima",
    "type": "Figure",
-   "label": "Anima"
+   "label": "Anima",
+   "aliases": [
+    "Seele"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 58,
+     "batch": "b-cw13-1"
+    }
+   ]
   },
   {
    "id": "animus",
@@ -975,7 +985,20 @@
   {
    "id": "tao",
    "type": "Concept",
-   "label": "Tao"
+   "label": "Tao",
+   "aliases": [
+    "Meaning",
+    "Sinn",
+    "providence",
+    "way"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 28,
+     "batch": "b-cw13-1"
+    }
+   ]
   },
   {
    "id": "psychopomp",
@@ -2819,7 +2842,17 @@
   {
    "id": "temenos",
    "type": "Motif",
-   "label": "Temenos (protected taboo precinct)"
+   "label": "Temenos (protected taboo precinct)",
+   "aliases": [
+    "sacred precinct"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 36,
+     "batch": "b-cw13-1"
+    }
+   ]
   },
   {
    "id": "unknown-woman",
@@ -2915,7 +2948,19 @@
   {
    "id": "magic-circle",
    "type": "Symbol",
-   "label": "The traced magic circle that holds the tension and prevents an eruption of the unconscious; psychological equivalent of the vas bene clausum"
+   "label": "The traced magic circle that holds the tension and prevents an eruption of the unconscious; psychological equivalent of the vas bene clausum",
+   "aliases": [
+    "charmed circle",
+    "protective circle",
+    "sulcus primigenius"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 36,
+     "batch": "b-cw13-1"
+    }
+   ]
   },
   {
    "id": "inferior-function",
@@ -3094,7 +3139,17 @@
   {
    "id": "diamond-body",
    "type": "Symbol",
-   "label": "Diamond Body"
+   "label": "Diamond Body",
+   "aliases": [
+    "holy fruit"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 68,
+     "batch": "b-cw13-1"
+    }
+   ]
   },
   {
    "id": "the-gods",
@@ -3109,7 +3164,17 @@
   {
    "id": "hun",
    "type": "Concept",
-   "label": "Hun (Cloud-Demon Soul)"
+   "label": "Hun (Cloud-Demon Soul)",
+   "aliases": [
+    "cloud-demon"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 57,
+     "batch": "b-cw13-1"
+    }
+   ]
   },
   {
    "id": "ion",
@@ -8323,6 +8388,7 @@
    "label": "Tapas (self-incubation)",
    "type": "Operation",
    "aliases": [
+    "self-brooding",
     "self-incubation"
    ],
    "name_refs": [
@@ -8330,6 +8396,11 @@
      "volume": "12",
      "paragraph": 441,
      "batch": "b-cw12-7"
+    },
+    {
+     "volume": "13",
+     "paragraph": 39,
+     "batch": "b-cw13-1"
     }
    ]
   },
@@ -8374,6 +8445,192 @@
   {
    "id": "superman",
    "label": "The superman (Nietzsche's Zarathustra)",
+   "type": "Figure"
+  },
+  {
+   "id": "yin",
+   "label": "Yin (the dark, feminine principle)",
+   "type": "Concept"
+  },
+  {
+   "id": "yang",
+   "label": "Yang (the bright, masculine principle)",
+   "type": "Concept"
+  },
+  {
+   "id": "uprooted-consciousness",
+   "label": "The uprooted consciousness",
+   "type": "Concept"
+  },
+  {
+   "id": "outgrowing",
+   "label": "Outgrowing (of an insoluble problem)",
+   "type": "Concept"
+  },
+  {
+   "id": "wu-wei",
+   "label": "Wu wei (action through non-action, letting things happen)",
+   "type": "Concept"
+  },
+  {
+   "id": "reversal",
+   "label": "Reversal (realization of the opposite hidden in the unconscious)",
+   "type": "Concept"
+  },
+  {
+   "id": "light-of-heaven",
+   "label": "The light of heaven",
+   "type": "Symbol",
+   "aliases": [
+    "heart of heaven"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 28,
+     "batch": "b-cw13-1"
+    }
+   ]
+  },
+  {
+   "id": "heating",
+   "label": "Heating (of the roots of consciousness and life)",
+   "type": "Operation"
+  },
+  {
+   "id": "conscious-life",
+   "label": "Conscious life (the unity of consciousness and life)",
+   "type": "Concept"
+  },
+  {
+   "id": "philosophical-eye",
+   "label": "The Philosophical Eye (Böhme's mandala)",
+   "type": "Symbol",
+   "aliases": [
+    "Mirror of Wisdom"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 31,
+     "batch": "b-cw13-1"
+    }
+   ]
+  },
+  {
+   "id": "germinal-vesicle",
+   "label": "The germinal vesicle",
+   "type": "Symbol",
+   "aliases": [
+    "dark pass",
+    "dragon castle at the bottom of the sea",
+    "heavenly heart",
+    "yellow castle"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 33,
+     "batch": "b-cw13-1"
+    }
+   ]
+  },
+  {
+   "id": "lead",
+   "label": "Lead (the lead of the water region)",
+   "type": "Substance"
+  },
+  {
+   "id": "edward-maitland",
+   "label": "Edward Maitland",
+   "type": "Figure"
+  },
+  {
+   "id": "hildegard-of-bingen",
+   "label": "Hildegard of Bingen",
+   "type": "Figure"
+  },
+  {
+   "id": "sun-wheel",
+   "label": "The sun-wheel",
+   "type": "Symbol"
+  },
+  {
+   "id": "monotheism-of-consciousness",
+   "label": "Monotheism of consciousness",
+   "type": "Concept"
+  },
+  {
+   "id": "po",
+   "label": "P'o (the white-ghost soul)",
+   "type": "Concept",
+   "aliases": [
+    "p’o",
+    "white ghost"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 57,
+     "batch": "b-cw13-1"
+    }
+   ]
+  },
+  {
+   "id": "hsing",
+   "label": "Hsing (human nature, essence)",
+   "type": "Concept",
+   "aliases": [
+    "creative consciousness",
+    "essence of human nature"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 59,
+     "batch": "b-cw13-1"
+    }
+   ]
+  },
+  {
+   "id": "ming",
+   "label": "Ming (life, fate)",
+   "type": "Concept",
+   "aliases": [
+    "destiny",
+    "fate"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 60,
+     "batch": "b-cw13-1"
+    }
+   ]
+  },
+  {
+   "id": "detached-consciousness",
+   "label": "Detached consciousness",
+   "type": "Concept"
+  },
+  {
+   "id": "spirit-body",
+   "label": "The spirit-body (breath-body)",
+   "type": "Symbol",
+   "aliases": [
+    "breath-body"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 69,
+     "batch": "b-cw13-1"
+    }
+   ]
+  },
+  {
+   "id": "pneumatic-man",
+   "label": "The pneumatic man",
    "type": "Figure"
   }
  ],
@@ -31940,6 +32197,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-07-30",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, SUPPORTED, 2026-07-30)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 45,
+     "quote": "The oldest mandala drawing known to me ... It, too, is based on the quaternary principle.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, FINDING-adjudicated, 2026-11-13)",
+     "correction_note": "cross-vendor correction: The text states the mandala is 'based on' the quaternary principle, which does not support the relation 'tends-towards'."
     }
    ],
    "relation_family": {
@@ -77181,6 +77450,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-23",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-14, PASS, 2026-10-23)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 36,
+     "quote": "One source is the unconscious, which spontaneously produces fantasies of this kind",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -141376,6 +141656,18 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-11, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 67,
+     "quote": "It is then no longer in the ego ... but in the hypothetical point between conscious and unconscious. This new centre might be called the self.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "note": "as centre of gravity of the total personality"
     }
    ],
    "relation_family": {
@@ -151171,6 +151463,1220 @@
    ],
    "relation_family": {
     "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "yin",
+   "relation": "is-opposed-to",
+   "object": "yang",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 7,
+     "quote": "Opposed to this yang principle is the dark, feminine, earthbound yin",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "collective-unconscious",
+   "relation": "expresses",
+   "object": "brain",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 11,
+     "quote": "The collective unconscious is simply the psychic expression of the identity of brain structure irrespective of all racial differences.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-gods",
+   "relation": "is",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 12,
+     "quote": "the old gods who are nothing other than those mighty, primordial images that hitherto have held our consciousness in thrall",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "uprooted-consciousness",
+   "relation": "loses-touch-with",
+   "object": "primordial-image",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 13,
+     "quote": "This uprooted consciousness can no longer appeal to the authority of the primordial images",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 15,
+     "quote": "a consciousness heightened by an inevitable one-sidedness gets so far out of touch with the primordial images that a breakdown ensues",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "yang",
+   "relation": "changes-into",
+   "object": "yin",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 13,
+     "quote": "night begins at midday when yang breaks up and begins to change into yin",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source": "I Ching, as cited by Jung",
+     "source_author": "other",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "nirdvandva",
+   "relation": "is-freedom-from",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 15,
+     "quote": "they sought a way of life in which they would be what the Indians call nirdvandva , free of opposites.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "privation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "outgrowing",
+   "relation": "is",
+   "object": "wider-consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 17,
+     "quote": "This “outgrowing,” as I formerly called it, proved on further investigation to be a new level of consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "wu-wei",
+   "relation": "opens",
+   "object": "tao",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 20,
+     "quote": "The art of letting things happen, action through non-action ... became for me the key that opens the door to the way.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "consciousness",
+   "relation": "obstructs",
+   "object": "spontaneous-fantasy",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 20,
+     "quote": "The conscious mind raises innumerable objections, in fact it often seems bent on blotting out the spontaneous fantasy activity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 21,
+     "quote": "each time the fantasy material is to be produced, the activity of consciousness must be switched off again",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "reversal",
+   "relation": "signifies-reunion-with",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 30,
+     "quote": "the process of “reversal”—signifies reunion with the unconscious laws of our being",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "light-of-heaven",
+   "relation": "is-synonymous-with",
+   "object": "tao",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 28,
+     "quote": "the “light of heaven” which “dwells between the eyes” as the “heart of heaven” is used synonymously with Tao",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source_author": "Chinese alchemy",
+     "source_text": "Secret of the Golden Flower"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "heating",
+   "relation": "produces",
+   "object": "diamond-body",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 28,
+     "quote": "If thou wouldst complete the diamond body with no outflowing, Diligently heat the roots of consciousness",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source": "Hui Ming Ching, as quoted in Jung's commentary on The Secret of the Golden Flower",
+     "source_author": "Chinese alchemy",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "heating",
+   "relation": "signifies-intensification-of",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 29,
+     "quote": "“Heating” is necessary; that is, there must be an intensification of consciousness in order that light may be kindled",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-1",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "symbolization",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "conscious-life",
+   "relation": "corresponds-to",
+   "object": "tao",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 30,
+     "quote": "the attainment of conscious life or, expressed in Chinese terms, the realization of the Tao",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "philosophical-eye",
+   "relation": "is-a",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 31,
+     "quote": "An unmistakable and very interesting mandala can be found in Jakob Böhme’s book XL Questions concerning the Soule",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the quoted sentence places a mandala in Böhme's book; that Böhme calls it the Philosophical Eye is the sentence after, one step, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "golden-flower",
+   "relation": "grows-from",
+   "object": "germinal-vesicle",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 34,
+     "quote": "from the depths below, fire penetrates the seed and makes it grow, causing a great golden flower to unfold from the germinal vesicle",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "germinal-vesicle",
+   "relation": "contains",
+   "object": "conscious-life",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 34,
+     "quote": "In the germinal vesicle, consciousness and life (or human nature and life, hsing-ming ) are still a “unity",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source": "Hui Ming Ching, as quoted in Jung's commentary on The Secret of the Golden Flower",
+     "source_author": "Chinese alchemy",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": "composition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "gold",
+   "relation": "grows-out-of",
+   "object": "lead",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 35,
+     "quote": "out of the “lead of the water region” grows the noble gold",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source": "the Chinese text's 'lead of the water region', as cited by Jung",
+     "source_author": "Chinese alchemy",
+     "source_text": "other"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "becomes",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 35,
+     "quote": "what is unconscious becomes conscious in the form of a living process of growth",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-1",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "transformation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mandala",
+   "relation": "encloses",
+   "object": "the-centre",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 36,
+     "quote": "It has the obvious purpose of drawing a sulcus primigenius , a magical furrow around the centre",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "circumambulatio",
+   "relation": "corresponds-to",
+   "object": "circulation-of-light",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 38,
+     "quote": "The “enclosure,” or circumambulatio , is expressed in our text by the idea of “circulation.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "circulation-of-light",
+   "relation": "activates",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 39,
+     "quote": "The circular movement thus has the moral significance of activating the light and dark forces of human nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "edward-maitland",
+   "relation": "experiences",
+   "object": "light",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 40,
+     "quote": "I found myself confronted with a glory of unspeakable whiteness and brightness",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source": "Edward Maitland, as quoted by Jung",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "hildegard-of-bingen",
+   "relation": "experiences",
+   "object": "light",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 42,
+     "quote": "Since my childhood I have always seen a light in my soul",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source": "Hildegard of Bingen, as quoted by Jung",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "individuation",
+   "relation": "requires",
+   "object": "symbol",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 44,
+     "quote": "for this reason the process of individuation can never do without the symbol",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "sun-wheel",
+   "relation": "is-a",
+   "object": "mandala",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 45,
+     "quote": "The oldest mandala drawing known to me is a palaeolithic “sun-wheel,” recently discovered in Rhodesia.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-unconscious",
+   "relation": "disintegrates",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 46,
+     "quote": "the unconscious has a decidedly disintegrating effect on consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 48,
+     "quote": "Autonomous psychic contents are thus quite common experiences for us. Such contents have a disintegrating effect upon consciousness.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) objected that §48 attributes the effect to autonomous psychic contents; the reference stands at medium with the proposer's note saying exactly that, and the §46 reference of the same edge has the unconscious itself",
+     "note": "autonomous contents of the unconscious"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "magic-circle",
+   "relation": "protects",
+   "object": "consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 47,
+     "quote": "It is intended to prevent the “outflowing” and to protect the unity of consciousness from being burst asunder by the unconscious.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "bardo-thodol",
+   "relation": "warns-against",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 50,
+     "quote": "they are not to project the one light of highest consciousness into concretized figures",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "splinter-psyche",
+   "relation": "arises-from",
+   "object": "dissociation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 51,
+     "quote": "If tendencies towards dissociation were not inherent in the human psyche, fragmentary psychic systems would never have been split off",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 55,
+     "quote": "His dissociative tendencies are actual psychic personalities possessing a differential reality.",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) objected that §55 says the dissociative tendencies are psychic personalities; the reference stands at medium as proposed, and the §51 reference of the same edge carries the splitting-off"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "monotheism-of-consciousness",
+   "relation": "is",
+   "object": "possession",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 51,
+     "quote": "Our true religion is a monotheism of consciousness, a possession by it",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "psychosis",
+   "relation": "is",
+   "object": "possession",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 53,
+     "quote": "Insanity is possession by an unconscious content that, as such, is not assimilated to consciousness",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "correction_note": "gate correction: Jung's word is insanity; the standing node psychosis is one step from it (the proposer's note says so), medium",
+     "note": "Jung's word is insanity"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "hun",
+   "relation": "corresponds-to",
+   "object": "animus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 57,
+     "quote": "And indeed, the term “animus” seems appropriate for hun",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "correction_note": "gate correction: 'the term animus seems appropriate for hun' is hedged, and §59 prefers Logos for hun in man; medium"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "hun",
+   "relation": "pertains-to",
+   "object": "yang",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 57,
+     "quote": "a higher breath-soul belonging to the yang principle and therefore masculine",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source_author": "Chinese alchemy",
+     "source_text": "Secret of the Golden Flower"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "po",
+   "relation": "pertains-to",
+   "object": "yin",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 57,
+     "quote": "belongs to the lower, earthbound, bodily soul, the yin principle, and is therefore feminine",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source_author": "Chinese alchemy",
+     "source_text": "Secret of the Golden Flower"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "corresponds-to",
+   "object": "po",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 58,
+     "quote": "I used the term “anima” 5 in a way quite analogous to the Chinese definition of p’o",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "hun",
+   "relation": "corresponds-to",
+   "object": "logos",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 59,
+     "quote": "For these reasons I would prefer to translate hun as it appears in man by “Logos.”",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "hun",
+   "relation": "corresponds-to",
+   "object": "hsing",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 60,
+     "quote": "just as hun corresponds to hsing , translated by Wilhelm as Logos",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "eros",
+   "relation": "corresponds-to",
+   "object": "ming",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 60,
+     "quote": "the Eros of woman corresponds to ming , “fate” or “destiny,” interpreted by Wilhelm as Eros",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "is",
+   "object": "splinter-psyche",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 61,
+     "quote": "the anima is a psychic, and therefore a personal, autonomous system",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) objected to the standing node's label; the node is 'Splinter psyche / autonomous complex', and Jung's sentence calls the anima an autonomous system; the label question goes to the sitting"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "anima",
+   "relation": "bridges-to",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 62,
+     "quote": "have taken it as a bridge to the unconscious, in other words, as a function of relationship to the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "detached-consciousness",
+   "relation": "abolishes",
+   "object": "participation-mystique",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 65,
+     "quote": "The unconscious is not projected any more, and so the primordial participation mystique with things is abolished.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "psychotherapy",
+   "relation": "dissolves",
+   "object": "participation-mystique",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 66,
+     "quote": "it is the therapeutic effect par excellence , for which I labour with my students and patients, and it consists in the dissolution of participation mystique",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "detached-consciousness",
+   "relation": "prepares-for",
+   "object": "death",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 68,
+     "quote": "I have reasons for believing that this attitude sets in after middle life and is a natural preparation for death.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "death",
+   "relation": "is-goal-of",
+   "object": "life",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 68,
+     "quote": "seen in correct psychological perspective, death is not an end but a goal",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "telos",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "spirit-body",
+   "relation": "ensures-continuity-of",
+   "object": "detached-consciousness",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 69,
+     "quote": "the symbolic begetting and birth of a “spirit-body,” or “breath-body,” which ensures the continuity of detached consciousness",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)",
+     "source": "Chinese yoga philosophy, per Jung's commentary",
+     "source_author": "Chinese alchemy"
+    }
+   ],
+   "relation_family": {
+    "value": "instrumentality",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "spirit-body",
+   "relation": "is",
+   "object": "pneumatic-man",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 69,
+     "quote": "It is the birth of the pneumatic man, known to the European from antiquity",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-1, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-13"
