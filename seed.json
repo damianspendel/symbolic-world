@@ -174,6 +174,7 @@
    "type": "Operation",
    "label": "Coniunctio",
    "aliases": [
+    "chymical marriage",
     "coitus",
     "coniugium",
     "matrimonium",
@@ -189,6 +190,11 @@
      "volume": "12",
      "paragraph": 334,
      "batch": "b-cw12-5"
+    },
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "batch": "b-cw13-3"
     }
    ]
   },
@@ -285,6 +291,11 @@
      "volume": "13",
      "paragraph": 137,
      "batch": "b-cw13-2"
+    },
+    {
+     "volume": "13",
+     "paragraph": 158,
+     "batch": "b-cw13-3"
     }
    ],
    "latin": "lapis Philosophorum"
@@ -368,6 +379,7 @@
    "type": "Figure",
    "label": "Mercurius",
    "aliases": [
+    "Hermes",
     "Hermes Psychopompos",
     "Kyllenios",
     "Mercurius duplex",
@@ -426,6 +438,11 @@
      "volume": "12",
      "paragraph": 529,
      "batch": "b-cw12-8"
+    },
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "batch": "b-cw13-3"
     }
    ],
    "latin": "argentum vivum"
@@ -439,12 +456,17 @@
     "Monad",
     "Unica Res",
     "Unum",
+    "chaos",
     "elementum primordiale",
+    "humidum radicale",
     "limbus microcosmicus",
     "massa informis",
     "materia vilis",
     "mysterium magnum",
-    "radix ipsius"
+    "radix ipsius",
+    "sperma mundi",
+    "spiritus aquae",
+    "vapor terrae"
    ],
    "name_refs": [
     {
@@ -476,6 +498,16 @@
      "volume": "12",
      "paragraph": 516,
      "batch": "b-cw12-8"
+    },
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "batch": "b-cw13-3"
+    },
+    {
+     "volume": "13",
+     "paragraph": 173,
+     "batch": "b-cw13-3"
     }
    ]
   },
@@ -513,8 +545,11 @@
    "tradition": "Gnostic-Kabbalistic",
    "aliases": [
     "Adam Kadmon",
+    "Idechtrum",
     "Poimen",
-    "Primordial Man"
+    "Primordial Man",
+    "Protoplast",
+    "Protothoma"
    ],
    "name_refs": [
     {
@@ -531,6 +566,11 @@
      "volume": "12",
      "paragraph": 253,
      "batch": "b-cw12-4"
+    },
+    {
+     "volume": "13",
+     "paragraph": 168,
+     "batch": "b-cw13-3"
     }
    ]
   },
@@ -984,6 +1024,11 @@
      "volume": "14",
      "paragraph": 137,
      "batch": "b-cw14-2"
+    },
+    {
+     "volume": "13",
+     "paragraph": 148,
+     "batch": "b-cw13-3"
     }
    ]
   },
@@ -1136,6 +1181,7 @@
    "type": "Figure",
    "label": "Filius Philosophorum",
    "aliases": [
+    "filius sapientiae",
     "unicus filius"
    ],
    "name_refs": [
@@ -1143,8 +1189,14 @@
      "volume": "12",
      "paragraph": 530,
      "batch": "b-cw12-8"
+    },
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "batch": "b-cw13-3"
     }
-   ]
+   ],
+   "latin": "filius philosophorum"
   },
   {
    "id": "divine-child",
@@ -1546,6 +1598,7 @@
    "latin": "puellus regius",
    "aliases": [
     "King’s Son",
+    "Rex coronatus",
     "kingly boy"
    ],
    "name_refs": [
@@ -1563,6 +1616,11 @@
      "volume": "12",
      "paragraph": 434,
      "batch": "b-cw12-7"
+    },
+    {
+     "volume": "13",
+     "paragraph": 184,
+     "batch": "b-cw13-3"
     }
    ]
   },
@@ -2080,6 +2138,11 @@
      "volume": "14",
      "paragraph": 244,
      "batch": "b-cw14-4"
+    },
+    {
+     "volume": "13",
+     "paragraph": 183,
+     "batch": "b-cw13-3"
     }
    ]
   },
@@ -2536,6 +2599,7 @@
    "latin": "filius Mundi Maioris",
    "aliases": [
     "Son of the Great World",
+    "Son of the Macrocosm",
     "Son of the great World",
     "salvator macrocosmi"
    ],
@@ -2559,6 +2623,11 @@
      "volume": "13",
      "paragraph": 127,
      "batch": "b-cw13-2"
+    },
+    {
+     "volume": "13",
+     "paragraph": 162,
+     "batch": "b-cw13-3"
     }
    ]
   },
@@ -3006,7 +3075,15 @@
      "volume": "14",
      "paragraph": 9,
      "batch": "b-cw14-1"
+    },
+    {
+     "volume": "13",
+     "paragraph": 186,
+     "batch": "b-cw13-3"
     }
+   ],
+   "aliases": [
+    "house of fire"
    ]
   },
   {
@@ -3297,7 +3374,23 @@
   {
    "id": "iliaster",
    "type": "Concept",
-   "label": "Iliaster"
+   "label": "Iliaster",
+   "aliases": [
+    "Iliastrum",
+    "Yliastrum"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 160,
+     "batch": "b-cw13-3"
+    },
+    {
+     "volume": "13",
+     "paragraph": 168,
+     "batch": "b-cw13-3"
+    }
+   ]
   },
   {
    "id": "aquaster",
@@ -3312,17 +3405,54 @@
   {
    "id": "melusina",
    "type": "Figure",
-   "label": "Melusina"
+   "label": "Melusina",
+   "aliases": [
+    "mère Lusine"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 179,
+     "batch": "b-cw13-3"
+    }
+   ]
   },
   {
    "id": "aniadus",
    "type": "Concept",
-   "label": "Aniadus"
+   "label": "Aniadus",
+   "aliases": [
+    "Anachmus",
+    "Aniada",
+    "Aniadum"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 193,
+     "batch": "b-cw13-3"
+    },
+    {
+     "volume": "13",
+     "paragraph": 194,
+     "batch": "b-cw13-3"
+    }
+   ]
   },
   {
    "id": "homo-maximus",
    "type": "Figure",
-   "label": "Homo maximus"
+   "label": "Homo maximus",
+   "aliases": [
+    "maior homo"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 185,
+     "batch": "b-cw13-3"
+    }
+   ]
   },
   {
    "id": "scaiolae",
@@ -8788,6 +8918,105 @@
      "batch": "b-cw13-2"
     }
    ]
+  },
+  {
+   "id": "corpus-mysticum",
+   "label": "Corpus mysticum",
+   "type": "Concept"
+  },
+  {
+   "id": "compassion",
+   "label": "Compassion",
+   "type": "Concept"
+  },
+  {
+   "id": "astrum",
+   "label": "Astrum",
+   "type": "Concept",
+   "aliases": [
+    "corpus coeleste"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 173,
+     "batch": "b-cw13-3"
+    }
+   ]
+  },
+  {
+   "id": "conrad-gessner",
+   "label": "Conrad Gessner",
+   "type": "Figure"
+  },
+  {
+   "id": "pagoyum",
+   "label": "Pagoyum",
+   "type": "Concept",
+   "aliases": [
+    "Pagoya"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 148,
+     "batch": "b-cw13-3"
+    }
+   ]
+  },
+  {
+   "id": "physician",
+   "label": "Physician",
+   "type": "Figure"
+  },
+  {
+   "id": "mater-natura",
+   "label": "Mater Natura",
+   "type": "Symbol",
+   "latin": "Mater Natura",
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 148,
+     "batch": "b-cw13-3"
+    },
+    {
+     "volume": "13",
+     "paragraph": 153,
+     "batch": "b-cw13-3"
+    }
+   ],
+   "aliases": [
+    "Mother Nature"
+   ]
+  },
+  {
+   "id": "corpus-astrale",
+   "label": "Corpus astrale",
+   "type": "Concept",
+   "aliases": [
+    "firmament"
+   ],
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 188,
+     "batch": "b-cw13-3"
+    }
+   ]
+  },
+  {
+   "id": "labor-sophiae",
+   "label": "Labor Sophiae",
+   "type": "Concept",
+   "latin": "labor Sophiae",
+   "name_refs": [
+    {
+     "volume": "13",
+     "paragraph": 209,
+     "batch": "b-cw13-3"
+    }
+   ]
   }
  ],
  "edges": [
@@ -12113,6 +12342,19 @@
      "source": "Nicholas Melchior (Melchior Cibinensis)",
      "correction_note": "cross-vendor correction: 'the lapis-Christ identity' is Jung's own phrase naming the alchemical parallel the paragraph then documents from Melchior's Mass; the claim is the alchemists' doctrine as Jung reports it, so jung-quotes-source -> jung-reports-parallel, source kept.",
      "crossvendor_checked": "gemini-3.1-pro (post-merge due diligence, xv-trilogy-july, FINDING-adjudicated, 2026-11-11)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 162,
+     "quote": "the Stone of the Philosophers, the Preserver of the Macrocosm, is the symbol of Christ Jesus Crucified",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Khunrath",
+     "source_author": "Khunrath"
     }
    ],
    "relation_family": {
@@ -12540,6 +12782,32 @@
      "source": "Aurora consurgens, ch. II",
      "source_author": "the alchemists",
      "source_text": "Aurora consurgens"
+    },
+    {
+     "volume": "13",
+     "paragraph": 158,
+     "quote": "Melchior Cibinensis, at the beginning of the sixteenth century, could still represent it in the form of a Mass",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Melchior Cibinensis",
+     "source_author": "Melchior Cibinensis"
+    },
+    {
+     "volume": "13",
+     "paragraph": 195,
+     "quote": "made the bold attempt to present the opus alchymicum in the form of a Mass",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Nicolaus Melchior Szebeny (Melchior Cibinensis)",
+     "source_author": "Melchior Cibinensis"
     }
    ],
    "relation_family": {
@@ -13977,6 +14245,20 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-2, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "quote": "the coniunctio was allegorized as the hierosgamos, the ritual cohabitation of Sol and Luna",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists",
+     "note": "allegorized as"
     }
    ],
    "relation_family": {
@@ -29730,6 +30012,19 @@
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-3, PASS, 2026-11-12)",
      "source": "alchemical usage",
+     "source_author": "the alchemists"
+    },
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "quote": "Its chief figure was Hermes or Mercurius, in his dual significance as quicksilver and the world soul",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "the alchemists",
      "source_author": "the alchemists"
     }
    ],
@@ -56379,6 +56674,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-08-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw9i-9, PASS, 2026-08-12)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 207,
+     "quote": "This quaternity is an archetypal arrangement.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -79829,6 +80135,28 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-7, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 173,
+     "quote": "hermaphroditic (beyond division by sex), and damp (i.e., psychic). This paints a picture of the self, the indescribable totality of man.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 210,
+     "quote": "the mortal ego with the immortal self, Anthropos, purusha, atman, or whatever else be the names",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -79836,6 +80164,11 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-19"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
    }
   },
   {
@@ -81826,6 +82159,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-10-20",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw11-7, PASS, 2026-10-20)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 177,
+     "quote": "the filius , that incorruptible being whose symbols indicate the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -81833,6 +82177,11 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-10-20"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
    }
   },
   {
@@ -112342,6 +112691,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-11",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw14-1, PASS, 2026-11-11)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 209,
+     "quote": "he discovers in the projection the qualities of the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -144889,6 +145249,17 @@
      "verified_by": "claude-fable-5",
      "verified_date": "2026-11-12",
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-2, PASS, 2026-11-12)"
+    },
+    {
+     "volume": "13",
+     "paragraph": 189,
+     "quote": "the retorta distillatio ex medio centri results in the activation and development of a psychic centre ... that coincides psychologically with that of the self",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
     }
    ],
    "relation_family": {
@@ -144896,6 +145267,11 @@
     "state": "assigned",
     "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-12"
+   },
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
    }
   },
   {
@@ -148139,6 +148515,33 @@
      "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw12-5, PASS, 2026-11-12)",
      "source": "Josephus Quercetanus (1576), sequence of twelve operations",
      "source_author": "other"
+    },
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "quote": "separating the prima materia, the so-called chaos, ... which were then reunited in personified form in the coniunctio",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    },
+    {
+     "volume": "13",
+     "paragraph": 190,
+     "quote": "When this separation is completed and the body has been purified by Melissa and freed from Saturnine melancholy, then the coniunctio can take place",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Paracelsus",
+     "source_author": "Paracelsus",
+     "source_text": "De vita longa"
     }
    ],
    "relation_family": {
@@ -154042,6 +154445,1220 @@
     "value": null,
     "state": "pending-adjudication",
     "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "aqua-permanens",
+   "relation": "is",
+   "object": "corpus-mysticum",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 142,
+     "quote": "For Zosimos and those of like mind the divine water was a corpus mysticum",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Zosimos",
+     "source_author": "Zosimos",
+     "note": "the divine water of Zosimos"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "corpus-mysticum",
+   "relation": "confers",
+   "object": "redemption",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 142,
+     "quote": "it can be understood in a quite general sense as a visible gift of grace conferring redemption",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "projects-into",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 143,
+     "quote": "Alchemy projected an inner, psychic experience into chemical substances",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "paracelsus",
+   "relation": "driven-by",
+   "object": "compassion",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 146,
+     "quote": "The driving force behind Paracelsus was his compassion",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lumen-naturae",
+   "relation": "comes-from",
+   "object": "astrum",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 148,
+     "quote": "The light of nature comes from the Astrum",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Paracelsus",
+     "source_author": "Paracelsus"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "paracelsus",
+   "relation": "has",
+   "object": "dual-mother",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 153,
+     "quote": "like every true hero he had two mothers, a heavenly one and an earthly one—Mother Church and Mother Nature",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "kinship",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "paracelsus",
+   "relation": "is-prototype-of",
+   "object": "faust",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 154,
+     "quote": "Not for nothing was Paracelsus the prototype of Faust",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "prefiguration",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "conrad-gessner",
+   "relation": "accuses",
+   "object": "paracelsus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 154,
+     "quote": "“Theophrastus has assuredly been an impious man and a sorcerer [ magus ], and has had intercourse with demons.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Conrad Gessner, letter to Crato von Crafftheim",
+     "source_author": "other"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "alchemy",
+   "relation": "conflicts-with",
+   "object": "christianity",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 164,
+     "quote": "the secret content of alchemy, were diametrically opposed to the spirit of Christianity",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "magic",
+   "relation": "is",
+   "object": "pagoyum",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 156,
+     "quote": "But this kind of folk magic is not Christian, it is demonstrably pagan—in a word, a “Pagoyum.”",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "correction_note": "gate correction: the sentence says 'this kind of folk magic' is a Pagoyum; the standing node is magic at large, medium with a scope note",
+     "note": "the folk magic Paracelsus took over"
+    }
+   ],
+   "relation_family": {
+    "value": "classification",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "prima-materia",
+   "relation": "undergoes",
+   "object": "separatio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "quote": "separating the prima materia, the so-called chaos, into the active principle, the soul, and the passive principle, the body",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "springs-from",
+   "object": "coniunctio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 157,
+     "quote": "From this union sprang the filius sapientiae or filius philosophorum , the transformed Mercurius",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "physician",
+   "relation": "matures-through",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 158,
+     "quote": "he says that the physician himself is “ripened” by the art",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Paracelsus, Paragranum",
+     "source_author": "Paracelsus"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "is",
+   "object": "filius-macrocosmi",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 162,
+     "quote": "“This [the filius philosophorum ], the Son of the Macrocosm, is God and creature",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Khunrath",
+     "source_author": "Khunrath"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "filius-philosophorum",
+   "relation": "parallels",
+   "object": "christ",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 162,
+     "quote": "Long before Paracelsus, as I have said, this filius was equated with Christ.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    },
+    {
+     "volume": "13",
+     "paragraph": 166,
+     "quote": "the well-known parallel between the filius philosophorum and Christ",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, FINDING-adjudicated, 2026-11-13)",
+     "audit_note": "cross-vendor (Gemini) asked for jung-reports-parallel; the §166 sentence is Jung's own historical statement of the parallel, and the §162 reference of the same edge carries the report of the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "faust",
+   "relation": "derives-from",
+   "object": "alchemy",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 163,
+     "quote": "It was from the spirit of alchemy that Goethe wrought the figure of the “superman” Faust",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "derivation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "anima-mundi",
+   "relation": "is-extracted-from",
+   "object": "matter",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 166,
+     "quote": "The extraction of the world soul from matter was not a peculiarity of Paracelsan alchemy.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "the alchemists",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "separation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "adech",
+   "relation": "signifies",
+   "object": "homo-maximus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 168,
+     "quote": "whom Paracelsus calls the homo maximus 59 or Adech, 60 an arcane name derived from Adam",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Paracelsus",
+     "source_author": "Paracelsus"
+    },
+    {
+     "volume": "13",
+     "paragraph": 203,
+     "quote": "We have seen already that Adech stands for the inner homo maximus.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "life",
+   "relation": "is",
+   "object": "mumia",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 170,
+     "quote": "“Life, by Hercules, is nothing other than a certain embalsamed Mumia, which preserves the mortal body from the mortal worms and from corruption",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Paracelsus",
+     "source_author": "Paracelsus",
+     "source_text": "De vita longa"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "balsam",
+   "relation": "is-aspect-of",
+   "object": "iliaster",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 171,
+     "quote": "one could say that the balsam is the pharmacological or chemical aspect of the Iliaster",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "iliaster",
+   "relation": "is-principle-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 171,
+     "quote": "in every man there is an Iliaster that holds together each individual’s peculiar combination of qualities",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-body",
+   "relation": "undergoes",
+   "object": "separatio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 172,
+     "quote": "the impure animate body must be purified through the separation of the elements, which is done by your meditating upon it",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Paracelsus",
+     "source_author": "Paracelsus",
+     "source_text": "De vita longa"
+    }
+   ],
+   "relation_family": {
+    "value": null,
+    "state": "pending-adjudication",
+    "by": "arms-disagree",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "imaginatio",
+   "relation": "is-power-of",
+   "object": "astrum",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 173,
+     "quote": "In the Paracelsist tradition imaginatio is the active power of the astrum (star) or corpus coeleste sive supracoeleste (Ruland)",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Ruland",
+     "source_author": "Ruland",
+     "correction_note": "gate correction: the sentence names Ruland in parentheses and no title; source_text withdrawn, author stands"
+    }
+   ],
+   "relation_family": {
+    "value": "doctrinal-attribution",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "artifex",
+   "relation": "projects-into",
+   "object": "arcane-substance",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 173,
+     "quote": "By projecting himself into the substance he has become unconsciously identical with it and suffers the same process.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "aquaster",
+   "relation": "is-aspect-of",
+   "object": "iliaster",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 173,
+     "quote": "the so-called “Aquaster,” 20 which stands for the watery aspect of the Iliaster",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "ares",
+   "relation": "is-principle-of",
+   "object": "individuation",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 176,
+     "quote": "It can therefore be taken as the principle of individuation in the strict sense.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "melusina",
+   "relation": "originates-in",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 180,
+     "quote": "the birthplace of Melusina is the womb of the mysteries, obviously what we today would call the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "generation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "melusina",
+   "relation": "is-variant-of",
+   "object": "mercurius",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 180,
+     "quote": "She appears as a variant of the mercurial serpent",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "note": "the mercurial serpent"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "filius-regius",
+   "relation": "calls-from",
+   "object": "the-sea",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 181,
+     "quote": "Of this filius regius Michael Maier says: 54 “He lives and calls from the depths: 55 Who shall deliver me from the waters",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Maier",
+     "source_author": "Maier"
+    }
+   ],
+   "relation_family": {
+    "value": "structural-position",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "mater-natura",
+   "relation": "conflicts-with",
+   "object": "christianity",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 184,
+     "quote": "the much lauded Mater Natura—a figure not entirely in accord with the views of Christianity",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "correction_note": "gate correction: 'not entirely in accord with the views of Christianity' is milder than conflicts-with, medium"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "fire",
+   "relation": "undergoes",
+   "object": "circulatio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 186,
+     "quote": "The fire that originates in the centre carries everything upward ... “The physiochemists call this movement circular, and they imitate it in their operations.”",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Dorn",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: the first span of the quote is Jung's paraphrase of Dorn and only the second is Dorn's words; a report of Dorn, source fields as proposed, medium as proposed"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "balsam",
+   "relation": "is",
+   "object": "corpus-astrale",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 188,
+     "quote": "The shining body is the corpus astrale , the “firmament” or “star” in man.",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Dorn",
+     "source_author": "Dorn",
+     "correction_note": "gate correction: the identity runs across two sentences (the shining body is the sidereal balsam; the shining body is the corpus astrale), one step, medium",
+     "note": "the shining body is the sidereal balsam"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "aniadus",
+   "relation": "undergoes",
+   "object": "exaltatio",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 190,
+     "quote": "“in the true May, when the exaltations of Aniada begin, these should be gathered.”",
+     "claim_type": "jung-quotes-source",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "Paracelsus",
+     "source_author": "Paracelsus",
+     "source_text": "De vita longa"
+    }
+   ],
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "natural-man",
+   "relation": "unites-with",
+   "object": "inner-man",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 194,
+     "quote": "implanting the inner man in the Christian sense, but of a “scientific” union of the natural with the spiritual man",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, FINDING-adjudicated, 2026-11-13)",
+     "correction_note": "cross-vendor correction: The text specifies a union of the natural with the 'spiritual man', explicitly contrasting this with the 'inner man' in the Christian sense."
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "homunculus",
+   "relation": "is",
+   "object": "projection",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 195,
+     "quote": "They were projections, of course; but of that, too, Paracelsus seems to have had an inkling",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "note": "homunculi, Trarames, Durdales, nymphs, Melusines"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "projection",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "lumen-naturae",
+   "relation": "is",
+   "object": "scintilla",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 197,
+     "quote": "his whole creative yearning, belonged to the lumen naturae , the divine spark buried in the darkness",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "archetypal-identity",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "symbol",
+   "relation": "unites",
+   "object": "the-opposites",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 200,
+     "quote": "I have put in an apologia for the symbol, which unites what is divided.",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "union",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "homo-maximus",
+   "relation": "elucidates",
+   "object": "the-opus",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 203,
+     "quote": "Paracelsus’s conception of the homo maximus does much to elucidate the psychological motives of the alchemical opus in general",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": null,
+    "state": "no-family",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "gerard-dorn",
+   "relation": "opposes",
+   "object": "axiom-of-maria",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 204,
+     "quote": "Dorn’s insistence on three as opposed to four is based on his polemical attitude to the axiom of Maria",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "opposition",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "scaiolae",
+   "relation": "correspond-to",
+   "object": "four-functions",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 208,
+     "quote": "his four Scaiolae, which appear to be interpreted as mental powers and psychological functions",
+     "claim_type": "jung-asserts",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "correction_note": "gate correction: 'appear to be interpreted as mental powers and psychological functions' is hedged; §207's correspondence is stated of the quaternity in general; medium"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "adech",
+   "relation": "rules",
+   "object": "scaiolae",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 209,
+     "quote": "Adech (= Adam, Anthropos), 26 who is the ruler of the Scaiolae and/or their quintessence",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "relation_family": {
+    "value": "dependence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "labor-sophiae",
+   "relation": "confronts",
+   "object": "the-unconscious",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 209,
+     "quote": "the labor Sophiae: it is a process of coming to terms with the unconscious",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "psychic-effect",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "faust",
+   "relation": "parallels",
+   "object": "labor-sophiae",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 210,
+     "quote": "an alchemical encounter with the unconscious, comparable to the labor Sophiae of Paracelsus",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "correspondence",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "the-self",
+   "relation": "appears-as",
+   "object": "adech",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 210,
+     "quote": "the more it will feel the other as “that difficult Adech” who crosses its purpose at every misguided step",
+     "claim_type": "jung-asserts",
+     "confidence": "high",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)"
+    }
+   ],
+   "cross_register": {
+    "value": true,
+    "by": "proposer, b-cw13-3",
+    "date": "2026-11-13"
+   },
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
+    "date": "2026-11-13"
+   }
+  },
+  {
+   "subject": "christ",
+   "relation": "reflects",
+   "object": "anthropos",
+   "references": [
+    {
+     "volume": "13",
+     "paragraph": 210,
+     "quote": "from that point of view Christ was a reflection—and only a reflection—of the inner Anthropos",
+     "claim_type": "jung-reports-parallel",
+     "confidence": "medium",
+     "verified": true,
+     "verified_by": "claude-fable-5",
+     "verified_date": "2026-11-13",
+     "crossvendor_checked": "gemini-3.1-pro (pre-merge, b-cw13-3, PASS, 2026-11-13)",
+     "source": "the secret doctrine of the Anthropos (alchemical)",
+     "source_author": "the alchemists"
+    }
+   ],
+   "relation_family": {
+    "value": "manifestation",
+    "state": "assigned",
+    "by": "opus+gemini-agreed (v0.7.2)",
     "date": "2026-11-13"
    }
   }

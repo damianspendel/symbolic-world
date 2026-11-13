@@ -1425,11 +1425,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw13-3-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §141-210",
+   "result": "CW 13 WINDOW 3: Alchemical Studies §141-210, the close of The Visions of Zosimos (the divine water as corpus mysticum conferring redemption, alchemy projecting psychic experience into matter) and most of Paracelsus as a Spiritual Phenomenon: the physician driven by compassion, the two mothers, the lumen naturae from the astrum, the Pagoyum, Paracelsus as prototype of Faust, Gessner's charge of sorcery, alchemy against the spirit of Christianity, the separation of the prima materia and the filius philosophorum from the coniunctio, the physician ripened by the art, Khunrath's filius as Son of the Macrocosm and the filius-Christ parallel, Faust from the spirit of alchemy, the world soul extracted from matter, Adech as homo maximus, life as Mumia, the balsam and the Iliaster, the body's separation by meditation, imaginatio as the power of the astrum, the artifex projected into the substance, the Aquaster, Ares as principle of individuation, Melusina from the unconscious and as a variant of the mercurial serpent, Maier's filius regius calling from the sea, Mater Natura beside Christianity, Dorn's circular fire and the corpus astrale, the exaltations of Aniada, the union of the natural with the inner man, the homunculi as projections, the lumen naturae as divine spark, the symbol uniting the divided, the homo maximus and the opus, Dorn against the axiom of Maria, the Scaiolae and the four functions, Adech ruling the Scaiolae, the labor Sophiae as coming to terms with the unconscious, Faust and the difficult Adech, Christ as reflection of the inner Anthropos. Run by hand in the mining chat on 2026-11-13 morning on Damian's instruction to run all remaining windows; the third window of CW 13 in the second pass (state record b-cw13-3-pass2). Mined 56 candidates/61 refs (Opus-family miner subagent, blinded, model id stamped; ten attaches onto standing edges; the miner cut a first draft of about 170 candidates to 56; 25 names entries; 16 cross-register flags; 5 stage candidates; stages_note recorded; a stale first-pass candidates file from July was overwritten, as intended). Pre-check kept all 61 (quotation share of CW 13 after the window 5.24 percent against the 9 percent cap). Fable gate 54 TRUE / 6 CORRECTED / 1 FALSE: the adam-kadmon mint refused as a duplicate of the standing anthropos (label 'Anthropos / Adam Kadmon'), its edge dropped and the claim sent to the sitting; three confidence demotions (§184 'not entirely in accord', §188 the balsam as corpus astrale across two sentences, §208 'appear to be interpreted'); §156 scope note (the folk magic Paracelsus took over) with medium; §186 Dorn's circular fire retyped jung-reports-parallel because the quote's first span is Jung's paraphrase; §173 source_text withdrawn for a parenthetical Ruland. Twenty-four names accepted and one rejected (scaiolae|207, Scaioli being people). Gemini cross-vendor 58 PASS / 2 FINDING on 60 post-gate refs: §194 demoted to medium (the spiritual man on the inner-man node, one step); §166 a report asked of Jung's own historical statement whose source sits on §162, overruled with an audit note. Names applied to 24 entries on 20 nodes; cross_register set on 16 edges; nine mints: corpus-mysticum, compassion, astrum, conrad-gessner, pagoyum, physician, mater-natura, corpus-astrale, labor-sophiae. Sources written as other: Conrad Gessner (added to the controlled list in the tooling commit). +45 edges, 13 refs attached to standing edges and 2 further refs on this window's new edges, +60 refs, +9 nodes. Graph 1193/4963/6644; CW 13 now 412 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 45 edges under v0.7.2: agreement 39/45 (87 percent), 36 assigned, 6 queued, 3 no-family, 0 text-undecided; queue 860; no bare unclassified rows from the Gemini arm. strain: 3 no-family, 0 text-undecided of 45 swept; new homeless strings: elucidates (is-principle-of is already listed as homeless, two edges). FAMILY GAP FOR THE SITTING: undergoes split psychic-effect against separation on both separatio edges (§157, §172), the recurring seed question; matures-through and accuses split a content family against doctrinal-attribution on 'he says' and a quoted accusation; signifies split symbolization against archetypal-identity on Adech as homo maximus; confers split psychic-effect against instrumentality. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-13, 61 refs judged against the full paragraphs; weekly Fable 79 percent and 5-hour meter 36 percent at the window's start against today's 95 percent stop, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1193/4963/6644, distinct paragraphs 3936, claim mix 5182/1077/385. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a6d4a4c6d35781d96, 31 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 17 assistant turns after the miner finished at 2026-11-13T06:19:59.831Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW13-DUE: window 3 (§141-210)",
- "nodes": 1184,
- "edges": 4918,
- "refs": 6584,
+ "next": "CW13-DUE: window 4 (§211-280)",
+ "nodes": 1193,
+ "edges": 4963,
+ "refs": 6644,
  "as_of": "2026-11-13"
 }
