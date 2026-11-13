@@ -76,31 +76,34 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The paper, <em>Trust, Layered</em>, describes v2.0.0.</p>
 <p>Each entry opens with the graph version, the ruleset version it shipped with (the two are deliberately separate numbers) and the calibration record in force when the release was cut.</p>
 <section class="rel-entry">
-<h2>v2.4.0: the trilogy second pass, CW 14 and CW 12</h2>
-<div class="meta">in preparation. This draft covers CW 14 and CW 12; the second pass over CW 13 is not in it.</div>
+<h2>v2.4.0: the alchemical trilogy, mined a second time</h2>
+<div class="meta">in preparation. Tag <code>v2.4.0</code>, GitHub Release and Zenodo record under the concept DOI once released.</div>
 <div class="pin">graph <span class="v">v2.4.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
 <h4>mining status</h4>
 <ul>
-<li>Mined CW 14, <em>Mysterium Coniunctionis</em>, and CW 12, <em>Psychology and Alchemy</em>, a second time, in windows of seventy paragraphs: eleven windows for CW 14 and eight for CW 12. The first pass over these volumes predates the form rule and the reporting clause.</li>
-<li>New references name their source author, and the source text where Jung gives one. Nodes in <code>seed.json</code> carry their Latin form, their aliases and the paragraph that names them.</li>
-<li>Quotations have a cap per volume, and the pre-check enforces it.</li>
+<li>Mined the three alchemical volumes a second time, in windows of seventy paragraphs: CW 14, <em>Mysterium Coniunctionis</em>, in eleven windows; CW 12, <em>Psychology and Alchemy</em>, in eight; CW 13, <em>Alchemical Studies</em>, in seven. The first pass over these volumes predates the form rule and the reporting clause.</li>
+<li>New references name their source author, and the source text where Jung gives one. Nodes carry their Latin form, their aliases and the paragraph that names them.</li>
+<li>The graph records the stages of the work: nigredo, albedo, citrinitas, rubedo, the cauda pavonis and the viriditas, the operations, and Dorn's three stages of the coniunctio. Relations name them as belongs-to, undergoes, precedes and follows.</li>
+<li>Quotations have a cap of 9% per volume, and the pre-check enforces it.</li>
 <li>Graph: 1244 nodes, 5132 relations, 6887 references over 134 batches; 890 relations await adjudication.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li>The VoID files for the graph and the ontology name as their data dump the Turtle file the site serves. The w3id address they named before redirected to the DOI landing page.</li>
+<li>The VoID files for the graph and the ontology name the Turtle files the site serves as their data dump. The w3id address they named before redirected to the DOI landing page.</li>
 <li>The RDF export in <code>exports/rdf/</code> is rebuilt from this release's graph.</li>
+<li>Three subtitles that went live with v2.3.0 after its tag reach the repository with this release.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li><a href="/opus">/opus</a> takes the concordance's place in the menu and on the landing page. The concordance stays at <a href="/atlas#/concordance">/atlas#/concordance</a>.</li>
+<li><a href="/opus">/opus</a> takes the concordance's place in the menu and on the landing page. The concordance stays at <a href="/atlas#/concordance">/atlas#/concordance</a>, linked from /opus and <a href="/about">/about</a>.</li>
+<li>The atlas size ceiling is 6.0 MB.</li>
 </ul>
 <h4>UI</h4>
 <ul>
-<li><a href="/opus">/opus</a> follows Jung's reading of the ten woodcuts of the <em>Rosarium philosophorum</em> in CW 16. Each picture has up to three verified claims from the graph, some of them from the CW 14 second pass. The background turns black, white, yellow and red where Jung names the stage, and each change shows the claim it rests on. The woodcuts come from Jung's own copy of the 1550 edition, digitised by e-rara.ch.</li>
-<li><a href="/query">/query</a> suggests concepts in the subject and object fields and relations as you type, and offers provenance as a list.</li>
+<li><a href="/opus">/opus</a> follows Jung's reading of the ten woodcuts of the <em>Rosarium philosophorum</em> in CW 16. Each picture carries three verified claims, and some come from CW 12 and 14. The background changes where Jung names a stage. On a desktop the pictures cross-fade in place; on a phone the page scrolls. The woodcuts come from Jung's own copy of the 1550 edition, digitised by e-rara.ch.</li>
+<li><a href="/opus-claims">/opus-claims</a> lists every verified claim on the figures of the ten pictures across CW 12, 13, 14 and 16, picture by picture.</li>
+<li><a href="/query">/query</a> suggests concepts and relations as you type, and offers provenance as a list.</li>
 <li><a href="/method">/method</a> says "Validated by a person" for the gold set and adds a row on recall to its limits. The "How the checks work" heading on <a href="/evidence">/evidence</a> links to it.</li>
-<li>New subtitles on <a href="/evidence">/evidence</a>, <a href="/about">/about</a> and <a href="/concepts">/concepts</a>.</li>
 </ul>
 </section>
 <section class="rel-entry">
