@@ -1267,6 +1267,7 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </tbody></table></details>
 <p class="meta">Every row is one verified reference in the graph, with the quote as stored. Sorted CW 16, 14, 12, 13, then by paragraph.</p>
 <script>(function(){var m=document.querySelector('.page-main'),bs=[].slice.call(document.querySelectorAll('.c-chip'));if(!m)return;
+function hash(){var h=location.hash.slice(1),d=h&&document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;d.scrollIntoView()}}hash();addEventListener('hashchange',hash);
 function counts(){[].slice.call(document.querySelectorAll('.c-sec')).forEach(function(s){var n=0;[].slice.call(s.querySelectorAll('tbody tr')).forEach(function(r){if(!m.classList.contains('c-hide-'+r.getAttribute('data-v')))n++});var c=s.querySelector('.c-count'),t=c.getAttribute('data-total');c.textContent=(String(n)===t?t:n+' of '+t)+' claims'})}
 bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-v'),on=!b.classList.contains('on');b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');m.classList.toggle('c-hide-'+v,!on);counts()})})})();</script>
 </main></body></html>
