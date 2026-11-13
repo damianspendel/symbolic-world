@@ -3589,7 +3589,9 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       1: [['quintessence|produced-from|four-elements', '14', 439], ['mercurius|exemplifies|axiom-of-maria', '13', 272],
           ['mercurius|synonym-of|aqua-permanens', '12', 90], ['sol|descends-into|mercurial-fountain', '14', 23]],
       2: [['sol|opposes|luna', '14', 127], ['rex|represents|consciousness', '12', 496], ['rex|conforms-to|christ', '14', 349]],
-      3: [['arcane-substance|defined-as|veritas', '12', 377], ['veritas|personified-as|sapientia', '14', 366]],
+      // picture 3 has no tile (Damian, 2026-11-13: "Picture 3, no tile, if
+      // there's nothing, that's fine"): its two candidates concern Dorn's veritas,
+      // not the naked truth of the woodcut
       4: [['night-sea-journey|is-a-descent-into|the-unconscious', '12', 436], ['the-sea|is-for-the-alchemists-their-own-darkness-namely|the-unconscious', '13', 183],
           ['solutio|dissolves|the-body', '14', 316], ['bath|renews|rex', '14', 504]],
       5: [['hierosgamos|symbolizes|union-of-opposites', '12', 43], ['coniunctio|is|death', '13', 457],
@@ -3725,7 +3727,7 @@ ${tileHtml(n)}
     derived(1550)   // the Rosarium's first printing, a fact of the book, not a count
     const opusBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The opus</h1>
-<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with related claims from CW 12 and 14 marked as such.</p></div>
+<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, and of their figures across CW 12, 13, 14 and 16.</p></div>
 <p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses. The colours change where Jung, or a text he quotes, names a stage.</p>
 <div class="opus-ground" aria-hidden="true"><div class="opus-green"></div><div class="opus-peacock"></div><p class="opus-peacock-label">cauda pavonis, the peacock's tail</p></div>
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
