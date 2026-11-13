@@ -3628,7 +3628,7 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 </ul>
 <p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
 <p class="opus-aside"><a href="/atlas#/concordance">Jung's concepts beside the alchemical terms: the concordance &rarr;</a></p>
-<p class="opus-aside"><a href="/opus-claims">Every claim on these pictures, across the trilogy &rarr;</a></p>
+<p class="opus-aside"><a href="/opus-claims">Here we relate the citations to the stages of the alchemical journey &rarr;</a></p>
 </div>
 </section>
 </div>
