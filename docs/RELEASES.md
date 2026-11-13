@@ -68,6 +68,7 @@ pin: graph v2.4.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   landing page. The concordance stays at
   [/atlas#/concordance](/atlas#/concordance), linked from /opus and
   [/about](/about).
+- The concordance takes in the new terms from the second pass.
 - The atlas size ceiling is 6.0 MB.
 
 ### UI

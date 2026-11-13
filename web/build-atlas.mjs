@@ -413,11 +413,20 @@ const LAB_CONCEPTS = new Set([
   'alchemy', 'hermetic-philosophy', 'aniadus', 'aquaster', 'archeus', 'ares',
   'axiom-of-maria', 'iliaster', 'lumen-naturae', 'mysterium-magnum', 'sapientia',
   'scaiolae', 'spiritus-mundi', 'substantia-coelestis', 'tetrameria', 'theoria',
-  'unio-mentalis', 'vir-unus'
+  'unio-mentalis', 'vir-unus',
+  // the trilogy second pass (Damian, 2026-11-13: "OK as is"; reasons in the
+  // build track's draft of that day)
+  'accrescent-soul', 'amor-perfectissimus', 'anima-corporalis', 'anima-media-natura',
+  'astrum', 'chemistry', 'cogitatio', 'corpus-astrale', 'corpus-mysticum',
+  'discretio-intellectualis', 'illuminatio', 'increatum', 'intermediate-realm',
+  'labor-sophiae', 'pagoyum', 'seed-of-unity', 'spiritus-vegetativus', 'subtle-body',
+  'tetrasomia', 'three-regimina', 'unio-naturalis', 'veritas'
 ])
 const PSYCHE_OPERATIONS = new Set([
   // Operation-typed nodes that are psychological technique, not laboratory work.
-  'active-imagination', 'amplification', 'shadow-confrontation'
+  'active-imagination', 'amplification', 'shadow-confrontation',
+  // the trilogy second pass (Damian, 2026-11-13): contemplative practice
+  'heating', 'tapas'
 ])
 const registerOf = (n) => {
   if (n.type === 'Concept') return LAB_CONCEPTS.has(n.id) ? 'laboratory' : 'psyche'
@@ -3541,16 +3550,17 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
           [['wholeness|requires|soul', '16', 454]]],
       // picture 5: CW 14 §120 (Sol and Mercurius) gave way to §460 after the
       // Gemini hostile review (Damian, 2026-11-13)
-      5: [[['coniunctio|expresses|union-of-opposites', '16', 460]], [['nous|is-embraced-by|physis', '16', 457]],
-          [['water|symbolizes|the-unconscious', '16', 459]]],
+      // pictures 5 and 9 keep two (Damian, 2026-11-13, round-2 review): §457
+      // (the paragraph says "man of light", not Nous) and CW 14 §677 (the quote
+      // never names the unio mentalis) left the page
+      5: [[['coniunctio|expresses|union-of-opposites', '16', 460]], [['water|symbolizes|the-unconscious', '16', 459]]],
       6: [[['death|precedes|rebirth', '16', 467]], [['coniunctio|followed-by|nigredo', '16', 468]],
           [['sol-niger|belongs-to|nigredo', '14', 113]]],
       7: [[['dissociation|is-analogous-to|schizophrenia', '16', 476]], [['mercurius|resists-integration-into|consciousness', '16', 478]],
           [['nigredo|parallels|dark-night-of-the-soul', '16', 479]]],
       8: [[['water|symbolizes|sapientia', '16', 485]], [['dew|belongs-to|albedo', '14', 155]],
           [['nigredo|precedes|albedo', '16', 493]]],
-      9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['unio-mentalis|precedes|reunion-with-the-body', '14', 677]],
-          [['nigredo|precedes|albedo', '16', 515]]],
+      9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['nigredo|precedes|albedo', '16', 515]]],
       10: [[['anthropos|parallels|christ', '16', 525]], [['denarius|means|christ', '16', 525]],
            [['rebis|symbolizes|union-of-opposites', '14', 11]]]
     }
@@ -3583,11 +3593,29 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     const OPUS_QUOTE_DISPLAY = {
       'coniunctio|followed-by|nigredo|16|468': 'The coniunctio was incestuous and therefore sinful, leaving pollution behind it. The nigredo always appears in conjunction with tenebrositas'
     }
+    // Display tidying (Damian, 2026-11-13: "go ahead"). The stored quotes stay
+    // exact; /opus shows them without the footnote numerals and stray spaces of
+    // the source text. Numerals and the lost dash are an explicit list keyed by
+    // reference, since a general rule would strip real numbers ("4 to 3 to 2 to
+    // 1" in §404); spaces before punctuation and inside brackets follow one rule
+    // that leaves ellipses alone.
+    const OPUS_TIDY = {
+      '16|479': [['the Cross 7 concerning', 'the Cross concerning']],
+      '14|388': [['rubedo 98 “', 'rubedo “']],
+      '14|155': [['the soul; 195 in other words', 'the soul; in other words']],
+      '14|11': [['body,” 54 an idea', 'body,” an idea']],
+      '16|415': [['on principleincestuous', 'on principle—incestuous']]
+    }
+    const tidy = (q, v, p) => {
+      let t = String(q)
+      for (const [from, to] of OPUS_TIDY[`${v}|${p}`] || []) t = t.split(from).join(to)
+      return t.replace(/\s+([,;:!?)\]]|\.(?!\.))/g, '$1').replace(/([(\[])\s+/g, '$1')
+    }
     const shownQuote = (e, r) => {
       const d = OPUS_QUOTE_DISPLAY[`${e.key}|${r.volume}|${r.paragraph}`]
-      if (!d) return r.quote
+      if (!d) return tidy(r.quote, r.volume, r.paragraph)
       if (!String(r.quote).split(/\s*\.\.\.\s*/).every(f => d.includes(f.trim()))) { console.error(`OPUS PAGE: the display quote for ${e.key} at §${r.paragraph} no longer holds the stored quote's fragments`); process.exit(1) }
-      return d
+      return tidy(d, r.volume, r.paragraph)
     }
     const relatedTag = (v) => String(v) === '16' ? '' : `<p class="opus-related">Related claim · CW ${esc(v)}</p>`
     const claimLine = (e, r) => `<li class="opus-claim${String(r.volume) === '16' ? '' : ' is-related'}">${relatedTag(r.volume)}<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
@@ -3598,7 +3626,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       const edges = [...new Map(g.map(([e]) => [e.key, e])).values()]
       const refs = [...new Map(g.map(([, r]) => [r.quote, r])).values()]
       return `<li class="opus-claim">${edges.map(relLine).join('\n')}
-${refs.map(r => `<blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p>`).join('\n')}</li>`
+${refs.map(r => `<blockquote class="ev">&ldquo;${esc(tidy(r.quote, r.volume, r.paragraph))}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p>`).join('\n')}</li>`
     }
     const sections = OPUS_PICTURES.map(([n, title, a, b, stage]) => {
       const pool = []
@@ -3616,8 +3644,8 @@ ${refs.map(r => `<blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquot
       if (fixed && forced.length && !fixed.some(g => g.some(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para))) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at §${st.para} is not among its pinned claims`); process.exit(1) }
       const claimsHtml = fixed ? fixed.map(g => claimGroup(g)).join('\n') : chosen.map(([e, r]) => claimLine(e, r)).join('\n')
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
-      const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.verdure.quote)}&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
-<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.shimmer.quote)}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
+      const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(tidy(OPUS_OUTSIDE.verdure.quote, '16', 479))}&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
+<blockquote class="opus-outside">&ldquo;${esc(tidy(OPUS_OUTSIDE.shimmer.quote, '16', 480))}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
       const wsz = woodcutSize(n)
       const figure = wsz
         ? `<figure class="opus-cut"><img src="/${woodcutFile(n)}" width="${wsz[0]}" height="${wsz[1]}" alt="Woodcut ${n} of the Rosarium philosophorum (1550): ${esc(title)}" loading="${n <= 2 ? 'eager' : 'lazy'}"></figure>`
@@ -3639,7 +3667,7 @@ ${shimmer}
     const opusBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The opus</h1>
 <p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with related claims from CW 12 and 14 marked as such.</p></div>
-<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses. The colours change where Jung, or a text he quotes, names a stage; between those points they are the page's display.</p>
+<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses. The colours change where Jung, or a text he quotes, names a stage.</p>
 <div class="opus-ground" aria-hidden="true"><div class="opus-green"></div><div class="opus-peacock"></div><p class="opus-peacock-label">cauda pavonis, the peacock's tail</p></div>
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
 <div class="opus-pin">
@@ -3648,7 +3676,7 @@ ${sections}
 <div class="opus-text">
 <p class="eyebrow">After the white</p>
 <p class="opus-stage">The white turns red. CW 12 §334.</p>
-${relatedTag('12')}<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
+${relatedTag('12')}<blockquote class="opus-outside">&ldquo;${esc(tidy(OPUS_OUTSIDE.close.quote, '12', 334))}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
 <ul class="opus-claims">
 ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map(([e, r]) => claimLine(e, r)).join('\n')}
 </ul>
@@ -3659,7 +3687,7 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 </section>
 </div>
 </div>
-<p class="meta">Woodcuts from Jung's own copy of the <em>Rosarium philosophorum</em> (Frankfurt, 1550): Stiftung der Werke von C.G. Jung, Zürich, digitised by e-rara.ch, <a href="https://doi.org/10.3931/e-rara-10570">doi:10.3931/e-rara-10570</a>, Public Domain Mark. Picture titles and paragraph ranges follow the headings of CW 16.</p>`
+<p class="meta">Woodcuts from Jung's own copy of the <em>Rosarium philosophorum</em> (Frankfurt, 1550): Stiftung der Werke von C.G. Jung, Zürich, digitised by e-rara.ch, <a href="https://doi.org/10.3931/e-rara-10570">doi:10.3931/e-rara-10570</a>, Public Domain Mark. Picture titles and paragraph ranges follow the headings of CW 16. Quotations are tidied for display: footnote numbers and stray spaces from the source text are removed.</p>`
     const opusStyle = `
 .page-main.prose > .opus-ground { position: fixed; inset: 0; max-width: none; width: auto; z-index: -1; background: transparent; transition: background-color .6s ease; pointer-events: none; }
 .page-main.opus-black, .page-main.opus-white, .page-main.opus-red { transition: color .6s ease; }
@@ -3798,7 +3826,7 @@ addEventListener('scroll',tick,{passive:true});addEventListener('resize',functio
     }
     const cLink = (id) => `<a href="/concept-${esc(id)}">${esc(nodeLabel(id))}</a>`
     const claimRow = ([e, r]) => `<tr data-v="${esc(r.volume)}"><td class="c-rel">${cLink(e.source)} <em>${esc(String(e.relation).replace(/-/g, ' '))}</em> ${cLink(e.target)}</td><td class="c-q">&ldquo;${esc(r.quote)}&rdquo;</td><td class="c-cite">CW ${esc(r.volume)} §${esc(r.paragraph)}</td><td class="c-type">${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</td></tr>`
-    const claimSections = [...OPUS_PICTURES.map(([n, title, a, b]) => ({ id: `picture-${n}`, label: `Picture ${n} · ${title}`, thumb: `opus-rosarium-${String(n).padStart(2, '0')}-thumb.jpg`, range: [a, b], set: CLAIMS_SETS[n], extra: n === 1 ? ` Mercurius is left out of this set because his claims would fill the section; see ${cLink('mercurius')}.` : '' })),
+    const claimSections = [...OPUS_PICTURES.map(([n, title, a, b]) => ({ id: `picture-${n}`, label: `Picture ${n} · ${title}`, thumb: `opus-rosarium-${String(n).padStart(2, '0')}-thumb.jpg`, range: [a, b], set: CLAIMS_SETS[n], extra: n === 1 ? ` Mercurius appears on picture 1 of <a href="/opus">/opus</a>; his own claims would swamp this table, so they are on <a href="/concept-mercurius">his page</a>.` : '' })),
       { id: 'the-red', label: 'After the white · the rubedo', thumb: null, range: null, set: CLAIMS_SETS.close, extra: '' }]
     let claimTotal = 0
     const counts = []
@@ -3817,7 +3845,7 @@ ${rows.map(claimRow).join('\n')}
     const claimsBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The Rosarium pictures: every claim</h1>
 <p class="sub">Every verified claim on the figures of the ten pictures, across CW 12, 13, 14 and 16.</p></div>
-<p>Each section below gathers the claims cited in one picture's paragraphs of "The Psychology of the Transference" (CW 16) and the claims anywhere in CW 12, 13, 14 and 16 on the figures the picture shows. A claim can appear in more than one section. The pictures themselves, with three claims each, are on <a href="/opus">/opus</a>.</p>
+<p>Each section below gathers the claims cited in one picture's paragraphs of "The Psychology of the Transference" (CW 16) as well as claims anywhere in CW 12, 13, 14 and 16. A claim can appear in more than one section. The pictures themselves, with three claims each, are on <a href="/opus">/opus</a>.</p>
 <div class="c-filter" role="group" aria-label="Show volumes">${CLAIM_VOLS.map(v => `<button type="button" class="chip c-chip on" data-v="${v}" aria-pressed="true">CW ${v}</button>`).join('')}</div>
 ${sectionsHtml}
 <p class="meta">Every row is one verified reference in the graph, with the quote as stored. Sorted CW 16, 14, 12, 13, then by paragraph.</p>`
