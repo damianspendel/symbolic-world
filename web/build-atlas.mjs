@@ -2212,6 +2212,7 @@ ${top.map(e => { const r = bestRef(e), n = passageCount(e); return `<div class="
 <p class="sub">${ns(`<span class="p-type">${esc(node.type)}${node.register ? ` · ${esc(node.register)}` : ''}</span>`)}</p></div>
 ${opening}
 ${topBlock}
+<p class="meta">${ns('Quotations are mechanically checked against the source paragraph. The method is documented <a href="/method">here</a>.')}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
 ${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
 ${neighbourBlock}
@@ -3676,11 +3677,13 @@ ${refs.map(r => `<blockquote class="ev">&ldquo;${esc(tidy(r.quote, r.volume, r.p
       if (picks.length < OPUS_TILE_MIN) return ''
       for (const [e, r] of picks) if (!['12', '13', '14'].includes(String(r.volume))) { console.error(`OPUS PAGE: picture ${n}'s tile holds a CW ${r.volume} claim`); process.exit(1) }
       const total = trilogyRows(n); derived(total)
-      return `<details class="opus-tile"><summary>Amplification across the trilogy · ${total} claims</summary>
+      // its own surface, a state on the bar, a second close at the foot (Damian,
+      // 2026-11-13: "it's not obvious how to turn if off (so colour it somehow)")
+      return `<details class="opus-tile"><summary><span class="t-closed">Amplification across the trilogy · ${total} claims ▾</span><span class="t-open">Close amplification ▴</span></summary>
 <ul class="opus-claims">
 ${picks.map(([e, r]) => claimLine(e, r, false)).join('\n')}
 </ul>
-<p class="opus-tile-all"><a href="/opus-claims#picture-${n}">All ${total} &rarr;</a></p>
+<p class="opus-tile-foot"><a href="/opus-claims#picture-${n}">All ${total} &rarr;</a><button type="button" class="opus-tile-close">Close amplification ▴</button></p>
 </details>`
     }
     const sections = OPUS_PICTURES.map(([n, title, a, b, stage]) => {
@@ -3776,13 +3779,24 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 .opus-rel em { font-style: normal; opacity: .8; }
 .opus-claim blockquote, .opus-outside { margin: 0; padding: .2rem 0 .2rem .9rem; border-left: 2px solid currentColor; font-family: var(--display); font-size: 1.02rem; line-height: 1.5; }
 .opus-cite { display: block; font: .64rem/1.7 var(--mono); margin-top: .3rem; }
-.opus-tile { margin: 1.2rem 0 0; border-top: 1px solid currentColor; padding-top: .2rem; }
-.opus-tile > summary { display: block; width: 100%; cursor: pointer; list-style: none; padding: .95rem 0; min-height: 44px; font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+.opus-tile { margin: 1.2rem 0 0; border-left: 3px solid rgba(217,180,74,.75); border-radius: 0 8px 8px 0; background: rgba(217,180,74,.10); }
+.opus-tile[open] { background: rgba(217,180,74,.14); padding-bottom: .6rem; }
+.opus-tile > summary { display: flex; align-items: center; width: 100%; min-height: 44px; cursor: pointer; list-style: none; padding: .7rem .9rem; border: 1px solid rgba(217,180,74,.55); border-left: 0; border-radius: 0 8px 8px 0; background: rgba(217,180,74,.20); font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.opus-tile > summary:hover, .opus-tile > summary:focus-visible { background: rgba(217,180,74,.32); }
 .opus-tile > summary::-webkit-details-marker { display: none; }
-.opus-tile > summary::after { content: " \\25b8"; }
-.opus-tile[open] > summary::after { content: " \\25be"; }
-.opus-tile .opus-claims { margin-top: .4rem; }
-.opus-tile-all { font-size: .82rem; margin: 0 0 .4rem; }
+.opus-tile .t-open, .opus-tile[open] .t-closed { display: none; }
+.opus-tile[open] .t-open { display: inline; }
+.opus-tile .opus-claims { margin: .8rem 0 .2rem; padding: 0 .9rem; }
+.opus-tile-foot { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; align-items: center; justify-content: space-between; margin: 0; padding: 0 .9rem; font-size: .82rem; }
+.opus-tile-close { font: .62rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: inherit; background: rgba(217,180,74,.20); border: 1px solid rgba(217,180,74,.55); border-radius: 6px; padding: .55rem .8rem; min-height: 40px; cursor: pointer; }
+.opus-tile-close:hover, .opus-tile-close:focus-visible { background: rgba(217,180,74,.32); }
+/* desktop: an open tile takes the claim column's place, so the pinned panel
+   does not grow (Damian, 2026-11-13: "adds a scroll bar") */
+.opus-pinned .opus-pic.tile-open .opus-text > .opus-claims, .opus-pinned .opus-pic.tile-open .opus-text > .opus-outside { display: none; }
+.opus-pinned .opus-pic.tile-open .opus-tile { margin-top: .6rem; }
+.opus-tile .opus-claim { margin-bottom: .9rem; }
+.opus-tile .opus-rel { font-size: 1.05rem; }
+.opus-tile .opus-claim blockquote { font-size: .96rem; line-height: 1.45; }
 .opus-flow .opus-pic .opus-tile { order: 3; }
 .opus-related { font: .6rem var(--mono); letter-spacing: .12em; text-transform: uppercase; opacity: .75; margin: 0 0 .2rem; }
 .opus-green, .opus-peacock { position: absolute; pointer-events: none; opacity: 0; }
@@ -3845,6 +3859,7 @@ else if(st==='red'){var t2=Math.min(1,t*1.6);if(segs[i].getAttribute('data-yello
 colours(i>=0&&segs[i].id==='picture-7',t);
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
 setMode();if(mode==='pinned'&&segs[0])segs[0].classList.add('is-active');
+[].slice.call(document.querySelectorAll('.opus-tile')).forEach(function(d){var sec=d.closest('.opus-pic');d.addEventListener('toggle',function(){if(sec)sec.classList.toggle('tile-open',d.open)});var c=d.querySelector('.opus-tile-close');if(c)c.addEventListener('click',function(){d.open=false;var s=d.querySelector('summary');if(s)s.focus()})});
 addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});tick()})();`
     registerPage({
       slug: 'opus', title: 'The opus', where: 'opus', nav: 'opus',
