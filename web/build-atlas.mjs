@@ -3554,16 +3554,56 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       // (the paragraph says "man of light", not Nous) and CW 14 §677 (the quote
       // never names the unio mentalis) left the page
       5: [[['coniunctio|expresses|union-of-opposites', '16', 460]], [['water|symbolizes|the-unconscious', '16', 459]]],
-      6: [[['death|precedes|rebirth', '16', 467]], [['coniunctio|followed-by|nigredo', '16', 468]],
-          [['sol-niger|belongs-to|nigredo', '14', 113]]],
+      // pictures carry CW 16 only from 2026-11-13 (Damian: the amplification
+      // tile); the CW 14 claims that sat here moved into their tiles
+      6: [[['death|precedes|rebirth', '16', 467]], [['coniunctio|followed-by|nigredo', '16', 468]]],
       7: [[['dissociation|is-analogous-to|schizophrenia', '16', 476]], [['mercurius|resists-integration-into|consciousness', '16', 478]],
           [['nigredo|parallels|dark-night-of-the-soul', '16', 479]]],
-      8: [[['water|symbolizes|sapientia', '16', 485]], [['dew|belongs-to|albedo', '14', 155]],
-          [['nigredo|precedes|albedo', '16', 493]]],
+      8: [[['water|symbolizes|sapientia', '16', 485]], [['nigredo|precedes|albedo', '16', 493]]],
       9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['nigredo|precedes|albedo', '16', 515]]],
-      10: [[['anthropos|parallels|christ', '16', 525]], [['denarius|means|christ', '16', 525]],
-           [['rebis|symbolizes|union-of-opposites', '14', 11]]]
+      10: [[['anthropos|parallels|christ', '16', 525]], [['denarius|means|christ', '16', 525]]]
     }
+    const CLAIMS_SETS = {
+      1: ['mercurial-fountain', 'fountain', 'aqua-permanens', 'quintessence', 'axiom-of-maria'],
+      2: ['rex', 'regina', 'sol', 'luna'],
+      3: ['veritas'],
+      4: ['bath', 'night-sea-journey', 'solutio', 'dissolutio', 'rex-marinus', 'the-sea'],
+      5: ['coniunctio', 'hierosgamos', 'union-of-opposites'],
+      6: ['nigredo', 'mortificatio', 'putrefactio', 'sol-niger', 'death'],
+      7: ['sublimatio', 'cauda-pavonis', 'benedicta-viriditas', 'soul'],
+      8: ['dew', 'ablutio', 'albedo'],
+      9: ['unio-mentalis', 'reunion-with-the-body', 'unus-mundus', 'anima-mundi'],
+      10: ['rebis', 'filius-philosophorum', 'rebirth', 'lapis', 'anthropos'],
+      close: ['rubedo', 'citrinitas']
+    }
+    // The amplification tile under each picture (Damian, 2026-11-13: "put it
+    // into todays release"): what Jung says of the same figures in CW 12, 13 and
+    // 14. Pinned picks: each quote names the picture's figure or operation (no
+    // keyword matches); Jung asserts first, spread across volumes; nothing the
+    // two Gemini reviews flagged (CW 14 §120, §677). Each pick was put to Gemini
+    // with the question whether the quote, read in its paragraph, concerns the
+    // figure or operation shown in the picture. The count is the picture's CW
+    // 12, 13 and 14 rows on /opus-claims.
+    const OPUS_TILES = {
+      1: [['quintessence|produced-from|four-elements', '14', 439], ['mercurius|exemplifies|axiom-of-maria', '13', 272],
+          ['mercurius|synonym-of|aqua-permanens', '12', 90], ['sol|descends-into|mercurial-fountain', '14', 23]],
+      2: [['sol|opposes|luna', '14', 127], ['rex|represents|consciousness', '12', 496], ['rex|conforms-to|christ', '14', 349]],
+      3: [['arcane-substance|defined-as|veritas', '12', 377], ['veritas|personified-as|sapientia', '14', 366]],
+      4: [['night-sea-journey|is-a-descent-into|the-unconscious', '12', 436], ['the-sea|is-for-the-alchemists-their-own-darkness-namely|the-unconscious', '13', 183],
+          ['solutio|dissolves|the-body', '14', 316], ['bath|renews|rex', '14', 504]],
+      5: [['hierosgamos|symbolizes|union-of-opposites', '12', 43], ['coniunctio|is|death', '13', 457],
+          ['coniunctio|parallels|christ-and-church', '14', 106], ['hierosgamos|embodies|union-of-opposites', '14', 207]],
+      6: [['nigredo|corresponds-to|shadow-confrontation', '12', 41], ['rex|undergoes|mortificatio', '13', 106],
+          ['nigredo|corresponds-to|the-unconscious', '14', 646], ['sol-niger|belongs-to|nigredo', '14', 113]],
+      7: [['cauda-pavonis|symbolizes|wholeness', '12', 331], ['soul|returns-to|helios', '12', 66], ['regina|undergoes|cauda-pavonis', '14', 430]],
+      8: [['albedo|emerges-from|the-unconscious', '14', 220], ['ablutio|precedes|albedo', '12', 334],
+          ['nigredo|precedes|albedo', '13', 89], ['dew|belongs-to|albedo', '14', 155]],
+      9: [['unio-mentalis|conjoined-with|the-body', '14', 664], ['reunion-with-the-body|precedes|unus-mundus', '14', 679],
+          ['unio-mentalis|corresponds-to|individuation', '14', 670], ['anima-mundi|imprisoned-in|matter', '12', 414]],
+      10: [['rebis|symbolizes|union-of-opposites', '14', 11], ['filius-philosophorum|is|lapis', '12', 530],
+           ['lapis|represents-a-transcendent-totality-which-coincides-with|the-self', '13', 134], ['anthropos|stands-for|wholeness', '12', 210]]
+    }
+    const OPUS_TILE_MIN = 2
     const OPUS_PICKS = { close: [['coniunctio|belongs-to|rubedo', '14', 307]] }
     const OPUS_YELLOW = ['citrinitas|coincides-with|rubedo', '12', 271]
     const edgeByKey = new Map(atlasEdges.map(e => [e.key, e]))
@@ -3618,7 +3658,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       return tidy(d, r.volume, r.paragraph)
     }
     const relatedTag = (v) => String(v) === '16' ? '' : `<p class="opus-related">Related claim · CW ${esc(v)}</p>`
-    const claimLine = (e, r) => `<li class="opus-claim${String(r.volume) === '16' ? '' : ' is-related'}">${relatedTag(r.volume)}<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
+    const claimLine = (e, r, mark = true) => `<li class="opus-claim${String(r.volume) === '16' || !mark ? '' : ' is-related'}">${mark ? relatedTag(r.volume) : ''}<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
 <blockquote class="ev">&ldquo;${esc(shownQuote(e, r))}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
     const relLine = (e) => `<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>`
     const claimGroup = (g) => {
@@ -3627,6 +3667,21 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       const refs = [...new Map(g.map(([, r]) => [r.quote, r])).values()]
       return `<li class="opus-claim">${edges.map(relLine).join('\n')}
 ${refs.map(r => `<blockquote class="ev">&ldquo;${esc(tidy(r.quote, r.volume, r.paragraph))}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p>`).join('\n')}</li>`
+    }
+    const trilogyRows = (n) => { const ids = new Set(CLAIMS_SETS[n]); let c = 0
+      for (const e of atlasEdges) if (ids.has(e.source) || ids.has(e.target)) for (const r of e.refs) if (r.verified === true && r.quote && ['12', '13', '14'].includes(String(r.volume))) c++
+      return c }
+    const tileHtml = (n) => {
+      const picks = (OPUS_TILES[n] || []).map(x => findPick(x))
+      if (picks.length < OPUS_TILE_MIN) return ''
+      for (const [e, r] of picks) if (!['12', '13', '14'].includes(String(r.volume))) { console.error(`OPUS PAGE: picture ${n}'s tile holds a CW ${r.volume} claim`); process.exit(1) }
+      const total = trilogyRows(n); derived(total)
+      return `<details class="opus-tile"><summary>Amplification across the trilogy · ${total} claims</summary>
+<ul class="opus-claims">
+${picks.map(([e, r]) => claimLine(e, r, false)).join('\n')}
+</ul>
+<p class="opus-tile-all"><a href="/opus-claims#picture-${n}">All ${total} &rarr;</a></p>
+</details>`
     }
     const sections = OPUS_PICTURES.map(([n, title, a, b, stage]) => {
       const pool = []
@@ -3660,6 +3715,7 @@ ${st ? `<p class="opus-stage">${esc(st.note)}${st.para && !st.inline ? ` CW 16 �
 ${claimsHtml}
 </ul>
 ${shimmer}
+${tileHtml(n)}
 </div>
 </section>`
     }).join('\n')
@@ -3720,6 +3776,14 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 .opus-rel em { font-style: normal; opacity: .8; }
 .opus-claim blockquote, .opus-outside { margin: 0; padding: .2rem 0 .2rem .9rem; border-left: 2px solid currentColor; font-family: var(--display); font-size: 1.02rem; line-height: 1.5; }
 .opus-cite { display: block; font: .64rem/1.7 var(--mono); margin-top: .3rem; }
+.opus-tile { margin: 1.2rem 0 0; border-top: 1px solid currentColor; padding-top: .2rem; }
+.opus-tile > summary { display: block; width: 100%; cursor: pointer; list-style: none; padding: .95rem 0; min-height: 44px; font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+.opus-tile > summary::-webkit-details-marker { display: none; }
+.opus-tile > summary::after { content: " \\25b8"; }
+.opus-tile[open] > summary::after { content: " \\25be"; }
+.opus-tile .opus-claims { margin-top: .4rem; }
+.opus-tile-all { font-size: .82rem; margin: 0 0 .4rem; }
+.opus-flow .opus-pic .opus-tile { order: 3; }
 .opus-related { font: .6rem var(--mono); letter-spacing: .12em; text-transform: uppercase; opacity: .75; margin: 0 0 .2rem; }
 .opus-green, .opus-peacock { position: absolute; pointer-events: none; opacity: 0; }
 .opus-green { inset: 0; background: radial-gradient(ellipse 85% 65% at 50% 105%, rgba(52,150,96,.55), rgba(30,90,60,.18) 55%, transparent 80%); }
@@ -3798,19 +3862,6 @@ addEventListener('scroll',tick,{passive:true});addEventListener('resize',functio
     // and the verified references in CW 12, 13, 14 or 16 whose subject or object
     // is in its concept set. One row per reference; a claim may sit in more than
     // one section. Nothing here is new text: every quote is the seed's own.
-    const CLAIMS_SETS = {
-      1: ['mercurial-fountain', 'fountain', 'aqua-permanens', 'quintessence', 'axiom-of-maria'],
-      2: ['rex', 'regina', 'sol', 'luna'],
-      3: ['veritas'],
-      4: ['bath', 'night-sea-journey', 'solutio', 'dissolutio', 'rex-marinus', 'the-sea'],
-      5: ['coniunctio', 'hierosgamos', 'union-of-opposites'],
-      6: ['nigredo', 'mortificatio', 'putrefactio', 'sol-niger', 'death'],
-      7: ['sublimatio', 'cauda-pavonis', 'benedicta-viriditas', 'soul'],
-      8: ['dew', 'ablutio', 'albedo'],
-      9: ['unio-mentalis', 'reunion-with-the-body', 'unus-mundus', 'anima-mundi'],
-      10: ['rebis', 'filius-philosophorum', 'rebirth', 'lapis', 'anthropos'],
-      close: ['rubedo', 'citrinitas']
-    }
     const nodeIds = new Set(atlasNodes.map(x => x.id))
     for (const [k, ids] of Object.entries(CLAIMS_SETS)) for (const id of ids) if (!nodeIds.has(id)) { console.error(`OPUS CLAIMS: concept ${id} (section ${k}) is not a node in the graph`); process.exit(1) }
     const CLAIM_VOLS = ['16', '14', '12', '13']
@@ -3877,6 +3928,7 @@ ${sectionsHtml}
 }
 `
     const CLAIMS_JS = `(function(){var m=document.querySelector('.page-main'),bs=[].slice.call(document.querySelectorAll('.c-chip'));if(!m)return;
+function hash(){var h=location.hash.slice(1),d=h&&document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;d.scrollIntoView()}}hash();addEventListener('hashchange',hash);
 function counts(){[].slice.call(document.querySelectorAll('.c-sec')).forEach(function(s){var n=0;[].slice.call(s.querySelectorAll('tbody tr')).forEach(function(r){if(!m.classList.contains('c-hide-'+r.getAttribute('data-v')))n++});var c=s.querySelector('.c-count'),t=c.getAttribute('data-total');c.textContent=(String(n)===t?t:n+' of '+t)+' claims'})}
 bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-v'),on=!b.classList.contains('on');b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');m.classList.toggle('c-hide-'+v,!on);counts()})})})();`
     registerPage({
