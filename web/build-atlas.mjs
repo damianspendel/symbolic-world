@@ -3504,7 +3504,9 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     const OPUS_STAGE = {
       6: { edge: 'coniunctio|followed-by|nigredo', para: 468, note: 'The page turns black where Jung names the nigredo.' },
       7: { edge: 'nigredo|parallels|dark-night-of-the-soul', para: 479, note: 'The black holds.' },
-      8: { edge: 'nigredo|precedes|albedo', para: 493, note: 'The black fades to white. Jung names the whitening at CW 16 §484, and it is complete at §493.' },
+      // the wording after the Gemini hostile review (Damian, 2026-11-13): §493
+      // names the turn, not its completion; the citation is in the sentence
+      8: { edge: 'nigredo|precedes|albedo', para: 493, inline: true, note: 'Jung names the whitening at §484; at §493 the nigredo gives way to the albedo.' },
       9: { edge: 'nigredo|precedes|albedo', para: 515, note: 'White.' },
       10: { edge: null, para: null, note: 'Jung names no stage in these paragraphs; the white holds as a choice of display, not a claim.' }
     }
@@ -3523,20 +3525,24 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     // their cite. The order is explicit so a data change cannot reshuffle it;
     // the build refuses if an entry leaves the graph or a picture's colour cite
     // is not among its claims. The closing panel has its own pick, and the
-    // yellow before the red rests on CW 12 §271.
+    // red rests on CW 12 §334 (the yellow left the page on 2026-11-13).
     const OPUS_CLAIMS = 3
     const OPUS_ORDER = {
       1: [[['alchemy|derives-from|the-unconscious', '16', 407]], [['quintessence|derives-from|four-elements', '16', 402]],
           [['mercurius|is-counterpart-of|the-trinity', '16', 403]]],
       2: [[['the-unconscious|produces|symbol', '16', 414]],
           [['regina|represents|artifex', '16', 421], ['rex|represents|soror-mystica', '16', 421]], [['coniunctio|involves|incest', '16', 415]]],
+      // picture 3 keeps two (Damian, 2026-11-13, after the Gemini hostile
+      // review): coniunctio amplified-by sol/luna at §451 left, since the quote
+      // is a marriage proposal, not an amplification
       3: [[['the-opus|requires|morality', '16', 451], ['the-opus|requires|morality', '16', 450]],
-          [['coniunctio|amplified-by|sol', '16', 451], ['coniunctio|amplified-by|luna', '16', 451]],
           [['repression|leads-to|dissociation', '16', 452]]],
       4: [[['bath|is-form-of|night-sea-journey', '16', 455]], [['rotundum|corresponds-to|wholeness', '16', 454]],
           [['wholeness|requires|soul', '16', 454]]],
-      5: [[['nous|is-embraced-by|physis', '16', 457]], [['water|symbolizes|the-unconscious', '16', 459]],
-          [['coniunctio|is-a|hierosgamos', '14', 120]]],
+      // picture 5: CW 14 §120 (Sol and Mercurius) gave way to §460 after the
+      // Gemini hostile review (Damian, 2026-11-13)
+      5: [[['coniunctio|expresses|union-of-opposites', '16', 460]], [['nous|is-embraced-by|physis', '16', 457]],
+          [['water|symbolizes|the-unconscious', '16', 459]]],
       6: [[['death|precedes|rebirth', '16', 467]], [['coniunctio|followed-by|nigredo', '16', 468]],
           [['sol-niger|belongs-to|nigredo', '14', 113]]],
       7: [[['dissociation|is-analogous-to|schizophrenia', '16', 476]], [['mercurius|resists-integration-into|consciousness', '16', 478]],
@@ -3557,7 +3563,10 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       if (!r && hard) { console.error(`OPUS PAGE: the pick ${key} at CW ${vol} §${para} is not in the graph — refusing to cite a claim that is not there.`); process.exit(1) }
       return r ? [e, r] : null
     }
-    const yellow = findPick(OPUS_YELLOW, false)
+    // the yellow left the page after the Gemini hostile review (Damian,
+    // 2026-11-13): CW 12 §271 is a general remark inside a dream commentary.
+    // The claim stays in the graph and on /opus-claims; the panel goes white to red
+    const yellow = null
     // the woodcuts: Jung's own copy of the 1550 Rosarium, Stiftung der Werke von
     // C.G. Jung, Zürich, digitised on e-rara.ch (doi:10.3931/e-rara-10570, Public
     // Domain Mark); one crop per picture, paper tone kept (Damian, 2026-11-12)
@@ -3566,9 +3575,23 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     const inRange = (r, a, b) => String(r.volume) === '16' && Number(r.paragraph) >= a && Number(r.paragraph) <= b
     // Claims from outside CW 16 carry a visible mark (Damian, 2026-11-13, after
     // the Gemini hostile review: "Mark the claims in the subtitle")
+    // A display quote for one reference whose stored quote is spliced (Damian,
+    // 2026-11-13, after the Gemini hostile review): the unbroken passage from the
+    // same paragraph that holds every fragment of the stored quote. Checked
+    // 2026-11-13: exact substring of CW 16 §468, 19 words, claude-fable-5 read in
+    // context, SUPPORTED as Jung asserts. The graph keeps its stored quote.
+    const OPUS_QUOTE_DISPLAY = {
+      'coniunctio|followed-by|nigredo|16|468': 'The coniunctio was incestuous and therefore sinful, leaving pollution behind it. The nigredo always appears in conjunction with tenebrositas'
+    }
+    const shownQuote = (e, r) => {
+      const d = OPUS_QUOTE_DISPLAY[`${e.key}|${r.volume}|${r.paragraph}`]
+      if (!d) return r.quote
+      if (!String(r.quote).split(/\s*\.\.\.\s*/).every(f => d.includes(f.trim()))) { console.error(`OPUS PAGE: the display quote for ${e.key} at §${r.paragraph} no longer holds the stored quote's fragments`); process.exit(1) }
+      return d
+    }
     const relatedTag = (v) => String(v) === '16' ? '' : `<p class="opus-related">Related claim · CW ${esc(v)}</p>`
     const claimLine = (e, r) => `<li class="opus-claim${String(r.volume) === '16' ? '' : ' is-related'}">${relatedTag(r.volume)}<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
-<blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
+<blockquote class="ev">&ldquo;${esc(shownQuote(e, r))}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
     const relLine = (e) => `<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>`
     const claimGroup = (g) => {
       if (g.length === 1) return claimLine(g[0][0], g[0][1])
@@ -3604,7 +3627,7 @@ ${figure}
 <div class="opus-text">
 <p class="eyebrow">Picture ${n} · CW 16 §${a} to §${b}</p>
 <h2>${esc(title)}</h2>
-${st ? `<p class="opus-stage">${esc(st.note)}${st.para ? ` CW 16 §${st.para}.` : ''}</p>` : ''}
+${st ? `<p class="opus-stage">${esc(st.note)}${st.para && !st.inline ? ` CW 16 §${st.para}.` : ''}</p>` : ''}
 <ul class="opus-claims">
 ${claimsHtml}
 </ul>
@@ -3616,7 +3639,7 @@ ${shimmer}
     const opusBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The opus</h1>
 <p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with related claims from CW 12 and 14 marked as such.</p></div>
-<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses.</p>
+<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses. The colours change where Jung, or a text he quotes, names a stage; between those points they are the page's display.</p>
 <div class="opus-ground" aria-hidden="true"><div class="opus-green"></div><div class="opus-peacock"></div><p class="opus-peacock-label">cauda pavonis, the peacock's tail</p></div>
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
 <div class="opus-pin">
@@ -3624,7 +3647,7 @@ ${sections}
 <section class="opus-close opus-seg" id="the-red" data-stage="red"${yellow ? ' data-yellow="1"' : ''}>
 <div class="opus-text">
 <p class="eyebrow">After the white</p>
-${yellow ? `<p class="opus-stage">The white turns yellow, then red. CW 12 §271.</p>` : ''}
+<p class="opus-stage">The white turns red. CW 12 §334.</p>
 ${relatedTag('12')}<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
 <ul class="opus-claims">
 ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map(([e, r]) => claimLine(e, r)).join('\n')}
@@ -3700,7 +3723,8 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
     // erring toward flow. In both, the stage of the picture in view sets the
     // ground with the same thresholds: the fade mixes black to white by how far
     // it has gone, picture 7 raises the green and sweeps the peacock band, the
-    // closing panel warms white to yellow to red.
+    // closing panel warms white to red (the yellow branch stays for a
+    // data-yellow panel, which the page no longer emits).
     const OPUS_JS = `(function(){
 var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main'),track=document.querySelector('.opus-track');if(!g||!m||!track)return;
 var de=document.documentElement,segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header'),mode='';
@@ -3733,11 +3757,11 @@ addEventListener('scroll',tick,{passive:true});addEventListener('resize',functio
     registerPage({
       slug: 'opus', title: 'The opus', where: 'opus', nav: 'opus',
       changefreq: 'monthly', priority: '0.6',
-      description: 'Jung’s reading of the ten woodcuts of the Rosarium philosophorum in CW 16, with verified claims and quotes, and the colours of the alchemical work where he names them.',
+      description: 'Jung’s reading of the ten woodcuts of the Rosarium philosophorum in CW 16, with related claims from CW 12 and 14, verified claims and quotes, and the colours of the alchemical work where he names them.',
       style: opusStyle, body: opusBody + `\n<script>${OPUS_JS}</script>`
     })
     V2_COPY.push(['public/opus.html (generated)', stripEvidence(opusBody)])
-    console.log('opus page: written, pinned stage, woodcuts ' + (woodcutSize(1) ? 'in' : 'as placeholders') + ', yellow ' + (yellow ? 'in (CW 12 §271)' : 'left out (CW 12 §271 edge not in the graph)'))
+    console.log('opus page: written, pinned stage, woodcuts ' + (woodcutSize(1) ? 'in' : 'as placeholders') + ', yellow ' + (yellow ? 'in (CW 12 §271)' : 'off (ruled out 2026-11-13)'))
 
     // ------------------------------------------------ /opus-claims --------
     // Every verified claim on the figures of the ten pictures (Damian,
