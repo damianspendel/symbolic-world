@@ -1473,11 +1473,27 @@
      "auditor": "request model in pipeline/crossvendor_run.py"
     }
    }
+  },
+  {
+   "id": "b-cw13-6-pass2",
+   "status": "merged (branch mining-away, unpublished)",
+   "window": "CW13 §351-420",
+   "result": "CW 13 WINDOW 6: Alchemical Studies §351-420, the historical part of The Philosophical Tree: the tree as the growth of the arcane substance, the opus likened to a tree in Zosimos and Greverus, the planets as temperaments, the coniunctio tetraptiva and the axiom of Maria, the tetrasomia reducing the quaternio to unity, Mercurius as arcane substance and as the tree, the four forms of Hermes from the four sons of Horus and Ezekiel's cherubim, Daniel's beasts as functions, Zosimos's quicksilver as spirit, the tree putrefied in the water and reinforced by active imagination, Dorn's metallic tree coagulating its blood into fruit and Dorn against Aristotle, the golden tree enclosing the seven metals, the putissimus homo sweating rose-coloured blood whose soul is in the blood, the stone as primordial religious experience, the rose and the lotus, the rose-coloured blood as Eros and the servator cosmi, the compensatory Logos, Petrus Bonus on the stone and the virgin birth, alchemy discovering the symbolism of individuation, science withdrawing projection, Freud and the incest archetype, symbols compensating consciousness, the serpent as Melusina, the tree of Bata as instrument of transformation, Abu'l Qasim's four colours, the vine and the sun-and-moon fruits, Khunrath's salt as Sophia, tree and mountain, Mercurius as tree of the metals, the fruit as the pneumatic man, the world-tree, the inverted tree and the Sefiroth and man, the tree as enlightenment, the tree giving rise to wisdom and expressing introversion, the serpent as tree-numen and the stork as allegory of Christ, Melusina as tree-numen and Mercurius in his feminine role of wisdom. Run by hand in the mining chat on 2026-11-13 morning on Damian's instruction to run all remaining windows; the sixth window of CW 13 in the second pass (state record b-cw13-6-pass2). Mined 56 candidates/65 refs (Opus-family miner subagent, blinded, model id stamped; eight attaches onto standing edges; 15 names entries; 8 cross-register flags; 2 stage candidates; stages_note recorded). Pre-check kept all 65 (quotation share of CW 13 after the window 7.79 percent against the 9 percent cap). Fable gate 61 TRUE / 4 CORRECTED / 0 FALSE: §354 the tree representing the growth of the arcane substance demoted to medium with a scope note; §415 the tree expressing introversion scoped to the Scriptum Alberti's tree with medium; scope notes on §360 (the four forms of Hermes) and §408 (the fruit of Simon Magus's tree). All fifteen names accepted. Gemini cross-vendor 57 PASS / 8 FINDING on 65 post-gate refs: §354 retyped jung-quotes-source (Zosimos's words through the Pelagios report); §402 demoted to medium (the standing four-colours node was minted for the dream mandala's colours, the label question for the sitting); §359 and §360 reports kept under the in-doubt rule, §376 and §398 on references already at medium, §415 and §416 the allowed ellipsis, all overruled with audit notes. Names applied to 15 entries on 14 nodes; cross_register set on 7 edges; eighteen mints: planets, temperaments, coniunctio-tetraptiva, tetrasomia, four-sons-of-horus, cherubim, four-beasts, metallic-tree, aristotle, golden-tree, seven-metals, servator-cosmi, virgin-birth, vine, mountain, fruit, inverted-tree, tree-numen. Sources written as other: Greverus (author added to the controlled list in the tooling commit), the Congeries Paracelsicae chemicae, the Ripley Scrowle and the treatise of Pelagios (texts added), the old English legend of Seth and Christian tradition on the stork. +48 edges, 9 refs attached to standing edges and 8 further refs on this window's new edges, +65 refs, +18 nodes. Graph 1231/5087/6829; CW 13 now 597 references. Transfer: transfer.py's reuse figure is 100 percent by construction for a second pass over a baseline volume and is recorded for the trend file's continuity only. Family sweep 48 edges under v0.7.2: agreement 39/48 (81 percent), 38 assigned, 9 queued, 1 no-family, 0 text-undecided; queue 885; one bare unclassified row from the Gemini arm (n 5042) normalized to no-family before assembly, raw file kept. strain: 1 no-family, 0 text-undecided of 48 swept; new homeless strings: discovers (both arms no-family on Freud and incest). FAMILY GAP FOR THE SITTING: is-called, is-compared-with, is-seen-as and is-allegory-of each split a content family against doctrinal-attribution on named or collective carriers; is left the Opus arm text-undecided on 'the tree or its spiritus vegetativus'; expresses split symbolization against manifestation; takes-role-of split manifestation against personification; exemplifies and discovers-symbolism-of each left the Gemini arm without a family. Fable spend: the gate ran on claude-fable-5-1 in the mining chat on 2026-11-13, 65 refs judged against the full paragraphs; weekly Fable 84 percent and 5-hour meter 68 percent at the window's start against today's 95 percent stop, no capacity warning. Living docs: README/ABSTRACT/REVIEW counts refreshed to 1231/5087/6829, distinct paragraphs 4021, claim mix 5301/1127/401. Note quotes (RULES #24): seed.json holds no '[...]'. Data committed only; the iCloud archive step runs after the commit.",
+   "models": {
+    "proposer": "claude-opus-5-5",
+    "gate": "claude-fable-5-1",
+    "auditor": "gemini-3.1-pro-preview",
+    "source": {
+     "proposer": "miner subagent transcript agent-a9e2728810108f60c, 25 assistant turns",
+     "gate": "session transcript 1f55cd21-bb26-4047-bd4d-966b1601feed, 16 assistant turns after the miner finished at 2026-11-13T07:11:25.231Z",
+     "auditor": "request model in pipeline/crossvendor_run.py"
+    }
+   }
   }
  ],
- "next": "CW13-DUE: window 6 (§351-420)",
- "nodes": 1213,
- "edges": 5039,
- "refs": 6764,
+ "next": "CW13-DUE: window 7 (§421-482)",
+ "nodes": 1231,
+ "edges": 5087,
+ "refs": 6829,
  "as_of": "2026-11-13"
 }
