@@ -35,7 +35,10 @@ jobs:
       - name: Jung graph structural checks (corpus is local-only; quote checks run locally via manage.sh)
         run: |
           python3 - << 'PY'
-          import json
+          import json, re
+          # the quote cap counts letter tokens, as the mining pre-check does
+          # (tests/test_graph.py words(); fragments split at "..." or "…")
+          def words(s): return re.findall(r"[a-z]+", s.lower())
           seed = json.load(open('seed.json'))
           ids = {n['id'] for n in seed['nodes']}
           CLAIMS = {'jung-asserts','jung-reports-parallel','jung-quotes-source'}
@@ -50,7 +53,8 @@ jobs:
                   if e['relation'] not in STRUCTURAL and r.get('claim_type') not in CLAIMS:
                       problems.append(f"bad claim_type: {e['subject']}->{e['object']}")
                   q = r.get('quote','')
-                  if len(q.split()) > 27: problems.append(f"quote too long: {e['subject']}->{e['object']}")
+                  n_tok = sum(len(words(f)) for f in re.split(r'\.\.\.|…', q))
+                  if n_tok > 25: problems.append(f"quote too long ({n_tok} letter tokens): {e['subject']}->{e['object']}")
               if e['relation'] not in STRUCTURAL and not e.get('references'):
                   problems.append(f"no references: {e['subject']}->{e['object']}")
           assert not problems, problems[:10]
