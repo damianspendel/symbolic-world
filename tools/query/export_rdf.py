@@ -61,6 +61,14 @@ QUOTES_FILE = "symbolicworld-quotes.ttl"
 ONTOLOGY_FILE = "symbolicworld-ontology.ttl"
 VOID_FILE = "symbolicworld-void.ttl"
 
+# Links to Wikidata (v3.0.0 item 1). The file keeps every link with its check
+# record; only kind "figure" names a graph node (key = node id), so only those
+# are exported, and only where the check is "accept". Author and text links have
+# no node and stay in the file for a later decision.
+LINKS_FILE = os.path.join(HERE, "..", "linking", "wikidata_links.json")
+WIKIDATA_ENTITY = "http://www.wikidata.org/entity/"
+QID = re.compile(r"Q[1-9][0-9]*\Z")
+
 PREFIXES = [
     ("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
     ("rdfs", "http://www.w3.org/2000/01/rdf-schema#"),
@@ -69,6 +77,8 @@ PREFIXES = [
     ("swf", BASE + "family/"),
     ("swr", BASE + "relation/"),
     ("swn", BASE + "node/"),
+    ("skos", "http://www.w3.org/2004/02/skos/core#"),
+    ("wd", WIKIDATA_ENTITY),
 ]
 PROVENANCE_PREFIXES = PREFIXES + [
     ("xsd", "http://www.w3.org/2001/XMLSchema#"),
@@ -100,7 +110,56 @@ def literal(text):
     return f'"{escaped}"'
 
 
-def header(graph, declarations, split_strings, unresolved_declarations):
+def model_family(record):
+    """'opus (Claude Opus family, ...)' -> 'Opus'."""
+    return record.split()[0].capitalize()
+
+
+def wikidata_links(graph, path=LINKS_FILE):
+    """The exported links: {node id: qid} in seed node order, for figure links the
+    checker accepted. A link naming no node, a malformed QID, a node linked twice,
+    or a link proposed and checked by the same model family stops the export."""
+    links = load_json(path)["links"]
+    ids = {node["id"] for node in graph.nodes}
+    chosen = {}
+    for link in links:
+        if link["kind"] != "figure" or link["check"] != "accept":
+            continue
+        key, qid = link["key"], link["qid"]
+        if key not in ids:
+            raise ValueError(f"{path}: figure link {key} -> {qid} names no node in {graph.path}")
+        if not QID.match(qid):
+            raise ValueError(f"{path}: {key} has a malformed QID {qid!r}")
+        if key in chosen:
+            raise ValueError(f"{path}: node {key} is linked twice")
+        if model_family(link["proposed_by"]) == model_family(link["checked_by"]):
+            raise ValueError(f"{path}: {key} was proposed and checked by one family")
+        chosen[key] = qid
+    return {node["id"]: chosen[node["id"]] for node in graph.nodes if node["id"] in chosen}
+
+
+def link_families(path=LINKS_FILE):
+    """(proposer families, checker families) over the exported links, as words."""
+    links = [l for l in load_json(path)["links"] if l["kind"] == "figure" and l["check"] == "accept"]
+    def words(field):
+        return " and ".join(sorted({model_family(l[field]) for l in links}))
+    return words("proposed_by"), words("checked_by")
+
+
+def links_note(count):
+    proposer, checker = link_families()
+    return [
+        f"# Links to Wikidata: {count} nodes carry skos:closeMatch to a Wikidata item,",
+        "# in their node blocks. Each link was proposed by one model family",
+        f"# ({proposer}) from a public Wikidata search and checked by a second",
+        f"# ({checker}); the maintainer spot-checks a seeded sample. Only links the",
+        "# checker accepted are here, and only for nodes: links to authors and texts",
+        "# have no node and are not exported. The check records are in",
+        "# tools/linking/wikidata_links.json in the repository.",
+    ]
+
+
+def header(graph, declarations, split_strings, unresolved_declarations, links):
     today = datetime.date.today().isoformat()
     lines = [
         "# The Symbolic World — structure and provenance, Turtle. CC BY 4.0.",
@@ -164,12 +223,15 @@ def header(graph, declarations, split_strings, unresolved_declarations):
         "#",
         "# The quoted words are NOT in this file. Each reference gives the volume and",
         "# paragraph, and the quote is on the concept page at symbolicworld.observer.",
+        "#",
+        *links_note(len(links)),
         "",
     ]
     return lines
 
 
-def build(graph, declarations):
+def build(graph, declarations, links=None):
+    links = wikidata_links(graph) if links is None else links
     families = graph.family_of_string()
     string_families = {}
     for family, strings in families.items():
@@ -181,7 +243,7 @@ def build(graph, declarations):
     restricted = [d for d in active_declarations(declarations)
                   if d.get("applies_to_family")]
 
-    out = header(graph, declarations, split, restricted)
+    out = header(graph, declarations, split, restricted, links)
     for prefix, iri in PREFIXES:
         out.append(f"@prefix {prefix}: <{iri}> .")
     out.append("")
@@ -232,7 +294,11 @@ def build(graph, declarations):
     for node in graph.nodes:
         out.append(f"{term('swn', PREFIXES[6][1], node['id'])} a sw:Node ;")
         out.append(f"    rdfs:label {literal(node.get('label', node['id']))} ;")
-        out.append(f"    sw:nodeType {literal(node.get('type', 'unknown'))} .")
+        if node["id"] in links:
+            out.append(f"    sw:nodeType {literal(node.get('type', 'unknown'))} ;")
+            out.append(f"    skos:closeMatch wd:{links[node['id']]} .")
+        else:
+            out.append(f"    sw:nodeType {literal(node.get('type', 'unknown'))} .")
         out.append("")
 
     out.append("# ---- edges " + "-" * 64)
@@ -479,8 +545,8 @@ def build_claims(graph):
     return "\n".join(head + out) + "\n"
 
 
-def build_graph_file(graph, declarations):
-    return build(graph, declarations) + build_claims(graph)
+def build_graph_file(graph, declarations, links=None):
+    return build(graph, declarations, links) + build_claims(graph)
 
 
 def build_quotes(graph):
@@ -546,6 +612,9 @@ def build_ontology(graph):
            "# relation or family, nothing inferred from a node's type. NO TRANSITIVITY AXIOM",
            "# APPEARS IN THIS FILE. The families are object properties; the verbatim relations",
            "# are leaf properties under them in the graph file, for strings in exactly one family.",
+           "#",
+           "# The graph file links nodes to Wikidata by skos:closeMatch. No term in this file",
+           "# is linked.",
            ""]
     for prefix, iri in PROVENANCE_PREFIXES:
         out.append(f"@prefix {prefix}: <{iri}> .")
@@ -605,9 +674,12 @@ def count_triples(text):
     return len(rdflib.Graph().parse(data=text, format="turtle"))
 
 
-def build_void(graph, graph_text, ontology_text, quotes_text):
+def build_void(graph, graph_text, ontology_text, quotes_text, links):
     today = datetime.date.today().isoformat()
     dataset = f"<{BASE}data/graph>"
+    linkset = f"<{BASE}data/graph-wikidata>"
+    wikidata = "<https://www.wikidata.org/>"
+    proposer, checker = link_families()
     references = sum(len(e.get("references") or []) for e in graph.edges)
     partitions = (("sw:Node", len(graph.nodes)), ("sw:Relation", len(graph.edges)),
                   ("sw:Claim", references), ("sw:Reference", references))
@@ -615,8 +687,12 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
            "#",
            *([f"# THE NAMESPACE IS PROVISIONAL: {BASE} is not registered, so the IRIs here",
               "# do not resolve yet."] if PROVISIONAL else [REGISTERED_NOTE]),
+           "#",
+           f"# The graph file's {len(links)} skos:closeMatch links to Wikidata are described",
+           "# below as a void:Linkset, a subset of the graph dataset.",
            "",
-           "@prefix void: <http://rdfs.org/ns/void#> ."]
+           "@prefix void: <http://rdfs.org/ns/void#> .",
+           "@prefix foaf: <http://xmlns.com/foaf/0.1/> ."]
     for prefix, iri in PROVENANCE_PREFIXES:
         out.append(f"@prefix {prefix}: <{iri}> .")
     pairs = [("a", "void:Dataset"),
@@ -636,6 +712,8 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
              ("void:triples", f'{count_triples(graph_text)}'),
              ("void:entities", f"{sum(n for _, n in partitions)}")]
     pairs += [("void:classPartition", f"[ void:class {c} ; void:entities {n} ]") for c, n in partitions]
+    if links:
+        pairs.append(("void:subset", linkset))
     # rdfs:seeAlso, not void:subset: the quotations must not read as part of a CC BY dataset
     if quotes_text is not None:
         pairs.append(("rdfs:seeAlso", f"<{BASE}data/quotations>"))
@@ -646,6 +724,26 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
                 ("dcterms:license", f"<{LICENSE}>"),
                 ("void:dataDump", f"<https://symbolicworld.observer/{ONTOLOGY_FILE}>"),
                 ("void:triples", f"{count_triples(ontology_text)}")])]
+    if links:
+        out += ["", statement(linkset, [
+            ("a", "void:Linkset"),
+            ("dcterms:title", literal("The Symbolic World: links to Wikidata")),
+            ("dcterms:description", literal(
+                "Links from nodes of the graph to Wikidata items, by skos:closeMatch. "
+                f"Each link was proposed by one model family ({proposer}) from a public "
+                f"Wikidata search, checked by a second family ({checker}), and spot-checked "
+                "by the maintainer on a seeded sample. Only links the checker accepted are "
+                "exported; the check records are in tools/linking/wikidata_links.json in "
+                "the repository.")),
+            ("void:subjectsTarget", dataset),
+            ("void:objectsTarget", wikidata),
+            ("void:linkPredicate", "skos:closeMatch"),
+            ("void:triples", f"{len(links)}")]),
+            "", statement(wikidata, [
+                ("a", "void:Dataset"),
+                ("dcterms:title", literal("Wikidata")),
+                ("foaf:homepage", wikidata),
+                ("void:uriSpace", literal(WIKIDATA_ENTITY))])]
     if quotes_text is not None:
         # dcterms:rights, not dcterms:license: the CC BY grant excludes this subset
         out += ["", statement(f"<{BASE}data/quotations>", [
@@ -661,12 +759,13 @@ def build_void(graph, graph_text, ontology_text, quotes_text):
 def build_all(graph, declarations, quotes_mode=None):
     """{file name: Turtle text} for the publishable export."""
     mode = quotes_mode or QUOTES_MODE
-    files = {GRAPH_FILE: build_graph_file(graph, declarations),
+    links = wikidata_links(graph)
+    files = {GRAPH_FILE: build_graph_file(graph, declarations, links),
              ONTOLOGY_FILE: build_ontology(graph)}
     quotes = build_quotes(graph) if mode == "separate" else None
     if quotes is not None:
         files[QUOTES_FILE] = quotes
-    files[VOID_FILE] = build_void(graph, files[GRAPH_FILE], files[ONTOLOGY_FILE], quotes)
+    files[VOID_FILE] = build_void(graph, files[GRAPH_FILE], files[ONTOLOGY_FILE], quotes, links)
     return files
 
 

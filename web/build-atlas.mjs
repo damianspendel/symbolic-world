@@ -1996,6 +1996,17 @@ details.chk[open] .cmeta { display: block; }
 .crow:target { border-color: var(--gold-dim); }
 .crow { scroll-margin-top: 6rem; }
 ` : ''}`
+// v3.0.0 item 1: a concept page whose node has a checked Wikidata link names the
+// item beside its other outward links. tools/linking/wikidata_links.json is the
+// record; only figure links the checker accepted name a node, the same filter
+// tools/query/export_rdf.py applies for skos:closeMatch. Nothing goes into
+// atlas.json or the app.
+const WIKIDATA_OF = new Map()
+for (const l of JSON.parse(readFileSync(here('../tools/linking/wikidata_links.json'), 'utf8')).links) {
+  if (l.kind !== 'figure' || l.check !== 'accept') continue
+  if (!/^Q[1-9][0-9]*$/.test(l.qid)) throw new Error(`wikidata_links.json: ${l.key} has a malformed QID ${l.qid}`)
+  WIKIDATA_OF.set(l.key, l.qid)
+}
 if (EMIT_CONCEPT_PAGES) {
   const conceptFamIds = new Set(families.map(f => f.id))
   const conceptFamName = new Map(families.map(f => [f.id, f.name]))
@@ -2180,6 +2191,9 @@ ${neighbours.map(nb => `<li><a class="ev" href="/concept-${nb.id}">${esc(labelOf
       (edges.length ? ` The atlas holds ${count(edges.length, 'relation')} for it` +
         (passages ? `, drawn from ${count(passages, 'passage')} quoted with volume and paragraph${volList}` : '') + '.' : '') + '</p>'
 
+    const qid = WIKIDATA_OF.get(node.id)
+    const wikidataLink = qid ? `<p class="meta">${ns(`Wikidata: <a href="https://www.wikidata.org/wiki/${qid}">${qid}</a>`)}</p>\n` : ''
+
     // spec-reader-v1, A1 and A7
     let readerBody = null
     if (CONCEPT_READER_LAYOUT) {
@@ -2252,7 +2266,7 @@ ${opening}
 ${topBlock}
 <p class="meta">${ns('Quotations are mechanically checked against the source paragraph. The method is documented <a href="/method">here</a>.')}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
-${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
 ${neighbourBlock}
 ${shelves.length > 1 ? `<p class="chips">${ns(`\n${shelfChips}\n`)}</p>` : ''}
 ${shelfBlocks}
@@ -2265,7 +2279,7 @@ ${shelfBlocks}
 ${CONCEPT_SEARCH_HEAD ? lede + '\n' : ''}<p class="meta">${ns(registerNote)}</p>
 <p>${ns(provLine)}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
-${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
 ${neighbourBlock}
 ${order.length > 1 ? `<p class="chips">${ns(`\n${chips}\n`)}</p>` : ''}
 ${groupBlocks}
