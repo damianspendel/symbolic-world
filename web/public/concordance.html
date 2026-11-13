@@ -1,0 +1,2395 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://symbolicworld.observer/concordance">
+<meta name="description" content="Jung’s psychological concepts beside the alchemical terms he reads them through, grouped by term: each pair with its relation, CW paragraph and a verified quote.">
+<meta property="og:image" content="https://symbolicworld.observer/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="The Symbolic World: an atlas of C. G. Jung's Collected Works, with the graph of concepts">
+<title>The concordance: Jung’s concepts beside the alchemical terms · The Symbolic World</title>
+<link rel="stylesheet" href="/chrome.css">
+<script src="/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { min-height: 100vh; }
+/* face, size and colour come from the shared scale in chrome.css; only the
+   rhythm between headings and text belongs to the page */
+h1 { margin: .3rem 0 .6rem; }
+h2 { margin: 2.2rem 0 .5rem; }
+h3 { margin: 1.4rem 0 .35rem; }
+h4 { margin: 1.3rem 0 .45rem; }
+p { font-size: .92rem; line-height: 1.62; }
+p + p { margin-top: .6rem; }
+a { color: var(--gold); }
+code { font: .86em var(--mono); color: var(--gold); background: rgba(212,175,55,.07); padding: .05em .3em; border-radius: 3px; }
+.dim { color: var(--ink-faint); }
+.meta { font: .62rem/1.7 var(--mono); color: var(--ink-faint); }
+.chip { font: .56rem var(--mono); letter-spacing: .03em; padding: .12rem .46rem; border-radius: 99px;
+        border: 1px solid var(--hairline); white-space: nowrap; color: var(--ink-faint); display: inline-block; }
+.f-ok { color: var(--m-substance); border-color: var(--b-ok); }
+.f-pend { color: var(--amber); border-color: var(--b-amber); }
+.f-none { color: var(--ink-dim); border-style: dashed; }
+.receipts { margin-top: 1.1rem; border: 1px solid var(--hairline); border-left: 3px solid var(--gold-dim);
+  border-radius: 0 8px 8px 0; background: var(--well); padding: .7rem .85rem;
+  font: .62rem/1.75 var(--mono); color: var(--ink-faint); overflow-x: auto; }
+.receipts b { color: var(--gold-dim); font-weight: 400; letter-spacing: .12em;
+  text-transform: uppercase; font-size: .55rem; display: block; margin-bottom: .3rem; }
+.receipts .hash { color: var(--ink-label); }
+.callout { border: 1px solid var(--hairline); border-left: 3px solid var(--m-symbol); border-radius: 0 8px 8px 0;
+  padding: .7rem .9rem; background: rgba(194,205,214,.045); margin-top: 1rem; }
+.callout p { font-size: .85rem; color: var(--ink-label); max-width: 72ch; }
+.tw { overflow-x: auto; margin: .6rem 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border-bottom: 1px solid var(--hairline); padding: .38rem .5rem; text-align: left; vertical-align: top; }
+th { font: .55rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-dim); }
+td.n { font-family: var(--mono); font-size: .78rem; }
+/* V2-R9 — progressive disclosure. Native details/summary: no script, and the
+   page still works with the fold closed. */
+.disclose { border: 1px solid var(--hairline); border-radius: 8px; padding: .55rem .8rem; margin: .6rem 0 .8rem; background: var(--surface); }
+.disclose > summary { cursor: pointer; font-size: .88rem; line-height: 1.6; color: var(--ink-label); list-style: none; }
+.disclose > summary::-webkit-details-marker { display: none; }
+.disclose > summary::before { content: "\25b8"; color: var(--gold-dim); margin-right: .5rem; display: inline-block; }
+.disclose[open] > summary::before { transform: rotate(90deg); }
+.disclose > summary .more { display: block; font: .58rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-dim); margin-top: .25rem; }
+.disclose[open] > summary { margin-bottom: .5rem; }
+.page-main.landing { padding-top: 2.4rem; }
+.page-main.landing > * { max-width: none; }
+.land-hero { margin-bottom: 3rem; }
+.land-hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.05; margin: .4rem 0 0; }
+.land-lead { margin-top: 1.2rem; }
+.land-hero h1 em { font-style: italic; color: var(--gold); }
+.land-lead { font-family: var(--display); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; max-width: 34em; }
+.land-tasks { margin-bottom: 3.5rem; }
+.land-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+.land-card { position: relative; display: flex; flex-direction: column; gap: .5rem; padding: 1.3rem 1.3rem 1.4rem; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); color: var(--ink); text-decoration: none; min-height: 44px; }
+.land-card:hover, .land-card:focus-visible, .land-card:focus-within { border-color: var(--gold-dim); }
+.land-starts { font-size: .86rem; line-height: 1.8; color: var(--ink-faint); }
+.land-starts a { position: relative; z-index: 1; white-space: nowrap; color: var(--gold); text-decoration: none; }
+.land-starts a:hover, .land-starts a:focus-visible { text-decoration: underline; }
+.land-card-all { text-decoration: none; }
+.land-card-all::after { content: ""; position: absolute; inset: 0; border-radius: 8px; }
+.land-card-t { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; }
+.land-card-d { font-size: .92rem; line-height: 1.5; color: var(--ink-faint); }
+.land-card-k { margin-top: auto; padding-top: .4rem; font: .6rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+
+.page-main.landing > .land-lead { margin: 0 0 1rem; }
+.conc-count { font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); }
+.conc-aside { margin-top: .5rem; font-size: .86rem; }
+.conc-index { margin: 1.6rem 0 2rem; font-size: .86rem; line-height: 1.9; color: var(--ink-faint); }
+.conc-index a { color: var(--gold); text-decoration: none; white-space: nowrap; }
+.conc-index a:hover, .conc-index a:focus-visible { text-decoration: underline; }
+.conc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 1rem; align-items: start; margin-bottom: 2.5rem; }
+.conc-term { border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); padding: 1.1rem 1.2rem .4rem; scroll-margin-top: 5rem; }
+.conc-term:target { border-color: var(--gold-dim); }
+.conc-term h2 { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; margin: 0; }
+.conc-term h2 a { color: var(--ink); text-decoration: none; }
+.conc-term h2 a:hover { color: var(--gold); }
+.conc-n { font: .6rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: .3rem 0 .6rem; }
+.conc-rows { list-style: none; padding: 0; margin: 0; }
+.conc-row { padding: .7rem 0; border-top: 1px solid var(--hairline); }
+.conc-pair { font-family: var(--display); font-size: 1.02rem; line-height: 1.35; margin: 0 0 .35rem; }
+.conc-pair em { font-style: normal; color: var(--ink-faint); }
+.conc-row blockquote { margin: 0; padding: .1rem 0 .1rem .8rem; border-left: 2px solid var(--gold-dim); font-family: var(--display); font-size: .95rem; line-height: 1.5; color: var(--ink-label); }
+.conc-cite { font: .62rem/1.7 var(--mono); color: var(--ink-faint); margin-top: .35rem; }
+.conc-cite a { color: var(--gold); }
+@media (max-width: 720px) { .conc-grid { grid-template-columns: 1fr; } .conc-term { padding: .9rem .9rem .3rem; } }
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="hrow hrow-1"><a class="brand" href="/">The Symbolic World</a><nav class="topmenu"><span class="mgrp"><a href="/concepts">concepts</a><a href="/query">search</a><a href="/atlas">atlas</a><a href="/opus">opus</a><a href="/routes">routes</a><a href="/evidence">evidence</a><a href="/support">support</a><a href="/about">about</a></span></nav><button class="themetoggle" type="button" title="switch between day and night" aria-label="switch between day and night"></button></div>
+</header>
+<main class="page-main prose landing">
+<div class="titleband"><p class="eyebrow">Explore</p>
+<h1>The concordance</h1>
+<p class="sub">Jung's psychological concepts beside the alchemical terms he reads them through.</p></div>
+<p class="land-lead">Each pair joins an alchemical term to a concept of Jung's psychology through a verified relation of symbolization, correspondence or projection. The page groups the pairs by alchemical term. Each row quotes one passage, and the concept pages hold every citation.</p>
+<p class="conc-count">293 pairs · 136 alchemical terms</p>
+<p class="conc-aside"><a href="/atlas#/concordance">The same pairs on a board, with two guided walks, in the atlas &rarr;</a></p>
+<nav class="conc-index" aria-label="Alchemical terms"><a class="ev" href="#accrescent-soul">Accrescent soul (Isidore)</a> · <a class="ev" href="#aesthetic-formulation">Aesthetic (creative) formulation</a> · <a class="ev" href="#africa">Africa (the fourth region of Maier's peregrination)</a> · <a class="ev" href="#the-opus">The alchemical opus (opus alchymicum)</a> · <a class="ev" href="#alchemy">Alchemy</a> · <a class="ev" href="#anima-corporalis">Anima corporalis (the bodily soul)</a> · <a class="ev" href="#the-ape">The Ape (anthropoid)</a> · <a class="ev" href="#aqua-nostra">Aqua Nostra</a> · <a class="ev" href="#aqua-permanens">Aqua permanens (permanent water)</a> · <a class="ev" href="#aquaster">Aquaster</a> · <a class="ev" href="#arcane-substance">Arcane substance (arcanum)</a> · <a class="ev" href="#arrow">Arrow (the wounding shaft)</a> · <a class="ev" href="#ash">Ash (cinis / avis Hermetis)</a> · <a class="ev" href="#marriage-horoscope-experiment">The astrological marriage-horoscope experiment</a> · <a class="ev" href="#behemoth">Behemoth</a> · <a class="ev" href="#bird">Bird (theriomorphic form of the anima and messenger of the old man)</a> · <a class="ev" href="#brain">Brain (cerebrum)</a> · <a class="ev" href="#bread-and-wine">Bread and wine (the sacrificial gifts)</a> · <a class="ev" href="#bull">Bull (Mithraic)</a> · <a class="ev" href="#caelum">Caelum (Dorn's heaven / quintessence)</a> · <a class="ev" href="#cauda-pavonis">Cauda pavonis (peacock's tail)</a> · <a class="ev" href="#cave">The cave (place of rebirth)</a> · <a class="ev" href="#celestial-pole">The celestial Pole</a> · <a class="ev" href="#chariot">The Chariot (currus / Merkabah)</a> · <a class="ev" href="#cibatio">Cibatio (feeding)</a> · <a class="ev" href="#circle">The circle</a> · <a class="ev" href="#clock">The clock (dreams 7 and 9)</a> · <a class="ev" href="#coniunctio">Coniunctio</a> · <a class="ev" href="#crab">The crab (zodiacal Cancer)</a> · <a class="ev" href="#croquet-ball">Croquet ball</a> · <a class="ev" href="#cross">Cross</a> · <a class="ev" href="#cross-of-light">The cross of light (Acts of John)</a> · <a class="ev" href="#crossroads">Crossroads</a> · <a class="ev" href="#crowd">The crowd (swarm of people)</a> · <a class="ev" href="#crude-sulphur">Crude sulphur (sulphur vulgi, common sulphur)</a> · <a class="ev" href="#cynocephalus">Cynocephalus</a> · <a class="ev" href="#diamond-body">Diamond Body</a> · <a class="ev" href="#discretio-intellectualis">Discretio intellectualis (intellectual discrimination)</a> · <a class="ev" href="#dismemberment">Dismemberment</a> · <a class="ev" href="#dog">Dog (canis)</a> · <a class="ev" href="#dorje">The dorje (diamond thunderbolt)</a> · <a class="ev" href="#dragon">Dragon</a> · <a class="ev" href="#eagle">Eagle (aquila)</a> · <a class="ev" href="#echeneis">Echeneis / remora (the sucking-fish)</a> · <a class="ev" href="#the-eye">The eye (pupil and iris)</a> · <a class="ev" href="#ezekiels-vision">Ezekiel's vision (the four creatures and wheels)</a> · <a class="ev" href="#fire">Fire (the unquenchable, holy fire)</a> · <a class="ev" href="#fish">The Fish (Ichthys)</a> · <a class="ev" href="#fixatio">Fixatio</a> · <a class="ev" href="#the-flood">The Flood (the Deluge)</a> · <a class="ev" href="#fountain">Fountain</a> · <a class="ev" href="#four-beasts">Four beasts of Daniel</a> · <a class="ev" href="#golden-flower">The Golden Flower</a> · <a class="ev" href="#hat">The hat (dream symbol)</a> · <a class="ev" href="#the-head">The Head</a> · <a class="ev" href="#heavenly-jerusalem">The heavenly Jerusalem</a> · <a class="ev" href="#hermetic-philosophy">Hermetic philosophy</a> · <a class="ev" href="#the-vessel">The Hermetic Vessel (vas Hermetis)</a> · <a class="ev" href="#hexagram">Hexagram (I Ching)</a> · <a class="ev" href="#hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a> · <a class="ev" href="#honey">Honey</a> · <a class="ev" href="#horse">The horse (three-legged and four-legged)</a> · <a class="ev" href="#horse-sacrifice">Horse-sacrifice</a> · <a class="ev" href="#i-ching">The I Ching (Book of Changes)</a> · <a class="ev" href="#initiation">Initiation</a> · <a class="ev" href="#inner-dialogue">Inner dialogue with the 'other' voice</a> · <a class="ev" href="#subjective-level-interpretation">Interpretation on the subjective level</a> · <a class="ev" href="#the-key">The key (Faust's key to the Mothers)</a> · <a class="ev" href="#lapis">Lapis philosophorum</a> · <a class="ev" href="#the-left">The left (leftward movement)</a> · <a class="ev" href="#leviathan">Leviathan</a> · <a class="ev" href="#light">Light</a> · <a class="ev" href="#lightning">Lightning (the flash, fulmen)</a> · <a class="ev" href="#lion">Lion (leo)</a> · <a class="ev" href="#luna">Luna</a> · <a class="ev" href="#lux-moderna">Lux moderna (the new light of the alchemists)</a> · <a class="ev" href="#magnet-of-the-wise">The magnet of the wise (magnes)</a> · <a class="ev" href="#mandala">Mandala</a> · <a class="ev" href="#mirror">Mirror</a> · <a class="ev" href="#mistletoe">Mistletoe</a> · <a class="ev" href="#nigredo">Nigredo</a> · <a class="ev" href="#oak">Oak (feminine tree-numen)</a> · <a class="ev" href="#ogdoad">Ogdoad (double quaternity)</a> · <a class="ev" href="#omnes-colores">Omnes colores (all colours)</a> · <a class="ev" href="#one-scintilla-monad">One Scintilla / Monad</a> · <a class="ev" href="#ortus">Ortus (four-coloured beast)</a> · <a class="ev" href="#painting">Painting (the patient's pictures of dream and fantasy)</a> · <a class="ev" href="#paradise">Paradise (Garden of Eden)</a> · <a class="ev" href="#phallus">The phallus (symbol of creative libido)</a> · <a class="ev" href="#philosophical-tree">The Philosophical Tree (arbor philosophica)</a> · <a class="ev" href="#pisces">Pisces (the zodiacal sign of the Fishes)</a> · <a class="ev" href="#planets">Planets</a> · <a class="ev" href="#plenilunium">Plenilunium (full moon)</a> · <a class="ev" href="#prayer">Prayer (invocation)</a> · <a class="ev" href="#pregnancy">Pregnancy (of the mother in the Cantilena)</a> · <a class="ev" href="#prima-materia">Prima materia</a> · <a class="ev" href="#psychotherapy">Psychotherapy</a> · <a class="ev" href="#tetraktys">The Pythagorean tetraktys</a> · <a class="ev" href="#rebis">Rebis / Hermaphrodite</a> · <a class="ev" href="#roebuck">The roebuck (magic animal)</a> · <a class="ev" href="#rose-coloured-blood">Rose-coloured blood</a> · <a class="ev" href="#rotundum">The rotundum (the round element)</a> · <a class="ev" href="#round-table">The round table (dreams 30, 31, 38)</a> · <a class="ev" href="#rubedo">Rubedo</a> · <a class="ev" href="#salt">Salt (Sal)</a> · <a class="ev" href="#scaiolae">Scaiolae</a> · <a class="ev" href="#scintilla">Scintilla (soul-spark)</a> · <a class="ev" href="#the-sea">The Sea (mare)</a> · <a class="ev" href="#sea-monster">The sea-monster (water-monster)</a> · <a class="ev" href="#separatio">Separatio</a> · <a class="ev" href="#shapeless-life-mass">The shapeless animal lump or life-mass of dream 18, the amorphous mass out of which the transfigured human head arises</a> · <a class="ev" href="#serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> · <a class="ev" href="#sol">Sol</a> · <a class="ev" href="#sol-niger">Sol niger (black sun)</a> · <a class="ev" href="#solificatio">Solificatio</a> · <a class="ev" href="#solutio">Solutio (dissolution)</a> · <a class="ev" href="#stag">Stag</a> · <a class="ev" href="#star">The star</a> · <a class="ev" href="#the-statue">The Statue (statua)</a> · <a class="ev" href="#sulphur">Sulphur</a> · <a class="ev" href="#the-sword">The sword (sacrificial and alchemical instrument)</a> · <a class="ev" href="#tetrameria">Tetrameria (quartering of the process)</a> · <a class="ev" href="#tetramorph">The Tetramorph (the four evangelist symbols as steed of the Church)</a> · <a class="ev" href="#theoria">Theoria (the alchemical doctrine, aqua doctrinae)</a> · <a class="ev" href="#theriomorphic-symbol">Theriomorphic symbol (animal representation of libido)</a> · <a class="ev" href="#tortoise">Tortoise</a> · <a class="ev" href="#tree">The Tree (mythological)</a> · <a class="ev" href="#umbra-solis">Umbra solis (shadow of the sun)</a> · <a class="ev" href="#unicorn">Unicorn</a> · <a class="ev" href="#unio-mentalis">Unio mentalis</a> · <a class="ev" href="#ouroboros">Uroboros</a> · <a class="ev" href="#water">Water</a> · <a class="ev" href="#the-wheel">The wheel (eight-spoked wheel, rota, Ezekiel's wheel) as symbol of the circulating process and of wholeness</a> · <a class="ev" href="#womb">The womb (matrix)</a> · <a class="ev" href="#worm">Worm (vermis)</a> · <a class="ev" href="#yoga">Yoga (samadhi, the Eastern method of self-control)</a></nav>
+<div class="conc-grid">
+<section class="conc-term" id="accrescent-soul">
+<h2><a class="ev" href="/concept-accrescent-soul">Accrescent soul (Isidore)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-accrescent-soul">Accrescent soul (Isidore)</a> <em title="is-projection-of">is projection of</em> <a href="/concept-collective-unconscious">The collective unconscious</a></p>
+<blockquote class="ev">&ldquo;one is justified in calling it a projection of this empirically demonstrable fact in the form of a metaphysical hypostasis.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §374 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="aesthetic-formulation">
+<h2><a class="ev" href="/concept-aesthetic-formulation">Aesthetic (creative) formulation</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-aesthetic-formulation">Aesthetic (creative) formulation</a> <em title="gives-form-to">gives form to</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;Here too a product is created which is influenced by both conscious and unconscious, embodying the striving of the unconscious for the light&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §168 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-aesthetic-formulation#r-e1668">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="africa">
+<h2><a class="ev" href="/concept-africa">Africa (the fourth region of Maier's peregrination)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-africa">Africa (the fourth region of Maier's peregrination)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-inferior-function">The fourth or 'inferior' function, taboo and contaminated with the unconscious, personified by the anima</a></p>
+<blockquote class="ev">&ldquo;the “inferior” function, which is the darkest and the most unconscious of all. “Africa” is not a bad image for this.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §276 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-opus">
+<h2><a class="ev" href="/concept-the-opus">The alchemical opus (opus alchymicum)</a></h2>
+<p class="conc-n">4 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <em title="compared-with">compared with</em> <a href="/concept-active-imagination">Active imagination</a></p>
+<blockquote class="ev">&ldquo;can best be compared with what we call active imagination&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §448 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-individuation">Individuation</a></p>
+<blockquote class="ev">&ldquo;the symbolism of alchemy expresses ... the so-called individuation process&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §40 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-the-opus#r-e85">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <em title="deals-with-processes-resembling">deals with processes resembling</em> <a href="/concept-psyche">The psyche</a></p>
+<blockquote class="ev">&ldquo;not just with chemical experiments as such, but with something resembling psychic processes expressed in pseudochemical language&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §342 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-opus">The alchemical opus (opus alchymicum)</a> <em title="is-projection-of">is projection of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;what he was in reality experiencing was his own unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §346 · Jung asserts</span> · <a href="/family-projection">projection</a> · <a href="/concept-the-opus#r-e86">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="alchemy">
+<h2><a class="ev" href="/concept-alchemy">Alchemy</a></h2>
+<p class="conc-n">8 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-alchemy">Alchemy</a> <em title="parallels">parallels</em> <a href="/concept-analytic-process">The analytic process</a></p>
+<blockquote class="ev">&ldquo;Alchemy describes ... the same psychological phenomenology which can be observed in the analysis of unconscious processes&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §399 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-alchemy#r-e3398">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-alchemy">Alchemy</a> <em title="expresses">expresses</em> <a href="/concept-collective-unconscious">The collective unconscious</a></p>
+<blockquote class="ev">&ldquo;one of the most important sources for symbolical ideas in the past is alchemy&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §388 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-alchemy#r-e1792">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-alchemy">Alchemy</a> <em title="parallels">parallels</em> <a href="/concept-eastern-view">The Eastern view of the world</a></p>
+<blockquote class="ev">&ldquo;That is why alchemy developed along parallel lines in East and West and why in both spheres it strove towards the same goal&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §916 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-alchemy">Alchemy</a> <em title="expresses">expresses</em> <a href="/concept-individuation">Individuation</a></p>
+<blockquote class="ev">&ldquo;What the symbolism of alchemy expresses is the whole problem of the evolution of personality described above, the so-called individuation process&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §40 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-alchemy">Alchemy</a> <em title="is-in-its-mystical-side-to-all-appearances-a-concretization-in-projected-and-symbolic-form-of">is in its mystical side to all appearances a concretization in projected and symbolic form of</em> <a href="/concept-individuation">Individuation</a></p>
+<blockquote class="ev">&ldquo;To all appearances, it is a concretization, in projected and symbolic form, of the process of individuation.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §140 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-individuation">Individuation</a> <em title="parallels">parallels</em> <a href="/concept-alchemy">Alchemy</a></p>
+<blockquote class="ev">&ldquo;the symbol formation has the closest affinities with alchemical ideas&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §523 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-individuation#r-e1445">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-alchemy">Alchemy</a> <em title="is-the-tradition-whose-practitioners-projected-god-into">is the tradition whose practitioners projected god into</em> <a href="/concept-matter">Matter</a></p>
+<blockquote class="ev">&ldquo;the alchemists came to project even the highest value—God—into matter&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §432 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-alchemy">Alchemy</a> <em title="projects-into">projects into</em> <a href="/concept-matter">Matter</a></p>
+<blockquote class="ev">&ldquo;Alchemy projected an inner, psychic experience into chemical substances&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §143 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="anima-corporalis">
+<h2><a class="ev" href="/concept-anima-corporalis">Anima corporalis (the bodily soul)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-anima-corporalis">Anima corporalis (the bodily soul)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;The soul in this text is evidently an anima corporalis ( figs. 91 , 208 ) that dwells in the blood. It would therefore correspond to the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §397 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-ape">
+<h2><a class="ev" href="/concept-the-ape">The Ape (anthropoid)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-ape">The Ape (anthropoid)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;the “ape” refers to the dreamer’s instinctual personality&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §56 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="aqua-nostra">
+<h2><a class="ev" href="/concept-aqua-nostra">Aqua Nostra</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-aqua-nostra">Aqua Nostra</a> <em title="symbolizes">symbolizes</em> <a href="/concept-psychic-energy">Psychic energy</a></p>
+<blockquote class="ev">&ldquo;enough water of life— aqua nostra , energy, libido—to reach the central star&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §287 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-aqua-nostra#r-e645">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="aqua-permanens">
+<h2><a class="ev" href="/concept-aqua-permanens">Aqua permanens (permanent water)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-aqua-permanens">Aqua permanens (permanent water)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-collective-unconscious">The collective unconscious</a></p>
+<blockquote class="ev">&ldquo;There is probably no more suitable psychological concept for this than the collective unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §372 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-aqua-permanens">Aqua permanens (permanent water)</a> <em title="is-analogue-of">is analogue of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the matrix and "nurse of all things" makes it an unsurpassable analogy of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §717 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-aqua-permanens#r-e347">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="aquaster">
+<h2><a class="ev" href="/concept-aquaster">Aquaster</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-aquaster">Aquaster</a> <em title="comes-of-all-paracelsan-concepts-closest-to-the-modern-concept-of">comes of all paracelsan concepts closest to the modern concept of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;Of all the Paracelsan concepts, therefore, the Aquaster comes closest to the modern concept of the unconscious.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §175 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="arcane-substance">
+<h2><a class="ev" href="/concept-arcane-substance">Arcane substance (arcanum)</a></h2>
+<p class="conc-n">5 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-arcane-substance">Arcane substance (arcanum)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-dominant-of-consciousness">Dominant of consciousness (ruling idea)</a></p>
+<blockquote class="ev">&ldquo;The arcane substance corresponds to the Christian dominant, which was originally alive and present in consciousness but then sank into the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §466 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-ego">The ego</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-arcane-substance">Arcane substance (arcanum)</a></p>
+<blockquote class="ev">&ldquo;the alchemists came very close to realizing that the ego was the mysteriously elusive arcane substance and the longed-for lapis&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §131 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-arcane-substance">Arcane substance (arcanum)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;The arcane substance, as its attributes show, refers to the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §224 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-arcane-substance">Arcane substance (arcanum)</a> <em title="is-projection-of">is projection of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;one of the innumerable expressions used for the unconscious … in the guise of a hundred “arcane substances.”&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §242 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-arcane-substance">Arcane substance (arcanum)</a> <em title="points-to">points to</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;Because the arcane substance always points to the principal unconscious content&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §195 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="arrow">
+<h2><a class="ev" href="/concept-arrow">Arrow (the wounding shaft)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-arrow">Arrow (the wounding shaft)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-libido">Libido (psychic energy)</a></p>
+<blockquote class="ev">&ldquo;As we know that the arrow is a libido-symbol&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §447 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="ash">
+<h2><a class="ev" href="/concept-ash">Ash (cinis / avis Hermetis)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-ash">Ash (cinis / avis Hermetis)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-spirit">Spirit</a></p>
+<blockquote class="ev">&ldquo;the ash is the spirit that dwells in the glorified body&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §247 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="marriage-horoscope-experiment">
+<h2><a class="ev" href="/concept-marriage-horoscope-experiment">The astrological marriage-horoscope experiment</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-marriage-horoscope-experiment">The astrological marriage-horoscope experiment</a> <em title="reflects">reflects</em> <a href="/concept-psychological-attitude">Psychological attitude</a></p>
+<blockquote class="ev">&ldquo;As compared with our general results there is a predominance of the Mars aspects, which fully agrees with the psychic state of the subject.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §897 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-marriage-horoscope-experiment#r-e2048">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="behemoth">
+<h2><a class="ev" href="/concept-behemoth">Behemoth</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-behemoth">Behemoth</a> <em title="expresses">expresses</em> <a href="/concept-nature">Nature</a></p>
+<blockquote class="ev">&ldquo;Behemoth and Leviathan, both expressive of the crudest force conceivable in nature&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §87 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="bird">
+<h2><a class="ev" href="/concept-bird">Bird (theriomorphic form of the anima and messenger of the old man)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-bird">Bird (theriomorphic form of the anima and messenger of the old man)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-spirit">Spirit</a></p>
+<blockquote class="ev">&ldquo;Birds, as aerial beings, are well-known spirit symbols.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §586 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-bird#r-e1485">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="brain">
+<h2><a class="ev" href="/concept-brain">Brain (cerebrum)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-collective-unconscious">The collective unconscious</a> <em title="expresses">expresses</em> <a href="/concept-brain">Brain (cerebrum)</a></p>
+<blockquote class="ev">&ldquo;The collective unconscious is simply the psychic expression of the identity of brain structure irrespective of all racial differences.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §11 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="bread-and-wine">
+<h2><a class="ev" href="/concept-bread-and-wine">Bread and wine (the sacrificial gifts)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-bread-and-wine">Bread and wine (the sacrificial gifts)</a> <em title="represents">represents</em> <a href="/concept-culture">Culture</a></p>
+<blockquote class="ev">&ldquo;in so far as bread and wine are important products of culture, they do express a vital human striving&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §382 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-bread-and-wine#r-e2308">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-bread-and-wine">Bread and wine (the sacrificial gifts)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-life">Life</a></p>
+<blockquote class="ev">&ldquo;they are best fitted to serve as a symbol of human life and human personality&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §381 · Jung quotes a source</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="bull">
+<h2><a class="ev" href="/concept-bull">Bull (Mithraic)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-bull">Bull (Mithraic)</a> <em title="represents">represents</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;the killing of the bull clearly denotes an overcoming of animal instinct&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §396 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-bull#r-e2965">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-bull">Bull (Mithraic)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;not only has man’s animal instinctuality (symbolized by the bull) to be sacrificed, but the entire natural man&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §673 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="caelum">
+<h2><a class="ev" href="/concept-caelum">Caelum (Dorn's heaven / quintessence)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-caelum">Caelum (Dorn's heaven / quintessence)</a> <em title="represents">represents</em> <a href="/concept-individuation">Individuation</a></p>
+<blockquote class="ev">&ldquo;Psychologically, it was a representation of the individuation process&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §705 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-caelum">Caelum (Dorn's heaven / quintessence)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;Dorn’s caelum ... For the psychologist it is the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §765 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-caelum#r-e362">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="cauda-pavonis">
+<h2><a class="ev" href="/concept-cauda-pavonis">Cauda pavonis (peacock's tail)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cauda-pavonis">Cauda pavonis (peacock's tail)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;The cauda pavonis , combination of all colours, symbolizing wholeness.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §331 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-cauda-pavonis#r-e211">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="cave">
+<h2><a class="ev" href="/concept-cave">The cave (place of rebirth)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cave">The cave (place of rebirth)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;into the cave which everyone has in himself, or into the darkness that lies behind consciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §241 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-cave#r-e1272">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="celestial-pole">
+<h2><a class="ev" href="/concept-celestial-pole">The celestial Pole</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-celestial-pole">The celestial Pole</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;The Pole is the point round which everything turns—hence another symbol of the self.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §265 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="chariot">
+<h2><a class="ev" href="/concept-chariot">The Chariot (currus / Merkabah)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-chariot">The Chariot (currus / Merkabah)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;can be understood in this sense as a symbol of the self.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §261 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="cibatio">
+<h2><a class="ev" href="/concept-cibatio">Cibatio (feeding)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cibatio">Cibatio (feeding)</a> <em title="signifies">signifies</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;At the same time the cibatio and imbibitio of the anima-mother indicate the integration and completion of the entire personality.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §424 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="circle">
+<h2><a class="ev" href="/concept-circle">The circle</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-circle">The circle</a> <em title="expresses">expresses</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;The symbols used by the unconscious ... to express wholeness, completeness, and perfection: symbols, as a rule, of the quaternity and the circle&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 7 §186 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-circle#r-e3628">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="clock">
+<h2><a class="ev" href="/concept-clock">The clock (dreams 7 and 9)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-clock">The clock (dreams 7 and 9)</a> <em title="alludes-to">alludes to</em> <a href="/concept-immortality">Immortality (life after death)</a></p>
+<blockquote class="ev">&ldquo;This theme was already hinted at in dream 9 (par. 134), with its pendulum clock, a perpetuum mobile&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §246 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="coniunctio">
+<h2><a class="ev" href="/concept-coniunctio">Coniunctio</a></h2>
+<p class="conc-n">5 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-coniunctio">Coniunctio</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-tao">Tao</a></p>
+<blockquote class="ev">&ldquo;the Western equivalent...namely the union of yang and yin in tao&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §662 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-transference">The transference</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-coniunctio">Coniunctio</a></p>
+<blockquote class="ev">&ldquo;the coniunctio, corresponds to the central significance of the transference in psychotherapy&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §538 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-coniunctio">Coniunctio</a> <em title="became-symbol-of">became symbol of</em> <a href="/concept-unio-mystica">Unio mystica</a></p>
+<blockquote class="ev">&ldquo;The idea of the coniunctio ... it became the symbol of the unio mystica&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §354 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-coniunctio">Coniunctio</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;The classical coniunctio Solis et Lunae as the symbol of the union of opposites is clearly emphasized.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §899 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-coniunctio">Coniunctio</a> <em title="expresses">expresses</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;as a mythologem, it expresses the archetype of the union of opposites&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §354 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-coniunctio#r-e3374">all 3 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="crab">
+<h2><a class="ev" href="/concept-crab">The crab (zodiacal Cancer)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-crab">The crab (zodiacal Cancer)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;The crab is therefore the symbol for the unconscious contents&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 7 §138 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="croquet-ball">
+<h2><a class="ev" href="/concept-croquet-ball">Croquet ball</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-croquet-ball">Croquet ball</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;The croquet ball is connected with the “round” motif and is therefore a symbol of wholeness, that is, of the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §150 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="cross">
+<h2><a class="ev" href="/concept-cross">Cross</a></h2>
+<p class="conc-n">6 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cross">Cross</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-atman">Atman / Purusha</a></p>
+<blockquote class="ev">&ldquo;For the Gnostics the cross had exactly the same function that the atman or Self has always had for the East.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §433 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cross">Cross</a> <em title="signifies">signifies</em> <a href="/concept-order">Order / orderedness</a></p>
+<blockquote class="ev">&ldquo;The cross signifies order as opposed to the disorderly chaos of the formless multitude.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §433 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cross">Cross</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-quaternity">The quaternity</a></p>
+<blockquote class="ev">&ldquo;the Cross, set up midway between heaven and hell as a symbol of Christ’s struggle with the devil, corresponds to the quaternity&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §250 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cross">Cross</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;or rather the self, his wholeness, which is both God and animal&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §460 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cross">Cross</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;a tremendous tension of opposites paradoxically at one with themselves, as in the cross, their most perfect symbol&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §460 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cross">Cross</a> <em title="symbolizes">symbolizes</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;As attributes of God and also symbols in their own right, the quaternity and the cross signify wholeness.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §363 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-cross#r-e3478">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="cross-of-light">
+<h2><a class="ev" href="/concept-cross-of-light">The cross of light (Acts of John)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cross-of-light">The cross of light (Acts of John)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;since it is a quaternity, a whole divided into four parts, it is the classic symbol of the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §430 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="crossroads">
+<h2><a class="ev" href="/concept-crossroads">Crossroads</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-crossroads">Crossroads</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;Where the roads cross and enter into one another, thereby symbolizing the union of opposites&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §577 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="crowd">
+<h2><a class="ev" href="/concept-crowd">The crowd (swarm of people)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-crowd">The crowd (swarm of people)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;We know that this image symbolizes a secret, 1 or rather, the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §300 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="crude-sulphur">
+<h2><a class="ev" href="/concept-crude-sulphur">Crude sulphur (sulphur vulgi, common sulphur)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-crude-sulphur">Crude sulphur (sulphur vulgi, common sulphur)</a> <em title="signifies">signifies</em> <a href="/concept-concupiscentia">Concupiscentia (desirousness)</a></p>
+<blockquote class="ev">&ldquo;The enemy is your own crude sulphur, which burns you with the hellish fire of desirousness, or concupiscentia.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §191 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="cynocephalus">
+<h2><a class="ev" href="/concept-cynocephalus">Cynocephalus</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-cynocephalus">Cynocephalus</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;its godlike affinities make it an equally appropriate symbol for that part of the unconscious which transcends the conscious level&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §175 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="diamond-body">
+<h2><a class="ev" href="/concept-diamond-body">Diamond Body</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-diamond-body">Diamond Body</a> <em title="symbolizes-the-detachment-of">symbolizes the detachment of</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;these expressions symbolize an attitude that is beyond the reach of emotional entanglements and violent shocks—a consciousness detached from the world&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §68 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-diamond-body">Diamond Body</a> <em title="stands-for">stands for</em> <a href="/concept-immortality">Immortality (life after death)</a></p>
+<blockquote class="ev">&ldquo;the “diamond body,” in other words, the attainment of immortality&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §511 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="discretio-intellectualis">
+<h2><a class="ev" href="/concept-discretio-intellectualis">Discretio intellectualis (intellectual discrimination)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-discretio-intellectualis">Discretio intellectualis (intellectual discrimination)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-apperception">Apperception</a></p>
+<blockquote class="ev">&ldquo;The senses mediate perception, while the discretio intellectualis corresponds to apperception.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §372 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="dismemberment">
+<h2><a class="ev" href="/concept-dismemberment">Dismemberment</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dismemberment">Dismemberment</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-dissociation">Dissociation (splitting of the personality)</a></p>
+<blockquote class="ev">&ldquo;The psychological equivalent of this dismemberment is psychic dissociation.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §848 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dismemberment">Dismemberment</a> <em title="is-psychologically-parallel-to-the-reduction-to-order-through-reflection-of-chaotic-fragments-of">is psychologically parallel to the reduction to order through reflection of chaotic fragments of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;The psychological parallel to this is the reduction to order, through reflection, of apparently chaotic fragments of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §111 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="dog">
+<h2><a class="ev" href="/concept-dog">Dog (canis)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-logos">Logos</a> <em title="likened-to">likened to</em> <a href="/concept-dog">Dog (canis)</a></p>
+<blockquote class="ev">&ldquo;For the Logos is a dog ... who guards and protects the sheep against the wiles of the wolves&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §176 · Jung quotes a source</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="dorje">
+<h2><a class="ev" href="/concept-dorje">The dorje (diamond thunderbolt)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dorje">The dorje (diamond thunderbolt)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;The diamond thunderbolt, the dorje in the centre, symbolizes the perfect state where masculine and feminine are united.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §636 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="dragon">
+<h2><a class="ev" href="/concept-dragon">Dragon</a></h2>
+<p class="conc-n">5 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dragon">Dragon</a> <em title="expresses">expresses</em> <a href="/concept-fear">Fear</a></p>
+<blockquote class="ev">&ldquo;Dragon and snake are symbolic representations of the fear of the consequences of breaking the taboo and regressing to incest&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §395 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dragon">Dragon</a> <em title="represents">represents</em> <a href="/concept-mother-imago">Mother-imago</a></p>
+<blockquote class="ev">&ldquo;the dragon represents the negative mother-imago and thus expresses resistance to incest, or the fear of it&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §395 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dragon">Dragon</a> <em title="represents">represents</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;Taken purely as a psychologem the hero represents the positive, favourable action of the unconscious, while the dragon is its negative and unfavourable action&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §580 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dragon">Dragon</a> <em title="symbolizes">symbolizes</em> <a href="/concept-unconsciousness">Unconsciousness (initial state)</a></p>
+<blockquote class="ev">&ldquo;The dragon, or serpent, represents the initial state of unconsciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §118 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dragon">Dragon</a> <em title="represents-the-initial-state-of">represents the initial state of</em> <a href="/concept-unconsciousness">Unconsciousness (initial state)</a></p>
+<blockquote class="ev">&ldquo;The dragon, or serpent, represents the initial state of unconsciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §118 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="eagle">
+<h2><a class="ev" href="/concept-eagle">Eagle (aquila)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-eagle">Eagle (aquila)</a> <em title="depicts">depicts</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;In the last resort all these symbols depict the consciousness-transcending fact we call the self.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §305 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="echeneis">
+<h2><a class="ev" href="/concept-echeneis">Echeneis / remora (the sucking-fish)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-echeneis">Echeneis / remora (the sucking-fish)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;The symbol of the self appears here as an “extremely small” fish in the vast ocean of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §219 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-echeneis#r-e1038">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-eye">
+<h2><a class="ev" href="/concept-the-eye">The eye (pupil and iris)</a></h2>
+<p class="conc-n">4 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-eye">The eye (pupil and iris)</a> <em title="stands-for">stands for</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;derived originally from an eye motif and therefore stand for the observing and discriminating consciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §682 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-the-eye#r-e1488">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-eye">The eye (pupil and iris)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;The eye, like the sun, is a symbol as well as an allegory of consciousness.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §47 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-eye">The eye (pupil and iris)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-god-image">God-image (imago Dei)</a></p>
+<blockquote class="ev">&ldquo;The eye is also a well-known symbol for God.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §594 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-eye">The eye (pupil and iris)</a> <em title="signifies">signifies</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;Here the eye signifies the self.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §698 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="ezekiels-vision">
+<h2><a class="ev" href="/concept-ezekiels-vision">Ezekiel's vision (the four creatures and wheels)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-ezekiels-vision">Ezekiel's vision (the four creatures and wheels)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;Psychologically the vision of Ezekiel is a symbol of the self consisting of four individual creatures and wheels&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §269 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-ezekiels-vision#r-e4216">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="fire">
+<h2><a class="ev" href="/concept-fire">Fire (the unquenchable, holy fire)</a></h2>
+<p class="conc-n">4 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-libido">Libido (psychic energy)</a> <em title="symbolized-by">symbolized by</em> <a href="/concept-fire">Fire (the unquenchable, holy fire)</a></p>
+<blockquote class="ev">&ldquo;libido-symbols do not stop at sun, light, and fire, but have a whole range of other expressions at their disposal&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §145 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-libido#r-e2778">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-fire">Fire (the unquenchable, holy fire)</a> <em title="signifies">signifies</em> <a href="/concept-life">Life</a></p>
+<blockquote class="ev">&ldquo;The fire signifying “life” fits into the frame of the dream&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §60 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-fire">Fire (the unquenchable, holy fire)</a> <em title="expresses">expresses</em> <a href="/concept-psychic-energy">Psychic energy</a></p>
+<blockquote class="ev">&ldquo;The light and fire attributes depict the intensity of the feeling-tone and are therefore expressions for the psychic energy&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §128 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-fire">Fire (the unquenchable, holy fire)</a> <em title="is-image-of">is image of</em> <a href="/concept-soul">Soul</a></p>
+<blockquote class="ev">&ldquo;This flame is my own soul&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §145 · Jung quotes a source</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-fire#r-e2779">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="fish">
+<h2><a class="ev" href="/concept-fish">The Fish (Ichthys)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-fish">The Fish (Ichthys)</a> <em title="in-their-antithetical-nature-figure">in their antithetical nature figure</em> <a href="/concept-the-opposites">The opposites</a></p>
+<blockquote class="ev">&ldquo;it is probably the oldest testimony to the antithetical nature of the fishes&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §133 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-fish">The Fish (Ichthys)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-soul">Soul</a></p>
+<blockquote class="ev">&ldquo;It even seems to have been regarded as a symbol for the soul, if we are to judge by a painting&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §187 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="fixatio">
+<h2><a class="ev" href="/concept-fixatio">Fixatio</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-fixatio">Fixatio</a> <em title="signifies">signifies</em> <a href="/concept-feeling">Feeling (the function)</a></p>
+<blockquote class="ev">&ldquo;The “fixation” refers alchemically to the lapis but psychologically to the consolidation of feeling.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §222 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-flood">
+<h2><a class="ev" href="/concept-the-flood">The Flood (the Deluge)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-instinct">Instinct</a> <em title="projected-as">projected as</em> <a href="/concept-the-flood">The Flood (the Deluge)</a></p>
+<blockquote class="ev">&ldquo;The choking, heart-constricting surge of instinct is projected outwards as a mounting flood&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §174 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="fountain">
+<h2><a class="ev" href="/concept-fountain">Fountain</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-fountain">Fountain</a> <em title="represents">represents</em> <a href="/concept-the-centre">The centre towards which the eyes must always be turned; virtual midpoint of the mandala and locus of creative change</a></p>
+<blockquote class="ev">&ldquo;The centre and the circle, here represented by fountain and garden&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §155 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="four-beasts">
+<h2><a class="ev" href="/concept-four-beasts">Four beasts of Daniel</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-four-beasts">Four beasts of Daniel</a> <em title="represent">represent</em> <a href="/concept-four-functions">The four basic functions of consciousness</a></p>
+<blockquote class="ev">&ldquo;All four of them are beasts of prey or, in psychological terms, functions that have succumbed to desire&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §365 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="golden-flower">
+<h2><a class="ev" href="/concept-golden-flower">The Golden Flower</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-golden-flower">The Golden Flower</a> <em title="symbolizes">symbolizes</em> <a href="/concept-tao">Tao</a></p>
+<blockquote class="ev">&ldquo;The golden flower is the light, and the light of heaven is the Tao.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §33 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="hat">
+<h2><a class="ev" href="/concept-hat">The hat (dream symbol)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-hat">The hat (dream symbol)</a> <em title="represents">represents</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;So the “strange” hat was the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §255 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-head">
+<h2><a class="ev" href="/concept-the-head">The Head</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-head">The Head</a> <em title="signifies">signifies</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;Here we have an indication of the psychic nature of the arcanum, for the head of a man signifies above all the seat of consciousness.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §107 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="heavenly-jerusalem">
+<h2><a class="ev" href="/concept-heavenly-jerusalem">The heavenly Jerusalem</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-heavenly-jerusalem">The heavenly Jerusalem</a> <em title="represents">represents</em> <a href="/concept-mother-imago">Mother-imago</a></p>
+<blockquote class="ev">&ldquo;the City, the heavenly bride who is here promised to the Son, is the mother or mother-imago&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §318 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="hermetic-philosophy">
+<h2><a class="ev" href="/concept-hermetic-philosophy">Hermetic philosophy</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-dream-series">The dream series</a> <em title="recapitulates">recapitulates</em> <a href="/concept-hermetic-philosophy">Hermetic philosophy</a></p>
+<blockquote class="ev">&ldquo;The dreamer’s opus amounts to an unconscious recapitulation of the efforts of Hermetic philosophy.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §222 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-vessel">
+<h2><a class="ev" href="/concept-the-vessel">The Hermetic Vessel (vas Hermetis)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-vessel">The Hermetic Vessel (vas Hermetis)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;It is the lapis itself and at the same time contains it; that is to say, the self is its own container.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §115 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="hexagram">
+<h2><a class="ev" href="/concept-hexagram">Hexagram (I Ching)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-hexagram">Hexagram (I Ching)</a> <em title="renders">renders</em> <a href="/concept-psyche">The psyche</a></p>
+<blockquote class="ev">&ldquo;the observer’s opinion that the text of the hexagram amounts to a true rendering of his psychic condition&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §974 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="hierosgamos">
+<h2><a class="ev" href="/concept-hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a> <em title="is-projection-of">is projection of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the hierosgamos of the substances is a projection of unconscious contents&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §410 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;the union of opposites in the archetypal form of the hierosgamos&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §43 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-hierosgamos#r-e93">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-union-of-opposites">Union of opposites</a> <em title="is-analogous-to">is analogous to</em> <a href="/concept-hierosgamos">Hierosgamos (sacred marriage / chymical wedding)</a></p>
+<blockquote class="ev">&ldquo;an as-yet-unfulfilled programme that culminates in the union of opposites. This union is analogous to the “royal marriage” in alchemy.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §381 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="honey">
+<h2><a class="ev" href="/concept-honey">Honey</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-honey">Honey</a> <em title="signifies">signifies</em> <a href="/concept-will-to-live">The will to live (Schopenhauer's Will)</a></p>
+<blockquote class="ev">&ldquo;It expresses, psychologically, the joy of life and the life urge&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §698 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="horse">
+<h2><a class="ev" href="/concept-horse">The horse (three-legged and four-legged)</a></h2>
+<p class="conc-n">7 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-horse">The horse (three-legged and four-legged)</a> <em title="represents">represents</em> <a href="/concept-the-body">The body (corpus)</a></p>
+<blockquote class="ev">&ldquo;As an animal lower than man it represents the lower part of the body and the animal impulses&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §347 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-horse#r-e3368">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-horse">The horse (three-legged and four-legged)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-libido">Libido (psychic energy)</a></p>
+<blockquote class="ev">&ldquo;The mother-imago is a libido-symbol and so is the horse&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §421 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-horse#r-e2976">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-horse">The horse (three-legged and four-legged)</a> <em title="parallels">parallels</em> <a href="/concept-the-shadow">The shadow</a></p>
+<blockquote class="ev">&ldquo;Rider and horse form a centaur-like unit, ... like man and his shadow&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §678 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-horse">The horse (three-legged and four-legged)</a> <em title="represents">represents</em> <a href="/concept-spirit">Spirit</a></p>
+<blockquote class="ev">&ldquo;The two horses are miraculous animals that talk and know and thus represent the unconscious spirit&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §425 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-horse">The horse (three-legged and four-legged)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-time">Time</a></p>
+<blockquote class="ev">&ldquo;Here the horse is undoubtedly conceived as a time-symbol, besides being the whole world&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §425 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-horse#r-e2978">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-horse">The horse (three-legged and four-legged)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;Legend attributes properties to the horse which psychologically belong to the unconscious of man&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §421 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-horse">The horse (three-legged and four-legged)</a> <em title="represents">represents</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;“Horse” is an archetype ... As an animal it represents the non-human psyche, the subhuman, animal side, the unconscious.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §347 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="horse-sacrifice">
+<h2><a class="ev" href="/concept-horse-sacrifice">Horse-sacrifice</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-horse-sacrifice">Horse-sacrifice</a> <em title="symbolizes-renunciation-of">symbolizes renunciation of</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;Whereas the former symbolizes the renunciation of biological drives&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §675 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="i-ching">
+<h2><a class="ev" href="/concept-i-ching">The I Ching (Book of Changes)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-i-ching">The I Ching (Book of Changes)</a> <em title="parallels">parallels</em> <a href="/concept-dream">Dream</a></p>
+<blockquote class="ev">&ldquo;in interpreting a dream, one must follow the dream-text...so in consulting the oracle one must keep in mind the form of the question&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §1005 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-i-ching">The I Ching (Book of Changes)</a> <em title="resembles">resembles</em> <a href="/concept-physics">Physics</a></p>
+<blockquote class="ev">&ldquo;The ancient Chinese mind contemplates the cosmos in a way comparable to that of the modern physicist&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §973 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="initiation">
+<h2><a class="ev" href="/concept-initiation">Initiation</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-analytic-process">The analytic process</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-initiation">Initiation</a></p>
+<blockquote class="ev">&ldquo;The only “initiation process” that is still alive and practised today in the West is the analysis of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §842 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-analytic-process#r-e2554">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-spontaneous-fantasy">Spontaneous fantasy</a> <em title="analogous-to">analogous to</em> <a href="/concept-initiation">Initiation</a></p>
+<blockquote class="ev">&ldquo;We could therefore most fittingly describe these later series of fantasies as processes of initiation, since these form the closest analogy.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 7 §384 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="inner-dialogue">
+<h2><a class="ev" href="/concept-inner-dialogue">Inner dialogue with the 'other' voice</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-inner-dialogue">Inner dialogue with the 'other' voice</a> <em title="represents">represents</em> <a href="/concept-transcendent-function">The transcendent function</a></p>
+<blockquote class="ev">&ldquo;The shuttling to and fro of arguments and affects represents the transcendent function of opposites.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §189 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="subjective-level-interpretation">
+<h2><a class="ev" href="/concept-subjective-level-interpretation">Interpretation on the subjective level</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-subjective-level-interpretation">Interpretation on the subjective level</a> <em title="withdraws">withdraws</em> <a href="/concept-projection">Projection</a></p>
+<blockquote class="ev">&ldquo;all the projected contents can be restored to the patient with their original value&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §515 · Jung asserts</span> · <a href="/family-projection">projection</a> · <a href="/concept-subjective-level-interpretation#r-e1861">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-key">
+<h2><a class="ev" href="/concept-the-key">The key (Faust's key to the Mothers)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-key">The key (Faust's key to the Mothers)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-libido">Libido (psychic energy)</a></p>
+<blockquote class="ev">&ldquo;What he is describing here is the libido, which is not only creative and procreative, but possesses an intuitive faculty&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §182 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="lapis">
+<h2><a class="ev" href="/concept-lapis">Lapis philosophorum</a></h2>
+<p class="conc-n">16 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-centre">The centre towards which the eyes must always be turned; virtual midpoint of the mandala and locus of creative change</a> <em title="is-analogue-of">is analogue of</em> <a href="/concept-lapis">Lapis philosophorum</a></p>
+<blockquote class="ev">&ldquo;The centre and the circle ... are analogues of the lapis , which is among other things a living being&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §155 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="represents">represents</em> <a href="/concept-deus-absconditus">Deus absconditus</a></p>
+<blockquote class="ev">&ldquo;The attributes of the stone ... are so insistently emphasized that one cannot help taking it as the deus absconditus in matter&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §127 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="symbolizes">symbolizes</em> <a href="/concept-god-within">The God within (the divine as immanent in man)</a></p>
+<blockquote class="ev">&ldquo;The lapis may therefore be understood as a symbol of the inner Christ, of God in man.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §127 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="symbolizes">symbolizes</em> <a href="/concept-immortality">Immortality (life after death)</a></p>
+<blockquote class="ev">&ldquo;as the vivus lapis philosophicus , is a symbol of the saviour, the Anthropos, and immortality&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §133 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="signifies">signifies</em> <a href="/concept-inner-man">The inner man</a></p>
+<blockquote class="ev">&ldquo;The lapis signifies the inner man, the ἄνθρωπος πνενματικός , the natura abscondita which the alchemists sought to set free.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §126 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-lapis#r-e775">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-inorganic">The inorganic</a></p>
+<blockquote class="ev">&ldquo;a symbol of the inorganic—the stone—something that does not live but merely exists or “becomes,”&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §286 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="symbolizes">symbolizes</em> <a href="/concept-matter">Matter</a></p>
+<blockquote class="ev">&ldquo;It represents feminine matter&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §643 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-monad">The monad (Leibniz)</a> <em title="projected-into">projected into</em> <a href="/concept-lapis">Lapis philosophorum</a></p>
+<blockquote class="ev">&ldquo;it is the unity of the personality projected into the unity of the stone&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §294 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-one-mind">The One Mind (Universal Mind)</a> <em title="resembles">resembles</em> <a href="/concept-lapis">Lapis philosophorum</a></p>
+<blockquote class="ev">&ldquo;the Mind must be something as vague and indefinite as the philosophers’ stone&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §807 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;This description fits the paradoxical situation of the self, as its symbolism shows.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §257 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-lapis#r-e3">all 12 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="represents-a-transcendent-totality-which-coincides-with">represents a transcendent totality which coincides with</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;the lapis represents the idea of a transcendent totality which coincides with what analytical psychology calls the self.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §134 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="is-projection-of">is projection of</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;we would say that the stone is a projection of the unified self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §264 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;just as the lapis unites the opposites so the self assimilates contents of consciousness and the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §141 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-lapis#r-e4131">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-self">The Self</a> <em title="described-as">described as</em> <a href="/concept-lapis">Lapis philosophorum</a></p>
+<blockquote class="ev">&ldquo;this totality transcends our vision; it is a veritable lapis invisibilitatis&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §247 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="equivalent-of">equivalent of</em> <a href="/concept-unus-mundus">Unus mundus</a></p>
+<blockquote class="ev">&ldquo;a unus mundus. The alchemical equivalent is the lapis and its synonyms&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §661 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lapis">Lapis philosophorum</a> <em title="symbolizes">symbolizes</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;Hermetic philosophy gave this idea, in the form of the lapis Philosophorum, pre-eminence&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §716 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-left">
+<h2><a class="ev" href="/concept-the-left">The left (leftward movement)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-left">The left (leftward movement)</a> <em title="represents">represents</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;The left, the “sinister” side, is the unconscious side.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §166 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-the-left#r-e4595">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="leviathan">
+<h2><a class="ev" href="/concept-leviathan">Leviathan</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-leviathan">Leviathan</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the unconscious is portrayed as a great animal, for instance Leviathan&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §277 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="light">
+<h2><a class="ev" href="/concept-light">Light</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-light">Light</a> <em title="is-the-symbolical-equivalent-of">is the symbolical equivalent of</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;“Light” is the symbolical equivalent of consciousness, and the nature of consciousness is expressed by analogies with light.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §28 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-light">Light</a> <em title="expresses">expresses</em> <a href="/concept-emotion">Emotion / affect</a></p>
+<blockquote class="ev">&ldquo;the thing perceived as an inner light, as the sun of the other world, is an emotional component of the psyche&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §141 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-light">Light</a> <em title="expresses">expresses</em> <a href="/concept-psychic-energy">Psychic energy</a></p>
+<blockquote class="ev">&ldquo;The light and fire attributes depict the intensity of the feeling-tone and are therefore expressions for the psychic energy&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §128 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="lightning">
+<h2><a class="ev" href="/concept-lightning">Lightning (the flash, fulmen)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lightning">Lightning (the flash, fulmen)</a> <em title="represents">represents</em> <a href="/concept-intuition">Intuition</a></p>
+<blockquote class="ev">&ldquo;The patient’s association to lightning was that it might stand for intuition , a conjecture that is not far off the mark&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §541 · Jung quotes a source</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lightning">Lightning (the flash, fulmen)</a> <em title="signifies-change-of">signifies change of</em> <a href="/concept-psyche">The psyche</a></p>
+<blockquote class="ev">&ldquo;Lightning signifies a sudden, unexpected, and overpowering change of psychic condition&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §533 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="lion">
+<h2><a class="ev" href="/concept-lion">Lion (leo)</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lion">Lion (leo)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-concupiscentia">Concupiscentia (desirousness)</a></p>
+<blockquote class="ev">&ldquo;the wolf, lion, and other ravening beasts which for the alchemists symbolized the appetites that break loose&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §511 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lion">Lion (leo)</a> <em title="expresses">expresses</em> <a href="/concept-emotion">Emotion / affect</a></p>
+<blockquote class="ev">&ldquo;this is precisely what the fiery lion is intended to express—the passionate emotionality that precedes the recognition of unconscious contents.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §404 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lion">Lion (leo)</a> <em title="signifies">signifies</em> <a href="/concept-the-shadow">The shadow</a></p>
+<blockquote class="ev">&ldquo;Lion and peacock, emblems of concupiscence and pride, signify the overweening pretensions of the human shadow&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §513 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="luna">
+<h2><a class="ev" href="/concept-luna">Luna</a></h2>
+<p class="conc-n">4 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-luna">Luna</a> <em title="can-represent">can represent</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;In a woman the moon corresponds to consciousness and the sun to the unconscious.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §159 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-luna#r-e524">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-eros">Eros (relating principle)</a> <em title="is-equivalent-of">is equivalent of</em> <a href="/concept-luna">Luna</a></p>
+<blockquote class="ev">&ldquo;Logos and Eros are intellectually formulated intuitive equivalents of the archetypal images of Sol and Luna&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §226 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-luna">Luna</a> <em title="is-psychic-analogue-of">is psychic analogue of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;consciousness and unconsciousness, whose symbols are Sol and Luna&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §127 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-luna">Luna</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the moon is a favourite symbol for certain aspects of the unconscious—though only, of course, in a man&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §159 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-luna#r-e107">all 4 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="lux-moderna">
+<h2><a class="ev" href="/concept-lux-moderna">Lux moderna (the new light of the alchemists)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-lux-moderna">Lux moderna (the new light of the alchemists)</a> <em title="signifies">signifies</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;The “light” that shines at the end is the lux moderna of the alchemists, the new widening of consciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §211 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="magnet-of-the-wise">
+<h2><a class="ev" href="/concept-magnet-of-the-wise">The magnet of the wise (magnes)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-magnet-of-the-wise">The magnet of the wise (magnes)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;The “magnet” that attracts the hidden thing is the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §700 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="mandala">
+<h2><a class="ev" href="/concept-mandala">Mandala</a></h2>
+<p class="conc-n">15 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="refers-to">refers to</em> <a href="/concept-the-centre">The centre towards which the eyes must always be turned; virtual midpoint of the mandala and locus of creative change</a></p>
+<blockquote class="ev">&ldquo;images that refer directly and exclusively to the new centre ... I call mandala symbolism&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §45 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="symbolizes">symbolizes</em> <a href="/concept-god-within">The God within (the divine as immanent in man)</a></p>
+<blockquote class="ev">&ldquo;the mandala symbolizes either the divine being hitherto hidden and dormant in the body and now extracted and revivified&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §166 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="indistinguishable-from">indistinguishable from</em> <a href="/concept-god-image">God-image (imago Dei)</a></p>
+<blockquote class="ev">&ldquo;their symbols can no longer be distinguished from the imago Dei&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §60 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-mandala#r-e899">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="symbolizes">symbolizes</em> <a href="/concept-individuation">Individuation</a></p>
+<blockquote class="ev">&ldquo;the mandala is a symbol of individuation&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §73 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="represents">represents</em> <a href="/concept-order">Order / orderedness</a></p>
+<blockquote class="ev">&ldquo;they suddenly feel the need to compensate the confusion in their psyches through representations of an ordered unity&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §947 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="expresses">expresses</em> <a href="/concept-psychological-attitude">Psychological attitude</a></p>
+<blockquote class="ev">&ldquo;everything that can be grouped together under the general concept “mandala” expresses the essence of a certain kind of attitude&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §247 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-mandala#r-e4640">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="coincides-with">coincides with</em> <a href="/concept-quaternity">The quaternity</a></p>
+<blockquote class="ev">&ldquo;the usual quaternary structure of the mandala 57 would coincide with the alchemists’ quaternio of opposites&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §12 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-self">The Self</a> <em title="symbolized-by">symbolized by</em> <a href="/concept-mandala">Mandala</a></p>
+<blockquote class="ev">&ldquo;Its empirical symbols ... very often possess a distinct numinosity , i.e., an a priori emotional value, as in the case of the mandala&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 6 §791 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-the-self#r-e1033">all 4 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="denotes">denotes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;Thus the mandala denotes and assists exclusive concentration on the centre, the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §156 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="represents">represents</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;which bring the mandala of the total personality, 488 the ground-plan of the self, closer to consciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §262 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-mandala#r-e3429">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;symbols appear that are chiefly of the mandala type&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §31 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="signifies">signifies</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;a mandala, which has the functional significance of a union of opposites, or of mediation&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §150 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-unus-mundus">Unus mundus</a> <em title="symbolized-by">symbolized by</em> <a href="/concept-mandala">Mandala</a></p>
+<blockquote class="ev">&ldquo;mandala symbolism is the psychological equivalent of the unus mundus&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §662 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-wholeness">Wholeness / totality</a> <em title="symbolized-by">symbolized by</em> <a href="/concept-mandala">Mandala</a></p>
+<blockquote class="ev">&ldquo;wholeness... anticipated by the psyche in the form of... mandala symbols&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §59 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mandala">Mandala</a> <em title="expresses">expresses</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;There is no deity in the mandala ... The place of the deity seems to be taken by the wholeness of man.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §139 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="mirror">
+<h2><a class="ev" href="/concept-mirror">Mirror</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mirror">Mirror</a> <em title="refers-to">refers to</em> <a href="/concept-the-intellect">The intellect</a></p>
+<blockquote class="ev">&ldquo;The “mirror” as an “indispensable instrument of navigation” doubtless refers to the intellect&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §149 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="mistletoe">
+<h2><a class="ev" href="/concept-mistletoe">Mistletoe</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mistletoe">Mistletoe</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-the-shadow">The shadow</a></p>
+<blockquote class="ev">&ldquo;The mistletoe, however, corresponds to the shadow brother&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §393 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="nigredo">
+<h2><a class="ev" href="/concept-nigredo">Nigredo</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-nigredo">Nigredo</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-shadow-confrontation">Confrontation with the shadow</a></p>
+<blockquote class="ev">&ldquo;the nigredo , the first stage of the work, which was felt as “melancholia” in alchemy and corresponds to the encounter with the shadow in psychology&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §41 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-nigredo">Nigredo</a> <em title="expresses">expresses</em> <a href="/concept-original-sin">Original sin</a></p>
+<blockquote class="ev">&ldquo;the blackness of the Shulamite is an expression for sin, the original sin, as the text shows&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §600 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-nigredo">Nigredo</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;The nigredo corresponds to the darkness of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §646 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="oak">
+<h2><a class="ev" href="/concept-oak">Oak (feminine tree-numen)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-oak">Oak (feminine tree-numen)</a> <em title="represents">represents</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;the oak, which represents the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §247 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="ogdoad">
+<h2><a class="ev" href="/concept-ogdoad">Ogdoad (double quaternity)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-ogdoad">Ogdoad (double quaternity)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;The double quaternio or ogdoad stands for a totality, for something that is at once heavenly and earthly, spiritual or corporeal&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §8 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="omnes-colores">
+<h2><a class="ev" href="/concept-omnes-colores">Omnes colores (all colours)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-omnes-colores">Omnes colores (all colours)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-four-functions">The four basic functions of consciousness</a></p>
+<blockquote class="ev">&ldquo;the synthesis of the four or seven colours would mean nothing less than the integration of the personality, the union of the four basic functions&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §390 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="one-scintilla-monad">
+<h2><a class="ev" href="/concept-one-scintilla-monad">One Scintilla / Monad</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-one-scintilla-monad">One Scintilla / Monad</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;the One Scintilla or Monad is to be regarded as a symbol of the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §388 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="ortus">
+<h2><a class="ev" href="/concept-ortus">Ortus (four-coloured beast)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-ortus">Ortus (four-coloured beast)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-quaternity">The quaternity</a></p>
+<blockquote class="ev">&ldquo;The Ortus is the alchemical ... which represents the living quaternity in its first synthesis&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §282 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="painting">
+<h2><a class="ev" href="/concept-painting">Painting (the patient's pictures of dream and fantasy)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-painting">Painting (the patient's pictures of dream and fantasy)</a> <em title="relates-to">relates to</em> <a href="/concept-chakra">Chakra (padma, psychic centre of Tantric yoga)</a></p>
+<blockquote class="ev">&ldquo;Soon afterwards she began her drawings of flowers, whose symbolic content relates them quite clearly to the chakras&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §560 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="paradise">
+<h2><a class="ev" href="/concept-paradise">Paradise (Garden of Eden)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-paradise">Paradise (Garden of Eden)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;a symbol of totality and—from the psychological point of view—of the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §276 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-paradise">Paradise (Garden of Eden)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-unconsciousness">Unconsciousness (initial state)</a></p>
+<blockquote class="ev">&ldquo;separates us even further from the paradise of unconscious childhood&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 8 §751 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-paradise#r-e1962">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="phallus">
+<h2><a class="ev" href="/concept-phallus">The phallus (symbol of creative libido)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-phallus">The phallus (symbol of creative libido)</a> <em title="represents">represents</em> <a href="/concept-libido">Libido (psychic energy)</a></p>
+<blockquote class="ev">&ldquo;of which the phallus, too, is a symbol. It represents the libido, or psychic energy in its creative aspect&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §180 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-phallus#r-e2803">all 3 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-phallus">The phallus (symbol of creative libido)</a> <em title="means">means</em> <a href="/concept-mana">Mana</a></p>
+<blockquote class="ev">&ldquo;The phallus always means the creative mana, the power of healing and fertility&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §340 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="philosophical-tree">
+<h2><a class="ev" href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-individuation">Individuation</a></p>
+<blockquote class="ev">&ldquo;the individuation process ... the commonest alchemical symbol for this is the tree&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §288 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a> <em title="expresses">expresses</em> <a href="/concept-introversion">Introversion</a></p>
+<blockquote class="ev">&ldquo;The fact that the leaves of the tree (the viriditas gloriosa ) grew inwards is ... a concrete expression of introversion in the contemplative state&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §415 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-philosophical-tree">The Philosophical Tree (arbor philosophica)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;the self depicted as a process of growth&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §304 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="pisces">
+<h2><a class="ev" href="/concept-pisces">Pisces (the zodiacal sign of the Fishes)</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-pisces">Pisces (the zodiacal sign of the Fishes)</a> <em title="signifies">signifies</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;the fishes represent the driving forces of the coming world of consciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §231 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-pisces#r-e1043">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-enantiodromia">Enantiodromia</a> <em title="runs-parallel-to">runs parallel to</em> <a href="/concept-pisces">Pisces (the zodiacal sign of the Fishes)</a></p>
+<blockquote class="ev">&ldquo;The beginning of the enantiodromia would fall, logically, midway between the two fishes.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §149 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-enantiodromia#r-e1006">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-pisces">Pisces (the zodiacal sign of the Fishes)</a> <em title="expresses">expresses</em> <a href="/concept-the-opposites">The opposites</a></p>
+<blockquote class="ev">&ldquo;This countermovement, which was unknown to the majority of the oldest sources, was much emphasized in Christian times&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §147 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-pisces#r-e1005">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="planets">
+<h2><a class="ev" href="/concept-planets">Planets</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-planets">Planets</a> <em title="signify">signify</em> <a href="/concept-temperaments">Temperaments</a></p>
+<blockquote class="ev">&ldquo;The planetary names refer ultimately not only to metals but, as every alchemist knew, to the (astrological) temperaments, that is, to psychic factors.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §355 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="plenilunium">
+<h2><a class="ev" href="/concept-plenilunium">Plenilunium (full moon)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-plenilunium">Plenilunium (full moon)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;her roundness ( plenilunium, circulus lunaris ) ... the psychological self, or psychic totality.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §498 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="prayer">
+<h2><a class="ev" href="/concept-prayer">Prayer (invocation)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-prayer">Prayer (invocation)</a> <em title="expresses">expresses</em> <a href="/concept-introversion">Introversion</a></p>
+<blockquote class="ev">&ldquo;the invocation expresses this introversion&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §260 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="pregnancy">
+<h2><a class="ev" href="/concept-pregnancy">Pregnancy (of the mother in the Cantilena)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-pregnancy">Pregnancy (of the mother in the Cantilena)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;the opposites, just because they are in conflict, will gradually draw together ... a latent state of concord, suitably expressed by the symbol of pregnancy.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §506 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-pregnancy#r-e4345">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="prima-materia">
+<h2><a class="ev" href="/concept-prima-materia">Prima materia</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-prima-materia">Prima materia</a> <em title="is-psychic-analogue-of">is psychic analogue of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;of this the alchemists said everything that we could possibly say about the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §516 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-prima-materia#r-e7">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-prima-materia">Prima materia</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;he discovers in the projection the qualities of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §209 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-prima-materia#r-e3391">all 4 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-prima-materia">Prima materia</a> <em title="symbolizes">symbolizes</em> <a href="/concept-unconsciousness">Unconsciousness (initial state)</a></p>
+<blockquote class="ev">&ldquo;it was not a definite substance at all, but rather an intuitive concept for an initial psychic situation&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §240 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="psychotherapy">
+<h2><a class="ev" href="/concept-psychotherapy">Psychotherapy</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-psychotherapy">Psychotherapy</a> <em title="parallels">parallels</em> <a href="/concept-zen-buddhism">Zen Buddhism</a></p>
+<blockquote class="ev">&ldquo;If knowledge plays no small part in our Western procedure, this is equivalent to the importance of the traditional spiritual atmosphere of Buddhism in Zen.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §904 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="tetraktys">
+<h2><a class="ev" href="/concept-tetraktys">The Pythagorean tetraktys</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-quaternity">The quaternity</a> <em title="is-akin-to">is akin to</em> <a href="/concept-tetraktys">The Pythagorean tetraktys</a></p>
+<blockquote class="ev">&ldquo;the number four plays an important role in these dreams, always alluding to an idea akin to the Pythagorean tetraktys&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §61 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="rebis">
+<h2><a class="ev" href="/concept-rebis">Rebis / Hermaphrodite</a></h2>
+<p class="conc-n">4 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-rebis">Rebis / Hermaphrodite</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;the Rebis or Lapis Philosophorum... a symbol of the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §426 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-rebis">Rebis / Hermaphrodite</a> <em title="symbolizes">symbolizes</em> <a href="/concept-unconsciousness">Unconsciousness (initial state)</a></p>
+<blockquote class="ev">&ldquo;I have never come across the hermaphrodite as a personification of the goal, but more as a symbol of the initial state&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §535 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-rebis">Rebis / Hermaphrodite</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;He reconciles the two “in one body,” 54 an idea which is figuratively represented in alchemy as the two-headed hermaphrodite.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §11 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-rebis#r-e3476">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-rebis">Rebis / Hermaphrodite</a> <em title="expresses">expresses</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;What the alchemist tried to express with his Rebis and his squaring of the circle ... is wholeness—a wholeness that resolves all opposition&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §537 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="roebuck">
+<h2><a class="ev" href="/concept-roebuck">The roebuck (magic animal)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-roebuck">The roebuck (magic animal)</a> <em title="represents">represents</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;Therefore the roebuck killed at the ford ... a symbol, that is to say, which points to the “animal” and other such powers of the unconscious.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §503 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-roebuck#r-e3028">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="rose-coloured-blood">
+<h2><a class="ev" href="/concept-rose-coloured-blood">Rose-coloured blood</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-rose-coloured-blood">Rose-coloured blood</a> <em title="expressed-in-the-form-of-the-red-tincture-the-healing-or-whole-making-effect-of-a-certain-kind-of">expressed in the form of the red tincture the healing or whole making effect of a certain kind of</em> <a href="/concept-eros">Eros (relating principle)</a></p>
+<blockquote class="ev">&ldquo;in the form of the red tincture, it expressed the healing or whole-making effect of a certain kind of Eros&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §390 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="rotundum">
+<h2><a class="ev" href="/concept-rotundum">The rotundum (the round element)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-rotundum">The rotundum (the round element)</a> <em title="represents">represents</em> <a href="/concept-god-image">God-image (imago Dei)</a></p>
+<blockquote class="ev">&ldquo;This image of the Deity dormant and concealed in matter was what the alchemists called ... or simply the rotundum&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §92 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-rotundum">The rotundum (the round element)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;wholeness—represented by the sphere—is emphasized as the essence of personality&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §540 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="round-table">
+<h2><a class="ev" href="/concept-round-table">The round table (dreams 30, 31, 38)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-round-table">The round table (dreams 30, 31, 38)</a> <em title="points-to">points to</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;The round table again points to the circle of wholeness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §240 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="rubedo">
+<h2><a class="ev" href="/concept-rubedo">Rubedo</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-rubedo">Rubedo</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;redness ( rubedo ) which now follows denotes an increase of warmth and light coming from the sun, consciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §307 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="salt">
+<h2><a class="ev" href="/concept-salt">Salt (Sal)</a></h2>
+<p class="conc-n">8 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-salt">Salt (Sal)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-bitterness">Bitterness (amaritudo)</a></p>
+<blockquote class="ev">&ldquo;the most outstanding properties of salt are bitterness and wisdom&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §330 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-salt#r-e198">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-salt">Salt (Sal)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-eros">Eros (relating principle)</a></p>
+<blockquote class="ev">&ldquo;It represents the feminine principle of Eros, which brings everything into relationship, in an almost perfect way.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §322 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-salt#r-e197">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-salt">Salt (Sal)</a> <em title="analogue-of">analogue of</em> <a href="/concept-god-image">God-image (imago Dei)</a></p>
+<blockquote class="ev">&ldquo;salt becomes an analogue of God&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §323 · Jung reports a parallel</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-salt">Salt (Sal)</a> <em title="is-akin-to">is akin to</em> <a href="/concept-mens">Mens (the mind)</a></p>
+<blockquote class="ev">&ldquo;But as a matter of fact “mind” and “salt” are close cousins— cum grano salis!&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §360 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-nous">Nous</a> <em title="likened-to">likened to</em> <a href="/concept-salt">Salt (Sal)</a></p>
+<blockquote class="ev">&ldquo;It is engendered from the water and commingled and mixed with the bodies as if it were the salt of all created things&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §327 · Jung quotes a source</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-salt">Salt (Sal)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;which in many patients' drawings represents the centre and hence the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §329 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-salt">Salt (Sal)</a> <em title="expresses-aspects-of">expresses aspects of</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the various aspects of the unconscious that are expressed by salt&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §234 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-salt">Salt (Sal)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;salt contains in itself the element of water and fire, and by this is one out of two&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §326 · Jung quotes a source</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="scaiolae">
+<h2><a class="ev" href="/concept-scaiolae">Scaiolae</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-scaiolae">Scaiolae</a> <em title="correspond-to">correspond to</em> <a href="/concept-four-functions">The four basic functions of consciousness</a></p>
+<blockquote class="ev">&ldquo;his four Scaiolae, which appear to be interpreted as mental powers and psychological functions&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §208 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-scaiolae#r-e4957">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-scaiolae">Scaiolae</a> <em title="correspond-to-the-traditional-quadripartite-man-and-express-his-all-encompassing">correspond to the traditional quadripartite man and express his all encompassing</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;the four Scaiolae correspond to the traditional quadripartite man and express his all-encompassing wholeness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §207 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="scintilla">
+<h2><a class="ev" href="/concept-scintilla">Scintilla (soul-spark)</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-scintilla">Scintilla (soul-spark)</a> <em title="expresses">expresses</em> <a href="/concept-god-image">God-image (imago Dei)</a></p>
+<blockquote class="ev">&ldquo;the scintilla or soul-spark, the innermost divine essence of man, is characterized by symbols which can just as well express a God-image&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §717 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-scintilla">Scintilla (soul-spark)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-god-image">God-image (imago Dei)</a></p>
+<blockquote class="ev">&ldquo;He hath given us a spark of His light. Thus the truth is to be sought not in ourselves, but in the image of God&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §48 · Jung quotes a source</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-scintilla">Scintilla (soul-spark)</a> <em title="is-psychic-analogue-of">is psychic analogue of</em> <a href="/concept-splinter-psyche">Splinter psyche / autonomous complex</a></p>
+<blockquote class="ev">&ldquo;other, “unconscious” complexes may possess, as splinter psyches, a certain luminosity of their own&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §47 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-sea">
+<h2><a class="ev" href="/concept-the-sea">The Sea (mare)</a></h2>
+<p class="conc-n">4 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-sea">The Sea (mare)</a> <em title="interpreted-as">interpreted as</em> <a href="/concept-the-body">The body (corpus)</a></p>
+<blockquote class="ev">&ldquo;The water they swim in is mare nostrum (our sea) and is interpreted as the body.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §3 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-sea">The Sea (mare)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-collective-unconscious">The collective unconscious</a></p>
+<blockquote class="ev">&ldquo;The sea is the symbol of the collective unconscious, because unfathomed depths lie concealed beneath its reflecting surface&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §57 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-the-sea#r-e566">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-sea">The Sea (mare)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;we know that in alchemy “our sea” is a symbol for the unconscious in general, just as it is in dreams&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §219 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-the-sea#r-e1037">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-sea">The Sea (mare)</a> <em title="signifies">signifies</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;In dreams and fantasies the sea or a large expanse of water signifies the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §320 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="sea-monster">
+<h2><a class="ev" href="/concept-sea-monster">The sea-monster (water-monster)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sea-monster">The sea-monster (water-monster)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the battle with the sea monster means: it is the attempt to free the ego-consciousness from the deadly grip of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §539 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sea-monster">The sea-monster (water-monster)</a> <em title="represents">represents</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;the typical struggle of the hero with the monster (the unconscious content) takes place beside the water&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 7 §160 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="separatio">
+<h2><a class="ev" href="/concept-separatio">Separatio</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-separatio">Separatio</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-death">Death</a></p>
+<blockquote class="ev">&ldquo;they rediscovered the old truth that every operation of this kind is a figurative death&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §674 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-separatio#r-e4439">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="shapeless-life-mass">
+<h2><a class="ev" href="/concept-shapeless-life-mass">The shapeless animal lump or life-mass of dream 18, the amorphous mass out of which the transfigured human head arises</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-shapeless-life-mass">The shapeless animal lump or life-mass of dream 18, the amorphous mass out of which the transfigured human head arises</a> <em title="stands-for">stands for</em> <a href="/concept-collective-unconscious">The collective unconscious</a></p>
+<blockquote class="ev">&ldquo;The animal lump or life-mass stands for the mass of the inherited unconscious which is to be united with consciousness.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §184 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="serpent">
+<h2><a class="ev" href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a></h2>
+<p class="conc-n">11 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-death">Death</a></p>
+<blockquote class="ev">&ldquo;That the snake really is a death-symbol is evident&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §578 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="signifies">signifies</em> <a href="/concept-evil">Evil (malum)</a></p>
+<blockquote class="ev">&ldquo;the snake signifies evil and darkness on the one hand and wisdom on the other&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §370 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-fear">Fear</a></p>
+<blockquote class="ev">&ldquo;The krater symbolizes the maternal vessel of rebirth, the snake fear and resistance, and the lion raging desire&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §671 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-serpent#r-e3140">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="signifies">signifies</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;it is the awakening of Kundalini, meaning that the patient’s chthonic nature is becoming active&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §667 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="represents">represents</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;the snake is the representative of the world of instinct&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §615 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="represents">represents</em> <a href="/concept-kundalini">Kundalini</a></p>
+<blockquote class="ev">&ldquo;The fundamental idea of Tantrism is that a feminine creative force in the shape of a serpent, named kundalinī&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §561 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-serpent#r-e3389">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-opposites">The opposites</a></p>
+<blockquote class="ev">&ldquo;it contains and symbolizes the strongest polarity into which the Anthropos falls when he descends into Physis&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §390 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="represents">represents</em> <a href="/concept-the-shadow">The shadow</a></p>
+<blockquote class="ev">&ldquo;The snake, like the devil in Christian theology, represents the shadow, and one which goes far beyond anything personal&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §567 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-transformation">Transformation (of the god)</a></p>
+<blockquote class="ev">&ldquo;The snake symbolizes the numen of the transformative act as well as the transformative substance itself&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §676 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="represents">represents</em> <a href="/concept-tree-numen">Tree-numen</a></p>
+<blockquote class="ev">&ldquo;the mercurial serpent ... because it represents the tree-numen&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §416 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-serpent#r-e5083">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-serpent">The snake/serpent as agent of transformation and renewal (healing serpent, Kundalini serpent, the snakes in the four corners)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;It is an excellent symbol for the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §580 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-serpent#r-e3088">all 4 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="sol">
+<h2><a class="ev" href="/concept-sol">Sol</a></h2>
+<p class="conc-n">12 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="is-psychic-analogue-of">is psychic analogue of</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;Sol corresponds psychologically to consciousness, the diurnal side of the psyche&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §121 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-sol#r-e5">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="signifies">signifies</em> <a href="/concept-consciousness">Consciousness (ego, diurnal psyche)</a></p>
+<blockquote class="ev">&ldquo;The sun itself (looking rather like the yolk of an incubated egg) usually denotes consciousness, illumination, understanding.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §697 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-ego">The ego</a></p>
+<blockquote class="ev">&ldquo;The refulgent body of the sun is the ego and its field of consciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §129 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-sol#r-e399">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="stands-for">stands for</em> <a href="/concept-eros">Eros (relating principle)</a></p>
+<blockquote class="ev">&ldquo;So when Miss Miller praises God or the sun, she really means her love&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §127 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="symbolizes">symbolizes</em> <a href="/concept-god-image">God-image (imago Dei)</a></p>
+<blockquote class="ev">&ldquo;the most important was its frequent use as a God-image&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §130 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-libido">Libido (psychic energy)</a> <em title="symbolized-by">symbolized by</em> <a href="/concept-sol">Sol</a></p>
+<blockquote class="ev">&ldquo;If one worships God, sun, or fire (cf. fig. 4), one is worshipping intensity and power&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §128 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-libido#r-e154">all 4 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-libido">Libido (psychic energy)</a> <em title="compared-with">compared with</em> <a href="/concept-sol">Sol</a></p>
+<blockquote class="ev">&ldquo;like the sun, the libido also wills its own descent, its own involution&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §680 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-logos">Logos</a> <em title="is-equivalent-of">is equivalent of</em> <a href="/concept-sol">Sol</a></p>
+<blockquote class="ev">&ldquo;Logos and Eros are intellectually formulated intuitive equivalents of the archetypal images of Sol and Luna&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §226 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="is-a-symbol-of-the-source-of-life-and-the-ultimate-wholeness-of">is a symbol of the source of life and the ultimate wholeness of</em> <a href="/concept-man">Man (homo)</a></p>
+<blockquote class="ev">&ldquo;the sun is a symbol of the source of life and the ultimate wholeness of man&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §112 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="symbolizes">symbolizes</em> <a href="/concept-psychic-energy">Psychic energy</a></p>
+<blockquote class="ev">&ldquo;The sun comparison tells us over and over again that the dynamic of the gods is psychic energy&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §296 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="is-classical-symbol-for-unity-and-divinity-of">is classical symbol for unity and divinity of</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;the classical symbol for the unity and divinity of the self, the sun&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §108 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol">Sol</a> <em title="symbolizes">symbolizes</em> <a href="/concept-spirit">Spirit</a></p>
+<blockquote class="ev">&ldquo;if Sol is the spirit and Luna the body&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §175 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="sol-niger">
+<h2><a class="ev" href="/concept-sol-niger">Sol niger (black sun)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sol-niger">Sol niger (black sun)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-the-shadow">The shadow</a></p>
+<blockquote class="ev">&ldquo;the umbra solis or sol niger of the alchemists, the black shadow which everybody carries with him&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §420 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-sol-niger#r-e3416">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="solificatio">
+<h2><a class="ev" href="/concept-solificatio">Solificatio</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-solificatio">Solificatio</a> <em title="signifies">signifies</em> <a href="/concept-differentiation">Differentiation (of consciousness)</a></p>
+<blockquote class="ev">&ldquo;The second, or solificatio , is the conscious differentiation of the masculine aspect&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §647 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="solutio">
+<h2><a class="ev" href="/concept-solutio">Solutio (dissolution)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-solutio">Solutio (dissolution)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;the union of the male with the female, and this in turn to the union of conscious and unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §364 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="stag">
+<h2><a class="ev" href="/concept-stag">Stag</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-stag">Stag</a> <em title="signifies">signifies</em> <a href="/concept-soul">Soul</a></p>
+<blockquote class="ev">&ldquo;The stag signifies the soul, the unicorn spirit, and the forest the body.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §3 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="star">
+<h2><a class="ev" href="/concept-star">The star</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-star">The star</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;The picture shows the self appearing as a star out of chaos.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §683 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-star#r-e1542">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-statue">
+<h2><a class="ev" href="/concept-the-statue">The Statue (statua)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-statue">The Statue (statua)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-body">The body (corpus)</a></p>
+<blockquote class="ev">&ldquo;The statue stands for the inert materiality of Adam, who still needs an animating soul&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §569 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="sulphur">
+<h2><a class="ev" href="/concept-sulphur">Sulphur</a></h2>
+<p class="conc-n">3 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sulphur">Sulphur</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-compulsion">Compulsion (involuntary motivation)</a></p>
+<blockquote class="ev">&ldquo;The unconscious dynamism would correspond to sulphur, for compulsion is the great mystery of human life.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §151 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sulphur">Sulphur</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-eros">Eros (relating principle)</a></p>
+<blockquote class="ev">&ldquo;This might well be a description of Eros.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §140 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-sulphur">Sulphur</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;The common denominator of these two...conceptions is the self&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §145 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-sword">
+<h2><a class="ev" href="/concept-the-sword">The sword (sacrificial and alchemical instrument)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-sword">The sword (sacrificial and alchemical instrument)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-logos">Logos</a></p>
+<blockquote class="ev">&ldquo;the sword which comes out of the mouth of the Son of Man in the Book of Revelation is ... the Logos&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §357 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-the-sword#r-e2273">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="tetrameria">
+<h2><a class="ev" href="/concept-tetrameria">Tetrameria (quartering of the process)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-tetrameria">Tetrameria (quartering of the process)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-quaternity">The quaternity</a></p>
+<blockquote class="ev">&ldquo;the original tetrameria corresponded exactly to the quaternity of elements&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §333 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="tetramorph">
+<h2><a class="ev" href="/concept-tetramorph">The Tetramorph (the four evangelist symbols as steed of the Church)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-tetramorph">The Tetramorph (the four evangelist symbols as steed of the Church)</a> <em title="expresses">expresses</em> <a href="/concept-quaternity">The quaternity</a></p>
+<blockquote class="ev">&ldquo;the four seraphim on God’s throne became the emblems of the evangelists, for they form the quaternity which expresses Christ’s totality&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §667 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-tetramorph#r-e2149">all 3 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="theoria">
+<h2><a class="ev" href="/concept-theoria">Theoria (the alchemical doctrine, aqua doctrinae)</a></h2>
+<p class="conc-n">2 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-amplification">Amplification (amplificatio)</a> <em title="understood-as">understood as</em> <a href="/concept-theoria">Theoria (the alchemical doctrine, aqua doctrinae)</a></p>
+<blockquote class="ev">&ldquo;is understood by the alchemist as theoria&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §403 · Jung reports a parallel</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-theoria">Theoria (the alchemical doctrine, aqua doctrinae)</a> <em title="is-projection-of">is projection of</em> <a href="/concept-archetype">Archetype (archetype-as-such)</a></p>
+<blockquote class="ev">&ldquo;The theoria of alchemy, as I think I have shown, is for the most part a projection of unconscious contents, of those archetypal forms&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 16 §538 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="theriomorphic-symbol">
+<h2><a class="ev" href="/concept-theriomorphic-symbol">Theriomorphic symbol (animal representation of libido)</a></h2>
+<p class="conc-n">4 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-theriomorphic-symbol">Theriomorphic symbol (animal representation of libido)</a> <em title="represents">represents</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;the animals which represent the instincts to appear at the same time as attributes of the parents&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §263 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-theriomorphic-symbol#r-e2863">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-theriomorphic-symbol">Theriomorphic symbol (animal representation of libido)</a> <em title="indicates">indicates</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;Theriomorphic symbolism is always an indication of a psychic process occurring on an animal level, i.e., in the instinctual sphere.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §178 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-theriomorphic-symbol">Theriomorphic symbol (animal representation of libido)</a> <em title="represents">represents</em> <a href="/concept-libido">Libido (psychic energy)</a></p>
+<blockquote class="ev">&ldquo;Thus the theriomorphic symbols always refer to unconscious manifestations of libido.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §261 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-theriomorphic-symbol#r-e2861">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-theriomorphic-symbol">Theriomorphic symbol (animal representation of libido)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-libido">Libido (psychic energy)</a></p>
+<blockquote class="ev">&ldquo;part of the libido which still possesses the compulsive character of an instinct ... some kind of animal is an entirely appropriate symbol.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 7 §133 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="tortoise">
+<h2><a class="ev" href="/concept-tortoise">Tortoise</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-tortoise">Tortoise</a> <em title="symbolizes">symbolizes</em> <a href="/concept-instinct">Instinct</a></p>
+<blockquote class="ev">&ldquo;a tortoise 71 ( fig. 76 ), which, primitive and cold-blooded like the snake, symbolizes the instinctual side of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §203 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="tree">
+<h2><a class="ev" href="/concept-tree">The Tree (mythological)</a></h2>
+<p class="conc-n">5 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-tree">The Tree (mythological)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-libido">Libido (psychic energy)</a></p>
+<blockquote class="ev">&ldquo;It is the tree of libido, which here represents the feminine as well as the masculine side&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §326 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-tree#r-e2908">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-tree">The Tree (mythological)</a> <em title="represents-if-the-mandala-is-a-symbol-of-it-seen-in-cross-section-a-profile-view-of">represents if the mandala is a symbol of it seen in cross section a profile view of</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;If a mandala may be described as a symbol of the self … then the tree would represent a profile view of it&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §304 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-tree">The Tree (mythological)</a> <em title="is-together-with-the-mountain-a-symbol-of-the-personality-and-of">is together with the mountain a symbol of the personality and of</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;Mountain and tree are symbols of the personality and of the self, as I have shown elsewhere&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §407 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-tree">The Tree (mythological)</a> <em title="represents">represents</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;then the tree would represent a profile view of it: the self depicted as a process of growth&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 13 §304 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-tree">The Tree (mythological)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;his relation to the unconscious since the latter is frequently expressed through wood and water symbols&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §406 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="umbra-solis">
+<h2><a class="ev" href="/concept-umbra-solis">Umbra solis (shadow of the sun)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-umbra-solis">Umbra solis (shadow of the sun)</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-the-shadow">The shadow</a></p>
+<blockquote class="ev">&ldquo;on the other hand to the shadow, corresponding to the umbra solis&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §152 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a> · <a href="/concept-umbra-solis#r-e4140">all 2 passages</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="unicorn">
+<h2><a class="ev" href="/concept-unicorn">Unicorn</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-unicorn">Unicorn</a> <em title="signifies">signifies</em> <a href="/concept-spirit">Spirit</a></p>
+<blockquote class="ev">&ldquo;The stag signifies the soul, the unicorn spirit, and the forest the body.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §3 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="unio-mentalis">
+<h2><a class="ev" href="/concept-unio-mentalis">Unio mentalis</a></h2>
+<p class="conc-n">4 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-christianity">Christianity</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-unio-mentalis">Unio mentalis</a></p>
+<blockquote class="ev">&ldquo;Christianity, ... was “a unio mentalis in the overcoming of the body.”&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §747 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-shadow-confrontation">Confrontation with the shadow</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-unio-mentalis">Unio mentalis</a></p>
+<blockquote class="ev">&ldquo;the shadow, corresponds to the union of spirit and soul in the unio mentalis&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §707 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-unio-mentalis">Unio mentalis</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-individuation">Individuation</a></p>
+<blockquote class="ev">&ldquo;The unio mentalis , the interior oneness which today we call individuation&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §670 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-unio-mentalis">Unio mentalis</a> <em title="signifies">signifies</em> <a href="/concept-wider-consciousness">The wider (higher) consciousness</a></p>
+<blockquote class="ev">&ldquo;The unio mentalis signified, therefore, an extension of consciousness&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §743 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="ouroboros">
+<h2><a class="ev" href="/concept-ouroboros">Uroboros</a></h2>
+<p class="conc-n">5 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-ouroboros">Uroboros</a> <em title="symbolizes">symbolizes</em> <a href="/concept-individuation">Individuation</a></p>
+<blockquote class="ev">&ldquo;The alchemists … expressed this paradox through the symbol of the uroboros, the snake that bites its own tail&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §297 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-ouroboros">Uroboros</a> <em title="symbolizes-assimilation-of">symbolizes assimilation of</em> <a href="/concept-the-shadow">The shadow</a></p>
+<blockquote class="ev">&ldquo;The uroboros is a dramatic symbol for the integration and assimilation of the opposite, i.e., of the shadow&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §513 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-spirit">Spirit</a> <em title="corresponds-to">corresponds to</em> <a href="/concept-ouroboros">Uroboros</a></p>
+<blockquote class="ev">&ldquo;Simon’s description of the creative pneuma , the true arcane substance, corresponds in every detail to the uroboros or serpens mercurialis of the Latinists.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §359 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-ouroboros">Uroboros</a> <em title="symbolizes">symbolizes</em> <a href="/concept-union-of-opposites">Union of opposites</a></p>
+<blockquote class="ev">&ldquo;compounded of opposites and is at the same time their uniting symbol&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §460 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-ouroboros#r-e11">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-ouroboros">Uroboros</a> <em title="symbolizes">symbolizes</em> <a href="/concept-wholeness">Wholeness / totality</a></p>
+<blockquote class="ev">&ldquo;the apocatastasis, i.e., the restoration of an original state of wholeness, which the alchemists expressed through the symbol of the uroboros&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9ii §410 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="water">
+<h2><a class="ev" href="/concept-water">Water</a></h2>
+<p class="conc-n">5 pairs</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-mother-imago">Mother-imago</a> <em title="projected-onto">projected onto</em> <a href="/concept-water">Water</a></p>
+<blockquote class="ev">&ldquo;The projection of the mother-imago upon water endows the latter with a number of numinous or magical qualities&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §320 · Jung asserts</span> · <a href="/family-projection">projection</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-water">Water</a> <em title="signifies">signifies</em> <a href="/concept-spirit">Spirit</a></p>
+<blockquote class="ev">&ldquo;Here the water signifies the pneuma , i.e., the spirit of prophecy&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §313 · Jung reports a parallel</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-water#r-e2268">all 2 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-water">Water</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;This water is no figure of speech, but a living symbol of the dark psyche.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 9i §33 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a> · <a href="/concept-water#r-e1164">all 8 passages</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-water">Water</a> <em title="represents">represents</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;The water represents the maternal depths and the place of rebirth; in short, the unconscious in its positive and negative aspects&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §609 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-water">Water</a> <em title="signifies">signifies</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;Thus the water signifies the unconscious, or rather, the state of unconsciousness, of concealment&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 7 §140 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="the-wheel">
+<h2><a class="ev" href="/concept-the-wheel">The wheel (eight-spoked wheel, rota, Ezekiel's wheel) as symbol of the circulating process and of wholeness</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-the-wheel">The wheel (eight-spoked wheel, rota, Ezekiel's wheel) as symbol of the circulating process and of wholeness</a> <em title="refers-to">refers to</em> <a href="/concept-the-self">The Self</a></p>
+<blockquote class="ev">&ldquo;Being round, the wheel refers to the self and the creative activity in which it is manifest&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 12 §281 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="womb">
+<h2><a class="ev" href="/concept-womb">The womb (matrix)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-womb">The womb (matrix)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-the-unconscious">The unconscious</a></p>
+<blockquote class="ev">&ldquo;with the matrix, which frequently symbolizes the creative aspect of the unconscious&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 5 §182 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="worm">
+<h2><a class="ev" href="/concept-worm">Worm (vermis)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-worm">Worm (vermis)</a> <em title="symbolizes">symbolizes</em> <a href="/concept-death">Death</a></p>
+<blockquote class="ev">&ldquo;The worm or serpent is all-devouring death.&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 14 §482 · Jung asserts</span> · <a href="/family-symbolization">symbolization</a></p>
+</li>
+</ul>
+</section>
+<section class="conc-term" id="yoga">
+<h2><a class="ev" href="/concept-yoga">Yoga (samadhi, the Eastern method of self-control)</a></h2>
+<p class="conc-n">1 pair</p>
+<ul class="conc-rows">
+<li class="conc-row">
+<p class="conc-pair ev"><a href="/concept-analytical-psychology">Analytical psychology</a> <em title="parallels">parallels</em> <a href="/concept-yoga">Yoga (samadhi, the Eastern method of self-control)</a></p>
+<blockquote class="ev">&ldquo;Our Western psychology has, in fact, got as far as yoga in that it is able to establish scientifically a deeper layer of unity&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW 11 §945 · Jung asserts</span> · <a href="/family-correspondence">correspondence</a></p>
+</li>
+</ul>
+</section>
+</div>
+<p class="meta">A term is alchemical when the atlas puts it on the laboratory side: substances, operations, symbols, and the concepts listed as alchemical doctrine. Figures and motifs, Mercurius and the anima among them, belong to neither side yet and do not appear here. Each pair shows its highest-confidence citation, in Jung's own voice where it has one; where a pair rests on more passages, the link after the quote leads to them.</p>
+</main></body></html>

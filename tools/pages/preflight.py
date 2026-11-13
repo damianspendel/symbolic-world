@@ -37,6 +37,8 @@ ALLOW = {
     'symbolicworld-graph.ttl', 'symbolicworld-ontology.ttl', 'symbolicworld-void.ttl',
     # the static twin of the SPA's #/method view (spec-concept-pages-v1)
     'method.html',
+    # the static concordance (2026-11-13)
+    'concordance.html',
     # the Rosarium page (v2.4.0) and its ten woodcuts
     'opus.html',
     'opus-rosarium-01.jpg',

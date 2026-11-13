@@ -145,6 +145,11 @@ const ROUTES_IN_UI = true
 // the list as text), so switching the page off means editing the menu too.
 const EMIT_OPUS_PAGE = true
 
+// The concordance page (2026-11-13): a static, indexable /concordance
+// page built from the same bridges as the app view. Off, the page is not
+// written and no sitemap entry is made.
+const EMIT_CONCORDANCE_PAGE = true
+
 // The support link (Ko-fi, decision of 2026-10-21): one footer link on every
 // generated page, the /support page and its menu entry, nothing else monetized.
 // Empty renders nothing anywhere. tools/build_ledger_page.py reads this
@@ -4072,6 +4077,107 @@ bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribut
     })
     V2_COPY.push(['public/opus-claims.html (generated)', stripEvidence(claimsBody)])
     console.log(`opus claims page: ${claimTotal} rows — ` + counts.map(([id, c]) => `${id} ${c}`).join(', '))
+  }
+
+  // ------------------------------------------------ /concordance ------------
+  // The concordance page (2026-11-13): a static page of the
+  // concordance, so search engines can index it; the app view at
+  // /atlas#/concordance sits behind a fragment they ignore. Built from the
+  // `concordance` object the app reads: the same bridges, grouped by the
+  // alchemical (laboratory-side) term, each pair with the relation as the edge
+  // states it, one citation and its quote, all already on the concept pages.
+  // The app view, the landing card and the menu are unchanged; repointing them
+  // is Damian's call.
+  if (EMIT_CONCORDANCE_PAGE) {
+    const edgeById = new Map(atlasEdges.map(e => [e.id, e]))
+    const famName = new Map(families.map(f => [f.id, f.name]))
+    const CONC_VOICE = { 'jung-asserts': 'Jung asserts', 'jung-reports-parallel': 'Jung reports a parallel', 'jung-quotes-source': 'Jung quotes a source' }
+    const confRank = (c) => c === 'high' ? 0 : c === 'medium' ? 1 : 2
+    // one quote a pair: high confidence, Jung's own voice, then volume and paragraph
+    const pickRef = (e) => [...e.refs].filter(r => r.quote).sort((a, b) => confRank(a.confidence) - confRank(b.confidence) ||
+      (b.claim_type === 'jung-asserts') - (a.claim_type === 'jung-asserts') ||
+      byVolume(a.volume, b.volume) || Number(a.paragraph) - Number(b.paragraph))[0]
+    const fold = (s) => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/^the\s+/, '')
+    const byLabel = (a, b) => fold(nodeLabel(a)).localeCompare(fold(nodeLabel(b))) || a.localeCompare(b)
+    const terms = new Map()
+    for (const id of bridges) {
+      const e = edgeById.get(id)
+      const lab = registerById[e.source] === 'laboratory' ? e.source : e.target
+      const psy = lab === e.source ? e.target : e.source
+      if (registerById[lab] !== 'laboratory' || registerById[psy] !== 'psyche') { console.error(`CONCORDANCE PAGE: bridge ${id} (${e.key}) does not join the two registers`); process.exit(1) }
+      const r = pickRef(e)
+      if (!r) { console.error(`CONCORDANCE PAGE: bridge ${id} (${e.key}) has no quoted reference`); process.exit(1) }
+      if (!terms.has(lab)) terms.set(lab, [])
+      terms.get(lab).push({ e, psy, r })
+    }
+    const termIds = [...terms.keys()].sort(byLabel)
+    const pairTotal = derived(bridges.length), termTotal = derived(termIds.length)
+    const cLink = (id) => `<a href="/concept-${esc(id)}">${esc(nodeLabel(id))}</a>`
+    const row = ({ e, r }) => {
+      const passages = new Set(e.refs.map(x => `${x.volume}§${x.paragraph}`)).size
+      const fam = e.family && e.family.state === 'family' ? e.family.value : ''
+      return `<li class="conc-row">
+<p class="conc-pair ev">${cLink(e.source)} <em title="${escAttr(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> ${cLink(e.target)}</p>
+<blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote>
+<p class="conc-cite"><span class="ev">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(CONC_VOICE[r.claim_type] || r.claim_type)}</span>${fam ? ` · <a href="/family-${esc(fam)}">${esc(famName.get(fam) || fam)}</a>` : ''}${passages > 1 ? ` · <a href="/concept-${esc(e.source)}#r-${esc(e.id)}">all ${derived(passages)} passages</a>` : ''}</p>
+</li>`
+    }
+    const cards = termIds.map(lab => {
+      const rows = terms.get(lab).sort((a, b) => byLabel(a.psy, b.psy) || a.e.id.localeCompare(b.e.id, 'en', { numeric: true }))
+      return `<section class="conc-term" id="${esc(lab)}">
+<h2><a class="ev" href="/concept-${esc(lab)}">${esc(nodeLabel(lab))}</a></h2>
+<p class="conc-n">${derived(rows.length)} ${rows.length === 1 ? 'pair' : 'pairs'}</p>
+<ul class="conc-rows">
+${rows.map(row).join('\n')}
+</ul>
+</section>`
+    }).join('\n')
+    const index = termIds.map(lab => `<a class="ev" href="#${esc(lab)}">${esc(nodeLabel(lab))}</a>`).join(' · ')
+    const concBody = `<div class="titleband"><p class="eyebrow">Explore</p>
+<h1>The concordance</h1>
+<p class="sub">Jung's psychological concepts beside the alchemical terms he reads them through.</p></div>
+<p class="land-lead">Each pair joins an alchemical term to a concept of Jung's psychology through a verified relation of symbolization, correspondence or projection. The page groups the pairs by alchemical term. Each row quotes one passage, and the concept pages hold every citation.</p>
+<p class="conc-count">${pairTotal} pairs · ${termTotal} alchemical terms</p>
+<p class="conc-aside"><a href="/atlas#/concordance">The same pairs on a board, with two guided walks, in the atlas &rarr;</a></p>
+<nav class="conc-index" aria-label="Alchemical terms">${index}</nav>
+<div class="conc-grid">
+${cards}
+</div>
+<p class="meta">A term is alchemical when the atlas puts it on the laboratory side: substances, operations, symbols, and the concepts listed as alchemical doctrine. Figures and motifs, Mercurius and the anima among them, belong to neither side yet and do not appear here. Each pair shows its highest-confidence citation, in Jung's own voice where it has one; where a pair rests on more passages, the link after the quote leads to them.</p>`
+    const concStyle = `${LANDING_CSS}
+.page-main.landing > .land-lead { margin: 0 0 1rem; }
+.conc-count { font: .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); }
+.conc-aside { margin-top: .5rem; font-size: .86rem; }
+.conc-index { margin: 1.6rem 0 2rem; font-size: .86rem; line-height: 1.9; color: var(--ink-faint); }
+.conc-index a { color: var(--gold); text-decoration: none; white-space: nowrap; }
+.conc-index a:hover, .conc-index a:focus-visible { text-decoration: underline; }
+.conc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 1rem; align-items: start; margin-bottom: 2.5rem; }
+.conc-term { border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); padding: 1.1rem 1.2rem .4rem; scroll-margin-top: 5rem; }
+.conc-term:target { border-color: var(--gold-dim); }
+.conc-term h2 { font-family: var(--display); font-size: 1.35rem; line-height: 1.2; margin: 0; }
+.conc-term h2 a { color: var(--ink); text-decoration: none; }
+.conc-term h2 a:hover { color: var(--gold); }
+.conc-n { font: .6rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: .3rem 0 .6rem; }
+.conc-rows { list-style: none; padding: 0; margin: 0; }
+.conc-row { padding: .7rem 0; border-top: 1px solid var(--hairline); }
+.conc-pair { font-family: var(--display); font-size: 1.02rem; line-height: 1.35; margin: 0 0 .35rem; }
+.conc-pair em { font-style: normal; color: var(--ink-faint); }
+.conc-row blockquote { margin: 0; padding: .1rem 0 .1rem .8rem; border-left: 2px solid var(--gold-dim); font-family: var(--display); font-size: .95rem; line-height: 1.5; color: var(--ink-label); }
+.conc-cite { font: .62rem/1.7 var(--mono); color: var(--ink-faint); margin-top: .35rem; }
+.conc-cite a { color: var(--gold); }
+@media (max-width: 720px) { .conc-grid { grid-template-columns: 1fr; } .conc-term { padding: .9rem .9rem .3rem; } }
+`
+    registerPage({
+      slug: 'concordance', title: 'The concordance', where: 'concordance', kind: 'prose landing',
+      titleFull: 'The concordance: Jung’s concepts beside the alchemical terms · The Symbolic World',
+      changefreq: 'weekly', priority: '0.6',
+      description: 'Jung’s psychological concepts beside the alchemical terms he reads them through, grouped by term: each pair with its relation, CW paragraph and a verified quote.',
+      style: concStyle, body: concBody
+    })
+    V2_COPY.push(['public/concordance.html (generated)', stripEvidence(concBody)])
+    console.log(`concordance page: ${pairTotal} pairs over ${termTotal} alchemical terms`)
+  } else {
+    console.log('concordance page: EMIT_CONCORDANCE_PAGE is false — not registered')
   }
 
   // ------------------------------------------------ /support ----------------
