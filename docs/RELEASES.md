@@ -72,12 +72,12 @@ pin: graph v2.4.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 
 ### UI
 
-- [/opus](/opus) follows Jung's reading of the ten woodcuts of the
-  *Rosarium philosophorum* in CW 16. Each picture carries three verified
-  claims, and some come from CW 12 and 14. The background changes where
-  Jung names a stage. On a desktop the pictures cross-fade in place; on a
-  phone the page scrolls. The woodcuts come from Jung's own copy of the
-  1550 edition, digitised by e-rara.ch.
+- [/opus](/opus) follows Jung's reading of the ten woodcuts of the *Rosarium
+  philosophorum* in CW 16. Each picture carries up to three verified claims,
+  and some come from CW 12 and 14. The background changes where Jung, or a
+  text he quotes, names a stage. On a desktop the pictures cross-fade in
+  place; on a phone the page scrolls. The woodcuts come from Jung's own copy
+  of the 1550 edition, digitised by e-rara.ch.
 - [/opus-claims](/opus-claims) lists every verified claim on the figures of
   the ten pictures across CW 12, 13, 14 and 16, picture by picture.
 - [/query](/query) suggests concepts and relations as you type, and offers
