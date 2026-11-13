@@ -84,7 +84,7 @@ sw:Voice a owl:Class ;
 sw:Commitment a owl:Class ;
     owl:oneOf ( sw:CommitmentHigh sw:CommitmentMedium sw:CommitmentLow ) ;
     rdfs:label "Commitment" ;
-    rdfs:comment "The confidence recorded for the claim, from the confidence field of its reference: high, medium or low. A later check can lower it, as an audit or a dispute has done for some claims." ;
+    rdfs:comment "The confidence recorded for the claim, from the confidence field of its reference: high, medium or low. The gate, an audit or a dispute can lower it, and the reference then keeps the original string." ;
     rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
 sw:Rung a owl:Class ;
     owl:oneOf ( sw:Attested sw:ModelSupported sw:CrossChecked sw:Normalized sw:FamilyAssigned sw:Derived sw:HumanReviewed sw:HumanAgreed ) ;
