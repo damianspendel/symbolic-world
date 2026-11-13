@@ -3519,8 +3519,19 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     // Each replaces the lowest-ranked of the picture's three claims under the
     // page's own order; the colour cite is never replaced. The closing panel
     // carries its own, and the yellow before the red rests on CW 12 §271.
+    // Four claims a picture (Damian, 2026-11-13: "let's make everthing have
+    // four - a quaternity if you like"). Picture 2 is set by hand from his
+    // ruling the same day; a group of edges sharing one quote shows as one claim.
+    const OPUS_CLAIMS = 4
+    const OPUS_FIXED = {
+      2: [
+        [['coniunctio|involves|incest', '16', 415]],
+        [['regina|represents|artifex', '16', 421], ['rex|represents|soror-mystica', '16', 421]],
+        [['regina|appears-as|luna', '14', 532]],
+        [['rex|symbolizes|consciousness', '14', 501]]
+      ]
+    }
     const OPUS_PICKS = {
-      2: [['luna|belongs-to|albedo', '14', 181], ['sol|belongs-to|rubedo', '14', 181]],
       5: [['coniunctio|is-a|hierosgamos', '14', 120]],
       6: [['sol-niger|belongs-to|nigredo', '14', 113]],
       7: [['cauda-pavonis|precedes|rubedo', '14', 388]],
@@ -3546,6 +3557,9 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     const inRange = (r, a, b) => String(r.volume) === '16' && Number(r.paragraph) >= a && Number(r.paragraph) <= b
     const claimLine = (e, r) => `<li class="opus-claim"><p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
 <blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
+    const relLine = (e) => `<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>`
+    const claimGroup = (g) => g.length === 1 ? claimLine(g[0][0], g[0][1]) : `<li class="opus-claim">${g.map(([e]) => relLine(e)).join('\n')}
+<blockquote class="ev">&ldquo;${esc(g[0][1].quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(g[0][1].volume)} §${esc(g[0][1].paragraph)} · ${esc(OPUS_VOICE[g[0][1].claim_type] || g[0][1].claim_type)}</p></li>`
     const sections = OPUS_PICTURES.map(([n, title, a, b, stage]) => {
       const pool = []
       for (const e of atlasEdges) for (const r of e.refs) if (inRange(r, a, b) && r.quote) pool.push([e, r])
@@ -3555,10 +3569,14 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       const rest = pool.filter(x => !forced.includes(x)).sort((x, y) => { const a1 = rank(x), b1 = rank(y); return a1[0] - b1[0] || a1[1] - b1[1] })
       const picks = (OPUS_PICKS[n] || []).map(x => findPick(x))
       const chosen = [], seen = new Set(picks.map(x => x[0].key))
-      for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === 3) break }
-      const dropped = chosen.splice(Math.max(forced.length ? 1 : 0, 3 - picks.length))
+      for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === OPUS_CLAIMS) break }
+      const dropped = chosen.splice(Math.max(forced.length ? 1 : 0, OPUS_CLAIMS - picks.length))
       chosen.push(...picks)
       for (const [e, r] of dropped) console.log(`opus picks: picture ${n} drops ${e.key} (CW ${r.volume} §${r.paragraph})`)
+      const fixed = OPUS_FIXED[n] ? OPUS_FIXED[n].map(g => g.map(x => findPick(x))) : null
+      if (fixed) for (const g of fixed) if (new Set(g.map(([, r]) => r.quote)).size !== 1) { console.error(`OPUS PAGE: picture ${n} groups claims that do not share one quote`); process.exit(1) }
+      if (fixed && st && st.edge) { console.error(`OPUS PAGE: picture ${n} is set by hand but carries a colour cite`); process.exit(1) }
+      const claimsHtml = fixed ? fixed.map(g => claimGroup(g)).join('\n') : chosen.map(([e, r]) => claimLine(e, r)).join('\n')
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
       const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.verdure.quote)}&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
 <blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.shimmer.quote)}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
@@ -3573,7 +3591,7 @@ ${figure}
 <h2>${esc(title)}</h2>
 ${st ? `<p class="opus-stage">${esc(st.note)}${st.para ? ` CW 16 §${st.para}.` : ''}</p>` : ''}
 <ul class="opus-claims">
-${chosen.map(([e, r]) => claimLine(e, r)).join('\n')}
+${claimsHtml}
 </ul>
 ${shimmer}
 </div>
