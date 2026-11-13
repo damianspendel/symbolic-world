@@ -62,6 +62,16 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .page-main.opus-black .eyebrow, .page-main.opus-black .opus-cite, .page-main.opus-black .meta { color: #b9ad94; }
 .page-main.opus-white .eyebrow, .page-main.opus-white .opus-cite, .page-main.opus-white .meta { color: #6b5f48; }
 .page-main.opus-red .eyebrow, .page-main.opus-red .opus-cite, .page-main.opus-red .meta { color: #f0d6c2; }
+/* night (Damian, 2026-11-13, option B): the script paints the nigredo true
+   black and the whites a darker paper tone (#d9d2c3); the red stays. On that
+   paper the links, the picture title and the small print go darker to keep
+   4.5:1, and a lighter rule marks the turn to black against the night page:
+   under the header while the ground is black, and on picture 6's top edge
+   when the page scrolls as a page. Day is untouched */
+[data-theme="night"] .page-main.opus-white a, [data-theme="night"] .page-main.opus-white h2 { color: #5c430b; }
+[data-theme="night"] .page-main.opus-white .eyebrow, [data-theme="night"] .page-main.opus-white .opus-cite, [data-theme="night"] .page-main.opus-white .meta { color: #544a37; }
+[data-theme="night"] .page-main.prose > .opus-ground.is-nigredo::before { content: ""; position: absolute; left: 0; right: 0; top: var(--opus-top, 0px); height: 1px; background: rgba(236,230,216,.3); }
+[data-theme="night"].opus-flow #picture-6 { border-top: 1px solid rgba(236,230,216,.3); }
 .opus-pic { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: 1.5rem 2.5rem; align-items: start; padding: 4rem 0; min-height: 70vh; }
 .opus-cut { margin: 0; }
 .opus-cut img { display: block; width: 100%; height: auto; max-height: 62vh; object-fit: contain; background: #fbf8f1; border-radius: 4px; box-shadow: 0 1px 0 rgba(0,0,0,.08); }
@@ -335,7 +345,7 @@ var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-mai
 var de=document.documentElement,segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header'),mode='';
 function top(){var h=head?head.offsetHeight:0;de.style.setProperty('--opus-top',h+'px');return h}
 function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
-var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],YELLOW=[216,170,52],cur=-1,gr=g.querySelector('.opus-green'),pk=g.querySelector('.opus-peacock'),pl=g.querySelector('.opus-peacock-label');
+var BLACK=[11,10,9],WHITE=[244,240,231],BLACK_N=[0,0,0],WHITE_N=[217,210,195],RED=[122,31,18],YELLOW=[216,170,52],cur=-1,gr=g.querySelector('.opus-green'),pk=g.querySelector('.opus-peacock'),pl=g.querySelector('.opus-peacock-label');
 function ramp(t,a,b){return Math.min(1,Math.max(0,(t-a)/(b-a)))}
 function colours(on,t){var gn=0,po=0,u=0;if(on){gn=ramp(t,.1,.42)*(1-ramp(t,.62,.9));u=ramp(t,.48,.94);po=Math.sin(Math.PI*u)}
 if(gr)gr.style.opacity=gn.toFixed(3);if(pk){pk.style.opacity=(po*.6).toFixed(3);pk.style.transform='translateX('+(-90+180*u).toFixed(1)+'%)'}if(pl)pl.style.opacity=po.toFixed(3)}
@@ -351,15 +361,16 @@ var y=innerHeight*0.5;i=-1;for(var k=0;k<segs.length;k++){if(segs[k].getBounding
 if(i<0)return [-1,0];r=segs[i].getBoundingClientRect();return [i,Math.min(1,Math.max(0,(y-r.top)/r.height))]}
 function tick(){var h=top(),w=where(h),i=w[0],t=w[1];
 if(mode==='pinned'&&i!==cur){segs.forEach(function(s,k){s.classList.toggle('is-active',k===i)});cur=i}
-var st=i<0?'none':segs[i].getAttribute('data-stage'),bg='transparent',cls='';
-if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
-else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
-else if(st==='fade'){bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
-else if(st==='red'){var t2=Math.min(1,t*1.6);if(segs[i].getAttribute('data-yellow')){bg=t2<.5?mix(WHITE,YELLOW,t2*2):mix(YELLOW,RED,(t2-.5)*2);cls=t2<.72?'opus-white':'opus-red'}else{bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}}
+var st=i<0?'none':segs[i].getAttribute('data-stage'),bg='transparent',cls='',N=de.dataset.theme==='night',K=N?BLACK_N:BLACK,W=N?WHITE_N:WHITE;
+if(st==='black'){bg=mix(K,K,0);cls='opus-black'}
+else if(st==='white'){bg=mix(W,W,0);cls='opus-white'}
+else if(st==='fade'){bg=mix(K,W,t);cls=t<(N?.55:.5)?'opus-black':'opus-white'}
+else if(st==='red'){var t2=Math.min(1,t*1.6);if(segs[i].getAttribute('data-yellow')){bg=t2<.5?mix(W,YELLOW,t2*2):mix(YELLOW,RED,(t2-.5)*2);cls=t2<.72?'opus-white':'opus-red'}else{bg=mix(W,RED,t2);cls=t2<(N?.58:.45)?'opus-white':'opus-red'}}
+g.classList.toggle('is-nigredo',N&&cls==='opus-black');
 colours(i>=0&&segs[i].id==='picture-7',t);
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
 setMode();if(mode==='pinned'&&segs[0])segs[0].classList.add('is-active');
 [].slice.call(document.querySelectorAll('.opus-tile')).forEach(function(d){var sec=d.closest('.opus-pic');d.addEventListener('toggle',function(){if(sec)sec.classList.toggle('tile-open',d.open)});var c=d.querySelector('.opus-tile-close');if(c)c.addEventListener('click',function(){d.open=false;var s=d.querySelector('summary');if(s)s.focus()})});
 function jump(){var id=location.hash.slice(1),k=-1;if(!id)return;segs.forEach(function(s,j){if(s.id===id)k=j});if(k<0)return;var h=top();if(mode!=='pinned'){segs[k].scrollIntoView();return}var r=track.getBoundingClientRect();scrollTo(0,Math.round(scrollY+r.top-h+k*innerHeight+2));tick()}
-addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});addEventListener('hashchange',jump);addEventListener('load',function(){setMode();tick();setTimeout(jump,60)});if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){setMode();tick()});tick();jump()})();</script>
+addEventListener('scroll',tick,{passive:true});document.addEventListener('sw-theme',tick);addEventListener('resize',function(){setMode();tick()});addEventListener('hashchange',jump);addEventListener('load',function(){setMode();tick();setTimeout(jump,60)});if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){setMode();tick()});tick();jump()})();</script>
 </main></body></html>
