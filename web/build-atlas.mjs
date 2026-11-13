@@ -3816,6 +3816,7 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
    below 768px, or on a touch screen too short for the stage, the page scrolls
    as a page. Each picture reads title, woodcut, claims; the woodcut fades in
    as it enters; the ground follows the picture in view */
+.opus-flow .opus-seg { scroll-margin-top: var(--opus-top, 0px); }
 .opus-flow .opus-pic { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 3rem 0; min-height: 0; }
 .opus-flow .opus-pic > .opus-text { display: contents; }
 .opus-flow .opus-pic .eyebrow { order: 0; }
@@ -3837,6 +3838,8 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
     // it has gone, picture 7 raises the green and sweeps the peacock band, the
     // closing panel warms white to red (the yellow branch stays for a
     // data-yellow panel, which the page no longer emits).
+    // A link to #picture-N scrolls the pinned
+    // stage to that picture; in flow it lands the picture below the header.
     const OPUS_JS = `(function(){
 var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main'),track=document.querySelector('.opus-track');if(!g||!m||!track)return;
 var de=document.documentElement,segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header'),mode='';
@@ -3866,11 +3869,39 @@ colours(i>=0&&segs[i].id==='picture-7',t);
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
 setMode();if(mode==='pinned'&&segs[0])segs[0].classList.add('is-active');
 [].slice.call(document.querySelectorAll('.opus-tile')).forEach(function(d){var sec=d.closest('.opus-pic');d.addEventListener('toggle',function(){if(sec)sec.classList.toggle('tile-open',d.open)});var c=d.querySelector('.opus-tile-close');if(c)c.addEventListener('click',function(){d.open=false;var s=d.querySelector('summary');if(s)s.focus()})});
-addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});tick()})();`
+function jump(){var id=location.hash.slice(1),k=-1;if(!id)return;segs.forEach(function(s,j){if(s.id===id)k=j});if(k<0)return;var h=top();if(mode!=='pinned'){segs[k].scrollIntoView();return}var r=track.getBoundingClientRect();scrollTo(0,Math.round(scrollY+r.top-h+k*innerHeight+2));tick()}
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});addEventListener('hashchange',jump);addEventListener('load',function(){setTimeout(jump,60)});tick();jump()})();`
+    // SEO after v2.4.0, items 1 to 3 (Damian, 2026-11-13): a title a search can
+    // match, a description of the page as it stands (the tiles are off), and
+    // schema.org data for the page and its woodcuts, each image carrying the
+    // alt text the page gives it
+    const SITE = 'https://symbolicworld.observer'
+    const opusName = 'Jung and the Rosarium philosophorum: the ten woodcuts'
+    const opusDescription = 'The ten woodcuts of the Rosarium philosophorum from Jung’s own copy, each with verified, quoted claims from his reading in CW 16 and the colour stages he names.'
+    const woodcutLd = OPUS_PICTURES.filter(([n]) => woodcutSize(n)).map(([n, title]) => {
+      const [w, h] = woodcutSize(n)
+      return {
+        '@type': 'ImageObject', '@id': `${SITE}/opus#woodcut-${n}`, position: n,
+        contentUrl: `${SITE}/${woodcutFile(n)}`, encodingFormat: 'image/jpeg', width: w, height: h,
+        name: `Woodcut ${n} of the Rosarium philosophorum (1550): ${title}`,
+        caption: `Woodcut ${n} of the Rosarium philosophorum (1550): ${title}`,
+        license: 'https://creativecommons.org/publicdomain/mark/1.0/',
+        creditText: 'Stiftung der Werke von C.G. Jung, Zürich; digitised by e-rara.ch',
+        isBasedOn: 'https://doi.org/10.3931/e-rara-10570'
+      }
+    })
+    const opusLd = `<script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage', '@id': `${SITE}/opus`, url: `${SITE}/opus`,
+      name: opusName, description: opusDescription, inLanguage: 'en',
+      isPartOf: { '@type': 'WebSite', name: 'The Symbolic World', url: `${SITE}/` },
+      about: { '@type': 'Book', name: 'Rosarium philosophorum', datePublished: '1550', locationCreated: { '@type': 'Place', name: 'Frankfurt' } },
+      ...(woodcutLd.length ? { primaryImageOfPage: { '@id': woodcutLd[0]['@id'] }, image: woodcutLd } : {})
+    }).replace(/</g, '\\u003c')}</script>`
     registerPage({
-      slug: 'opus', title: 'The opus', where: 'opus', nav: 'opus',
+      slug: 'opus', title: 'The opus', titleFull: `${opusName} · The Symbolic World`, where: 'opus', nav: 'opus',
       changefreq: 'monthly', priority: '0.6',
-      description: 'Jung’s reading of the ten woodcuts of the Rosarium philosophorum in CW 16, with related claims from CW 12 and 14, verified claims and quotes, and the colours of the alchemical work where he names them.',
+      description: opusDescription, head: opusLd,
       style: opusStyle, body: opusBody + `\n<script>${OPUS_JS}</script>`
     })
     V2_COPY.push(['public/opus.html (generated)', stripEvidence(opusBody)])
