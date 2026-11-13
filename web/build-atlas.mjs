@@ -3225,7 +3225,7 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 <p>The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
 <p>Analysts and trainees can look up where Jung treats a concept and follow it across volumes, with a citation ready to carry into their own work. The <a href="/query">query page</a> filters by volume, family and claim type, and it searches the words inside the quotes.</p>
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
-<p>Readers of alchemy can use the <a href="/atlas#/concordance">concordance</a>, which sets Jung's psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
+<p>Readers of alchemy can follow Jung's reading of the ten Rosarium pictures on <a href="/opus">/opus</a>, and use the <a href="/atlas#/concordance">concordance</a>, which sets his psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
 <p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>. The original structure and metadata are open for reuse under CC BY 4.0, and the quotations stay with their rights holders.</p>
 <p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/method">method page</a> sets out what the checks cover and what they leave out.</p>
 <p>In case of concerns, please contact <a href="mailto:damian.spendel@gmail.com">the author</a>.</p>`
@@ -3504,7 +3504,9 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
     const OPUS_STAGE = {
       6: { edge: 'coniunctio|followed-by|nigredo', para: 468, note: 'The page turns black where Jung names the nigredo.' },
       7: { edge: 'nigredo|parallels|dark-night-of-the-soul', para: 479, note: 'The black holds.' },
-      8: { edge: 'nigredo|precedes|albedo', para: 493, note: 'The black fades to white. Jung names the whitening at CW 16 §484, and it is complete at §493.' },
+      // the wording after the Gemini hostile review (Damian, 2026-11-13): §493
+      // names the turn, not its completion; the citation is in the sentence
+      8: { edge: 'nigredo|precedes|albedo', para: 493, inline: true, note: 'Jung names the whitening at §484; at §493 the nigredo gives way to the albedo.' },
       9: { edge: 'nigredo|precedes|albedo', para: 515, note: 'White.' },
       10: { edge: null, para: null, note: 'Jung names no stage in these paragraphs; the white holds as a choice of display, not a claim.' }
     }
@@ -3514,14 +3516,90 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       shimmer: { volume: '16', paragraph: 480, voice: 'jung-asserts', quote: 'The appearance of the colours in the alchemical vessel, the so-called cauda pavonis, denotes the spring, the renewal of life' },
       close: { volume: '12', paragraph: 334, voice: 'jung-asserts', quote: 'The albedo is, so to speak, the daybreak, but not till the rubedo is it sunrise.' }
     }
+    // The claims on each picture, in a pinned order. Three a picture (Damian,
+    // 2026-11-13: "we need to go back to three quotes, it just looks better",
+    // reversing the four of the same morning). The order is his pattern: the
+    // claim that frames the image, its figures, the psychological reading,
+    // Jung's crux. A group shows as one claim: edges that share one quote, or
+    // one edge with several quotes. CW 14 entries are trilogy picks, marked by
+    // their cite. The order is explicit so a data change cannot reshuffle it;
+    // the build refuses if an entry leaves the graph or a picture's colour cite
+    // is not among its claims. The closing panel has its own pick, and the
+    // red rests on CW 12 §334 (the yellow left the page on 2026-11-13).
+    const OPUS_CLAIMS = 3
+    const OPUS_ORDER = {
+      1: [[['alchemy|derives-from|the-unconscious', '16', 407]], [['quintessence|derives-from|four-elements', '16', 402]],
+          [['mercurius|is-counterpart-of|the-trinity', '16', 403]]],
+      2: [[['the-unconscious|produces|symbol', '16', 414]],
+          [['regina|represents|artifex', '16', 421], ['rex|represents|soror-mystica', '16', 421]], [['coniunctio|involves|incest', '16', 415]]],
+      // picture 3 keeps two (Damian, 2026-11-13, after the Gemini hostile
+      // review): coniunctio amplified-by sol/luna at §451 left, since the quote
+      // is a marriage proposal, not an amplification
+      3: [[['the-opus|requires|morality', '16', 451], ['the-opus|requires|morality', '16', 450]],
+          [['repression|leads-to|dissociation', '16', 452]]],
+      4: [[['bath|is-form-of|night-sea-journey', '16', 455]], [['rotundum|corresponds-to|wholeness', '16', 454]],
+          [['wholeness|requires|soul', '16', 454]]],
+      // picture 5: CW 14 §120 (Sol and Mercurius) gave way to §460 after the
+      // Gemini hostile review (Damian, 2026-11-13)
+      5: [[['coniunctio|expresses|union-of-opposites', '16', 460]], [['nous|is-embraced-by|physis', '16', 457]],
+          [['water|symbolizes|the-unconscious', '16', 459]]],
+      6: [[['death|precedes|rebirth', '16', 467]], [['coniunctio|followed-by|nigredo', '16', 468]],
+          [['sol-niger|belongs-to|nigredo', '14', 113]]],
+      7: [[['dissociation|is-analogous-to|schizophrenia', '16', 476]], [['mercurius|resists-integration-into|consciousness', '16', 478]],
+          [['nigredo|parallels|dark-night-of-the-soul', '16', 479]]],
+      8: [[['water|symbolizes|sapientia', '16', 485]], [['dew|belongs-to|albedo', '14', 155]],
+          [['nigredo|precedes|albedo', '16', 493]]],
+      9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['unio-mentalis|precedes|reunion-with-the-body', '14', 677]],
+          [['nigredo|precedes|albedo', '16', 515]]],
+      10: [[['anthropos|parallels|christ', '16', 525]], [['denarius|means|christ', '16', 525]],
+           [['rebis|symbolizes|union-of-opposites', '14', 11]]]
+    }
+    const OPUS_PICKS = { close: [['coniunctio|belongs-to|rubedo', '14', 307]] }
+    const OPUS_YELLOW = ['citrinitas|coincides-with|rubedo', '12', 271]
+    const edgeByKey = new Map(atlasEdges.map(e => [e.key, e]))
+    const findPick = ([key, vol, para], hard = true) => {
+      const e = edgeByKey.get(key)
+      const r = e && e.refs.find(x => String(x.volume) === vol && Number(x.paragraph) === para && x.quote)
+      if (!r && hard) { console.error(`OPUS PAGE: the pick ${key} at CW ${vol} §${para} is not in the graph — refusing to cite a claim that is not there.`); process.exit(1) }
+      return r ? [e, r] : null
+    }
+    // the yellow left the page after the Gemini hostile review (Damian,
+    // 2026-11-13): CW 12 §271 is a general remark inside a dream commentary.
+    // The claim stays in the graph and on /opus-claims; the panel goes white to red
+    const yellow = null
     // the woodcuts: Jung's own copy of the 1550 Rosarium, Stiftung der Werke von
     // C.G. Jung, Zürich, digitised on e-rara.ch (doi:10.3931/e-rara-10570, Public
     // Domain Mark); one crop per picture, paper tone kept (Damian, 2026-11-12)
     const woodcutFile = (n) => `opus-rosarium-${String(n).padStart(2, '0')}.jpg`
     const woodcutSize = (n) => { try { const b = readFileSync(here(`./public/${woodcutFile(n)}`)); let o = 2; while (o < b.length) { if (b[o] !== 0xFF) return null; const mk = b[o + 1], len = b.readUInt16BE(o + 2); if (mk >= 0xC0 && mk <= 0xCF && mk !== 0xC4 && mk !== 0xC8 && mk !== 0xCC) return [b.readUInt16BE(o + 7), b.readUInt16BE(o + 5)]; o += 2 + len } return null } catch { return null } }
     const inRange = (r, a, b) => String(r.volume) === '16' && Number(r.paragraph) >= a && Number(r.paragraph) <= b
-    const claimLine = (e, r) => `<li class="opus-claim"><p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
-<blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
+    // Claims from outside CW 16 carry a visible mark (Damian, 2026-11-13, after
+    // the Gemini hostile review: "Mark the claims in the subtitle")
+    // A display quote for one reference whose stored quote is spliced (Damian,
+    // 2026-11-13, after the Gemini hostile review): the unbroken passage from the
+    // same paragraph that holds every fragment of the stored quote. Checked
+    // 2026-11-13: exact substring of CW 16 §468, 19 words, claude-fable-5 read in
+    // context, SUPPORTED as Jung asserts. The graph keeps its stored quote.
+    const OPUS_QUOTE_DISPLAY = {
+      'coniunctio|followed-by|nigredo|16|468': 'The coniunctio was incestuous and therefore sinful, leaving pollution behind it. The nigredo always appears in conjunction with tenebrositas'
+    }
+    const shownQuote = (e, r) => {
+      const d = OPUS_QUOTE_DISPLAY[`${e.key}|${r.volume}|${r.paragraph}`]
+      if (!d) return r.quote
+      if (!String(r.quote).split(/\s*\.\.\.\s*/).every(f => d.includes(f.trim()))) { console.error(`OPUS PAGE: the display quote for ${e.key} at §${r.paragraph} no longer holds the stored quote's fragments`); process.exit(1) }
+      return d
+    }
+    const relatedTag = (v) => String(v) === '16' ? '' : `<p class="opus-related">Related claim · CW ${esc(v)}</p>`
+    const claimLine = (e, r) => `<li class="opus-claim${String(r.volume) === '16' ? '' : ' is-related'}">${relatedTag(r.volume)}<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>
+<blockquote class="ev">&ldquo;${esc(shownQuote(e, r))}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p></li>`
+    const relLine = (e) => `<p class="opus-rel"><a href="/concept-${esc(e.source)}">${esc(nodeLabel(e.source))}</a> <em title="${esc(e.relation)}">${esc(String(e.relation).replace(/-/g, ' '))}</em> <a href="/concept-${esc(e.target)}">${esc(nodeLabel(e.target))}</a></p>`
+    const claimGroup = (g) => {
+      if (g.length === 1) return claimLine(g[0][0], g[0][1])
+      const edges = [...new Map(g.map(([e]) => [e.key, e])).values()]
+      const refs = [...new Map(g.map(([, r]) => [r.quote, r])).values()]
+      return `<li class="opus-claim">${edges.map(relLine).join('\n')}
+${refs.map(r => `<blockquote class="ev">&ldquo;${esc(r.quote)}&rdquo;</blockquote><p class="opus-cite">CW ${esc(r.volume)} §${esc(r.paragraph)} · ${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</p>`).join('\n')}</li>`
+    }
     const sections = OPUS_PICTURES.map(([n, title, a, b, stage]) => {
       const pool = []
       for (const e of atlasEdges) for (const r of e.refs) if (inRange(r, a, b) && r.quote) pool.push([e, r])
@@ -3529,8 +3607,14 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       const forced = st && st.edge ? pool.filter(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para) : []
       const rank = (x) => [x[1].claim_type === 'jung-asserts' ? 0 : 1, Number(x[1].paragraph)]
       const rest = pool.filter(x => !forced.includes(x)).sort((x, y) => { const a1 = rank(x), b1 = rank(y); return a1[0] - b1[0] || a1[1] - b1[1] })
+      // a picture without a pinned order falls back to the ranking: the colour
+      // cite first, then Jung asserts by paragraph
       const chosen = [], seen = new Set()
-      for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === 3) break }
+      for (const x of [...forced, ...rest]) { if (seen.has(x[0].key)) continue; seen.add(x[0].key); chosen.push(x); if (chosen.length === OPUS_CLAIMS) break }
+      const fixed = OPUS_ORDER[n] ? OPUS_ORDER[n].map(g => g.map(x => findPick(x))) : null
+      if (fixed) for (const g of fixed) if (new Set(g.map(([, r]) => r.quote)).size !== 1 && new Set(g.map(([e]) => e.key)).size !== 1) { console.error(`OPUS PAGE: picture ${n} groups claims that share neither one quote nor one edge`); process.exit(1) }
+      if (fixed && forced.length && !fixed.some(g => g.some(([e, r]) => e.key === st.edge && Number(r.paragraph) === st.para))) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at §${st.para} is not among its pinned claims`); process.exit(1) }
+      const claimsHtml = fixed ? fixed.map(g => claimGroup(g)).join('\n') : chosen.map(([e, r]) => claimLine(e, r)).join('\n')
       if (st && st.edge && !forced.length) { console.error(`OPUS PAGE: picture ${n}'s colour cite ${st.edge} at CW 16 §${st.para} is not in the graph — refusing to colour the page on a claim that is not there.`); process.exit(1) }
       const shimmer = n === 7 ? `<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.verdure.quote)}&rdquo;<span class="opus-cite">CW 16 §479 · the Rosarium, quoted by Jung · a quote outside the graph, checked against its paragraph</span></blockquote>
 <blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.shimmer.quote)}&rdquo;<span class="opus-cite">CW 16 §480 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>` : ''
@@ -3543,9 +3627,9 @@ ${figure}
 <div class="opus-text">
 <p class="eyebrow">Picture ${n} · CW 16 §${a} to §${b}</p>
 <h2>${esc(title)}</h2>
-${st ? `<p class="opus-stage">${esc(st.note)}${st.para ? ` CW 16 §${st.para}.` : ''}</p>` : ''}
+${st ? `<p class="opus-stage">${esc(st.note)}${st.para && !st.inline ? ` CW 16 §${st.para}.` : ''}</p>` : ''}
 <ul class="opus-claims">
-${chosen.map(([e, r]) => claimLine(e, r)).join('\n')}
+${claimsHtml}
 </ul>
 ${shimmer}
 </div>
@@ -3554,17 +3638,23 @@ ${shimmer}
     derived(1550)   // the Rosarium's first printing, a fact of the book, not a count
     const opusBody = `<div class="titleband"><p class="eyebrow">Explore</p>
 <h1>The opus</h1>
-<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum.</p></div>
-<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses.</p>
+<p class="sub">Jung's reading of the ten pictures of the Rosarium philosophorum, with related claims from CW 12 and 14 marked as such.</p></div>
+<p>The <em>Rosarium philosophorum</em> (Frankfurt, 1550) tells the alchemical work in ten woodcuts. Jung reads them in order in "The Psychology of the Transference" (CW 16). Each picture below has citations from the graph. Colours adjust as the sequence progresses. The colours change where Jung, or a text he quotes, names a stage; between those points they are the page's display.</p>
 <div class="opus-ground" aria-hidden="true"><div class="opus-green"></div><div class="opus-peacock"></div><p class="opus-peacock-label">cauda pavonis, the peacock's tail</p></div>
 <div class="opus-track" style="--opus-n: ${OPUS_PICTURES.length + 1}">
 <div class="opus-pin">
 ${sections}
-<section class="opus-close opus-seg" id="the-red" data-stage="red">
+<section class="opus-close opus-seg" id="the-red" data-stage="red"${yellow ? ' data-yellow="1"' : ''}>
 <div class="opus-text">
 <p class="eyebrow">After the white</p>
-<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
+<p class="opus-stage">The white turns red. CW 12 §334.</p>
+${relatedTag('12')}<blockquote class="opus-outside">&ldquo;${esc(OPUS_OUTSIDE.close.quote)}&rdquo;<span class="opus-cite">CW 12 §334 · Jung asserts · a quote outside the graph, checked against its paragraph</span></blockquote>
+<ul class="opus-claims">
+${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map(([e, r]) => claimLine(e, r)).join('\n')}
+</ul>
 <p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
+<p class="opus-aside"><a href="/atlas#/concordance">Jung's concepts beside the alchemical terms: the concordance &rarr;</a></p>
+<p class="opus-aside"><a href="/opus-claims">Here we relate the citations to the stages of the alchemical work &rarr;</a></p>
 </div>
 </section>
 </div>
@@ -3602,46 +3692,173 @@ ${sections}
 .opus-rel em { font-style: normal; opacity: .8; }
 .opus-claim blockquote, .opus-outside { margin: 0; padding: .2rem 0 .2rem .9rem; border-left: 2px solid currentColor; font-family: var(--display); font-size: 1.02rem; line-height: 1.5; }
 .opus-cite { display: block; font: .64rem/1.7 var(--mono); margin-top: .3rem; }
+.opus-related { font: .6rem var(--mono); letter-spacing: .12em; text-transform: uppercase; opacity: .75; margin: 0 0 .2rem; }
 .opus-green, .opus-peacock { position: absolute; pointer-events: none; opacity: 0; }
 .opus-green { inset: 0; background: radial-gradient(ellipse 85% 65% at 50% 105%, rgba(52,150,96,.55), rgba(30,90,60,.18) 55%, transparent 80%); }
 .opus-peacock { left: -10%; right: -10%; top: 38%; height: 26vh; background: linear-gradient(90deg, transparent, #1d7a55 14%, #2353a8 32%, #c79a2e 52%, #6a3b9e 72%, #1d7a55 86%, transparent); filter: blur(22px); will-change: transform, opacity; }
 .page-main.prose > .opus-ground .opus-peacock-label { position: absolute; left: auto; right: 1.5rem; top: calc(var(--opus-top, 0px) + .9rem); margin: 0; max-width: none; text-align: right; font: .72rem var(--mono); letter-spacing: .14em; color: #e8dcc0; opacity: 0; }
 .opus-close { padding: 5rem 0 4rem; min-height: 60vh; }
+.opus-aside { margin-top: .9rem; font-size: .82rem; opacity: .8; }
 @media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; gap: 1rem; } .opus-frame { max-width: 16rem; } .opus-cut img { max-height: 30vh; width: auto; max-width: 100%; margin: 0 auto; } .opus-pinned .opus-pic { align-items: start; } }
-@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } }
+/* the phone layout (Damian, 2026-11-13: "go ahead with the phone lay out"):
+   below 768px, or on a touch screen too short for the stage, the page scrolls
+   as a page. Each picture reads title, woodcut, claims; the woodcut fades in
+   as it enters; the ground follows the picture in view */
+.opus-flow .opus-pic { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 3rem 0; min-height: 0; }
+.opus-flow .opus-pic > .opus-text { display: contents; }
+.opus-flow .opus-pic .eyebrow { order: 0; }
+.opus-flow .opus-pic h2 { order: 1; }
+.opus-flow .opus-pic > .opus-cut, .opus-flow .opus-pic > .opus-frame { order: 2; margin: .4rem 0 1.2rem; }
+.opus-flow .opus-pic .opus-stage, .opus-flow .opus-pic .opus-claims, .opus-flow .opus-pic .opus-outside { order: 3; }
+/* the box is reserved from the width and height attributes before the image
+   loads, so nothing jumps under a scrolling finger */
+.opus-flow .opus-cut img { width: 100%; height: auto; max-height: 60vh; object-fit: contain; background: transparent; box-shadow: none; margin: 0 auto; opacity: 0; transition: opacity .9s ease; }
+.opus-flow .opus-cut img.in { opacity: 1; }
+.opus-flow .opus-close { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+@media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } .opus-flow .opus-cut img { opacity: 1 !important; transition: none !important; } }
 `
-    // the scroll: the stage of the section nearest the viewport's middle sets
-    // the ground; the fade section mixes black to white by how far it has
-    // scrolled; the closing section warms towards red
+    // the scroll. Two modes, chosen at load and on resize: the pinned stage
+    // (one viewport of scroll per picture, crossfading) where the screen is wide
+    // and tall enough, and plain page flow on phones and short touch screens,
+    // erring toward flow. In both, the stage of the picture in view sets the
+    // ground with the same thresholds: the fade mixes black to white by how far
+    // it has gone, picture 7 raises the green and sweeps the peacock band, the
+    // closing panel warms white to red (the yellow branch stays for a
+    // data-yellow panel, which the page no longer emits).
     const OPUS_JS = `(function(){
 var g=document.querySelector('.opus-ground'),m=document.querySelector('.page-main'),track=document.querySelector('.opus-track');if(!g||!m||!track)return;
-var segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header');
-document.documentElement.classList.add('opus-pinned');
-function top(){var h=head?head.offsetHeight:0;document.documentElement.style.setProperty('--opus-top',h+'px');return h}
+var de=document.documentElement,segs=[].slice.call(track.querySelectorAll('.opus-seg')),head=document.querySelector('.site-header'),mode='';
+function top(){var h=head?head.offsetHeight:0;de.style.setProperty('--opus-top',h+'px');return h}
 function mix(a,b,t){return 'rgb('+a.map(function(v,i){return Math.round(v+(b[i]-v)*t)}).join(',')+')'}
-var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],cur=-1,gr=g.querySelector('.opus-green'),pk=g.querySelector('.opus-peacock'),pl=g.querySelector('.opus-peacock-label');
+var BLACK=[11,10,9],WHITE=[244,240,231],RED=[122,31,18],YELLOW=[216,170,52],cur=-1,gr=g.querySelector('.opus-green'),pk=g.querySelector('.opus-peacock'),pl=g.querySelector('.opus-peacock-label');
 function ramp(t,a,b){return Math.min(1,Math.max(0,(t-a)/(b-a)))}
 function colours(on,t){var gn=0,po=0,u=0;if(on){gn=ramp(t,.1,.42)*(1-ramp(t,.62,.9));u=ramp(t,.48,.94);po=Math.sin(Math.PI*u)}
 if(gr)gr.style.opacity=gn.toFixed(3);if(pk){pk.style.opacity=(po*.6).toFixed(3);pk.style.transform='translateX('+(-90+180*u).toFixed(1)+'%)'}if(pl)pl.style.opacity=po.toFixed(3)}
-function tick(){var h=top(),r=track.getBoundingClientRect(),step=innerHeight,p=Math.max(0,(h-r.top)/step),i=Math.min(segs.length-1,Math.floor(p)),t=Math.min(1,Math.max(0,p-i));
-if(r.top>h+step*0.5)i=-1;
-if(i!==cur){segs.forEach(function(s,k){s.classList.toggle('is-active',k===i)});cur=i}
+function wantPinned(){var coarse=window.matchMedia&&matchMedia('(pointer: coarse)').matches;return innerWidth>=768&&!(coarse&&innerHeight<900)}
+var io=null,imgs=[].slice.call(track.querySelectorAll('.opus-cut img'));
+function setMode(){var w=wantPinned()?'pinned':'flow';if(w===mode)return;mode=w;
+de.classList.toggle('opus-pinned',w==='pinned');de.classList.toggle('opus-flow',w==='flow');
+segs.forEach(function(s){s.classList.remove('is-active')});cur=-1;
+if(w==='flow'){if('IntersectionObserver' in window){io=io||new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});imgs.forEach(function(im){if(!im.classList.contains('in'))io.observe(im)})}else imgs.forEach(function(im){im.classList.add('in')})}}
+function where(h){var r,i,t;if(mode==='pinned'){r=track.getBoundingClientRect();var step=innerHeight,p=Math.max(0,(h-r.top)/step);i=Math.min(segs.length-1,Math.floor(p));t=Math.min(1,Math.max(0,p-i));if(r.top>h+step*0.5)i=-1;return [i,t]}
+var y=innerHeight*0.5;i=-1;for(var k=0;k<segs.length;k++){if(segs[k].getBoundingClientRect().top<=y)i=k;else break}
+if(i<0)return [-1,0];r=segs[i].getBoundingClientRect();return [i,Math.min(1,Math.max(0,(y-r.top)/r.height))]}
+function tick(){var h=top(),w=where(h),i=w[0],t=w[1];
+if(mode==='pinned'&&i!==cur){segs.forEach(function(s,k){s.classList.toggle('is-active',k===i)});cur=i}
 var st=i<0?'none':segs[i].getAttribute('data-stage'),bg='transparent',cls='';
 if(st==='black'){bg=mix(BLACK,BLACK,0);cls='opus-black'}
 else if(st==='white'){bg=mix(WHITE,WHITE,0);cls='opus-white'}
 else if(st==='fade'){bg=mix(BLACK,WHITE,t);cls=t<.5?'opus-black':'opus-white'}
-else if(st==='red'){var t2=Math.min(1,t*1.6);bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}
+else if(st==='red'){var t2=Math.min(1,t*1.6);if(segs[i].getAttribute('data-yellow')){bg=t2<.5?mix(WHITE,YELLOW,t2*2):mix(YELLOW,RED,(t2-.5)*2);cls=t2<.72?'opus-white':'opus-red'}else{bg=mix(WHITE,RED,t2);cls=t2<.45?'opus-white':'opus-red'}}
 colours(i>=0&&segs[i].id==='picture-7',t);
 g.style.backgroundColor=bg;m.classList.remove('opus-black','opus-white','opus-red');if(cls)m.classList.add(cls)}
-addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);segs[0]&&segs[0].classList.add('is-active');tick()})();`
+setMode();if(mode==='pinned'&&segs[0])segs[0].classList.add('is-active');
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',function(){setMode();tick()});tick()})();`
     registerPage({
       slug: 'opus', title: 'The opus', where: 'opus', nav: 'opus',
       changefreq: 'monthly', priority: '0.6',
-      description: 'Jung’s reading of the ten woodcuts of the Rosarium philosophorum in CW 16, with verified claims and quotes, and the colours of the alchemical work where he names them.',
+      description: 'Jung’s reading of the ten woodcuts of the Rosarium philosophorum in CW 16, with related claims from CW 12 and 14, verified claims and quotes, and the colours of the alchemical work where he names them.',
       style: opusStyle, body: opusBody + `\n<script>${OPUS_JS}</script>`
     })
     V2_COPY.push(['public/opus.html (generated)', stripEvidence(opusBody)])
-    console.log('opus page: written, pinned stage, woodcuts ' + (woodcutSize(1) ? 'in' : 'as placeholders'))
+    console.log('opus page: written, pinned stage, woodcuts ' + (woodcutSize(1) ? 'in' : 'as placeholders') + ', yellow ' + (yellow ? 'in (CW 12 §271)' : 'off (ruled out 2026-11-13)'))
+
+    // ------------------------------------------------ /opus-claims --------
+    // Every verified claim on the figures of the ten pictures (Damian,
+    // 2026-11-13: "concept sets are right, this release, please"). A section's
+    // rows are the union of the verified references in its CW 16 paragraph range
+    // and the verified references in CW 12, 13, 14 or 16 whose subject or object
+    // is in its concept set. One row per reference; a claim may sit in more than
+    // one section. Nothing here is new text: every quote is the seed's own.
+    const CLAIMS_SETS = {
+      1: ['mercurial-fountain', 'fountain', 'aqua-permanens', 'quintessence', 'axiom-of-maria'],
+      2: ['rex', 'regina', 'sol', 'luna'],
+      3: ['veritas'],
+      4: ['bath', 'night-sea-journey', 'solutio', 'dissolutio', 'rex-marinus', 'the-sea'],
+      5: ['coniunctio', 'hierosgamos', 'union-of-opposites'],
+      6: ['nigredo', 'mortificatio', 'putrefactio', 'sol-niger', 'death'],
+      7: ['sublimatio', 'cauda-pavonis', 'benedicta-viriditas', 'soul'],
+      8: ['dew', 'ablutio', 'albedo'],
+      9: ['unio-mentalis', 'reunion-with-the-body', 'unus-mundus', 'anima-mundi'],
+      10: ['rebis', 'filius-philosophorum', 'rebirth', 'lapis', 'anthropos'],
+      close: ['rubedo', 'citrinitas']
+    }
+    const nodeIds = new Set(atlasNodes.map(x => x.id))
+    for (const [k, ids] of Object.entries(CLAIMS_SETS)) for (const id of ids) if (!nodeIds.has(id)) { console.error(`OPUS CLAIMS: concept ${id} (section ${k}) is not a node in the graph`); process.exit(1) }
+    const CLAIM_VOLS = ['16', '14', '12', '13']
+    const volRank = (v) => CLAIM_VOLS.indexOf(String(v))
+    const claimRows = (range, set) => {
+      const inSet = new Set(set), rows = []
+      for (const e of atlasEdges) for (const r of e.refs) {
+        if (r.verified !== true || !r.quote || volRank(r.volume) < 0) continue
+        const byRange = range && String(r.volume) === '16' && Number(r.paragraph) >= range[0] && Number(r.paragraph) <= range[1]
+        if (byRange || inSet.has(e.source) || inSet.has(e.target)) rows.push([e, r])
+      }
+      return rows.sort((x, y) => volRank(x[1].volume) - volRank(y[1].volume) || Number(x[1].paragraph) - Number(y[1].paragraph) || x[0].key.localeCompare(y[0].key))
+    }
+    const cLink = (id) => `<a href="/concept-${esc(id)}">${esc(nodeLabel(id))}</a>`
+    const claimRow = ([e, r]) => `<tr data-v="${esc(r.volume)}"><td class="c-rel">${cLink(e.source)} <em>${esc(String(e.relation).replace(/-/g, ' '))}</em> ${cLink(e.target)}</td><td class="c-q">&ldquo;${esc(r.quote)}&rdquo;</td><td class="c-cite">CW ${esc(r.volume)} §${esc(r.paragraph)}</td><td class="c-type">${esc(OPUS_VOICE[r.claim_type] || r.claim_type)}</td></tr>`
+    const claimSections = [...OPUS_PICTURES.map(([n, title, a, b]) => ({ id: `picture-${n}`, label: `Picture ${n} · ${title}`, thumb: `opus-rosarium-${String(n).padStart(2, '0')}-thumb.jpg`, range: [a, b], set: CLAIMS_SETS[n], extra: n === 1 ? ` Mercurius is left out of this set because his claims would fill the section; see ${cLink('mercurius')}.` : '' })),
+      { id: 'the-red', label: 'After the white · the rubedo', thumb: null, range: null, set: CLAIMS_SETS.close, extra: '' }]
+    let claimTotal = 0
+    const counts = []
+    const sectionsHtml = claimSections.map(sc => {
+      const rows = claimRows(sc.range, sc.set)
+      claimTotal += rows.length; counts.push([sc.id, rows.length])
+      const thumb = sc.thumb ? `<img class="c-thumb" src="/${sc.thumb}" alt="" width="40" height="52" loading="lazy">` : `<span class="c-thumb c-swatch" aria-hidden="true"></span>`
+      const scope = sc.range ? `Claims cited in CW 16 §${sc.range[0]} to §${sc.range[1]}, and claims in CW 12, 13, 14 and 16 on ` : `Claims in CW 12, 13, 14 and 16 on `
+      return `<details class="c-sec" id="${sc.id}"><summary>${thumb}<span class="c-sum"><span class="c-title">${esc(sc.label)}</span><span class="c-count" data-total="${rows.length}">${rows.length} claims</span></span></summary>
+<p class="c-intro">${scope}${sc.set.map(cLink).join(', ')}.${sc.extra}</p>
+<table class="c-table ev"><thead><tr><th>Claim</th><th>Quote</th><th>Cite</th><th>Kind</th></tr></thead><tbody>
+${rows.map(claimRow).join('\n')}
+</tbody></table></details>`
+    }).join('\n')
+    derived(claimTotal, ...counts.map(c => c[1]))
+    const claimsBody = `<div class="titleband"><p class="eyebrow">Explore</p>
+<h1>The Rosarium pictures: every claim</h1>
+<p class="sub">Every verified claim on the figures of the ten pictures, across CW 12, 13, 14 and 16.</p></div>
+<p>Each section below gathers the claims cited in one picture's paragraphs of "The Psychology of the Transference" (CW 16) and the claims anywhere in CW 12, 13, 14 and 16 on the figures the picture shows. A claim can appear in more than one section. The pictures themselves, with three claims each, are on <a href="/opus">/opus</a>.</p>
+<div class="c-filter" role="group" aria-label="Show volumes">${CLAIM_VOLS.map(v => `<button type="button" class="chip c-chip on" data-v="${v}" aria-pressed="true">CW ${v}</button>`).join('')}</div>
+${sectionsHtml}
+<p class="meta">Every row is one verified reference in the graph, with the quote as stored. Sorted CW 16, 14, 12, 13, then by paragraph.</p>`
+    const claimsStyle = `
+.c-filter { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0 1.2rem; }
+.c-chip { cursor: pointer; background: transparent; font-size: .66rem; padding: .25rem .7rem; }
+.c-chip.on { color: var(--gold); border-color: var(--gold-dim); }
+.c-sec { border: 1px solid var(--hairline); border-radius: 8px; margin: .6rem 0; background: var(--surface); }
+.c-sec > summary { display: flex; align-items: center; gap: .8rem; padding: .55rem .8rem; cursor: pointer; list-style: none; }
+.c-sec > summary::-webkit-details-marker { display: none; }
+.c-thumb { width: 40px; height: 52px; object-fit: contain; flex: none; background: #fbf8f1; border-radius: 3px; }
+.c-swatch { display: block; background: linear-gradient(#f4f0e7, #d8aa34 45%, #7a1f12); }
+.c-sum { display: flex; flex-direction: column; min-width: 0; }
+.c-title { font-family: var(--display); font-size: 1.05rem; }
+.c-count { font: .62rem var(--mono); color: var(--ink-faint); letter-spacing: .04em; }
+.c-intro { font-size: .84rem; color: var(--ink-label); padding: 0 .8rem; margin: .2rem 0 .6rem; }
+.c-table { margin: 0 0 .4rem; }
+.c-table td { font-size: .84rem; }
+.c-rel { width: 28%; } .c-rel em { font-style: normal; color: var(--ink-label); }
+.c-q { font-family: var(--display); }
+.c-cite, .c-type { font: .66rem var(--mono); color: var(--ink-faint); white-space: nowrap; }
+.c-hide-16 tr[data-v="16"], .c-hide-14 tr[data-v="14"], .c-hide-12 tr[data-v="12"], .c-hide-13 tr[data-v="13"] { display: none; }
+@media (max-width: 720px) {
+  .c-table thead { display: none; }
+  .c-table, .c-table tbody, .c-table tr, .c-table td { display: block; width: auto; }
+  .c-table tr { padding: .6rem .8rem; border-bottom: 1px solid var(--hairline); }
+  .c-table td { border: 0; padding: .1rem 0; }
+  .c-cite, .c-type { display: inline-block !important; white-space: normal; margin-right: .6rem; }
+}
+`
+    const CLAIMS_JS = `(function(){var m=document.querySelector('.page-main'),bs=[].slice.call(document.querySelectorAll('.c-chip'));if(!m)return;
+function counts(){[].slice.call(document.querySelectorAll('.c-sec')).forEach(function(s){var n=0;[].slice.call(s.querySelectorAll('tbody tr')).forEach(function(r){if(!m.classList.contains('c-hide-'+r.getAttribute('data-v')))n++});var c=s.querySelector('.c-count'),t=c.getAttribute('data-total');c.textContent=(String(n)===t?t:n+' of '+t)+' claims'})}
+bs.forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-v'),on=!b.classList.contains('on');b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false');m.classList.toggle('c-hide-'+v,!on);counts()})})})();`
+    registerPage({
+      slug: 'opus-claims', title: 'The Rosarium pictures: every claim', where: 'opus',
+      changefreq: 'weekly', priority: '0.5',
+      description: 'Every verified claim on the figures of the ten woodcuts of the Rosarium philosophorum, across CW 12, 13, 14 and 16, with the quote and citation for each.',
+      style: claimsStyle, body: claimsBody + `\n<script>${CLAIMS_JS}</script>`
+    })
+    V2_COPY.push(['public/opus-claims.html (generated)', stripEvidence(claimsBody)])
+    console.log(`opus claims page: ${claimTotal} rows — ` + counts.map(([id, c]) => `${id} ${c}`).join(', '))
   }
 
   // ------------------------------------------------ /support ----------------

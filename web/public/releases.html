@@ -76,6 +76,34 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <p>The paper, <em>Trust, Layered</em>, describes v2.0.0.</p>
 <p>Each entry opens with the graph version, the ruleset version it shipped with (the two are deliberately separate numbers) and the calibration record in force when the release was cut.</p>
 <section class="rel-entry">
+<h2>v2.4.0: the trilogy second pass, CW 14 and CW 12</h2>
+<div class="meta">in preparation. This draft covers CW 14 and CW 12; the second pass over CW 13 is not in it.</div>
+<div class="pin">graph <span class="v">v2.4.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
+<h4>mining status</h4>
+<ul>
+<li>Mined CW 14, <em>Mysterium Coniunctionis</em>, and CW 12, <em>Psychology and Alchemy</em>, a second time, in windows of seventy paragraphs: eleven windows for CW 14 and eight for CW 12. The first pass over these volumes predates the form rule and the reporting clause.</li>
+<li>New references name their source author, and the source text where Jung gives one. Nodes in <code>seed.json</code> carry their Latin form, their aliases and the paragraph that names them.</li>
+<li>Quotations have a cap per volume, and the pre-check enforces it.</li>
+<li>Graph: 1156 nodes, 4829 relations, 6480 references over 127 batches; 838 relations await adjudication.</li>
+</ul>
+<h4>governance</h4>
+<ul>
+<li>The VoID files for the graph and the ontology name as their data dump the Turtle file the site serves. The w3id address they named before redirected to the DOI landing page.</li>
+<li>The RDF export in <code>exports/rdf/</code> is rebuilt from this release's graph.</li>
+</ul>
+<h4>core build</h4>
+<ul>
+<li><a href="/opus">/opus</a> takes the concordance's place in the menu and on the landing page. The concordance stays at <a href="/atlas#/concordance">/atlas#/concordance</a>.</li>
+</ul>
+<h4>UI</h4>
+<ul>
+<li><a href="/opus">/opus</a> follows Jung's reading of the ten woodcuts of the <em>Rosarium philosophorum</em> in CW 16. Each picture has up to three verified claims from the graph, some of them from the CW 14 second pass. The background turns black, white, yellow and red where Jung names the stage, and each change shows the claim it rests on. The woodcuts come from Jung's own copy of the 1550 edition, digitised by e-rara.ch.</li>
+<li><a href="/query">/query</a> suggests concepts in the subject and object fields and relations as you type, and offers provenance as a list.</li>
+<li><a href="/method">/method</a> says "Validated by a person" for the gold set and adds a row on recall to its limits. The "How the checks work" heading on <a href="/evidence">/evidence</a> links to it.</li>
+<li>New subtitles on <a href="/evidence">/evidence</a>, <a href="/about">/about</a> and <a href="/concepts">/concepts</a>.</li>
+</ul>
+</section>
+<section class="rel-entry">
 <h2>v2.3.0: CW 16, CW 7 and CW 6</h2>
 <div class="meta">released 2026-11-11. Tag <code>v2.3.0</code>, GitHub Release, Zenodo record under the concept DOI.</div>
 <div class="pin">graph <span class="v">v2.3.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
@@ -219,8 +247,8 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 </ul>
 </section>
 <div class="receipts"><b>receipts</b>
-prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:a90f825eff62</span>;<br>
+prose from <code>docs/RELEASES.md</code>; counts read from seed.json <span class="hash">sha256:516ce35f40ad</span>;<br>
 ruleset v0.7.2 with calibration record <code>pipeline/family_calibration/records/2026-08-13_v072_run4.json</code> (PASS);<br>
-external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-11-12
+external-validity figures from <code>docs/experiments/external_validity_2026-08/results.json</code>; built 2026-11-13
 </div>
 </main></body></html>
