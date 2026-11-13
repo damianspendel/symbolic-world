@@ -3225,7 +3225,7 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 <p>The Symbolic World helps analysts, students, readers of alchemy and scholars of Jung find what Jung wrote and check it. Each connection between concepts carries a verbatim quote from the Collected Works, with its volume and paragraph, so any reader can test a claim against the book.</p>
 <p>Analysts and trainees can look up where Jung treats a concept and follow it across volumes, with a citation ready to carry into their own work. The <a href="/query">query page</a> filters by volume, family and claim type, and it searches the words inside the quotes.</p>
 <p>Students can start from the <a href="/concepts">ranked concepts index</a> to see which ideas Jung returns to most, then open any concept's page for everything the graph holds on it. The <a href="/routes">routes page</a> traces how one concept reaches another.</p>
-<p>Readers of alchemy can use the <a href="/atlas#/concordance">concordance</a>, which sets Jung's psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
+<p>Readers of alchemy can follow Jung's reading of the ten Rosarium pictures on <a href="/opus">/opus</a>, and use the <a href="/atlas#/concordance">concordance</a>, which sets his psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
 <p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>. The original structure and metadata are open for reuse under CC BY 4.0, and the quotations stay with their rights holders.</p>
 <p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/method">method page</a> sets out what the checks cover and what they leave out.</p>
 <p>In case of concerns, please contact <a href="mailto:damian.spendel@gmail.com">the author</a>.</p>`
@@ -3629,6 +3629,7 @@ ${yellow ? `<p class="opus-stage">The white turns yellow, then red. CW 12 §271.
 ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map(([e, r]) => claimLine(e, r)).join('\n')}
 </ul>
 <p><a class="land-cta" href="/concept-rubedo">The rubedo &rarr;</a></p>
+<p class="opus-aside"><a href="/atlas#/concordance">Jung's concepts beside the alchemical terms: the concordance &rarr;</a></p>
 </div>
 </section>
 </div>
@@ -3671,6 +3672,7 @@ ${[...(yellow ? [yellow] : []), ...OPUS_PICKS.close.map(x => findPick(x))].map((
 .opus-peacock { left: -10%; right: -10%; top: 38%; height: 26vh; background: linear-gradient(90deg, transparent, #1d7a55 14%, #2353a8 32%, #c79a2e 52%, #6a3b9e 72%, #1d7a55 86%, transparent); filter: blur(22px); will-change: transform, opacity; }
 .page-main.prose > .opus-ground .opus-peacock-label { position: absolute; left: auto; right: 1.5rem; top: calc(var(--opus-top, 0px) + .9rem); margin: 0; max-width: none; text-align: right; font: .72rem var(--mono); letter-spacing: .14em; color: #e8dcc0; opacity: 0; }
 .opus-close { padding: 5rem 0 4rem; min-height: 60vh; }
+.opus-aside { margin-top: .9rem; font-size: .82rem; opacity: .8; }
 @media (max-width: 720px) { .opus-pic { grid-template-columns: 1fr; padding: 3rem 0; min-height: 0; gap: 1rem; } .opus-frame { max-width: 16rem; } .opus-cut img { max-height: 30vh; width: auto; max-width: 100%; margin: 0 auto; } .opus-pinned .opus-pic { align-items: start; } }
 @media (prefers-reduced-motion: reduce) { .page-main.prose > .opus-ground, .page-main, .opus-pinned .opus-seg { transition: none !important; } }
 `
