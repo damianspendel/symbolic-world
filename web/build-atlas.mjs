@@ -2109,8 +2109,9 @@ if (EMIT_CONCEPT_PAGES) {
   for (const node of atlasNodes) {
     const edges = edgesByNode.get(node.id)
     // B4: the Latin form, unless it only repeats the label
+    // ...and unless the label already carries it, as "Salt (Sal)" carries "Sal"
     const latinShown = !TITLE_BOTH_NAMES ? node.latin
-      : (node.latin && foldName(node.latin) !== foldName(node.label) ? node.latin : '')
+      : (node.latin && !foldName(node.label).includes(foldName(node.latin)) ? node.latin : '')
     const refTotal = edges.reduce((a, e) => a + e.refs.length, 0)
     const vols = [...new Set(edges.flatMap(e => e.volumes))].sort(byVolume)
     derived(edges.length, refTotal)
@@ -3532,7 +3533,7 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "The Symbolic World — a verified knowledge graph of C. G. Jung's Collected Works",
-  "description": "A knowledge graph of symbolic relations in Jung's Collected Works. Each relation carries a citation with CW volume, paragraph number, and a brief verbatim quotation, plus the verification provenance of a multi-model gating pipeline with a public dispute log. The graph grows as further volumes are mined.",
+  "description": "A knowledge graph of symbolic relations in Jung's Collected Works. Each relation carries a citation with CW volume, paragraph number, and a brief verbatim quotation, plus the verification provenance of a multi-model gating pipeline with a public dispute log. Mining of the eleven volumes the graph covers finished in November 2026.",
   "url": "https://symbolicworld.observer/",
   "sameAs": "https://doi.org/10.5281/zenodo.21631523",${DATASET_LD_IDENTIFIER ? `
   "identifier": "https://doi.org/10.5281/zenodo.21631523",
