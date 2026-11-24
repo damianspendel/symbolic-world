@@ -42,6 +42,7 @@ import pytest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUBLIC = os.path.join(ROOT, "web", "public")
+ENGLISH_NAMES = json.load(open(os.path.join(ROOT, "web", "english-names.json")))["names"]
 SRC = os.path.join(ROOT, "web", "src")
 SEED = os.path.join(ROOT, "seed.json")
 DECLARATIONS = os.path.join(ROOT, "pipeline", "family", "relation_declarations.json")
@@ -2239,7 +2240,9 @@ def test_concept_pages_carry_a_defined_term_and_no_quotation():
         assert ld["@type"] == "DefinedTerm" and ld["name"] == nodes[cid]["label"], cid
         assert ld["url"] == f"https://symbolicworld.observer/concept-{cid}", cid
         assert ld["inDefinedTermSet"]["url"] == "https://symbolicworld.observer/concepts", cid
-        assert ld.get("alternateName", "") == (nodes[cid].get("latin") or ""), cid
+        english = ENGLISH_NAMES.get(cid, {}).get("english", "")
+        alt = [x for x in (nodes[cid].get("latin"), english) if x]
+        assert ld.get("alternateName", "") == (alt if len(alt) > 1 else (alt[0] if alt else "")), cid
         assert "Quotation" not in blocks[0] and "quote" not in blocks[0].lower(), cid
 
 
@@ -2294,3 +2297,21 @@ def test_the_release_export_tracks_only_the_three_cc_by_files():
     assert sorted(tracked) == ["exports/rdf/symbolicworld-graph.ttl",
                                "exports/rdf/symbolicworld-ontology.ttl",
                                "exports/rdf/symbolicworld-void.ttl"], tracked
+
+
+def test_english_names_for_latin_labels():
+    """English names for Latin labels (24 Nov 2026): each English name in web/english-names.json is
+    one of its node's own aliases, and appears in that concept page's title and
+    meta description."""
+    names = json.load(open(os.path.join(ROOT, "web", "english-names.json")))["names"]
+    seed = json.load(open(os.path.join(ROOT, "seed.json")))
+    aliases = {n["id"]: n.get("aliases", []) for n in seed["nodes"]}
+    assert names
+    for nid, v in names.items():
+        assert v["english"] in aliases[nid], nid
+        assert v["proposed_by"].split()[0] != v["checked_by"].split()[0], nid
+        page = read(os.path.join(PUBLIC, f"concept-{nid}.html"))
+        title = html_lib.unescape(re.search(r"<title>(.*?)</title>", page).group(1))
+        desc = html_lib.unescape(re.search(r'<meta name="description" content="([^"]*)"', page).group(1))
+        assert v["english"] in title and v["english"] in desc, nid
+        assert len(title) <= 60 and len(desc) <= 155, nid

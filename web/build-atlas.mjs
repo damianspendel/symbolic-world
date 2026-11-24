@@ -2106,6 +2106,10 @@ if (EMIT_CONCEPT_PAGES) {
   let conceptCount = 0
   const headOverflow = { titles: [], descriptions: [] }
   const foldName = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim()
+  // An English name for a Latin label (24 Nov 2026), only where the node's
+  // own alias gives it and two model families agreed (web/english-names.json).
+  const ENGLISH_NAMES = JSON.parse(readFileSync(here('./english-names.json'), 'utf8')).names
+  const SEED_ALIASES = new Map(seed.nodes.map(n => [n.id, n.aliases || []]))
   for (const node of atlasNodes) {
     const edges = edgesByNode.get(node.id)
     // B4: the Latin form, unless it only repeats the label
@@ -2315,7 +2319,11 @@ ${groupBlocks}
     // spec-seo-minor-v1, item 1: a title that fits 60 and a description that
     // fits 155. A label shortens by dropping a trailing parenthetical, then by
     // cutting at the first ; , : or " / "; the brand is added only when it fits.
+    const english = ENGLISH_NAMES[node.id] ? ENGLISH_NAMES[node.id].english : ''
+    if (english && !(SEED_ALIASES.get(node.id) || []).includes(english)) throw new Error(`english-names.json: ${node.id} names "${english}", which is not one of its aliases`)
+    const withEnglish = english ? `${node.label} (${english})` : ''
     const labelSteps = TITLE_BOTH_NAMES && latinShown ? [`${node.label} (${latinShown})`, node.label] : [node.label]
+    if (withEnglish) labelSteps.unshift(withEnglish)
     const noParen = node.label.replace(/\s*\([^()]*\)\s*$/, '')
     if (noParen && noParen !== node.label) labelSteps.push(noParen)
     const cut = noParen.search(/;|,|:| \/ /)
@@ -2325,16 +2333,24 @@ ${groupBlocks}
       const base = `${v} in Jung’s Collected Works`
       if ((base + ' · The Symbolic World').length <= 60) { titleFull = base + ' · The Symbolic World'; titleLabel = v; break }
       if (base.length <= 60) { titleFull = base; titleLabel = v; break }
+      // the English name is worth the shorter suffix: "Lapis philosophorum (philosophers’ stone) in Jung"
+      if (v === withEnglish && `${v} in Jung`.length <= 60) { titleFull = `${v} in Jung`; titleLabel = v; break }
     }
     if (!titleFull) { titleLabel = labelSteps[labelSteps.length - 1]; titleFull = `${titleLabel} in Jung’s Collected Works`; headOverflow.titles.push(node.id) }
     const descOf = (v, withVols) => passages
       ? `${v} in C. G. Jung’s Collected Works: ${count(passages, 'passage')} quoted with volume and paragraph${withVols ? volList : ''}, ${passages === 1 ? '' : 'each '}machine-checked against the source text.`
       : `${v} in C. G. Jung’s Collected Works: ${count(edges.length, 'relation')} in a verified knowledge graph of the Collected Works.`
-    const descSteps = [[node.label, true], [node.label, false], ...labelSteps.slice(1).map(v => [v, false])]
+    const descSteps = [...(withEnglish ? [[withEnglish, true], [withEnglish, false]] : []),
+      [node.label, true], [node.label, false], ...labelSteps.slice(withEnglish ? 2 : 1).map(v => [v, false])]
     let description = null, descLabel = node.label
     for (const [v, withVols] of descSteps) {
       const d = descOf(v, withVols)
       if (d.length <= 155) { description = d; descLabel = v; break }
+    }
+    if (withEnglish && descLabel !== withEnglish && passages) {
+      // a shorter sentence that keeps the English name when the full one does not fit 155
+      const d = `${withEnglish} in C. G. Jung’s Collected Works: ${count(passages, 'passage')} quoted and machine-checked against the source text.`
+      if (d.length <= 155) { description = d; descLabel = withEnglish }
     }
     if (!description) { descLabel = labelSteps[labelSteps.length - 1]; description = descOf(descLabel, false); headOverflow.descriptions.push(node.id) }
 
@@ -2342,7 +2358,8 @@ ${groupBlocks}
       '@context': 'https://schema.org',
       '@type': 'DefinedTerm',
       name: node.label,
-      ...(node.latin ? { alternateName: node.latin } : {}),
+      ...((node.latin || english) ? { alternateName: [node.latin, english].filter(Boolean).length === 1
+        ? (node.latin || english) : [node.latin, english].filter(Boolean) } : {}),
       url: `https://symbolicworld.observer/concept-${node.id}`,
       inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'Concepts in The Symbolic World', url: 'https://symbolicworld.observer/concepts' }
     }).replace(/</g, '\\u003c')}</script>` : ''
