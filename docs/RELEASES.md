@@ -60,8 +60,8 @@ pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   exists, the IRI links to Wikidata. [/vocabulary](/vocabulary) lists the
   three new terms.
 - Concept titles no longer repeat a Latin name that the label already
-  carries. A concept with a Latin label shows its English name in the title
-  where the name is one of its own aliases.
+  carries. The lapis philosophorum page adds its English name, philosophers'
+  stone, which is one of the concept's own aliases.
 - The home page's dataset description says that mining of the eleven
   volumes finished in November 2026.
 
