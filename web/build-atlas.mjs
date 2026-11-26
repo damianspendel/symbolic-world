@@ -2026,6 +2026,28 @@ const concordanceSides = (e) => {
   const lab = registerById[e.source] === 'laboratory' ? e.source : e.target
   return { lab, psy: lab === e.source ? e.target : e.source }
 }
+// The figures of each Rosarium picture: /opus-claims groups claims by them, and a
+// concept page whose node is in a picture's set links to that picture on /opus
+// (2026-11-13, and 2026-11-26 for v2.5.0). The
+// closing panel's set is not a picture and gets no link.
+const CLAIMS_SETS = {
+  1: ['mercurial-fountain', 'fountain', 'aqua-permanens', 'quintessence', 'axiom-of-maria'],
+  2: ['rex', 'regina', 'sol', 'luna'],
+  3: ['veritas'],
+  4: ['bath', 'night-sea-journey', 'solutio', 'dissolutio', 'rex-marinus', 'the-sea'],
+  5: ['coniunctio', 'hierosgamos', 'union-of-opposites'],
+  6: ['nigredo', 'mortificatio', 'putrefactio', 'sol-niger', 'death'],
+  7: ['sublimatio', 'cauda-pavonis', 'benedicta-viriditas', 'soul'],
+  8: ['dew', 'ablutio', 'albedo'],
+  9: ['unio-mentalis', 'reunion-with-the-body', 'unus-mundus', 'anima-mundi'],
+  10: ['rebis', 'filius-philosophorum', 'rebirth', 'lapis', 'anthropos'],
+  close: ['rubedo', 'citrinitas']
+}
+const OPUS_PICTURE_OF = new Map()
+if (EMIT_OPUS_PAGE) for (const [k, ids] of Object.entries(CLAIMS_SETS)) {
+  if (!/^\d+$/.test(k)) continue
+  for (const id of ids) OPUS_PICTURE_OF.set(id, [...(OPUS_PICTURE_OF.get(id) || []), Number(k)])
+}
 const CONCORDANCE_TERMS = new Set()
 if (EMIT_CONCORDANCE_PAGE) {
   const bridgeEdge = new Map(atlasEdges.map(e => [e.id, e]))
@@ -2220,6 +2242,8 @@ ${neighbours.map(nb => `<li><a class="ev" href="/concept-${nb.id}">${esc(labelOf
       (edges.length ? ` The atlas holds ${count(edges.length, 'relation')} for it` +
         (passages ? `, drawn from ${count(passages, 'passage')} quoted with volume and paragraph${volList}` : '') + '.' : '') + '</p>'
 
+    const pics = OPUS_PICTURE_OF.get(node.id) || []
+    const opusLink = pics.length ? `<p>${ns(`<a href="/opus#picture-${pics[0]}">Shown in picture${pics.length > 1 ? 's' : ''} ${pics.map(n => derived(n)).join(' and ')} of the Rosarium →</a>`)}</p>\n` : ''
     const concLink = CONCORDANCE_TERMS.has(node.id) ? `<p>${ns(`<a href="/concordance#${node.id}">In the concordance →</a>`)}</p>\n` : ''
     const qid = WIKIDATA_OF.get(node.id)
     const wdLabel = WIKIDATA_LABEL.get(node.id)
@@ -2297,7 +2321,7 @@ ${opening}
 ${topBlock}
 <p class="meta">${ns('Quotations are mechanically checked against the source paragraph. The method is documented <a href="/method">here</a>.')}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
-${concLink}${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${opusLink}${concLink}${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
 ${neighbourBlock}
 ${shelves.length > 1 ? `<p class="chips">${ns(`\n${shelfChips}\n`)}</p>` : ''}
 ${shelfBlocks}
@@ -2310,7 +2334,7 @@ ${shelfBlocks}
 ${CONCEPT_SEARCH_HEAD ? lede + '\n' : ''}<p class="meta">${ns(registerNote)}</p>
 <p>${ns(provLine)}</p>
 <p class="atlas-cta">${ns(`<a href="/atlas#/n/${node.id}">see its relations on the atlas →</a>`)}</p>
-${concLink}${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
+${opusLink}${concLink}${wikidataLink}${refTotal ? `<div class="vmix"${NS}>\n${volStrip}\n</div>` : ''}
 ${neighbourBlock}
 ${order.length > 1 ? `<p class="chips">${ns(`\n${chips}\n`)}</p>` : ''}
 ${groupBlocks}
@@ -3334,12 +3358,18 @@ ${[...vocab.object_properties, ...vocab.datatype_properties, ...vocab.annotation
 <p>Readers of alchemy can follow Jung's reading of the ten Rosarium pictures in <a href="/opus">the opus</a>, and use the <a href="/concordance">concordance</a>, which sets his psychological concepts beside the alchemical figures and operations he reads them through, with the citation for each pairing.</p>
 <p>Scholars can treat the atlas as an inspectable index to the Collected Works. Every link names its source paragraph, says whether Jung asserts the claim, reports a doctrine or quotes a source, and records who checked it. Disputes sit on the <a href="/disputes">public log</a>. The original structure and metadata are open for reuse under CC BY 4.0, and the quotations stay with their rights holders.</p>
 <p>The atlas maps what Jung says. A machine checks every quotation against the text. A documented procedure assigns the relation families, and a person can rule where the procedure disagrees. Neither step replaces scholarly review. The <a href="/method">method page</a> sets out what the checks cover and what they leave out.</p>
-<p>In case of concerns, please contact <a href="mailto:damian.spendel@gmail.com">the author</a>.</p>`
+<p>In case of concerns, please contact <a href="mailto:damian.spendel@gmail.com">the author</a>.</p>
+<p class="about-homage">Homage to the Buddha.<br>May this work benefit all sentient beings.</p>`
+    // the closing dedication (2026-11-26): both lines at the end of the
+    // page, small, in the faint ink of the meta lines
+    const aboutStyle = `
+.about-homage { margin: 4rem 0 1rem; font-size: .88rem; line-height: 1.7; color: var(--ink-faint); }
+`
     registerPage({
       slug: 'about', title: 'About', where: 'about', nav: 'about',
       changefreq: 'monthly', priority: '0.5',
       description: 'Who The Symbolic World is for: analysts, students, readers of alchemy and scholars of Jung, and what each can check against the Collected Works.',
-      body: aboutBody
+      style: aboutStyle, body: aboutBody
     })
     V2_COPY.push(['public/about.html (generated)', stripEvidence(aboutBody)])
     console.log('about page: written')
@@ -3662,19 +3692,6 @@ ${EMIT_OG_IMAGE ? '<meta name="twitter:image" content="https://symbolicworld.obs
       8: [[['water|symbolizes|sapientia', '16', 485]], [['nigredo|precedes|albedo', '16', 493]]],
       9: [[['artifex|focuses-on|the-unconscious', '16', 498]], [['nigredo|precedes|albedo', '16', 515]]],
       10: [[['anthropos|parallels|christ', '16', 525]], [['denarius|means|christ', '16', 525]]]
-    }
-    const CLAIMS_SETS = {
-      1: ['mercurial-fountain', 'fountain', 'aqua-permanens', 'quintessence', 'axiom-of-maria'],
-      2: ['rex', 'regina', 'sol', 'luna'],
-      3: ['veritas'],
-      4: ['bath', 'night-sea-journey', 'solutio', 'dissolutio', 'rex-marinus', 'the-sea'],
-      5: ['coniunctio', 'hierosgamos', 'union-of-opposites'],
-      6: ['nigredo', 'mortificatio', 'putrefactio', 'sol-niger', 'death'],
-      7: ['sublimatio', 'cauda-pavonis', 'benedicta-viriditas', 'soul'],
-      8: ['dew', 'ablutio', 'albedo'],
-      9: ['unio-mentalis', 'reunion-with-the-body', 'unus-mundus', 'anima-mundi'],
-      10: ['rebis', 'filius-philosophorum', 'rebirth', 'lapis', 'anthropos'],
-      close: ['rubedo', 'citrinitas']
     }
     // The amplification tile under each picture (Damian, 2026-11-13: "put it
     // into todays release"): what Jung says of the same figures in CW 12, 13 and
