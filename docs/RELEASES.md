@@ -73,6 +73,10 @@ pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   psychology that he reads through it, with one quoted passage for each pair.
   [/opus](/opus), [/about](/about) and the concept pages of its terms link
   to it.
+- [/opus](/opus) opens on the first picture. The later pictures no longer
+  show for a moment while the page sets itself up.
+- The search on the home page lists its results over the page, so the four
+  cards keep their size.
 
 ## v2.4.1: corrections to the method page
 
