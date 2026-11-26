@@ -9,7 +9,7 @@ This statement sets out what the project publishes and the legal basis for it.
 
 The Symbolic World is a scholarly knowledge graph of C. G. Jung's *Collected Works* (CW), built by Damian Spendel with AI collaborators. It has three parts: a public web application (symbolicworld.observer), a dataset (`seed.json`), and a research paper (`docs/PAPER.md`).
 
-The dataset contains 6,887 references at release v2.4.0, and it grows under the same rules. Each reference includes:
+The dataset contains 6,887 references at release v2.5.0. Mining of the eleven volumes it covers finished in November 2026, and any later addition follows the same rules. Each reference includes:
 
 - a verbatim quotation of at most 25 words from a single CW paragraph
 - the CW volume and paragraph number (§)
