@@ -3449,7 +3449,8 @@ var q=document.getElementById('land-q'),box=document.getElementById('land-hits')
 function run(){var v=fold(q.value).trim();if(!v){show(box,[],'');return}
 load().then(function(all){var hits=[];all.forEach(function(n,i){var r=rank(n,v);if(r<9)hits.push([r,i,n])});hits.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});show(box,hits.slice(0,8).map(function(h){return h[2]}),v)})}
 q.addEventListener('focus',load,{once:true});q.addEventListener('input',run);
-q.addEventListener('keydown',function(e){var links=box.querySelectorAll('a');if(e.key==='ArrowDown'||e.key==='ArrowUp'){if(!links.length)return;e.preventDefault();on=(on+(e.key==='ArrowDown'?1:links.length-1))%links.length;links.forEach(function(a,i){a.classList.toggle('on',i===on)})}
+q.addEventListener('focus',function(){box.hidden=false});q.addEventListener('input',function(){box.hidden=false});document.addEventListener('pointerdown',function(e){if(!e.target.closest||!e.target.closest('.land-search'))box.hidden=true});
+q.addEventListener('keydown',function(e){var links=box.querySelectorAll('a');if(e.key==='ArrowDown'||e.key==='ArrowUp'){if(!links.length)return;e.preventDefault();on=(on+(e.key==='ArrowDown'?1:links.length-1))%links.length;links.forEach(function(a,i){a.classList.toggle('on',i===on)});if(links[on].scrollIntoView)links[on].scrollIntoView({block:'nearest'})}
 else if(e.key==='Enter'){var a=links[on<0?0:on];if(a){e.preventDefault();location.href=a.getAttribute('href')}}
 else if(e.key==='Escape'){q.value='';show(box,[],'')}})})})()`
   {
@@ -3501,10 +3502,11 @@ ${EMIT_OPUS_PAGE ? `<a class="land-card" href="/opus"><span class="land-card-t">
 <span>open data, CC BY</span>
 </footer>`
     const landingStyle = `
-${LANDING_CSS}${HOME_SEARCH ? `.land-search { position: relative; z-index: 1; display: block; }
+${LANDING_CSS}${HOME_SEARCH ? `.land-search { position: relative; z-index: 3; display: block; }
 .land-search .std-search { width: 100%; box-sizing: border-box; }
-.land-hits { display: flex; flex-direction: column; margin-top: .3rem; }
-.land-hits:empty { display: none; }
+/* the hits float over the page, so the four cards keep their height */
+.land-hits { position: absolute; top: 100%; left: 0; right: 0; display: flex; flex-direction: column; margin-top: .3rem; padding: .3rem; max-height: min(22rem, 60vh); overflow-y: auto; overscroll-behavior: contain; background: var(--panel); border: 1px solid var(--gold-dim); border-radius: 6px; box-shadow: 0 10px 28px rgba(0,0,0,.28); }
+.land-hits:empty, .land-hits[hidden] { display: none; }
 .land-hits a { padding: .35rem .5rem; border-radius: 4px; color: var(--ink); text-decoration: none; font-size: .92rem; }
 .land-hits a:hover, .land-hits a:focus-visible, .land-hits a.on { background: var(--well); color: var(--gold); }
 .land-hits .latin { font-style: italic; color: var(--ink-faint); margin-left: .4rem; }
