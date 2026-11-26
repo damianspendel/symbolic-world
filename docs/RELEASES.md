@@ -77,6 +77,11 @@ pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   show for a moment while the page sets itself up.
 - The search on the home page lists its results over the page, so the four
   cards keep their size.
+- The concept pages of the figures in the Rosarium pictures link to their
+  picture on [/opus](/opus).
+- The dispute form asks for the volume and paragraph number and the reader's
+  own words, and asks readers not to paste the paragraph.
+- [/about](/about) ends with a homage to the Buddha and a dedication.
 
 ## v2.4.1: corrections to the method page
 
