@@ -115,6 +115,16 @@ def model_family(record):
     return record.split()[0].capitalize()
 
 
+def link_accepted(link):
+    """A link is exported when the checker accepted it, or when the two models
+    disagreed and the maintainer decided to link (a `decision` record,
+    2026-11-26). A decision, where there is one, is what counts."""
+    decision = link.get("decision")
+    if decision:
+        return decision.get("verdict") == "accept" and bool(decision.get("decided_by"))
+    return link["check"] == "accept"
+
+
 def wikidata_links(graph, path=LINKS_FILE):
     """The exported links: {node id: qid} in seed node order, for figure links the
     checker accepted. A link naming no node, a malformed QID, a node linked twice,
@@ -123,7 +133,7 @@ def wikidata_links(graph, path=LINKS_FILE):
     ids = {node["id"] for node in graph.nodes}
     chosen = {}
     for link in links:
-        if link["kind"] != "figure" or link["check"] != "accept":
+        if link["kind"] != "figure" or not link_accepted(link):
             continue
         key, qid = link["key"], link["qid"]
         if key not in ids:
@@ -149,7 +159,7 @@ def spot_check_state(path=LINKS_FILE):
 
 def link_families(path=LINKS_FILE):
     """(proposer families, checker families) over the exported links, as words."""
-    links = [l for l in load_json(path)["links"] if l["kind"] == "figure" and l["check"] == "accept"]
+    links = [l for l in load_json(path)["links"] if l["kind"] == "figure" and link_accepted(l)]
     def words(field):
         return " and ".join(sorted({model_family(l[field]) for l in links}))
     return words("proposed_by"), words("checked_by")

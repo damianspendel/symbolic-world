@@ -1,5 +1,5 @@
 {
- "_about": "Links from Symbolic World to Wikidata, v3.0.0 item 1. A link is here only when the proposer (Opus family) chose it from a public Wikidata search and a checker from another family (Fable) accepted it. Candidates from tools/linking/wikidata_candidates.py; Damian spot-checks a seeded sample before release; spot_check records whether he has.",
+ "_about": "Links from Symbolic World to Wikidata, v3.0.0 item 1. A link is here when the proposer (Opus family) chose it from a public Wikidata search and a checker from another family (Fable) accepted it, or when the two models disagreed and Damian decided; a link he decided carries a decision record. no_link records the disagreements he settled with no link. Candidates from tools/linking/wikidata_candidates.py; Damian spot-checks a seeded sample before release; spot_check records whether he has. Figure links name a node; author and text links name a source string of seed.json and are exported to the RDF only.",
  "graph_release": "v2.4.0",
  "links": [
   {
@@ -3281,6 +3281,133 @@
    "check": "accept",
    "check_reason": "Q900529 (Turba Philosophorum: alchemical work) is the referent the string names, and no listed candidate fits better.",
    "date": "2026-11-13"
+  },
+  {
+   "kind": "author",
+   "key": "Koepgen",
+   "label": "Koepgen",
+   "qid": "Q93265708",
+   "wikidata_label": "Georg Koepgen",
+   "wikidata_description": null,
+   "match": "skos:closeMatch",
+   "proposed_by": "opus (Claude Opus family, Claude Code subagent)",
+   "proposer_confidence": "medium",
+   "proposer_reason": "Q93265708 Georg Koepgen is the author of Die Gnosis des Christentums (1939), which Jung cites in CW 14; the name is rare and matches, but the item has no description.",
+   "checked_by": "fable (Claude Fable family, Claude Code subagent)",
+   "check": "reject",
+   "check_reason": "Q93265708 'Georg Koepgen' has no description, dates or works in the file, so it cannot be confirmed as the author of Die Gnosis des Christentums rather than a namesake; check the item by hand before linking.",
+   "date": "2026-11-13",
+   "decision": {
+    "decided_by": "Damian",
+    "date": "2026-11-26",
+    "verdict": "accept",
+    "reason": "Accept Q93265708. Looked up on Wikidata on 2026-11-26 (wbgetentities, public read-only). The entry is a human, Georg Koepgen, born 1898, died 1975, with German National Library identifier 1153556480; it gives no description and does not list Die Gnosis des Christentums. The checker rejected the link because the entry then gave no dates or works; the dates and the identifier answer that, and the name is rare."
+   }
+  },
+  {
+   "kind": "author",
+   "key": "Olympiodorus",
+   "label": "Olympiodorus",
+   "qid": "Q3351663",
+   "wikidata_label": "Olympiodorus the Alchemist",
+   "wikidata_description": null,
+   "match": "skos:closeMatch",
+   "proposed_by": "opus (Claude Opus family, Claude Code subagent)",
+   "proposed_qid": "Q974775",
+   "proposer_confidence": "low",
+   "proposer_reason": "Q974775 is Olympiodorus the Younger, the Neoplatonist to whom the alchemical commentary on Zosimos is traditionally attributed; that attribution is disputed, so the link is uncertain.",
+   "checked_by": "fable (Claude Fable family, Claude Code subagent)",
+   "check": "prefer",
+   "check_reason": "Jung cites the alchemical commentator from Berthelot's collection; Q3351663 (Olympiodorus the Alchemist) is listed and is that author, whereas his identity with the Neoplatonist Olympiodorus the Younger (Q974775) is disputed.",
+   "date": "2026-11-13",
+   "decision": {
+    "decided_by": "Damian",
+    "date": "2026-11-26",
+    "verdict": "accept",
+    "reason": "Use Q3351663, Olympiodorus the Alchemist, the item the Fable checker preferred over the proposer's Q974775 (Olympiodorus the Younger, Neoplatonist philosopher, c.495-570): Jung cites the alchemical commentator, and the identity of the two is disputed. Looked up on Wikidata on 2026-11-26 (wbgetentities, public read-only). Q3351663 has no English description."
+   }
+  },
+  {
+   "kind": "figure",
+   "key": "holy-ghost",
+   "label": "Holy Ghost (Paraclete)",
+   "qid": "Q58646537",
+   "wikidata_label": "God the Holy Spirit",
+   "wikidata_description": "in trinitarian Christianity, the third person of the Trinity, that proceeds from the Father (and the Son, depending on the branch of Christianity); often depicted as a dove in iconography",
+   "match": "skos:closeMatch",
+   "proposed_by": "opus (Claude Opus family, Claude Code subagent)",
+   "proposer_confidence": null,
+   "proposer_reason": "Summarized from the 26 Nov decision brief, no verbatim record on disk: proposed on 2026-11-26 after the checker rejected the Paraclete item Q864658, as the Holy Spirit in the sense of the third person of the Trinity, which the node's relations are about.",
+   "checked_by": "fable (Claude Fable family, Claude Code subagent)",
+   "check": "accept",
+   "check_reason": "Summarized from the 26 Nov decision brief, no verbatim record on disk: accepted as a better match than the broader Q37302 \"Holy Spirit\", and advised not to publish Q37302 as well.",
+   "date": "2026-11-26",
+   "earlier_proposal": {
+    "qid": "Q864658",
+    "wikidata_label": "Paraclete",
+    "wikidata_description": "Greek for advocate or helper, mentioned in John 14:16–17; traditionally identified with the Holy Spirit or with other Messianic figures",
+    "proposed_by": "opus (Claude Opus family, Claude Code subagent)",
+    "proposer_confidence": "medium",
+    "proposer_reason": "Q864658 is the Paraclete of John 14:16-17, traditionally identified with the Holy Spirit, and the node is labelled 'Holy Ghost (Paraclete)'; no item for the Holy Spirit as third person of the Trinity is listed, so this is the nearest denotation.",
+    "checked_by": "fable (Claude Fable family, Claude Code subagent)",
+    "check": "reject",
+    "check_reason": "Q864658 is the Johannine term Paraclete, not the Holy Spirit as third person of the Trinity, which is what the node's relations are about; the proper Holy Spirit item is not in the candidate list, so this is too loose for closeMatch.",
+    "date": "2026-11-13"
+   },
+   "not_published": [
+    {
+     "qid": "Q37302",
+     "wikidata_label": "Holy Spirit",
+     "wikidata_description": "conception of God, or an attribute thereof, in various religions",
+     "reason": "Broader than the node: a conception of God across religions. The Fable checker preferred Q58646537 and said not to publish Q37302 as well."
+    }
+   ],
+   "decision": {
+    "decided_by": "Damian",
+    "date": "2026-11-26",
+    "verdict": "accept",
+    "reason": "Link Q58646537, God the Holy Spirit, the third person of the Trinity. Looked up on Wikidata on 2026-11-26 (wbgetentities, public read-only). Q37302 is recorded under not_published and is not exported."
+   }
+  }
+ ],
+ "no_link": [
+  {
+   "kind": "figure",
+   "key": "saturn",
+   "label": "Saturn",
+   "proposed_qid": "Q134388",
+   "proposed_by": "opus (Claude Opus family, Claude Code subagent)",
+   "proposer_confidence": "medium",
+   "proposer_reason": "Q134388 is the Roman god Saturn; Jung's Saturn is the god/planet/lead complex of alchemy and astrology, so the god item fits the senex and devil relations, while Q193 (the planet) would fit the astrological ones.",
+   "checked_by": "fable (Claude Fable family, Claude Code subagent)",
+   "check": "reject",
+   "check_reason": "The node mixes the planet of medieval astrology, the alchemical lead and the god, and most listed relations are planetary (abode of the devil, conjunction with Jupiter, whose node is linked to the planet Q319); neither Q134388 (god) nor Q193 (planet) alone is a safe closeMatch.",
+   "date": "2026-11-13",
+   "decision": {
+    "decided_by": "Damian",
+    "date": "2026-11-26",
+    "verdict": "no link",
+    "reason": "No link. The node mixes the planet of astrology, the alchemical lead and the god, and neither the god (Q134388) nor the planet (Q193) alone is a safe closeMatch. The checker's rejection stands."
+   }
+  },
+  {
+   "kind": "figure",
+   "key": "dwarf",
+   "label": "The dwarf (gnome, manikin)",
+   "proposed_qid": "Q214045",
+   "proposed_by": "opus (Claude Opus family, Claude Code subagent)",
+   "proposer_confidence": "medium",
+   "proposer_reason": "Q214045 is the dwarf of Germanic folklore, the supernatural being Jung's dwarf/gnome draws on; the Tolkien race and literary works are excluded.",
+   "checked_by": "fable (Claude Fable family, Claude Code subagent)",
+   "check": "reject",
+   "check_reason": "Q214045 is the dwarf of Germanic folklore, while the node is a cross-cultural motif (Cabiri, the thumbling atman, the wise old man as manikin), so the item is narrower than the node and not interchangeable with it.",
+   "date": "2026-11-13",
+   "decision": {
+    "decided_by": "Damian",
+    "date": "2026-11-26",
+    "verdict": "no link",
+    "reason": "No link. Q214045 is the dwarf of Germanic folklore, while the node is a motif across cultures (the Cabiri, the thumbling, the manikin), so the item is narrower than the node. The checker's rejection stands."
+   }
   }
  ],
  "spot_check": {

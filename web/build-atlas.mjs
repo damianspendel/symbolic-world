@@ -2003,7 +2003,8 @@ details.chk[open] .cmeta { display: block; }
 // atlas.json or the app.
 const WIKIDATA_OF = new Map()
 for (const l of JSON.parse(readFileSync(here('../tools/linking/wikidata_links.json'), 'utf8')).links) {
-  if (l.kind !== 'figure' || l.check !== 'accept') continue
+  // a maintainer's decision, where there is one, counts over the check (export_rdf.link_accepted)
+  if (l.kind !== 'figure' || !(l.decision ? l.decision.verdict === 'accept' && l.decision.decided_by : l.check === 'accept')) continue
   if (!/^Q[1-9][0-9]*$/.test(l.qid)) throw new Error(`wikidata_links.json: ${l.key} has a malformed QID ${l.qid}`)
   WIKIDATA_OF.set(l.key, l.qid)
 }

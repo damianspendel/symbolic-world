@@ -5,7 +5,7 @@ Backlog v3.0.0, item 1. The graph links figures to Wikidata items by `skos:close
 1. `wikidata_candidates.py` reads `seed.json` at the v2.4.0 tag and asks Wikidata's public search for candidates for every figure node, every source author and every source text. It sends only the public labels. It writes `pipeline/work/wikidata/candidates.json`, which git ignores.
 2. A proposer from the Opus family chose one candidate or none for each target, with a reason and a confidence (`proposals.json`, beside the candidates).
 3. A checker from the Fable family judged each pick: accept, reject, or prefer another candidate (`checks.json`, beside them).
-4. `wikidata_links.json` keeps only the links the checker accepted, each with both records. On 13 November 2026 that was 205 links: 157 figures, 40 authors and 8 texts.
+4. `wikidata_links.json` keeps only the links the checker accepted, each with both records. On 13 November 2026 that was 205 links: 157 figures, 40 authors and 8 texts. On 26 November Damian settled five links where the two models disagreed: Koepgen, Olympiodorus and the Holy Ghost are linked, each with a `decision` record, and Saturn and the dwarf have none, recorded under `no_link`. That makes 208 links: 158 figures, 42 authors and 8 texts.
 5. Damian marks a seeded sample. `spot_check` in the links file records whether he has, and the exporter states the spot check from that field and nothing else.
 
 `tools/query/export_rdf.py` exports the figure links only, since authors and texts have no node and no address yet. The export stops on a link to a missing node, a malformed Q-id, a node linked twice, or a link that one family both proposed and checked. `tests/test_wikidata_links.py` checks the export.
