@@ -83,6 +83,9 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 .opus-pinned .opus-pin { position: sticky; top: var(--opus-top, 0px); height: calc(100vh - var(--opus-top, 0px)); overflow: hidden; }
 .opus-pinned .opus-seg { position: absolute; inset: 0; min-height: 0; padding: 1.5rem 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s linear .7s; overflow-y: auto; }
 .opus-pinned .opus-seg.is-active { opacity: 1; visibility: visible; transition: opacity .7s ease, visibility 0s; }
+/* no crossfade while the script sets or changes the mode: otherwise every panel fades out over
+   the first one on opening, and a later heading shows for a moment */
+.opus-hold .opus-seg { transition: none !important; }
 .opus-pinned .opus-pic { align-items: center; }
 .opus-pinned .opus-close { display: flex; flex-direction: column; justify-content: center; }
 .opus-frame { aspect-ratio: 3 / 4; border: 1px dashed currentColor; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .4rem; text-align: center; padding: 1rem; opacity: .75; font: .7rem var(--mono); letter-spacing: .08em; }
@@ -351,8 +354,9 @@ function colours(on,t){var gn=0,po=0,u=0;if(on){gn=ramp(t,.1,.42)*(1-ramp(t,.62,
 if(gr)gr.style.opacity=gn.toFixed(3);if(pk){pk.style.opacity=(po*.6).toFixed(3);pk.style.transform='translateX('+(-90+180*u).toFixed(1)+'%)'}if(pl)pl.style.opacity=po.toFixed(3)}
 function wantPinned(){var coarse=window.matchMedia&&matchMedia('(pointer: coarse)').matches;return innerWidth>=768&&!(coarse&&innerHeight<900)}
 var io=null,imgs=[].slice.call(track.querySelectorAll('.opus-cut img'));
-function overflows(){var p=de.classList.contains('opus-pinned'),f=de.classList.contains('opus-flow'),o;top();de.classList.add('opus-pinned');de.classList.remove('opus-flow');o=segs.some(function(s){return s.scrollHeight>s.clientHeight+1});de.classList.toggle('opus-pinned',p);de.classList.toggle('opus-flow',f);return o}
-function setMode(){var w=wantPinned()&&!overflows()?'pinned':'flow';if(w===mode)return;mode=w;
+function hold(){de.classList.add('opus-hold');if(hold.p)return;hold.p=1;requestAnimationFrame(function(){requestAnimationFrame(function(){de.classList.remove('opus-hold');hold.p=0})})}
+function overflows(){hold();var p=de.classList.contains('opus-pinned'),f=de.classList.contains('opus-flow'),o;top();de.classList.add('opus-pinned');de.classList.remove('opus-flow');o=segs.some(function(s){return s.scrollHeight>s.clientHeight+1});de.classList.toggle('opus-pinned',p);de.classList.toggle('opus-flow',f);return o}
+function setMode(){var w=wantPinned()&&!overflows()?'pinned':'flow';if(w===mode)return;mode=w;hold();
 de.classList.toggle('opus-pinned',w==='pinned');de.classList.toggle('opus-flow',w==='flow');
 segs.forEach(function(s){s.classList.remove('is-active')});cur=-1;
 if(w==='flow'){if('IntersectionObserver' in window){io=io||new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});imgs.forEach(function(im){if(!im.classList.contains('in'))io.observe(im)})}else imgs.forEach(function(im){im.classList.add('in')})}}
