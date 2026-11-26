@@ -3411,9 +3411,24 @@
   }
  ],
  "spot_check": {
-  "done": false,
-  "date": null,
-  "sample": "a seeded sample of 30 accepted links (seed 20261113) plus the links accepted on thin evidence",
-  "note": "Set done to true and give the date only after Damian has marked the sample. The exporter states the spot check from this field."
+  "done": true,
+  "date": "2026-11-26",
+  "by": "Damian, in tab W of the reading app",
+  "sample": "the 8 links accepted on thin evidence and a seeded sample of 30 accepted links (seed 20261113), 38 in all, drawn from this file at sha256 c4fb08c6740c208183b24d4d6f06f1724042f4c70d99d8e2efafb72c4cf2d9d6",
+  "checked": 38,
+  "right": 38,
+  "wrong": 0,
+  "parts": {
+   "thin_accepts": {
+    "n": 8,
+    "right": 8
+   },
+   "seeded_sample": {
+    "n": 30,
+    "right": 30
+   }
+  },
+  "record": "pipeline/review/v3_wikidata_author.json",
+  "note": "The exporter states the spot check from this field. The three links decided on 2026-11-26 were not part of the sample."
  }
 }

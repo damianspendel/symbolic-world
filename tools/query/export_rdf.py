@@ -213,6 +213,18 @@ def spot_check_state(path=LINKS_FILE):
     return bool(sc.get("done")) and bool(sc.get("date")), sc.get("date")
 
 
+def spot_check_sentence(path=LINKS_FILE):
+    """One sentence on the maintainer's spot check, from the links file only."""
+    done, date = spot_check_state(path)
+    if not done:
+        return "A seeded sample awaits the maintainer's spot check."
+    sc = load_json(path)["spot_check"]
+    n, right, wrong = sc.get("checked"), sc.get("right"), sc.get("wrong")
+    found = f"found all {n} right" if wrong == 0 else f"found {right} right and {wrong} wrong"
+    return (f"The maintainer spot-checked {n} links on {date}, a seeded sample and the links "
+            f"accepted on thin evidence, and {found}.")
+
+
 def link_families(path=LINKS_FILE, kinds=("figure",)):
     """(proposer families, checker families) over the exported links of these
     kinds, as words."""
@@ -249,8 +261,7 @@ def links_note(count, sources):
         f"# model family ({proposer}) from a public Wikidata search and checked by a",
         f"# second ({checker}); {decided} also carry the maintainer's decision, where",
         "# the two families had disagreed. "
-        + (f"The maintainer spot-checked a seeded sample on {spot_check_state()[1]}."
-           if spot_check_state()[0] else "A seeded sample awaits the maintainer's spot check."),
+        + spot_check_sentence(),
         "# Only accepted links are here. The check records are in",
         "# tools/linking/wikidata_links.json in the repository.",
     ]
@@ -852,8 +863,7 @@ def build_void(graph, graph_text, ontology_text, quotes_text, links, sources=Non
                 "Links from nodes of the graph to Wikidata items, by skos:closeMatch. "
                 f"Each link was proposed by one model family ({proposer}) from a public "
                 f"Wikidata search and checked by a second family ({checker}). "
-                + (f"The maintainer spot-checked a seeded sample on {spot_check_state()[1]}. "
-                   if spot_check_state()[0] else "A seeded sample awaits the maintainer's spot check. ")
+                + spot_check_sentence() + " "
                 + "Only links the checker accepted are "
                 "exported; the check records are in tools/linking/wikidata_links.json in "
                 "the repository.")),
@@ -876,8 +886,7 @@ def build_void(graph, graph_text, ontology_text, quotes_text, links, sources=Non
                 f"search and checked by a second family ({s_checker}). "
                 + (f"For {len(decided)} where the two disagreed, the maintainer decided "
                    f"on {' and '.join(dates)}. " if decided else "")
-                + (f"The maintainer spot-checked a seeded sample on {spot_check_state()[1]}. "
-                   if spot_check_state()[0] else "A seeded sample awaits the maintainer's spot check. ")
+                + spot_check_sentence() + " "
                 + "A source with no accepted link has an IRI and a label and no closeMatch. These "
                 "links are in the RDF export only, not on the website; the check records are in "
                 "tools/linking/wikidata_links.json in the repository.")),

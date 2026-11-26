@@ -127,7 +127,7 @@ def test_void_linkset_counts_the_close_matches(parsed, close_matches):
     # The spot check is stated only as the links file records it (spot_check).
     done, date = export_rdf.spot_check_state()
     if done:
-        assert f"spot-checked a seeded sample on {date}" in description
+        assert f"spot-checked 38 links on {date}" in description and "awaits" not in description
     else:
         assert "awaits the maintainer's spot check" in description and "spot-checked" not in description
 
