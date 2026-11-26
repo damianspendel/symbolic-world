@@ -228,3 +228,23 @@ def test_each_file_header_mentions_the_links(export):
     for name, text in export.items():
         head = "\n".join(line for line in text.split("\n") if line.startswith("#"))
         assert "Wikidata" in head, name
+
+
+def test_concept_page_link_line_names_the_entry():
+    """Since 2026-11-26 the line reads "Wikidata: <label> (<Q-id>)", with the label
+    from wikidata_links.json, and the bare number only where no label is recorded."""
+    import html
+    data = json.load(open(os.path.join(ROOT, "tools", "linking", "wikidata_links.json")))
+    shown = 0
+    for l in data["links"]:
+        page = os.path.join(ROOT, "web", "public", f"concept-{l['key']}.html")
+        if l["kind"] != "figure" or not os.path.exists(page):
+            continue
+        m = re.search(r'Wikidata: <a href="https://www\.wikidata\.org/wiki/(Q\d+)">(.*?)</a>', open(page).read())
+        if not m:
+            continue
+        shown += 1
+        text = html.unescape(re.sub(r"<[^>]+>", "", m.group(2)))
+        label = (l.get("decision") or {}).get("wikidata_label") or l.get("wikidata_label")
+        assert text == (f"{label.strip()} ({m.group(1)})" if label and label.strip() else m.group(1)), l["key"]
+    assert shown >= 150

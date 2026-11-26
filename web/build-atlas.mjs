@@ -2002,11 +2002,16 @@ details.chk[open] .cmeta { display: block; }
 // tools/query/export_rdf.py applies for skos:closeMatch. Nothing goes into
 // atlas.json or the app.
 const WIKIDATA_OF = new Map()
+// The link line (2026-11-26) names the entry, "Wikidata: Lilith (Q180627)", from
+// the label recorded in wikidata_links.json; an entry with no English label shows the number.
+const WIKIDATA_LABEL = new Map()
 for (const l of JSON.parse(readFileSync(here('../tools/linking/wikidata_links.json'), 'utf8')).links) {
   // a maintainer's decision, where there is one, counts over the check (export_rdf.link_accepted)
   if (l.kind !== 'figure' || !(l.decision ? l.decision.verdict === 'accept' && l.decision.decided_by : l.check === 'accept')) continue
   if (!/^Q[1-9][0-9]*$/.test(l.qid)) throw new Error(`wikidata_links.json: ${l.key} has a malformed QID ${l.qid}`)
   WIKIDATA_OF.set(l.key, l.qid)
+  const label = (l.decision && l.decision.wikidata_label) || l.wikidata_label
+  if (label && String(label).trim()) WIKIDATA_LABEL.set(l.key, String(label).trim())
 }
 if (EMIT_CONCEPT_PAGES) {
   const conceptFamIds = new Set(families.map(f => f.id))
@@ -2193,7 +2198,8 @@ ${neighbours.map(nb => `<li><a class="ev" href="/concept-${nb.id}">${esc(labelOf
         (passages ? `, drawn from ${count(passages, 'passage')} quoted with volume and paragraph${volList}` : '') + '.' : '') + '</p>'
 
     const qid = WIKIDATA_OF.get(node.id)
-    const wikidataLink = qid ? `<p class="meta">${ns(`Wikidata: <a href="https://www.wikidata.org/wiki/${qid}">${qid}</a>`)}</p>\n` : ''
+    const wdLabel = WIKIDATA_LABEL.get(node.id)
+    const wikidataLink = qid ? `<p class="meta">${ns(`Wikidata: <a href="https://www.wikidata.org/wiki/${qid}">${wdLabel ? `<span class="ev">${esc(wdLabel)}</span> (${qid})` : qid}</a>`)}</p>\n` : ''
 
     // spec-reader-v1, A1 and A7
     let readerBody = null
