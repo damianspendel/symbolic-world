@@ -29,6 +29,51 @@ Each entry opens with the graph version, the ruleset version it shipped with
 (the two are deliberately separate numbers) and the calibration record in force
 when the release was cut.
 
+## v2.5.0: Wikidata links and a page for the concordance
+
+status: in preparation. Tag `v2.5.0`, GitHub Release and Zenodo record under
+the concept DOI once released.
+pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
+
+### mining status
+
+- The data of v2.4.1, unchanged: {{nodes}} nodes, {{edges}} relations,
+  {{refs}} references over {{batches}} batches. This release mines nothing
+  new.
+
+### governance
+
+- Figures, source authors and source texts link to Wikidata. A model of the
+  Opus family proposed each link and a model of the Fable family checked it,
+  and the release keeps only the links the checker accepted. Where the two
+  disagreed, the maintainer decided. He then checked a seeded sample and the
+  links accepted on thin evidence, and found every one right.
+- `tools/linking/wikidata_links.json` keeps each link with both models'
+  records and the maintainer's decisions.
+
+### core build
+
+- The RDF export links each figure to its Wikidata entry by
+  `skos:closeMatch`, and the VoID file describes these links as linksets.
+- Source authors and source texts have IRIs of their own under the
+  symbolicworld namespace, and claims point to them. Where a checked link
+  exists, the IRI links to Wikidata. [/vocabulary](/vocabulary) lists the
+  three new terms.
+- Concept titles no longer repeat a Latin name that the label already
+  carries. A concept with a Latin label shows its English name in the title
+  where the name is one of its own aliases.
+- The home page's dataset description says that mining of the eleven
+  volumes finished in November 2026.
+
+### UI
+
+- The concept page of each linked figure names its Wikidata entry.
+- [/concordance](/concordance) is a page of its own that search engines can
+  index: the alchemical terms A to Z, each beside the concepts of Jung's
+  psychology that he reads through it, with one quoted passage for each pair.
+  [/opus](/opus), [/about](/about) and the concept pages of its terms link
+  to it.
+
 ## v2.4.1: corrections to the method page
 
 status: released 2026-11-13. Tag `v2.4.1`, GitHub Release, Zenodo record
