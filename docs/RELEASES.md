@@ -31,8 +31,8 @@ when the release was cut.
 
 ## v2.5.0: Wikidata links and a page for the concordance
 
-status: in preparation. Tag `v2.5.0`, GitHub Release and Zenodo record under
-the concept DOI once released.
+status: released 2026-11-26. Tag `v2.5.0`, GitHub Release, Zenodo record
+under the concept DOI.
 pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
 ### mining status
