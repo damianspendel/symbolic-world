@@ -69,4 +69,4 @@ AI models (Claude Opus and Fable, Anthropic; Gemini, Google) carried out extract
 
 ## 8. Disclaimer
 
-This statement is the project's good-faith position, prepared without legal counsel. It is not legal advice, and it does not bind anyone else's assessment: rights holders may take a different view, and the law of quotation varies by jurisdiction. We publish it so that others can check our reasoning and correct it.
+This statement is the project's good-faith position. It is not legal advice, and it does not bind anyone else's assessment: rights holders may take a different view, and the law of quotation varies by jurisdiction. We publish it so that others can check our reasoning and correct it.
