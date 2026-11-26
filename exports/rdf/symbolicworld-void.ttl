@@ -1,8 +1,13 @@
 # The Symbolic World — VoID description. CC BY 4.0.
 #
 # The namespace https://w3id.org/symbolicworld/ is registered at w3id.org.
+#
+# The graph file's 158 skos:closeMatch links from nodes to Wikidata, and
+# its 50 from source authors and texts, are described below as two
+# void:Linksets, each a subset of the graph dataset.
 
 @prefix void: <http://rdfs.org/ns/void#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -10,6 +15,8 @@
 @prefix swf: <https://w3id.org/symbolicworld/family/> .
 @prefix swr: <https://w3id.org/symbolicworld/relation/> .
 @prefix swn: <https://w3id.org/symbolicworld/node/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -18,6 +25,8 @@
 @prefix swt: <https://w3id.org/symbolicworld/reference/> .
 @prefix swk: <https://w3id.org/symbolicworld/stage/> .
 @prefix swg: <https://w3id.org/symbolicworld/agent/> .
+@prefix swauthor: <https://w3id.org/symbolicworld/author/> .
+@prefix swtext: <https://w3id.org/symbolicworld/text/> .
 
 <https://w3id.org/symbolicworld/data/graph> a void:Dataset ;
     dcterms:title "The Symbolic World: structure and provenance" ;
@@ -26,20 +35,43 @@
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:identifier "10.5281/zenodo.21631523" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.21631523> ;
-    dcterms:modified "2026-11-13"^^xsd:date ;
+    dcterms:modified "2026-11-26"^^xsd:date ;
     void:uriSpace "https://w3id.org/symbolicworld/" ;
     void:vocabulary <https://w3id.org/symbolicworld/ns> ;
     void:vocabulary <http://www.w3.org/ns/prov#> ;
     void:dataDump <https://symbolicworld.observer/symbolicworld-graph.ttl> ;
-    void:triples 249346 ;
+    void:triples 250056 ;
     void:entities 20150 ;
     void:classPartition [ void:class sw:Node ; void:entities 1244 ] ;
     void:classPartition [ void:class sw:Relation ; void:entities 5132 ] ;
     void:classPartition [ void:class sw:Claim ; void:entities 6887 ] ;
-    void:classPartition [ void:class sw:Reference ; void:entities 6887 ] .
+    void:classPartition [ void:class sw:Reference ; void:entities 6887 ] ;
+    void:subset <https://w3id.org/symbolicworld/data/graph-wikidata> ;
+    void:subset <https://w3id.org/symbolicworld/data/sources-wikidata> .
 
 <https://w3id.org/symbolicworld/ns> a void:Dataset ;
     dcterms:title "The Symbolic World: claims and warrants" ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     void:dataDump <https://symbolicworld.observer/symbolicworld-ontology.ttl> ;
-    void:triples 440 .
+    void:triples 457 .
+
+<https://w3id.org/symbolicworld/data/graph-wikidata> a void:Linkset ;
+    dcterms:title "The Symbolic World: links to Wikidata" ;
+    dcterms:description "Links from nodes of the graph to Wikidata items, by skos:closeMatch. Each link was proposed by one model family (Opus) from a public Wikidata search and checked by a second family (Fable). The maintainer spot-checked 38 links on 2026-11-26, a seeded sample and the links accepted on thin evidence, and found all 38 right. Only links the checker accepted are exported; the check records are in tools/linking/wikidata_links.json in the repository." ;
+    void:subjectsTarget <https://w3id.org/symbolicworld/data/graph> ;
+    void:objectsTarget <https://www.wikidata.org/> ;
+    void:linkPredicate skos:closeMatch ;
+    void:triples 158 .
+
+<https://w3id.org/symbolicworld/data/sources-wikidata> a void:Linkset ;
+    dcterms:title "The Symbolic World: source authors and texts linked to Wikidata" ;
+    dcterms:description "Links from the source authors and source texts that claims name (sw:sourceAuthor, sw:sourceText) to Wikidata items, by skos:closeMatch: 42 of 45 authors and 8 of 35 texts. Each link was proposed by one model family (Opus) from a public Wikidata search and checked by a second family (Fable). For 2 where the two disagreed, the maintainer decided on 2026-11-26. The maintainer spot-checked 38 links on 2026-11-26, a seeded sample and the links accepted on thin evidence, and found all 38 right. A source with no accepted link has an IRI and a label and no closeMatch. These links are in the RDF export only, not on the website; the check records are in tools/linking/wikidata_links.json in the repository." ;
+    void:subjectsTarget <https://w3id.org/symbolicworld/data/graph> ;
+    void:objectsTarget <https://www.wikidata.org/> ;
+    void:linkPredicate skos:closeMatch ;
+    void:triples 50 .
+
+<https://www.wikidata.org/> a void:Dataset ;
+    dcterms:title "Wikidata" ;
+    foaf:homepage <https://www.wikidata.org/> ;
+    void:uriSpace "http://www.wikidata.org/entity/" .

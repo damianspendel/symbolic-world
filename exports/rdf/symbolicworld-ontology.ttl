@@ -7,6 +7,9 @@
 # relation or family, nothing inferred from a node's type. NO TRANSITIVITY AXIOM
 # APPEARS IN THIS FILE. The families are object properties; the verbatim relations
 # are leaf properties under them in the graph file, for strings in exactly one family.
+#
+# The graph file links nodes to Wikidata by skos:closeMatch. No term in this file
+# is linked.
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -15,6 +18,8 @@
 @prefix swf: <https://w3id.org/symbolicworld/family/> .
 @prefix swr: <https://w3id.org/symbolicworld/relation/> .
 @prefix swn: <https://w3id.org/symbolicworld/node/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -23,6 +28,8 @@
 @prefix swt: <https://w3id.org/symbolicworld/reference/> .
 @prefix swk: <https://w3id.org/symbolicworld/stage/> .
 @prefix swg: <https://w3id.org/symbolicworld/agent/> .
+@prefix swauthor: <https://w3id.org/symbolicworld/author/> .
+@prefix swtext: <https://w3id.org/symbolicworld/text/> .
 
 <https://w3id.org/symbolicworld/ns> a owl:Ontology ;
     rdfs:label "The Symbolic World: claims and warrants" ;
@@ -95,6 +102,11 @@ sw:FamilyState a owl:Class ;
     owl:oneOf ( sw:StateAssigned sw:StatePendingAdjudication sw:StateNoFamily sw:StateTextUndecided ) ;
     rdfs:label "Family state" ;
     rdfs:comment "Where a relation stands in the family layer." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:SourceText a owl:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Source text" ;
+    rdfs:comment "A text a claim names as its source, one per title as the record spells it. Two spellings of one work are not merged." ;
     rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
 
 sw:JungAsserts a owl:NamedIndividual ;
@@ -247,6 +259,18 @@ sw:familyState a owl:ObjectProperty ;
     rdfs:range sw:FamilyState ;
     rdfs:label "family state" ;
     rdfs:comment "Where the relation stands in the family layer." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:sourceAuthor a owl:ObjectProperty ;
+    rdfs:domain sw:Claim ;
+    rdfs:range prov:Agent ;
+    rdfs:label "source author" ;
+    rdfs:comment "The author a claim names as its source, one per name as the record spells it. Group names such as the alchemists have none." ;
+    rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
+sw:sourceText a owl:ObjectProperty ;
+    rdfs:domain sw:Claim ;
+    rdfs:range sw:SourceText ;
+    rdfs:label "source text" ;
+    rdfs:comment "The text a claim names as its source." ;
     rdfs:isDefinedBy <https://w3id.org/symbolicworld/ns> .
 sw:verbatimRelation a owl:ObjectProperty ;
     rdfs:domain sw:Relation ;
