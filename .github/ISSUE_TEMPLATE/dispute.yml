@@ -7,8 +7,9 @@ body:
     attributes:
       value: |
         Use the **dispute button** in the atlas (expand any citation's ✓) to copy a prefilled
-        report, then paste it below. Disputes that do not state what the cited paragraph
-        actually says are closed as incomplete, without adjudication. Admissible disputes are
+        report, then paste it below. Give the volume and paragraph number, and say in your own
+        words what is wrong. Please don't paste the paragraph. Disputes that do not say what is
+        wrong are closed as incomplete, without adjudication. Admissible disputes are
         re-gated with your objection attached; every outcome is published in the
         [dispute log](https://symbolicworld.observer/disputes.html).
   - type: textarea
@@ -22,8 +23,8 @@ body:
   - type: textarea
     id: objection
     attributes:
-      label: What the cited paragraph actually says
-      description: Quote or closely paraphrase the paragraph (volume + §) and state why it does not support the edge. This field is the admissibility gate.
+      label: What is wrong
+      description: Give the volume and paragraph number, and say in your own words what is wrong. Please don't paste the paragraph. This field is the admissibility gate.
     validations:
       required: true
   - type: checkboxes

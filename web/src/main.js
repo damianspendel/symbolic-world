@@ -572,7 +572,7 @@ function wirePanel(p) {
       'DISPUTE REPORT — The Symbolic World',
       `Edge: ${d.edge}`, `Citation: ${d.citation}`, `Quote: "${d.quote}"`, `Claim type: ${d.claim_type}`,
       `Verified by: ${d.verified_by} (${d.verified_date})`, '',
-      'My objection (what the cited paragraph actually says):', '  [describe here — please quote the paragraph]', '',
+      'My objection:', '  [Give the volume and paragraph number, and say in your own words what is wrong. Please don\'t paste the paragraph.]', '',
       'Submit at: https://github.com/damianspendel/symbolic-world/issues/new?template=dispute.yml',
       '(use the dispute template). Disputed edges are re-reviewed with this objection',
       'attached; outcomes are published at https://symbolicworld.observer/disputes'
