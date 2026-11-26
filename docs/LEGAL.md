@@ -46,7 +46,7 @@ Switzerland. The project is run from Switzerland, where the quotation right is i
 
 Any single 25-word quotation is plainly within quotation norms. A dataset of 6,887 such quotations is an aggregation, and this section addresses it as one.
 
-- Scale: 6,887 quotations of at most 25 words come to 109,028 words, a mean of 15.8 words each. They are drawn from the eleven volumes mined so far, which hold about 1.39 million words, so the quotations are 7.9% of those volumes. The highest share in any one volume is 9.0% (CW 12). The *Collected Works* run to roughly twenty volumes, so the share of the whole is lower.
+- Scale: 6,887 quotations of at most 25 words come to 109,028 words, a mean of 15.8 words each. They are drawn from the eleven volumes mined, which hold about 1.39 million words, so the quotations are 7.9% of those volumes. The highest share in any one volume is 9.0% (CW 12). The *Collected Works* run to roughly twenty volumes, so the share of the whole is lower.
 - Non-substitutive: the quotations are discontinuous fragments selected because they anchor citations, not because they represent the work's expressive interest. Read together they do not form readable text and could not serve anyone as a substitute for reading Jung.
 - Toward the books: if anything, the dataset sends readers to Jung. A quotation of 25 words or fewer cannot stand in for its paragraph, and each one gives the volume, paragraph, and page where the reader finds the full passage in the printed edition.
 - Function: the dataset works as a concordance, a finding aid that tells a reader where in the CW a claim rests and gives enough verbatim text to verify the match. Paragraph (§) numbers and page numbers are facts, and copyright does not protect facts.
