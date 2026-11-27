@@ -31,7 +31,7 @@ when the release was cut.
 
 ## v2.5.0: Wikidata links and a page for the concordance
 
-status: released 2026-11-26. Tag `v2.5.0`, GitHub Release, Zenodo record
+status: released 2026-11-27. Tag `v2.5.0`, GitHub Release, Zenodo record
 under the concept DOI.
 pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_record}} (PASS)
 
@@ -50,6 +50,8 @@ pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   links accepted on thin evidence, and found every one right.
 - `tools/linking/wikidata_links.json` keeps each link with both models'
   records and the maintainer's decisions.
+- The registration note for the v3.0.0 readings, dated 2026-11-13, has
+  sha256 `cdfbf3c2887da2812c3ed0701f5f2084f2db3a458f55ce6f2201957a5688b1b4`.
 
 ### core build
 

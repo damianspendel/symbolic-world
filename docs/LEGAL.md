@@ -1,7 +1,7 @@
 # Legal statement
 
 The Symbolic World: a knowledge graph of C. G. Jung's *Collected Works*
-Date: 2026-07-27. Figures as of the v2.5.0 freeze, 2026-11-26.
+Date: 2026-07-27. Figures as of the v2.5.0 freeze, 2026-11-27.
 
 This statement sets out what the project publishes and the legal basis for it.
 
