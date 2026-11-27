@@ -46,8 +46,10 @@ pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 - Figures, source authors and source texts link to Wikidata. A model of the
   Opus family proposed each link and a model of the Fable family checked it,
   and the release keeps only the links the checker accepted. Where the two
-  disagreed, the maintainer decided. He then checked a seeded sample and the
-  links accepted on thin evidence, and found every one right.
+  disagreed, the maintainer decided. The release has 208 links: 158
+  figures, 42 source authors and 8 source texts. The maintainer checked 38
+  of them by hand, the 8 accepted on thin evidence and a seeded sample of
+  30, and found all 38 right.
 - `tools/linking/wikidata_links.json` keeps each link with both models'
   records and the maintainer's decisions.
 - The registration note for the v3.0.0 readings, dated 2026-11-13, has
@@ -61,6 +63,9 @@ pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
   symbolicworld namespace, and claims point to them. Where a checked link
   exists, the IRI links to Wikidata. [/vocabulary](/vocabulary) lists the
   three new terms.
+- Addresses under `https://w3id.org/symbolicworld/` answer a request for
+  Turtle with the RDF file. Claim, reference and edge addresses open their
+  record page.
 - Concept titles no longer repeat a Latin name that the label already
   carries. The lapis philosophorum page adds its English name, philosophers'
   stone, which is one of the concept's own aliases.
@@ -70,9 +75,9 @@ pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 ### UI
 
 - The concept page of each linked figure names its Wikidata entry.
-- [/concordance](/concordance) is a page of its own that search engines can
-  index: the alchemical terms A to Z, each beside the concepts of Jung's
-  psychology that he reads through it, with one quoted passage for each pair.
+- [/concordance](/concordance) is a page of its own: the alchemical terms A
+  to Z, each beside the concepts of Jung's psychology that he reads through
+  it, with one quoted passage for each pair.
   [/opus](/opus), [/about](/about) and the concept pages of its terms link
   to it.
 - [/opus](/opus) opens on the first picture. The later pictures no longer
