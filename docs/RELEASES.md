@@ -38,56 +38,34 @@ pin: graph v2.5.0 · ruleset {{ruleset}} · calibration record {{calibration_rec
 ### mining status
 
 - The data of v2.4.1, unchanged: {{nodes}} nodes, {{edges}} relations,
-  {{refs}} references over {{batches}} batches. This release mines nothing
-  new.
+  {{refs}} references over {{batches}} batches.
 
 ### governance
 
-- Figures, source authors and source texts link to Wikidata. A model of the
-  Opus family proposed each link and a model of the Fable family checked it,
-  and the release keeps only the links the checker accepted. Where the two
-  disagreed, the maintainer decided. The release has 208 links: 158
-  figures, 42 source authors and 8 source texts. The maintainer checked 38
-  of them by hand, the 8 accepted on thin evidence and a seeded sample of
-  30, and found all 38 right.
-- `tools/linking/wikidata_links.json` keeps each link with both models'
-  records and the maintainer's decisions.
-- The registration note for the v3.0.0 readings, dated 2026-11-13, has
-  sha256 `cdfbf3c2887da2812c3ed0701f5f2084f2db3a458f55ce6f2201957a5688b1b4`.
+- The release has 208 links to Wikidata: 158 figures, 42 source authors and
+  8 source texts.
+- `tools/linking/wikidata_links.json` keeps a record of each link.
 
 ### core build
 
-- The RDF export links each figure to its Wikidata entry by
-  `skos:closeMatch`, and the VoID file describes these links as linksets.
-- Source authors and source texts have IRIs of their own under the
-  symbolicworld namespace, and claims point to them. Where a checked link
-  exists, the IRI links to Wikidata. [/vocabulary](/vocabulary) lists the
-  three new terms.
+- The RDF export links figures, source authors and source texts to Wikidata
+  by `skos:closeMatch`. Authors and texts have IRIs of their own; claims
+  point to them. [/vocabulary](/vocabulary) lists the three new terms.
 - Addresses under `https://w3id.org/symbolicworld/` answer a request for
   Turtle with the RDF file. Claim, reference and edge addresses open their
   record page.
-- Concept titles no longer repeat a Latin name that the label already
-  carries. The lapis philosophorum page adds its English name, philosophers'
-  stone, which is one of the concept's own aliases.
-- The home page's dataset description says that mining of the eleven
-  volumes finished in November 2026.
+- Concept titles no longer repeat a Latin name. The lapis philosophorum page
+  adds its English name, philosophers' stone.
 
 ### UI
 
 - The concept page of each linked figure names its Wikidata entry.
 - [/concordance](/concordance) is a page of its own: the alchemical terms A
   to Z, each beside the concepts of Jung's psychology that he reads through
-  it, with one quoted passage for each pair.
-  [/opus](/opus), [/about](/about) and the concept pages of its terms link
-  to it.
-- [/opus](/opus) opens on the first picture. The later pictures no longer
-  show for a moment while the page sets itself up.
-- The search on the home page lists its results over the page, so the four
-  cards keep their size.
-- The concept pages of the figures in the Rosarium pictures link to their
-  picture on [/opus](/opus).
-- The dispute form asks for the volume and paragraph number and the reader's
-  own words, and asks readers not to paste the paragraph.
+  it.
+- [/opus](/opus) opens on the first picture; the concept pages of the
+  figures in the pictures link to it.
+- Changes to the dispute form
 - [/about](/about) ends with a homage to the Buddha and a dedication.
 
 ## v2.4.1: corrections to the method page

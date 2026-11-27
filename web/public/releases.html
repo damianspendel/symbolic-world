@@ -81,30 +81,25 @@ td.n { font-family: var(--mono); font-size: .78rem; }
 <div class="pin">graph <span class="v">v2.5.0</span> · ruleset <span class="v">v0.7.2</span> · calibration record of 2026-08-13, run 4 (PASS)</div>
 <h4>mining status</h4>
 <ul>
-<li>The data of v2.4.1, unchanged: 1244 nodes, 5132 relations, 6887 references over 134 batches. This release mines nothing new.</li>
+<li>The data of v2.4.1, unchanged: 1244 nodes, 5132 relations, 6887 references over 134 batches.</li>
 </ul>
 <h4>governance</h4>
 <ul>
-<li>Figures, source authors and source texts link to Wikidata. A model of the Opus family proposed each link and a model of the Fable family checked it, and the release keeps only the links the checker accepted. Where the two disagreed, the maintainer decided. The release has 208 links: 158 figures, 42 source authors and 8 source texts. The maintainer checked 38 of them by hand, the 8 accepted on thin evidence and a seeded sample of 30, and found all 38 right.</li>
-<li><code>tools/linking/wikidata_links.json</code> keeps each link with both models' records and the maintainer's decisions.</li>
-<li>The registration note for the v3.0.0 readings, dated 2026-11-13, has sha256 <code>cdfbf3c2887da2812c3ed0701f5f2084f2db3a458f55ce6f2201957a5688b1b4</code>.</li>
+<li>The release has 208 links to Wikidata: 158 figures, 42 source authors and 8 source texts.</li>
+<li><code>tools/linking/wikidata_links.json</code> keeps a record of each link.</li>
 </ul>
 <h4>core build</h4>
 <ul>
-<li>The RDF export links each figure to its Wikidata entry by <code>skos:closeMatch</code>, and the VoID file describes these links as linksets.</li>
-<li>Source authors and source texts have IRIs of their own under the symbolicworld namespace, and claims point to them. Where a checked link exists, the IRI links to Wikidata. <a href="/vocabulary">/vocabulary</a> lists the three new terms.</li>
+<li>The RDF export links figures, source authors and source texts to Wikidata by <code>skos:closeMatch</code>. Authors and texts have IRIs of their own; claims point to them. <a href="/vocabulary">/vocabulary</a> lists the three new terms.</li>
 <li>Addresses under <code>https://w3id.org/symbolicworld/</code> answer a request for Turtle with the RDF file. Claim, reference and edge addresses open their record page.</li>
-<li>Concept titles no longer repeat a Latin name that the label already carries. The lapis philosophorum page adds its English name, philosophers' stone, which is one of the concept's own aliases.</li>
-<li>The home page's dataset description says that mining of the eleven volumes finished in November 2026.</li>
+<li>Concept titles no longer repeat a Latin name. The lapis philosophorum page adds its English name, philosophers' stone.</li>
 </ul>
 <h4>UI</h4>
 <ul>
 <li>The concept page of each linked figure names its Wikidata entry.</li>
-<li><a href="/concordance">/concordance</a> is a page of its own: the alchemical terms A to Z, each beside the concepts of Jung's psychology that he reads through it, with one quoted passage for each pair. <a href="/opus">/opus</a>, <a href="/about">/about</a> and the concept pages of its terms link to it.</li>
-<li><a href="/opus">/opus</a> opens on the first picture. The later pictures no longer show for a moment while the page sets itself up.</li>
-<li>The search on the home page lists its results over the page, so the four cards keep their size.</li>
-<li>The concept pages of the figures in the Rosarium pictures link to their picture on <a href="/opus">/opus</a>.</li>
-<li>The dispute form asks for the volume and paragraph number and the reader's own words, and asks readers not to paste the paragraph.</li>
+<li><a href="/concordance">/concordance</a> is a page of its own: the alchemical terms A to Z, each beside the concepts of Jung's psychology that he reads through it.</li>
+<li><a href="/opus">/opus</a> opens on the first picture; the concept pages of the figures in the pictures link to it.</li>
+<li>Changes to the dispute form</li>
 <li><a href="/about">/about</a> ends with a homage to the Buddha and a dedication.</li>
 </ul>
 </section>
